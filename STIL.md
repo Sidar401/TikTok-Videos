@@ -10,6 +10,10 @@ Code-Vorlage: `vorlage/` (Demo: `renders/stil-demo.mp4`).
 - **Bildwechsel alle 2–4 s** (harter Schnitt), jedes Bild illustriert genau den gesprochenen Halbsatz
 - Voiceover (männlich, locker, schnell) + durchgehende Untertitel
 
+## Branding HundeFinanzTV
+- Orange `#DB8622` aus HundeWissenTv: Untertitel-Box + **26 px oranger Rahmen** ums ganze Video (wie auf HundeWissenTv)
+- Maskottchen: Beagle aus `brand/hundewissentv-logo.jpg` (dunkler Kreis `#353A3D`, Creme `#FAF5EF`)
+
 ## Untertitel-Box (Markenzeichen)
 - Kanalfarbe aus `kanal.json` (Orange; Referenz nutzte Türkis `#19C4A0`), abgerundet (Radius 28 px), weiße Schrift
 - Montserrat 600, 54 px, max. 2 Zeilen, kleingeschrieben wie gesprochen

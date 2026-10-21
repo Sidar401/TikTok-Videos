@@ -1,6 +1,6 @@
 ---
 name: finanz-video
-description: Erstellt ein fertiges TikTok-Finanzvideo (Deutsch, 1080×1920, 45–60 s) für den Kanal aus kanal.json – Skript, Voiceover mit der festen Kanalstimme (Piper, offline), animierte Szenen im Kanal-Stil (STIL.md) und MP4-Render. Nutzen, sobald der Nutzer ein Video, ein Thema oder eine Idee für den Finanzkanal nennt.
+description: Erstellt ein fertiges TikTok-Finanzvideo (Deutsch, 1080×1920, 45–60 s) für den Kanal aus kanal.json – Skript, Voiceover vom Nutzer (ElevenLabs) automatisch synchronisiert, animierte Szenen im Kanal-Stil (STIL.md) und MP4-Render. Nutzen, sobald der Nutzer ein Video, ein Thema oder eine Idee für den Finanzkanal nennt.
 ---
 
 # Finanz-Video erstellen
@@ -23,7 +23,10 @@ Der Nutzer arbeitet am iPad: Antworten kurz, Ergebnisse per `SendUserFile` schic
    - Aufbau aus `STIL.md`: Hook (0–3 s) → Frage/Problem → Beispiel mit echten Zahlen → Visualisierung → Faustregel/Meinung → kurzer CTA.
    - `text` = Untertitel (locker, kleingeschrieben wie gesprochen, Ziffern erlaubt). `sprechtext` = was die Stimme sagt: Zahlen und Zeichen ausschreiben („sechsunddreißigtausend Euro“, „sieben Prozent“), sonst liest Piper sie falsch.
    - Zahlen nachrechnen (Zinseszins etc.) und im Chat kurz nennen. Keine Anlageberatung versprechen.
-4. **Voiceover:** `python3 scripts/voice.py videos/<name>` → `assets/voice.wav` + `timings.json` (Start/Ende pro Satz und pro Untertitel-Box). Stimme kommt fest aus `kanal.json`, nie wechseln, außer der Nutzer sagt es.
+4. **Voiceover (Standard: ElevenLabs vom Nutzer):**
+   - Dem Nutzer das Skript zum Einsprechen schicken: nur die `sprechtext`-Sätze, **ein Satz pro Zeile**, in einem Codeblock (iPad: leicht zu kopieren). Hinweis: gleiche ElevenLabs-Stimme wie immer, Satzzeichen stehen lassen. Dann warten.
+   - Lädt der Nutzer die Datei hoch: `python3 scripts/sync.py videos/<name> <upload.mp3>` → `assets/voice.wav` + `timings.json` (Satzgrenzen über Pausen). Meldet es „Fallback“, Satzanzahl und Pausen prüfen und dem Nutzer sagen.
+   - Nur wenn der Nutzer es ausdrücklich will: Computerstimme `python3 scripts/voice.py videos/<name>` (Piper, `stimme_fallback` aus `kanal.json`).
 5. **Komposition bauen** in `videos/<name>/index.html` (Vorlage ist schon drin, Beispielszenen ersetzen):
    - Root-`data-duration` = `timings.json.dauer`.
    - Pro Satz eine `.scene clip` mit `data-start`/`data-duration` aus `timings.json` und einem SVG-Motiv nach `STIL.md` (flache Clipart-Optik, Serifen-Zahlen grün/gold, schlichte Charts). Motive selbst als Inline-SVG zeichnen; wiederverwendbare Motive aus früheren Videos kopieren.
