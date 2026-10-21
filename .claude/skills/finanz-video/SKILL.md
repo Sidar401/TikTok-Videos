@@ -1,6 +1,6 @@
 ---
 name: finanz-video
-description: Erstellt ein fertiges TikTok-Finanzvideo (Deutsch, 1080×1920, 45–60 s) für den Kanal aus kanal.json – Skript, Voiceover vom Nutzer (ElevenLabs) automatisch synchronisiert, animierte Szenen im Kanal-Stil (STIL.md) und MP4-Render. Nutzen, sobald der Nutzer ein Video, ein Thema oder eine Idee für den Finanzkanal nennt.
+description: Erstellt ein fertiges TikTok-Finanzvideo (Deutsch, 1080×1920, 30–60 s) für den Kanal aus kanal.json – Skript, Voiceover vom Nutzer (ElevenLabs) automatisch synchronisiert, animierte Szenen im Kanal-Stil (STIL.md) und MP4-Render. Nutzen, sobald der Nutzer ein Video, ein Thema oder eine Idee für den Finanzkanal nennt.
 ---
 
 # Finanz-Video erstellen
@@ -27,10 +27,11 @@ Der Nutzer arbeitet am iPad: Antworten kurz, Ergebnisse per `SendUserFile` schic
    - Dem Nutzer das Skript zum Einsprechen schicken: nur die `sprechtext`-Sätze, **ein Satz pro Zeile**, in einem Codeblock (iPad: leicht zu kopieren). Hinweis: gleiche ElevenLabs-Stimme wie immer, Satzzeichen stehen lassen. Dann warten.
    - Lädt der Nutzer die Datei hoch: `python3 scripts/sync.py videos/<name> <upload.mp3>` → `assets/voice.wav` + `timings.json` (Satzgrenzen über Pausen). Meldet es „Fallback“, Satzanzahl und Pausen prüfen und dem Nutzer sagen.
    - Nur wenn der Nutzer es ausdrücklich will: Computerstimme `python3 scripts/voice.py videos/<name>` (Piper, `stimme_fallback` aus `kanal.json`).
-5. **Komposition bauen** in `videos/<name>/index.html` (Vorlage ist schon drin, Beispielszenen ersetzen):
+5. **Komposition bauen:** `build.py` aus dem letzten Video (Muster: `videos/100-euro-im-monat/build.py`) nach `videos/<name>/` kopieren, `SCENES` anpassen, `python3 build.py` → `index.html` (Kopf/CSS kommt aus der Vorlage). Es setzt automatisch:
    - Root-`data-duration` = `timings.json.dauer`.
    - Pro Satz eine `.scene clip` mit `data-start`/`data-duration` aus `timings.json` und einem SVG-Motiv nach `STIL.md` (flache Clipart-Optik, Serifen-Zahlen grün/gold, schlichte Charts). Motive selbst als Inline-SVG zeichnen; wiederverwendbare Motive aus früheren Videos kopieren.
    - Pro Untertitel-Box ein `.cap clip` aus `captions` in `timings.json`.
+   - Marken-Badge (Beagle + „HundeFinanzTV“) oben, oranger Rahmen, Outro mit Beagle + „+ Folgen“.
    - Audio: `<audio id="voice" src="assets/voice.wav" data-start="0" data-duration="<dauer>" data-track-index="3"></audio>` im Root.
    - Animation: Pop-in, langsamer Drift, Linien zeichnen (Helfer `pop`/`drift`/`draw` aus der Vorlage).
 6. **Prüfen:** `cd videos/<name> && npx hyperframes lint && npx hyperframes check`. Fehler beheben. Warnungen „nested_structure“/„track_too_dense“ und der Kontrast der Untertitel-Box sind bekannt und ok.

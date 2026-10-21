@@ -1,0 +1,45 @@
+{
+ "titel": "100 € im Monat",
+ "saetze": [
+  {
+   "id": "s1",
+   "text": "du hast 100 € im Monat übrig?"
+  },
+  {
+   "id": "s2",
+   "text": "dann pass jetzt gut auf"
+  },
+  {
+   "id": "s3",
+   "text": "auf dem Konto hast du nach 30 Jahren genau 36.000 €"
+  },
+  {
+   "id": "s4",
+   "text": "investierst du sie in einen ETF mit 7 % Rendite, sieht das ganz anders aus"
+  },
+  {
+   "id": "s5",
+   "text": "dann hast du über 100.000 €"
+  },
+  {
+   "id": "s6",
+   "text": "mehr als dreimal so viel"
+  },
+  {
+   "id": "s7",
+   "text": "das ist der Zinseszins"
+  },
+  {
+   "id": "s8",
+   "text": "dein Geld arbeitet für dich,"
+  },
+  {
+   "id": "s9",
+   "text": "während du schläfst"
+  },
+  {
+   "id": "s10",
+   "text": "folg mir für mehr Geld-Tipps!"
+  }
+ ]
+}

@@ -16,14 +16,15 @@ MAX_WORDS, MAX_CHARS = 6, 34  # pro Untertitel-Box
 
 
 def chunks(text):
-    out, cur = [], []
-    for w in text.split():
-        if cur and (len(cur) >= MAX_WORDS or len(" ".join(cur + [w])) > MAX_CHARS):
-            out.append(" ".join(cur)); cur = []
-        cur.append(w)
-    if cur:
-        out.append(" ".join(cur))
-    return out
+    """Text in gleichmäßige Untertitel-Boxen teilen (max. MAX_WORDS / MAX_CHARS)."""
+    words = text.split()
+    n = 1
+    while True:
+        size = -(-len(words) // n)
+        parts = [" ".join(words[i:i + size]) for i in range(0, len(words), size)]
+        if all(len(p.split()) <= MAX_WORDS and len(p) <= MAX_CHARS for p in parts) or size == 1:
+            return [p.replace(" €", "\u00a0€").replace(" %", "\u00a0%").replace("-", "\u2011") for p in parts]
+        n += 1
 
 
 def main(video_dir):
