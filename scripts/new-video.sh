@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
-# Neues Hochformat-Video (1080x1920) unter videos/<name> anlegen.
-# GSAP wird lokal kopiert, weil CDNs in der Cloud-Umgebung gesperrt sind.
+# Neues Video im Kanal-Stil anlegen: kopiert vorlage/ nach videos/<name>/.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 name="${1:?Usage: scripts/new-video.sh <name>}"
 dir="videos/$name"
-HYPERFRAMES_SKIP_SKILLS=1 npx hyperframes init "$dir" --resolution portrait --non-interactive
-cp node_modules/gsap/dist/gsap.min.js "$dir/"
-sed -i 's#https://cdn.jsdelivr.net/npm/gsap@[0-9.]*/dist/gsap.min.js#gsap.min.js#' "$dir/index.html"
+[ -e "$dir" ] && { echo "Existiert schon: $dir"; exit 1; }
+mkdir -p videos
+cp -r vorlage "$dir"
+rm -rf "$dir/.hyperframes"
+sed -i "s/\"name\": *\"[^\"]*\"/\"name\": \"$name\"/" "$dir/package.json"
 echo "Fertig: $dir"
