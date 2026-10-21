@@ -1,0 +1,75 @@
+#!/usr/bin/env python3
+"""Voiceover + Untertitel-Timings aus skript.json erzeugen (Piper, offline).
+
+Aufruf: python3 scripts/voice.py videos/<name>
+Liest  videos/<name>/skript.json  -> {"saetze": [{"id": "s1", "text": "...", "sprechtext": "..."?}]}
+Schreibt videos/<name>/assets/voice.wav und videos/<name>/timings.json
+"""
+import json, subprocess, sys, wave
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+VOICES = Path("/root/tts")
+GAP = 0.12          # Pause zwischen Sätzen (s)
+TAIL = 0.6          # Stille am Ende (s)
+MAX_WORDS, MAX_CHARS = 6, 34  # pro Untertitel-Box
+
+
+def chunks(text):
+    out, cur = [], []
+    for w in text.split():
+        if cur and (len(cur) >= MAX_WORDS or len(" ".join(cur + [w])) > MAX_CHARS):
+            out.append(" ".join(cur)); cur = []
+        cur.append(w)
+    if cur:
+        out.append(" ".join(cur))
+    return out
+
+
+def main(video_dir):
+    vdir = Path(video_dir).resolve()
+    kanal = json.loads((ROOT / "kanal.json").read_text())
+    model = VOICES / f"de-{kanal['stimme']}-low.onnx"
+    saetze = json.loads((vdir / "skript.json").read_text())["saetze"]
+    tmp = vdir / ".voice"; tmp.mkdir(exist_ok=True)
+    (vdir / "assets").mkdir(exist_ok=True)
+
+    timings, frames, t, rate = [], [], 0.0, None
+    for i, s in enumerate(saetze):
+        raw = tmp / f"{i:03d}.wav"
+        subprocess.run(
+            [sys.executable, "-m", "piper", "-m", str(model), "--length-scale", str(kanal["tempo"]), "-f", str(raw)],
+            input=s.get("sprechtext", s["text"]).encode(), check=True, stderr=subprocess.DEVNULL,
+        )
+        with wave.open(str(raw)) as w:
+            rate = w.getframerate()
+            data = w.readframes(w.getnframes())
+            dur = w.getnframes() / rate
+        frames.append(data + b"\x00\x00" * int(GAP * rate))
+        parts = chunks(s["text"])
+        total = sum(len(p) for p in parts)
+        caps, ct = [], t
+        for p in parts:
+            d = dur * len(p) / total
+            caps.append({"text": p, "start": round(ct, 3), "end": round(ct + d, 3)})
+            ct += d
+        timings.append({"id": s["id"], "start": round(t, 3), "end": round(t + dur + GAP, 3), "captions": caps})
+        t += dur + GAP
+
+    raw_all = tmp / "all.wav"
+    with wave.open(str(raw_all), "wb") as w:
+        w.setnchannels(1); w.setsampwidth(2); w.setframerate(rate)
+        w.writeframes(b"".join(frames) + b"\x00\x00" * int(TAIL * rate))
+    subprocess.run(
+        ["ffmpeg", "-v", "error", "-y", "-i", str(raw_all), "-af",
+         "highpass=f=70,acompressor=threshold=-18dB:ratio=3:attack=5:release=80,"
+         "loudnorm=I=-14:TP=-1.5:LRA=7,aresample=44100", str(vdir / "assets" / "voice.wav")],
+        check=True,
+    )
+    total = round(t + TAIL, 2)
+    (vdir / "timings.json").write_text(json.dumps({"dauer": total, "saetze": timings}, ensure_ascii=False, indent=2))
+    print(f"voice.wav + timings.json: {total}s, {len(saetze)} Sätze")
+
+
+if __name__ == "__main__":
+    main(sys.argv[1])

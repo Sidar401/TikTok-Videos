@@ -11,7 +11,7 @@ Code-Vorlage: `vorlage/` (Demo: `renders/stil-demo.mp4`).
 - Voiceover (männlich, locker, schnell) + durchgehende Untertitel
 
 ## Untertitel-Box (Markenzeichen)
-- Türkis `#19C4A0`, abgerundet (Radius 28 px), weiße Schrift
+- Kanalfarbe aus `kanal.json` (Orange; Referenz nutzte Türkis `#19C4A0`), abgerundet (Radius 28 px), weiße Schrift
 - Montserrat 600, 54 px, max. 2 Zeilen, kleingeschrieben wie gesprochen
 - Position: horizontal zentriert, Oberkante y = 1360
 - Wechselt pro Halbsatz (ca. 1,5–3 s), ohne Animation
