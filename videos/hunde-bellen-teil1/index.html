@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      :root { --brand: #DB8622; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+      #root { position: relative; width: 100%; height: 100%; background: #000; }
+      .slide { position: absolute; inset: 0; overflow: hidden; }
+      .slide .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .photo {
+        position: absolute; left: 0; top: 300px; width: 1080px; height: 1080px; overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      }
+      .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      #brand {
+        position: absolute; top: 190px; left: 0; width: 1080px; display: flex; justify-content: center;
+        align-items: center; gap: 14px; font-family: "Inter", sans-serif; font-weight: 800; font-size: 44px;
+        color: #fff; z-index: 5;
+      }
+      #brand-dog { width: 80px; height: 80px; }
+      #brand-dog img { width: 100%; height: 100%; object-fit: contain; }
+      #frame { position: absolute; inset: 0; border: 26px solid var(--brand); z-index: 10; }
+      .cap { position: absolute; left: 0; top: 1225px; width: 1080px; display: flex; justify-content: center; z-index: 6; }
+      .cap span {
+        display: block; max-width: 980px; padding: 14px 30px 16px; border-radius: 18px; background: #fff;
+        color: #111; font-family: "Inter", sans-serif; font-weight: 600; font-size: 48px; line-height: 1.15; white-space: nowrap;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="47.36" data-width="1080" data-height="1920">
+      <div id="b1" class="slide clip" data-start="0.0" data-duration="4.607" data-track-index="1">
+        <img class="bg" src="assets/bilder/01-bg.jpg" alt="" />
+        <div class="photo"><img id="b1-img" src="assets/bilder/01.jpg" alt="" /></div>
+      </div>
+      <div id="b2" class="slide clip" data-start="4.607" data-duration="6.128" data-track-index="1">
+        <img class="bg" src="assets/bilder/02-bg.jpg" alt="" />
+        <div class="photo"><img id="b2-img" src="assets/bilder/02.jpg" alt="" /></div>
+      </div>
+      <div id="b3" class="slide clip" data-start="10.735" data-duration="5.655" data-track-index="1">
+        <img class="bg" src="assets/bilder/03-bg.jpg" alt="" />
+        <div class="photo"><img id="b3-img" src="assets/bilder/03.jpg" alt="" /></div>
+      </div>
+      <div id="b4" class="slide clip" data-start="16.39" data-duration="5.909" data-track-index="1">
+        <img class="bg" src="assets/bilder/04-bg.jpg" alt="" />
+        <div class="photo"><img id="b4-img" src="assets/bilder/04.jpg" alt="" /></div>
+      </div>
+      <div id="b5" class="slide clip" data-start="22.299" data-duration="4.956" data-track-index="1">
+        <img class="bg" src="assets/bilder/05-bg.jpg" alt="" />
+        <div class="photo"><img id="b5-img" src="assets/bilder/05.jpg" alt="" /></div>
+      </div>
+      <div id="b6" class="slide clip" data-start="27.255" data-duration="3.973" data-track-index="1">
+        <img class="bg" src="assets/bilder/06-bg.jpg" alt="" />
+        <div class="photo"><img id="b6-img" src="assets/bilder/06.jpg" alt="" /></div>
+      </div>
+      <div id="b7" class="slide clip" data-start="31.228" data-duration="5.418" data-track-index="1">
+        <img class="bg" src="assets/bilder/07-bg.jpg" alt="" />
+        <div class="photo"><img id="b7-img" src="assets/bilder/07.jpg" alt="" /></div>
+      </div>
+      <div id="b8" class="slide clip" data-start="36.646" data-duration="4.443" data-track-index="1">
+        <img class="bg" src="assets/bilder/08-bg.jpg" alt="" />
+        <div class="photo"><img id="b8-img" src="assets/bilder/08.jpg" alt="" /></div>
+      </div>
+      <div id="b9" class="slide clip" data-start="41.089" data-duration="6.271" data-track-index="1">
+        <img class="bg" src="assets/bilder/09-bg.jpg" alt="" />
+        <div class="photo"><img id="b9-img" src="assets/bilder/09.jpg" alt="" /></div>
+      </div>
+
+      <div id="brand"><div id="brand-dog"><img src="assets/beagle.png" alt="" /></div><span>HundeWissenTv</span></div>
+      <div id="frame"></div>
+
+      <div id="captions" data-track-kind="captions">
+        <div id="c1" class="cap clip" data-start="0.0" data-duration="2.024" data-track-index="2"><span>wenn dein Hund ständig bellt,</span></div>
+        <div id="c2" class="cap clip" data-start="2.024" data-duration="1.536" data-track-index="2"><span>hat das meistens einen</span></div>
+        <div id="c3" class="cap clip" data-start="3.56" data-duration="1.047" data-track-index="2"><span>dieser 5 Gründe</span></div>
+        <div id="c4" class="cap clip" data-start="4.607" data-duration="0.887" data-track-index="2"><span>Grund Nr. 1</span></div>
+        <div id="c5" class="cap clip" data-start="5.494" data-duration="2.258" data-track-index="2"><span>ist territoriales Verhalten,</span></div>
+        <div id="c6" class="cap clip" data-start="7.752" data-duration="1.37" data-track-index="2"><span>weil jemand seine</span></div>
+        <div id="c7" class="cap clip" data-start="9.122" data-duration="1.613" data-track-index="2"><span>Grenze überschreitet</span></div>
+        <div id="c8" class="cap clip" data-start="10.735" data-duration="1.247" data-track-index="2"><span>Grund Nr. 2 ist</span></div>
+        <div id="c9" class="cap clip" data-start="11.982" data-duration="1.996" data-track-index="2"><span>Angst oder Unsicherheit,</span></div>
+        <div id="c10" class="cap clip" data-start="13.978" data-duration="2.412" data-track-index="2"><span>er bellt, um sich zu schützen</span></div>
+        <div id="c11" class="cap clip" data-start="16.39" data-duration="2.58" data-track-index="2"><span>Grund Nr. 3 ist Aufmerksamkeit,</span></div>
+        <div id="c12" class="cap clip" data-start="18.97" data-duration="1.498" data-track-index="2"><span>weil Bellen früher</span></div>
+        <div id="c13" class="cap clip" data-start="20.468" data-duration="1.831" data-track-index="2"><span>schon funktioniert hat</span></div>
+        <div id="c14" class="cap clip" data-start="22.299" data-duration="2.194" data-track-index="2"><span>Grund Nr. 4 ist Langeweile,</span></div>
+        <div id="c15" class="cap clip" data-start="24.493" data-duration="1.462" data-track-index="2"><span>und zwar genau wie</span></div>
+        <div id="c16" class="cap clip" data-start="25.955" data-duration="1.3" data-track-index="2"><span>bei uns Menschen</span></div>
+        <div id="c17" class="cap clip" data-start="27.255" data-duration="1.986" data-track-index="2"><span>ihm fehlt einfach geistige</span></div>
+        <div id="c18" class="cap clip" data-start="29.241" data-duration="1.987" data-track-index="2"><span>und körperliche Auslastung</span></div>
+        <div id="c19" class="cap clip" data-start="31.228" data-duration="2.298" data-track-index="2"><span>Grund Nr. 5 ist Frustration,</span></div>
+        <div id="c20" class="cap clip" data-start="33.526" data-duration="1.56" data-track-index="2"><span>auch das kennen wir</span></div>
+        <div id="c21" class="cap clip" data-start="35.086" data-duration="1.56" data-track-index="2"><span>Menschen nur zu gut</span></div>
+        <div id="c22" class="cap clip" data-start="36.646" data-duration="1.65" data-track-index="2"><span>zum Beispiel an der Leine,</span></div>
+        <div id="c23" class="cap clip" data-start="38.296" data-duration="1.651" data-track-index="2"><span>wenn er andere Hunde sieht</span></div>
+        <div id="c24" class="cap clip" data-start="39.947" data-duration="1.142" data-track-index="2"><span>und nicht hin darf</span></div>
+        <div id="c25" class="cap clip" data-start="41.089" data-duration="1.01" data-track-index="2"><span>hol dir jetzt</span></div>
+        <div id="c26" class="cap clip" data-start="42.099" data-duration="2.641" data-track-index="2"><span>meinen kostenlosen Anti‑Bell‑Plan,</span></div>
+        <div id="c27" class="cap clip" data-start="44.74" data-duration="2.019" data-track-index="2"><span>der Link ist in meiner Bio</span></div>
+      </div>
+
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="47.36" data-track-index="3"></audio>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#b1-img", { scale: 1.0, x: 0 }, { scale: 1.1, x: 0, duration: 4.607, ease: "sine.inOut" }, 0.0);
+      tl.fromTo("#b1 .photo", { scale: 0.96, opacity: 0.4 }, { scale: 1, opacity: 1, duration: 0.3, ease: "power3.out" }, 0.0);
+      tl.fromTo("#b2-img", { scale: 1.08, x: 0 }, { scale: 1.0, x: -30, duration: 6.128, ease: "sine.inOut" }, 4.607);
+      tl.fromTo("#b2 .photo", { scale: 0.96, opacity: 0.4 }, { scale: 1, opacity: 1, duration: 0.3, ease: "power3.out" }, 4.607);
+      tl.fromTo("#b3-img", { scale: 1.0, x: 0 }, { scale: 1.08, x: 30, duration: 5.655, ease: "sine.inOut" }, 10.735);
+      tl.fromTo("#b3 .photo", { scale: 0.96, opacity: 0.4 }, { scale: 1, opacity: 1, duration: 0.3, ease: "power3.out" }, 10.735);
+      tl.fromTo("#b4-img", { scale: 1.08, x: 0 }, { scale: 1.0, x: 30, duration: 5.909, ease: "sine.inOut" }, 16.39);
+      tl.fromTo("#b4 .photo", { scale: 0.96, opacity: 0.4 }, { scale: 1, opacity: 1, duration: 0.3, ease: "power3.out" }, 16.39);
+      tl.fromTo("#b5-img", { scale: 1.0, x: 0 }, { scale: 1.1, x: -30, duration: 4.956, ease: "sine.inOut" }, 22.299);
+      tl.fromTo("#b5 .photo", { scale: 0.96, opacity: 0.4 }, { scale: 1, opacity: 1, duration: 0.3, ease: "power3.out" }, 22.299);
+      tl.fromTo("#b6-img", { scale: 1.1, x: 0 }, { scale: 1.0, x: 0, duration: 3.973, ease: "sine.inOut" }, 27.255);
+      tl.fromTo("#b6 .photo", { scale: 0.96, opacity: 0.4 }, { scale: 1, opacity: 1, duration: 0.3, ease: "power3.out" }, 27.255);
+      tl.fromTo("#b7-img", { scale: 1.0, x: 0 }, { scale: 1.08, x: 30, duration: 5.418, ease: "sine.inOut" }, 31.228);
+      tl.fromTo("#b7 .photo", { scale: 0.96, opacity: 0.4 }, { scale: 1, opacity: 1, duration: 0.3, ease: "power3.out" }, 31.228);
+      tl.fromTo("#b8-img", { scale: 1.08, x: 0 }, { scale: 1.0, x: -30, duration: 4.443, ease: "sine.inOut" }, 36.646);
+      tl.fromTo("#b8 .photo", { scale: 0.96, opacity: 0.4 }, { scale: 1, opacity: 1, duration: 0.3, ease: "power3.out" }, 36.646);
+      tl.fromTo("#b9-img", { scale: 1.0, x: 0 }, { scale: 1.06, x: 0, duration: 6.271, ease: "sine.inOut" }, 41.089);
+      tl.fromTo("#b9 .photo", { scale: 0.96, opacity: 0.4 }, { scale: 1, opacity: 1, duration: 0.3, ease: "power3.out" }, 41.089);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

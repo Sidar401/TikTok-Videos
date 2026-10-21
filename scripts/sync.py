@@ -52,18 +52,38 @@ def main(video_dir, audio):
         if gaps:
             break
 
+    lens = [len(s["text"]) for s in saetze]
+    expect, acc = [], 0
+    for l in lens[:-1]:
+        acc += l
+        expect.append(total * acc / sum(lens))
+
     if need and len(gaps) >= need:
-        # die `need` längsten Pausen sind die Satzgrenzen
-        cuts = sorted(sorted(gaps, key=lambda x: x[1] - x[0], reverse=True)[:need])
-        bounds = [(s + e) / 2 for s, e in cuts]
-        mode = "Pausen"
+        # DP: Satzgrenzen = Pausen, die lang sind UND nahe an der erwarteten Stelle
+        # (erwartet = Anteil der Textlänge an der Gesamtdauer)
+        mids = [((s + e) / 2, e - s) for s, e in gaps]
+        INF = float("inf")
+        K, J = len(mids), need
+        cost = [[INF] * K for _ in range(J)]
+        prev = [[-1] * K for _ in range(J)]
+        for j in range(J):
+            for k in range(j, K - (J - 1 - j)):
+                c = abs(mids[k][0] - expect[j]) - 6 * mids[k][1]
+                if j == 0:
+                    cost[j][k] = c
+                else:
+                    best = min(range(j - 1, k), key=lambda q: cost[j - 1][q])
+                    cost[j][k] = cost[j - 1][best] + c
+                    prev[j][k] = best
+        k = min(range(K), key=lambda q: cost[J - 1][q])
+        picks = []
+        for j in range(J - 1, -1, -1):
+            picks.append(k)
+            k = prev[j][k]
+        bounds = [mids[q][0] for q in reversed(picks)]
+        mode = "Pausen + Textlänge"
     else:
-        # Fallback: proportional zur Textlänge
-        lens = [len(s["text"]) for s in saetze]
-        acc, bounds = 0, []
-        for l in lens[:-1]:
-            acc += l
-            bounds.append(total * acc / sum(lens))
+        bounds = expect
         mode = "Textlänge (Fallback)"
 
     edges = [0.0] + bounds + [total]

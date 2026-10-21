@@ -15,16 +15,34 @@ TAIL = 0.6          # Stille am Ende (s)
 MAX_WORDS, MAX_CHARS = 6, 34  # pro Untertitel-Box
 
 
-def chunks(text):
-    """Text in gleichmäßige Untertitel-Boxen teilen (max. MAX_WORDS / MAX_CHARS)."""
-    words = text.split()
+def _even(words):
     n = 1
     while True:
         size = -(-len(words) // n)
         parts = [" ".join(words[i:i + size]) for i in range(0, len(words), size)]
         if all(len(p.split()) <= MAX_WORDS and len(p) <= MAX_CHARS for p in parts) or size == 1:
-            return [p.replace(" €", "\u00a0€").replace(" %", "\u00a0%").replace("-", "\u2011") for p in parts]
+            return parts
         n += 1
+
+
+def chunks(text):
+    """Text in Untertitel-Boxen teilen: zuerst an Kommas, dann gleichmäßig (max. MAX_WORDS / MAX_CHARS)."""
+    clauses, cur = [], []
+    for w in text.split():
+        cur.append(w)
+        if w.endswith(","):
+            clauses.append(cur); cur = []
+    if cur:
+        clauses.append(cur)
+    # sehr kurze Teilsätze mit dem nächsten zusammenlegen
+    merged = []
+    for c in clauses:
+        if merged and len(merged[-1]) < 3 and len(" ".join(merged[-1] + c)) <= MAX_CHARS:
+            merged[-1] = merged[-1] + c
+        else:
+            merged.append(c)
+    parts = [p for c in merged for p in _even(c)]
+    return [p.replace(" €", "\u00a0€").replace(" %", "\u00a0%").replace("-", "\u2011") for p in parts]
 
 
 def main(video_dir):

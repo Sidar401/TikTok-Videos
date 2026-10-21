@@ -1,0 +1,203 @@
+{
+  "dauer": 47.36,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 4.607,
+      "captions": [
+        {
+          "text": "wenn dein Hund ständig bellt,",
+          "start": 0.0,
+          "end": 2.024
+        },
+        {
+          "text": "hat das meistens einen",
+          "start": 2.024,
+          "end": 3.56
+        },
+        {
+          "text": "dieser 5 Gründe",
+          "start": 3.56,
+          "end": 4.607
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 4.607,
+      "end": 10.735,
+      "captions": [
+        {
+          "text": "Grund Nr. 1",
+          "start": 4.607,
+          "end": 5.494
+        },
+        {
+          "text": "ist territoriales Verhalten,",
+          "start": 5.494,
+          "end": 7.752
+        },
+        {
+          "text": "weil jemand seine",
+          "start": 7.752,
+          "end": 9.122
+        },
+        {
+          "text": "Grenze überschreitet",
+          "start": 9.122,
+          "end": 10.735
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 10.735,
+      "end": 16.39,
+      "captions": [
+        {
+          "text": "Grund Nr. 2 ist",
+          "start": 10.735,
+          "end": 11.982
+        },
+        {
+          "text": "Angst oder Unsicherheit,",
+          "start": 11.982,
+          "end": 13.978
+        },
+        {
+          "text": "er bellt, um sich zu schützen",
+          "start": 13.978,
+          "end": 16.39
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 16.39,
+      "end": 22.299,
+      "captions": [
+        {
+          "text": "Grund Nr. 3 ist Aufmerksamkeit,",
+          "start": 16.39,
+          "end": 18.97
+        },
+        {
+          "text": "weil Bellen früher",
+          "start": 18.97,
+          "end": 20.468
+        },
+        {
+          "text": "schon funktioniert hat",
+          "start": 20.468,
+          "end": 22.299
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 22.299,
+      "end": 27.255,
+      "captions": [
+        {
+          "text": "Grund Nr. 4 ist Langeweile,",
+          "start": 22.299,
+          "end": 24.493
+        },
+        {
+          "text": "und zwar genau wie",
+          "start": 24.493,
+          "end": 25.955
+        },
+        {
+          "text": "bei uns Menschen",
+          "start": 25.955,
+          "end": 27.255
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 27.255,
+      "end": 31.228,
+      "captions": [
+        {
+          "text": "ihm fehlt einfach geistige",
+          "start": 27.255,
+          "end": 29.241
+        },
+        {
+          "text": "und körperliche Auslastung",
+          "start": 29.241,
+          "end": 31.228
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 31.228,
+      "end": 36.646,
+      "captions": [
+        {
+          "text": "Grund Nr. 5 ist Frustration,",
+          "start": 31.228,
+          "end": 33.526
+        },
+        {
+          "text": "auch das kennen wir",
+          "start": 33.526,
+          "end": 35.086
+        },
+        {
+          "text": "Menschen nur zu gut",
+          "start": 35.086,
+          "end": 36.646
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 36.646,
+      "end": 41.089,
+      "captions": [
+        {
+          "text": "zum Beispiel an der Leine,",
+          "start": 36.646,
+          "end": 38.296
+        },
+        {
+          "text": "wenn er andere Hunde sieht",
+          "start": 38.296,
+          "end": 39.947
+        },
+        {
+          "text": "und nicht hin darf",
+          "start": 39.947,
+          "end": 41.089
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 41.089,
+      "end": 46.759,
+      "captions": [
+        {
+          "text": "hol dir jetzt",
+          "start": 41.089,
+          "end": 42.099
+        },
+        {
+          "text": "meinen kostenlosen Anti‑Bell‑Plan,",
+          "start": 42.099,
+          "end": 44.74
+        },
+        {
+          "text": "der Link ist in meiner Bio",
+          "start": 44.74,
+          "end": 46.759
+        }
+      ]
+    }
+  ]
+}
