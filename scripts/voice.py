@@ -12,7 +12,11 @@ ROOT = Path(__file__).resolve().parent.parent
 VOICES = Path("/root/tts")
 GAP = 0.12          # Pause zwischen Sätzen (s)
 TAIL = 0.6          # Stille am Ende (s)
-MAX_WORDS, MAX_CHARS = 6, 31  # pro Untertitel-Box
+MAX_WORDS, MAX_CHARS = 6, 32  # pro Untertitel-Box
+# Nach diesen Wörtern nie eine Untertitel-Box beenden (gehören zum nächsten Wort)
+KLEBEWOERTER = {"der", "die", "das", "dem", "den", "des", "ein", "eine", "einen", "einem", "einer", "im", "in", "am", "an",
+                "zum", "zur", "mit", "von", "vom", "für", "auf", "aus", "bei", "nach", "und", "oder", "aber", "zu", "dein",
+                "deine", "deinen", "deinem", "mein", "meine", "unser", "unsere", "wenn", "dass", "weil", "als", "wie", "so"}
 
 
 def _even(words):
@@ -22,7 +26,7 @@ def _even(words):
     while n <= len(words):
         best = None
         for cuts in combinations(range(1, len(words)), n - 1):
-            if any(re.fullmatch(r"[\d.,]+(\x01[€%])?", words[c - 1]) for c in cuts):
+            if any(re.fullmatch(r"[\d.,]+(\x01[€%])?", words[c - 1]) or words[c - 1].lower() in KLEBEWOERTER for c in cuts):
                 continue
             idx = (0,) + cuts + (len(words),)
             parts = [" ".join(words[a:b]) for a, b in zip(idx, idx[1:])]

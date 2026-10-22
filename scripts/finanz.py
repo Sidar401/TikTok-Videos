@@ -109,7 +109,7 @@ EXTRA_CSS = """
       .tile svg { width: 230px; height: 230px; }
       .tile span { font-family: Montserrat; font-weight: 800; font-size: 54px; color: #111; }
       .big { font-family: var(--font-display); text-align: center; color: #111; }
-      .cap span { max-width: 990px; }
+      .cap span { max-width: 990px; font-size: 50px; }
     </style>"""
 
 

@@ -1,0 +1,173 @@
+{
+  "dauer": 32.34,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 3.128,
+      "captions": [
+        {
+          "text": "wie viel Geld solltest du",
+          "start": 0.0,
+          "end": 1.466
+        },
+        {
+          "text": "für Notfälle zur Seite legen?",
+          "start": 1.466,
+          "end": 3.128
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 3.128,
+      "end": 6.657,
+      "captions": [
+        {
+          "text": "die Faustregel lautet",
+          "start": 3.128,
+          "end": 4.832
+        },
+        {
+          "text": "3 bis 6 Monatsausgaben",
+          "start": 4.832,
+          "end": 6.657
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 6.657,
+      "end": 12.744,
+      "captions": [
+        {
+          "text": "wenn du 1.500 € im Monat",
+          "start": 6.657,
+          "end": 9.133
+        },
+        {
+          "text": "brauchst,",
+          "start": 9.133,
+          "end": 10.062
+        },
+        {
+          "text": "sind das 4.500 bis 9.000 €",
+          "start": 10.062,
+          "end": 12.744
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 12.744,
+      "end": 15.994,
+      "captions": [
+        {
+          "text": "damit bist du sicher,",
+          "start": 12.744,
+          "end": 14.028
+        },
+        {
+          "text": "wenn die Waschmaschine",
+          "start": 14.028,
+          "end": 15.369
+        },
+        {
+          "text": "kaputt geht",
+          "start": 15.369,
+          "end": 15.994
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 15.994,
+      "end": 18.745,
+      "captions": [
+        {
+          "text": "oder wenn dein Hund",
+          "start": 15.994,
+          "end": 17.15
+        },
+        {
+          "text": "plötzlich zum Tierarzt muss",
+          "start": 17.15,
+          "end": 18.745
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 18.745,
+      "end": 21.437,
+      "captions": [
+        {
+          "text": "parke den Notgroschen",
+          "start": 18.745,
+          "end": 19.957
+        },
+        {
+          "text": "auf einem Tagesgeldkonto",
+          "start": 19.957,
+          "end": 21.437
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 21.437,
+      "end": 24.036,
+      "captions": [
+        {
+          "text": "dort bekommst du wenigstens",
+          "start": 21.437,
+          "end": 22.967
+        },
+        {
+          "text": "ein bisschen Zinsen",
+          "start": 22.967,
+          "end": 24.036
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 24.036,
+      "end": 27.635,
+      "captions": [
+        {
+          "text": "erst wenn der Notgroschen steht,",
+          "start": 24.036,
+          "end": 25.8
+        },
+        {
+          "text": "fängst du mit dem Investieren an",
+          "start": 25.8,
+          "end": 27.635
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 27.635,
+      "end": 31.729,
+      "captions": [
+        {
+          "text": "folge HundeFinanzTV,",
+          "start": 27.635,
+          "end": 28.877
+        },
+        {
+          "text": "wir bringen dich Schritt",
+          "start": 28.877,
+          "end": 30.293
+        },
+        {
+          "text": "für Schritt nach vorne!",
+          "start": 30.293,
+          "end": 31.729
+        }
+      ]
+    }
+  ]
+}

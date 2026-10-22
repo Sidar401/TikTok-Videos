@@ -1,0 +1,50 @@
+{
+ "titel": "Wie viel Notgroschen brauchst du?",
+ "saetze": [
+  {
+   "id": "s1",
+   "text": "wie viel Geld solltest du für Notfälle zur Seite legen?",
+   "sprechtext": "Wie viel Geld solltest du für Notfälle zur Seite legen?"
+  },
+  {
+   "id": "s2",
+   "text": "die Faustregel lautet 3 bis 6 Monatsausgaben",
+   "sprechtext": "Die Faustregel lautet drei bis sechs Monatsausgaben."
+  },
+  {
+   "id": "s3",
+   "text": "wenn du 1.500 € im Monat brauchst, sind das 4.500 bis 9.000 €",
+   "sprechtext": "Wenn du tausendfünfhundert Euro im Monat brauchst, sind das viertausendfünfhundert bis neuntausend Euro."
+  },
+  {
+   "id": "s4",
+   "text": "damit bist du sicher, wenn die Waschmaschine kaputt geht",
+   "sprechtext": "Damit bist du sicher, wenn die Waschmaschine kaputt geht."
+  },
+  {
+   "id": "s5",
+   "text": "oder wenn dein Hund plötzlich zum Tierarzt muss",
+   "sprechtext": "Oder wenn dein Hund plötzlich zum Tierarzt muss."
+  },
+  {
+   "id": "s6",
+   "text": "parke den Notgroschen auf einem Tagesgeldkonto",
+   "sprechtext": "Parke den Notgroschen auf einem Tagesgeldkonto."
+  },
+  {
+   "id": "s7",
+   "text": "dort bekommst du wenigstens ein bisschen Zinsen",
+   "sprechtext": "Dort bekommst du wenigstens ein bisschen Zinsen."
+  },
+  {
+   "id": "s8",
+   "text": "erst wenn der Notgroschen steht, fängst du mit dem Investieren an",
+   "sprechtext": "Erst wenn der Notgroschen steht, fängst du mit dem Investieren an."
+  },
+  {
+   "id": "s9",
+   "text": "folge HundeFinanzTV, wir bringen dich Schritt für Schritt nach vorne!",
+   "sprechtext": "Folge HundeFinanzTV, wir bringen dich Schritt für Schritt nach vorne!"
+  }
+ ]
+}
