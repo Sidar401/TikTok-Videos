@@ -36,4 +36,11 @@ Code-Vorlage: `vorlage/` (Demo: `renders/stil-demo.mp4`).
 6. Kein extra Outro-Bild in den Referenzen; optional kurzer CTA
 
 ## Logo-Regel (vom Nutzer)
-- Das Beagle-Logo **nur am Anfang** (Einstieg/Hook) zeigen, sonst nirgends: kein Logo im Marken-Badge (nur Kanalname), in Szenen gezeichnete Hunde statt Logo, auf Covern eine Pfote.
+- **Kein Logo im Video**, auch nicht am Anfang. Marken-Badge oben = nur Kanalname als Text. Auf Covern eine Pfote.
+- Einstieg: das **Thema groß als Text** + passende Szene (z. B. „Warum **bellt** dein Hund ständig?“ mit bellendem Hund).
+
+## Hauptfigur Hundekanäle: der Aussie
+- Immer derselbe Australian Shepherd (blue merle), Cartoon-Posen in `brand/aussie/`: `sitzend`, `bellend`, `liegend`, `aengstlich`, `neugierig`, `springend` (freigestellte PNGs, Original: `posen-original.webp`).
+- Passende Pose pro Szene wählen, per GSAP animieren (Pop-in, Hüpfen, Zittern); Spiegeln mit `pose(name, flip=True)`.
+- Nicht selbst als SVG nachzeichnen. Fehlt eine Pose, den Nutzer bitten, sie im gleichen Stil zu erstellen.
+- Vorlage für Hunde-Shorts: `videos/hunde-bellen-animiert/build.py`.

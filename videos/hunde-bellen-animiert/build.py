@@ -38,6 +38,12 @@ def dog_svg(color="#8a4a12", flip=False):
 
 PAW = """<svg viewBox="0 0 100 100" style="width:100%;height:100%"><g fill="#fff"><ellipse cx="50" cy="66" rx="24" ry="20" /><circle cx="24" cy="40" r="10" /><circle cx="40" cy="24" r="10" /><circle cx="60" cy="24" r="10" /><circle cx="76" cy="40" r="10" /></g></svg>"""
 
+def pose(name, flip=False):
+    """Aussie-Pose (brand/aussie): sitzend, bellend, liegend, aengstlich, neugierig, springend."""
+    f = ";transform:scaleX(-1)" if flip else ""
+    return f'<img src="assets/aussie/{name}.png" alt="" style="width:100%;height:100%;object-fit:contain{f}" />'
+
+
 PERSON = """<g fill="currentColor"><circle cx="50" cy="28" r="22" /><path d="M14 130 Q14 62 50 58 Q86 62 86 130 Z" /></g>"""
 
 
@@ -47,14 +53,17 @@ def header(sid, text):
 
 SCENES = [
     ("intro", "s1", "s1", """
+        <div id="intro-title" style="position:absolute;top:290px;left:40px;width:1000px;text-align:center;font-weight:800;font-size:100px;line-height:1.05;color:#111">Warum <span class="orange">bellt</span><br />dein Hund ständig?</div>
         <div class="stage">
-          <div id="intro-dog" style="position:absolute;left:230px;top:180px;width:620px;height:620px">""" + BEAGLE + """</div>
-          <div id="intro-bubble" class="bubble" style="left:640px;top:70px">WUFF!</div>
-          <div id="intro-five" class="big" style="position:absolute;left:0;top:750px;width:1080px;text-align:center"><span class="orange">5</span> Gründe</div>
+          <div id="intro-dog" style="position:absolute;left:250px;top:170px;width:640px;height:640px">""" + pose("bellend") + """</div>
+          <div id="intro-bubble" class="bubble" style="left:70px;top:170px">WUFF!</div>
+          <div id="intro-five" class="chip" style="position:absolute;left:640px;top:780px;font-size:64px">5 Gründe</div>
         </div>""", lambda t0, d: f"""
-      pop("#intro-dog", {t0});
-      pop("#intro-bubble", {t0} + 0.4);
-      tl.fromTo("#intro-bubble", {{ rotation: -6 }}, {{ rotation: 6, duration: 0.12, yoyo: true, repeat: 7, ease: "sine.inOut" }}, {t0} + 0.75);
+      tl.fromTo("#intro-title", {{ y: -30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }}, {t0});
+      pop("#intro-dog", {t0} + 0.15);
+      pop("#intro-bubble", {t0} + 0.5);
+      tl.fromTo("#intro-bubble", {{ rotation: -6 }}, {{ rotation: 6, duration: 0.12, yoyo: true, repeat: 7, ease: "sine.inOut" }}, {t0} + 0.85);
+      tl.fromTo("#intro-dog", {{ y: 0 }}, {{ y: -16, duration: 0.14, yoyo: true, repeat: 5, ease: "sine.out" }}, {t0} + 0.6);
       pop("#intro-five", {c('s1', 2)});"""),
 
     ("revier", "s2", "s2", header("revier", "Grund 1: Revier") + """
@@ -65,10 +74,10 @@ SCENES = [
             <path d="M220 395 L400 250 L580 395 Z" fill="#DB8622" stroke="#353a3d" stroke-width="8" stroke-linejoin="round" />
             <rect x="370" y="490" width="70" height="120" fill="#8a5a2b" />
           </g>
-          <g transform="translate(560 560) scale(1.1)"><g id="revier-dog" style="color:#8a4a12">""" + DOG + """</g></g>
           <g transform="translate(840 440) scale(1.6)"><g id="revier-person" style="color:#353a3d">""" + PERSON + """</g></g>
           <g id="revier-alarm"><circle cx="760" cy="380" r="46" fill="#e24b4b" /><rect x="752" y="345" width="16" height="44" rx="8" fill="#fff" /><circle cx="760" cy="405" r="9" fill="#fff" /></g>
-        </svg></div>""", lambda t0, d: f"""
+        </svg>
+          <div id="revier-dog" style="position:absolute;left:470px;top:430px;width:400px;height:400px">""" + pose("bellend", flip=True) + """</div></div>""", lambda t0, d: f"""
       pop("#revier-head", {t0});
       pop("#revier-house", {t0} + 0.2);
       tl.fromTo("#revier-zone", {{ opacity: 0, scale: 0.8, svgOrigin: "400 560" }}, {{ opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.6)" }}, {t0} + 0.5);
@@ -83,7 +92,7 @@ SCENES = [
             <path d="M80 190 Q20 190 30 140 Q30 95 85 95 Q100 40 165 45 Q220 20 260 70 Q330 60 340 120 Q385 135 365 180 Q355 195 320 195 Z" fill="#5d666b" />
             <path id="angst-bolt" d="M200 170 L160 250 L205 240 L180 320 L260 215 L215 225 L240 170 Z" fill="#f2c418" />
           </svg>
-          <div id="angst-dog" style="position:absolute;left:240px;top:420px;width:600px;height:430px">""" + dog_svg() + """</div>
+          <div id="angst-dog" style="position:absolute;left:300px;top:330px;width:480px;height:540px">""" + pose("aengstlich") + """</div>
           <svg viewBox="0 0 100 100" style="position:absolute;left:770px;top:420px;width:90px;height:90px"><path id="angst-drop" d="M50 10 Q80 55 70 75 Q50 98 30 75 Q20 55 50 10 Z" fill="#6fb7e6" /></svg>
         </div>""", lambda t0, d: f"""
       pop("#angst-head", {t0});
@@ -95,7 +104,7 @@ SCENES = [
 
     ("aufmerksam", "s4", "s4", header("aufmerksam", "Grund 3: Aufmerksamkeit") + """
         <div class="stage">
-          <div id="auf-dog" style="position:absolute;left:60px;top:240px;width:500px;height:360px">""" + dog_svg() + """</div>
+          <div id="auf-dog" style="position:absolute;left:40px;top:120px;width:460px;height:560px">""" + pose("springend", flip=True) + """</div>
           <div id="auf-bubble" class="bubble" style="left:520px;top:140px">Hey!<br />Schau mich an!</div>
           <div id="auf-chain" style="position:absolute;left:0;top:720px;width:1080px;display:flex;justify-content:center;align-items:center;gap:30px">
             <div class="chip">WUFF</div>
@@ -120,7 +129,7 @@ SCENES = [
             <circle cx="200" cy="200" r="14" fill="#353a3d" />
           </svg>
           <div id="lw-row" style="position:absolute;left:0;top:500px;width:1080px;display:flex;justify-content:center;align-items:center;gap:40px">
-            <div style="width:360px;height:260px">""" + dog_svg() + """</div>
+            <div style="width:420px;height:300px">""" + pose("liegend") + """</div>
             <div class="big">=</div>
             <svg viewBox="0 0 100 135" style="width:230px;height:310px;color:#353a3d">""" + PERSON + """</svg>
           </div>
@@ -142,8 +151,9 @@ SCENES = [
       tl.fromTo("#al-b2", {{ scaleX: 0 }}, {{ scaleX: 0.15, duration: 0.8, ease: "power2.out", transformOrigin: "0 50%" }}, {c('s6', 1)});"""),
 
     ("frust", "s7", "s7", header("frust", "Grund 5: Frustration") + """
-        <div class="stage"><svg viewBox="0 0 1080 900" style="width:1080px;height:900px">
-          <g transform="translate(270 330) scale(2.2)"><g id="frust-dog" style="color:#8a4a12">""" + DOG + """</g></g>
+        <div class="stage">
+          <div id="frust-dog" style="position:absolute;left:260px;top:170px;width:480px;height:480px">""" + pose("bellend", flip=True) + """</div>
+          <svg viewBox="0 0 1080 900" style="position:absolute;inset:0;width:1080px;height:900px">
           <g fill="#c9a06a" stroke="#8a6a3a" stroke-width="5">
             <rect x="130" y="560" width="820" height="34" /><rect x="130" y="680" width="820" height="34" />
             <path d="M150 760 L150 500 L180 470 L210 500 L210 760 Z M290 760 L290 500 L320 470 L350 500 L350 760 Z M430 760 L430 500 L460 470 L490 500 L490 760 Z M570 760 L570 500 L600 470 L630 500 L630 760 Z M710 760 L710 500 L740 470 L770 500 L770 760 Z M850 760 L850 500 L880 470 L910 500 L910 760 Z" />
@@ -167,7 +177,7 @@ SCENES = [
             <g transform="translate(760 360) scale(1.05)"><g id="leine-other" style="color:#353a3d">""" + DOG + """</g></g>
             <g id="leine-x" stroke="#e24b4b" stroke-width="22" stroke-linecap="round"><path d="M610 400 L710 540 M710 400 L610 540" /></g>
           </svg>
-          <div id="leine-dog" style="position:absolute;left:200px;top:380px;width:380px;height:280px">""" + dog_svg() + """</div>
+          <div id="leine-dog" style="position:absolute;left:200px;top:300px;width:400px;height:400px">""" + pose("bellend", flip=True) + """</div>
         </div>""", lambda t0, d: f"""
       pop("#leine-head", {t0});
       pop("#leine-dog", {t0} + 0.1);
@@ -184,6 +194,7 @@ SCENES = [
             <div style="font-family:Inter;font-weight:800;font-size:76px;color:#fff;text-align:center;line-height:1.05">10 Tage<br />ANTI-<br />BELL-<br />PLAN</div>
             <div style="width:170px;height:170px;margin-top:20px">""" + PAW + """</div>
           </div>
+          <div id="eb-dog" style="position:absolute;left:10px;top:330px;width:330px;height:520px">""" + pose("sitzend") + """</div>
           <svg id="eb-star" viewBox="0 0 200 200" style="position:absolute;left:640px;top:0;width:300px;height:300px">
             <path d="M100 5 L122 60 L180 40 L150 95 L195 130 L135 135 L140 195 L100 155 L60 195 L65 135 L5 130 L50 95 L20 40 L78 60 Z" fill="#f2c418" stroke="#111" stroke-width="5" />
             <text x="100" y="112" text-anchor="middle" font-family="Inter" font-weight="800" font-size="17" fill="#111" transform="rotate(-12 100 100)">KOSTENLOS</text>
@@ -195,6 +206,7 @@ SCENES = [
       pop("#eb-book", {t0});
       tl.fromTo("#eb-book", {{ rotation: -4 }}, {{ rotation: 0, duration: 0.5, ease: "back.out(2)" }}, {t0});
       tl.fromTo("#eb-star", {{ scale: 0, rotation: -40 }}, {{ scale: 1, rotation: 0, duration: 0.4, ease: "back.out(2)" }}, {c('s9', 1)} + 0.4);
+      pop("#eb-dog", {t0} + 0.3);
       pop("#eb-link", {c('s9', 2)});
       tl.fromTo("#eb-link", {{ y: 0 }}, {{ y: 14, duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" }}, {c('s9', 2)} + 0.4);"""),
 ]
