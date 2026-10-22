@@ -1,0 +1,178 @@
+{
+  "dauer": 31.79,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 2.876,
+      "captions": [
+        {
+          "text": "am Ende vom Geld ist",
+          "start": 0.0,
+          "end": 1.3
+        },
+        {
+          "text": "noch so viel Monat übrig?",
+          "start": 1.3,
+          "end": 2.876
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 2.876,
+      "end": 5.809,
+      "captions": [
+        {
+          "text": "dann probier mal",
+          "start": 2.876,
+          "end": 4.245
+        },
+        {
+          "text": "die 50‑30‑20‑Regel",
+          "start": 4.245,
+          "end": 5.809
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 5.809,
+      "end": 11.908,
+      "captions": [
+        {
+          "text": "bei 2.000 € netto",
+          "start": 5.809,
+          "end": 7.273
+        },
+        {
+          "text": "gehen 1.000 € an feste",
+          "start": 7.273,
+          "end": 9.21
+        },
+        {
+          "text": "Kosten wie Miete,",
+          "start": 9.21,
+          "end": 10.707
+        },
+        {
+          "text": "Strom und Essen",
+          "start": 10.707,
+          "end": 11.908
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 11.908,
+      "end": 14.972,
+      "captions": [
+        {
+          "text": "600 € sind für alles,",
+          "start": 11.908,
+          "end": 13.506
+        },
+        {
+          "text": "was dir Spaß macht",
+          "start": 13.506,
+          "end": 14.972
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 14.972,
+      "end": 18.293,
+      "captions": [
+        {
+          "text": "und 400 € sparst du",
+          "start": 14.972,
+          "end": 16.508
+        },
+        {
+          "text": "direkt am Monatsanfang",
+          "start": 16.508,
+          "end": 18.293
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 18.293,
+      "end": 20.956,
+      "captions": [
+        {
+          "text": "nicht am Ende,",
+          "start": 18.293,
+          "end": 19.225
+        },
+        {
+          "text": "wenn nichts mehr übrig ist",
+          "start": 19.225,
+          "end": 20.956
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 20.956,
+      "end": 23.634,
+      "captions": [
+        {
+          "text": "so wächst dein Vermögen",
+          "start": 20.956,
+          "end": 22.535
+        },
+        {
+          "text": "ganz automatisch",
+          "start": 22.535,
+          "end": 23.634
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 23.634,
+      "end": 26.54,
+      "captions": [
+        {
+          "text": "und das ganz ohne schlechtes",
+          "start": 23.634,
+          "end": 25.3
+        },
+        {
+          "text": "Gewissen beim Shoppen",
+          "start": 25.3,
+          "end": 26.54
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 26.54,
+      "end": 31.211,
+      "captions": [
+        {
+          "text": "folge HundeFinanzTV,",
+          "start": 26.54,
+          "end": 27.9
+        },
+        {
+          "text": "wir zeigen dir,",
+          "start": 27.9,
+          "end": 28.926
+        },
+        {
+          "text": "wie du mehr",
+          "start": 28.926,
+          "end": 29.679
+        },
+        {
+          "text": "aus deinem Geld machst!",
+          "start": 29.679,
+          "end": 31.211
+        }
+      ]
+    }
+  ]
+}

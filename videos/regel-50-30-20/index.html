@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      /* Kanal-Stil (siehe STIL.md) */
+      @font-face {
+        font-family: "Abril Fatface";
+        src: url("assets/fonts/abril-fatface.woff2") format("woff2");
+      }
+      :root {
+        --bg: #ffffff;
+        --ink: #111111;
+        --brand: #DB8622; /* Kanalfarbe aus kanal.json */
+        --green: #1f7a4d;
+        --gold: #f2c418;
+        --red: #e24b4b;
+        --blue: #3d7be0;
+        --font-caption: "Montserrat", sans-serif;
+        --font-display: "Abril Fatface", serif;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: var(--bg);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: var(--bg);
+      }
+
+      /* Szene: eine Illustration, zentriert im oberen Bereich */
+      .scene {
+        position: absolute;
+        left: 0;
+        top: 230px;
+        width: 1080px;
+        height: 1080px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .art { width: 820px; height: 820px; }
+      .art svg { width: 100%; height: 100%; display: block; }
+
+      /* Oranger Rahmen wie bei HundeWissenTv */
+      #frame {
+        position: absolute;
+        inset: 0;
+        border: 26px solid var(--brand);
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      /* Untertitel-Box (TikTok-Look) */
+      .cap {
+        position: absolute;
+        left: 0;
+        top: 1360px;
+        width: 1080px;
+        display: flex;
+        justify-content: center;
+      }
+      .cap span {
+        display: block;
+        max-width: 880px;
+        padding: 20px 44px 22px;
+        border-radius: 28px;
+        background: var(--brand);
+        color: #ffffff;
+        font-family: var(--font-caption);
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 1.15;
+        text-align: center;
+      }
+
+      /* Zahlen-Vergleich in Serifen-Schrift */
+      .cmp {
+        width: 940px;
+        display: grid;
+        grid-template-columns: 1fr 6px 1fr;
+        column-gap: 40px;
+        font-family: var(--font-display);
+        color: var(--ink);
+        text-align: center;
+      }
+      .cmp .head { font-size: 104px; line-height: 1.1; }
+      .cmp .sub { font-size: 76px; line-height: 1.1; }
+      .cmp .divider { background: var(--ink); grid-row: 1 / span 3; grid-column: 2; }
+      .cmp .arrow { height: 260px; display: flex; justify-content: center; align-items: center; }
+      .cmp .arrow svg { width: 140px; height: 220px; }
+      .cmp .num { font-size: 96px; line-height: 1.2; }
+      .green { color: var(--green); }
+      .gold { color: var(--gold); }
+      .chart-label { font-family: var(--font-display); }
+      .serif { font-family: var(--font-display); }
+      #brand {
+        position: absolute;
+        top: 190px;
+        left: 0;
+        width: 1080px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+        font-family: var(--font-caption);
+        font-weight: 800;
+        font-size: 42px;
+        color: #353a3d;
+        z-index: 5;
+      }
+      #brand-dog { width: 84px; height: 84px; }
+
+      .scene { position: absolute; inset: 0; top: 0; height: 1920px; display: block; }
+      .tile { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 30px 10px; border-radius: 30px; background: #faf5ef; }
+      .tile svg { width: 230px; height: 230px; }
+      .tile span { font-family: Montserrat; font-weight: 800; font-size: 54px; color: #111; }
+      .big { font-family: var(--font-display); text-align: center; color: #111; }
+      .cap span { max-width: 990px; font-size: 50px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="31.79" data-width="1080" data-height="1920">
+      <div id="intro" class="scene clip" data-start="0.0" data-duration="2.876" data-track-index="1"><div id="intro-title" style="position:absolute;top:290px;left:40px;width:1000px;text-align:center;font-family:Montserrat;font-weight:800;font-size:74px;line-height:1.05;color:#111">Am Ende vom Geld ist<br />noch so viel <span style="color:var(--brand)">Monat</span> übrig?</div><div id="intro-wallet" style="position:absolute;left:240px;top:620px;width:600px;height:450px;"><svg viewBox="0 0 400 300" style="width:100%;height:100%">
+  <rect x="30" y="70" width="340" height="210" rx="28" fill="#8a5a2b" />
+  <rect x="30" y="70" width="340" height="60" rx="28" fill="#a8743f" />
+  <rect x="270" y="145" width="110" height="70" rx="16" fill="#6b3f1f" /><circle cx="305" cy="180" r="12" fill="#f2c418" />
+  <g id="wl-moth" fill="#9aa3a8"><ellipse cx="200" cy="40" rx="10" ry="16" /><ellipse cx="180" cy="34" rx="20" ry="12" /><ellipse cx="220" cy="34" rx="20" ry="12" /></g>
+</svg></div>
+      </div>
+      <div id="regel" class="scene clip" data-start="2.876" data-duration="2.933" data-track-index="1"><div id="rg-num" class="big" style="position:absolute;left:0;top:480px;width:1080px;font-size:200px"><span style="color:#353a3d">50</span><span style="color:#ccc">·</span><span style="color:#DB8622">30</span><span style="color:#ccc">·</span><span style="color:#1f7a4d">20</span></div><div id="rg-sub" style="position:absolute;left:0;top:760px;width:1080px;text-align:center;font-family:Montserrat;font-weight:800;font-size:80px;color:#111">Regel</div>
+      </div>
+      <div id="donut" class="scene clip" data-start="5.809" data-duration="12.484" data-track-index="1"><div id="dn-art" style="position:absolute;left:260px;top:320px;width:560px;height:560px;"><svg viewBox="0 0 400 400" style="width:100%;height:100%">
+  <circle cx="200" cy="200" r="150" fill="none" stroke="#eee" stroke-width="70" />
+  <g transform="rotate(-90 200 200)"><circle id="dn-fix" cx="200" cy="200" r="150" fill="none" stroke="#353a3d" stroke-width="70" stroke-dasharray="0 942.5" stroke-dashoffset="-0.0" /><circle id="dn-spass" cx="200" cy="200" r="150" fill="none" stroke="#DB8622" stroke-width="70" stroke-dasharray="0 942.5" stroke-dashoffset="-471.2" /><circle id="dn-spar" cx="200" cy="200" r="150" fill="none" stroke="#1f7a4d" stroke-width="70" stroke-dasharray="0 942.5" stroke-dashoffset="-754.0" /></g>
+  <text x="200" y="195" text-anchor="middle" class="serif" font-size="48" fill="#111">2.000€</text>
+  <text x="200" y="240" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="26" fill="#353a3d">netto</text>
+</svg></div><div style="position:absolute;left:150px;top:900px"><div id="lg-fix" style="display:flex;align-items:center;gap:24px;margin:14px 0"><div style="width:56px;height:56px;border-radius:14px;background:#353a3d"></div><div class="serif" style="font-size:76px;color:#353a3d;width:300px">1.000€</div><div style="font-family:Montserrat;font-weight:800;font-size:58px;color:#111">Fixkosten</div></div><div id="lg-spass" style="display:flex;align-items:center;gap:24px;margin:14px 0"><div style="width:56px;height:56px;border-radius:14px;background:#DB8622"></div><div class="serif" style="font-size:76px;color:#DB8622;width:300px">600€</div><div style="font-family:Montserrat;font-weight:800;font-size:58px;color:#111">Spaß</div></div><div id="lg-spar" style="display:flex;align-items:center;gap:24px;margin:14px 0"><div style="width:56px;height:56px;border-radius:14px;background:#1f7a4d"></div><div class="serif" style="font-size:76px;color:#1f7a4d;width:300px">400€</div><div style="font-family:Montserrat;font-weight:800;font-size:58px;color:#111">Sparen</div></div></div>
+      </div>
+      <div id="anfang" class="scene clip" data-start="18.293" data-duration="2.663" data-track-index="1"><div id="an-1" style="position:absolute;left:140px;top:470px;width:800px;display:flex;align-items:center;gap:30px;padding:30px 40px;border-radius:30px;background:#faf5ef;border:6px solid #1f7a4d"><div style="flex:1;font-family:Montserrat;font-weight:800;font-size:58px;color:#111;white-space:nowrap">am Monatsanfang</div><div style="width:120px;height:120px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><circle cx="50" cy="50" r="46" fill="#1f7a4d" /><path d="M28 52 L44 68 L74 36" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" /></svg></div></div><div id="an-2" style="position:absolute;left:140px;top:760px;width:800px;display:flex;align-items:center;gap:30px;padding:30px 40px;border-radius:30px;background:#faf5ef;border:6px solid #e24b4b"><div style="flex:1;font-family:Montserrat;font-weight:800;font-size:58px;color:#111;white-space:nowrap">am Monatsende</div><div style="width:120px;height:120px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><circle cx="50" cy="50" r="46" fill="#e24b4b" /><path d="M32 32 L68 68 M68 32 L32 68" stroke="#fff" stroke-width="11" stroke-linecap="round" /></svg></div></div>
+      </div>
+      <div id="wachstum" class="scene clip" data-start="20.956" data-duration="2.678" data-track-index="1"><div id="wa-pig" style="position:absolute;left:40px;top:520px;width:380px;height:329px;"><svg viewBox="0 0 300 260" style="width:100%;height:100%">
+  <ellipse cx="150" cy="150" rx="120" ry="90" fill="#f4a6b5" />
+  <circle cx="250" cy="140" r="38" fill="#f4a6b5" /><ellipse cx="265" cy="140" rx="20" ry="16" fill="#e98a9c" />
+  <circle cx="258" cy="136" r="4" fill="#8a3a4a" /><circle cx="272" cy="136" r="4" fill="#8a3a4a" />
+  <circle cx="215" cy="110" r="7" fill="#111" /><path d="M200 70 L225 40 L235 80 Z" fill="#e98a9c" />
+  <rect x="85" y="225" width="30" height="34" rx="10" fill="#e98a9c" /><rect x="180" y="225" width="30" height="34" rx="10" fill="#e98a9c" />
+  <rect x="120" y="62" width="70" height="12" rx="6" fill="#8a3a4a" />
+</svg></div><div class="st-0" style="position:absolute;left:470px;top:1100px;width:170px;height:40px;border-radius:12px;background:#f2c418;border:5px solid #c99a06"></div><div class="st-0" style="position:absolute;left:470px;top:1054px;width:170px;height:40px;border-radius:12px;background:#f2c418;border:5px solid #c99a06"></div><div class="st-0" style="position:absolute;left:470px;top:1008px;width:170px;height:40px;border-radius:12px;background:#f2c418;border:5px solid #c99a06"></div><div class="st-1" style="position:absolute;left:670px;top:1100px;width:170px;height:40px;border-radius:12px;background:#f2c418;border:5px solid #c99a06"></div><div class="st-1" style="position:absolute;left:670px;top:1054px;width:170px;height:40px;border-radius:12px;background:#f2c418;border:5px solid #c99a06"></div><div class="st-1" style="position:absolute;left:670px;top:1008px;width:170px;height:40px;border-radius:12px;background:#f2c418;border:5px solid #c99a06"></div><div class="st-1" style="position:absolute;left:670px;top:962px;width:170px;height:40px;border-radius:12px;background:#f2c418;border:5px solid #c99a06"></div><div class="st-1" style="position:absolute;left:670px;top:916px;width:170px;height:40px;border-radius:12px;background:#f2c418;border:5px solid #c99a06"></div><div class="st-1" style="position:absolute;left:670px;top:870px;width:170px;height:40px;border-radius:12px;background:#f2c418;border:5px solid #c99a06"></div><div class="st-2" style="position:absolute;left:870px;top:1100px;width:170px;height:40px;border-radius:12px;background:#f2c418;border:5px solid #c99a06"></div><div class="st-2" style="position:absolute;left:870px;top:1054px;width:170px;height:40px;border-radius:12px;background:#f2c418;border:5px solid #c99a06"></div><div class="st-2" style="position:absolute;left:870px;top:1008px;width:170px;height:40px;border-radius:12px;background:#f2c418;border:5px solid #c99a06"></div><div class="st-2" style="position:absolute;left:870px;top:962px;width:170px;height:40px;border-radius:12px;background:#f2c418;border:5px solid #c99a06"></div><div class="st-2" style="position:absolute;left:870px;top:916px;width:170px;height:40px;border-radius:12px;background:#f2c418;border:5px solid #c99a06"></div><div class="st-2" style="position:absolute;left:870px;top:870px;width:170px;height:40px;border-radius:12px;background:#f2c418;border:5px solid #c99a06"></div><div class="st-2" style="position:absolute;left:870px;top:824px;width:170px;height:40px;border-radius:12px;background:#f2c418;border:5px solid #c99a06"></div><div class="st-2" style="position:absolute;left:870px;top:778px;width:170px;height:40px;border-radius:12px;background:#f2c418;border:5px solid #c99a06"></div><div class="st-2" style="position:absolute;left:870px;top:732px;width:170px;height:40px;border-radius:12px;background:#f2c418;border:5px solid #c99a06"></div><div class="st-2" style="position:absolute;left:870px;top:686px;width:170px;height:40px;border-radius:12px;background:#f2c418;border:5px solid #c99a06"></div>
+      </div>
+      <div id="shoppen" class="scene clip" data-start="23.634" data-duration="2.906" data-track-index="1"><div id="sh-dog" style="position:absolute;left:40px;top:500px;width:480px;height:480px;"><img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:contain" /></div><div id="sh-bag" style="position:absolute;left:580px;top:480px;width:380px;height:405px;"><svg viewBox="0 0 300 320" style="width:100%;height:100%">
+  <path d="M40 100 L260 100 L240 300 L60 300 Z" fill="#DB8622" />
+  <path d="M100 100 Q100 30 150 30 Q200 30 200 100" fill="none" stroke="#a8621a" stroke-width="14" />
+  <path d="M150 230 Q110 200 120 175 Q130 155 150 175 Q170 155 180 175 Q190 200 150 230 Z" fill="#fff" />
+</svg></div>
+      </div>
+      <div id="outro" class="scene clip" data-start="26.54" data-duration="5.25" data-track-index="1">
+        <div style="position:absolute;left:0;top:330px;width:1080px;display:flex;flex-direction:column;align-items:center;gap:30px">
+          <div id="outro-dog" style="width:520px;height:520px"><img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:contain" /></div>
+          <div id="outro-name" style="font-family:Montserrat;font-weight:800;font-size:92px;color:#111">HundeFinanzTV</div>
+          <div id="outro-btn" style="padding:18px 64px;border-radius:60px;background:var(--brand);color:#fff;font-family:Montserrat;font-weight:700;font-size:56px">+ Folgen</div>
+        </div>
+      </div>
+
+      <div id="brand"><span>HundeFinanzTV</span></div>
+      <div id="frame"></div>
+
+      <div id="captions" data-track-kind="captions">
+        <div id="c1" class="cap clip" data-start="0.0" data-duration="1.3" data-track-index="2"><span>am Ende vom Geld ist</span></div>
+        <div id="c2" class="cap clip" data-start="1.3" data-duration="1.576" data-track-index="2"><span>noch so viel Monat übrig?</span></div>
+        <div id="c3" class="cap clip" data-start="2.876" data-duration="1.369" data-track-index="2"><span>dann probier mal</span></div>
+        <div id="c4" class="cap clip" data-start="4.245" data-duration="1.564" data-track-index="2"><span>die 50‑30‑20‑Regel</span></div>
+        <div id="c5" class="cap clip" data-start="5.809" data-duration="1.464" data-track-index="2"><span>bei 2.000 € netto</span></div>
+        <div id="c6" class="cap clip" data-start="7.273" data-duration="1.937" data-track-index="2"><span>gehen 1.000 € an feste</span></div>
+        <div id="c7" class="cap clip" data-start="9.21" data-duration="1.497" data-track-index="2"><span>Kosten wie Miete,</span></div>
+        <div id="c8" class="cap clip" data-start="10.707" data-duration="1.201" data-track-index="2"><span>Strom und Essen</span></div>
+        <div id="c9" class="cap clip" data-start="11.908" data-duration="1.598" data-track-index="2"><span>600 € sind für alles,</span></div>
+        <div id="c10" class="cap clip" data-start="13.506" data-duration="1.466" data-track-index="2"><span>was dir Spaß macht</span></div>
+        <div id="c11" class="cap clip" data-start="14.972" data-duration="1.536" data-track-index="2"><span>und 400 € sparst du</span></div>
+        <div id="c12" class="cap clip" data-start="16.508" data-duration="1.785" data-track-index="2"><span>direkt am Monatsanfang</span></div>
+        <div id="c13" class="cap clip" data-start="18.293" data-duration="0.932" data-track-index="2"><span>nicht am Ende,</span></div>
+        <div id="c14" class="cap clip" data-start="19.225" data-duration="1.731" data-track-index="2"><span>wenn nichts mehr übrig ist</span></div>
+        <div id="c15" class="cap clip" data-start="20.956" data-duration="1.579" data-track-index="2"><span>so wächst dein Vermögen</span></div>
+        <div id="c16" class="cap clip" data-start="22.535" data-duration="1.099" data-track-index="2"><span>ganz automatisch</span></div>
+        <div id="c17" class="cap clip" data-start="23.634" data-duration="1.666" data-track-index="2"><span>und das ganz ohne schlechtes</span></div>
+        <div id="c18" class="cap clip" data-start="25.3" data-duration="1.24" data-track-index="2"><span>Gewissen beim Shoppen</span></div>
+        <div id="c19" class="cap clip" data-start="26.54" data-duration="1.36" data-track-index="2"><span>folge HundeFinanzTV,</span></div>
+        <div id="c20" class="cap clip" data-start="27.9" data-duration="1.026" data-track-index="2"><span>wir zeigen dir,</span></div>
+        <div id="c21" class="cap clip" data-start="28.926" data-duration="0.753" data-track-index="2"><span>wie du mehr</span></div>
+        <div id="c22" class="cap clip" data-start="29.679" data-duration="1.532" data-track-index="2"><span>aus deinem Geld machst!</span></div>
+      </div>
+
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="31.79" data-track-index="3"></audio>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const pop = (sel, at) =>
+        tl.fromTo(sel, { scale: 0.82, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.8)" }, at);
+      const draw = (sel, at, dur) => {
+        const len = document.querySelector(sel).getTotalLength();
+        tl.fromTo(sel, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: dur, ease: "power2.out" }, at);
+      };
+
+      // intro
+      (() => {
+      tl.fromTo("#intro-title", { scale: 1.05 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 0.0);
+      tl.fromTo("#intro-wallet", { scale: 1.05 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 0.0);
+      tl.fromTo("#wl-moth", { y: 0 }, { y: -60, duration: 2.876, ease: "sine.inOut" }, 0.0);
+      })();
+      // regel
+      (() => {
+      pop("#rg-num", 2.876);
+      pop("#rg-sub", 2.876 + 0.3);
+      })();
+      // donut
+      (() => {
+      pop("#dn-art", 5.809);
+      tl.fromTo("#dn-fix", { strokeDasharray: "0 942.5" }, { strokeDasharray: "471.2 942.5", duration: 0.7, ease: "power2.out" }, 7.273);
+      pop("#lg-fix", 7.273 + 0.2);
+      tl.fromTo("#dn-spass", { strokeDasharray: "0 942.5" }, { strokeDasharray: "282.7 942.5", duration: 0.7, ease: "power2.out" }, 11.908);
+      pop("#lg-spass", 11.908 + 0.2);
+      tl.fromTo("#dn-spar", { strokeDasharray: "0 942.5" }, { strokeDasharray: "188.5 942.5", duration: 0.7, ease: "power2.out" }, 14.972);
+      pop("#lg-spar", 14.972 + 0.2);
+      })();
+      // anfang
+      (() => {
+      pop("#an-1", 18.293);
+      pop("#an-2", 19.225);
+      })();
+      // wachstum
+      (() => {
+      pop("#wa-pig", 20.956);
+      tl.fromTo(".st-0", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.25, stagger: 0.05, ease: "power2.out" }, 20.956 + 0.30);
+      tl.fromTo(".st-1", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.25, stagger: 0.05, ease: "power2.out" }, 20.956 + 0.70);
+      tl.fromTo(".st-2", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.25, stagger: 0.05, ease: "power2.out" }, 20.956 + 1.10);
+      })();
+      // shoppen
+      (() => {
+      pop("#sh-dog", 23.634);
+      pop("#sh-bag", 23.634 + 0.25);
+      tl.fromTo("#sh-bag", { rotation: -6 }, { rotation: 6, duration: 0.25, yoyo: true, repeat: 3, ease: "sine.inOut" }, 25.3);
+      })();
+      // outro
+      (() => {
+      pop("#outro-dog", 26.54);
+      pop("#outro-name", 26.54 + 0.25);
+      pop("#outro-btn", 26.54 + 0.5);
+      tl.fromTo("#outro-btn", { scale: 1 }, { scale: 1.08, duration: 0.3, yoyo: true, repeat: 1, ease: "sine.inOut" }, 26.54 + 1.1);
+      })();
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
