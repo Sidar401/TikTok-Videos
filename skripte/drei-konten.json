@@ -1,0 +1,76 @@
+{
+ "titel": "Das Drei-Konten-Modell",
+ "cta": "kommentar",
+ "saetze": [
+  {
+   "id": "s1",
+   "text": "die meisten Menschen haben nur ein Konto, und genau das ist das Problem",
+   "sprechtext": "Die meisten Menschen haben nur ein Konto, und genau das ist das Problem."
+  },
+  {
+   "id": "s2",
+   "text": "denn so siehst du nie, wie viel Geld du wirklich ausgeben darfst",
+   "sprechtext": "Denn so siehst du nie, wie viel Geld du wirklich ausgeben darfst."
+  },
+  {
+   "id": "s3",
+   "text": "die Lösung ist das Drei-Konten-Modell",
+   "sprechtext": "Die Lösung ist das Drei-Konten-Modell."
+  },
+  {
+   "id": "s4",
+   "text": "konto Nummer eins ist dein Girokonto",
+   "sprechtext": "Konto Nummer eins ist dein Girokonto."
+  },
+  {
+   "id": "s5",
+   "text": "hier landet dein Gehalt und davon zahlst du Miete, Essen und alle festen Kosten",
+   "sprechtext": "Hier landet dein Gehalt und davon zahlst du Miete, Essen und alle festen Kosten."
+  },
+  {
+   "id": "s6",
+   "text": "konto Nummer zwei ist dein Tagesgeldkonto",
+   "sprechtext": "Konto Nummer zwei ist dein Tagesgeldkonto."
+  },
+  {
+   "id": "s7",
+   "text": "dort liegt dein Notgroschen, also etwa 3 Monatsausgaben, und bekommt sogar Zinsen",
+   "sprechtext": "Dort liegt dein Notgroschen, also etwa drei Monatsausgaben, und bekommt sogar Zinsen."
+  },
+  {
+   "id": "s8",
+   "text": "konto Nummer drei ist dein Depot",
+   "sprechtext": "Konto Nummer drei ist dein Depot."
+  },
+  {
+   "id": "s9",
+   "text": "dort läuft jeden Monat automatisch ein ETF-Sparplan, direkt nach dem Gehaltseingang",
+   "sprechtext": "Dort läuft jeden Monat automatisch ein ETF-Sparplan, direkt nach dem Gehaltseingang."
+  },
+  {
+   "id": "s10",
+   "text": "so musst du nie wieder nachdenken, dein Geld sortiert sich von selbst",
+   "sprechtext": "So musst du nie wieder nachdenken, dein Geld sortiert sich von selbst."
+  },
+  {
+   "id": "s11",
+   "text": "und du siehst auf einen Blick, was du wirklich ausgeben kannst",
+   "sprechtext": "Und du siehst auf einen Blick, was du wirklich ausgeben kannst."
+  },
+  {
+   "id": "s12",
+   "text": "wie viele Konten hast du?",
+   "sprechtext": "Wie viele Konten hast du?"
+  },
+  {
+   "id": "s13",
+   "text": "schreib es uns in die Kommentare!",
+   "sprechtext": "Schreib es uns in die Kommentare!"
+  },
+  {
+   "id": "s14",
+   "text": "folge HundeFinanzTV, wir haben noch mehr Geld-Tipps für dich!",
+   "sprechtext": "Folge HundeFinanzTV, wir haben noch mehr Geld-Tipps für dich!"
+  }
+ ]
+}

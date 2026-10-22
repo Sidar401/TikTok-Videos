@@ -1,0 +1,71 @@
+{
+ "titel": "Was ist ein ETF?",
+ "cta": "kommentar",
+ "saetze": [
+  {
+   "id": "s1",
+   "text": "alle reden von ETFs, aber was ist das eigentlich?",
+   "sprechtext": "Alle reden von ETFs, aber was ist das eigentlich?"
+  },
+  {
+   "id": "s2",
+   "text": "stell dir einen Einkaufskorb vor",
+   "sprechtext": "Stell dir einen Einkaufskorb vor."
+  },
+  {
+   "id": "s3",
+   "text": "statt einzelne Aktien zu kaufen, kaufst du den ganzen Korb auf einmal",
+   "sprechtext": "Statt einzelne Aktien zu kaufen, kaufst du den ganzen Korb auf einmal."
+  },
+  {
+   "id": "s4",
+   "text": "mit einem weltweiten ETF steckst du dein Geld in über tausend Unternehmen gleichzeitig",
+   "sprechtext": "Mit einem weltweiten ETF steckst du dein Geld in über tausend Unternehmen gleichzeitig."
+  },
+  {
+   "id": "s5",
+   "text": "darunter Firmen wie Apple, Microsoft oder Nestlé",
+   "sprechtext": "Darunter Firmen wie Apple, Microsoft oder Nestlé."
+  },
+  {
+   "id": "s6",
+   "text": "geht es einer Firma schlecht, fällt das kaum ins Gewicht",
+   "sprechtext": "Geht es einer Firma schlecht, fällt das kaum ins Gewicht."
+  },
+  {
+   "id": "s7",
+   "text": "das nennt man Streuung, und genau das macht ETFs so beliebt",
+   "sprechtext": "Das nennt man Streuung, und genau das macht ETFs so beliebt."
+  },
+  {
+   "id": "s8",
+   "text": "dazu sind sie günstig, viele kosten nur ein paar Zehntel % im Jahr",
+   "sprechtext": "Dazu sind sie günstig, viele kosten nur ein paar Zehntel Prozent im Jahr."
+  },
+  {
+   "id": "s9",
+   "text": "und du kannst schon mit wenigen € im Monat per Sparplan starten",
+   "sprechtext": "Und du kannst schon mit wenigen Euro im Monat per Sparplan starten."
+  },
+  {
+   "id": "s10",
+   "text": "aber Achtung, Kurse schwanken, deshalb solltest du langfristig denken",
+   "sprechtext": "Aber Achtung, Kurse schwanken, deshalb solltest du langfristig denken."
+  },
+  {
+   "id": "s11",
+   "text": "hast du schon einen ETF?",
+   "sprechtext": "Hast du schon einen ETF?"
+  },
+  {
+   "id": "s12",
+   "text": "schreib uns ja oder nein in die Kommentare!",
+   "sprechtext": "Schreib uns ja oder nein in die Kommentare!"
+  },
+  {
+   "id": "s13",
+   "text": "folge HundeFinanzTV, wir erklären dir Finanzen ganz einfach!",
+   "sprechtext": "Folge HundeFinanzTV, wir erklären dir Finanzen ganz einfach!"
+  }
+ ]
+}
