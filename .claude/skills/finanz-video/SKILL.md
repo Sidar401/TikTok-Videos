@@ -21,6 +21,7 @@ Der Nutzer arbeitet am iPad: Antworten kurz, Ergebnisse per `SendUserFile` schic
    ```
    - **30–40 s** (Nutzerwunsch) ≈ 75–90 Wörter, 8–11 Sätze (ein Satz = ein Bild, 2–4 s).
    - Aufbau aus `STIL.md`: Hook (0–3 s) → Frage/Problem → Beispiel mit echten Zahlen → Visualisierung → Faustregel/Meinung → kurzer CTA.
+   - **CTA immer in Wir-Form**, nie „folg mir“: z. B. „Folge HundeFinanzTV, wir haben noch mehr Geld-Tipps für dich!“ (Outro-Button bleibt „+ Folgen“).
    - `text` = Untertitel (locker, kleingeschrieben wie gesprochen, Ziffern erlaubt). `sprechtext` = was die Stimme sagt: Zahlen und Zeichen ausschreiben („sechsunddreißigtausend Euro“, „sieben Prozent“), sonst liest Piper sie falsch.
    - Zahlen nachrechnen (Zinseszins etc.) und im Chat kurz nennen. Keine Anlageberatung versprechen.
 4. **Voiceover (Standard: ElevenLabs vom Nutzer):**
