@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """Fremdes Voiceover (z. B. ElevenLabs) an skript.json anlegen.
 
-Aufruf: python3 scripts/sync.py videos/<name> <audio.mp3>
+Aufruf: python3 scripts/sync.py videos/<name> <audio.mp3> [--tempo 1.15] [--pause 0.18]
+  --tempo  schneller sprechen (Tonhöhe bleibt), Standard 1.15
+  --pause  Pausen länger als dieser Wert (s) werden darauf gekürzt, Standard 0.18
 Findet die Pausen zwischen den Sätzen (ffmpeg silencedetect) und schreibt
 assets/voice.wav + timings.json im gleichen Format wie voice.py.
 """
-import json, re, subprocess, sys
+import json, re, subprocess, sys, wave
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -31,21 +33,58 @@ def duration(path):
     ).stdout)
 
 
-def main(video_dir, audio):
+def tighten(src, dst, tempo, max_pause):
+    """Pausen auf max_pause kürzen, dann Tempo erhöhen (atempo, Tonhöhe bleibt)."""
+    raw = dst.with_suffix(".raw.wav")
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(src), "-ac", "1", "-ar", "44100", str(raw)], check=True)
+    with wave.open(str(raw)) as w:
+        rate = w.getframerate()
+        pcm = w.readframes(w.getnframes())
+    keep, pos, segs, new = [], 0, [], 0
+    for s, e in silences(raw, -35, max_pause):
+        a, b = int(s * rate) * 2, int(e * rate) * 2
+        half = int(max_pause / 2 * rate) * 2
+        keep.append(pcm[pos:a + half])
+        segs.append((pos / 2 / rate, (a + half) / 2 / rate, new / 2 / rate))
+        new += a + half - pos
+        pos = max(a + half, b - half)
+    keep.append(pcm[pos:])
+    segs.append((pos / 2 / rate, len(pcm) / 2 / rate, new / 2 / rate))
+    with wave.open(str(raw), "wb") as w:
+        w.setnchannels(1); w.setsampwidth(2); w.setframerate(rate)
+        w.writeframes(b"".join(keep))
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(raw), "-af",
+                    f"atempo={tempo},loudnorm=I=-14:TP=-1.5:LRA=7,aresample=44100", str(dst)], check=True)
+    raw.unlink()
+
+    def fmap(t):
+        """Zeit im Original -> Zeit in der gekürzten, schnelleren Fassung."""
+        for oa, ob, na in segs:
+            if t <= ob:
+                return (na + max(0.0, t - oa)) / tempo
+        oa, ob, na = segs[-1]
+        return (na + ob - oa) / tempo
+    return fmap
+
+
+def main(video_dir, audio, tempo=1.15, max_pause=0.18):
     vdir = Path(video_dir).resolve()
     saetze = json.loads((vdir / "skript.json").read_text())["saetze"]
     (vdir / "assets").mkdir(exist_ok=True)
     out = vdir / "assets" / "voice.wav"
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(audio), "-af",
-                    "loudnorm=I=-14:TP=-1.5:LRA=7,aresample=44100", str(out)], check=True)
-    total = duration(out)
+    before = duration(audio)
+    fmap = tighten(Path(audio), out, tempo, max_pause)
+    # Satzgrenzen im Original suchen (dort sind die Pausen noch aussagekräftig)
+    orig = vdir / ".voice-orig.wav"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(audio), "-ac", "1", "-ar", "44100", str(orig)], check=True)
+    total = duration(orig)
     need = len(saetze) - 1
 
     # Pausen innerhalb der Sprache (nicht Anfang/Ende), längste zuerst
     gaps = []
     for noise in (-35, -30, -40, -25):
         for d in (0.18, 0.12, 0.25, 0.08):
-            g = [(s, e) for s, e in silences(out, noise, d) if s > 0.05 and e < total - 0.05]
+            g = [(s, e) for s, e in silences(orig, noise, d) if s > 0.05 and e < total - 0.05]
             if len(g) >= need:
                 gaps = g
                 break
@@ -86,6 +125,7 @@ def main(video_dir, audio):
         bounds = expect
         mode = "Textlänge (Fallback)"
 
+    orig.unlink()
     edges = [0.0] + bounds + [total]
     timings = []
     for s, a, b in zip(saetze, edges, edges[1:]):
@@ -94,13 +134,19 @@ def main(video_dir, audio):
         caps, ct = [], a
         for p in parts:
             d = (b - a) * len(p) / n
-            caps.append({"text": p, "start": round(ct, 3), "end": round(ct + d, 3)})
+            caps.append({"text": p, "start": round(fmap(ct), 3), "end": round(fmap(ct + d), 3)})
             ct += d
-        timings.append({"id": s["id"], "start": round(a, 3), "end": round(b, 3), "captions": caps})
-    dauer = round(total + TAIL, 2)
+        timings.append({"id": s["id"], "start": round(fmap(a), 3), "end": round(fmap(b), 3), "captions": caps})
+    dauer = round(duration(out) + TAIL, 2)
     (vdir / "timings.json").write_text(json.dumps({"dauer": dauer, "saetze": timings}, ensure_ascii=False, indent=2))
-    print(f"{len(saetze)} Sätze an {mode} ausgerichtet, Dauer {dauer}s")
+    print(f"{len(saetze)} Sätze an {mode} ausgerichtet, {before:.1f}s -> {dauer}s (Tempo {tempo}, Pausen max {max_pause}s)")
 
 
 if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2])
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("video_dir"); ap.add_argument("audio")
+    ap.add_argument("--tempo", type=float, default=1.15)
+    ap.add_argument("--pause", type=float, default=0.18)
+    a = ap.parse_args()
+    main(a.video_dir, a.audio, a.tempo, a.pause)

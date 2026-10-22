@@ -53,15 +53,15 @@ def header(sid, text):
 
 SCENES = [
     ("intro", "s1", "s1", """
-        <div id="intro-title" style="position:absolute;top:290px;left:40px;width:1000px;text-align:center;font-weight:800;font-size:100px;line-height:1.05;color:#111">Warum <span class="orange">bellt</span><br />dein Hund ständig?</div>
+        <div id="intro-title" style="position:absolute;top:290px;left:40px;width:1000px;text-align:center;font-weight:800;font-size:90px;line-height:1.05;color:#111">Warum <span class="orange">bellt</span><br />dein Hund ständig?</div>
         <div class="stage">
           <div id="intro-dog" style="position:absolute;left:250px;top:170px;width:640px;height:640px">""" + pose("bellend") + """</div>
           <div id="intro-bubble" class="bubble" style="left:70px;top:170px">WUFF!</div>
           <div id="intro-five" class="chip" style="position:absolute;left:640px;top:780px;font-size:64px">5 Gründe</div>
         </div>""", lambda t0, d: f"""
-      tl.fromTo("#intro-title", {{ y: -30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }}, {t0});
-      pop("#intro-dog", {t0} + 0.15);
-      pop("#intro-bubble", {t0} + 0.5);
+      tl.fromTo("#intro-title", {{ scale: 1.05 }}, {{ scale: 1, duration: 0.5, ease: "back.out(2)" }}, {t0});
+      tl.fromTo("#intro-dog", {{ scale: 0.92 }}, {{ scale: 1, duration: 0.5, ease: "back.out(2)" }}, {t0});
+      pop("#intro-bubble", {t0} + 0.25);
       tl.fromTo("#intro-bubble", {{ rotation: -6 }}, {{ rotation: 6, duration: 0.12, yoyo: true, repeat: 7, ease: "sine.inOut" }}, {t0} + 0.85);
       tl.fromTo("#intro-dog", {{ y: 0 }}, {{ y: -16, duration: 0.14, yoyo: true, repeat: 5, ease: "sine.out" }}, {t0} + 0.6);
       pop("#intro-five", {c('s1', 2)});"""),

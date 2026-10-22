@@ -1,201 +1,201 @@
 {
-  "dauer": 47.36,
+  "dauer": 37.51,
   "saetze": [
     {
       "id": "s1",
       "start": 0.0,
-      "end": 4.607,
+      "end": 3.831,
       "captions": [
         {
           "text": "wenn dein Hund ständig bellt,",
           "start": 0.0,
-          "end": 2.024
+          "end": 1.668
         },
         {
           "text": "hat das meistens einen",
-          "start": 2.024,
-          "end": 3.56
+          "start": 1.668,
+          "end": 2.999
         },
         {
           "text": "dieser 5 Gründe",
-          "start": 3.56,
-          "end": 4.607
+          "start": 2.999,
+          "end": 3.831
         }
       ]
     },
     {
       "id": "s2",
-      "start": 4.607,
-      "end": 10.735,
+      "start": 3.831,
+      "end": 8.834,
       "captions": [
         {
           "text": "Grund Nr. 1",
-          "start": 4.607,
-          "end": 5.494
+          "start": 3.831,
+          "end": 4.529
         },
         {
           "text": "ist territoriales Verhalten,",
-          "start": 5.494,
-          "end": 7.752
+          "start": 4.529,
+          "end": 6.472
         },
         {
           "text": "weil jemand seine",
-          "start": 7.752,
-          "end": 9.122
+          "start": 6.472,
+          "end": 7.599
         },
         {
           "text": "Grenze überschreitet",
-          "start": 9.122,
-          "end": 10.735
+          "start": 7.599,
+          "end": 8.834
         }
       ]
     },
     {
       "id": "s3",
-      "start": 10.735,
-      "end": 16.39,
+      "start": 8.834,
+      "end": 13.112,
       "captions": [
         {
           "text": "Grund Nr. 2 ist",
-          "start": 10.735,
-          "end": 11.982
+          "start": 8.834,
+          "end": 9.748
         },
         {
           "text": "Angst oder Unsicherheit,",
-          "start": 11.982,
-          "end": 13.978
+          "start": 9.748,
+          "end": 11.376
         },
         {
           "text": "er bellt, um sich zu schützen",
-          "start": 13.978,
-          "end": 16.39
+          "start": 11.376,
+          "end": 13.112
         }
       ]
     },
     {
       "id": "s4",
-      "start": 16.39,
-      "end": 22.299,
+      "start": 13.112,
+      "end": 17.56,
       "captions": [
         {
           "text": "Grund Nr. 3 ist Aufmerksamkeit,",
-          "start": 16.39,
-          "end": 18.97
+          "start": 13.112,
+          "end": 15.068
         },
         {
           "text": "weil Bellen früher",
-          "start": 18.97,
-          "end": 20.468
+          "start": 15.068,
+          "end": 16.247
         },
         {
           "text": "schon funktioniert hat",
-          "start": 20.468,
-          "end": 22.299
+          "start": 16.247,
+          "end": 17.56
         }
       ]
     },
     {
       "id": "s5",
-      "start": 22.299,
-      "end": 27.255,
+      "start": 17.56,
+      "end": 21.47,
       "captions": [
         {
           "text": "Grund Nr. 4 ist Langeweile,",
-          "start": 22.299,
-          "end": 24.493
+          "start": 17.56,
+          "end": 19.185
         },
         {
           "text": "und zwar genau wie",
-          "start": 24.493,
-          "end": 25.955
+          "start": 19.185,
+          "end": 20.455
         },
         {
           "text": "bei uns Menschen",
-          "start": 25.955,
-          "end": 27.255
+          "start": 20.455,
+          "end": 21.47
         }
       ]
     },
     {
       "id": "s6",
-      "start": 27.255,
-      "end": 31.228,
+      "start": 21.47,
+      "end": 24.523,
       "captions": [
         {
           "text": "ihm fehlt einfach geistige",
-          "start": 27.255,
-          "end": 29.241
+          "start": 21.47,
+          "end": 23.082
         },
         {
           "text": "und körperliche Auslastung",
-          "start": 29.241,
-          "end": 31.228
+          "start": 23.082,
+          "end": 24.523
         }
       ]
     },
     {
       "id": "s7",
-      "start": 31.228,
-      "end": 36.646,
+      "start": 24.523,
+      "end": 28.672,
       "captions": [
         {
           "text": "Grund Nr. 5 ist Frustration,",
-          "start": 31.228,
-          "end": 33.526
+          "start": 24.523,
+          "end": 26.239
         },
         {
           "text": "auch das kennen wir",
-          "start": 33.526,
-          "end": 35.086
+          "start": 26.239,
+          "end": 27.417
         },
         {
           "text": "Menschen nur zu gut",
-          "start": 35.086,
-          "end": 36.646
+          "start": 27.417,
+          "end": 28.672
         }
       ]
     },
     {
       "id": "s8",
-      "start": 36.646,
-      "end": 41.089,
+      "start": 28.672,
+      "end": 32.349,
       "captions": [
         {
           "text": "zum Beispiel an der Leine,",
-          "start": 36.646,
-          "end": 38.296
+          "start": 28.672,
+          "end": 30.008
         },
         {
           "text": "wenn er andere Hunde sieht",
-          "start": 38.296,
-          "end": 39.947
+          "start": 30.008,
+          "end": 31.445
         },
         {
           "text": "und nicht hin darf",
-          "start": 39.947,
-          "end": 41.089
+          "start": 31.445,
+          "end": 32.349
         }
       ]
     },
     {
       "id": "s9",
-      "start": 41.089,
-      "end": 46.759,
+      "start": 32.349,
+      "end": 36.895,
       "captions": [
         {
           "text": "hol dir jetzt",
-          "start": 41.089,
-          "end": 42.099
+          "start": 32.349,
+          "end": 33.136
         },
         {
           "text": "meinen kostenlosen Anti‑Bell‑Plan,",
-          "start": 42.099,
-          "end": 44.74
+          "start": 33.136,
+          "end": 35.258
         },
         {
           "text": "der Link ist in meiner Bio",
-          "start": 44.74,
-          "end": 46.759
+          "start": 35.258,
+          "end": 36.895
         }
       ]
     }

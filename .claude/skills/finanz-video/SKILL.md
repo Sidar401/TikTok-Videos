@@ -25,7 +25,7 @@ Der Nutzer arbeitet am iPad: Antworten kurz, Ergebnisse per `SendUserFile` schic
    - Zahlen nachrechnen (Zinseszins etc.) und im Chat kurz nennen. Keine Anlageberatung versprechen.
 4. **Voiceover (Standard: ElevenLabs vom Nutzer):**
    - Dem Nutzer das Skript zum Einsprechen schicken: nur die `sprechtext`-Sätze, **ein Satz pro Zeile**, in einem Codeblock (iPad: leicht zu kopieren). Hinweis: gleiche ElevenLabs-Stimme wie immer, Satzzeichen stehen lassen. Dann warten.
-   - Lädt der Nutzer die Datei hoch: `python3 scripts/sync.py videos/<name> <upload.mp3>` → `assets/voice.wav` + `timings.json` (Satzgrenzen über Pausen). Meldet es „Fallback“, Satzanzahl und Pausen prüfen und dem Nutzer sagen.
+   - Lädt der Nutzer die Datei hoch: `python3 scripts/sync.py videos/<name> <upload.mp3>` → `assets/voice.wav` + `timings.json`. Standard: Pausen auf 0,18 s kürzen + Tempo 1,15 (Tonhöhe bleibt), weil die ElevenLabs-Stimme langsam ist; anpassbar mit `--tempo`/`--pause`. Satzgrenzen werden im Original erkannt und umgerechnet. Meldet es „Fallback“, Satzanzahl und Pausen prüfen und dem Nutzer sagen.
    - Nur wenn der Nutzer es ausdrücklich will: Computerstimme `python3 scripts/voice.py videos/<name>` (Piper, `stimme_fallback` aus `kanal.json`).
 5. **Komposition bauen:** `build.py` aus dem letzten Video (Muster: `videos/100-euro-im-monat/build.py`) nach `videos/<name>/` kopieren, `SCENES` anpassen, `python3 build.py` → `index.html` (Kopf/CSS kommt aus der Vorlage). Es setzt automatisch:
    - Root-`data-duration` = `timings.json.dauer`.
@@ -40,6 +40,8 @@ Der Nutzer arbeitet am iPad: Antworten kurz, Ergebnisse per `SendUserFile` schic
 9. **Abliefern:** committen + pushen (Branch laut Session), MP4 per `SendUserFile` schicken, dazu 1–2 Zeilen: Titel, Länge, Vorschlag für Caption + 3–5 Hashtags.
 
 ## Regeln
+
+- **Erste 3 Sekunden:** Frame 0 ist nie leer, Thema/Hook und Hauptmotiv sind sofort sichtbar (nur leichtes Scale-Einrasten, kein Einblenden aus Opacity 0).
 
 - Text nur im Bereich y = 168–1330, außer der Untertitel-Box (Oberkante 1360, wie in den Referenzen).
 - Keine CDNs (gesperrt): nur lokale Dateien in `assets/`.
