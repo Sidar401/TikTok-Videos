@@ -19,7 +19,7 @@ Der Nutzer arbeitet am iPad: Antworten kurz, Ergebnisse per `SendUserFile` schic
      { "id": "s1", "text": "du hast 100 € im Monat übrig", "sprechtext": "Du hast hundert Euro im Monat übrig.", "bild": "Geldsack mit Münzen" }
    ] }
    ```
-   - 45–60 s gesprochen ≈ 110–150 Wörter, 12–20 Sätze (ein Satz = ein Bild, 2–4 s).
+   - **30–40 s** (Nutzerwunsch) ≈ 75–90 Wörter, 8–11 Sätze (ein Satz = ein Bild, 2–4 s).
    - Aufbau aus `STIL.md`: Hook (0–3 s) → Frage/Problem → Beispiel mit echten Zahlen → Visualisierung → Faustregel/Meinung → kurzer CTA.
    - `text` = Untertitel (locker, kleingeschrieben wie gesprochen, Ziffern erlaubt). `sprechtext` = was die Stimme sagt: Zahlen und Zeichen ausschreiben („sechsunddreißigtausend Euro“, „sieben Prozent“), sonst liest Piper sie falsch.
    - Zahlen nachrechnen (Zinseszins etc.) und im Chat kurz nennen. Keine Anlageberatung versprechen.
@@ -31,7 +31,7 @@ Der Nutzer arbeitet am iPad: Antworten kurz, Ergebnisse per `SendUserFile` schic
    - Root-`data-duration` = `timings.json.dauer`.
    - Pro Satz eine `.scene clip` mit `data-start`/`data-duration` aus `timings.json` und einem SVG-Motiv nach `STIL.md` (flache Clipart-Optik, Serifen-Zahlen grün/gold, schlichte Charts). Motive selbst als Inline-SVG zeichnen; wiederverwendbare Motive aus früheren Videos kopieren.
    - Pro Untertitel-Box ein `.cap clip` aus `captions` in `timings.json`.
-   - Marken-Badge oben (nur Name „HundeFinanzTV“, **ohne Logo**), oranger Rahmen. Beagle-Logo **nur am Anfang**, nicht im Outro oder in Szenen (Logo-Regel in `STIL.md`).
+   - Marken-Badge oben (nur Name „HundeFinanzTV“), oranger Rahmen. **Kein Logo im Video**; Einstieg = Thema groß als Text + passende Szene (Logo-Regel in `STIL.md`). Der Aussie (`brand/aussie/`) darf als Maskottchen auftreten.
    - Audio: `<audio id="voice" src="assets/voice.wav" data-start="0" data-duration="<dauer>" data-track-index="3"></audio>` im Root.
    - Animation: Pop-in, langsamer Drift, Linien zeichnen (Helfer `pop`/`drift`/`draw` aus der Vorlage).
 6. **Prüfen:** `cd videos/<name> && npx hyperframes lint && npx hyperframes check`. Fehler beheben. Warnungen „nested_structure“/„track_too_dense“ und der Kontrast der Untertitel-Box sind bekannt und ok.
