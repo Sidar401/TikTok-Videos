@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      /* Kanal-Stil (siehe STIL.md) */
+      @font-face {
+        font-family: "Abril Fatface";
+        src: url("assets/fonts/abril-fatface.woff2") format("woff2");
+      }
+      :root {
+        --bg: #ffffff;
+        --ink: #111111;
+        --brand: #DB8622; /* Kanalfarbe aus kanal.json */
+        --green: #1f7a4d;
+        --gold: #f2c418;
+        --red: #e24b4b;
+        --blue: #3d7be0;
+        --font-caption: "Montserrat", sans-serif;
+        --font-display: "Abril Fatface", serif;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: var(--bg);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: var(--bg);
+      }
+
+      /* Szene: eine Illustration, zentriert im oberen Bereich */
+      .scene {
+        position: absolute;
+        left: 0;
+        top: 230px;
+        width: 1080px;
+        height: 1080px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .art { width: 820px; height: 820px; }
+      .art svg { width: 100%; height: 100%; display: block; }
+
+      /* Oranger Rahmen wie bei HundeWissenTv */
+      #frame {
+        position: absolute;
+        inset: 0;
+        border: 26px solid var(--brand);
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      /* Untertitel-Box (TikTok-Look) */
+      .cap {
+        position: absolute;
+        left: 0;
+        top: 1360px;
+        width: 1080px;
+        display: flex;
+        justify-content: center;
+      }
+      .cap span {
+        display: block;
+        max-width: 880px;
+        padding: 20px 44px 22px;
+        border-radius: 28px;
+        background: var(--brand);
+        color: #ffffff;
+        font-family: var(--font-caption);
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 1.15;
+        text-align: center;
+      }
+
+      /* Zahlen-Vergleich in Serifen-Schrift */
+      .cmp {
+        width: 940px;
+        display: grid;
+        grid-template-columns: 1fr 6px 1fr;
+        column-gap: 40px;
+        font-family: var(--font-display);
+        color: var(--ink);
+        text-align: center;
+      }
+      .cmp .head { font-size: 104px; line-height: 1.1; }
+      .cmp .sub { font-size: 76px; line-height: 1.1; }
+      .cmp .divider { background: var(--ink); grid-row: 1 / span 3; grid-column: 2; }
+      .cmp .arrow { height: 260px; display: flex; justify-content: center; align-items: center; }
+      .cmp .arrow svg { width: 140px; height: 220px; }
+      .cmp .num { font-size: 96px; line-height: 1.2; }
+      .green { color: var(--green); }
+      .gold { color: var(--gold); }
+      .chart-label { font-family: var(--font-display); }
+      .serif { font-family: var(--font-display); }
+      #brand {
+        position: absolute;
+        top: 190px;
+        left: 0;
+        width: 1080px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+        font-family: var(--font-caption);
+        font-weight: 800;
+        font-size: 42px;
+        color: #353a3d;
+        z-index: 5;
+      }
+      #brand-dog { width: 84px; height: 84px; }
+
+      .scene { position: absolute; inset: 0; top: 0; height: 1920px; display: block; }
+      .tile { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 30px 10px; border-radius: 30px; background: #faf5ef; }
+      .tile svg { width: 230px; height: 230px; }
+      .tile span { font-family: Montserrat; font-weight: 800; font-size: 54px; color: #111; }
+      .big { font-family: var(--font-display); text-align: center; color: #111; }
+      .cap span { max-width: 990px; font-size: 50px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="48.81" data-width="1080" data-height="1920">
+      <div id="intro" class="scene clip" data-start="0.0" data-duration="3.441" data-track-index="1"><div id="intro-title" style="position:absolute;top:290px;left:40px;width:1000px;text-align:center;font-family:Montserrat;font-weight:800;font-size:92px;line-height:1.05;color:#111">Was ist eigentlich<br />ein <span style="color:var(--brand)">ETF</span>?</div><div id="intro-korb" style="position:absolute;left:240px;top:600px;width:600px;height:450px;"><svg viewBox="0 0 400 300" style="width:100%;height:100%">
+  <rect id="ik-k0" x="95" y="105" width="38" height="34" rx="6" fill="#3d7be0" /><rect id="ik-k1" x="139" y="105" width="38" height="34" rx="6" fill="#1f7a4d" /><rect id="ik-k2" x="183" y="105" width="38" height="34" rx="6" fill="#DB8622" /><rect id="ik-k3" x="227" y="105" width="38" height="34" rx="6" fill="#e24b4b" /><rect id="ik-k4" x="271" y="105" width="38" height="34" rx="6" fill="#8a5a2b" /><rect id="ik-k5" x="95" y="65" width="38" height="34" rx="6" fill="#9b59b6" /><rect id="ik-k6" x="139" y="65" width="38" height="34" rx="6" fill="#f2c418" /><rect id="ik-k7" x="183" y="65" width="38" height="34" rx="6" fill="#353a3d" /><rect id="ik-k8" x="227" y="65" width="38" height="34" rx="6" fill="#2c9a63" />
+  <path d="M40 130 L360 130 L325 280 L75 280 Z" fill="#DB8622" />
+  <g stroke="#a8621a" stroke-width="8"><line x1="120" y1="150" x2="130" y2="260" /><line x1="200" y1="150" x2="200" y2="260" /><line x1="280" y1="150" x2="270" y2="260" /></g>
+  <path d="M90 130 Q200 -10 310 130" fill="none" stroke="#353a3d" stroke-width="14" stroke-linecap="round" />
+</svg></div><div id="intro-q" class="big" style="position:absolute;left:800px;top:520px;width:200px;font-size:200px;color:#e24b4b">?</div>
+      </div>
+      <div id="korb" class="scene clip" data-start="3.441" data-duration="1.903" data-track-index="1"><div id="kb-korb" style="position:absolute;left:190px;top:470px;width:700px;height:525px;"><svg viewBox="0 0 400 300" style="width:100%;height:100%">
+  
+  <path d="M40 130 L360 130 L325 280 L75 280 Z" fill="#DB8622" />
+  <g stroke="#a8621a" stroke-width="8"><line x1="120" y1="150" x2="130" y2="260" /><line x1="200" y1="150" x2="200" y2="260" /><line x1="280" y1="150" x2="270" y2="260" /></g>
+  <path d="M90 130 Q200 -10 310 130" fill="none" stroke="#353a3d" stroke-width="14" stroke-linecap="round" />
+</svg></div>
+      </div>
+      <div id="einzeln" class="scene clip" data-start="5.344" data-duration="4.317" data-track-index="1"><div id="ez-aktie" style="position:absolute;left:90px;top:470px;width:240px;height:300px;"><svg viewBox="0 0 240 300" style="width:100%;height:100%">
+  <rect x="10" y="10" width="220" height="280" rx="20" fill="#fff" stroke="#353a3d" stroke-width="8" />
+  <text x="120" y="70" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="36" fill="#111">Aktie</text>
+  <path d="M40 230 L90 170 L130 200 L200 110" fill="none" stroke="#1f7a4d" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+</svg></div><div id="ez-x" style="position:absolute;left:250px;top:430px;width:120px;height:120px;"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><circle cx="50" cy="50" r="46" fill="#e24b4b" /><path d="M32 32 L68 68 M68 32 L32 68" stroke="#fff" stroke-width="11" stroke-linecap="round" /></svg></div><div id="ez-korb" style="position:absolute;left:420px;top:520px;width:600px;height:450px;"><svg viewBox="0 0 400 300" style="width:100%;height:100%">
+  <rect id="ez-k0" x="95" y="105" width="38" height="34" rx="6" fill="#3d7be0" /><rect id="ez-k1" x="139" y="105" width="38" height="34" rx="6" fill="#1f7a4d" /><rect id="ez-k2" x="183" y="105" width="38" height="34" rx="6" fill="#DB8622" /><rect id="ez-k3" x="227" y="105" width="38" height="34" rx="6" fill="#e24b4b" /><rect id="ez-k4" x="271" y="105" width="38" height="34" rx="6" fill="#8a5a2b" /><rect id="ez-k5" x="95" y="65" width="38" height="34" rx="6" fill="#9b59b6" /><rect id="ez-k6" x="139" y="65" width="38" height="34" rx="6" fill="#f2c418" /><rect id="ez-k7" x="183" y="65" width="38" height="34" rx="6" fill="#353a3d" /><rect id="ez-k8" x="227" y="65" width="38" height="34" rx="6" fill="#2c9a63" /><rect id="ez-k9" x="271" y="65" width="38" height="34" rx="6" fill="#3d7be0" />
+  <path d="M40 130 L360 130 L325 280 L75 280 Z" fill="#DB8622" />
+  <g stroke="#a8621a" stroke-width="8"><line x1="120" y1="150" x2="130" y2="260" /><line x1="200" y1="150" x2="200" y2="260" /><line x1="280" y1="150" x2="270" y2="260" /></g>
+  <path d="M90 130 Q200 -10 310 130" fill="none" stroke="#353a3d" stroke-width="14" stroke-linecap="round" />
+</svg></div>
+      </div>
+      <div id="welt" class="scene clip" data-start="9.661" data-duration="5.613" data-track-index="1"><div id="wt-globus" style="position:absolute;left:290px;top:340px;width:500px;height:500px;"><svg viewBox="0 0 300 300" style="width:100%;height:100%">
+  <circle cx="150" cy="150" r="135" fill="#9ed0f0" />
+  <path d="M70 80 Q100 60 130 80 Q140 110 110 120 Q90 140 70 120 Z M160 70 Q210 60 230 100 Q220 130 190 125 Q170 110 160 70 Z M120 170 Q160 160 175 195 Q165 240 135 250 Q115 220 120 170 Z M210 170 Q240 165 250 190 Q235 215 215 205 Z" fill="#2c9a63" />
+  <circle cx="150" cy="150" r="135" fill="none" stroke="#353a3d" stroke-width="8" />
+</svg></div><div id="wt-num" class="big" style="position:absolute;left:0px;top:880px;width:1080px;font-size:150px;color:#1f7a4d">1.000+</div><div id="wt-sub" style="position:absolute;left:0;top:1060px;width:1080px;text-align:center;font-family:Montserrat;font-weight:800;font-size:60px;color:#111">Unternehmen</div>
+      </div>
+      <div id="firmen" class="scene clip" data-start="15.274" data-duration="3.544" data-track-index="1"><div style="position:absolute;left:0;top:450px;width:1080px;display:flex;flex-direction:column;align-items:center;gap:40px"><div id="fm-1" style="padding:26px 60px;border-radius:28px;background:#353a3d;color:#fff;font-family:Montserrat;font-weight:800;font-size:84px">Apple</div><div id="fm-2" style="padding:26px 60px;border-radius:28px;background:#3d7be0;color:#fff;font-family:Montserrat;font-weight:800;font-size:84px">Microsoft</div><div id="fm-3" style="padding:26px 60px;border-radius:28px;background:#8a5a2b;color:#fff;font-family:Montserrat;font-weight:800;font-size:84px">Nestlé</div></div>
+      </div>
+      <div id="schlecht" class="scene clip" data-start="18.818" data-duration="3.241" data-track-index="1"><div id="sc-korb" style="position:absolute;left:190px;top:420px;width:700px;height:525px;"><svg viewBox="0 0 400 300" style="width:100%;height:100%">
+  <rect id="sc-k0" x="95" y="105" width="38" height="34" rx="6" fill="#3d7be0" /><rect id="sc-k1" x="139" y="105" width="38" height="34" rx="6" fill="#1f7a4d" /><rect id="sc-k2" x="183" y="105" width="38" height="34" rx="6" fill="#DB8622" /><rect id="sc-k3" x="227" y="105" width="38" height="34" rx="6" fill="#e24b4b" /><rect id="sc-k4" x="271" y="105" width="38" height="34" rx="6" fill="#e24b4b" /><rect id="sc-k5" x="95" y="65" width="38" height="34" rx="6" fill="#9b59b6" /><rect id="sc-k6" x="139" y="65" width="38" height="34" rx="6" fill="#f2c418" /><rect id="sc-k7" x="183" y="65" width="38" height="34" rx="6" fill="#353a3d" /><rect id="sc-k8" x="227" y="65" width="38" height="34" rx="6" fill="#2c9a63" /><rect id="sc-k9" x="271" y="65" width="38" height="34" rx="6" fill="#3d7be0" />
+  <path d="M40 130 L360 130 L325 280 L75 280 Z" fill="#DB8622" />
+  <g stroke="#a8621a" stroke-width="8"><line x1="120" y1="150" x2="130" y2="260" /><line x1="200" y1="150" x2="200" y2="260" /><line x1="280" y1="150" x2="270" y2="260" /></g>
+  <path d="M90 130 Q200 -10 310 130" fill="none" stroke="#353a3d" stroke-width="14" stroke-linecap="round" />
+</svg></div><svg id="sc-arrow" viewBox="0 0 80 120" style="position:absolute;left:880px;top:380px;width:110px;height:165px"><path d="M40 10 L40 100 M12 72 L40 106 L68 72" fill="none" stroke="#e24b4b" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" /></svg><div id="sc-txt" class="big" style="position:absolute;left:0px;top:1000px;width:1080px;font-size:90px;color:#1f7a4d">kaum Einfluss</div>
+      </div>
+      <div id="streuung" class="scene clip" data-start="22.059" data-duration="4.257" data-track-index="1"><div id="st-word" class="big" style="position:absolute;left:0px;top:350px;width:1080px;font-size:130px;color:var(--brand)">Streuung</div><div style="position:absolute;left:240px;top:600px;width:600px;display:grid;grid-template-columns:repeat(5,1fr);gap:20px"><div class="st-b" style="height:100px;border-radius:16px;background:#3d7be0"></div><div class="st-b" style="height:100px;border-radius:16px;background:#1f7a4d"></div><div class="st-b" style="height:100px;border-radius:16px;background:#DB8622"></div><div class="st-b" style="height:100px;border-radius:16px;background:#e24b4b"></div><div class="st-b" style="height:100px;border-radius:16px;background:#8a5a2b"></div><div class="st-b" style="height:100px;border-radius:16px;background:#9b59b6"></div><div class="st-b" style="height:100px;border-radius:16px;background:#f2c418"></div><div class="st-b" style="height:100px;border-radius:16px;background:#353a3d"></div><div class="st-b" style="height:100px;border-radius:16px;background:#2c9a63"></div><div class="st-b" style="height:100px;border-radius:16px;background:#3d7be0"></div><div class="st-b" style="height:100px;border-radius:16px;background:#1f7a4d"></div><div class="st-b" style="height:100px;border-radius:16px;background:#DB8622"></div><div class="st-b" style="height:100px;border-radius:16px;background:#e24b4b"></div><div class="st-b" style="height:100px;border-radius:16px;background:#8a5a2b"></div><div class="st-b" style="height:100px;border-radius:16px;background:#9b59b6"></div></div>
+      </div>
+      <div id="guenstig" class="scene clip" data-start="26.316" data-duration="4.622" data-track-index="1"><div id="gs-tag" style="position:absolute;left:190px;top:450px;width:700px;height:455px;"><svg viewBox="0 0 400 260" style="width:100%;height:100%">
+  <path d="M20 40 L280 40 L380 130 L280 220 L20 220 Z" fill="#1f7a4d" />
+  <circle cx="300" cy="130" r="16" fill="#fff" />
+  <text x="150" y="155" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="70" fill="#fff">0,2 %</text>
+</svg></div><div id="gs-sub" style="position:absolute;left:0;top:960px;width:1080px;text-align:center;font-family:Montserrat;font-weight:800;font-size:64px;color:#111">Kosten pro Jahr</div>
+      </div>
+      <div id="sparplan" class="scene clip" data-start="30.938" data-duration="3.885" data-track-index="1"><div id="sp-word" class="big" style="position:absolute;left:0px;top:350px;width:1080px;font-size:120px;color:#1f7a4d">Sparplan</div><div style="position:absolute;left:0;top:620px;width:1080px;display:flex;justify-content:center;gap:24px"><div id="sp-0" style="position:relative;width:150px;height:150px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><rect x="8" y="16" width="84" height="76" rx="12" fill="#fff" stroke="#353a3d" stroke-width="7" /><rect x="8" y="16" width="84" height="24" rx="10" fill="#DB8622" /></svg><div style="position:absolute;left:45px;top:62px;width:60px;height:60px;border-radius:50%;background:#f2c418;border:5px solid #c99a06"></div></div><div id="sp-1" style="position:relative;width:150px;height:150px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><rect x="8" y="16" width="84" height="76" rx="12" fill="#fff" stroke="#353a3d" stroke-width="7" /><rect x="8" y="16" width="84" height="24" rx="10" fill="#DB8622" /></svg><div style="position:absolute;left:45px;top:62px;width:60px;height:60px;border-radius:50%;background:#f2c418;border:5px solid #c99a06"></div></div><div id="sp-2" style="position:relative;width:150px;height:150px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><rect x="8" y="16" width="84" height="76" rx="12" fill="#fff" stroke="#353a3d" stroke-width="7" /><rect x="8" y="16" width="84" height="24" rx="10" fill="#DB8622" /></svg><div style="position:absolute;left:45px;top:62px;width:60px;height:60px;border-radius:50%;background:#f2c418;border:5px solid #c99a06"></div></div><div id="sp-3" style="position:relative;width:150px;height:150px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><rect x="8" y="16" width="84" height="76" rx="12" fill="#fff" stroke="#353a3d" stroke-width="7" /><rect x="8" y="16" width="84" height="24" rx="10" fill="#DB8622" /></svg><div style="position:absolute;left:45px;top:62px;width:60px;height:60px;border-radius:50%;background:#f2c418;border:5px solid #c99a06"></div></div><div id="sp-4" style="position:relative;width:150px;height:150px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><rect x="8" y="16" width="84" height="76" rx="12" fill="#fff" stroke="#353a3d" stroke-width="7" /><rect x="8" y="16" width="84" height="24" rx="10" fill="#DB8622" /></svg><div style="position:absolute;left:45px;top:62px;width:60px;height:60px;border-radius:50%;background:#f2c418;border:5px solid #c99a06"></div></div></div><div id="sp-sub" style="position:absolute;left:0;top:860px;width:1080px;text-align:center;font-family:Montserrat;font-weight:800;font-size:60px;color:#111">jeden Monat automatisch</div>
+      </div>
+      <div id="schwanken" class="scene clip" data-start="34.823" data-duration="4.185" data-track-index="1"><div id="zk-art" style="position:absolute;left:140px;top:360px;width:800px;height:640px;"><svg viewBox="0 0 400 320" style="width:100%;height:100%">
+  <path d="M30 20 L30 290 L380 290" fill="none" stroke="#111" stroke-width="7" />
+  <path id="zk-line" d="M40 250 L70 220 L95 240 L125 190 L150 215 L180 170 L205 200 L235 140 L260 175 L290 110 L315 150 L345 70 L370 90" fill="none" stroke="#1f7a4d" stroke-width="9" stroke-linejoin="round" stroke-linecap="round" />
+  <path id="zk-trend" d="M40 255 L370 70" stroke="#DB8622" stroke-width="7" stroke-dasharray="14 12" />
+</svg></div><div id="zk-txt" class="big" style="position:absolute;left:0px;top:1040px;width:1080px;font-size:90px;color:var(--brand)">langfristig ↑</div>
+      </div>
+      <div id="frage" class="scene clip" data-start="39.008" data-duration="2.149" data-track-index="1"><div id="fr-dog" style="position:absolute;left:290px;top:330px;width:500px;height:500px;"><img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:contain" /></div><div id="fr-q" class="big" style="position:absolute;left:0px;top:880px;width:1080px;font-size:100px;color:#111">Hast du schon<br />einen ETF?</div>
+      </div>
+      <div id="kommentar" class="scene clip" data-start="41.157" data-duration="2.558" data-track-index="1"><div id="km-blase" style="position:absolute;left:340px;top:360px;width:400px;height:347px;"><svg viewBox="0 0 300 260" style="width:100%;height:100%">
+  <path d="M30 20 L270 20 Q290 20 290 40 L290 170 Q290 190 270 190 L120 190 L60 245 L75 190 L30 190 Q10 190 10 170 L10 40 Q10 20 30 20 Z" fill="#fff" stroke="#111" stroke-width="10" stroke-linejoin="round" />
+  <circle cx="95" cy="105" r="16" fill="#111" /><circle cx="150" cy="105" r="16" fill="#111" /><circle cx="205" cy="105" r="16" fill="#111" />
+</svg></div><div style="position:absolute;left:0;top:800px;width:1080px;display:flex;justify-content:center;gap:50px"><div id="km-ja" style="padding:26px 60px;border-radius:28px;background:#1f7a4d;color:#fff;font-family:Montserrat;font-weight:800;font-size:84px">JA</div><div id="km-nein" style="padding:26px 60px;border-radius:28px;background:#e24b4b;color:#fff;font-family:Montserrat;font-weight:800;font-size:84px">NEIN</div></div>
+      </div>
+      <div id="outro" class="scene clip" data-start="43.715" data-duration="5.095" data-track-index="1">
+        <div style="position:absolute;left:0;top:330px;width:1080px;display:flex;flex-direction:column;align-items:center;gap:30px">
+          <div id="outro-dog" style="width:520px;height:520px"><img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:contain" /></div>
+          <div id="outro-name" style="font-family:Montserrat;font-weight:800;font-size:92px;color:#111">HundeFinanzTV</div>
+          <div id="outro-btn" style="padding:18px 64px;border-radius:60px;background:var(--brand);color:#fff;font-family:Montserrat;font-weight:700;font-size:56px">+ Folgen</div>
+        </div>
+      </div>
+
+      <div id="brand"><span>HundeFinanzTV</span></div>
+      <div id="frame"></div>
+
+      <div id="captions" data-track-kind="captions">
+        <div id="c1" class="cap clip" data-start="0.0" data-duration="1.434" data-track-index="2"><span>alle reden von ETFs,</span></div>
+        <div id="c2" class="cap clip" data-start="1.434" data-duration="2.007" data-track-index="2"><span>aber was ist das eigentlich?</span></div>
+        <div id="c3" class="cap clip" data-start="3.441" data-duration="0.552" data-track-index="2"><span>stell dir</span></div>
+        <div id="c4" class="cap clip" data-start="3.993" data-duration="1.351" data-track-index="2"><span>einen Einkaufskorb vor</span></div>
+        <div id="c5" class="cap clip" data-start="5.344" data-duration="0.925" data-track-index="2"><span>statt einzelne</span></div>
+        <div id="c6" class="cap clip" data-start="6.269" data-duration="1.123" data-track-index="2"><span>Aktien zu kaufen,</span></div>
+        <div id="c7" class="cap clip" data-start="7.392" data-duration="1.321" data-track-index="2"><span>kaufst du den ganzen</span></div>
+        <div id="c8" class="cap clip" data-start="8.713" data-duration="0.948" data-track-index="2"><span>Korb auf einmal</span></div>
+        <div id="c9" class="cap clip" data-start="9.661" data-duration="1.331" data-track-index="2"><span>mit einem weltweiten</span></div>
+        <div id="c10" class="cap clip" data-start="10.992" data-duration="1.648" data-track-index="2"><span>ETF steckst du dein Geld</span></div>
+        <div id="c11" class="cap clip" data-start="12.64" data-duration="1.03" data-track-index="2"><span>in über tausend</span></div>
+        <div id="c12" class="cap clip" data-start="13.67" data-duration="1.604" data-track-index="2"><span>Unternehmen gleichzeitig</span></div>
+        <div id="c13" class="cap clip" data-start="15.274" data-duration="2.039" data-track-index="2"><span>darunter Firmen wie Apple,</span></div>
+        <div id="c14" class="cap clip" data-start="17.313" data-duration="1.505" data-track-index="2"><span>Microsoft oder Nestlé</span></div>
+        <div id="c15" class="cap clip" data-start="18.818" data-duration="1.649" data-track-index="2"><span>geht es einer Firma schlecht,</span></div>
+        <div id="c16" class="cap clip" data-start="20.467" data-duration="1.592" data-track-index="2"><span>fällt das kaum ins Gewicht</span></div>
+        <div id="c17" class="cap clip" data-start="22.059" data-duration="1.712" data-track-index="2"><span>das nennt man Streuung,</span></div>
+        <div id="c18" class="cap clip" data-start="23.771" data-duration="1.452" data-track-index="2"><span>und genau das macht</span></div>
+        <div id="c19" class="cap clip" data-start="25.223" data-duration="1.093" data-track-index="2"><span>ETFs so beliebt</span></div>
+        <div id="c20" class="cap clip" data-start="26.316" data-duration="1.416" data-track-index="2"><span>dazu sind sie günstig,</span></div>
+        <div id="c21" class="cap clip" data-start="27.732" data-duration="1.669" data-track-index="2"><span>viele kosten nur ein paar</span></div>
+        <div id="c22" class="cap clip" data-start="29.401" data-duration="1.537" data-track-index="2"><span>Zehntel Prozent im Jahr</span></div>
+        <div id="c23" class="cap clip" data-start="30.938" data-duration="1.155" data-track-index="2"><span>und du kannst schon</span></div>
+        <div id="c24" class="cap clip" data-start="32.093" data-duration="1.52" data-track-index="2"><span>mit wenigen Euro im Monat</span></div>
+        <div id="c25" class="cap clip" data-start="33.613" data-duration="1.21" data-track-index="2"><span>per Sparplan starten</span></div>
+        <div id="c26" class="cap clip" data-start="34.823" data-duration="1.871" data-track-index="2"><span>aber Achtung, Kurse schwanken,</span></div>
+        <div id="c27" class="cap clip" data-start="36.694" data-duration="1.188" data-track-index="2"><span>deshalb solltest du</span></div>
+        <div id="c28" class="cap clip" data-start="37.882" data-duration="1.126" data-track-index="2"><span>langfristig denken</span></div>
+        <div id="c29" class="cap clip" data-start="39.008" data-duration="2.149" data-track-index="2"><span>hast du schon einen ETF?</span></div>
+        <div id="c30" class="cap clip" data-start="41.157" data-duration="1.452" data-track-index="2"><span>schreib uns ja oder nein</span></div>
+        <div id="c31" class="cap clip" data-start="42.609" data-duration="1.106" data-track-index="2"><span>in die Kommentare!</span></div>
+        <div id="c32" class="cap clip" data-start="43.715" data-duration="1.548" data-track-index="2"><span>folge HundeFinanzTV,</span></div>
+        <div id="c33" class="cap clip" data-start="45.263" data-duration="1.238" data-track-index="2"><span>wir erklären dir</span></div>
+        <div id="c34" class="cap clip" data-start="46.501" data-duration="1.703" data-track-index="2"><span>Finanzen ganz einfach!</span></div>
+      </div>
+
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="48.81" data-track-index="3"></audio>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const pop = (sel, at) =>
+        tl.fromTo(sel, { scale: 0.82, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.8)" }, at);
+      const draw = (sel, at, dur) => {
+        const len = document.querySelector(sel).getTotalLength();
+        tl.fromTo(sel, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: dur, ease: "power2.out" }, at);
+      };
+
+      // intro
+      (() => {
+      tl.fromTo("#intro-title", { scale: 1.05 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 0.0);
+      tl.fromTo("#intro-korb", { scale: 1.05 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 0.0);
+      pop("#intro-q", 0.0 + 0.3);
+      })();
+      // korb
+      (() => {
+      pop("#kb-korb", 3.441);
+      })();
+      // einzeln
+      (() => {
+      pop("#ez-aktie", 5.344);
+      pop("#ez-x", 6.269);
+      pop("#ez-korb", 7.392);
+      tl.fromTo("#ez-korb rect", { y: -60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.25, stagger: 0.08, ease: "power2.out" }, 7.392 + 0.2);
+      })();
+      // welt
+      (() => {
+      pop("#wt-globus", 9.661);
+      tl.fromTo("#wt-globus", { rotation: -10 }, { rotation: 10, duration: 5.613, ease: "sine.inOut" }, 9.661);
+      pop("#wt-num", 12.64);
+      pop("#wt-sub", 13.67);
+      })();
+      // firmen
+      (() => {
+      pop("#fm-1", 15.274 + 0.40);
+      pop("#fm-2", 15.274 + 1.00);
+      pop("#fm-3", 15.274 + 1.60);
+      })();
+      // schlecht
+      (() => {
+      pop("#sc-korb", 18.818);
+      pop("#sc-arrow", 18.818 + 0.3);
+      tl.fromTo("#sc-k4", { y: 0 }, { y: 14, duration: 0.15, yoyo: true, repeat: 3 }, 18.818 + 0.4);
+      pop("#sc-txt", 20.467);
+      })();
+      // streuung
+      (() => {
+      pop("#st-word", 22.059);
+      tl.fromTo(".st-b", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.25, stagger: 0.06, ease: "back.out(2)" }, 22.059 + 0.3);
+      })();
+      // guenstig
+      (() => {
+      pop("#gs-tag", 26.316);
+      tl.fromTo("#gs-tag", { rotation: -8 }, { rotation: 0, duration: 0.6, ease: "back.out(3)" }, 26.316);
+      pop("#gs-sub", 29.401);
+      })();
+      // sparplan
+      (() => {
+      pop("#sp-word", 30.938);
+      pop("#sp-0", 32.093 + 0.00);
+      pop("#sp-1", 32.093 + 0.18);
+      pop("#sp-2", 32.093 + 0.36);
+      pop("#sp-3", 32.093 + 0.54);
+      pop("#sp-4", 32.093 + 0.72);
+      pop("#sp-sub", 33.613);
+      })();
+      // schwanken
+      (() => {
+      pop("#zk-art", 34.823);
+      draw("#zk-line", 34.823 + 0.1, 1.4);
+      tl.fromTo("#zk-trend", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 37.882);
+      pop("#zk-txt", 37.882 + 0.2);
+      })();
+      // frage
+      (() => {
+      pop("#fr-dog", 39.008);
+      pop("#fr-q", 39.008 + 0.2);
+      })();
+      // kommentar
+      (() => {
+      pop("#km-blase", 41.157);
+      pop("#km-ja", 41.157 + 0.4);
+      pop("#km-nein", 41.157 + 0.8);
+      })();
+      // outro
+      (() => {
+      pop("#outro-dog", 43.715);
+      pop("#outro-name", 43.715 + 0.25);
+      pop("#outro-btn", 43.715 + 0.5);
+      tl.fromTo("#outro-btn", { scale: 1 }, { scale: 1.08, duration: 0.3, yoyo: true, repeat: 1, ease: "sine.inOut" }, 43.715 + 1.1);
+      })();
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
