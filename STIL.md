@@ -34,3 +34,6 @@ Code-Vorlage: `vorlage/` (Demo: `renders/stil-demo.mp4`).
 4. **Visualisierung** per Vergleich oder Chart
 5. **Fazit/Faustregel** + persönliche Meinung („ich halte mich an…“)
 6. Kein extra Outro-Bild in den Referenzen; optional kurzer CTA
+
+## Logo-Regel (vom Nutzer)
+- Das Beagle-Logo **nur am Anfang** (Einstieg/Hook) zeigen, sonst nirgends: kein Logo im Marken-Badge (nur Kanalname), in Szenen gezeichnete Hunde statt Logo, auf Covern eine Pfote.

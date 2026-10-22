@@ -31,7 +31,7 @@ Der Nutzer arbeitet am iPad: Antworten kurz, Ergebnisse per `SendUserFile` schic
    - Root-`data-duration` = `timings.json.dauer`.
    - Pro Satz eine `.scene clip` mit `data-start`/`data-duration` aus `timings.json` und einem SVG-Motiv nach `STIL.md` (flache Clipart-Optik, Serifen-Zahlen grün/gold, schlichte Charts). Motive selbst als Inline-SVG zeichnen; wiederverwendbare Motive aus früheren Videos kopieren.
    - Pro Untertitel-Box ein `.cap clip` aus `captions` in `timings.json`.
-   - Marken-Badge (Beagle + „HundeFinanzTV“) oben, oranger Rahmen, Outro mit Beagle + „+ Folgen“.
+   - Marken-Badge oben (nur Name „HundeFinanzTV“, **ohne Logo**), oranger Rahmen. Beagle-Logo **nur am Anfang**, nicht im Outro oder in Szenen (Logo-Regel in `STIL.md`).
    - Audio: `<audio id="voice" src="assets/voice.wav" data-start="0" data-duration="<dauer>" data-track-index="3"></audio>` im Root.
    - Animation: Pop-in, langsamer Drift, Linien zeichnen (Helfer `pop`/`drift`/`draw` aus der Vorlage).
 6. **Prüfen:** `cd videos/<name> && npx hyperframes lint && npx hyperframes check`. Fehler beheben. Warnungen „nested_structure“/„track_too_dense“ und der Kontrast der Untertitel-Box sind bekannt und ok.
