@@ -1,0 +1,276 @@
+{
+  "dauer": 46.67,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 3.232,
+      "captions": [
+        {
+          "text": "dein Dispo ist",
+          "start": 0.0,
+          "end": 0.905
+        },
+        {
+          "text": "einer der teuersten",
+          "start": 0.905,
+          "end": 2.133
+        },
+        {
+          "text": "Kredite überhaupt",
+          "start": 2.133,
+          "end": 3.232
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 3.232,
+      "end": 7.256,
+      "captions": [
+        {
+          "text": "viele Banken verlangen dafür",
+          "start": 3.232,
+          "end": 5.293
+        },
+        {
+          "text": "10 % Zinsen oder sogar mehr",
+          "start": 5.293,
+          "end": 7.256
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 7.256,
+      "end": 11.105,
+      "captions": [
+        {
+          "text": "überziehst du",
+          "start": 7.256,
+          "end": 8.148
+        },
+        {
+          "text": "dein Konto ein ganzes",
+          "start": 8.148,
+          "end": 9.627
+        },
+        {
+          "text": "Jahr lang um 2.000 €,",
+          "start": 9.627,
+          "end": 11.105
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 11.105,
+      "end": 14.325,
+      "captions": [
+        {
+          "text": "dann zahlst du schnell",
+          "start": 11.105,
+          "end": 12.839
+        },
+        {
+          "text": "200 € nur an Zinsen",
+          "start": 12.839,
+          "end": 14.325
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 14.325,
+      "end": 17.266,
+      "captions": [
+        {
+          "text": "Geld,",
+          "start": 14.325,
+          "end": 14.709
+        },
+        {
+          "text": "für das du absolut",
+          "start": 14.709,
+          "end": 16.132
+        },
+        {
+          "text": "nichts bekommst",
+          "start": 16.132,
+          "end": 17.266
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 17.266,
+      "end": 21.489,
+      "captions": [
+        {
+          "text": "und das Gemeine ist,",
+          "start": 17.266,
+          "end": 18.472
+        },
+        {
+          "text": "dass sich der Dispo",
+          "start": 18.472,
+          "end": 19.666
+        },
+        {
+          "text": "wie dein eigenes Geld anfühlt",
+          "start": 19.666,
+          "end": 21.489
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 21.489,
+      "end": 23.041,
+      "captions": [
+        {
+          "text": "so kommst du raus",
+          "start": 21.489,
+          "end": 23.041
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 23.041,
+      "end": 26.771,
+      "captions": [
+        {
+          "text": "erstens,",
+          "start": 23.041,
+          "end": 23.65
+        },
+        {
+          "text": "zahl jeden Monat",
+          "start": 23.65,
+          "end": 24.737
+        },
+        {
+          "text": "einen festen Betrag zurück",
+          "start": 24.737,
+          "end": 26.771
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 26.771,
+      "end": 32.373,
+      "captions": [
+        {
+          "text": "zweitens,",
+          "start": 26.771,
+          "end": 27.354
+        },
+        {
+          "text": "bau dir danach",
+          "start": 27.354,
+          "end": 28.225
+        },
+        {
+          "text": "einen Notgroschen auf,",
+          "start": 28.225,
+          "end": 29.791
+        },
+        {
+          "text": "damit du den Dispo",
+          "start": 29.791,
+          "end": 31.072
+        },
+        {
+          "text": "nie wieder brauchst",
+          "start": 31.072,
+          "end": 32.373
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 32.373,
+      "end": 37.906,
+      "captions": [
+        {
+          "text": "und drittens,",
+          "start": 32.373,
+          "end": 33.224
+        },
+        {
+          "text": "wenn es gar nicht anders geht,",
+          "start": 33.224,
+          "end": 35.303
+        },
+        {
+          "text": "ist ein günstiger",
+          "start": 35.303,
+          "end": 36.481
+        },
+        {
+          "text": "Ratenkredit oft billiger",
+          "start": 36.481,
+          "end": 37.906
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 37.906,
+      "end": 39.925,
+      "captions": [
+        {
+          "text": "bist du schon mal",
+          "start": 37.906,
+          "end": 38.627
+        },
+        {
+          "text": "in den Dispo gerutscht?",
+          "start": 38.627,
+          "end": 39.925
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 39.925,
+      "end": 41.797,
+      "captions": [
+        {
+          "text": "schreib es ehrlich",
+          "start": 39.925,
+          "end": 40.932
+        },
+        {
+          "text": "in die Kommentare!",
+          "start": 40.932,
+          "end": 41.797
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 41.797,
+      "end": 46.083,
+      "captions": [
+        {
+          "text": "folge HundeFinanzTV,",
+          "start": 41.797,
+          "end": 43.125
+        },
+        {
+          "text": "wir helfen dir raus",
+          "start": 43.125,
+          "end": 44.52
+        },
+        {
+          "text": "aus der Schuldenfalle!",
+          "start": 44.52,
+          "end": 46.083
+        }
+      ]
+    }
+  ]
+}
