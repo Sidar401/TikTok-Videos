@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      /* Kanal-Stil (siehe STIL.md) */
+      @font-face {
+        font-family: "Abril Fatface";
+        src: url("assets/fonts/abril-fatface.woff2") format("woff2");
+      }
+      :root {
+        --bg: #ffffff;
+        --ink: #111111;
+        --brand: #DB8622; /* Kanalfarbe aus kanal.json */
+        --green: #1f7a4d;
+        --gold: #f2c418;
+        --red: #e24b4b;
+        --blue: #3d7be0;
+        --font-caption: "Montserrat", sans-serif;
+        --font-display: "Abril Fatface", serif;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: var(--bg);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: var(--bg);
+      }
+
+      /* Szene: eine Illustration, zentriert im oberen Bereich */
+      .scene {
+        position: absolute;
+        left: 0;
+        top: 230px;
+        width: 1080px;
+        height: 1080px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .art { width: 820px; height: 820px; }
+      .art svg { width: 100%; height: 100%; display: block; }
+
+      /* Oranger Rahmen wie bei HundeWissenTv */
+      #frame {
+        position: absolute;
+        inset: 0;
+        border: 26px solid var(--brand);
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      /* Untertitel-Box (TikTok-Look) */
+      .cap {
+        position: absolute;
+        left: 0;
+        top: 1360px;
+        width: 1080px;
+        display: flex;
+        justify-content: center;
+      }
+      .cap span {
+        display: block;
+        max-width: 880px;
+        padding: 20px 44px 22px;
+        border-radius: 28px;
+        background: var(--brand);
+        color: #ffffff;
+        font-family: var(--font-caption);
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 1.15;
+        text-align: center;
+      }
+
+      /* Zahlen-Vergleich in Serifen-Schrift */
+      .cmp {
+        width: 940px;
+        display: grid;
+        grid-template-columns: 1fr 6px 1fr;
+        column-gap: 40px;
+        font-family: var(--font-display);
+        color: var(--ink);
+        text-align: center;
+      }
+      .cmp .head { font-size: 104px; line-height: 1.1; }
+      .cmp .sub { font-size: 76px; line-height: 1.1; }
+      .cmp .divider { background: var(--ink); grid-row: 1 / span 3; grid-column: 2; }
+      .cmp .arrow { height: 260px; display: flex; justify-content: center; align-items: center; }
+      .cmp .arrow svg { width: 140px; height: 220px; }
+      .cmp .num { font-size: 96px; line-height: 1.2; }
+      .green { color: var(--green); }
+      .gold { color: var(--gold); }
+      .chart-label { font-family: var(--font-display); }
+      .serif { font-family: var(--font-display); }
+      #brand {
+        position: absolute;
+        top: 190px;
+        left: 0;
+        width: 1080px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+        font-family: var(--font-caption);
+        font-weight: 800;
+        font-size: 42px;
+        color: #353a3d;
+        z-index: 5;
+      }
+      #brand-dog { width: 84px; height: 84px; }
+
+      .scene { position: absolute; inset: 0; top: 0; height: 1920px; display: block; }
+      .cap span { max-width: 990px; }
+      .tile { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 30px 10px; border-radius: 30px; background: #faf5ef; }
+      .tile svg { width: 230px; height: 230px; }
+      .tile span { font-family: Montserrat; font-weight: 800; font-size: 54px; color: #111; }
+      .big { font-family: var(--font-display); text-align: center; color: #111; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="28.99" data-width="1080" data-height="1920">
+      <div id="intro" class="scene clip" data-start="0.0" data-duration="3.546" data-track-index="1"><div id="intro-title" style="position:absolute;top:290px;left:40px;width:1000px;text-align:center;font-family:Montserrat;font-weight:800;font-size:92px;line-height:1.05;color:#111">Dein Geld auf dem<br />Konto <span style="color:#e24b4b">schrumpft</span></div><div id="intro-schein" style="position:absolute;left:140px;top:620px;width:800px;height:440px;"><svg viewBox="0 0 400 220" style="width:100%;height:100%">
+  <rect x="5" y="5" width="390" height="210" rx="18" fill="#8fc9a3" stroke="#1f7a4d" stroke-width="8" />
+  <rect x="25" y="25" width="350" height="170" rx="10" fill="none" stroke="#1f7a4d" stroke-width="4" stroke-dasharray="10 8" />
+  <circle cx="200" cy="110" r="58" fill="#e8f4ec" stroke="#1f7a4d" stroke-width="5" />
+  <text x="200" y="135" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="70" fill="#1f7a4d">€</text>
+  <text x="60" y="70" font-family="Montserrat" font-weight="800" font-size="40" fill="#1f7a4d">100</text>
+  <text x="270" y="185" font-family="Montserrat" font-weight="800" font-size="40" fill="#1f7a4d">100</text>
+</svg></div>
+      </div>
+      <div id="merkst" class="scene clip" data-start="3.546" data-duration="1.62" data-track-index="1"><div id="ms-phone" style="position:absolute;left:390px;top:380px;width:300px;height:560px;"><svg viewBox="0 0 300 560" style="width:100%;height:100%">
+  <rect x="5" y="5" width="290" height="550" rx="44" fill="#353a3d" />
+  <rect x="22" y="40" width="256" height="480" rx="20" fill="#fff" />
+  <rect x="110" y="18" width="80" height="12" rx="6" fill="#1a1a1a" />
+  <text x="150" y="110" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="24" fill="#888">Girokonto</text>
+  <text x="150" y="180" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="34" fill="#111">10.000,00 €</text>
+  <rect x="50" y="230" width="200" height="14" rx="7" fill="#eee" /><rect x="50" y="265" width="160" height="14" rx="7" fill="#eee" />
+  <rect x="50" y="300" width="180" height="14" rx="7" fill="#eee" />
+</svg></div><div id="ms-eq" class="big" style="position:absolute;left:0;top:980px;width:1080px;font-size:72px">sieht gleich aus …</div>
+      </div>
+      <div id="grund" class="scene clip" data-start="5.166" data-duration="2.141" data-track-index="1"><div id="gr-word" class="big" style="position:absolute;left:0;top:340px;width:1080px;font-size:130px;color:#e24b4b">Inflation</div><div id="gr-ballon" style="position:absolute;left:340px;top:560px;width:400px;height:560px;"><svg viewBox="0 0 300 420" style="width:100%;height:100%">
+  <path d="M150 330 Q140 370 160 410" fill="none" stroke="#353a3d" stroke-width="5" />
+  <ellipse cx="150" cy="170" rx="130" ry="155" fill="#e24b4b" />
+  <path d="M135 322 L165 322 L150 340 Z" fill="#c23b3b" />
+  <ellipse cx="100" cy="100" rx="25" ry="45" fill="#fff" opacity="0.3" />
+  <text x="150" y="215" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="130" fill="#fff">%</text>
+</svg></div>
+      </div>
+      <div id="rechnung" class="scene clip" data-start="7.307" data-duration="6.99" data-track-index="1"><div class="big" style="position:absolute;left:0;top:340px;width:1080px"><div id="rc-a" style="font-size:130px;color:#1f7a4d">10.000€</div><div id="rc-mid" style="height:250px;display:flex;justify-content:center;align-items:center;gap:30px"><svg viewBox="0 0 70 110" style="width:110px;height:190px"><path d="M35 6 L35 96 M14 76 L35 100 L56 76" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /></svg><div style="font-family:Montserrat;font-weight:800;font-size:48px;text-align:left;color:#353a3d">10 Jahre<br />2,5 % Inflation</div></div><div id="rc-b" style="font-size:150px;color:#e24b4b">≈ 7.800€</div><div id="rc-sub" style="font-family:Montserrat;font-weight:700;font-size:44px;color:#353a3d">Kaufkraft von heute</div></div>
+      </div>
+      <div id="verlust" class="scene clip" data-start="14.297" data-duration="3.23" data-track-index="1"><div id="vl-num" class="big" style="position:absolute;left:0;top:420px;width:1080px;font-size:190px;color:#e24b4b">−2.200€</div><svg id="vl-arrow" viewBox="0 0 100 160" style="position:absolute;left:470px;top:700px;width:140px;height:224px"><path d="M50 10 L50 140 M15 105 L50 145 L85 105" fill="none" stroke="#e24b4b" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" /></svg><div id="vl-sub" style="position:absolute;left:0;top:960px;width:1080px;text-align:center;font-family:Montserrat;font-weight:800;font-size:64px;color:#111">Kaufkraft weg</div>
+      </div>
+      <div id="weg" class="scene clip" data-start="17.527" data-duration="0.879" data-track-index="1"><div id="weg-coin" style="position:absolute;left:390px;top:520px;width:300px;height:300px;"><div style="width:100%;height:100%;border-radius:50%;background:#f2c418;border:8px solid #c99a06;display:flex;align-items:center;justify-content:center;font-family:Montserrat;font-weight:800;font-size:60px;color:#7a5a00">€</div></div><div id="weg-puff" style="position:absolute;left:240px;top:470px;width:600px;height:450px;"><svg viewBox="0 0 400 300" style="width:100%;height:100%">
+  <g fill="#d9dde0"><circle cx="140" cy="160" r="70" /><circle cx="230" cy="130" r="85" /><circle cx="300" cy="180" r="60" /><circle cx="190" cy="210" r="60" /></g>
+</svg></div>
+      </div>
+      <div id="notgroschen" class="scene clip" data-start="18.406" data-duration="5.009" data-track-index="1"><div id="ng-head" class="big" style="position:absolute;left:0;top:330px;width:1080px;font-size:100px">Notgroschen</div><div id="ng-pig" style="position:absolute;left:270px;top:520px;width:540px;height:468px;"><svg viewBox="0 0 300 260" style="width:100%;height:100%">
+  <ellipse cx="150" cy="150" rx="120" ry="90" fill="#f4a6b5" />
+  <circle cx="250" cy="140" r="38" fill="#f4a6b5" /><ellipse cx="265" cy="140" rx="20" ry="16" fill="#e98a9c" />
+  <circle cx="258" cy="136" r="4" fill="#8a3a4a" /><circle cx="272" cy="136" r="4" fill="#8a3a4a" />
+  <circle cx="215" cy="110" r="7" fill="#111" /><path d="M200 70 L225 40 L235 80 Z" fill="#e98a9c" />
+  <rect x="85" y="225" width="30" height="34" rx="10" fill="#e98a9c" /><rect x="180" y="225" width="30" height="34" rx="10" fill="#e98a9c" />
+  <rect x="120" y="62" width="70" height="12" rx="6" fill="#8a3a4a" />
+</svg></div><div id="ng-chip" style="position:absolute;left:0;top:1030px;width:1080px;display:flex;justify-content:center"><div class="chip" style="font-family:Montserrat;font-weight:800;font-size:56px;padding:14px 40px;border-radius:24px;background:var(--brand);color:#fff">3 × Monatsausgaben</div></div>
+      </div>
+      <div id="arbeiten" class="scene clip" data-start="23.415" data-duration="2.003" data-track-index="1"><div id="ab-dog" style="position:absolute;left:40px;top:520px;width:460px;height:460px;"><img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:contain" /></div><div id="ab-gears" style="position:absolute;left:480px;top:440px;width:560px;height:560px;"><svg viewBox="0 0 400 400" style="width:100%;height:100%">
+  <g id="gear1"><circle cx="120" cy="130" r="58" fill="none" stroke="#353a3d" stroke-width="26" stroke-dasharray="22 14" /><circle cx="120" cy="130" r="30" fill="#353a3d" /></g>
+  <g id="gear2"><circle cx="300" cy="120" r="42" fill="none" stroke="#9aa3a8" stroke-width="22" stroke-dasharray="18 12" /><circle cx="300" cy="120" r="20" fill="#9aa3a8" /></g>
+  <circle cx="200" cy="260" r="100" fill="#f2c418" stroke="#c99a06" stroke-width="8" />
+  <text x="200" y="300" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="120" fill="#c99a06">€</text>
+</svg></div>
+      </div>
+      <div id="outro" class="scene clip" data-start="25.418" data-duration="3.572" data-track-index="1">
+        <div style="position:absolute;left:0;top:330px;width:1080px;display:flex;flex-direction:column;align-items:center;gap:30px">
+          <div id="outro-dog" style="width:520px;height:520px"><img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:contain" /></div>
+          <div id="outro-name" style="font-family:Montserrat;font-weight:800;font-size:92px;color:#111">HundeFinanzTV</div>
+          <div id="outro-btn" style="padding:18px 64px;border-radius:60px;background:var(--brand);color:#fff;font-family:Montserrat;font-weight:700;font-size:56px">+ Folgen</div>
+        </div>
+      </div>
+
+      <div id="brand"><span>HundeFinanzTV</span></div>
+      <div id="frame"></div>
+
+      <div id="captions" data-track-kind="captions">
+        <div id="c1" class="cap clip" data-start="0.0" data-duration="1.741" data-track-index="2"><span>dein Geld auf dem Girokonto</span></div>
+        <div id="c2" class="cap clip" data-start="1.741" data-duration="1.805" data-track-index="2"><span>wird jedes Jahr weniger wert</span></div>
+        <div id="c3" class="cap clip" data-start="3.546" data-duration="1.62" data-track-index="2"><span>und du merkst es nicht mal</span></div>
+        <div id="c4" class="cap clip" data-start="5.166" data-duration="2.141" data-track-index="2"><span>der Grund heißt Inflation</span></div>
+        <div id="c5" class="cap clip" data-start="7.307" data-duration="2.017" data-track-index="2"><span>bei 2,5 % Inflation sind</span></div>
+        <div id="c6" class="cap clip" data-start="9.324" data-duration="2.058" data-track-index="2"><span>deine 10.000 € nach 10</span></div>
+        <div id="c7" class="cap clip" data-start="11.382" data-duration="1.966" data-track-index="2"><span>Jahren nur noch knapp</span></div>
+        <div id="c8" class="cap clip" data-start="13.348" data-duration="0.949" data-track-index="2"><span>8.000 € wert</span></div>
+        <div id="c9" class="cap clip" data-start="14.297" data-duration="1.322" data-track-index="2"><span>du verlierst also</span></div>
+        <div id="c10" class="cap clip" data-start="15.619" data-duration="1.908" data-track-index="2"><span>über 2.000 € Kaufkraft</span></div>
+        <div id="c11" class="cap clip" data-start="17.527" data-duration="0.879" data-track-index="2"><span>einfach so</span></div>
+        <div id="c12" class="cap clip" data-start="18.406" data-duration="1.543" data-track-index="2"><span>deshalb gehört nur dein</span></div>
+        <div id="c13" class="cap clip" data-start="19.949" data-duration="1.667" data-track-index="2"><span>Notgroschen aufs Konto,</span></div>
+        <div id="c14" class="cap clip" data-start="21.616" data-duration="1.799" data-track-index="2"><span>also etwa 3 Monatsausgaben</span></div>
+        <div id="c15" class="cap clip" data-start="23.415" data-duration="0.914" data-track-index="2"><span>der Rest sollte</span></div>
+        <div id="c16" class="cap clip" data-start="24.329" data-duration="1.089" data-track-index="2"><span>für dich arbeiten</span></div>
+        <div id="c17" class="cap clip" data-start="25.418" data-duration="1.697" data-track-index="2"><span>folg HundeFinanzTV für</span></div>
+        <div id="c18" class="cap clip" data-start="27.115" data-duration="1.292" data-track-index="2"><span>mehr Geld‑Tipps!</span></div>
+      </div>
+
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="28.99" data-track-index="3"></audio>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const pop = (sel, at) =>
+        tl.fromTo(sel, { scale: 0.82, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.8)" }, at);
+      const draw = (sel, at, dur) => {
+        const len = document.querySelector(sel).getTotalLength();
+        tl.fromTo(sel, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: dur, ease: "power2.out" }, at);
+      };
+
+      // intro
+      (() => {
+      tl.fromTo("#intro-title", { scale: 1.05 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 0.0);
+      tl.fromTo("#intro-schein", { scale: 1 }, { scale: 0.62, duration: 3.546, ease: "power1.in" }, 0.0);
+      })();
+      // merkst
+      (() => {
+      pop("#ms-phone", 3.546);
+      pop("#ms-eq", 3.546 + 0.6);
+      })();
+      // grund
+      (() => {
+      pop("#gr-word", 5.166);
+      tl.fromTo("#gr-ballon", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 1.6, ease: "power1.out" }, 5.166 + 0.1);
+      })();
+      // rechnung
+      (() => {
+      pop("#rc-a", 7.307);
+      pop("#rc-mid", 9.324);
+      pop("#rc-b", 13.348 - 0.3);
+      pop("#rc-sub", 13.348);
+      })();
+      // verlust
+      (() => {
+      pop("#vl-num", 14.297);
+      tl.fromTo("#vl-arrow", { y: -40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" }, 14.297 + 0.3);
+      pop("#vl-sub", 15.619);
+      })();
+      // weg
+      (() => {
+      tl.fromTo("#weg-coin", { scale: 1, opacity: 1 }, { scale: 0.3, opacity: 0, duration: 0.35, ease: "power2.in" }, 17.527 + 0.15);
+      tl.fromTo("#weg-puff", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2)" }, 17.527 + 0.3);
+      })();
+      // notgroschen
+      (() => {
+      pop("#ng-head", 18.406);
+      pop("#ng-pig", 18.406 + 0.2);
+      pop("#ng-chip", 21.616);
+      })();
+      // arbeiten
+      (() => {
+      pop("#ab-dog", 23.415);
+      pop("#ab-gears", 23.415 + 0.2);
+      tl.fromTo("#gear1", { rotation: 0 }, { rotation: 120, duration: 2.003, ease: "none", svgOrigin: "120 130" }, 23.415);
+      tl.fromTo("#gear2", { rotation: 0 }, { rotation: -160, duration: 2.003, ease: "none", svgOrigin: "300 120" }, 23.415);
+      })();
+      // outro
+      (() => {
+      pop("#outro-dog", 25.418);
+      pop("#outro-name", 25.418 + 0.25);
+      pop("#outro-btn", 25.418 + 0.5);
+      tl.fromTo("#outro-btn", { scale: 1 }, { scale: 1.08, duration: 0.3, yoyo: true, repeat: 1, ease: "sine.inOut" }, 25.418 + 1.1);
+      })();
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

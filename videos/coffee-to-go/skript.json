@@ -1,0 +1,55 @@
+{
+ "titel": "Dein Coffee to go kostet dich 170.000 €",
+ "saetze": [
+  {
+   "id": "s1",
+   "text": "dein Coffee to go kostet dich 170.000 €",
+   "sprechtext": "Dein Coffee to go kostet dich hundertsiebzigtausend Euro."
+  },
+  {
+   "id": "s2",
+   "text": "klingt verrückt, oder?",
+   "sprechtext": "Klingt verrückt, oder?"
+  },
+  {
+   "id": "s3",
+   "text": "5 € am Tag sind 150 € im Monat",
+   "sprechtext": "Fünf Euro am Tag sind hundertfünfzig Euro im Monat."
+  },
+  {
+   "id": "s4",
+   "text": "das merkst du kaum",
+   "sprechtext": "Das merkst du kaum."
+  },
+  {
+   "id": "s5",
+   "text": "investierst du das Geld aber 30 Jahre lang mit 7 % Rendite,",
+   "sprechtext": "Investierst du das Geld aber dreißig Jahre lang mit sieben Prozent Rendite,"
+  },
+  {
+   "id": "s6",
+   "text": "dann hast du am Ende rund 170.000 €",
+   "sprechtext": "dann hast du am Ende rund hundertsiebzigtausend Euro."
+  },
+  {
+   "id": "s7",
+   "text": "eingezahlt hast du nur 54.000 €",
+   "sprechtext": "Eingezahlt hast du nur vierundfünfzigtausend."
+  },
+  {
+   "id": "s8",
+   "text": "ich sag nicht, dass du keinen Kaffee mehr trinken sollst",
+   "sprechtext": "Ich sag nicht, dass du keinen Kaffee mehr trinken sollst."
+  },
+  {
+   "id": "s9",
+   "text": "aber vielleicht nicht jeden Tag",
+   "sprechtext": "Aber vielleicht nicht jeden Tag."
+  },
+  {
+   "id": "s10",
+   "text": "folg HundeFinanzTV für mehr Geld-Tipps!",
+   "sprechtext": "Folg HundeFinanzTV für mehr Geld-Tipps!"
+  }
+ ]
+}

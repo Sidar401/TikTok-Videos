@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      /* Kanal-Stil (siehe STIL.md) */
+      @font-face {
+        font-family: "Abril Fatface";
+        src: url("assets/fonts/abril-fatface.woff2") format("woff2");
+      }
+      :root {
+        --bg: #ffffff;
+        --ink: #111111;
+        --brand: #DB8622; /* Kanalfarbe aus kanal.json */
+        --green: #1f7a4d;
+        --gold: #f2c418;
+        --red: #e24b4b;
+        --blue: #3d7be0;
+        --font-caption: "Montserrat", sans-serif;
+        --font-display: "Abril Fatface", serif;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: var(--bg);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: var(--bg);
+      }
+
+      /* Szene: eine Illustration, zentriert im oberen Bereich */
+      .scene {
+        position: absolute;
+        left: 0;
+        top: 230px;
+        width: 1080px;
+        height: 1080px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .art { width: 820px; height: 820px; }
+      .art svg { width: 100%; height: 100%; display: block; }
+
+      /* Oranger Rahmen wie bei HundeWissenTv */
+      #frame {
+        position: absolute;
+        inset: 0;
+        border: 26px solid var(--brand);
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      /* Untertitel-Box (TikTok-Look) */
+      .cap {
+        position: absolute;
+        left: 0;
+        top: 1360px;
+        width: 1080px;
+        display: flex;
+        justify-content: center;
+      }
+      .cap span {
+        display: block;
+        max-width: 880px;
+        padding: 20px 44px 22px;
+        border-radius: 28px;
+        background: var(--brand);
+        color: #ffffff;
+        font-family: var(--font-caption);
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 1.15;
+        text-align: center;
+      }
+
+      /* Zahlen-Vergleich in Serifen-Schrift */
+      .cmp {
+        width: 940px;
+        display: grid;
+        grid-template-columns: 1fr 6px 1fr;
+        column-gap: 40px;
+        font-family: var(--font-display);
+        color: var(--ink);
+        text-align: center;
+      }
+      .cmp .head { font-size: 104px; line-height: 1.1; }
+      .cmp .sub { font-size: 76px; line-height: 1.1; }
+      .cmp .divider { background: var(--ink); grid-row: 1 / span 3; grid-column: 2; }
+      .cmp .arrow { height: 260px; display: flex; justify-content: center; align-items: center; }
+      .cmp .arrow svg { width: 140px; height: 220px; }
+      .cmp .num { font-size: 96px; line-height: 1.2; }
+      .green { color: var(--green); }
+      .gold { color: var(--gold); }
+      .chart-label { font-family: var(--font-display); }
+      .serif { font-family: var(--font-display); }
+      #brand {
+        position: absolute;
+        top: 190px;
+        left: 0;
+        width: 1080px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+        font-family: var(--font-caption);
+        font-weight: 800;
+        font-size: 42px;
+        color: #353a3d;
+        z-index: 5;
+      }
+      #brand-dog { width: 84px; height: 84px; }
+
+      .scene { position: absolute; inset: 0; top: 0; height: 1920px; display: block; }
+      .cap span { max-width: 990px; }
+      .tile { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 30px 10px; border-radius: 30px; background: #faf5ef; }
+      .tile svg { width: 230px; height: 230px; }
+      .tile span { font-family: Montserrat; font-weight: 800; font-size: 54px; color: #111; }
+      .big { font-family: var(--font-display); text-align: center; color: #111; }
+
+      .day { display: flex; flex-direction: column; align-items: center; gap: 12px; font-family: Montserrat; font-weight: 800; font-size: 40px; color: #353a3d; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="32.65" data-width="1080" data-height="1920">
+      <div id="intro" class="scene clip" data-start="0.0" data-duration="3.479" data-track-index="1"><div id="intro-title" style="position:absolute;top:290px;left:40px;width:1000px;text-align:center;font-family:Montserrat;font-weight:800;font-size:92px;line-height:1.05;color:#111">Dein Coffee to go<br />kostet dich</div><div id="intro-num" class="big" style="position:absolute;left:0;top:520px;width:1080px;font-size:170px;color:#c99a06">170.000€</div><div id="intro-cup" style="position:absolute;left:390px;top:760px;width:300px;height:380px;"><svg viewBox="0 0 300 380" style="width:100%;height:100%">
+  <path d="M60 110 L240 110 L215 350 Q150 368 85 350 Z" fill="#f6efe1" stroke="#353a3d" stroke-width="8" stroke-linejoin="round" />
+  <path d="M70 190 L230 190 L220 290 L80 290 Z" fill="#DB8622" />
+  <circle cx="150" cy="240" r="26" fill="#fff" opacity="0.9" />
+  <rect x="45" y="78" width="210" height="40" rx="14" fill="#6b3f1f" />
+  <rect x="80" y="58" width="140" height="28" rx="10" fill="#8a5a2b" />
+  <g id="ic-steam" fill="none" stroke="#b9c0c4" stroke-width="10" stroke-linecap="round">
+    <path d="M110 40 Q95 20 110 0" /><path d="M150 40 Q135 20 150 0" /><path d="M190 40 Q175 20 190 0" />
+  </g>
+</svg></div>
+      </div>
+      <div id="verrueckt" class="scene clip" data-start="3.479" data-duration="1.906" data-track-index="1"><div id="vr-cup" style="position:absolute;left:330px;top:470px;width:420px;height:532px;"><svg viewBox="0 0 300 380" style="width:100%;height:100%">
+  <path d="M60 110 L240 110 L215 350 Q150 368 85 350 Z" fill="#f6efe1" stroke="#353a3d" stroke-width="8" stroke-linejoin="round" />
+  <path d="M70 190 L230 190 L220 290 L80 290 Z" fill="#DB8622" />
+  <circle cx="150" cy="240" r="26" fill="#fff" opacity="0.9" />
+  <rect x="45" y="78" width="210" height="40" rx="14" fill="#6b3f1f" />
+  <rect x="80" y="58" width="140" height="28" rx="10" fill="#8a5a2b" />
+  <g id="vc-steam" fill="none" stroke="#b9c0c4" stroke-width="10" stroke-linecap="round">
+    <path d="M110 40 Q95 20 110 0" /><path d="M150 40 Q135 20 150 0" /><path d="M190 40 Q175 20 190 0" />
+  </g>
+</svg></div><div id="vr-q" class="big" style="position:absolute;left:720px;top:380px;font-size:260px;color:#e24b4b">?!</div>
+      </div>
+      <div id="tag" class="scene clip" data-start="5.385" data-duration="4.935" data-track-index="1"><div class="big" style="position:absolute;left:0;top:360px;width:1080px"><div id="tag-a" style="font-size:140px">5€ <span style="font-size:80px">/ Tag</span></div><div id="tag-arrow" style="height:230px;display:flex;justify-content:center;align-items:center"><svg viewBox="0 0 70 110" style="width:120px;height:200px"><path d="M35 6 L35 96 M14 76 L35 100 L56 76" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /></svg></div><div id="tag-b" style="font-size:150px;color:#e24b4b">150€ <span style="font-size:80px;color:#111">/ Monat</span></div></div>
+      </div>
+      <div id="kaum" class="scene clip" data-start="10.32" data-duration="1.287" data-track-index="1"><svg viewBox="0 0 400 400" style="position:absolute;left:190px;top:400px;width:700px;height:700px">
+          <circle id="kaum-coin" cx="170" cy="170" r="34" fill="#f2c418" stroke="#c99a06" stroke-width="6" />
+          <text x="170" y="182" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="30" fill="#7a5a00">5€</text>
+          <g id="kaum-lupe"><circle cx="170" cy="170" r="90" fill="none" stroke="#353a3d" stroke-width="20" />
+            <line x1="235" y1="235" x2="340" y2="340" stroke="#353a3d" stroke-width="30" stroke-linecap="round" /></g>
+        </svg>
+      </div>
+      <div id="zins" class="scene clip" data-start="11.607" data-duration="4.987" data-track-index="1"><div id="zins-art" style="position:absolute;left:130px;top:330px;width:820px;height:820px;"><svg viewBox="0 0 400 400" style="width:100%;height:100%">
+  <path d="M40 40 L40 340 L370 340" fill="none" stroke="#111" stroke-width="8" stroke-linecap="square" />
+  <path id="zins-solid" d="M60 300 C140 290 220 285 300 270" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" />
+  <path id="zins-dots" d="M60 295 C170 270 240 200 300 95" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 16" />
+  <text id="zins-label" class="serif" x="70" y="100" font-size="70" fill="#1f7a4d">~7%</text>
+  <text id="zins-years" x="205" y="385" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="30" fill="#353a3d">30 Jahre</text>
+  <g id="zins-check"><circle cx="320" cy="80" r="42" fill="#111" />
+    <path d="M300 82 L315 97 L342 66" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" /></g>
+</svg></div>
+      </div>
+      <div id="ende" class="scene clip" data-start="16.594" data-duration="3.538" data-track-index="1"><div id="ende-sack" style="position:absolute;left:240px;top:330px;width:600px;height:600px;"><svg viewBox="0 0 400 400" style="width:100%;height:100%">
+  <g fill="#f2c418" stroke="#c99a06" stroke-width="3">
+    <rect x="250" y="300" width="110" height="22" rx="8" /><rect x="250" y="276" width="110" height="22" rx="8" />
+    <rect x="250" y="252" width="110" height="22" rx="8" /><rect x="250" y="228" width="110" height="22" rx="8" />
+    <rect x="250" y="204" width="110" height="22" rx="8" /><rect x="265" y="180" width="110" height="22" rx="8" />
+  </g>
+  <path d="M150 110 C120 70 140 50 160 70 C175 50 205 50 220 70 C240 50 260 70 230 110 Z" fill="#1f7a4d" />
+  <rect x="145" y="104" width="90" height="18" rx="9" fill="#f2c418" />
+  <path d="M150 120 C60 170 40 330 120 340 L260 340 C340 330 320 170 230 120 Z" fill="#1f7a4d" />
+  <path d="M155 135 C90 180 75 300 125 325" fill="none" stroke="#2c9a63" stroke-width="10" stroke-linecap="round" />
+  <circle cx="190" cy="245" r="62" fill="#f2c418" />
+  <text x="190" y="272" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="80" fill="#1f7a4d">€</text>
+</svg></div><div id="ende-num" class="big" style="position:absolute;left:0;top:960px;width:1080px;font-size:160px;color:#c99a06">170.000€</div>
+      </div>
+      <div id="vergleich" class="scene clip" data-start="20.132" data-duration="2.648" data-track-index="1"><div id="vgl-art" style="position:absolute;left:130px;top:330px;width:820px;height:820px;"><svg viewBox="0 0 400 400" style="width:100%;height:100%">
+          <line x1="30" y1="350" x2="370" y2="350" stroke="#111" stroke-width="6" />
+          <rect id="vgl-b1" x="70" y="276" width="110" height="74" fill="#1f7a4d" />
+          <rect id="vgl-b2" x="220" y="118" width="110" height="232" fill="#f2c418" />
+          <text id="vgl-l1" x="125" y="261" text-anchor="middle" class="serif" font-size="32" fill="#1f7a4d">54.000€</text>
+          <text id="vgl-l2" x="275" y="103" text-anchor="middle" class="serif" font-size="32" fill="#c99a06">170.000€</text>
+          <text x="125" y="385" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="22" fill="#353a3d">eingezahlt</text>
+          <text x="275" y="385" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="22" fill="#353a3d">am Ende</text>
+          <text id="vgl-x" x="200" y="50" text-anchor="middle" class="serif" font-size="56" fill="var(--brand)">x3</text>
+        </svg></div>
+      </div>
+      <div id="kaffee-ok" class="scene clip" data-start="22.78" data-duration="3.713" data-track-index="1"><div id="ok-dog" style="position:absolute;left:60px;top:450px;width:480px;height:480px;"><img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:contain" /></div><div id="ok-cup" style="position:absolute;left:600px;top:470px;width:340px;height:430px;"><svg viewBox="0 0 300 380" style="width:100%;height:100%">
+  <path d="M60 110 L240 110 L215 350 Q150 368 85 350 Z" fill="#f6efe1" stroke="#353a3d" stroke-width="8" stroke-linejoin="round" />
+  <path d="M70 190 L230 190 L220 290 L80 290 Z" fill="#DB8622" />
+  <circle cx="150" cy="240" r="26" fill="#fff" opacity="0.9" />
+  <rect x="45" y="78" width="210" height="40" rx="14" fill="#6b3f1f" />
+  <rect x="80" y="58" width="140" height="28" rx="10" fill="#8a5a2b" />
+  <g id="oc-steam" fill="none" stroke="#b9c0c4" stroke-width="10" stroke-linecap="round">
+    <path d="M110 40 Q95 20 110 0" /><path d="M150 40 Q135 20 150 0" /><path d="M190 40 Q175 20 190 0" />
+  </g>
+</svg></div><div id="ok-check" style="position:absolute;left:820px;top:380px;width:160px;height:160px;"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><circle cx="50" cy="50" r="46" fill="#1f7a4d" /><path d="M28 52 L44 68 L74 36" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" /></svg></div>
+      </div>
+      <div id="woche" class="scene clip" data-start="26.493" data-duration="2.311" data-track-index="1"><div id="wk-title" class="big" style="position:absolute;left:0;top:400px;width:1080px;font-size:96px">nicht jeden Tag</div><div style="position:absolute;left:0;top:640px;width:1080px"><div style="display:flex;gap:12px;justify-content:center"><div class="day"><span>Mo</span><div id="wk-0" style="width:120px;height:120px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><circle cx="50" cy="50" r="46" fill="#e24b4b" /><path d="M32 32 L68 68 M68 32 L32 68" stroke="#fff" stroke-width="11" stroke-linecap="round" /></svg></div></div><div class="day"><span>Di</span><div id="wk-1" style="width:120px;height:120px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><circle cx="50" cy="50" r="46" fill="#e24b4b" /><path d="M32 32 L68 68 M68 32 L32 68" stroke="#fff" stroke-width="11" stroke-linecap="round" /></svg></div></div><div class="day"><span>Mi</span><div id="wk-2" style="width:120px;height:120px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><circle cx="50" cy="50" r="46" fill="#1f7a4d" /><path d="M28 52 L44 68 L74 36" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" /></svg></div></div><div class="day"><span>Do</span><div id="wk-3" style="width:120px;height:120px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><circle cx="50" cy="50" r="46" fill="#e24b4b" /><path d="M32 32 L68 68 M68 32 L32 68" stroke="#fff" stroke-width="11" stroke-linecap="round" /></svg></div></div><div class="day"><span>Fr</span><div id="wk-4" style="width:120px;height:120px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><circle cx="50" cy="50" r="46" fill="#e24b4b" /><path d="M32 32 L68 68 M68 32 L32 68" stroke="#fff" stroke-width="11" stroke-linecap="round" /></svg></div></div><div class="day"><span>Sa</span><div id="wk-5" style="width:120px;height:120px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><circle cx="50" cy="50" r="46" fill="#1f7a4d" /><path d="M28 52 L44 68 L74 36" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" /></svg></div></div><div class="day"><span>So</span><div id="wk-6" style="width:120px;height:120px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><circle cx="50" cy="50" r="46" fill="#e24b4b" /><path d="M32 32 L68 68 M68 32 L32 68" stroke="#fff" stroke-width="11" stroke-linecap="round" /></svg></div></div></div></div>
+      </div>
+      <div id="outro" class="scene clip" data-start="28.804" data-duration="3.846" data-track-index="1">
+        <div style="position:absolute;left:0;top:330px;width:1080px;display:flex;flex-direction:column;align-items:center;gap:30px">
+          <div id="outro-dog" style="width:520px;height:520px"><img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:contain" /></div>
+          <div id="outro-name" style="font-family:Montserrat;font-weight:800;font-size:92px;color:#111">HundeFinanzTV</div>
+          <div id="outro-btn" style="padding:18px 64px;border-radius:60px;background:var(--brand);color:#fff;font-family:Montserrat;font-weight:700;font-size:56px">+ Folgen</div>
+        </div>
+      </div>
+
+      <div id="brand"><span>HundeFinanzTV</span></div>
+      <div id="frame"></div>
+
+      <div id="captions" data-track-kind="captions">
+        <div id="c1" class="cap clip" data-start="0.0" data-duration="1.561" data-track-index="2"><span>dein Coffee to go</span></div>
+        <div id="c2" class="cap clip" data-start="1.561" data-duration="1.918" data-track-index="2"><span>kostet dich 170.000 €</span></div>
+        <div id="c3" class="cap clip" data-start="3.479" data-duration="1.906" data-track-index="2"><span>klingt verrückt, oder?</span></div>
+        <div id="c4" class="cap clip" data-start="5.385" data-duration="2.553" data-track-index="2"><span>5 € am Tag sind</span></div>
+        <div id="c5" class="cap clip" data-start="7.938" data-duration="2.382" data-track-index="2"><span>150 € im Monat</span></div>
+        <div id="c6" class="cap clip" data-start="10.32" data-duration="1.287" data-track-index="2"><span>das merkst du kaum</span></div>
+        <div id="c7" class="cap clip" data-start="11.607" data-duration="2.149" data-track-index="2"><span>investierst du das Geld</span></div>
+        <div id="c8" class="cap clip" data-start="13.756" data-duration="1.681" data-track-index="2"><span>aber 30 Jahre lang</span></div>
+        <div id="c9" class="cap clip" data-start="15.437" data-duration="1.157" data-track-index="2"><span>mit 7 % Rendite,</span></div>
+        <div id="c10" class="cap clip" data-start="16.594" data-duration="1.498" data-track-index="2"><span>dann hast du am</span></div>
+        <div id="c11" class="cap clip" data-start="18.092" data-duration="2.04" data-track-index="2"><span>Ende rund 170.000 €</span></div>
+        <div id="c12" class="cap clip" data-start="20.132" data-duration="1.451" data-track-index="2"><span>eingezahlt hast du</span></div>
+        <div id="c13" class="cap clip" data-start="21.583" data-duration="1.197" data-track-index="2"><span>nur 54.000 €</span></div>
+        <div id="c14" class="cap clip" data-start="22.78" data-duration="0.99" data-track-index="2"><span>ich sag nicht,</span></div>
+        <div id="c15" class="cap clip" data-start="23.77" data-duration="1.485" data-track-index="2"><span>dass du keinen Kaffee</span></div>
+        <div id="c16" class="cap clip" data-start="25.255" data-duration="1.238" data-track-index="2"><span>mehr trinken sollst</span></div>
+        <div id="c17" class="cap clip" data-start="26.493" data-duration="1.71" data-track-index="2"><span>aber vielleicht nicht</span></div>
+        <div id="c18" class="cap clip" data-start="28.203" data-duration="0.601" data-track-index="2"><span>jeden Tag</span></div>
+        <div id="c19" class="cap clip" data-start="28.804" data-duration="1.816" data-track-index="2"><span>folg HundeFinanzTV für</span></div>
+        <div id="c20" class="cap clip" data-start="30.62" data-duration="1.446" data-track-index="2"><span>mehr Geld‑Tipps!</span></div>
+      </div>
+
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="32.65" data-track-index="3"></audio>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const pop = (sel, at) =>
+        tl.fromTo(sel, { scale: 0.82, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.8)" }, at);
+      const draw = (sel, at, dur) => {
+        const len = document.querySelector(sel).getTotalLength();
+        tl.fromTo(sel, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: dur, ease: "power2.out" }, at);
+      };
+
+      // intro
+      (() => {
+      tl.fromTo("#intro-title", { scale: 1.05 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 0.0);
+      tl.fromTo("#intro-num", { scale: 1.1 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 0.0);
+      tl.fromTo("#intro-cup", { scale: 1.05 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 0.0);
+      })();
+      // verrueckt
+      (() => {
+      pop("#vr-cup", 3.479);
+      tl.fromTo("#vr-cup", { rotation: -6 }, { rotation: 6, duration: 0.1, yoyo: true, repeat: 5, ease: "sine.inOut" }, 3.479 + 0.3);
+      pop("#vr-q", 3.479 + 0.2);
+      })();
+      // tag
+      (() => {
+      pop("#tag-a", 5.385);
+      pop("#tag-arrow", 5.385 + 0.4);
+      pop("#tag-b", 7.938);
+      })();
+      // kaum
+      (() => {
+      pop("#kaum-coin", 10.32);
+      tl.fromTo("#kaum-lupe", { x: 120, y: 120, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 10.32 + 0.2);
+      })();
+      // zins
+      (() => {
+      draw("#zins-solid", 11.607, 0.6);
+      tl.fromTo("#zins-dots", { opacity: 0 }, { opacity: 1, duration: 0.5 }, 11.607 + 0.4);
+      pop("#zins-years", 11.607 + 0.5);
+      pop("#zins-label", 13.756);
+      pop("#zins-check", 13.756 + 0.4);
+      })();
+      // ende
+      (() => {
+      pop("#ende-sack", 16.594);
+      pop("#ende-num", 18.092);
+      tl.fromTo("#ende-num", { scale: 1 }, { scale: 1.1, duration: 0.2, yoyo: true, repeat: 1 }, 18.092 + 0.45);
+      })();
+      // vergleich
+      (() => {
+      tl.fromTo("#vgl-b1", { attr: { y: 350, height: 0 } }, { attr: { y: 276, height: 74 }, duration: 0.5, ease: "power2.out" }, 20.132);
+      pop("#vgl-l1", 20.132 + 0.4);
+      tl.fromTo("#vgl-b2", { attr: { y: 350, height: 0 } }, { attr: { y: 118, height: 232 }, duration: 0.8, ease: "power2.out" }, 20.732000000000003);
+      pop("#vgl-l2", 20.732000000000003 + 0.7);
+      pop("#vgl-x", 20.132 + 1.4);
+      })();
+      // kaffee-ok
+      (() => {
+      pop("#ok-dog", 22.78);
+      pop("#ok-cup", 22.78 + 0.2);
+      pop("#ok-check", 23.77);
+      })();
+      // woche
+      (() => {
+      pop("#wk-title", 26.493);
+      pop("#wk-0", 26.493 + 0.25);
+      pop("#wk-1", 26.493 + 0.37);
+      pop("#wk-2", 26.493 + 0.49);
+      pop("#wk-3", 26.493 + 0.61);
+      pop("#wk-4", 26.493 + 0.73);
+      pop("#wk-5", 26.493 + 0.85);
+      pop("#wk-6", 26.493 + 0.97);
+      })();
+      // outro
+      (() => {
+      pop("#outro-dog", 28.804);
+      pop("#outro-name", 28.804 + 0.25);
+      pop("#outro-btn", 28.804 + 0.5);
+      tl.fromTo("#outro-btn", { scale: 1 }, { scale: 1.08, duration: 0.3, yoyo: true, repeat: 1, ease: "sine.inOut" }, 28.804 + 1.1);
+      })();
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

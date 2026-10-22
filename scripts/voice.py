@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parent.parent
 VOICES = Path("/root/tts")
 GAP = 0.12          # Pause zwischen Sätzen (s)
 TAIL = 0.6          # Stille am Ende (s)
-MAX_WORDS, MAX_CHARS = 6, 34  # pro Untertitel-Box
+MAX_WORDS, MAX_CHARS = 6, 29  # pro Untertitel-Box
 
 
 def _even(words):

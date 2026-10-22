@@ -1,0 +1,50 @@
+{
+ "titel": "Dein Geld auf dem Konto schrumpft",
+ "saetze": [
+  {
+   "id": "s1",
+   "text": "dein Geld auf dem Girokonto wird jedes Jahr weniger wert",
+   "sprechtext": "Dein Geld auf dem Girokonto wird jedes Jahr weniger wert."
+  },
+  {
+   "id": "s2",
+   "text": "und du merkst es nicht mal",
+   "sprechtext": "Und du merkst es nicht mal."
+  },
+  {
+   "id": "s3",
+   "text": "der Grund heißt Inflation",
+   "sprechtext": "Der Grund heißt Inflation."
+  },
+  {
+   "id": "s4",
+   "text": "bei 2,5 % Inflation sind deine 10.000 € nach 10 Jahren nur noch knapp 8.000 € wert",
+   "sprechtext": "Bei zweieinhalb Prozent Inflation sind deine zehntausend Euro nach zehn Jahren nur noch knapp achttausend Euro wert."
+  },
+  {
+   "id": "s5",
+   "text": "du verlierst also über 2.000 € Kaufkraft",
+   "sprechtext": "Du verlierst also über zweitausend Euro Kaufkraft."
+  },
+  {
+   "id": "s6",
+   "text": "einfach so",
+   "sprechtext": "Einfach so."
+  },
+  {
+   "id": "s7",
+   "text": "deshalb gehört nur dein Notgroschen aufs Konto, also etwa 3 Monatsausgaben",
+   "sprechtext": "Deshalb gehört nur dein Notgroschen aufs Konto, also etwa drei Monatsausgaben."
+  },
+  {
+   "id": "s8",
+   "text": "der Rest sollte für dich arbeiten",
+   "sprechtext": "Der Rest sollte für dich arbeiten."
+  },
+  {
+   "id": "s9",
+   "text": "folg HundeFinanzTV für mehr Geld-Tipps!",
+   "sprechtext": "Folg HundeFinanzTV für mehr Geld-Tipps!"
+  }
+ ]
+}
