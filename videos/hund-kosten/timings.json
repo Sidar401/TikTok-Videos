@@ -1,166 +1,166 @@
 {
-  "dauer": 27.28,
+  "dauer": 32.65,
   "saetze": [
     {
       "id": "s1",
       "start": 0.0,
-      "end": 3.262,
+      "end": 3.727,
       "captions": [
         {
           "text": "weißt du,",
           "start": 0.0,
-          "end": 0.518
+          "end": 0.572
         },
         {
           "text": "was dich dein Hund in",
-          "start": 0.518,
-          "end": 1.726
+          "start": 0.572,
+          "end": 1.906
         },
         {
           "text": "seinem Leben wirklich kostet?",
-          "start": 1.726,
-          "end": 3.262
+          "start": 1.906,
+          "end": 3.727
         }
       ]
     },
     {
       "id": "s2",
-      "start": 3.262,
-      "end": 5.651,
+      "start": 3.727,
+      "end": 6.767,
       "captions": [
         {
           "text": "Futter, Tierarzt,",
-          "start": 3.262,
-          "end": 4.254
+          "start": 3.727,
+          "end": 4.875
         },
         {
           "text": "Versicherung und Hundesteuer",
-          "start": 4.254,
-          "end": 5.651
+          "start": 4.875,
+          "end": 6.767
         }
       ]
     },
     {
       "id": "s3",
-      "start": 5.651,
-      "end": 8.0,
+      "start": 6.767,
+      "end": 9.844,
       "captions": [
         {
           "text": "da kommen schnell 100 €",
-          "start": 5.651,
-          "end": 7.071
+          "start": 6.767,
+          "end": 8.537
         },
         {
           "text": "im Monat zusammen",
-          "start": 7.071,
-          "end": 8.0
+          "start": 8.537,
+          "end": 9.844
         }
       ]
     },
     {
       "id": "s4",
-      "start": 8.0,
-      "end": 10.204,
+      "start": 9.844,
+      "end": 13.007,
       "captions": [
         {
           "text": "bei 13 Jahren sind",
-          "start": 8.0,
-          "end": 9.063
+          "start": 9.844,
+          "end": 11.471
         },
         {
           "text": "das rund 16.000 €",
-          "start": 9.063,
-          "end": 10.204
+          "start": 11.471,
+          "end": 13.007
         }
       ]
     },
     {
       "id": "s5",
-      "start": 10.204,
-      "end": 13.065,
+      "start": 13.007,
+      "end": 15.844,
       "captions": [
         {
           "text": "und da sind Notfälle beim",
-          "start": 10.204,
-          "end": 11.646
+          "start": 13.007,
+          "end": 14.482
         },
         {
           "text": "Tierarzt noch nicht dabei",
-          "start": 11.646,
-          "end": 13.065
+          "start": 14.482,
+          "end": 15.844
         }
       ]
     },
     {
       "id": "s6",
-      "start": 13.065,
-      "end": 16.953,
+      "start": 15.844,
+      "end": 20.948,
       "captions": [
         {
           "text": "mein Tipp: leg ab dem",
-          "start": 13.065,
-          "end": 14.219
+          "start": 15.844,
+          "end": 17.167
         },
         {
           "text": "ersten Tag 100 € im Monat",
-          "start": 14.219,
-          "end": 15.62
+          "start": 17.167,
+          "end": 19.144
         },
         {
           "text": "für deinen Hund zur Seite",
-          "start": 15.62,
-          "end": 16.953
+          "start": 19.144,
+          "end": 20.948
         }
       ]
     },
     {
       "id": "s7",
-      "start": 16.953,
-      "end": 21.708,
+      "start": 20.948,
+      "end": 26.493,
       "captions": [
         {
           "text": "investiert mit 7 % hast du",
-          "start": 16.953,
-          "end": 19.229
+          "start": 20.948,
+          "end": 23.579
         },
         {
           "text": "nach 13 Jahren über 24.000 €",
-          "start": 19.229,
-          "end": 21.708
+          "start": 23.579,
+          "end": 26.493
         }
       ]
     },
     {
       "id": "s8",
-      "start": 21.708,
-      "end": 23.472,
+      "start": 26.493,
+      "end": 28.804,
       "captions": [
         {
           "text": "so bezahlt sich dein",
-          "start": 21.708,
-          "end": 22.668
+          "start": 26.493,
+          "end": 27.789
         },
         {
           "text": "Hund quasi selbst",
-          "start": 22.668,
-          "end": 23.472
+          "start": 27.789,
+          "end": 28.804
         }
       ]
     },
     {
       "id": "s9",
-      "start": 23.472,
-      "end": 26.666,
+      "start": 28.804,
+      "end": 32.066,
       "captions": [
         {
           "text": "folg HundeFinanzTV für",
-          "start": 23.472,
-          "end": 25.34
+          "start": 28.804,
+          "end": 30.62
         },
         {
           "text": "mehr Geld‑Tipps!",
-          "start": 25.34,
-          "end": 26.666
+          "start": 30.62,
+          "end": 32.066
         }
       ]
     }

@@ -142,7 +142,25 @@ def main(video_dir, audio, tempo=1.08, max_pause=0.25):
         est = [float(silben(s.get("sprechtext", s["text"]))) for s in saetze]
     e = [x * total / sum(est) for x in est]
 
-    if need and len(mids) >= need:
+    # Erzwungene Ausrichtung per DTW (Piper-Fassung des Skripts vs. Aufnahme), dann an echte Pausen/Täler einrasten
+    try:
+        from dtw_align import align
+        dtw_b, dtw_cost = align(str(orig), [s.get("sprechtext", s["text"]) for s in saetze])
+    except Exception as ex:  # noqa: BLE001
+        dtw_b, dtw_cost = None, None
+        print("DTW nicht möglich:", ex)
+    if dtw_cost is not None and dtw_cost > 0.65:
+        print(f"WARNUNG: Aufnahme passt schlecht zum Skript (DTW-Kosten {dtw_cost:.2f}). Richtige Datei / richtiger Text?")
+
+    if dtw_b:
+        bounds, last = [], 0.0
+        for x in dtw_b:
+            near = [m for m, _ in mids if abs(m - x) <= 0.45 and m > last]
+            y = min(near, key=lambda m: abs(m - x) - 0.5 * cands[m]) if near else x
+            bounds.append(y)
+            last = y
+        mode = f"DTW (Kosten {dtw_cost:.2f}) + Pausen"
+    elif need and len(mids) >= need:
         # DP über Satzdauern: jede Satzlänge nah an der Schätzung, Grenzen bevorzugt in echten Pausen
         pos = [0.0] + [m for m, _ in mids] + [total]
         gap = [0.0] + [g for _, g in mids] + [0.0]

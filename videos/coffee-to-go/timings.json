@@ -1,173 +1,173 @@
 {
-  "dauer": 32.65,
+  "dauer": 27.28,
   "saetze": [
     {
       "id": "s1",
       "start": 0.0,
-      "end": 3.479,
+      "end": 3.262,
       "captions": [
         {
           "text": "dein Coffee to go",
           "start": 0.0,
-          "end": 1.561
+          "end": 1.518
         },
         {
           "text": "kostet dich 170.000 €",
-          "start": 1.561,
-          "end": 3.479
+          "start": 1.518,
+          "end": 3.262
         }
       ]
     },
     {
       "id": "s2",
-      "start": 3.479,
-      "end": 5.385,
+      "start": 3.262,
+      "end": 4.341,
       "captions": [
         {
           "text": "klingt verrückt, oder?",
-          "start": 3.479,
-          "end": 5.385
+          "start": 3.262,
+          "end": 4.341
         }
       ]
     },
     {
       "id": "s3",
-      "start": 5.385,
-      "end": 10.32,
+      "start": 4.341,
+      "end": 8.0,
       "captions": [
         {
           "text": "5 € am Tag sind",
-          "start": 5.385,
-          "end": 7.938
+          "start": 4.341,
+          "end": 6.187
         },
         {
           "text": "150 € im Monat",
-          "start": 7.938,
-          "end": 10.32
+          "start": 6.187,
+          "end": 8.0
         }
       ]
     },
     {
       "id": "s4",
-      "start": 10.32,
-      "end": 11.607,
+      "start": 8.0,
+      "end": 9.063,
       "captions": [
         {
           "text": "das merkst du kaum",
-          "start": 10.32,
-          "end": 11.607
+          "start": 8.0,
+          "end": 9.063
         }
       ]
     },
     {
       "id": "s5",
-      "start": 11.607,
-      "end": 16.594,
+      "start": 9.063,
+      "end": 13.065,
       "captions": [
         {
           "text": "investierst du das Geld",
-          "start": 11.607,
-          "end": 13.756
+          "start": 9.063,
+          "end": 10.61
         },
         {
           "text": "aber 30 Jahre lang",
-          "start": 13.756,
-          "end": 15.437
+          "start": 10.61,
+          "end": 11.922
         },
         {
           "text": "mit 7 % Rendite,",
-          "start": 15.437,
-          "end": 16.594
+          "start": 11.922,
+          "end": 13.065
         }
       ]
     },
     {
       "id": "s6",
-      "start": 16.594,
-      "end": 20.132,
+      "start": 13.065,
+      "end": 16.251,
       "captions": [
         {
           "text": "dann hast du am",
-          "start": 16.594,
-          "end": 18.092
+          "start": 13.065,
+          "end": 14.473
         },
         {
           "text": "Ende rund 170.000 €",
-          "start": 18.092,
-          "end": 20.132
+          "start": 14.473,
+          "end": 16.251
         }
       ]
     },
     {
       "id": "s7",
-      "start": 20.132,
-      "end": 22.78,
+      "start": 16.251,
+      "end": 18.805,
       "captions": [
         {
           "text": "eingezahlt hast du",
-          "start": 20.132,
-          "end": 21.583
+          "start": 16.251,
+          "end": 17.787
         },
         {
           "text": "nur 54.000 €",
-          "start": 21.583,
-          "end": 22.78
+          "start": 17.787,
+          "end": 18.805
         }
       ]
     },
     {
       "id": "s8",
-      "start": 22.78,
-      "end": 26.493,
+      "start": 18.805,
+      "end": 21.884,
       "captions": [
         {
           "text": "ich sag nicht,",
-          "start": 22.78,
-          "end": 23.77
+          "start": 18.805,
+          "end": 19.599
         },
         {
           "text": "dass du keinen Kaffee",
-          "start": 23.77,
-          "end": 25.255
+          "start": 19.599,
+          "end": 20.832
         },
         {
           "text": "mehr trinken sollst",
-          "start": 25.255,
-          "end": 26.493
+          "start": 20.832,
+          "end": 21.884
         }
       ]
     },
     {
       "id": "s9",
-      "start": 26.493,
-      "end": 28.804,
+      "start": 21.884,
+      "end": 23.472,
       "captions": [
         {
           "text": "aber vielleicht nicht",
-          "start": 26.493,
-          "end": 28.203
+          "start": 21.884,
+          "end": 23.023
         },
         {
           "text": "jeden Tag",
-          "start": 28.203,
-          "end": 28.804
+          "start": 23.023,
+          "end": 23.472
         }
       ]
     },
     {
       "id": "s10",
-      "start": 28.804,
-      "end": 32.066,
+      "start": 23.472,
+      "end": 26.666,
       "captions": [
         {
           "text": "folg HundeFinanzTV für",
-          "start": 28.804,
-          "end": 30.62
+          "start": 23.472,
+          "end": 25.34
         },
         {
           "text": "mehr Geld‑Tipps!",
-          "start": 30.62,
-          "end": 32.066
+          "start": 25.34,
+          "end": 26.666
         }
       ]
     }
