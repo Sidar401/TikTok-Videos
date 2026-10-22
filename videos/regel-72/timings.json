@@ -1,0 +1,168 @@
+{
+  "dauer": 30.67,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 3.338,
+      "captions": [
+        {
+          "text": "mit diesem Trick",
+          "start": 0.0,
+          "end": 0.868
+        },
+        {
+          "text": "weißt du sofort,",
+          "start": 0.868,
+          "end": 1.737
+        },
+        {
+          "text": "wann sich dein Geld verdoppelt",
+          "start": 1.737,
+          "end": 3.338
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 3.338,
+      "end": 5.272,
+      "captions": [
+        {
+          "text": "er heißt die 72er‑Regel",
+          "start": 3.338,
+          "end": 5.272
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 5.272,
+      "end": 8.284,
+      "captions": [
+        {
+          "text": "du teilst einfach",
+          "start": 5.272,
+          "end": 6.529
+        },
+        {
+          "text": "72 durch deinen Zinssatz",
+          "start": 6.529,
+          "end": 8.284
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 8.284,
+      "end": 11.617,
+      "captions": [
+        {
+          "text": "bei 7 % Rendite sind",
+          "start": 8.284,
+          "end": 10.108
+        },
+        {
+          "text": "das rund 10 Jahre",
+          "start": 10.108,
+          "end": 11.617
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 11.617,
+      "end": 15.326,
+      "captions": [
+        {
+          "text": "aus 10.000 € werden",
+          "start": 11.617,
+          "end": 13.801
+        },
+        {
+          "text": "also 20.000 €",
+          "start": 13.801,
+          "end": 15.326
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 15.326,
+      "end": 18.447,
+      "captions": [
+        {
+          "text": "und nach 20 Jahren",
+          "start": 15.326,
+          "end": 17.095
+        },
+        {
+          "text": "sogar 40.000 €",
+          "start": 17.095,
+          "end": 18.447
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 18.447,
+      "end": 22.075,
+      "captions": [
+        {
+          "text": "bei 2 % auf dem Tagesgeld",
+          "start": 18.447,
+          "end": 20.571
+        },
+        {
+          "text": "dauert es 36 Jahre",
+          "start": 20.571,
+          "end": 22.075
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 22.075,
+      "end": 26.279,
+      "captions": [
+        {
+          "text": "und auf dem Girokonto",
+          "start": 22.075,
+          "end": 23.594
+        },
+        {
+          "text": "mit 0 % verdoppelt",
+          "start": 23.594,
+          "end": 24.937
+        },
+        {
+          "text": "sich dein Geld nie",
+          "start": 24.937,
+          "end": 26.279
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 26.279,
+      "end": 30.097,
+      "captions": [
+        {
+          "text": "folge HundeFinanzTV,",
+          "start": 26.279,
+          "end": 27.567
+        },
+        {
+          "text": "wir haben noch mehr",
+          "start": 27.567,
+          "end": 28.791
+        },
+        {
+          "text": "Geld‑Tricks für dich!",
+          "start": 28.791,
+          "end": 30.097
+        }
+      ]
+    }
+  ]
+}

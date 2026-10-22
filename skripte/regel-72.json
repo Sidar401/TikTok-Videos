@@ -1,0 +1,50 @@
+{
+ "titel": "Die 72er-Regel",
+ "saetze": [
+  {
+   "id": "s1",
+   "text": "mit diesem Trick weißt du sofort, wann sich dein Geld verdoppelt",
+   "sprechtext": "Mit diesem Trick weißt du sofort, wann sich dein Geld verdoppelt."
+  },
+  {
+   "id": "s2",
+   "text": "er heißt die 72er-Regel",
+   "sprechtext": "Er heißt die zweiundsiebziger Regel."
+  },
+  {
+   "id": "s3",
+   "text": "du teilst einfach 72 durch deinen Zinssatz",
+   "sprechtext": "Du teilst einfach zweiundsiebzig durch deinen Zinssatz."
+  },
+  {
+   "id": "s4",
+   "text": "bei 7 % Rendite sind das rund 10 Jahre",
+   "sprechtext": "Bei sieben Prozent Rendite sind das rund zehn Jahre."
+  },
+  {
+   "id": "s5",
+   "text": "aus 10.000 € werden also 20.000 €",
+   "sprechtext": "Aus zehntausend Euro werden also zwanzigtausend Euro."
+  },
+  {
+   "id": "s6",
+   "text": "und nach 20 Jahren sogar 40.000 €",
+   "sprechtext": "Und nach zwanzig Jahren sogar vierzigtausend Euro."
+  },
+  {
+   "id": "s7",
+   "text": "bei 2 % auf dem Tagesgeld dauert es 36 Jahre",
+   "sprechtext": "Bei zwei Prozent auf dem Tagesgeld dauert es sechsunddreißig Jahre."
+  },
+  {
+   "id": "s8",
+   "text": "und auf dem Girokonto mit 0 % verdoppelt sich dein Geld nie",
+   "sprechtext": "Und auf dem Girokonto mit null Prozent verdoppelt sich dein Geld nie."
+  },
+  {
+   "id": "s9",
+   "text": "folge HundeFinanzTV, wir haben noch mehr Geld-Tricks für dich!",
+   "sprechtext": "Folge HundeFinanzTV, wir haben noch mehr Geld-Tricks für dich!"
+  }
+ ]
+}

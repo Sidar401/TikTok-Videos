@@ -1,0 +1,55 @@
+{
+ "titel": "Wer früher anfängt, gewinnt",
+ "saetze": [
+  {
+   "id": "s1",
+   "text": "Anna zahlt nur 12.000 € ein und hat am Ende mehr als Ben mit 36.000 €",
+   "sprechtext": "Anna zahlt nur zwölftausend Euro ein und hat am Ende mehr als Ben mit sechsunddreißigtausend."
+  },
+  {
+   "id": "s2",
+   "text": "wie geht das?",
+   "sprechtext": "Wie geht das?"
+  },
+  {
+   "id": "s3",
+   "text": "Anna spart ab 25 zehn Jahre lang 100 € im Monat und hört dann auf",
+   "sprechtext": "Anna spart ab fünfundzwanzig zehn Jahre lang hundert Euro im Monat und hört dann auf."
+  },
+  {
+   "id": "s4",
+   "text": "Ben fängt erst mit 35 an und spart 30 Jahre lang",
+   "sprechtext": "Ben fängt erst mit fünfunddreißig an und spart dreißig Jahre lang."
+  },
+  {
+   "id": "s5",
+   "text": "beide bekommen 7 % Rendite",
+   "sprechtext": "Beide bekommen sieben Prozent Rendite."
+  },
+  {
+   "id": "s6",
+   "text": "mit 65 hat Anna rund 126.000 €",
+   "sprechtext": "Mit fünfundsechzig hat Anna rund hundertsechsundzwanzigtausend Euro."
+  },
+  {
+   "id": "s7",
+   "text": "Ben hat nur rund 113.000 €",
+   "sprechtext": "Ben hat nur rund hundertdreizehntausend."
+  },
+  {
+   "id": "s8",
+   "text": "der Grund ist der Zinseszins, denn Zeit ist wichtiger als Geld",
+   "sprechtext": "Der Grund ist der Zinseszins, denn Zeit ist wichtiger als Geld."
+  },
+  {
+   "id": "s9",
+   "text": "fang also so früh an, wie du kannst",
+   "sprechtext": "Fang also so früh an, wie du kannst."
+  },
+  {
+   "id": "s10",
+   "text": "folge HundeFinanzTV, wir haben noch mehr Geld-Tipps für dich!",
+   "sprechtext": "Folge HundeFinanzTV, wir haben noch mehr Geld-Tipps für dich!"
+  }
+ ]
+}

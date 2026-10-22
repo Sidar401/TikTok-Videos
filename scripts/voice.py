@@ -12,17 +12,28 @@ ROOT = Path(__file__).resolve().parent.parent
 VOICES = Path("/root/tts")
 GAP = 0.12          # Pause zwischen Sätzen (s)
 TAIL = 0.6          # Stille am Ende (s)
-MAX_WORDS, MAX_CHARS = 6, 29  # pro Untertitel-Box
+MAX_WORDS, MAX_CHARS = 6, 31  # pro Untertitel-Box
 
 
 def _even(words):
+    """Wortliste in möglichst wenige, gleich lange Teile (nach Zeichen) teilen; nie direkt nach einer Zahl trennen."""
+    from itertools import combinations
     n = 1
-    while True:
-        size = -(-len(words) // n)
-        parts = [" ".join(words[i:i + size]) for i in range(0, len(words), size)]
-        if all(len(p.split()) <= MAX_WORDS and len(p) <= MAX_CHARS for p in parts) or size == 1:
-            return parts
+    while n <= len(words):
+        best = None
+        for cuts in combinations(range(1, len(words)), n - 1):
+            if any(re.fullmatch(r"[\d.,]+(\x01[€%])?", words[c - 1]) for c in cuts):
+                continue
+            idx = (0,) + cuts + (len(words),)
+            parts = [" ".join(words[a:b]) for a, b in zip(idx, idx[1:])]
+            if all(len(p.split()) <= MAX_WORDS and len(p) <= MAX_CHARS for p in parts):
+                score = max(len(p) for p in parts)
+                if best is None or score < best[0]:
+                    best = (score, parts)
+        if best:
+            return best[1]
         n += 1
+    return words
 
 
 def chunks(text):
