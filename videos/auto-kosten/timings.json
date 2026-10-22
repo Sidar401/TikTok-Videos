@@ -1,0 +1,249 @@
+{
+  "dauer": 44.4,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 2.717,
+      "captions": [
+        {
+          "text": "dein Auto kostet",
+          "start": 0.0,
+          "end": 0.988
+        },
+        {
+          "text": "dich viel mehr,",
+          "start": 0.988,
+          "end": 1.914
+        },
+        {
+          "text": "als du denkst",
+          "start": 1.914,
+          "end": 2.717
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 2.717,
+      "end": 4.717,
+      "captions": [
+        {
+          "text": "die meisten rechnen",
+          "start": 2.717,
+          "end": 3.793
+        },
+        {
+          "text": "nur mit dem Sprit",
+          "start": 3.793,
+          "end": 4.717
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 4.717,
+      "end": 10.7,
+      "captions": [
+        {
+          "text": "aber dazu kommen Versicherung,",
+          "start": 4.717,
+          "end": 6.892
+        },
+        {
+          "text": "Steuer, Werkstatt,",
+          "start": 6.892,
+          "end": 8.213
+        },
+        {
+          "text": "Reifen und vor allem",
+          "start": 8.213,
+          "end": 9.659
+        },
+        {
+          "text": "der Wertverlust",
+          "start": 9.659,
+          "end": 10.7
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 10.7,
+      "end": 13.71,
+      "captions": [
+        {
+          "text": "schnell sind",
+          "start": 10.7,
+          "end": 11.562
+        },
+        {
+          "text": "das 400 € im Monat oder mehr",
+          "start": 11.562,
+          "end": 13.71
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 13.71,
+      "end": 16.309,
+      "captions": [
+        {
+          "text": "das sind fast 5.000 € im Jahr",
+          "start": 13.71,
+          "end": 16.309
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 16.309,
+      "end": 21.071,
+      "captions": [
+        {
+          "text": "stell dir vor,",
+          "start": 16.309,
+          "end": 17.354
+        },
+        {
+          "text": "du fährst ein Auto,",
+          "start": 17.354,
+          "end": 18.772
+        },
+        {
+          "text": "das 200 € im Monat",
+          "start": 18.772,
+          "end": 20.116
+        },
+        {
+          "text": "günstiger ist",
+          "start": 20.116,
+          "end": 21.071
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 21.071,
+      "end": 24.211,
+      "captions": [
+        {
+          "text": "und investierst",
+          "start": 21.071,
+          "end": 22.58
+        },
+        {
+          "text": "genau diese 200 €",
+          "start": 22.58,
+          "end": 24.211
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 24.211,
+      "end": 29.246,
+      "captions": [
+        {
+          "text": "nach 20 Jahren mit 7 % Rendite",
+          "start": 24.211,
+          "end": 27.159
+        },
+        {
+          "text": "hast du fast 100.000 €",
+          "start": 27.159,
+          "end": 29.246
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 29.246,
+      "end": 32.006,
+      "captions": [
+        {
+          "text": "nur weil du auf ein bisschen",
+          "start": 29.246,
+          "end": 30.775
+        },
+        {
+          "text": "Luxus verzichtet hast",
+          "start": 30.775,
+          "end": 32.006
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 32.006,
+      "end": 35.557,
+      "captions": [
+        {
+          "text": "ein Auto soll dich",
+          "start": 32.006,
+          "end": 33.147
+        },
+        {
+          "text": "von A nach B bringen",
+          "start": 33.147,
+          "end": 34.442
+        },
+        {
+          "text": "und nicht arm machen",
+          "start": 34.442,
+          "end": 35.557
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 35.557,
+      "end": 39.791,
+      "captions": [
+        {
+          "text": "teile dieses Video",
+          "start": 35.557,
+          "end": 36.587
+        },
+        {
+          "text": "mit jemandem,",
+          "start": 36.587,
+          "end": 37.461
+        },
+        {
+          "text": "der gerade ein neues",
+          "start": 37.461,
+          "end": 38.806
+        },
+        {
+          "text": "Auto kaufen will!",
+          "start": 38.806,
+          "end": 39.791
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 39.791,
+      "end": 43.814,
+      "captions": [
+        {
+          "text": "folge HundeFinanzTV,",
+          "start": 39.791,
+          "end": 41.086
+        },
+        {
+          "text": "wir haben noch mehr",
+          "start": 41.086,
+          "end": 42.379
+        },
+        {
+          "text": "Spar‑Tipps für dich!",
+          "start": 42.379,
+          "end": 43.814
+        }
+      ]
+    }
+  ]
+}

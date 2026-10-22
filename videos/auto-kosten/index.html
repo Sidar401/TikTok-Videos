@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      /* Kanal-Stil (siehe STIL.md) */
+      @font-face {
+        font-family: "Abril Fatface";
+        src: url("assets/fonts/abril-fatface.woff2") format("woff2");
+      }
+      :root {
+        --bg: #ffffff;
+        --ink: #111111;
+        --brand: #DB8622; /* Kanalfarbe aus kanal.json */
+        --green: #1f7a4d;
+        --gold: #f2c418;
+        --red: #e24b4b;
+        --blue: #3d7be0;
+        --font-caption: "Montserrat", sans-serif;
+        --font-display: "Abril Fatface", serif;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: var(--bg);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: var(--bg);
+      }
+
+      /* Szene: eine Illustration, zentriert im oberen Bereich */
+      .scene {
+        position: absolute;
+        left: 0;
+        top: 230px;
+        width: 1080px;
+        height: 1080px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .art { width: 820px; height: 820px; }
+      .art svg { width: 100%; height: 100%; display: block; }
+
+      /* Oranger Rahmen wie bei HundeWissenTv */
+      #frame {
+        position: absolute;
+        inset: 0;
+        border: 26px solid var(--brand);
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      /* Untertitel-Box (TikTok-Look) */
+      .cap {
+        position: absolute;
+        left: 0;
+        top: 1360px;
+        width: 1080px;
+        display: flex;
+        justify-content: center;
+      }
+      .cap span {
+        display: block;
+        max-width: 880px;
+        padding: 20px 44px 22px;
+        border-radius: 28px;
+        background: var(--brand);
+        color: #ffffff;
+        font-family: var(--font-caption);
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 1.15;
+        text-align: center;
+      }
+
+      /* Zahlen-Vergleich in Serifen-Schrift */
+      .cmp {
+        width: 940px;
+        display: grid;
+        grid-template-columns: 1fr 6px 1fr;
+        column-gap: 40px;
+        font-family: var(--font-display);
+        color: var(--ink);
+        text-align: center;
+      }
+      .cmp .head { font-size: 104px; line-height: 1.1; }
+      .cmp .sub { font-size: 76px; line-height: 1.1; }
+      .cmp .divider { background: var(--ink); grid-row: 1 / span 3; grid-column: 2; }
+      .cmp .arrow { height: 260px; display: flex; justify-content: center; align-items: center; }
+      .cmp .arrow svg { width: 140px; height: 220px; }
+      .cmp .num { font-size: 96px; line-height: 1.2; }
+      .green { color: var(--green); }
+      .gold { color: var(--gold); }
+      .chart-label { font-family: var(--font-display); }
+      .serif { font-family: var(--font-display); }
+      #brand {
+        position: absolute;
+        top: 190px;
+        left: 0;
+        width: 1080px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+        font-family: var(--font-caption);
+        font-weight: 800;
+        font-size: 42px;
+        color: #353a3d;
+        z-index: 5;
+      }
+      #brand-dog { width: 84px; height: 84px; }
+
+      .scene { position: absolute; inset: 0; top: 0; height: 1920px; display: block; }
+      .tile { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 30px 10px; border-radius: 30px; background: #faf5ef; }
+      .tile svg { width: 230px; height: 230px; }
+      .tile span { font-family: Montserrat; font-weight: 800; font-size: 54px; color: #111; }
+      .big { font-family: var(--font-display); text-align: center; color: #111; }
+      .cap span { max-width: 990px; font-size: 50px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="44.4" data-width="1080" data-height="1920">
+      <div id="intro" class="scene clip" data-start="0.0" data-duration="2.717" data-track-index="1"><div id="intro-title" style="position:absolute;top:290px;left:40px;width:1000px;text-align:center;font-family:Montserrat;font-weight:800;font-size:74px;line-height:1.05;color:#111">Dein Auto kostet dich<br /><span style="color:#e24b4b">mehr</span>, als du denkst</div><div id="intro-auto" style="position:absolute;left:140px;top:640px;width:800px;height:440px;"><svg viewBox="0 0 400 220" style="width:100%;height:100%">
+  <path d="M30 140 L60 80 Q72 58 100 58 L280 58 Q310 58 325 80 L360 140 Z" fill="#e24b4b" />
+  <rect x="15" y="130" width="370" height="55" rx="20" fill="#e24b4b" />
+  <path d="M110 74 L180 74 L180 128 L85 128 Z M200 74 L275 74 Q290 74 300 90 L320 128 L200 128 Z" fill="#cfe6f5" />
+  <circle cx="100" cy="190" r="30" fill="#353a3d" /><circle cx="100" cy="190" r="12" fill="#ccc" />
+  <circle cx="300" cy="190" r="30" fill="#353a3d" /><circle cx="300" cy="190" r="12" fill="#ccc" />
+  <rect x="360" y="140" width="22" height="14" rx="4" fill="#f2c418" />
+</svg></div><div id="intro-q" class="big" style="position:absolute;left:760px;top:520px;width:260px;font-size:130px;color:#e24b4b">?€</div>
+      </div>
+      <div id="sprit" class="scene clip" data-start="2.717" data-duration="2.0" data-track-index="1"><div id="sp-tile" class="tile" style="position:absolute;left:340px;top:450px;width:400px"><svg viewBox="0 0 100 100" style="width:300px;height:300px"><rect x="18" y="14" width="44" height="76" rx="8" fill="#e24b4b" /><rect x="26" y="24" width="28" height="20" rx="3" fill="#fff" /><path d="M62 34 L78 46 L78 78 Q78 86 70 86" fill="none" stroke="#353a3d" stroke-width="6" stroke-linecap="round" /></svg><span style="font-size:70px">Sprit</span></div>
+      </div>
+      <div id="kosten" class="scene clip" data-start="4.717" data-duration="5.983" data-track-index="1"><div style="position:absolute;left:60px;top:330px;width:960px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:26px"><div id="kt-0" class="tile" style="padding:22px 6px"><svg viewBox="0 0 100 100" style="width:170px;height:170px"><rect x="18" y="14" width="44" height="76" rx="8" fill="#e24b4b" /><rect x="26" y="24" width="28" height="20" rx="3" fill="#fff" /><path d="M62 34 L78 46 L78 78 Q78 86 70 86" fill="none" stroke="#353a3d" stroke-width="6" stroke-linecap="round" /></svg><span style="font-size:46px">Sprit</span></div><div id="kt-1" class="tile" style="padding:22px 6px"><svg viewBox="0 0 100 100" style="width:170px;height:170px"><path d="M50 10 L84 22 Q84 64 50 90 Q16 64 16 22 Z" fill="#3d7be0" /><path d="M36 50 L46 60 L66 38" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" /></svg><span style="font-size:40px">Versicherung</span></div><div id="kt-2" class="tile" style="padding:22px 6px"><svg viewBox="0 0 100 100" style="width:170px;height:170px"><rect x="22" y="10" width="56" height="80" rx="6" fill="#f6efe1" stroke="#353a3d" stroke-width="5" /><text x="50" y="66" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="40" fill="#353a3d">§</text></svg><span style="font-size:46px">Steuer</span></div><div id="kt-3" class="tile" style="padding:22px 6px"><svg viewBox="0 0 100 100" style="width:170px;height:170px"><path d="M70 12 A20 20 0 0 0 52 40 L14 78 Q10 86 18 90 Q24 94 30 88 L66 50 A20 20 0 0 0 92 30 L80 38 L68 34 L64 22 Z" fill="#353a3d" /></svg><span style="font-size:46px">Werkstatt</span></div><div id="kt-4" class="tile" style="padding:22px 6px"><svg viewBox="0 0 100 100" style="width:170px;height:170px"><circle cx="50" cy="50" r="40" fill="#353a3d" /><circle cx="50" cy="50" r="18" fill="#ccc" /><g stroke="#555" stroke-width="5"><line x1="50" y1="10" x2="50" y2="26" /><line x1="50" y1="74" x2="50" y2="90" /><line x1="10" y1="50" x2="26" y2="50" /><line x1="74" y1="50" x2="90" y2="50" /></g></svg><span style="font-size:46px">Reifen</span></div><div id="kt-5" class="tile" style="padding:22px 6px"><svg viewBox="0 0 100 100" style="width:170px;height:170px"><path d="M12 22 L40 52 L58 38 L88 76" fill="none" stroke="#e24b4b" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" /><path d="M66 78 L90 78 L90 54" fill="none" stroke="#e24b4b" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" /></svg><span style="font-size:40px">Wertverlust</span></div></div>
+      </div>
+      <div id="monat" class="scene clip" data-start="10.7" data-duration="3.01" data-track-index="1"><div id="mn-num" class="big" style="position:absolute;left:0px;top:500px;width:1080px;font-size:230px;color:#e24b4b">400€</div><div id="mn-sub" style="position:absolute;left:0;top:800px;width:1080px;text-align:center;font-family:Montserrat;font-weight:800;font-size:80px;color:#111">pro Monat</div>
+      </div>
+      <div id="jahr" class="scene clip" data-start="13.71" data-duration="2.599" data-track-index="1"><div id="jr-num" class="big" style="position:absolute;left:0px;top:500px;width:1080px;font-size:200px;color:#e24b4b">≈ 5.000€</div><div id="jr-sub" style="position:absolute;left:0;top:780px;width:1080px;text-align:center;font-family:Montserrat;font-weight:800;font-size:80px;color:#111">pro Jahr</div>
+      </div>
+      <div id="vergleich" class="scene clip" data-start="16.309" data-duration="4.762" data-track-index="1"><div id="vg-teuer" style="position:absolute;left:60px;top:380px;width:600px;height:330px;"><svg viewBox="0 0 400 220" style="width:100%;height:100%">
+  <path d="M30 140 L60 80 Q72 58 100 58 L280 58 Q310 58 325 80 L360 140 Z" fill="#e24b4b" />
+  <rect x="15" y="130" width="370" height="55" rx="20" fill="#e24b4b" />
+  <path d="M110 74 L180 74 L180 128 L85 128 Z M200 74 L275 74 Q290 74 300 90 L320 128 L200 128 Z" fill="#cfe6f5" />
+  <circle cx="100" cy="190" r="30" fill="#353a3d" /><circle cx="100" cy="190" r="12" fill="#ccc" />
+  <circle cx="300" cy="190" r="30" fill="#353a3d" /><circle cx="300" cy="190" r="12" fill="#ccc" />
+  <rect x="360" y="140" width="22" height="14" rx="4" fill="#f2c418" />
+</svg></div><div id="vg-x" style="position:absolute;left:560px;top:360px;width:120px;height:120px;"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><circle cx="50" cy="50" r="46" fill="#e24b4b" /><path d="M32 32 L68 68 M68 32 L32 68" stroke="#fff" stroke-width="11" stroke-linecap="round" /></svg></div><div id="vg-guenstig" style="position:absolute;left:420px;top:820px;width:520px;height:286px;"><svg viewBox="0 0 400 220" style="width:100%;height:100%">
+  <path d="M30 140 L60 80 Q72 58 100 58 L280 58 Q310 58 325 80 L360 140 Z" fill="#1f7a4d" />
+  <rect x="15" y="130" width="370" height="55" rx="20" fill="#1f7a4d" />
+  <path d="M110 74 L180 74 L180 128 L85 128 Z M200 74 L275 74 Q290 74 300 90 L320 128 L200 128 Z" fill="#cfe6f5" />
+  <circle cx="100" cy="190" r="30" fill="#353a3d" /><circle cx="100" cy="190" r="12" fill="#ccc" />
+  <circle cx="300" cy="190" r="30" fill="#353a3d" /><circle cx="300" cy="190" r="12" fill="#ccc" />
+  <rect x="360" y="140" width="22" height="14" rx="4" fill="#f2c418" />
+</svg></div><div id="vg-txt" class="big" style="position:absolute;left:0px;top:1110px;width:1080px;font-size:76px;color:#1f7a4d">−200€ / Monat</div>
+      </div>
+      <div id="invest" class="scene clip" data-start="21.071" data-duration="3.14" data-track-index="1"><div id="iv-c" style="position:absolute;left:150px;top:520px;width:260px;height:260px;border-radius:50%;background:#f2c418;border:10px solid #c99a06;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:72px;color:#7a5a00">200€</div><svg id="iv-arrow" viewBox="0 0 120 60" style="position:absolute;left:460px;top:620px;width:170px;height:85px"><path d="M8 30 L100 30 M76 8 L104 30 L76 52" fill="none" stroke="#111" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" /></svg><div id="iv-chart" style="position:absolute;left:670px;top:470px;width:330px;height:330px;"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M10 85 L40 55 L60 68 L90 25" fill="none" stroke="#1f7a4d" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" /><path d="M70 22 L92 22 L92 44" fill="none" stroke="#1f7a4d" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" /></svg></div><div id="iv-txt" class="big" style="position:absolute;left:0px;top:920px;width:1080px;font-size:100px;color:#1f7a4d">investieren</div>
+      </div>
+      <div id="ergebnis" class="scene clip" data-start="24.211" data-duration="5.035" data-track-index="1"><div id="eg-sack" style="position:absolute;left:240px;top:330px;width:600px;height:600px;"><svg viewBox="0 0 400 400" style="width:100%;height:100%">
+  <g fill="#f2c418" stroke="#c99a06" stroke-width="3">
+    <rect x="250" y="300" width="110" height="22" rx="8" /><rect x="250" y="276" width="110" height="22" rx="8" />
+    <rect x="250" y="252" width="110" height="22" rx="8" /><rect x="250" y="228" width="110" height="22" rx="8" />
+    <rect x="250" y="204" width="110" height="22" rx="8" /><rect x="265" y="180" width="110" height="22" rx="8" />
+  </g>
+  <path d="M150 110 C120 70 140 50 160 70 C175 50 205 50 220 70 C240 50 260 70 230 110 Z" fill="#1f7a4d" />
+  <rect x="145" y="104" width="90" height="18" rx="9" fill="#f2c418" />
+  <path d="M150 120 C60 170 40 330 120 340 L260 340 C340 330 320 170 230 120 Z" fill="#1f7a4d" />
+  <path d="M155 135 C90 180 75 300 125 325" fill="none" stroke="#2c9a63" stroke-width="10" stroke-linecap="round" />
+  <circle cx="190" cy="245" r="62" fill="#f2c418" />
+  <text x="190" y="272" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="80" fill="#1f7a4d">€</text>
+</svg></div><div id="eg-num" class="big" style="position:absolute;left:0px;top:960px;width:1080px;font-size:150px;color:#c99a06">≈ 98.000€</div>
+      </div>
+      <div id="luxus" class="scene clip" data-start="29.246" data-duration="2.76" data-track-index="1"><div id="lx-dog" style="position:absolute;left:40px;top:480px;width:480px;height:480px;"><img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:contain" /></div><div id="lx-krone" style="position:absolute;left:580px;top:520px;width:380px;height:304px;"><svg viewBox="0 0 200 160" style="width:100%;height:100%"><path d="M20 140 L10 40 L60 80 L100 20 L140 80 L190 40 L180 140 Z" fill="#f2c418" stroke="#c99a06" stroke-width="8" stroke-linejoin="round" /><circle cx="100" cy="110" r="14" fill="#e24b4b" /></svg></div><div id="lx-x" style="position:absolute;left:860px;top:460px;width:140px;height:140px;"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><circle cx="50" cy="50" r="46" fill="#e24b4b" /><path d="M32 32 L68 68 M68 32 L32 68" stroke="#fff" stroke-width="11" stroke-linecap="round" /></svg></div>
+      </div>
+      <div id="weg" class="scene clip" data-start="32.006" data-duration="3.551" data-track-index="1"><div id="ab-a" style="position:absolute;left:120px;top:560px;width:150px;height:150px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--brand)"><div style="transform:rotate(45deg);width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:Montserrat;font-weight:800;font-size:70px;color:#fff">A</div></div><div id="ab-b" style="position:absolute;left:810px;top:560px;width:150px;height:150px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--brand)"><div style="transform:rotate(45deg);width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:Montserrat;font-weight:800;font-size:70px;color:#fff">B</div></div><svg viewBox="0 0 1080 60" style="position:absolute;left:0;top:780px;width:1080px;height:60px"><line id="ab-road" x1="190" y1="30" x2="890" y2="30" stroke="#353a3d" stroke-width="14" stroke-dasharray="40 26" /></svg><div id="ab-auto" style="position:absolute;left:160px;top:655px;width:300px;height:165px;"><svg viewBox="0 0 400 220" style="width:100%;height:100%">
+  <path d="M30 140 L60 80 Q72 58 100 58 L280 58 Q310 58 325 80 L360 140 Z" fill="#1f7a4d" />
+  <rect x="15" y="130" width="370" height="55" rx="20" fill="#1f7a4d" />
+  <path d="M110 74 L180 74 L180 128 L85 128 Z M200 74 L275 74 Q290 74 300 90 L320 128 L200 128 Z" fill="#cfe6f5" />
+  <circle cx="100" cy="190" r="30" fill="#353a3d" /><circle cx="100" cy="190" r="12" fill="#ccc" />
+  <circle cx="300" cy="190" r="30" fill="#353a3d" /><circle cx="300" cy="190" r="12" fill="#ccc" />
+  <rect x="360" y="140" width="22" height="14" rx="4" fill="#f2c418" />
+</svg></div><div id="ab-txt" class="big" style="position:absolute;left:0px;top:1070px;width:1080px;font-size:76px;color:#e24b4b">nicht arm machen</div>
+      </div>
+      <div id="teilen" class="scene clip" data-start="35.557" data-duration="4.234" data-track-index="1"><div id="tn-icon" style="position:absolute;left:340px;top:420px;width:400px;height:400px;"><svg viewBox="0 0 200 200" style="width:100%;height:100%">
+  <circle cx="100" cy="100" r="95" fill="var(--brand)" />
+  <path d="M60 140 Q65 85 115 80 L115 55 L155 98 L115 140 L115 112 Q80 110 60 140 Z" fill="#fff" />
+</svg></div><div id="tn-txt" class="big" style="position:absolute;left:0px;top:900px;width:1080px;font-size:100px;color:var(--brand)">Teile das Video!</div>
+      </div>
+      <div id="outro" class="scene clip" data-start="39.791" data-duration="4.609" data-track-index="1">
+        <div style="position:absolute;left:0;top:330px;width:1080px;display:flex;flex-direction:column;align-items:center;gap:30px">
+          <div id="outro-dog" style="width:520px;height:520px"><img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:contain" /></div>
+          <div id="outro-name" style="font-family:Montserrat;font-weight:800;font-size:92px;color:#111">HundeFinanzTV</div>
+          <div id="outro-btn" style="padding:18px 64px;border-radius:60px;background:var(--brand);color:#fff;font-family:Montserrat;font-weight:700;font-size:56px">+ Folgen</div>
+        </div>
+      </div>
+
+      <div id="brand"><span>HundeFinanzTV</span></div>
+      <div id="frame"></div>
+
+      <div id="captions" data-track-kind="captions">
+        <div id="c1" class="cap clip" data-start="0.0" data-duration="0.988" data-track-index="2"><span>dein Auto kostet</span></div>
+        <div id="c2" class="cap clip" data-start="0.988" data-duration="0.926" data-track-index="2"><span>dich viel mehr,</span></div>
+        <div id="c3" class="cap clip" data-start="1.914" data-duration="0.803" data-track-index="2"><span>als du denkst</span></div>
+        <div id="c4" class="cap clip" data-start="2.717" data-duration="1.076" data-track-index="2"><span>die meisten rechnen</span></div>
+        <div id="c5" class="cap clip" data-start="3.793" data-duration="0.924" data-track-index="2"><span>nur mit dem Sprit</span></div>
+        <div id="c6" class="cap clip" data-start="4.717" data-duration="2.175" data-track-index="2"><span>aber dazu kommen Versicherung,</span></div>
+        <div id="c7" class="cap clip" data-start="6.892" data-duration="1.321" data-track-index="2"><span>Steuer, Werkstatt,</span></div>
+        <div id="c8" class="cap clip" data-start="8.213" data-duration="1.446" data-track-index="2"><span>Reifen und vor allem</span></div>
+        <div id="c9" class="cap clip" data-start="9.659" data-duration="1.041" data-track-index="2"><span>der Wertverlust</span></div>
+        <div id="c10" class="cap clip" data-start="10.7" data-duration="0.862" data-track-index="2"><span>schnell sind</span></div>
+        <div id="c11" class="cap clip" data-start="11.562" data-duration="2.148" data-track-index="2"><span>das 400 € im Monat oder mehr</span></div>
+        <div id="c12" class="cap clip" data-start="13.71" data-duration="2.599" data-track-index="2"><span>das sind fast 5.000 € im Jahr</span></div>
+        <div id="c13" class="cap clip" data-start="16.309" data-duration="1.045" data-track-index="2"><span>stell dir vor,</span></div>
+        <div id="c14" class="cap clip" data-start="17.354" data-duration="1.418" data-track-index="2"><span>du fährst ein Auto,</span></div>
+        <div id="c15" class="cap clip" data-start="18.772" data-duration="1.344" data-track-index="2"><span>das 200 € im Monat</span></div>
+        <div id="c16" class="cap clip" data-start="20.116" data-duration="0.955" data-track-index="2"><span>günstiger ist</span></div>
+        <div id="c17" class="cap clip" data-start="21.071" data-duration="1.509" data-track-index="2"><span>und investierst</span></div>
+        <div id="c18" class="cap clip" data-start="22.58" data-duration="1.631" data-track-index="2"><span>genau diese 200 €</span></div>
+        <div id="c19" class="cap clip" data-start="24.211" data-duration="2.948" data-track-index="2"><span>nach 20 Jahren mit 7 % Rendite</span></div>
+        <div id="c20" class="cap clip" data-start="27.159" data-duration="2.087" data-track-index="2"><span>hast du fast 100.000 €</span></div>
+        <div id="c21" class="cap clip" data-start="29.246" data-duration="1.529" data-track-index="2"><span>nur weil du auf ein bisschen</span></div>
+        <div id="c22" class="cap clip" data-start="30.775" data-duration="1.231" data-track-index="2"><span>Luxus verzichtet hast</span></div>
+        <div id="c23" class="cap clip" data-start="32.006" data-duration="1.141" data-track-index="2"><span>ein Auto soll dich</span></div>
+        <div id="c24" class="cap clip" data-start="33.147" data-duration="1.295" data-track-index="2"><span>von A nach B bringen</span></div>
+        <div id="c25" class="cap clip" data-start="34.442" data-duration="1.115" data-track-index="2"><span>und nicht arm machen</span></div>
+        <div id="c26" class="cap clip" data-start="35.557" data-duration="1.03" data-track-index="2"><span>teile dieses Video</span></div>
+        <div id="c27" class="cap clip" data-start="36.587" data-duration="0.874" data-track-index="2"><span>mit jemandem,</span></div>
+        <div id="c28" class="cap clip" data-start="37.461" data-duration="1.345" data-track-index="2"><span>der gerade ein neues</span></div>
+        <div id="c29" class="cap clip" data-start="38.806" data-duration="0.985" data-track-index="2"><span>Auto kaufen will!</span></div>
+        <div id="c30" class="cap clip" data-start="39.791" data-duration="1.295" data-track-index="2"><span>folge HundeFinanzTV,</span></div>
+        <div id="c31" class="cap clip" data-start="41.086" data-duration="1.293" data-track-index="2"><span>wir haben noch mehr</span></div>
+        <div id="c32" class="cap clip" data-start="42.379" data-duration="1.435" data-track-index="2"><span>Spar‑Tipps für dich!</span></div>
+      </div>
+
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="44.4" data-track-index="3"></audio>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const pop = (sel, at) =>
+        tl.fromTo(sel, { scale: 0.82, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.8)" }, at);
+      const draw = (sel, at, dur) => {
+        const len = document.querySelector(sel).getTotalLength();
+        tl.fromTo(sel, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: dur, ease: "power2.out" }, at);
+      };
+
+      // intro
+      (() => {
+      tl.fromTo("#intro-title", { scale: 1.05 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 0.0);
+      tl.fromTo("#intro-auto", { scale: 1.05 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 0.0);
+      pop("#intro-q", 0.0 + 0.3);
+      })();
+      // sprit
+      (() => {
+      pop("#sp-tile", 2.717);
+      })();
+      // kosten
+      (() => {
+      pop("#kt-0", 4.717);
+      pop("#kt-1", 4.717 + 0.50);
+      pop("#kt-2", 4.717 + 1.40);
+      pop("#kt-3", 4.717 + 2.30);
+      pop("#kt-4", 4.717 + 3.20);
+      pop("#kt-5", 4.717 + 4.10);
+      })();
+      // monat
+      (() => {
+      pop("#mn-num", 11.562 - 0.3);
+      pop("#mn-sub", 11.562);
+      })();
+      // jahr
+      (() => {
+      pop("#jr-num", 13.71);
+      tl.fromTo("#jr-num", { scale: 1 }, { scale: 1.1, duration: 0.2, yoyo: true, repeat: 1 }, 13.71 + 0.5);
+      pop("#jr-sub", 13.71 + 0.3);
+      })();
+      // vergleich
+      (() => {
+      pop("#vg-teuer", 16.309);
+      pop("#vg-x", 18.772 - 0.2);
+      tl.fromTo("#vg-guenstig", { x: 400, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 17.354);
+      pop("#vg-txt", 18.772);
+      })();
+      // invest
+      (() => {
+      pop("#iv-c", 21.071);
+      pop("#iv-arrow", 21.071 + 0.4);
+      pop("#iv-chart", 22.58);
+      pop("#iv-txt", 22.58 + 0.2);
+      })();
+      // ergebnis
+      (() => {
+      pop("#eg-sack", 24.211);
+      pop("#eg-num", 27.159);
+      })();
+      // luxus
+      (() => {
+      pop("#lx-dog", 29.246);
+      pop("#lx-krone", 29.246 + 0.2);
+      pop("#lx-x", 30.775);
+      })();
+      // weg
+      (() => {
+      pop("#ab-a", 32.006);
+      pop("#ab-b", 32.006 + 0.2);
+      tl.fromTo("#ab-auto", { x: 0 }, { x: 480, duration: 2.64, ease: "power1.inOut" }, 32.006 + 0.3);
+      pop("#ab-txt", 34.442);
+      })();
+      // teilen
+      (() => {
+      pop("#tn-icon", 35.557);
+      tl.fromTo("#tn-icon", { rotation: -10 }, { rotation: 10, duration: 0.2, yoyo: true, repeat: 3, ease: "sine.inOut" }, 35.557 + 0.35);
+      pop("#tn-txt", 35.557 + 0.2);
+      })();
+      // outro
+      (() => {
+      pop("#outro-dog", 39.791);
+      pop("#outro-name", 39.791 + 0.25);
+      pop("#outro-btn", 39.791 + 0.5);
+      tl.fromTo("#outro-btn", { scale: 1 }, { scale: 1.08, duration: 0.3, yoyo: true, repeat: 1, ease: "sine.inOut" }, 39.791 + 1.1);
+      })();
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
