@@ -5,7 +5,7 @@ Aufruf: python3 scripts/voice.py videos/<name>
 Liest  videos/<name>/skript.json  -> {"saetze": [{"id": "s1", "text": "...", "sprechtext": "..."?}]}
 Schreibt videos/<name>/assets/voice.wav und videos/<name>/timings.json
 """
-import json, subprocess, sys, wave
+import json, re, subprocess, sys, wave
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -27,6 +27,7 @@ def _even(words):
 
 def chunks(text):
     """Text in Untertitel-Boxen teilen: zuerst an Kommas, dann gleichmäßig (max. MAX_WORDS / MAX_CHARS)."""
+    text = re.sub(r"(\d) ([€%])", "\\1\x01\\2", text)  # Zahl und Einheit nie trennen
     clauses, cur = [], []
     for w in text.split():
         cur.append(w)
@@ -42,7 +43,7 @@ def chunks(text):
         else:
             merged.append(c)
     parts = [p for c in merged for p in _even(c)]
-    return [p.replace(" €", "\u00a0€").replace(" %", "\u00a0%").replace("-", "\u2011") for p in parts]
+    return [p.replace("\x01", "\u00a0").replace("-", "\u2011") for p in parts]
 
 
 def main(video_dir):

@@ -14,6 +14,54 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from voice import chunks  # noqa: E402
 
 TAIL = 0.6
+GAPW = float(__import__("os").environ.get("GAPW", 3))
+
+
+def envelope(path):
+    """Silben-Spitzen und Lautstärke-Täler (Zeiten in s) aus der Hüllkurve."""
+    import numpy as np
+    from scipy.signal import find_peaks
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(path), "-ac", "1", "-ar", "16000", "-f", "s16le", "-"],
+                         capture_output=True, check=True).stdout
+    x = np.frombuffer(raw, np.int16).astype(float)
+    hop = 160
+    e = np.sqrt(np.convolve(x ** 2, np.ones(400) / 400, "same")[::hop])
+    e = np.convolve(e, np.ones(5) / 5, "same")
+    pk, _ = find_peaks(e, distance=10, prominence=e.max() * 0.06)
+    dp, _ = find_peaks(-e, distance=15, prominence=e.max() * 0.25)
+    return list(pk * hop / 16000), list(dp * hop / 16000)
+
+
+def piper_dauer(text, model="/root/tts/de-thorsten-low.onnx"):
+    """Sprechdauer eines Satzes mit Piper messen (None, wenn Piper fehlt)."""
+    import tempfile
+    try:
+        with tempfile.NamedTemporaryFile(suffix=".wav") as f:
+            subprocess.run([sys.executable, "-m", "piper", "-m", model, "--sentence-silence", "0", "--noise-w", "0", "--noise-scale", "0", "-f", f.name],
+                           input=text.encode(), stderr=subprocess.DEVNULL, check=True)
+            with wave.open(f.name) as w:
+                return w.getnframes() / w.getframerate()
+    except Exception:
+        return None
+
+
+def silben(text):
+    """Grobe Silbenzahl (Vokalgruppen) – Maß für die Sprechdauer eines Satzes.
+    Abkürzungen in Großbuchstaben (ETF, TV) werden buchstabiert, Ziffern grob mitgezählt."""
+    n = 0
+    for w in re.findall(r"[\wÄÖÜäöüß%€]+", text):
+        if len(w) >= 2 and w.isupper() and w.isalpha():
+            n += len(w)
+        elif re.fullmatch(r"[A-ZÄÖÜ][a-zäöüß]+[A-Z]{2,}", w):  # z. B. HundeFinanzTV
+            m = re.match(r"([A-ZÄÖÜ][a-zäöüß]+.*?)([A-Z]{2,})$", w)
+            n += len(re.findall(r"[aeiouyäöü]+", m.group(1).lower())) + len(m.group(2))
+        elif w.isdigit():
+            n += 2 * len(w)
+        elif w in ("%", "€"):
+            n += 2
+        else:
+            n += max(1, len(re.findall(r"[aeiouyäöü]+", w.lower())))
+    return max(1, n)
 
 
 def silences(path, noise_db, min_dur):
@@ -80,50 +128,50 @@ def main(video_dir, audio, tempo=1.08, max_pause=0.25):
     total = duration(orig)
     need = len(saetze) - 1
 
-    # Pausen innerhalb der Sprache (nicht Anfang/Ende), längste zuerst
-    gaps = []
-    for noise in (-35, -30, -40, -25):
-        for d in (0.18, 0.12, 0.25, 0.08):
-            g = [(s, e) for s, e in silences(orig, noise, d) if s > 0.05 and e < total - 0.05]
-            if len(g) >= need:
-                gaps = g
-                break
-        if gaps:
-            break
+    # Kandidaten für Satzgrenzen: Pausen + kurze Lautstärke-Täler (ElevenLabs macht nicht immer Pausen)
+    _, dips = envelope(orig)
+    cands = {round((s + e) / 2, 3): e - s for s, e in silences(orig, -35, 0.06) if s > 0.05 and e < total - 0.05}
+    for t in dips:
+        if all(abs(t - m) > 0.15 for m in cands):
+            cands[round(t, 3)] = 0.0
+    mids = sorted(cands.items())
 
-    lens = [len(s["text"]) for s in saetze]
-    expect, acc = [], 0
-    for l in lens[:-1]:
-        acc += l
-        expect.append(total * acc / sum(lens))
+    # Erwartete Satzdauer: jeden Satz kurz mit Piper sprechen lassen (erfasst Zahlen, Abkürzungen, Satzlänge)
+    est = [piper_dauer(s.get("sprechtext", s["text"])) for s in saetze]
+    if None in est:
+        est = [float(silben(s.get("sprechtext", s["text"]))) for s in saetze]
+    e = [x * total / sum(est) for x in est]
 
-    if need and len(gaps) >= need:
-        # DP: Satzgrenzen = Pausen, die lang sind UND nahe an der erwarteten Stelle
-        # (erwartet = Anteil der Textlänge an der Gesamtdauer)
-        mids = [((s + e) / 2, e - s) for s, e in gaps]
-        INF = float("inf")
-        K, J = len(mids), need
-        cost = [[INF] * K for _ in range(J)]
-        prev = [[-1] * K for _ in range(J)]
-        for j in range(J):
-            for k in range(j, K - (J - 1 - j)):
-                c = abs(mids[k][0] - expect[j]) - 6 * mids[k][1]
-                if j == 0:
-                    cost[j][k] = c
-                else:
-                    best = min(range(j - 1, k), key=lambda q: cost[j - 1][q])
-                    cost[j][k] = cost[j - 1][best] + c
-                    prev[j][k] = best
-        k = min(range(K), key=lambda q: cost[J - 1][q])
-        picks = []
-        for j in range(J - 1, -1, -1):
-            picks.append(k)
-            k = prev[j][k]
-        bounds = [mids[q][0] for q in reversed(picks)]
-        mode = "Pausen + Textlänge"
+    if need and len(mids) >= need:
+        # DP über Satzdauern: jede Satzlänge nah an der Schätzung, Grenzen bevorzugt in echten Pausen
+        pos = [0.0] + [m for m, _ in mids] + [total]
+        gap = [0.0] + [g for _, g in mids] + [0.0]
+        N, J, INF = len(pos), len(saetze), float("inf")
+        cost = [[INF] * N for _ in range(J + 1)]
+        prev = [[-1] * N for _ in range(J + 1)]
+        cost[0][0] = 0.0
+        for j in range(1, J + 1):
+            for i in range(1, N):
+                if (j == J) != (i == N - 1):
+                    continue
+                for q in range(i):
+                    if cost[j - 1][q] == INF:
+                        continue
+                    c = cost[j - 1][q] + abs(pos[i] - pos[q] - e[j - 1]) - GAPW * min(gap[i], 0.6)
+                    if c < cost[j][i]:
+                        cost[j][i], prev[j][i] = c, q
+        i, bounds = N - 1, []
+        for j in range(J, 0, -1):
+            i = prev[j][i]
+            bounds.append(pos[i])
+        bounds = list(reversed(bounds))[1:]
+        mode = "Pausen + geschätzte Satzdauer"
     else:
-        bounds = expect
-        mode = "Textlänge (Fallback)"
+        acc, bounds = 0.0, []
+        for x in e[:-1]:
+            acc += x
+            bounds.append(acc)
+        mode = "geschätzte Satzdauer (Fallback)"
 
     orig.unlink()
     edges = [0.0] + bounds + [total]

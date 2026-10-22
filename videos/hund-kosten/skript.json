@@ -1,0 +1,50 @@
+{
+ "titel": "Was kostet ein Hund wirklich?",
+ "saetze": [
+  {
+   "id": "s1",
+   "text": "weißt du, was dich dein Hund in seinem Leben wirklich kostet?",
+   "sprechtext": "Weißt du, was dich dein Hund in seinem Leben wirklich kostet?"
+  },
+  {
+   "id": "s2",
+   "text": "Futter, Tierarzt, Versicherung und Hundesteuer",
+   "sprechtext": "Futter, Tierarzt, Versicherung und Hundesteuer."
+  },
+  {
+   "id": "s3",
+   "text": "da kommen schnell 100 € im Monat zusammen",
+   "sprechtext": "Da kommen schnell hundert Euro im Monat zusammen."
+  },
+  {
+   "id": "s4",
+   "text": "bei 13 Jahren sind das rund 16.000 €",
+   "sprechtext": "Bei dreizehn Jahren sind das rund sechzehntausend Euro."
+  },
+  {
+   "id": "s5",
+   "text": "und da sind Notfälle beim Tierarzt noch nicht dabei",
+   "sprechtext": "Und da sind Notfälle beim Tierarzt noch nicht dabei."
+  },
+  {
+   "id": "s6",
+   "text": "mein Tipp: leg ab dem ersten Tag 100 € im Monat für deinen Hund zur Seite",
+   "sprechtext": "Mein Tipp: Leg ab dem ersten Tag hundert Euro im Monat für deinen Hund zur Seite."
+  },
+  {
+   "id": "s7",
+   "text": "investiert mit 7 % hast du nach 13 Jahren über 24.000 €",
+   "sprechtext": "Investiert mit sieben Prozent hast du nach dreizehn Jahren über vierundzwanzigtausend Euro."
+  },
+  {
+   "id": "s8",
+   "text": "so bezahlt sich dein Hund quasi selbst",
+   "sprechtext": "So bezahlt sich dein Hund quasi selbst."
+  },
+  {
+   "id": "s9",
+   "text": "folg HundeFinanzTV für mehr Geld-Tipps!",
+   "sprechtext": "Folg HundeFinanzTV für mehr Geld-Tipps!"
+  }
+ ]
+}

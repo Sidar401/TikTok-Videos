@@ -1,0 +1,168 @@
+{
+  "dauer": 27.28,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 3.262,
+      "captions": [
+        {
+          "text": "weißt du,",
+          "start": 0.0,
+          "end": 0.518
+        },
+        {
+          "text": "was dich dein Hund in",
+          "start": 0.518,
+          "end": 1.726
+        },
+        {
+          "text": "seinem Leben wirklich kostet?",
+          "start": 1.726,
+          "end": 3.262
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 3.262,
+      "end": 5.651,
+      "captions": [
+        {
+          "text": "Futter, Tierarzt,",
+          "start": 3.262,
+          "end": 4.254
+        },
+        {
+          "text": "Versicherung und Hundesteuer",
+          "start": 4.254,
+          "end": 5.651
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 5.651,
+      "end": 8.0,
+      "captions": [
+        {
+          "text": "da kommen schnell 100 €",
+          "start": 5.651,
+          "end": 7.071
+        },
+        {
+          "text": "im Monat zusammen",
+          "start": 7.071,
+          "end": 8.0
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 8.0,
+      "end": 10.204,
+      "captions": [
+        {
+          "text": "bei 13 Jahren sind",
+          "start": 8.0,
+          "end": 9.063
+        },
+        {
+          "text": "das rund 16.000 €",
+          "start": 9.063,
+          "end": 10.204
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 10.204,
+      "end": 13.065,
+      "captions": [
+        {
+          "text": "und da sind Notfälle beim",
+          "start": 10.204,
+          "end": 11.646
+        },
+        {
+          "text": "Tierarzt noch nicht dabei",
+          "start": 11.646,
+          "end": 13.065
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 13.065,
+      "end": 16.953,
+      "captions": [
+        {
+          "text": "mein Tipp: leg ab dem",
+          "start": 13.065,
+          "end": 14.219
+        },
+        {
+          "text": "ersten Tag 100 € im Monat",
+          "start": 14.219,
+          "end": 15.62
+        },
+        {
+          "text": "für deinen Hund zur Seite",
+          "start": 15.62,
+          "end": 16.953
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 16.953,
+      "end": 21.708,
+      "captions": [
+        {
+          "text": "investiert mit 7 % hast du",
+          "start": 16.953,
+          "end": 19.229
+        },
+        {
+          "text": "nach 13 Jahren über 24.000 €",
+          "start": 19.229,
+          "end": 21.708
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 21.708,
+      "end": 23.472,
+      "captions": [
+        {
+          "text": "so bezahlt sich dein",
+          "start": 21.708,
+          "end": 22.668
+        },
+        {
+          "text": "Hund quasi selbst",
+          "start": 22.668,
+          "end": 23.472
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 23.472,
+      "end": 26.666,
+      "captions": [
+        {
+          "text": "folg HundeFinanzTV für",
+          "start": 23.472,
+          "end": 25.34
+        },
+        {
+          "text": "mehr Geld‑Tipps!",
+          "start": 25.34,
+          "end": 26.666
+        }
+      ]
+    }
+  ]
+}

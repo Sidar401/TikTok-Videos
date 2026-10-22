@@ -4,7 +4,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 npm install --no-audit --no-fund
 npx hyperframes browser ensure
-pip install -q piper-tts 2>/dev/null || pip install -q --break-system-packages piper-tts
+pip install -q piper-tts scipy numpy 2>/dev/null || pip install -q --break-system-packages piper-tts scipy numpy
 mkdir -p /root/tts
 for v in thorsten karlsson pavoque; do
   [ -f "/root/tts/de-$v-low.onnx" ] && continue
