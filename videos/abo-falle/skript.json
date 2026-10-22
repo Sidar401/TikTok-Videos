@@ -1,0 +1,50 @@
+{
+ "titel": "Die Abo-Falle",
+ "saetze": [
+  {
+   "id": "s1",
+   "text": "diese kleinen Beträge fressen heimlich dein Vermögen auf",
+   "sprechtext": "Diese kleinen Beträge fressen heimlich dein Vermögen auf."
+  },
+  {
+   "id": "s2",
+   "text": "Streaming, Musik, Fitnessstudio und Cloud-Speicher",
+   "sprechtext": "Streaming, Musik, Fitnessstudio und Cloud-Speicher."
+  },
+  {
+   "id": "s3",
+   "text": "4 Abos zu je 15 € sind 60 € im Monat",
+   "sprechtext": "Vier Abos zu je fünfzehn Euro sind sechzig Euro im Monat."
+  },
+  {
+   "id": "s4",
+   "text": "das sind über 700 € im Jahr",
+   "sprechtext": "Das sind über siebenhundert Euro im Jahr."
+  },
+  {
+   "id": "s5",
+   "text": "investierst du das Geld 20 Jahre lang mit 7 % Rendite,",
+   "sprechtext": "Investierst du das Geld zwanzig Jahre lang mit sieben Prozent Rendite,"
+  },
+  {
+   "id": "s6",
+   "text": "dann hast du am Ende fast 30.000 €",
+   "sprechtext": "dann hast du am Ende fast dreißigtausend Euro."
+  },
+  {
+   "id": "s7",
+   "text": "schau also heute noch in deine Kontoauszüge",
+   "sprechtext": "Schau also heute noch in deine Kontoauszüge."
+  },
+  {
+   "id": "s8",
+   "text": "welches Abo nutzt du wirklich?",
+   "sprechtext": "Welches Abo nutzt du wirklich?"
+  },
+  {
+   "id": "s9",
+   "text": "folge HundeFinanzTV, wir haben noch mehr Spar-Tipps für dich!",
+   "sprechtext": "Folge HundeFinanzTV, wir haben noch mehr Spar-Tipps für dich!"
+  }
+ ]
+}
