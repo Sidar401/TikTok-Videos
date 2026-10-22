@@ -25,7 +25,7 @@ Der Nutzer arbeitet am iPad: Antworten kurz, Ergebnisse per `SendUserFile` schic
    - Zahlen nachrechnen (Zinseszins etc.) und im Chat kurz nennen. Keine Anlageberatung versprechen.
 4. **Voiceover (Standard: ElevenLabs vom Nutzer):**
    - Dem Nutzer das Skript zum Einsprechen schicken: nur die `sprechtext`-Sätze, **ein Satz pro Zeile**, in einem Codeblock (iPad: leicht zu kopieren). Hinweis: gleiche ElevenLabs-Stimme wie immer, Satzzeichen stehen lassen. Dann warten.
-   - Lädt der Nutzer die Datei hoch: `python3 scripts/sync.py videos/<name> <upload.mp3>` → `assets/voice.wav` + `timings.json`. Standard: Pausen auf 0,18 s kürzen + Tempo 1,15 (Tonhöhe bleibt), weil die ElevenLabs-Stimme langsam ist; anpassbar mit `--tempo`/`--pause`. Satzgrenzen werden im Original erkannt und umgerechnet. Meldet es „Fallback“, Satzanzahl und Pausen prüfen und dem Nutzer sagen.
+   - Lädt der Nutzer die Datei hoch: `python3 scripts/sync.py videos/<name> <upload.mp3>` → `assets/voice.wav` + `timings.json`. Standard: Pausen auf 0,25 s kürzen + Tempo 1,08 (Tonhöhe bleibt; 1,15 war dem Nutzer zu schnell); anpassbar mit `--tempo`/`--pause`. Satzgrenzen werden im Original erkannt und umgerechnet. Meldet es „Fallback“, Satzanzahl und Pausen prüfen und dem Nutzer sagen.
    - Nur wenn der Nutzer es ausdrücklich will: Computerstimme `python3 scripts/voice.py videos/<name>` (Piper, `stimme_fallback` aus `kanal.json`).
 5. **Komposition bauen:** `build.py` aus dem letzten Video (Muster: `videos/100-euro-im-monat/build.py`) nach `videos/<name>/` kopieren, `SCENES` anpassen, `python3 build.py` → `index.html` (Kopf/CSS kommt aus der Vorlage). Es setzt automatisch:
    - Root-`data-duration` = `timings.json.dauer`.

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Fremdes Voiceover (z. B. ElevenLabs) an skript.json anlegen.
 
-Aufruf: python3 scripts/sync.py videos/<name> <audio.mp3> [--tempo 1.15] [--pause 0.18]
-  --tempo  schneller sprechen (Tonhöhe bleibt), Standard 1.15
-  --pause  Pausen länger als dieser Wert (s) werden darauf gekürzt, Standard 0.18
+Aufruf: python3 scripts/sync.py videos/<name> <audio.mp3> [--tempo 1.08] [--pause 0.25]
+  --tempo  schneller sprechen (Tonhöhe bleibt), Standard 1.08
+  --pause  Pausen länger als dieser Wert (s) werden darauf gekürzt, Standard 0.25
 Findet die Pausen zwischen den Sätzen (ffmpeg silencedetect) und schreibt
 assets/voice.wav + timings.json im gleichen Format wie voice.py.
 """
@@ -67,7 +67,7 @@ def tighten(src, dst, tempo, max_pause):
     return fmap
 
 
-def main(video_dir, audio, tempo=1.15, max_pause=0.18):
+def main(video_dir, audio, tempo=1.08, max_pause=0.25):
     vdir = Path(video_dir).resolve()
     saetze = json.loads((vdir / "skript.json").read_text())["saetze"]
     (vdir / "assets").mkdir(exist_ok=True)
@@ -146,7 +146,7 @@ if __name__ == "__main__":
     import argparse
     ap = argparse.ArgumentParser()
     ap.add_argument("video_dir"); ap.add_argument("audio")
-    ap.add_argument("--tempo", type=float, default=1.15)
-    ap.add_argument("--pause", type=float, default=0.18)
+    ap.add_argument("--tempo", type=float, default=1.08)
+    ap.add_argument("--pause", type=float, default=0.25)
     a = ap.parse_args()
     main(a.video_dir, a.audio, a.tempo, a.pause)
