@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      /* Kanal-Stil (siehe STIL.md) */
+      @font-face {
+        font-family: "Abril Fatface";
+        src: url("assets/fonts/abril-fatface.woff2") format("woff2");
+      }
+      :root {
+        --bg: #ffffff;
+        --ink: #111111;
+        --brand: #DB8622; /* Kanalfarbe aus kanal.json */
+        --green: #1f7a4d;
+        --gold: #f2c418;
+        --red: #e24b4b;
+        --blue: #3d7be0;
+        --font-caption: "Montserrat", sans-serif;
+        --font-display: "Abril Fatface", serif;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: var(--bg);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: var(--bg);
+      }
+
+      /* Szene: eine Illustration, zentriert im oberen Bereich */
+      .scene {
+        position: absolute;
+        left: 0;
+        top: 230px;
+        width: 1080px;
+        height: 1080px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .art { width: 820px; height: 820px; }
+      .art svg { width: 100%; height: 100%; display: block; }
+
+      /* Oranger Rahmen wie bei HundeWissenTv */
+      #frame {
+        position: absolute;
+        inset: 0;
+        border: 26px solid var(--brand);
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      /* Untertitel-Box (TikTok-Look) */
+      .cap {
+        position: absolute;
+        left: 0;
+        top: 1360px;
+        width: 1080px;
+        display: flex;
+        justify-content: center;
+      }
+      .cap span {
+        display: block;
+        max-width: 880px;
+        padding: 20px 44px 22px;
+        border-radius: 28px;
+        background: var(--brand);
+        color: #ffffff;
+        font-family: var(--font-caption);
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 1.15;
+        text-align: center;
+      }
+
+      /* Zahlen-Vergleich in Serifen-Schrift */
+      .cmp {
+        width: 940px;
+        display: grid;
+        grid-template-columns: 1fr 6px 1fr;
+        column-gap: 40px;
+        font-family: var(--font-display);
+        color: var(--ink);
+        text-align: center;
+      }
+      .cmp .head { font-size: 104px; line-height: 1.1; }
+      .cmp .sub { font-size: 76px; line-height: 1.1; }
+      .cmp .divider { background: var(--ink); grid-row: 1 / span 3; grid-column: 2; }
+      .cmp .arrow { height: 260px; display: flex; justify-content: center; align-items: center; }
+      .cmp .arrow svg { width: 140px; height: 220px; }
+      .cmp .num { font-size: 96px; line-height: 1.2; }
+      .green { color: var(--green); }
+      .gold { color: var(--gold); }
+      .chart-label { font-family: var(--font-display); }
+      .serif { font-family: var(--font-display); }
+      #brand {
+        position: absolute;
+        top: 190px;
+        left: 0;
+        width: 1080px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+        font-family: var(--font-caption);
+        font-weight: 800;
+        font-size: 42px;
+        color: #353a3d;
+        z-index: 5;
+      }
+      #brand-dog { width: 84px; height: 84px; }
+
+      .scene { position: absolute; inset: 0; top: 0; height: 1920px; display: block; }
+      .tile { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 30px 10px; border-radius: 30px; background: #faf5ef; }
+      .tile svg { width: 230px; height: 230px; }
+      .tile span { font-family: Montserrat; font-weight: 800; font-size: 54px; color: #111; }
+      .big { font-family: var(--font-display); text-align: center; color: #111; }
+      .cap span { max-width: 990px; font-size: 50px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="49.38" data-width="1080" data-height="1920">
+      <div id="intro" class="scene clip" data-start="0.0" data-duration="4.635" data-track-index="1"><div id="intro-title" style="position:absolute;top:290px;left:40px;width:1000px;text-align:center;font-family:Montserrat;font-weight:800;font-size:88px;line-height:1.05;color:#111">Mehr Gehalt –<br />trotzdem <span style="color:#e24b4b">pleite</span>?</div><div id="intro-zettel" style="position:absolute;left:350px;top:600px;width:380px;height:481px;"><svg viewBox="0 0 300 380" style="width:100%;height:100%">
+  <rect x="10" y="10" width="280" height="360" rx="16" fill="#fff" stroke="#353a3d" stroke-width="8" />
+  <text x="40" y="70" font-family="Montserrat" font-weight="800" font-size="30" fill="#111">Gehalt</text>
+  <rect x="40" y="105" width="200" height="14" rx="7" fill="#eee" /><rect x="40" y="140" width="160" height="14" rx="7" fill="#eee" />
+  <rect x="40" y="175" width="190" height="14" rx="7" fill="#eee" />
+  <text x="150" y="300" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="64" fill="#1f7a4d">+200 €</text>
+</svg></div>
+      </div>
+      <div id="begriff" class="scene clip" data-start="4.635" data-duration="2.227" data-track-index="1"><div id="bg-word" class="big" style="position:absolute;left:0px;top:440px;width:1080px;font-size:140px;color:#e24b4b">Lifestyle-<br />Inflation</div>
+      </div>
+      <div id="konsum" class="scene clip" data-start="6.862" data-duration="5.756" data-track-index="1"><div style="position:absolute;left:0;top:450px;width:1080px;display:flex;justify-content:center;gap:40px"><div id="ks-0" class="tile" style="width:290px"><svg viewBox="0 0 100 100"><circle cx="50" cy="55" r="36" fill="#fff" stroke="#353a3d" stroke-width="6" /><circle cx="50" cy="55" r="22" fill="#DB8622" /><path d="M10 15 L10 45 M18 15 L18 45 M10 30 L18 30 M88 15 Q98 35 88 50 L88 90" stroke="#353a3d" stroke-width="5" fill="none" stroke-linecap="round" /></svg><span>Essen</span></div><div id="ks-1" class="tile" style="width:290px"><svg viewBox="0 0 100 100"><rect x="28" y="6" width="44" height="88" rx="10" fill="#353a3d" /><rect x="33" y="16" width="34" height="64" rx="4" fill="#9ed0f0" /><circle cx="50" cy="87" r="3" fill="#fff" /></svg><span>Handy</span></div><div id="ks-2" class="tile" style="width:290px"><svg viewBox="0 0 100 100"><path d="M10 62 L18 40 Q22 32 32 32 L68 32 Q78 32 82 40 L90 62 Z" fill="#e24b4b" /><rect x="6" y="58" width="88" height="20" rx="8" fill="#e24b4b" /><rect x="28" y="38" width="44" height="18" rx="4" fill="#cfe6f5" /><circle cx="26" cy="80" r="10" fill="#353a3d" /><circle cx="74" cy="80" r="10" fill="#353a3d" /></svg><span>Auto</span></div></div>
+      </div>
+      <div id="weg" class="scene clip" data-start="12.618" data-duration="2.712" data-track-index="1"><div id="wg-plus" class="big" style="position:absolute;left:0px;top:500px;width:1080px;font-size:180px;color:#1f7a4d">+200€</div><div id="wg-puff" style="position:absolute;left:240px;top:430px;width:600px;height:450px;"><svg viewBox="0 0 400 300" style="width:100%;height:100%"><g fill="#d9dde0"><circle cx="140" cy="160" r="70" /><circle cx="230" cy="130" r="85" /><circle cx="300" cy="180" r="60" /><circle cx="190" cy="210" r="60" /></g></svg></div><div id="wg-null" class="big" style="position:absolute;left:0px;top:960px;width:1080px;font-size:140px;color:#e24b4b">0€</div>
+      </div>
+      <div id="regel" class="scene clip" data-start="15.33" data-duration="2.725" data-track-index="1"><div id="rg-title" class="big" style="position:absolute;left:0px;top:350px;width:1080px;font-size:110px;color:var(--brand)">Hälfte-Regel</div><div id="rg-pie" style="position:absolute;left:290px;top:560px;width:500px;height:500px;"><svg viewBox="0 0 300 300" style="width:100%;height:100%">
+  <path d="M150 20 A130 130 0 0 0 150 280 Z" fill="#DB8622" /><path d="M150 20 A130 130 0 0 1 150 280 Z" fill="#1f7a4d" />
+  <line x1="150" y1="10" x2="150" y2="290" stroke="#fff" stroke-width="10" />
+  <text x="85" y="170" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="40" fill="#fff">50%</text>
+  <text x="215" y="170" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="40" fill="#fff">50%</text>
+</svg></div>
+      </div>
+      <div id="teilung" class="scene clip" data-start="18.055" data-duration="4.404" data-track-index="1"><div id="tl-200" style="position:absolute;left:395px;top:380px;width:290px;height:290px;border-radius:50%;background:#f2c418;border:10px solid #c99a06;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:80px;color:#7a5a00">200€</div><div id="tl-a" style="position:absolute;left:150px;top:760px;width:250px;height:250px;border-radius:50%;background:#f2c418;border:10px solid #c99a06;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:70px;color:#7a5a00">100€</div><div id="tl-b" style="position:absolute;left:680px;top:760px;width:250px;height:250px;border-radius:50%;background:#f2c418;border:10px solid #c99a06;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:70px;color:#7a5a00">100€</div><div id="tl-gift" style="position:absolute;left:170px;top:1040px;width:210px;height:210px;"><svg viewBox="0 0 200 200" style="width:100%;height:100%">
+  <rect x="25" y="80" width="150" height="110" rx="10" fill="#e24b4b" /><rect x="15" y="55" width="170" height="40" rx="8" fill="#c23b3b" />
+  <rect x="88" y="55" width="24" height="135" fill="#f2c418" />
+  <path d="M100 55 Q60 10 50 40 Q45 60 100 55 Q155 60 150 40 Q140 10 100 55 Z" fill="#f2c418" />
+</svg></div>
+      </div>
+      <div id="invest" class="scene clip" data-start="22.459" data-duration="2.736" data-track-index="1"><div id="iv-c" style="position:absolute;left:160px;top:520px;width:280px;height:280px;border-radius:50%;background:#f2c418;border:10px solid #c99a06;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:80px;color:#7a5a00">100€</div><svg id="iv-arrow" viewBox="0 0 120 60" style="position:absolute;left:470px;top:620px;width:170px;height:85px"><path d="M8 30 L100 30 M76 8 L104 30 L76 52" fill="none" stroke="#111" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" /></svg><div id="iv-chart" style="position:absolute;left:670px;top:470px;width:330px;height:330px;"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M10 85 L40 55 L60 68 L90 25" fill="none" stroke="#1f7a4d" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" /><path d="M70 22 L92 22 L92 44" fill="none" stroke="#1f7a4d" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" /></svg></div><div id="iv-txt" class="big" style="position:absolute;left:0px;top:920px;width:1080px;font-size:100px;color:#1f7a4d">investieren</div>
+      </div>
+      <div id="ergebnis" class="scene clip" data-start="25.195" data-duration="6.363" data-track-index="1"><div id="eg-sack" style="position:absolute;left:240px;top:330px;width:600px;height:600px;"><svg viewBox="0 0 400 400" style="width:100%;height:100%">
+  <g fill="#f2c418" stroke="#c99a06" stroke-width="3">
+    <rect x="250" y="300" width="110" height="22" rx="8" /><rect x="250" y="276" width="110" height="22" rx="8" />
+    <rect x="250" y="252" width="110" height="22" rx="8" /><rect x="250" y="228" width="110" height="22" rx="8" />
+    <rect x="250" y="204" width="110" height="22" rx="8" /><rect x="265" y="180" width="110" height="22" rx="8" />
+  </g>
+  <path d="M150 110 C120 70 140 50 160 70 C175 50 205 50 220 70 C240 50 260 70 230 110 Z" fill="#1f7a4d" />
+  <rect x="145" y="104" width="90" height="18" rx="9" fill="#f2c418" />
+  <path d="M150 120 C60 170 40 330 120 340 L260 340 C340 330 320 170 230 120 Z" fill="#1f7a4d" />
+  <path d="M155 135 C90 180 75 300 125 325" fill="none" stroke="#2c9a63" stroke-width="10" stroke-linecap="round" />
+  <circle cx="190" cy="245" r="62" fill="#f2c418" />
+  <text x="190" y="272" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="80" fill="#1f7a4d">€</text>
+</svg></div><div id="eg-num" class="big" style="position:absolute;left:0px;top:960px;width:1080px;font-size:150px;color:#c99a06">≈ 76.000€</div>
+      </div>
+      <div id="vergleich" class="scene clip" data-start="31.558" data-duration="2.533" data-track-index="1"><div id="vg-art" style="position:absolute;left:130px;top:330px;width:820px;height:820px;"><svg viewBox="0 0 400 400" style="width:100%;height:100%">
+          <line x1="30" y1="350" x2="370" y2="350" stroke="#111" stroke-width="6" />
+          <rect id="vg-b1" x="70" y="258" width="110" height="92" fill="#1f7a4d" />
+          <rect id="vg-b2" x="220" y="118" width="110" height="232" fill="#f2c418" />
+          <text id="vg-l1" x="125" y="243" text-anchor="middle" class="serif" font-size="32" fill="#1f7a4d">30.000€</text>
+          <text id="vg-l2" x="275" y="103" text-anchor="middle" class="serif" font-size="32" fill="#c99a06">76.000€</text>
+          <text x="125" y="385" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="22" fill="#353a3d">eingezahlt</text>
+          <text x="275" y="385" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="22" fill="#353a3d">nach 25 J.</text>
+          
+        </svg></div>
+      </div>
+      <div id="goennen" class="scene clip" data-start="34.091" data-duration="4.238" data-track-index="1"><div id="gn-dog" style="position:absolute;left:60px;top:470px;width:500px;height:500px;"><img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:contain" /></div><div id="gn-gift" style="position:absolute;left:600px;top:560px;width:360px;height:360px;"><svg viewBox="0 0 200 200" style="width:100%;height:100%">
+  <rect x="25" y="80" width="150" height="110" rx="10" fill="#e24b4b" /><rect x="15" y="55" width="170" height="40" rx="8" fill="#c23b3b" />
+  <rect x="88" y="55" width="24" height="135" fill="#f2c418" />
+  <path d="M100 55 Q60 10 50 40 Q45 60 100 55 Q155 60 150 40 Q140 10 100 55 Z" fill="#f2c418" />
+</svg></div>
+      </div>
+      <div id="finger" class="scene clip" data-start="38.329" data-duration="3.8" data-track-index="1"><div id="fg-person" style="position:absolute;left:390px;top:380px;width:300px;height:450px;"><svg viewBox="0 0 200 300" style="width:100%;height:100%">
+  <circle cx="100" cy="60" r="45" fill="#353a3d" /><path d="M30 290 Q30 120 100 115 Q170 120 170 290 Z" fill="#353a3d" />
+  <path d="M165 170 Q200 190 195 220" stroke="#353a3d" stroke-width="26" stroke-linecap="round" fill="none" />
+</svg></div><div id="fg-c1" style="position:absolute;left:640px;top:760px;width:110px;height:110px;border-radius:50%;background:#f2c418;border:10px solid #c99a06;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:50px;color:#7a5a00">€</div><div id="fg-c2" style="position:absolute;left:720px;top:900px;width:100px;height:100px;border-radius:50%;background:#f2c418;border:10px solid #c99a06;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:46px;color:#7a5a00">€</div><div id="fg-c3" style="position:absolute;left:630px;top:1030px;width:90px;height:90px;border-radius:50%;background:#f2c418;border:10px solid #c99a06;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:42px;color:#7a5a00">€</div>
+      </div>
+      <div id="teilen" class="scene clip" data-start="42.129" data-duration="2.037" data-track-index="1"><div id="tn-icon" style="position:absolute;left:340px;top:420px;width:400px;height:400px;"><svg viewBox="0 0 200 200" style="width:100%;height:100%">
+  <circle cx="100" cy="100" r="95" fill="var(--brand)" />
+  <path d="M60 140 Q65 85 115 80 L115 55 L155 98 L115 140 L115 112 Q80 110 60 140 Z" fill="#fff" />
+</svg></div><div id="tn-txt" class="big" style="position:absolute;left:0px;top:900px;width:1080px;font-size:100px;color:var(--brand)">Teile das Video!</div>
+      </div>
+      <div id="outro" class="scene clip" data-start="44.166" data-duration="5.214" data-track-index="1">
+        <div style="position:absolute;left:0;top:330px;width:1080px;display:flex;flex-direction:column;align-items:center;gap:30px">
+          <div id="outro-dog" style="width:520px;height:520px"><img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:contain" /></div>
+          <div id="outro-name" style="font-family:Montserrat;font-weight:800;font-size:92px;color:#111">HundeFinanzTV</div>
+          <div id="outro-btn" style="padding:18px 64px;border-radius:60px;background:var(--brand);color:#fff;font-family:Montserrat;font-weight:700;font-size:56px">+ Folgen</div>
+        </div>
+      </div>
+
+      <div id="brand"><span>HundeFinanzTV</span></div>
+      <div id="frame"></div>
+
+      <div id="captions" data-track-kind="captions">
+        <div id="c1" class="cap clip" data-start="0.0" data-duration="0.662" data-track-index="2"><span>du bekommst</span></div>
+        <div id="c2" class="cap clip" data-start="0.662" data-duration="1.202" data-track-index="2"><span>eine Gehaltserhöhung</span></div>
+        <div id="c3" class="cap clip" data-start="1.864" data-duration="1.504" data-track-index="2"><span>und am Ende vom Monat ist</span></div>
+        <div id="c4" class="cap clip" data-start="3.368" data-duration="1.267" data-track-index="2"><span>trotzdem nichts übrig?</span></div>
+        <div id="c5" class="cap clip" data-start="4.635" data-duration="0.878" data-track-index="2"><span>das nennt man</span></div>
+        <div id="c6" class="cap clip" data-start="5.513" data-duration="1.349" data-track-index="2"><span>Lifestyle‑Inflation</span></div>
+        <div id="c7" class="cap clip" data-start="6.862" data-duration="1.28" data-track-index="2"><span>mehr Geld bedeutet</span></div>
+        <div id="c8" class="cap clip" data-start="8.142" data-duration="1.94" data-track-index="2"><span>automatisch teureres Essen,</span></div>
+        <div id="c9" class="cap clip" data-start="10.082" data-duration="1.078" data-track-index="2"><span>ein neues Handy</span></div>
+        <div id="c10" class="cap clip" data-start="11.16" data-duration="1.458" data-track-index="2"><span>und ein größeres Auto</span></div>
+        <div id="c11" class="cap clip" data-start="12.618" data-duration="0.789" data-track-index="2"><span>und plötzlich ist</span></div>
+        <div id="c12" class="cap clip" data-start="13.407" data-duration="0.936" data-track-index="2"><span>die Gehaltserhöhung</span></div>
+        <div id="c13" class="cap clip" data-start="14.343" data-duration="0.987" data-track-index="2"><span>einfach verschwunden</span></div>
+        <div id="c14" class="cap clip" data-start="15.33" data-duration="0.981" data-track-index="2"><span>unser Tipp ist</span></div>
+        <div id="c15" class="cap clip" data-start="16.311" data-duration="1.744" data-track-index="2"><span>die Hälfte‑Regel</span></div>
+        <div id="c16" class="cap clip" data-start="18.055" data-duration="0.709" data-track-index="2"><span>bekommst du</span></div>
+        <div id="c17" class="cap clip" data-start="18.764" data-duration="1.685" data-track-index="2"><span>200 € mehr im Monat,</span></div>
+        <div id="c18" class="cap clip" data-start="20.449" data-duration="2.01" data-track-index="2"><span>gönnst du dir 100 € davon</span></div>
+        <div id="c19" class="cap clip" data-start="22.459" data-duration="0.779" data-track-index="2"><span>die anderen</span></div>
+        <div id="c20" class="cap clip" data-start="23.238" data-duration="1.957" data-track-index="2"><span>100 € investierst du direkt</span></div>
+        <div id="c21" class="cap clip" data-start="25.195" data-duration="2.943" data-track-index="2"><span>mit 7 % Rendite hast du</span></div>
+        <div id="c22" class="cap clip" data-start="28.138" data-duration="3.42" data-track-index="2"><span>nach 25 Jahren rund 76.000 €</span></div>
+        <div id="c23" class="cap clip" data-start="31.558" data-duration="1.192" data-track-index="2"><span>eingezahlt hast</span></div>
+        <div id="c24" class="cap clip" data-start="32.75" data-duration="1.341" data-track-index="2"><span>du nur 30.000 €</span></div>
+        <div id="c25" class="cap clip" data-start="34.091" data-duration="1.098" data-track-index="2"><span>und das Beste ist,</span></div>
+        <div id="c26" class="cap clip" data-start="35.189" data-duration="1.413" data-track-index="2"><span>dass du dir trotzdem</span></div>
+        <div id="c27" class="cap clip" data-start="36.602" data-duration="1.727" data-track-index="2"><span>jedes Mal etwas gegönnt hast</span></div>
+        <div id="c28" class="cap clip" data-start="38.329" data-duration="0.917" data-track-index="2"><span>kennst du jemanden,</span></div>
+        <div id="c29" class="cap clip" data-start="39.246" data-duration="1.414" data-track-index="2"><span>dem die Gehaltserhöhung</span></div>
+        <div id="c30" class="cap clip" data-start="40.66" data-duration="1.469" data-track-index="2"><span>immer durch die Finger rinnt?</span></div>
+        <div id="c31" class="cap clip" data-start="42.129" data-duration="1.027" data-track-index="2"><span>dann teile dieses</span></div>
+        <div id="c32" class="cap clip" data-start="43.156" data-duration="1.01" data-track-index="2"><span>Video mit ihm!</span></div>
+        <div id="c33" class="cap clip" data-start="44.166" data-duration="1.292" data-track-index="2"><span>folge HundeFinanzTV,</span></div>
+        <div id="c34" class="cap clip" data-start="45.458" data-duration="1.04" data-track-index="2"><span>wir zeigen dir,</span></div>
+        <div id="c35" class="cap clip" data-start="46.498" data-duration="0.762" data-track-index="2"><span>wie du mehr</span></div>
+        <div id="c36" class="cap clip" data-start="47.26" data-duration="1.545" data-track-index="2"><span>aus deinem Geld machst!</span></div>
+      </div>
+
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="49.38" data-track-index="3"></audio>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const pop = (sel, at) =>
+        tl.fromTo(sel, { scale: 0.82, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.8)" }, at);
+      const draw = (sel, at, dur) => {
+        const len = document.querySelector(sel).getTotalLength();
+        tl.fromTo(sel, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: dur, ease: "power2.out" }, at);
+      };
+
+      // intro
+      (() => {
+      tl.fromTo("#intro-title", { scale: 1.05 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 0.0);
+      tl.fromTo("#intro-zettel", { scale: 1.05 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 0.0);
+      })();
+      // begriff
+      (() => {
+      pop("#bg-word", 4.635);
+      })();
+      // konsum
+      (() => {
+      pop("#ks-0", 8.142);
+      pop("#ks-1", 10.082);
+      pop("#ks-2", 11.16);
+      })();
+      // weg
+      (() => {
+      pop("#wg-plus", 12.618);
+      tl.fromTo("#wg-plus", { opacity: 1 }, { opacity: 0, scale: 0.5, duration: 0.3 }, 14.343 - 0.2);
+      tl.fromTo("#wg-puff", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2)" }, 14.343);
+      pop("#wg-null", 14.343 + 0.3);
+      })();
+      // regel
+      (() => {
+      pop("#rg-title", 15.33);
+      tl.fromTo("#rg-pie", { rotation: -90, scale: 0.6, opacity: 0 }, { rotation: 0, scale: 1, opacity: 1, duration: 0.6, ease: "back.out(1.6)" }, 15.33 + 0.2);
+      })();
+      // teilung
+      (() => {
+      pop("#tl-200", 18.055);
+      pop("#tl-a", 18.764);
+      pop("#tl-b", 18.764 + 0.1);
+      pop("#tl-gift", 18.764 + 0.4);
+      })();
+      // invest
+      (() => {
+      pop("#iv-c", 22.459);
+      pop("#iv-arrow", 22.459 + 0.3);
+      pop("#iv-chart", 23.238);
+      pop("#iv-txt", 23.238 + 0.2);
+      })();
+      // ergebnis
+      (() => {
+      pop("#eg-sack", 25.195);
+      pop("#eg-num", 28.138);
+      })();
+      // vergleich
+      (() => {
+      tl.fromTo("#vg-b1", { attr: { y: 350, height: 0 } }, { attr: { y: 258, height: 92 }, duration: 0.5, ease: "power2.out" }, 31.558);
+      pop("#vg-l1", 31.558 + 0.4);
+      tl.fromTo("#vg-b2", { attr: { y: 350, height: 0 } }, { attr: { y: 118, height: 232 }, duration: 0.8, ease: "power2.out" }, 32.158);
+      pop("#vg-l2", 32.158 + 0.7);
+      })();
+      // goennen
+      (() => {
+      pop("#gn-dog", 34.091);
+      pop("#gn-gift", 36.602 - 0.3);
+      tl.fromTo("#gn-gift", { rotation: -8 }, { rotation: 8, duration: 0.2, yoyo: true, repeat: 3, ease: "sine.inOut" }, 36.602);
+      })();
+      // finger
+      (() => {
+      pop("#fg-person", 38.329);
+      tl.fromTo("#fg-c1", { y: -180, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power2.in" }, 39.246 + 0.00);
+      tl.fromTo("#fg-c2", { y: -180, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power2.in" }, 39.246 + 0.30);
+      tl.fromTo("#fg-c3", { y: -180, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power2.in" }, 39.246 + 0.60);
+      })();
+      // teilen
+      (() => {
+      pop("#tn-icon", 42.129);
+      tl.fromTo("#tn-icon", { rotation: -10 }, { rotation: 10, duration: 0.2, yoyo: true, repeat: 3, ease: "sine.inOut" }, 42.129 + 0.35);
+      pop("#tn-txt", 42.129 + 0.2);
+      })();
+      // outro
+      (() => {
+      pop("#outro-dog", 44.166);
+      pop("#outro-name", 44.166 + 0.25);
+      pop("#outro-btn", 44.166 + 0.5);
+      tl.fromTo("#outro-btn", { scale: 1 }, { scale: 1.08, duration: 0.3, yoyo: true, repeat: 1, ease: "sine.inOut" }, 44.166 + 1.1);
+      })();
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

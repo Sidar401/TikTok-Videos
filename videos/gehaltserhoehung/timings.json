@@ -1,0 +1,276 @@
+{
+  "dauer": 49.38,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 4.635,
+      "captions": [
+        {
+          "text": "du bekommst",
+          "start": 0.0,
+          "end": 0.662
+        },
+        {
+          "text": "eine Gehaltserhöhung",
+          "start": 0.662,
+          "end": 1.864
+        },
+        {
+          "text": "und am Ende vom Monat ist",
+          "start": 1.864,
+          "end": 3.368
+        },
+        {
+          "text": "trotzdem nichts übrig?",
+          "start": 3.368,
+          "end": 4.635
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 4.635,
+      "end": 6.862,
+      "captions": [
+        {
+          "text": "das nennt man",
+          "start": 4.635,
+          "end": 5.513
+        },
+        {
+          "text": "Lifestyle‑Inflation",
+          "start": 5.513,
+          "end": 6.862
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 6.862,
+      "end": 12.618,
+      "captions": [
+        {
+          "text": "mehr Geld bedeutet",
+          "start": 6.862,
+          "end": 8.142
+        },
+        {
+          "text": "automatisch teureres Essen,",
+          "start": 8.142,
+          "end": 10.082
+        },
+        {
+          "text": "ein neues Handy",
+          "start": 10.082,
+          "end": 11.16
+        },
+        {
+          "text": "und ein größeres Auto",
+          "start": 11.16,
+          "end": 12.618
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 12.618,
+      "end": 15.33,
+      "captions": [
+        {
+          "text": "und plötzlich ist",
+          "start": 12.618,
+          "end": 13.407
+        },
+        {
+          "text": "die Gehaltserhöhung",
+          "start": 13.407,
+          "end": 14.343
+        },
+        {
+          "text": "einfach verschwunden",
+          "start": 14.343,
+          "end": 15.33
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 15.33,
+      "end": 18.055,
+      "captions": [
+        {
+          "text": "unser Tipp ist",
+          "start": 15.33,
+          "end": 16.311
+        },
+        {
+          "text": "die Hälfte‑Regel",
+          "start": 16.311,
+          "end": 18.055
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 18.055,
+      "end": 22.459,
+      "captions": [
+        {
+          "text": "bekommst du",
+          "start": 18.055,
+          "end": 18.764
+        },
+        {
+          "text": "200 € mehr im Monat,",
+          "start": 18.764,
+          "end": 20.449
+        },
+        {
+          "text": "gönnst du dir 100 € davon",
+          "start": 20.449,
+          "end": 22.459
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 22.459,
+      "end": 25.195,
+      "captions": [
+        {
+          "text": "die anderen",
+          "start": 22.459,
+          "end": 23.238
+        },
+        {
+          "text": "100 € investierst du direkt",
+          "start": 23.238,
+          "end": 25.195
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 25.195,
+      "end": 31.558,
+      "captions": [
+        {
+          "text": "mit 7 % Rendite hast du",
+          "start": 25.195,
+          "end": 28.138
+        },
+        {
+          "text": "nach 25 Jahren rund 76.000 €",
+          "start": 28.138,
+          "end": 31.558
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 31.558,
+      "end": 34.091,
+      "captions": [
+        {
+          "text": "eingezahlt hast",
+          "start": 31.558,
+          "end": 32.75
+        },
+        {
+          "text": "du nur 30.000 €",
+          "start": 32.75,
+          "end": 34.091
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 34.091,
+      "end": 38.329,
+      "captions": [
+        {
+          "text": "und das Beste ist,",
+          "start": 34.091,
+          "end": 35.189
+        },
+        {
+          "text": "dass du dir trotzdem",
+          "start": 35.189,
+          "end": 36.602
+        },
+        {
+          "text": "jedes Mal etwas gegönnt hast",
+          "start": 36.602,
+          "end": 38.329
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 38.329,
+      "end": 42.129,
+      "captions": [
+        {
+          "text": "kennst du jemanden,",
+          "start": 38.329,
+          "end": 39.246
+        },
+        {
+          "text": "dem die Gehaltserhöhung",
+          "start": 39.246,
+          "end": 40.66
+        },
+        {
+          "text": "immer durch die Finger rinnt?",
+          "start": 40.66,
+          "end": 42.129
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 42.129,
+      "end": 44.166,
+      "captions": [
+        {
+          "text": "dann teile dieses",
+          "start": 42.129,
+          "end": 43.156
+        },
+        {
+          "text": "Video mit ihm!",
+          "start": 43.156,
+          "end": 44.166
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 44.166,
+      "end": 48.805,
+      "captions": [
+        {
+          "text": "folge HundeFinanzTV,",
+          "start": 44.166,
+          "end": 45.458
+        },
+        {
+          "text": "wir zeigen dir,",
+          "start": 45.458,
+          "end": 46.498
+        },
+        {
+          "text": "wie du mehr",
+          "start": 46.498,
+          "end": 47.26
+        },
+        {
+          "text": "aus deinem Geld machst!",
+          "start": 47.26,
+          "end": 48.805
+        }
+      ]
+    }
+  ]
+}
