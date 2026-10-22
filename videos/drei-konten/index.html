@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      /* Kanal-Stil (siehe STIL.md) */
+      @font-face {
+        font-family: "Abril Fatface";
+        src: url("assets/fonts/abril-fatface.woff2") format("woff2");
+      }
+      :root {
+        --bg: #ffffff;
+        --ink: #111111;
+        --brand: #DB8622; /* Kanalfarbe aus kanal.json */
+        --green: #1f7a4d;
+        --gold: #f2c418;
+        --red: #e24b4b;
+        --blue: #3d7be0;
+        --font-caption: "Montserrat", sans-serif;
+        --font-display: "Abril Fatface", serif;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: var(--bg);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: var(--bg);
+      }
+
+      /* Szene: eine Illustration, zentriert im oberen Bereich */
+      .scene {
+        position: absolute;
+        left: 0;
+        top: 230px;
+        width: 1080px;
+        height: 1080px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .art { width: 820px; height: 820px; }
+      .art svg { width: 100%; height: 100%; display: block; }
+
+      /* Oranger Rahmen wie bei HundeWissenTv */
+      #frame {
+        position: absolute;
+        inset: 0;
+        border: 26px solid var(--brand);
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      /* Untertitel-Box (TikTok-Look) */
+      .cap {
+        position: absolute;
+        left: 0;
+        top: 1360px;
+        width: 1080px;
+        display: flex;
+        justify-content: center;
+      }
+      .cap span {
+        display: block;
+        max-width: 880px;
+        padding: 20px 44px 22px;
+        border-radius: 28px;
+        background: var(--brand);
+        color: #ffffff;
+        font-family: var(--font-caption);
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 1.15;
+        text-align: center;
+      }
+
+      /* Zahlen-Vergleich in Serifen-Schrift */
+      .cmp {
+        width: 940px;
+        display: grid;
+        grid-template-columns: 1fr 6px 1fr;
+        column-gap: 40px;
+        font-family: var(--font-display);
+        color: var(--ink);
+        text-align: center;
+      }
+      .cmp .head { font-size: 104px; line-height: 1.1; }
+      .cmp .sub { font-size: 76px; line-height: 1.1; }
+      .cmp .divider { background: var(--ink); grid-row: 1 / span 3; grid-column: 2; }
+      .cmp .arrow { height: 260px; display: flex; justify-content: center; align-items: center; }
+      .cmp .arrow svg { width: 140px; height: 220px; }
+      .cmp .num { font-size: 96px; line-height: 1.2; }
+      .green { color: var(--green); }
+      .gold { color: var(--gold); }
+      .chart-label { font-family: var(--font-display); }
+      .serif { font-family: var(--font-display); }
+      #brand {
+        position: absolute;
+        top: 190px;
+        left: 0;
+        width: 1080px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+        font-family: var(--font-caption);
+        font-weight: 800;
+        font-size: 42px;
+        color: #353a3d;
+        z-index: 5;
+      }
+      #brand-dog { width: 84px; height: 84px; }
+
+      .scene { position: absolute; inset: 0; top: 0; height: 1920px; display: block; }
+      .tile { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 30px 10px; border-radius: 30px; background: #faf5ef; }
+      .tile svg { width: 230px; height: 230px; }
+      .tile span { font-family: Montserrat; font-weight: 800; font-size: 54px; color: #111; }
+      .big { font-family: var(--font-display); text-align: center; color: #111; }
+      .cap span { max-width: 990px; font-size: 50px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="49.14" data-width="1080" data-height="1920">
+      <div id="intro" class="scene clip" data-start="0.0" data-duration="4.511" data-track-index="1"><div id="intro-title" style="position:absolute;top:290px;left:40px;width:1000px;text-align:center;font-family:Montserrat;font-weight:800;font-size:92px;line-height:1.05;color:#111">Warum <span style="color:#e24b4b">ein</span> Konto<br />nicht reicht</div><div id="intro-card" style="position:absolute;left:290px;top:600px;width:500px;height:312px;"><svg viewBox="0 0 400 250" style="width:100%;height:100%">
+  <rect x="5" y="5" width="390" height="240" rx="26" fill="#353a3d" />
+  <rect x="40" y="70" width="70" height="52" rx="10" fill="#f2c418" />
+  <line x1="40" y1="96" x2="110" y2="96" stroke="#c99a06" stroke-width="4" />
+  
+  <text x="40" y="200" font-family="Montserrat" font-weight="800" font-size="44" fill="#fff">Mein Konto</text>
+</svg></div><div id="intro-q" class="big" style="position:absolute;left:0;top:930px;width:1080px;font-size:220px;color:#e24b4b">?</div>
+      </div>
+      <div id="chaos" class="scene clip" data-start="4.511" data-duration="3.358" data-track-index="1"><div id="ch-card" style="position:absolute;left:290px;top:520px;width:500px;height:312px;"><svg viewBox="0 0 400 250" style="width:100%;height:100%">
+  <rect x="5" y="5" width="390" height="240" rx="26" fill="#353a3d" />
+  <rect x="40" y="70" width="70" height="52" rx="10" fill="#f2c418" />
+  <line x1="40" y1="96" x2="110" y2="96" stroke="#c99a06" stroke-width="4" />
+  
+  <text x="40" y="200" font-family="Montserrat" font-weight="800" font-size="44" fill="#fff">Mein Konto</text>
+</svg></div><div id="ch-q1" class="big" style="position:absolute;left:-300px;top:380px;width:1080px;font-size:160px;color:#e24b4b">?</div><div id="ch-q2" class="big" style="position:absolute;left:330px;top:440px;width:1080px;font-size:140px;color:#e24b4b">?</div><div id="ch-txt" class="big" style="position:absolute;left:0;top:900px;width:1080px;font-size:64px;color:#111">Wie viel darf ich ausgeben?</div>
+      </div>
+      <div id="modell" class="scene clip" data-start="7.869" data-duration="2.393" data-track-index="1"><div id="md-title" class="big" style="position:absolute;left:0;top:350px;width:1080px;font-size:104px;color:#111">3-Konten-Modell</div><div id="md-1" style="position:absolute;left:60px;top:620px;width:300px;height:188px;"><svg viewBox="0 0 400 250" style="width:100%;height:100%">
+  <rect x="5" y="5" width="390" height="240" rx="26" fill="#3d7be0" />
+  <rect x="40" y="70" width="70" height="52" rx="10" fill="#f2c418" />
+  <line x1="40" y1="96" x2="110" y2="96" stroke="#c99a06" stroke-width="4" />
+  <circle cx="345" cy="55" r="34" fill="#fff" /><text x="345" y="70" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="40" fill="#3d7be0">1</text>
+  <text x="40" y="200" font-family="Montserrat" font-weight="800" font-size="44" fill="#fff">Girokonto</text>
+</svg></div><div id="md-2" style="position:absolute;left:390px;top:620px;width:300px;height:188px;"><svg viewBox="0 0 400 250" style="width:100%;height:100%">
+  <rect x="5" y="5" width="390" height="240" rx="26" fill="#1f7a4d" />
+  <rect x="40" y="70" width="70" height="52" rx="10" fill="#f2c418" />
+  <line x1="40" y1="96" x2="110" y2="96" stroke="#c99a06" stroke-width="4" />
+  <circle cx="345" cy="55" r="34" fill="#fff" /><text x="345" y="70" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="40" fill="#1f7a4d">2</text>
+  <text x="40" y="200" font-family="Montserrat" font-weight="800" font-size="44" fill="#fff">Tagesgeld</text>
+</svg></div><div id="md-3" style="position:absolute;left:720px;top:620px;width:300px;height:188px;"><svg viewBox="0 0 400 250" style="width:100%;height:100%">
+  <rect x="5" y="5" width="390" height="240" rx="26" fill="#DB8622" />
+  <rect x="40" y="70" width="70" height="52" rx="10" fill="#f2c418" />
+  <line x1="40" y1="96" x2="110" y2="96" stroke="#c99a06" stroke-width="4" />
+  <circle cx="345" cy="55" r="34" fill="#fff" /><text x="345" y="70" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="40" fill="#DB8622">3</text>
+  <text x="40" y="200" font-family="Montserrat" font-weight="800" font-size="44" fill="#fff">Depot</text>
+</svg></div>
+      </div>
+      <div id="giro" class="scene clip" data-start="10.262" data-duration="2.437" data-track-index="1"><div id="gi-card" style="position:absolute;left:190px;top:480px;width:700px;height:437px;"><svg viewBox="0 0 400 250" style="width:100%;height:100%">
+  <rect x="5" y="5" width="390" height="240" rx="26" fill="#3d7be0" />
+  <rect x="40" y="70" width="70" height="52" rx="10" fill="#f2c418" />
+  <line x1="40" y1="96" x2="110" y2="96" stroke="#c99a06" stroke-width="4" />
+  <circle cx="345" cy="55" r="34" fill="#fff" /><text x="345" y="70" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="40" fill="#3d7be0">1</text>
+  <text x="40" y="200" font-family="Montserrat" font-weight="800" font-size="44" fill="#fff">Girokonto</text>
+</svg></div>
+      </div>
+      <div id="fluss" class="scene clip" data-start="12.699" data-duration="5.56" data-track-index="1"><div id="fl-card" style="position:absolute;left:290px;top:330px;width:500px;height:312px;"><svg viewBox="0 0 400 250" style="width:100%;height:100%">
+  <rect x="5" y="5" width="390" height="240" rx="26" fill="#3d7be0" />
+  <rect x="40" y="70" width="70" height="52" rx="10" fill="#f2c418" />
+  <line x1="40" y1="96" x2="110" y2="96" stroke="#c99a06" stroke-width="4" />
+  <circle cx="345" cy="55" r="34" fill="#fff" /><text x="345" y="70" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="40" fill="#3d7be0">1</text>
+  <text x="40" y="200" font-family="Montserrat" font-weight="800" font-size="44" fill="#fff">Girokonto</text>
+</svg></div><div id="fl-euro" style="position:absolute;left:100px;top:400px;width:150px;height:150px;"><div style="width:100%;height:100%;border-radius:50%;background:#f2c418;border:10px solid #c99a06;display:flex;align-items:center;justify-content:center;font-family:Montserrat;font-weight:800;font-size:70px;color:#7a5a00">€</div></div><div id="fl-out" style="position:absolute;left:0;top:760px;width:1080px;display:flex;justify-content:center;gap:40px"><div id="fl-i1" style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:170px;height:170px;border-radius:30px;background:#faf5ef;padding:24px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M10 50 L50 15 L90 50 L80 50 L80 88 L20 88 L20 50 Z" fill="#DB8622" /><rect x="42" y="60" width="16" height="28" fill="#fff" /></svg></div><span style="font-family:Montserrat;font-weight:800;font-size:44px;color:#111">Miete</span></div><div id="fl-i2" style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:170px;height:170px;border-radius:30px;background:#faf5ef;padding:24px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M12 30 L88 30 L78 75 L22 75 Z" fill="#1f7a4d" /><circle cx="32" cy="86" r="7" fill="#353a3d" /><circle cx="68" cy="86" r="7" fill="#353a3d" /><path d="M12 30 L5 15" stroke="#353a3d" stroke-width="6" stroke-linecap="round" /></svg></div><span style="font-family:Montserrat;font-weight:800;font-size:44px;color:#111">Essen</span></div><div id="fl-i3" style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:170px;height:170px;border-radius:30px;background:#faf5ef;padding:24px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M58 6 L22 56 L46 56 L38 94 L78 40 L52 40 Z" fill="#f2c418" stroke="#c99a06" stroke-width="4" stroke-linejoin="round" /></svg></div><span style="font-family:Montserrat;font-weight:800;font-size:44px;color:#111">Strom</span></div></div>
+      </div>
+      <div id="tagesgeld" class="scene clip" data-start="18.259" data-duration="2.846" data-track-index="1"><div id="tg-card" style="position:absolute;left:190px;top:480px;width:700px;height:437px;"><svg viewBox="0 0 400 250" style="width:100%;height:100%">
+  <rect x="5" y="5" width="390" height="240" rx="26" fill="#1f7a4d" />
+  <rect x="40" y="70" width="70" height="52" rx="10" fill="#f2c418" />
+  <line x1="40" y1="96" x2="110" y2="96" stroke="#c99a06" stroke-width="4" />
+  <circle cx="345" cy="55" r="34" fill="#fff" /><text x="345" y="70" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="40" fill="#1f7a4d">2</text>
+  <text x="40" y="200" font-family="Montserrat" font-weight="800" font-size="44" fill="#fff">Tagesgeld</text>
+</svg></div>
+      </div>
+      <div id="notgroschen" class="scene clip" data-start="21.105" data-duration="5.373" data-track-index="1"><div id="ng-pig" style="position:absolute;left:270px;top:360px;width:540px;height:468px;"><svg viewBox="0 0 300 260" style="width:100%;height:100%">
+  <ellipse cx="150" cy="150" rx="120" ry="90" fill="#f4a6b5" />
+  <circle cx="250" cy="140" r="38" fill="#f4a6b5" /><ellipse cx="265" cy="140" rx="20" ry="16" fill="#e98a9c" />
+  <circle cx="258" cy="136" r="4" fill="#8a3a4a" /><circle cx="272" cy="136" r="4" fill="#8a3a4a" />
+  <circle cx="215" cy="110" r="7" fill="#111" /><path d="M200 70 L225 40 L235 80 Z" fill="#e98a9c" />
+  <rect x="85" y="225" width="30" height="34" rx="10" fill="#e98a9c" /><rect x="180" y="225" width="30" height="34" rx="10" fill="#e98a9c" />
+  <rect x="120" y="62" width="70" height="12" rx="6" fill="#8a3a4a" />
+</svg></div><div id="ng-txt" class="big" style="position:absolute;left:0;top:880px;width:1080px;font-size:76px;color:#111">3 × Monatsausgaben</div><div id="ng-zins" class="big" style="position:absolute;left:0;top:1000px;width:1080px;font-size:90px;color:#1f7a4d">+ Zinsen</div>
+      </div>
+      <div id="depot" class="scene clip" data-start="26.478" data-duration="2.122" data-track-index="1"><div id="dp-card" style="position:absolute;left:190px;top:480px;width:700px;height:437px;"><svg viewBox="0 0 400 250" style="width:100%;height:100%">
+  <rect x="5" y="5" width="390" height="240" rx="26" fill="#DB8622" />
+  <rect x="40" y="70" width="70" height="52" rx="10" fill="#f2c418" />
+  <line x1="40" y1="96" x2="110" y2="96" stroke="#c99a06" stroke-width="4" />
+  <circle cx="345" cy="55" r="34" fill="#fff" /><text x="345" y="70" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="40" fill="#DB8622">3</text>
+  <text x="40" y="200" font-family="Montserrat" font-weight="800" font-size="44" fill="#fff">Depot</text>
+</svg></div>
+      </div>
+      <div id="sparplan" class="scene clip" data-start="28.6" data-duration="5.851" data-track-index="1"><div id="sp-euro" style="position:absolute;left:90px;top:520px;width:220px;height:220px;"><div style="width:100%;height:100%;border-radius:50%;background:#f2c418;border:10px solid #c99a06;display:flex;align-items:center;justify-content:center;font-family:Montserrat;font-weight:800;font-size:100px;color:#7a5a00">€</div></div><div id="sp-p1" style="position:absolute;left:330px;top:590px;width:160px;height:80px;"><svg viewBox="0 0 120 60" style="width:100%;height:100%"><path d="M8 30 L100 30 M76 8 L104 30 L76 52" fill="none" stroke="#111" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" /></svg></div><div id="sp-card" style="position:absolute;left:510px;top:480px;width:480px;height:300px;"><svg viewBox="0 0 400 250" style="width:100%;height:100%">
+  <rect x="5" y="5" width="390" height="240" rx="26" fill="#DB8622" />
+  <rect x="40" y="70" width="70" height="52" rx="10" fill="#f2c418" />
+  <line x1="40" y1="96" x2="110" y2="96" stroke="#c99a06" stroke-width="4" />
+  <circle cx="345" cy="55" r="34" fill="#fff" /><text x="345" y="70" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="40" fill="#DB8622">3</text>
+  <text x="40" y="200" font-family="Montserrat" font-weight="800" font-size="44" fill="#fff">Depot</text>
+</svg></div><div id="sp-chart" style="position:absolute;left:640px;top:820px;width:220px;height:220px;"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M10 85 L40 55 L60 68 L90 25" fill="none" stroke="#1f7a4d" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" /><path d="M70 22 L92 22 L92 44" fill="none" stroke="#1f7a4d" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" /></svg></div><div id="sp-auto" class="big" style="position:absolute;left:0;top:360px;width:1080px;font-size:90px;color:var(--brand)">automatisch</div>
+      </div>
+      <div id="sortiert" class="scene clip" data-start="34.451" data-duration="3.581" data-track-index="1"><div id="so-euro" style="position:absolute;left:440px;top:330px;width:200px;height:200px;"><div style="width:100%;height:100%;border-radius:50%;background:#f2c418;border:10px solid #c99a06;display:flex;align-items:center;justify-content:center;font-family:Montserrat;font-weight:800;font-size:90px;color:#7a5a00">€</div></div><svg id="so-lines" viewBox="0 0 1080 300" style="position:absolute;left:0;top:540px;width:1080px;height:300px">
+        <path d="M540 0 L210 240 M540 0 L540 240 M540 0 L870 240" stroke="#111" stroke-width="8" stroke-linecap="round" fill="none" />
+      </svg><div id="so-1" style="position:absolute;left:60px;top:820px;width:300px;height:188px;"><svg viewBox="0 0 400 250" style="width:100%;height:100%">
+  <rect x="5" y="5" width="390" height="240" rx="26" fill="#3d7be0" />
+  <rect x="40" y="70" width="70" height="52" rx="10" fill="#f2c418" />
+  <line x1="40" y1="96" x2="110" y2="96" stroke="#c99a06" stroke-width="4" />
+  <circle cx="345" cy="55" r="34" fill="#fff" /><text x="345" y="70" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="40" fill="#3d7be0">1</text>
+  <text x="40" y="200" font-family="Montserrat" font-weight="800" font-size="44" fill="#fff">Girokonto</text>
+</svg></div><div id="so-2" style="position:absolute;left:390px;top:820px;width:300px;height:188px;"><svg viewBox="0 0 400 250" style="width:100%;height:100%">
+  <rect x="5" y="5" width="390" height="240" rx="26" fill="#1f7a4d" />
+  <rect x="40" y="70" width="70" height="52" rx="10" fill="#f2c418" />
+  <line x1="40" y1="96" x2="110" y2="96" stroke="#c99a06" stroke-width="4" />
+  <circle cx="345" cy="55" r="34" fill="#fff" /><text x="345" y="70" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="40" fill="#1f7a4d">2</text>
+  <text x="40" y="200" font-family="Montserrat" font-weight="800" font-size="44" fill="#fff">Tagesgeld</text>
+</svg></div><div id="so-3" style="position:absolute;left:720px;top:820px;width:300px;height:188px;"><svg viewBox="0 0 400 250" style="width:100%;height:100%">
+  <rect x="5" y="5" width="390" height="240" rx="26" fill="#DB8622" />
+  <rect x="40" y="70" width="70" height="52" rx="10" fill="#f2c418" />
+  <line x1="40" y1="96" x2="110" y2="96" stroke="#c99a06" stroke-width="4" />
+  <circle cx="345" cy="55" r="34" fill="#fff" /><text x="345" y="70" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="40" fill="#DB8622">3</text>
+  <text x="40" y="200" font-family="Montserrat" font-weight="800" font-size="44" fill="#fff">Depot</text>
+</svg></div>
+      </div>
+      <div id="blick" class="scene clip" data-start="38.032" data-duration="3.339" data-track-index="1"><div id="bl-dog" style="position:absolute;left:40px;top:500px;width:460px;height:460px;"><img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:contain" /></div><div id="bl-card" style="position:absolute;left:530px;top:560px;width:480px;height:300px;"><svg viewBox="0 0 400 250" style="width:100%;height:100%">
+  <rect x="5" y="5" width="390" height="240" rx="26" fill="#3d7be0" />
+  <rect x="40" y="70" width="70" height="52" rx="10" fill="#f2c418" />
+  <line x1="40" y1="96" x2="110" y2="96" stroke="#c99a06" stroke-width="4" />
+  <circle cx="345" cy="55" r="34" fill="#fff" /><text x="345" y="70" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="40" fill="#3d7be0">1</text>
+  <text x="40" y="200" font-family="Montserrat" font-weight="800" font-size="44" fill="#fff">Girokonto</text>
+</svg></div><div id="bl-check" style="position:absolute;left:470px;top:470px;width:150px;height:150px;"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><circle cx="50" cy="50" r="46" fill="#1f7a4d" /><path d="M28 52 L44 68 L74 36" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" /></svg></div><div id="bl-txt" class="big" style="position:absolute;left:0;top:920px;width:1080px;font-size:76px;color:#111">= dein Budget</div>
+      </div>
+      <div id="frage" class="scene clip" data-start="41.371" data-duration="1.516" data-track-index="1"><div id="fr-q" class="big" style="position:absolute;left:0;top:360px;width:1080px;font-size:100px;color:#111">Wie viele Konten<br />hast du?</div><div style="position:absolute;left:0;top:720px;width:1080px;display:flex;justify-content:center;gap:50px"><div id="fr-1" style="width:200px;height:200px;border-radius:50%;background:#3d7be0;display:flex;align-items:center;justify-content:center;font-family:Montserrat;font-weight:800;font-size:110px;color:#fff">1</div><div id="fr-2" style="width:200px;height:200px;border-radius:50%;background:#1f7a4d;display:flex;align-items:center;justify-content:center;font-family:Montserrat;font-weight:800;font-size:110px;color:#fff">2</div><div id="fr-3" style="width:200px;height:200px;border-radius:50%;background:#DB8622;display:flex;align-items:center;justify-content:center;font-family:Montserrat;font-weight:800;font-size:110px;color:#fff">3</div></div>
+      </div>
+      <div id="kommentar" class="scene clip" data-start="42.887" data-duration="1.856" data-track-index="1"><div id="km-blase" style="position:absolute;left:290px;top:400px;width:500px;height:433px;"><svg viewBox="0 0 300 260" style="width:100%;height:100%">
+  <path d="M30 20 L270 20 Q290 20 290 40 L290 170 Q290 190 270 190 L120 190 L60 245 L75 190 L30 190 Q10 190 10 170 L10 40 Q10 20 30 20 Z" fill="#fff" stroke="#111" stroke-width="10" stroke-linejoin="round" />
+  <circle cx="95" cy="105" r="16" fill="#111" /><circle cx="150" cy="105" r="16" fill="#111" /><circle cx="205" cy="105" r="16" fill="#111" />
+</svg></div><div id="km-txt" class="big" style="position:absolute;left:0;top:900px;width:1080px;font-size:84px;color:var(--brand)">Schreib's in<br />die Kommentare!</div>
+      </div>
+      <div id="outro" class="scene clip" data-start="44.743" data-duration="4.397" data-track-index="1">
+        <div style="position:absolute;left:0;top:330px;width:1080px;display:flex;flex-direction:column;align-items:center;gap:30px">
+          <div id="outro-dog" style="width:520px;height:520px"><img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:contain" /></div>
+          <div id="outro-name" style="font-family:Montserrat;font-weight:800;font-size:92px;color:#111">HundeFinanzTV</div>
+          <div id="outro-btn" style="padding:18px 64px;border-radius:60px;background:var(--brand);color:#fff;font-family:Montserrat;font-weight:700;font-size:56px">+ Folgen</div>
+        </div>
+      </div>
+
+      <div id="brand"><span>HundeFinanzTV</span></div>
+      <div id="frame"></div>
+
+      <div id="captions" data-track-kind="captions">
+        <div id="c1" class="cap clip" data-start="0.0" data-duration="1.349" data-track-index="2"><span>die meisten Menschen</span></div>
+        <div id="c2" class="cap clip" data-start="1.349" data-duration="1.349" data-track-index="2"><span>haben nur ein Konto,</span></div>
+        <div id="c3" class="cap clip" data-start="2.698" data-duration="1.813" data-track-index="2"><span>und genau das ist das Problem</span></div>
+        <div id="c4" class="cap clip" data-start="4.511" data-duration="1.138" data-track-index="2"><span>denn so siehst du nie,</span></div>
+        <div id="c5" class="cap clip" data-start="5.649" data-duration="0.93" data-track-index="2"><span>wie viel Geld du</span></div>
+        <div id="c6" class="cap clip" data-start="6.579" data-duration="1.29" data-track-index="2"><span>wirklich ausgeben darfst</span></div>
+        <div id="c7" class="cap clip" data-start="7.869" data-duration="0.906" data-track-index="2"><span>die Lösung ist</span></div>
+        <div id="c8" class="cap clip" data-start="8.775" data-duration="1.487" data-track-index="2"><span>das Drei‑Konten‑Modell</span></div>
+        <div id="c9" class="cap clip" data-start="10.262" data-duration="1.153" data-track-index="2"><span>Konto Nummer eins</span></div>
+        <div id="c10" class="cap clip" data-start="11.415" data-duration="1.284" data-track-index="2"><span>ist dein Girokonto</span></div>
+        <div id="c11" class="cap clip" data-start="12.699" data-duration="1.697" data-track-index="2"><span>hier landet dein Gehalt</span></div>
+        <div id="c12" class="cap clip" data-start="14.396" data-duration="1.973" data-track-index="2"><span>und davon zahlst du Miete,</span></div>
+        <div id="c13" class="cap clip" data-start="16.369" data-duration="1.89" data-track-index="2"><span>Essen und alle festen Kosten</span></div>
+        <div id="c14" class="cap clip" data-start="18.259" data-duration="1.429" data-track-index="2"><span>Konto Nummer zwei ist</span></div>
+        <div id="c15" class="cap clip" data-start="19.688" data-duration="1.417" data-track-index="2"><span>dein Tagesgeldkonto</span></div>
+        <div id="c16" class="cap clip" data-start="21.105" data-duration="1.892" data-track-index="2"><span>dort liegt dein Notgroschen,</span></div>
+        <div id="c17" class="cap clip" data-start="22.997" data-duration="1.909" data-track-index="2"><span>also etwa 3 Monatsausgaben,</span></div>
+        <div id="c18" class="cap clip" data-start="24.906" data-duration="1.572" data-track-index="2"><span>und bekommt sogar Zinsen</span></div>
+        <div id="c19" class="cap clip" data-start="26.478" data-duration="2.122" data-track-index="2"><span>Konto Nummer drei ist dein Depot</span></div>
+        <div id="c20" class="cap clip" data-start="28.6" data-duration="1.476" data-track-index="2"><span>dort läuft jeden Monat</span></div>
+        <div id="c21" class="cap clip" data-start="30.076" data-duration="2.203" data-track-index="2"><span>automatisch ein ETF‑Sparplan,</span></div>
+        <div id="c22" class="cap clip" data-start="32.279" data-duration="2.172" data-track-index="2"><span>direkt nach dem Gehaltseingang</span></div>
+        <div id="c23" class="cap clip" data-start="34.451" data-duration="0.842" data-track-index="2"><span>so musst du nie</span></div>
+        <div id="c24" class="cap clip" data-start="35.293" data-duration="1.02" data-track-index="2"><span>wieder nachdenken,</span></div>
+        <div id="c25" class="cap clip" data-start="36.313" data-duration="1.021" data-track-index="2"><span>dein Geld sortiert</span></div>
+        <div id="c26" class="cap clip" data-start="37.334" data-duration="0.698" data-track-index="2"><span>sich von selbst</span></div>
+        <div id="c27" class="cap clip" data-start="38.032" data-duration="1.576" data-track-index="2"><span>und du siehst auf einen Blick,</span></div>
+        <div id="c28" class="cap clip" data-start="39.608" data-duration="1.763" data-track-index="2"><span>was du wirklich ausgeben kannst</span></div>
+        <div id="c29" class="cap clip" data-start="41.371" data-duration="1.516" data-track-index="2"><span>wie viele Konten hast du?</span></div>
+        <div id="c30" class="cap clip" data-start="42.887" data-duration="0.797" data-track-index="2"><span>schreib es uns</span></div>
+        <div id="c31" class="cap clip" data-start="43.684" data-duration="1.059" data-track-index="2"><span>in die Kommentare!</span></div>
+        <div id="c32" class="cap clip" data-start="44.743" data-duration="1.293" data-track-index="2"><span>folge HundeFinanzTV,</span></div>
+        <div id="c33" class="cap clip" data-start="46.036" data-duration="1.23" data-track-index="2"><span>wir haben noch mehr</span></div>
+        <div id="c34" class="cap clip" data-start="47.266" data-duration="1.29" data-track-index="2"><span>Geld‑Tipps für dich!</span></div>
+      </div>
+
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="49.14" data-track-index="3"></audio>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const pop = (sel, at) =>
+        tl.fromTo(sel, { scale: 0.82, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.8)" }, at);
+      const draw = (sel, at, dur) => {
+        const len = document.querySelector(sel).getTotalLength();
+        tl.fromTo(sel, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: dur, ease: "power2.out" }, at);
+      };
+
+      // intro
+      (() => {
+      tl.fromTo("#intro-title", { scale: 1.05 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 0.0);
+      tl.fromTo("#intro-card", { scale: 1.05 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 0.0);
+      pop("#intro-q", 0.0 + 0.4);
+      })();
+      // chaos
+      (() => {
+      pop("#ch-card", 4.511);
+      pop("#ch-q1", 4.511 + 0.3);
+      pop("#ch-q2", 4.511 + 0.5);
+      pop("#ch-txt", 5.649);
+      })();
+      // modell
+      (() => {
+      pop("#md-title", 7.869);
+      pop("#md-1", 7.869 + 0.55);
+      pop("#md-2", 7.869 + 0.80);
+      pop("#md-3", 7.869 + 1.05);
+      })();
+      // giro
+      (() => {
+      pop("#gi-card", 10.262);
+      })();
+      // fluss
+      (() => {
+      pop("#fl-card", 12.699);
+      tl.fromTo("#fl-euro", { x: -200, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 12.699 + 0.2);
+      pop("#fl-i1", 14.396 + 0.00);
+      pop("#fl-i2", 14.396 + 0.30);
+      pop("#fl-i3", 14.396 + 0.60);
+      })();
+      // tagesgeld
+      (() => {
+      pop("#tg-card", 18.259);
+      })();
+      // notgroschen
+      (() => {
+      pop("#ng-pig", 21.105);
+      pop("#ng-txt", 22.997);
+      pop("#ng-zins", 24.906);
+      })();
+      // depot
+      (() => {
+      pop("#dp-card", 26.478);
+      })();
+      // sparplan
+      (() => {
+      pop("#sp-euro", 28.6);
+      pop("#sp-p1", 28.6 + 0.3);
+      pop("#sp-card", 28.6 + 0.5);
+      pop("#sp-auto", 30.076);
+      pop("#sp-chart", 32.279);
+      })();
+      // sortiert
+      (() => {
+      pop("#so-euro", 34.451);
+      tl.fromTo("#so-lines", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 34.451 + 0.3);
+      pop("#so-1", 34.451 + 0.70);
+      pop("#so-2", 34.451 + 0.90);
+      pop("#so-3", 34.451 + 1.10);
+      })();
+      // blick
+      (() => {
+      pop("#bl-dog", 38.032);
+      pop("#bl-card", 38.032 + 0.2);
+      pop("#bl-check", 39.608);
+      pop("#bl-txt", 39.608 + 0.2);
+      })();
+      // frage
+      (() => {
+      pop("#fr-q", 41.371);
+      pop("#fr-1", 41.371 + 0.35);
+      pop("#fr-2", 41.371 + 0.50);
+      pop("#fr-3", 41.371 + 0.65);
+      })();
+      // kommentar
+      (() => {
+      pop("#km-blase", 42.887);
+      tl.fromTo("#km-blase", { rotation: -5 }, { rotation: 5, duration: 0.2, yoyo: true, repeat: 3, ease: "sine.inOut" }, 42.887 + 0.35);
+      pop("#km-txt", 42.887 + 0.2);
+      })();
+      // outro
+      (() => {
+      pop("#outro-dog", 44.743);
+      pop("#outro-name", 44.743 + 0.25);
+      pop("#outro-btn", 44.743 + 0.5);
+      tl.fromTo("#outro-btn", { scale: 1 }, { scale: 1.08, duration: 0.3, yoyo: true, repeat: 1, ease: "sine.inOut" }, 44.743 + 1.1);
+      })();
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

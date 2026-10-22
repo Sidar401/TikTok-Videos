@@ -1,0 +1,273 @@
+{
+  "dauer": 49.14,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 4.511,
+      "captions": [
+        {
+          "text": "die meisten Menschen",
+          "start": 0.0,
+          "end": 1.349
+        },
+        {
+          "text": "haben nur ein Konto,",
+          "start": 1.349,
+          "end": 2.698
+        },
+        {
+          "text": "und genau das ist das Problem",
+          "start": 2.698,
+          "end": 4.511
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 4.511,
+      "end": 7.869,
+      "captions": [
+        {
+          "text": "denn so siehst du nie,",
+          "start": 4.511,
+          "end": 5.649
+        },
+        {
+          "text": "wie viel Geld du",
+          "start": 5.649,
+          "end": 6.579
+        },
+        {
+          "text": "wirklich ausgeben darfst",
+          "start": 6.579,
+          "end": 7.869
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 7.869,
+      "end": 10.262,
+      "captions": [
+        {
+          "text": "die Lösung ist",
+          "start": 7.869,
+          "end": 8.775
+        },
+        {
+          "text": "das Drei‑Konten‑Modell",
+          "start": 8.775,
+          "end": 10.262
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 10.262,
+      "end": 12.699,
+      "captions": [
+        {
+          "text": "Konto Nummer eins",
+          "start": 10.262,
+          "end": 11.415
+        },
+        {
+          "text": "ist dein Girokonto",
+          "start": 11.415,
+          "end": 12.699
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 12.699,
+      "end": 18.259,
+      "captions": [
+        {
+          "text": "hier landet dein Gehalt",
+          "start": 12.699,
+          "end": 14.396
+        },
+        {
+          "text": "und davon zahlst du Miete,",
+          "start": 14.396,
+          "end": 16.369
+        },
+        {
+          "text": "Essen und alle festen Kosten",
+          "start": 16.369,
+          "end": 18.259
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 18.259,
+      "end": 21.105,
+      "captions": [
+        {
+          "text": "Konto Nummer zwei ist",
+          "start": 18.259,
+          "end": 19.688
+        },
+        {
+          "text": "dein Tagesgeldkonto",
+          "start": 19.688,
+          "end": 21.105
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 21.105,
+      "end": 26.478,
+      "captions": [
+        {
+          "text": "dort liegt dein Notgroschen,",
+          "start": 21.105,
+          "end": 22.997
+        },
+        {
+          "text": "also etwa 3 Monatsausgaben,",
+          "start": 22.997,
+          "end": 24.906
+        },
+        {
+          "text": "und bekommt sogar Zinsen",
+          "start": 24.906,
+          "end": 26.478
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 26.478,
+      "end": 28.6,
+      "captions": [
+        {
+          "text": "Konto Nummer drei ist dein Depot",
+          "start": 26.478,
+          "end": 28.6
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 28.6,
+      "end": 34.451,
+      "captions": [
+        {
+          "text": "dort läuft jeden Monat",
+          "start": 28.6,
+          "end": 30.076
+        },
+        {
+          "text": "automatisch ein ETF‑Sparplan,",
+          "start": 30.076,
+          "end": 32.279
+        },
+        {
+          "text": "direkt nach dem Gehaltseingang",
+          "start": 32.279,
+          "end": 34.451
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 34.451,
+      "end": 38.032,
+      "captions": [
+        {
+          "text": "so musst du nie",
+          "start": 34.451,
+          "end": 35.293
+        },
+        {
+          "text": "wieder nachdenken,",
+          "start": 35.293,
+          "end": 36.313
+        },
+        {
+          "text": "dein Geld sortiert",
+          "start": 36.313,
+          "end": 37.334
+        },
+        {
+          "text": "sich von selbst",
+          "start": 37.334,
+          "end": 38.032
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 38.032,
+      "end": 41.371,
+      "captions": [
+        {
+          "text": "und du siehst auf einen Blick,",
+          "start": 38.032,
+          "end": 39.608
+        },
+        {
+          "text": "was du wirklich ausgeben kannst",
+          "start": 39.608,
+          "end": 41.371
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 41.371,
+      "end": 42.887,
+      "captions": [
+        {
+          "text": "wie viele Konten hast du?",
+          "start": 41.371,
+          "end": 42.887
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 42.887,
+      "end": 44.743,
+      "captions": [
+        {
+          "text": "schreib es uns",
+          "start": 42.887,
+          "end": 43.684
+        },
+        {
+          "text": "in die Kommentare!",
+          "start": 43.684,
+          "end": 44.743
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "start": 44.743,
+      "end": 48.556,
+      "captions": [
+        {
+          "text": "folge HundeFinanzTV,",
+          "start": 44.743,
+          "end": 46.036
+        },
+        {
+          "text": "wir haben noch mehr",
+          "start": 46.036,
+          "end": 47.266
+        },
+        {
+          "text": "Geld‑Tipps für dich!",
+          "start": 47.266,
+          "end": 48.556
+        }
+      ]
+    }
+  ]
+}
