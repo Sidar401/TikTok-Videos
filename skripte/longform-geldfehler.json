@@ -1,0 +1,689 @@
+{
+ "titel": "longform-geldfehler",
+ "saetze": [
+  {
+   "id": "s1",
+   "kapitel": "k1",
+   "text": "Es gibt Geldfehler, die kosten dich jedes Jahr tausende Euro, und du merkst es nicht einmal",
+   "sprechtext": "Es gibt Geldfehler, die kosten dich jedes Jahr tausende Euro, und du merkst es nicht einmal."
+  },
+  {
+   "id": "s2",
+   "kapitel": "k1",
+   "text": "Sie passieren leise, ganz automatisch, jeden Monat aufs Neue",
+   "sprechtext": "Sie passieren leise, ganz automatisch, jeden Monat aufs Neue."
+  },
+  {
+   "id": "s3",
+   "kapitel": "k1",
+   "text": "Und das Gemeine ist: Fast jeder von uns macht mindestens drei davon",
+   "sprechtext": "Und das Gemeine ist: Fast jeder von uns macht mindestens drei davon."
+  },
+  {
+   "id": "s4",
+   "kapitel": "k1",
+   "text": "Und das hat nichts damit zu tun, wie viel du verdienst",
+   "sprechtext": "Und das hat nichts damit zu tun, wie viel du verdienst."
+  },
+  {
+   "id": "s5",
+   "kapitel": "k1",
+   "text": "Auch Leute mit einem richtig guten Gehalt sind am Monatsende oft pleite, genau wegen dieser Fehler",
+   "sprechtext": "Auch Leute mit einem richtig guten Gehalt sind am Monatsende oft pleite, genau wegen dieser Fehler."
+  },
+  {
+   "id": "s6",
+   "kapitel": "k1",
+   "text": "Und umgekehrt bauen Menschen mit einem ganz normalen Gehalt ein Vermögen auf, weil sie diese Fehler vermeiden",
+   "sprechtext": "Und umgekehrt bauen Menschen mit einem ganz normalen Gehalt ein Vermögen auf, weil sie diese Fehler vermeiden."
+  },
+  {
+   "id": "s7",
+   "kapitel": "k1",
+   "text": "Heute zeigen wir dir die zehn größten Geldfehler, die dich arm halten",
+   "sprechtext": "Heute zeigen wir dir die zehn größten Geldfehler, die dich arm halten."
+  },
+  {
+   "id": "s8",
+   "kapitel": "k1",
+   "text": "Wir starten bei Platz zehn und arbeiten uns bis zum teuersten Fehler auf Platz eins vor",
+   "sprechtext": "Wir starten bei Platz zehn und arbeiten uns bis zum teuersten Fehler auf Platz eins vor."
+  },
+  {
+   "id": "s9",
+   "kapitel": "k1",
+   "text": "Und bei jedem Fehler rechnen wir dir vor, was er dich pro Jahr wirklich kostet",
+   "sprechtext": "Und bei jedem Fehler rechnen wir dir vor, was er dich pro Jahr wirklich kostet."
+  },
+  {
+   "id": "s10",
+   "kapitel": "k1",
+   "text": "Am Ende zählen wir alles zusammen, und die Summe wird dich schockieren",
+   "sprechtext": "Am Ende zählen wir alles zusammen, und die Summe wird dich schockieren."
+  },
+  {
+   "id": "s11",
+   "kapitel": "k1",
+   "text": "Ganz besonders Fehler Nummer sieben, den macht wirklich fast jeder",
+   "sprechtext": "Ganz besonders Fehler Nummer sieben, den macht wirklich fast jeder."
+  },
+  {
+   "id": "s12",
+   "kapitel": "k1",
+   "text": "Und bei Platz eins geht es nicht um ein paar 100 €, sondern um eine sechsstellige Summe",
+   "sprechtext": "Und bei Platz eins geht es nicht um ein paar hundert Euro, sondern um eine sechsstellige Summe."
+  },
+  {
+   "id": "s13",
+   "kapitel": "k1",
+   "text": "Bevor wir starten, eine Frage an dich",
+   "sprechtext": "Bevor wir starten, eine Frage an dich."
+  },
+  {
+   "id": "s14",
+   "kapitel": "k1",
+   "text": "Was glaubst du, welcher Geldfehler ist der teuerste?",
+   "sprechtext": "Was glaubst du, welcher Geldfehler ist der teuerste?"
+  },
+  {
+   "id": "s15",
+   "kapitel": "k1",
+   "text": "Schreib deinen Tipp in die Kommentare, und am Ende schaust du, ob du richtig lagst",
+   "sprechtext": "Schreib deinen Tipp in die Kommentare, und am Ende schaust du, ob du richtig lagst."
+  },
+  {
+   "id": "s16",
+   "kapitel": "k1",
+   "text": "Und wenn du dein Geld besser im Griff haben willst, folge HundeFinanzTV",
+   "sprechtext": "Und wenn du dein Geld besser im Griff haben willst, folge HundeFinanzTV."
+  },
+  {
+   "id": "s17",
+   "kapitel": "k1",
+   "text": "Wir bringen jeden Tag neue Videos rund um Geld und Finanzen",
+   "sprechtext": "Wir bringen jeden Tag neue Videos rund um Geld und Finanzen."
+  },
+  {
+   "id": "s18",
+   "kapitel": "k1",
+   "text": "Also, los geht's mit Platz zehn",
+   "sprechtext": "Also, los geht's mit Platz zehn."
+  },
+  {
+   "id": "s19",
+   "kapitel": "k2",
+   "text": "Platz zehn: Abos, die du gar nicht mehr nutzt",
+   "sprechtext": "Platz zehn: Abos, die du gar nicht mehr nutzt."
+  },
+  {
+   "id": "s20",
+   "kapitel": "k2",
+   "text": "Streaming, Musik, das Fitnessstudio, eine App, die du vor einem Jahr ausprobiert hast",
+   "sprechtext": "Streaming, Musik, das Fitnessstudio, eine App, die du vor einem Jahr ausprobiert hast."
+  },
+  {
+   "id": "s21",
+   "kapitel": "k2",
+   "text": "Einzeln sind das nur ein paar Euro, deshalb fällt es kaum auf",
+   "sprechtext": "Einzeln sind das nur ein paar Euro, deshalb fällt es kaum auf."
+  },
+  {
+   "id": "s22",
+   "kapitel": "k2",
+   "text": "Aber im Durchschnitt zahlen viele Menschen rund 30 € im Monat für Abos, die sie kaum nutzen",
+   "sprechtext": "Aber im Durchschnitt zahlen viele Menschen rund dreißig Euro im Monat für Abos, die sie kaum nutzen."
+  },
+  {
+   "id": "s23",
+   "kapitel": "k2",
+   "text": "Das sind 360 € im Jahr, einfach weg",
+   "sprechtext": "Das sind dreihundertsechzig Euro im Jahr, einfach weg."
+  },
+  {
+   "id": "s24",
+   "kapitel": "k2",
+   "text": "Unser Tipp: Geh einmal deine Kontoauszüge durch und kündige alles, was du im letzten Monat nicht benutzt hast",
+   "sprechtext": "Unser Tipp: Geh einmal deine Kontoauszüge durch und kündige alles, was du im letzten Monat nicht benutzt hast."
+  },
+  {
+   "id": "s25",
+   "kapitel": "k2",
+   "text": "Platz neun: ein teures Girokonto",
+   "sprechtext": "Platz neun: ein teures Girokonto."
+  },
+  {
+   "id": "s26",
+   "kapitel": "k2",
+   "text": "Viele Banken verlangen inzwischen Kontoführungsgebühren, dazu kommen Kosten für die Karte oder fürs Abheben",
+   "sprechtext": "Viele Banken verlangen inzwischen Kontoführungsgebühren, dazu kommen Kosten für die Karte oder fürs Abheben."
+  },
+  {
+   "id": "s27",
+   "kapitel": "k2",
+   "text": "Schnell sind das 10 € im Monat, also 120 € im Jahr",
+   "sprechtext": "Schnell sind das zehn Euro im Monat, also hundertzwanzig Euro im Jahr."
+  },
+  {
+   "id": "s28",
+   "kapitel": "k2",
+   "text": "Und das, obwohl es immer noch kostenlose Girokonten gibt",
+   "sprechtext": "Und das, obwohl es immer noch kostenlose Girokonten gibt."
+  },
+  {
+   "id": "s29",
+   "kapitel": "k2",
+   "text": "Ein Wechsel dauert heute nur ein paar Minuten, die Bank übernimmt sogar die Daueraufträge für dich",
+   "sprechtext": "Ein Wechsel dauert heute nur ein paar Minuten, die Bank übernimmt sogar die Daueraufträge für dich."
+  },
+  {
+   "id": "s30",
+   "kapitel": "k2",
+   "text": "Achte beim Wechsel aber darauf, dass das neue Konto wirklich dauerhaft kostenlos ist, oft gibt es Bedingungen wie einen monatlichen Geldeingang",
+   "sprechtext": "Achte beim Wechsel aber darauf, dass das neue Konto wirklich dauerhaft kostenlos ist, oft gibt es Bedingungen wie einen monatlichen Geldeingang."
+  },
+  {
+   "id": "s31",
+   "kapitel": "k2",
+   "text": "Platz acht: der tägliche Coffee to go",
+   "sprechtext": "Platz acht: der tägliche Coffee to go."
+  },
+  {
+   "id": "s32",
+   "kapitel": "k2",
+   "text": "Ein Kaffee hier, ein belegtes Brötchen da, vielleicht noch ein Snack am Nachmittag",
+   "sprechtext": "Ein Kaffee hier, ein belegtes Brötchen da, vielleicht noch ein Snack am Nachmittag."
+  },
+  {
+   "id": "s33",
+   "kapitel": "k2",
+   "text": "Das sind schnell 3 € an jedem Arbeitstag",
+   "sprechtext": "Das sind schnell drei Euro an jedem Arbeitstag."
+  },
+  {
+   "id": "s34",
+   "kapitel": "k2",
+   "text": "Klingt harmlos, sind aber rund 60 € im Monat und 720 € im Jahr",
+   "sprechtext": "Klingt harmlos, sind aber rund sechzig Euro im Monat und siebenhundertzwanzig Euro im Jahr."
+  },
+  {
+   "id": "s35",
+   "kapitel": "k2",
+   "text": "Über zehn Jahre sind das über 7.000 €, nur für Kaffee und Snacks",
+   "sprechtext": "Über zehn Jahre sind das über siebentausend Euro, nur für Kaffee und Snacks."
+  },
+  {
+   "id": "s36",
+   "kapitel": "k2",
+   "text": "Wir sagen nicht, dass du nie wieder Kaffee kaufen darfst",
+   "sprechtext": "Wir sagen nicht, dass du nie wieder Kaffee kaufen darfst."
+  },
+  {
+   "id": "s37",
+   "kapitel": "k2",
+   "text": "Aber eine Thermoskanne von zu Hause spart dir richtig viel Geld",
+   "sprechtext": "Aber eine Thermoskanne von zu Hause spart dir richtig viel Geld."
+  },
+  {
+   "id": "s38",
+   "kapitel": "k3",
+   "text": "Und jetzt kommt Platz sieben, der Fehler, den fast jeder macht",
+   "sprechtext": "Und jetzt kommt Platz sieben, der Fehler, den fast jeder macht."
+  },
+  {
+   "id": "s39",
+   "kapitel": "k3",
+   "text": "Verträge, die du nie vergleichst",
+   "sprechtext": "Verträge, die du nie vergleichst."
+  },
+  {
+   "id": "s40",
+   "kapitel": "k3",
+   "text": "Strom, Gas, Handy, Internet und Versicherungen laufen bei den meisten einfach jahrelang weiter",
+   "sprechtext": "Strom, Gas, Handy, Internet und Versicherungen laufen bei den meisten einfach jahrelang weiter."
+  },
+  {
+   "id": "s41",
+   "kapitel": "k3",
+   "text": "Und genau darauf setzen die Anbieter",
+   "sprechtext": "Und genau darauf setzen die Anbieter."
+  },
+  {
+   "id": "s42",
+   "kapitel": "k3",
+   "text": "Neukunden bekommen die besten Preise, treue Kunden zahlen drauf",
+   "sprechtext": "Neukunden bekommen die besten Preise, treue Kunden zahlen drauf."
+  },
+  {
+   "id": "s43",
+   "kapitel": "k3",
+   "text": "Wer seine Verträge nie vergleicht, zahlt im Schnitt locker 400 € im Jahr zu viel",
+   "sprechtext": "Wer seine Verträge nie vergleicht, zahlt im Schnitt locker vierhundert Euro im Jahr zu viel."
+  },
+  {
+   "id": "s44",
+   "kapitel": "k3",
+   "text": "Dabei reicht es, einmal im Jahr eine Stunde zu investieren",
+   "sprechtext": "Dabei reicht es, einmal im Jahr eine Stunde zu investieren."
+  },
+  {
+   "id": "s45",
+   "kapitel": "k3",
+   "text": "Vergleichen, wechseln oder anrufen und einen besseren Preis verhandeln",
+   "sprechtext": "Vergleichen, wechseln oder anrufen und einen besseren Preis verhandeln."
+  },
+  {
+   "id": "s46",
+   "kapitel": "k3",
+   "text": "Eine Stunde für 400 €, das ist der beste Stundenlohn, den du je haben wirst",
+   "sprechtext": "Eine Stunde für vierhundert Euro, das ist der beste Stundenlohn, den du je haben wirst."
+  },
+  {
+   "id": "s47",
+   "kapitel": "k3",
+   "text": "Platz sechs: Leben im Dispo",
+   "sprechtext": "Platz sechs: Leben im Dispo."
+  },
+  {
+   "id": "s48",
+   "kapitel": "k3",
+   "text": "Der Dispo fühlt sich an wie eigenes Geld, aber er ist ein sehr teurer Kredit",
+   "sprechtext": "Der Dispo fühlt sich an wie eigenes Geld, aber er ist ein sehr teurer Kredit."
+  },
+  {
+   "id": "s49",
+   "kapitel": "k3",
+   "text": "Viele Banken verlangen dafür über 11 % Zinsen",
+   "sprechtext": "Viele Banken verlangen dafür über elf Prozent Zinsen."
+  },
+  {
+   "id": "s50",
+   "kapitel": "k3",
+   "text": "Wer dauerhaft 2.000 € im Minus ist, zahlt dafür rund 220 € im Jahr",
+   "sprechtext": "Wer dauerhaft zweitausend Euro im Minus ist, zahlt dafür rund zweihundertzwanzig Euro im Jahr."
+  },
+  {
+   "id": "s51",
+   "kapitel": "k3",
+   "text": "Nur für Zinsen, ohne dass du dafür irgendetwas bekommst",
+   "sprechtext": "Nur für Zinsen, ohne dass du dafür irgendetwas bekommst."
+  },
+  {
+   "id": "s52",
+   "kapitel": "k3",
+   "text": "Und weil der Dispo so bequem ist, kommen viele jahrelang nicht mehr raus",
+   "sprechtext": "Und weil der Dispo so bequem ist, kommen viele jahrelang nicht mehr raus."
+  },
+  {
+   "id": "s53",
+   "kapitel": "k3",
+   "text": "Raus kommst du am besten mit einem festen Betrag, den du jeden Monat zurückzahlst",
+   "sprechtext": "Raus kommst du am besten mit einem festen Betrag, den du jeden Monat zurückzahlst."
+  },
+  {
+   "id": "s54",
+   "kapitel": "k3",
+   "text": "Platz fünf: Kaufen auf Raten",
+   "sprechtext": "Platz fünf: Kaufen auf Raten."
+  },
+  {
+   "id": "s55",
+   "kapitel": "k3",
+   "text": "Das neue Handy, der Fernseher oder das Sofa, einfach in kleinen Monatsraten",
+   "sprechtext": "Das neue Handy, der Fernseher oder das Sofa, einfach in kleinen Monatsraten."
+  },
+  {
+   "id": "s56",
+   "kapitel": "k3",
+   "text": "Das Problem: Du gibst Geld aus, das du noch gar nicht hast",
+   "sprechtext": "Das Problem: Du gibst Geld aus, das du noch gar nicht hast."
+  },
+  {
+   "id": "s57",
+   "kapitel": "k3",
+   "text": "Und oft sind in den Raten versteckte Zinsen und Gebühren drin",
+   "sprechtext": "Und oft sind in den Raten versteckte Zinsen und Gebühren drin."
+  },
+  {
+   "id": "s58",
+   "kapitel": "k3",
+   "text": "Dazu kaufst du schneller Dinge, die du eigentlich gar nicht brauchst",
+   "sprechtext": "Dazu kaufst du schneller Dinge, die du eigentlich gar nicht brauchst."
+  },
+  {
+   "id": "s59",
+   "kapitel": "k3",
+   "text": "Das kostet viele Menschen locker 250 € im Jahr",
+   "sprechtext": "Das kostet viele Menschen locker zweihundertfünfzig Euro im Jahr."
+  },
+  {
+   "id": "s60",
+   "kapitel": "k3",
+   "text": "Unsere Regel: Wenn du es dir nicht bar leisten kannst, kannst du es dir nicht leisten",
+   "sprechtext": "Unsere Regel: Wenn du es dir nicht bar leisten kannst, kannst du es dir nicht leisten."
+  },
+  {
+   "id": "s61",
+   "kapitel": "k4",
+   "text": "Damit sind wir in den Top vier, und jetzt wird es richtig teuer",
+   "sprechtext": "Damit sind wir in den Top vier, und jetzt wird es richtig teuer."
+  },
+  {
+   "id": "s62",
+   "kapitel": "k4",
+   "text": "Platz vier: der Lieferdienst",
+   "sprechtext": "Platz vier: der Lieferdienst."
+  },
+  {
+   "id": "s63",
+   "kapitel": "k4",
+   "text": "Nach einem langen Tag ist es so bequem, schnell Essen zu bestellen",
+   "sprechtext": "Nach einem langen Tag ist es so bequem, schnell Essen zu bestellen."
+  },
+  {
+   "id": "s64",
+   "kapitel": "k4",
+   "text": "Eine Pizza mit Lieferung und Getränk kostet schnell 25 €",
+   "sprechtext": "Eine Pizza mit Lieferung und Getränk kostet schnell fünfundzwanzig Euro."
+  },
+  {
+   "id": "s65",
+   "kapitel": "k4",
+   "text": "Selbst gekocht wären es vielleicht 8 €",
+   "sprechtext": "Selbst gekocht wären es vielleicht acht Euro."
+  },
+  {
+   "id": "s66",
+   "kapitel": "k4",
+   "text": "Dazu kommen Liefergebühren, Trinkgeld und der Mindestbestellwert, der dich zu mehr verleitet",
+   "sprechtext": "Dazu kommen Liefergebühren, Trinkgeld und der Mindestbestellwert, der dich zu mehr verleitet."
+  },
+  {
+   "id": "s67",
+   "kapitel": "k4",
+   "text": "Wer zweimal pro Woche bestellt, zahlt im Jahr rund 1.700 € mehr",
+   "sprechtext": "Wer zweimal pro Woche bestellt, zahlt im Jahr rund eintausendsiebenhundert Euro mehr."
+  },
+  {
+   "id": "s68",
+   "kapitel": "k4",
+   "text": "Unser Tipp: Koch am Sonntag einfach doppelt, dann hast du für stressige Tage etwas im Kühlschrank",
+   "sprechtext": "Unser Tipp: Koch am Sonntag einfach doppelt, dann hast du für stressige Tage etwas im Kühlschrank."
+  },
+  {
+   "id": "s69",
+   "kapitel": "k4",
+   "text": "Platz drei: Geld, das einfach auf dem Girokonto liegt",
+   "sprechtext": "Platz drei: Geld, das einfach auf dem Girokonto liegt."
+  },
+  {
+   "id": "s70",
+   "kapitel": "k4",
+   "text": "Viele haben 10.000 € oder mehr auf dem Girokonto und bekommen dafür null Zinsen",
+   "sprechtext": "Viele haben zehntausend Euro oder mehr auf dem Girokonto und bekommen dafür null Zinsen."
+  },
+  {
+   "id": "s71",
+   "kapitel": "k4",
+   "text": "Auf einem Tagesgeldkonto gibt es oft rund 2 %",
+   "sprechtext": "Auf einem Tagesgeldkonto gibt es oft rund zwei Prozent."
+  },
+  {
+   "id": "s72",
+   "kapitel": "k4",
+   "text": "Das sind 200 € im Jahr, die du einfach verschenkst",
+   "sprechtext": "Das sind zweihundert Euro im Jahr, die du einfach verschenkst."
+  },
+  {
+   "id": "s73",
+   "kapitel": "k4",
+   "text": "Und das Tagesgeld ist genauso sicher und täglich verfügbar",
+   "sprechtext": "Und das Tagesgeld ist genauso sicher und täglich verfügbar."
+  },
+  {
+   "id": "s74",
+   "kapitel": "k4",
+   "text": "Wichtig: Das Geld für deinen Notgroschen gehört genau dorthin, aufs Tagesgeld",
+   "sprechtext": "Wichtig: Das Geld für deinen Notgroschen gehört genau dorthin, aufs Tagesgeld."
+  },
+  {
+   "id": "s75",
+   "kapitel": "k4",
+   "text": "Platz zwei: zu viel Auto",
+   "sprechtext": "Platz zwei: zu viel Auto."
+  },
+  {
+   "id": "s76",
+   "kapitel": "k4",
+   "text": "Ein neues Auto verliert in den ersten Jahren sehr viel an Wert",
+   "sprechtext": "Ein neues Auto verliert in den ersten Jahren sehr viel an Wert."
+  },
+  {
+   "id": "s77",
+   "kapitel": "k4",
+   "text": "Ein Neuwagen für 30.000 € ist nach drei Jahren oft nur noch die Hälfte wert",
+   "sprechtext": "Ein Neuwagen für dreißigtausend Euro ist nach drei Jahren oft nur noch die Hälfte wert."
+  },
+  {
+   "id": "s78",
+   "kapitel": "k4",
+   "text": "Viele kaufen oder leasen deshalb ein Auto, das eigentlich nicht zu ihrem Gehalt passt",
+   "sprechtext": "Viele kaufen oder leasen deshalb ein Auto, das eigentlich nicht zu ihrem Gehalt passt."
+  },
+  {
+   "id": "s79",
+   "kapitel": "k4",
+   "text": "Ein solider Gebrauchter statt Neuwagen oder Leasing spart oft 150 € im Monat",
+   "sprechtext": "Ein solider Gebrauchter statt Neuwagen oder Leasing spart oft hundertfünfzig Euro im Monat."
+  },
+  {
+   "id": "s80",
+   "kapitel": "k4",
+   "text": "Das sind 1.800 € im Jahr",
+   "sprechtext": "Das sind eintausendachthundert Euro im Jahr."
+  },
+  {
+   "id": "s81",
+   "kapitel": "k4",
+   "text": "Und mehr Freiheit, weil weniger Geld jeden Monat fest verplant ist",
+   "sprechtext": "Und mehr Freiheit, weil weniger Geld jeden Monat fest verplant ist."
+  },
+  {
+   "id": "s82",
+   "kapitel": "k5",
+   "text": "Und jetzt Platz eins, der teuerste Geldfehler von allen",
+   "sprechtext": "Und jetzt Platz eins, der teuerste Geldfehler von allen."
+  },
+  {
+   "id": "s83",
+   "kapitel": "k5",
+   "text": "Nicht zu investieren, oder viel zu spät damit anzufangen",
+   "sprechtext": "Nicht zu investieren, oder viel zu spät damit anzufangen."
+  },
+  {
+   "id": "s84",
+   "kapitel": "k5",
+   "text": "Viele denken: Investieren ist kompliziert, riskant oder nur was für Reiche",
+   "sprechtext": "Viele denken: Investieren ist kompliziert, riskant oder nur was für Reiche."
+  },
+  {
+   "id": "s85",
+   "kapitel": "k5",
+   "text": "Aber schau dir diese Rechnung an",
+   "sprechtext": "Aber schau dir diese Rechnung an."
+  },
+  {
+   "id": "s86",
+   "kapitel": "k5",
+   "text": "Wenn du 30 Jahre lang 200 € im Monat in einen breit gestreuten ETF steckst, zahlst du insgesamt 72.000 € ein",
+   "sprechtext": "Wenn du dreißig Jahre lang zweihundert Euro im Monat in einen breit gestreuten ETF steckst, zahlst du insgesamt zweiundsiebzigtausend Euro ein."
+  },
+  {
+   "id": "s87",
+   "kapitel": "k5",
+   "text": "Mit einer Rendite von historisch rund 7 % pro Jahr können daraus knapp 250.000 € werden",
+   "sprechtext": "Mit einer Rendite von historisch rund sieben Prozent pro Jahr können daraus knapp zweihundertfünfzigtausend Euro werden."
+  },
+  {
+   "id": "s88",
+   "kapitel": "k5",
+   "text": "Das ist natürlich keine Garantie, aber es zeigt die Kraft des Zinseszinses",
+   "sprechtext": "Das ist natürlich keine Garantie, aber es zeigt die Kraft des Zinseszinses."
+  },
+  {
+   "id": "s89",
+   "kapitel": "k5",
+   "text": "Wer nur zehn Jahre wartet, hat am Ende oft nicht mal die Hälfte",
+   "sprechtext": "Wer nur zehn Jahre wartet, hat am Ende oft nicht mal die Hälfte."
+  },
+  {
+   "id": "s90",
+   "kapitel": "k5",
+   "text": "Bei 20 statt 30 Jahren wären es nur rund 104.000 €",
+   "sprechtext": "Bei zwanzig statt dreißig Jahren wären es nur rund hundertviertausend Euro."
+  },
+  {
+   "id": "s91",
+   "kapitel": "k5",
+   "text": "Zehn Jahre warten kosten dich also rund 140.000 €",
+   "sprechtext": "Zehn Jahre warten kosten dich also rund hundertvierzigtausend Euro."
+  },
+  {
+   "id": "s92",
+   "kapitel": "k5",
+   "text": "Deshalb ist Zeit dein wichtigster Faktor, und jedes Jahr Warten kostet dich bares Geld",
+   "sprechtext": "Deshalb ist Zeit dein wichtigster Faktor, und jedes Jahr Warten kostet dich bares Geld."
+  },
+  {
+   "id": "s93",
+   "kapitel": "k5",
+   "text": "Jetzt zählen wir zusammen, was dich die Fehler zehn bis zwei jedes Jahr kosten",
+   "sprechtext": "Jetzt zählen wir zusammen, was dich die Fehler zehn bis zwei jedes Jahr kosten."
+  },
+  {
+   "id": "s94",
+   "kapitel": "k5",
+   "text": "Abos: 360 €",
+   "sprechtext": "Abos: dreihundertsechzig Euro."
+  },
+  {
+   "id": "s95",
+   "kapitel": "k5",
+   "text": "Girokonto: 120 €",
+   "sprechtext": "Girokonto: hundertzwanzig Euro."
+  },
+  {
+   "id": "s96",
+   "kapitel": "k5",
+   "text": "Coffee to go: 720 €",
+   "sprechtext": "Coffee to go: siebenhundertzwanzig Euro."
+  },
+  {
+   "id": "s97",
+   "kapitel": "k5",
+   "text": "Verträge: 400 €",
+   "sprechtext": "Verträge: vierhundert Euro."
+  },
+  {
+   "id": "s98",
+   "kapitel": "k5",
+   "text": "Dispo: 220 €",
+   "sprechtext": "Dispo: zweihundertzwanzig Euro."
+  },
+  {
+   "id": "s99",
+   "kapitel": "k5",
+   "text": "Ratenkäufe: 250 €",
+   "sprechtext": "Ratenkäufe: zweihundertfünfzig Euro."
+  },
+  {
+   "id": "s100",
+   "kapitel": "k5",
+   "text": "Lieferdienst: 1.700 €",
+   "sprechtext": "Lieferdienst: eintausendsiebenhundert Euro."
+  },
+  {
+   "id": "s101",
+   "kapitel": "k5",
+   "text": "Girokonto statt Tagesgeld: 200 €",
+   "sprechtext": "Girokonto statt Tagesgeld: zweihundert Euro."
+  },
+  {
+   "id": "s102",
+   "kapitel": "k5",
+   "text": "Und zu viel Auto: 1.800 €",
+   "sprechtext": "Und zu viel Auto: eintausendachthundert Euro."
+  },
+  {
+   "id": "s103",
+   "kapitel": "k5",
+   "text": "Zusammen sind das rund 5.800 € pro Jahr",
+   "sprechtext": "Zusammen sind das rund fünftausendachthundert Euro pro Jahr."
+  },
+  {
+   "id": "s104",
+   "kapitel": "k5",
+   "text": "Und in zehn Jahren 58.000 €",
+   "sprechtext": "Und in zehn Jahren achtundfünfzigtausend Euro."
+  },
+  {
+   "id": "s105",
+   "kapitel": "k5",
+   "text": "Geld, das du nicht verdienen musst, sondern nur nicht verschwenden darfst",
+   "sprechtext": "Geld, das du nicht verdienen musst, sondern nur nicht verschwenden darfst."
+  },
+  {
+   "id": "s106",
+   "kapitel": "k5",
+   "text": "Natürlich macht nicht jeder alle zehn Fehler",
+   "sprechtext": "Natürlich macht nicht jeder alle zehn Fehler."
+  },
+  {
+   "id": "s107",
+   "kapitel": "k5",
+   "text": "Aber schon drei oder vier davon kosten dich tausende Euro im Jahr",
+   "sprechtext": "Aber schon drei oder vier davon kosten dich tausende Euro im Jahr."
+  },
+  {
+   "id": "s108",
+   "kapitel": "k5",
+   "text": "Unser Tipp: Such dir heute einen einzigen Fehler aus und behebe ihn noch diese Woche",
+   "sprechtext": "Unser Tipp: Such dir heute einen einzigen Fehler aus und behebe ihn noch diese Woche."
+  },
+  {
+   "id": "s109",
+   "kapitel": "k5",
+   "text": "Am besten fängst du mit den Verträgen oder den Abos an, das geht am schnellsten",
+   "sprechtext": "Am besten fängst du mit den Verträgen oder den Abos an, das geht am schnellsten."
+  },
+  {
+   "id": "s110",
+   "kapitel": "k5",
+   "text": "Und das gesparte Geld steckst du direkt in einen Sparplan, so schlägst du zwei Fliegen mit einer Klappe",
+   "sprechtext": "Und das gesparte Geld steckst du direkt in einen Sparplan, so schlägst du zwei Fliegen mit einer Klappe."
+  },
+  {
+   "id": "s111",
+   "kapitel": "k5",
+   "text": "Na, lagst du mit deinem Tipp in den Kommentaren richtig?",
+   "sprechtext": "Na, lagst du mit deinem Tipp in den Kommentaren richtig?"
+  },
+  {
+   "id": "s112",
+   "kapitel": "k5",
+   "text": "Schreib uns, welchen Fehler du als Erstes angehen willst",
+   "sprechtext": "Schreib uns, welchen Fehler du als Erstes angehen willst."
+  },
+  {
+   "id": "s113",
+   "kapitel": "k5",
+   "text": "Und wenn dir das Video geholfen hat, teile es mit jemandem, der am Monatsende immer knapp bei Kasse ist",
+   "sprechtext": "Und wenn dir das Video geholfen hat, teile es mit jemandem, der am Monatsende immer knapp bei Kasse ist."
+  },
+  {
+   "id": "s114",
+   "kapitel": "k5",
+   "text": "Wir sind HundeFinanzTV, wir sehen uns morgen im nächsten Video",
+   "sprechtext": "Wir sind HundeFinanzTV, wir sehen uns morgen im nächsten Video!"
+  }
+ ]
+}
