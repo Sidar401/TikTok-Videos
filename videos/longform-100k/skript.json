@@ -1,0 +1,432 @@
+{
+ "titel": "Von 0 auf 100.000 € mit normalem Gehalt",
+ "format": "16:9",
+ "saetze": [
+  {
+   "id": "s1",
+   "kapitel": "k1",
+   "text": "100.000 € auf dem Konto",
+   "sprechtext": "Hunderttausend Euro auf dem Konto."
+  },
+  {
+   "id": "s2",
+   "kapitel": "k1",
+   "text": "für viele klingt das wie ein Traum, den nur Reiche erreichen",
+   "sprechtext": "Für viele klingt das wie ein Traum, den nur Reiche erreichen."
+  },
+  {
+   "id": "s3",
+   "kapitel": "k1",
+   "text": "aber das stimmt nicht",
+   "sprechtext": "Aber das stimmt nicht."
+  },
+  {
+   "id": "s4",
+   "kapitel": "k1",
+   "text": "mit einem ganz normalen Gehalt und einem klaren Plan schaffst du das auch",
+   "sprechtext": "Mit einem ganz normalen Gehalt und einem klaren Plan schaffst du das auch."
+  },
+  {
+   "id": "s5",
+   "kapitel": "k1",
+   "text": "und zwar ohne Lotto, ohne Erbschaft und ohne riskante Zocker-Aktien",
+   "sprechtext": "Und zwar ohne Lotto, ohne Erbschaft und ohne riskante Zocker-Aktien."
+  },
+  {
+   "id": "s6",
+   "kapitel": "k1",
+   "text": "vielleicht denkst du jetzt, mit meinem Gehalt geht das nie",
+   "sprechtext": "Vielleicht denkst du jetzt, mit meinem Gehalt geht das nie."
+  },
+  {
+   "id": "s7",
+   "kapitel": "k1",
+   "text": "doch die Mathematik ist auf deiner Seite, wenn du früh genug anfängst",
+   "sprechtext": "Doch die Mathematik ist auf deiner Seite, wenn du früh genug anfängst."
+  },
+  {
+   "id": "s8",
+   "kapitel": "k1",
+   "text": "in diesem Video zeigen wir dir den realistischen Plan, Schritt für Schritt",
+   "sprechtext": "In diesem Video zeigen wir dir den realistischen Plan, Schritt für Schritt."
+  },
+  {
+   "id": "s9",
+   "kapitel": "k1",
+   "text": "am Ende rechnen wir genau aus, wie lange du dafür brauchst",
+   "sprechtext": "Am Ende rechnen wir genau aus, wie lange du dafür brauchst."
+  },
+  {
+   "id": "s10",
+   "kapitel": "k1",
+   "text": "und wir zeigen dir die drei größten Stolperfallen, an denen die meisten scheitern",
+   "sprechtext": "Und wir zeigen dir die drei größten Stolperfallen, an denen die meisten scheitern."
+  },
+  {
+   "id": "s11",
+   "kapitel": "k1",
+   "text": "also bleib bis zum Schluss dran",
+   "sprechtext": "Also bleib bis zum Schluss dran."
+  },
+  {
+   "id": "s12",
+   "kapitel": "k1",
+   "text": "los geht's",
+   "sprechtext": "Los geht's."
+  },
+  {
+   "id": "s13",
+   "kapitel": "k2",
+   "text": "Schritt eins ist der Kassensturz",
+   "sprechtext": "Schritt eins ist der Kassensturz."
+  },
+  {
+   "id": "s14",
+   "kapitel": "k2",
+   "text": "bevor du sparen kannst, musst du wissen, wohin dein Geld eigentlich fließt",
+   "sprechtext": "Bevor du sparen kannst, musst du wissen, wohin dein Geld eigentlich fließt."
+  },
+  {
+   "id": "s15",
+   "kapitel": "k2",
+   "text": "schreib einen Monat lang alle Ausgaben auf, wirklich alle",
+   "sprechtext": "Schreib einen Monat lang alle Ausgaben auf, wirklich alle."
+  },
+  {
+   "id": "s16",
+   "kapitel": "k2",
+   "text": "Miete, Strom, Handy, Versicherungen, Essen, Abos und auch den Kaffee unterwegs",
+   "sprechtext": "Miete, Strom, Handy, Versicherungen, Essen, Abos und auch den Kaffee unterwegs."
+  },
+  {
+   "id": "s17",
+   "kapitel": "k2",
+   "text": "am einfachsten geht das mit einer Haushaltsbuch-App oder ganz klassisch mit einer Tabelle",
+   "sprechtext": "Am einfachsten geht das mit einer Haushaltsbuch-App oder ganz klassisch mit einer Tabelle."
+  },
+  {
+   "id": "s18",
+   "kapitel": "k2",
+   "text": "die meisten Menschen sind danach ehrlich schockiert",
+   "sprechtext": "Die meisten Menschen sind danach ehrlich schockiert."
+  },
+  {
+   "id": "s19",
+   "kapitel": "k2",
+   "text": "denn oft verschwinden zweihundert bis 300 € im Monat, ohne dass man es merkt",
+   "sprechtext": "Denn oft verschwinden zweihundert bis dreihundert Euro im Monat, ohne dass man es merkt."
+  },
+  {
+   "id": "s20",
+   "kapitel": "k2",
+   "text": "genau dieses Geld ist dein Startkapital",
+   "sprechtext": "Genau dieses Geld ist dein Startkapital."
+  },
+  {
+   "id": "s21",
+   "kapitel": "k2",
+   "text": "unser Beispiel ist Lisa",
+   "sprechtext": "Unser Beispiel ist Lisa."
+  },
+  {
+   "id": "s22",
+   "kapitel": "k2",
+   "text": "Lisa verdient 2.000 € netto im Monat",
+   "sprechtext": "Lisa verdient zweitausend Euro netto im Monat."
+  },
+  {
+   "id": "s23",
+   "kapitel": "k2",
+   "text": "nach ihrem Kassensturz streicht sie zwei Abos und kocht öfter selbst",
+   "sprechtext": "Nach ihrem Kassensturz streicht sie zwei Abos und kocht öfter selbst."
+  },
+  {
+   "id": "s24",
+   "kapitel": "k2",
+   "text": "und plötzlich hat sie 300 € im Monat übrig",
+   "sprechtext": "Und plötzlich hat sie dreihundert Euro im Monat übrig."
+  },
+  {
+   "id": "s25",
+   "kapitel": "k2",
+   "text": "jetzt mal ehrlich, wie viel bleibt bei dir am Monatsende übrig?",
+   "sprechtext": "Jetzt mal ehrlich, wie viel bleibt bei dir am Monatsende übrig?"
+  },
+  {
+   "id": "s26",
+   "kapitel": "k2",
+   "text": "schreib es uns in die Kommentare, wir sind gespannt",
+   "sprechtext": "Schreib es uns in die Kommentare, wir sind gespannt."
+  },
+  {
+   "id": "s27",
+   "kapitel": "k2",
+   "text": "und wenn du solche Videos magst, folge HundeFinanzTV, damit du keinen Schritt verpasst",
+   "sprechtext": "Und wenn du solche Videos magst, folge HundeFinanzTV, damit du keinen Schritt verpasst."
+  },
+  {
+   "id": "s28",
+   "kapitel": "k3",
+   "text": "Schritt zwei ist dein Notgroschen",
+   "sprechtext": "Schritt zwei ist dein Notgroschen."
+  },
+  {
+   "id": "s29",
+   "kapitel": "k3",
+   "text": "bevor du auch nur einen Euro investierst, brauchst du ein Sicherheitspolster",
+   "sprechtext": "Bevor du auch nur einen Euro investierst, brauchst du ein Sicherheitspolster."
+  },
+  {
+   "id": "s30",
+   "kapitel": "k3",
+   "text": "die Faustregel lautet 3 Monatsausgaben",
+   "sprechtext": "Die Faustregel lautet drei Monatsausgaben."
+  },
+  {
+   "id": "s31",
+   "kapitel": "k3",
+   "text": "bei Lisa sind das rund 4.500 €",
+   "sprechtext": "Bei Lisa sind das rund viertausendfünfhundert Euro."
+  },
+  {
+   "id": "s32",
+   "kapitel": "k3",
+   "text": "dieses Geld parkt sie auf einem Tagesgeldkonto",
+   "sprechtext": "Dieses Geld parkt sie auf einem Tagesgeldkonto."
+  },
+  {
+   "id": "s33",
+   "kapitel": "k3",
+   "text": "achte darauf, dass das Konto kostenlos ist und Zinsen bringt",
+   "sprechtext": "Achte darauf, dass das Konto kostenlos ist und Zinsen bringt."
+  },
+  {
+   "id": "s34",
+   "kapitel": "k3",
+   "text": "so muss sie nie ihr Investment verkaufen, nur weil die Waschmaschine kaputt geht",
+   "sprechtext": "So muss sie nie ihr Investment verkaufen, nur weil die Waschmaschine kaputt geht."
+  },
+  {
+   "id": "s35",
+   "kapitel": "k3",
+   "text": "und ganz wichtig, der Notgroschen ist nur für echte Notfälle da, nicht für den nächsten Urlaub",
+   "sprechtext": "Und ganz wichtig, der Notgroschen ist nur für echte Notfälle da, nicht für den nächsten Urlaub."
+  },
+  {
+   "id": "s36",
+   "kapitel": "k3",
+   "text": "Schritt drei ist der wichtigste, spare zuerst und nicht zuletzt",
+   "sprechtext": "Schritt drei ist der wichtigste, spare zuerst und nicht zuletzt."
+  },
+  {
+   "id": "s37",
+   "kapitel": "k3",
+   "text": "Lisa richtet einen Dauerauftrag ein, der direkt nach dem Gehaltseingang ausgeführt wird",
+   "sprechtext": "Lisa richtet einen Dauerauftrag ein, der direkt nach dem Gehaltseingang ausgeführt wird."
+  },
+  {
+   "id": "s38",
+   "kapitel": "k3",
+   "text": "dreihundert Euro gehen automatisch weg, bevor sie überhaupt in Versuchung kommt",
+   "sprechtext": "Dreihundert Euro gehen automatisch weg, bevor sie überhaupt in Versuchung kommt."
+  },
+  {
+   "id": "s39",
+   "kapitel": "k3",
+   "text": "was übrig bleibt, darf sie ganz entspannt ausgeben",
+   "sprechtext": "Was übrig bleibt, darf sie ganz entspannt ausgeben."
+  },
+  {
+   "id": "s40",
+   "kapitel": "k3",
+   "text": "das klingt simpel, aber genau daran scheitern die meisten",
+   "sprechtext": "Das klingt simpel, aber genau daran scheitern die meisten."
+  },
+  {
+   "id": "s41",
+   "kapitel": "k3",
+   "text": "denn wer erst am Monatsende spart, hat meistens nichts mehr übrig",
+   "sprechtext": "Denn wer erst am Monatsende spart, hat meistens nichts mehr übrig."
+  },
+  {
+   "id": "s42",
+   "kapitel": "k4",
+   "text": "Schritt vier ist das Investieren",
+   "sprechtext": "Schritt vier ist das Investieren."
+  },
+  {
+   "id": "s43",
+   "kapitel": "k4",
+   "text": "Lisa steckt ihre 300 € jeden Monat in einen breit gestreuten ETF auf die ganze Welt",
+   "sprechtext": "Lisa steckt ihre dreihundert Euro jeden Monat in einen breit gestreuten ETF auf die ganze Welt."
+  },
+  {
+   "id": "s44",
+   "kapitel": "k4",
+   "text": "ein ETF ist wie ein Einkaufskorb mit über tausend Unternehmen auf einmal",
+   "sprechtext": "Ein ETF ist wie ein Einkaufskorb mit über tausend Unternehmen auf einmal."
+  },
+  {
+   "id": "s45",
+   "kapitel": "k4",
+   "text": "dadurch ist dein Geld breit gestreut, und eine einzelne Pleite tut dir kaum weh",
+   "sprechtext": "Dadurch ist dein Geld breit gestreut, und eine einzelne Pleite tut dir kaum weh."
+  },
+  {
+   "id": "s46",
+   "kapitel": "k4",
+   "text": "die Kosten liegen oft nur bei ein paar Zehntel Prozent im Jahr",
+   "sprechtext": "Die Kosten liegen oft nur bei ein paar Zehntel Prozent im Jahr."
+  },
+  {
+   "id": "s47",
+   "kapitel": "k4",
+   "text": "historisch lag die durchschnittliche Rendite solcher ETFs bei etwa 7 % pro Jahr",
+   "sprechtext": "Historisch lag die durchschnittliche Rendite solcher ETFs bei etwa sieben Prozent pro Jahr."
+  },
+  {
+   "id": "s48",
+   "kapitel": "k4",
+   "text": "eine Garantie gibt es dafür natürlich nicht",
+   "sprechtext": "Eine Garantie gibt es dafür natürlich nicht."
+  },
+  {
+   "id": "s49",
+   "kapitel": "k4",
+   "text": "aber rechnen wir mal mit diesen 7 %",
+   "sprechtext": "Aber rechnen wir mal mit diesen sieben Prozent."
+  },
+  {
+   "id": "s50",
+   "kapitel": "k4",
+   "text": "nach 5 Jahren hat Lisa rund 21.000 €",
+   "sprechtext": "Nach fünf Jahren hat Lisa rund einundzwanzigtausend Euro."
+  },
+  {
+   "id": "s51",
+   "kapitel": "k4",
+   "text": "nach 10 Jahren sind es schon fast 50.000 €",
+   "sprechtext": "Nach zehn Jahren sind es schon fast fünfzigtausend Euro."
+  },
+  {
+   "id": "s52",
+   "kapitel": "k4",
+   "text": "und nach 16 Jahren knackt sie die 100.000 €",
+   "sprechtext": "Und nach sechzehn Jahren knackt sie die hunderttausend Euro."
+  },
+  {
+   "id": "s53",
+   "kapitel": "k4",
+   "text": "eingezahlt hat sie in dieser Zeit nur rund 58.000 €",
+   "sprechtext": "Eingezahlt hat sie in dieser Zeit nur rund achtundfünfzigtausend Euro."
+  },
+  {
+   "id": "s54",
+   "kapitel": "k4",
+   "text": "den Rest hat der Zinseszins für sie erledigt",
+   "sprechtext": "Den Rest hat der Zinseszins für sie erledigt."
+  },
+  {
+   "id": "s55",
+   "kapitel": "k4",
+   "text": "und wenn Lisa ihre Sparrate auf 500 € erhöht, schafft sie es sogar in gut 11 Jahren",
+   "sprechtext": "Und wenn Lisa ihre Sparrate auf fünfhundert Euro erhöht, schafft sie es sogar in gut elf Jahren."
+  },
+  {
+   "id": "s56",
+   "kapitel": "k5",
+   "text": "bleiben noch die drei größten Stolperfallen",
+   "sprechtext": "Bleiben noch die drei größten Stolperfallen."
+  },
+  {
+   "id": "s57",
+   "kapitel": "k5",
+   "text": "Stolperfalle Nummer eins ist Panik",
+   "sprechtext": "Stolperfalle Nummer eins ist Panik."
+  },
+  {
+   "id": "s58",
+   "kapitel": "k5",
+   "text": "die Börse fällt manchmal um zwanzig oder 30 %",
+   "sprechtext": "Die Börse fällt manchmal um zwanzig oder dreißig Prozent."
+  },
+  {
+   "id": "s59",
+   "kapitel": "k5",
+   "text": "wer dann verkauft, macht die Verluste erst richtig echt",
+   "sprechtext": "Wer dann verkauft, macht die Verluste erst richtig echt."
+  },
+  {
+   "id": "s60",
+   "kapitel": "k5",
+   "text": "wer einfach weiter spart, kauft dagegen günstig nach",
+   "sprechtext": "Wer einfach weiter spart, kauft dagegen günstig nach."
+  },
+  {
+   "id": "s61",
+   "kapitel": "k5",
+   "text": "Stolperfalle Nummer zwei ist Lifestyle-Inflation",
+   "sprechtext": "Stolperfalle Nummer zwei ist Lifestyle-Inflation."
+  },
+  {
+   "id": "s62",
+   "kapitel": "k5",
+   "text": "bekommst du mehr Gehalt, erhöhe zuerst deine Sparrate und dann erst deine Ausgaben",
+   "sprechtext": "Bekommst du mehr Gehalt, erhöhe zuerst deine Sparrate und dann erst deine Ausgaben."
+  },
+  {
+   "id": "s63",
+   "kapitel": "k5",
+   "text": "Stolperfalle Nummer drei ist Ungeduld",
+   "sprechtext": "Stolperfalle Nummer drei ist Ungeduld."
+  },
+  {
+   "id": "s64",
+   "kapitel": "k5",
+   "text": "die ersten Jahre fühlen sich langsam an, aber genau dann wird das Fundament gelegt",
+   "sprechtext": "Die ersten Jahre fühlen sich langsam an, aber genau dann wird das Fundament gelegt."
+  },
+  {
+   "id": "s65",
+   "kapitel": "k5",
+   "text": "und hier noch ein Bonus-Tipp",
+   "sprechtext": "Und hier noch ein Bonus-Tipp."
+  },
+  {
+   "id": "s66",
+   "kapitel": "k5",
+   "text": "erhöhe deine Sparrate jedes Jahr um nur 20 €",
+   "sprechtext": "Erhöhe deine Sparrate jedes Jahr um nur zwanzig Euro."
+  },
+  {
+   "id": "s67",
+   "kapitel": "k5",
+   "text": "das merkst du kaum, aber es bringt dich spürbar schneller ans Ziel",
+   "sprechtext": "Das merkst du kaum, aber es bringt dich spürbar schneller ans Ziel."
+  },
+  {
+   "id": "s68",
+   "kapitel": "k5",
+   "text": "100.000 € sind also kein Traum, sondern ein Plan",
+   "sprechtext": "Hunderttausend Euro sind also kein Traum, sondern ein Plan."
+  },
+  {
+   "id": "s69",
+   "kapitel": "k5",
+   "text": "Kassensturz, Notgroschen, automatisch sparen, investieren und dranbleiben",
+   "sprechtext": "Kassensturz, Notgroschen, automatisch sparen, investieren und dranbleiben."
+  },
+  {
+   "id": "s70",
+   "kapitel": "k5",
+   "text": "wenn dir das Video geholfen hat, gib uns ein Like und teile es mit jemandem, der das hören muss",
+   "sprechtext": "Wenn dir das Video geholfen hat, gib uns ein Like und teile es mit jemandem, der das hören muss."
+  },
+  {
+   "id": "s71",
+   "kapitel": "k5",
+   "text": "wir sind HundeFinanzTV, und wir sehen uns im nächsten Video",
+   "sprechtext": "Wir sind HundeFinanzTV, und wir sehen uns im nächsten Video."
+  }
+ ]
+}

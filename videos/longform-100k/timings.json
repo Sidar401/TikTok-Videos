@@ -1,0 +1,1512 @@
+{
+  "dauer": 303.9,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 2.422,
+      "captions": [
+        {
+          "text": "100.000 € auf dem Konto",
+          "start": 0.0,
+          "end": 2.422
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 2.422,
+      "end": 5.817,
+      "captions": [
+        {
+          "text": "für viele klingt",
+          "start": 2.422,
+          "end": 3.359
+        },
+        {
+          "text": "das wie ein Traum,",
+          "start": 3.359,
+          "end": 4.412
+        },
+        {
+          "text": "den nur Reiche erreichen",
+          "start": 4.412,
+          "end": 5.817
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 5.817,
+      "end": 7.044,
+      "captions": [
+        {
+          "text": "aber das stimmt nicht",
+          "start": 5.817,
+          "end": 7.044
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 7.044,
+      "end": 11.797,
+      "captions": [
+        {
+          "text": "mit einem ganz normalen",
+          "start": 7.044,
+          "end": 8.584
+        },
+        {
+          "text": "Gehalt und einem klaren",
+          "start": 8.584,
+          "end": 10.123
+        },
+        {
+          "text": "Plan schaffst du das auch",
+          "start": 10.123,
+          "end": 11.797
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 11.797,
+      "end": 17.12,
+      "captions": [
+        {
+          "text": "und zwar ohne Lotto,",
+          "start": 11.797,
+          "end": 13.435
+        },
+        {
+          "text": "ohne Erbschaft und ohne",
+          "start": 13.435,
+          "end": 15.318
+        },
+        {
+          "text": "riskante Zocker‑Aktien",
+          "start": 15.318,
+          "end": 17.12
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 17.12,
+      "end": 21.038,
+      "captions": [
+        {
+          "text": "vielleicht denkst du jetzt,",
+          "start": 17.12,
+          "end": 18.613
+        },
+        {
+          "text": "mit meinem Gehalt geht das nie",
+          "start": 18.613,
+          "end": 21.038
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 21.038,
+      "end": 26.08,
+      "captions": [
+        {
+          "text": "doch die Mathematik",
+          "start": 21.038,
+          "end": 22.472
+        },
+        {
+          "text": "ist auf deiner Seite,",
+          "start": 22.472,
+          "end": 24.109
+        },
+        {
+          "text": "wenn du früh genug anfängst",
+          "start": 24.109,
+          "end": 26.08
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 26.08,
+      "end": 31.191,
+      "captions": [
+        {
+          "text": "in diesem Video zeigen wir",
+          "start": 26.08,
+          "end": 27.917
+        },
+        {
+          "text": "dir den realistischen Plan,",
+          "start": 27.917,
+          "end": 29.963
+        },
+        {
+          "text": "Schritt für Schritt",
+          "start": 29.963,
+          "end": 31.191
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 31.191,
+      "end": 35.248,
+      "captions": [
+        {
+          "text": "am Ende rechnen wir genau aus,",
+          "start": 31.191,
+          "end": 33.254
+        },
+        {
+          "text": "wie lange du dafür brauchst",
+          "start": 33.254,
+          "end": 35.248
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 35.248,
+      "end": 40.454,
+      "captions": [
+        {
+          "text": "und wir zeigen dir die drei",
+          "start": 35.248,
+          "end": 37.013
+        },
+        {
+          "text": "größten Stolperfallen,",
+          "start": 37.013,
+          "end": 38.496
+        },
+        {
+          "text": "an denen die meisten scheitern",
+          "start": 38.496,
+          "end": 40.454
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 40.454,
+      "end": 43.056,
+      "captions": [
+        {
+          "text": "also bleib bis",
+          "start": 40.454,
+          "end": 41.642
+        },
+        {
+          "text": "zum Schluss dran",
+          "start": 41.642,
+          "end": 43.056
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 43.056,
+      "end": 44.303,
+      "captions": [
+        {
+          "text": "los geht's",
+          "start": 43.056,
+          "end": 44.303
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 44.303,
+      "end": 46.98,
+      "captions": [
+        {
+          "text": "Schritt eins ist",
+          "start": 44.303,
+          "end": 45.722
+        },
+        {
+          "text": "der Kassensturz",
+          "start": 45.722,
+          "end": 46.98
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "start": 46.98,
+      "end": 51.697,
+      "captions": [
+        {
+          "text": "bevor du sparen kannst,",
+          "start": 46.98,
+          "end": 48.459
+        },
+        {
+          "text": "musst du wissen,",
+          "start": 48.459,
+          "end": 49.538
+        },
+        {
+          "text": "wohin dein Geld",
+          "start": 49.538,
+          "end": 50.55
+        },
+        {
+          "text": "eigentlich fließt",
+          "start": 50.55,
+          "end": 51.697
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "start": 51.697,
+      "end": 55.652,
+      "captions": [
+        {
+          "text": "schreib einen Monat",
+          "start": 51.697,
+          "end": 53.067
+        },
+        {
+          "text": "lang alle Ausgaben auf,",
+          "start": 53.067,
+          "end": 54.726
+        },
+        {
+          "text": "wirklich alle",
+          "start": 54.726,
+          "end": 55.652
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "start": 55.652,
+      "end": 62.161,
+      "captions": [
+        {
+          "text": "Miete, Strom, Handy,",
+          "start": 55.652,
+          "end": 57.443
+        },
+        {
+          "text": "Versicherungen, Essen,",
+          "start": 57.443,
+          "end": 59.424
+        },
+        {
+          "text": "Abos und auch",
+          "start": 59.424,
+          "end": 60.594
+        },
+        {
+          "text": "den Kaffee unterwegs",
+          "start": 60.594,
+          "end": 62.161
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "start": 62.161,
+      "end": 68.018,
+      "captions": [
+        {
+          "text": "am einfachsten",
+          "start": 62.161,
+          "end": 62.972
+        },
+        {
+          "text": "geht",
+          "start": 62.972,
+          "end": 63.293
+        },
+        {
+          "text": "das",
+          "start": 63.293,
+          "end": 63.535
+        },
+        {
+          "text": "mit",
+          "start": 63.535,
+          "end": 63.776
+        },
+        {
+          "text": "einer",
+          "start": 63.776,
+          "end": 64.178
+        },
+        {
+          "text": "Haushaltsbuch‑App",
+          "start": 64.178,
+          "end": 65.545
+        },
+        {
+          "text": "oder",
+          "start": 65.545,
+          "end": 65.867
+        },
+        {
+          "text": "ganz",
+          "start": 65.867,
+          "end": 66.189
+        },
+        {
+          "text": "klassisch",
+          "start": 66.189,
+          "end": 66.913
+        },
+        {
+          "text": "mit",
+          "start": 66.913,
+          "end": 67.154
+        },
+        {
+          "text": "einer",
+          "start": 67.154,
+          "end": 67.556
+        },
+        {
+          "text": "Tabelle",
+          "start": 67.556,
+          "end": 68.018
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "start": 68.018,
+      "end": 70.953,
+      "captions": [
+        {
+          "text": "die meisten Menschen sind",
+          "start": 68.018,
+          "end": 69.434
+        },
+        {
+          "text": "danach ehrlich schockiert",
+          "start": 69.434,
+          "end": 70.953
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "start": 70.953,
+      "end": 76.866,
+      "captions": [
+        {
+          "text": "denn oft verschwinden",
+          "start": 70.953,
+          "end": 72.702
+        },
+        {
+          "text": "zweihundert",
+          "start": 72.702,
+          "end": 73.618
+        },
+        {
+          "text": "bis 300 € im Monat,",
+          "start": 73.618,
+          "end": 75.2
+        },
+        {
+          "text": "ohne dass man es merkt",
+          "start": 75.2,
+          "end": 76.866
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "start": 76.866,
+      "end": 80.586,
+      "captions": [
+        {
+          "text": "genau dieses Geld",
+          "start": 76.866,
+          "end": 78.526
+        },
+        {
+          "text": "ist dein Startkapital",
+          "start": 78.526,
+          "end": 80.586
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "start": 80.586,
+      "end": 82.523,
+      "captions": [
+        {
+          "text": "unser Beispiel ist Lisa",
+          "start": 80.586,
+          "end": 82.523
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "start": 82.523,
+      "end": 85.857,
+      "captions": [
+        {
+          "text": "Lisa verdient",
+          "start": 82.523,
+          "end": 83.654
+        },
+        {
+          "text": "2.000 € netto im Monat",
+          "start": 83.654,
+          "end": 85.857
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "start": 85.857,
+      "end": 90.287,
+      "captions": [
+        {
+          "text": "nach ihrem Kassensturz",
+          "start": 85.857,
+          "end": 87.307
+        },
+        {
+          "text": "streicht sie zwei Abos",
+          "start": 87.307,
+          "end": 88.835
+        },
+        {
+          "text": "und kocht öfter selbst",
+          "start": 88.835,
+          "end": 90.287
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "start": 90.287,
+      "end": 93.281,
+      "captions": [
+        {
+          "text": "und plötzlich hat sie",
+          "start": 90.287,
+          "end": 91.783
+        },
+        {
+          "text": "300 € im Monat übrig",
+          "start": 91.783,
+          "end": 93.281
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "start": 93.281,
+      "end": 98.364,
+      "captions": [
+        {
+          "text": "jetzt mal ehrlich,",
+          "start": 93.281,
+          "end": 94.284
+        },
+        {
+          "text": "wie viel bleibt bei dir",
+          "start": 94.284,
+          "end": 96.494
+        },
+        {
+          "text": "am Monatsende übrig?",
+          "start": 96.494,
+          "end": 98.364
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "start": 98.364,
+      "end": 101.541,
+      "captions": [
+        {
+          "text": "schreib es uns",
+          "start": 98.364,
+          "end": 99.255
+        },
+        {
+          "text": "in die Kommentare,",
+          "start": 99.255,
+          "end": 100.466
+        },
+        {
+          "text": "wir sind gespannt",
+          "start": 100.466,
+          "end": 101.541
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "start": 101.541,
+      "end": 107.829,
+      "captions": [
+        {
+          "text": "und wenn du solche",
+          "start": 101.541,
+          "end": 102.902
+        },
+        {
+          "text": "Videos magst,",
+          "start": 102.902,
+          "end": 103.934
+        },
+        {
+          "text": "folge HundeFinanzTV,",
+          "start": 103.934,
+          "end": 105.522
+        },
+        {
+          "text": "damit du keinen",
+          "start": 105.522,
+          "end": 106.713
+        },
+        {
+          "text": "Schritt verpasst",
+          "start": 106.713,
+          "end": 107.829
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "start": 107.829,
+      "end": 110.6,
+      "captions": [
+        {
+          "text": "Schritt zwei ist",
+          "start": 107.829,
+          "end": 109.212
+        },
+        {
+          "text": "dein Notgroschen",
+          "start": 109.212,
+          "end": 110.6
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "start": 110.6,
+      "end": 115.528,
+      "captions": [
+        {
+          "text": "bevor du auch nur",
+          "start": 110.6,
+          "end": 111.669
+        },
+        {
+          "text": "einen Euro investierst,",
+          "start": 111.669,
+          "end": 113.313
+        },
+        {
+          "text": "brauchst du",
+          "start": 113.313,
+          "end": 114.1
+        },
+        {
+          "text": "ein Sicherheitspolster",
+          "start": 114.1,
+          "end": 115.528
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "start": 115.528,
+      "end": 119.035,
+      "captions": [
+        {
+          "text": "die Faustregel lautet",
+          "start": 115.528,
+          "end": 117.557
+        },
+        {
+          "text": "3 Monatsausgaben",
+          "start": 117.557,
+          "end": 119.035
+        }
+      ]
+    },
+    {
+      "id": "s31",
+      "start": 119.035,
+      "end": 122.809,
+      "captions": [
+        {
+          "text": "bei Lisa sind das rund 4.500 €",
+          "start": 119.035,
+          "end": 122.809
+        }
+      ]
+    },
+    {
+      "id": "s32",
+      "start": 122.809,
+      "end": 126.478,
+      "captions": [
+        {
+          "text": "dieses Geld parkt sie",
+          "start": 122.809,
+          "end": 124.453
+        },
+        {
+          "text": "auf einem Tagesgeldkonto",
+          "start": 124.453,
+          "end": 126.478
+        }
+      ]
+    },
+    {
+      "id": "s33",
+      "start": 126.478,
+      "end": 130.806,
+      "captions": [
+        {
+          "text": "achte darauf,",
+          "start": 126.478,
+          "end": 127.411
+        },
+        {
+          "text": "dass das Konto kostenlos",
+          "start": 127.411,
+          "end": 129.222
+        },
+        {
+          "text": "ist und Zinsen bringt",
+          "start": 129.222,
+          "end": 130.806
+        }
+      ]
+    },
+    {
+      "id": "s34",
+      "start": 130.806,
+      "end": 135.452,
+      "captions": [
+        {
+          "text": "so muss sie nie ihr",
+          "start": 130.806,
+          "end": 131.953
+        },
+        {
+          "text": "Investment verkaufen,",
+          "start": 131.953,
+          "end": 133.22
+        },
+        {
+          "text": "nur weil die Waschmaschine",
+          "start": 133.22,
+          "end": 134.789
+        },
+        {
+          "text": "kaputt geht",
+          "start": 134.789,
+          "end": 135.452
+        }
+      ]
+    },
+    {
+      "id": "s35",
+      "start": 135.452,
+      "end": 142.435,
+      "captions": [
+        {
+          "text": "und ganz wichtig,",
+          "start": 135.452,
+          "end": 136.726
+        },
+        {
+          "text": "der Notgroschen ist nur",
+          "start": 136.726,
+          "end": 138.528
+        },
+        {
+          "text": "für echte Notfälle da,",
+          "start": 138.528,
+          "end": 140.251
+        },
+        {
+          "text": "nicht für den nächsten Urlaub",
+          "start": 140.251,
+          "end": 142.435
+        }
+      ]
+    },
+    {
+      "id": "s36",
+      "start": 142.435,
+      "end": 147.059,
+      "captions": [
+        {
+          "text": "Schritt drei ist",
+          "start": 142.435,
+          "end": 143.598
+        },
+        {
+          "text": "der wichtigste,",
+          "start": 143.598,
+          "end": 144.77
+        },
+        {
+          "text": "spare zuerst und nicht zuletzt",
+          "start": 144.77,
+          "end": 147.059
+        }
+      ]
+    },
+    {
+      "id": "s37",
+      "start": 147.059,
+      "end": 152.969,
+      "captions": [
+        {
+          "text": "Lisa richtet",
+          "start": 147.059,
+          "end": 147.88
+        },
+        {
+          "text": "einen Dauerauftrag ein,",
+          "start": 147.88,
+          "end": 149.556
+        },
+        {
+          "text": "der direkt",
+          "start": 149.556,
+          "end": 150.285
+        },
+        {
+          "text": "nach dem Gehaltseingang",
+          "start": 150.285,
+          "end": 151.961
+        },
+        {
+          "text": "ausgeführt wird",
+          "start": 151.961,
+          "end": 152.969
+        }
+      ]
+    },
+    {
+      "id": "s38",
+      "start": 152.969,
+      "end": 158.53,
+      "captions": [
+        {
+          "text": "dreihundert Euro",
+          "start": 152.969,
+          "end": 154.075
+        },
+        {
+          "text": "gehen automatisch weg,",
+          "start": 154.075,
+          "end": 155.713
+        },
+        {
+          "text": "bevor sie überhaupt",
+          "start": 155.713,
+          "end": 157.128
+        },
+        {
+          "text": "in Versuchung kommt",
+          "start": 157.128,
+          "end": 158.53
+        }
+      ]
+    },
+    {
+      "id": "s39",
+      "start": 158.53,
+      "end": 162.24,
+      "captions": [
+        {
+          "text": "was übrig bleibt,",
+          "start": 158.53,
+          "end": 159.836
+        },
+        {
+          "text": "darf sie ganz",
+          "start": 159.836,
+          "end": 160.844
+        },
+        {
+          "text": "entspannt ausgeben",
+          "start": 160.844,
+          "end": 162.24
+        }
+      ]
+    },
+    {
+      "id": "s40",
+      "start": 162.24,
+      "end": 165.861,
+      "captions": [
+        {
+          "text": "das klingt simpel,",
+          "start": 162.24,
+          "end": 163.425
+        },
+        {
+          "text": "aber genau daran",
+          "start": 163.425,
+          "end": 164.479
+        },
+        {
+          "text": "scheitern die meisten",
+          "start": 164.479,
+          "end": 165.861
+        }
+      ]
+    },
+    {
+      "id": "s41",
+      "start": 165.861,
+      "end": 171.357,
+      "captions": [
+        {
+          "text": "denn wer erst",
+          "start": 165.861,
+          "end": 167.135
+        },
+        {
+          "text": "am Monatsende spart,",
+          "start": 167.135,
+          "end": 169.152
+        },
+        {
+          "text": "hat meistens nichts mehr übrig",
+          "start": 169.152,
+          "end": 171.357
+        }
+      ]
+    },
+    {
+      "id": "s42",
+      "start": 171.357,
+      "end": 173.924,
+      "captions": [
+        {
+          "text": "Schritt vier ist",
+          "start": 171.357,
+          "end": 172.746
+        },
+        {
+          "text": "das Investieren",
+          "start": 172.746,
+          "end": 173.924
+        }
+      ]
+    },
+    {
+      "id": "s43",
+      "start": 173.924,
+      "end": 181.236,
+      "captions": [
+        {
+          "text": "Lisa steckt",
+          "start": 173.924,
+          "end": 174.825
+        },
+        {
+          "text": "ihre 300 € jeden Monat",
+          "start": 174.825,
+          "end": 176.874
+        },
+        {
+          "text": "in einen breit gestreuten",
+          "start": 176.874,
+          "end": 179.203
+        },
+        {
+          "text": "ETF auf die ganze Welt",
+          "start": 179.203,
+          "end": 181.236
+        }
+      ]
+    },
+    {
+      "id": "s44",
+      "start": 181.236,
+      "end": 186.682,
+      "captions": [
+        {
+          "text": "ein ETF ist",
+          "start": 181.236,
+          "end": 182.091
+        },
+        {
+          "text": "wie ein Einkaufskorb mit über",
+          "start": 182.091,
+          "end": 184.387
+        },
+        {
+          "text": "tausend Unternehmen auf einmal",
+          "start": 184.387,
+          "end": 186.682
+        }
+      ]
+    },
+    {
+      "id": "s45",
+      "start": 186.682,
+      "end": 191.974,
+      "captions": [
+        {
+          "text": "dadurch ist dein Geld",
+          "start": 186.682,
+          "end": 188.092
+        },
+        {
+          "text": "breit gestreut,",
+          "start": 188.092,
+          "end": 189.157
+        },
+        {
+          "text": "und eine einzelne",
+          "start": 189.157,
+          "end": 190.364
+        },
+        {
+          "text": "Pleite tut dir kaum weh",
+          "start": 190.364,
+          "end": 191.974
+        }
+      ]
+    },
+    {
+      "id": "s46",
+      "start": 191.974,
+      "end": 196.205,
+      "captions": [
+        {
+          "text": "die Kosten liegen",
+          "start": 191.974,
+          "end": 193.158
+        },
+        {
+          "text": "oft nur bei ein paar",
+          "start": 193.158,
+          "end": 194.575
+        },
+        {
+          "text": "Zehntel Prozent im Jahr",
+          "start": 194.575,
+          "end": 196.205
+        }
+      ]
+    },
+    {
+      "id": "s47",
+      "start": 196.205,
+      "end": 202.996,
+      "captions": [
+        {
+          "text": "historisch lag",
+          "start": 196.205,
+          "end": 197.477
+        },
+        {
+          "text": "die durchschnittliche",
+          "start": 197.477,
+          "end": 199.384
+        },
+        {
+          "text": "Rendite solcher ETFs",
+          "start": 199.384,
+          "end": 201.2
+        },
+        {
+          "text": "bei etwa 7 % pro Jahr",
+          "start": 201.2,
+          "end": 202.996
+        }
+      ]
+    },
+    {
+      "id": "s48",
+      "start": 202.996,
+      "end": 206.23,
+      "captions": [
+        {
+          "text": "eine Garantie gibt es",
+          "start": 202.996,
+          "end": 204.636
+        },
+        {
+          "text": "dafür natürlich nicht",
+          "start": 204.636,
+          "end": 206.23
+        }
+      ]
+    },
+    {
+      "id": "s49",
+      "start": 206.23,
+      "end": 209.298,
+      "captions": [
+        {
+          "text": "aber rechnen wir",
+          "start": 206.23,
+          "end": 207.591
+        },
+        {
+          "text": "mal mit diesen 7 %",
+          "start": 207.591,
+          "end": 209.298
+        }
+      ]
+    },
+    {
+      "id": "s50",
+      "start": 209.298,
+      "end": 213.467,
+      "captions": [
+        {
+          "text": "nach 5 Jahren hat",
+          "start": 209.298,
+          "end": 211.327
+        },
+        {
+          "text": "Lisa rund 21.000 €",
+          "start": 211.327,
+          "end": 213.467
+        }
+      ]
+    },
+    {
+      "id": "s51",
+      "start": 213.467,
+      "end": 216.96,
+      "captions": [
+        {
+          "text": "nach 10 Jahren sind",
+          "start": 213.467,
+          "end": 215.082
+        },
+        {
+          "text": "es schon fast 50.000 €",
+          "start": 215.082,
+          "end": 216.96
+        }
+      ]
+    },
+    {
+      "id": "s52",
+      "start": 216.96,
+      "end": 220.922,
+      "captions": [
+        {
+          "text": "und nach 16 Jahren",
+          "start": 216.96,
+          "end": 218.658
+        },
+        {
+          "text": "knackt sie die 100.000 €",
+          "start": 218.658,
+          "end": 220.922
+        }
+      ]
+    },
+    {
+      "id": "s53",
+      "start": 220.922,
+      "end": 225.98,
+      "captions": [
+        {
+          "text": "eingezahlt hat sie in dieser",
+          "start": 220.922,
+          "end": 223.755
+        },
+        {
+          "text": "Zeit nur rund 58.000 €",
+          "start": 223.755,
+          "end": 225.98
+        }
+      ]
+    },
+    {
+      "id": "s54",
+      "start": 225.98,
+      "end": 229.353,
+      "captions": [
+        {
+          "text": "den Rest hat der Zinseszins",
+          "start": 225.98,
+          "end": 228.098
+        },
+        {
+          "text": "für sie erledigt",
+          "start": 228.098,
+          "end": 229.353
+        }
+      ]
+    },
+    {
+      "id": "s55",
+      "start": 229.353,
+      "end": 235.899,
+      "captions": [
+        {
+          "text": "und wenn Lisa ihre",
+          "start": 229.353,
+          "end": 230.826
+        },
+        {
+          "text": "Sparrate auf 500 € erhöht,",
+          "start": 230.826,
+          "end": 232.954
+        },
+        {
+          "text": "schafft sie es sogar",
+          "start": 232.954,
+          "end": 234.59
+        },
+        {
+          "text": "in gut 11 Jahren",
+          "start": 234.59,
+          "end": 235.899
+        }
+      ]
+    },
+    {
+      "id": "s56",
+      "start": 235.899,
+      "end": 238.747,
+      "captions": [
+        {
+          "text": "bleiben noch die drei",
+          "start": 235.899,
+          "end": 237.344
+        },
+        {
+          "text": "größten Stolperfallen",
+          "start": 237.344,
+          "end": 238.747
+        }
+      ]
+    },
+    {
+      "id": "s57",
+      "start": 238.747,
+      "end": 241.652,
+      "captions": [
+        {
+          "text": "Stolperfalle Nummer",
+          "start": 238.747,
+          "end": 240.43
+        },
+        {
+          "text": "eins ist Panik",
+          "start": 240.43,
+          "end": 241.652
+        }
+      ]
+    },
+    {
+      "id": "s58",
+      "start": 241.652,
+      "end": 245.817,
+      "captions": [
+        {
+          "text": "die Börse fällt manchmal",
+          "start": 241.652,
+          "end": 243.902
+        },
+        {
+          "text": "um zwanzig oder 30 %",
+          "start": 243.902,
+          "end": 245.817
+        }
+      ]
+    },
+    {
+      "id": "s59",
+      "start": 245.817,
+      "end": 249.753,
+      "captions": [
+        {
+          "text": "wer dann verkauft,",
+          "start": 245.817,
+          "end": 247.174
+        },
+        {
+          "text": "macht die Verluste",
+          "start": 247.174,
+          "end": 248.531
+        },
+        {
+          "text": "erst richtig echt",
+          "start": 248.531,
+          "end": 249.753
+        }
+      ]
+    },
+    {
+      "id": "s60",
+      "start": 249.753,
+      "end": 253.903,
+      "captions": [
+        {
+          "text": "wer einfach weiter spart,",
+          "start": 249.753,
+          "end": 251.828
+        },
+        {
+          "text": "kauft dagegen günstig nach",
+          "start": 251.828,
+          "end": 253.903
+        }
+      ]
+    },
+    {
+      "id": "s61",
+      "start": 253.903,
+      "end": 257.661,
+      "captions": [
+        {
+          "text": "Stolperfalle Nummer zwei",
+          "start": 253.903,
+          "end": 255.768
+        },
+        {
+          "text": "ist Lifestyle‑Inflation",
+          "start": 255.768,
+          "end": 257.661
+        }
+      ]
+    },
+    {
+      "id": "s62",
+      "start": 257.661,
+      "end": 263.206,
+      "captions": [
+        {
+          "text": "bekommst du mehr Gehalt,",
+          "start": 257.661,
+          "end": 259.342
+        },
+        {
+          "text": "erhöhe zuerst deine Sparrate",
+          "start": 259.342,
+          "end": 261.336
+        },
+        {
+          "text": "und dann erst deine Ausgaben",
+          "start": 261.336,
+          "end": 263.206
+        }
+      ]
+    },
+    {
+      "id": "s63",
+      "start": 263.206,
+      "end": 266.095,
+      "captions": [
+        {
+          "text": "Stolperfalle Nummer",
+          "start": 263.206,
+          "end": 264.73
+        },
+        {
+          "text": "drei ist Ungeduld",
+          "start": 264.73,
+          "end": 266.095
+        }
+      ]
+    },
+    {
+      "id": "s64",
+      "start": 266.095,
+      "end": 271.86,
+      "captions": [
+        {
+          "text": "die ersten Jahre",
+          "start": 266.095,
+          "end": 267.19
+        },
+        {
+          "text": "fühlen sich langsam an,",
+          "start": 267.19,
+          "end": 268.906
+        },
+        {
+          "text": "aber genau dann wird",
+          "start": 268.906,
+          "end": 270.407
+        },
+        {
+          "text": "das Fundament gelegt",
+          "start": 270.407,
+          "end": 271.86
+        }
+      ]
+    },
+    {
+      "id": "s65",
+      "start": 271.86,
+      "end": 273.704,
+      "captions": [
+        {
+          "text": "und hier noch ein Bonus‑Tipp",
+          "start": 271.86,
+          "end": 273.704
+        }
+      ]
+    },
+    {
+      "id": "s66",
+      "start": 273.704,
+      "end": 277.89,
+      "captions": [
+        {
+          "text": "erhöhe deine Sparrate",
+          "start": 273.704,
+          "end": 275.757
+        },
+        {
+          "text": "jedes Jahr um nur 20 €",
+          "start": 275.757,
+          "end": 277.89
+        }
+      ]
+    },
+    {
+      "id": "s67",
+      "start": 277.89,
+      "end": 281.783,
+      "captions": [
+        {
+          "text": "das merkst du kaum,",
+          "start": 277.89,
+          "end": 278.999
+        },
+        {
+          "text": "aber es bringt dich",
+          "start": 278.999,
+          "end": 280.175
+        },
+        {
+          "text": "spürbar schneller ans Ziel",
+          "start": 280.175,
+          "end": 281.783
+        }
+      ]
+    },
+    {
+      "id": "s68",
+      "start": 281.783,
+      "end": 286.534,
+      "captions": [
+        {
+          "text": "100.000 € sind",
+          "start": 281.783,
+          "end": 282.991
+        },
+        {
+          "text": "also kein Traum,",
+          "start": 282.991,
+          "end": 284.806
+        },
+        {
+          "text": "sondern ein Plan",
+          "start": 284.806,
+          "end": 286.534
+        }
+      ]
+    },
+    {
+      "id": "s69",
+      "start": 286.534,
+      "end": 292.593,
+      "captions": [
+        {
+          "text": "Kassensturz, Notgroschen,",
+          "start": 286.534,
+          "end": 288.653
+        },
+        {
+          "text": "automatisch sparen,",
+          "start": 288.653,
+          "end": 290.327
+        },
+        {
+          "text": "investieren und dranbleiben",
+          "start": 290.327,
+          "end": 292.593
+        }
+      ]
+    },
+    {
+      "id": "s70",
+      "start": 292.593,
+      "end": 298.827,
+      "captions": [
+        {
+          "text": "wenn dir das Video",
+          "start": 292.593,
+          "end": 293.735
+        },
+        {
+          "text": "geholfen hat,",
+          "start": 293.735,
+          "end": 294.642
+        },
+        {
+          "text": "gib uns ein Like",
+          "start": 294.642,
+          "end": 295.758
+        },
+        {
+          "text": "und teile es mit jemandem,",
+          "start": 295.758,
+          "end": 297.572
+        },
+        {
+          "text": "der das hören muss",
+          "start": 297.572,
+          "end": 298.827
+        }
+      ]
+    },
+    {
+      "id": "s71",
+      "start": 298.827,
+      "end": 303.302,
+      "captions": [
+        {
+          "text": "wir sind HundeFinanzTV,",
+          "start": 298.827,
+          "end": 300.633
+        },
+        {
+          "text": "und wir sehen uns",
+          "start": 300.633,
+          "end": 301.967
+        },
+        {
+          "text": "im nächsten Video",
+          "start": 301.967,
+          "end": 303.302
+        }
+      ]
+    }
+  ]
+}

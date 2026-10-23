@@ -202,6 +202,18 @@ def main(video_dir, audio, tempo=1.08, max_pause=0.25):
             d = (b - a) * len(p) / n
             caps.append({"text": p, "start": round(fmap(ct), 3), "end": round(fmap(ct + d), 3)})
             ct += d
+        # Captions, die in einer gekürzten Pause landen (Dauer ~0), mit dem Nachbarn verschmelzen
+        i = 0
+        while len(caps) > 1 and i < len(caps):
+            c = caps[i]
+            if c["end"] - c["start"] < 0.2:
+                j = i + 1 if i + 1 < len(caps) else i - 1
+                lo, hi = sorted((i, j))
+                caps[lo:hi + 1] = [{"text": caps[lo]["text"] + " " + caps[hi]["text"],
+                                    "start": caps[lo]["start"], "end": caps[hi]["end"]}]
+                i = 0
+            else:
+                i += 1
         timings.append({"id": s["id"], "start": round(fmap(a), 3), "end": round(fmap(b), 3), "captions": caps})
     dauer = round(duration(out) + TAIL, 2)
     (vdir / "timings.json").write_text(json.dumps({"dauer": dauer, "saetze": timings}, ensure_ascii=False, indent=2))
