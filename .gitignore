@@ -3,3 +3,5 @@ node_modules/
 videos/*/*.mp4
 .voice/
 __pycache__/
+renders/.*.hf-transaction-*/
+renders/work-*/
