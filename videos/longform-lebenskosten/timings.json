@@ -1,0 +1,2608 @@
+{
+  "dauer": 491.5,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 2.665,
+      "captions": [
+        {
+          "text": "Wie viel Geld brauchst du",
+          "start": 0.0,
+          "end": 1.211
+        },
+        {
+          "text": "eigentlich wirklich zum Leben?",
+          "start": 1.211,
+          "end": 2.665
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 2.665,
+      "end": 7.409,
+      "captions": [
+        {
+          "text": "Nicht zum Überleben,",
+          "start": 2.665,
+          "end": 3.836
+        },
+        {
+          "text": "sondern für ein ganz normales,",
+          "start": 3.836,
+          "end": 5.593
+        },
+        {
+          "text": "entspanntes Leben",
+          "start": 5.593,
+          "end": 6.589
+        },
+        {
+          "text": "in Deutschland",
+          "start": 6.589,
+          "end": 7.409
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 7.409,
+      "end": 9.382,
+      "captions": [
+        {
+          "text": "Die meisten haben",
+          "start": 7.409,
+          "end": 8.316
+        },
+        {
+          "text": "darauf keine Antwort",
+          "start": 8.316,
+          "end": 9.382
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 9.382,
+      "end": 14.326,
+      "captions": [
+        {
+          "text": "Sie schauen am Monatsende",
+          "start": 9.382,
+          "end": 10.967
+        },
+        {
+          "text": "aufs Konto und wundern sich,",
+          "start": 10.967,
+          "end": 12.741
+        },
+        {
+          "text": "wo das Geld geblieben ist",
+          "start": 12.741,
+          "end": 14.326
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 14.326,
+      "end": 18.598,
+      "captions": [
+        {
+          "text": "Und das ist gefährlich,",
+          "start": 14.326,
+          "end": 15.619
+        },
+        {
+          "text": "denn wer seine",
+          "start": 15.619,
+          "end": 16.406
+        },
+        {
+          "text": "Zahl nicht kennt,",
+          "start": 16.406,
+          "end": 17.361
+        },
+        {
+          "text": "kann auch nicht planen",
+          "start": 17.361,
+          "end": 18.598
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 18.598,
+      "end": 21.927,
+      "captions": [
+        {
+          "text": "Genau deshalb",
+          "start": 18.598,
+          "end": 19.385
+        },
+        {
+          "text": "rechnen wir das heute",
+          "start": 19.385,
+          "end": 20.656
+        },
+        {
+          "text": "einmal komplett durch",
+          "start": 20.656,
+          "end": 21.927
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 21.927,
+      "end": 25.228,
+      "captions": [
+        {
+          "text": "Ehrlich,",
+          "start": 21.927,
+          "end": 22.477
+        },
+        {
+          "text": "Schritt für Schritt",
+          "start": 22.477,
+          "end": 23.784
+        },
+        {
+          "text": "und mit echten Zahlen",
+          "start": 23.784,
+          "end": 25.228
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 25.228,
+      "end": 27.85,
+      "captions": [
+        {
+          "text": "Wir schauen uns drei",
+          "start": 25.228,
+          "end": 26.539
+        },
+        {
+          "text": "Lebenssituationen an",
+          "start": 26.539,
+          "end": 27.85
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 27.85,
+      "end": 30.384,
+      "captions": [
+        {
+          "text": "Erstens: Single",
+          "start": 27.85,
+          "end": 28.936
+        },
+        {
+          "text": "in einer Mietwohnung",
+          "start": 28.936,
+          "end": 30.384
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 30.384,
+      "end": 32.581,
+      "captions": [
+        {
+          "text": "Zweitens: ein Paar ohne Kinder",
+          "start": 30.384,
+          "end": 32.581
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 32.581,
+      "end": 35.42,
+      "captions": [
+        {
+          "text": "Und drittens: eine Familie",
+          "start": 32.581,
+          "end": 34.338
+        },
+        {
+          "text": "mit zwei Kindern",
+          "start": 34.338,
+          "end": 35.42
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 35.42,
+      "end": 42.363,
+      "captions": [
+        {
+          "text": "Und am Ende zeigen wir dir,",
+          "start": 35.42,
+          "end": 37.124
+        },
+        {
+          "text": "wie du mit deinem Gehalt",
+          "start": 37.124,
+          "end": 38.639
+        },
+        {
+          "text": "mehr übrig behältst,",
+          "start": 38.639,
+          "end": 39.901
+        },
+        {
+          "text": "egal in welcher",
+          "start": 39.901,
+          "end": 40.848
+        },
+        {
+          "text": "Situation du gerade bist",
+          "start": 40.848,
+          "end": 42.363
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 42.363,
+      "end": 47.683,
+      "captions": [
+        {
+          "text": "Eine Sache vorweg: Alle",
+          "start": 42.363,
+          "end": 43.912
+        },
+        {
+          "text": "Zahlen sind Durchschnittswerte",
+          "start": 43.912,
+          "end": 45.932
+        },
+        {
+          "text": "für eine mittelgroße Stadt",
+          "start": 45.932,
+          "end": 47.683
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "start": 47.683,
+      "end": 52.501,
+      "captions": [
+        {
+          "text": "In München oder Hamburg",
+          "start": 47.683,
+          "end": 49.266
+        },
+        {
+          "text": "zahlst du mehr,",
+          "start": 49.266,
+          "end": 50.298
+        },
+        {
+          "text": "auf dem Land oft",
+          "start": 50.298,
+          "end": 51.4
+        },
+        {
+          "text": "deutlich weniger",
+          "start": 51.4,
+          "end": 52.501
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "start": 52.501,
+      "end": 55.678,
+      "captions": [
+        {
+          "text": "Aber als Orientierung",
+          "start": 52.501,
+          "end": 54.304
+        },
+        {
+          "text": "sind sie perfekt",
+          "start": 54.304,
+          "end": 55.678
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "start": 55.678,
+      "end": 59.422,
+      "captions": [
+        {
+          "text": "Und du wirst sehen:",
+          "start": 55.678,
+          "end": 56.904
+        },
+        {
+          "text": "Einige Ergebnisse",
+          "start": 56.904,
+          "end": 58.002
+        },
+        {
+          "text": "sind echt überraschend",
+          "start": 58.002,
+          "end": 59.422
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "start": 59.422,
+      "end": 61.89,
+      "captions": [
+        {
+          "text": "Besonders beim Paar",
+          "start": 59.422,
+          "end": 60.656
+        },
+        {
+          "text": "und bei der Familie",
+          "start": 60.656,
+          "end": 61.89
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "start": 61.89,
+      "end": 64.154,
+      "captions": [
+        {
+          "text": "Bevor wir loslegen,",
+          "start": 61.89,
+          "end": 63.053
+        },
+        {
+          "text": "eine Frage an dich",
+          "start": 63.053,
+          "end": 64.154
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "start": 64.154,
+      "end": 67.787,
+      "captions": [
+        {
+          "text": "Was schätzt du:",
+          "start": 64.154,
+          "end": 65.078
+        },
+        {
+          "text": "Wie viel Geld brauchst",
+          "start": 65.078,
+          "end": 66.432
+        },
+        {
+          "text": "du selbst jeden Monat?",
+          "start": 66.432,
+          "end": 67.787
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "start": 67.787,
+      "end": 73.872,
+      "captions": [
+        {
+          "text": "Schreib deine Zahl",
+          "start": 67.787,
+          "end": 68.861
+        },
+        {
+          "text": "jetzt in die Kommentare,",
+          "start": 68.861,
+          "end": 70.293
+        },
+        {
+          "text": "und am Ende des Videos",
+          "start": 70.293,
+          "end": 71.605
+        },
+        {
+          "text": "vergleichst du sie",
+          "start": 71.605,
+          "end": 72.679
+        },
+        {
+          "text": "mit unserer Rechnung",
+          "start": 72.679,
+          "end": 73.872
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "start": 73.872,
+      "end": 78.411,
+      "captions": [
+        {
+          "text": "Und wenn du solche",
+          "start": 73.872,
+          "end": 75.149
+        },
+        {
+          "text": "ehrlichen Rechnungen magst,",
+          "start": 75.149,
+          "end": 77.063
+        },
+        {
+          "text": "folge HundeFinanzTV",
+          "start": 77.063,
+          "end": 78.411
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "start": 78.411,
+      "end": 81.427,
+      "captions": [
+        {
+          "text": "Wir machen jede Woche Finanzen",
+          "start": 78.411,
+          "end": 80.087
+        },
+        {
+          "text": "einfach und verständlich",
+          "start": 80.087,
+          "end": 81.427
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "start": 81.427,
+      "end": 82.446,
+      "captions": [
+        {
+          "text": "Also, los geht's",
+          "start": 81.427,
+          "end": 82.446
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "start": 82.446,
+      "end": 84.734,
+      "captions": [
+        {
+          "text": "Fangen wir mit dem Single an",
+          "start": 82.446,
+          "end": 84.734
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "start": 84.734,
+      "end": 85.736,
+      "captions": [
+        {
+          "text": "Nennen wir ihn Max",
+          "start": 84.734,
+          "end": 85.736
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "start": 85.736,
+      "end": 89.084,
+      "captions": [
+        {
+          "text": "Max wohnt allein",
+          "start": 85.736,
+          "end": 86.786
+        },
+        {
+          "text": "in einer kleinen",
+          "start": 86.786,
+          "end": 87.837
+        },
+        {
+          "text": "Zwei‑Zimmer‑Wohnung",
+          "start": 87.837,
+          "end": 89.084
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "start": 89.084,
+      "end": 91.53,
+      "captions": [
+        {
+          "text": "Der größte Brocken ist",
+          "start": 89.084,
+          "end": 90.396
+        },
+        {
+          "text": "natürlich die Miete",
+          "start": 90.396,
+          "end": 91.53
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "start": 91.53,
+      "end": 97.412,
+      "captions": [
+        {
+          "text": "Warm,",
+          "start": 91.53,
+          "end": 91.976
+        },
+        {
+          "text": "also mit Heizung",
+          "start": 91.976,
+          "end": 93.402
+        },
+        {
+          "text": "und Nebenkosten,",
+          "start": 93.402,
+          "end": 94.827
+        },
+        {
+          "text": "zahlt Max rund 750 € im Monat",
+          "start": 94.827,
+          "end": 97.412
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "start": 97.412,
+      "end": 100.283,
+      "captions": [
+        {
+          "text": "Dazu kommen Strom,",
+          "start": 97.412,
+          "end": 98.847
+        },
+        {
+          "text": "Internet und Handy",
+          "start": 98.847,
+          "end": 100.283
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "start": 100.283,
+      "end": 102.527,
+      "captions": [
+        {
+          "text": "Zusammen sind das etwa 100 €",
+          "start": 100.283,
+          "end": 102.527
+        }
+      ]
+    },
+    {
+      "id": "s31",
+      "start": 102.527,
+      "end": 103.465,
+      "captions": [
+        {
+          "text": "Dann das Essen",
+          "start": 102.527,
+          "end": 103.465
+        }
+      ]
+    },
+    {
+      "id": "s32",
+      "start": 103.465,
+      "end": 109.429,
+      "captions": [
+        {
+          "text": "Wenn Max meistens",
+          "start": 103.465,
+          "end": 104.644
+        },
+        {
+          "text": "selbst kocht und nur",
+          "start": 104.644,
+          "end": 106.031
+        },
+        {
+          "text": "ab und zu essen geht,",
+          "start": 106.031,
+          "end": 107.487
+        },
+        {
+          "text": "landet er bei ungefähr 300 €",
+          "start": 107.487,
+          "end": 109.429
+        }
+      ]
+    },
+    {
+      "id": "s33",
+      "start": 109.429,
+      "end": 111.107,
+      "captions": [
+        {
+          "text": "Jetzt die Mobilität",
+          "start": 109.429,
+          "end": 111.107
+        }
+      ]
+    },
+    {
+      "id": "s34",
+      "start": 111.107,
+      "end": 114.177,
+      "captions": [
+        {
+          "text": "Max hat kein Auto und fährt",
+          "start": 111.107,
+          "end": 112.701
+        },
+        {
+          "text": "mit dem Deutschlandticket",
+          "start": 112.701,
+          "end": 114.177
+        }
+      ]
+    },
+    {
+      "id": "s35",
+      "start": 114.177,
+      "end": 116.887,
+      "captions": [
+        {
+          "text": "Das kostet ihn",
+          "start": 114.177,
+          "end": 115.363
+        },
+        {
+          "text": "rund 60 € im Monat",
+          "start": 115.363,
+          "end": 116.887
+        }
+      ]
+    },
+    {
+      "id": "s36",
+      "start": 116.887,
+      "end": 123.718,
+      "captions": [
+        {
+          "text": "Hätte er ein Auto,",
+          "start": 116.887,
+          "end": 118.284
+        },
+        {
+          "text": "wären es mit Versicherung,",
+          "start": 118.284,
+          "end": 120.302
+        },
+        {
+          "text": "Sprit und Reparaturen",
+          "start": 120.302,
+          "end": 121.933
+        },
+        {
+          "text": "schnell 350 € oder mehr",
+          "start": 121.933,
+          "end": 123.718
+        }
+      ]
+    },
+    {
+      "id": "s37",
+      "start": 123.718,
+      "end": 125.857,
+      "captions": [
+        {
+          "text": "Weiter geht's",
+          "start": 123.718,
+          "end": 124.512
+        },
+        {
+          "text": "mit den Versicherungen",
+          "start": 124.512,
+          "end": 125.857
+        }
+      ]
+    },
+    {
+      "id": "s38",
+      "start": 125.857,
+      "end": 131.095,
+      "captions": [
+        {
+          "text": "Haftpflicht,",
+          "start": 125.857,
+          "end": 126.809
+        },
+        {
+          "text": "Hausrat",
+          "start": 126.809,
+          "end": 127.365
+        },
+        {
+          "text": "und",
+          "start": 127.365,
+          "end": 127.603
+        },
+        {
+          "text": "vielleicht",
+          "start": 127.603,
+          "end": 128.397
+        },
+        {
+          "text": "eine",
+          "start": 128.397,
+          "end": 128.714
+        },
+        {
+          "text": "Berufsunfähigkeitsversicherung",
+          "start": 128.714,
+          "end": 131.095
+        }
+      ]
+    },
+    {
+      "id": "s39",
+      "start": 131.095,
+      "end": 132.982,
+      "captions": [
+        {
+          "text": "Dafür rechnen wir etwa 50 €",
+          "start": 131.095,
+          "end": 132.982
+        }
+      ]
+    },
+    {
+      "id": "s40",
+      "start": 132.982,
+      "end": 139.675,
+      "captions": [
+        {
+          "text": "Den Rundfunkbeitrag",
+          "start": 132.982,
+          "end": 134.655
+        },
+        {
+          "text": "vergessen viele,",
+          "start": 134.655,
+          "end": 136.064
+        },
+        {
+          "text": "aber er kommt trotzdem:",
+          "start": 136.064,
+          "end": 138.09
+        },
+        {
+          "text": "rund 18 € im Monat",
+          "start": 138.09,
+          "end": 139.675
+        }
+      ]
+    },
+    {
+      "id": "s41",
+      "start": 139.675,
+      "end": 143.546,
+      "captions": [
+        {
+          "text": "Dann Abos wie Streaming,",
+          "start": 139.675,
+          "end": 141.652
+        },
+        {
+          "text": "Musik und Fitnessstudio",
+          "start": 141.652,
+          "end": 143.546
+        }
+      ]
+    },
+    {
+      "id": "s42",
+      "start": 143.546,
+      "end": 146.029,
+      "captions": [
+        {
+          "text": "Bei Max sind das etwa 30 €",
+          "start": 143.546,
+          "end": 146.029
+        }
+      ]
+    },
+    {
+      "id": "s43",
+      "start": 146.029,
+      "end": 150.448,
+      "captions": [
+        {
+          "text": "Klingt wenig,",
+          "start": 146.029,
+          "end": 147.155
+        },
+        {
+          "text": "aber über ein Jahr",
+          "start": 147.155,
+          "end": 148.715
+        },
+        {
+          "text": "sind das schon 360 €",
+          "start": 148.715,
+          "end": 150.448
+        }
+      ]
+    },
+    {
+      "id": "s44",
+      "start": 150.448,
+      "end": 151.244,
+      "captions": [
+        {
+          "text": "Und natürlich will",
+          "start": 150.448,
+          "end": 150.896
+        },
+        {
+          "text": "Max auch leben",
+          "start": 150.896,
+          "end": 151.244
+        }
+      ]
+    },
+    {
+      "id": "s45",
+      "start": 151.244,
+      "end": 155.681,
+      "captions": [
+        {
+          "text": "Kleidung, Freizeit,",
+          "start": 151.244,
+          "end": 153.0
+        },
+        {
+          "text": "Freunde treffen, mal ins Kino",
+          "start": 153.0,
+          "end": 155.681
+        }
+      ]
+    },
+    {
+      "id": "s46",
+      "start": 155.681,
+      "end": 158.41,
+      "captions": [
+        {
+          "text": "Dafür planen wir 200 € ein",
+          "start": 155.681,
+          "end": 158.41
+        }
+      ]
+    },
+    {
+      "id": "s47",
+      "start": 158.41,
+      "end": 160.354,
+      "captions": [
+        {
+          "text": "Jetzt zählen wir",
+          "start": 158.41,
+          "end": 159.447
+        },
+        {
+          "text": "alles zusammen",
+          "start": 159.447,
+          "end": 160.354
+        }
+      ]
+    },
+    {
+      "id": "s48",
+      "start": 160.354,
+      "end": 163.579,
+      "captions": [
+        {
+          "text": "Max braucht rund",
+          "start": 160.354,
+          "end": 161.966
+        },
+        {
+          "text": "1.500 € im Monat",
+          "start": 161.966,
+          "end": 163.579
+        }
+      ]
+    },
+    {
+      "id": "s49",
+      "start": 163.579,
+      "end": 165.887,
+      "captions": [
+        {
+          "text": "Aber Moment,",
+          "start": 163.579,
+          "end": 164.348
+        },
+        {
+          "text": "das ist noch nicht alles",
+          "start": 164.348,
+          "end": 165.887
+        }
+      ]
+    },
+    {
+      "id": "s50",
+      "start": 165.887,
+      "end": 169.554,
+      "captions": [
+        {
+          "text": "Max sollte ja",
+          "start": 165.887,
+          "end": 166.709
+        },
+        {
+          "text": "auch etwas sparen,",
+          "start": 166.709,
+          "end": 167.847
+        },
+        {
+          "text": "für Notfälle und für später",
+          "start": 167.847,
+          "end": 169.554
+        }
+      ]
+    },
+    {
+      "id": "s51",
+      "start": 169.554,
+      "end": 174.187,
+      "captions": [
+        {
+          "text": "Mit 10 % Sparrate sind",
+          "start": 169.554,
+          "end": 171.981
+        },
+        {
+          "text": "wir bei etwa 1.700 €",
+          "start": 171.981,
+          "end": 174.187
+        }
+      ]
+    },
+    {
+      "id": "s52",
+      "start": 174.187,
+      "end": 177.108,
+      "captions": [
+        {
+          "text": "Und das ist netto,",
+          "start": 174.187,
+          "end": 175.198
+        },
+        {
+          "text": "also das,",
+          "start": 175.198,
+          "end": 175.704
+        },
+        {
+          "text": "was auf dem Konto ankommt",
+          "start": 175.704,
+          "end": 177.108
+        }
+      ]
+    },
+    {
+      "id": "s53",
+      "start": 177.108,
+      "end": 181.54,
+      "captions": [
+        {
+          "text": "Brutto muss Max dafür",
+          "start": 177.108,
+          "end": 179.272
+        },
+        {
+          "text": "grob 2.500 € verdienen",
+          "start": 179.272,
+          "end": 181.54
+        }
+      ]
+    },
+    {
+      "id": "s54",
+      "start": 181.54,
+      "end": 184.446,
+      "captions": [
+        {
+          "text": "Das ist für einen Single",
+          "start": 181.54,
+          "end": 182.993
+        },
+        {
+          "text": "ein ganz normales Gehalt",
+          "start": 182.993,
+          "end": 184.446
+        }
+      ]
+    },
+    {
+      "id": "s55",
+      "start": 184.446,
+      "end": 188.286,
+      "captions": [
+        {
+          "text": "Aber man sieht auch:",
+          "start": 184.446,
+          "end": 185.705
+        },
+        {
+          "text": "Die Miete frisst fast",
+          "start": 185.705,
+          "end": 187.027
+        },
+        {
+          "text": "die Hälfte von allem",
+          "start": 187.027,
+          "end": 188.286
+        }
+      ]
+    },
+    {
+      "id": "s56",
+      "start": 188.286,
+      "end": 189.079,
+      "captions": [
+        {
+          "text": "Kommen wir zum Paar",
+          "start": 188.286,
+          "end": 189.079
+        }
+      ]
+    },
+    {
+      "id": "s57",
+      "start": 189.079,
+      "end": 194.125,
+      "captions": [
+        {
+          "text": "Lisa und Tom wohnen zusammen,",
+          "start": 189.079,
+          "end": 191.14
+        },
+        {
+          "text": "beide arbeiten,",
+          "start": 191.14,
+          "end": 192.206
+        },
+        {
+          "text": "Kinder haben sie noch nicht",
+          "start": 192.206,
+          "end": 194.125
+        }
+      ]
+    },
+    {
+      "id": "s58",
+      "start": 194.125,
+      "end": 198.155,
+      "captions": [
+        {
+          "text": "Ihre Drei‑Zimmer‑Wohnung",
+          "start": 194.125,
+          "end": 196.14
+        },
+        {
+          "text": "kostet warm etwa 1.100 €",
+          "start": 196.14,
+          "end": 198.155
+        }
+      ]
+    },
+    {
+      "id": "s59",
+      "start": 198.155,
+      "end": 202.768,
+      "captions": [
+        {
+          "text": "Strom,",
+          "start": 198.155,
+          "end": 198.698
+        },
+        {
+          "text": "Internet und zwei Handys",
+          "start": 198.698,
+          "end": 200.869
+        },
+        {
+          "text": "liegen bei rund 150 €",
+          "start": 200.869,
+          "end": 202.768
+        }
+      ]
+    },
+    {
+      "id": "s60",
+      "start": 202.768,
+      "end": 207.247,
+      "captions": [
+        {
+          "text": "Fürs Essen geben die beiden",
+          "start": 202.768,
+          "end": 205.007
+        },
+        {
+          "text": "zusammen ungefähr 550 € aus",
+          "start": 205.007,
+          "end": 207.247
+        }
+      ]
+    },
+    {
+      "id": "s61",
+      "start": 207.247,
+      "end": 212.202,
+      "captions": [
+        {
+          "text": "Die beiden teilen",
+          "start": 207.247,
+          "end": 208.287
+        },
+        {
+          "text": "sich ein Auto,",
+          "start": 208.287,
+          "end": 209.143
+        },
+        {
+          "text": "und Lisa fährt zusätzlich",
+          "start": 209.143,
+          "end": 210.673
+        },
+        {
+          "text": "mit dem Deutschlandticket",
+          "start": 210.673,
+          "end": 212.202
+        }
+      ]
+    },
+    {
+      "id": "s62",
+      "start": 212.202,
+      "end": 215.046,
+      "captions": [
+        {
+          "text": "Zusammen kostet",
+          "start": 212.202,
+          "end": 213.296
+        },
+        {
+          "text": "die Mobilität etwa 400 €",
+          "start": 213.296,
+          "end": 215.046
+        }
+      ]
+    },
+    {
+      "id": "s63",
+      "start": 215.046,
+      "end": 218.923,
+      "captions": [
+        {
+          "text": "Versicherungen",
+          "start": 215.046,
+          "end": 216.691
+        },
+        {
+          "text": "für zwei: rund 90 €",
+          "start": 216.691,
+          "end": 218.923
+        }
+      ]
+    },
+    {
+      "id": "s64",
+      "start": 218.923,
+      "end": 223.414,
+      "captions": [
+        {
+          "text": "Dazu der Rundfunkbeitrag,",
+          "start": 218.923,
+          "end": 220.624
+        },
+        {
+          "text": "aber nur einmal,",
+          "start": 220.624,
+          "end": 221.713
+        },
+        {
+          "text": "denn der gilt pro Wohnung",
+          "start": 221.713,
+          "end": 223.414
+        }
+      ]
+    },
+    {
+      "id": "s65",
+      "start": 223.414,
+      "end": 225.097,
+      "captions": [
+        {
+          "text": "Also wieder 18 €",
+          "start": 223.414,
+          "end": 225.097
+        }
+      ]
+    },
+    {
+      "id": "s66",
+      "start": 225.097,
+      "end": 227.711,
+      "captions": [
+        {
+          "text": "Abos und Streaming:",
+          "start": 225.097,
+          "end": 226.649
+        },
+        {
+          "text": "ungefähr 40 €",
+          "start": 226.649,
+          "end": 227.711
+        }
+      ]
+    },
+    {
+      "id": "s67",
+      "start": 227.711,
+      "end": 233.079,
+      "captions": [
+        {
+          "text": "Und für Freizeit,",
+          "start": 227.711,
+          "end": 229.401
+        },
+        {
+          "text": "Kleidung und Ausgehen",
+          "start": 229.401,
+          "end": 231.488
+        },
+        {
+          "text": "planen wir 350 €",
+          "start": 231.488,
+          "end": 233.079
+        }
+      ]
+    },
+    {
+      "id": "s68",
+      "start": 233.079,
+      "end": 236.626,
+      "captions": [
+        {
+          "text": "Zusammen sind das etwa",
+          "start": 233.079,
+          "end": 235.133
+        },
+        {
+          "text": "2.700 € im Monat",
+          "start": 235.133,
+          "end": 236.626
+        }
+      ]
+    },
+    {
+      "id": "s69",
+      "start": 236.626,
+      "end": 238.708,
+      "captions": [
+        {
+          "text": "Und jetzt kommt das Spannende",
+          "start": 236.626,
+          "end": 238.708
+        }
+      ]
+    },
+    {
+      "id": "s70",
+      "start": 238.708,
+      "end": 242.597,
+      "captions": [
+        {
+          "text": "Pro Person sind",
+          "start": 238.708,
+          "end": 240.653
+        },
+        {
+          "text": "das nur 1.350 €",
+          "start": 240.653,
+          "end": 242.597
+        }
+      ]
+    },
+    {
+      "id": "s71",
+      "start": 242.597,
+      "end": 244.757,
+      "captions": [
+        {
+          "text": "Das ist weniger",
+          "start": 242.597,
+          "end": 243.579
+        },
+        {
+          "text": "als bei Max allein",
+          "start": 243.579,
+          "end": 244.757
+        }
+      ]
+    },
+    {
+      "id": "s72",
+      "start": 244.757,
+      "end": 245.376,
+      "captions": [
+        {
+          "text": "Warum?",
+          "start": 244.757,
+          "end": 245.376
+        }
+      ]
+    },
+    {
+      "id": "s73",
+      "start": 245.376,
+      "end": 250.572,
+      "captions": [
+        {
+          "text": "Weil sich Miete,",
+          "start": 245.376,
+          "end": 246.636
+        },
+        {
+          "text": "Internet,",
+          "start": 246.636,
+          "end": 247.344
+        },
+        {
+          "text": "Rundfunk und Auto",
+          "start": 247.344,
+          "end": 248.683
+        },
+        {
+          "text": "auf zwei Köpfe verteilen",
+          "start": 248.683,
+          "end": 250.572
+        }
+      ]
+    },
+    {
+      "id": "s74",
+      "start": 250.572,
+      "end": 254.472,
+      "captions": [
+        {
+          "text": "Zusammenwohnen ist also",
+          "start": 250.572,
+          "end": 251.784
+        },
+        {
+          "text": "nicht nur romantisch,",
+          "start": 251.784,
+          "end": 252.891
+        },
+        {
+          "text": "sondern auch finanziell clever",
+          "start": 252.891,
+          "end": 254.472
+        }
+      ]
+    },
+    {
+      "id": "s75",
+      "start": 254.472,
+      "end": 260.51,
+      "captions": [
+        {
+          "text": "Mit einer Sparrate",
+          "start": 254.472,
+          "end": 256.17
+        },
+        {
+          "text": "von 10 % brauchen die beiden",
+          "start": 256.17,
+          "end": 258.812
+        },
+        {
+          "text": "rund 3.000 € netto",
+          "start": 258.812,
+          "end": 260.51
+        }
+      ]
+    },
+    {
+      "id": "s76",
+      "start": 260.51,
+      "end": 263.798,
+      "captions": [
+        {
+          "text": "Wenn beide normal verdienen,",
+          "start": 260.51,
+          "end": 262.125
+        },
+        {
+          "text": "bleibt hier richtig was übrig",
+          "start": 262.125,
+          "end": 263.798
+        }
+      ]
+    },
+    {
+      "id": "s77",
+      "start": 263.798,
+      "end": 269.047,
+      "captions": [
+        {
+          "text": "Und genau in dieser Phase",
+          "start": 263.798,
+          "end": 265.621
+        },
+        {
+          "text": "sollte man besonders viel",
+          "start": 265.621,
+          "end": 267.443
+        },
+        {
+          "text": "sparen und investieren",
+          "start": 267.443,
+          "end": 269.047
+        }
+      ]
+    },
+    {
+      "id": "s78",
+      "start": 269.047,
+      "end": 272.102,
+      "captions": [
+        {
+          "text": "Denn später, mit Kindern,",
+          "start": 269.047,
+          "end": 270.672
+        },
+        {
+          "text": "wird es deutlich enger",
+          "start": 270.672,
+          "end": 272.102
+        }
+      ]
+    },
+    {
+      "id": "s79",
+      "start": 272.102,
+      "end": 274.282,
+      "captions": [
+        {
+          "text": "Und damit sind wir",
+          "start": 272.102,
+          "end": 273.291
+        },
+        {
+          "text": "bei der Familie",
+          "start": 273.291,
+          "end": 274.282
+        }
+      ]
+    },
+    {
+      "id": "s80",
+      "start": 274.282,
+      "end": 277.662,
+      "captions": [
+        {
+          "text": "Familie Becker:",
+          "start": 274.282,
+          "end": 275.489
+        },
+        {
+          "text": "zwei Erwachsene,",
+          "start": 275.489,
+          "end": 276.777
+        },
+        {
+          "text": "zwei Kinder",
+          "start": 276.777,
+          "end": 277.662
+        }
+      ]
+    },
+    {
+      "id": "s81",
+      "start": 277.662,
+      "end": 280.343,
+      "captions": [
+        {
+          "text": "Sie brauchen mehr Platz,",
+          "start": 277.662,
+          "end": 278.876
+        },
+        {
+          "text": "also eine Vier‑Zimmer‑Wohnung",
+          "start": 278.876,
+          "end": 280.343
+        }
+      ]
+    },
+    {
+      "id": "s82",
+      "start": 280.343,
+      "end": 283.297,
+      "captions": [
+        {
+          "text": "Die kostet warm rund 1.500 €",
+          "start": 280.343,
+          "end": 283.297
+        }
+      ]
+    },
+    {
+      "id": "s83",
+      "start": 283.297,
+      "end": 291.416,
+      "captions": [
+        {
+          "text": "Strom,",
+          "start": 283.297,
+          "end": 283.728
+        },
+        {
+          "text": "Internet und Handys",
+          "start": 283.728,
+          "end": 285.093
+        },
+        {
+          "text": "liegen bei etwa 200 €,",
+          "start": 285.093,
+          "end": 286.674
+        },
+        {
+          "text": "denn mit Kindern",
+          "start": 286.674,
+          "end": 287.824
+        },
+        {
+          "text": "läuft mehr Licht,",
+          "start": 287.824,
+          "end": 289.045
+        },
+        {
+          "text": "mehr Waschmaschine",
+          "start": 289.045,
+          "end": 290.338
+        },
+        {
+          "text": "und mehr Geräte",
+          "start": 290.338,
+          "end": 291.416
+        }
+      ]
+    },
+    {
+      "id": "s84",
+      "start": 291.416,
+      "end": 293.232,
+      "captions": [
+        {
+          "text": "Beim Essen wird",
+          "start": 291.416,
+          "end": 292.295
+        },
+        {
+          "text": "es richtig teuer",
+          "start": 292.295,
+          "end": 293.232
+        }
+      ]
+    },
+    {
+      "id": "s85",
+      "start": 293.232,
+      "end": 298.679,
+      "captions": [
+        {
+          "text": "Vier Personen,",
+          "start": 293.232,
+          "end": 294.503
+        },
+        {
+          "text": "davon zwei hungrige",
+          "start": 294.503,
+          "end": 296.228
+        },
+        {
+          "text": "Kinder: rund 900 € im Monat",
+          "start": 296.228,
+          "end": 298.679
+        }
+      ]
+    },
+    {
+      "id": "s86",
+      "start": 298.679,
+      "end": 301.355,
+      "captions": [
+        {
+          "text": "Mit Kindern geht",
+          "start": 298.679,
+          "end": 299.976
+        },
+        {
+          "text": "es kaum ohne Auto",
+          "start": 299.976,
+          "end": 301.355
+        }
+      ]
+    },
+    {
+      "id": "s87",
+      "start": 301.355,
+      "end": 305.258,
+      "captions": [
+        {
+          "text": "Für Auto und Bus",
+          "start": 301.355,
+          "end": 302.998
+        },
+        {
+          "text": "rechnen wir etwa 450 €",
+          "start": 302.998,
+          "end": 305.258
+        }
+      ]
+    },
+    {
+      "id": "s88",
+      "start": 305.258,
+      "end": 309.83,
+      "captions": [
+        {
+          "text": "Versicherungen für die ganze",
+          "start": 305.258,
+          "end": 307.768
+        },
+        {
+          "text": "Familie: ungefähr 130 €",
+          "start": 307.768,
+          "end": 309.83
+        }
+      ]
+    },
+    {
+      "id": "s89",
+      "start": 309.83,
+      "end": 313.302,
+      "captions": [
+        {
+          "text": "Rundfunk und Abos",
+          "start": 309.83,
+          "end": 311.425
+        },
+        {
+          "text": "zusammen: knapp 60 €",
+          "start": 311.425,
+          "end": 313.302
+        }
+      ]
+    },
+    {
+      "id": "s90",
+      "start": 313.302,
+      "end": 317.267,
+      "captions": [
+        {
+          "text": "Und jetzt der Posten,",
+          "start": 313.302,
+          "end": 314.645
+        },
+        {
+          "text": "den viele unterschätzen:",
+          "start": 314.645,
+          "end": 316.18
+        },
+        {
+          "text": "die Kinder selbst",
+          "start": 316.18,
+          "end": 317.267
+        }
+      ]
+    },
+    {
+      "id": "s91",
+      "start": 317.267,
+      "end": 325.404,
+      "captions": [
+        {
+          "text": "Kleidung,",
+          "start": 317.267,
+          "end": 317.898
+        },
+        {
+          "text": "die ständig zu klein wird,",
+          "start": 317.898,
+          "end": 319.722
+        },
+        {
+          "text": "Schulsachen, Sportverein,",
+          "start": 319.722,
+          "end": 321.476
+        },
+        {
+          "text": "Musikschule,",
+          "start": 321.476,
+          "end": 322.318
+        },
+        {
+          "text": "Geburtstage und vielleicht",
+          "start": 322.318,
+          "end": 324.141
+        },
+        {
+          "text": "noch Kita‑Gebühren",
+          "start": 324.141,
+          "end": 325.404
+        }
+      ]
+    },
+    {
+      "id": "s92",
+      "start": 325.404,
+      "end": 329.494,
+      "captions": [
+        {
+          "text": "Dafür rechnen wir rund",
+          "start": 325.404,
+          "end": 327.449
+        },
+        {
+          "text": "400 € für beide Kinder",
+          "start": 327.449,
+          "end": 329.494
+        }
+      ]
+    },
+    {
+      "id": "s93",
+      "start": 329.494,
+      "end": 332.382,
+      "captions": [
+        {
+          "text": "Und auch Eltern brauchen",
+          "start": 329.494,
+          "end": 330.969
+        },
+        {
+          "text": "mal Freizeit und Urlaub",
+          "start": 330.969,
+          "end": 332.382
+        }
+      ]
+    },
+    {
+      "id": "s94",
+      "start": 332.382,
+      "end": 334.846,
+      "captions": [
+        {
+          "text": "Dafür planen wir 300 €",
+          "start": 332.382,
+          "end": 334.846
+        }
+      ]
+    },
+    {
+      "id": "s95",
+      "start": 334.846,
+      "end": 338.412,
+      "captions": [
+        {
+          "text": "Alles zusammen kommen wir",
+          "start": 334.846,
+          "end": 336.594
+        },
+        {
+          "text": "auf knapp 4.000 € im Monat",
+          "start": 336.594,
+          "end": 338.412
+        }
+      ]
+    },
+    {
+      "id": "s96",
+      "start": 338.412,
+      "end": 340.236,
+      "captions": [
+        {
+          "text": "Das klingt erst",
+          "start": 338.412,
+          "end": 339.295
+        },
+        {
+          "text": "mal erschreckend",
+          "start": 339.295,
+          "end": 340.236
+        }
+      ]
+    },
+    {
+      "id": "s97",
+      "start": 340.236,
+      "end": 344.451,
+      "captions": [
+        {
+          "text": "Fast 4.000 €, jeden Monat,",
+          "start": 340.236,
+          "end": 342.344
+        },
+        {
+          "text": "nur damit der Alltag läuft",
+          "start": 342.344,
+          "end": 344.451
+        }
+      ]
+    },
+    {
+      "id": "s98",
+      "start": 344.451,
+      "end": 346.635,
+      "captions": [
+        {
+          "text": "Aber es gibt auch",
+          "start": 344.451,
+          "end": 345.611
+        },
+        {
+          "text": "Hilfe vom Staat",
+          "start": 345.611,
+          "end": 346.635
+        }
+      ]
+    },
+    {
+      "id": "s99",
+      "start": 346.635,
+      "end": 351.301,
+      "captions": [
+        {
+          "text": "Für zwei Kinder",
+          "start": 346.635,
+          "end": 347.729
+        },
+        {
+          "text": "bekommt die Familie über",
+          "start": 347.729,
+          "end": 349.478
+        },
+        {
+          "text": "500 € Kindergeld im Monat",
+          "start": 349.478,
+          "end": 351.301
+        }
+      ]
+    },
+    {
+      "id": "s100",
+      "start": 351.301,
+      "end": 355.788,
+      "captions": [
+        {
+          "text": "Damit muss die Familie",
+          "start": 351.301,
+          "end": 352.919
+        },
+        {
+          "text": "selbst noch etwa",
+          "start": 352.919,
+          "end": 354.096
+        },
+        {
+          "text": "3.500 € netto verdienen",
+          "start": 354.096,
+          "end": 355.788
+        }
+      ]
+    },
+    {
+      "id": "s101",
+      "start": 355.788,
+      "end": 358.94,
+      "captions": [
+        {
+          "text": "Und dabei ist noch",
+          "start": 355.788,
+          "end": 357.409
+        },
+        {
+          "text": "kein Cent gespart",
+          "start": 357.409,
+          "end": 358.94
+        }
+      ]
+    },
+    {
+      "id": "s102",
+      "start": 358.94,
+      "end": 363.306,
+      "captions": [
+        {
+          "text": "Genau hier merken viele",
+          "start": 358.94,
+          "end": 360.702
+        },
+        {
+          "text": "Familien: Das Geld",
+          "start": 360.702,
+          "end": 362.08
+        },
+        {
+          "text": "reicht gerade so",
+          "start": 362.08,
+          "end": 363.306
+        }
+      ]
+    },
+    {
+      "id": "s103",
+      "start": 363.306,
+      "end": 366.808,
+      "captions": [
+        {
+          "text": "Und jede kaputte",
+          "start": 363.306,
+          "end": 364.524
+        },
+        {
+          "text": "Waschmaschine wird zum Problem",
+          "start": 364.524,
+          "end": 366.808
+        }
+      ]
+    },
+    {
+      "id": "s104",
+      "start": 366.808,
+      "end": 371.09,
+      "captions": [
+        {
+          "text": "Oder die Autoreparatur,",
+          "start": 366.808,
+          "end": 368.396
+        },
+        {
+          "text": "oder die Nachzahlung",
+          "start": 368.396,
+          "end": 369.778
+        },
+        {
+          "text": "bei den Nebenkosten",
+          "start": 369.778,
+          "end": 371.09
+        }
+      ]
+    },
+    {
+      "id": "s105",
+      "start": 371.09,
+      "end": 374.767,
+      "captions": [
+        {
+          "text": "Deshalb ist ein Notgroschen",
+          "start": 371.09,
+          "end": 372.832
+        },
+        {
+          "text": "für Familien besonders wichtig",
+          "start": 372.832,
+          "end": 374.767
+        }
+      ]
+    },
+    {
+      "id": "s106",
+      "start": 374.767,
+      "end": 375.923,
+      "captions": [
+        {
+          "text": "Fassen wir zusammen",
+          "start": 374.767,
+          "end": 375.923
+        }
+      ]
+    },
+    {
+      "id": "s107",
+      "start": 375.923,
+      "end": 379.159,
+      "captions": [
+        {
+          "text": "Single: rund 1.500 €",
+          "start": 375.923,
+          "end": 379.159
+        }
+      ]
+    },
+    {
+      "id": "s108",
+      "start": 379.159,
+      "end": 385.765,
+      "captions": [
+        {
+          "text": "Paar: rund 2.700 €,",
+          "start": 379.159,
+          "end": 381.888
+        },
+        {
+          "text": "also nur 1.350 € pro Person",
+          "start": 381.888,
+          "end": 385.765
+        }
+      ]
+    },
+    {
+      "id": "s109",
+      "start": 385.765,
+      "end": 388.561,
+      "captions": [
+        {
+          "text": "Familie mit zwei",
+          "start": 385.765,
+          "end": 386.942
+        },
+        {
+          "text": "Kindern: knapp 4.000 €",
+          "start": 386.942,
+          "end": 388.561
+        }
+      ]
+    },
+    {
+      "id": "s110",
+      "start": 388.561,
+      "end": 390.392,
+      "captions": [
+        {
+          "text": "Jeweils ohne Sparen",
+          "start": 388.561,
+          "end": 390.392
+        }
+      ]
+    },
+    {
+      "id": "s111",
+      "start": 390.392,
+      "end": 394.596,
+      "captions": [
+        {
+          "text": "Und jetzt das Wichtigste:",
+          "start": 390.392,
+          "end": 391.961
+        },
+        {
+          "text": "Wie behältst du mehr",
+          "start": 391.961,
+          "end": 393.216
+        },
+        {
+          "text": "von deinem Geld übrig?",
+          "start": 393.216,
+          "end": 394.596
+        }
+      ]
+    },
+    {
+      "id": "s112",
+      "start": 394.596,
+      "end": 396.909,
+      "captions": [
+        {
+          "text": "Hier sind fünf Tipps,",
+          "start": 394.596,
+          "end": 395.629
+        },
+        {
+          "text": "die wirklich etwas bringen",
+          "start": 395.629,
+          "end": 396.909
+        }
+      ]
+    },
+    {
+      "id": "s113",
+      "start": 396.909,
+      "end": 400.355,
+      "captions": [
+        {
+          "text": "Tipp eins: Die Miete",
+          "start": 396.909,
+          "end": 398.55
+        },
+        {
+          "text": "ist dein größter Hebel",
+          "start": 398.55,
+          "end": 400.355
+        }
+      ]
+    },
+    {
+      "id": "s114",
+      "start": 400.355,
+      "end": 405.453,
+      "captions": [
+        {
+          "text": "Faustregel: Die Warmmiete",
+          "start": 400.355,
+          "end": 401.872
+        },
+        {
+          "text": "sollte nicht mehr",
+          "start": 401.872,
+          "end": 402.904
+        },
+        {
+          "text": "als ein Drittel deines",
+          "start": 402.904,
+          "end": 404.239
+        },
+        {
+          "text": "Nettoeinkommens sein",
+          "start": 404.239,
+          "end": 405.453
+        }
+      ]
+    },
+    {
+      "id": "s115",
+      "start": 405.453,
+      "end": 409.828,
+      "captions": [
+        {
+          "text": "100 € weniger Miete sind",
+          "start": 405.453,
+          "end": 407.736
+        },
+        {
+          "text": "über 10 Jahre 12.000 €",
+          "start": 407.736,
+          "end": 409.828
+        }
+      ]
+    },
+    {
+      "id": "s116",
+      "start": 409.828,
+      "end": 412.593,
+      "captions": [
+        {
+          "text": "Tipp zwei: Prüf deine Verträge",
+          "start": 409.828,
+          "end": 412.593
+        }
+      ]
+    },
+    {
+      "id": "s117",
+      "start": 412.593,
+      "end": 419.068,
+      "captions": [
+        {
+          "text": "Handy, Internet,",
+          "start": 412.593,
+          "end": 413.65
+        },
+        {
+          "text": "Strom und Versicherungen",
+          "start": 413.65,
+          "end": 415.236
+        },
+        {
+          "text": "kann man oft",
+          "start": 415.236,
+          "end": 416.029
+        },
+        {
+          "text": "mit einem Anruf oder Wechsel",
+          "start": 416.029,
+          "end": 417.879
+        },
+        {
+          "text": "günstiger bekommen",
+          "start": 417.879,
+          "end": 419.068
+        }
+      ]
+    },
+    {
+      "id": "s118",
+      "start": 419.068,
+      "end": 423.796,
+      "captions": [
+        {
+          "text": "Das dauert",
+          "start": 419.068,
+          "end": 419.897
+        },
+        {
+          "text": "einen Nachmittag und spart",
+          "start": 419.897,
+          "end": 422.054
+        },
+        {
+          "text": "schnell 50 € im Monat",
+          "start": 422.054,
+          "end": 423.796
+        }
+      ]
+    },
+    {
+      "id": "s119",
+      "start": 423.796,
+      "end": 426.8,
+      "captions": [
+        {
+          "text": "Tipp drei: Das Auto",
+          "start": 423.796,
+          "end": 425.259
+        },
+        {
+          "text": "ehrlich durchrechnen",
+          "start": 425.259,
+          "end": 426.8
+        }
+      ]
+    },
+    {
+      "id": "s120",
+      "start": 426.8,
+      "end": 429.731,
+      "captions": [
+        {
+          "text": "Viele unterschätzen,",
+          "start": 426.8,
+          "end": 428.021
+        },
+        {
+          "text": "was ein Auto wirklich kostet",
+          "start": 428.021,
+          "end": 429.731
+        }
+      ]
+    },
+    {
+      "id": "s121",
+      "start": 429.731,
+      "end": 436.037,
+      "captions": [
+        {
+          "text": "Selbst ein günstiger",
+          "start": 429.731,
+          "end": 431.132
+        },
+        {
+          "text": "Kleinwagen kostet oft",
+          "start": 431.132,
+          "end": 432.604
+        },
+        {
+          "text": "mehr als 300 € im Monat,",
+          "start": 432.604,
+          "end": 434.285
+        },
+        {
+          "text": "wenn man alles mitrechnet",
+          "start": 434.285,
+          "end": 436.037
+        }
+      ]
+    },
+    {
+      "id": "s122",
+      "start": 436.037,
+      "end": 440.024,
+      "captions": [
+        {
+          "text": "Wertverlust, Versicherung,",
+          "start": 436.037,
+          "end": 438.341
+        },
+        {
+          "text": "Steuer, Reparaturen",
+          "start": 438.341,
+          "end": 440.024
+        }
+      ]
+    },
+    {
+      "id": "s123",
+      "start": 440.024,
+      "end": 443.738,
+      "captions": [
+        {
+          "text": "Brauchst du wirklich eins,",
+          "start": 440.024,
+          "end": 441.661
+        },
+        {
+          "text": "oder reicht",
+          "start": 441.661,
+          "end": 442.353
+        },
+        {
+          "text": "das Deutschlandticket?",
+          "start": 442.353,
+          "end": 443.738
+        }
+      ]
+    },
+    {
+      "id": "s124",
+      "start": 443.738,
+      "end": 447.087,
+      "captions": [
+        {
+          "text": "Tipp vier: Plane",
+          "start": 443.738,
+          "end": 444.956
+        },
+        {
+          "text": "mit Wochenbudgets fürs Essen",
+          "start": 444.956,
+          "end": 447.087
+        }
+      ]
+    },
+    {
+      "id": "s125",
+      "start": 447.087,
+      "end": 452.416,
+      "captions": [
+        {
+          "text": "Wer mit Einkaufsliste",
+          "start": 447.087,
+          "end": 448.522
+        },
+        {
+          "text": "einkauft und weniger bestellt,",
+          "start": 448.522,
+          "end": 450.571
+        },
+        {
+          "text": "spart locker 100 € im Monat",
+          "start": 450.571,
+          "end": 452.416
+        }
+      ]
+    },
+    {
+      "id": "s126",
+      "start": 452.416,
+      "end": 457.002,
+      "captions": [
+        {
+          "text": "Und Tipp fünf,",
+          "start": 452.416,
+          "end": 453.583
+        },
+        {
+          "text": "der wichtigste: Spar zuerst,",
+          "start": 453.583,
+          "end": 455.918
+        },
+        {
+          "text": "nicht zuletzt",
+          "start": 455.918,
+          "end": 457.002
+        }
+      ]
+    },
+    {
+      "id": "s127",
+      "start": 457.002,
+      "end": 461.62,
+      "captions": [
+        {
+          "text": "Richte direkt am Gehaltstag",
+          "start": 457.002,
+          "end": 458.863
+        },
+        {
+          "text": "einen Dauerauftrag",
+          "start": 458.863,
+          "end": 460.104
+        },
+        {
+          "text": "auf dein Sparkonto ein",
+          "start": 460.104,
+          "end": 461.62
+        }
+      ]
+    },
+    {
+      "id": "s128",
+      "start": 461.62,
+      "end": 464.268,
+      "captions": [
+        {
+          "text": "Was du nicht siehst,",
+          "start": 461.62,
+          "end": 462.852
+        },
+        {
+          "text": "gibst du auch nicht aus",
+          "start": 462.852,
+          "end": 464.268
+        }
+      ]
+    },
+    {
+      "id": "s129",
+      "start": 464.268,
+      "end": 470.846,
+      "captions": [
+        {
+          "text": "Wenn du diese fünf",
+          "start": 464.268,
+          "end": 465.645
+        },
+        {
+          "text": "Tipps umsetzt,",
+          "start": 465.645,
+          "end": 466.716
+        },
+        {
+          "text": "kannst du locker",
+          "start": 466.716,
+          "end": 467.939
+        },
+        {
+          "text": "200 bis 300 € im Monat",
+          "start": 467.939,
+          "end": 469.622
+        },
+        {
+          "text": "mehr übrig haben",
+          "start": 469.622,
+          "end": 470.846
+        }
+      ]
+    },
+    {
+      "id": "s130",
+      "start": 470.846,
+      "end": 474.917,
+      "captions": [
+        {
+          "text": "Und angelegt werden",
+          "start": 470.846,
+          "end": 472.135
+        },
+        {
+          "text": "daraus über die Jahre",
+          "start": 472.135,
+          "end": 473.56
+        },
+        {
+          "text": "richtig große Summen",
+          "start": 473.56,
+          "end": 474.917
+        }
+      ]
+    },
+    {
+      "id": "s131",
+      "start": 474.917,
+      "end": 478.395,
+      "captions": [
+        {
+          "text": "So,",
+          "start": 474.917,
+          "end": 475.11
+        },
+        {
+          "text": "und jetzt schau",
+          "start": 475.11,
+          "end": 476.076
+        },
+        {
+          "text": "mal auf deine Zahl",
+          "start": 476.076,
+          "end": 477.236
+        },
+        {
+          "text": "in den Kommentaren",
+          "start": 477.236,
+          "end": 478.395
+        }
+      ]
+    },
+    {
+      "id": "s132",
+      "start": 478.395,
+      "end": 480.718,
+      "captions": [
+        {
+          "text": "Lagst du drüber oder drunter?",
+          "start": 478.395,
+          "end": 480.718
+        }
+      ]
+    },
+    {
+      "id": "s133",
+      "start": 480.718,
+      "end": 486.812,
+      "captions": [
+        {
+          "text": "Wenn dir das Video",
+          "start": 480.718,
+          "end": 481.724
+        },
+        {
+          "text": "geholfen hat,",
+          "start": 481.724,
+          "end": 482.451
+        },
+        {
+          "text": "gib uns ein Like",
+          "start": 482.451,
+          "end": 483.346
+        },
+        {
+          "text": "und teile es mit jemandem,",
+          "start": 483.346,
+          "end": 484.799
+        },
+        {
+          "text": "der gerade seine",
+          "start": 484.799,
+          "end": 485.694
+        },
+        {
+          "text": "Finanzen ordnen will",
+          "start": 485.694,
+          "end": 486.812
+        }
+      ]
+    },
+    {
+      "id": "s134",
+      "start": 486.812,
+      "end": 490.898,
+      "captions": [
+        {
+          "text": "Wir sind HundeFinanzTV,",
+          "start": 486.812,
+          "end": 488.9
+        },
+        {
+          "text": "bis zum nächsten Video",
+          "start": 488.9,
+          "end": 490.898
+        }
+      ]
+    }
+  ]
+}
