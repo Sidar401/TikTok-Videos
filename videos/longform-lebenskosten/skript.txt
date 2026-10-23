@@ -1,8 +1,8 @@
 k1|Wie viel Geld brauchst du eigentlich wirklich zum Leben?|
 k1|Nicht zum Überleben, sondern für ein ganz normales, entspanntes Leben in Deutschland.|
 k1|Die meisten haben darauf keine Antwort.|
-k1|Und das ist gefährlich, denn wer seine Zahl nicht kennt, kann auch nicht planen.|
 k1|Sie schauen am Monatsende aufs Konto und wundern sich, wo das Geld geblieben ist.|
+k1|Und das ist gefährlich, denn wer seine Zahl nicht kennt, kann auch nicht planen.|
 k1|Genau deshalb rechnen wir das heute einmal komplett durch.|
 k1|Ehrlich, Schritt für Schritt und mit echten Zahlen.|
 k1|Wir schauen uns drei Lebenssituationen an.|
