@@ -23,6 +23,7 @@ Der Nutzer arbeitet am iPad: Antworten kurz, Ergebnisse per `SendUserFile` schic
    - Aufbau aus `STIL.md`: Hook (0–3 s) → Frage/Problem → Beispiel mit echten Zahlen → Visualisierung → Faustregel/Meinung → kurzer CTA.
    - **Zusatz-CTAs abwechselnd:** Video A → Kommentar-CTA („Schreib uns in die Kommentare …“), Video B → Teilen-CTA („Teile das Video mit jemandem, der …“), dann wieder A. Nie beide in einem Video. Im Chat beim Skript angeben, welcher CTA drin ist.
    - **CTA immer in Wir-Form**, nie „folg mir“: z. B. „Folge HundeFinanzTV, wir haben noch mehr Geld-Tipps für dich!“ (Outro-Button bleibt „+ Folgen“).
+   - **Wir machen jeden Tag Videos** – im Skript nie „jede Woche“ sagen, sondern z. B. „wir bringen jeden Tag neue Videos“.
    - `text` = Untertitel (locker, kleingeschrieben wie gesprochen, Ziffern erlaubt). `sprechtext` = was die Stimme sagt: Zahlen und Zeichen ausschreiben („sechsunddreißigtausend Euro“, „sieben Prozent“), sonst liest Piper sie falsch.
    - Zahlen nachrechnen (Zinseszins etc.) und im Chat kurz nennen. Keine Anlageberatung versprechen.
 4. **Voiceover (Standard: ElevenLabs vom Nutzer):**

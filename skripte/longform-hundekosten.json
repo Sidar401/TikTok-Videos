@@ -1,0 +1,767 @@
+{
+ "titel": "longform-hundekosten",
+ "saetze": [
+  {
+   "id": "s1",
+   "kapitel": "k1",
+   "text": "Ein Hund kostet dich im Laufe seines Lebens ungefähr so viel wie ein Kleinwagen",
+   "sprechtext": "Ein Hund kostet dich im Laufe seines Lebens ungefähr so viel wie ein Kleinwagen."
+  },
+  {
+   "id": "s2",
+   "kapitel": "k1",
+   "text": "Klingt übertrieben?",
+   "sprechtext": "Klingt übertrieben?"
+  },
+  {
+   "id": "s3",
+   "kapitel": "k1",
+   "text": "Dann rechnen wir das heute einmal ganz ehrlich durch",
+   "sprechtext": "Dann rechnen wir das heute einmal ganz ehrlich durch."
+  },
+  {
+   "id": "s4",
+   "kapitel": "k1",
+   "text": "Denn die meisten denken beim Hund nur an den Kaufpreis und ein bisschen Futter",
+   "sprechtext": "Denn die meisten denken beim Hund nur an den Kaufpreis und ein bisschen Futter."
+  },
+  {
+   "id": "s5",
+   "kapitel": "k1",
+   "text": "Aber das ist nur die Spitze des Eisbergs",
+   "sprechtext": "Aber das ist nur die Spitze des Eisbergs."
+  },
+  {
+   "id": "s6",
+   "kapitel": "k1",
+   "text": "Da kommen Hundesteuer, Versicherungen, Tierarzt, Urlaub und Notfälle dazu",
+   "sprechtext": "Da kommen Hundesteuer, Versicherungen, Tierarzt, Urlaub und Notfälle dazu."
+  },
+  {
+   "id": "s7",
+   "kapitel": "k1",
+   "text": "Und genau die machen am Ende den großen Unterschied",
+   "sprechtext": "Und genau die machen am Ende den großen Unterschied."
+  },
+  {
+   "id": "s8",
+   "kapitel": "k1",
+   "text": "In diesem Video gehen wir das ganze Hundeleben durch",
+   "sprechtext": "In diesem Video gehen wir das ganze Hundeleben durch."
+  },
+  {
+   "id": "s9",
+   "kapitel": "k1",
+   "text": "Erstens: die Anschaffung und das erste Jahr",
+   "sprechtext": "Erstens: die Anschaffung und das erste Jahr."
+  },
+  {
+   "id": "s10",
+   "kapitel": "k1",
+   "text": "Zweitens: die laufenden Kosten jeden Monat",
+   "sprechtext": "Zweitens: die laufenden Kosten jeden Monat."
+  },
+  {
+   "id": "s11",
+   "kapitel": "k1",
+   "text": "Drittens: die teuren Überraschungen, mit denen keiner rechnet",
+   "sprechtext": "Drittens: die teuren Überraschungen, mit denen keiner rechnet."
+  },
+  {
+   "id": "s12",
+   "kapitel": "k1",
+   "text": "Und am Ende siehst du die komplette Rechnung für ein ganzes Hundeleben, plus Tipps, wie du dabei richtig Geld sparst",
+   "sprechtext": "Und am Ende siehst du die komplette Rechnung für ein ganzes Hundeleben, plus Tipps, wie du dabei richtig Geld sparst."
+  },
+  {
+   "id": "s13",
+   "kapitel": "k1",
+   "text": "Wir rechnen mit einem mittelgroßen Hund, so wie einem Beagle, und einer Lebensdauer von 13 Jahren",
+   "sprechtext": "Wir rechnen mit einem mittelgroßen Hund, so wie einem Beagle, und einer Lebensdauer von dreizehn Jahren."
+  },
+  {
+   "id": "s14",
+   "kapitel": "k1",
+   "text": "Bei kleinen Hunden wird es etwas günstiger, bei großen Hunden deutlich teurer",
+   "sprechtext": "Bei kleinen Hunden wird es etwas günstiger, bei großen Hunden deutlich teurer."
+  },
+  {
+   "id": "s15",
+   "kapitel": "k1",
+   "text": "Und ein paar Zahlen werden dich wirklich überraschen, besonders beim Tierarzt",
+   "sprechtext": "Und ein paar Zahlen werden dich wirklich überraschen, besonders beim Tierarzt."
+  },
+  {
+   "id": "s16",
+   "kapitel": "k1",
+   "text": "Egal ob du schon einen Hund hast oder gerade über einen nachdenkst, dieses Video spart dir bares Geld",
+   "sprechtext": "Egal ob du schon einen Hund hast oder gerade über einen nachdenkst, dieses Video spart dir bares Geld."
+  },
+  {
+   "id": "s17",
+   "kapitel": "k1",
+   "text": "Bevor wir starten, eine Frage an dich",
+   "sprechtext": "Bevor wir starten, eine Frage an dich."
+  },
+  {
+   "id": "s18",
+   "kapitel": "k1",
+   "text": "Hast du selbst einen Hund?",
+   "sprechtext": "Hast du selbst einen Hund?"
+  },
+  {
+   "id": "s19",
+   "kapitel": "k1",
+   "text": "Und was schätzt du: Wie viel kostet ein Hund im ganzen Leben?",
+   "sprechtext": "Und was schätzt du: Wie viel kostet ein Hund im ganzen Leben?"
+  },
+  {
+   "id": "s20",
+   "kapitel": "k1",
+   "text": "Schreib deine Schätzung jetzt in die Kommentare, am Ende lösen wir auf",
+   "sprechtext": "Schreib deine Schätzung jetzt in die Kommentare, am Ende lösen wir auf."
+  },
+  {
+   "id": "s21",
+   "kapitel": "k1",
+   "text": "Und wenn du Hunde und Geld genauso liebst wie wir, dann folge HundeFinanzTV",
+   "sprechtext": "Und wenn du Hunde und Geld genauso liebst wie wir, dann folge HundeFinanzTV."
+  },
+  {
+   "id": "s22",
+   "kapitel": "k1",
+   "text": "Wir bringen jeden Tag neue Videos rund um Geld und Finanzen",
+   "sprechtext": "Wir bringen jeden Tag neue Videos rund um Geld und Finanzen."
+  },
+  {
+   "id": "s23",
+   "kapitel": "k1",
+   "text": "Also, los geht's",
+   "sprechtext": "Also, los geht's."
+  },
+  {
+   "id": "s24",
+   "kapitel": "k2",
+   "text": "Fangen wir mit der Anschaffung an",
+   "sprechtext": "Fangen wir mit der Anschaffung an."
+  },
+  {
+   "id": "s25",
+   "kapitel": "k2",
+   "text": "Ein Welpe vom seriösen Züchter kostet schnell zwischen 1.000 und 2.500 €",
+   "sprechtext": "Ein Welpe vom seriösen Züchter kostet heute schnell zwischen tausend und zweieinhalbtausend Euro."
+  },
+  {
+   "id": "s26",
+   "kapitel": "k2",
+   "text": "Wir rechnen mit 1.500 €",
+   "sprechtext": "Wir rechnen mit fünfzehnhundert Euro."
+  },
+  {
+   "id": "s27",
+   "kapitel": "k2",
+   "text": "Aus dem Tierheim: meist eine Schutzgebühr von 200 bis 400 €",
+   "sprechtext": "Aus dem Tierheim ist es deutlich günstiger, da zahlst du meistens eine Schutzgebühr von zweihundert bis vierhundert Euro."
+  },
+  {
+   "id": "s28",
+   "kapitel": "k2",
+   "text": "Und du gibst einem Hund ein neues Zuhause",
+   "sprechtext": "Und du gibst einem Hund ein neues Zuhause."
+  },
+  {
+   "id": "s29",
+   "kapitel": "k2",
+   "text": "Ein wichtiger Tipp: Finger weg von Welpen aus dem Internet zu Schnäppchenpreisen",
+   "sprechtext": "Ein wichtiger Tipp: Finger weg von Welpen aus dem Internet zu Schnäppchenpreisen."
+  },
+  {
+   "id": "s30",
+   "kapitel": "k2",
+   "text": "Die sind oft krank und kosten dich später beim Tierarzt ein Vielfaches",
+   "sprechtext": "Die sind oft krank und kosten dich später beim Tierarzt ein Vielfaches."
+  },
+  {
+   "id": "s31",
+   "kapitel": "k2",
+   "text": "Dann kommt die Erstausstattung",
+   "sprechtext": "Dann kommt die Erstausstattung."
+  },
+  {
+   "id": "s32",
+   "kapitel": "k2",
+   "text": "Leine, Halsband oder Geschirr, Körbchen, Näpfe, Transportbox und natürlich Spielzeug",
+   "sprechtext": "Leine, Halsband oder Geschirr, Körbchen, Näpfe, Transportbox und natürlich Spielzeug."
+  },
+  {
+   "id": "s33",
+   "kapitel": "k2",
+   "text": "Das summiert sich schnell auf rund 300 €",
+   "sprechtext": "Das summiert sich schnell auf rund dreihundert Euro."
+  },
+  {
+   "id": "s34",
+   "kapitel": "k2",
+   "text": "Im ersten Jahr muss der Welpe außerdem zum Tierarzt",
+   "sprechtext": "Im ersten Jahr muss der Welpe außerdem zum Tierarzt."
+  },
+  {
+   "id": "s35",
+   "kapitel": "k2",
+   "text": "Impfungen, Entwurmung und ein Chip mit Registrierung",
+   "sprechtext": "Impfungen, Entwurmung und ein Chip mit Registrierung."
+  },
+  {
+   "id": "s36",
+   "kapitel": "k2",
+   "text": "Dafür rechnen wir etwa 200 €",
+   "sprechtext": "Dafür rechnen wir etwa zweihundert Euro."
+  },
+  {
+   "id": "s37",
+   "kapitel": "k2",
+   "text": "Viele lassen ihren Hund später auch kastrieren",
+   "sprechtext": "Viele lassen ihren Hund später auch kastrieren."
+  },
+  {
+   "id": "s38",
+   "kapitel": "k2",
+   "text": "Das kostet je nach Hund zwischen 300 und 600 €",
+   "sprechtext": "Das kostet je nach Hund zwischen dreihundert und sechshundert Euro."
+  },
+  {
+   "id": "s39",
+   "kapitel": "k2",
+   "text": "Das rechnen wir hier nicht mit, aber plane es auf jeden Fall ein",
+   "sprechtext": "Das rechnen wir hier nicht mit, aber plane es auf jeden Fall ein."
+  },
+  {
+   "id": "s40",
+   "kapitel": "k2",
+   "text": "Und dann die Welpenschule, die sich wirklich lohnt",
+   "sprechtext": "Und dann die Welpenschule, die sich wirklich lohnt."
+  },
+  {
+   "id": "s41",
+   "kapitel": "k2",
+   "text": "Ein Kurs kostet ungefähr 200 €",
+   "sprechtext": "Ein Kurs kostet ungefähr zweihundert Euro."
+  },
+  {
+   "id": "s42",
+   "kapitel": "k2",
+   "text": "Zusammen für den Start: rund 2.200 €",
+   "sprechtext": "Zusammen sind das für den Start rund zweitausendzweihundert Euro."
+  },
+  {
+   "id": "s43",
+   "kapitel": "k2",
+   "text": "Und das ist erst der Anfang, denn jetzt geht es um die Kosten, die jeden Monat kommen",
+   "sprechtext": "Und das ist erst der Anfang, denn jetzt geht es um die Kosten, die jeden Monat kommen."
+  },
+  {
+   "id": "s44",
+   "kapitel": "k3",
+   "text": "Der größte laufende Posten ist das Futter",
+   "sprechtext": "Der größte laufende Posten ist das Futter."
+  },
+  {
+   "id": "s45",
+   "kapitel": "k3",
+   "text": "Für einen mittelgroßen Hund mit gutem Futter: rund 60 € im Monat",
+   "sprechtext": "Für einen mittelgroßen Hund mit gutem Futter rechnen wir rund sechzig Euro im Monat."
+  },
+  {
+   "id": "s46",
+   "kapitel": "k3",
+   "text": "Dazu kommen Leckerlis, Kauknochen und ab und zu neues Spielzeug",
+   "sprechtext": "Dazu kommen Leckerlis, Kauknochen und ab und zu neues Spielzeug."
+  },
+  {
+   "id": "s47",
+   "kapitel": "k3",
+   "text": "Gerade Welpen zerlegen gerne mal ein Körbchen",
+   "sprechtext": "Gerade Welpen zerlegen gerne mal ein Körbchen."
+  },
+  {
+   "id": "s48",
+   "kapitel": "k3",
+   "text": "Dafür planen wir 20 € im Monat",
+   "sprechtext": "Dafür planen wir zwanzig Euro im Monat."
+  },
+  {
+   "id": "s49",
+   "kapitel": "k3",
+   "text": "Dann die Hundesteuer",
+   "sprechtext": "Dann die Hundesteuer."
+  },
+  {
+   "id": "s50",
+   "kapitel": "k3",
+   "text": "Die legt jede Stadt selbst fest, und die Unterschiede sind riesig",
+   "sprechtext": "Die legt jede Stadt selbst fest, und die Unterschiede sind riesig."
+  },
+  {
+   "id": "s51",
+   "kapitel": "k3",
+   "text": "Im Schnitt etwa 120 € im Jahr, also 10 € im Monat",
+   "sprechtext": "Im Schnitt sind es etwa hundertzwanzig Euro im Jahr, also zehn Euro im Monat."
+  },
+  {
+   "id": "s52",
+   "kapitel": "k3",
+   "text": "Für bestimmte Rassen kann die Steuer aber auch mehrere hundert Euro im Jahr kosten",
+   "sprechtext": "Für bestimmte Rassen kann die Steuer aber auch mehrere hundert Euro im Jahr kosten."
+  },
+  {
+   "id": "s53",
+   "kapitel": "k3",
+   "text": "Und Achtung: Für einen zweiten Hund ist die Steuer in vielen Städten sogar höher",
+   "sprechtext": "Und Achtung: Für einen zweiten Hund ist die Steuer in vielen Städten sogar höher."
+  },
+  {
+   "id": "s54",
+   "kapitel": "k3",
+   "text": "Ganz wichtig ist die Hundehaftpflicht",
+   "sprechtext": "Ganz wichtig ist die Hundehaftpflicht."
+  },
+  {
+   "id": "s55",
+   "kapitel": "k3",
+   "text": "In einigen Bundesländern ist sie sogar Pflicht, und sie schützt dich, wenn dein Hund einen Schaden anrichtet",
+   "sprechtext": "In einigen Bundesländern ist sie sogar Pflicht, und sie schützt dich, wenn dein Hund einen Schaden anrichtet."
+  },
+  {
+   "id": "s56",
+   "kapitel": "k3",
+   "text": "Die kostet meistens nur rund 6 € im Monat",
+   "sprechtext": "Die kostet meistens nur rund sechs Euro im Monat."
+  },
+  {
+   "id": "s57",
+   "kapitel": "k3",
+   "text": "Dann der Tierarzt für die Routine",
+   "sprechtext": "Dann der Tierarzt für die Routine."
+  },
+  {
+   "id": "s58",
+   "kapitel": "k3",
+   "text": "Jährliche Impfungen, Wurmkur, Floh- und Zeckenschutz und ein Check-up",
+   "sprechtext": "Jährliche Impfungen, Wurmkur, Floh- und Zeckenschutz und ein Check-up."
+  },
+  {
+   "id": "s59",
+   "kapitel": "k3",
+   "text": "Ungefähr 300 € im Jahr, also 25 € im Monat",
+   "sprechtext": "Das sind ungefähr dreihundert Euro im Jahr, also fünfundzwanzig Euro im Monat."
+  },
+  {
+   "id": "s60",
+   "kapitel": "k3",
+   "text": "Manche Rassen, wie Pudel oder Doodles, müssen außerdem regelmäßig zum Hundefriseur",
+   "sprechtext": "Manche Rassen, wie Pudel oder Doodles, müssen außerdem regelmäßig zum Hundefriseur."
+  },
+  {
+   "id": "s61",
+   "kapitel": "k3",
+   "text": "Das kostet schnell 50 bis 80 € pro Termin",
+   "sprechtext": "Das kostet schnell fünfzig bis achtzig Euro pro Termin."
+  },
+  {
+   "id": "s62",
+   "kapitel": "k3",
+   "text": "Beim Beagle zum Glück nicht, deshalb lassen wir das hier weg",
+   "sprechtext": "Beim Beagle zum Glück nicht, deshalb lassen wir das hier weg."
+  },
+  {
+   "id": "s63",
+   "kapitel": "k3",
+   "text": "Und jetzt kommt ein Punkt, den viele weglassen, die OP-Versicherung",
+   "sprechtext": "Und jetzt kommt ein Punkt, den viele weglassen, die OP-Versicherung."
+  },
+  {
+   "id": "s64",
+   "kapitel": "k3",
+   "text": "Für rund 25 € im Monat bist du bei teuren Operationen abgesichert",
+   "sprechtext": "Für rund fünfundzwanzig Euro im Monat bist du bei teuren Operationen abgesichert."
+  },
+  {
+   "id": "s65",
+   "kapitel": "k3",
+   "text": "Warum das so wichtig ist, zeigen wir dir gleich",
+   "sprechtext": "Warum das so wichtig ist, zeigen wir dir gleich."
+  },
+  {
+   "id": "s66",
+   "kapitel": "k3",
+   "text": "Zählen wir zusammen",
+   "sprechtext": "Zählen wir zusammen."
+  },
+  {
+   "id": "s67",
+   "kapitel": "k3",
+   "text": "Futter, Leckerlis, Steuer, Haftpflicht, Tierarzt und OP-Versicherung",
+   "sprechtext": "Futter, Leckerlis, Steuer, Haftpflicht, Tierarzt und OP-Versicherung."
+  },
+  {
+   "id": "s68",
+   "kapitel": "k3",
+   "text": "Das sind rund 150 € im Monat",
+   "sprechtext": "Das sind rund hundertfünfzig Euro im Monat."
+  },
+  {
+   "id": "s69",
+   "kapitel": "k3",
+   "text": "Oder anders gesagt: 1.800 € im Jahr",
+   "sprechtext": "Oder anders gesagt: eintausendachthundert Euro im Jahr."
+  },
+  {
+   "id": "s70",
+   "kapitel": "k3",
+   "text": "Und das 13 Jahre lang",
+   "sprechtext": "Und das dreizehn Jahre lang."
+  },
+  {
+   "id": "s71",
+   "kapitel": "k3",
+   "text": "Macht allein 23.400 €",
+   "sprechtext": "Macht allein dreiundzwanzigtausendvierhundert Euro."
+  },
+  {
+   "id": "s72",
+   "kapitel": "k4",
+   "text": "Jetzt kommen die Kosten, die viele völlig unterschätzen",
+   "sprechtext": "Jetzt kommen die Kosten, die viele völlig unterschätzen."
+  },
+  {
+   "id": "s73",
+   "kapitel": "k4",
+   "text": "Erstens: der Tierarzt im Notfall",
+   "sprechtext": "Erstens: der Tierarzt im Notfall."
+  },
+  {
+   "id": "s74",
+   "kapitel": "k4",
+   "text": "Seit der neuen Gebührenordnung sind Tierarztbesuche in Deutschland deutlich teurer geworden",
+   "sprechtext": "Seit der neuen Gebührenordnung sind Tierarztbesuche in Deutschland deutlich teurer geworden."
+  },
+  {
+   "id": "s75",
+   "kapitel": "k4",
+   "text": "Ein Notdienst am Wochenende kostet schnell über 100 €",
+   "sprechtext": "Ein Notdienst am Wochenende kostet schnell über hundert Euro, bevor überhaupt behandelt wird."
+  },
+  {
+   "id": "s76",
+   "kapitel": "k4",
+   "text": "Und wenn eine Operation nötig ist, wird es richtig teuer",
+   "sprechtext": "Und wenn eine Operation nötig ist, wird es richtig teuer."
+  },
+  {
+   "id": "s77",
+   "kapitel": "k4",
+   "text": "Kreuzbandriss oder Magendrehung: schnell 2.000 bis 4.000 €",
+   "sprechtext": "Ein Kreuzbandriss oder eine Magendrehung kosten schnell zwei- bis viertausend Euro."
+  },
+  {
+   "id": "s78",
+   "kapitel": "k4",
+   "text": "Wir rechnen mit einer großen OP im Hundeleben: etwa 3.000 €",
+   "sprechtext": "Wir rechnen mit einer großen Operation im Hundeleben, also etwa dreitausend Euro."
+  },
+  {
+   "id": "s79",
+   "kapitel": "k4",
+   "text": "Mit OP-Versicherung zahlst du davon nur einen kleinen Teil selbst",
+   "sprechtext": "Mit OP-Versicherung zahlst du davon nur einen kleinen Teil selbst."
+  },
+  {
+   "id": "s80",
+   "kapitel": "k4",
+   "text": "Ohne Versicherung musst du das komplett aus eigener Tasche zahlen",
+   "sprechtext": "Ohne Versicherung musst du das komplett aus eigener Tasche zahlen."
+  },
+  {
+   "id": "s81",
+   "kapitel": "k4",
+   "text": "Und auch die Kleinigkeiten summieren sich",
+   "sprechtext": "Und auch die Kleinigkeiten summieren sich."
+  },
+  {
+   "id": "s82",
+   "kapitel": "k4",
+   "text": "Eine Ohrenentzündung, ein verschluckter Socken oder eine Allergie",
+   "sprechtext": "Eine Ohrenentzündung, ein verschluckter Socken oder eine Allergie."
+  },
+  {
+   "id": "s83",
+   "kapitel": "k4",
+   "text": "Jeder Besuch kostet schnell 80 bis 200 €",
+   "sprechtext": "Jeder dieser Besuche kostet schnell achtzig bis zweihundert Euro."
+  },
+  {
+   "id": "s84",
+   "kapitel": "k4",
+   "text": "Zweitens: der Urlaub",
+   "sprechtext": "Zweitens: der Urlaub."
+  },
+  {
+   "id": "s85",
+   "kapitel": "k4",
+   "text": "Wenn der Hund nicht mit kann, braucht er eine Hundepension oder einen Hundesitter",
+   "sprechtext": "Wenn der Hund nicht mit kann, braucht er eine Hundepension oder einen Hundesitter."
+  },
+  {
+   "id": "s86",
+   "kapitel": "k4",
+   "text": "Das kostet zwischen 20 und 40 € pro Tag",
+   "sprechtext": "Das kostet zwischen zwanzig und vierzig Euro pro Tag."
+  },
+  {
+   "id": "s87",
+   "kapitel": "k4",
+   "text": "Bei zwei Wochen Urlaub im Jahr: schnell 300 €",
+   "sprechtext": "Bei zwei Wochen Urlaub im Jahr sind das schnell dreihundert Euro."
+  },
+  {
+   "id": "s88",
+   "kapitel": "k4",
+   "text": "Über 13 Jahre gerechnet: fast 4.000 €",
+   "sprechtext": "Über dreizehn Jahre gerechnet sind das fast viertausend Euro."
+  },
+  {
+   "id": "s89",
+   "kapitel": "k4",
+   "text": "Und wenn du Vollzeit arbeitest, brauchst du vielleicht einen Gassi-Service",
+   "sprechtext": "Und wenn du Vollzeit arbeitest, brauchst du vielleicht einen Gassi-Service."
+  },
+  {
+   "id": "s90",
+   "kapitel": "k4",
+   "text": "Der kostet 10 bis 20 € pro Runde",
+   "sprechtext": "Der kostet zehn bis zwanzig Euro pro Runde, das rechnen wir aber nicht mit ein."
+  },
+  {
+   "id": "s91",
+   "kapitel": "k4",
+   "text": "Und drittens: die Seniorenjahre",
+   "sprechtext": "Und drittens: die Seniorenjahre."
+  },
+  {
+   "id": "s92",
+   "kapitel": "k4",
+   "text": "Ältere Hunde brauchen oft Spezialfutter, Medikamente gegen Gelenkschmerzen und mehr Tierarztbesuche",
+   "sprechtext": "Ältere Hunde brauchen oft Spezialfutter, Medikamente gegen Gelenkschmerzen und mehr Tierarztbesuche."
+  },
+  {
+   "id": "s93",
+   "kapitel": "k4",
+   "text": "In den letzten drei Jahren: schnell 50 € mehr im Monat",
+   "sprechtext": "Das sind in den letzten drei Jahren schnell fünfzig Euro mehr im Monat."
+  },
+  {
+   "id": "s94",
+   "kapitel": "k4",
+   "text": "Zusammen rund 1.800 € extra",
+   "sprechtext": "Zusammen also rund eintausendachthundert Euro extra."
+  },
+  {
+   "id": "s95",
+   "kapitel": "k4",
+   "text": "Das ist kein schönes Thema, aber es gehört dazu",
+   "sprechtext": "Das ist kein schönes Thema, aber es gehört dazu."
+  },
+  {
+   "id": "s96",
+   "kapitel": "k4",
+   "text": "Denn gerade im Alter braucht dein Hund dich am meisten",
+   "sprechtext": "Denn gerade im Alter braucht dein Hund dich am meisten."
+  },
+  {
+   "id": "s97",
+   "kapitel": "k5",
+   "text": "Und jetzt kommt die große Gesamtrechnung",
+   "sprechtext": "Und jetzt kommt die große Gesamtrechnung."
+  },
+  {
+   "id": "s98",
+   "kapitel": "k5",
+   "text": "Anschaffung & erstes Jahr: rund 2.200 €",
+   "sprechtext": "Anschaffung und erstes Jahr: rund zweitausendzweihundert Euro."
+  },
+  {
+   "id": "s99",
+   "kapitel": "k5",
+   "text": "Laufende Kosten über 13 Jahre: 23.400 €",
+   "sprechtext": "Laufende Kosten über dreizehn Jahre: dreiundzwanzigtausendvierhundert Euro."
+  },
+  {
+   "id": "s100",
+   "kapitel": "k5",
+   "text": "Urlaub & Hundepension: knapp 4.000 €",
+   "sprechtext": "Urlaub und Hundepension: knapp viertausend Euro."
+  },
+  {
+   "id": "s101",
+   "kapitel": "k5",
+   "text": "Eine große OP: etwa 3.000 €",
+   "sprechtext": "Eine große Operation: etwa dreitausend Euro."
+  },
+  {
+   "id": "s102",
+   "kapitel": "k5",
+   "text": "Seniorenjahre: rund 1.800 €",
+   "sprechtext": "Und die Seniorenjahre: rund eintausendachthundert Euro."
+  },
+  {
+   "id": "s103",
+   "kapitel": "k5",
+   "text": "Alles zusammen: rund 34.000 €",
+   "sprechtext": "Alles zusammen kostet ein Hund im Leben also rund vierunddreißigtausend Euro."
+  },
+  {
+   "id": "s104",
+   "kapitel": "k5",
+   "text": "Das ist tatsächlich so viel wie ein neuer Kleinwagen",
+   "sprechtext": "Das ist tatsächlich so viel wie ein neuer Kleinwagen."
+  },
+  {
+   "id": "s105",
+   "kapitel": "k5",
+   "text": "Auf den Monat gerechnet: etwa 220 €",
+   "sprechtext": "Auf den Monat gerechnet sind das über die dreizehn Jahre etwa zweihundertzwanzig Euro."
+  },
+  {
+   "id": "s106",
+   "kapitel": "k5",
+   "text": "Kleiner Hund: eher 20.000 €",
+   "sprechtext": "Bei einem kleinen Hund landest du eher bei zwanzigtausend Euro."
+  },
+  {
+   "id": "s107",
+   "kapitel": "k5",
+   "text": "Großer Hund: schnell 40.000 € und mehr",
+   "sprechtext": "Bei einem großen Hund, wie einem Schäferhund oder einer Dogge, sind es schnell vierzigtausend Euro und mehr."
+  },
+  {
+   "id": "s108",
+   "kapitel": "k5",
+   "text": "Wie lag deine Schätzung in den Kommentaren?",
+   "sprechtext": "Wie lag deine Schätzung in den Kommentaren?"
+  },
+  {
+   "id": "s109",
+   "kapitel": "k5",
+   "text": "Und jetzt das Wichtigste: Wie kannst du dabei Geld sparen, ohne dass dein Hund auf etwas verzichten muss?",
+   "sprechtext": "Und jetzt das Wichtigste: Wie kannst du dabei Geld sparen, ohne dass dein Hund auf etwas verzichten muss?"
+  },
+  {
+   "id": "s110",
+   "kapitel": "k5",
+   "text": "Hier sind fünf Tipps",
+   "sprechtext": "Hier sind fünf Tipps."
+  },
+  {
+   "id": "s111",
+   "kapitel": "k5",
+   "text": "Tipp eins: Leg ein eigenes Hundekonto an",
+   "sprechtext": "Tipp eins: Leg ein eigenes Hundekonto an."
+  },
+  {
+   "id": "s112",
+   "kapitel": "k5",
+   "text": "Spar jeden Monat 50 € als Tierarzt-Rücklage",
+   "sprechtext": "Spar jeden Monat fünfzig Euro als Tierarzt-Rücklage."
+  },
+  {
+   "id": "s113",
+   "kapitel": "k5",
+   "text": "Nach drei Jahren: schon 1.800 € für Notfälle",
+   "sprechtext": "Nach drei Jahren hast du schon eintausendachthundert Euro für Notfälle."
+  },
+  {
+   "id": "s114",
+   "kapitel": "k5",
+   "text": "Tipp zwei: Schließ früh eine OP-Versicherung ab",
+   "sprechtext": "Tipp zwei: Schließ früh eine OP-Versicherung ab."
+  },
+  {
+   "id": "s115",
+   "kapitel": "k5",
+   "text": "Je jünger der Hund, desto günstiger der Beitrag, und Vorerkrankungen sind dann noch nicht ausgeschlossen",
+   "sprechtext": "Je jünger der Hund, desto günstiger der Beitrag, und Vorerkrankungen sind dann noch nicht ausgeschlossen."
+  },
+  {
+   "id": "s116",
+   "kapitel": "k5",
+   "text": "Tipp drei: Kauf das Futter in großen Packungen oder im Abo",
+   "sprechtext": "Tipp drei: Kauf das Futter in großen Packungen oder im Abo."
+  },
+  {
+   "id": "s117",
+   "kapitel": "k5",
+   "text": "Damit sparst du oft 10 bis 20 %",
+   "sprechtext": "Damit sparst du oft zehn bis zwanzig Prozent."
+  },
+  {
+   "id": "s118",
+   "kapitel": "k5",
+   "text": "Tipp vier: Vergleich die Hundehaftpflicht einmal im Jahr",
+   "sprechtext": "Tipp vier: Vergleich die Hundehaftpflicht einmal im Jahr."
+  },
+  {
+   "id": "s119",
+   "kapitel": "k5",
+   "text": "Die Preise unterscheiden sich stark, bei fast gleicher Leistung",
+   "sprechtext": "Die Preise unterscheiden sich stark, bei fast gleicher Leistung."
+  },
+  {
+   "id": "s120",
+   "kapitel": "k5",
+   "text": "Und viele Hundevereine bieten günstige Kurse an, oft viel billiger als private Hundeschulen",
+   "sprechtext": "Und viele Hundevereine bieten günstige Kurse an, oft viel billiger als private Hundeschulen."
+  },
+  {
+   "id": "s121",
+   "kapitel": "k5",
+   "text": "Und Tipp fünf: Vorsorge ist günstiger als Behandlung",
+   "sprechtext": "Und Tipp fünf: Vorsorge ist günstiger als Behandlung."
+  },
+  {
+   "id": "s122",
+   "kapitel": "k5",
+   "text": "Regelmäßige Bewegung, das richtige Gewicht und gepflegte Zähne sparen dir später teure Tierarztbesuche",
+   "sprechtext": "Regelmäßige Bewegung, das richtige Gewicht und gepflegte Zähne sparen dir später teure Tierarztbesuche."
+  },
+  {
+   "id": "s123",
+   "kapitel": "k5",
+   "text": "Ein Hund ist kein günstiges Hobby",
+   "sprechtext": "Ein Hund ist kein günstiges Hobby."
+  },
+  {
+   "id": "s124",
+   "kapitel": "k5",
+   "text": "Aber er ist ein Familienmitglied, und mit einem klaren Plan musst du dir keine Sorgen ums Geld machen",
+   "sprechtext": "Aber er ist ein Familienmitglied, und mit einem klaren Plan musst du dir keine Sorgen ums Geld machen."
+  },
+  {
+   "id": "s125",
+   "kapitel": "k5",
+   "text": "Und ehrlich: Jeder Euro ist es wert, wenn dich dein Hund jeden Abend an der Tür begrüßt",
+   "sprechtext": "Und ehrlich: Jeder Euro ist es wert, wenn dich dein Hund jeden Abend an der Tür begrüßt."
+  },
+  {
+   "id": "s126",
+   "kapitel": "k5",
+   "text": "Wenn dir das Video gefallen hat, gib uns ein Like und teile es mit jemandem, der sich gerade einen Hund holen will",
+   "sprechtext": "Wenn dir das Video gefallen hat, gib uns ein Like und teile es mit jemandem, der sich gerade einen Hund holen will."
+  },
+  {
+   "id": "s127",
+   "kapitel": "k5",
+   "text": "Wir sind HundeFinanzTV, wir sehen uns morgen im nächsten Video",
+   "sprechtext": "Wir sind HundeFinanzTV, wir sehen uns morgen im nächsten Video!"
+  }
+ ]
+}
