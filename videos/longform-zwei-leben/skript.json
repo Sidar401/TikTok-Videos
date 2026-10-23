@@ -29,14 +29,14 @@
   {
    "id": "s5",
    "kapitel": "k1",
-   "text": "Und nein, Felix ist nicht dumm oder faul",
-   "sprechtext": "Und nein, Felix ist nicht dumm oder faul."
+   "text": "Und nein, der mit den Schulden ist nicht dumm oder faul",
+   "sprechtext": "Und nein, der mit den Schulden ist nicht dumm oder faul."
   },
   {
    "id": "s6",
    "kapitel": "k1",
-   "text": "Er arbeitet genauso hart wie Leon und gibt sein Geld für ganz normale Dinge aus",
-   "sprechtext": "Er arbeitet genauso hart wie Leon und gibt sein Geld für ganz normale Dinge aus."
+   "text": "Er arbeitet genauso hart wie sein Freund und gibt sein Geld für ganz normale Dinge aus",
+   "sprechtext": "Er arbeitet genauso hart wie sein Freund und gibt sein Geld für ganz normale Dinge aus."
   },
   {
    "id": "s7",
@@ -71,8 +71,8 @@
   {
    "id": "s12",
    "kapitel": "k1",
-   "text": "Am Ende zeigen wir dir die fünf wichtigsten Lehren, mit denen du ab heute wie Leon handeln kannst",
-   "sprechtext": "Am Ende zeigen wir dir die fünf wichtigsten Lehren, mit denen du ab heute wie Leon handeln kannst."
+   "text": "Am Ende zeigen wir dir die fünf wichtigsten Lehren, mit denen du ab heute auf der richtigen Seite landest",
+   "sprechtext": "Am Ende zeigen wir dir die fünf wichtigsten Lehren, mit denen du ab heute auf der richtigen Seite landest."
   },
   {
    "id": "s13",
@@ -83,8 +83,8 @@
   {
    "id": "s14",
    "kapitel": "k1",
-   "text": "Und ganz ehrlich: Wir alle haben ein bisschen Felix in uns",
-   "sprechtext": "Und ganz ehrlich: Wir alle haben ein bisschen Felix in uns."
+   "text": "Und ganz ehrlich: Ein bisschen von beiden steckt in jedem von uns",
+   "sprechtext": "Und ganz ehrlich: Ein bisschen von beiden steckt in jedem von uns."
   },
   {
    "id": "s15",
@@ -95,8 +95,8 @@
   {
    "id": "s16",
    "kapitel": "k1",
-   "text": "Bist du eher wie Leon oder eher wie Felix?",
-   "sprechtext": "Bist du eher wie Leon oder eher wie Felix?"
+   "text": "Bist du eher der Sparer oder eher der Genießer?",
+   "sprechtext": "Bist du eher der Sparer oder eher der Genießer?"
   },
   {
    "id": "s17",
