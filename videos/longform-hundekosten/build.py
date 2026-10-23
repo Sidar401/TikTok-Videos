@@ -5,9 +5,9 @@ from pathlib import Path
 
 HERE = Path(__file__).parent
 sys.path.insert(0, str(HERE.parent.parent / "scripts"))
-from finanz import BEAGLE, SPARSCHWEIN  # noqa: E402
+from finanz import SPARSCHWEIN  # noqa: E402
 from longform import GOLD, GRUEN, ORANGE, ROT, build, svg  # noqa: E402
-from icons import (AUTO, BLASE, DAUMEN, FLUG, HERZ, ICON, KAL3, RECHNER, SCHILD, SCHOCK, STERN, TEILEN, WARN,  # noqa: E402
+from icons import (AUTO, HUND_NEUTRAL, BLASE, DAUMEN, FLUG, HERZ, ICON, KAL3, RECHNER, SCHILD, SCHOCK, STERN, TEILEN, WARN,  # noqa: E402
                    doppel, folgen)
 from lf_szenen import Zeit, balken3, beleg, chips_zeit, karte  # noqa: E402
 
@@ -42,12 +42,12 @@ PFLASTER = svg('<g transform="rotate(-35 50 50)"><rect x="8" y="34" width="84" h
 HUNDEHAUS = svg('<path d="M10 46 L50 12 L90 46" fill="#e24b4b" /><rect x="18" y="44" width="64" height="48" fill="#DB8622" /><path d="M36 92 L36 66 Q50 52 64 66 L64 92 Z" fill="#353a3d" />'
                 '<text x="50" y="40" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="10" fill="#fff">PENSION</text>')
 PILLE = svg('<g transform="rotate(-35 50 50)"><rect x="14" y="36" width="72" height="28" rx="14" fill="#fff" stroke="#353a3d" stroke-width="4" /><path d="M50 36 L36 36 Q14 36 14 50 Q14 64 36 64 L50 64 Z" fill="#3d7be0" /></g>')
-HUND = ICON(BEAGLE, 560, 560)
+HUND = ICON(HUND_NEUTRAL, 560, 560)
 
 
 def intro():
     html = ('<div class="mitte" style="gap:40px">'
-            f'<div style="display:flex;align-items:center;gap:60px"><div id="in-h" style="width:340px;height:340px">{BEAGLE}</div>'
+            f'<div style="display:flex;align-items:center;gap:60px"><div id="in-h" style="width:340px;height:340px">{HUND_NEUTRAL}</div>'
             '<div id="in-g" class="serif" style="font-size:200px;color:#DB8622">=</div>'
             f'<div id="in-a" style="width:360px;height:360px">{AUTO}</div></div>'
             '<div id="in-t" class="serif" style="font-size:84px;line-height:1.1;color:#111;text-align:center">Ein Hund kostet so viel<br />wie ein <span style="color:#e24b4b">Kleinwagen?</span></div></div>')
@@ -135,7 +135,7 @@ SZENEN = [
         ("s101", "s101", ICON(PFLASTER), "Große OP", 3000),
         ("s102", "s102", ICON(PILLE), "Seniorenjahre", 1800),
     ], "s103", "≈ 34.000 €")),
-    ("s104", "s104", "split", dict(icon=doppel(BEAGLE, AUTO), text="= ein Kleinwagen!", farbe=ROT)),
+    ("s104", "s104", "split", dict(icon=doppel(HUND_NEUTRAL, AUTO), text="= ein Kleinwagen!", farbe=ROT)),
     ("s105", "s105", "zahl", dict(zahl="≈ 220 €", sub="pro Monat – 13 Jahre lang")),
     ("s106", "s107", "frei", balken3(Z, "gr", [("kleiner Hund", "20.000 €", 240, GRUEN, "s106"), ("mittel", "34.000 €", 410, ORANGE, None),
                                                 ("großer Hund", "40.000 €+", 500, ROT, "s107")])),

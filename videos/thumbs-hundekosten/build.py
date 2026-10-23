@@ -7,15 +7,9 @@ from pathlib import Path
 
 HERE = Path(__file__).parent
 sys.path.insert(0, str(HERE.parent.parent / "scripts"))
-from icons import AUTO  # noqa: E402
-from longform import ORANGE, ROT, svg  # noqa: E402
+from icons import AUTO, HUND_NEUTRAL as HUND  # noqa: E402
+from longform import ORANGE, ROT  # noqa: E402
 
-# neutraler Cartoon-Hund (nicht das Kanal-Logo)
-HUND = svg('<path d="M18 30 Q8 34 10 60 Q12 72 22 70 Q28 50 30 34 Z" fill="#8a5a2b" /><path d="M82 30 Q92 34 90 60 Q88 72 78 70 Q72 50 70 34 Z" fill="#8a5a2b" />'
-           '<ellipse cx="50" cy="52" rx="30" ry="32" fill="#e9b97a" /><ellipse cx="50" cy="68" rx="18" ry="14" fill="#f6efe1" />'
-           '<circle cx="39" cy="46" r="5" fill="#111" /><circle cx="61" cy="46" r="5" fill="#111" /><circle cx="40.5" cy="44.5" r="1.6" fill="#fff" /><circle cx="62.5" cy="44.5" r="1.6" fill="#fff" />'
-           '<ellipse cx="50" cy="61" rx="7" ry="5" fill="#111" /><path d="M43 71 Q50 78 57 71" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round" />'
-           '<path d="M47 76 Q50 86 53 76 Z" fill="#e24b4b" />')
 POSTEN = [("Anschaffung", "2.200 €"), ("Futter & Co.", "23.400 €"), ("Urlaub", "3.900 €"), ("Notfall-OP", "3.000 €"), ("Seniorenjahre", "1.800 €")]
 
 

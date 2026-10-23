@@ -43,7 +43,10 @@ Der Nutzer arbeitet am iPad: Antworten kurz, Ergebnisse per `SendUserFile` schic
 6. **Prüfen:** `cd videos/<name> && npx hyperframes lint && npx hyperframes check`. Fehler beheben. Warnungen „nested_structure“/„track_too_dense“ und der Kontrast der Untertitel-Box sind bekannt und ok.
 7. **Ansehen:** `npx hyperframes snapshot --at <Mitte jeder Szene>` und das Kontaktblatt lesen: Text im Bild, nichts abgeschnitten, Motiv passt zum Satz.
 8. **Rendern:** `npx hyperframes render --quality delivery --output ../../renders/<name>.mp4`; Dauer mit `ffprobe` gegen `dauer` prüfen.
-9. **Abliefern:** committen + pushen (Branch laut Session), MP4 per `SendUserFile` schicken, dazu 1–2 Zeilen: Titel, Länge, Vorschlag für Caption + 3–5 Hashtags.
+9. **Abliefern:** committen + pushen (Branch laut Session), MP4 per `SendUserFile` schicken, dazu Titel, Länge, Caption **und immer die perfekten Hashtags zum Viralgehen** (Nutzer-Wunsch), getrennt nach Plattform:
+   - **TikTok:** 5–8 Hashtags, Mix aus 2 großen (#geld #finanzen), 3–4 Nischen-Tags zum Thema (#sparen #etf …), 1–2 deutsche Trend-/Reichweiten-Tags (#fyp #fürdich) + #hundefinanztv.
+   - **YouTube (Shorts & Longform):** 3 Hashtags für über dem Titel (#Shorts bei Shorts zuerst) + 10–15 Tags fürs Tag-Feld.
+   - **Instagram Reels:** 8–12 Hashtags, gleiche Logik wie TikTok, ohne #fyp.
 
 ## Regeln
 
