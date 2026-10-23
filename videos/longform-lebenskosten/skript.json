@@ -1,0 +1,810 @@
+{
+ "titel": "So viel Geld brauchst du wirklich zum Leben",
+ "format": "16:9",
+ "saetze": [
+  {
+   "id": "s1",
+   "kapitel": "k1",
+   "text": "Wie viel Geld brauchst du eigentlich wirklich zum Leben?",
+   "sprechtext": "Wie viel Geld brauchst du eigentlich wirklich zum Leben?"
+  },
+  {
+   "id": "s2",
+   "kapitel": "k1",
+   "text": "Nicht zum Überleben, sondern für ein ganz normales, entspanntes Leben in Deutschland",
+   "sprechtext": "Nicht zum Überleben, sondern für ein ganz normales, entspanntes Leben in Deutschland."
+  },
+  {
+   "id": "s3",
+   "kapitel": "k1",
+   "text": "Die meisten haben darauf keine Antwort",
+   "sprechtext": "Die meisten haben darauf keine Antwort."
+  },
+  {
+   "id": "s4",
+   "kapitel": "k1",
+   "text": "Und das ist gefährlich, denn wer seine Zahl nicht kennt, kann auch nicht planen",
+   "sprechtext": "Und das ist gefährlich, denn wer seine Zahl nicht kennt, kann auch nicht planen."
+  },
+  {
+   "id": "s5",
+   "kapitel": "k1",
+   "text": "Sie schauen am Monatsende aufs Konto und wundern sich, wo das Geld geblieben ist",
+   "sprechtext": "Sie schauen am Monatsende aufs Konto und wundern sich, wo das Geld geblieben ist."
+  },
+  {
+   "id": "s6",
+   "kapitel": "k1",
+   "text": "Genau deshalb rechnen wir das heute einmal komplett durch",
+   "sprechtext": "Genau deshalb rechnen wir das heute einmal komplett durch."
+  },
+  {
+   "id": "s7",
+   "kapitel": "k1",
+   "text": "Ehrlich, Schritt für Schritt und mit echten Zahlen",
+   "sprechtext": "Ehrlich, Schritt für Schritt und mit echten Zahlen."
+  },
+  {
+   "id": "s8",
+   "kapitel": "k1",
+   "text": "Wir schauen uns drei Lebenssituationen an",
+   "sprechtext": "Wir schauen uns drei Lebenssituationen an."
+  },
+  {
+   "id": "s9",
+   "kapitel": "k1",
+   "text": "Erstens: Single in einer Mietwohnung",
+   "sprechtext": "Erstens: Single in einer Mietwohnung."
+  },
+  {
+   "id": "s10",
+   "kapitel": "k1",
+   "text": "Zweitens: ein Paar ohne Kinder",
+   "sprechtext": "Zweitens: ein Paar ohne Kinder."
+  },
+  {
+   "id": "s11",
+   "kapitel": "k1",
+   "text": "Und drittens: eine Familie mit zwei Kindern",
+   "sprechtext": "Und drittens: eine Familie mit zwei Kindern."
+  },
+  {
+   "id": "s12",
+   "kapitel": "k1",
+   "text": "Und am Ende zeigen wir dir, wie du mit deinem Gehalt mehr übrig behältst, egal in welcher Situation du gerade bist",
+   "sprechtext": "Und am Ende zeigen wir dir, wie du mit deinem Gehalt mehr übrig behältst, egal in welcher Situation du gerade bist."
+  },
+  {
+   "id": "s13",
+   "kapitel": "k1",
+   "text": "Eine Sache vorweg: Alle Zahlen sind Durchschnittswerte für eine mittelgroße Stadt",
+   "sprechtext": "Eine Sache vorweg: Alle Zahlen sind Durchschnittswerte für eine mittelgroße Stadt."
+  },
+  {
+   "id": "s14",
+   "kapitel": "k1",
+   "text": "In München oder Hamburg zahlst du mehr, auf dem Land oft deutlich weniger",
+   "sprechtext": "In München oder Hamburg zahlst du mehr, auf dem Land oft deutlich weniger."
+  },
+  {
+   "id": "s15",
+   "kapitel": "k1",
+   "text": "Aber als Orientierung sind sie perfekt",
+   "sprechtext": "Aber als Orientierung sind sie perfekt."
+  },
+  {
+   "id": "s16",
+   "kapitel": "k1",
+   "text": "Und du wirst sehen: Einige Ergebnisse sind echt überraschend",
+   "sprechtext": "Und du wirst sehen: Einige Ergebnisse sind echt überraschend."
+  },
+  {
+   "id": "s17",
+   "kapitel": "k1",
+   "text": "Besonders beim Paar und bei der Familie",
+   "sprechtext": "Besonders beim Paar und bei der Familie."
+  },
+  {
+   "id": "s18",
+   "kapitel": "k1",
+   "text": "Bevor wir loslegen, eine Frage an dich",
+   "sprechtext": "Bevor wir loslegen, eine Frage an dich."
+  },
+  {
+   "id": "s19",
+   "kapitel": "k1",
+   "text": "Was schätzt du: Wie viel Geld brauchst du selbst jeden Monat?",
+   "sprechtext": "Was schätzt du: Wie viel Geld brauchst du selbst jeden Monat?"
+  },
+  {
+   "id": "s20",
+   "kapitel": "k1",
+   "text": "Schreib deine Zahl jetzt in die Kommentare, und am Ende des Videos vergleichst du sie mit unserer Rechnung",
+   "sprechtext": "Schreib deine Zahl jetzt in die Kommentare, und am Ende des Videos vergleichst du sie mit unserer Rechnung."
+  },
+  {
+   "id": "s21",
+   "kapitel": "k1",
+   "text": "Und wenn du solche ehrlichen Rechnungen magst, folge HundeFinanzTV",
+   "sprechtext": "Und wenn du solche ehrlichen Rechnungen magst, folge HundeFinanzTV."
+  },
+  {
+   "id": "s22",
+   "kapitel": "k1",
+   "text": "Wir machen jede Woche Finanzen einfach und verständlich",
+   "sprechtext": "Wir machen jede Woche Finanzen einfach und verständlich."
+  },
+  {
+   "id": "s23",
+   "kapitel": "k1",
+   "text": "Also, los geht's",
+   "sprechtext": "Also, los geht's."
+  },
+  {
+   "id": "s24",
+   "kapitel": "k2",
+   "text": "Fangen wir mit dem Single an",
+   "sprechtext": "Fangen wir mit dem Single an."
+  },
+  {
+   "id": "s25",
+   "kapitel": "k2",
+   "text": "Nennen wir ihn Max",
+   "sprechtext": "Nennen wir ihn Max."
+  },
+  {
+   "id": "s26",
+   "kapitel": "k2",
+   "text": "Max wohnt allein in einer kleinen Zwei-Zimmer-Wohnung",
+   "sprechtext": "Max wohnt allein in einer kleinen Zwei-Zimmer-Wohnung."
+  },
+  {
+   "id": "s27",
+   "kapitel": "k2",
+   "text": "Der größte Brocken ist natürlich die Miete",
+   "sprechtext": "Der größte Brocken ist natürlich die Miete."
+  },
+  {
+   "id": "s28",
+   "kapitel": "k2",
+   "text": "Warm: rund 750 € im Monat",
+   "sprechtext": "Warm, also mit Heizung und Nebenkosten, zahlt Max rund siebenhundertfünfzig Euro im Monat."
+  },
+  {
+   "id": "s29",
+   "kapitel": "k2",
+   "text": "Dazu kommen Strom, Internet und Handy",
+   "sprechtext": "Dazu kommen Strom, Internet und Handy."
+  },
+  {
+   "id": "s30",
+   "kapitel": "k2",
+   "text": "Zusammen etwa 100 €",
+   "sprechtext": "Zusammen sind das etwa hundert Euro."
+  },
+  {
+   "id": "s31",
+   "kapitel": "k2",
+   "text": "Dann das Essen",
+   "sprechtext": "Dann das Essen."
+  },
+  {
+   "id": "s32",
+   "kapitel": "k2",
+   "text": "landet er bei ungefähr 300 €",
+   "sprechtext": "Wenn Max meistens selbst kocht und nur ab und zu essen geht, landet er bei ungefähr dreihundert Euro."
+  },
+  {
+   "id": "s33",
+   "kapitel": "k2",
+   "text": "Jetzt die Mobilität",
+   "sprechtext": "Jetzt die Mobilität."
+  },
+  {
+   "id": "s34",
+   "kapitel": "k2",
+   "text": "Max hat kein Auto und fährt mit dem Deutschlandticket",
+   "sprechtext": "Max hat kein Auto und fährt mit dem Deutschlandticket."
+  },
+  {
+   "id": "s35",
+   "kapitel": "k2",
+   "text": "Das kostet rund 60 € im Monat",
+   "sprechtext": "Das kostet ihn rund sechzig Euro im Monat."
+  },
+  {
+   "id": "s36",
+   "kapitel": "k2",
+   "text": "wären es schnell 350 € oder mehr",
+   "sprechtext": "Hätte er ein Auto, wären es mit Versicherung, Sprit und Reparaturen schnell dreihundertfünfzig Euro oder mehr."
+  },
+  {
+   "id": "s37",
+   "kapitel": "k2",
+   "text": "Weiter geht's mit den Versicherungen",
+   "sprechtext": "Weiter geht's mit den Versicherungen."
+  },
+  {
+   "id": "s38",
+   "kapitel": "k2",
+   "text": "Haftpflicht, Hausrat und vielleicht eine Berufsunfähigkeitsversicherung",
+   "sprechtext": "Haftpflicht, Hausrat und vielleicht eine Berufsunfähigkeitsversicherung."
+  },
+  {
+   "id": "s39",
+   "kapitel": "k2",
+   "text": "Dafür rechnen wir etwa 50 €",
+   "sprechtext": "Dafür rechnen wir etwa fünfzig Euro."
+  },
+  {
+   "id": "s40",
+   "kapitel": "k2",
+   "text": "rund 18 € im Monat",
+   "sprechtext": "Den Rundfunkbeitrag vergessen viele, aber er kommt trotzdem: rund achtzehn Euro im Monat."
+  },
+  {
+   "id": "s41",
+   "kapitel": "k2",
+   "text": "Dann Abos wie Streaming, Musik und Fitnessstudio",
+   "sprechtext": "Dann Abos wie Streaming, Musik und Fitnessstudio."
+  },
+  {
+   "id": "s42",
+   "kapitel": "k2",
+   "text": "Bei Max sind das etwa 30 €",
+   "sprechtext": "Bei Max sind das etwa dreißig Euro."
+  },
+  {
+   "id": "s43",
+   "kapitel": "k2",
+   "text": "übers Jahr schon 360 €",
+   "sprechtext": "Klingt wenig, aber über ein Jahr sind das schon dreihundertsechzig Euro."
+  },
+  {
+   "id": "s44",
+   "kapitel": "k2",
+   "text": "Und natürlich will Max auch leben",
+   "sprechtext": "Und natürlich will Max auch leben."
+  },
+  {
+   "id": "s45",
+   "kapitel": "k2",
+   "text": "Kleidung, Freizeit, Freunde treffen, mal ins Kino",
+   "sprechtext": "Kleidung, Freizeit, Freunde treffen, mal ins Kino."
+  },
+  {
+   "id": "s46",
+   "kapitel": "k2",
+   "text": "Dafür planen wir 200 € ein",
+   "sprechtext": "Dafür planen wir zweihundert Euro ein."
+  },
+  {
+   "id": "s47",
+   "kapitel": "k2",
+   "text": "Jetzt zählen wir alles zusammen",
+   "sprechtext": "Jetzt zählen wir alles zusammen."
+  },
+  {
+   "id": "s48",
+   "kapitel": "k2",
+   "text": "Max braucht rund 1.500 € im Monat",
+   "sprechtext": "Max braucht rund eintausendfünfhundert Euro im Monat."
+  },
+  {
+   "id": "s49",
+   "kapitel": "k2",
+   "text": "Aber Moment, das ist noch nicht alles",
+   "sprechtext": "Aber Moment, das ist noch nicht alles."
+  },
+  {
+   "id": "s50",
+   "kapitel": "k2",
+   "text": "Max sollte ja auch etwas sparen, für Notfälle und für später",
+   "sprechtext": "Max sollte ja auch etwas sparen, für Notfälle und für später."
+  },
+  {
+   "id": "s51",
+   "kapitel": "k2",
+   "text": "Mit 10 % Sparrate: etwa 1.700 €",
+   "sprechtext": "Mit zehn Prozent Sparrate sind wir bei etwa eintausendsiebenhundert Euro."
+  },
+  {
+   "id": "s52",
+   "kapitel": "k2",
+   "text": "Und das ist netto, also das, was auf dem Konto ankommt",
+   "sprechtext": "Und das ist netto, also das, was auf dem Konto ankommt."
+  },
+  {
+   "id": "s53",
+   "kapitel": "k2",
+   "text": "Brutto grob 2.500 €",
+   "sprechtext": "Brutto muss Max dafür grob zweitausendfünfhundert Euro verdienen."
+  },
+  {
+   "id": "s54",
+   "kapitel": "k2",
+   "text": "Das ist für einen Single ein ganz normales Gehalt",
+   "sprechtext": "Das ist für einen Single ein ganz normales Gehalt."
+  },
+  {
+   "id": "s55",
+   "kapitel": "k2",
+   "text": "Aber man sieht auch: Die Miete frisst fast die Hälfte von allem",
+   "sprechtext": "Aber man sieht auch: Die Miete frisst fast die Hälfte von allem."
+  },
+  {
+   "id": "s56",
+   "kapitel": "k3",
+   "text": "Kommen wir zum Paar",
+   "sprechtext": "Kommen wir zum Paar."
+  },
+  {
+   "id": "s57",
+   "kapitel": "k3",
+   "text": "Lisa und Tom wohnen zusammen, beide arbeiten, Kinder haben sie noch nicht",
+   "sprechtext": "Lisa und Tom wohnen zusammen, beide arbeiten, Kinder haben sie noch nicht."
+  },
+  {
+   "id": "s58",
+   "kapitel": "k3",
+   "text": "kostet warm etwa 1.100 €",
+   "sprechtext": "Ihre Drei-Zimmer-Wohnung kostet warm etwa elfhundert Euro."
+  },
+  {
+   "id": "s59",
+   "kapitel": "k3",
+   "text": "liegen bei rund 150 €",
+   "sprechtext": "Strom, Internet und zwei Handys liegen bei rund hundertfünfzig Euro."
+  },
+  {
+   "id": "s60",
+   "kapitel": "k3",
+   "text": "ungefähr 550 € fürs Essen",
+   "sprechtext": "Fürs Essen geben die beiden zusammen ungefähr fünfhundertfünfzig Euro aus."
+  },
+  {
+   "id": "s61",
+   "kapitel": "k3",
+   "text": "Die beiden teilen sich ein Auto, und Lisa fährt zusätzlich mit dem Deutschlandticket",
+   "sprechtext": "Die beiden teilen sich ein Auto, und Lisa fährt zusätzlich mit dem Deutschlandticket."
+  },
+  {
+   "id": "s62",
+   "kapitel": "k3",
+   "text": "Mobilität: etwa 400 €",
+   "sprechtext": "Zusammen kostet die Mobilität etwa vierhundert Euro."
+  },
+  {
+   "id": "s63",
+   "kapitel": "k3",
+   "text": "Versicherungen: rund 90 €",
+   "sprechtext": "Versicherungen für zwei: rund neunzig Euro."
+  },
+  {
+   "id": "s64",
+   "kapitel": "k3",
+   "text": "Dazu der Rundfunkbeitrag, aber nur einmal, denn der gilt pro Wohnung",
+   "sprechtext": "Dazu der Rundfunkbeitrag, aber nur einmal, denn der gilt pro Wohnung."
+  },
+  {
+   "id": "s65",
+   "kapitel": "k3",
+   "text": "Also wieder 18 €",
+   "sprechtext": "Also wieder achtzehn Euro."
+  },
+  {
+   "id": "s66",
+   "kapitel": "k3",
+   "text": "Abos: ungefähr 40 €",
+   "sprechtext": "Abos und Streaming: ungefähr vierzig Euro."
+  },
+  {
+   "id": "s67",
+   "kapitel": "k3",
+   "text": "Freizeit: 350 €",
+   "sprechtext": "Und für Freizeit, Kleidung und Ausgehen planen wir dreihundertfünfzig Euro."
+  },
+  {
+   "id": "s68",
+   "kapitel": "k3",
+   "text": "Zusammen etwa 2.700 € im Monat",
+   "sprechtext": "Zusammen sind das etwa zweitausendsiebenhundert Euro im Monat."
+  },
+  {
+   "id": "s69",
+   "kapitel": "k3",
+   "text": "Und jetzt kommt das Spannende",
+   "sprechtext": "Und jetzt kommt das Spannende."
+  },
+  {
+   "id": "s70",
+   "kapitel": "k3",
+   "text": "Pro Person nur 1.350 €",
+   "sprechtext": "Pro Person sind das nur eintausenddreihundertfünfzig Euro."
+  },
+  {
+   "id": "s71",
+   "kapitel": "k3",
+   "text": "Das ist weniger als bei Max allein",
+   "sprechtext": "Das ist weniger als bei Max allein."
+  },
+  {
+   "id": "s72",
+   "kapitel": "k3",
+   "text": "Warum?",
+   "sprechtext": "Warum?"
+  },
+  {
+   "id": "s73",
+   "kapitel": "k3",
+   "text": "Weil sich Miete, Internet, Rundfunk und Auto auf zwei Köpfe verteilen",
+   "sprechtext": "Weil sich Miete, Internet, Rundfunk und Auto auf zwei Köpfe verteilen."
+  },
+  {
+   "id": "s74",
+   "kapitel": "k3",
+   "text": "Zusammenwohnen ist also nicht nur romantisch, sondern auch finanziell clever",
+   "sprechtext": "Zusammenwohnen ist also nicht nur romantisch, sondern auch finanziell clever."
+  },
+  {
+   "id": "s75",
+   "kapitel": "k3",
+   "text": "rund 3.000 € netto",
+   "sprechtext": "Mit einer Sparrate von zehn Prozent brauchen die beiden rund dreitausend Euro netto."
+  },
+  {
+   "id": "s76",
+   "kapitel": "k3",
+   "text": "Wenn beide normal verdienen, bleibt hier richtig was übrig",
+   "sprechtext": "Wenn beide normal verdienen, bleibt hier richtig was übrig."
+  },
+  {
+   "id": "s77",
+   "kapitel": "k3",
+   "text": "Und genau in dieser Phase sollte man besonders viel sparen und investieren",
+   "sprechtext": "Und genau in dieser Phase sollte man besonders viel sparen und investieren."
+  },
+  {
+   "id": "s78",
+   "kapitel": "k3",
+   "text": "Denn später, mit Kindern, wird es deutlich enger",
+   "sprechtext": "Denn später, mit Kindern, wird es deutlich enger."
+  },
+  {
+   "id": "s79",
+   "kapitel": "k4",
+   "text": "Und damit sind wir bei der Familie",
+   "sprechtext": "Und damit sind wir bei der Familie."
+  },
+  {
+   "id": "s80",
+   "kapitel": "k4",
+   "text": "Familie Becker: zwei Erwachsene, zwei Kinder",
+   "sprechtext": "Familie Becker: zwei Erwachsene, zwei Kinder."
+  },
+  {
+   "id": "s81",
+   "kapitel": "k4",
+   "text": "Sie brauchen mehr Platz, also eine Vier-Zimmer-Wohnung",
+   "sprechtext": "Sie brauchen mehr Platz, also eine Vier-Zimmer-Wohnung."
+  },
+  {
+   "id": "s82",
+   "kapitel": "k4",
+   "text": "Warm rund 1.500 €",
+   "sprechtext": "Die kostet warm rund fünfzehnhundert Euro."
+  },
+  {
+   "id": "s83",
+   "kapitel": "k4",
+   "text": "etwa 200 €",
+   "sprechtext": "Strom, Internet und Handys liegen bei etwa zweihundert Euro, denn mit Kindern läuft mehr Licht, mehr Waschmaschine und mehr Geräte."
+  },
+  {
+   "id": "s84",
+   "kapitel": "k4",
+   "text": "Beim Essen wird es richtig teuer",
+   "sprechtext": "Beim Essen wird es richtig teuer."
+  },
+  {
+   "id": "s85",
+   "kapitel": "k4",
+   "text": "rund 900 € im Monat",
+   "sprechtext": "Vier Personen, davon zwei hungrige Kinder: rund neunhundert Euro im Monat."
+  },
+  {
+   "id": "s86",
+   "kapitel": "k4",
+   "text": "Mit Kindern geht es kaum ohne Auto",
+   "sprechtext": "Mit Kindern geht es kaum ohne Auto."
+  },
+  {
+   "id": "s87",
+   "kapitel": "k4",
+   "text": "Mobilität: etwa 450 €",
+   "sprechtext": "Für Auto und Bus rechnen wir etwa vierhundertfünfzig Euro."
+  },
+  {
+   "id": "s88",
+   "kapitel": "k4",
+   "text": "Versicherungen: ungefähr 130 €",
+   "sprechtext": "Versicherungen für die ganze Familie: ungefähr hundertdreißig Euro."
+  },
+  {
+   "id": "s89",
+   "kapitel": "k4",
+   "text": "Rundfunk & Abos: knapp 60 €",
+   "sprechtext": "Rundfunk und Abos zusammen: knapp sechzig Euro."
+  },
+  {
+   "id": "s90",
+   "kapitel": "k4",
+   "text": "Und jetzt der Posten, den viele unterschätzen: die Kinder selbst",
+   "sprechtext": "Und jetzt der Posten, den viele unterschätzen: die Kinder selbst."
+  },
+  {
+   "id": "s91",
+   "kapitel": "k4",
+   "text": "Kleidung, die ständig zu klein wird, Schulsachen, Sportverein, Musikschule, Geburtstage und vielleicht noch Kita-Gebühren",
+   "sprechtext": "Kleidung, die ständig zu klein wird, Schulsachen, Sportverein, Musikschule, Geburtstage und vielleicht noch Kita-Gebühren."
+  },
+  {
+   "id": "s92",
+   "kapitel": "k4",
+   "text": "rund 400 € für beide Kinder",
+   "sprechtext": "Dafür rechnen wir rund vierhundert Euro für beide Kinder."
+  },
+  {
+   "id": "s93",
+   "kapitel": "k4",
+   "text": "Und auch Eltern brauchen mal Freizeit und Urlaub",
+   "sprechtext": "Und auch Eltern brauchen mal Freizeit und Urlaub."
+  },
+  {
+   "id": "s94",
+   "kapitel": "k4",
+   "text": "Dafür planen wir 300 €",
+   "sprechtext": "Dafür planen wir dreihundert Euro."
+  },
+  {
+   "id": "s95",
+   "kapitel": "k4",
+   "text": "knapp 4.000 € im Monat",
+   "sprechtext": "Alles zusammen kommen wir auf knapp viertausend Euro im Monat."
+  },
+  {
+   "id": "s96",
+   "kapitel": "k4",
+   "text": "Das klingt erst mal erschreckend",
+   "sprechtext": "Das klingt erst mal erschreckend."
+  },
+  {
+   "id": "s97",
+   "kapitel": "k4",
+   "text": "Fast 4.000 € jeden Monat",
+   "sprechtext": "Fast viertausend Euro, jeden Monat, nur damit der Alltag läuft."
+  },
+  {
+   "id": "s98",
+   "kapitel": "k4",
+   "text": "Aber es gibt auch Hilfe vom Staat",
+   "sprechtext": "Aber es gibt auch Hilfe vom Staat."
+  },
+  {
+   "id": "s99",
+   "kapitel": "k4",
+   "text": "über 500 € Kindergeld im Monat",
+   "sprechtext": "Für zwei Kinder bekommt die Familie über fünfhundert Euro Kindergeld im Monat."
+  },
+  {
+   "id": "s100",
+   "kapitel": "k4",
+   "text": "noch etwa 3.500 € netto",
+   "sprechtext": "Damit muss die Familie selbst noch etwa dreitausendfünfhundert Euro netto verdienen."
+  },
+  {
+   "id": "s101",
+   "kapitel": "k4",
+   "text": "Und dabei ist noch kein Cent gespart",
+   "sprechtext": "Und dabei ist noch kein Cent gespart."
+  },
+  {
+   "id": "s102",
+   "kapitel": "k4",
+   "text": "Genau hier merken viele Familien: Das Geld reicht gerade so",
+   "sprechtext": "Genau hier merken viele Familien: Das Geld reicht gerade so."
+  },
+  {
+   "id": "s103",
+   "kapitel": "k4",
+   "text": "Und jede kaputte Waschmaschine wird zum Problem",
+   "sprechtext": "Und jede kaputte Waschmaschine wird zum Problem."
+  },
+  {
+   "id": "s104",
+   "kapitel": "k4",
+   "text": "Oder die Autoreparatur, oder die Nachzahlung bei den Nebenkosten",
+   "sprechtext": "Oder die Autoreparatur, oder die Nachzahlung bei den Nebenkosten."
+  },
+  {
+   "id": "s105",
+   "kapitel": "k4",
+   "text": "Deshalb ist ein Notgroschen für Familien besonders wichtig",
+   "sprechtext": "Deshalb ist ein Notgroschen für Familien besonders wichtig."
+  },
+  {
+   "id": "s106",
+   "kapitel": "k5",
+   "text": "Fassen wir zusammen",
+   "sprechtext": "Fassen wir zusammen."
+  },
+  {
+   "id": "s107",
+   "kapitel": "k5",
+   "text": "Single: rund 1.500 €",
+   "sprechtext": "Single: rund eintausendfünfhundert Euro."
+  },
+  {
+   "id": "s108",
+   "kapitel": "k5",
+   "text": "Paar: rund 2.700 €",
+   "sprechtext": "Paar: rund zweitausendsiebenhundert Euro, also nur eintausenddreihundertfünfzig pro Person."
+  },
+  {
+   "id": "s109",
+   "kapitel": "k5",
+   "text": "Familie: knapp 4.000 €",
+   "sprechtext": "Familie mit zwei Kindern: knapp viertausend Euro."
+  },
+  {
+   "id": "s110",
+   "kapitel": "k5",
+   "text": "Jeweils ohne Sparen",
+   "sprechtext": "Jeweils ohne Sparen."
+  },
+  {
+   "id": "s111",
+   "kapitel": "k5",
+   "text": "Und jetzt das Wichtigste: Wie behältst du mehr von deinem Geld übrig?",
+   "sprechtext": "Und jetzt das Wichtigste: Wie behältst du mehr von deinem Geld übrig?"
+  },
+  {
+   "id": "s112",
+   "kapitel": "k5",
+   "text": "Hier sind fünf Tipps, die wirklich etwas bringen",
+   "sprechtext": "Hier sind fünf Tipps, die wirklich etwas bringen."
+  },
+  {
+   "id": "s113",
+   "kapitel": "k5",
+   "text": "Tipp eins: Die Miete ist dein größter Hebel",
+   "sprechtext": "Tipp eins: Die Miete ist dein größter Hebel."
+  },
+  {
+   "id": "s114",
+   "kapitel": "k5",
+   "text": "Faustregel: Die Warmmiete sollte nicht mehr als ein Drittel deines Nettoeinkommens sein",
+   "sprechtext": "Faustregel: Die Warmmiete sollte nicht mehr als ein Drittel deines Nettoeinkommens sein."
+  },
+  {
+   "id": "s115",
+   "kapitel": "k5",
+   "text": "über 10 Jahre 12.000 €",
+   "sprechtext": "Hundert Euro weniger Miete sind über zehn Jahre zwölftausend Euro."
+  },
+  {
+   "id": "s116",
+   "kapitel": "k5",
+   "text": "Tipp zwei: Prüf deine Verträge",
+   "sprechtext": "Tipp zwei: Prüf deine Verträge."
+  },
+  {
+   "id": "s117",
+   "kapitel": "k5",
+   "text": "Handy, Internet, Strom und Versicherungen kann man oft mit einem Anruf oder Wechsel günstiger bekommen",
+   "sprechtext": "Handy, Internet, Strom und Versicherungen kann man oft mit einem Anruf oder Wechsel günstiger bekommen."
+  },
+  {
+   "id": "s118",
+   "kapitel": "k5",
+   "text": "spart schnell 50 € im Monat",
+   "sprechtext": "Das dauert einen Nachmittag und spart schnell fünfzig Euro im Monat."
+  },
+  {
+   "id": "s119",
+   "kapitel": "k5",
+   "text": "Tipp drei: Das Auto ehrlich durchrechnen",
+   "sprechtext": "Tipp drei: Das Auto ehrlich durchrechnen."
+  },
+  {
+   "id": "s120",
+   "kapitel": "k5",
+   "text": "Viele unterschätzen, was ein Auto wirklich kostet",
+   "sprechtext": "Viele unterschätzen, was ein Auto wirklich kostet."
+  },
+  {
+   "id": "s121",
+   "kapitel": "k5",
+   "text": "oft mehr als 300 € im Monat",
+   "sprechtext": "Selbst ein günstiger Kleinwagen kostet oft mehr als dreihundert Euro im Monat, wenn man alles mitrechnet."
+  },
+  {
+   "id": "s122",
+   "kapitel": "k5",
+   "text": "Wertverlust, Versicherung, Steuer, Reparaturen",
+   "sprechtext": "Wertverlust, Versicherung, Steuer, Reparaturen."
+  },
+  {
+   "id": "s123",
+   "kapitel": "k5",
+   "text": "Brauchst du wirklich eins, oder reicht das Deutschlandticket?",
+   "sprechtext": "Brauchst du wirklich eins, oder reicht das Deutschlandticket?"
+  },
+  {
+   "id": "s124",
+   "kapitel": "k5",
+   "text": "Tipp vier: Plane mit Wochenbudgets fürs Essen",
+   "sprechtext": "Tipp vier: Plane mit Wochenbudgets fürs Essen."
+  },
+  {
+   "id": "s125",
+   "kapitel": "k5",
+   "text": "spart locker 100 € im Monat",
+   "sprechtext": "Wer mit Einkaufsliste einkauft und weniger bestellt, spart locker hundert Euro im Monat."
+  },
+  {
+   "id": "s126",
+   "kapitel": "k5",
+   "text": "Und Tipp fünf, der wichtigste: Spar zuerst, nicht zuletzt",
+   "sprechtext": "Und Tipp fünf, der wichtigste: Spar zuerst, nicht zuletzt."
+  },
+  {
+   "id": "s127",
+   "kapitel": "k5",
+   "text": "Richte direkt am Gehaltstag einen Dauerauftrag auf dein Sparkonto ein",
+   "sprechtext": "Richte direkt am Gehaltstag einen Dauerauftrag auf dein Sparkonto ein."
+  },
+  {
+   "id": "s128",
+   "kapitel": "k5",
+   "text": "Was du nicht siehst, gibst du auch nicht aus",
+   "sprechtext": "Was du nicht siehst, gibst du auch nicht aus."
+  },
+  {
+   "id": "s129",
+   "kapitel": "k5",
+   "text": "200 bis 300 € mehr im Monat",
+   "sprechtext": "Wenn du diese fünf Tipps umsetzt, kannst du locker zweihundert bis dreihundert Euro im Monat mehr übrig haben."
+  },
+  {
+   "id": "s130",
+   "kapitel": "k5",
+   "text": "Und angelegt werden daraus über die Jahre richtig große Summen",
+   "sprechtext": "Und angelegt werden daraus über die Jahre richtig große Summen."
+  },
+  {
+   "id": "s131",
+   "kapitel": "k5",
+   "text": "So, und jetzt schau mal auf deine Zahl in den Kommentaren",
+   "sprechtext": "So, und jetzt schau mal auf deine Zahl in den Kommentaren."
+  },
+  {
+   "id": "s132",
+   "kapitel": "k5",
+   "text": "Lagst du drüber oder drunter?",
+   "sprechtext": "Lagst du drüber oder drunter?"
+  },
+  {
+   "id": "s133",
+   "kapitel": "k5",
+   "text": "Wenn dir das Video geholfen hat, gib uns ein Like und teile es mit jemandem, der gerade seine Finanzen ordnen will",
+   "sprechtext": "Wenn dir das Video geholfen hat, gib uns ein Like und teile es mit jemandem, der gerade seine Finanzen ordnen will."
+  },
+  {
+   "id": "s134",
+   "kapitel": "k5",
+   "text": "Wir sind HundeFinanzTV, bis zum nächsten Video",
+   "sprechtext": "Wir sind HundeFinanzTV, bis zum nächsten Video!"
+  }
+ ]
+}

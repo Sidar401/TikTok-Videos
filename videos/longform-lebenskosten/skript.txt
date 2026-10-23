@@ -1,0 +1,134 @@
+k1|Wie viel Geld brauchst du eigentlich wirklich zum Leben?|
+k1|Nicht zum Überleben, sondern für ein ganz normales, entspanntes Leben in Deutschland.|
+k1|Die meisten haben darauf keine Antwort.|
+k1|Und das ist gefährlich, denn wer seine Zahl nicht kennt, kann auch nicht planen.|
+k1|Sie schauen am Monatsende aufs Konto und wundern sich, wo das Geld geblieben ist.|
+k1|Genau deshalb rechnen wir das heute einmal komplett durch.|
+k1|Ehrlich, Schritt für Schritt und mit echten Zahlen.|
+k1|Wir schauen uns drei Lebenssituationen an.|
+k1|Erstens: Single in einer Mietwohnung.|
+k1|Zweitens: ein Paar ohne Kinder.|
+k1|Und drittens: eine Familie mit zwei Kindern.|
+k1|Und am Ende zeigen wir dir, wie du mit deinem Gehalt mehr übrig behältst, egal in welcher Situation du gerade bist.|
+k1|Eine Sache vorweg: Alle Zahlen sind Durchschnittswerte für eine mittelgroße Stadt.|
+k1|In München oder Hamburg zahlst du mehr, auf dem Land oft deutlich weniger.|
+k1|Aber als Orientierung sind sie perfekt.|
+k1|Und du wirst sehen: Einige Ergebnisse sind echt überraschend.|
+k1|Besonders beim Paar und bei der Familie.|
+k1|Bevor wir loslegen, eine Frage an dich.|
+k1|Was schätzt du: Wie viel Geld brauchst du selbst jeden Monat?|
+k1|Schreib deine Zahl jetzt in die Kommentare, und am Ende des Videos vergleichst du sie mit unserer Rechnung.|
+k1|Und wenn du solche ehrlichen Rechnungen magst, folge HundeFinanzTV.|
+k1|Wir machen jede Woche Finanzen einfach und verständlich.|
+k1|Also, los geht's.|
+k2|Fangen wir mit dem Single an.|
+k2|Nennen wir ihn Max.|
+k2|Max wohnt allein in einer kleinen Zwei-Zimmer-Wohnung.|
+k2|Der größte Brocken ist natürlich die Miete.|
+k2|Warm, also mit Heizung und Nebenkosten, zahlt Max rund siebenhundertfünfzig Euro im Monat.|Warm: rund 750 € im Monat
+k2|Dazu kommen Strom, Internet und Handy.|
+k2|Zusammen sind das etwa hundert Euro.|Zusammen etwa 100 €
+k2|Dann das Essen.|
+k2|Wenn Max meistens selbst kocht und nur ab und zu essen geht, landet er bei ungefähr dreihundert Euro.|landet er bei ungefähr 300 €
+k2|Jetzt die Mobilität.|
+k2|Max hat kein Auto und fährt mit dem Deutschlandticket.|
+k2|Das kostet ihn rund sechzig Euro im Monat.|Das kostet rund 60 € im Monat
+k2|Hätte er ein Auto, wären es mit Versicherung, Sprit und Reparaturen schnell dreihundertfünfzig Euro oder mehr.|wären es schnell 350 € oder mehr
+k2|Weiter geht's mit den Versicherungen.|
+k2|Haftpflicht, Hausrat und vielleicht eine Berufsunfähigkeitsversicherung.|
+k2|Dafür rechnen wir etwa fünfzig Euro.|Dafür rechnen wir etwa 50 €
+k2|Den Rundfunkbeitrag vergessen viele, aber er kommt trotzdem: rund achtzehn Euro im Monat.|rund 18 € im Monat
+k2|Dann Abos wie Streaming, Musik und Fitnessstudio.|
+k2|Bei Max sind das etwa dreißig Euro.|Bei Max sind das etwa 30 €
+k2|Klingt wenig, aber über ein Jahr sind das schon dreihundertsechzig Euro.|übers Jahr schon 360 €
+k2|Und natürlich will Max auch leben.|
+k2|Kleidung, Freizeit, Freunde treffen, mal ins Kino.|
+k2|Dafür planen wir zweihundert Euro ein.|Dafür planen wir 200 € ein
+k2|Jetzt zählen wir alles zusammen.|
+k2|Max braucht rund eintausendfünfhundert Euro im Monat.|Max braucht rund 1.500 € im Monat
+k2|Aber Moment, das ist noch nicht alles.|
+k2|Max sollte ja auch etwas sparen, für Notfälle und für später.|
+k2|Mit zehn Prozent Sparrate sind wir bei etwa eintausendsiebenhundert Euro.|Mit 10 % Sparrate: etwa 1.700 €
+k2|Und das ist netto, also das, was auf dem Konto ankommt.|
+k2|Brutto muss Max dafür grob zweitausendfünfhundert Euro verdienen.|Brutto grob 2.500 €
+k2|Das ist für einen Single ein ganz normales Gehalt.|
+k2|Aber man sieht auch: Die Miete frisst fast die Hälfte von allem.|
+k3|Kommen wir zum Paar.|
+k3|Lisa und Tom wohnen zusammen, beide arbeiten, Kinder haben sie noch nicht.|
+k3|Ihre Drei-Zimmer-Wohnung kostet warm etwa elfhundert Euro.|kostet warm etwa 1.100 €
+k3|Strom, Internet und zwei Handys liegen bei rund hundertfünfzig Euro.|liegen bei rund 150 €
+k3|Fürs Essen geben die beiden zusammen ungefähr fünfhundertfünfzig Euro aus.|ungefähr 550 € fürs Essen
+k3|Die beiden teilen sich ein Auto, und Lisa fährt zusätzlich mit dem Deutschlandticket.|
+k3|Zusammen kostet die Mobilität etwa vierhundert Euro.|Mobilität: etwa 400 €
+k3|Versicherungen für zwei: rund neunzig Euro.|Versicherungen: rund 90 €
+k3|Dazu der Rundfunkbeitrag, aber nur einmal, denn der gilt pro Wohnung.|
+k3|Also wieder achtzehn Euro.|Also wieder 18 €
+k3|Abos und Streaming: ungefähr vierzig Euro.|Abos: ungefähr 40 €
+k3|Und für Freizeit, Kleidung und Ausgehen planen wir dreihundertfünfzig Euro.|Freizeit: 350 €
+k3|Zusammen sind das etwa zweitausendsiebenhundert Euro im Monat.|Zusammen etwa 2.700 € im Monat
+k3|Und jetzt kommt das Spannende.|
+k3|Pro Person sind das nur eintausenddreihundertfünfzig Euro.|Pro Person nur 1.350 €
+k3|Das ist weniger als bei Max allein.|
+k3|Warum?|
+k3|Weil sich Miete, Internet, Rundfunk und Auto auf zwei Köpfe verteilen.|
+k3|Zusammenwohnen ist also nicht nur romantisch, sondern auch finanziell clever.|
+k3|Mit einer Sparrate von zehn Prozent brauchen die beiden rund dreitausend Euro netto.|rund 3.000 € netto
+k3|Wenn beide normal verdienen, bleibt hier richtig was übrig.|
+k3|Und genau in dieser Phase sollte man besonders viel sparen und investieren.|
+k3|Denn später, mit Kindern, wird es deutlich enger.|
+k4|Und damit sind wir bei der Familie.|
+k4|Familie Becker: zwei Erwachsene, zwei Kinder.|
+k4|Sie brauchen mehr Platz, also eine Vier-Zimmer-Wohnung.|
+k4|Die kostet warm rund fünfzehnhundert Euro.|Warm rund 1.500 €
+k4|Strom, Internet und Handys liegen bei etwa zweihundert Euro, denn mit Kindern läuft mehr Licht, mehr Waschmaschine und mehr Geräte.|etwa 200 €
+k4|Beim Essen wird es richtig teuer.|
+k4|Vier Personen, davon zwei hungrige Kinder: rund neunhundert Euro im Monat.|rund 900 € im Monat
+k4|Mit Kindern geht es kaum ohne Auto.|
+k4|Für Auto und Bus rechnen wir etwa vierhundertfünfzig Euro.|Mobilität: etwa 450 €
+k4|Versicherungen für die ganze Familie: ungefähr hundertdreißig Euro.|Versicherungen: ungefähr 130 €
+k4|Rundfunk und Abos zusammen: knapp sechzig Euro.|Rundfunk & Abos: knapp 60 €
+k4|Und jetzt der Posten, den viele unterschätzen: die Kinder selbst.|
+k4|Kleidung, die ständig zu klein wird, Schulsachen, Sportverein, Musikschule, Geburtstage und vielleicht noch Kita-Gebühren.|
+k4|Dafür rechnen wir rund vierhundert Euro für beide Kinder.|rund 400 € für beide Kinder
+k4|Und auch Eltern brauchen mal Freizeit und Urlaub.|
+k4|Dafür planen wir dreihundert Euro.|Dafür planen wir 300 €
+k4|Alles zusammen kommen wir auf knapp viertausend Euro im Monat.|knapp 4.000 € im Monat
+k4|Das klingt erst mal erschreckend.|
+k4|Fast viertausend Euro, jeden Monat, nur damit der Alltag läuft.|Fast 4.000 € jeden Monat
+k4|Aber es gibt auch Hilfe vom Staat.|
+k4|Für zwei Kinder bekommt die Familie über fünfhundert Euro Kindergeld im Monat.|über 500 € Kindergeld im Monat
+k4|Damit muss die Familie selbst noch etwa dreitausendfünfhundert Euro netto verdienen.|noch etwa 3.500 € netto
+k4|Und dabei ist noch kein Cent gespart.|
+k4|Genau hier merken viele Familien: Das Geld reicht gerade so.|
+k4|Und jede kaputte Waschmaschine wird zum Problem.|
+k4|Oder die Autoreparatur, oder die Nachzahlung bei den Nebenkosten.|
+k4|Deshalb ist ein Notgroschen für Familien besonders wichtig.|
+k5|Fassen wir zusammen.|
+k5|Single: rund eintausendfünfhundert Euro.|Single: rund 1.500 €
+k5|Paar: rund zweitausendsiebenhundert Euro, also nur eintausenddreihundertfünfzig pro Person.|Paar: rund 2.700 €
+k5|Familie mit zwei Kindern: knapp viertausend Euro.|Familie: knapp 4.000 €
+k5|Jeweils ohne Sparen.|
+k5|Und jetzt das Wichtigste: Wie behältst du mehr von deinem Geld übrig?|
+k5|Hier sind fünf Tipps, die wirklich etwas bringen.|
+k5|Tipp eins: Die Miete ist dein größter Hebel.|
+k5|Faustregel: Die Warmmiete sollte nicht mehr als ein Drittel deines Nettoeinkommens sein.|
+k5|Hundert Euro weniger Miete sind über zehn Jahre zwölftausend Euro.|über 10 Jahre 12.000 €
+k5|Tipp zwei: Prüf deine Verträge.|
+k5|Handy, Internet, Strom und Versicherungen kann man oft mit einem Anruf oder Wechsel günstiger bekommen.|
+k5|Das dauert einen Nachmittag und spart schnell fünfzig Euro im Monat.|spart schnell 50 € im Monat
+k5|Tipp drei: Das Auto ehrlich durchrechnen.|
+k5|Viele unterschätzen, was ein Auto wirklich kostet.|
+k5|Selbst ein günstiger Kleinwagen kostet oft mehr als dreihundert Euro im Monat, wenn man alles mitrechnet.|oft mehr als 300 € im Monat
+k5|Wertverlust, Versicherung, Steuer, Reparaturen.|
+k5|Brauchst du wirklich eins, oder reicht das Deutschlandticket?|
+k5|Tipp vier: Plane mit Wochenbudgets fürs Essen.|
+k5|Wer mit Einkaufsliste einkauft und weniger bestellt, spart locker hundert Euro im Monat.|spart locker 100 € im Monat
+k5|Und Tipp fünf, der wichtigste: Spar zuerst, nicht zuletzt.|
+k5|Richte direkt am Gehaltstag einen Dauerauftrag auf dein Sparkonto ein.|
+k5|Was du nicht siehst, gibst du auch nicht aus.|
+k5|Wenn du diese fünf Tipps umsetzt, kannst du locker zweihundert bis dreihundert Euro im Monat mehr übrig haben.|200 bis 300 € mehr im Monat
+k5|Und angelegt werden daraus über die Jahre richtig große Summen.|
+k5|So, und jetzt schau mal auf deine Zahl in den Kommentaren.|
+k5|Lagst du drüber oder drunter?|
+k5|Wenn dir das Video geholfen hat, gib uns ein Like und teile es mit jemandem, der gerade seine Finanzen ordnen will.|
+k5|Wir sind HundeFinanzTV, bis zum nächsten Video!|
