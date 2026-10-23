@@ -61,6 +61,8 @@ def beleg(z, uid, titel, intro_icon, posten, ende_sid, summe_text):
         out = []
         zeiten = [t0] + [z.st(p[0]) for p in posten]
         for k, a in enumerate(zeiten):
+            if k == 0 and len(zeiten) > 1 and zeiten[1] <= t0 + 0.05:
+                continue  # erster Posten startet sofort: Start-Bild gar nicht zeigen
             out.append(f'tl.fromTo("#{uid}-i{k}", {{ opacity: 0, scale: 0.85 }}, {{ opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.8)" }}, {a});')
             if k + 1 < len(zeiten):
                 out.append(f'tl.to("#{uid}-i{k}", {{ opacity: 0, duration: 0.2 }}, {zeiten[k + 1] - 0.2});')

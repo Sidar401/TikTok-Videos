@@ -1,0 +1,2584 @@
+{
+  "dauer": 509.52,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 4.801,
+      "captions": [
+        {
+          "text": "Ein Hund kostet dich im Laufe",
+          "start": 0.0,
+          "end": 1.808
+        },
+        {
+          "text": "seines Lebens ungefähr",
+          "start": 1.808,
+          "end": 3.18
+        },
+        {
+          "text": "so viel wie ein Kleinwagen",
+          "start": 3.18,
+          "end": 4.801
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 4.801,
+      "end": 5.184,
+      "captions": [
+        {
+          "text": "Klingt übertrieben?",
+          "start": 4.801,
+          "end": 5.184
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 5.184,
+      "end": 8.802,
+      "captions": [
+        {
+          "text": "Dann rechnen wir das heute",
+          "start": 5.184,
+          "end": 7.028
+        },
+        {
+          "text": "einmal ganz ehrlich durch",
+          "start": 7.028,
+          "end": 8.802
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 8.802,
+      "end": 12.931,
+      "captions": [
+        {
+          "text": "Denn die meisten denken beim",
+          "start": 8.802,
+          "end": 10.323
+        },
+        {
+          "text": "Hund nur an den Kaufpreis",
+          "start": 10.323,
+          "end": 11.681
+        },
+        {
+          "text": "und ein bisschen Futter",
+          "start": 11.681,
+          "end": 12.931
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 12.931,
+      "end": 15.388,
+      "captions": [
+        {
+          "text": "Aber das ist nur",
+          "start": 12.931,
+          "end": 13.939
+        },
+        {
+          "text": "die Spitze des Eisbergs",
+          "start": 13.939,
+          "end": 15.388
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 15.388,
+      "end": 20.522,
+      "captions": [
+        {
+          "text": "Da kommen Hundesteuer,",
+          "start": 15.388,
+          "end": 16.979
+        },
+        {
+          "text": "Versicherungen, Tierarzt,",
+          "start": 16.979,
+          "end": 18.787
+        },
+        {
+          "text": "Urlaub und Notfälle dazu",
+          "start": 18.787,
+          "end": 20.522
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 20.522,
+      "end": 23.522,
+      "captions": [
+        {
+          "text": "Und genau die machen am Ende",
+          "start": 20.522,
+          "end": 22.202
+        },
+        {
+          "text": "den großen Unterschied",
+          "start": 22.202,
+          "end": 23.522
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 23.522,
+      "end": 26.7,
+      "captions": [
+        {
+          "text": "In diesem Video gehen wir",
+          "start": 23.522,
+          "end": 25.08
+        },
+        {
+          "text": "das ganze Hundeleben durch",
+          "start": 25.08,
+          "end": 26.7
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 26.7,
+      "end": 29.247,
+      "captions": [
+        {
+          "text": "Erstens: die Anschaffung",
+          "start": 26.7,
+          "end": 28.155
+        },
+        {
+          "text": "und das erste Jahr",
+          "start": 28.155,
+          "end": 29.247
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 29.247,
+      "end": 33.149,
+      "captions": [
+        {
+          "text": "Zweitens: die laufenden",
+          "start": 29.247,
+          "end": 31.436
+        },
+        {
+          "text": "Kosten jeden Monat",
+          "start": 31.436,
+          "end": 33.149
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 33.149,
+      "end": 36.841,
+      "captions": [
+        {
+          "text": "Drittens: die teuren",
+          "start": 33.149,
+          "end": 34.401
+        },
+        {
+          "text": "Überraschungen,",
+          "start": 34.401,
+          "end": 35.339
+        },
+        {
+          "text": "mit denen keiner rechnet",
+          "start": 35.339,
+          "end": 36.841
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 36.841,
+      "end": 44.133,
+      "captions": [
+        {
+          "text": "Und am Ende siehst",
+          "start": 36.841,
+          "end": 38.023
+        },
+        {
+          "text": "du die komplette Rechnung",
+          "start": 38.023,
+          "end": 39.666
+        },
+        {
+          "text": "für ein ganzes Hundeleben,",
+          "start": 39.666,
+          "end": 41.374
+        },
+        {
+          "text": "plus Tipps,",
+          "start": 41.374,
+          "end": 42.096
+        },
+        {
+          "text": "wie du dabei",
+          "start": 42.096,
+          "end": 42.885
+        },
+        {
+          "text": "richtig Geld sparst",
+          "start": 42.885,
+          "end": 44.133
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 44.133,
+      "end": 50.712,
+      "captions": [
+        {
+          "text": "Wir rechnen",
+          "start": 44.133,
+          "end": 44.911
+        },
+        {
+          "text": "mit einem mittelgroßen Hund,",
+          "start": 44.911,
+          "end": 46.892
+        },
+        {
+          "text": "so wie einem Beagle,",
+          "start": 46.892,
+          "end": 48.307
+        },
+        {
+          "text": "und einer Lebensdauer",
+          "start": 48.307,
+          "end": 49.792
+        },
+        {
+          "text": "von 13 Jahren",
+          "start": 49.792,
+          "end": 50.712
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "start": 50.712,
+      "end": 55.435,
+      "captions": [
+        {
+          "text": "Bei kleinen Hunden wird",
+          "start": 50.712,
+          "end": 52.18
+        },
+        {
+          "text": "es etwas günstiger,",
+          "start": 52.18,
+          "end": 53.393
+        },
+        {
+          "text": "bei großen Hunden",
+          "start": 53.393,
+          "end": 54.478
+        },
+        {
+          "text": "deutlich teurer",
+          "start": 54.478,
+          "end": 55.435
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "start": 55.435,
+      "end": 59.102,
+      "captions": [
+        {
+          "text": "Und ein paar Zahlen werden",
+          "start": 55.435,
+          "end": 56.706
+        },
+        {
+          "text": "dich wirklich überraschen,",
+          "start": 56.706,
+          "end": 57.977
+        },
+        {
+          "text": "besonders beim Tierarzt",
+          "start": 57.977,
+          "end": 59.102
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "start": 59.102,
+      "end": 66.132,
+      "captions": [
+        {
+          "text": "Egal ob du schon",
+          "start": 59.102,
+          "end": 60.262
+        },
+        {
+          "text": "einen Hund hast oder gerade",
+          "start": 60.262,
+          "end": 62.218
+        },
+        {
+          "text": "über einen nachdenkst,",
+          "start": 62.218,
+          "end": 63.813
+        },
+        {
+          "text": "dieses Video spart",
+          "start": 63.813,
+          "end": 65.117
+        },
+        {
+          "text": "dir bares Geld",
+          "start": 65.117,
+          "end": 66.132
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "start": 66.132,
+      "end": 67.75,
+      "captions": [
+        {
+          "text": "Bevor wir starten,",
+          "start": 66.132,
+          "end": 66.941
+        },
+        {
+          "text": "eine Frage an dich",
+          "start": 66.941,
+          "end": 67.75
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "start": 67.75,
+      "end": 69.068,
+      "captions": [
+        {
+          "text": "Hast du selbst einen Hund?",
+          "start": 67.75,
+          "end": 69.068
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "start": 69.068,
+      "end": 73.948,
+      "captions": [
+        {
+          "text": "Und was schätzt du:",
+          "start": 69.068,
+          "end": 70.64
+        },
+        {
+          "text": "Wie viel kostet ein Hund",
+          "start": 70.64,
+          "end": 72.625
+        },
+        {
+          "text": "im ganzen Leben?",
+          "start": 72.625,
+          "end": 73.948
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "start": 73.948,
+      "end": 77.871,
+      "captions": [
+        {
+          "text": "Schreib deine Schätzung",
+          "start": 73.948,
+          "end": 75.275
+        },
+        {
+          "text": "jetzt in die Kommentare,",
+          "start": 75.275,
+          "end": 76.659
+        },
+        {
+          "text": "am Ende lösen wir auf",
+          "start": 76.659,
+          "end": 77.871
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "start": 77.871,
+      "end": 81.981,
+      "captions": [
+        {
+          "text": "Und wenn du Hunde und Geld",
+          "start": 77.871,
+          "end": 79.335
+        },
+        {
+          "text": "genauso liebst wie wir,",
+          "start": 79.335,
+          "end": 80.63
+        },
+        {
+          "text": "dann folge HundeFinanzTV",
+          "start": 80.63,
+          "end": 81.981
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "start": 81.981,
+      "end": 85.669,
+      "captions": [
+        {
+          "text": "Wir bringen jeden Tag",
+          "start": 81.981,
+          "end": 83.34
+        },
+        {
+          "text": "neue Videos rund",
+          "start": 83.34,
+          "end": 84.375
+        },
+        {
+          "text": "um Geld und Finanzen",
+          "start": 84.375,
+          "end": 85.669
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "start": 85.669,
+      "end": 88.031,
+      "captions": [
+        {
+          "text": "Also, los geht's",
+          "start": 85.669,
+          "end": 88.031
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "start": 88.031,
+      "end": 89.783,
+      "captions": [
+        {
+          "text": "Fangen wir",
+          "start": 88.031,
+          "end": 88.579
+        },
+        {
+          "text": "mit der Anschaffung an",
+          "start": 88.579,
+          "end": 89.783
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "start": 89.783,
+      "end": 95.427,
+      "captions": [
+        {
+          "text": "Ein Welpe vom seriösen",
+          "start": 89.783,
+          "end": 91.417
+        },
+        {
+          "text": "Züchter kostet heute schnell",
+          "start": 91.417,
+          "end": 93.496
+        },
+        {
+          "text": "zwischen 1.000 und 2.500 €",
+          "start": 93.496,
+          "end": 95.427
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "start": 95.427,
+      "end": 97.703,
+      "captions": [
+        {
+          "text": "Wir rechnen mit 1.500 €",
+          "start": 95.427,
+          "end": 97.703
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "start": 97.703,
+      "end": 104.656,
+      "captions": [
+        {
+          "text": "Aus dem Tierheim ist",
+          "start": 97.703,
+          "end": 99.137
+        },
+        {
+          "text": "es deutlich günstiger,",
+          "start": 99.137,
+          "end": 100.714
+        },
+        {
+          "text": "da zahlst du meistens",
+          "start": 100.714,
+          "end": 102.219
+        },
+        {
+          "text": "eine Schutzgebühr",
+          "start": 102.219,
+          "end": 103.437
+        },
+        {
+          "text": "von 200 bis 400 €",
+          "start": 103.437,
+          "end": 104.656
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "start": 104.656,
+      "end": 107.157,
+      "captions": [
+        {
+          "text": "Und du gibst einem Hund",
+          "start": 104.656,
+          "end": 106.094
+        },
+        {
+          "text": "ein neues Zuhause",
+          "start": 106.094,
+          "end": 107.157
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "start": 107.157,
+      "end": 112.179,
+      "captions": [
+        {
+          "text": "Ein wichtiger Tipp: Finger weg",
+          "start": 107.157,
+          "end": 109.089
+        },
+        {
+          "text": "von Welpen aus dem Internet",
+          "start": 109.089,
+          "end": 110.827
+        },
+        {
+          "text": "zu Schnäppchenpreisen",
+          "start": 110.827,
+          "end": 112.179
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "start": 112.179,
+      "end": 116.737,
+      "captions": [
+        {
+          "text": "Die sind oft krank",
+          "start": 112.179,
+          "end": 113.386
+        },
+        {
+          "text": "und kosten dich später beim",
+          "start": 113.386,
+          "end": 115.195
+        },
+        {
+          "text": "Tierarzt ein Vielfaches",
+          "start": 115.195,
+          "end": 116.737
+        }
+      ]
+    },
+    {
+      "id": "s31",
+      "start": 116.737,
+      "end": 118.638,
+      "captions": [
+        {
+          "text": "Dann kommt die Erstausstattung",
+          "start": 116.737,
+          "end": 118.638
+        }
+      ]
+    },
+    {
+      "id": "s32",
+      "start": 118.638,
+      "end": 125.415,
+      "captions": [
+        {
+          "text": "Leine, Halsband oder Geschirr,",
+          "start": 118.638,
+          "end": 121.148
+        },
+        {
+          "text": "Körbchen, Näpfe,",
+          "start": 121.148,
+          "end": 122.487
+        },
+        {
+          "text": "Transportbox",
+          "start": 122.487,
+          "end": 123.491
+        },
+        {
+          "text": "und natürlich Spielzeug",
+          "start": 123.491,
+          "end": 125.415
+        }
+      ]
+    },
+    {
+      "id": "s33",
+      "start": 125.415,
+      "end": 128.495,
+      "captions": [
+        {
+          "text": "Das summiert sich",
+          "start": 125.415,
+          "end": 126.758
+        },
+        {
+          "text": "schnell auf rund 300 €",
+          "start": 126.758,
+          "end": 128.495
+        }
+      ]
+    },
+    {
+      "id": "s34",
+      "start": 128.495,
+      "end": 132.15,
+      "captions": [
+        {
+          "text": "Im ersten Jahr muss der Welpe",
+          "start": 128.495,
+          "end": 130.615
+        },
+        {
+          "text": "außerdem zum Tierarzt",
+          "start": 130.615,
+          "end": 132.15
+        }
+      ]
+    },
+    {
+      "id": "s35",
+      "start": 132.15,
+      "end": 135.994,
+      "captions": [
+        {
+          "text": "Impfungen,",
+          "start": 132.15,
+          "end": 132.919
+        },
+        {
+          "text": "Entwurmung und ein Chip",
+          "start": 132.919,
+          "end": 134.687
+        },
+        {
+          "text": "mit Registrierung",
+          "start": 134.687,
+          "end": 135.994
+        }
+      ]
+    },
+    {
+      "id": "s36",
+      "start": 135.994,
+      "end": 138.6,
+      "captions": [
+        {
+          "text": "Dafür rechnen wir etwa 200 €",
+          "start": 135.994,
+          "end": 138.6
+        }
+      ]
+    },
+    {
+      "id": "s37",
+      "start": 138.6,
+      "end": 141.38,
+      "captions": [
+        {
+          "text": "Viele lassen ihren Hund",
+          "start": 138.6,
+          "end": 140.021
+        },
+        {
+          "text": "später auch kastrieren",
+          "start": 140.021,
+          "end": 141.38
+        }
+      ]
+    },
+    {
+      "id": "s38",
+      "start": 141.38,
+      "end": 145.314,
+      "captions": [
+        {
+          "text": "Das kostet je nach Hund",
+          "start": 141.38,
+          "end": 143.391
+        },
+        {
+          "text": "zwischen 300 und 600 €",
+          "start": 143.391,
+          "end": 145.314
+        }
+      ]
+    },
+    {
+      "id": "s39",
+      "start": 145.314,
+      "end": 148.781,
+      "captions": [
+        {
+          "text": "Das rechnen wir",
+          "start": 145.314,
+          "end": 146.167
+        },
+        {
+          "text": "hier nicht mit,",
+          "start": 146.167,
+          "end": 147.019
+        },
+        {
+          "text": "aber plane es",
+          "start": 147.019,
+          "end": 147.758
+        },
+        {
+          "text": "auf jeden Fall ein",
+          "start": 147.758,
+          "end": 148.781
+        }
+      ]
+    },
+    {
+      "id": "s40",
+      "start": 148.781,
+      "end": 151.844,
+      "captions": [
+        {
+          "text": "Und dann die Welpenschule,",
+          "start": 148.781,
+          "end": 150.406
+        },
+        {
+          "text": "die sich wirklich lohnt",
+          "start": 150.406,
+          "end": 151.844
+        }
+      ]
+    },
+    {
+      "id": "s41",
+      "start": 151.844,
+      "end": 154.957,
+      "captions": [
+        {
+          "text": "Ein Kurs kostet ungefähr 200 €",
+          "start": 151.844,
+          "end": 154.957
+        }
+      ]
+    },
+    {
+      "id": "s42",
+      "start": 154.957,
+      "end": 159.144,
+      "captions": [
+        {
+          "text": "Zusammen sind",
+          "start": 154.957,
+          "end": 156.253
+        },
+        {
+          "text": "das für den Start",
+          "start": 156.253,
+          "end": 157.948
+        },
+        {
+          "text": "rund 2.200 €",
+          "start": 157.948,
+          "end": 159.144
+        }
+      ]
+    },
+    {
+      "id": "s43",
+      "start": 159.144,
+      "end": 164.458,
+      "captions": [
+        {
+          "text": "Und das ist erst der Anfang,",
+          "start": 159.144,
+          "end": 160.959
+        },
+        {
+          "text": "denn jetzt geht",
+          "start": 160.959,
+          "end": 161.931
+        },
+        {
+          "text": "es um die Kosten,",
+          "start": 161.931,
+          "end": 163.032
+        },
+        {
+          "text": "die jeden Monat kommen",
+          "start": 163.032,
+          "end": 164.458
+        }
+      ]
+    },
+    {
+      "id": "s44",
+      "start": 164.458,
+      "end": 167.297,
+      "captions": [
+        {
+          "text": "Der größte laufende",
+          "start": 164.458,
+          "end": 165.807
+        },
+        {
+          "text": "Posten ist das Futter",
+          "start": 165.807,
+          "end": 167.297
+        }
+      ]
+    },
+    {
+      "id": "s45",
+      "start": 167.297,
+      "end": 172.048,
+      "captions": [
+        {
+          "text": "Für einen mittelgroßen Hund",
+          "start": 167.297,
+          "end": 169.054
+        },
+        {
+          "text": "mit gutem Futter rechnen",
+          "start": 169.054,
+          "end": 170.616
+        },
+        {
+          "text": "wir rund 60 € im Monat",
+          "start": 170.616,
+          "end": 172.048
+        }
+      ]
+    },
+    {
+      "id": "s46",
+      "start": 172.048,
+      "end": 177.659,
+      "captions": [
+        {
+          "text": "Dazu kommen Leckerlis,",
+          "start": 172.048,
+          "end": 174.072
+        },
+        {
+          "text": "Kauknochen und ab",
+          "start": 174.072,
+          "end": 175.635
+        },
+        {
+          "text": "und zu neues Spielzeug",
+          "start": 175.635,
+          "end": 177.659
+        }
+      ]
+    },
+    {
+      "id": "s47",
+      "start": 177.659,
+      "end": 180.629,
+      "captions": [
+        {
+          "text": "Gerade Welpen zerlegen",
+          "start": 177.659,
+          "end": 179.144
+        },
+        {
+          "text": "gerne mal ein Körbchen",
+          "start": 179.144,
+          "end": 180.629
+        }
+      ]
+    },
+    {
+      "id": "s48",
+      "start": 180.629,
+      "end": 183.554,
+      "captions": [
+        {
+          "text": "Dafür planen wir",
+          "start": 180.629,
+          "end": 182.243
+        },
+        {
+          "text": "20 € im Monat",
+          "start": 182.243,
+          "end": 183.554
+        }
+      ]
+    },
+    {
+      "id": "s49",
+      "start": 183.554,
+      "end": 184.062,
+      "captions": [
+        {
+          "text": "Dann die Hundesteuer",
+          "start": 183.554,
+          "end": 184.062
+        }
+      ]
+    },
+    {
+      "id": "s50",
+      "start": 184.062,
+      "end": 189.065,
+      "captions": [
+        {
+          "text": "Die legt jede Stadt",
+          "start": 184.062,
+          "end": 185.595
+        },
+        {
+          "text": "selbst fest,",
+          "start": 185.595,
+          "end": 186.564
+        },
+        {
+          "text": "und die Unterschiede",
+          "start": 186.564,
+          "end": 188.177
+        },
+        {
+          "text": "sind riesig",
+          "start": 188.177,
+          "end": 189.065
+        }
+      ]
+    },
+    {
+      "id": "s51",
+      "start": 189.065,
+      "end": 194.189,
+      "captions": [
+        {
+          "text": "Im Schnitt sind es",
+          "start": 189.065,
+          "end": 190.742
+        },
+        {
+          "text": "etwa 120 € im Jahr,",
+          "start": 190.742,
+          "end": 192.512
+        },
+        {
+          "text": "also 10 € im Monat",
+          "start": 192.512,
+          "end": 194.189
+        }
+      ]
+    },
+    {
+      "id": "s52",
+      "start": 194.189,
+      "end": 199.152,
+      "captions": [
+        {
+          "text": "Für bestimmte Rassen kann",
+          "start": 194.189,
+          "end": 195.74
+        },
+        {
+          "text": "die Steuer aber auch mehrere",
+          "start": 195.74,
+          "end": 197.477
+        },
+        {
+          "text": "hundert Euro im Jahr kosten",
+          "start": 197.477,
+          "end": 199.152
+        }
+      ]
+    },
+    {
+      "id": "s53",
+      "start": 199.152,
+      "end": 204.476,
+      "captions": [
+        {
+          "text": "Und Achtung: Für einen zweiten",
+          "start": 199.152,
+          "end": 201.2
+        },
+        {
+          "text": "Hund ist die Steuer",
+          "start": 201.2,
+          "end": 202.497
+        },
+        {
+          "text": "in vielen Städten sogar höher",
+          "start": 202.497,
+          "end": 204.476
+        }
+      ]
+    },
+    {
+      "id": "s54",
+      "start": 204.476,
+      "end": 206.974,
+      "captions": [
+        {
+          "text": "Ganz wichtig ist",
+          "start": 204.476,
+          "end": 205.586
+        },
+        {
+          "text": "die Hundehaftpflicht",
+          "start": 205.586,
+          "end": 206.974
+        }
+      ]
+    },
+    {
+      "id": "s55",
+      "start": 206.974,
+      "end": 213.149,
+      "captions": [
+        {
+          "text": "In einigen Bundesländern",
+          "start": 206.974,
+          "end": 208.399
+        },
+        {
+          "text": "ist sie sogar Pflicht,",
+          "start": 208.399,
+          "end": 209.705
+        },
+        {
+          "text": "und sie schützt dich,",
+          "start": 209.705,
+          "end": 210.952
+        },
+        {
+          "text": "wenn dein Hund",
+          "start": 210.952,
+          "end": 211.783
+        },
+        {
+          "text": "einen Schaden anrichtet",
+          "start": 211.783,
+          "end": 213.149
+        }
+      ]
+    },
+    {
+      "id": "s56",
+      "start": 213.149,
+      "end": 216.566,
+      "captions": [
+        {
+          "text": "Die kostet meistens",
+          "start": 213.149,
+          "end": 214.772
+        },
+        {
+          "text": "nur rund 6 € im Monat",
+          "start": 214.772,
+          "end": 216.566
+        }
+      ]
+    },
+    {
+      "id": "s57",
+      "start": 216.566,
+      "end": 218.726,
+      "captions": [
+        {
+          "text": "Dann der Tierarzt",
+          "start": 216.566,
+          "end": 217.714
+        },
+        {
+          "text": "für die Routine",
+          "start": 217.714,
+          "end": 218.726
+        }
+      ]
+    },
+    {
+      "id": "s58",
+      "start": 218.726,
+      "end": 223.275,
+      "captions": [
+        {
+          "text": "Jährliche Impfungen, Wurmkur,",
+          "start": 218.726,
+          "end": 220.695
+        },
+        {
+          "text": "Floh‑ und Zeckenschutz",
+          "start": 220.695,
+          "end": 222.189
+        },
+        {
+          "text": "und ein Check‑up",
+          "start": 222.189,
+          "end": 223.275
+        }
+      ]
+    },
+    {
+      "id": "s59",
+      "start": 223.275,
+      "end": 228.739,
+      "captions": [
+        {
+          "text": "Das sind ungefähr",
+          "start": 223.275,
+          "end": 225.171
+        },
+        {
+          "text": "300 € im Jahr,",
+          "start": 225.171,
+          "end": 226.732
+        },
+        {
+          "text": "also 25 € im Monat",
+          "start": 226.732,
+          "end": 228.739
+        }
+      ]
+    },
+    {
+      "id": "s60",
+      "start": 228.739,
+      "end": 234.532,
+      "captions": [
+        {
+          "text": "Manche Rassen,",
+          "start": 228.739,
+          "end": 229.766
+        },
+        {
+          "text": "wie Pudel oder Doodles,",
+          "start": 229.766,
+          "end": 231.452
+        },
+        {
+          "text": "müssen außerdem regelmäßig",
+          "start": 231.452,
+          "end": 233.359
+        },
+        {
+          "text": "zum Hundefriseur",
+          "start": 233.359,
+          "end": 234.532
+        }
+      ]
+    },
+    {
+      "id": "s61",
+      "start": 234.532,
+      "end": 238.1,
+      "captions": [
+        {
+          "text": "Das kostet schnell",
+          "start": 234.532,
+          "end": 236.138
+        },
+        {
+          "text": "50 bis 80 € pro Termin",
+          "start": 236.138,
+          "end": 238.1
+        }
+      ]
+    },
+    {
+      "id": "s62",
+      "start": 238.1,
+      "end": 241.461,
+      "captions": [
+        {
+          "text": "Beim Beagle zum Glück nicht,",
+          "start": 238.1,
+          "end": 239.723
+        },
+        {
+          "text": "deshalb lassen",
+          "start": 239.723,
+          "end": 240.534
+        },
+        {
+          "text": "wir das hier weg",
+          "start": 240.534,
+          "end": 241.461
+        }
+      ]
+    },
+    {
+      "id": "s63",
+      "start": 241.461,
+      "end": 246.437,
+      "captions": [
+        {
+          "text": "Und jetzt kommt ein Punkt,",
+          "start": 241.461,
+          "end": 243.451
+        },
+        {
+          "text": "den viele weglassen,",
+          "start": 243.451,
+          "end": 244.982
+        },
+        {
+          "text": "die OP‑Versicherung",
+          "start": 244.982,
+          "end": 246.437
+        }
+      ]
+    },
+    {
+      "id": "s64",
+      "start": 246.437,
+      "end": 252.037,
+      "captions": [
+        {
+          "text": "Für rund 25 € im Monat",
+          "start": 246.437,
+          "end": 248.393
+        },
+        {
+          "text": "bist du bei teuren",
+          "start": 248.393,
+          "end": 249.993
+        },
+        {
+          "text": "Operationen abgesichert",
+          "start": 249.993,
+          "end": 252.037
+        }
+      ]
+    },
+    {
+      "id": "s65",
+      "start": 252.037,
+      "end": 254.849,
+      "captions": [
+        {
+          "text": "Warum das so wichtig ist,",
+          "start": 252.037,
+          "end": 253.565
+        },
+        {
+          "text": "zeigen wir dir gleich",
+          "start": 253.565,
+          "end": 254.849
+        }
+      ]
+    },
+    {
+      "id": "s66",
+      "start": 254.849,
+      "end": 256.136,
+      "captions": [
+        {
+          "text": "Zählen wir zusammen",
+          "start": 254.849,
+          "end": 256.136
+        }
+      ]
+    },
+    {
+      "id": "s67",
+      "start": 256.136,
+      "end": 261.15,
+      "captions": [
+        {
+          "text": "Futter, Leckerlis, Steuer,",
+          "start": 256.136,
+          "end": 258.111
+        },
+        {
+          "text": "Haftpflicht,",
+          "start": 258.111,
+          "end": 259.023
+        },
+        {
+          "text": "Tierarzt und OP‑Versicherung",
+          "start": 259.023,
+          "end": 261.15
+        }
+      ]
+    },
+    {
+      "id": "s68",
+      "start": 261.15,
+      "end": 264.36,
+      "captions": [
+        {
+          "text": "Das sind rund",
+          "start": 261.15,
+          "end": 262.696
+        },
+        {
+          "text": "150 € im Monat",
+          "start": 262.696,
+          "end": 264.36
+        }
+      ]
+    },
+    {
+      "id": "s69",
+      "start": 264.36,
+      "end": 267.726,
+      "captions": [
+        {
+          "text": "Oder anders gesagt:",
+          "start": 264.36,
+          "end": 266.241
+        },
+        {
+          "text": "1.800 € im Jahr",
+          "start": 266.241,
+          "end": 267.726
+        }
+      ]
+    },
+    {
+      "id": "s70",
+      "start": 267.726,
+      "end": 269.135,
+      "captions": [
+        {
+          "text": "Und das 13 Jahre lang",
+          "start": 267.726,
+          "end": 269.135
+        }
+      ]
+    },
+    {
+      "id": "s71",
+      "start": 269.135,
+      "end": 272.587,
+      "captions": [
+        {
+          "text": "Macht allein 23.400 €",
+          "start": 269.135,
+          "end": 272.587
+        }
+      ]
+    },
+    {
+      "id": "s72",
+      "start": 272.587,
+      "end": 275.257,
+      "captions": [
+        {
+          "text": "Jetzt kommen die Kosten,",
+          "start": 272.587,
+          "end": 273.774
+        },
+        {
+          "text": "die viele völlig unterschätzen",
+          "start": 273.774,
+          "end": 275.257
+        }
+      ]
+    },
+    {
+      "id": "s73",
+      "start": 275.257,
+      "end": 278.089,
+      "captions": [
+        {
+          "text": "Erstens: der Tierarzt",
+          "start": 275.257,
+          "end": 277.175
+        },
+        {
+          "text": "im Notfall",
+          "start": 277.175,
+          "end": 278.089
+        }
+      ]
+    },
+    {
+      "id": "s74",
+      "start": 278.089,
+      "end": 283.446,
+      "captions": [
+        {
+          "text": "Seit",
+          "start": 278.089,
+          "end": 278.332
+        },
+        {
+          "text": "der neuen Gebührenordnung sind",
+          "start": 278.332,
+          "end": 280.159
+        },
+        {
+          "text": "Tierarztbesuche in Deutschland",
+          "start": 280.159,
+          "end": 281.985
+        },
+        {
+          "text": "deutlich teurer geworden",
+          "start": 281.985,
+          "end": 283.446
+        }
+      ]
+    },
+    {
+      "id": "s75",
+      "start": 283.446,
+      "end": 289.102,
+      "captions": [
+        {
+          "text": "Ein Notdienst am Wochenende",
+          "start": 283.446,
+          "end": 285.286
+        },
+        {
+          "text": "kostet schnell über 100 €,",
+          "start": 285.286,
+          "end": 287.058
+        },
+        {
+          "text": "bevor überhaupt behandelt wird",
+          "start": 287.058,
+          "end": 289.102
+        }
+      ]
+    },
+    {
+      "id": "s76",
+      "start": 289.102,
+      "end": 292.477,
+      "captions": [
+        {
+          "text": "Und wenn eine Operation",
+          "start": 289.102,
+          "end": 290.539
+        },
+        {
+          "text": "nötig ist,",
+          "start": 290.539,
+          "end": 291.164
+        },
+        {
+          "text": "wird es richtig teuer",
+          "start": 291.164,
+          "end": 292.477
+        }
+      ]
+    },
+    {
+      "id": "s77",
+      "start": 292.477,
+      "end": 297.529,
+      "captions": [
+        {
+          "text": "Ein Kreuzbandriss",
+          "start": 292.477,
+          "end": 293.687
+        },
+        {
+          "text": "oder eine Magendrehung kosten",
+          "start": 293.687,
+          "end": 295.75
+        },
+        {
+          "text": "schnell 2.000 bis 4.000 €",
+          "start": 295.75,
+          "end": 297.529
+        }
+      ]
+    },
+    {
+      "id": "s78",
+      "start": 297.529,
+      "end": 303.67,
+      "captions": [
+        {
+          "text": "Wir rechnen mit einer großen",
+          "start": 297.529,
+          "end": 300.021
+        },
+        {
+          "text": "Operation im Hundeleben,",
+          "start": 300.021,
+          "end": 302.157
+        },
+        {
+          "text": "also etwa 3.000 €",
+          "start": 302.157,
+          "end": 303.67
+        }
+      ]
+    },
+    {
+      "id": "s79",
+      "start": 303.67,
+      "end": 308.35,
+      "captions": [
+        {
+          "text": "Mit OP‑Versicherung",
+          "start": 303.67,
+          "end": 305.081
+        },
+        {
+          "text": "zahlst du davon nur",
+          "start": 305.081,
+          "end": 306.493
+        },
+        {
+          "text": "einen kleinen Teil selbst",
+          "start": 306.493,
+          "end": 308.35
+        }
+      ]
+    },
+    {
+      "id": "s80",
+      "start": 308.35,
+      "end": 312.405,
+      "captions": [
+        {
+          "text": "Ohne Versicherung",
+          "start": 308.35,
+          "end": 309.444
+        },
+        {
+          "text": "musst du das komplett",
+          "start": 309.444,
+          "end": 310.796
+        },
+        {
+          "text": "aus eigener Tasche zahlen",
+          "start": 310.796,
+          "end": 312.405
+        }
+      ]
+    },
+    {
+      "id": "s81",
+      "start": 312.405,
+      "end": 315.016,
+      "captions": [
+        {
+          "text": "Und auch die Kleinigkeiten",
+          "start": 312.405,
+          "end": 314.102
+        },
+        {
+          "text": "summieren sich",
+          "start": 314.102,
+          "end": 315.016
+        }
+      ]
+    },
+    {
+      "id": "s82",
+      "start": 315.016,
+      "end": 319.263,
+      "captions": [
+        {
+          "text": "Eine Ohrenentzündung,",
+          "start": 315.016,
+          "end": 316.432
+        },
+        {
+          "text": "ein verschluckter Socken",
+          "start": 316.432,
+          "end": 318.05
+        },
+        {
+          "text": "oder eine Allergie",
+          "start": 318.05,
+          "end": 319.263
+        }
+      ]
+    },
+    {
+      "id": "s83",
+      "start": 319.263,
+      "end": 323.257,
+      "captions": [
+        {
+          "text": "Jeder dieser Besuche",
+          "start": 319.263,
+          "end": 320.963
+        },
+        {
+          "text": "kostet schnell 80 bis 200 €",
+          "start": 320.963,
+          "end": 323.257
+        }
+      ]
+    },
+    {
+      "id": "s84",
+      "start": 323.257,
+      "end": 324.682,
+      "captions": [
+        {
+          "text": "Zweitens: der Urlaub",
+          "start": 323.257,
+          "end": 324.682
+        }
+      ]
+    },
+    {
+      "id": "s85",
+      "start": 324.682,
+      "end": 329.882,
+      "captions": [
+        {
+          "text": "Wenn der Hund nicht mit kann,",
+          "start": 324.682,
+          "end": 326.591
+        },
+        {
+          "text": "braucht er eine Hundepension",
+          "start": 326.591,
+          "end": 328.434
+        },
+        {
+          "text": "oder einen Hundesitter",
+          "start": 328.434,
+          "end": 329.882
+        }
+      ]
+    },
+    {
+      "id": "s86",
+      "start": 329.882,
+      "end": 333.246,
+      "captions": [
+        {
+          "text": "Das kostet zwischen",
+          "start": 329.882,
+          "end": 331.564
+        },
+        {
+          "text": "20 und 40 € pro Tag",
+          "start": 331.564,
+          "end": 333.246
+        }
+      ]
+    },
+    {
+      "id": "s87",
+      "start": 333.246,
+      "end": 337.119,
+      "captions": [
+        {
+          "text": "Bei zwei Wochen Urlaub im Jahr",
+          "start": 333.246,
+          "end": 335.48
+        },
+        {
+          "text": "sind das schnell 300 €",
+          "start": 335.48,
+          "end": 337.119
+        }
+      ]
+    },
+    {
+      "id": "s88",
+      "start": 337.119,
+      "end": 341.062,
+      "captions": [
+        {
+          "text": "Über 13 Jahre gerechnet",
+          "start": 337.119,
+          "end": 339.18
+        },
+        {
+          "text": "sind das fast 4.000 €",
+          "start": 339.18,
+          "end": 341.062
+        }
+      ]
+    },
+    {
+      "id": "s89",
+      "start": 341.062,
+      "end": 344.573,
+      "captions": [
+        {
+          "text": "Und wenn du",
+          "start": 341.062,
+          "end": 341.606
+        },
+        {
+          "text": "Vollzeit arbeitest,",
+          "start": 341.606,
+          "end": 342.546
+        },
+        {
+          "text": "brauchst du vielleicht",
+          "start": 342.546,
+          "end": 343.633
+        },
+        {
+          "text": "einen Gassi‑Service",
+          "start": 343.633,
+          "end": 344.573
+        }
+      ]
+    },
+    {
+      "id": "s90",
+      "start": 344.573,
+      "end": 350.02,
+      "captions": [
+        {
+          "text": "Der kostet 10 bis",
+          "start": 344.573,
+          "end": 345.998
+        },
+        {
+          "text": "20 € pro Runde,",
+          "start": 345.998,
+          "end": 347.255
+        },
+        {
+          "text": "das rechnen wir",
+          "start": 347.255,
+          "end": 348.512
+        },
+        {
+          "text": "aber nicht mit ein",
+          "start": 348.512,
+          "end": 350.02
+        }
+      ]
+    },
+    {
+      "id": "s91",
+      "start": 350.02,
+      "end": 352.256,
+      "captions": [
+        {
+          "text": "Und drittens:",
+          "start": 350.02,
+          "end": 350.989
+        },
+        {
+          "text": "die Seniorenjahre",
+          "start": 350.989,
+          "end": 352.256
+        }
+      ]
+    },
+    {
+      "id": "s92",
+      "start": 352.256,
+      "end": 359.139,
+      "captions": [
+        {
+          "text": "Ältere Hunde brauchen",
+          "start": 352.256,
+          "end": 353.778
+        },
+        {
+          "text": "oft Spezialfutter,",
+          "start": 353.778,
+          "end": 355.082
+        },
+        {
+          "text": "Medikamente",
+          "start": 355.082,
+          "end": 355.879
+        },
+        {
+          "text": "gegen Gelenkschmerzen",
+          "start": 355.879,
+          "end": 357.4
+        },
+        {
+          "text": "und mehr Tierarztbesuche",
+          "start": 357.4,
+          "end": 359.139
+        }
+      ]
+    },
+    {
+      "id": "s93",
+      "start": 359.139,
+      "end": 363.262,
+      "captions": [
+        {
+          "text": "Das sind in den letzten",
+          "start": 359.139,
+          "end": 360.719
+        },
+        {
+          "text": "drei Jahren schnell",
+          "start": 360.719,
+          "end": 362.025
+        },
+        {
+          "text": "50 € mehr im Monat",
+          "start": 362.025,
+          "end": 363.262
+        }
+      ]
+    },
+    {
+      "id": "s94",
+      "start": 363.262,
+      "end": 366.499,
+      "captions": [
+        {
+          "text": "Zusammen also",
+          "start": 363.262,
+          "end": 364.619
+        },
+        {
+          "text": "rund 1.800 € extra",
+          "start": 364.619,
+          "end": 366.499
+        }
+      ]
+    },
+    {
+      "id": "s95",
+      "start": 366.499,
+      "end": 370.245,
+      "captions": [
+        {
+          "text": "Das ist kein schönes Thema,",
+          "start": 366.499,
+          "end": 368.698
+        },
+        {
+          "text": "aber es gehört dazu",
+          "start": 368.698,
+          "end": 370.245
+        }
+      ]
+    },
+    {
+      "id": "s96",
+      "start": 370.245,
+      "end": 373.363,
+      "captions": [
+        {
+          "text": "Denn gerade im Alter braucht",
+          "start": 370.245,
+          "end": 371.892
+        },
+        {
+          "text": "dein Hund dich am meisten",
+          "start": 371.892,
+          "end": 373.363
+        }
+      ]
+    },
+    {
+      "id": "s97",
+      "start": 373.363,
+      "end": 375.79,
+      "captions": [
+        {
+          "text": "Und jetzt kommt",
+          "start": 373.363,
+          "end": 374.296
+        },
+        {
+          "text": "die große Gesamtrechnung",
+          "start": 374.296,
+          "end": 375.79
+        }
+      ]
+    },
+    {
+      "id": "s98",
+      "start": 375.79,
+      "end": 379.927,
+      "captions": [
+        {
+          "text": "Anschaffung und erstes",
+          "start": 375.79,
+          "end": 378.065
+        },
+        {
+          "text": "Jahr: rund 2.200 €",
+          "start": 378.065,
+          "end": 379.927
+        }
+      ]
+    },
+    {
+      "id": "s99",
+      "start": 379.927,
+      "end": 385.04,
+      "captions": [
+        {
+          "text": "Laufende Kosten über",
+          "start": 379.927,
+          "end": 382.618
+        },
+        {
+          "text": "13 Jahre: 23.400 €",
+          "start": 382.618,
+          "end": 385.04
+        }
+      ]
+    },
+    {
+      "id": "s100",
+      "start": 385.04,
+      "end": 388.714,
+      "captions": [
+        {
+          "text": "Urlaub und Hundepension:",
+          "start": 385.04,
+          "end": 387.423
+        },
+        {
+          "text": "knapp 4.000 €",
+          "start": 387.423,
+          "end": 388.714
+        }
+      ]
+    },
+    {
+      "id": "s101",
+      "start": 388.714,
+      "end": 391.966,
+      "captions": [
+        {
+          "text": "Eine große Operation:",
+          "start": 388.714,
+          "end": 390.783
+        },
+        {
+          "text": "etwa 3.000 €",
+          "start": 390.783,
+          "end": 391.966
+        }
+      ]
+    },
+    {
+      "id": "s102",
+      "start": 391.966,
+      "end": 395.383,
+      "captions": [
+        {
+          "text": "Und die Seniorenjahre:",
+          "start": 391.966,
+          "end": 394.177
+        },
+        {
+          "text": "rund 1.800 €",
+          "start": 394.177,
+          "end": 395.383
+        }
+      ]
+    },
+    {
+      "id": "s103",
+      "start": 395.383,
+      "end": 400.69,
+      "captions": [
+        {
+          "text": "Alles zusammen kostet ein Hund",
+          "start": 395.383,
+          "end": 398.176
+        },
+        {
+          "text": "im Leben also rund 34.000 €",
+          "start": 398.176,
+          "end": 400.69
+        }
+      ]
+    },
+    {
+      "id": "s104",
+      "start": 400.69,
+      "end": 403.914,
+      "captions": [
+        {
+          "text": "Das ist tatsächlich so viel",
+          "start": 400.69,
+          "end": 402.397
+        },
+        {
+          "text": "wie ein neuer Kleinwagen",
+          "start": 402.397,
+          "end": 403.914
+        }
+      ]
+    },
+    {
+      "id": "s105",
+      "start": 403.914,
+      "end": 409.479,
+      "captions": [
+        {
+          "text": "Auf den Monat",
+          "start": 403.914,
+          "end": 405.14
+        },
+        {
+          "text": "gerechnet sind das über",
+          "start": 405.14,
+          "end": 407.31
+        },
+        {
+          "text": "die 13 Jahre etwa 220 €",
+          "start": 407.31,
+          "end": 409.479
+        }
+      ]
+    },
+    {
+      "id": "s106",
+      "start": 409.479,
+      "end": 414.026,
+      "captions": [
+        {
+          "text": "Bei einem kleinen Hund",
+          "start": 409.479,
+          "end": 411.48
+        },
+        {
+          "text": "landest du eher bei 20.000 €",
+          "start": 411.48,
+          "end": 414.026
+        }
+      ]
+    },
+    {
+      "id": "s107",
+      "start": 414.026,
+      "end": 420.344,
+      "captions": [
+        {
+          "text": "Bei einem großen Hund,",
+          "start": 414.026,
+          "end": 415.537
+        },
+        {
+          "text": "wie einem Schäferhund",
+          "start": 415.537,
+          "end": 416.979
+        },
+        {
+          "text": "oder einer Dogge,",
+          "start": 416.979,
+          "end": 418.146
+        },
+        {
+          "text": "sind es schnell",
+          "start": 418.146,
+          "end": 419.177
+        },
+        {
+          "text": "40.000 € und mehr",
+          "start": 419.177,
+          "end": 420.344
+        }
+      ]
+    },
+    {
+      "id": "s108",
+      "start": 420.344,
+      "end": 423.414,
+      "captions": [
+        {
+          "text": "Wie lag deine Schätzung",
+          "start": 420.344,
+          "end": 422.025
+        },
+        {
+          "text": "in den Kommentaren?",
+          "start": 422.025,
+          "end": 423.414
+        }
+      ]
+    },
+    {
+      "id": "s109",
+      "start": 423.414,
+      "end": 429.392,
+      "captions": [
+        {
+          "text": "Und jetzt das Wichtigste:",
+          "start": 423.414,
+          "end": 424.894
+        },
+        {
+          "text": "Wie kannst",
+          "start": 424.894,
+          "end": 425.486
+        },
+        {
+          "text": "du dabei Geld sparen,",
+          "start": 425.486,
+          "end": 426.729
+        },
+        {
+          "text": "ohne dass dein Hund",
+          "start": 426.729,
+          "end": 427.853
+        },
+        {
+          "text": "auf etwas verzichten muss?",
+          "start": 427.853,
+          "end": 429.392
+        }
+      ]
+    },
+    {
+      "id": "s110",
+      "start": 429.392,
+      "end": 431.02,
+      "captions": [
+        {
+          "text": "Hier sind fünf Tipps",
+          "start": 429.392,
+          "end": 431.02
+        }
+      ]
+    },
+    {
+      "id": "s111",
+      "start": 431.02,
+      "end": 434.542,
+      "captions": [
+        {
+          "text": "Tipp eins: Leg",
+          "start": 431.02,
+          "end": 432.284
+        },
+        {
+          "text": "ein eigenes Hundekonto an",
+          "start": 432.284,
+          "end": 434.542
+        }
+      ]
+    },
+    {
+      "id": "s112",
+      "start": 434.542,
+      "end": 438.433,
+      "captions": [
+        {
+          "text": "Spar jeden Monat 50 €",
+          "start": 434.542,
+          "end": 436.487
+        },
+        {
+          "text": "als Tierarzt‑Rücklage",
+          "start": 436.487,
+          "end": 438.433
+        }
+      ]
+    },
+    {
+      "id": "s113",
+      "start": 438.433,
+      "end": 442.052,
+      "captions": [
+        {
+          "text": "Nach drei Jahren hast du",
+          "start": 438.433,
+          "end": 440.17
+        },
+        {
+          "text": "schon 1.800 € für Notfälle",
+          "start": 440.17,
+          "end": 442.052
+        }
+      ]
+    },
+    {
+      "id": "s114",
+      "start": 442.052,
+      "end": 445.961,
+      "captions": [
+        {
+          "text": "Tipp zwei: Schließ früh",
+          "start": 442.052,
+          "end": 444.007
+        },
+        {
+          "text": "eine OP‑Versicherung ab",
+          "start": 444.007,
+          "end": 445.961
+        }
+      ]
+    },
+    {
+      "id": "s115",
+      "start": 445.961,
+      "end": 451.652,
+      "captions": [
+        {
+          "text": "Je jünger der Hund,",
+          "start": 445.961,
+          "end": 447.032
+        },
+        {
+          "text": "desto günstiger der Beitrag,",
+          "start": 447.032,
+          "end": 448.609
+        },
+        {
+          "text": "und Vorerkrankungen sind dann",
+          "start": 448.609,
+          "end": 450.243
+        },
+        {
+          "text": "noch nicht ausgeschlossen",
+          "start": 450.243,
+          "end": 451.652
+        }
+      ]
+    },
+    {
+      "id": "s116",
+      "start": 451.652,
+      "end": 455.676,
+      "captions": [
+        {
+          "text": "Tipp drei: Kauf",
+          "start": 451.652,
+          "end": 452.73
+        },
+        {
+          "text": "das Futter in großen",
+          "start": 452.73,
+          "end": 454.167
+        },
+        {
+          "text": "Packungen oder im Abo",
+          "start": 454.167,
+          "end": 455.676
+        }
+      ]
+    },
+    {
+      "id": "s117",
+      "start": 455.676,
+      "end": 458.62,
+      "captions": [
+        {
+          "text": "Damit sparst du",
+          "start": 455.676,
+          "end": 457.148
+        },
+        {
+          "text": "oft 10 bis 20 %",
+          "start": 457.148,
+          "end": 458.62
+        }
+      ]
+    },
+    {
+      "id": "s118",
+      "start": 458.62,
+      "end": 461.62,
+      "captions": [
+        {
+          "text": "Tipp vier: Vergleich",
+          "start": 458.62,
+          "end": 459.731
+        },
+        {
+          "text": "die Hundehaftpflicht",
+          "start": 459.731,
+          "end": 460.842
+        },
+        {
+          "text": "einmal im Jahr",
+          "start": 460.842,
+          "end": 461.62
+        }
+      ]
+    },
+    {
+      "id": "s119",
+      "start": 461.62,
+      "end": 465.458,
+      "captions": [
+        {
+          "text": "Die Preise unterscheiden",
+          "start": 461.62,
+          "end": 463.13
+        },
+        {
+          "text": "sich stark,",
+          "start": 463.13,
+          "end": 463.822
+        },
+        {
+          "text": "bei fast gleicher Leistung",
+          "start": 463.822,
+          "end": 465.458
+        }
+      ]
+    },
+    {
+      "id": "s120",
+      "start": 465.458,
+      "end": 471.665,
+      "captions": [
+        {
+          "text": "Und viele Hundevereine",
+          "start": 465.458,
+          "end": 467.01
+        },
+        {
+          "text": "bieten günstige Kurse an,",
+          "start": 467.01,
+          "end": 468.773
+        },
+        {
+          "text": "oft viel billiger",
+          "start": 468.773,
+          "end": 469.972
+        },
+        {
+          "text": "als private Hundeschulen",
+          "start": 469.972,
+          "end": 471.665
+        }
+      ]
+    },
+    {
+      "id": "s121",
+      "start": 471.665,
+      "end": 475.393,
+      "captions": [
+        {
+          "text": "Und Tipp fünf: Vorsorge ist",
+          "start": 471.665,
+          "end": 473.639
+        },
+        {
+          "text": "günstiger als Behandlung",
+          "start": 473.639,
+          "end": 475.393
+        }
+      ]
+    },
+    {
+      "id": "s122",
+      "start": 475.393,
+      "end": 482.748,
+      "captions": [
+        {
+          "text": "Regelmäßige Bewegung,",
+          "start": 475.393,
+          "end": 476.953
+        },
+        {
+          "text": "das richtige Gewicht",
+          "start": 476.953,
+          "end": 478.439
+        },
+        {
+          "text": "und gepflegte Zähne sparen dir",
+          "start": 478.439,
+          "end": 480.668
+        },
+        {
+          "text": "später teure Tierarztbesuche",
+          "start": 480.668,
+          "end": 482.748
+        }
+      ]
+    },
+    {
+      "id": "s123",
+      "start": 482.748,
+      "end": 485.138,
+      "captions": [
+        {
+          "text": "Ein Hund ist kein",
+          "start": 482.748,
+          "end": 484.018
+        },
+        {
+          "text": "günstiges Hobby",
+          "start": 484.018,
+          "end": 485.138
+        }
+      ]
+    },
+    {
+      "id": "s124",
+      "start": 485.138,
+      "end": 491.567,
+      "captions": [
+        {
+          "text": "Aber er ist",
+          "start": 485.138,
+          "end": 485.867
+        },
+        {
+          "text": "ein Familienmitglied,",
+          "start": 485.867,
+          "end": 487.259
+        },
+        {
+          "text": "und mit einem klaren",
+          "start": 487.259,
+          "end": 488.584
+        },
+        {
+          "text": "Plan musst du dir keine",
+          "start": 488.584,
+          "end": 490.109
+        },
+        {
+          "text": "Sorgen ums Geld machen",
+          "start": 490.109,
+          "end": 491.567
+        }
+      ]
+    },
+    {
+      "id": "s125",
+      "start": 491.567,
+      "end": 497.559,
+      "captions": [
+        {
+          "text": "Und ehrlich:",
+          "start": 491.567,
+          "end": 492.423
+        },
+        {
+          "text": "Jeder Euro ist es wert,",
+          "start": 492.423,
+          "end": 494.064
+        },
+        {
+          "text": "wenn dich dein Hund",
+          "start": 494.064,
+          "end": 495.419
+        },
+        {
+          "text": "jeden Abend an der Tür begrüßt",
+          "start": 495.419,
+          "end": 497.559
+        }
+      ]
+    },
+    {
+      "id": "s126",
+      "start": 497.559,
+      "end": 504.276,
+      "captions": [
+        {
+          "text": "Wenn dir das Video",
+          "start": 497.559,
+          "end": 498.668
+        },
+        {
+          "text": "gefallen hat,",
+          "start": 498.668,
+          "end": 499.469
+        },
+        {
+          "text": "gib uns ein Like",
+          "start": 499.469,
+          "end": 500.455
+        },
+        {
+          "text": "und teile es mit jemandem,",
+          "start": 500.455,
+          "end": 502.058
+        },
+        {
+          "text": "der sich gerade",
+          "start": 502.058,
+          "end": 502.982
+        },
+        {
+          "text": "einen Hund holen will",
+          "start": 502.982,
+          "end": 504.276
+        }
+      ]
+    },
+    {
+      "id": "s127",
+      "start": 504.276,
+      "end": 508.931,
+      "captions": [
+        {
+          "text": "Wir sind HundeFinanzTV,",
+          "start": 504.276,
+          "end": 506.06
+        },
+        {
+          "text": "wir sehen uns morgen",
+          "start": 506.06,
+          "end": 507.612
+        },
+        {
+          "text": "im nächsten Video",
+          "start": 507.612,
+          "end": 508.931
+        }
+      ]
+    }
+  ]
+}

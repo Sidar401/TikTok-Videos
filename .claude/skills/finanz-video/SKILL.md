@@ -29,6 +29,7 @@ Der Nutzer arbeitet am iPad: Antworten kurz, Ergebnisse per `SendUserFile` schic
    - Zahlen nachrechnen (Zinseszins etc.) und im Chat kurz nennen. Keine Anlageberatung versprechen.
 4. **Voiceover (Standard: ElevenLabs vom Nutzer):**
    - Dem Nutzer das Skript zum Einsprechen schicken: nur die `sprechtext`-Sätze, **ein Satz pro Zeile**, in einem Codeblock (iPad: leicht zu kopieren). Hinweis: gleiche ElevenLabs-Stimme wie immer, Satzzeichen stehen lassen. Dann warten.
+   - Lange Aufnahmen (Longform, > 5 Min.): DTW-Kosten um 0,70 sind normal (gröbere Auflösung). Dann mit `python3 scripts/stichprobe.py videos/<name>/ 5 20 50 80 110` prüfen – alle „OK“ = richtig.
    - **Mehrere Uploads auf einmal: nie nach Reihenfolge/Zeitstempel zuordnen**, sondern mit `python3 scripts/dtw_align.py <mp3> videos/<name>/skript.json` gegen jedes Skript prüfen (niedrigste Kosten = richtiges Skript; passend ≈ 0,55–0,60, falsch ≈ 0,70).
    - Lädt der Nutzer die Datei hoch: `python3 scripts/sync.py videos/<name> <upload.mp3>` (warnt bei DTW-Kosten > 0,65) → `assets/voice.wav` + `timings.json`. Standard: Pausen auf 0,25 s kürzen + Tempo 1,08 (Tonhöhe bleibt; 1,15 war dem Nutzer zu schnell); anpassbar mit `--tempo`/`--pause`. Satzgrenzen werden im Original erkannt und umgerechnet. Meldet es „Fallback“, Satzanzahl und Pausen prüfen und dem Nutzer sagen.
    - Nur wenn der Nutzer es ausdrücklich will: Computerstimme `python3 scripts/voice.py videos/<name>` (Piper, `stimme_fallback` aus `kanal.json`).

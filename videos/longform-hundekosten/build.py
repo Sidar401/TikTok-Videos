@@ -47,10 +47,10 @@ HUND = ICON(BEAGLE, 560, 560)
 
 def intro():
     html = ('<div class="mitte" style="gap:40px">'
-            f'<div style="display:flex;align-items:center;gap:60px"><div id="in-h" style="width:400px;height:400px">{BEAGLE}</div>'
+            f'<div style="display:flex;align-items:center;gap:60px"><div id="in-h" style="width:340px;height:340px">{BEAGLE}</div>'
             '<div id="in-g" class="serif" style="font-size:200px;color:#DB8622">=</div>'
-            f'<div id="in-a" style="width:430px;height:430px">{AUTO}</div></div>'
-            '<div id="in-t" class="serif" style="font-size:96px;color:#111">Ein Hund kostet so viel wie ein <span style="color:#e24b4b">Kleinwagen?</span></div></div>')
+            f'<div id="in-a" style="width:360px;height:360px">{AUTO}</div></div>'
+            '<div id="in-t" class="serif" style="font-size:84px;line-height:1.1;color:#111;text-align:center">Ein Hund kostet so viel<br />wie ein <span style="color:#e24b4b">Kleinwagen?</span></div></div>')
 
     def js(t0, d):
         return "".join(f' tl.fromTo("#{i}", {{ scale: 1.05 }}, {{ scale: 1, duration: 0.5, ease: "back.out(2)" }}, {t0});' for i in ("in-h", "in-g", "in-a", "in-t"))
