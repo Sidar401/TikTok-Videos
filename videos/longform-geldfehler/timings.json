@@ -1,0 +1,2523 @@
+{
+  "dauer": 493.65,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 5.652,
+      "captions": [
+        {
+          "text": "Es gibt Geldfehler,",
+          "start": 0.0,
+          "end": 1.22
+        },
+        {
+          "text": "die kosten dich",
+          "start": 1.22,
+          "end": 2.184
+        },
+        {
+          "text": "jedes Jahr tausende Euro,",
+          "start": 2.184,
+          "end": 3.789
+        },
+        {
+          "text": "und du merkst es nicht einmal",
+          "start": 3.789,
+          "end": 5.652
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 5.652,
+      "end": 10.707,
+      "captions": [
+        {
+          "text": "Sie passieren leise,",
+          "start": 5.652,
+          "end": 7.395
+        },
+        {
+          "text": "ganz automatisch,",
+          "start": 7.395,
+          "end": 8.877
+        },
+        {
+          "text": "jeden Monat aufs Neue",
+          "start": 8.877,
+          "end": 10.707
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 10.707,
+      "end": 14.597,
+      "captions": [
+        {
+          "text": "Und das Gemeine ist:",
+          "start": 10.707,
+          "end": 11.904
+        },
+        {
+          "text": "Fast jeder von uns macht",
+          "start": 11.904,
+          "end": 13.34
+        },
+        {
+          "text": "mindestens drei davon",
+          "start": 13.34,
+          "end": 14.597
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 14.597,
+      "end": 17.688,
+      "captions": [
+        {
+          "text": "Und das hat nichts",
+          "start": 14.597,
+          "end": 15.667
+        },
+        {
+          "text": "damit zu tun,",
+          "start": 15.667,
+          "end": 16.44
+        },
+        {
+          "text": "wie viel du verdienst",
+          "start": 16.44,
+          "end": 17.688
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 17.688,
+      "end": 23.831,
+      "captions": [
+        {
+          "text": "Auch Leute mit einem richtig",
+          "start": 17.688,
+          "end": 19.499
+        },
+        {
+          "text": "guten Gehalt sind",
+          "start": 19.499,
+          "end": 20.598
+        },
+        {
+          "text": "am Monatsende oft pleite,",
+          "start": 20.598,
+          "end": 22.214
+        },
+        {
+          "text": "genau wegen dieser Fehler",
+          "start": 22.214,
+          "end": 23.831
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 23.831,
+      "end": 30.034,
+      "captions": [
+        {
+          "text": "Und umgekehrt bauen Menschen",
+          "start": 23.831,
+          "end": 25.485
+        },
+        {
+          "text": "mit einem ganz normalen",
+          "start": 25.485,
+          "end": 26.844
+        },
+        {
+          "text": "Gehalt ein Vermögen auf,",
+          "start": 26.844,
+          "end": 28.262
+        },
+        {
+          "text": "weil sie diese",
+          "start": 28.262,
+          "end": 29.089
+        },
+        {
+          "text": "Fehler vermeiden",
+          "start": 29.089,
+          "end": 30.034
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 30.034,
+      "end": 34.55,
+      "captions": [
+        {
+          "text": "Heute zeigen wir dir",
+          "start": 30.034,
+          "end": 31.382
+        },
+        {
+          "text": "die zehn größten Geldfehler,",
+          "start": 31.382,
+          "end": 33.269
+        },
+        {
+          "text": "die dich arm halten",
+          "start": 33.269,
+          "end": 34.55
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 34.55,
+      "end": 40.284,
+      "captions": [
+        {
+          "text": "Wir starten bei Platz",
+          "start": 34.55,
+          "end": 35.983
+        },
+        {
+          "text": "zehn und arbeiten uns",
+          "start": 35.983,
+          "end": 37.417
+        },
+        {
+          "text": "bis zum teuersten Fehler",
+          "start": 37.417,
+          "end": 39.055
+        },
+        {
+          "text": "auf Platz eins vor",
+          "start": 39.055,
+          "end": 40.284
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 40.284,
+      "end": 46.498,
+      "captions": [
+        {
+          "text": "Und bei jedem Fehler",
+          "start": 40.284,
+          "end": 41.941
+        },
+        {
+          "text": "rechnen wir dir vor,",
+          "start": 41.941,
+          "end": 43.598
+        },
+        {
+          "text": "was er dich pro",
+          "start": 43.598,
+          "end": 44.841
+        },
+        {
+          "text": "Jahr wirklich kostet",
+          "start": 44.841,
+          "end": 46.498
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 46.498,
+      "end": 50.421,
+      "captions": [
+        {
+          "text": "Am Ende zählen wir",
+          "start": 46.498,
+          "end": 47.552
+        },
+        {
+          "text": "alles zusammen,",
+          "start": 47.552,
+          "end": 48.43
+        },
+        {
+          "text": "und die Summe wird",
+          "start": 48.43,
+          "end": 49.484
+        },
+        {
+          "text": "dich schockieren",
+          "start": 49.484,
+          "end": 50.421
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 50.421,
+      "end": 54.569,
+      "captions": [
+        {
+          "text": "Ganz besonders",
+          "start": 50.421,
+          "end": 51.328
+        },
+        {
+          "text": "Fehler Nummer sieben,",
+          "start": 51.328,
+          "end": 52.689
+        },
+        {
+          "text": "den macht wirklich fast jeder",
+          "start": 52.689,
+          "end": 54.569
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 54.569,
+      "end": 59.862,
+      "captions": [
+        {
+          "text": "Und bei Platz",
+          "start": 54.569,
+          "end": 55.334
+        },
+        {
+          "text": "eins geht es nicht um",
+          "start": 55.334,
+          "end": 56.569
+        },
+        {
+          "text": "ein paar hundert Euro,",
+          "start": 56.569,
+          "end": 57.862
+        },
+        {
+          "text": "sondern um",
+          "start": 57.862,
+          "end": 58.451
+        },
+        {
+          "text": "eine sechsstellige Summe",
+          "start": 58.451,
+          "end": 59.862
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 59.862,
+      "end": 62.028,
+      "captions": [
+        {
+          "text": "Bevor wir starten,",
+          "start": 59.862,
+          "end": 60.945
+        },
+        {
+          "text": "eine Frage an dich",
+          "start": 60.945,
+          "end": 62.028
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "start": 62.028,
+      "end": 65.605,
+      "captions": [
+        {
+          "text": "Was glaubst du,",
+          "start": 62.028,
+          "end": 63.101
+        },
+        {
+          "text": "welcher Geldfehler",
+          "start": 63.101,
+          "end": 64.389
+        },
+        {
+          "text": "ist der teuerste?",
+          "start": 64.389,
+          "end": 65.605
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "start": 65.605,
+      "end": 70.016,
+      "captions": [
+        {
+          "text": "Schreib deinen Tipp",
+          "start": 65.605,
+          "end": 66.666
+        },
+        {
+          "text": "in die Kommentare,",
+          "start": 66.666,
+          "end": 67.671
+        },
+        {
+          "text": "und am Ende schaust du,",
+          "start": 67.671,
+          "end": 68.955
+        },
+        {
+          "text": "ob du richtig lagst",
+          "start": 68.955,
+          "end": 70.016
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "start": 70.016,
+      "end": 74.371,
+      "captions": [
+        {
+          "text": "Und wenn du dein Geld besser",
+          "start": 70.016,
+          "end": 71.783
+        },
+        {
+          "text": "im Griff haben willst,",
+          "start": 71.783,
+          "end": 73.172
+        },
+        {
+          "text": "folge HundeFinanzTV",
+          "start": 73.172,
+          "end": 74.371
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "start": 74.371,
+      "end": 78.165,
+      "captions": [
+        {
+          "text": "Wir bringen jeden Tag",
+          "start": 74.371,
+          "end": 75.769
+        },
+        {
+          "text": "neue Videos rund",
+          "start": 75.769,
+          "end": 76.834
+        },
+        {
+          "text": "um Geld und Finanzen",
+          "start": 76.834,
+          "end": 78.165
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "start": 78.165,
+      "end": 80.623,
+      "captions": [
+        {
+          "text": "Also,",
+          "start": 78.165,
+          "end": 78.575
+        },
+        {
+          "text": "los geht's mit Platz zehn",
+          "start": 78.575,
+          "end": 80.623
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "start": 80.623,
+      "end": 83.289,
+      "captions": [
+        {
+          "text": "Platz zehn: Abos,",
+          "start": 80.623,
+          "end": 81.653
+        },
+        {
+          "text": "die du gar nicht mehr nutzt",
+          "start": 81.653,
+          "end": 83.289
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "start": 83.289,
+      "end": 89.466,
+      "captions": [
+        {
+          "text": "Streaming, Musik,",
+          "start": 83.289,
+          "end": 84.57
+        },
+        {
+          "text": "das Fitnessstudio, eine App,",
+          "start": 84.57,
+          "end": 86.679
+        },
+        {
+          "text": "die du vor einem Jahr",
+          "start": 86.679,
+          "end": 88.261
+        },
+        {
+          "text": "ausprobiert hast",
+          "start": 88.261,
+          "end": 89.466
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "start": 89.466,
+      "end": 93.321,
+      "captions": [
+        {
+          "text": "Einzeln sind das nur",
+          "start": 89.466,
+          "end": 90.773
+        },
+        {
+          "text": "ein paar Euro,",
+          "start": 90.773,
+          "end": 91.688
+        },
+        {
+          "text": "deshalb fällt es kaum auf",
+          "start": 91.688,
+          "end": 93.321
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "start": 93.321,
+      "end": 99.762,
+      "captions": [
+        {
+          "text": "Aber im Durchschnitt",
+          "start": 93.321,
+          "end": 94.785
+        },
+        {
+          "text": "zahlen viele Menschen rund",
+          "start": 94.785,
+          "end": 96.688
+        },
+        {
+          "text": "30 € im Monat für Abos,",
+          "start": 96.688,
+          "end": 98.371
+        },
+        {
+          "text": "die sie kaum nutzen",
+          "start": 98.371,
+          "end": 99.762
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "start": 99.762,
+      "end": 103.237,
+      "captions": [
+        {
+          "text": "Das sind 360 € im Jahr,",
+          "start": 99.762,
+          "end": 102.113
+        },
+        {
+          "text": "einfach weg",
+          "start": 102.113,
+          "end": 103.237
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "start": 103.237,
+      "end": 110.656,
+      "captions": [
+        {
+          "text": "Unser Tipp: Geh einmal",
+          "start": 103.237,
+          "end": 104.791
+        },
+        {
+          "text": "deine Kontoauszüge",
+          "start": 104.791,
+          "end": 106.063
+        },
+        {
+          "text": "durch und kündige alles,",
+          "start": 106.063,
+          "end": 107.759
+        },
+        {
+          "text": "was du im letzten Monat",
+          "start": 107.759,
+          "end": 109.384
+        },
+        {
+          "text": "nicht benutzt hast",
+          "start": 109.384,
+          "end": 110.656
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "start": 110.656,
+      "end": 113.36,
+      "captions": [
+        {
+          "text": "Platz neun:",
+          "start": 110.656,
+          "end": 111.615
+        },
+        {
+          "text": "ein teures Girokonto",
+          "start": 111.615,
+          "end": 113.36
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "start": 113.36,
+      "end": 119.934,
+      "captions": [
+        {
+          "text": "Viele Banken",
+          "start": 113.36,
+          "end": 114.133
+        },
+        {
+          "text": "verlangen inzwischen",
+          "start": 114.133,
+          "end": 115.422
+        },
+        {
+          "text": "Kontoführungsgebühren,",
+          "start": 115.422,
+          "end": 116.84
+        },
+        {
+          "text": "dazu kommen Kosten",
+          "start": 116.84,
+          "end": 118.0
+        },
+        {
+          "text": "für die Karte",
+          "start": 118.0,
+          "end": 118.838
+        },
+        {
+          "text": "oder fürs Abheben",
+          "start": 118.838,
+          "end": 119.934
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "start": 119.934,
+      "end": 124.396,
+      "captions": [
+        {
+          "text": "Schnell sind",
+          "start": 119.934,
+          "end": 121.049
+        },
+        {
+          "text": "das 10 € im Monat,",
+          "start": 121.049,
+          "end": 122.723
+        },
+        {
+          "text": "also 120 € im Jahr",
+          "start": 122.723,
+          "end": 124.396
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "start": 124.396,
+      "end": 127.999,
+      "captions": [
+        {
+          "text": "Und das,",
+          "start": 124.396,
+          "end": 124.93
+        },
+        {
+          "text": "obwohl es immer noch",
+          "start": 124.93,
+          "end": 126.264
+        },
+        {
+          "text": "kostenlose Girokonten gibt",
+          "start": 126.264,
+          "end": 127.999
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "start": 127.999,
+      "end": 133.029,
+      "captions": [
+        {
+          "text": "Ein Wechsel dauert heute",
+          "start": 127.999,
+          "end": 129.27
+        },
+        {
+          "text": "nur ein paar Minuten,",
+          "start": 129.27,
+          "end": 130.382
+        },
+        {
+          "text": "die Bank übernimmt sogar",
+          "start": 130.382,
+          "end": 131.652
+        },
+        {
+          "text": "die Daueraufträge für dich",
+          "start": 131.652,
+          "end": 133.029
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "start": 133.029,
+      "end": 142.244,
+      "captions": [
+        {
+          "text": "Achte beim Wechsel",
+          "start": 133.029,
+          "end": 134.24
+        },
+        {
+          "text": "aber darauf,",
+          "start": 134.24,
+          "end": 135.047
+        },
+        {
+          "text": "dass das neue Konto wirklich",
+          "start": 135.047,
+          "end": 136.93
+        },
+        {
+          "text": "dauerhaft kostenlos ist,",
+          "start": 136.93,
+          "end": 138.545
+        },
+        {
+          "text": "oft gibt es Bedingungen",
+          "start": 138.545,
+          "end": 140.092
+        },
+        {
+          "text": "wie einen monatlichen",
+          "start": 140.092,
+          "end": 141.504
+        },
+        {
+          "text": "Geldeingang",
+          "start": 141.504,
+          "end": 142.244
+        }
+      ]
+    },
+    {
+      "id": "s31",
+      "start": 142.244,
+      "end": 145.046,
+      "captions": [
+        {
+          "text": "Platz acht: der tägliche",
+          "start": 142.244,
+          "end": 144.112
+        },
+        {
+          "text": "Coffee to go",
+          "start": 144.112,
+          "end": 145.046
+        }
+      ]
+    },
+    {
+      "id": "s32",
+      "start": 145.046,
+      "end": 149.901,
+      "captions": [
+        {
+          "text": "Ein Kaffee hier,",
+          "start": 145.046,
+          "end": 146.029
+        },
+        {
+          "text": "ein belegtes Brötchen da,",
+          "start": 146.029,
+          "end": 147.566
+        },
+        {
+          "text": "vielleicht noch",
+          "start": 147.566,
+          "end": 148.488
+        },
+        {
+          "text": "ein Snack am Nachmittag",
+          "start": 148.488,
+          "end": 149.901
+        }
+      ]
+    },
+    {
+      "id": "s33",
+      "start": 149.901,
+      "end": 153.042,
+      "captions": [
+        {
+          "text": "Das sind schnell 3 €",
+          "start": 149.901,
+          "end": 151.512
+        },
+        {
+          "text": "an jedem Arbeitstag",
+          "start": 151.512,
+          "end": 153.042
+        }
+      ]
+    },
+    {
+      "id": "s34",
+      "start": 153.042,
+      "end": 159.151,
+      "captions": [
+        {
+          "text": "Klingt harmlos,",
+          "start": 153.042,
+          "end": 154.595
+        },
+        {
+          "text": "sind aber rund",
+          "start": 154.595,
+          "end": 156.045
+        },
+        {
+          "text": "60 € im Monat",
+          "start": 156.045,
+          "end": 157.391
+        },
+        {
+          "text": "und 720 € im Jahr",
+          "start": 157.391,
+          "end": 159.151
+        }
+      ]
+    },
+    {
+      "id": "s35",
+      "start": 159.151,
+      "end": 164.158,
+      "captions": [
+        {
+          "text": "Über zehn Jahre sind",
+          "start": 159.151,
+          "end": 160.766
+        },
+        {
+          "text": "das über 7.000 €,",
+          "start": 160.766,
+          "end": 162.139
+        },
+        {
+          "text": "nur für Kaffee und Snacks",
+          "start": 162.139,
+          "end": 164.158
+        }
+      ]
+    },
+    {
+      "id": "s36",
+      "start": 164.158,
+      "end": 167.65,
+      "captions": [
+        {
+          "text": "Wir sagen nicht,",
+          "start": 164.158,
+          "end": 165.193
+        },
+        {
+          "text": "dass du nie wieder",
+          "start": 165.193,
+          "end": 166.357
+        },
+        {
+          "text": "Kaffee kaufen darfst",
+          "start": 166.357,
+          "end": 167.65
+        }
+      ]
+    },
+    {
+      "id": "s37",
+      "start": 167.65,
+      "end": 171.468,
+      "captions": [
+        {
+          "text": "Aber eine Thermoskanne",
+          "start": 167.65,
+          "end": 169.027
+        },
+        {
+          "text": "von zu Hause spart",
+          "start": 169.027,
+          "end": 170.154
+        },
+        {
+          "text": "dir richtig viel Geld",
+          "start": 170.154,
+          "end": 171.468
+        }
+      ]
+    },
+    {
+      "id": "s38",
+      "start": 171.468,
+      "end": 175.489,
+      "captions": [
+        {
+          "text": "Und jetzt kommt Platz sieben,",
+          "start": 171.468,
+          "end": 173.411
+        },
+        {
+          "text": "der Fehler,",
+          "start": 173.411,
+          "end": 174.149
+        },
+        {
+          "text": "den fast jeder macht",
+          "start": 174.149,
+          "end": 175.489
+        }
+      ]
+    },
+    {
+      "id": "s39",
+      "start": 175.489,
+      "end": 177.351,
+      "captions": [
+        {
+          "text": "Verträge,",
+          "start": 175.489,
+          "end": 176.03
+        },
+        {
+          "text": "die du nie vergleichst",
+          "start": 176.03,
+          "end": 177.351
+        }
+      ]
+    },
+    {
+      "id": "s40",
+      "start": 177.351,
+      "end": 183.564,
+      "captions": [
+        {
+          "text": "Strom, Gas, Handy,",
+          "start": 177.351,
+          "end": 178.58
+        },
+        {
+          "text": "Internet und Versicherungen",
+          "start": 178.58,
+          "end": 180.423
+        },
+        {
+          "text": "laufen bei den meisten",
+          "start": 180.423,
+          "end": 181.925
+        },
+        {
+          "text": "einfach jahrelang weiter",
+          "start": 181.925,
+          "end": 183.564
+        }
+      ]
+    },
+    {
+      "id": "s41",
+      "start": 183.564,
+      "end": 186.094,
+      "captions": [
+        {
+          "text": "Und genau darauf",
+          "start": 183.564,
+          "end": 184.721
+        },
+        {
+          "text": "setzen die Anbieter",
+          "start": 184.721,
+          "end": 186.094
+        }
+      ]
+    },
+    {
+      "id": "s42",
+      "start": 186.094,
+      "end": 190.267,
+      "captions": [
+        {
+          "text": "Neukunden bekommen",
+          "start": 186.094,
+          "end": 187.325
+        },
+        {
+          "text": "die besten Preise,",
+          "start": 187.325,
+          "end": 188.557
+        },
+        {
+          "text": "treue Kunden zahlen drauf",
+          "start": 188.557,
+          "end": 190.267
+        }
+      ]
+    },
+    {
+      "id": "s43",
+      "start": 190.267,
+      "end": 195.616,
+      "captions": [
+        {
+          "text": "Wer seine Verträge",
+          "start": 190.267,
+          "end": 191.517
+        },
+        {
+          "text": "nie vergleicht,",
+          "start": 191.517,
+          "end": 192.559
+        },
+        {
+          "text": "zahlt im Schnitt locker",
+          "start": 192.559,
+          "end": 194.157
+        },
+        {
+          "text": "400 € im Jahr zu viel",
+          "start": 194.157,
+          "end": 195.616
+        }
+      ]
+    },
+    {
+      "id": "s44",
+      "start": 195.616,
+      "end": 199.649,
+      "captions": [
+        {
+          "text": "Dabei reicht es,",
+          "start": 195.616,
+          "end": 196.768
+        },
+        {
+          "text": "einmal im Jahr",
+          "start": 196.768,
+          "end": 197.777
+        },
+        {
+          "text": "eine Stunde zu investieren",
+          "start": 197.777,
+          "end": 199.649
+        }
+      ]
+    },
+    {
+      "id": "s45",
+      "start": 199.649,
+      "end": 204.387,
+      "captions": [
+        {
+          "text": "Vergleichen,",
+          "start": 199.649,
+          "end": 200.498
+        },
+        {
+          "text": "wechseln oder anrufen",
+          "start": 200.498,
+          "end": 201.983
+        },
+        {
+          "text": "und einen besseren",
+          "start": 201.983,
+          "end": 203.256
+        },
+        {
+          "text": "Preis verhandeln",
+          "start": 203.256,
+          "end": 204.387
+        }
+      ]
+    },
+    {
+      "id": "s46",
+      "start": 204.387,
+      "end": 209.903,
+      "captions": [
+        {
+          "text": "Eine Stunde für 400 €,",
+          "start": 204.387,
+          "end": 206.049
+        },
+        {
+          "text": "das ist der beste Stundenlohn,",
+          "start": 206.049,
+          "end": 208.316
+        },
+        {
+          "text": "den du je haben wirst",
+          "start": 208.316,
+          "end": 209.903
+        }
+      ]
+    },
+    {
+      "id": "s47",
+      "start": 209.903,
+      "end": 211.908,
+      "captions": [
+        {
+          "text": "Platz sechs: Leben im Dispo",
+          "start": 209.903,
+          "end": 211.908
+        }
+      ]
+    },
+    {
+      "id": "s48",
+      "start": 211.908,
+      "end": 217.207,
+      "captions": [
+        {
+          "text": "Der Dispo fühlt sich",
+          "start": 211.908,
+          "end": 213.36
+        },
+        {
+          "text": "an wie eigenes Geld,",
+          "start": 213.36,
+          "end": 214.812
+        },
+        {
+          "text": "aber er ist ein sehr",
+          "start": 214.812,
+          "end": 216.263
+        },
+        {
+          "text": "teurer Kredit",
+          "start": 216.263,
+          "end": 217.207
+        }
+      ]
+    },
+    {
+      "id": "s49",
+      "start": 217.207,
+      "end": 220.876,
+      "captions": [
+        {
+          "text": "Viele Banken verlangen",
+          "start": 217.207,
+          "end": 219.041
+        },
+        {
+          "text": "dafür über 11 % Zinsen",
+          "start": 219.041,
+          "end": 220.876
+        }
+      ]
+    },
+    {
+      "id": "s50",
+      "start": 220.876,
+      "end": 227.388,
+      "captions": [
+        {
+          "text": "Wer dauerhaft",
+          "start": 220.876,
+          "end": 222.22
+        },
+        {
+          "text": "2.000 € im Minus ist,",
+          "start": 222.22,
+          "end": 224.39
+        },
+        {
+          "text": "zahlt dafür rund",
+          "start": 224.39,
+          "end": 226.044
+        },
+        {
+          "text": "220 € im Jahr",
+          "start": 226.044,
+          "end": 227.388
+        }
+      ]
+    },
+    {
+      "id": "s51",
+      "start": 227.388,
+      "end": 231.425,
+      "captions": [
+        {
+          "text": "Nur für Zinsen,",
+          "start": 227.388,
+          "end": 228.531
+        },
+        {
+          "text": "ohne dass du dafür",
+          "start": 228.531,
+          "end": 229.902
+        },
+        {
+          "text": "irgendetwas bekommst",
+          "start": 229.902,
+          "end": 231.425
+        }
+      ]
+    },
+    {
+      "id": "s52",
+      "start": 231.425,
+      "end": 235.779,
+      "captions": [
+        {
+          "text": "Und weil der Dispo",
+          "start": 231.425,
+          "end": 232.561
+        },
+        {
+          "text": "so bequem ist,",
+          "start": 232.561,
+          "end": 233.444
+        },
+        {
+          "text": "kommen viele jahrelang",
+          "start": 233.444,
+          "end": 234.832
+        },
+        {
+          "text": "nicht mehr raus",
+          "start": 234.832,
+          "end": 235.779
+        }
+      ]
+    },
+    {
+      "id": "s53",
+      "start": 235.779,
+      "end": 241.301,
+      "captions": [
+        {
+          "text": "Raus kommst du am besten",
+          "start": 235.779,
+          "end": 237.478
+        },
+        {
+          "text": "mit einem festen Betrag,",
+          "start": 237.478,
+          "end": 239.177
+        },
+        {
+          "text": "den du jeden Monat",
+          "start": 239.177,
+          "end": 240.451
+        },
+        {
+          "text": "zurückzahlst",
+          "start": 240.451,
+          "end": 241.301
+        }
+      ]
+    },
+    {
+      "id": "s54",
+      "start": 241.301,
+      "end": 243.232,
+      "captions": [
+        {
+          "text": "Platz fünf: Kaufen auf Raten",
+          "start": 241.301,
+          "end": 243.232
+        }
+      ]
+    },
+    {
+      "id": "s55",
+      "start": 243.232,
+      "end": 248.682,
+      "captions": [
+        {
+          "text": "Das neue Handy,",
+          "start": 243.232,
+          "end": 244.352
+        },
+        {
+          "text": "der Fernseher oder das Sofa,",
+          "start": 244.352,
+          "end": 246.442
+        },
+        {
+          "text": "einfach in kleinen Monatsraten",
+          "start": 246.442,
+          "end": 248.682
+        }
+      ]
+    },
+    {
+      "id": "s56",
+      "start": 248.682,
+      "end": 252.624,
+      "captions": [
+        {
+          "text": "Das Problem: Du",
+          "start": 248.682,
+          "end": 249.738
+        },
+        {
+          "text": "gibst Geld aus,",
+          "start": 249.738,
+          "end": 250.794
+        },
+        {
+          "text": "das du noch gar nicht hast",
+          "start": 250.794,
+          "end": 252.624
+        }
+      ]
+    },
+    {
+      "id": "s57",
+      "start": 252.624,
+      "end": 256.496,
+      "captions": [
+        {
+          "text": "Und oft sind",
+          "start": 252.624,
+          "end": 253.412
+        },
+        {
+          "text": "in den Raten versteckte",
+          "start": 253.412,
+          "end": 254.921
+        },
+        {
+          "text": "Zinsen und Gebühren drin",
+          "start": 254.921,
+          "end": 256.496
+        }
+      ]
+    },
+    {
+      "id": "s58",
+      "start": 256.496,
+      "end": 259.671,
+      "captions": [
+        {
+          "text": "Dazu kaufst du",
+          "start": 256.496,
+          "end": 257.18
+        },
+        {
+          "text": "schneller Dinge,",
+          "start": 257.18,
+          "end": 257.961
+        },
+        {
+          "text": "die du eigentlich",
+          "start": 257.961,
+          "end": 258.792
+        },
+        {
+          "text": "gar nicht brauchst",
+          "start": 258.792,
+          "end": 259.671
+        }
+      ]
+    },
+    {
+      "id": "s59",
+      "start": 259.671,
+      "end": 264.112,
+      "captions": [
+        {
+          "text": "Das kostet viele Menschen",
+          "start": 259.671,
+          "end": 262.138
+        },
+        {
+          "text": "locker 250 € im Jahr",
+          "start": 262.138,
+          "end": 264.112
+        }
+      ]
+    },
+    {
+      "id": "s60",
+      "start": 264.112,
+      "end": 268.954,
+      "captions": [
+        {
+          "text": "Unsere Regel: Wenn du es dir",
+          "start": 264.112,
+          "end": 265.745
+        },
+        {
+          "text": "nicht bar leisten kannst,",
+          "start": 265.745,
+          "end": 267.204
+        },
+        {
+          "text": "kannst du es dir nicht leisten",
+          "start": 267.204,
+          "end": 268.954
+        }
+      ]
+    },
+    {
+      "id": "s61",
+      "start": 268.954,
+      "end": 272.535,
+      "captions": [
+        {
+          "text": "Damit sind wir",
+          "start": 268.954,
+          "end": 269.79
+        },
+        {
+          "text": "in den Top vier,",
+          "start": 269.79,
+          "end": 270.745
+        },
+        {
+          "text": "und jetzt wird",
+          "start": 270.745,
+          "end": 271.58
+        },
+        {
+          "text": "es richtig teuer",
+          "start": 271.58,
+          "end": 272.535
+        }
+      ]
+    },
+    {
+      "id": "s62",
+      "start": 272.535,
+      "end": 275.189,
+      "captions": [
+        {
+          "text": "Platz vier: der Lieferdienst",
+          "start": 272.535,
+          "end": 275.189
+        }
+      ]
+    },
+    {
+      "id": "s63",
+      "start": 275.189,
+      "end": 279.204,
+      "captions": [
+        {
+          "text": "Nach einem langen",
+          "start": 275.189,
+          "end": 276.255
+        },
+        {
+          "text": "Tag ist es so bequem,",
+          "start": 276.255,
+          "end": 277.573
+        },
+        {
+          "text": "schnell Essen zu bestellen",
+          "start": 277.573,
+          "end": 279.204
+        }
+      ]
+    },
+    {
+      "id": "s64",
+      "start": 279.204,
+      "end": 283.677,
+      "captions": [
+        {
+          "text": "Eine Pizza mit Lieferung",
+          "start": 279.204,
+          "end": 281.192
+        },
+        {
+          "text": "und Getränk",
+          "start": 281.192,
+          "end": 282.103
+        },
+        {
+          "text": "kostet schnell 25 €",
+          "start": 282.103,
+          "end": 283.677
+        }
+      ]
+    },
+    {
+      "id": "s65",
+      "start": 283.677,
+      "end": 286.391,
+      "captions": [
+        {
+          "text": "Selbst gekocht wären",
+          "start": 283.677,
+          "end": 285.144
+        },
+        {
+          "text": "es vielleicht 8 €",
+          "start": 285.144,
+          "end": 286.391
+        }
+      ]
+    },
+    {
+      "id": "s66",
+      "start": 286.391,
+      "end": 292.296,
+      "captions": [
+        {
+          "text": "Dazu kommen Liefergebühren,",
+          "start": 286.391,
+          "end": 288.182
+        },
+        {
+          "text": "Trinkgeld",
+          "start": 288.182,
+          "end": 288.78
+        },
+        {
+          "text": "und der Mindestbestellwert,",
+          "start": 288.78,
+          "end": 290.571
+        },
+        {
+          "text": "der dich zu mehr verleitet",
+          "start": 290.571,
+          "end": 292.296
+        }
+      ]
+    },
+    {
+      "id": "s67",
+      "start": 292.296,
+      "end": 297.908,
+      "captions": [
+        {
+          "text": "Wer zweimal pro",
+          "start": 292.296,
+          "end": 293.699
+        },
+        {
+          "text": "Woche bestellt,",
+          "start": 293.699,
+          "end": 295.102
+        },
+        {
+          "text": "zahlt im Jahr",
+          "start": 295.102,
+          "end": 296.318
+        },
+        {
+          "text": "rund 1.700 € mehr",
+          "start": 296.318,
+          "end": 297.908
+        }
+      ]
+    },
+    {
+      "id": "s68",
+      "start": 297.908,
+      "end": 303.372,
+      "captions": [
+        {
+          "text": "Unser Tipp: Koch",
+          "start": 297.908,
+          "end": 298.838
+        },
+        {
+          "text": "am Sonntag einfach doppelt,",
+          "start": 298.838,
+          "end": 300.407
+        },
+        {
+          "text": "dann hast du für stressige",
+          "start": 300.407,
+          "end": 301.919
+        },
+        {
+          "text": "Tage etwas im Kühlschrank",
+          "start": 301.919,
+          "end": 303.372
+        }
+      ]
+    },
+    {
+      "id": "s69",
+      "start": 303.372,
+      "end": 307.719,
+      "captions": [
+        {
+          "text": "Platz drei: Geld,",
+          "start": 303.372,
+          "end": 304.821
+        },
+        {
+          "text": "das einfach",
+          "start": 304.821,
+          "end": 305.759
+        },
+        {
+          "text": "auf dem Girokonto liegt",
+          "start": 305.759,
+          "end": 307.719
+        }
+      ]
+    },
+    {
+      "id": "s70",
+      "start": 307.719,
+      "end": 313.586,
+      "captions": [
+        {
+          "text": "Viele haben 10.000 €",
+          "start": 307.719,
+          "end": 309.243
+        },
+        {
+          "text": "oder mehr auf dem Girokonto",
+          "start": 309.243,
+          "end": 311.3
+        },
+        {
+          "text": "und bekommen dafür null Zinsen",
+          "start": 311.3,
+          "end": 313.586
+        }
+      ]
+    },
+    {
+      "id": "s71",
+      "start": 313.586,
+      "end": 317.484,
+      "captions": [
+        {
+          "text": "Auf einem Tagesgeldkonto",
+          "start": 313.586,
+          "end": 315.712
+        },
+        {
+          "text": "gibt es oft rund 2 %",
+          "start": 315.712,
+          "end": 317.484
+        }
+      ]
+    },
+    {
+      "id": "s72",
+      "start": 317.484,
+      "end": 320.742,
+      "captions": [
+        {
+          "text": "Das sind 200 € im Jahr,",
+          "start": 317.484,
+          "end": 319.013
+        },
+        {
+          "text": "die du einfach verschenkst",
+          "start": 319.013,
+          "end": 320.742
+        }
+      ]
+    },
+    {
+      "id": "s73",
+      "start": 320.742,
+      "end": 324.844,
+      "captions": [
+        {
+          "text": "Und das Tagesgeld ist genauso",
+          "start": 320.742,
+          "end": 322.829
+        },
+        {
+          "text": "sicher und täglich verfügbar",
+          "start": 322.829,
+          "end": 324.844
+        }
+      ]
+    },
+    {
+      "id": "s74",
+      "start": 324.844,
+      "end": 329.94,
+      "captions": [
+        {
+          "text": "Wichtig: Das Geld",
+          "start": 324.844,
+          "end": 326.015
+        },
+        {
+          "text": "für deinen Notgroschen",
+          "start": 326.015,
+          "end": 327.53
+        },
+        {
+          "text": "gehört genau dorthin,",
+          "start": 327.53,
+          "end": 328.976
+        },
+        {
+          "text": "aufs Tagesgeld",
+          "start": 328.976,
+          "end": 329.94
+        }
+      ]
+    },
+    {
+      "id": "s75",
+      "start": 329.94,
+      "end": 332.296,
+      "captions": [
+        {
+          "text": "Platz zwei: zu viel Auto",
+          "start": 329.94,
+          "end": 332.296
+        }
+      ]
+    },
+    {
+      "id": "s76",
+      "start": 332.296,
+      "end": 335.748,
+      "captions": [
+        {
+          "text": "Ein neues Auto verliert",
+          "start": 332.296,
+          "end": 333.619
+        },
+        {
+          "text": "in den ersten Jahren",
+          "start": 333.619,
+          "end": 334.77
+        },
+        {
+          "text": "sehr viel an Wert",
+          "start": 334.77,
+          "end": 335.748
+        }
+      ]
+    },
+    {
+      "id": "s77",
+      "start": 335.748,
+      "end": 340.825,
+      "captions": [
+        {
+          "text": "Ein Neuwagen für 30.000 €",
+          "start": 335.748,
+          "end": 337.487
+        },
+        {
+          "text": "ist nach drei Jahren oft",
+          "start": 337.487,
+          "end": 339.156
+        },
+        {
+          "text": "nur noch die Hälfte wert",
+          "start": 339.156,
+          "end": 340.825
+        }
+      ]
+    },
+    {
+      "id": "s78",
+      "start": 340.825,
+      "end": 346.165,
+      "captions": [
+        {
+          "text": "Viele kaufen oder leasen",
+          "start": 340.825,
+          "end": 342.388
+        },
+        {
+          "text": "deshalb ein Auto,",
+          "start": 342.388,
+          "end": 343.495
+        },
+        {
+          "text": "das eigentlich nicht",
+          "start": 343.495,
+          "end": 344.797
+        },
+        {
+          "text": "zu ihrem Gehalt passt",
+          "start": 344.797,
+          "end": 346.165
+        }
+      ]
+    },
+    {
+      "id": "s79",
+      "start": 346.165,
+      "end": 352.133,
+      "captions": [
+        {
+          "text": "Ein solider Gebrauchter",
+          "start": 346.165,
+          "end": 348.02
+        },
+        {
+          "text": "statt Neuwagen oder Leasing",
+          "start": 348.02,
+          "end": 350.197
+        },
+        {
+          "text": "spart oft 150 € im Monat",
+          "start": 350.197,
+          "end": 352.133
+        }
+      ]
+    },
+    {
+      "id": "s80",
+      "start": 352.133,
+      "end": 354.626,
+      "captions": [
+        {
+          "text": "Das sind 1.800 € im Jahr",
+          "start": 352.133,
+          "end": 354.626
+        }
+      ]
+    },
+    {
+      "id": "s81",
+      "start": 354.626,
+      "end": 359.61,
+      "captions": [
+        {
+          "text": "Und mehr Freiheit,",
+          "start": 354.626,
+          "end": 356.028
+        },
+        {
+          "text": "weil weniger Geld",
+          "start": 356.028,
+          "end": 357.352
+        },
+        {
+          "text": "jeden Monat fest verplant ist",
+          "start": 357.352,
+          "end": 359.61
+        }
+      ]
+    },
+    {
+      "id": "s82",
+      "start": 359.61,
+      "end": 363.254,
+      "captions": [
+        {
+          "text": "Und jetzt Platz eins,",
+          "start": 359.61,
+          "end": 361.054
+        },
+        {
+          "text": "der teuerste",
+          "start": 361.054,
+          "end": 361.879
+        },
+        {
+          "text": "Geldfehler von allen",
+          "start": 361.879,
+          "end": 363.254
+        }
+      ]
+    },
+    {
+      "id": "s83",
+      "start": 363.254,
+      "end": 366.472,
+      "captions": [
+        {
+          "text": "Nicht zu investieren,",
+          "start": 363.254,
+          "end": 364.505
+        },
+        {
+          "text": "oder viel zu spät",
+          "start": 364.505,
+          "end": 365.519
+        },
+        {
+          "text": "damit anzufangen",
+          "start": 365.519,
+          "end": 366.472
+        }
+      ]
+    },
+    {
+      "id": "s84",
+      "start": 366.472,
+      "end": 371.635,
+      "captions": [
+        {
+          "text": "Viele denken: Investieren",
+          "start": 366.472,
+          "end": 368.29
+        },
+        {
+          "text": "ist kompliziert,",
+          "start": 368.29,
+          "end": 369.453
+        },
+        {
+          "text": "riskant oder nur",
+          "start": 369.453,
+          "end": 370.617
+        },
+        {
+          "text": "was für Reiche",
+          "start": 370.617,
+          "end": 371.635
+        }
+      ]
+    },
+    {
+      "id": "s85",
+      "start": 371.635,
+      "end": 373.104,
+      "captions": [
+        {
+          "text": "Aber schau dir",
+          "start": 371.635,
+          "end": 372.298
+        },
+        {
+          "text": "diese Rechnung an",
+          "start": 372.298,
+          "end": 373.104
+        }
+      ]
+    },
+    {
+      "id": "s86",
+      "start": 373.104,
+      "end": 382.975,
+      "captions": [
+        {
+          "text": "Wenn du",
+          "start": 373.104,
+          "end": 373.775
+        },
+        {
+          "text": "30 Jahre lang 200 €",
+          "start": 373.775,
+          "end": 375.596
+        },
+        {
+          "text": "im Monat in einen breit",
+          "start": 375.596,
+          "end": 377.8
+        },
+        {
+          "text": "gestreuten ETF steckst,",
+          "start": 377.8,
+          "end": 380.004
+        },
+        {
+          "text": "zahlst du insgesamt",
+          "start": 380.004,
+          "end": 381.825
+        },
+        {
+          "text": "72.000 € ein",
+          "start": 381.825,
+          "end": 382.975
+        }
+      ]
+    },
+    {
+      "id": "s87",
+      "start": 382.975,
+      "end": 390.56,
+      "captions": [
+        {
+          "text": "Mit einer Rendite",
+          "start": 382.975,
+          "end": 384.51
+        },
+        {
+          "text": "von historisch rund 7 %",
+          "start": 384.51,
+          "end": 386.587
+        },
+        {
+          "text": "pro Jahr können daraus",
+          "start": 386.587,
+          "end": 388.573
+        },
+        {
+          "text": "knapp 250.000 € werden",
+          "start": 388.573,
+          "end": 390.56
+        }
+      ]
+    },
+    {
+      "id": "s88",
+      "start": 390.56,
+      "end": 395.759,
+      "captions": [
+        {
+          "text": "Das ist natürlich",
+          "start": 390.56,
+          "end": 391.805
+        },
+        {
+          "text": "keine Garantie,",
+          "start": 391.805,
+          "end": 392.903
+        },
+        {
+          "text": "aber es zeigt die Kraft",
+          "start": 392.903,
+          "end": 394.587
+        },
+        {
+          "text": "des Zinseszinses",
+          "start": 394.587,
+          "end": 395.759
+        }
+      ]
+    },
+    {
+      "id": "s89",
+      "start": 395.759,
+      "end": 399.697,
+      "captions": [
+        {
+          "text": "Wer nur zehn Jahre wartet,",
+          "start": 395.759,
+          "end": 397.437
+        },
+        {
+          "text": "hat am Ende oft",
+          "start": 397.437,
+          "end": 398.406
+        },
+        {
+          "text": "nicht mal die Hälfte",
+          "start": 398.406,
+          "end": 399.697
+        }
+      ]
+    },
+    {
+      "id": "s90",
+      "start": 399.697,
+      "end": 404.699,
+      "captions": [
+        {
+          "text": "Bei 20 statt 30 Jahren",
+          "start": 399.697,
+          "end": 401.943
+        },
+        {
+          "text": "wären es nur rund 104.000 €",
+          "start": 401.943,
+          "end": 404.699
+        }
+      ]
+    },
+    {
+      "id": "s91",
+      "start": 404.699,
+      "end": 408.746,
+      "captions": [
+        {
+          "text": "Zehn Jahre warten kosten",
+          "start": 404.699,
+          "end": 406.722
+        },
+        {
+          "text": "dich also rund 140.000 €",
+          "start": 406.722,
+          "end": 408.746
+        }
+      ]
+    },
+    {
+      "id": "s92",
+      "start": 408.746,
+      "end": 414.733,
+      "captions": [
+        {
+          "text": "Deshalb ist Zeit",
+          "start": 408.746,
+          "end": 409.9
+        },
+        {
+          "text": "dein wichtigster Faktor,",
+          "start": 409.9,
+          "end": 411.631
+        },
+        {
+          "text": "und jedes Jahr Warten",
+          "start": 411.631,
+          "end": 413.146
+        },
+        {
+          "text": "kostet dich bares Geld",
+          "start": 413.146,
+          "end": 414.733
+        }
+      ]
+    },
+    {
+      "id": "s93",
+      "start": 414.733,
+      "end": 418.912,
+      "captions": [
+        {
+          "text": "Jetzt zählen wir zusammen,",
+          "start": 414.733,
+          "end": 416.163
+        },
+        {
+          "text": "was dich die Fehler zehn",
+          "start": 416.163,
+          "end": 417.482
+        },
+        {
+          "text": "bis zwei jedes Jahr kosten",
+          "start": 417.482,
+          "end": 418.912
+        }
+      ]
+    },
+    {
+      "id": "s94",
+      "start": 418.912,
+      "end": 420.953,
+      "captions": [
+        {
+          "text": "Abos: 360 €",
+          "start": 418.912,
+          "end": 420.953
+        }
+      ]
+    },
+    {
+      "id": "s95",
+      "start": 420.953,
+      "end": 423.367,
+      "captions": [
+        {
+          "text": "Girokonto: 120 €",
+          "start": 420.953,
+          "end": 423.367
+        }
+      ]
+    },
+    {
+      "id": "s96",
+      "start": 423.367,
+      "end": 425.959,
+      "captions": [
+        {
+          "text": "Coffee to go: 720 €",
+          "start": 423.367,
+          "end": 425.959
+        }
+      ]
+    },
+    {
+      "id": "s97",
+      "start": 425.959,
+      "end": 427.992,
+      "captions": [
+        {
+          "text": "Verträge: 400 €",
+          "start": 425.959,
+          "end": 427.992
+        }
+      ]
+    },
+    {
+      "id": "s98",
+      "start": 427.992,
+      "end": 430.305,
+      "captions": [
+        {
+          "text": "Dispo: 220 €",
+          "start": 427.992,
+          "end": 430.305
+        }
+      ]
+    },
+    {
+      "id": "s99",
+      "start": 430.305,
+      "end": 433.157,
+      "captions": [
+        {
+          "text": "Ratenkäufe: 250 €",
+          "start": 430.305,
+          "end": 433.157
+        }
+      ]
+    },
+    {
+      "id": "s100",
+      "start": 433.157,
+      "end": 435.835,
+      "captions": [
+        {
+          "text": "Lieferdienst: 1.700 €",
+          "start": 433.157,
+          "end": 435.835
+        }
+      ]
+    },
+    {
+      "id": "s101",
+      "start": 435.835,
+      "end": 439.325,
+      "captions": [
+        {
+          "text": "Girokonto statt",
+          "start": 435.835,
+          "end": 437.524
+        },
+        {
+          "text": "Tagesgeld: 200 €",
+          "start": 437.524,
+          "end": 439.325
+        }
+      ]
+    },
+    {
+      "id": "s102",
+      "start": 439.325,
+      "end": 442.736,
+      "captions": [
+        {
+          "text": "Und zu viel Auto: 1.800 €",
+          "start": 439.325,
+          "end": 442.736
+        }
+      ]
+    },
+    {
+      "id": "s103",
+      "start": 442.736,
+      "end": 445.595,
+      "captions": [
+        {
+          "text": "Zusammen sind das rund",
+          "start": 442.736,
+          "end": 444.391
+        },
+        {
+          "text": "5.800 € pro Jahr",
+          "start": 444.391,
+          "end": 445.595
+        }
+      ]
+    },
+    {
+      "id": "s104",
+      "start": 445.595,
+      "end": 449.415,
+      "captions": [
+        {
+          "text": "Und in zehn Jahren 58.000 €",
+          "start": 445.595,
+          "end": 449.415
+        }
+      ]
+    },
+    {
+      "id": "s105",
+      "start": 449.415,
+      "end": 452.916,
+      "captions": [
+        {
+          "text": "Geld,",
+          "start": 449.415,
+          "end": 449.665
+        },
+        {
+          "text": "das du nicht verdienen musst,",
+          "start": 449.665,
+          "end": 451.115
+        },
+        {
+          "text": "sondern nur nicht",
+          "start": 451.115,
+          "end": 451.966
+        },
+        {
+          "text": "verschwenden darfst",
+          "start": 451.966,
+          "end": 452.916
+        }
+      ]
+    },
+    {
+      "id": "s106",
+      "start": 452.916,
+      "end": 455.549,
+      "captions": [
+        {
+          "text": "Natürlich macht nicht",
+          "start": 452.916,
+          "end": 454.202
+        },
+        {
+          "text": "jeder alle zehn Fehler",
+          "start": 454.202,
+          "end": 455.549
+        }
+      ]
+    },
+    {
+      "id": "s107",
+      "start": 455.549,
+      "end": 458.833,
+      "captions": [
+        {
+          "text": "Aber schon drei oder vier",
+          "start": 455.549,
+          "end": 456.852
+        },
+        {
+          "text": "davon kosten dich",
+          "start": 456.852,
+          "end": 457.738
+        },
+        {
+          "text": "tausende Euro im Jahr",
+          "start": 457.738,
+          "end": 458.833
+        }
+      ]
+    },
+    {
+      "id": "s108",
+      "start": 458.833,
+      "end": 463.963,
+      "captions": [
+        {
+          "text": "Unser Tipp: Such dir",
+          "start": 458.833,
+          "end": 460.1
+        },
+        {
+          "text": "heute einen einzigen",
+          "start": 460.1,
+          "end": 461.366
+        },
+        {
+          "text": "Fehler aus und behebe",
+          "start": 461.366,
+          "end": 462.696
+        },
+        {
+          "text": "ihn noch diese Woche",
+          "start": 462.696,
+          "end": 463.963
+        }
+      ]
+    },
+    {
+      "id": "s109",
+      "start": 463.963,
+      "end": 469.234,
+      "captions": [
+        {
+          "text": "Am besten fängst du",
+          "start": 463.963,
+          "end": 465.281
+        },
+        {
+          "text": "mit den Verträgen",
+          "start": 465.281,
+          "end": 466.46
+        },
+        {
+          "text": "oder den Abos an,",
+          "start": 466.46,
+          "end": 467.639
+        },
+        {
+          "text": "das geht am schnellsten",
+          "start": 467.639,
+          "end": 469.234
+        }
+      ]
+    },
+    {
+      "id": "s110",
+      "start": 469.234,
+      "end": 475.692,
+      "captions": [
+        {
+          "text": "Und das gesparte Geld steckst",
+          "start": 469.234,
+          "end": 471.107
+        },
+        {
+          "text": "du direkt in einen Sparplan,",
+          "start": 471.107,
+          "end": 472.915
+        },
+        {
+          "text": "so schlägst du zwei",
+          "start": 472.915,
+          "end": 474.142
+        },
+        {
+          "text": "Fliegen mit einer Klappe",
+          "start": 474.142,
+          "end": 475.692
+        }
+      ]
+    },
+    {
+      "id": "s111",
+      "start": 475.692,
+      "end": 478.01,
+      "captions": [
+        {
+          "text": "Na,",
+          "start": 475.692,
+          "end": 475.821
+        },
+        {
+          "text": "lagst du mit deinem Tipp",
+          "start": 475.821,
+          "end": 476.851
+        },
+        {
+          "text": "in den Kommentaren richtig?",
+          "start": 476.851,
+          "end": 478.01
+        }
+      ]
+    },
+    {
+      "id": "s112",
+      "start": 478.01,
+      "end": 482.613,
+      "captions": [
+        {
+          "text": "Schreib uns,",
+          "start": 478.01,
+          "end": 479.033
+        },
+        {
+          "text": "welchen Fehler du",
+          "start": 479.033,
+          "end": 480.482
+        },
+        {
+          "text": "als Erstes angehen willst",
+          "start": 480.482,
+          "end": 482.613
+        }
+      ]
+    },
+    {
+      "id": "s113",
+      "start": 482.613,
+      "end": 489.034,
+      "captions": [
+        {
+          "text": "Und wenn dir das Video",
+          "start": 482.613,
+          "end": 484.04
+        },
+        {
+          "text": "geholfen hat,",
+          "start": 484.04,
+          "end": 484.883
+        },
+        {
+          "text": "teile es mit jemandem,",
+          "start": 484.883,
+          "end": 486.31
+        },
+        {
+          "text": "der am Monatsende immer",
+          "start": 486.31,
+          "end": 487.802
+        },
+        {
+          "text": "knapp bei Kasse ist",
+          "start": 487.802,
+          "end": 489.034
+        }
+      ]
+    },
+    {
+      "id": "s114",
+      "start": 489.034,
+      "end": 493.066,
+      "captions": [
+        {
+          "text": "Wir sind HundeFinanzTV,",
+          "start": 489.034,
+          "end": 490.58
+        },
+        {
+          "text": "wir sehen uns morgen",
+          "start": 490.58,
+          "end": 491.924
+        },
+        {
+          "text": "im nächsten Video",
+          "start": 491.924,
+          "end": 493.066
+        }
+      ]
+    }
+  ]
+}
