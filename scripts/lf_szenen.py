@@ -33,14 +33,14 @@ def karte(nr_text, titel, farbe=ORANGE, uid="ka"):
     return dict(html=html, js=lambda t0, d: f'pop("#{uid}-n", {t0}); tl.fromTo("#{uid}-t", {{ y: 40, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }}, {t0} + 0.15);')
 
 
-def beleg(z, uid, titel, intro_icon, posten, ende_sid, summe_text):
+def beleg(z, uid, titel, intro_icon, posten, ende_sid, summe_text, fs=38):
     """Kassenzettel: links wechselnde Icons, rechts füllt sich die Liste mit laufender Summe.
     posten = [(icon_ab_sid, betrag_sid, icon, label, betrag)]; betrag None = nur Bildwechsel, keine Zeile."""
     zeilen_p = [p for p in posten if p[4] is not None]
     icons = [(None, intro_icon)] + [(p[0], p[2]) for p in posten]
     bild = "".join(f'<div id="{uid}-i{k}" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0">{ic}</div>'
                    for k, (_, ic) in enumerate(icons))
-    zeilen = "".join(f'<div id="{uid}-r{k}" style="display:flex;justify-content:space-between;font-weight:700;font-size:38px;color:#353a3d;padding:7px 0;opacity:0">'
+    zeilen = "".join(f'<div id="{uid}-r{k}" style="display:flex;justify-content:space-between;font-weight:700;font-size:{fs}px;color:#353a3d;padding:{round(fs * 0.18)}px 0;opacity:0">'
                      f'<span>{p[3]}</span><span style="font-weight:800;color:#111">{eur(p[4])}</span></div>'
                      for k, p in enumerate(zeilen_p))
     summen, s = [], 0

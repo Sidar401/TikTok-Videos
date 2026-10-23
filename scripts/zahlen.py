@@ -78,7 +78,7 @@ def ziffern(text):
                 bereich_einheit = unit
                 if m.group(2) == "-" and "tausend" in worte[k + 2][1]:
                     n *= 1000
-        if prev == "mehrere":
+        if prev in ("mehrere", "paar", "einige", "ein", "einem"):
             continue
         if nxt in EINHEIT or bereich_einheit or n >= 13:
             out[i] = fmt(n) + m.group(3)
