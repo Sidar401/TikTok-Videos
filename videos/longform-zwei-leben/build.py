@@ -122,7 +122,7 @@ SZENEN = [
     ("s77", "s80", "frei", chips_zeit(Z, "pu", "Felix auf Pump", [("Urlaub auf Raten", ROT, "s77"), ("Handy auf Raten", ROT, "s80"), ("Fernseher 0 %", ROT, None), ("wieder Dispo", ROT, None)])),
     ("s81", "s83", "split", dict(icon=ICON(DENKEN), text="Ständig Geldstress", farbe=ROT, sub="„Wie macht Leon das nur?“", sub_at=st("s83") - st("s81"))),
     ("s84", "s88", "split", dict(icon=ICON(NACHKAUF), text="Leon bleibt ruhig", farbe=GRUEN, sub="Kurse fallen = günstig nachkaufen", sub_at=st("s87") - st("s84"))),
-    ("s89", "s90", "frei", duell(Z, "35", L(ICON(KURVE, 380, 380), "≈ 70.000 € Depot", None, "s89"), F(ICON(KARTE, 380, 380), "neuer Kredit", "s90"))),
+    ("s89", "s90", "frei", duell(Z, "d35", L(ICON(KURVE, 380, 380), "≈ 70.000 € Depot", None, "s89"), F(ICON(KARTE, 380, 380), "neuer Kredit", "s90"))),
     # ---- Mit 40 ----
     ("s91", "s93", "frei", karte("15 Jahre später", "Der 40. Geburtstag", GOLD, uid="g40")),
     ("s94", "s98", "frei", beleg(Z, "le", "Leon mit 40", fig(LEON, 380), [
@@ -131,7 +131,7 @@ SZENEN = [
         ("s97", "s97", ICON(SPARSCHWEIN, 640, 555), "Notgroschen", 10000),
     ], "s98", "≈ 137.000 €")),
     ("s99", "s101", "zahl", dict(zahl="−8.000 €", sub="Felix mit 40: nichts gespart, nur Schulden", farbe=ROT)),
-    ("s102", "s103", "zahl", dict(zahl="145.000 €", sub="Unterschied – bei gleichem Gehalt", farbe=GOLD)),
+    ("s102", "s103", "zahl", dict(zahl="145.000 €", sub="Unterschied – bei gleichem Gehalt", farbe=GRUEN)),
     ("s104", "s104", "split", dict(icon=ICON(HERZ), text="Mehr Spaß, weniger Geldsorgen", farbe=GRUEN)),
     ("s105", "s107", "frei", balken3(Z, "fr", [("Leon mit 40", "137.000 €", 160, GRUEN, None), ("Leon mit 65", "≈ 700.000 €", 540, GOLD, "s107")], "ohne einen weiteren Euro", "s106")),
     ("s108", "s110", "split", dict(icon=ICON(STERN), text="Finanzielle Freiheit", farbe=GRUEN, sub="Er hat die Wahl", sub_at=st("s110") - st("s108"))),

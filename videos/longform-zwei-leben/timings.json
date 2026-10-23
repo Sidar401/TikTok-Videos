@@ -1,0 +1,2815 @@
+{
+  "dauer": 524.52,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 3.858,
+      "captions": [
+        {
+          "text": "Zwei beste Freunde,",
+          "start": 0.0,
+          "end": 1.164
+        },
+        {
+          "text": "gleiches Alter, gleicher Job,",
+          "start": 1.164,
+          "end": 2.94
+        },
+        {
+          "text": "gleiches Gehalt",
+          "start": 2.94,
+          "end": 3.858
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 3.858,
+      "end": 7.833,
+      "captions": [
+        {
+          "text": "Mit 40 hat der eine über",
+          "start": 3.858,
+          "end": 6.138
+        },
+        {
+          "text": "130.000 € Vermögen",
+          "start": 6.138,
+          "end": 7.833
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 7.833,
+      "end": 9.821,
+      "captions": [
+        {
+          "text": "Der andere hat",
+          "start": 7.833,
+          "end": 8.725
+        },
+        {
+          "text": "8.000 € Schulden",
+          "start": 8.725,
+          "end": 9.821
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 9.821,
+      "end": 11.247,
+      "captions": [
+        {
+          "text": "Wie kann das sein?",
+          "start": 9.821,
+          "end": 11.247
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 11.247,
+      "end": 14.286,
+      "captions": [
+        {
+          "text": "Und nein,",
+          "start": 11.247,
+          "end": 11.783
+        },
+        {
+          "text": "der mit den Schulden",
+          "start": 11.783,
+          "end": 12.922
+        },
+        {
+          "text": "ist nicht dumm oder faul",
+          "start": 12.922,
+          "end": 14.286
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 14.286,
+      "end": 19.531,
+      "captions": [
+        {
+          "text": "Er arbeitet genauso hart",
+          "start": 14.286,
+          "end": 15.764
+        },
+        {
+          "text": "wie sein Freund und gibt",
+          "start": 15.764,
+          "end": 17.265
+        },
+        {
+          "text": "sein Geld für ganz",
+          "start": 17.265,
+          "end": 18.43
+        },
+        {
+          "text": "normale Dinge aus",
+          "start": 18.43,
+          "end": 19.531
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 19.531,
+      "end": 24.269,
+      "captions": [
+        {
+          "text": "Genau das macht diese",
+          "start": 19.531,
+          "end": 20.506
+        },
+        {
+          "text": "Geschichte so gefährlich,",
+          "start": 20.506,
+          "end": 22.11
+        },
+        {
+          "text": "weil sie so vielen",
+          "start": 22.11,
+          "end": 23.178
+        },
+        {
+          "text": "Menschen passiert",
+          "start": 23.178,
+          "end": 24.269
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 24.269,
+      "end": 30.152,
+      "captions": [
+        {
+          "text": "Keiner von beiden hat",
+          "start": 24.269,
+          "end": 25.153
+        },
+        {
+          "text": "im Lotto gewonnen,",
+          "start": 25.153,
+          "end": 26.313
+        },
+        {
+          "text": "keiner hat geerbt,",
+          "start": 26.313,
+          "end": 27.381
+        },
+        {
+          "text": "und keiner hat",
+          "start": 27.381,
+          "end": 28.283
+        },
+        {
+          "text": "einen riesigen Fehler gemacht",
+          "start": 28.283,
+          "end": 30.152
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 30.152,
+      "end": 35.451,
+      "captions": [
+        {
+          "text": "Der Unterschied sind viele",
+          "start": 30.152,
+          "end": 31.82
+        },
+        {
+          "text": "kleine Entscheidungen,",
+          "start": 31.82,
+          "end": 33.191
+        },
+        {
+          "text": "die am Anfang völlig",
+          "start": 33.191,
+          "end": 34.48
+        },
+        {
+          "text": "harmlos aussehen",
+          "start": 34.48,
+          "end": 35.451
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 35.451,
+      "end": 42.032,
+      "captions": [
+        {
+          "text": "Heute begleiten wir",
+          "start": 35.451,
+          "end": 36.679
+        },
+        {
+          "text": "die beiden 15 Jahre lang,",
+          "start": 36.679,
+          "end": 38.373
+        },
+        {
+          "text": "vom ersten Gehalt mit 25 bis",
+          "start": 38.373,
+          "end": 40.27
+        },
+        {
+          "text": "zum vierzigsten Geburtstag",
+          "start": 40.27,
+          "end": 42.032
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 42.032,
+      "end": 45.844,
+      "captions": [
+        {
+          "text": "Und wir rechnen",
+          "start": 42.032,
+          "end": 43.158
+        },
+        {
+          "text": "bei jeder Entscheidung",
+          "start": 43.158,
+          "end": 44.864
+        },
+        {
+          "text": "ganz genau mit",
+          "start": 44.864,
+          "end": 45.844
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 45.844,
+      "end": 51.535,
+      "captions": [
+        {
+          "text": "Am Ende zeigen wir dir",
+          "start": 45.844,
+          "end": 47.014
+        },
+        {
+          "text": "die fünf wichtigsten Lehren,",
+          "start": 47.014,
+          "end": 48.636
+        },
+        {
+          "text": "mit denen du ab heute",
+          "start": 48.636,
+          "end": 49.852
+        },
+        {
+          "text": "auf der richtigen",
+          "start": 49.852,
+          "end": 50.837
+        },
+        {
+          "text": "Seite landest",
+          "start": 50.837,
+          "end": 51.535
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 51.535,
+      "end": 55.606,
+      "captions": [
+        {
+          "text": "Pass gut auf,",
+          "start": 51.535,
+          "end": 52.228
+        },
+        {
+          "text": "denn wahrscheinlich",
+          "start": 52.228,
+          "end": 53.292
+        },
+        {
+          "text": "erkennst du dich",
+          "start": 53.292,
+          "end": 54.213
+        },
+        {
+          "text": "in einem der beiden wieder",
+          "start": 54.213,
+          "end": 55.606
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "start": 55.606,
+      "end": 58.992,
+      "captions": [
+        {
+          "text": "Und ganz ehrlich:",
+          "start": 55.606,
+          "end": 56.443
+        },
+        {
+          "text": "Ein bisschen von beiden",
+          "start": 56.443,
+          "end": 57.717
+        },
+        {
+          "text": "steckt in jedem von uns",
+          "start": 57.717,
+          "end": 58.992
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "start": 58.992,
+      "end": 62.037,
+      "captions": [
+        {
+          "text": "Bevor wir starten,",
+          "start": 58.992,
+          "end": 60.202
+        },
+        {
+          "text": "eine Frage an dich",
+          "start": 60.202,
+          "end": 62.037
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "start": 62.037,
+      "end": 65.216,
+      "captions": [
+        {
+          "text": "Bist du eher der Sparer",
+          "start": 62.037,
+          "end": 63.639
+        },
+        {
+          "text": "oder eher der Genießer?",
+          "start": 63.639,
+          "end": 65.216
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "start": 65.216,
+      "end": 68.205,
+      "captions": [
+        {
+          "text": "Schreib es nach dem Video",
+          "start": 65.216,
+          "end": 66.448
+        },
+        {
+          "text": "in die Kommentare,",
+          "start": 66.448,
+          "end": 67.351
+        },
+        {
+          "text": "wir sind gespannt",
+          "start": 67.351,
+          "end": 68.205
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "start": 68.205,
+      "end": 72.836,
+      "captions": [
+        {
+          "text": "Und wenn du lieber",
+          "start": 68.205,
+          "end": 69.379
+        },
+        {
+          "text": "der mit dem Vermögen",
+          "start": 69.379,
+          "end": 70.735
+        },
+        {
+          "text": "sein willst,",
+          "start": 70.735,
+          "end": 71.548
+        },
+        {
+          "text": "folge HundeFinanzTV",
+          "start": 71.548,
+          "end": 72.836
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "start": 72.836,
+      "end": 76.949,
+      "captions": [
+        {
+          "text": "Wir bringen jeden Tag",
+          "start": 72.836,
+          "end": 74.367
+        },
+        {
+          "text": "neue Videos rund",
+          "start": 74.367,
+          "end": 75.534
+        },
+        {
+          "text": "um Geld und Finanzen",
+          "start": 75.534,
+          "end": 76.949
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "start": 76.949,
+      "end": 79.263,
+      "captions": [
+        {
+          "text": "Also,",
+          "start": 76.949,
+          "end": 77.275
+        },
+        {
+          "text": "lernen wir die beiden kennen",
+          "start": 77.275,
+          "end": 79.263
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "start": 79.263,
+      "end": 80.343,
+      "captions": [
+        {
+          "text": "Das sind Leon und Felix",
+          "start": 79.263,
+          "end": 80.343
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "start": 80.343,
+      "end": 85.449,
+      "captions": [
+        {
+          "text": "Beide sind 25,",
+          "start": 80.343,
+          "end": 81.465
+        },
+        {
+          "text": "beide haben gerade ihre",
+          "start": 81.465,
+          "end": 83.436
+        },
+        {
+          "text": "Ausbildung abgeschlossen",
+          "start": 83.436,
+          "end": 85.449
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "start": 85.449,
+      "end": 89.196,
+      "captions": [
+        {
+          "text": "Und beide verdienen",
+          "start": 85.449,
+          "end": 87.162
+        },
+        {
+          "text": "2.500 € netto im Monat",
+          "start": 87.162,
+          "end": 89.196
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "start": 89.196,
+      "end": 93.482,
+      "captions": [
+        {
+          "text": "Zum ersten Mal",
+          "start": 89.196,
+          "end": 90.151
+        },
+        {
+          "text": "richtig eigenes Geld,",
+          "start": 90.151,
+          "end": 91.634
+        },
+        {
+          "text": "das fühlt sich großartig an",
+          "start": 91.634,
+          "end": 93.482
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "start": 93.482,
+      "end": 98.83,
+      "captions": [
+        {
+          "text": "Beide ziehen in ihre",
+          "start": 93.482,
+          "end": 94.832
+        },
+        {
+          "text": "erste eigene Wohnung,",
+          "start": 94.832,
+          "end": 96.197
+        },
+        {
+          "text": "und beide wollen endlich",
+          "start": 96.197,
+          "end": 97.887
+        },
+        {
+          "text": "ihr Leben genießen",
+          "start": 97.887,
+          "end": 98.83
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "start": 98.83,
+      "end": 101.552,
+      "captions": [
+        {
+          "text": "Die erste große",
+          "start": 98.83,
+          "end": 99.881
+        },
+        {
+          "text": "Entscheidung: das Auto",
+          "start": 99.881,
+          "end": 101.552
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "start": 101.552,
+      "end": 105.642,
+      "captions": [
+        {
+          "text": "Felix will etwas",
+          "start": 101.552,
+          "end": 102.533
+        },
+        {
+          "text": "Ordentliches und least",
+          "start": 102.533,
+          "end": 104.161
+        },
+        {
+          "text": "einen schicken Neuwagen",
+          "start": 104.161,
+          "end": 105.642
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "start": 105.642,
+      "end": 110.248,
+      "captions": [
+        {
+          "text": "Mit Versicherung und allem",
+          "start": 105.642,
+          "end": 107.266
+        },
+        {
+          "text": "drum und dran kostet",
+          "start": 107.266,
+          "end": 108.686
+        },
+        {
+          "text": "ihn das 300 € im Monat",
+          "start": 108.686,
+          "end": 110.248
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "start": 110.248,
+      "end": 112.752,
+      "captions": [
+        {
+          "text": "Leon kauft sich",
+          "start": 110.248,
+          "end": 111.134
+        },
+        {
+          "text": "einen soliden Gebrauchten",
+          "start": 111.134,
+          "end": 112.752
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "start": 112.752,
+      "end": 117.076,
+      "captions": [
+        {
+          "text": "Der ist nicht so schick,",
+          "start": 112.752,
+          "end": 114.583
+        },
+        {
+          "text": "kostet ihn aber nur",
+          "start": 114.583,
+          "end": 116.056
+        },
+        {
+          "text": "150 € im Monat",
+          "start": 116.056,
+          "end": 117.076
+        }
+      ]
+    },
+    {
+      "id": "s31",
+      "start": 117.076,
+      "end": 120.349,
+      "captions": [
+        {
+          "text": "Unterschied: 150 € jeden Monat",
+          "start": 117.076,
+          "end": 120.349
+        }
+      ]
+    },
+    {
+      "id": "s32",
+      "start": 120.349,
+      "end": 121.573,
+      "captions": [
+        {
+          "text": "Klingt nicht nach viel,",
+          "start": 120.349,
+          "end": 121.348
+        },
+        {
+          "text": "oder?",
+          "start": 121.348,
+          "end": 121.573
+        }
+      ]
+    },
+    {
+      "id": "s33",
+      "start": 121.573,
+      "end": 127.285,
+      "captions": [
+        {
+          "text": "Aber über 15 Jahre sind",
+          "start": 121.573,
+          "end": 123.952
+        },
+        {
+          "text": "das schon 27.000 €,",
+          "start": 123.952,
+          "end": 126.103
+        },
+        {
+          "text": "nur beim Auto",
+          "start": 126.103,
+          "end": 127.285
+        }
+      ]
+    },
+    {
+      "id": "s34",
+      "start": 127.285,
+      "end": 129.516,
+      "captions": [
+        {
+          "text": "Die zweite Entscheidung:",
+          "start": 127.285,
+          "end": 128.714
+        },
+        {
+          "text": "die Wohnung",
+          "start": 128.714,
+          "end": 129.516
+        }
+      ]
+    },
+    {
+      "id": "s35",
+      "start": 129.516,
+      "end": 134.381,
+      "captions": [
+        {
+          "text": "Felix nimmt die moderne",
+          "start": 129.516,
+          "end": 131.36
+        },
+        {
+          "text": "Neubauwohnung mit Balkon",
+          "start": 131.36,
+          "end": 133.329
+        },
+        {
+          "text": "in bester Lage",
+          "start": 133.329,
+          "end": 134.381
+        }
+      ]
+    },
+    {
+      "id": "s36",
+      "start": 134.381,
+      "end": 138.31,
+      "captions": [
+        {
+          "text": "Mit Einbauküche,",
+          "start": 134.381,
+          "end": 135.519
+        },
+        {
+          "text": "Fußbodenheizung",
+          "start": 135.519,
+          "end": 136.636
+        },
+        {
+          "text": "und Blick über die Stadt",
+          "start": 136.636,
+          "end": 138.31
+        }
+      ]
+    },
+    {
+      "id": "s37",
+      "start": 138.31,
+      "end": 141.215,
+      "captions": [
+        {
+          "text": "Warmmiete: 950 €",
+          "start": 138.31,
+          "end": 141.215
+        }
+      ]
+    },
+    {
+      "id": "s38",
+      "start": 141.215,
+      "end": 145.309,
+      "captions": [
+        {
+          "text": "Leon nimmt eine kleinere",
+          "start": 141.215,
+          "end": 142.842
+        },
+        {
+          "text": "Altbauwohnung,",
+          "start": 142.842,
+          "end": 143.892
+        },
+        {
+          "text": "etwas weiter draußen",
+          "start": 143.892,
+          "end": 145.309
+        }
+      ]
+    },
+    {
+      "id": "s39",
+      "start": 145.309,
+      "end": 149.442,
+      "captions": [
+        {
+          "text": "Dafür hat er einen kurzen",
+          "start": 145.309,
+          "end": 146.929
+        },
+        {
+          "text": "Weg zur Arbeit",
+          "start": 146.929,
+          "end": 147.82
+        },
+        {
+          "text": "und richtig nette Nachbarn",
+          "start": 147.82,
+          "end": 149.442
+        }
+      ]
+    },
+    {
+      "id": "s40",
+      "start": 149.442,
+      "end": 151.544,
+      "captions": [
+        {
+          "text": "Warmmiete: 800 €",
+          "start": 149.442,
+          "end": 151.544
+        }
+      ]
+    },
+    {
+      "id": "s41",
+      "start": 151.544,
+      "end": 154.27,
+      "captions": [
+        {
+          "text": "Wieder ein Unterschied",
+          "start": 151.544,
+          "end": 153.536
+        },
+        {
+          "text": "von 150 €",
+          "start": 153.536,
+          "end": 154.27
+        }
+      ]
+    },
+    {
+      "id": "s42",
+      "start": 154.27,
+      "end": 158.727,
+      "captions": [
+        {
+          "text": "Beide Entscheidungen",
+          "start": 154.27,
+          "end": 155.425
+        },
+        {
+          "text": "sind völlig normal,",
+          "start": 155.425,
+          "end": 156.562
+        },
+        {
+          "text": "niemand würde Felix",
+          "start": 156.562,
+          "end": 157.777
+        },
+        {
+          "text": "dafür kritisieren",
+          "start": 157.777,
+          "end": 158.727
+        }
+      ]
+    },
+    {
+      "id": "s43",
+      "start": 158.727,
+      "end": 161.865,
+      "captions": [
+        {
+          "text": "Aber zusammen sind",
+          "start": 158.727,
+          "end": 160.045
+        },
+        {
+          "text": "das schon 300 € im Monat",
+          "start": 160.045,
+          "end": 161.865
+        }
+      ]
+    },
+    {
+      "id": "s44",
+      "start": 161.865,
+      "end": 163.285,
+      "captions": [
+        {
+          "text": "Jetzt kommt der Alltag",
+          "start": 161.865,
+          "end": 163.285
+        }
+      ]
+    },
+    {
+      "id": "s45",
+      "start": 163.285,
+      "end": 170.808,
+      "captions": [
+        {
+          "text": "Felix bestellt nach der Arbeit",
+          "start": 163.285,
+          "end": 165.302
+        },
+        {
+          "text": "gern mal Essen,",
+          "start": 165.302,
+          "end": 166.358
+        },
+        {
+          "text": "hat mehrere Streaming‑Abos",
+          "start": 166.358,
+          "end": 168.237
+        },
+        {
+          "text": "und kauft öfter",
+          "start": 168.237,
+          "end": 169.321
+        },
+        {
+          "text": "mal spontan etwas online",
+          "start": 169.321,
+          "end": 170.808
+        }
+      ]
+    },
+    {
+      "id": "s46",
+      "start": 170.808,
+      "end": 173.528,
+      "captions": [
+        {
+          "text": "Leon kocht meistens",
+          "start": 170.808,
+          "end": 171.86
+        },
+        {
+          "text": "selbst und hat nur ein Abo",
+          "start": 171.86,
+          "end": 173.528
+        }
+      ]
+    },
+    {
+      "id": "s47",
+      "start": 173.528,
+      "end": 177.147,
+      "captions": [
+        {
+          "text": "Das macht noch einmal rund",
+          "start": 173.528,
+          "end": 175.162
+        },
+        {
+          "text": "100 € Unterschied im Monat",
+          "start": 175.162,
+          "end": 177.147
+        }
+      ]
+    },
+    {
+      "id": "s48",
+      "start": 177.147,
+      "end": 180.187,
+      "captions": [
+        {
+          "text": "Kleinigkeiten,",
+          "start": 177.147,
+          "end": 177.928
+        },
+        {
+          "text": "die man im Alltag",
+          "start": 177.928,
+          "end": 179.183
+        },
+        {
+          "text": "gar nicht bemerkt",
+          "start": 179.183,
+          "end": 180.187
+        }
+      ]
+    },
+    {
+      "id": "s49",
+      "start": 180.187,
+      "end": 183.011,
+      "captions": [
+        {
+          "text": "Und jetzt kommt die wichtigste",
+          "start": 180.187,
+          "end": 181.829
+        },
+        {
+          "text": "Entscheidung von allen",
+          "start": 181.829,
+          "end": 183.011
+        }
+      ]
+    },
+    {
+      "id": "s50",
+      "start": 183.011,
+      "end": 187.203,
+      "captions": [
+        {
+          "text": "Felix gibt jeden Monat",
+          "start": 183.011,
+          "end": 184.606
+        },
+        {
+          "text": "so ziemlich alles aus,",
+          "start": 184.606,
+          "end": 186.408
+        },
+        {
+          "text": "was reinkommt",
+          "start": 186.408,
+          "end": 187.203
+        }
+      ]
+    },
+    {
+      "id": "s51",
+      "start": 187.203,
+      "end": 191.828,
+      "captions": [
+        {
+          "text": "Am Monatsende",
+          "start": 187.203,
+          "end": 187.915
+        },
+        {
+          "text": "ist nichts übrig,",
+          "start": 187.915,
+          "end": 188.847
+        },
+        {
+          "text": "aber er denkt",
+          "start": 188.847,
+          "end": 189.56
+        },
+        {
+          "text": "sich: Ich bin jung,",
+          "start": 189.56,
+          "end": 190.5
+        },
+        {
+          "text": "sparen kann ich später noch",
+          "start": 190.5,
+          "end": 191.828
+        }
+      ]
+    },
+    {
+      "id": "s52",
+      "start": 191.828,
+      "end": 193.873,
+      "captions": [
+        {
+          "text": "Leon macht etwas anderes",
+          "start": 191.828,
+          "end": 193.873
+        }
+      ]
+    },
+    {
+      "id": "s53",
+      "start": 193.873,
+      "end": 199.16,
+      "captions": [
+        {
+          "text": "Am Tag nach dem Gehalt",
+          "start": 193.873,
+          "end": 195.574
+        },
+        {
+          "text": "gehen automatisch 400 €",
+          "start": 195.574,
+          "end": 197.564
+        },
+        {
+          "text": "per Dauerauftrag weg",
+          "start": 197.564,
+          "end": 199.16
+        }
+      ]
+    },
+    {
+      "id": "s54",
+      "start": 199.16,
+      "end": 204.178,
+      "captions": [
+        {
+          "text": "Genau die 400 €,",
+          "start": 199.16,
+          "end": 200.295
+        },
+        {
+          "text": "die er bei Auto,",
+          "start": 200.295,
+          "end": 201.563
+        },
+        {
+          "text": "Wohnung und Alltag",
+          "start": 201.563,
+          "end": 202.989
+        },
+        {
+          "text": "weniger ausgibt",
+          "start": 202.989,
+          "end": 204.178
+        }
+      ]
+    },
+    {
+      "id": "s55",
+      "start": 204.178,
+      "end": 208.442,
+      "captions": [
+        {
+          "text": "Das Geld fließt",
+          "start": 204.178,
+          "end": 205.067
+        },
+        {
+          "text": "in einen ETF‑Sparplan",
+          "start": 205.067,
+          "end": 206.884
+        },
+        {
+          "text": "auf die ganze Welt",
+          "start": 206.884,
+          "end": 208.442
+        }
+      ]
+    },
+    {
+      "id": "s56",
+      "start": 208.442,
+      "end": 212.791,
+      "captions": [
+        {
+          "text": "Breit gestreut,",
+          "start": 208.442,
+          "end": 209.539
+        },
+        {
+          "text": "über tausende Unternehmen,",
+          "start": 209.539,
+          "end": 211.358
+        },
+        {
+          "text": "mit niedrigen Kosten",
+          "start": 211.358,
+          "end": 212.791
+        }
+      ]
+    },
+    {
+      "id": "s57",
+      "start": 212.791,
+      "end": 216.491,
+      "captions": [
+        {
+          "text": "Er muss sich um",
+          "start": 212.791,
+          "end": 213.795
+        },
+        {
+          "text": "nichts kümmern,",
+          "start": 213.795,
+          "end": 214.841
+        },
+        {
+          "text": "alles läuft automatisch",
+          "start": 214.841,
+          "end": 216.491
+        }
+      ]
+    },
+    {
+      "id": "s58",
+      "start": 216.491,
+      "end": 220.425,
+      "captions": [
+        {
+          "text": "Und hier ist",
+          "start": 216.491,
+          "end": 217.218
+        },
+        {
+          "text": "das Spannende: Leon lebt",
+          "start": 217.218,
+          "end": 218.758
+        },
+        {
+          "text": "nicht schlechter als Felix",
+          "start": 218.758,
+          "end": 220.425
+        }
+      ]
+    },
+    {
+      "id": "s59",
+      "start": 220.425,
+      "end": 225.273,
+      "captions": [
+        {
+          "text": "Er hat ein Auto,",
+          "start": 220.425,
+          "end": 221.358
+        },
+        {
+          "text": "eine schöne Wohnung,",
+          "start": 221.358,
+          "end": 222.544
+        },
+        {
+          "text": "geht mit Freunden essen",
+          "start": 222.544,
+          "end": 223.909
+        },
+        {
+          "text": "und fährt in den Urlaub",
+          "start": 223.909,
+          "end": 225.273
+        }
+      ]
+    },
+    {
+      "id": "s60",
+      "start": 225.273,
+      "end": 227.802,
+      "captions": [
+        {
+          "text": "Nur eben ein bisschen",
+          "start": 225.273,
+          "end": 227.073
+        },
+        {
+          "text": "günstiger",
+          "start": 227.073,
+          "end": 227.802
+        }
+      ]
+    },
+    {
+      "id": "s61",
+      "start": 227.802,
+      "end": 234.03,
+      "captions": [
+        {
+          "text": "Statt dem neuesten Handy",
+          "start": 227.802,
+          "end": 229.161
+        },
+        {
+          "text": "kauft er das Vorjahresmodell,",
+          "start": 229.161,
+          "end": 230.948
+        },
+        {
+          "text": "und statt Fernreise geht",
+          "start": 230.948,
+          "end": 232.427
+        },
+        {
+          "text": "es öfter mal an die Ostsee",
+          "start": 232.427,
+          "end": 234.03
+        }
+      ]
+    },
+    {
+      "id": "s62",
+      "start": 234.03,
+      "end": 236.776,
+      "captions": [
+        {
+          "text": "Von außen sieht man",
+          "start": 234.03,
+          "end": 235.284
+        },
+        {
+          "text": "kaum einen Unterschied",
+          "start": 235.284,
+          "end": 236.776
+        }
+      ]
+    },
+    {
+      "id": "s63",
+      "start": 236.776,
+      "end": 240.338,
+      "captions": [
+        {
+          "text": "Aber auf dem Konto entsteht",
+          "start": 236.776,
+          "end": 238.969
+        },
+        {
+          "text": "gerade ein riesiger",
+          "start": 238.969,
+          "end": 240.338
+        }
+      ]
+    },
+    {
+      "id": "s64",
+      "start": 240.338,
+      "end": 241.594,
+      "captions": [
+        {
+          "text": "Die Jahre vergehen",
+          "start": 240.338,
+          "end": 241.594
+        }
+      ]
+    },
+    {
+      "id": "s65",
+      "start": 241.594,
+      "end": 244.742,
+      "captions": [
+        {
+          "text": "Mit 28 bekommen beide",
+          "start": 241.594,
+          "end": 243.265
+        },
+        {
+          "text": "eine Gehaltserhöhung",
+          "start": 243.265,
+          "end": 244.742
+        }
+      ]
+    },
+    {
+      "id": "s66",
+      "start": 244.742,
+      "end": 249.614,
+      "captions": [
+        {
+          "text": "Felix gönnt sich davon",
+          "start": 244.742,
+          "end": 246.271
+        },
+        {
+          "text": "direkt ein größeres",
+          "start": 246.271,
+          "end": 247.759
+        },
+        {
+          "text": "Auto und teurere Urlaube",
+          "start": 247.759,
+          "end": 249.614
+        }
+      ]
+    },
+    {
+      "id": "s67",
+      "start": 249.614,
+      "end": 255.259,
+      "captions": [
+        {
+          "text": "Das nennt man",
+          "start": 249.614,
+          "end": 250.582
+        },
+        {
+          "text": "Lifestyle‑Inflation:",
+          "start": 250.582,
+          "end": 252.109
+        },
+        {
+          "text": "Je mehr du verdienst,",
+          "start": 252.109,
+          "end": 253.608
+        },
+        {
+          "text": "desto mehr gibst du aus",
+          "start": 253.608,
+          "end": 255.259
+        }
+      ]
+    },
+    {
+      "id": "s68",
+      "start": 255.259,
+      "end": 260.136,
+      "captions": [
+        {
+          "text": "Und das Gemeine daran: Es",
+          "start": 255.259,
+          "end": 256.675
+        },
+        {
+          "text": "fühlt sich völlig normal an,",
+          "start": 256.675,
+          "end": 258.251
+        },
+        {
+          "text": "weil man es sich",
+          "start": 258.251,
+          "end": 259.224
+        },
+        {
+          "text": "ja verdient hat",
+          "start": 259.224,
+          "end": 260.136
+        }
+      ]
+    },
+    {
+      "id": "s69",
+      "start": 260.136,
+      "end": 266.681,
+      "captions": [
+        {
+          "text": "Leon gönnt sich auch etwas,",
+          "start": 260.136,
+          "end": 261.903
+        },
+        {
+          "text": "aber die Hälfte",
+          "start": 261.903,
+          "end": 263.034
+        },
+        {
+          "text": "jeder Gehaltserhöhung legt",
+          "start": 263.034,
+          "end": 264.994
+        },
+        {
+          "text": "er zusätzlich zur Seite",
+          "start": 264.994,
+          "end": 266.681
+        }
+      ]
+    },
+    {
+      "id": "s70",
+      "start": 266.681,
+      "end": 272.436,
+      "captions": [
+        {
+          "text": "Daraus",
+          "start": 266.681,
+          "end": 267.091
+        },
+        {
+          "text": "baut",
+          "start": 267.091,
+          "end": 267.396
+        },
+        {
+          "text": "er sich",
+          "start": 267.396,
+          "end": 267.854
+        },
+        {
+          "text": "nach",
+          "start": 267.854,
+          "end": 268.16
+        },
+        {
+          "text": "und",
+          "start": 268.16,
+          "end": 268.389
+        },
+        {
+          "text": "nach",
+          "start": 268.389,
+          "end": 268.694
+        },
+        {
+          "text": "einen",
+          "start": 268.694,
+          "end": 269.076
+        },
+        {
+          "text": "Notgroschen",
+          "start": 269.076,
+          "end": 269.916
+        },
+        {
+          "text": "von",
+          "start": 269.916,
+          "end": 270.145
+        },
+        {
+          "text": "10.000",
+          "start": 270.145,
+          "end": 270.603
+        },
+        {
+          "text": "€ auf",
+          "start": 270.603,
+          "end": 270.909
+        },
+        {
+          "text": "dem",
+          "start": 270.909,
+          "end": 271.138
+        },
+        {
+          "text": "Tagesgeldkonto",
+          "start": 271.138,
+          "end": 272.207
+        },
+        {
+          "text": "auf",
+          "start": 272.207,
+          "end": 272.436
+        }
+      ]
+    },
+    {
+      "id": "s71",
+      "start": 272.436,
+      "end": 276.626,
+      "captions": [
+        {
+          "text": "Mit 31 passiert das,",
+          "start": 272.436,
+          "end": 274.265
+        },
+        {
+          "text": "was jedem passieren kann",
+          "start": 274.265,
+          "end": 276.626
+        }
+      ]
+    },
+    {
+      "id": "s72",
+      "start": 276.626,
+      "end": 280.632,
+      "captions": [
+        {
+          "text": "Das Auto geht kaputt,",
+          "start": 276.626,
+          "end": 278.378
+        },
+        {
+          "text": "die Reparatur kostet 2.000 €",
+          "start": 278.378,
+          "end": 280.632
+        }
+      ]
+    },
+    {
+      "id": "s73",
+      "start": 280.632,
+      "end": 284.775,
+      "captions": [
+        {
+          "text": "Leon zahlt das aus seinem",
+          "start": 280.632,
+          "end": 282.144
+        },
+        {
+          "text": "Notgroschen,",
+          "start": 282.144,
+          "end": 282.946
+        },
+        {
+          "text": "ärgerlich, aber kein Problem",
+          "start": 282.946,
+          "end": 284.775
+        }
+      ]
+    },
+    {
+      "id": "s74",
+      "start": 284.775,
+      "end": 287.392,
+      "captions": [
+        {
+          "text": "Felix hat keinen Notgroschen",
+          "start": 284.775,
+          "end": 287.392
+        }
+      ]
+    },
+    {
+      "id": "s75",
+      "start": 287.392,
+      "end": 291.918,
+      "captions": [
+        {
+          "text": "Er rutscht tief",
+          "start": 287.392,
+          "end": 288.504
+        },
+        {
+          "text": "in den Dispo und zahlt",
+          "start": 288.504,
+          "end": 290.327
+        },
+        {
+          "text": "dafür über 11 % Zinsen",
+          "start": 290.327,
+          "end": 291.918
+        }
+      ]
+    },
+    {
+      "id": "s76",
+      "start": 291.918,
+      "end": 297.712,
+      "captions": [
+        {
+          "text": "Bei 2.000 € im Dispo",
+          "start": 291.918,
+          "end": 293.57
+        },
+        {
+          "text": "sind das über 200 €",
+          "start": 293.57,
+          "end": 295.359
+        },
+        {
+          "text": "Zinsen im Jahr,",
+          "start": 295.359,
+          "end": 296.771
+        },
+        {
+          "text": "für nichts",
+          "start": 296.771,
+          "end": 297.712
+        }
+      ]
+    },
+    {
+      "id": "s77",
+      "start": 297.712,
+      "end": 303.869,
+      "captions": [
+        {
+          "text": "Ein Jahr später will Felix",
+          "start": 297.712,
+          "end": 299.206
+        },
+        {
+          "text": "unbedingt in den Urlaub,",
+          "start": 299.206,
+          "end": 301.022
+        },
+        {
+          "text": "und finanziert ihn",
+          "start": 301.022,
+          "end": 302.383
+        },
+        {
+          "text": "mit einem Ratenkredit",
+          "start": 302.383,
+          "end": 303.869
+        }
+      ]
+    },
+    {
+      "id": "s78",
+      "start": 303.869,
+      "end": 308.068,
+      "captions": [
+        {
+          "text": "Zwei Wochen Sonne,",
+          "start": 303.869,
+          "end": 304.886
+        },
+        {
+          "text": "aber die Raten zahlt er noch",
+          "start": 304.886,
+          "end": 306.577
+        },
+        {
+          "text": "anderthalb Jahre lang ab",
+          "start": 306.577,
+          "end": 308.068
+        }
+      ]
+    },
+    {
+      "id": "s79",
+      "start": 308.068,
+      "end": 310.314,
+      "captions": [
+        {
+          "text": "So geht es weiter,",
+          "start": 308.068,
+          "end": 309.423
+        },
+        {
+          "text": "Jahr für Jahr",
+          "start": 309.423,
+          "end": 310.314
+        }
+      ]
+    },
+    {
+      "id": "s80",
+      "start": 310.314,
+      "end": 316.09,
+      "captions": [
+        {
+          "text": "Ein neues Handy auf Raten,",
+          "start": 310.314,
+          "end": 312.182
+        },
+        {
+          "text": "ein Fernseher mit null",
+          "start": 312.182,
+          "end": 313.985
+        },
+        {
+          "text": "Prozent Finanzierung,",
+          "start": 313.985,
+          "end": 315.626
+        },
+        {
+          "text": "wieder Dispo",
+          "start": 315.626,
+          "end": 316.09
+        }
+      ]
+    },
+    {
+      "id": "s81",
+      "start": 316.09,
+      "end": 320.431,
+      "captions": [
+        {
+          "text": "Felix verdient gut,",
+          "start": 316.09,
+          "end": 317.218
+        },
+        {
+          "text": "aber er hat",
+          "start": 317.218,
+          "end": 317.87
+        },
+        {
+          "text": "ständig das Gefühl,",
+          "start": 317.87,
+          "end": 318.998
+        },
+        {
+          "text": "dass das Geld nicht reicht",
+          "start": 318.998,
+          "end": 320.431
+        }
+      ]
+    },
+    {
+      "id": "s82",
+      "start": 320.431,
+      "end": 324.858,
+      "captions": [
+        {
+          "text": "Und er hat Stress,",
+          "start": 320.431,
+          "end": 321.634
+        },
+        {
+          "text": "jedes Mal,",
+          "start": 321.634,
+          "end": 322.332
+        },
+        {
+          "text": "wenn eine unerwartete",
+          "start": 322.332,
+          "end": 323.862
+        },
+        {
+          "text": "Rechnung kommt",
+          "start": 323.862,
+          "end": 324.858
+        }
+      ]
+    },
+    {
+      "id": "s83",
+      "start": 324.858,
+      "end": 329.199,
+      "captions": [
+        {
+          "text": "Er fragt sich oft,",
+          "start": 324.858,
+          "end": 325.989
+        },
+        {
+          "text": "wie Leon das macht,",
+          "start": 325.989,
+          "end": 327.175
+        },
+        {
+          "text": "obwohl er doch",
+          "start": 327.175,
+          "end": 327.978
+        },
+        {
+          "text": "genauso viel verdient",
+          "start": 327.978,
+          "end": 329.199
+        }
+      ]
+    },
+    {
+      "id": "s84",
+      "start": 329.199,
+      "end": 332.088,
+      "captions": [
+        {
+          "text": "Leon dagegen schaut kaum",
+          "start": 329.199,
+          "end": 330.602
+        },
+        {
+          "text": "noch auf seinen Depotstand",
+          "start": 330.602,
+          "end": 332.088
+        }
+      ]
+    },
+    {
+      "id": "s85",
+      "start": 332.088,
+      "end": 335.784,
+      "captions": [
+        {
+          "text": "Es gibt Jahre,",
+          "start": 332.088,
+          "end": 332.787
+        },
+        {
+          "text": "in denen die Börse fällt,",
+          "start": 332.787,
+          "end": 334.348
+        },
+        {
+          "text": "manchmal sogar deutlich",
+          "start": 334.348,
+          "end": 335.784
+        }
+      ]
+    },
+    {
+      "id": "s86",
+      "start": 335.784,
+      "end": 340.3,
+      "captions": [
+        {
+          "text": "Aber Leon verkauft",
+          "start": 335.784,
+          "end": 337.091
+        },
+        {
+          "text": "nicht in Panik,",
+          "start": 337.091,
+          "end": 338.234
+        },
+        {
+          "text": "sondern spart einfach weiter",
+          "start": 338.234,
+          "end": 340.3
+        }
+      ]
+    },
+    {
+      "id": "s87",
+      "start": 340.3,
+      "end": 346.315,
+      "captions": [
+        {
+          "text": "Im Gegenteil:",
+          "start": 340.3,
+          "end": 341.16
+        },
+        {
+          "text": "Wenn die Kurse fallen,",
+          "start": 341.16,
+          "end": 342.628
+        },
+        {
+          "text": "kauft er mit seinem Sparplan",
+          "start": 342.628,
+          "end": 344.629
+        },
+        {
+          "text": "automatisch günstiger ein",
+          "start": 344.629,
+          "end": 346.315
+        }
+      ]
+    },
+    {
+      "id": "s88",
+      "start": 346.315,
+      "end": 351.422,
+      "captions": [
+        {
+          "text": "Er weiß: Wer langfristig",
+          "start": 346.315,
+          "end": 347.754
+        },
+        {
+          "text": "dabei bleibt,",
+          "start": 347.754,
+          "end": 348.618
+        },
+        {
+          "text": "wird an der Börse",
+          "start": 348.618,
+          "end": 349.747
+        },
+        {
+          "text": "historisch gesehen belohnt",
+          "start": 349.747,
+          "end": 351.422
+        }
+      ]
+    },
+    {
+      "id": "s89",
+      "start": 351.422,
+      "end": 356.123,
+      "captions": [
+        {
+          "text": "Mit 35 hat Leon schon",
+          "start": 351.422,
+          "end": 353.745
+        },
+        {
+          "text": "fast 70.000 € im Depot",
+          "start": 353.745,
+          "end": 356.123
+        }
+      ]
+    },
+    {
+      "id": "s90",
+      "start": 356.123,
+      "end": 359.161,
+      "captions": [
+        {
+          "text": "Felix hat",
+          "start": 356.123,
+          "end": 356.462
+        },
+        {
+          "text": "zu diesem Zeitpunkt wieder",
+          "start": 356.462,
+          "end": 357.761
+        },
+        {
+          "text": "einen neuen Kredit am Laufen",
+          "start": 357.761,
+          "end": 359.161
+        }
+      ]
+    },
+    {
+      "id": "s91",
+      "start": 359.161,
+      "end": 362.483,
+      "captions": [
+        {
+          "text": "Und jetzt sind wir",
+          "start": 359.161,
+          "end": 360.893
+        },
+        {
+          "text": "15 Jahre später",
+          "start": 360.893,
+          "end": 362.483
+        }
+      ]
+    },
+    {
+      "id": "s92",
+      "start": 362.483,
+      "end": 364.943,
+      "captions": [
+        {
+          "text": "Beide feiern ihren",
+          "start": 362.483,
+          "end": 363.63
+        },
+        {
+          "text": "vierzigsten Geburtstag",
+          "start": 363.63,
+          "end": 364.943
+        }
+      ]
+    },
+    {
+      "id": "s93",
+      "start": 364.943,
+      "end": 367.168,
+      "captions": [
+        {
+          "text": "Schauen wir uns an,",
+          "start": 364.943,
+          "end": 366.032
+        },
+        {
+          "text": "wo die beiden stehen",
+          "start": 366.032,
+          "end": 367.168
+        }
+      ]
+    },
+    {
+      "id": "s94",
+      "start": 367.168,
+      "end": 371.094,
+      "captions": [
+        {
+          "text": "Leon hat 15 Jahre lang",
+          "start": 367.168,
+          "end": 368.878
+        },
+        {
+          "text": "400 € im Monat investiert",
+          "start": 368.878,
+          "end": 371.094
+        }
+      ]
+    },
+    {
+      "id": "s95",
+      "start": 371.094,
+      "end": 375.152,
+      "captions": [
+        {
+          "text": "Das sind 72.000 €,",
+          "start": 371.094,
+          "end": 372.63
+        },
+        {
+          "text": "die er selbst eingezahlt hat",
+          "start": 372.63,
+          "end": 375.152
+        }
+      ]
+    },
+    {
+      "id": "s96",
+      "start": 375.152,
+      "end": 382.759,
+      "captions": [
+        {
+          "text": "Mit einer historischen",
+          "start": 375.152,
+          "end": 376.985
+        },
+        {
+          "text": "Rendite von rund",
+          "start": 376.985,
+          "end": 378.466
+        },
+        {
+          "text": "7 % pro Jahr sind daraus",
+          "start": 378.466,
+          "end": 380.687
+        },
+        {
+          "text": "knapp 127.000 € geworden",
+          "start": 380.687,
+          "end": 382.759
+        }
+      ]
+    },
+    {
+      "id": "s97",
+      "start": 382.759,
+      "end": 387.152,
+      "captions": [
+        {
+          "text": "Plus seine",
+          "start": 382.759,
+          "end": 383.504
+        },
+        {
+          "text": "10.000 € Notgroschen",
+          "start": 383.504,
+          "end": 385.29
+        },
+        {
+          "text": "auf dem Tagesgeldkonto",
+          "start": 385.29,
+          "end": 387.152
+        }
+      ]
+    },
+    {
+      "id": "s98",
+      "start": 387.152,
+      "end": 390.229,
+      "captions": [
+        {
+          "text": "Zusammen rund 137.000 €",
+          "start": 387.152,
+          "end": 390.229
+        }
+      ]
+    },
+    {
+      "id": "s99",
+      "start": 390.229,
+      "end": 390.747,
+      "captions": [
+        {
+          "text": "Und Felix?",
+          "start": 390.229,
+          "end": 390.747
+        }
+      ]
+    },
+    {
+      "id": "s100",
+      "start": 390.747,
+      "end": 392.73,
+      "captions": [
+        {
+          "text": "Felix hat nichts gespart",
+          "start": 390.747,
+          "end": 392.73
+        }
+      ]
+    },
+    {
+      "id": "s101",
+      "start": 392.73,
+      "end": 397.604,
+      "captions": [
+        {
+          "text": "Dafür hat er noch rund",
+          "start": 392.73,
+          "end": 394.314
+        },
+        {
+          "text": "8.000 € Schulden aus Dispo",
+          "start": 394.314,
+          "end": 396.397
+        },
+        {
+          "text": "und Ratenkrediten",
+          "start": 396.397,
+          "end": 397.604
+        }
+      ]
+    },
+    {
+      "id": "s102",
+      "start": 397.604,
+      "end": 402.065,
+      "captions": [
+        {
+          "text": "Der Unterschied zwischen",
+          "start": 397.604,
+          "end": 399.67
+        },
+        {
+          "text": "den beiden: rund 145.000 €",
+          "start": 399.67,
+          "end": 402.065
+        }
+      ]
+    },
+    {
+      "id": "s103",
+      "start": 402.065,
+      "end": 403.227,
+      "captions": [
+        {
+          "text": "Bei gleichem Gehalt",
+          "start": 402.065,
+          "end": 403.227
+        }
+      ]
+    },
+    {
+      "id": "s104",
+      "start": 403.227,
+      "end": 410.955,
+      "captions": [
+        {
+          "text": "Und Leon hatte in diesen",
+          "start": 403.227,
+          "end": 404.707
+        },
+        {
+          "text": "15 Jahren nicht",
+          "start": 404.707,
+          "end": 405.696
+        },
+        {
+          "text": "weniger Spaß im Leben,",
+          "start": 405.696,
+          "end": 407.148
+        },
+        {
+          "text": "eher im Gegenteil,",
+          "start": 407.148,
+          "end": 408.336
+        },
+        {
+          "text": "denn er hatte deutlich",
+          "start": 408.336,
+          "end": 409.787
+        },
+        {
+          "text": "weniger Geldsorgen",
+          "start": 409.787,
+          "end": 410.955
+        }
+      ]
+    },
+    {
+      "id": "s105",
+      "start": 410.955,
+      "end": 413.281,
+      "captions": [
+        {
+          "text": "Und jetzt kommt",
+          "start": 410.955,
+          "end": 411.897
+        },
+        {
+          "text": "der eigentliche Hammer",
+          "start": 411.897,
+          "end": 413.281
+        }
+      ]
+    },
+    {
+      "id": "s106",
+      "start": 413.281,
+      "end": 418.421,
+      "captions": [
+        {
+          "text": "Selbst wenn Leon ab",
+          "start": 413.281,
+          "end": 414.519
+        },
+        {
+          "text": "heute keinen einzigen",
+          "start": 414.519,
+          "end": 415.919
+        },
+        {
+          "text": "Euro mehr spart,",
+          "start": 415.919,
+          "end": 416.872
+        },
+        {
+          "text": "wächst sein Depot weiter",
+          "start": 416.872,
+          "end": 418.421
+        }
+      ]
+    },
+    {
+      "id": "s107",
+      "start": 418.421,
+      "end": 425.339,
+      "captions": [
+        {
+          "text": "Mit 7 % pro Jahr",
+          "start": 418.421,
+          "end": 419.967
+        },
+        {
+          "text": "könnten daraus bis zur Rente",
+          "start": 419.967,
+          "end": 422.759
+        },
+        {
+          "text": "mit 65 fast 700.000 € werden",
+          "start": 422.759,
+          "end": 425.339
+        }
+      ]
+    },
+    {
+      "id": "s108",
+      "start": 425.339,
+      "end": 429.165,
+      "captions": [
+        {
+          "text": "Leon könnte also schon",
+          "start": 425.339,
+          "end": 426.644
+        },
+        {
+          "text": "mit 40 weniger arbeiten,",
+          "start": 426.644,
+          "end": 428.3
+        },
+        {
+          "text": "wenn er möchte",
+          "start": 428.3,
+          "end": 429.165
+        }
+      ]
+    },
+    {
+      "id": "s109",
+      "start": 429.165,
+      "end": 431.327,
+      "captions": [
+        {
+          "text": "Das ist echte",
+          "start": 429.165,
+          "end": 430.029
+        },
+        {
+          "text": "finanzielle Freiheit",
+          "start": 430.029,
+          "end": 431.327
+        }
+      ]
+    },
+    {
+      "id": "s110",
+      "start": 431.327,
+      "end": 434.476,
+      "captions": [
+        {
+          "text": "Er hat die Wahl,",
+          "start": 431.327,
+          "end": 432.315
+        },
+        {
+          "text": "und genau das ist",
+          "start": 432.315,
+          "end": 433.364
+        },
+        {
+          "text": "der wahre Reichtum",
+          "start": 433.364,
+          "end": 434.476
+        }
+      ]
+    },
+    {
+      "id": "s111",
+      "start": 434.476,
+      "end": 437.392,
+      "captions": [
+        {
+          "text": "Ist es für Felix",
+          "start": 434.476,
+          "end": 435.951
+        },
+        {
+          "text": "jetzt zu spät?",
+          "start": 435.951,
+          "end": 437.392
+        }
+      ]
+    },
+    {
+      "id": "s112",
+      "start": 437.392,
+      "end": 438.821,
+      "captions": [
+        {
+          "text": "Nein, auf keinen Fall",
+          "start": 437.392,
+          "end": 438.821
+        }
+      ]
+    },
+    {
+      "id": "s113",
+      "start": 438.821,
+      "end": 442.61,
+      "captions": [
+        {
+          "text": "Zuerst sollte er seine",
+          "start": 438.821,
+          "end": 440.119
+        },
+        {
+          "text": "Schulden abbauen,",
+          "start": 440.119,
+          "end": 441.121
+        },
+        {
+          "text": "angefangen beim teuren Dispo",
+          "start": 441.121,
+          "end": 442.61
+        }
+      ]
+    },
+    {
+      "id": "s114",
+      "start": 442.61,
+      "end": 444.598,
+      "captions": [
+        {
+          "text": "Danach baut er sich",
+          "start": 442.61,
+          "end": 443.299
+        },
+        {
+          "text": "einen kleinen Notgroschen auf",
+          "start": 443.299,
+          "end": 444.598
+        }
+      ]
+    },
+    {
+      "id": "s115",
+      "start": 444.598,
+      "end": 453.041,
+      "captions": [
+        {
+          "text": "Wenn Felix ab heute auch",
+          "start": 444.598,
+          "end": 446.966
+        },
+        {
+          "text": "400 € im Monat investiert,",
+          "start": 446.966,
+          "end": 449.467
+        },
+        {
+          "text": "kann er bis 65 über",
+          "start": 449.467,
+          "end": 451.342
+        },
+        {
+          "text": "300.000 € aufbauen",
+          "start": 451.342,
+          "end": 453.041
+        }
+      ]
+    },
+    {
+      "id": "s116",
+      "start": 453.041,
+      "end": 458.861,
+      "captions": [
+        {
+          "text": "Aber Leon hat trotzdem",
+          "start": 453.041,
+          "end": 454.498
+        },
+        {
+          "text": "mehr als doppelt so viel,",
+          "start": 454.498,
+          "end": 456.153
+        },
+        {
+          "text": "nur weil er 15 Jahre",
+          "start": 456.153,
+          "end": 457.547
+        },
+        {
+          "text": "früher angefangen hat",
+          "start": 457.547,
+          "end": 458.861
+        }
+      ]
+    },
+    {
+      "id": "s117",
+      "start": 458.861,
+      "end": 460.589,
+      "captions": [
+        {
+          "text": "Was lernen wir",
+          "start": 458.861,
+          "end": 459.61
+        },
+        {
+          "text": "aus der Geschichte?",
+          "start": 459.61,
+          "end": 460.589
+        }
+      ]
+    },
+    {
+      "id": "s118",
+      "start": 460.589,
+      "end": 464.285,
+      "captions": [
+        {
+          "text": "Erstens: Nicht",
+          "start": 460.589,
+          "end": 461.209
+        },
+        {
+          "text": "das Gehalt macht reich,",
+          "start": 461.209,
+          "end": 462.499
+        },
+        {
+          "text": "sondern was du davon behältst",
+          "start": 462.499,
+          "end": 464.285
+        }
+      ]
+    },
+    {
+      "id": "s119",
+      "start": 464.285,
+      "end": 469.735,
+      "captions": [
+        {
+          "text": "Zweitens: Kleine monatliche",
+          "start": 464.285,
+          "end": 465.838
+        },
+        {
+          "text": "Unterschiede werden über",
+          "start": 465.838,
+          "end": 467.701
+        },
+        {
+          "text": "die Jahre zu riesigen Summen",
+          "start": 467.701,
+          "end": 469.735
+        }
+      ]
+    },
+    {
+      "id": "s120",
+      "start": 469.735,
+      "end": 474.548,
+      "captions": [
+        {
+          "text": "150 € beim Auto,",
+          "start": 469.735,
+          "end": 471.251
+        },
+        {
+          "text": "150 bei der Miete",
+          "start": 471.251,
+          "end": 472.815
+        },
+        {
+          "text": "und 100 im Alltag",
+          "start": 472.815,
+          "end": 474.548
+        }
+      ]
+    },
+    {
+      "id": "s121",
+      "start": 474.548,
+      "end": 480.435,
+      "captions": [
+        {
+          "text": "Drittens: Zahl",
+          "start": 474.548,
+          "end": 475.285
+        },
+        {
+          "text": "dich selbst zuerst,",
+          "start": 475.285,
+          "end": 476.816
+        },
+        {
+          "text": "mit einem Dauerauftrag",
+          "start": 476.816,
+          "end": 478.747
+        },
+        {
+          "text": "direkt am Gehaltstag",
+          "start": 478.747,
+          "end": 480.435
+        }
+      ]
+    },
+    {
+      "id": "s122",
+      "start": 480.435,
+      "end": 483.941,
+      "captions": [
+        {
+          "text": "Viertens:",
+          "start": 480.435,
+          "end": 480.917
+        },
+        {
+          "text": "Ein Notgroschen schützt",
+          "start": 480.917,
+          "end": 482.365
+        },
+        {
+          "text": "dich vor teuren Schulden",
+          "start": 482.365,
+          "end": 483.941
+        }
+      ]
+    },
+    {
+      "id": "s123",
+      "start": 483.941,
+      "end": 488.157,
+      "captions": [
+        {
+          "text": "Denn ohne Notgroschen",
+          "start": 483.941,
+          "end": 485.341
+        },
+        {
+          "text": "wird jede kaputte",
+          "start": 485.341,
+          "end": 486.599
+        },
+        {
+          "text": "Waschmaschine zum Kredit",
+          "start": 486.599,
+          "end": 488.157
+        }
+      ]
+    },
+    {
+      "id": "s124",
+      "start": 488.157,
+      "end": 494.142,
+      "captions": [
+        {
+          "text": "Und fünftens: Zeit ist",
+          "start": 488.157,
+          "end": 489.684
+        },
+        {
+          "text": "dein wichtigster Verbündeter,",
+          "start": 489.684,
+          "end": 491.905
+        },
+        {
+          "text": "also fang heute an,",
+          "start": 491.905,
+          "end": 493.321
+        },
+        {
+          "text": "nicht morgen",
+          "start": 493.321,
+          "end": 494.142
+        }
+      ]
+    },
+    {
+      "id": "s125",
+      "start": 494.142,
+      "end": 497.932,
+      "captions": [
+        {
+          "text": "Du musst nicht perfekt sein,",
+          "start": 494.142,
+          "end": 495.54
+        },
+        {
+          "text": "und du musst auch nicht",
+          "start": 495.54,
+          "end": 496.819
+        },
+        {
+          "text": "auf alles verzichten",
+          "start": 496.819,
+          "end": 497.932
+        }
+      ]
+    },
+    {
+      "id": "s126",
+      "start": 497.932,
+      "end": 503.47,
+      "captions": [
+        {
+          "text": "Schon 50 oder 100 €",
+          "start": 497.932,
+          "end": 499.143
+        },
+        {
+          "text": "im Monat machen über die Jahre",
+          "start": 499.143,
+          "end": 501.461
+        },
+        {
+          "text": "einen riesigen Unterschied",
+          "start": 501.461,
+          "end": 503.47
+        }
+      ]
+    },
+    {
+      "id": "s127",
+      "start": 503.47,
+      "end": 508.192,
+      "captions": [
+        {
+          "text": "Die gute Nachricht: Du",
+          "start": 503.47,
+          "end": 504.796
+        },
+        {
+          "text": "entscheidest selbst,",
+          "start": 504.796,
+          "end": 506.216
+        },
+        {
+          "text": "ob du Leon oder Felix wirst",
+          "start": 506.216,
+          "end": 508.192
+        }
+      ]
+    },
+    {
+      "id": "s128",
+      "start": 508.192,
+      "end": 513.065,
+      "captions": [
+        {
+          "text": "Und jetzt sag uns",
+          "start": 508.192,
+          "end": 509.44
+        },
+        {
+          "text": "in den Kommentaren: Bist du",
+          "start": 509.44,
+          "end": 511.147
+        },
+        {
+          "text": "eher Leon oder eher Felix?",
+          "start": 511.147,
+          "end": 513.065
+        }
+      ]
+    },
+    {
+      "id": "s129",
+      "start": 513.065,
+      "end": 519.584,
+      "captions": [
+        {
+          "text": "Wenn dir die Geschichte",
+          "start": 513.065,
+          "end": 514.127
+        },
+        {
+          "text": "gefallen hat,",
+          "start": 514.127,
+          "end": 515.02
+        },
+        {
+          "text": "teile das Video",
+          "start": 515.02,
+          "end": 516.041
+        },
+        {
+          "text": "mit einem Freund,",
+          "start": 516.041,
+          "end": 517.208
+        },
+        {
+          "text": "der gerade sein",
+          "start": 517.208,
+          "end": 518.238
+        },
+        {
+          "text": "erstes Gehalt bekommt",
+          "start": 518.238,
+          "end": 519.584
+        }
+      ]
+    },
+    {
+      "id": "s130",
+      "start": 519.584,
+      "end": 523.922,
+      "captions": [
+        {
+          "text": "Wir sind HundeFinanzTV,",
+          "start": 519.584,
+          "end": 521.252
+        },
+        {
+          "text": "wir sehen uns morgen",
+          "start": 521.252,
+          "end": 522.667
+        },
+        {
+          "text": "im nächsten Video",
+          "start": 522.667,
+          "end": 523.922
+        }
+      ]
+    }
+  ]
+}

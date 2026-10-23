@@ -39,7 +39,7 @@ CSS = """
       .chip.x::after { content: ""; position: absolute; left: 8%; right: 8%; top: 50%; height: 10px; background: #111; border-radius: 5px; transform: rotate(-8deg); }
       .ctitel { font-family: "Abril Fatface", serif; font-size: 100px; color: #111; }
       #brand { position: absolute; left: 60px; top: 44px; font-weight: 800; font-size: 40px; color: #353a3d; z-index: 5; }
-      .kapanz { position: absolute; right: 60px; top: 38px; padding: 10px 30px; border-radius: 40px; background: #faf5ef; color: var(--brand); font-weight: 800; font-size: 34px; z-index: 5; }
+      .kapanz { position: absolute; right: 60px; top: 38px; padding: 10px 30px; border-radius: 40px; background: #faf5ef; color: #a8621a; font-weight: 800; font-size: 34px; z-index: 5; }
       #frame { position: absolute; inset: 0; border: 18px solid var(--brand); z-index: 10; }
       .cap { position: absolute; left: 0; top: 905px; width: 1920px; display: flex; justify-content: center; z-index: 6; }
       .cap span { display: block; padding: 14px 40px 16px; border-radius: 22px; background: var(--brand); color: #fff; font-weight: 600; font-size: 50px; line-height: 1.15; white-space: nowrap; }
