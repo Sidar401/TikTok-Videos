@@ -107,3 +107,25 @@ def chips_zeit(z, uid, titel, items):
         return (f'pop("#{uid}-t", {t0});' if titel else "") + "".join(
             f' pop("#{uid}-c{i}", {z.st(s) if s else t0 + 0.3 + i * 0.4});' for i, (_, _, s) in enumerate(items))
     return dict(html=html, js=js)
+
+
+def duell(z, uid, links, rechts):
+    """Zwei Personen nebeneinander, je mit Bild + Wert. links/rechts = dict(name, farbe, icon, wert, ab_sid, wert_sid).
+    Seite erscheint bei ab_sid (None = Szenenstart), der Wert beim Euro-Betrag in wert_sid (sonst bei dessen Start)."""
+    def spalte(k, x):
+        return (f'<div id="{uid}-{k}" style="width:760px;display:flex;flex-direction:column;align-items:center;gap:22px">'
+                f'<div style="padding:10px 44px;border-radius:40px;background:{x["farbe"]};color:#fff;font-weight:800;font-size:54px">{x["name"]}</div>'
+                f'<div style="width:380px;height:380px;display:flex;align-items:center;justify-content:center">{x["icon"]}</div>'
+                f'<div id="{uid}-{k}w" class="serif" style="font-size:72px;line-height:1.1;color:{x["farbe"]};text-align:center">{x["wert"]}</div></div>')
+    html = (f'<div class="mitte" style="flex-direction:row;gap:60px;align-items:flex-start;top:110px">{spalte("l", links)}'
+            f'<div style="width:6px;height:620px;background:#e8dccb;border-radius:3px"></div>{spalte("r", rechts)}</div>')
+
+    def js(t0, d):
+        out = []
+        for k, x in (("l", links), ("r", rechts)):
+            a = z.st(x["ab_sid"]) if x.get("ab_sid") else t0
+            w = z.euro_zeit(x["wert_sid"]) if x.get("wert_sid") else a + 0.4
+            out.append(f'pop("#{uid}-{k}", {a});')
+            out.append(f'tl.fromTo("#{uid}-{k}w", {{ opacity: 0, y: 20 }}, {{ opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }}, {max(w, a + 0.3)});')
+        return " ".join(out)
+    return dict(html=html, js=js)
