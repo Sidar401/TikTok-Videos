@@ -1,0 +1,786 @@
+{
+ "titel": "Reich mit 40 oder pleite mit 40",
+ "format": "16:9",
+ "saetze": [
+  {
+   "id": "s1",
+   "kapitel": "k1",
+   "text": "Zwei beste Freunde, gleiches Alter, gleicher Job, gleiches Gehalt",
+   "sprechtext": "Zwei beste Freunde, gleiches Alter, gleicher Job, gleiches Gehalt."
+  },
+  {
+   "id": "s2",
+   "kapitel": "k1",
+   "text": "Mit 40 hat der eine über 130.000 € Vermögen",
+   "sprechtext": "Mit vierzig hat der eine über hundertdreißigtausend Euro Vermögen."
+  },
+  {
+   "id": "s3",
+   "kapitel": "k1",
+   "text": "Der andere hat 8.000 € Schulden",
+   "sprechtext": "Der andere hat achttausend Euro Schulden."
+  },
+  {
+   "id": "s4",
+   "kapitel": "k1",
+   "text": "Wie kann das sein?",
+   "sprechtext": "Wie kann das sein?"
+  },
+  {
+   "id": "s5",
+   "kapitel": "k1",
+   "text": "Und nein, Felix ist nicht dumm oder faul",
+   "sprechtext": "Und nein, Felix ist nicht dumm oder faul."
+  },
+  {
+   "id": "s6",
+   "kapitel": "k1",
+   "text": "Er arbeitet genauso hart wie Leon und gibt sein Geld für ganz normale Dinge aus",
+   "sprechtext": "Er arbeitet genauso hart wie Leon und gibt sein Geld für ganz normale Dinge aus."
+  },
+  {
+   "id": "s7",
+   "kapitel": "k1",
+   "text": "Genau das macht diese Geschichte so gefährlich, weil sie so vielen Menschen passiert",
+   "sprechtext": "Genau das macht diese Geschichte so gefährlich, weil sie so vielen Menschen passiert."
+  },
+  {
+   "id": "s8",
+   "kapitel": "k1",
+   "text": "Keiner von beiden hat im Lotto gewonnen, keiner hat geerbt, und keiner hat einen riesigen Fehler gemacht",
+   "sprechtext": "Keiner von beiden hat im Lotto gewonnen, keiner hat geerbt, und keiner hat einen riesigen Fehler gemacht."
+  },
+  {
+   "id": "s9",
+   "kapitel": "k1",
+   "text": "Der Unterschied sind viele kleine Entscheidungen, die am Anfang völlig harmlos aussehen",
+   "sprechtext": "Der Unterschied sind viele kleine Entscheidungen, die am Anfang völlig harmlos aussehen."
+  },
+  {
+   "id": "s10",
+   "kapitel": "k1",
+   "text": "Heute begleiten wir die beiden 15 Jahre lang, vom ersten Gehalt mit 25 bis zum vierzigsten Geburtstag",
+   "sprechtext": "Heute begleiten wir die beiden fünfzehn Jahre lang, vom ersten Gehalt mit fünfundzwanzig bis zum vierzigsten Geburtstag."
+  },
+  {
+   "id": "s11",
+   "kapitel": "k1",
+   "text": "Und wir rechnen bei jeder Entscheidung ganz genau mit",
+   "sprechtext": "Und wir rechnen bei jeder Entscheidung ganz genau mit."
+  },
+  {
+   "id": "s12",
+   "kapitel": "k1",
+   "text": "Am Ende zeigen wir dir die fünf wichtigsten Lehren, mit denen du ab heute wie Leon handeln kannst",
+   "sprechtext": "Am Ende zeigen wir dir die fünf wichtigsten Lehren, mit denen du ab heute wie Leon handeln kannst."
+  },
+  {
+   "id": "s13",
+   "kapitel": "k1",
+   "text": "Pass gut auf, denn wahrscheinlich erkennst du dich in einem der beiden wieder",
+   "sprechtext": "Pass gut auf, denn wahrscheinlich erkennst du dich in einem der beiden wieder."
+  },
+  {
+   "id": "s14",
+   "kapitel": "k1",
+   "text": "Und ganz ehrlich: Wir alle haben ein bisschen Felix in uns",
+   "sprechtext": "Und ganz ehrlich: Wir alle haben ein bisschen Felix in uns."
+  },
+  {
+   "id": "s15",
+   "kapitel": "k1",
+   "text": "Bevor wir starten, eine Frage an dich",
+   "sprechtext": "Bevor wir starten, eine Frage an dich."
+  },
+  {
+   "id": "s16",
+   "kapitel": "k1",
+   "text": "Bist du eher wie Leon oder eher wie Felix?",
+   "sprechtext": "Bist du eher wie Leon oder eher wie Felix?"
+  },
+  {
+   "id": "s17",
+   "kapitel": "k1",
+   "text": "Schreib es nach dem Video in die Kommentare, wir sind gespannt",
+   "sprechtext": "Schreib es nach dem Video in die Kommentare, wir sind gespannt."
+  },
+  {
+   "id": "s18",
+   "kapitel": "k1",
+   "text": "Und wenn du lieber der mit dem Vermögen sein willst, folge HundeFinanzTV",
+   "sprechtext": "Und wenn du lieber der mit dem Vermögen sein willst, folge HundeFinanzTV."
+  },
+  {
+   "id": "s19",
+   "kapitel": "k1",
+   "text": "Wir bringen jeden Tag neue Videos rund um Geld und Finanzen",
+   "sprechtext": "Wir bringen jeden Tag neue Videos rund um Geld und Finanzen."
+  },
+  {
+   "id": "s20",
+   "kapitel": "k1",
+   "text": "Also, lernen wir die beiden kennen",
+   "sprechtext": "Also, lernen wir die beiden kennen."
+  },
+  {
+   "id": "s21",
+   "kapitel": "k2",
+   "text": "Das sind Leon und Felix",
+   "sprechtext": "Das sind Leon und Felix."
+  },
+  {
+   "id": "s22",
+   "kapitel": "k2",
+   "text": "Beide sind 25, beide haben gerade ihre Ausbildung abgeschlossen",
+   "sprechtext": "Beide sind fünfundzwanzig, beide haben gerade ihre Ausbildung abgeschlossen."
+  },
+  {
+   "id": "s23",
+   "kapitel": "k2",
+   "text": "Und beide verdienen 2.500 € netto im Monat",
+   "sprechtext": "Und beide verdienen zweitausendfünfhundert Euro netto im Monat."
+  },
+  {
+   "id": "s24",
+   "kapitel": "k2",
+   "text": "Zum ersten Mal richtig eigenes Geld, das fühlt sich großartig an",
+   "sprechtext": "Zum ersten Mal richtig eigenes Geld, das fühlt sich großartig an."
+  },
+  {
+   "id": "s25",
+   "kapitel": "k2",
+   "text": "Beide ziehen in ihre erste eigene Wohnung, und beide wollen endlich ihr Leben genießen",
+   "sprechtext": "Beide ziehen in ihre erste eigene Wohnung, und beide wollen endlich ihr Leben genießen."
+  },
+  {
+   "id": "s26",
+   "kapitel": "k2",
+   "text": "Die erste große Entscheidung: das Auto",
+   "sprechtext": "Die erste große Entscheidung: das Auto."
+  },
+  {
+   "id": "s27",
+   "kapitel": "k2",
+   "text": "Felix will etwas Ordentliches und least einen schicken Neuwagen",
+   "sprechtext": "Felix will etwas Ordentliches und least einen schicken Neuwagen."
+  },
+  {
+   "id": "s28",
+   "kapitel": "k2",
+   "text": "Mit Versicherung und allem drum und dran kostet ihn das 300 € im Monat",
+   "sprechtext": "Mit Versicherung und allem drum und dran kostet ihn das dreihundert Euro im Monat."
+  },
+  {
+   "id": "s29",
+   "kapitel": "k2",
+   "text": "Leon kauft sich einen soliden Gebrauchten",
+   "sprechtext": "Leon kauft sich einen soliden Gebrauchten."
+  },
+  {
+   "id": "s30",
+   "kapitel": "k2",
+   "text": "Der ist nicht so schick, kostet ihn aber nur 150 € im Monat",
+   "sprechtext": "Der ist nicht so schick, kostet ihn aber nur hundertfünfzig Euro im Monat."
+  },
+  {
+   "id": "s31",
+   "kapitel": "k2",
+   "text": "Unterschied: 150 € jeden Monat",
+   "sprechtext": "Unterschied: hundertfünfzig Euro jeden Monat."
+  },
+  {
+   "id": "s32",
+   "kapitel": "k2",
+   "text": "Klingt nicht nach viel, oder?",
+   "sprechtext": "Klingt nicht nach viel, oder?"
+  },
+  {
+   "id": "s33",
+   "kapitel": "k2",
+   "text": "Aber über 15 Jahre sind das schon 27.000 €, nur beim Auto",
+   "sprechtext": "Aber über fünfzehn Jahre sind das schon siebenundzwanzigtausend Euro, nur beim Auto."
+  },
+  {
+   "id": "s34",
+   "kapitel": "k2",
+   "text": "Die zweite Entscheidung: die Wohnung",
+   "sprechtext": "Die zweite Entscheidung: die Wohnung."
+  },
+  {
+   "id": "s35",
+   "kapitel": "k2",
+   "text": "Felix nimmt die moderne Neubauwohnung mit Balkon in bester Lage",
+   "sprechtext": "Felix nimmt die moderne Neubauwohnung mit Balkon in bester Lage."
+  },
+  {
+   "id": "s36",
+   "kapitel": "k2",
+   "text": "Mit Einbauküche, Fußbodenheizung und Blick über die Stadt",
+   "sprechtext": "Mit Einbauküche, Fußbodenheizung und Blick über die Stadt."
+  },
+  {
+   "id": "s37",
+   "kapitel": "k2",
+   "text": "Warmmiete: 950 €",
+   "sprechtext": "Warmmiete: neunhundertfünfzig Euro."
+  },
+  {
+   "id": "s38",
+   "kapitel": "k2",
+   "text": "Leon nimmt eine kleinere Altbauwohnung, etwas weiter draußen",
+   "sprechtext": "Leon nimmt eine kleinere Altbauwohnung, etwas weiter draußen."
+  },
+  {
+   "id": "s39",
+   "kapitel": "k2",
+   "text": "Dafür hat er einen kurzen Weg zur Arbeit und richtig nette Nachbarn",
+   "sprechtext": "Dafür hat er einen kurzen Weg zur Arbeit und richtig nette Nachbarn."
+  },
+  {
+   "id": "s40",
+   "kapitel": "k2",
+   "text": "Warmmiete: 800 €",
+   "sprechtext": "Warmmiete: achthundert Euro."
+  },
+  {
+   "id": "s41",
+   "kapitel": "k2",
+   "text": "Wieder ein Unterschied von 150 €",
+   "sprechtext": "Wieder ein Unterschied von hundertfünfzig Euro."
+  },
+  {
+   "id": "s42",
+   "kapitel": "k2",
+   "text": "Beide Entscheidungen sind völlig normal, niemand würde Felix dafür kritisieren",
+   "sprechtext": "Beide Entscheidungen sind völlig normal, niemand würde Felix dafür kritisieren."
+  },
+  {
+   "id": "s43",
+   "kapitel": "k2",
+   "text": "Aber zusammen sind das schon 300 € im Monat",
+   "sprechtext": "Aber zusammen sind das schon dreihundert Euro im Monat."
+  },
+  {
+   "id": "s44",
+   "kapitel": "k3",
+   "text": "Jetzt kommt der Alltag",
+   "sprechtext": "Jetzt kommt der Alltag."
+  },
+  {
+   "id": "s45",
+   "kapitel": "k3",
+   "text": "Felix bestellt nach der Arbeit gern mal Essen, hat mehrere Streaming-Abos und kauft öfter mal spontan etwas online",
+   "sprechtext": "Felix bestellt nach der Arbeit gern mal Essen, hat mehrere Streaming-Abos und kauft öfter mal spontan etwas online."
+  },
+  {
+   "id": "s46",
+   "kapitel": "k3",
+   "text": "Leon kocht meistens selbst und hat nur ein Abo",
+   "sprechtext": "Leon kocht meistens selbst und hat nur ein Abo."
+  },
+  {
+   "id": "s47",
+   "kapitel": "k3",
+   "text": "Das macht noch einmal rund 100 € Unterschied im Monat",
+   "sprechtext": "Das macht noch einmal rund hundert Euro Unterschied im Monat."
+  },
+  {
+   "id": "s48",
+   "kapitel": "k3",
+   "text": "Kleinigkeiten, die man im Alltag gar nicht bemerkt",
+   "sprechtext": "Kleinigkeiten, die man im Alltag gar nicht bemerkt."
+  },
+  {
+   "id": "s49",
+   "kapitel": "k3",
+   "text": "Und jetzt kommt die wichtigste Entscheidung von allen",
+   "sprechtext": "Und jetzt kommt die wichtigste Entscheidung von allen."
+  },
+  {
+   "id": "s50",
+   "kapitel": "k3",
+   "text": "Felix gibt jeden Monat so ziemlich alles aus, was reinkommt",
+   "sprechtext": "Felix gibt jeden Monat so ziemlich alles aus, was reinkommt."
+  },
+  {
+   "id": "s51",
+   "kapitel": "k3",
+   "text": "Am Monatsende ist nichts übrig, aber er denkt sich: Ich bin jung, sparen kann ich später noch",
+   "sprechtext": "Am Monatsende ist nichts übrig, aber er denkt sich: Ich bin jung, sparen kann ich später noch."
+  },
+  {
+   "id": "s52",
+   "kapitel": "k3",
+   "text": "Leon macht etwas anderes",
+   "sprechtext": "Leon macht etwas anderes."
+  },
+  {
+   "id": "s53",
+   "kapitel": "k3",
+   "text": "Am Tag nach dem Gehalt gehen automatisch 400 € per Dauerauftrag weg",
+   "sprechtext": "Am Tag nach dem Gehalt gehen automatisch vierhundert Euro per Dauerauftrag weg."
+  },
+  {
+   "id": "s54",
+   "kapitel": "k3",
+   "text": "Genau die 400 €, die er bei Auto, Wohnung und Alltag weniger ausgibt",
+   "sprechtext": "Genau die vierhundert Euro, die er bei Auto, Wohnung und Alltag weniger ausgibt."
+  },
+  {
+   "id": "s55",
+   "kapitel": "k3",
+   "text": "Das Geld fließt in einen ETF-Sparplan auf die ganze Welt",
+   "sprechtext": "Das Geld fließt in einen ETF-Sparplan auf die ganze Welt."
+  },
+  {
+   "id": "s56",
+   "kapitel": "k3",
+   "text": "Breit gestreut, über tausende Unternehmen, mit niedrigen Kosten",
+   "sprechtext": "Breit gestreut, über tausende Unternehmen, mit niedrigen Kosten."
+  },
+  {
+   "id": "s57",
+   "kapitel": "k3",
+   "text": "Er muss sich um nichts kümmern, alles läuft automatisch",
+   "sprechtext": "Er muss sich um nichts kümmern, alles läuft automatisch."
+  },
+  {
+   "id": "s58",
+   "kapitel": "k3",
+   "text": "Und hier ist das Spannende: Leon lebt nicht schlechter als Felix",
+   "sprechtext": "Und hier ist das Spannende: Leon lebt nicht schlechter als Felix."
+  },
+  {
+   "id": "s59",
+   "kapitel": "k3",
+   "text": "Er hat ein Auto, eine schöne Wohnung, geht mit Freunden essen und fährt in den Urlaub",
+   "sprechtext": "Er hat ein Auto, eine schöne Wohnung, geht mit Freunden essen und fährt in den Urlaub."
+  },
+  {
+   "id": "s60",
+   "kapitel": "k3",
+   "text": "Nur eben ein bisschen günstiger",
+   "sprechtext": "Nur eben ein bisschen günstiger."
+  },
+  {
+   "id": "s61",
+   "kapitel": "k3",
+   "text": "Statt dem neuesten Handy kauft er das Vorjahresmodell, und statt Fernreise geht es öfter mal an die Ostsee",
+   "sprechtext": "Statt dem neuesten Handy kauft er das Vorjahresmodell, und statt Fernreise geht es öfter mal an die Ostsee."
+  },
+  {
+   "id": "s62",
+   "kapitel": "k3",
+   "text": "Von außen sieht man kaum einen Unterschied",
+   "sprechtext": "Von außen sieht man kaum einen Unterschied."
+  },
+  {
+   "id": "s63",
+   "kapitel": "k3",
+   "text": "Aber auf dem Konto entsteht gerade ein riesiger",
+   "sprechtext": "Aber auf dem Konto entsteht gerade ein riesiger."
+  },
+  {
+   "id": "s64",
+   "kapitel": "k4",
+   "text": "Die Jahre vergehen",
+   "sprechtext": "Die Jahre vergehen."
+  },
+  {
+   "id": "s65",
+   "kapitel": "k4",
+   "text": "Mit 28 bekommen beide eine Gehaltserhöhung",
+   "sprechtext": "Mit achtundzwanzig bekommen beide eine Gehaltserhöhung."
+  },
+  {
+   "id": "s66",
+   "kapitel": "k4",
+   "text": "Felix gönnt sich davon direkt ein größeres Auto und teurere Urlaube",
+   "sprechtext": "Felix gönnt sich davon direkt ein größeres Auto und teurere Urlaube."
+  },
+  {
+   "id": "s67",
+   "kapitel": "k4",
+   "text": "Das nennt man Lifestyle-Inflation: Je mehr du verdienst, desto mehr gibst du aus",
+   "sprechtext": "Das nennt man Lifestyle-Inflation: Je mehr du verdienst, desto mehr gibst du aus."
+  },
+  {
+   "id": "s68",
+   "kapitel": "k4",
+   "text": "Und das Gemeine daran: Es fühlt sich völlig normal an, weil man es sich ja verdient hat",
+   "sprechtext": "Und das Gemeine daran: Es fühlt sich völlig normal an, weil man es sich ja verdient hat."
+  },
+  {
+   "id": "s69",
+   "kapitel": "k4",
+   "text": "Leon gönnt sich auch etwas, aber die Hälfte jeder Gehaltserhöhung legt er zusätzlich zur Seite",
+   "sprechtext": "Leon gönnt sich auch etwas, aber die Hälfte jeder Gehaltserhöhung legt er zusätzlich zur Seite."
+  },
+  {
+   "id": "s70",
+   "kapitel": "k4",
+   "text": "Daraus baut er sich nach und nach einen Notgroschen von 10.000 € auf dem Tagesgeldkonto auf",
+   "sprechtext": "Daraus baut er sich nach und nach einen Notgroschen von zehntausend Euro auf dem Tagesgeldkonto auf."
+  },
+  {
+   "id": "s71",
+   "kapitel": "k4",
+   "text": "Mit 31 passiert das, was jedem passieren kann",
+   "sprechtext": "Mit einunddreißig passiert das, was jedem passieren kann."
+  },
+  {
+   "id": "s72",
+   "kapitel": "k4",
+   "text": "Das Auto geht kaputt, die Reparatur kostet 2.000 €",
+   "sprechtext": "Das Auto geht kaputt, die Reparatur kostet zweitausend Euro."
+  },
+  {
+   "id": "s73",
+   "kapitel": "k4",
+   "text": "Leon zahlt das aus seinem Notgroschen, ärgerlich, aber kein Problem",
+   "sprechtext": "Leon zahlt das aus seinem Notgroschen, ärgerlich, aber kein Problem."
+  },
+  {
+   "id": "s74",
+   "kapitel": "k4",
+   "text": "Felix hat keinen Notgroschen",
+   "sprechtext": "Felix hat keinen Notgroschen."
+  },
+  {
+   "id": "s75",
+   "kapitel": "k4",
+   "text": "Er rutscht tief in den Dispo und zahlt dafür über 11 % Zinsen",
+   "sprechtext": "Er rutscht tief in den Dispo und zahlt dafür über elf Prozent Zinsen."
+  },
+  {
+   "id": "s76",
+   "kapitel": "k4",
+   "text": "Bei 2.000 € im Dispo sind das über 200 € Zinsen im Jahr, für nichts",
+   "sprechtext": "Bei zweitausend Euro im Dispo sind das über zweihundert Euro Zinsen im Jahr, für nichts."
+  },
+  {
+   "id": "s77",
+   "kapitel": "k4",
+   "text": "Ein Jahr später will Felix unbedingt in den Urlaub, und finanziert ihn mit einem Ratenkredit",
+   "sprechtext": "Ein Jahr später will Felix unbedingt in den Urlaub, und finanziert ihn mit einem Ratenkredit."
+  },
+  {
+   "id": "s78",
+   "kapitel": "k4",
+   "text": "Zwei Wochen Sonne, aber die Raten zahlt er noch anderthalb Jahre lang ab",
+   "sprechtext": "Zwei Wochen Sonne, aber die Raten zahlt er noch anderthalb Jahre lang ab."
+  },
+  {
+   "id": "s79",
+   "kapitel": "k4",
+   "text": "So geht es weiter, Jahr für Jahr",
+   "sprechtext": "So geht es weiter, Jahr für Jahr."
+  },
+  {
+   "id": "s80",
+   "kapitel": "k4",
+   "text": "Ein neues Handy auf Raten, ein Fernseher mit null Prozent Finanzierung, wieder Dispo",
+   "sprechtext": "Ein neues Handy auf Raten, ein Fernseher mit null Prozent Finanzierung, wieder Dispo."
+  },
+  {
+   "id": "s81",
+   "kapitel": "k4",
+   "text": "Felix verdient gut, aber er hat ständig das Gefühl, dass das Geld nicht reicht",
+   "sprechtext": "Felix verdient gut, aber er hat ständig das Gefühl, dass das Geld nicht reicht."
+  },
+  {
+   "id": "s82",
+   "kapitel": "k4",
+   "text": "Und er hat Stress, jedes Mal, wenn eine unerwartete Rechnung kommt",
+   "sprechtext": "Und er hat Stress, jedes Mal, wenn eine unerwartete Rechnung kommt."
+  },
+  {
+   "id": "s83",
+   "kapitel": "k4",
+   "text": "Er fragt sich oft, wie Leon das macht, obwohl er doch genauso viel verdient",
+   "sprechtext": "Er fragt sich oft, wie Leon das macht, obwohl er doch genauso viel verdient."
+  },
+  {
+   "id": "s84",
+   "kapitel": "k4",
+   "text": "Leon dagegen schaut kaum noch auf seinen Depotstand",
+   "sprechtext": "Leon dagegen schaut kaum noch auf seinen Depotstand."
+  },
+  {
+   "id": "s85",
+   "kapitel": "k4",
+   "text": "Es gibt Jahre, in denen die Börse fällt, manchmal sogar deutlich",
+   "sprechtext": "Es gibt Jahre, in denen die Börse fällt, manchmal sogar deutlich."
+  },
+  {
+   "id": "s86",
+   "kapitel": "k4",
+   "text": "Aber Leon verkauft nicht in Panik, sondern spart einfach weiter",
+   "sprechtext": "Aber Leon verkauft nicht in Panik, sondern spart einfach weiter."
+  },
+  {
+   "id": "s87",
+   "kapitel": "k4",
+   "text": "Im Gegenteil: Wenn die Kurse fallen, kauft er mit seinem Sparplan automatisch günstiger ein",
+   "sprechtext": "Im Gegenteil: Wenn die Kurse fallen, kauft er mit seinem Sparplan automatisch günstiger ein."
+  },
+  {
+   "id": "s88",
+   "kapitel": "k4",
+   "text": "Er weiß: Wer langfristig dabei bleibt, wird an der Börse historisch gesehen belohnt",
+   "sprechtext": "Er weiß: Wer langfristig dabei bleibt, wird an der Börse historisch gesehen belohnt."
+  },
+  {
+   "id": "s89",
+   "kapitel": "k4",
+   "text": "Mit 35 hat Leon schon fast 70.000 € im Depot",
+   "sprechtext": "Mit fünfunddreißig hat Leon schon fast siebzigtausend Euro im Depot."
+  },
+  {
+   "id": "s90",
+   "kapitel": "k4",
+   "text": "Felix hat zu diesem Zeitpunkt wieder einen neuen Kredit am Laufen",
+   "sprechtext": "Felix hat zu diesem Zeitpunkt wieder einen neuen Kredit am Laufen."
+  },
+  {
+   "id": "s91",
+   "kapitel": "k5",
+   "text": "Und jetzt sind wir 15 Jahre später",
+   "sprechtext": "Und jetzt sind wir fünfzehn Jahre später."
+  },
+  {
+   "id": "s92",
+   "kapitel": "k5",
+   "text": "Beide feiern ihren vierzigsten Geburtstag",
+   "sprechtext": "Beide feiern ihren vierzigsten Geburtstag."
+  },
+  {
+   "id": "s93",
+   "kapitel": "k5",
+   "text": "Schauen wir uns an, wo die beiden stehen",
+   "sprechtext": "Schauen wir uns an, wo die beiden stehen."
+  },
+  {
+   "id": "s94",
+   "kapitel": "k5",
+   "text": "Leon hat 15 Jahre lang 400 € im Monat investiert",
+   "sprechtext": "Leon hat fünfzehn Jahre lang vierhundert Euro im Monat investiert."
+  },
+  {
+   "id": "s95",
+   "kapitel": "k5",
+   "text": "Das sind 72.000 €, die er selbst eingezahlt hat",
+   "sprechtext": "Das sind zweiundsiebzigtausend Euro, die er selbst eingezahlt hat."
+  },
+  {
+   "id": "s96",
+   "kapitel": "k5",
+   "text": "Mit einer historischen Rendite von rund 7 % pro Jahr sind daraus knapp 127.000 € geworden",
+   "sprechtext": "Mit einer historischen Rendite von rund sieben Prozent pro Jahr sind daraus knapp hundertsiebenundzwanzigtausend Euro geworden."
+  },
+  {
+   "id": "s97",
+   "kapitel": "k5",
+   "text": "Plus seine 10.000 € Notgroschen auf dem Tagesgeldkonto",
+   "sprechtext": "Plus seine zehntausend Euro Notgroschen auf dem Tagesgeldkonto."
+  },
+  {
+   "id": "s98",
+   "kapitel": "k5",
+   "text": "Zusammen rund 137.000 €",
+   "sprechtext": "Zusammen rund hundertsiebenunddreißigtausend Euro."
+  },
+  {
+   "id": "s99",
+   "kapitel": "k5",
+   "text": "Und Felix?",
+   "sprechtext": "Und Felix?"
+  },
+  {
+   "id": "s100",
+   "kapitel": "k5",
+   "text": "Felix hat nichts gespart",
+   "sprechtext": "Felix hat nichts gespart."
+  },
+  {
+   "id": "s101",
+   "kapitel": "k5",
+   "text": "Dafür hat er noch rund 8.000 € Schulden aus Dispo und Ratenkrediten",
+   "sprechtext": "Dafür hat er noch rund achttausend Euro Schulden aus Dispo und Ratenkrediten."
+  },
+  {
+   "id": "s102",
+   "kapitel": "k5",
+   "text": "Der Unterschied zwischen den beiden: rund 145.000 €",
+   "sprechtext": "Der Unterschied zwischen den beiden: rund hundertfünfundvierzigtausend Euro."
+  },
+  {
+   "id": "s103",
+   "kapitel": "k5",
+   "text": "Bei gleichem Gehalt",
+   "sprechtext": "Bei gleichem Gehalt."
+  },
+  {
+   "id": "s104",
+   "kapitel": "k5",
+   "text": "Und Leon hatte in diesen 15 Jahren nicht weniger Spaß im Leben, eher im Gegenteil, denn er hatte deutlich weniger Geldsorgen",
+   "sprechtext": "Und Leon hatte in diesen fünfzehn Jahren nicht weniger Spaß im Leben, eher im Gegenteil, denn er hatte deutlich weniger Geldsorgen."
+  },
+  {
+   "id": "s105",
+   "kapitel": "k5",
+   "text": "Und jetzt kommt der eigentliche Hammer",
+   "sprechtext": "Und jetzt kommt der eigentliche Hammer."
+  },
+  {
+   "id": "s106",
+   "kapitel": "k5",
+   "text": "Selbst wenn Leon ab heute keinen einzigen Euro mehr spart, wächst sein Depot weiter",
+   "sprechtext": "Selbst wenn Leon ab heute keinen einzigen Euro mehr spart, wächst sein Depot weiter."
+  },
+  {
+   "id": "s107",
+   "kapitel": "k5",
+   "text": "Mit 7 % pro Jahr könnten daraus bis zur Rente mit 65 fast 700.000 € werden",
+   "sprechtext": "Mit sieben Prozent pro Jahr könnten daraus bis zur Rente mit fünfundsechzig fast siebenhunderttausend Euro werden."
+  },
+  {
+   "id": "s108",
+   "kapitel": "k5",
+   "text": "Leon könnte also schon mit 40 weniger arbeiten, wenn er möchte",
+   "sprechtext": "Leon könnte also schon mit vierzig weniger arbeiten, wenn er möchte."
+  },
+  {
+   "id": "s109",
+   "kapitel": "k5",
+   "text": "Das ist echte finanzielle Freiheit",
+   "sprechtext": "Das ist echte finanzielle Freiheit."
+  },
+  {
+   "id": "s110",
+   "kapitel": "k5",
+   "text": "Er hat die Wahl, und genau das ist der wahre Reichtum",
+   "sprechtext": "Er hat die Wahl, und genau das ist der wahre Reichtum."
+  },
+  {
+   "id": "s111",
+   "kapitel": "k5",
+   "text": "Ist es für Felix jetzt zu spät?",
+   "sprechtext": "Ist es für Felix jetzt zu spät?"
+  },
+  {
+   "id": "s112",
+   "kapitel": "k5",
+   "text": "Nein, auf keinen Fall",
+   "sprechtext": "Nein, auf keinen Fall."
+  },
+  {
+   "id": "s113",
+   "kapitel": "k5",
+   "text": "Zuerst sollte er seine Schulden abbauen, angefangen beim teuren Dispo",
+   "sprechtext": "Zuerst sollte er seine Schulden abbauen, angefangen beim teuren Dispo."
+  },
+  {
+   "id": "s114",
+   "kapitel": "k5",
+   "text": "Danach baut er sich einen kleinen Notgroschen auf",
+   "sprechtext": "Danach baut er sich einen kleinen Notgroschen auf."
+  },
+  {
+   "id": "s115",
+   "kapitel": "k5",
+   "text": "Wenn Felix ab heute auch 400 € im Monat investiert, kann er bis 65 über 300.000 € aufbauen",
+   "sprechtext": "Wenn Felix ab heute auch vierhundert Euro im Monat investiert, kann er bis fünfundsechzig über dreihunderttausend Euro aufbauen."
+  },
+  {
+   "id": "s116",
+   "kapitel": "k5",
+   "text": "Aber Leon hat trotzdem mehr als doppelt so viel, nur weil er 15 Jahre früher angefangen hat",
+   "sprechtext": "Aber Leon hat trotzdem mehr als doppelt so viel, nur weil er fünfzehn Jahre früher angefangen hat."
+  },
+  {
+   "id": "s117",
+   "kapitel": "k5",
+   "text": "Was lernen wir aus der Geschichte?",
+   "sprechtext": "Was lernen wir aus der Geschichte?"
+  },
+  {
+   "id": "s118",
+   "kapitel": "k5",
+   "text": "Erstens: Nicht das Gehalt macht reich, sondern was du davon behältst",
+   "sprechtext": "Erstens: Nicht das Gehalt macht reich, sondern was du davon behältst."
+  },
+  {
+   "id": "s119",
+   "kapitel": "k5",
+   "text": "Zweitens: Kleine monatliche Unterschiede werden über die Jahre zu riesigen Summen",
+   "sprechtext": "Zweitens: Kleine monatliche Unterschiede werden über die Jahre zu riesigen Summen."
+  },
+  {
+   "id": "s120",
+   "kapitel": "k5",
+   "text": "150 € beim Auto, 150 bei der Miete und 100 im Alltag",
+   "sprechtext": "Hundertfünfzig Euro beim Auto, hundertfünfzig bei der Miete und hundert im Alltag."
+  },
+  {
+   "id": "s121",
+   "kapitel": "k5",
+   "text": "Drittens: Zahl dich selbst zuerst, mit einem Dauerauftrag direkt am Gehaltstag",
+   "sprechtext": "Drittens: Zahl dich selbst zuerst, mit einem Dauerauftrag direkt am Gehaltstag."
+  },
+  {
+   "id": "s122",
+   "kapitel": "k5",
+   "text": "Viertens: Ein Notgroschen schützt dich vor teuren Schulden",
+   "sprechtext": "Viertens: Ein Notgroschen schützt dich vor teuren Schulden."
+  },
+  {
+   "id": "s123",
+   "kapitel": "k5",
+   "text": "Denn ohne Notgroschen wird jede kaputte Waschmaschine zum Kredit",
+   "sprechtext": "Denn ohne Notgroschen wird jede kaputte Waschmaschine zum Kredit."
+  },
+  {
+   "id": "s124",
+   "kapitel": "k5",
+   "text": "Und fünftens: Zeit ist dein wichtigster Verbündeter, also fang heute an, nicht morgen",
+   "sprechtext": "Und fünftens: Zeit ist dein wichtigster Verbündeter, also fang heute an, nicht morgen."
+  },
+  {
+   "id": "s125",
+   "kapitel": "k5",
+   "text": "Du musst nicht perfekt sein, und du musst auch nicht auf alles verzichten",
+   "sprechtext": "Du musst nicht perfekt sein, und du musst auch nicht auf alles verzichten."
+  },
+  {
+   "id": "s126",
+   "kapitel": "k5",
+   "text": "Schon 50 oder 100 € im Monat machen über die Jahre einen riesigen Unterschied",
+   "sprechtext": "Schon fünfzig oder hundert Euro im Monat machen über die Jahre einen riesigen Unterschied."
+  },
+  {
+   "id": "s127",
+   "kapitel": "k5",
+   "text": "Die gute Nachricht: Du entscheidest selbst, ob du Leon oder Felix wirst",
+   "sprechtext": "Die gute Nachricht: Du entscheidest selbst, ob du Leon oder Felix wirst."
+  },
+  {
+   "id": "s128",
+   "kapitel": "k5",
+   "text": "Und jetzt sag uns in den Kommentaren: Bist du eher Leon oder eher Felix?",
+   "sprechtext": "Und jetzt sag uns in den Kommentaren: Bist du eher Leon oder eher Felix?"
+  },
+  {
+   "id": "s129",
+   "kapitel": "k5",
+   "text": "Wenn dir die Geschichte gefallen hat, teile das Video mit einem Freund, der gerade sein erstes Gehalt bekommt",
+   "sprechtext": "Wenn dir die Geschichte gefallen hat, teile das Video mit einem Freund, der gerade sein erstes Gehalt bekommt."
+  },
+  {
+   "id": "s130",
+   "kapitel": "k5",
+   "text": "Wir sind HundeFinanzTV, wir sehen uns morgen im nächsten Video",
+   "sprechtext": "Wir sind HundeFinanzTV, wir sehen uns morgen im nächsten Video!"
+  }
+ ]
+}
