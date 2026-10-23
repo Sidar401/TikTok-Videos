@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
-"""YouTube-Kanalbanner HundeFinanzTV (2560×1440, sicherer Bereich 1546×423 mittig)."""
+"""YouTube-Kanalbanner (2560×1440, sicherer Bereich 1546×423 mittig).
+Aufruf: python3 build.py [Kanalname] [Hintergrundfarbe]  (Standard: HundeFinanzTV, #DB8622)"""
+import sys
 from pathlib import Path
 
 HERE = Path(__file__).parent
+NAME = sys.argv[1] if len(sys.argv) > 1 else "HundeFinanzTV"
+FARBE = sys.argv[2] if len(sys.argv) > 2 else "#DB8622"
 HAND = '<svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M38 20 Q38 10 46 10 Q54 10 54 20 L54 46 L58 44 Q66 40 70 48 L74 46 Q82 44 84 52 L86 52 Q94 52 94 62 L92 80 Q88 96 70 96 L52 96 Q40 96 32 84 L16 62 Q12 54 20 52 Q26 50 32 58 L38 66 Z" fill="#fff" stroke="#111" stroke-width="5" stroke-linejoin="round" /></svg>'
 GLOCKE = '<svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M50 8 Q72 10 74 40 L76 66 L88 78 L12 78 L24 66 L26 40 Q28 10 50 8 Z" fill="#fff" /><circle cx="50" cy="88" r="9" fill="#fff" /></svg>'
 
@@ -14,8 +18,8 @@ GLOCKE = '<svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M50
     <script src="assets/gsap.min.js"></script>
     <style>
       * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-      html, body {{ width: 2560px; height: 1440px; overflow: hidden; background: #DB8622; }}
-      #root {{ position: relative; width: 100%; height: 100%; background: #DB8622; font-family: Montserrat, sans-serif; }}
+      html, body {{ width: 2560px; height: 1440px; overflow: hidden; background: {FARBE}; }}
+      #root {{ position: relative; width: 100%; height: 100%; background: {FARBE}; font-family: Montserrat, sans-serif; }}
       .zeile {{ position: absolute; left: 0; width: 2560px; text-align: center; font-weight: 900; text-transform: uppercase; line-height: 1; }}
     </style>
   </head>
@@ -24,7 +28,7 @@ GLOCKE = '<svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M50
       <div id="bg" class="clip" data-start="0" data-duration="1" data-track-index="1" style="position:absolute;inset:0">
         <div class="zeile" style="top:525px;font-size:112px;color:#fff;letter-spacing:5px">Herzlich</div>
         <div class="zeile" style="top:645px;font-size:112px;color:#fff;letter-spacing:5px">Willkommen</div>
-        <div class="zeile" style="top:770px;font-size:136px;color:#2b2f31;letter-spacing:4px">HundeFinanzTV</div>
+        <div class="zeile" style="top:770px;font-size:136px;color:#2b2f31;letter-spacing:4px">{NAME}</div>
         <div style="position:absolute;left:560px;top:512px;display:flex;align-items:center;gap:12px;padding:12px 26px;border-radius:14px;background:#e62117;color:#fff;font-weight:900;font-size:38px;transform:rotate(-4deg)">
           <div style="width:42px;height:42px">{GLOCKE}</div>ABONNIEREN</div>
         <div style="position:absolute;left:815px;top:555px;width:84px;height:84px;transform:rotate(-20deg)">{HAND}</div>
