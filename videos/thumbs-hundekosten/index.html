@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="de" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Abril Fatface"; src: url("assets/fonts/abril-fatface.woff2") format("woff2"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #fff; }
+      #root { position: relative; width: 100%; height: 100%; background: #fff; font-family: Montserrat, sans-serif; }
+      .scene { position: absolute; inset: 0; }
+      .serif { font-family: "Abril Fatface", serif; }
+      #frame { position: absolute; inset: 0; border: 30px solid #DB8622; z-index: 10; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="3" data-width="1920" data-height="1080">
+<div id="v0" class="scene clip" data-start="0" data-duration="1" data-track-index="1">
+  <div style="position:absolute;left:90px;top:150px;width:900px">
+    <div class="serif" style="font-size:132px;line-height:1.02;color:#111">So viel kostet<br/>ein Hund</div>
+    <div style="display:inline-block;margin-top:30px;padding:16px 44px;border-radius:30px;background:#DB8622;color:#fff;font-weight:900;font-size:92px">WIRKLICH</div>
+  </div>
+  <div style="position:absolute;left:1040px;top:150px"><div style="width:760px;background:#faf5ef;border-radius:30px;padding:34px 46px;font-weight:700;font-size:44px;color:#353a3d;transform:rotate(3deg);box-shadow:0 14px 0 #e8dccb"><div style="font-weight:800;color:#DB8622;border-bottom:4px dashed #d9cbb8;padding-bottom:10px;margin-bottom:8px">Ein Hundeleben</div><div style="display:flex;justify-content:space-between;padding:6px 0"><span>Anschaffung</span><b style="color:#111">2.200 €</b></div><div style="display:flex;justify-content:space-between;padding:6px 0"><span>Futter & Co.</span><b style="color:#111">23.400 €</b></div><div style="display:flex;justify-content:space-between;padding:6px 0"><span>Urlaub</span><b style="color:#111">3.900 €</b></div><div style="display:flex;justify-content:space-between;padding:6px 0"><span>Notfall-OP</span><b style="color:#111">3.000 €</b></div><div style="display:flex;justify-content:space-between;padding:6px 0"><span>Seniorenjahre</span><b style="color:#111">1.800 €</b></div><div style="display:flex;justify-content:space-between;align-items:center;border-top:5px solid #353a3d;margin-top:14px;padding-top:14px"><span style="font-weight:800;color:#111">Summe</span><span class="serif" style="font-size:88px;color:#e24b4b">34.000 €</span></div></div></div>
+  <div style="position:absolute;left:560px;top:560px;width:420px;height:420px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M18 30 Q8 34 10 60 Q12 72 22 70 Q28 50 30 34 Z" fill="#8a5a2b" /><path d="M82 30 Q92 34 90 60 Q88 72 78 70 Q72 50 70 34 Z" fill="#8a5a2b" /><ellipse cx="50" cy="52" rx="30" ry="32" fill="#e9b97a" /><ellipse cx="50" cy="68" rx="18" ry="14" fill="#f6efe1" /><circle cx="39" cy="46" r="5" fill="#111" /><circle cx="61" cy="46" r="5" fill="#111" /><circle cx="40.5" cy="44.5" r="1.6" fill="#fff" /><circle cx="62.5" cy="44.5" r="1.6" fill="#fff" /><ellipse cx="50" cy="61" rx="7" ry="5" fill="#111" /><path d="M43 71 Q50 78 57 71" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round" /><path d="M47 76 Q50 86 53 76 Z" fill="#e24b4b" /></svg></div>
+</div>
+<div id="v1" class="scene clip" data-start="1" data-duration="1" data-track-index="1">
+  <div style="position:absolute;left:0;top:110px;width:1920px;display:flex;justify-content:center;align-items:center;gap:70px">
+    <div style="width:470px;height:470px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M18 30 Q8 34 10 60 Q12 72 22 70 Q28 50 30 34 Z" fill="#8a5a2b" /><path d="M82 30 Q92 34 90 60 Q88 72 78 70 Q72 50 70 34 Z" fill="#8a5a2b" /><ellipse cx="50" cy="52" rx="30" ry="32" fill="#e9b97a" /><ellipse cx="50" cy="68" rx="18" ry="14" fill="#f6efe1" /><circle cx="39" cy="46" r="5" fill="#111" /><circle cx="61" cy="46" r="5" fill="#111" /><circle cx="40.5" cy="44.5" r="1.6" fill="#fff" /><circle cx="62.5" cy="44.5" r="1.6" fill="#fff" /><ellipse cx="50" cy="61" rx="7" ry="5" fill="#111" /><path d="M43 71 Q50 78 57 71" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round" /><path d="M47 76 Q50 86 53 76 Z" fill="#e24b4b" /></svg></div>
+    <div class="serif" style="font-size:260px;color:#DB8622">=</div>
+    <div style="width:520px;height:520px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M10 62 L16 40 Q20 30 32 30 L68 30 Q80 30 84 40 L90 62 Z" fill="#3d7be0" /><rect x="6" y="56" width="88" height="22" rx="8" fill="#3d7be0" /><path d="M26 40 L32 34 L68 34 L74 40 Z" fill="#cfe6f5" /><circle cx="28" cy="78" r="10" fill="#353a3d" /><circle cx="72" cy="78" r="10" fill="#353a3d" /></svg></div>
+  </div>
+  <div style="position:absolute;left:0;top:700px;width:1920px;text-align:center">
+    <span style="display:inline-block;padding:20px 64px;border-radius:40px;background:#e24b4b;color:#fff;font-weight:900;font-size:118px;transform:rotate(-2deg)">Hund = Kleinwagen?!</span>
+  </div>
+</div>
+<div id="v2" class="scene clip" data-start="2" data-duration="1" data-track-index="1">
+  <div style="position:absolute;left:90px;top:250px;width:620px;height:620px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M18 30 Q8 34 10 60 Q12 72 22 70 Q28 50 30 34 Z" fill="#8a5a2b" /><path d="M82 30 Q92 34 90 60 Q88 72 78 70 Q72 50 70 34 Z" fill="#8a5a2b" /><ellipse cx="50" cy="52" rx="30" ry="32" fill="#e9b97a" /><ellipse cx="50" cy="68" rx="18" ry="14" fill="#f6efe1" /><circle cx="39" cy="46" r="5" fill="#111" /><circle cx="61" cy="46" r="5" fill="#111" /><circle cx="40.5" cy="44.5" r="1.6" fill="#fff" /><circle cx="62.5" cy="44.5" r="1.6" fill="#fff" /><ellipse cx="50" cy="61" rx="7" ry="5" fill="#111" /><path d="M43 71 Q50 78 57 71" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round" /><path d="M47 76 Q50 86 53 76 Z" fill="#e24b4b" /></svg></div>
+  <div style="position:absolute;left:760px;top:250px;width:1080px;text-align:center">
+    <div class="serif" style="font-size:250px;line-height:1;color:#e24b4b">34.000 €</div>
+    <div style="font-weight:900;font-size:100px;color:#111;margin-top:20px">für EINEN Hund?!</div>
+    <div style="display:inline-block;margin-top:40px;padding:14px 46px;border-radius:30px;background:#DB8622;color:#fff;font-weight:900;font-size:64px">vom Welpen bis ins Alter</div>
+  </div>
+</div>
+      <div id="frame"></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#root", { opacity: 1 }, 0);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

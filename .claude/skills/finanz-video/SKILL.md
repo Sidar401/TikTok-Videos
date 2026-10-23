@@ -37,7 +37,7 @@ Der Nutzer arbeitet am iPad: Antworten kurz, Ergebnisse per `SendUserFile` schic
    - Root-`data-duration` = `timings.json.dauer`.
    - Pro Satz eine `.scene clip` mit `data-start`/`data-duration` aus `timings.json` und einem SVG-Motiv nach `STIL.md` (flache Clipart-Optik, Serifen-Zahlen grün/gold, schlichte Charts). Motive selbst als Inline-SVG zeichnen; wiederverwendbare Motive aus früheren Videos kopieren.
    - Pro Untertitel-Box ein `.cap clip` aus `captions` in `timings.json`.
-   - Marken-Badge oben (nur Name „HundeFinanzTV“), oranger Rahmen. **Kein Logo im Video**; Einstieg = Thema groß als Text + passende Szene (Logo-Regel in `STIL.md`). Maskottchen = Beagle (`assets/beagle.png`), sparsam (Tipp-Szene, Outro); der Aussie gehört nur zu HundeWissenTv.
+   - Marken-Badge oben (nur Name „HundeFinanzTV“), oranger Rahmen. **Kein Logo im Video**; Einstieg = Thema groß als Text + passende Szene (Logo-Regel in `STIL.md`). Maskottchen/Logo = Beagle (`assets/beagle.png`) **nur in CTA-Szenen** (Folgen-CTA, Outro), sonst nie; der Aussie gehört nur zu HundeWissenTv.
    - Audio: `<audio id="voice" src="assets/voice.wav" data-start="0" data-duration="<dauer>" data-track-index="3"></audio>` im Root.
    - Animation: Pop-in, langsamer Drift, Linien zeichnen (Helfer `pop`/`drift`/`draw` aus der Vorlage).
 6. **Prüfen:** `cd videos/<name> && npx hyperframes lint && npx hyperframes check`. Fehler beheben. Warnungen „nested_structure“/„track_too_dense“ und der Kontrast der Untertitel-Box sind bekannt und ok.
