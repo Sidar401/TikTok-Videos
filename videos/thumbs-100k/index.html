@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="de" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Abril Fatface"; src: url("assets/fonts/abril-fatface.woff2") format("woff2"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #fff; }
+      #root { position: relative; width: 100%; height: 100%; background: #fff; font-family: Montserrat, sans-serif; }
+      .scene { position: absolute; inset: 0; }
+      .serif { font-family: "Abril Fatface", serif; }
+      #frame { position: absolute; inset: 0; border: 30px solid #DB8622; z-index: 10; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="3" data-width="1920" data-height="1080">
+<div id="v0" class="scene clip" data-start="0" data-duration="1" data-track-index="1">
+  <div style="position:absolute;left:90px;top:120px;width:560px;height:560px"><svg viewBox="0 0 400 400" style="width:100%;height:100%">
+  <g fill="#f2c418" stroke="#c99a06" stroke-width="3">
+    <rect x="250" y="300" width="110" height="22" rx="8" /><rect x="250" y="276" width="110" height="22" rx="8" />
+    <rect x="250" y="252" width="110" height="22" rx="8" /><rect x="250" y="228" width="110" height="22" rx="8" />
+    <rect x="250" y="204" width="110" height="22" rx="8" /><rect x="265" y="180" width="110" height="22" rx="8" />
+  </g>
+  <path d="M150 110 C120 70 140 50 160 70 C175 50 205 50 220 70 C240 50 260 70 230 110 Z" fill="#1f7a4d" />
+  <rect x="145" y="104" width="90" height="18" rx="9" fill="#f2c418" />
+  <path d="M150 120 C60 170 40 330 120 340 L260 340 C340 330 320 170 230 120 Z" fill="#1f7a4d" />
+  <path d="M155 135 C90 180 75 300 125 325" fill="none" stroke="#2c9a63" stroke-width="10" stroke-linecap="round" />
+  <circle cx="190" cy="245" r="62" fill="#f2c418" />
+  <text x="190" y="272" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="80" fill="#1f7a4d">€</text>
+</svg></div>
+  <div style="position:absolute;left:640px;top:150px;width:1220px">
+    <div class="serif" style="font-size:160px;line-height:1;color:#111">0 →</div>
+    <div class="serif" style="font-size:250px;line-height:1;color:#c99a06">100.000 €</div>
+  </div>
+  <div style="position:absolute;left:90px;top:760px;padding:22px 50px;border-radius:30px;background:#DB8622;color:#fff;font-weight:900;font-size:96px">mit normalem Gehalt</div>
+  <div style="position:absolute;right:70px;bottom:60px;width:300px;height:300px"><img src="assets/beagle.png" style="width:100%;height:100%;object-fit:contain" /></div>
+</div>
+<div id="v1" class="scene clip" data-start="1" data-duration="1" data-track-index="1">
+  <div style="position:absolute;left:80px;top:90px;width:900px">
+    <div class="serif" style="font-size:150px;line-height:1.02;color:#111">So wirst du<br/>reich mit</div>
+    <div style="display:inline-block;margin-top:30px;padding:18px 44px;border-radius:30px;background:#DB8622;color:#fff;font-weight:900;font-size:96px">2.000 € netto</div>
+  </div>
+  <div style="position:absolute;left:1000px;bottom:30px;display:flex;align-items:flex-end;gap:40px"><div style="display:flex;flex-direction:column;align-items:center;gap:12px"><div class="serif" style="font-size:56px;color:#1f7a4d;white-space:nowrap">21.000 €</div><div style="width:200px;height:170px;border-radius:16px 16px 0 0;background:#1f7a4d"></div></div><div style="display:flex;flex-direction:column;align-items:center;gap:12px"><div class="serif" style="font-size:56px;color:#c99a06;white-space:nowrap">50.000 €</div><div style="width:200px;height:360px;border-radius:16px 16px 0 0;background:#f2c418"></div></div><div style="display:flex;flex-direction:column;align-items:center;gap:12px"><div class="serif" style="font-size:64px;color:#c99a06;white-space:nowrap">100.000 €</div><div style="width:200px;height:620px;border-radius:16px 16px 0 0;background:#f2c418"></div></div></div>
+  <div style="position:absolute;left:420px;top:700px;width:260px;height:260px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M10 88 L48 50 L62 64 L86 30" fill="none" stroke="#1f7a4d" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" /><path d="M66 22 L94 18 L90 46 Z" fill="#1f7a4d" /></svg></div>
+  <div style="position:absolute;left:70px;bottom:40px;width:300px;height:300px"><img src="assets/beagle.png" style="width:100%;height:100%;object-fit:contain" /></div>
+</div>
+<div id="v2" class="scene clip" data-start="2" data-duration="1" data-track-index="1">
+  <div style="position:absolute;left:0;top:190px;width:1920px;display:flex;justify-content:center;align-items:center;gap:60px">
+    <div style="text-align:center"><div style="font-weight:800;font-size:64px;color:#353a3d">Gehalt</div>
+      <div class="serif" style="font-size:170px;color:#1f7a4d;line-height:1">2.000 €</div></div>
+    <div class="serif" style="font-size:180px;color:#DB8622;line-height:1">→</div>
+    <div style="text-align:center"><div style="font-weight:800;font-size:64px;color:#353a3d">Vermögen</div>
+      <div class="serif" style="font-size:170px;color:#c99a06;line-height:1">100.000 €</div></div>
+  </div>
+  <div style="position:absolute;left:0;top:640px;width:1920px;text-align:center">
+    <span style="display:inline-block;padding:26px 70px;border-radius:40px;background:#e24b4b;color:#fff;font-weight:900;font-size:130px;transform:rotate(-3deg)">Realistisch?!</span>
+  </div>
+  <div style="position:absolute;right:70px;bottom:50px;width:280px;height:280px"><img src="assets/beagle.png" style="width:100%;height:100%;object-fit:contain" /></div>
+</div>
+      <div id="frame"></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#root", { opacity: 1 }, 0);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
