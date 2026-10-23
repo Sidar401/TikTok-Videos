@@ -79,3 +79,20 @@ def doppel(a, b):
     """Zwei Icons nebeneinander (links im Bildbereich)."""
     return f'<div style="display:flex;gap:40px;align-items:center">{big(340, 340, a)}{big(340, 340, b)}</div>'
 
+
+# ---------- Alltag & Kosten ----------
+HAUS = svg('<path d="M8 48 L50 10 L92 48" fill="none" stroke="#353a3d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /><path d="M18 44 L18 92 L82 92 L82 44 L50 16 Z" fill="#DB8622" /><rect x="40" y="62" width="20" height="30" rx="3" fill="#fff" /><rect x="24" y="52" width="14" height="14" rx="2" fill="#fff8d6" /><rect x="62" y="52" width="14" height="14" rx="2" fill="#fff8d6" />')
+STROM = svg('<circle cx="50" cy="50" r="44" fill="#fff8d6" stroke="#353a3d" stroke-width="5" /><path d="M56 12 L28 56 L48 56 L42 88 L72 42 L52 42 Z" fill="#f2c418" stroke="#c99a06" stroke-width="3" stroke-linejoin="round" />')
+WAGEN = svg('<path d="M6 14 L20 14 L30 64 L80 64 L90 30 L24 30" fill="none" stroke="#353a3d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /><rect x="34" y="20" width="14" height="16" rx="2" fill="#2c9a63" /><rect x="52" y="14" width="12" height="22" rx="2" fill="#e24b4b" /><rect x="68" y="22" width="12" height="14" rx="2" fill="#f2c418" /><circle cx="36" cy="80" r="8" fill="#353a3d" /><circle cx="72" cy="80" r="8" fill="#353a3d" />')
+TICKET = svg('<path d="M6 26 L94 26 L94 42 Q86 50 94 58 L94 74 L6 74 L6 58 Q14 50 6 42 Z" fill="#e24b4b" /><text x="50" y="58" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="17" fill="#fff">D-Ticket</text>')
+AUTO = svg('<path d="M10 62 L16 40 Q20 30 32 30 L68 30 Q80 30 84 40 L90 62 Z" fill="#3d7be0" /><rect x="6" y="56" width="88" height="22" rx="8" fill="#3d7be0" /><path d="M26 40 L32 34 L68 34 L74 40 Z" fill="#cfe6f5" /><circle cx="28" cy="78" r="10" fill="#353a3d" /><circle cx="72" cy="78" r="10" fill="#353a3d" />')
+SCHILD = svg('<path d="M50 6 L88 20 L88 48 Q88 78 50 94 Q12 78 12 48 L12 20 Z" fill="#1f7a4d" /><path d="M32 50 L46 64 L70 38" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />')
+TV = svg('<rect x="6" y="18" width="88" height="60" rx="8" fill="#353a3d" /><rect x="14" y="26" width="72" height="44" rx="4" fill="#cfe6f5" /><path d="M38 6 L50 18 L62 6" fill="none" stroke="#353a3d" stroke-width="5" stroke-linecap="round" /><rect x="30" y="82" width="40" height="8" rx="4" fill="#353a3d" />')
+PLAY = svg('<rect x="6" y="14" width="88" height="66" rx="14" fill="#9b59b6" /><path d="M40 32 L66 47 L40 62 Z" fill="#fff" />')
+KIND = svg('<rect x="22" y="22" width="56" height="70" rx="14" fill="#e24b4b" /><path d="M36 22 Q36 6 50 6 Q64 6 64 22" fill="none" stroke="#a8321f" stroke-width="6" /><rect x="32" y="52" width="36" height="24" rx="6" fill="#f2c418" /><rect x="46" y="58" width="8" height="8" rx="2" fill="#a8321f" />')
+HERZ = svg('<path d="M50 88 Q10 60 10 34 Q10 12 30 12 Q44 12 50 26 Q56 12 70 12 Q90 12 90 34 Q90 60 50 88 Z" fill="#e24b4b" />')
+
+
+def gruppe(*leute, w=220, h=300):
+    return '<div style="display:flex;align-items:flex-end;gap:10px">' + "".join(
+        f'<div style="width:{w * f:.0f}px;height:{h * f:.0f}px">{p}</div>' for p, f in leute) + "</div>"

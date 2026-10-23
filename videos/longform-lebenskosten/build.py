@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """HundeFinanzTV Longform (16:9): So viel Geld brauchst du wirklich zum Leben."""
-import json
 import sys
 from pathlib import Path
 
@@ -8,50 +7,18 @@ HERE = Path(__file__).parent
 sys.path.insert(0, str(HERE.parent.parent / "scripts"))
 from finanz import BEAGLE, CHECK, CROSS, SPARSCHWEIN  # noqa: E402
 from longform import GOLD, GRUEN, ORANGE, ROT, build, svg  # noqa: E402
-from icons import (AUTO_PFEIL, BANK, BLASE, DAUMEN, FLUG, GELDBEUTEL, HANDY, ICON, KURVE, RECHNER, SCHOCK,  # noqa: E402
-                   STAPEL, STERN, TASCHE, TEILEN, WARN, WASCH, ZETTEL, big, doppel, folgen, person)
+from icons import (AUTO, AUTO_PFEIL, BANK, BLASE, DAUMEN, FLUG, GELDBEUTEL, HANDY, HAUS, HERZ, ICON, KIND, KURVE, PLAY,  # noqa: E402
+                   RECHNER, SCHILD, SCHOCK, STAPEL, STERN, STROM, TASCHE, TEILEN, TICKET, TV, WAGEN, WARN, WASCH, ZETTEL,
+                   doppel, folgen, gruppe, person)
+from lf_szenen import Zeit, balken3, beleg, karte  # noqa: E402
 
-T = json.loads((HERE / "timings.json").read_text())
-S = {s["id"]: s for s in T["saetze"]}
+Z = Zeit(HERE)
+st = Z.st
 
-
-def st(sid):
-    return S[sid]["start"]
-
-
-def euro_zeit(sid):
-    """Zeitpunkt, an dem im Satz der Euro-Betrag gesprochen wird (erste Caption mit €)."""
-    for c in S[sid]["captions"]:
-        if "€" in c["text"]:
-            return c["start"]
-    return st(sid)
-
-
-def eur(v):
-    return f"{v:,} €".replace(",", ".")
-
-
-# ---------- Icons ----------
-HAUS = svg('<path d="M8 48 L50 10 L92 48" fill="none" stroke="#353a3d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /><path d="M18 44 L18 92 L82 92 L82 44 L50 16 Z" fill="#DB8622" /><rect x="40" y="62" width="20" height="30" rx="3" fill="#fff" /><rect x="24" y="52" width="14" height="14" rx="2" fill="#fff8d6" /><rect x="62" y="52" width="14" height="14" rx="2" fill="#fff8d6" />')
-STROM = svg('<circle cx="50" cy="50" r="44" fill="#fff8d6" stroke="#353a3d" stroke-width="5" /><path d="M56 12 L28 56 L48 56 L42 88 L72 42 L52 42 Z" fill="#f2c418" stroke="#c99a06" stroke-width="3" stroke-linejoin="round" />')
-WAGEN = svg('<path d="M6 14 L20 14 L30 64 L80 64 L90 30 L24 30" fill="none" stroke="#353a3d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /><rect x="34" y="20" width="14" height="16" rx="2" fill="#2c9a63" /><rect x="52" y="14" width="12" height="22" rx="2" fill="#e24b4b" /><rect x="68" y="22" width="12" height="14" rx="2" fill="#f2c418" /><circle cx="36" cy="80" r="8" fill="#353a3d" /><circle cx="72" cy="80" r="8" fill="#353a3d" />')
-TICKET = svg('<path d="M6 26 L94 26 L94 42 Q86 50 94 58 L94 74 L6 74 L6 58 Q14 50 6 42 Z" fill="#e24b4b" /><text x="50" y="58" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="17" fill="#fff">D-Ticket</text>')
-AUTO = svg('<path d="M10 62 L16 40 Q20 30 32 30 L68 30 Q80 30 84 40 L90 62 Z" fill="#3d7be0" /><rect x="6" y="56" width="88" height="22" rx="8" fill="#3d7be0" /><path d="M26 40 L32 34 L68 34 L74 40 Z" fill="#cfe6f5" /><circle cx="28" cy="78" r="10" fill="#353a3d" /><circle cx="72" cy="78" r="10" fill="#353a3d" />')
-SCHILD = svg('<path d="M50 6 L88 20 L88 48 Q88 78 50 94 Q12 78 12 48 L12 20 Z" fill="#1f7a4d" /><path d="M32 50 L46 64 L70 38" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />')
-TV = svg('<rect x="6" y="18" width="88" height="60" rx="8" fill="#353a3d" /><rect x="14" y="26" width="72" height="44" rx="4" fill="#cfe6f5" /><path d="M38 6 L50 18 L62 6" fill="none" stroke="#353a3d" stroke-width="5" stroke-linecap="round" /><rect x="30" y="82" width="40" height="8" rx="4" fill="#353a3d" />')
-PLAY = svg('<rect x="6" y="14" width="88" height="66" rx="14" fill="#9b59b6" /><path d="M40 32 L66 47 L40 62 Z" fill="#fff" />')
-KIND = svg('<rect x="22" y="22" width="56" height="70" rx="14" fill="#e24b4b" /><path d="M36 22 Q36 6 50 6 Q64 6 64 22" fill="none" stroke="#a8321f" stroke-width="6" /><rect x="32" y="52" width="36" height="24" rx="6" fill="#f2c418" /><rect x="46" y="58" width="8" height="8" rx="2" fill="#a8321f" />')
-HERZ = svg('<path d="M50 88 Q10 60 10 34 Q10 12 30 12 Q44 12 50 26 Q56 12 70 12 Q90 12 90 34 Q90 60 50 88 Z" fill="#e24b4b" />')
 KIND_P = person("#3d7be0", "#8a5a2b")
 MAX = person("#3d7be0", "#353a3d")
 LISA = person(ORANGE, "#8a5a2b")
 TOM = person(GRUEN, "#353a3d")
-
-
-def gruppe(*leute, w=220, h=300):
-    return '<div style="display:flex;align-items:flex-end;gap:10px">' + "".join(
-        f'<div style="width:{w * f:.0f}px;height:{h * f:.0f}px">{p}</div>' for p, f in leute) + "</div>"
-
 
 SINGLE = gruppe((MAX, 1.3), w=260, h=360)
 PAAR = gruppe((LISA, 1), (TOM, 1), w=260, h=360)
@@ -70,12 +37,6 @@ def intro():
     return dict(html=html, js=js)
 
 
-def karte(nr_text, titel, farbe=ORANGE, uid="ka"):
-    html = (f'<div class="mitte"><div class="kap"><div class="nr" id="{uid}-n" style="background:{farbe}">{nr_text}</div>'
-            f'<div class="t" id="{uid}-t">{titel}</div></div></div>')
-    return dict(html=html, js=lambda t0, d: f'pop("#{uid}-n", {t0}); tl.fromTo("#{uid}-t", {{ y: 40, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }}, {t0} + 0.15);')
-
-
 def drei():
     teile = [("s9", SINGLE, "Single"), ("s10", PAAR, "Paar"), ("s11", FAMILIE, "Familie")]
     cols = "".join(f'<div id="dr-{i}" style="display:flex;flex-direction:column;align-items:center;gap:20px;width:520px">'
@@ -84,67 +45,6 @@ def drei():
                    for i, (_, g, n) in enumerate(teile))
     html = f'<div class="mitte" style="flex-direction:row;gap:40px">{cols}</div>'
     return dict(html=html, js=lambda t0, d: " ".join(f'pop("#dr-{i}", {st(s) if i else t0});' for i, (s, _, _) in enumerate(teile)))
-
-
-def beleg(uid, titel, intro_icon, posten, ende_sid, summe_text):
-    """Kassenzettel: links wechselnde Icons, rechts füllt sich die Liste mit laufender Summe.
-    posten = [(icon_ab_sid, betrag_sid, icon, label, betrag)]"""
-    icons = [(None, intro_icon)] + [(p[0], p[2]) for p in posten]
-    bild = "".join(f'<div id="{uid}-i{k}" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0">{ic}</div>'
-                   for k, (_, ic) in enumerate(icons))
-    zeilen = "".join(f'<div id="{uid}-r{k}" style="display:flex;justify-content:space-between;font-weight:700;font-size:38px;color:#353a3d;padding:7px 0;opacity:0">'
-                     f'<span>{p[3]}</span><span style="font-weight:800;color:#111">{eur(p[4])}</span></div>'
-                     for k, p in enumerate(posten))
-    summen, s = [], 0
-    for p in posten:
-        s += p[4]
-        summen.append(s)
-    tot = "".join(f'<div id="{uid}-s{k}" class="serif" style="position:absolute;right:0;top:0;font-size:60px;color:{ROT};opacity:0">{eur(v)}</div>'
-                  for k, v in enumerate(summen))
-    tot += f'<div id="{uid}-sf" class="serif" style="position:absolute;right:0;top:0;font-size:60px;color:{ROT};opacity:0">{summe_text}</div>'
-    html = (f'<div class="bild" style="position:absolute">{bild}</div>'
-            f'<div style="position:absolute;left:960px;top:120px;width:840px;height:740px;background:#faf5ef;border-radius:34px;padding:34px 50px;display:flex;flex-direction:column">'
-            f'<div style="font-weight:800;font-size:46px;color:var(--brand);border-bottom:4px dashed #d9cbb8;padding-bottom:14px;margin-bottom:10px">{titel}</div>'
-            f'<div style="flex:1">{zeilen}</div>'
-            f'<div style="display:flex;justify-content:space-between;align-items:center;border-top:4px solid #353a3d;padding-top:18px">'
-            f'<span style="font-weight:800;font-size:46px;color:#111">Summe</span><div id="{uid}-sb" style="position:relative;width:420px;height:72px">{tot}</div></div></div>')
-
-    def js(t0, d):
-        out = []
-        zeiten = [t0] + [st(p[0]) for p in posten]
-        for k, a in enumerate(zeiten):
-            out.append(f'tl.fromTo("#{uid}-i{k}", {{ opacity: 0, scale: 0.85 }}, {{ opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.8)" }}, {a});')
-            if k + 1 < len(zeiten):
-                out.append(f'tl.to("#{uid}-i{k}", {{ opacity: 0, duration: 0.2 }}, {zeiten[k + 1] - 0.2});')
-        for k, p in enumerate(posten):
-            a = euro_zeit(p[1])
-            out.append(f'tl.fromTo("#{uid}-r{k}", {{ opacity: 0, x: 40 }}, {{ opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }}, {a});')
-            out.append(f'tl.fromTo("#{uid}-s{k}", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.2 }}, {a});')
-            if k:
-                out.append(f'tl.to("#{uid}-s{k - 1}", {{ opacity: 0, duration: 0.2 }}, {a});')
-        e = euro_zeit(ende_sid)
-        out.append(f'tl.to("#{uid}-s{len(posten) - 1}", {{ opacity: 0, duration: 0.2 }}, {e});')
-        out.append(f'tl.fromTo("#{uid}-sf", {{ opacity: 0, scale: 1.3 }}, {{ opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2)" }}, {e});')
-        return " ".join(out)
-    return dict(html=html, js=js)
-
-
-def balken3(uid, daten, sub=None, sub_sid=None):
-    """Balkenvergleich: daten = [(label, wert_text, höhe, farbe, sid)]"""
-    cols = "".join(
-        f'<div id="{uid}-{i}" style="display:flex;flex-direction:column;align-items:center;gap:14px">'
-        f'<div class="serif" style="font-size:64px;color:{c}">{v}</div>'
-        f'<div style="width:260px;height:{h}px;border-radius:14px 14px 0 0;background:{c}"></div>'
-        f'<div style="font-weight:800;font-size:46px;color:#353a3d">{lab}</div></div>' for i, (lab, v, h, c, _) in enumerate(daten))
-    sub_html = f'<div id="{uid}-sub" style="position:absolute;right:150px;top:150px;padding:12px 34px;border-radius:30px;background:#353a3d;color:#fff;font-weight:800;font-size:46px">{sub}</div>' if sub else ""
-    html = f'<div class="mitte" style="flex-direction:row;align-items:flex-end;gap:90px;top:110px">{cols}</div>{sub_html}'
-
-    def js(t0, d):
-        out = [f'pop("#{uid}-{i}", {euro_zeit(s) if s else t0});' for i, (_, _, _, _, s) in enumerate(daten)]
-        if sub:
-            out.append(f'pop("#{uid}-sub", {st(sub_sid)});')
-        return " ".join(out)
-    return dict(html=html, js=js)
 
 
 def torte():
@@ -180,7 +80,7 @@ SZENEN = [
     ("s23", "s23", "kapitel", dict(titel='<span style="color:#DB8622">Los geht\'s!</span>')),
     # ---- Single ----
     ("s24", "s24", "frei", karte("Situation 1", "Single", uid="k1")),
-    ("s25", "s48", "frei", beleg("mx", "Max · pro Monat", SINGLE, [
+    ("s25", "s48", "frei", beleg(Z, "mx", "Max · pro Monat", SINGLE, [
         ("s27", "s28", ICON(HAUS), "Warmmiete", 750),
         ("s29", "s30", doppel(STROM, HANDY), "Strom, Internet, Handy", 100),
         ("s31", "s32", ICON(WAGEN), "Essen", 300),
@@ -197,7 +97,7 @@ SZENEN = [
     ("s55", "s55", "frei", torte()),
     # ---- Paar ----
     ("s56", "s56", "frei", karte("Situation 2", "Paar", uid="k2")),
-    ("s57", "s68", "frei", beleg("pa", "Lisa & Tom · pro Monat", PAAR, [
+    ("s57", "s68", "frei", beleg(Z, "pa", "Lisa & Tom · pro Monat", PAAR, [
         ("s58", "s58", ICON(HAUS), "Warmmiete", 1100),
         ("s59", "s59", doppel(STROM, HANDY), "Strom, Internet, Handys", 150),
         ("s60", "s60", ICON(WAGEN), "Essen", 550),
@@ -208,7 +108,7 @@ SZENEN = [
         ("s67", "s67", ICON(TASCHE), "Freizeit & Kleidung", 350),
     ], "s68", "≈ 2.700 €")),
     ("s69", "s69", "split", dict(icon=ICON(SCHOCK), text="Jetzt wird's spannend …")),
-    ("s70", "s71", "frei", balken3("pp", [("Max allein", "1.500 €", 420, ROT, None), ("pro Person", "1.350 €", 370, GRUEN, "s70")])),
+    ("s70", "s71", "frei", balken3(Z, "pp", [("Max allein", "1.500 €", 420, ROT, None), ("pro Person", "1.350 €", 370, GRUEN, "s70")])),
     ("s72", "s73", "split", dict(icon=PAAR, text="Warum?", sub="Miete, Internet, Rundfunk & Auto teilen sich auf 2 Köpfe", sub_at=st("s73") - st("s72"))),
     ("s74", "s74", "split", dict(icon=ICON(HERZ), text="Romantisch & clever", farbe=GRUEN)),
     ("s75", "s75", "zahl", dict(zahl="≈ 3.000 €", sub="netto – mit 10 % Sparrate", farbe=GRUEN)),
@@ -217,7 +117,7 @@ SZENEN = [
     ("s78", "s78", "split", dict(icon=ICON(WARN), text="Mit Kindern wird's enger", farbe=ROT)),
     # ---- Familie ----
     ("s79", "s79", "frei", karte("Situation 3", "Familie", uid="k3")),
-    ("s80", "s95", "frei", beleg("fa", "Familie Becker · pro Monat", FAMILIE, [
+    ("s80", "s95", "frei", beleg(Z, "fa", "Familie Becker · pro Monat", FAMILIE, [
         ("s81", "s82", ICON(HAUS), "Warmmiete", 1500),
         ("s83", "s83", doppel(STROM, WASCH), "Strom, Internet, Handys", 200),
         ("s84", "s85", ICON(WAGEN), "Essen", 900),
@@ -236,7 +136,7 @@ SZENEN = [
     ("s105", "s105", "split", dict(icon=ICON(SPARSCHWEIN, 640, 555), text="Notgroschen!", farbe=GRUEN)),
     # ---- Fazit & Tipps ----
     ("s106", "s106", "kapitel", dict(titel="Zusammengefasst")),
-    ("s107", "s110", "frei", balken3("zf", [("Single", "1.500 €", 220, "#3d7be0", "s107"), ("Paar", "2.700 €", 400, GRUEN, "s108"), ("Familie", "4.000 €", 590, ORANGE, "s109")], "ohne Sparen", "s110")),
+    ("s107", "s110", "frei", balken3(Z, "zf", [("Single", "1.500 €", 220, "#3d7be0", "s107"), ("Paar", "2.700 €", 400, GRUEN, "s108"), ("Familie", "4.000 €", 590, ORANGE, "s109")], "ohne Sparen", "s110")),
     ("s111", "s112", "split", dict(icon=ICON(STERN), text="5 Tipps: mehr Geld übrig", farbe=GRUEN)),
     ("s113", "s113", "frei", tipp(1, "Miete")),
     ("s114", "s114", "zahl", dict(zahl="max. ⅓", sub="deines Nettos für die Warmmiete")),
