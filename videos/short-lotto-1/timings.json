@@ -1,0 +1,394 @@
+{
+ "dauer": 68.177,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 3.065,
+   "captions": [
+    {
+     "text": "Stell dir vor,",
+     "start": 0.0,
+     "end": 0.74
+    },
+    {
+     "text": "du gewinnst morgen",
+     "start": 0.74,
+     "end": 1.691
+    },
+    {
+     "text": "eine Million Euro im Lotto",
+     "start": 1.691,
+     "end": 3.065
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 3.265,
+   "end": 7.786,
+   "captions": [
+    {
+     "text": "Und an einem Samstagabend",
+     "start": 3.265,
+     "end": 5.118
+    },
+    {
+     "text": "passiert es:",
+     "start": 5.118,
+     "end": 6.007
+    },
+    {
+     "text": "Marco knackt den Jackpot",
+     "start": 6.007,
+     "end": 7.786
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "start": 7.786,
+   "end": 11.143,
+   "captions": [
+    {
+     "text": "Er starrt minutenlang",
+     "start": 7.786,
+     "end": 8.905
+    },
+    {
+     "text": "auf den Fernseher",
+     "start": 8.905,
+     "end": 9.811
+    },
+    {
+     "text": "und kann es nicht glauben",
+     "start": 9.811,
+     "end": 11.143
+    }
+   ]
+  },
+  {
+   "id": "s35",
+   "start": 11.343,
+   "end": 15.109,
+   "captions": [
+    {
+     "text": "Marco kündigt seinen Job,",
+     "start": 11.343,
+     "end": 12.77
+    },
+    {
+     "text": "schließlich braucht",
+     "start": 12.77,
+     "end": 13.854
+    },
+    {
+     "text": "er ja kein Gehalt mehr",
+     "start": 13.854,
+     "end": 15.109
+    }
+   ]
+  },
+  {
+   "id": "s36",
+   "start": 15.109,
+   "end": 18.795,
+   "captions": [
+    {
+     "text": "Er kauft sich ein Haus",
+     "start": 15.109,
+     "end": 16.834
+    },
+    {
+     "text": "für 500.000 €,",
+     "start": 16.834,
+     "end": 17.932
+    },
+    {
+     "text": "bar bezahlt",
+     "start": 17.932,
+     "end": 18.795
+    }
+   ]
+  },
+  {
+   "id": "s37",
+   "start": 18.795,
+   "end": 21.583,
+   "captions": [
+    {
+     "text": "Dazu ein Sportwagen",
+     "start": 18.795,
+     "end": 20.504
+    },
+    {
+     "text": "für 80.000 €",
+     "start": 20.504,
+     "end": 21.583
+    }
+   ]
+  },
+  {
+   "id": "s38",
+   "start": 21.583,
+   "end": 25.298,
+   "captions": [
+    {
+     "text": "Eine große Reise mit Freunden,",
+     "start": 21.583,
+     "end": 23.41
+    },
+    {
+     "text": "natürlich alles",
+     "start": 23.41,
+     "end": 24.324
+    },
+    {
+     "text": "auf seine Kosten",
+     "start": 24.324,
+     "end": 25.298
+    }
+   ]
+  },
+  {
+   "id": "s39",
+   "start": 25.298,
+   "end": 30.317,
+   "captions": [
+    {
+     "text": "Dazu kommen Möbel,",
+     "start": 25.298,
+     "end": 26.607
+    },
+    {
+     "text": "Technik,",
+     "start": 26.607,
+     "end": 27.189
+    },
+    {
+     "text": "teure Uhren und jede Menge",
+     "start": 27.189,
+     "end": 29.08
+    },
+    {
+     "text": "spontane Einkäufe",
+     "start": 29.08,
+     "end": 30.317
+    }
+   ]
+  },
+  {
+   "id": "s40",
+   "start": 30.317,
+   "end": 34.64,
+   "captions": [
+    {
+     "text": "Er gönnt sich,",
+     "start": 30.317,
+     "end": 31.124
+    },
+    {
+     "text": "was er sich immer",
+     "start": 31.124,
+     "end": 32.104
+    },
+    {
+     "text": "gewünscht hat,",
+     "start": 32.104,
+     "end": 32.911
+    },
+    {
+     "text": "und das fühlt",
+     "start": 32.911,
+     "end": 33.66
+    },
+    {
+     "text": "sich großartig an",
+     "start": 33.66,
+     "end": 34.64
+    }
+   ]
+  },
+  {
+   "id": "s41",
+   "start": 34.64,
+   "end": 39.799,
+   "captions": [
+    {
+     "text": "Und plötzlich melden sich",
+     "start": 34.64,
+     "end": 36.122
+    },
+    {
+     "text": "Verwandte und Bekannte,",
+     "start": 36.122,
+     "end": 37.486
+    },
+    {
+     "text": "von denen er jahrelang",
+     "start": 37.486,
+     "end": 38.791
+    },
+    {
+     "text": "nichts gehört hat",
+     "start": 38.791,
+     "end": 39.799
+    }
+   ]
+  },
+  {
+   "id": "s42",
+   "start": 39.799,
+   "end": 43.266,
+   "captions": [
+    {
+     "text": "Der eine braucht Geld",
+     "start": 39.799,
+     "end": 40.886
+    },
+    {
+     "text": "für sein Geschäft,",
+     "start": 40.886,
+     "end": 41.817
+    },
+    {
+     "text": "die andere für eine Hochzeit",
+     "start": 41.817,
+     "end": 43.266
+    }
+   ]
+  },
+  {
+   "id": "s43",
+   "start": 43.266,
+   "end": 47.634,
+   "captions": [
+    {
+     "text": "Marco ist großzügig",
+     "start": 43.266,
+     "end": 44.926
+    },
+    {
+     "text": "und verleiht",
+     "start": 44.926,
+     "end": 45.974
+    },
+    {
+     "text": "insgesamt 100.000 €",
+     "start": 45.974,
+     "end": 47.634
+    }
+   ]
+  },
+  {
+   "id": "s44",
+   "start": 47.634,
+   "end": 51.131,
+   "captions": [
+    {
+     "text": "Nein zu sagen",
+     "start": 47.634,
+     "end": 48.405
+    },
+    {
+     "text": "fällt ihm schwer,",
+     "start": 48.405,
+     "end": 49.412
+    },
+    {
+     "text": "schließlich hat er ja so viel",
+     "start": 49.412,
+     "end": 51.131
+    }
+   ]
+  },
+  {
+   "id": "s45",
+   "start": 51.131,
+   "end": 55.719,
+   "captions": [
+    {
+     "text": "Nach nur einem Jahr sind",
+     "start": 51.131,
+     "end": 52.851
+    },
+    {
+     "text": "von der Million noch",
+     "start": 52.851,
+     "end": 54.285
+    },
+    {
+     "text": "etwa 200.000 € übrig",
+     "start": 54.285,
+     "end": 55.719
+    }
+   ]
+  },
+  {
+   "id": "s46",
+   "start": 55.719,
+   "end": 60.045,
+   "captions": [
+    {
+     "text": "Aber Marco fühlt",
+     "start": 55.719,
+     "end": 56.642
+    },
+    {
+     "text": "sich wie ein König,",
+     "start": 56.642,
+     "end": 57.738
+    },
+    {
+     "text": "und jeder will plötzlich",
+     "start": 57.738,
+     "end": 59.122
+    },
+    {
+     "text": "sein Freund sein",
+     "start": 59.122,
+     "end": 60.045
+    }
+   ]
+  },
+  {
+   "id": "s47",
+   "start": 60.045,
+   "end": 62.277,
+   "captions": [
+    {
+     "text": "Er sagt sich: Ist",
+     "start": 60.045,
+     "end": 61.129
+    },
+    {
+     "text": "doch noch genug da",
+     "start": 61.129,
+     "end": 62.277
+    }
+   ]
+  },
+  {
+   "id": "s22",
+   "start": 62.477,
+   "end": 66.377,
+   "captions": [
+    {
+     "text": "Wir bringen jeden Tag",
+     "start": 62.477,
+     "end": 63.914
+    },
+    {
+     "text": "neue Videos rund",
+     "start": 63.914,
+     "end": 65.009
+    },
+    {
+     "text": "um Geld und Finanzen",
+     "start": 65.009,
+     "end": 66.377
+    }
+   ]
+  }
+ ]
+}
