@@ -1,0 +1,2552 @@
+{
+  "dauer": 498.33,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 3.269,
+      "captions": [
+        {
+          "text": "Du gehst in den Supermarkt,",
+          "start": 0.0,
+          "end": 1.494
+        },
+        {
+          "text": "um schnell Milch",
+          "start": 1.494,
+          "end": 2.38
+        },
+        {
+          "text": "und Brot zu holen",
+          "start": 2.38,
+          "end": 3.269
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 3.269,
+      "end": 10.535,
+      "captions": [
+        {
+          "text": "Und 20 Minuten später",
+          "start": 3.269,
+          "end": 4.876
+        },
+        {
+          "text": "stehst du an der Kasse",
+          "start": 4.876,
+          "end": 6.612
+        },
+        {
+          "text": "mit einem vollen Wagen",
+          "start": 6.612,
+          "end": 8.349
+        },
+        {
+          "text": "und einer Rechnung",
+          "start": 8.349,
+          "end": 9.77
+        },
+        {
+          "text": "von über 50 €",
+          "start": 9.77,
+          "end": 10.535
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 10.535,
+      "end": 11.797,
+      "captions": [
+        {
+          "text": "Kommt dir bekannt vor?",
+          "start": 10.535,
+          "end": 11.797
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 11.797,
+      "end": 14.082,
+      "captions": [
+        {
+          "text": "Das ist kein Zufall,",
+          "start": 11.797,
+          "end": 13.082
+        },
+        {
+          "text": "das ist Absicht",
+          "start": 13.082,
+          "end": 14.082
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 14.082,
+      "end": 19.596,
+      "captions": [
+        {
+          "text": "Hinter jedem Regal,",
+          "start": 14.082,
+          "end": 15.299
+        },
+        {
+          "text": "jeder Lampe und sogar hinter",
+          "start": 15.299,
+          "end": 17.319
+        },
+        {
+          "text": "der Musik steckt Psychologie",
+          "start": 17.319,
+          "end": 19.596
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 19.596,
+      "end": 25.613,
+      "captions": [
+        {
+          "text": "Ganze Teams von Experten",
+          "start": 19.596,
+          "end": 20.772
+        },
+        {
+          "text": "tüfteln daran,",
+          "start": 20.772,
+          "end": 21.784
+        },
+        {
+          "text": "wie sie dir noch einen Euro",
+          "start": 21.784,
+          "end": 23.734
+        },
+        {
+          "text": "mehr aus der Tasche ziehen",
+          "start": 23.734,
+          "end": 25.613
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 25.613,
+      "end": 33.339,
+      "captions": [
+        {
+          "text": "Supermärkte sind bis",
+          "start": 25.613,
+          "end": 26.813
+        },
+        {
+          "text": "ins kleinste Detail",
+          "start": 26.813,
+          "end": 28.362
+        },
+        {
+          "text": "darauf ausgelegt,",
+          "start": 28.362,
+          "end": 29.748
+        },
+        {
+          "text": "dass du mehr kaufst,",
+          "start": 29.748,
+          "end": 31.379
+        },
+        {
+          "text": "als du eigentlich wolltest",
+          "start": 31.379,
+          "end": 33.339
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 33.339,
+      "end": 38.137,
+      "captions": [
+        {
+          "text": "Vom Eingang bis zur Kasse",
+          "start": 33.339,
+          "end": 35.143
+        },
+        {
+          "text": "wartet ein Trick",
+          "start": 35.143,
+          "end": 36.401
+        },
+        {
+          "text": "nach dem anderen auf dich",
+          "start": 36.401,
+          "end": 38.137
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 38.137,
+      "end": 42.155,
+      "captions": [
+        {
+          "text": "Heute machen wir",
+          "start": 38.137,
+          "end": 38.839
+        },
+        {
+          "text": "deshalb einen Rundgang",
+          "start": 38.839,
+          "end": 40.118
+        },
+        {
+          "text": "durch den Supermarkt,",
+          "start": 40.118,
+          "end": 41.339
+        },
+        {
+          "text": "gemeinsam mit Jana",
+          "start": 41.339,
+          "end": 42.155
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 42.155,
+      "end": 46.874,
+      "captions": [
+        {
+          "text": "Jana will eigentlich",
+          "start": 42.155,
+          "end": 43.353
+        },
+        {
+          "text": "nur ein paar Sachen",
+          "start": 43.353,
+          "end": 45.002
+        },
+        {
+          "text": "fürs Abendessen kaufen",
+          "start": 45.002,
+          "end": 46.874
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 46.874,
+      "end": 53.315,
+      "captions": [
+        {
+          "text": "Sie hat einen Zettel dabei",
+          "start": 46.874,
+          "end": 48.806
+        },
+        {
+          "text": "mit genau fünf Sachen: Nudeln,",
+          "start": 48.806,
+          "end": 51.04
+        },
+        {
+          "text": "Tomaten, Käse, Milch und Salat",
+          "start": 51.04,
+          "end": 53.315
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 53.315,
+      "end": 58.47,
+      "captions": [
+        {
+          "text": "Und wir decken unterwegs",
+          "start": 53.315,
+          "end": 55.111
+        },
+        {
+          "text": "zehn Tricks auf,",
+          "start": 55.111,
+          "end": 56.307
+        },
+        {
+          "text": "die fast",
+          "start": 56.307,
+          "end": 56.82
+        },
+        {
+          "text": "jeder Supermarkt benutzt",
+          "start": 56.82,
+          "end": 58.47
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 58.47,
+      "end": 65.738,
+      "captions": [
+        {
+          "text": "Am Ende rechnen wir aus,",
+          "start": 58.47,
+          "end": 60.046
+        },
+        {
+          "text": "was dich diese Tricks",
+          "start": 60.046,
+          "end": 61.554
+        },
+        {
+          "text": "im Jahr kosten,",
+          "start": 61.554,
+          "end": 62.631
+        },
+        {
+          "text": "und zeigen dir,",
+          "start": 62.631,
+          "end": 63.708
+        },
+        {
+          "text": "wie du sie ganz",
+          "start": 63.708,
+          "end": 64.784
+        },
+        {
+          "text": "einfach austrickst",
+          "start": 64.784,
+          "end": 65.738
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "start": 65.738,
+      "end": 68.019,
+      "captions": [
+        {
+          "text": "Bevor wir starten,",
+          "start": 65.738,
+          "end": 66.817
+        },
+        {
+          "text": "eine Frage an dich",
+          "start": 66.817,
+          "end": 68.019
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "start": 68.019,
+      "end": 70.121,
+      "captions": [
+        {
+          "text": "Welcher Trick hat dich",
+          "start": 68.019,
+          "end": 69.178
+        },
+        {
+          "text": "schon mal erwischt?",
+          "start": 69.178,
+          "end": 70.121
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "start": 70.121,
+      "end": 73.408,
+      "captions": [
+        {
+          "text": "Merk dir die Nummer",
+          "start": 70.121,
+          "end": 71.065
+        },
+        {
+          "text": "und schreib sie am Ende",
+          "start": 71.065,
+          "end": 72.503
+        },
+        {
+          "text": "in die Kommentare",
+          "start": 72.503,
+          "end": 73.408
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "start": 73.408,
+      "end": 78.133,
+      "captions": [
+        {
+          "text": "Und wenn du in Zukunft",
+          "start": 73.408,
+          "end": 74.879
+        },
+        {
+          "text": "cleverer einkaufen willst,",
+          "start": 74.879,
+          "end": 76.804
+        },
+        {
+          "text": "folge HundeFinanzTV",
+          "start": 76.804,
+          "end": 78.133
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "start": 78.133,
+      "end": 82.073,
+      "captions": [
+        {
+          "text": "Wir bringen jeden Tag",
+          "start": 78.133,
+          "end": 79.612
+        },
+        {
+          "text": "neue Videos rund",
+          "start": 79.612,
+          "end": 80.799
+        },
+        {
+          "text": "um Geld und Finanzen",
+          "start": 80.799,
+          "end": 82.073
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "start": 82.073,
+      "end": 85.687,
+      "captions": [
+        {
+          "text": "Also, Jana schnappt sich",
+          "start": 82.073,
+          "end": 83.417
+        },
+        {
+          "text": "einen Einkaufswagen,",
+          "start": 83.417,
+          "end": 84.768
+        },
+        {
+          "text": "und los geht's",
+          "start": 84.768,
+          "end": 85.687
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "start": 85.687,
+      "end": 90.583,
+      "captions": [
+        {
+          "text": "Und damit sind wir",
+          "start": 85.687,
+          "end": 87.038
+        },
+        {
+          "text": "schon beim ersten Trick:",
+          "start": 87.038,
+          "end": 88.839
+        },
+        {
+          "text": "der Einkaufswagen selbst",
+          "start": 88.839,
+          "end": 90.583
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "start": 90.583,
+      "end": 94.595,
+      "captions": [
+        {
+          "text": "Einkaufswagen sind",
+          "start": 90.583,
+          "end": 91.906
+        },
+        {
+          "text": "über die Jahre immer",
+          "start": 91.906,
+          "end": 93.458
+        },
+        {
+          "text": "größer geworden",
+          "start": 93.458,
+          "end": 94.595
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "start": 94.595,
+      "end": 101.001,
+      "captions": [
+        {
+          "text": "Das hat einen einfachen",
+          "start": 94.595,
+          "end": 96.253
+        },
+        {
+          "text": "Grund: In einem riesigen",
+          "start": 96.253,
+          "end": 97.967
+        },
+        {
+          "text": "Wagen sehen drei Teile",
+          "start": 97.967,
+          "end": 99.578
+        },
+        {
+          "text": "nach fast nichts aus",
+          "start": 99.578,
+          "end": 101.001
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "start": 101.001,
+      "end": 105.727,
+      "captions": [
+        {
+          "text": "Unser Gehirn will",
+          "start": 101.001,
+          "end": 102.309
+        },
+        {
+          "text": "den Wagen füllen,",
+          "start": 102.309,
+          "end": 103.659
+        },
+        {
+          "text": "und wir kaufen",
+          "start": 103.659,
+          "end": 104.771
+        },
+        {
+          "text": "automatisch mehr",
+          "start": 104.771,
+          "end": 105.727
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "start": 105.727,
+      "end": 111.704,
+      "captions": [
+        {
+          "text": "Jana hat nur fünf",
+          "start": 105.727,
+          "end": 106.733
+        },
+        {
+          "text": "Sachen auf ihrem Zettel,",
+          "start": 106.733,
+          "end": 108.153
+        },
+        {
+          "text": "aber einen Wagen,",
+          "start": 108.153,
+          "end": 109.159
+        },
+        {
+          "text": "in den locker ein ganzer",
+          "start": 109.159,
+          "end": 110.579
+        },
+        {
+          "text": "Wocheneinkauf passt",
+          "start": 110.579,
+          "end": 111.704
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "start": 111.704,
+      "end": 116.784,
+      "captions": [
+        {
+          "text": "Trick Nummer zwei wartet",
+          "start": 111.704,
+          "end": 113.352
+        },
+        {
+          "text": "direkt hinter dem Eingang:",
+          "start": 113.352,
+          "end": 115.44
+        },
+        {
+          "text": "Obst und Gemüse",
+          "start": 115.44,
+          "end": 116.784
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "start": 116.784,
+      "end": 122.173,
+      "captions": [
+        {
+          "text": "Bunte Farben, frische Ware,",
+          "start": 116.784,
+          "end": 118.628
+        },
+        {
+          "text": "oft sogar mit kleinen",
+          "start": 118.628,
+          "end": 120.359
+        },
+        {
+          "text": "Wassertropfen besprüht",
+          "start": 120.359,
+          "end": 122.173
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "start": 122.173,
+      "end": 128.957,
+      "captions": [
+        {
+          "text": "Und sogar das Licht über",
+          "start": 122.173,
+          "end": 123.705
+        },
+        {
+          "text": "der Obsttheke ist oft",
+          "start": 123.705,
+          "end": 125.178
+        },
+        {
+          "text": "extra warm eingestellt,",
+          "start": 125.178,
+          "end": 126.79
+        },
+        {
+          "text": "damit alles noch",
+          "start": 126.79,
+          "end": 127.765
+        },
+        {
+          "text": "frischer aussieht",
+          "start": 127.765,
+          "end": 128.957
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "start": 128.957,
+      "end": 135.429,
+      "captions": [
+        {
+          "text": "Das gibt uns sofort",
+          "start": 128.957,
+          "end": 129.838
+        },
+        {
+          "text": "ein gutes Gefühl,",
+          "start": 129.838,
+          "end": 131.073
+        },
+        {
+          "text": "wir fühlen uns gesund",
+          "start": 131.073,
+          "end": 132.546
+        },
+        {
+          "text": "und gönnen uns später",
+          "start": 132.546,
+          "end": 134.049
+        },
+        {
+          "text": "umso leichter etwas",
+          "start": 134.049,
+          "end": 135.429
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "start": 135.429,
+      "end": 140.016,
+      "captions": [
+        {
+          "text": "Und weil man hier",
+          "start": 135.429,
+          "end": 136.249
+        },
+        {
+          "text": "langsam auswählt,",
+          "start": 136.249,
+          "end": 137.391
+        },
+        {
+          "text": "wird gleich am Anfang",
+          "start": 137.391,
+          "end": 138.673
+        },
+        {
+          "text": "unser Tempo gebremst",
+          "start": 138.673,
+          "end": 140.016
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "start": 140.016,
+      "end": 144.553,
+      "captions": [
+        {
+          "text": "Wer langsamer geht,",
+          "start": 140.016,
+          "end": 141.342
+        },
+        {
+          "text": "sieht mehr,",
+          "start": 141.342,
+          "end": 142.253
+        },
+        {
+          "text": "und wer mehr sieht,",
+          "start": 142.253,
+          "end": 143.828
+        },
+        {
+          "text": "kauft mehr",
+          "start": 143.828,
+          "end": 144.553
+        }
+      ]
+    },
+    {
+      "id": "s31",
+      "start": 144.553,
+      "end": 147.418,
+      "captions": [
+        {
+          "text": "Trick Nummer drei:",
+          "start": 144.553,
+          "end": 146.094
+        },
+        {
+          "text": "Musik und Duft",
+          "start": 146.094,
+          "end": 147.418
+        }
+      ]
+    },
+    {
+      "id": "s32",
+      "start": 147.418,
+      "end": 152.181,
+      "captions": [
+        {
+          "text": "Hast du schon mal gemerkt,",
+          "start": 147.418,
+          "end": 148.735
+        },
+        {
+          "text": "dass im Supermarkt fast",
+          "start": 148.735,
+          "end": 150.488
+        },
+        {
+          "text": "immer ruhige Musik läuft?",
+          "start": 150.488,
+          "end": 152.181
+        }
+      ]
+    },
+    {
+      "id": "s33",
+      "start": 152.181,
+      "end": 156.795,
+      "captions": [
+        {
+          "text": "Langsame Musik sorgt dafür,",
+          "start": 152.181,
+          "end": 153.934
+        },
+        {
+          "text": "dass wir langsamer",
+          "start": 153.934,
+          "end": 155.244
+        },
+        {
+          "text": "gehen und länger bleiben",
+          "start": 155.244,
+          "end": 156.795
+        }
+      ]
+    },
+    {
+      "id": "s34",
+      "start": 156.795,
+      "end": 160.385,
+      "captions": [
+        {
+          "text": "Und dann der Duft von frischen",
+          "start": 156.795,
+          "end": 158.608
+        },
+        {
+          "text": "Brötchen aus dem Backautomaten",
+          "start": 158.608,
+          "end": 160.385
+        }
+      ]
+    },
+    {
+      "id": "s35",
+      "start": 160.385,
+      "end": 163.623,
+      "captions": [
+        {
+          "text": "Der macht Appetit,",
+          "start": 160.385,
+          "end": 161.354
+        },
+        {
+          "text": "und wer Appetit hat,",
+          "start": 161.354,
+          "end": 162.688
+        },
+        {
+          "text": "packt mehr ein",
+          "start": 162.688,
+          "end": 163.623
+        }
+      ]
+    },
+    {
+      "id": "s36",
+      "start": 163.623,
+      "end": 168.582,
+      "captions": [
+        {
+          "text": "Jana wollte eigentlich",
+          "start": 163.623,
+          "end": 164.755
+        },
+        {
+          "text": "kein Gebäck,",
+          "start": 164.755,
+          "end": 165.761
+        },
+        {
+          "text": "aber jetzt liegt",
+          "start": 165.761,
+          "end": 167.001
+        },
+        {
+          "text": "ein Croissant im Wagen",
+          "start": 167.001,
+          "end": 168.582
+        }
+      ]
+    },
+    {
+      "id": "s37",
+      "start": 168.582,
+      "end": 171.974,
+      "captions": [
+        {
+          "text": "Trick Nummer vier:",
+          "start": 168.582,
+          "end": 169.525
+        },
+        {
+          "text": "Die wichtigsten Produkte",
+          "start": 169.525,
+          "end": 170.768
+        },
+        {
+          "text": "stehen ganz hinten",
+          "start": 170.768,
+          "end": 171.974
+        }
+      ]
+    },
+    {
+      "id": "s38",
+      "start": 171.974,
+      "end": 178.205,
+      "captions": [
+        {
+          "text": "Milch, Butter,",
+          "start": 171.974,
+          "end": 172.76
+        },
+        {
+          "text": "Eier und oft auch",
+          "start": 172.76,
+          "end": 174.218
+        },
+        {
+          "text": "das Brot findest du fast",
+          "start": 174.218,
+          "end": 176.42
+        },
+        {
+          "text": "nie vorne am Eingang",
+          "start": 176.42,
+          "end": 178.205
+        }
+      ]
+    },
+    {
+      "id": "s39",
+      "start": 178.205,
+      "end": 180.644,
+      "captions": [
+        {
+          "text": "Denn das sind Dinge,",
+          "start": 178.205,
+          "end": 179.341
+        },
+        {
+          "text": "die fast jeder braucht",
+          "start": 179.341,
+          "end": 180.644
+        }
+      ]
+    },
+    {
+      "id": "s40",
+      "start": 180.644,
+      "end": 185.385,
+      "captions": [
+        {
+          "text": "Und auf dem Weg dorthin",
+          "start": 180.644,
+          "end": 182.148
+        },
+        {
+          "text": "musst du an hunderten",
+          "start": 182.148,
+          "end": 183.735
+        },
+        {
+          "text": "anderen Produkten vorbei",
+          "start": 183.735,
+          "end": 185.385
+        }
+      ]
+    },
+    {
+      "id": "s41",
+      "start": 185.385,
+      "end": 189.838,
+      "captions": [
+        {
+          "text": "Jana will nur Milch,",
+          "start": 185.385,
+          "end": 186.541
+        },
+        {
+          "text": "läuft dafür aber einmal",
+          "start": 186.541,
+          "end": 188.058
+        },
+        {
+          "text": "quer durch den ganzen Laden",
+          "start": 188.058,
+          "end": 189.838
+        }
+      ]
+    },
+    {
+      "id": "s42",
+      "start": 189.838,
+      "end": 196.711,
+      "captions": [
+        {
+          "text": "Ganz nebenbei landen bei ihr",
+          "start": 189.838,
+          "end": 191.695
+        },
+        {
+          "text": "Chips und eine Flasche",
+          "start": 191.695,
+          "end": 193.43
+        },
+        {
+          "text": "Saft im Wagen,",
+          "start": 193.43,
+          "end": 194.534
+        },
+        {
+          "text": "die nicht",
+          "start": 194.534,
+          "end": 195.243
+        },
+        {
+          "text": "auf dem Zettel standen",
+          "start": 195.243,
+          "end": 196.711
+        }
+      ]
+    },
+    {
+      "id": "s43",
+      "start": 196.711,
+      "end": 200.712,
+      "captions": [
+        {
+          "text": "Jetzt wird es",
+          "start": 196.711,
+          "end": 197.598
+        },
+        {
+          "text": "richtig raffiniert,",
+          "start": 197.598,
+          "end": 198.893
+        },
+        {
+          "text": "denn jetzt geht",
+          "start": 198.893,
+          "end": 199.916
+        },
+        {
+          "text": "es um die Regale",
+          "start": 199.916,
+          "end": 200.712
+        }
+      ]
+    },
+    {
+      "id": "s44",
+      "start": 200.712,
+      "end": 204.275,
+      "captions": [
+        {
+          "text": "Trick Nummer fünf:",
+          "start": 200.712,
+          "end": 202.155
+        },
+        {
+          "text": "Augenhöhe ist Kaufhöhe",
+          "start": 202.155,
+          "end": 204.275
+        }
+      ]
+    },
+    {
+      "id": "s45",
+      "start": 204.275,
+      "end": 210.284,
+      "captions": [
+        {
+          "text": "Die Produkte,",
+          "start": 204.275,
+          "end": 204.925
+        },
+        {
+          "text": "an denen der Supermarkt",
+          "start": 204.925,
+          "end": 206.653
+        },
+        {
+          "text": "am meisten verdient,",
+          "start": 206.653,
+          "end": 208.117
+        },
+        {
+          "text": "stehen genau",
+          "start": 208.117,
+          "end": 209.019
+        },
+        {
+          "text": "auf Höhe deiner Augen",
+          "start": 209.019,
+          "end": 210.284
+        }
+      ]
+    },
+    {
+      "id": "s46",
+      "start": 210.284,
+      "end": 215.776,
+      "captions": [
+        {
+          "text": "Hersteller zahlen",
+          "start": 210.284,
+          "end": 211.08
+        },
+        {
+          "text": "oft sogar Geld dafür,",
+          "start": 211.08,
+          "end": 212.45
+        },
+        {
+          "text": "damit ihre Produkte auf diesen",
+          "start": 212.45,
+          "end": 214.406
+        },
+        {
+          "text": "besten Plätzen stehen",
+          "start": 214.406,
+          "end": 215.776
+        }
+      ]
+    },
+    {
+      "id": "s47",
+      "start": 215.776,
+      "end": 222.355,
+      "captions": [
+        {
+          "text": "Die günstigen Eigenmarken",
+          "start": 215.776,
+          "end": 217.281
+        },
+        {
+          "text": "findest du dagegen",
+          "start": 217.281,
+          "end": 218.712
+        },
+        {
+          "text": "meistens ganz unten,",
+          "start": 218.712,
+          "end": 220.303
+        },
+        {
+          "text": "da, wo man sich bücken muss",
+          "start": 220.303,
+          "end": 222.355
+        }
+      ]
+    },
+    {
+      "id": "s48",
+      "start": 222.355,
+      "end": 228.149,
+      "captions": [
+        {
+          "text": "Und die Süßigkeiten",
+          "start": 222.355,
+          "end": 223.806
+        },
+        {
+          "text": "und das bunte",
+          "start": 223.806,
+          "end": 224.864
+        },
+        {
+          "text": "Müsli stehen gerne",
+          "start": 224.864,
+          "end": 226.329
+        },
+        {
+          "text": "auf Augenhöhe von Kindern",
+          "start": 226.329,
+          "end": 228.149
+        }
+      ]
+    },
+    {
+      "id": "s49",
+      "start": 228.149,
+      "end": 236.567,
+      "captions": [
+        {
+          "text": "Jana greift",
+          "start": 228.149,
+          "end": 228.788
+        },
+        {
+          "text": "ganz automatisch zur Marke",
+          "start": 228.788,
+          "end": 230.804
+        },
+        {
+          "text": "vor ihren Augen und zahlt",
+          "start": 230.804,
+          "end": 232.743
+        },
+        {
+          "text": "dafür fast doppelt so viel",
+          "start": 232.743,
+          "end": 234.759
+        },
+        {
+          "text": "wie für die Eigenmarke unten",
+          "start": 234.759,
+          "end": 236.567
+        }
+      ]
+    },
+    {
+      "id": "s50",
+      "start": 236.567,
+      "end": 238.945,
+      "captions": [
+        {
+          "text": "Trick Nummer sechs:",
+          "start": 236.567,
+          "end": 237.693
+        },
+        {
+          "text": "die magische 99",
+          "start": 237.693,
+          "end": 238.945
+        }
+      ]
+    },
+    {
+      "id": "s51",
+      "start": 238.945,
+      "end": 245.111,
+      "captions": [
+        {
+          "text": "Ein Preis von 4,99 € fühlt",
+          "start": 238.945,
+          "end": 241.188
+        },
+        {
+          "text": "sich viel eher",
+          "start": 241.188,
+          "end": 242.31
+        },
+        {
+          "text": "nach 4 € an als nach 5 €",
+          "start": 242.31,
+          "end": 245.111
+        }
+      ]
+    },
+    {
+      "id": "s52",
+      "start": 245.111,
+      "end": 250.119,
+      "captions": [
+        {
+          "text": "Unser Gehirn liest von links",
+          "start": 245.111,
+          "end": 246.765
+        },
+        {
+          "text": "nach rechts und bleibt",
+          "start": 246.765,
+          "end": 248.343
+        },
+        {
+          "text": "an der ersten Zahl hängen",
+          "start": 248.343,
+          "end": 250.119
+        }
+      ]
+    },
+    {
+      "id": "s53",
+      "start": 250.119,
+      "end": 253.566,
+      "captions": [
+        {
+          "text": "Ein Cent Unterschied,",
+          "start": 250.119,
+          "end": 251.697
+        },
+        {
+          "text": "aber gefühlt ein ganzer Euro",
+          "start": 251.697,
+          "end": 253.566
+        }
+      ]
+    },
+    {
+      "id": "s54",
+      "start": 253.566,
+      "end": 255.548,
+      "captions": [
+        {
+          "text": "Trick Nummer sieben:",
+          "start": 253.566,
+          "end": 254.761
+        },
+        {
+          "text": "Mengenangebote",
+          "start": 254.761,
+          "end": 255.548
+        }
+      ]
+    },
+    {
+      "id": "s55",
+      "start": 255.548,
+      "end": 261.145,
+      "captions": [
+        {
+          "text": "Drei für zwei,",
+          "start": 255.548,
+          "end": 257.111
+        },
+        {
+          "text": "XXL‑Packung,",
+          "start": 257.111,
+          "end": 258.615
+        },
+        {
+          "text": "jetzt 20 % mehr Inhalt",
+          "start": 258.615,
+          "end": 261.145
+        }
+      ]
+    },
+    {
+      "id": "s56",
+      "start": 261.145,
+      "end": 263.102,
+      "captions": [
+        {
+          "text": "Das klingt immer",
+          "start": 261.145,
+          "end": 261.971
+        },
+        {
+          "text": "nach einem Schnäppchen",
+          "start": 261.971,
+          "end": 263.102
+        }
+      ]
+    },
+    {
+      "id": "s57",
+      "start": 263.102,
+      "end": 266.848,
+      "captions": [
+        {
+          "text": "Jana nimmt",
+          "start": 263.102,
+          "end": 263.6
+        },
+        {
+          "text": "die Familienpackung Käse,",
+          "start": 263.6,
+          "end": 265.292
+        },
+        {
+          "text": "obwohl sie allein wohnt",
+          "start": 265.292,
+          "end": 266.848
+        }
+      ]
+    },
+    {
+      "id": "s58",
+      "start": 266.848,
+      "end": 272.096,
+      "captions": [
+        {
+          "text": "Aber manchmal ist",
+          "start": 266.848,
+          "end": 267.933
+        },
+        {
+          "text": "die Großpackung pro Kilo sogar",
+          "start": 267.933,
+          "end": 270.074
+        },
+        {
+          "text": "teurer als die normale Packung",
+          "start": 270.074,
+          "end": 272.096
+        }
+      ]
+    },
+    {
+      "id": "s59",
+      "start": 272.096,
+      "end": 277.702,
+      "captions": [
+        {
+          "text": "Und selbst wenn sie günstiger",
+          "start": 272.096,
+          "end": 274.049
+        },
+        {
+          "text": "ist: Wenn die Hälfte",
+          "start": 274.049,
+          "end": 275.5
+        },
+        {
+          "text": "im Müll landet,",
+          "start": 275.5,
+          "end": 276.574
+        },
+        {
+          "text": "hast du nichts gespart",
+          "start": 276.574,
+          "end": 277.702
+        }
+      ]
+    },
+    {
+      "id": "s60",
+      "start": 277.702,
+      "end": 285.701,
+      "captions": [
+        {
+          "text": "Der Profi‑Tipp: Schau",
+          "start": 277.702,
+          "end": 279.155
+        },
+        {
+          "text": "immer auf den Grundpreis,",
+          "start": 279.155,
+          "end": 281.102
+        },
+        {
+          "text": "also den Preis pro",
+          "start": 281.102,
+          "end": 282.504
+        },
+        {
+          "text": "Kilo oder Liter,",
+          "start": 282.504,
+          "end": 283.673
+        },
+        {
+          "text": "der klein",
+          "start": 283.673,
+          "end": 284.374
+        },
+        {
+          "text": "auf dem Preisschild steht",
+          "start": 284.374,
+          "end": 285.701
+        }
+      ]
+    },
+    {
+      "id": "s61",
+      "start": 285.701,
+      "end": 287.963,
+      "captions": [
+        {
+          "text": "Trick Nummer acht:",
+          "start": 285.701,
+          "end": 286.918
+        },
+        {
+          "text": "die Mogelpackung",
+          "start": 286.918,
+          "end": 287.963
+        }
+      ]
+    },
+    {
+      "id": "s62",
+      "start": 287.963,
+      "end": 293.399,
+      "captions": [
+        {
+          "text": "Die Verpackung",
+          "start": 287.963,
+          "end": 288.653
+        },
+        {
+          "text": "bleibt gleich groß,",
+          "start": 288.653,
+          "end": 289.831
+        },
+        {
+          "text": "der Preis bleibt gleich,",
+          "start": 289.831,
+          "end": 291.306
+        },
+        {
+          "text": "aber es ist plötzlich",
+          "start": 291.306,
+          "end": 292.667
+        },
+        {
+          "text": "weniger drin",
+          "start": 292.667,
+          "end": 293.399
+        }
+      ]
+    },
+    {
+      "id": "s63",
+      "start": 293.399,
+      "end": 296.667,
+      "captions": [
+        {
+          "text": "Statt 500 Gramm",
+          "start": 293.399,
+          "end": 294.825
+        },
+        {
+          "text": "sind es nur noch 400",
+          "start": 294.825,
+          "end": 296.667
+        }
+      ]
+    },
+    {
+      "id": "s64",
+      "start": 296.667,
+      "end": 302.461,
+      "captions": [
+        {
+          "text": "Das nennt man auch",
+          "start": 296.667,
+          "end": 297.951
+        },
+        {
+          "text": "Shrinkflation,",
+          "start": 297.951,
+          "end": 298.877
+        },
+        {
+          "text": "und es ist eine versteckte",
+          "start": 298.877,
+          "end": 300.97
+        },
+        {
+          "text": "Preiserhöhung um 20 %",
+          "start": 300.97,
+          "end": 302.461
+        }
+      ]
+    },
+    {
+      "id": "s65",
+      "start": 302.461,
+      "end": 308.066,
+      "captions": [
+        {
+          "text": "Die meisten merken es nie,",
+          "start": 302.461,
+          "end": 304.315
+        },
+        {
+          "text": "weil sie nur",
+          "start": 304.315,
+          "end": 305.263
+        },
+        {
+          "text": "auf den Preis schauen",
+          "start": 305.263,
+          "end": 306.878
+        },
+        {
+          "text": "und nicht auf die Menge",
+          "start": 306.878,
+          "end": 308.066
+        }
+      ]
+    },
+    {
+      "id": "s66",
+      "start": 308.066,
+      "end": 310.342,
+      "captions": [
+        {
+          "text": "Jana ist fast fertig",
+          "start": 308.066,
+          "end": 309.242
+        },
+        {
+          "text": "und steht an der Kasse",
+          "start": 309.242,
+          "end": 310.342
+        }
+      ]
+    },
+    {
+      "id": "s67",
+      "start": 310.342,
+      "end": 312.943,
+      "captions": [
+        {
+          "text": "Aber auch hier warten",
+          "start": 310.342,
+          "end": 311.812
+        },
+        {
+          "text": "noch zwei Tricks",
+          "start": 311.812,
+          "end": 312.943
+        }
+      ]
+    },
+    {
+      "id": "s68",
+      "start": 312.943,
+      "end": 314.9,
+      "captions": [
+        {
+          "text": "Trick Nummer neun:",
+          "start": 312.943,
+          "end": 314.115
+        },
+        {
+          "text": "die Quengelware",
+          "start": 314.115,
+          "end": 314.9
+        }
+      ]
+    },
+    {
+      "id": "s69",
+      "start": 314.9,
+      "end": 320.08,
+      "captions": [
+        {
+          "text": "Direkt an der Kasse",
+          "start": 314.9,
+          "end": 315.897
+        },
+        {
+          "text": "liegen Schokoriegel,",
+          "start": 315.897,
+          "end": 317.774
+        },
+        {
+          "text": "Kaugummis und kleine Snacks",
+          "start": 317.774,
+          "end": 320.08
+        }
+      ]
+    },
+    {
+      "id": "s70",
+      "start": 320.08,
+      "end": 323.127,
+      "captions": [
+        {
+          "text": "Genau dort,",
+          "start": 320.08,
+          "end": 320.653
+        },
+        {
+          "text": "wo man warten muss",
+          "start": 320.653,
+          "end": 321.921
+        },
+        {
+          "text": "und sich langweilt",
+          "start": 321.921,
+          "end": 323.127
+        }
+      ]
+    },
+    {
+      "id": "s71",
+      "start": 323.127,
+      "end": 327.579,
+      "captions": [
+        {
+          "text": "Und genau auf der Höhe,",
+          "start": 323.127,
+          "end": 324.845
+        },
+        {
+          "text": "auf der Kinder sie",
+          "start": 324.845,
+          "end": 326.324
+        },
+        {
+          "text": "sehen und quengeln",
+          "start": 326.324,
+          "end": 327.579
+        }
+      ]
+    },
+    {
+      "id": "s72",
+      "start": 327.579,
+      "end": 332.73,
+      "captions": [
+        {
+          "text": "Gerade wenn man",
+          "start": 327.579,
+          "end": 328.315
+        },
+        {
+          "text": "hungrig und müde ist,",
+          "start": 328.315,
+          "end": 329.659
+        },
+        {
+          "text": "sind diese kleinen Snacks",
+          "start": 329.659,
+          "end": 331.258
+        },
+        {
+          "text": "besonders verführerisch",
+          "start": 331.258,
+          "end": 332.73
+        }
+      ]
+    },
+    {
+      "id": "s73",
+      "start": 332.73,
+      "end": 337.956,
+      "captions": [
+        {
+          "text": "Für ein paar Euro",
+          "start": 332.73,
+          "end": 333.866
+        },
+        {
+          "text": "landet schnell noch",
+          "start": 333.866,
+          "end": 335.398
+        },
+        {
+          "text": "etwas auf dem Band,",
+          "start": 335.398,
+          "end": 336.916
+        },
+        {
+          "text": "ganz ohne Plan",
+          "start": 336.916,
+          "end": 337.956
+        }
+      ]
+    },
+    {
+      "id": "s74",
+      "start": 337.956,
+      "end": 341.197,
+      "captions": [
+        {
+          "text": "Trick Nummer zehn:",
+          "start": 337.956,
+          "end": 339.446
+        },
+        {
+          "text": "Kundenkarten und Apps",
+          "start": 339.446,
+          "end": 341.197
+        }
+      ]
+    },
+    {
+      "id": "s75",
+      "start": 341.197,
+      "end": 344.205,
+      "captions": [
+        {
+          "text": "An der Kasse fragt man",
+          "start": 341.197,
+          "end": 342.529
+        },
+        {
+          "text": "Jana: Haben Sie unsere App?",
+          "start": 342.529,
+          "end": 344.205
+        }
+      ]
+    },
+    {
+      "id": "s76",
+      "start": 344.205,
+      "end": 348.091,
+      "captions": [
+        {
+          "text": "Die Rabatte dort klingen toll,",
+          "start": 344.205,
+          "end": 345.875
+        },
+        {
+          "text": "aber du bezahlst",
+          "start": 345.875,
+          "end": 346.86
+        },
+        {
+          "text": "sie mit deinen Daten",
+          "start": 346.86,
+          "end": 348.091
+        }
+      ]
+    },
+    {
+      "id": "s77",
+      "start": 348.091,
+      "end": 353.532,
+      "captions": [
+        {
+          "text": "Der Supermarkt",
+          "start": 348.091,
+          "end": 349.051
+        },
+        {
+          "text": "weiß dann genau,",
+          "start": 349.051,
+          "end": 350.368
+        },
+        {
+          "text": "was du kaufst,",
+          "start": 350.368,
+          "end": 351.52
+        },
+        {
+          "text": "wann du kaufst und wie viel",
+          "start": 351.52,
+          "end": 353.532
+        }
+      ]
+    },
+    {
+      "id": "s78",
+      "start": 353.532,
+      "end": 357.543,
+      "captions": [
+        {
+          "text": "Und schickt dir",
+          "start": 353.532,
+          "end": 354.275
+        },
+        {
+          "text": "persönliche Angebote,",
+          "start": 354.275,
+          "end": 355.595
+        },
+        {
+          "text": "die dich wieder",
+          "start": 355.595,
+          "end": 356.539
+        },
+        {
+          "text": "in den Laden locken",
+          "start": 356.539,
+          "end": 357.543
+        }
+      ]
+    },
+    {
+      "id": "s79",
+      "start": 357.543,
+      "end": 362.282,
+      "captions": [
+        {
+          "text": "Wer nur für einen Coupon",
+          "start": 357.543,
+          "end": 358.909
+        },
+        {
+          "text": "in den Laden kommt,",
+          "start": 358.909,
+          "end": 360.142
+        },
+        {
+          "text": "kauft am Ende fast",
+          "start": 360.142,
+          "end": 361.309
+        },
+        {
+          "text": "immer noch mehr",
+          "start": 361.309,
+          "end": 362.282
+        }
+      ]
+    },
+    {
+      "id": "s80",
+      "start": 362.282,
+      "end": 365.336,
+      "captions": [
+        {
+          "text": "Schauen wir uns",
+          "start": 362.282,
+          "end": 363.426
+        },
+        {
+          "text": "Janas Kassenbon an",
+          "start": 363.426,
+          "end": 365.336
+        }
+      ]
+    },
+    {
+      "id": "s81",
+      "start": 365.336,
+      "end": 369.223,
+      "captions": [
+        {
+          "text": "Geplant hatte sie fünf",
+          "start": 365.336,
+          "end": 367.358
+        },
+        {
+          "text": "Sachen für etwa 15 €",
+          "start": 367.358,
+          "end": 369.223
+        }
+      ]
+    },
+    {
+      "id": "s82",
+      "start": 369.223,
+      "end": 371.452,
+      "captions": [
+        {
+          "text": "Bezahlt hat sie 32 €",
+          "start": 369.223,
+          "end": 371.452
+        }
+      ]
+    },
+    {
+      "id": "s83",
+      "start": 371.452,
+      "end": 375.826,
+      "captions": [
+        {
+          "text": "Mehr als das Doppelte,",
+          "start": 371.452,
+          "end": 373.053
+        },
+        {
+          "text": "und das ganz ohne,",
+          "start": 373.053,
+          "end": 374.374
+        },
+        {
+          "text": "dass sie es gemerkt hat",
+          "start": 374.374,
+          "end": 375.826
+        }
+      ]
+    },
+    {
+      "id": "s84",
+      "start": 375.826,
+      "end": 378.452,
+      "captions": [
+        {
+          "text": "Was kosten dich diese",
+          "start": 375.826,
+          "end": 377.012
+        },
+        {
+          "text": "Tricks im ganzen Jahr?",
+          "start": 377.012,
+          "end": 378.452
+        }
+      ]
+    },
+    {
+      "id": "s85",
+      "start": 378.452,
+      "end": 384.236,
+      "captions": [
+        {
+          "text": "Schätzungen zufolge",
+          "start": 378.452,
+          "end": 379.648
+        },
+        {
+          "text": "entscheiden wir einen großen",
+          "start": 379.648,
+          "end": 381.483
+        },
+        {
+          "text": "Teil unserer Einkäufe",
+          "start": 381.483,
+          "end": 382.86
+        },
+        {
+          "text": "erst spontan im Laden",
+          "start": 382.86,
+          "end": 384.236
+        }
+      ]
+    },
+    {
+      "id": "s86",
+      "start": 384.236,
+      "end": 389.576,
+      "captions": [
+        {
+          "text": "Nehmen wir an,",
+          "start": 384.236,
+          "end": 385.525
+        },
+        {
+          "text": "du gibst 100 € pro",
+          "start": 385.525,
+          "end": 387.228
+        },
+        {
+          "text": "Woche im Supermarkt aus",
+          "start": 387.228,
+          "end": 389.576
+        }
+      ]
+    },
+    {
+      "id": "s87",
+      "start": 389.576,
+      "end": 393.398,
+      "captions": [
+        {
+          "text": "Und nur 10 % davon gehen",
+          "start": 389.576,
+          "end": 391.34
+        },
+        {
+          "text": "auf das Konto solcher Tricks",
+          "start": 391.34,
+          "end": 393.398
+        }
+      ]
+    },
+    {
+      "id": "s88",
+      "start": 393.398,
+      "end": 398.774,
+      "captions": [
+        {
+          "text": "Dann sind das 10 €",
+          "start": 393.398,
+          "end": 395.298
+        },
+        {
+          "text": "pro Woche,",
+          "start": 395.298,
+          "end": 396.354
+        },
+        {
+          "text": "oder über 500 € im Jahr",
+          "start": 396.354,
+          "end": 398.774
+        }
+      ]
+    },
+    {
+      "id": "s89",
+      "start": 398.774,
+      "end": 403.774,
+      "captions": [
+        {
+          "text": "Für eine Familie,",
+          "start": 398.774,
+          "end": 400.125
+        },
+        {
+          "text": "die mehr einkauft,",
+          "start": 400.125,
+          "end": 401.565
+        },
+        {
+          "text": "schnell auch 1.000 € und mehr",
+          "start": 401.565,
+          "end": 403.774
+        }
+      ]
+    },
+    {
+      "id": "s90",
+      "start": 403.774,
+      "end": 407.027,
+      "captions": [
+        {
+          "text": "Die gute Nachricht: Du",
+          "start": 403.774,
+          "end": 405.259
+        },
+        {
+          "text": "kannst den Spieß umdrehen",
+          "start": 405.259,
+          "end": 407.027
+        }
+      ]
+    },
+    {
+      "id": "s91",
+      "start": 407.027,
+      "end": 410.564,
+      "captions": [
+        {
+          "text": "Hier sind sechs Gegentricks,",
+          "start": 407.027,
+          "end": 408.502
+        },
+        {
+          "text": "mit denen du",
+          "start": 408.502,
+          "end": 409.153
+        },
+        {
+          "text": "die Supermärkte austrickst",
+          "start": 409.153,
+          "end": 410.564
+        }
+      ]
+    },
+    {
+      "id": "s92",
+      "start": 410.564,
+      "end": 414.409,
+      "captions": [
+        {
+          "text": "Gegentrick eins: Geh",
+          "start": 410.564,
+          "end": 412.4
+        },
+        {
+          "text": "nie hungrig einkaufen",
+          "start": 412.4,
+          "end": 414.409
+        }
+      ]
+    },
+    {
+      "id": "s93",
+      "start": 414.409,
+      "end": 419.394,
+      "captions": [
+        {
+          "text": "Mit leerem Magen landen",
+          "start": 414.409,
+          "end": 415.947
+        },
+        {
+          "text": "nachweislich mehr Snacks",
+          "start": 415.947,
+          "end": 417.626
+        },
+        {
+          "text": "und Fertiggerichte im Wagen",
+          "start": 417.626,
+          "end": 419.394
+        }
+      ]
+    },
+    {
+      "id": "s94",
+      "start": 419.394,
+      "end": 423.465,
+      "captions": [
+        {
+          "text": "Ein kleiner Snack vor",
+          "start": 419.394,
+          "end": 420.724
+        },
+        {
+          "text": "dem Einkauf kann dir",
+          "start": 420.724,
+          "end": 422.105
+        },
+        {
+          "text": "also bares Geld sparen",
+          "start": 422.105,
+          "end": 423.465
+        }
+      ]
+    },
+    {
+      "id": "s95",
+      "start": 423.465,
+      "end": 428.839,
+      "captions": [
+        {
+          "text": "Gegentrick zwei: Nimm",
+          "start": 423.465,
+          "end": 424.74
+        },
+        {
+          "text": "einen Korb statt einem Wagen,",
+          "start": 424.74,
+          "end": 426.543
+        },
+        {
+          "text": "wenn du nur ein paar",
+          "start": 426.543,
+          "end": 427.908
+        },
+        {
+          "text": "Sachen brauchst",
+          "start": 427.908,
+          "end": 428.839
+        }
+      ]
+    },
+    {
+      "id": "s96",
+      "start": 428.839,
+      "end": 432.073,
+      "captions": [
+        {
+          "text": "Ein voller Korb wird schwer,",
+          "start": 428.839,
+          "end": 430.44
+        },
+        {
+          "text": "und schon kaufst du weniger",
+          "start": 430.44,
+          "end": 432.073
+        }
+      ]
+    },
+    {
+      "id": "s97",
+      "start": 432.073,
+      "end": 437.305,
+      "captions": [
+        {
+          "text": "Gegentrick drei: Schau",
+          "start": 432.073,
+          "end": 433.215
+        },
+        {
+          "text": "im Regal nach oben",
+          "start": 433.215,
+          "end": 434.553
+        },
+        {
+          "text": "und nach unten,",
+          "start": 434.553,
+          "end": 435.789
+        },
+        {
+          "text": "nicht nur geradeaus",
+          "start": 435.789,
+          "end": 437.305
+        }
+      ]
+    },
+    {
+      "id": "s98",
+      "start": 437.305,
+      "end": 441.698,
+      "captions": [
+        {
+          "text": "Die Eigenmarken unten",
+          "start": 437.305,
+          "end": 438.542
+        },
+        {
+          "text": "sind oft genauso gut",
+          "start": 438.542,
+          "end": 440.109
+        },
+        {
+          "text": "und deutlich günstiger",
+          "start": 440.109,
+          "end": 441.698
+        }
+      ]
+    },
+    {
+      "id": "s99",
+      "start": 441.698,
+      "end": 444.932,
+      "captions": [
+        {
+          "text": "Im Blindtest merken",
+          "start": 441.698,
+          "end": 442.801
+        },
+        {
+          "text": "viele Menschen kaum",
+          "start": 442.801,
+          "end": 444.039
+        },
+        {
+          "text": "einen Unterschied",
+          "start": 444.039,
+          "end": 444.932
+        }
+      ]
+    },
+    {
+      "id": "s100",
+      "start": 444.932,
+      "end": 450.538,
+      "captions": [
+        {
+          "text": "Gegentrick vier: Vergleiche",
+          "start": 444.932,
+          "end": 446.259
+        },
+        {
+          "text": "immer den Grundpreis,",
+          "start": 446.259,
+          "end": 447.763
+        },
+        {
+          "text": "besonders bei Angeboten",
+          "start": 447.763,
+          "end": 449.525
+        },
+        {
+          "text": "und Großpackungen",
+          "start": 449.525,
+          "end": 450.538
+        }
+      ]
+    },
+    {
+      "id": "s101",
+      "start": 450.538,
+      "end": 455.83,
+      "captions": [
+        {
+          "text": "Gegentrick fünf: Schreib",
+          "start": 450.538,
+          "end": 451.829
+        },
+        {
+          "text": "dir vorher genau auf,",
+          "start": 451.829,
+          "end": 453.372
+        },
+        {
+          "text": "was du brauchst,",
+          "start": 453.372,
+          "end": 454.618
+        },
+        {
+          "text": "und halt dich daran",
+          "start": 454.618,
+          "end": 455.83
+        }
+      ]
+    },
+    {
+      "id": "s102",
+      "start": 455.83,
+      "end": 459.6,
+      "captions": [
+        {
+          "text": "Alles,",
+          "start": 455.83,
+          "end": 456.037
+        },
+        {
+          "text": "was nicht",
+          "start": 456.037,
+          "end": 456.873
+        },
+        {
+          "text": "auf dem Zettel steht,",
+          "start": 456.873,
+          "end": 458.687
+        },
+        {
+          "text": "bleibt im Regal",
+          "start": 458.687,
+          "end": 459.6
+        }
+      ]
+    },
+    {
+      "id": "s103",
+      "start": 459.6,
+      "end": 464.932,
+      "captions": [
+        {
+          "text": "Und Gegentrick sechs: Geh",
+          "start": 459.6,
+          "end": 460.752
+        },
+        {
+          "text": "lieber einmal pro Woche",
+          "start": 460.752,
+          "end": 462.331
+        },
+        {
+          "text": "groß einkaufen statt",
+          "start": 462.331,
+          "end": 463.704
+        },
+        {
+          "text": "jeden Tag ein bisschen",
+          "start": 463.704,
+          "end": 464.932
+        }
+      ]
+    },
+    {
+      "id": "s104",
+      "start": 464.932,
+      "end": 468.991,
+      "captions": [
+        {
+          "text": "Denn jeder Besuch",
+          "start": 464.932,
+          "end": 465.797
+        },
+        {
+          "text": "im Supermarkt ist eine neue",
+          "start": 465.797,
+          "end": 467.619
+        },
+        {
+          "text": "Chance für die Tricks",
+          "start": 467.619,
+          "end": 468.991
+        }
+      ]
+    },
+    {
+      "id": "s105",
+      "start": 468.991,
+      "end": 472.699,
+      "captions": [
+        {
+          "text": "So sparst du nicht nur Geld,",
+          "start": 468.991,
+          "end": 470.921
+        },
+        {
+          "text": "sondern auch jede Menge Zeit",
+          "start": 470.921,
+          "end": 472.699
+        }
+      ]
+    },
+    {
+      "id": "s106",
+      "start": 472.699,
+      "end": 477.836,
+      "captions": [
+        {
+          "text": "Beim nächsten Einkauf",
+          "start": 472.699,
+          "end": 474.132
+        },
+        {
+          "text": "macht Jana es anders: satt,",
+          "start": 474.132,
+          "end": 476.176
+        },
+        {
+          "text": "mit Zettel und mit Korb",
+          "start": 476.176,
+          "end": 477.836
+        }
+      ]
+    },
+    {
+      "id": "s107",
+      "start": 477.836,
+      "end": 482.17,
+      "captions": [
+        {
+          "text": "Ergebnis: fünf Sachen,",
+          "start": 477.836,
+          "end": 480.753
+        },
+        {
+          "text": "16 €, fertig",
+          "start": 480.753,
+          "end": 482.17
+        }
+      ]
+    },
+    {
+      "id": "s108",
+      "start": 482.17,
+      "end": 483.233,
+      "captions": [
+        {
+          "text": "Und jetzt bist du dran",
+          "start": 482.17,
+          "end": 483.233
+        }
+      ]
+    },
+    {
+      "id": "s109",
+      "start": 483.233,
+      "end": 486.962,
+      "captions": [
+        {
+          "text": "Welcher Trick hat",
+          "start": 483.233,
+          "end": 483.968
+        },
+        {
+          "text": "dich schon erwischt? Schreib",
+          "start": 483.968,
+          "end": 485.37
+        },
+        {
+          "text": "die Nummer in die Kommentare",
+          "start": 485.37,
+          "end": 486.962
+        }
+      ]
+    },
+    {
+      "id": "s110",
+      "start": 486.962,
+      "end": 493.851,
+      "captions": [
+        {
+          "text": "Und wenn dich das Video",
+          "start": 486.962,
+          "end": 488.506
+        },
+        {
+          "text": "überrascht hat,",
+          "start": 488.506,
+          "end": 489.486
+        },
+        {
+          "text": "teile es mit jemandem,",
+          "start": 489.486,
+          "end": 491.097
+        },
+        {
+          "text": "der im Supermarkt immer",
+          "start": 491.097,
+          "end": 492.782
+        },
+        {
+          "text": "mehr kauft als geplant",
+          "start": 492.782,
+          "end": 493.851
+        }
+      ]
+    },
+    {
+      "id": "s111",
+      "start": 493.851,
+      "end": 497.754,
+      "captions": [
+        {
+          "text": "Wir sind HundeFinanzTV,",
+          "start": 493.851,
+          "end": 495.366
+        },
+        {
+          "text": "wir sehen uns morgen",
+          "start": 495.366,
+          "end": 496.684
+        },
+        {
+          "text": "im nächsten Video",
+          "start": 496.684,
+          "end": 497.754
+        }
+      ]
+    }
+  ]
+}

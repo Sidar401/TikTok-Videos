@@ -62,7 +62,8 @@ def plan(uid, station, zeilen, extras=(), neu=(), von=None):
         f'color:{"#fff" if n <= station else GRAU};font-weight:800;font-size:24px;display:flex;align-items:center;justify-content:center">{n}</div>'
         for n, (x, y) in STATION.items() if n > 0)
     x0, y0 = STATION[max(von, 0)]
-    jana = (f'<div id="{uid}-j" style="position:absolute;left:{x0 - 38}px;top:{y0 - 92}px;width:76px;height:96px;z-index:3">{JANA}</div>')
+    jana = (f'<div id="{uid}-j" style="position:absolute;left:{x0 - 48}px;top:{y0 - 118}px;width:96px;height:122px;z-index:3">'
+            f'<div id="{uid}-jb" style="width:100%;height:100%">{JANA}</div></div>')
     stil = {"h": "font-family:'Abril Fatface',serif;font-size:92px;line-height:1.05;color:#111",
             "s": "font-weight:800;font-size:50px;line-height:1.2;color:#353a3d",
             "k": "font-weight:700;font-size:40px;line-height:1.25;color:#555c60",
@@ -81,8 +82,8 @@ def plan(uid, station, zeilen, extras=(), neu=(), von=None):
 
     def js(t0, d):
         x1, y1 = STATION[station]
-        out = [f'tl.fromTo("#{uid}-j", {{ left: {x0 - 38}, top: {y0 - 92} }}, {{ left: {x1 - 38}, top: {y1 - 92}, duration: 1.4, ease: "power2.inOut" }}, {t0} + 0.2);',
-               f'tl.fromTo("#{uid}-j", {{ y: 0 }}, {{ y: -10, duration: 0.18, yoyo: true, repeat: 7, ease: "sine.inOut" }}, {t0} + 0.2);']
+        out = [f'tl.fromTo("#{uid}-j", {{ x: 0, y: 0 }}, {{ x: {x1 - x0}, y: {y1 - y0}, duration: 1.4, ease: "power2.inOut" }}, {t0} + 0.2);',
+               f'tl.fromTo("#{uid}-jb", {{ y: 0 }}, {{ y: -10, duration: 0.18, yoyo: true, repeat: 7, ease: "sine.inOut" }}, {t0} + 0.2);']
         for k, (_, sid, _) in enumerate(zeilen):
             a = st(sid) if sid else t0
             out.append(f'tl.fromTo("#{uid}-z{k}", {{ opacity: 0, x: 40 }}, {{ opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }}, {max(a, t0 + 0.1)});')
@@ -150,8 +151,8 @@ def mogelpackung():
                 f'<div style="position:absolute;top:40px;width:100%;text-align:center;color:#fff;font-weight:900;font-size:60px">MÜSLI</div>'
                 f'<div style="position:absolute;bottom:20px;width:100%;text-align:center;font-weight:900;font-size:56px;color:#111">{g} g</div></div>'
                 f'<div class="serif" style="font-size:64px;color:#111">2,49 €{extra}</div></div>')
-    html = (f'<div class="mitte" style="flex-direction:row;align-items:flex-end;gap:120px">{pack("a", 500)}{pack("b", 400)}'
-            f'<div id="mp-t" style="position:absolute;right:120px;top:120px" class="chip"><span style="color:#fff">+20 % versteckt teurer</span></div></div>')
+    html = (f'<div class="mitte" style="gap:40px"><div style="display:flex;align-items:flex-end;gap:120px">{pack("a", 500)}{pack("b", 400)}</div>'
+            f'<div id="mp-t" class="chip" style="background:{ROT}">+20 % versteckt teurer</div></div>')
     return dict(html=html, js=lambda t0, d: f'pop("#mp-a", {t0}); pop("#mp-b", {st("s63")}); pop("#mp-t", {st("s64")});')
 
 
