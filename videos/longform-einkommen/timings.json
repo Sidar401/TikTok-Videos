@@ -1,0 +1,2634 @@
+{
+  "dauer": 501.4,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 3.079,
+      "captions": [
+        {
+          "text": "Bist du eigentlich arm,",
+          "start": 0.0,
+          "end": 1.384
+        },
+        {
+          "text": "ganz normal oder schon reich?",
+          "start": 1.384,
+          "end": 3.079
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 3.079,
+      "end": 7.693,
+      "captions": [
+        {
+          "text": "Die meisten Menschen",
+          "start": 3.079,
+          "end": 3.801
+        },
+        {
+          "text": "in Deutschland schätzen sich",
+          "start": 3.801,
+          "end": 5.937
+        },
+        {
+          "text": "dabei komplett falsch ein",
+          "start": 5.937,
+          "end": 7.693
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 7.693,
+      "end": 11.256,
+      "captions": [
+        {
+          "text": "Viele, die richtig gut verdienen,",
+          "start": 7.693,
+          "end": 9.404
+        },
+        {
+          "text": "fühlen sich nur",
+          "start": 9.404,
+          "end": 10.267
+        },
+        {
+          "text": "wie Mittelschicht",
+          "start": 10.267,
+          "end": 11.256
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 11.256,
+      "end": 15.541,
+      "captions": [
+        {
+          "text": "Und viele,",
+          "start": 11.256,
+          "end": 11.539
+        },
+        {
+          "text": "die sich",
+          "start": 11.539,
+          "end": 12.019
+        },
+        {
+          "text": "für Mittelschicht halten,",
+          "start": 12.019,
+          "end": 13.519
+        },
+        {
+          "text": "liegen in Wahrheit",
+          "start": 13.519,
+          "end": 14.521
+        },
+        {
+          "text": "deutlich darunter",
+          "start": 14.521,
+          "end": 15.541
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 15.541,
+      "end": 19.169,
+      "captions": [
+        {
+          "text": "Das liegt daran,",
+          "start": 15.541,
+          "end": 16.352
+        },
+        {
+          "text": "dass kaum jemand offen",
+          "start": 16.352,
+          "end": 17.918
+        },
+        {
+          "text": "über Geld spricht",
+          "start": 17.918,
+          "end": 19.169
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 19.169,
+      "end": 24.057,
+      "captions": [
+        {
+          "text": "Wir vergleichen uns",
+          "start": 19.169,
+          "end": 20.148
+        },
+        {
+          "text": "nur mit Freunden,",
+          "start": 20.148,
+          "end": 21.3
+        },
+        {
+          "text": "Kollegen und dem,",
+          "start": 21.3,
+          "end": 22.452
+        },
+        {
+          "text": "was wir im Internet sehen",
+          "start": 22.452,
+          "end": 24.057
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 24.057,
+      "end": 27.788,
+      "captions": [
+        {
+          "text": "Heute klären wir",
+          "start": 24.057,
+          "end": 25.161
+        },
+        {
+          "text": "das ein für alle Mal,",
+          "start": 25.161,
+          "end": 26.647
+        },
+        {
+          "text": "mit echten Zahlen",
+          "start": 26.647,
+          "end": 27.788
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 27.788,
+      "end": 32.273,
+      "captions": [
+        {
+          "text": "Wir steigen gemeinsam",
+          "start": 27.788,
+          "end": 29.19
+        },
+        {
+          "text": "eine Einkommens‑Leiter hoch,",
+          "start": 29.19,
+          "end": 31.194
+        },
+        {
+          "text": "Stufe für Stufe",
+          "start": 31.194,
+          "end": 32.273
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 32.273,
+      "end": 37.747,
+      "captions": [
+        {
+          "text": "Ganz unten die Menschen,",
+          "start": 32.273,
+          "end": 33.867
+        },
+        {
+          "text": "bei denen es knapp wird,",
+          "start": 33.867,
+          "end": 35.393
+        },
+        {
+          "text": "und ganz oben",
+          "start": 35.393,
+          "end": 36.264
+        },
+        {
+          "text": "das reichste eine Prozent",
+          "start": 36.264,
+          "end": 37.747
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 37.747,
+      "end": 41.083,
+      "captions": [
+        {
+          "text": "Und du findest heraus,",
+          "start": 37.747,
+          "end": 39.249
+        },
+        {
+          "text": "auf welcher Stufe du stehst",
+          "start": 39.249,
+          "end": 41.083
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 41.083,
+      "end": 45.276,
+      "captions": [
+        {
+          "text": "Danach zeigen wir dir,",
+          "start": 41.083,
+          "end": 42.4
+        },
+        {
+          "text": "warum sich so viele",
+          "start": 42.4,
+          "end": 43.686
+        },
+        {
+          "text": "ärmer fühlen,",
+          "start": 43.686,
+          "end": 44.566
+        },
+        {
+          "text": "als sie sind",
+          "start": 44.566,
+          "end": 45.276
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 45.276,
+      "end": 49.4,
+      "captions": [
+        {
+          "text": "Und am Ende bekommst",
+          "start": 45.276,
+          "end": 46.523
+        },
+        {
+          "text": "du fünf Wege,",
+          "start": 46.523,
+          "end": 47.4
+        },
+        {
+          "text": "wie du eine Stufe",
+          "start": 47.4,
+          "end": 48.546
+        },
+        {
+          "text": "höher kletterst",
+          "start": 48.546,
+          "end": 49.4
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 49.4,
+      "end": 53.744,
+      "captions": [
+        {
+          "text": "Wichtig: Wir rechnen",
+          "start": 49.4,
+          "end": 50.529
+        },
+        {
+          "text": "mit dem Nettoeinkommen",
+          "start": 50.529,
+          "end": 52.144
+        },
+        {
+          "text": "eines Singles pro Monat",
+          "start": 52.144,
+          "end": 53.744
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "start": 53.744,
+      "end": 58.614,
+      "captions": [
+        {
+          "text": "Für Paare und Familien",
+          "start": 53.744,
+          "end": 55.211
+        },
+        {
+          "text": "gelten höhere Grenzen,",
+          "start": 55.211,
+          "end": 56.766
+        },
+        {
+          "text": "dazu kommen wir später noch",
+          "start": 56.766,
+          "end": 58.614
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "start": 58.614,
+      "end": 64.304,
+      "captions": [
+        {
+          "text": "Die Zahlen",
+          "start": 58.614,
+          "end": 59.153
+        },
+        {
+          "text": "sind gerundet und basieren",
+          "start": 59.153,
+          "end": 60.713
+        },
+        {
+          "text": "auf aktuellen Statistiken,",
+          "start": 60.713,
+          "end": 62.272
+        },
+        {
+          "text": "je nach Quelle",
+          "start": 62.272,
+          "end": 63.045
+        },
+        {
+          "text": "weichen sie leicht ab",
+          "start": 63.045,
+          "end": 64.304
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "start": 64.304,
+      "end": 66.498,
+      "captions": [
+        {
+          "text": "Bevor wir starten,",
+          "start": 64.304,
+          "end": 65.09
+        },
+        {
+          "text": "eine Frage an dich",
+          "start": 65.09,
+          "end": 66.498
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "start": 66.498,
+      "end": 69.121,
+      "captions": [
+        {
+          "text": "Auf welcher Stufe",
+          "start": 66.498,
+          "end": 67.897
+        },
+        {
+          "text": "stehst du wohl?",
+          "start": 67.897,
+          "end": 69.121
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "start": 69.121,
+      "end": 74.498,
+      "captions": [
+        {
+          "text": "Merk dir die Nummer",
+          "start": 69.121,
+          "end": 70.118
+        },
+        {
+          "text": "und schreib sie am Ende",
+          "start": 70.118,
+          "end": 71.536
+        },
+        {
+          "text": "in die Kommentare,",
+          "start": 71.536,
+          "end": 72.593
+        },
+        {
+          "text": "du musst also kein",
+          "start": 72.593,
+          "end": 73.702
+        },
+        {
+          "text": "Gehalt verraten",
+          "start": 73.702,
+          "end": 74.498
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "start": 74.498,
+      "end": 78.409,
+      "captions": [
+        {
+          "text": "Und wenn du wissen willst,",
+          "start": 74.498,
+          "end": 75.901
+        },
+        {
+          "text": "wie du nach oben kommst,",
+          "start": 75.901,
+          "end": 77.29
+        },
+        {
+          "text": "folge HundeFinanzTV",
+          "start": 77.29,
+          "end": 78.409
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "start": 78.409,
+      "end": 82.623,
+      "captions": [
+        {
+          "text": "Wir bringen jeden Tag",
+          "start": 78.409,
+          "end": 79.671
+        },
+        {
+          "text": "neue Videos rund",
+          "start": 79.671,
+          "end": 81.021
+        },
+        {
+          "text": "um Geld und Finanzen",
+          "start": 81.021,
+          "end": 82.623
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "start": 82.623,
+      "end": 85.598,
+      "captions": [
+        {
+          "text": "Also,",
+          "start": 82.623,
+          "end": 82.963
+        },
+        {
+          "text": "los geht's",
+          "start": 82.963,
+          "end": 83.677
+        },
+        {
+          "text": "mit der untersten Stufe",
+          "start": 83.677,
+          "end": 85.598
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "start": 85.598,
+      "end": 90.408,
+      "captions": [
+        {
+          "text": "Stufe eins: weniger",
+          "start": 85.598,
+          "end": 87.591
+        },
+        {
+          "text": "als 1.400 € netto im Monat",
+          "start": 87.591,
+          "end": 90.408
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "start": 90.408,
+      "end": 95.292,
+      "captions": [
+        {
+          "text": "Wer als Single darunter liegt,",
+          "start": 90.408,
+          "end": 92.154
+        },
+        {
+          "text": "gilt in Deutschland",
+          "start": 92.154,
+          "end": 93.396
+        },
+        {
+          "text": "offiziell als armutsgefährdet",
+          "start": 93.396,
+          "end": 95.292
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "start": 95.292,
+      "end": 98.062,
+      "captions": [
+        {
+          "text": "Das betrifft ungefähr",
+          "start": 95.292,
+          "end": 96.236
+        },
+        {
+          "text": "jeden siebten Menschen",
+          "start": 96.236,
+          "end": 97.352
+        },
+        {
+          "text": "in Deutschland",
+          "start": 97.352,
+          "end": 98.062
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "start": 98.062,
+      "end": 104.157,
+      "captions": [
+        {
+          "text": "Oft sind das Studierende,",
+          "start": 98.062,
+          "end": 99.282
+        },
+        {
+          "text": "Alleinerziehende,",
+          "start": 99.282,
+          "end": 100.519
+        },
+        {
+          "text": "Menschen in Teilzeit",
+          "start": 100.519,
+          "end": 101.974
+        },
+        {
+          "text": "oder Rentner mit kleiner Rente",
+          "start": 101.974,
+          "end": 104.157
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "start": 104.157,
+      "end": 110.323,
+      "captions": [
+        {
+          "text": "Auf dieser Stufe reicht",
+          "start": 104.157,
+          "end": 105.6
+        },
+        {
+          "text": "das Geld meistens",
+          "start": 105.6,
+          "end": 107.088
+        },
+        {
+          "text": "gerade so für Miete,",
+          "start": 107.088,
+          "end": 108.779
+        },
+        {
+          "text": "Essen und das Nötigste",
+          "start": 108.779,
+          "end": 110.323
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "start": 110.323,
+      "end": 115.059,
+      "captions": [
+        {
+          "text": "Schon eine Nachzahlung",
+          "start": 110.323,
+          "end": 111.343
+        },
+        {
+          "text": "bei den Nebenkosten kann hier",
+          "start": 111.343,
+          "end": 113.189
+        },
+        {
+          "text": "zu einem echten Problem werden",
+          "start": 113.189,
+          "end": 115.059
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "start": 115.059,
+      "end": 122.456,
+      "captions": [
+        {
+          "text": "Sparen ist hier kaum möglich,",
+          "start": 115.059,
+          "end": 116.917
+        },
+        {
+          "text": "deshalb gibt es",
+          "start": 116.917,
+          "end": 117.898
+        },
+        {
+          "text": "zum Beispiel Wohngeld,",
+          "start": 117.898,
+          "end": 119.337
+        },
+        {
+          "text": "das viele gar",
+          "start": 119.337,
+          "end": 120.188
+        },
+        {
+          "text": "nicht beantragen,",
+          "start": 120.188,
+          "end": 121.218
+        },
+        {
+          "text": "obwohl es ihnen zusteht",
+          "start": 121.218,
+          "end": 122.456
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "start": 122.456,
+      "end": 127.865,
+      "captions": [
+        {
+          "text": "Stufe zwei: zwischen",
+          "start": 122.456,
+          "end": 124.765
+        },
+        {
+          "text": "1.400 und 2.300 € netto",
+          "start": 124.765,
+          "end": 127.865
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "start": 127.865,
+      "end": 128.529,
+      "captions": [
+        {
+          "text": "Das ist die untere Mitte",
+          "start": 127.865,
+          "end": 128.529
+        }
+      ]
+    },
+    {
+      "id": "s31",
+      "start": 128.529,
+      "end": 138.185,
+      "captions": [
+        {
+          "text": "Hier landen viele",
+          "start": 128.529,
+          "end": 129.584
+        },
+        {
+          "text": "Berufseinsteiger,",
+          "start": 129.584,
+          "end": 130.611
+        },
+        {
+          "text": "Menschen mit Mindestlohn",
+          "start": 130.611,
+          "end": 132.405
+        },
+        {
+          "text": "in Vollzeit und viele",
+          "start": 132.405,
+          "end": 133.991
+        },
+        {
+          "text": "Beschäftigte im Handel,",
+          "start": 133.991,
+          "end": 135.722
+        },
+        {
+          "text": "in der Gastronomie",
+          "start": 135.722,
+          "end": 136.993
+        },
+        {
+          "text": "oder in der Pflege",
+          "start": 136.993,
+          "end": 138.185
+        }
+      ]
+    },
+    {
+      "id": "s32",
+      "start": 138.185,
+      "end": 147.369,
+      "captions": [
+        {
+          "text": "Ein Beispiel: Mit Mindestlohn",
+          "start": 138.185,
+          "end": 140.676
+        },
+        {
+          "text": "in Vollzeit kommt",
+          "start": 140.676,
+          "end": 142.256
+        },
+        {
+          "text": "man auf rund 2.400 € brutto,",
+          "start": 142.256,
+          "end": 144.859
+        },
+        {
+          "text": "das sind etwa 1.700 € netto",
+          "start": 144.859,
+          "end": 147.369
+        }
+      ]
+    },
+    {
+      "id": "s33",
+      "start": 147.369,
+      "end": 151.355,
+      "captions": [
+        {
+          "text": "Man kommt über die Runden,",
+          "start": 147.369,
+          "end": 149.104
+        },
+        {
+          "text": "aber große Sprünge",
+          "start": 149.104,
+          "end": 150.481
+        },
+        {
+          "text": "sind schwierig",
+          "start": 150.481,
+          "end": 151.355
+        }
+      ]
+    },
+    {
+      "id": "s34",
+      "start": 151.355,
+      "end": 155.833,
+      "captions": [
+        {
+          "text": "Hier entscheidet sich oft,",
+          "start": 151.355,
+          "end": 152.91
+        },
+        {
+          "text": "ob am Monatsende etwas",
+          "start": 152.91,
+          "end": 154.391
+        },
+        {
+          "text": "übrig bleibt oder nicht",
+          "start": 154.391,
+          "end": 155.833
+        }
+      ]
+    },
+    {
+      "id": "s35",
+      "start": 155.833,
+      "end": 158.407,
+      "captions": [
+        {
+          "text": "Und jetzt kommt eine Zahl,",
+          "start": 155.833,
+          "end": 157.242
+        },
+        {
+          "text": "die viele überrascht",
+          "start": 157.242,
+          "end": 158.407
+        }
+      ]
+    },
+    {
+      "id": "s36",
+      "start": 158.407,
+      "end": 162.312,
+      "captions": [
+        {
+          "text": "Stufe drei: rund 2.300 € netto",
+          "start": 158.407,
+          "end": 162.312
+        }
+      ]
+    },
+    {
+      "id": "s37",
+      "start": 162.312,
+      "end": 164.529,
+      "captions": [
+        {
+          "text": "Das ist genau die Mitte",
+          "start": 162.312,
+          "end": 163.669
+        },
+        {
+          "text": "von Deutschland",
+          "start": 163.669,
+          "end": 164.529
+        }
+      ]
+    },
+    {
+      "id": "s38",
+      "start": 164.529,
+      "end": 167.524,
+      "captions": [
+        {
+          "text": "Die Hälfte aller",
+          "start": 164.529,
+          "end": 165.155
+        },
+        {
+          "text": "Menschen hat weniger,",
+          "start": 165.155,
+          "end": 166.213
+        },
+        {
+          "text": "die andere Hälfte hat mehr",
+          "start": 166.213,
+          "end": 167.524
+        }
+      ]
+    },
+    {
+      "id": "s39",
+      "start": 167.524,
+      "end": 170.062,
+      "captions": [
+        {
+          "text": "Statistiker nennen",
+          "start": 167.524,
+          "end": 168.749
+        },
+        {
+          "text": "das den Median",
+          "start": 168.749,
+          "end": 170.062
+        }
+      ]
+    },
+    {
+      "id": "s40",
+      "start": 170.062,
+      "end": 175.464,
+      "captions": [
+        {
+          "text": "Wenn du als Single",
+          "start": 170.062,
+          "end": 171.321
+        },
+        {
+          "text": "2.300 € netto hast,",
+          "start": 171.321,
+          "end": 172.972
+        },
+        {
+          "text": "bist du also",
+          "start": 172.972,
+          "end": 173.926
+        },
+        {
+          "text": "genau in der Mitte",
+          "start": 173.926,
+          "end": 175.464
+        }
+      ]
+    },
+    {
+      "id": "s41",
+      "start": 175.464,
+      "end": 178.626,
+      "captions": [
+        {
+          "text": "Viele hätten diese Grenze",
+          "start": 175.464,
+          "end": 177.023
+        },
+        {
+          "text": "deutlich höher geschätzt",
+          "start": 177.023,
+          "end": 178.626
+        }
+      ]
+    },
+    {
+      "id": "s42",
+      "start": 178.626,
+      "end": 184.709,
+      "captions": [
+        {
+          "text": "Das liegt auch daran,",
+          "start": 178.626,
+          "end": 179.891
+        },
+        {
+          "text": "dass Rentner,",
+          "start": 179.891,
+          "end": 180.801
+        },
+        {
+          "text": "Studierende und Teilzeitkräfte",
+          "start": 180.801,
+          "end": 182.9
+        },
+        {
+          "text": "diesen Wert nach unten ziehen",
+          "start": 182.9,
+          "end": 184.709
+        }
+      ]
+    },
+    {
+      "id": "s43",
+      "start": 184.709,
+      "end": 185.337,
+      "captions": [
+        {
+          "text": "Weiter nach oben",
+          "start": 184.709,
+          "end": 185.337
+        }
+      ]
+    },
+    {
+      "id": "s44",
+      "start": 185.337,
+      "end": 190.854,
+      "captions": [
+        {
+          "text": "Stufe vier: zwischen",
+          "start": 185.337,
+          "end": 187.419
+        },
+        {
+          "text": "2.300 und 4.600 € netto",
+          "start": 187.419,
+          "end": 190.854
+        }
+      ]
+    },
+    {
+      "id": "s45",
+      "start": 190.854,
+      "end": 193.055,
+      "captions": [
+        {
+          "text": "Das ist die obere Mitte",
+          "start": 190.854,
+          "end": 193.055
+        }
+      ]
+    },
+    {
+      "id": "s46",
+      "start": 193.055,
+      "end": 202.636,
+      "captions": [
+        {
+          "text": "Hier findest du",
+          "start": 193.055,
+          "end": 193.925
+        },
+        {
+          "text": "viele Facharbeiter,",
+          "start": 193.925,
+          "end": 195.364
+        },
+        {
+          "text": "Handwerksmeister,",
+          "start": 195.364,
+          "end": 196.6
+        },
+        {
+          "text": "Pflegekräfte",
+          "start": 196.6,
+          "end": 197.402
+        },
+        {
+          "text": "mit Zusatzqualifikation",
+          "start": 197.402,
+          "end": 199.144
+        },
+        {
+          "text": "oder Angestellte mit einigen",
+          "start": 199.144,
+          "end": 201.265
+        },
+        {
+          "text": "Jahren Berufserfahrung",
+          "start": 201.265,
+          "end": 202.636
+        }
+      ]
+    },
+    {
+      "id": "s47",
+      "start": 202.636,
+      "end": 205.943,
+      "captions": [
+        {
+          "text": "Wer hier steht,",
+          "start": 202.636,
+          "end": 203.263
+        },
+        {
+          "text": "hat schon mehr als die meisten",
+          "start": 203.263,
+          "end": 204.96
+        },
+        {
+          "text": "Menschen im Land",
+          "start": 204.96,
+          "end": 205.943
+        }
+      ]
+    },
+    {
+      "id": "s48",
+      "start": 205.943,
+      "end": 213.443,
+      "captions": [
+        {
+          "text": "Auf dieser Stufe kann man sich",
+          "start": 205.943,
+          "end": 207.145
+        },
+        {
+          "text": "eine schöne Wohnung leisten,",
+          "start": 207.145,
+          "end": 209.047
+        },
+        {
+          "text": "in den Urlaub fahren",
+          "start": 209.047,
+          "end": 210.406
+        },
+        {
+          "text": "und trotzdem jeden Monat",
+          "start": 210.406,
+          "end": 212.036
+        },
+        {
+          "text": "etwas zur Seite legen",
+          "start": 212.036,
+          "end": 213.443
+        }
+      ]
+    },
+    {
+      "id": "s49",
+      "start": 213.443,
+      "end": 217.893,
+      "captions": [
+        {
+          "text": "Und trotzdem sagen",
+          "start": 213.443,
+          "end": 214.718
+        },
+        {
+          "text": "viele auf dieser Stufe:",
+          "start": 214.718,
+          "end": 216.263
+        },
+        {
+          "text": "Ich bin doch ganz normal",
+          "start": 216.263,
+          "end": 217.893
+        }
+      ]
+    },
+    {
+      "id": "s50",
+      "start": 217.893,
+      "end": 221.769,
+      "captions": [
+        {
+          "text": "Stufe fünf: mehr",
+          "start": 217.893,
+          "end": 219.742
+        },
+        {
+          "text": "als 4.600 € netto",
+          "start": 219.742,
+          "end": 221.769
+        }
+      ]
+    },
+    {
+      "id": "s51",
+      "start": 221.769,
+      "end": 226.267,
+      "captions": [
+        {
+          "text": "Ab hier giltst du als Single",
+          "start": 221.769,
+          "end": 223.484
+        },
+        {
+          "text": "in Deutschland offiziell",
+          "start": 223.484,
+          "end": 225.049
+        },
+        {
+          "text": "als einkommensreich",
+          "start": 225.049,
+          "end": 226.267
+        }
+      ]
+    },
+    {
+      "id": "s52",
+      "start": 226.267,
+      "end": 228.241,
+      "captions": [
+        {
+          "text": "Denn das ist doppelt",
+          "start": 226.267,
+          "end": 227.251
+        },
+        {
+          "text": "so viel wie die Mitte",
+          "start": 227.251,
+          "end": 228.241
+        }
+      ]
+    },
+    {
+      "id": "s53",
+      "start": 228.241,
+      "end": 230.408,
+      "captions": [
+        {
+          "text": "Das schafft nicht",
+          "start": 228.241,
+          "end": 229.23
+        },
+        {
+          "text": "einmal jeder Zehnte",
+          "start": 229.23,
+          "end": 230.408
+        }
+      ]
+    },
+    {
+      "id": "s54",
+      "start": 230.408,
+      "end": 234.404,
+      "captions": [
+        {
+          "text": "Dafür braucht",
+          "start": 230.408,
+          "end": 231.289
+        },
+        {
+          "text": "man als Single ungefähr",
+          "start": 231.289,
+          "end": 232.846
+        },
+        {
+          "text": "8.000 € brutto im Monat",
+          "start": 232.846,
+          "end": 234.404
+        }
+      ]
+    },
+    {
+      "id": "s55",
+      "start": 234.404,
+      "end": 241.654,
+      "captions": [
+        {
+          "text": "Typische Berufe",
+          "start": 234.404,
+          "end": 235.285
+        },
+        {
+          "text": "auf dieser Stufe sind",
+          "start": 235.285,
+          "end": 236.975
+        },
+        {
+          "text": "erfahrene Ingenieure,",
+          "start": 236.975,
+          "end": 238.511
+        },
+        {
+          "text": "Ärzte,",
+          "start": 238.511,
+          "end": 238.994
+        },
+        {
+          "text": "IT‑Spezialisten",
+          "start": 238.994,
+          "end": 240.125
+        },
+        {
+          "text": "oder Führungskräfte",
+          "start": 240.125,
+          "end": 241.654
+        }
+      ]
+    },
+    {
+      "id": "s56",
+      "start": 241.654,
+      "end": 248.258,
+      "captions": [
+        {
+          "text": "Interessant: Viele",
+          "start": 241.654,
+          "end": 242.586
+        },
+        {
+          "text": "auf dieser Stufe fühlen",
+          "start": 242.586,
+          "end": 243.735
+        },
+        {
+          "text": "sich trotzdem nicht reich,",
+          "start": 243.735,
+          "end": 245.488
+        },
+        {
+          "text": "weil sie sich mit noch",
+          "start": 245.488,
+          "end": 246.873
+        },
+        {
+          "text": "Reicheren vergleichen",
+          "start": 246.873,
+          "end": 248.258
+        }
+      ]
+    },
+    {
+      "id": "s57",
+      "start": 248.258,
+      "end": 250.376,
+      "captions": [
+        {
+          "text": "Und jetzt die Spitze",
+          "start": 248.258,
+          "end": 249.711
+        },
+        {
+          "text": "der Leiter",
+          "start": 249.711,
+          "end": 250.376
+        }
+      ]
+    },
+    {
+      "id": "s58",
+      "start": 250.376,
+      "end": 253.204,
+      "captions": [
+        {
+          "text": "Stufe sechs:",
+          "start": 250.376,
+          "end": 251.24
+        },
+        {
+          "text": "das reichste eine Prozent",
+          "start": 251.24,
+          "end": 253.204
+        }
+      ]
+    },
+    {
+      "id": "s59",
+      "start": 253.204,
+      "end": 257.96,
+      "captions": [
+        {
+          "text": "Dafür brauchst du grob",
+          "start": 253.204,
+          "end": 254.839
+        },
+        {
+          "text": "gerechnet mehr als 20.000 €",
+          "start": 254.839,
+          "end": 256.845
+        },
+        {
+          "text": "brutto im Monat",
+          "start": 256.845,
+          "end": 257.96
+        }
+      ]
+    },
+    {
+      "id": "s60",
+      "start": 257.96,
+      "end": 264.893,
+      "captions": [
+        {
+          "text": "Hier stehen vor",
+          "start": 257.96,
+          "end": 259.149
+        },
+        {
+          "text": "allem Unternehmer,",
+          "start": 259.149,
+          "end": 260.575
+        },
+        {
+          "text": "Top‑Manager,",
+          "start": 260.575,
+          "end": 261.526
+        },
+        {
+          "text": "Chefärzte und sehr",
+          "start": 261.526,
+          "end": 262.953
+        },
+        {
+          "text": "erfolgreiche Selbstständige",
+          "start": 262.953,
+          "end": 264.893
+        }
+      ]
+    },
+    {
+      "id": "s61",
+      "start": 264.893,
+      "end": 268.783,
+      "captions": [
+        {
+          "text": "Und beim Vermögen ist",
+          "start": 264.893,
+          "end": 265.956
+        },
+        {
+          "text": "der Unterschied noch viel",
+          "start": 265.956,
+          "end": 267.461
+        },
+        {
+          "text": "größer als beim Einkommen",
+          "start": 267.461,
+          "end": 268.783
+        }
+      ]
+    },
+    {
+      "id": "s62",
+      "start": 268.783,
+      "end": 273.797,
+      "captions": [
+        {
+          "text": "Das reichste",
+          "start": 268.783,
+          "end": 269.379
+        },
+        {
+          "text": "Zehntel besitzt mehr",
+          "start": 269.379,
+          "end": 270.675
+        },
+        {
+          "text": "als die Hälfte des gesamten",
+          "start": 270.675,
+          "end": 272.424
+        },
+        {
+          "text": "Vermögens in Deutschland",
+          "start": 272.424,
+          "end": 273.797
+        }
+      ]
+    },
+    {
+      "id": "s63",
+      "start": 273.797,
+      "end": 277.403,
+      "captions": [
+        {
+          "text": "Zwischen Stufe eins und Stufe",
+          "start": 273.797,
+          "end": 275.699
+        },
+        {
+          "text": "sechs liegen also Welten",
+          "start": 275.699,
+          "end": 277.403
+        }
+      ]
+    },
+    {
+      "id": "s64",
+      "start": 277.403,
+      "end": 280.582,
+      "captions": [
+        {
+          "text": "Und jetzt sei mal ehrlich:",
+          "start": 277.403,
+          "end": 279.014
+        },
+        {
+          "text": "Auf welcher Stufe stehst du?",
+          "start": 279.014,
+          "end": 280.582
+        }
+      ]
+    },
+    {
+      "id": "s65",
+      "start": 280.582,
+      "end": 283.682,
+      "captions": [
+        {
+          "text": "Jetzt kommt ein Trick",
+          "start": 280.582,
+          "end": 281.535
+        },
+        {
+          "text": "der Statistik,",
+          "start": 281.535,
+          "end": 282.323
+        },
+        {
+          "text": "der dich überraschen wird",
+          "start": 282.323,
+          "end": 283.682
+        }
+      ]
+    },
+    {
+      "id": "s66",
+      "start": 283.682,
+      "end": 290.997,
+      "captions": [
+        {
+          "text": "Vielleicht hast",
+          "start": 283.682,
+          "end": 284.377
+        },
+        {
+          "text": "du schon gehört,",
+          "start": 284.377,
+          "end": 285.564
+        },
+        {
+          "text": "dass das Durchschnittsgehalt",
+          "start": 285.564,
+          "end": 287.707
+        },
+        {
+          "text": "in Deutschland bei über",
+          "start": 287.707,
+          "end": 289.467
+        },
+        {
+          "text": "4.600 € brutto liegt",
+          "start": 289.467,
+          "end": 290.997
+        }
+      ]
+    },
+    {
+      "id": "s67",
+      "start": 290.997,
+      "end": 295.062,
+      "captions": [
+        {
+          "text": "Und vielleicht hast",
+          "start": 290.997,
+          "end": 292.025
+        },
+        {
+          "text": "du dann gedacht: Wow,",
+          "start": 292.025,
+          "end": 293.16
+        },
+        {
+          "text": "so viel verdiene",
+          "start": 293.16,
+          "end": 294.026
+        },
+        {
+          "text": "ich bei Weitem nicht",
+          "start": 294.026,
+          "end": 295.062
+        }
+      ]
+    },
+    {
+      "id": "s68",
+      "start": 295.062,
+      "end": 296.51,
+      "captions": [
+        {
+          "text": "Aber das liegt am Durchschnitt",
+          "start": 295.062,
+          "end": 296.51
+        }
+      ]
+    },
+    {
+      "id": "s69",
+      "start": 296.51,
+      "end": 301.756,
+      "captions": [
+        {
+          "text": "Stell dir vor,",
+          "start": 296.51,
+          "end": 297.489
+        },
+        {
+          "text": "neun Leute verdienen 3.000 €,",
+          "start": 297.489,
+          "end": 299.518
+        },
+        {
+          "text": "und dann kommt",
+          "start": 299.518,
+          "end": 300.497
+        },
+        {
+          "text": "ein Millionär dazu",
+          "start": 300.497,
+          "end": 301.756
+        }
+      ]
+    },
+    {
+      "id": "s70",
+      "start": 301.756,
+      "end": 307.264,
+      "captions": [
+        {
+          "text": "Plötzlich ist",
+          "start": 301.756,
+          "end": 302.538
+        },
+        {
+          "text": "der Durchschnitt riesig,",
+          "start": 302.538,
+          "end": 304.047
+        },
+        {
+          "text": "obwohl sich für die neun",
+          "start": 304.047,
+          "end": 305.534
+        },
+        {
+          "text": "Leute gar nichts geändert hat",
+          "start": 305.534,
+          "end": 307.264
+        }
+      ]
+    },
+    {
+      "id": "s71",
+      "start": 307.264,
+      "end": 310.034,
+      "captions": [
+        {
+          "text": "Deshalb ist der Median",
+          "start": 307.264,
+          "end": 308.932
+        },
+        {
+          "text": "viel ehrlicher",
+          "start": 308.932,
+          "end": 310.034
+        }
+      ]
+    },
+    {
+      "id": "s72",
+      "start": 310.034,
+      "end": 315.063,
+      "captions": [
+        {
+          "text": "Und genau deshalb",
+          "start": 310.034,
+          "end": 311.0
+        },
+        {
+          "text": "fühlen sich so viele",
+          "start": 311.0,
+          "end": 312.161
+        },
+        {
+          "text": "unterdurchschnittlich,",
+          "start": 312.161,
+          "end": 313.438
+        },
+        {
+          "text": "obwohl sie es gar nicht sind",
+          "start": 313.438,
+          "end": 315.063
+        }
+      ]
+    },
+    {
+      "id": "s73",
+      "start": 315.063,
+      "end": 321.576,
+      "captions": [
+        {
+          "text": "Der mittlere",
+          "start": 315.063,
+          "end": 315.889
+        },
+        {
+          "text": "Vollzeit‑Verdienst liegt",
+          "start": 315.889,
+          "end": 317.543
+        },
+        {
+          "text": "bei rund 4.000 € brutto,",
+          "start": 317.543,
+          "end": 319.197
+        },
+        {
+          "text": "also deutlich unter",
+          "start": 319.197,
+          "end": 320.506
+        },
+        {
+          "text": "dem Durchschnitt",
+          "start": 320.506,
+          "end": 321.576
+        }
+      ]
+    },
+    {
+      "id": "s74",
+      "start": 321.576,
+      "end": 325.708,
+      "captions": [
+        {
+          "text": "Das sind für einen Single",
+          "start": 321.576,
+          "end": 323.759
+        },
+        {
+          "text": "ungefähr 2.550 € netto",
+          "start": 323.759,
+          "end": 325.708
+        }
+      ]
+    },
+    {
+      "id": "s75",
+      "start": 325.708,
+      "end": 330.883,
+      "captions": [
+        {
+          "text": "Und dann gibt es",
+          "start": 325.708,
+          "end": 326.701
+        },
+        {
+          "text": "noch drei Gründe,",
+          "start": 326.701,
+          "end": 327.895
+        },
+        {
+          "text": "warum sich so viele",
+          "start": 327.895,
+          "end": 329.23
+        },
+        {
+          "text": "ärmer fühlen,",
+          "start": 329.23,
+          "end": 330.143
+        },
+        {
+          "text": "als sie sind",
+          "start": 330.143,
+          "end": 330.883
+        }
+      ]
+    },
+    {
+      "id": "s76",
+      "start": 330.883,
+      "end": 332.564,
+      "captions": [
+        {
+          "text": "Erstens: Wo du wohnst",
+          "start": 330.883,
+          "end": 332.564
+        }
+      ]
+    },
+    {
+      "id": "s77",
+      "start": 332.564,
+      "end": 338.73,
+      "captions": [
+        {
+          "text": "3.000 € netto fühlen sich",
+          "start": 332.564,
+          "end": 334.313
+        },
+        {
+          "text": "in München ganz anders",
+          "start": 334.313,
+          "end": 336.072
+        },
+        {
+          "text": "an als auf dem Land",
+          "start": 336.072,
+          "end": 337.591
+        },
+        {
+          "text": "in Sachsen‑Anhalt",
+          "start": 337.591,
+          "end": 338.73
+        }
+      ]
+    },
+    {
+      "id": "s78",
+      "start": 338.73,
+      "end": 342.4,
+      "captions": [
+        {
+          "text": "Die Statistik ist für ganz",
+          "start": 338.73,
+          "end": 340.043
+        },
+        {
+          "text": "Deutschland gleich,",
+          "start": 340.043,
+          "end": 341.162
+        },
+        {
+          "text": "die Mieten aber nicht",
+          "start": 341.162,
+          "end": 342.4
+        }
+      ]
+    },
+    {
+      "id": "s79",
+      "start": 342.4,
+      "end": 344.268,
+      "captions": [
+        {
+          "text": "Zweitens: Social Media",
+          "start": 342.4,
+          "end": 344.268
+        }
+      ]
+    },
+    {
+      "id": "s80",
+      "start": 344.268,
+      "end": 349.835,
+      "captions": [
+        {
+          "text": "Wir vergleichen uns",
+          "start": 344.268,
+          "end": 345.222
+        },
+        {
+          "text": "jeden Tag mit Luxusautos,",
+          "start": 345.222,
+          "end": 347.413
+        },
+        {
+          "text": "Fernreisen",
+          "start": 347.413,
+          "end": 348.289
+        },
+        {
+          "text": "und Designer‑Taschen",
+          "start": 348.289,
+          "end": 349.835
+        }
+      ]
+    },
+    {
+      "id": "s81",
+      "start": 349.835,
+      "end": 353.142,
+      "captions": [
+        {
+          "text": "Dabei sehen wir",
+          "start": 349.835,
+          "end": 350.536
+        },
+        {
+          "text": "nur die Highlights,",
+          "start": 350.536,
+          "end": 351.688
+        },
+        {
+          "text": "nie die Kredite dahinter",
+          "start": 351.688,
+          "end": 353.142
+        }
+      ]
+    },
+    {
+      "id": "s82",
+      "start": 353.142,
+      "end": 359.158,
+      "captions": [
+        {
+          "text": "Kein Mensch postet",
+          "start": 353.142,
+          "end": 354.619
+        },
+        {
+          "text": "seinen Kontoauszug,",
+          "start": 354.619,
+          "end": 356.656
+        },
+        {
+          "text": "aber jeder postet",
+          "start": 356.656,
+          "end": 358.353
+        },
+        {
+          "text": "seinen Urlaub",
+          "start": 358.353,
+          "end": 359.158
+        }
+      ]
+    },
+    {
+      "id": "s83",
+      "start": 359.158,
+      "end": 360.218,
+      "captions": [
+        {
+          "text": "Drittens: die Familie",
+          "start": 359.158,
+          "end": 360.218
+        }
+      ]
+    },
+    {
+      "id": "s84",
+      "start": 360.218,
+      "end": 363.483,
+      "captions": [
+        {
+          "text": "Für ein Paar mit zwei Kindern",
+          "start": 360.218,
+          "end": 361.926
+        },
+        {
+          "text": "gelten ganz andere Grenzen",
+          "start": 361.926,
+          "end": 363.483
+        }
+      ]
+    },
+    {
+      "id": "s85",
+      "start": 363.483,
+      "end": 368.825,
+      "captions": [
+        {
+          "text": "Armutsgefährdet ist",
+          "start": 363.483,
+          "end": 364.863
+        },
+        {
+          "text": "eine solche Familie schon",
+          "start": 364.863,
+          "end": 366.884
+        },
+        {
+          "text": "unter rund 2.900 € netto",
+          "start": 366.884,
+          "end": 368.825
+        }
+      ]
+    },
+    {
+      "id": "s86",
+      "start": 368.825,
+      "end": 374.579,
+      "captions": [
+        {
+          "text": "Und als einkommensreich",
+          "start": 368.825,
+          "end": 371.136
+        },
+        {
+          "text": "gilt sie erst",
+          "start": 371.136,
+          "end": 372.462
+        },
+        {
+          "text": "ab rund 9.700 € netto",
+          "start": 372.462,
+          "end": 374.579
+        }
+      ]
+    },
+    {
+      "id": "s87",
+      "start": 374.579,
+      "end": 379.695,
+      "captions": [
+        {
+          "text": "Mit Kindern rutscht man",
+          "start": 374.579,
+          "end": 376.033
+        },
+        {
+          "text": "also schnell ein paar",
+          "start": 376.033,
+          "end": 377.383
+        },
+        {
+          "text": "Stufen nach unten,",
+          "start": 377.383,
+          "end": 378.455
+        },
+        {
+          "text": "auch bei gutem Gehalt",
+          "start": 378.455,
+          "end": 379.695
+        }
+      ]
+    },
+    {
+      "id": "s88",
+      "start": 379.695,
+      "end": 382.798,
+      "captions": [
+        {
+          "text": "Und jetzt das Wichtigste:",
+          "start": 379.695,
+          "end": 381.088
+        },
+        {
+          "text": "Wie kommst",
+          "start": 381.088,
+          "end": 381.597
+        },
+        {
+          "text": "du eine Stufe höher?",
+          "start": 381.597,
+          "end": 382.798
+        }
+      ]
+    },
+    {
+      "id": "s89",
+      "start": 382.798,
+      "end": 385.324,
+      "captions": [
+        {
+          "text": "Hier sind fünf Wege,",
+          "start": 382.798,
+          "end": 383.519
+        },
+        {
+          "text": "die wirklich funktionieren",
+          "start": 383.519,
+          "end": 385.324
+        }
+      ]
+    },
+    {
+      "id": "s90",
+      "start": 385.324,
+      "end": 388.196,
+      "captions": [
+        {
+          "text": "Weg eins: Verhandle",
+          "start": 385.324,
+          "end": 387.116
+        },
+        {
+          "text": "dein Gehalt",
+          "start": 387.116,
+          "end": 388.196
+        }
+      ]
+    },
+    {
+      "id": "s91",
+      "start": 388.196,
+      "end": 393.828,
+      "captions": [
+        {
+          "text": "Viele trauen sich",
+          "start": 388.196,
+          "end": 389.42
+        },
+        {
+          "text": "nie zu fragen,",
+          "start": 389.42,
+          "end": 390.59
+        },
+        {
+          "text": "dabei ist",
+          "start": 390.59,
+          "end": 391.342
+        },
+        {
+          "text": "ein Plus von 5 bis",
+          "start": 391.342,
+          "end": 392.846
+        },
+        {
+          "text": "10 % oft drin",
+          "start": 392.846,
+          "end": 393.828
+        }
+      ]
+    },
+    {
+      "id": "s92",
+      "start": 393.828,
+      "end": 395.554,
+      "captions": [
+        {
+          "text": "Wer nie fragt,",
+          "start": 393.828,
+          "end": 394.5
+        },
+        {
+          "text": "bekommt auch nichts",
+          "start": 394.5,
+          "end": 395.554
+        }
+      ]
+    },
+    {
+      "id": "s93",
+      "start": 395.554,
+      "end": 401.587,
+      "captions": [
+        {
+          "text": "Bereite dich vor,",
+          "start": 395.554,
+          "end": 396.629
+        },
+        {
+          "text": "sammle deine Erfolge",
+          "start": 396.629,
+          "end": 398.104
+        },
+        {
+          "text": "und frag am besten",
+          "start": 398.104,
+          "end": 399.432
+        },
+        {
+          "text": "nach einem erfolgreichen",
+          "start": 399.432,
+          "end": 401.202
+        },
+        {
+          "text": "Projekt",
+          "start": 401.202,
+          "end": 401.587
+        }
+      ]
+    },
+    {
+      "id": "s94",
+      "start": 401.587,
+      "end": 404.797,
+      "captions": [
+        {
+          "text": "Weg zwei: Wechsle",
+          "start": 401.587,
+          "end": 403.254
+        },
+        {
+          "text": "den Arbeitgeber",
+          "start": 403.254,
+          "end": 404.797
+        }
+      ]
+    },
+    {
+      "id": "s95",
+      "start": 404.797,
+      "end": 408.838,
+      "captions": [
+        {
+          "text": "Bei einem Jobwechsel",
+          "start": 404.797,
+          "end": 406.333
+        },
+        {
+          "text": "steigen Gehälter",
+          "start": 406.333,
+          "end": 407.562
+        },
+        {
+          "text": "oft um 10 bis 20 %",
+          "start": 407.562,
+          "end": 408.838
+        }
+      ]
+    },
+    {
+      "id": "s96",
+      "start": 408.838,
+      "end": 413.651,
+      "captions": [
+        {
+          "text": "Wer nur auf die jährliche",
+          "start": 408.838,
+          "end": 410.225
+        },
+        {
+          "text": "Erhöhung wartet,",
+          "start": 410.225,
+          "end": 411.181
+        },
+        {
+          "text": "verschenkt über die Jahre",
+          "start": 411.181,
+          "end": 412.635
+        },
+        {
+          "text": "richtig viel Geld",
+          "start": 412.635,
+          "end": 413.651
+        }
+      ]
+    },
+    {
+      "id": "s97",
+      "start": 413.651,
+      "end": 415.554,
+      "captions": [
+        {
+          "text": "Weg drei: Bilde dich weiter",
+          "start": 413.651,
+          "end": 415.554
+        }
+      ]
+    },
+    {
+      "id": "s98",
+      "start": 415.554,
+      "end": 422.516,
+      "captions": [
+        {
+          "text": "Ein Meister,",
+          "start": 415.554,
+          "end": 415.972
+        },
+        {
+          "text": "ein Fachwirt",
+          "start": 415.972,
+          "end": 416.854
+        },
+        {
+          "text": "oder eine IT‑Zertifizierung",
+          "start": 416.854,
+          "end": 418.839
+        },
+        {
+          "text": "kann dich direkt eine ganze",
+          "start": 418.839,
+          "end": 420.825
+        },
+        {
+          "text": "Stufe nach oben bringen",
+          "start": 420.825,
+          "end": 422.516
+        }
+      ]
+    },
+    {
+      "id": "s99",
+      "start": 422.516,
+      "end": 429.108,
+      "captions": [
+        {
+          "text": "Und oft gibt es dafür",
+          "start": 422.516,
+          "end": 424.22
+        },
+        {
+          "text": "sogar Förderung vom Staat,",
+          "start": 424.22,
+          "end": 426.294
+        },
+        {
+          "text": "zum Beispiel über",
+          "start": 426.294,
+          "end": 427.695
+        },
+        {
+          "text": "das Aufstiegs‑BAföG",
+          "start": 427.695,
+          "end": 429.108
+        }
+      ]
+    },
+    {
+      "id": "s100",
+      "start": 429.108,
+      "end": 431.861,
+      "captions": [
+        {
+          "text": "Weg vier: Mach",
+          "start": 429.108,
+          "end": 430.127
+        },
+        {
+          "text": "deine Steuererklärung",
+          "start": 430.127,
+          "end": 431.861
+        }
+      ]
+    },
+    {
+      "id": "s101",
+      "start": 431.861,
+      "end": 435.059,
+      "captions": [
+        {
+          "text": "Im Schnitt bekommen",
+          "start": 431.861,
+          "end": 433.003
+        },
+        {
+          "text": "Arbeitnehmer",
+          "start": 433.003,
+          "end": 433.799
+        },
+        {
+          "text": "über 1.000 € zurück",
+          "start": 433.799,
+          "end": 435.059
+        }
+      ]
+    },
+    {
+      "id": "s102",
+      "start": 435.059,
+      "end": 438.335,
+      "captions": [
+        {
+          "text": "Trotzdem machen",
+          "start": 435.059,
+          "end": 435.885
+        },
+        {
+          "text": "Millionen Menschen",
+          "start": 435.885,
+          "end": 436.997
+        },
+        {
+          "text": "in Deutschland gar keine",
+          "start": 436.997,
+          "end": 438.335
+        }
+      ]
+    },
+    {
+      "id": "s103",
+      "start": 438.335,
+      "end": 441.124,
+      "captions": [
+        {
+          "text": "Das ist geschenktes Geld,",
+          "start": 438.335,
+          "end": 439.657
+        },
+        {
+          "text": "das einfach liegen bleibt",
+          "start": 439.657,
+          "end": 441.124
+        }
+      ]
+    },
+    {
+      "id": "s104",
+      "start": 441.124,
+      "end": 444.643,
+      "captions": [
+        {
+          "text": "Und Weg fünf: Bau dir",
+          "start": 441.124,
+          "end": 442.545
+        },
+        {
+          "text": "ein zweites Standbein auf",
+          "start": 442.545,
+          "end": 444.643
+        }
+      ]
+    },
+    {
+      "id": "s105",
+      "start": 444.643,
+      "end": 449.302,
+      "captions": [
+        {
+          "text": "Ein Nebenjob, ein Hobby,",
+          "start": 444.643,
+          "end": 446.076
+        },
+        {
+          "text": "das Geld bringt,",
+          "start": 446.076,
+          "end": 447.081
+        },
+        {
+          "text": "oder eine kleine",
+          "start": 447.081,
+          "end": 448.232
+        },
+        {
+          "text": "Selbstständigkeit",
+          "start": 448.232,
+          "end": 449.302
+        }
+      ]
+    },
+    {
+      "id": "s106",
+      "start": 449.302,
+      "end": 455.303,
+      "captions": [
+        {
+          "text": "Viele starten mit etwas,",
+          "start": 449.302,
+          "end": 450.681
+        },
+        {
+          "text": "das sie sowieso gut können,",
+          "start": 450.681,
+          "end": 452.303
+        },
+        {
+          "text": "zum Beispiel Nachhilfe,",
+          "start": 452.303,
+          "end": 453.771
+        },
+        {
+          "text": "Fotografie oder Handwerk",
+          "start": 453.771,
+          "end": 455.303
+        }
+      ]
+    },
+    {
+      "id": "s107",
+      "start": 455.303,
+      "end": 460.561,
+      "captions": [
+        {
+          "text": "Schon 300 € im Monat",
+          "start": 455.303,
+          "end": 457.598
+        },
+        {
+          "text": "extra sind im Jahr 3.600 €",
+          "start": 457.598,
+          "end": 460.561
+        }
+      ]
+    },
+    {
+      "id": "s108",
+      "start": 460.561,
+      "end": 461.863,
+      "captions": [
+        {
+          "text": "Fassen wir zusammen",
+          "start": 460.561,
+          "end": 461.863
+        }
+      ]
+    },
+    {
+      "id": "s109",
+      "start": 461.863,
+      "end": 467.223,
+      "captions": [
+        {
+          "text": "Die Mitte in Deutschland",
+          "start": 461.863,
+          "end": 463.74
+        },
+        {
+          "text": "liegt bei rund 2.300 €",
+          "start": 463.74,
+          "end": 465.482
+        },
+        {
+          "text": "netto für einen Single",
+          "start": 465.482,
+          "end": 467.223
+        }
+      ]
+    },
+    {
+      "id": "s110",
+      "start": 467.223,
+      "end": 471.512,
+      "captions": [
+        {
+          "text": "Ab 4.600 € gilt man",
+          "start": 467.223,
+          "end": 469.399
+        },
+        {
+          "text": "als einkommensreich",
+          "start": 469.399,
+          "end": 471.512
+        }
+      ]
+    },
+    {
+      "id": "s111",
+      "start": 471.512,
+      "end": 474.842,
+      "captions": [
+        {
+          "text": "Und die meisten von uns",
+          "start": 471.512,
+          "end": 472.65
+        },
+        {
+          "text": "stehen höher auf der Leiter,",
+          "start": 472.65,
+          "end": 474.111
+        },
+        {
+          "text": "als sie denken",
+          "start": 474.111,
+          "end": 474.842
+        }
+      ]
+    },
+    {
+      "id": "s112",
+      "start": 474.842,
+      "end": 478.427,
+      "captions": [
+        {
+          "text": "Wer seine Stufe kennt,",
+          "start": 474.842,
+          "end": 476.536
+        },
+        {
+          "text": "kann viel gezielter planen",
+          "start": 476.536,
+          "end": 478.427
+        }
+      ]
+    },
+    {
+      "id": "s113",
+      "start": 478.427,
+      "end": 484.299,
+      "captions": [
+        {
+          "text": "Aber egal,",
+          "start": 478.427,
+          "end": 478.984
+        },
+        {
+          "text": "auf welcher Stufe du",
+          "start": 478.984,
+          "end": 480.191
+        },
+        {
+          "text": "stehst: Mit den richtigen",
+          "start": 480.191,
+          "end": 481.663
+        },
+        {
+          "text": "Schritten kannst du",
+          "start": 481.663,
+          "end": 482.81
+        },
+        {
+          "text": "weiter nach oben klettern",
+          "start": 482.81,
+          "end": 484.299
+        }
+      ]
+    },
+    {
+      "id": "s114",
+      "start": 484.299,
+      "end": 485.869,
+      "captions": [
+        {
+          "text": "Und jetzt bist du dran",
+          "start": 484.299,
+          "end": 485.869
+        }
+      ]
+    },
+    {
+      "id": "s115",
+      "start": 485.869,
+      "end": 490.542,
+      "captions": [
+        {
+          "text": "Schreib uns in die Kommentare,",
+          "start": 485.869,
+          "end": 487.679
+        },
+        {
+          "text": "auf welcher Stufe du stehst,",
+          "start": 487.679,
+          "end": 489.422
+        },
+        {
+          "text": "von eins bis sechs",
+          "start": 489.422,
+          "end": 490.542
+        }
+      ]
+    },
+    {
+      "id": "s116",
+      "start": 490.542,
+      "end": 496.536,
+      "captions": [
+        {
+          "text": "Wenn dich die Zahlen",
+          "start": 490.542,
+          "end": 491.717
+        },
+        {
+          "text": "überrascht haben,",
+          "start": 491.717,
+          "end": 492.716
+        },
+        {
+          "text": "teile das Video mit jemandem,",
+          "start": 492.716,
+          "end": 494.421
+        },
+        {
+          "text": "der sich gerne",
+          "start": 494.421,
+          "end": 495.243
+        },
+        {
+          "text": "mit anderen vergleicht",
+          "start": 495.243,
+          "end": 496.536
+        }
+      ]
+    },
+    {
+      "id": "s117",
+      "start": 496.536,
+      "end": 500.788,
+      "captions": [
+        {
+          "text": "Wir sind HundeFinanzTV,",
+          "start": 496.536,
+          "end": 498.177
+        },
+        {
+          "text": "wir sehen uns morgen",
+          "start": 498.177,
+          "end": 499.605
+        },
+        {
+          "text": "im nächsten Video",
+          "start": 499.605,
+          "end": 500.788
+        }
+      ]
+    }
+  ]
+}

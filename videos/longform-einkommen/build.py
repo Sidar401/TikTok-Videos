@@ -80,9 +80,9 @@ def intro():
 
 def durchschnitt():
     """9 Leute à 3.000 € + 1 Millionär: Durchschnitt springt, Median bleibt."""
-    leute = "".join(f'<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:120px;height:150px">{person(BLAU, "#353a3d")}</div>'
-                    f'<div style="font-weight:800;font-size:28px;color:#353a3d">3.000 €</div></div>' for _ in range(9))
-    mill = (f'<div id="du-m" style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:150px;height:190px">{KRONE_P}</div>'
+    leute = "".join(f'<div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:150px;height:200px">{person(BLAU, "#353a3d")}</div>'
+                    f'<div style="font-weight:800;font-size:30px;color:#353a3d">3.000&nbsp;€</div></div>' for _ in range(9))
+    mill = (f'<div id="du-m" style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:190px;height:250px">{KRONE_P}</div>'
             f'<div style="font-weight:800;font-size:28px;color:#c99a06">Millionär</div></div>')
     html = (f'<div class="mitte" style="gap:50px"><div style="display:flex;align-items:flex-end;gap:14px">{leute}{mill}</div>'
             f'<div style="display:flex;gap:40px"><div id="du-d" class="chip" style="background:{ROT}">Durchschnitt: explodiert ↑</div>'
@@ -160,7 +160,7 @@ SZENEN = [
     ("s107", "s107", "zahl", dict(zahl="3.600 €", sub="pro Jahr mit 300 € im Monat extra", farbe=GRUEN)),
     ("s108", "s110", "frei", leiter("zf", 0, [("Fassen wir zusammen", None, "h"), ("Mitte: ≈ 2.300 € netto", "s109", "s"), ("einkommensreich ab 4.600 €", "s110", "g")])),
     ("s111", "s113", "split", dict(icon=ICON(LEITER), text="Du stehst höher, als du denkst", farbe=GRUEN, sub="… und kannst weiter klettern", sub_at=st("s113") - st("s111"))),
-    ("s114", "s115", "split", dict(icon=ICON(BLASE), text="Deine Stufe: 1 bis 6?", sub="Schreib's in die Kommentare!", sub_at=st("s115") - st("s114"))),
+    ("s114", "s115", "split", dict(icon=ICON(BLASE), text="Welche Stufe bist du?", sub="Schreib's in die Kommentare!", sub_at=st("s115") - st("s114"))),
     ("s116", "s116", "split", dict(icon=ICON(TEILEN), text="Teile das Video!", farbe=ORANGE)),
     ("s117", "s117", "frei", folgen("Bis morgen!", uid="fo2")),
 ]
