@@ -24,6 +24,7 @@ Der Nutzer arbeitet am iPad: Antworten kurz, Ergebnisse per `SendUserFile` schic
    - **Zusatz-CTAs abwechselnd:** Video A → Kommentar-CTA („Schreib uns in die Kommentare …“), Video B → Teilen-CTA („Teile das Video mit jemandem, der …“), dann wieder A. Nie beide in einem Video. Im Chat beim Skript angeben, welcher CTA drin ist.
    - **CTA immer in Wir-Form**, nie „folg mir“: z. B. „Folge HundeFinanzTV, wir haben noch mehr Geld-Tipps für dich!“ (Outro-Button bleibt „+ Folgen“).
    - Skript: Zahlen im `sprechtext` ausschreiben (für ElevenLabs); den Untertitel-`text` mit `python3 scripts/zahlen.py videos/<name>/skript.json` erzeugen (Zahlwörter → Ziffern, „dreihundert Euro“ → „300 €“).
+   - **Keine Wiederholungen:** Vor Ideen/Skript `THEMEN.md` lesen (Archiv aller Videos), nach jedem Video dort eintragen. Andere Beispiele, Namen, Zahlen und Bildideen als bisher.
    - **Wir machen jeden Tag Videos** – im Skript nie „jede Woche“ sagen, sondern z. B. „wir bringen jeden Tag neue Videos“.
    - `text` = Untertitel (locker, kleingeschrieben wie gesprochen, Ziffern erlaubt). `sprechtext` = was die Stimme sagt: Zahlen und Zeichen ausschreiben („sechsunddreißigtausend Euro“, „sieben Prozent“), sonst liest Piper sie falsch.
    - Zahlen nachrechnen (Zinseszins etc.) und im Chat kurz nennen. Keine Anlageberatung versprechen.

@@ -1,0 +1,707 @@
+{
+ "titel": "longform-einkommen",
+ "saetze": [
+  {
+   "id": "s1",
+   "kapitel": "k1",
+   "text": "Bist du eigentlich arm, ganz normal oder schon reich?",
+   "sprechtext": "Bist du eigentlich arm, ganz normal oder schon reich?"
+  },
+  {
+   "id": "s2",
+   "kapitel": "k1",
+   "text": "Die meisten Menschen in Deutschland schätzen sich dabei komplett falsch ein",
+   "sprechtext": "Die meisten Menschen in Deutschland schätzen sich dabei komplett falsch ein."
+  },
+  {
+   "id": "s3",
+   "kapitel": "k1",
+   "text": "Viele, die richtig gut verdienen, fühlen sich nur wie Mittelschicht",
+   "sprechtext": "Viele, die richtig gut verdienen, fühlen sich nur wie Mittelschicht."
+  },
+  {
+   "id": "s4",
+   "kapitel": "k1",
+   "text": "Und viele, die sich für Mittelschicht halten, liegen in Wahrheit deutlich darunter",
+   "sprechtext": "Und viele, die sich für Mittelschicht halten, liegen in Wahrheit deutlich darunter."
+  },
+  {
+   "id": "s5",
+   "kapitel": "k1",
+   "text": "Das liegt daran, dass kaum jemand offen über Geld spricht",
+   "sprechtext": "Das liegt daran, dass kaum jemand offen über Geld spricht."
+  },
+  {
+   "id": "s6",
+   "kapitel": "k1",
+   "text": "Wir vergleichen uns nur mit Freunden, Kollegen und dem, was wir im Internet sehen",
+   "sprechtext": "Wir vergleichen uns nur mit Freunden, Kollegen und dem, was wir im Internet sehen."
+  },
+  {
+   "id": "s7",
+   "kapitel": "k1",
+   "text": "Heute klären wir das ein für alle Mal, mit echten Zahlen",
+   "sprechtext": "Heute klären wir das ein für alle Mal, mit echten Zahlen."
+  },
+  {
+   "id": "s8",
+   "kapitel": "k1",
+   "text": "Wir steigen gemeinsam eine Einkommens-Leiter hoch, Stufe für Stufe",
+   "sprechtext": "Wir steigen gemeinsam eine Einkommens-Leiter hoch, Stufe für Stufe."
+  },
+  {
+   "id": "s9",
+   "kapitel": "k1",
+   "text": "Ganz unten die Menschen, bei denen es knapp wird, und ganz oben das reichste eine Prozent",
+   "sprechtext": "Ganz unten die Menschen, bei denen es knapp wird, und ganz oben das reichste eine Prozent."
+  },
+  {
+   "id": "s10",
+   "kapitel": "k1",
+   "text": "Und du findest heraus, auf welcher Stufe du stehst",
+   "sprechtext": "Und du findest heraus, auf welcher Stufe du stehst."
+  },
+  {
+   "id": "s11",
+   "kapitel": "k1",
+   "text": "Danach zeigen wir dir, warum sich so viele ärmer fühlen, als sie sind",
+   "sprechtext": "Danach zeigen wir dir, warum sich so viele ärmer fühlen, als sie sind."
+  },
+  {
+   "id": "s12",
+   "kapitel": "k1",
+   "text": "Und am Ende bekommst du fünf Wege, wie du eine Stufe höher kletterst",
+   "sprechtext": "Und am Ende bekommst du fünf Wege, wie du eine Stufe höher kletterst."
+  },
+  {
+   "id": "s13",
+   "kapitel": "k1",
+   "text": "Wichtig: Wir rechnen mit dem Nettoeinkommen eines Singles pro Monat",
+   "sprechtext": "Wichtig: Wir rechnen mit dem Nettoeinkommen eines Singles pro Monat."
+  },
+  {
+   "id": "s14",
+   "kapitel": "k1",
+   "text": "Für Paare und Familien gelten höhere Grenzen, dazu kommen wir später noch",
+   "sprechtext": "Für Paare und Familien gelten höhere Grenzen, dazu kommen wir später noch."
+  },
+  {
+   "id": "s15",
+   "kapitel": "k1",
+   "text": "Die Zahlen sind gerundet und basieren auf aktuellen Statistiken, je nach Quelle weichen sie leicht ab",
+   "sprechtext": "Die Zahlen sind gerundet und basieren auf aktuellen Statistiken, je nach Quelle weichen sie leicht ab."
+  },
+  {
+   "id": "s16",
+   "kapitel": "k1",
+   "text": "Bevor wir starten, eine Frage an dich",
+   "sprechtext": "Bevor wir starten, eine Frage an dich."
+  },
+  {
+   "id": "s17",
+   "kapitel": "k1",
+   "text": "Auf welcher Stufe stehst du wohl?",
+   "sprechtext": "Auf welcher Stufe stehst du wohl?"
+  },
+  {
+   "id": "s18",
+   "kapitel": "k1",
+   "text": "Merk dir die Nummer und schreib sie am Ende in die Kommentare, du musst also kein Gehalt verraten",
+   "sprechtext": "Merk dir die Nummer und schreib sie am Ende in die Kommentare, du musst also kein Gehalt verraten."
+  },
+  {
+   "id": "s19",
+   "kapitel": "k1",
+   "text": "Und wenn du wissen willst, wie du nach oben kommst, folge HundeFinanzTV",
+   "sprechtext": "Und wenn du wissen willst, wie du nach oben kommst, folge HundeFinanzTV."
+  },
+  {
+   "id": "s20",
+   "kapitel": "k1",
+   "text": "Wir bringen jeden Tag neue Videos rund um Geld und Finanzen",
+   "sprechtext": "Wir bringen jeden Tag neue Videos rund um Geld und Finanzen."
+  },
+  {
+   "id": "s21",
+   "kapitel": "k1",
+   "text": "Also, los geht's mit der untersten Stufe",
+   "sprechtext": "Also, los geht's mit der untersten Stufe."
+  },
+  {
+   "id": "s22",
+   "kapitel": "k2",
+   "text": "Stufe eins: weniger als 1.400 € netto im Monat",
+   "sprechtext": "Stufe eins: weniger als eintausendvierhundert Euro netto im Monat."
+  },
+  {
+   "id": "s23",
+   "kapitel": "k2",
+   "text": "Wer als Single darunter liegt, gilt in Deutschland offiziell als armutsgefährdet",
+   "sprechtext": "Wer als Single darunter liegt, gilt in Deutschland offiziell als armutsgefährdet."
+  },
+  {
+   "id": "s24",
+   "kapitel": "k2",
+   "text": "Das betrifft ungefähr jeden siebten Menschen in Deutschland",
+   "sprechtext": "Das betrifft ungefähr jeden siebten Menschen in Deutschland."
+  },
+  {
+   "id": "s25",
+   "kapitel": "k2",
+   "text": "Oft sind das Studierende, Alleinerziehende, Menschen in Teilzeit oder Rentner mit kleiner Rente",
+   "sprechtext": "Oft sind das Studierende, Alleinerziehende, Menschen in Teilzeit oder Rentner mit kleiner Rente."
+  },
+  {
+   "id": "s26",
+   "kapitel": "k2",
+   "text": "Auf dieser Stufe reicht das Geld meistens gerade so für Miete, Essen und das Nötigste",
+   "sprechtext": "Auf dieser Stufe reicht das Geld meistens gerade so für Miete, Essen und das Nötigste."
+  },
+  {
+   "id": "s27",
+   "kapitel": "k2",
+   "text": "Eine kaputte Waschmaschine kann hier schon zu einem echten Problem werden",
+   "sprechtext": "Eine kaputte Waschmaschine kann hier schon zu einem echten Problem werden."
+  },
+  {
+   "id": "s28",
+   "kapitel": "k2",
+   "text": "Sparen ist hier kaum möglich, deshalb gibt es zum Beispiel Wohngeld, das viele gar nicht beantragen, obwohl es ihnen zusteht",
+   "sprechtext": "Sparen ist hier kaum möglich, deshalb gibt es zum Beispiel Wohngeld, das viele gar nicht beantragen, obwohl es ihnen zusteht."
+  },
+  {
+   "id": "s29",
+   "kapitel": "k2",
+   "text": "Stufe zwei: zwischen 1.400 und 2.300 € netto",
+   "sprechtext": "Stufe zwei: zwischen eintausendvierhundert und zweitausenddreihundert Euro netto."
+  },
+  {
+   "id": "s30",
+   "kapitel": "k2",
+   "text": "Das ist die untere Mitte",
+   "sprechtext": "Das ist die untere Mitte."
+  },
+  {
+   "id": "s31",
+   "kapitel": "k2",
+   "text": "Hier landen viele Berufseinsteiger, Menschen mit Mindestlohn in Vollzeit und viele Beschäftigte im Handel, in der Gastronomie oder in der Pflege",
+   "sprechtext": "Hier landen viele Berufseinsteiger, Menschen mit Mindestlohn in Vollzeit und viele Beschäftigte im Handel, in der Gastronomie oder in der Pflege."
+  },
+  {
+   "id": "s32",
+   "kapitel": "k2",
+   "text": "Ein Beispiel: Mit Mindestlohn in Vollzeit kommt man auf rund 2.400 € brutto, das sind etwa 1.700 € netto",
+   "sprechtext": "Ein Beispiel: Mit Mindestlohn in Vollzeit kommt man auf rund zweitausendvierhundert Euro brutto, das sind etwa eintausendsiebenhundert Euro netto."
+  },
+  {
+   "id": "s33",
+   "kapitel": "k2",
+   "text": "Man kommt über die Runden, aber große Sprünge sind schwierig",
+   "sprechtext": "Man kommt über die Runden, aber große Sprünge sind schwierig."
+  },
+  {
+   "id": "s34",
+   "kapitel": "k2",
+   "text": "Hier entscheidet sich oft, ob am Monatsende etwas übrig bleibt oder nicht",
+   "sprechtext": "Hier entscheidet sich oft, ob am Monatsende etwas übrig bleibt oder nicht."
+  },
+  {
+   "id": "s35",
+   "kapitel": "k2",
+   "text": "Und jetzt kommt eine Zahl, die viele überrascht",
+   "sprechtext": "Und jetzt kommt eine Zahl, die viele überrascht."
+  },
+  {
+   "id": "s36",
+   "kapitel": "k2",
+   "text": "Stufe drei: rund 2.300 € netto",
+   "sprechtext": "Stufe drei: rund zweitausenddreihundert Euro netto."
+  },
+  {
+   "id": "s37",
+   "kapitel": "k2",
+   "text": "Das ist genau die Mitte von Deutschland",
+   "sprechtext": "Das ist genau die Mitte von Deutschland."
+  },
+  {
+   "id": "s38",
+   "kapitel": "k2",
+   "text": "Die Hälfte aller Menschen hat weniger, die andere Hälfte hat mehr",
+   "sprechtext": "Die Hälfte aller Menschen hat weniger, die andere Hälfte hat mehr."
+  },
+  {
+   "id": "s39",
+   "kapitel": "k2",
+   "text": "Statistiker nennen das den Median",
+   "sprechtext": "Statistiker nennen das den Median."
+  },
+  {
+   "id": "s40",
+   "kapitel": "k2",
+   "text": "Wenn du als Single 2.300 € netto hast, bist du also genau in der Mitte",
+   "sprechtext": "Wenn du als Single zweitausenddreihundert Euro netto hast, bist du also genau in der Mitte."
+  },
+  {
+   "id": "s41",
+   "kapitel": "k2",
+   "text": "Viele hätten diese Grenze deutlich höher geschätzt",
+   "sprechtext": "Viele hätten diese Grenze deutlich höher geschätzt."
+  },
+  {
+   "id": "s42",
+   "kapitel": "k2",
+   "text": "Das liegt auch daran, dass Rentner, Studierende und Teilzeitkräfte diesen Wert nach unten ziehen",
+   "sprechtext": "Das liegt auch daran, dass Rentner, Studierende und Teilzeitkräfte diesen Wert nach unten ziehen."
+  },
+  {
+   "id": "s43",
+   "kapitel": "k3",
+   "text": "Weiter nach oben",
+   "sprechtext": "Weiter nach oben."
+  },
+  {
+   "id": "s44",
+   "kapitel": "k3",
+   "text": "Stufe vier: zwischen 2.300 und 4.600 € netto",
+   "sprechtext": "Stufe vier: zwischen zweitausenddreihundert und viertausendsechshundert Euro netto."
+  },
+  {
+   "id": "s45",
+   "kapitel": "k3",
+   "text": "Das ist die obere Mitte",
+   "sprechtext": "Das ist die obere Mitte."
+  },
+  {
+   "id": "s46",
+   "kapitel": "k3",
+   "text": "Hier findest du viele Facharbeiter, Handwerksmeister, Pflegekräfte mit Zusatzqualifikation oder Angestellte mit einigen Jahren Berufserfahrung",
+   "sprechtext": "Hier findest du viele Facharbeiter, Handwerksmeister, Pflegekräfte mit Zusatzqualifikation oder Angestellte mit einigen Jahren Berufserfahrung."
+  },
+  {
+   "id": "s47",
+   "kapitel": "k3",
+   "text": "Wer hier steht, hat schon mehr als die meisten Menschen im Land",
+   "sprechtext": "Wer hier steht, hat schon mehr als die meisten Menschen im Land."
+  },
+  {
+   "id": "s48",
+   "kapitel": "k3",
+   "text": "Auf dieser Stufe kann man sich eine schöne Wohnung leisten, in den Urlaub fahren und trotzdem jeden Monat etwas zur Seite legen",
+   "sprechtext": "Auf dieser Stufe kann man sich eine schöne Wohnung leisten, in den Urlaub fahren und trotzdem jeden Monat etwas zur Seite legen."
+  },
+  {
+   "id": "s49",
+   "kapitel": "k3",
+   "text": "Und trotzdem sagen viele auf dieser Stufe: Ich bin doch ganz normal",
+   "sprechtext": "Und trotzdem sagen viele auf dieser Stufe: Ich bin doch ganz normal."
+  },
+  {
+   "id": "s50",
+   "kapitel": "k3",
+   "text": "Stufe fünf: mehr als 4.600 € netto",
+   "sprechtext": "Stufe fünf: mehr als viertausendsechshundert Euro netto."
+  },
+  {
+   "id": "s51",
+   "kapitel": "k3",
+   "text": "Ab hier giltst du als Single in Deutschland offiziell als einkommensreich",
+   "sprechtext": "Ab hier giltst du als Single in Deutschland offiziell als einkommensreich."
+  },
+  {
+   "id": "s52",
+   "kapitel": "k3",
+   "text": "Denn das ist doppelt so viel wie die Mitte",
+   "sprechtext": "Denn das ist doppelt so viel wie die Mitte."
+  },
+  {
+   "id": "s53",
+   "kapitel": "k3",
+   "text": "Das schafft nicht einmal jeder Zehnte",
+   "sprechtext": "Das schafft nicht einmal jeder Zehnte."
+  },
+  {
+   "id": "s54",
+   "kapitel": "k3",
+   "text": "Dafür braucht man als Single ungefähr 8.000 € brutto im Monat",
+   "sprechtext": "Dafür braucht man als Single ungefähr achttausend Euro brutto im Monat."
+  },
+  {
+   "id": "s55",
+   "kapitel": "k3",
+   "text": "Typische Berufe auf dieser Stufe sind erfahrene Ingenieure, Ärzte, IT-Spezialisten oder Führungskräfte",
+   "sprechtext": "Typische Berufe auf dieser Stufe sind erfahrene Ingenieure, Ärzte, IT-Spezialisten oder Führungskräfte."
+  },
+  {
+   "id": "s56",
+   "kapitel": "k3",
+   "text": "Interessant: Viele auf dieser Stufe fühlen sich trotzdem nicht reich, weil sie sich mit noch Reicheren vergleichen",
+   "sprechtext": "Interessant: Viele auf dieser Stufe fühlen sich trotzdem nicht reich, weil sie sich mit noch Reicheren vergleichen."
+  },
+  {
+   "id": "s57",
+   "kapitel": "k3",
+   "text": "Und jetzt die Spitze der Leiter",
+   "sprechtext": "Und jetzt die Spitze der Leiter."
+  },
+  {
+   "id": "s58",
+   "kapitel": "k3",
+   "text": "Stufe sechs: das reichste eine Prozent",
+   "sprechtext": "Stufe sechs: das reichste eine Prozent."
+  },
+  {
+   "id": "s59",
+   "kapitel": "k3",
+   "text": "Dafür brauchst du grob gerechnet mehr als 20.000 € brutto im Monat",
+   "sprechtext": "Dafür brauchst du grob gerechnet mehr als zwanzigtausend Euro brutto im Monat."
+  },
+  {
+   "id": "s60",
+   "kapitel": "k3",
+   "text": "Hier stehen vor allem Unternehmer, Top-Manager, Chefärzte und sehr erfolgreiche Selbstständige",
+   "sprechtext": "Hier stehen vor allem Unternehmer, Top-Manager, Chefärzte und sehr erfolgreiche Selbstständige."
+  },
+  {
+   "id": "s61",
+   "kapitel": "k3",
+   "text": "Und beim Vermögen ist der Unterschied noch viel größer als beim Einkommen",
+   "sprechtext": "Und beim Vermögen ist der Unterschied noch viel größer als beim Einkommen."
+  },
+  {
+   "id": "s62",
+   "kapitel": "k3",
+   "text": "Das reichste Zehntel besitzt mehr als die Hälfte des gesamten Vermögens in Deutschland",
+   "sprechtext": "Das reichste Zehntel besitzt mehr als die Hälfte des gesamten Vermögens in Deutschland."
+  },
+  {
+   "id": "s63",
+   "kapitel": "k3",
+   "text": "Zwischen Stufe eins und Stufe sechs liegen also Welten",
+   "sprechtext": "Zwischen Stufe eins und Stufe sechs liegen also Welten."
+  },
+  {
+   "id": "s64",
+   "kapitel": "k3",
+   "text": "Und jetzt sei mal ehrlich: Auf welcher Stufe stehst du?",
+   "sprechtext": "Und jetzt sei mal ehrlich: Auf welcher Stufe stehst du?"
+  },
+  {
+   "id": "s65",
+   "kapitel": "k4",
+   "text": "Jetzt kommt ein Trick der Statistik, der dich überraschen wird",
+   "sprechtext": "Jetzt kommt ein Trick der Statistik, der dich überraschen wird."
+  },
+  {
+   "id": "s66",
+   "kapitel": "k4",
+   "text": "Vielleicht hast du schon gehört, dass das Durchschnittsgehalt in Deutschland bei über 4.600 € brutto liegt",
+   "sprechtext": "Vielleicht hast du schon gehört, dass das Durchschnittsgehalt in Deutschland bei über viertausendsechshundert Euro brutto liegt."
+  },
+  {
+   "id": "s67",
+   "kapitel": "k4",
+   "text": "Und vielleicht hast du dann gedacht: Wow, so viel verdiene ich bei Weitem nicht",
+   "sprechtext": "Und vielleicht hast du dann gedacht: Wow, so viel verdiene ich bei Weitem nicht."
+  },
+  {
+   "id": "s68",
+   "kapitel": "k4",
+   "text": "Aber das liegt am Durchschnitt",
+   "sprechtext": "Aber das liegt am Durchschnitt."
+  },
+  {
+   "id": "s69",
+   "kapitel": "k4",
+   "text": "Stell dir vor, neun Leute verdienen 3.000 €, und dann kommt ein Millionär dazu",
+   "sprechtext": "Stell dir vor, neun Leute verdienen dreitausend Euro, und dann kommt ein Millionär dazu."
+  },
+  {
+   "id": "s70",
+   "kapitel": "k4",
+   "text": "Plötzlich ist der Durchschnitt riesig, obwohl sich für die neun Leute gar nichts geändert hat",
+   "sprechtext": "Plötzlich ist der Durchschnitt riesig, obwohl sich für die neun Leute gar nichts geändert hat."
+  },
+  {
+   "id": "s71",
+   "kapitel": "k4",
+   "text": "Deshalb ist der Median viel ehrlicher",
+   "sprechtext": "Deshalb ist der Median viel ehrlicher."
+  },
+  {
+   "id": "s72",
+   "kapitel": "k4",
+   "text": "Und genau deshalb fühlen sich so viele unterdurchschnittlich, obwohl sie es gar nicht sind",
+   "sprechtext": "Und genau deshalb fühlen sich so viele unterdurchschnittlich, obwohl sie es gar nicht sind."
+  },
+  {
+   "id": "s73",
+   "kapitel": "k4",
+   "text": "Der mittlere Vollzeit-Verdienst liegt bei rund 4.000 € brutto, also deutlich unter dem Durchschnitt",
+   "sprechtext": "Der mittlere Vollzeit-Verdienst liegt bei rund viertausend Euro brutto, also deutlich unter dem Durchschnitt."
+  },
+  {
+   "id": "s74",
+   "kapitel": "k4",
+   "text": "Das sind für einen Single ungefähr 2.550 € netto",
+   "sprechtext": "Das sind für einen Single ungefähr zweitausendfünfhundertfünfzig Euro netto."
+  },
+  {
+   "id": "s75",
+   "kapitel": "k4",
+   "text": "Und dann gibt es noch drei Gründe, warum sich so viele ärmer fühlen, als sie sind",
+   "sprechtext": "Und dann gibt es noch drei Gründe, warum sich so viele ärmer fühlen, als sie sind."
+  },
+  {
+   "id": "s76",
+   "kapitel": "k4",
+   "text": "Erstens: Wo du wohnst",
+   "sprechtext": "Erstens: Wo du wohnst."
+  },
+  {
+   "id": "s77",
+   "kapitel": "k4",
+   "text": "3.000 € netto fühlen sich in München ganz anders an als auf dem Land in Sachsen-Anhalt",
+   "sprechtext": "Dreitausend Euro netto fühlen sich in München ganz anders an als auf dem Land in Sachsen-Anhalt."
+  },
+  {
+   "id": "s78",
+   "kapitel": "k4",
+   "text": "Die Statistik ist für ganz Deutschland gleich, die Mieten aber nicht",
+   "sprechtext": "Die Statistik ist für ganz Deutschland gleich, die Mieten aber nicht."
+  },
+  {
+   "id": "s79",
+   "kapitel": "k4",
+   "text": "Zweitens: Social Media",
+   "sprechtext": "Zweitens: Social Media."
+  },
+  {
+   "id": "s80",
+   "kapitel": "k4",
+   "text": "Wir vergleichen uns jeden Tag mit Luxusautos, Fernreisen und Designer-Taschen",
+   "sprechtext": "Wir vergleichen uns jeden Tag mit Luxusautos, Fernreisen und Designer-Taschen."
+  },
+  {
+   "id": "s81",
+   "kapitel": "k4",
+   "text": "Dabei sehen wir nur die Highlights, nie die Kredite dahinter",
+   "sprechtext": "Dabei sehen wir nur die Highlights, nie die Kredite dahinter."
+  },
+  {
+   "id": "s82",
+   "kapitel": "k4",
+   "text": "Kein Mensch postet seinen Kontoauszug, aber jeder postet seinen Urlaub",
+   "sprechtext": "Kein Mensch postet seinen Kontoauszug, aber jeder postet seinen Urlaub."
+  },
+  {
+   "id": "s83",
+   "kapitel": "k4",
+   "text": "Drittens: die Familie",
+   "sprechtext": "Drittens: die Familie."
+  },
+  {
+   "id": "s84",
+   "kapitel": "k4",
+   "text": "Für ein Paar mit zwei Kindern gelten ganz andere Grenzen",
+   "sprechtext": "Für ein Paar mit zwei Kindern gelten ganz andere Grenzen."
+  },
+  {
+   "id": "s85",
+   "kapitel": "k4",
+   "text": "Armutsgefährdet ist eine solche Familie schon unter rund 2.900 € netto",
+   "sprechtext": "Armutsgefährdet ist eine solche Familie schon unter rund zweitausendneunhundert Euro netto."
+  },
+  {
+   "id": "s86",
+   "kapitel": "k4",
+   "text": "Und als einkommensreich gilt sie erst ab rund 9.700 € netto",
+   "sprechtext": "Und als einkommensreich gilt sie erst ab rund neuntausendsiebenhundert Euro netto."
+  },
+  {
+   "id": "s87",
+   "kapitel": "k4",
+   "text": "Mit Kindern rutscht man also schnell ein paar Stufen nach unten, auch bei gutem Gehalt",
+   "sprechtext": "Mit Kindern rutscht man also schnell ein paar Stufen nach unten, auch bei gutem Gehalt."
+  },
+  {
+   "id": "s88",
+   "kapitel": "k5",
+   "text": "Und jetzt das Wichtigste: Wie kommst du eine Stufe höher?",
+   "sprechtext": "Und jetzt das Wichtigste: Wie kommst du eine Stufe höher?"
+  },
+  {
+   "id": "s89",
+   "kapitel": "k5",
+   "text": "Hier sind fünf Wege, die wirklich funktionieren",
+   "sprechtext": "Hier sind fünf Wege, die wirklich funktionieren."
+  },
+  {
+   "id": "s90",
+   "kapitel": "k5",
+   "text": "Weg eins: Verhandle dein Gehalt",
+   "sprechtext": "Weg eins: Verhandle dein Gehalt."
+  },
+  {
+   "id": "s91",
+   "kapitel": "k5",
+   "text": "Viele trauen sich nie zu fragen, dabei ist ein Plus von 5 bis 10 % oft drin",
+   "sprechtext": "Viele trauen sich nie zu fragen, dabei ist ein Plus von fünf bis zehn Prozent oft drin."
+  },
+  {
+   "id": "s92",
+   "kapitel": "k5",
+   "text": "Wer nie fragt, bekommt auch nichts",
+   "sprechtext": "Wer nie fragt, bekommt auch nichts."
+  },
+  {
+   "id": "s93",
+   "kapitel": "k5",
+   "text": "Bereite dich vor, sammle deine Erfolge und frag am besten nach einem erfolgreichen Projekt",
+   "sprechtext": "Bereite dich vor, sammle deine Erfolge und frag am besten nach einem erfolgreichen Projekt."
+  },
+  {
+   "id": "s94",
+   "kapitel": "k5",
+   "text": "Weg zwei: Wechsle den Arbeitgeber",
+   "sprechtext": "Weg zwei: Wechsle den Arbeitgeber."
+  },
+  {
+   "id": "s95",
+   "kapitel": "k5",
+   "text": "Bei einem Jobwechsel steigen Gehälter oft um 10 bis 20 %",
+   "sprechtext": "Bei einem Jobwechsel steigen Gehälter oft um zehn bis zwanzig Prozent."
+  },
+  {
+   "id": "s96",
+   "kapitel": "k5",
+   "text": "Wer nur auf die jährliche Erhöhung wartet, verschenkt über die Jahre richtig viel Geld",
+   "sprechtext": "Wer nur auf die jährliche Erhöhung wartet, verschenkt über die Jahre richtig viel Geld."
+  },
+  {
+   "id": "s97",
+   "kapitel": "k5",
+   "text": "Weg drei: Bilde dich weiter",
+   "sprechtext": "Weg drei: Bilde dich weiter."
+  },
+  {
+   "id": "s98",
+   "kapitel": "k5",
+   "text": "Ein Meister, ein Fachwirt oder eine IT-Zertifizierung kann dich direkt eine ganze Stufe nach oben bringen",
+   "sprechtext": "Ein Meister, ein Fachwirt oder eine IT-Zertifizierung kann dich direkt eine ganze Stufe nach oben bringen."
+  },
+  {
+   "id": "s99",
+   "kapitel": "k5",
+   "text": "Und oft gibt es dafür sogar Förderung vom Staat, zum Beispiel über das Aufstiegs-BAföG",
+   "sprechtext": "Und oft gibt es dafür sogar Förderung vom Staat, zum Beispiel über das Aufstiegs-BAföG."
+  },
+  {
+   "id": "s100",
+   "kapitel": "k5",
+   "text": "Weg vier: Mach deine Steuererklärung",
+   "sprechtext": "Weg vier: Mach deine Steuererklärung."
+  },
+  {
+   "id": "s101",
+   "kapitel": "k5",
+   "text": "Im Schnitt bekommen Arbeitnehmer über 1.000 € zurück",
+   "sprechtext": "Im Schnitt bekommen Arbeitnehmer über tausend Euro zurück."
+  },
+  {
+   "id": "s102",
+   "kapitel": "k5",
+   "text": "Trotzdem machen Millionen Menschen in Deutschland gar keine",
+   "sprechtext": "Trotzdem machen Millionen Menschen in Deutschland gar keine."
+  },
+  {
+   "id": "s103",
+   "kapitel": "k5",
+   "text": "Das ist geschenktes Geld, das einfach liegen bleibt",
+   "sprechtext": "Das ist geschenktes Geld, das einfach liegen bleibt."
+  },
+  {
+   "id": "s104",
+   "kapitel": "k5",
+   "text": "Und Weg fünf: Bau dir ein zweites Standbein auf",
+   "sprechtext": "Und Weg fünf: Bau dir ein zweites Standbein auf."
+  },
+  {
+   "id": "s105",
+   "kapitel": "k5",
+   "text": "Ein Nebenjob, ein Hobby, das Geld bringt, oder eine kleine Selbstständigkeit",
+   "sprechtext": "Ein Nebenjob, ein Hobby, das Geld bringt, oder eine kleine Selbstständigkeit."
+  },
+  {
+   "id": "s106",
+   "kapitel": "k5",
+   "text": "Viele starten mit etwas, das sie sowieso gut können, zum Beispiel Nachhilfe, Fotografie oder Handwerk",
+   "sprechtext": "Viele starten mit etwas, das sie sowieso gut können, zum Beispiel Nachhilfe, Fotografie oder Handwerk."
+  },
+  {
+   "id": "s107",
+   "kapitel": "k5",
+   "text": "Schon 300 € im Monat extra sind im Jahr 3.600 €",
+   "sprechtext": "Schon dreihundert Euro im Monat extra sind im Jahr dreitausendsechshundert Euro."
+  },
+  {
+   "id": "s108",
+   "kapitel": "k5",
+   "text": "Fassen wir zusammen",
+   "sprechtext": "Fassen wir zusammen."
+  },
+  {
+   "id": "s109",
+   "kapitel": "k5",
+   "text": "Die Mitte in Deutschland liegt bei rund 2.300 € netto für einen Single",
+   "sprechtext": "Die Mitte in Deutschland liegt bei rund zweitausenddreihundert Euro netto für einen Single."
+  },
+  {
+   "id": "s110",
+   "kapitel": "k5",
+   "text": "Ab 4.600 € gilt man als einkommensreich",
+   "sprechtext": "Ab viertausendsechshundert Euro gilt man als einkommensreich."
+  },
+  {
+   "id": "s111",
+   "kapitel": "k5",
+   "text": "Und die meisten von uns stehen höher auf der Leiter, als sie denken",
+   "sprechtext": "Und die meisten von uns stehen höher auf der Leiter, als sie denken."
+  },
+  {
+   "id": "s112",
+   "kapitel": "k5",
+   "text": "Wer seine Stufe kennt, kann viel gezielter planen",
+   "sprechtext": "Wer seine Stufe kennt, kann viel gezielter planen."
+  },
+  {
+   "id": "s113",
+   "kapitel": "k5",
+   "text": "Aber egal, auf welcher Stufe du stehst: Mit den richtigen Schritten kannst du weiter nach oben klettern",
+   "sprechtext": "Aber egal, auf welcher Stufe du stehst: Mit den richtigen Schritten kannst du weiter nach oben klettern."
+  },
+  {
+   "id": "s114",
+   "kapitel": "k5",
+   "text": "Und jetzt bist du dran",
+   "sprechtext": "Und jetzt bist du dran."
+  },
+  {
+   "id": "s115",
+   "kapitel": "k5",
+   "text": "Schreib uns in die Kommentare, auf welcher Stufe du stehst, von eins bis sechs",
+   "sprechtext": "Schreib uns in die Kommentare, auf welcher Stufe du stehst, von eins bis sechs."
+  },
+  {
+   "id": "s116",
+   "kapitel": "k5",
+   "text": "Wenn dich die Zahlen überrascht haben, teile das Video mit jemandem, der sich gerne mit anderen vergleicht",
+   "sprechtext": "Wenn dich die Zahlen überrascht haben, teile das Video mit jemandem, der sich gerne mit anderen vergleicht."
+  },
+  {
+   "id": "s117",
+   "kapitel": "k5",
+   "text": "Wir sind HundeFinanzTV, wir sehen uns morgen im nächsten Video",
+   "sprechtext": "Wir sind HundeFinanzTV, wir sehen uns morgen im nächsten Video!"
+  }
+ ]
+}
