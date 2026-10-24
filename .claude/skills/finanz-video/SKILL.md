@@ -57,3 +57,11 @@ Der Nutzer arbeitet am iPad: Antworten kurz, Ergebnisse per `SendUserFile` schic
 - Keine CDNs (gesperrt): nur lokale Dateien in `assets/`.
 - Logos/Fotos echter Firmen nur, wenn der Nutzer sie liefert; sonst neutrale Grafik.
 - Neue Kanal-Entscheidungen (Farbe, Name, Stimme) in `kanal.json` bzw. `STIL.md` festhalten.
+
+## Unsere Vorgehensweise (Nutzer, nach „Bist du arm oder reich?“ – so ab sofort IMMER)
+Das Einkommen-Video (`videos/longform-einkommen`) ist der Qualitäts-Maßstab: „viel professioneller, viel Spaß, Entertainment, immer schön verbessern“.
+- **Eigenes Leitmotiv pro Video:** ein neues, durchgehendes Bild-Konzept, das es so noch nicht gab (dort: Einkommens-Leiter, die Stufe für Stufe aufleuchtet).
+- **Abwechslung:** viele verschiedene Szenentypen (Leitmotiv, kleine Erklär-Szenen wie „9 Leute + Millionär“, Duell, Balken, Chips, farbige Karten) – nie dieselbe Szenenart mehrmals hintereinander.
+- **Entertainment:** Neugier-Fragen, Überraschungs-Zahlen, Mitmach-Element („merk dir deine Stufe“), lockere Sprache.
+- **Nichts wiederholen:** `THEMEN.md` (Themen + Thumbnails) prüfen und ergänzen; Geldbeutel/Kassenzettel nur noch, wenn wirklich neu.
+- **Jedes Video ein Stück besser** als das letzte: nach dem Rendern kurz notieren, was beim nächsten Mal besser geht.
