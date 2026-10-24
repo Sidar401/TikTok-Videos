@@ -65,3 +65,8 @@ Das Einkommen-Video (`videos/longform-einkommen`) ist der Qualitäts-Maßstab: �
 - **Entertainment:** Neugier-Fragen, Überraschungs-Zahlen, Mitmach-Element („merk dir deine Stufe“), lockere Sprache.
 - **Nichts wiederholen:** `THEMEN.md` (Themen + Thumbnails) prüfen und ergänzen; Geldbeutel/Kassenzettel nur noch, wenn wirklich neu.
 - **Jedes Video ein Stück besser** als das letzte: nach dem Rendern kurz notieren, was beim nächsten Mal besser geht.
+
+## Shorts aus Longform (Nutzer-Wunsch, merken!)
+- Aus jedem Longform-Video 4–8 Shorts (9:16) schneiden – **ohne neue Voice** (Original-Voice-Ausschnitte wiederverwenden).
+- Jeder Short endet mit Verweis aufs Hauptvideo („Das ganze Video findest du auf YouTube/in unserem Profil“).
+- Starke Einzelszenen wählen (Hook, Aha-Zahl, Twist), Grafiken für 9:16 neu anordnen.
