@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Abril Fatface"; src: url("assets/fonts/abril-fatface.woff2") format("woff2"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #fff; }
+      #root { position: relative; width: 100%; height: 100%; background: #fff; font-family: Montserrat, sans-serif; }
+      .scene { position: absolute; inset: 0; }
+      .serif { font-family: "Abril Fatface", serif; }
+      #frame { position: absolute; inset: 0; border: 30px solid #DB8622; z-index: 10; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="3" data-width="1920" data-height="1080">
+<div id="v0" class="scene clip" data-start="0" data-duration="1" data-track-index="1">
+  <div style="position:absolute;inset:0;display:flex"><div style="width:960px;height:1080px;background:#1f7a4d;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:110px 0;gap:10px;color:#fff"><div style="background:#fff;border-radius:50%;padding:20px"><div style="width:240px;height:312px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M30 30 Q30 8 50 8 Q70 8 70 30 L74 52 L26 52 Z" fill="#353a3d" /><circle cx="50" cy="30" r="18" fill="#f1c9a5" /><path d="M18 98 Q18 56 50 54 Q82 56 82 98 Z" fill="#1f7a4d" /></svg></div></div><div style="font-weight:900;font-size:70px">Leon mit 40</div><div class="serif" style="font-size:140px;line-height:1">+137.000 €</div></div><div style="width:960px;height:1080px;background:#e24b4b;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:110px 0;gap:10px;color:#fff"><div style="background:#fff;border-radius:50%;padding:20px"><div style="width:240px;height:312px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M30 30 Q30 8 50 8 Q70 8 70 30 L74 52 L26 52 Z" fill="#8a5a2b" /><circle cx="50" cy="30" r="18" fill="#f1c9a5" /><path d="M18 98 Q18 56 50 54 Q82 56 82 98 Z" fill="#e24b4b" /></svg></div></div><div style="font-weight:900;font-size:70px">Felix mit 40</div><div class="serif" style="font-size:140px;line-height:1">−8.000 €</div></div></div>
+  <div style="position:absolute;left:0;top:50px;width:1920px;text-align:center"><span style="display:inline-block;padding:14px 50px;border-radius:30px;background:#fff;color:#111;font-weight:900;font-size:70px;transform:rotate(-2deg)">Gleiches Gehalt!</span></div>
+</div>
+<div id="v1" class="scene clip" data-start="1" data-duration="1" data-track-index="1">
+  <div class="serif" style="position:absolute;left:0;top:90px;width:1920px;text-align:center;font-size:130px;line-height:1.05;color:#111">
+    <span style="color:#1f7a4d">Reich</span> mit 40 oder<br/><span style="color:#e24b4b">pleite</span> mit 40?</div>
+  <div style="position:absolute;left:0;top:500px;width:1920px;display:flex;justify-content:center;align-items:flex-end;gap:160px">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px"><div style="width:300px;height:390px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M30 30 Q30 8 50 8 Q70 8 70 30 L74 52 L26 52 Z" fill="#353a3d" /><circle cx="50" cy="30" r="18" fill="#f1c9a5" /><path d="M18 98 Q18 56 50 54 Q82 56 82 98 Z" fill="#1f7a4d" /></svg></div><div style="padding:8px 36px;border-radius:30px;background:#1f7a4d;color:#fff;font-weight:900;font-size:56px">Leon</div></div>
+    <div class="serif" style="font-size:140px;color:#DB8622;margin-bottom:120px">vs</div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px"><div style="width:300px;height:390px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M30 30 Q30 8 50 8 Q70 8 70 30 L74 52 L26 52 Z" fill="#8a5a2b" /><circle cx="50" cy="30" r="18" fill="#f1c9a5" /><path d="M18 98 Q18 56 50 54 Q82 56 82 98 Z" fill="#e24b4b" /></svg></div><div style="padding:8px 36px;border-radius:30px;background:#e24b4b;color:#fff;font-weight:900;font-size:56px">Felix</div></div>
+  </div>
+</div>
+<div id="v2" class="scene clip" data-start="2" data-duration="1" data-track-index="1">
+  <div style="position:absolute;left:80px;top:230px;display:flex;align-items:flex-end;gap:10px"><div style="width:330px;height:429px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M30 30 Q30 8 50 8 Q70 8 70 30 L74 52 L26 52 Z" fill="#353a3d" /><circle cx="50" cy="30" r="18" fill="#f1c9a5" /><path d="M18 98 Q18 56 50 54 Q82 56 82 98 Z" fill="#1f7a4d" /></svg></div><div style="width:330px;height:429px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M30 30 Q30 8 50 8 Q70 8 70 30 L74 52 L26 52 Z" fill="#8a5a2b" /><circle cx="50" cy="30" r="18" fill="#f1c9a5" /><path d="M18 98 Q18 56 50 54 Q82 56 82 98 Z" fill="#e24b4b" /></svg></div></div>
+  <div style="position:absolute;left:790px;top:250px;width:1060px;text-align:center">
+    <div class="serif" style="font-size:220px;line-height:1;color:#1f7a4d;white-space:nowrap">145.000&nbsp;€</div>
+    <div style="font-weight:900;font-size:90px;color:#111;margin-top:20px">Unterschied</div>
+    <div style="display:inline-block;margin-top:30px;padding:14px 46px;border-radius:30px;background:#DB8622;color:#fff;font-weight:900;font-size:68px">bei GLEICHEM Gehalt</div>
+  </div>
+</div>
+      <div id="frame"></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#root", { opacity: 1 }, 0);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
