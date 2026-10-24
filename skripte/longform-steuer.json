@@ -1,0 +1,689 @@
+{
+ "titel": "longform-steuer",
+ "saetze": [
+  {
+   "id": "s1",
+   "kapitel": "k1",
+   "text": "Jedes Jahr verschenken Millionen Menschen in Deutschland bares Geld an das Finanzamt",
+   "sprechtext": "Jedes Jahr verschenken Millionen Menschen in Deutschland bares Geld an das Finanzamt."
+  },
+  {
+   "id": "s2",
+   "kapitel": "k1",
+   "text": "Nicht, weil sie etwas falsch machen, sondern weil sie gar nicht wissen, was sie alles absetzen dürfen",
+   "sprechtext": "Nicht, weil sie etwas falsch machen, sondern weil sie gar nicht wissen, was sie alles absetzen dürfen."
+  },
+  {
+   "id": "s3",
+   "kapitel": "k1",
+   "text": "Dabei ist das völlig legal und oft in wenigen Minuten erledigt",
+   "sprechtext": "Dabei ist das völlig legal und oft in wenigen Minuten erledigt."
+  },
+  {
+   "id": "s4",
+   "kapitel": "k1",
+   "text": "Schätzungen zufolge geben Millionen Arbeitnehmer gar keine Steuererklärung ab, obwohl die meisten Geld zurückbekommen würden",
+   "sprechtext": "Schätzungen zufolge geben Millionen Arbeitnehmer gar keine Steuererklärung ab, obwohl die meisten Geld zurückbekommen würden."
+  },
+  {
+   "id": "s5",
+   "kapitel": "k1",
+   "text": "Und viele, die eine machen, vergessen die Hälfte",
+   "sprechtext": "Und viele, die eine machen, vergessen die Hälfte."
+  },
+  {
+   "id": "s6",
+   "kapitel": "k1",
+   "text": "Das Finanzamt erinnert dich nämlich nicht daran, was du alles absetzen könntest",
+   "sprechtext": "Das Finanzamt erinnert dich nämlich nicht daran, was du alles absetzen könntest."
+  },
+  {
+   "id": "s7",
+   "kapitel": "k1",
+   "text": "Heute knacken wir gemeinsam einen Steuer-Tresor",
+   "sprechtext": "Heute knacken wir gemeinsam einen Steuer-Tresor."
+  },
+  {
+   "id": "s8",
+   "kapitel": "k1",
+   "text": "Er hat sieben Schlösser, und hinter jedem Schloss steckt ein legaler Steuertrick, den fast keiner richtig nutzt",
+   "sprechtext": "Er hat sieben Schlösser, und hinter jedem Schloss steckt ein legaler Steuertrick, den fast keiner richtig nutzt."
+  },
+  {
+   "id": "s9",
+   "kapitel": "k1",
+   "text": "Und damit es nicht trocken wird, rechnen wir alles an einem Beispiel durch",
+   "sprechtext": "Und damit es nicht trocken wird, rechnen wir alles an einem Beispiel durch."
+  },
+  {
+   "id": "s10",
+   "kapitel": "k1",
+   "text": "Das ist Tim, 35 Jahre alt, Bürokaufmann",
+   "sprechtext": "Das ist Tim, fünfunddreißig Jahre alt, Bürokaufmann."
+  },
+  {
+   "id": "s11",
+   "kapitel": "k1",
+   "text": "Tim hat noch nie eine Steuererklärung gemacht, weil er dachte, das lohnt sich nicht",
+   "sprechtext": "Tim hat noch nie eine Steuererklärung gemacht, weil er dachte, das lohnt sich nicht."
+  },
+  {
+   "id": "s12",
+   "kapitel": "k1",
+   "text": "Er sagt immer: Das ist mir zu kompliziert, und am Ende kommt eh nichts raus",
+   "sprechtext": "Er sagt immer: Das ist mir zu kompliziert, und am Ende kommt eh nichts raus."
+  },
+  {
+   "id": "s13",
+   "kapitel": "k1",
+   "text": "Mal sehen, ob er recht hat",
+   "sprechtext": "Mal sehen, ob er recht hat."
+  },
+  {
+   "id": "s14",
+   "kapitel": "k1",
+   "text": "Am Ende des Videos siehst du, wie viel Geld Tim die ganzen Jahre liegen gelassen hat",
+   "sprechtext": "Am Ende des Videos siehst du, wie viel Geld Tim die ganzen Jahre liegen gelassen hat."
+  },
+  {
+   "id": "s15",
+   "kapitel": "k1",
+   "text": "Kleiner Hinweis vorweg: Das ist keine Steuerberatung, und die genauen Beträge können sich jedes Jahr ändern",
+   "sprechtext": "Kleiner Hinweis vorweg: Das ist keine Steuerberatung, und die genauen Beträge können sich jedes Jahr ändern."
+  },
+  {
+   "id": "s16",
+   "kapitel": "k1",
+   "text": "Bevor wir starten, eine Frage an dich",
+   "sprechtext": "Bevor wir starten, eine Frage an dich."
+  },
+  {
+   "id": "s17",
+   "kapitel": "k1",
+   "text": "Machst du eigentlich jedes Jahr eine Steuererklärung?",
+   "sprechtext": "Machst du eigentlich jedes Jahr eine Steuererklärung?"
+  },
+  {
+   "id": "s18",
+   "kapitel": "k1",
+   "text": "Schreib einfach Ja oder Nein in die Kommentare, wir sind gespannt",
+   "sprechtext": "Schreib einfach Ja oder Nein in die Kommentare, wir sind gespannt."
+  },
+  {
+   "id": "s19",
+   "kapitel": "k1",
+   "text": "Und wenn du mehr solche Tipps willst, folge HundeFinanzTV",
+   "sprechtext": "Und wenn du mehr solche Tipps willst, folge HundeFinanzTV."
+  },
+  {
+   "id": "s20",
+   "kapitel": "k1",
+   "text": "Wir bringen jeden Tag neue Videos rund um Geld und Finanzen",
+   "sprechtext": "Wir bringen jeden Tag neue Videos rund um Geld und Finanzen."
+  },
+  {
+   "id": "s21",
+   "kapitel": "k1",
+   "text": "Bevor wir das erste Schloss knacken, musst du eine wichtige Regel kennen",
+   "sprechtext": "Bevor wir das erste Schloss knacken, musst du eine wichtige Regel kennen."
+  },
+  {
+   "id": "s22",
+   "kapitel": "k2",
+   "text": "Jeder Arbeitnehmer bekommt automatisch einen Pauschbetrag von 1.230 € für Werbungskosten",
+   "sprechtext": "Jeder Arbeitnehmer bekommt automatisch einen Pauschbetrag von eintausendzweihundertdreißig Euro für Werbungskosten."
+  },
+  {
+   "id": "s23",
+   "kapitel": "k2",
+   "text": "Das heißt: Das Finanzamt geht sowieso davon aus, dass du so viel für deinen Job ausgibst",
+   "sprechtext": "Das heißt: Das Finanzamt geht sowieso davon aus, dass du so viel für deinen Job ausgibst."
+  },
+  {
+   "id": "s24",
+   "kapitel": "k2",
+   "text": "Alles, was du darüber hinaus nachweisen kannst, senkt deine Steuern zusätzlich",
+   "sprechtext": "Alles, was du darüber hinaus nachweisen kannst, senkt deine Steuern zusätzlich."
+  },
+  {
+   "id": "s25",
+   "kapitel": "k2",
+   "text": "Und genau deshalb lohnt es sich, alles zusammenzuzählen",
+   "sprechtext": "Und genau deshalb lohnt es sich, alles zusammenzuzählen."
+  },
+  {
+   "id": "s26",
+   "kapitel": "k2",
+   "text": "Viele hören hier schon auf und denken: Dann lohnt es sich für mich nicht",
+   "sprechtext": "Viele hören hier schon auf und denken: Dann lohnt es sich für mich nicht."
+  },
+  {
+   "id": "s27",
+   "kapitel": "k2",
+   "text": "Doch genau das ist der größte Irrtum, denn zwei der sieben Schlösser zählen gar nicht zu diesem Pauschbetrag",
+   "sprechtext": "Doch genau das ist der größte Irrtum, denn zwei der sieben Schlösser zählen gar nicht zu diesem Pauschbetrag."
+  },
+  {
+   "id": "s28",
+   "kapitel": "k2",
+   "text": "Schloss Nummer eins: der Weg zur Arbeit",
+   "sprechtext": "Schloss Nummer eins: der Weg zur Arbeit."
+  },
+  {
+   "id": "s29",
+   "kapitel": "k2",
+   "text": "Für jeden Kilometer der einfachen Strecke kannst du die Entfernungspauschale ansetzen",
+   "sprechtext": "Für jeden Kilometer der einfachen Strecke kannst du die Entfernungspauschale ansetzen."
+  },
+  {
+   "id": "s30",
+   "kapitel": "k2",
+   "text": "Dabei ist es egal, ob du mit dem Auto, dem Fahrrad, dem Bus oder zu Fuß zur Arbeit kommst",
+   "sprechtext": "Dabei ist es egal, ob du mit dem Auto, dem Fahrrad, dem Bus oder zu Fuß zur Arbeit kommst."
+  },
+  {
+   "id": "s31",
+   "kapitel": "k2",
+   "text": "Selbst als Mitfahrer in einer Fahrgemeinschaft kannst du die Pauschale nutzen",
+   "sprechtext": "Selbst als Mitfahrer in einer Fahrgemeinschaft kannst du die Pauschale nutzen."
+  },
+  {
+   "id": "s32",
+   "kapitel": "k2",
+   "text": "Viele unterschätzen diesen Posten, weil sie die Strecke nie ausgerechnet haben",
+   "sprechtext": "Viele unterschätzen diesen Posten, weil sie die Strecke nie ausgerechnet haben."
+  },
+  {
+   "id": "s33",
+   "kapitel": "k2",
+   "text": "Tim fährt 20 Kilometer zur Arbeit, an drei Tagen pro Woche",
+   "sprechtext": "Tim fährt zwanzig Kilometer zur Arbeit, an drei Tagen pro Woche."
+  },
+  {
+   "id": "s34",
+   "kapitel": "k2",
+   "text": "Das sind im Jahr schon rund 800 €, die er ansetzen kann",
+   "sprechtext": "Das sind im Jahr schon rund achthundert Euro, die er ansetzen kann."
+  },
+  {
+   "id": "s35",
+   "kapitel": "k2",
+   "text": "Schloss Nummer zwei: das Homeoffice",
+   "sprechtext": "Schloss Nummer zwei: das Homeoffice."
+  },
+  {
+   "id": "s36",
+   "kapitel": "k2",
+   "text": "Für jeden Tag, an dem du überwiegend zu Hause arbeitest, gibt es 6 €",
+   "sprechtext": "Für jeden Tag, an dem du überwiegend zu Hause arbeitest, gibt es sechs Euro."
+  },
+  {
+   "id": "s37",
+   "kapitel": "k2",
+   "text": "Und das für bis zu 210 Tage im Jahr, also maximal 1.260 €",
+   "sprechtext": "Und das für bis zu zweihundertzehn Tage im Jahr, also maximal eintausendzweihundertsechzig Euro."
+  },
+  {
+   "id": "s38",
+   "kapitel": "k2",
+   "text": "Dafür brauchst du nicht mal ein eigenes Arbeitszimmer, der Küchentisch reicht",
+   "sprechtext": "Dafür brauchst du nicht mal ein eigenes Arbeitszimmer, der Küchentisch reicht."
+  },
+  {
+   "id": "s39",
+   "kapitel": "k2",
+   "text": "Einfach im Kalender notieren, an welchen Tagen du zu Hause warst, und schon hast du den Nachweis",
+   "sprechtext": "Einfach im Kalender notieren, an welchen Tagen du zu Hause warst, und schon hast du den Nachweis."
+  },
+  {
+   "id": "s40",
+   "kapitel": "k2",
+   "text": "Tim arbeitet an zwei Tagen pro Woche zu Hause, das sind bei ihm rund 500 €",
+   "sprechtext": "Tim arbeitet an zwei Tagen pro Woche zu Hause, das sind bei ihm rund fünfhundert Euro."
+  },
+  {
+   "id": "s41",
+   "kapitel": "k2",
+   "text": "Wichtig: Für einen Tag gibt es entweder Fahrtkosten oder die Homeoffice-Pauschale, nicht beides",
+   "sprechtext": "Wichtig: Für einen Tag gibt es entweder Fahrtkosten oder die Homeoffice-Pauschale, nicht beides."
+  },
+  {
+   "id": "s42",
+   "kapitel": "k2",
+   "text": "Schloss Nummer drei: Arbeitsmittel",
+   "sprechtext": "Schloss Nummer drei: Arbeitsmittel."
+  },
+  {
+   "id": "s43",
+   "kapitel": "k2",
+   "text": "Alles, was du für deinen Job kaufst, kannst du absetzen",
+   "sprechtext": "Alles, was du für deinen Job kaufst, kannst du absetzen."
+  },
+  {
+   "id": "s44",
+   "kapitel": "k2",
+   "text": "Laptop, Schreibtisch, Bürostuhl, Fachbücher, Software oder sogar die Berufskleidung",
+   "sprechtext": "Laptop, Schreibtisch, Bürostuhl, Fachbücher, Software oder sogar die Berufskleidung."
+  },
+  {
+   "id": "s45",
+   "kapitel": "k2",
+   "text": "Selbst Fachzeitschriften oder ein Werkzeugkoffer für den Job gehören dazu",
+   "sprechtext": "Selbst Fachzeitschriften oder ein Werkzeugkoffer für den Job gehören dazu."
+  },
+  {
+   "id": "s46",
+   "kapitel": "k2",
+   "text": "Ein Computer darf heute sogar komplett in einem Jahr abgesetzt werden",
+   "sprechtext": "Ein Computer darf heute sogar komplett in einem Jahr abgesetzt werden."
+  },
+  {
+   "id": "s47",
+   "kapitel": "k2",
+   "text": "Auch ein Teil deiner Internet- und Handykosten kann dazugehören, wenn du sie beruflich nutzt",
+   "sprechtext": "Auch ein Teil deiner Internet- und Handykosten kann dazugehören, wenn du sie beruflich nutzt."
+  },
+  {
+   "id": "s48",
+   "kapitel": "k2",
+   "text": "Gerade bei teureren Geräten lohnt es sich, die Rechnung gut aufzuheben",
+   "sprechtext": "Gerade bei teureren Geräten lohnt es sich, die Rechnung gut aufzuheben."
+  },
+  {
+   "id": "s49",
+   "kapitel": "k2",
+   "text": "Tim hat sich für die Arbeit einen neuen Laptop für 600 € gekauft",
+   "sprechtext": "Tim hat sich für die Arbeit einen neuen Laptop für sechshundert Euro gekauft."
+  },
+  {
+   "id": "s50",
+   "kapitel": "k3",
+   "text": "Schloss Nummer vier: Fortbildungen",
+   "sprechtext": "Schloss Nummer vier: Fortbildungen."
+  },
+  {
+   "id": "s51",
+   "kapitel": "k3",
+   "text": "Kurse, Seminare, Online-Schulungen oder ein Sprachkurs, der dir im Job hilft",
+   "sprechtext": "Kurse, Seminare, Online-Schulungen oder ein Sprachkurs, der dir im Job hilft."
+  },
+  {
+   "id": "s52",
+   "kapitel": "k3",
+   "text": "Sogar die Fahrtkosten und Übernachtungen dorthin zählen dazu",
+   "sprechtext": "Sogar die Fahrtkosten und Übernachtungen dorthin zählen dazu."
+  },
+  {
+   "id": "s53",
+   "kapitel": "k3",
+   "text": "Sogar ein Studium nach der Ausbildung kann als Werbungskosten zählen",
+   "sprechtext": "Sogar ein Studium nach der Ausbildung kann als Werbungskosten zählen."
+  },
+  {
+   "id": "s54",
+   "kapitel": "k3",
+   "text": "Tim hat einen Excel-Kurs für 300 € gemacht, auch der kommt mit rein",
+   "sprechtext": "Tim hat einen Excel-Kurs für dreihundert Euro gemacht, auch der kommt mit rein."
+  },
+  {
+   "id": "s55",
+   "kapitel": "k3",
+   "text": "Schloss Nummer fünf: die kleinen Dinge, die fast jeder vergisst",
+   "sprechtext": "Schloss Nummer fünf: die kleinen Dinge, die fast jeder vergisst."
+  },
+  {
+   "id": "s56",
+   "kapitel": "k3",
+   "text": "Für die Kontoführung akzeptiert das Finanzamt meistens pauschal 16 €, ganz ohne Beleg",
+   "sprechtext": "Für die Kontoführung akzeptiert das Finanzamt meistens pauschal sechzehn Euro, ganz ohne Beleg."
+  },
+  {
+   "id": "s57",
+   "kapitel": "k3",
+   "text": "Dazu kommen Bewerbungskosten, Gewerkschaftsbeiträge oder ein beruflich genutztes Handy",
+   "sprechtext": "Dazu kommen Bewerbungskosten, Gewerkschaftsbeiträge oder ein beruflich genutztes Handy."
+  },
+  {
+   "id": "s58",
+   "kapitel": "k3",
+   "text": "Wer umzieht, weil er einen neuen Job anfängt, kann sogar die Umzugskosten absetzen",
+   "sprechtext": "Wer umzieht, weil er einen neuen Job anfängt, kann sogar die Umzugskosten absetzen."
+  },
+  {
+   "id": "s59",
+   "kapitel": "k3",
+   "text": "Einzeln klein, zusammen aber oft ein schöner Betrag",
+   "sprechtext": "Einzeln klein, zusammen aber oft ein schöner Betrag."
+  },
+  {
+   "id": "s60",
+   "kapitel": "k3",
+   "text": "Jetzt zählen wir bei Tim zusammen",
+   "sprechtext": "Jetzt zählen wir bei Tim zusammen."
+  },
+  {
+   "id": "s61",
+   "kapitel": "k3",
+   "text": "Fahrtkosten, Homeoffice, Laptop, Kurs und Kontoführung: rund 2.200 €",
+   "sprechtext": "Fahrtkosten, Homeoffice, Laptop, Kurs und Kontoführung: rund zweitausendzweihundert Euro."
+  },
+  {
+   "id": "s62",
+   "kapitel": "k3",
+   "text": "Davon ziehen wir den Pauschbetrag von 1.230 € ab",
+   "sprechtext": "Davon ziehen wir den Pauschbetrag von eintausendzweihundertdreißig Euro ab."
+  },
+  {
+   "id": "s63",
+   "kapitel": "k3",
+   "text": "Bleiben rund 1.000 €, die Tims Steuern zusätzlich senken",
+   "sprechtext": "Bleiben rund tausend Euro, die Tims Steuern zusätzlich senken."
+  },
+  {
+   "id": "s64",
+   "kapitel": "k3",
+   "text": "Bei seinem Steuersatz bringt ihm das ungefähr 300 € zurück",
+   "sprechtext": "Bei seinem Steuersatz bringt ihm das ungefähr dreihundert Euro zurück."
+  },
+  {
+   "id": "s65",
+   "kapitel": "k3",
+   "text": "Wie viel du zurückbekommst, hängt von deinem persönlichen Steuersatz ab",
+   "sprechtext": "Wie viel du zurückbekommst, hängt von deinem persönlichen Steuersatz ab."
+  },
+  {
+   "id": "s66",
+   "kapitel": "k3",
+   "text": "Je mehr du verdienst, desto mehr bringt dir jeder abgesetzte Euro",
+   "sprechtext": "Je mehr du verdienst, desto mehr bringt dir jeder abgesetzte Euro."
+  },
+  {
+   "id": "s67",
+   "kapitel": "k3",
+   "text": "Klingt erstmal nicht nach viel, aber das ist erst der Anfang",
+   "sprechtext": "Klingt erstmal nicht nach viel, aber das ist erst der Anfang."
+  },
+  {
+   "id": "s68",
+   "kapitel": "k3",
+   "text": "Und jetzt kommen die zwei Schlösser, die richtig Geld bringen, denn die wirken direkt auf deine Steuer",
+   "sprechtext": "Und jetzt kommen die zwei Schlösser, die richtig Geld bringen, denn die wirken direkt auf deine Steuer."
+  },
+  {
+   "id": "s69",
+   "kapitel": "k4",
+   "text": "Schloss Nummer sechs: Handwerker und Haushaltshilfen",
+   "sprechtext": "Schloss Nummer sechs: Handwerker und Haushaltshilfen."
+  },
+  {
+   "id": "s70",
+   "kapitel": "k4",
+   "text": "Wenn ein Handwerker in deiner Wohnung etwas repariert, streicht oder wartet, kannst du 20 % der Arbeitskosten direkt von deiner Steuer abziehen",
+   "sprechtext": "Wenn ein Handwerker in deiner Wohnung etwas repariert, streicht oder wartet, kannst du zwanzig Prozent der Arbeitskosten direkt von deiner Steuer abziehen."
+  },
+  {
+   "id": "s71",
+   "kapitel": "k4",
+   "text": "Nicht vom Einkommen, sondern direkt von der Steuer, das ist ein riesiger Unterschied",
+   "sprechtext": "Nicht vom Einkommen, sondern direkt von der Steuer, das ist ein riesiger Unterschied."
+  },
+  {
+   "id": "s72",
+   "kapitel": "k4",
+   "text": "Das gilt auch für den Schornsteinfeger, den Gärtner, die Putzhilfe oder den Hausmeister",
+   "sprechtext": "Das gilt auch für den Schornsteinfeger, den Gärtner, die Putzhilfe oder den Hausmeister."
+  },
+  {
+   "id": "s73",
+   "kapitel": "k4",
+   "text": "Auch die Wartung der Heizung oder eine Reparatur in der Wohnung zählen dazu",
+   "sprechtext": "Auch die Wartung der Heizung oder eine Reparatur in der Wohnung zählen dazu."
+  },
+  {
+   "id": "s74",
+   "kapitel": "k4",
+   "text": "Sogar als Mieter, denn viele dieser Kosten stecken in deiner Nebenkostenabrechnung",
+   "sprechtext": "Sogar als Mieter, denn viele dieser Kosten stecken in deiner Nebenkostenabrechnung."
+  },
+  {
+   "id": "s75",
+   "kapitel": "k4",
+   "text": "Ein Blick in die Abrechnung lohnt sich also richtig, denn dort steht oft schon, wie viel davon absetzbar ist",
+   "sprechtext": "Ein Blick in die Abrechnung lohnt sich also richtig, denn dort steht oft schon, wie viel davon absetzbar ist."
+  },
+  {
+   "id": "s76",
+   "kapitel": "k4",
+   "text": "Für Handwerker kannst du so bis zu 1.200 € Steuern im Jahr sparen, für Haushaltshilfen sogar bis zu 4.000 €",
+   "sprechtext": "Für Handwerker kannst du so bis zu eintausendzweihundert Euro Steuern im Jahr sparen, für Haushaltshilfen sogar bis zu viertausend Euro."
+  },
+  {
+   "id": "s77",
+   "kapitel": "k4",
+   "text": "Wichtig ist nur: Du musst per Überweisung bezahlen, nicht bar",
+   "sprechtext": "Wichtig ist nur: Du musst per Überweisung bezahlen, nicht bar."
+  },
+  {
+   "id": "s78",
+   "kapitel": "k4",
+   "text": "Viele Menschen haben solche Kosten jedes Jahr, ohne es zu wissen",
+   "sprechtext": "Viele Menschen haben solche Kosten jedes Jahr, ohne es zu wissen."
+  },
+  {
+   "id": "s79",
+   "kapitel": "k4",
+   "text": "Tim hat sein Bad renovieren lassen, die reinen Arbeitskosten waren 1.500 €",
+   "sprechtext": "Tim hat sein Bad renovieren lassen, die reinen Arbeitskosten waren eintausendfünfhundert Euro."
+  },
+  {
+   "id": "s80",
+   "kapitel": "k4",
+   "text": "20 % davon sind 300 €, direkt zurück aufs Konto",
+   "sprechtext": "Zwanzig Prozent davon sind dreihundert Euro, direkt zurück aufs Konto."
+  },
+  {
+   "id": "s81",
+   "kapitel": "k4",
+   "text": "Schloss Nummer sieben: Spenden",
+   "sprechtext": "Schloss Nummer sieben: Spenden."
+  },
+  {
+   "id": "s82",
+   "kapitel": "k4",
+   "text": "Jede Spende an eine gemeinnützige Organisation kannst du absetzen",
+   "sprechtext": "Jede Spende an eine gemeinnützige Organisation kannst du absetzen."
+  },
+  {
+   "id": "s83",
+   "kapitel": "k4",
+   "text": "Bis 300 € reicht dafür sogar einfach der Kontoauszug",
+   "sprechtext": "Bis dreihundert Euro reicht dafür sogar einfach der Kontoauszug."
+  },
+  {
+   "id": "s84",
+   "kapitel": "k4",
+   "text": "Auch Beiträge an gemeinnützige Vereine können dazugehören, je nachdem, um welchen Verein es sich handelt",
+   "sprechtext": "Auch Beiträge an gemeinnützige Vereine können dazugehören, je nachdem, um welchen Verein es sich handelt."
+  },
+  {
+   "id": "s85",
+   "kapitel": "k4",
+   "text": "Tim spendet jedes Jahr 200 € an das Tierheim, das bringt ihm noch einmal rund 60 €",
+   "sprechtext": "Tim spendet jedes Jahr zweihundert Euro an das Tierheim, das bringt ihm noch einmal rund sechzig Euro."
+  },
+  {
+   "id": "s86",
+   "kapitel": "k4",
+   "text": "Damit sind alle sieben Schlösser geknackt",
+   "sprechtext": "Damit sind alle sieben Schlösser geknackt."
+  },
+  {
+   "id": "s87",
+   "kapitel": "k5",
+   "text": "Und jetzt öffnen wir den Tresor",
+   "sprechtext": "Und jetzt öffnen wir den Tresor."
+  },
+  {
+   "id": "s88",
+   "kapitel": "k5",
+   "text": "Arbeitskosten und Fortbildung: rund 300 €",
+   "sprechtext": "Arbeitskosten und Fortbildung: rund dreihundert Euro."
+  },
+  {
+   "id": "s89",
+   "kapitel": "k5",
+   "text": "Handwerker: 300 €",
+   "sprechtext": "Handwerker: dreihundert Euro."
+  },
+  {
+   "id": "s90",
+   "kapitel": "k5",
+   "text": "Spenden: rund 60 €",
+   "sprechtext": "Spenden: rund sechzig Euro."
+  },
+  {
+   "id": "s91",
+   "kapitel": "k5",
+   "text": "Zusammen bekommt Tim also rund 650 € zurück, nur für eine Steuererklärung",
+   "sprechtext": "Zusammen bekommt Tim also rund sechshundertfünfzig Euro zurück, nur für eine Steuererklärung."
+  },
+  {
+   "id": "s92",
+   "kapitel": "k5",
+   "text": "Aber jetzt kommt der eigentliche Knaller",
+   "sprechtext": "Aber jetzt kommt der eigentliche Knaller."
+  },
+  {
+   "id": "s93",
+   "kapitel": "k5",
+   "text": "Wer nicht verpflichtet ist, eine Steuererklärung abzugeben, kann sie bis zu vier Jahre rückwirkend machen",
+   "sprechtext": "Wer nicht verpflichtet ist, eine Steuererklärung abzugeben, kann sie bis zu vier Jahre rückwirkend machen."
+  },
+  {
+   "id": "s94",
+   "kapitel": "k5",
+   "text": "Tim kann also auch für die letzten Jahre noch Geld zurückholen",
+   "sprechtext": "Tim kann also auch für die letzten Jahre noch Geld zurückholen."
+  },
+  {
+   "id": "s95",
+   "kapitel": "k5",
+   "text": "Wenn es jedes Jahr ähnlich war, sind das insgesamt über 2.500 €",
+   "sprechtext": "Wenn es jedes Jahr ähnlich war, sind das insgesamt über zweitausendfünfhundert Euro."
+  },
+  {
+   "id": "s96",
+   "kapitel": "k5",
+   "text": "Geld, das sonst einfach verfallen wäre",
+   "sprechtext": "Geld, das sonst einfach verfallen wäre."
+  },
+  {
+   "id": "s97",
+   "kapitel": "k5",
+   "text": "Für Tim bedeutet das: Er hat in den letzten Jahren jedes Mal einen kleinen Urlaub verschenkt",
+   "sprechtext": "Für Tim bedeutet das: Er hat in den letzten Jahren jedes Mal einen kleinen Urlaub verschenkt."
+  },
+  {
+   "id": "s98",
+   "kapitel": "k5",
+   "text": "Und das, obwohl die ganze Arbeit nur ein paar Stunden gedauert hätte",
+   "sprechtext": "Und das, obwohl die ganze Arbeit nur ein paar Stunden gedauert hätte."
+  },
+  {
+   "id": "s99",
+   "kapitel": "k5",
+   "text": "Und wie macht man das am einfachsten?",
+   "sprechtext": "Und wie macht man das am einfachsten?"
+  },
+  {
+   "id": "s100",
+   "kapitel": "k5",
+   "text": "Mit dem kostenlosen Elster-Portal vom Finanzamt oder einer Steuer-App, die dich Schritt für Schritt durch alles führt",
+   "sprechtext": "Mit dem kostenlosen Elster-Portal vom Finanzamt oder einer Steuer-App, die dich Schritt für Schritt durch alles führt."
+  },
+  {
+   "id": "s101",
+   "kapitel": "k5",
+   "text": "Viele Daten wie dein Gehalt sind dort sogar schon automatisch eingetragen",
+   "sprechtext": "Viele Daten wie dein Gehalt sind dort sogar schon automatisch eingetragen."
+  },
+  {
+   "id": "s102",
+   "kapitel": "k5",
+   "text": "Und wenn du einmal eine Steuererklärung gemacht hast, kannst du die Daten im nächsten Jahr einfach übernehmen",
+   "sprechtext": "Und wenn du einmal eine Steuererklärung gemacht hast, kannst du die Daten im nächsten Jahr einfach übernehmen."
+  },
+  {
+   "id": "s103",
+   "kapitel": "k5",
+   "text": "Die Bearbeitung dauert beim Finanzamt meist nur ein paar Wochen, dann ist das Geld auf deinem Konto",
+   "sprechtext": "Die Bearbeitung dauert beim Finanzamt meist nur ein paar Wochen, dann ist das Geld auf deinem Konto."
+  },
+  {
+   "id": "s104",
+   "kapitel": "k5",
+   "text": "Sammle unterm Jahr einfach alle Rechnungen und Belege in einem Ordner oder als Foto auf dem Handy",
+   "sprechtext": "Sammle unterm Jahr einfach alle Rechnungen und Belege in einem Ordner oder als Foto auf dem Handy."
+  },
+  {
+   "id": "s105",
+   "kapitel": "k5",
+   "text": "Dann bist du in einer Stunde fertig",
+   "sprechtext": "Dann bist du in einer Stunde fertig."
+  },
+  {
+   "id": "s106",
+   "kapitel": "k5",
+   "text": "Und falls dir das trotzdem zu viel ist: Ein Lohnsteuerhilfeverein hilft dir gegen einen kleinen Jahresbeitrag",
+   "sprechtext": "Und falls dir das trotzdem zu viel ist: Ein Lohnsteuerhilfeverein hilft dir gegen einen kleinen Jahresbeitrag."
+  },
+  {
+   "id": "s107",
+   "kapitel": "k5",
+   "text": "Bei komplizierteren Fällen lohnt sich auch ein Steuerberater, dessen Kosten du zum Teil ebenfalls absetzen kannst",
+   "sprechtext": "Bei komplizierteren Fällen lohnt sich auch ein Steuerberater, dessen Kosten du zum Teil ebenfalls absetzen kannst."
+  },
+  {
+   "id": "s108",
+   "kapitel": "k5",
+   "text": "Fassen wir die sieben Schlösser zusammen",
+   "sprechtext": "Fassen wir die sieben Schlösser zusammen."
+  },
+  {
+   "id": "s109",
+   "kapitel": "k5",
+   "text": "Arbeitsweg, Homeoffice, Arbeitsmittel, Fortbildung, die kleinen Kosten, Handwerker und Spenden",
+   "sprechtext": "Arbeitsweg, Homeoffice, Arbeitsmittel, Fortbildung, die kleinen Kosten, Handwerker und Spenden."
+  },
+  {
+   "id": "s110",
+   "kapitel": "k5",
+   "text": "Schon zwei oder drei davon können sich richtig lohnen",
+   "sprechtext": "Schon zwei oder drei davon können sich richtig lohnen."
+  },
+  {
+   "id": "s111",
+   "kapitel": "k5",
+   "text": "Tim hat übrigens direkt alle vier Jahre nachgeholt und sich vom Geld einen Kurzurlaub gegönnt",
+   "sprechtext": "Tim hat übrigens direkt alle vier Jahre nachgeholt und sich vom Geld einen Kurzurlaub gegönnt."
+  },
+  {
+   "id": "s112",
+   "kapitel": "k5",
+   "text": "Und jetzt bist du dran: Machst du eine Steuererklärung, ja oder nein? Schreib es in die Kommentare",
+   "sprechtext": "Und jetzt bist du dran: Machst du eine Steuererklärung, ja oder nein? Schreib es in die Kommentare."
+  },
+  {
+   "id": "s113",
+   "kapitel": "k5",
+   "text": "Und wenn du jemanden kennst, der noch nie eine gemacht hat, teile das Video mit ihm",
+   "sprechtext": "Und wenn du jemanden kennst, der noch nie eine gemacht hat, teile das Video mit ihm."
+  },
+  {
+   "id": "s114",
+   "kapitel": "k5",
+   "text": "Wir sind HundeFinanzTV, wir sehen uns morgen im nächsten Video",
+   "sprechtext": "Wir sind HundeFinanzTV, wir sehen uns morgen im nächsten Video!"
+  }
+ ]
+}

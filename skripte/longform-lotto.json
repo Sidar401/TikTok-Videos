@@ -1,0 +1,677 @@
+{
+ "titel": "longform-lotto",
+ "saetze": [
+  {
+   "id": "s1",
+   "kapitel": "k1",
+   "text": "Stell dir vor, du gewinnst morgen eine Million Euro im Lotto",
+   "sprechtext": "Stell dir vor, du gewinnst morgen eine Million Euro im Lotto."
+  },
+  {
+   "id": "s2",
+   "kapitel": "k1",
+   "text": "Was würdest du als Erstes machen?",
+   "sprechtext": "Was würdest du als Erstes machen?"
+  },
+  {
+   "id": "s3",
+   "kapitel": "k1",
+   "text": "Kündigen, ein Haus kaufen, ein Traumauto, eine Weltreise?",
+   "sprechtext": "Kündigen, ein Haus kaufen, ein Traumauto, eine Weltreise?"
+  },
+  {
+   "id": "s4",
+   "kapitel": "k1",
+   "text": "Fast jeder hat sofort eine Antwort",
+   "sprechtext": "Fast jeder hat sofort eine Antwort."
+  },
+  {
+   "id": "s5",
+   "kapitel": "k1",
+   "text": "Millionen Menschen in Deutschland spielen jede Woche, und alle träumen vom großen Gewinn",
+   "sprechtext": "Millionen Menschen in Deutschland spielen jede Woche, und alle träumen vom großen Gewinn."
+  },
+  {
+   "id": "s6",
+   "kapitel": "k1",
+   "text": "Aber hier ist die unbequeme Wahrheit: Viele Lottogewinner haben nach einigen Jahren weniger als vorher",
+   "sprechtext": "Aber hier ist die unbequeme Wahrheit: Viele Lottogewinner haben nach einigen Jahren weniger als vorher."
+  },
+  {
+   "id": "s7",
+   "kapitel": "k1",
+   "text": "Klingt verrückt, oder? Wie kann man eine Million verlieren?",
+   "sprechtext": "Klingt verrückt, oder? Wie kann man eine Million verlieren?"
+  },
+  {
+   "id": "s8",
+   "kapitel": "k1",
+   "text": "Die Antwort hat weniger mit Pech zu tun als mit Psychologie",
+   "sprechtext": "Die Antwort hat weniger mit Pech zu tun als mit Psychologie."
+  },
+  {
+   "id": "s9",
+   "kapitel": "k1",
+   "text": "Heute zeigen wir dir, warum das so ist, und was man mit so einem Gewinn wirklich machen sollte",
+   "sprechtext": "Heute zeigen wir dir, warum das so ist, und was man mit so einem Gewinn wirklich machen sollte."
+  },
+  {
+   "id": "s10",
+   "kapitel": "k1",
+   "text": "Dafür begleiten wir Marco",
+   "sprechtext": "Dafür begleiten wir Marco."
+  },
+  {
+   "id": "s11",
+   "kapitel": "k1",
+   "text": "Marco ist 32, Lagerist, und spielt seit Jahren jede Woche dieselben sechs Zahlen",
+   "sprechtext": "Marco ist zweiunddreißig, Lagerist, und spielt seit Jahren jede Woche dieselben sechs Zahlen."
+  },
+  {
+   "id": "s12",
+   "kapitel": "k1",
+   "text": "Seine Zahlen sind die Geburtstage seiner Familie",
+   "sprechtext": "Seine Zahlen sind die Geburtstage seiner Familie."
+  },
+  {
+   "id": "s13",
+   "kapitel": "k1",
+   "text": "Er wohnt zur Miete, fährt ein altes Auto und kommt mit seinem Gehalt gut über die Runden",
+   "sprechtext": "Er wohnt zur Miete, fährt ein altes Auto und kommt mit seinem Gehalt gut über die Runden."
+  },
+  {
+   "id": "s14",
+   "kapitel": "k1",
+   "text": "Und an einem Samstagabend passiert es: Marco knackt den Jackpot",
+   "sprechtext": "Und an einem Samstagabend passiert es: Marco knackt den Jackpot."
+  },
+  {
+   "id": "s15",
+   "kapitel": "k1",
+   "text": "Er starrt minutenlang auf den Fernseher und kann es nicht glauben",
+   "sprechtext": "Er starrt minutenlang auf den Fernseher und kann es nicht glauben."
+  },
+  {
+   "id": "s16",
+   "kapitel": "k1",
+   "text": "Wir schauen Jahr für Jahr auf seinen Kontostand und sehen, wo das Geld bleibt",
+   "sprechtext": "Wir schauen Jahr für Jahr auf seinen Kontostand und sehen, wo das Geld bleibt."
+  },
+  {
+   "id": "s17",
+   "kapitel": "k1",
+   "text": "Und am Ende verraten wir dir, wie Marco aus derselben Million ein Einkommen fürs ganze Leben hätte machen können",
+   "sprechtext": "Und am Ende verraten wir dir, wie Marco aus derselben Million ein Einkommen fürs ganze Leben hätte machen können."
+  },
+  {
+   "id": "s18",
+   "kapitel": "k1",
+   "text": "Bevor wir starten, eine Frage an dich",
+   "sprechtext": "Bevor wir starten, eine Frage an dich."
+  },
+  {
+   "id": "s19",
+   "kapitel": "k1",
+   "text": "Was würdest du mit einer Million als Erstes kaufen?",
+   "sprechtext": "Was würdest du mit einer Million als Erstes kaufen?"
+  },
+  {
+   "id": "s20",
+   "kapitel": "k1",
+   "text": "Schreib es in die Kommentare, wir sind wirklich gespannt",
+   "sprechtext": "Schreib es in die Kommentare, wir sind wirklich gespannt."
+  },
+  {
+   "id": "s21",
+   "kapitel": "k1",
+   "text": "Und wenn du lernen willst, wie man mit Geld richtig umgeht, folge HundeFinanzTV",
+   "sprechtext": "Und wenn du lernen willst, wie man mit Geld richtig umgeht, folge HundeFinanzTV."
+  },
+  {
+   "id": "s22",
+   "kapitel": "k1",
+   "text": "Wir bringen jeden Tag neue Videos rund um Geld und Finanzen",
+   "sprechtext": "Wir bringen jeden Tag neue Videos rund um Geld und Finanzen."
+  },
+  {
+   "id": "s23",
+   "kapitel": "k1",
+   "text": "Doch zuerst: Wie wahrscheinlich ist so ein Gewinn überhaupt?",
+   "sprechtext": "Doch zuerst: Wie wahrscheinlich ist so ein Gewinn überhaupt?"
+  },
+  {
+   "id": "s24",
+   "kapitel": "k2",
+   "text": "Beim klassischen Lotto sechs aus 49 liegt die Chance auf den Jackpot bei eins zu rund 140 Millionen",
+   "sprechtext": "Beim klassischen Lotto sechs aus neunundvierzig liegt die Chance auf den Jackpot bei eins zu rund hundertvierzig Millionen."
+  },
+  {
+   "id": "s25",
+   "kapitel": "k2",
+   "text": "Das ist so unwahrscheinlich, dass man es sich kaum vorstellen kann",
+   "sprechtext": "Das ist so unwahrscheinlich, dass man es sich kaum vorstellen kann."
+  },
+  {
+   "id": "s26",
+   "kapitel": "k2",
+   "text": "Stell dir ein Fußballstadion vor, voll mit Lottoscheinen",
+   "sprechtext": "Stell dir ein Fußballstadion vor, voll mit Lottoscheinen."
+  },
+  {
+   "id": "s27",
+   "kapitel": "k2",
+   "text": "Und nicht nur eins, sondern über 1.000 volle Stadien",
+   "sprechtext": "Und nicht nur eins, sondern über tausend volle Stadien."
+  },
+  {
+   "id": "s28",
+   "kapitel": "k2",
+   "text": "Irgendwo darin liegt genau ein Gewinnerschein",
+   "sprechtext": "Irgendwo darin liegt genau ein Gewinnerschein."
+  },
+  {
+   "id": "s29",
+   "kapitel": "k2",
+   "text": "Selbst wenn du jede Woche spielst, müsstest du im Schnitt über eine Million Jahre warten",
+   "sprechtext": "Selbst wenn du jede Woche spielst, müsstest du im Schnitt über eine Million Jahre warten."
+  },
+  {
+   "id": "s30",
+   "kapitel": "k2",
+   "text": "Und trotzdem, Marco hat ihn",
+   "sprechtext": "Und trotzdem, Marco hat ihn."
+  },
+  {
+   "id": "s31",
+   "kapitel": "k2",
+   "text": "Eine Million Euro, und in Deutschland sind Lottogewinne sogar steuerfrei",
+   "sprechtext": "Eine Million Euro, und in Deutschland sind Lottogewinne sogar steuerfrei."
+  },
+  {
+   "id": "s32",
+   "kapitel": "k2",
+   "text": "Das Geld ist zwei Wochen später auf seinem Konto",
+   "sprechtext": "Das Geld ist zwei Wochen später auf seinem Konto."
+  },
+  {
+   "id": "s33",
+   "kapitel": "k2",
+   "text": "Marco kann nicht schlafen und malt sich die ganze Nacht aus, was er alles kaufen wird",
+   "sprechtext": "Marco kann nicht schlafen und malt sich die ganze Nacht aus, was er alles kaufen wird."
+  },
+  {
+   "id": "s34",
+   "kapitel": "k2",
+   "text": "Jahr eins: Die Party beginnt",
+   "sprechtext": "Jahr eins: Die Party beginnt."
+  },
+  {
+   "id": "s35",
+   "kapitel": "k2",
+   "text": "Marco kündigt seinen Job, schließlich braucht er ja kein Gehalt mehr",
+   "sprechtext": "Marco kündigt seinen Job, schließlich braucht er ja kein Gehalt mehr."
+  },
+  {
+   "id": "s36",
+   "kapitel": "k2",
+   "text": "Er kauft sich ein Haus für 500.000 €, bar bezahlt",
+   "sprechtext": "Er kauft sich ein Haus für fünfhunderttausend Euro, bar bezahlt."
+  },
+  {
+   "id": "s37",
+   "kapitel": "k2",
+   "text": "Dazu ein Sportwagen für 80.000 €",
+   "sprechtext": "Dazu ein Sportwagen für achtzigtausend Euro."
+  },
+  {
+   "id": "s38",
+   "kapitel": "k2",
+   "text": "Eine große Reise mit Freunden, natürlich alles auf seine Kosten",
+   "sprechtext": "Eine große Reise mit Freunden, natürlich alles auf seine Kosten."
+  },
+  {
+   "id": "s39",
+   "kapitel": "k2",
+   "text": "Dazu kommen Möbel, Technik, teure Uhren und jede Menge spontane Einkäufe",
+   "sprechtext": "Dazu kommen Möbel, Technik, teure Uhren und jede Menge spontane Einkäufe."
+  },
+  {
+   "id": "s40",
+   "kapitel": "k2",
+   "text": "Er gönnt sich, was er sich immer gewünscht hat, und das fühlt sich großartig an",
+   "sprechtext": "Er gönnt sich, was er sich immer gewünscht hat, und das fühlt sich großartig an."
+  },
+  {
+   "id": "s41",
+   "kapitel": "k2",
+   "text": "Und plötzlich melden sich Verwandte und Bekannte, von denen er jahrelang nichts gehört hat",
+   "sprechtext": "Und plötzlich melden sich Verwandte und Bekannte, von denen er jahrelang nichts gehört hat."
+  },
+  {
+   "id": "s42",
+   "kapitel": "k2",
+   "text": "Der eine braucht Geld für sein Geschäft, die andere für eine Hochzeit",
+   "sprechtext": "Der eine braucht Geld für sein Geschäft, die andere für eine Hochzeit."
+  },
+  {
+   "id": "s43",
+   "kapitel": "k2",
+   "text": "Marco ist großzügig und verleiht insgesamt 100.000 €",
+   "sprechtext": "Marco ist großzügig und verleiht insgesamt hunderttausend Euro."
+  },
+  {
+   "id": "s44",
+   "kapitel": "k2",
+   "text": "Nein zu sagen fällt ihm schwer, schließlich hat er ja so viel",
+   "sprechtext": "Nein zu sagen fällt ihm schwer, schließlich hat er ja so viel."
+  },
+  {
+   "id": "s45",
+   "kapitel": "k2",
+   "text": "Nach nur einem Jahr sind von der Million noch etwa 200.000 € übrig",
+   "sprechtext": "Nach nur einem Jahr sind von der Million noch etwa zweihunderttausend Euro übrig."
+  },
+  {
+   "id": "s46",
+   "kapitel": "k2",
+   "text": "Aber Marco fühlt sich wie ein König, und jeder will plötzlich sein Freund sein",
+   "sprechtext": "Aber Marco fühlt sich wie ein König, und jeder will plötzlich sein Freund sein."
+  },
+  {
+   "id": "s47",
+   "kapitel": "k2",
+   "text": "Er sagt sich: Ist doch noch genug da",
+   "sprechtext": "Er sagt sich: Ist doch noch genug da."
+  },
+  {
+   "id": "s48",
+   "kapitel": "k3",
+   "text": "Jahr zwei bis vier: der schleichende Absturz",
+   "sprechtext": "Jahr zwei bis vier: der schleichende Absturz."
+  },
+  {
+   "id": "s49",
+   "kapitel": "k3",
+   "text": "Jetzt merkt Marco, was niemand bedacht hat: Das Haus und der Sportwagen kosten jeden Monat Geld",
+   "sprechtext": "Jetzt merkt Marco, was niemand bedacht hat: Das Haus und der Sportwagen kosten jeden Monat Geld."
+  },
+  {
+   "id": "s50",
+   "kapitel": "k3",
+   "text": "Grundsteuer, Versicherungen, Reparaturen, Strom, Heizung",
+   "sprechtext": "Grundsteuer, Versicherungen, Reparaturen, Strom, Heizung."
+  },
+  {
+   "id": "s51",
+   "kapitel": "k3",
+   "text": "Dazu sein neuer Lebensstil, der natürlich auch nicht günstiger wird",
+   "sprechtext": "Dazu sein neuer Lebensstil, der natürlich auch nicht günstiger wird."
+  },
+  {
+   "id": "s52",
+   "kapitel": "k3",
+   "text": "Zusammen gibt Marco jetzt rund 5.000 € im Monat aus, ohne ein Einkommen zu haben",
+   "sprechtext": "Zusammen gibt Marco jetzt rund fünftausend Euro im Monat aus, ohne ein Einkommen zu haben."
+  },
+  {
+   "id": "s53",
+   "kapitel": "k3",
+   "text": "Das sind 60.000 € pro Jahr",
+   "sprechtext": "Das sind sechzigtausend Euro pro Jahr."
+  },
+  {
+   "id": "s54",
+   "kapitel": "k3",
+   "text": "Und weil keine neuen Einnahmen kommen, schmilzt das Geld schneller, als er es merkt",
+   "sprechtext": "Und weil keine neuen Einnahmen kommen, schmilzt das Geld schneller, als er es merkt."
+  },
+  {
+   "id": "s55",
+   "kapitel": "k3",
+   "text": "Und das verliehene Geld? Davon kommt kaum etwas zurück",
+   "sprechtext": "Und das verliehene Geld? Davon kommt kaum etwas zurück."
+  },
+  {
+   "id": "s56",
+   "kapitel": "k3",
+   "text": "Marco merkt auch, dass sich sein Freundeskreis verändert hat",
+   "sprechtext": "Marco merkt auch, dass sich sein Freundeskreis verändert hat."
+  },
+  {
+   "id": "s57",
+   "kapitel": "k3",
+   "text": "Manche alten Freunde fühlen sich unwohl, und neue Freunde sind vor allem dann da, wenn er bezahlt",
+   "sprechtext": "Manche alten Freunde fühlen sich unwohl, und neue Freunde sind vor allem dann da, wenn er bezahlt."
+  },
+  {
+   "id": "s58",
+   "kapitel": "k3",
+   "text": "Dann klingelt ein angeblicher Finanzexperte an seiner Tür",
+   "sprechtext": "Dann klingelt ein angeblicher Finanzexperte an seiner Tür."
+  },
+  {
+   "id": "s59",
+   "kapitel": "k3",
+   "text": "Er verspricht 20 % Rendite pro Jahr mit einem todsicheren Investment",
+   "sprechtext": "Er verspricht zwanzig Prozent Rendite pro Jahr mit einem todsicheren Investment."
+  },
+  {
+   "id": "s60",
+   "kapitel": "k3",
+   "text": "Marco steckt 50.000 € hinein, und das Geld ist weg",
+   "sprechtext": "Marco steckt fünfzigtausend Euro hinein, und das Geld ist weg."
+  },
+  {
+   "id": "s61",
+   "kapitel": "k3",
+   "text": "Im Nachhinein war es ein klassischer Betrug, aber mit so viel Geld auf dem Konto war Marco leichte Beute",
+   "sprechtext": "Im Nachhinein war es ein klassischer Betrug, aber mit so viel Geld auf dem Konto war Marco leichte Beute."
+  },
+  {
+   "id": "s62",
+   "kapitel": "k3",
+   "text": "Nach vier Jahren ist das Konto leer",
+   "sprechtext": "Nach vier Jahren ist das Konto leer."
+  },
+  {
+   "id": "s63",
+   "kapitel": "k3",
+   "text": "Marco muss das Auto verkaufen, nimmt einen Kredit auf das Haus auf und sucht wieder einen Job",
+   "sprechtext": "Marco muss das Auto verkaufen, nimmt einen Kredit auf das Haus auf und sucht wieder einen Job."
+  },
+  {
+   "id": "s64",
+   "kapitel": "k3",
+   "text": "Nur dass er jetzt seit Jahren raus ist aus dem Beruf",
+   "sprechtext": "Nur dass er jetzt seit Jahren raus ist aus dem Beruf."
+  },
+  {
+   "id": "s65",
+   "kapitel": "k3",
+   "text": "Und das Schlimmste: Der Stress und die Scham sind größer als vor dem Gewinn",
+   "sprechtext": "Und das Schlimmste: Der Stress und die Scham sind größer als vor dem Gewinn."
+  },
+  {
+   "id": "s66",
+   "kapitel": "k4",
+   "text": "Klingt übertrieben? Leider nicht",
+   "sprechtext": "Klingt übertrieben? Leider nicht."
+  },
+  {
+   "id": "s67",
+   "kapitel": "k4",
+   "text": "Eine Studie aus den USA hat herausgefunden, dass Lottogewinner nach einigen Jahren ähnlich oft pleite gingen wie Menschen mit kleinen Gewinnen",
+   "sprechtext": "Eine Studie aus den USA hat herausgefunden, dass Lottogewinner nach einigen Jahren ähnlich oft pleite gingen wie Menschen mit kleinen Gewinnen."
+  },
+  {
+   "id": "s68",
+   "kapitel": "k4",
+   "text": "Ein großer Gewinn schützt also nicht vor dem Absturz",
+   "sprechtext": "Ein großer Gewinn schützt also nicht vor dem Absturz."
+  },
+  {
+   "id": "s69",
+   "kapitel": "k4",
+   "text": "Wer kein großes Geld gewohnt ist, trifft mit plötzlichem Reichtum oft riskante Entscheidungen",
+   "sprechtext": "Wer kein großes Geld gewohnt ist, trifft mit plötzlichem Reichtum oft riskante Entscheidungen."
+  },
+  {
+   "id": "s70",
+   "kapitel": "k4",
+   "text": "Übrigens: Die oft zitierte Zahl, dass 70 % aller Gewinner pleite gehen, ist so nicht belegt",
+   "sprechtext": "Übrigens: Die oft zitierte Zahl, dass siebzig Prozent aller Gewinner pleite gehen, ist so nicht belegt."
+  },
+  {
+   "id": "s71",
+   "kapitel": "k4",
+   "text": "Aber es passiert oft genug, um daraus zu lernen",
+   "sprechtext": "Aber es passiert oft genug, um daraus zu lernen."
+  },
+  {
+   "id": "s72",
+   "kapitel": "k4",
+   "text": "Und warum passiert das?",
+   "sprechtext": "Und warum passiert das?"
+  },
+  {
+   "id": "s73",
+   "kapitel": "k4",
+   "text": "Erstens: Eine Million fühlt sich unendlich an, ist es aber nicht",
+   "sprechtext": "Erstens: Eine Million fühlt sich unendlich an, ist es aber nicht."
+  },
+  {
+   "id": "s74",
+   "kapitel": "k4",
+   "text": "Wer jedes Jahr 100.000 € ausgibt, ist nach zehn Jahren pleite, selbst ohne große Fehler",
+   "sprechtext": "Wer jedes Jahr hunderttausend Euro ausgibt, ist nach zehn Jahren pleite, selbst ohne große Fehler."
+  },
+  {
+   "id": "s75",
+   "kapitel": "k4",
+   "text": "Zweitens: Wer plötzlich viel Geld hat, aber nie gelernt hat, damit umzugehen, gibt es genauso schnell wieder aus",
+   "sprechtext": "Zweitens: Wer plötzlich viel Geld hat, aber nie gelernt hat, damit umzugehen, gibt es genauso schnell wieder aus."
+  },
+  {
+   "id": "s76",
+   "kapitel": "k4",
+   "text": "Psychologen nennen das auch den Gewöhnungseffekt: Nach kurzer Zeit fühlt sich der Luxus völlig normal an",
+   "sprechtext": "Psychologen nennen das auch den Gewöhnungseffekt: Nach kurzer Zeit fühlt sich der Luxus völlig normal an."
+  },
+  {
+   "id": "s77",
+   "kapitel": "k4",
+   "text": "Drittens: Teure Dinge verursachen laufende Kosten, und genau die unterschätzen fast alle",
+   "sprechtext": "Drittens: Teure Dinge verursachen laufende Kosten, und genau die unterschätzen fast alle."
+  },
+  {
+   "id": "s78",
+   "kapitel": "k4",
+   "text": "Ein Sportwagen kostet nicht nur beim Kauf, sondern jedes Jahr Tausende für Versicherung, Steuer und Wartung",
+   "sprechtext": "Ein Sportwagen kostet nicht nur beim Kauf, sondern jedes Jahr Tausende für Versicherung, Steuer und Wartung."
+  },
+  {
+   "id": "s79",
+   "kapitel": "k4",
+   "text": "Und viertens: Viel Geld zieht falsche Freunde und unseriöse Angebote an",
+   "sprechtext": "Und viertens: Viel Geld zieht falsche Freunde und unseriöse Angebote an."
+  },
+  {
+   "id": "s80",
+   "kapitel": "k4",
+   "text": "Plötzlich gibt es überall Menschen, die etwas von dir wollen",
+   "sprechtext": "Plötzlich gibt es überall Menschen, die etwas von dir wollen."
+  },
+  {
+   "id": "s81",
+   "kapitel": "k4",
+   "text": "Das Spannende ist: Diese Fehler passieren nicht nur Lottogewinnern",
+   "sprechtext": "Das Spannende ist: Diese Fehler passieren nicht nur Lottogewinnern."
+  },
+  {
+   "id": "s82",
+   "kapitel": "k4",
+   "text": "Auch bei einer Erbschaft, einer Abfindung oder einem großen Bonus passiert oft genau dasselbe, nur in kleiner",
+   "sprechtext": "Auch bei einer Erbschaft, einer Abfindung oder einem großen Bonus passiert oft genau dasselbe, nur in kleiner."
+  },
+  {
+   "id": "s83",
+   "kapitel": "k4",
+   "text": "Wer das versteht, ist schon klüger als die meisten Gewinner",
+   "sprechtext": "Wer das versteht, ist schon klüger als die meisten Gewinner."
+  },
+  {
+   "id": "s84",
+   "kapitel": "k5",
+   "text": "Spulen wir zurück: Was hätte Marco besser machen können?",
+   "sprechtext": "Spulen wir zurück: Was hätte Marco besser machen können?"
+  },
+  {
+   "id": "s85",
+   "kapitel": "k5",
+   "text": "Regel eins: Erst einmal nichts tun",
+   "sprechtext": "Regel eins: Erst einmal nichts tun."
+  },
+  {
+   "id": "s86",
+   "kapitel": "k5",
+   "text": "Profis raten, das Geld ein paar Monate auf einem sicheren Konto zu parken und keine großen Entscheidungen zu treffen",
+   "sprechtext": "Profis raten, das Geld ein paar Monate auf einem sicheren Konto zu parken und keine großen Entscheidungen zu treffen."
+  },
+  {
+   "id": "s87",
+   "kapitel": "k5",
+   "text": "So verhindert man Entscheidungen aus der Euphorie heraus",
+   "sprechtext": "So verhindert man Entscheidungen aus der Euphorie heraus."
+  },
+  {
+   "id": "s88",
+   "kapitel": "k5",
+   "text": "Regel zwei: Niemandem davon erzählen, außer den engsten Vertrauten",
+   "sprechtext": "Regel zwei: Niemandem davon erzählen, außer den engsten Vertrauten."
+  },
+  {
+   "id": "s89",
+   "kapitel": "k5",
+   "text": "Je weniger Leute davon wissen, desto weniger Druck und Bitten gibt es",
+   "sprechtext": "Je weniger Leute davon wissen, desto weniger Druck und Bitten gibt es."
+  },
+  {
+   "id": "s90",
+   "kapitel": "k5",
+   "text": "Regel drei: Sich von einem unabhängigen Berater helfen lassen, der nichts verkaufen will, zum Beispiel einem Honorarberater",
+   "sprechtext": "Regel drei: Sich von einem unabhängigen Berater helfen lassen, der nichts verkaufen will, zum Beispiel einem Honorarberater."
+  },
+  {
+   "id": "s91",
+   "kapitel": "k5",
+   "text": "Und Finger weg von allem, was hohe Renditen ohne Risiko verspricht, so etwas gibt es nicht",
+   "sprechtext": "Und Finger weg von allem, was hohe Renditen ohne Risiko verspricht, so etwas gibt es nicht."
+  },
+  {
+   "id": "s92",
+   "kapitel": "k5",
+   "text": "Regel vier: Ein Haus ja, aber eins, dessen laufende Kosten man sich auch ohne Gewinn leisten kann",
+   "sprechtext": "Regel vier: Ein Haus ja, aber eins, dessen laufende Kosten man sich auch ohne Gewinn leisten kann."
+  },
+  {
+   "id": "s93",
+   "kapitel": "k5",
+   "text": "Und Regel fünf: Den größten Teil breit gestreut anlegen und nur von den Erträgen leben",
+   "sprechtext": "Und Regel fünf: Den größten Teil breit gestreut anlegen und nur von den Erträgen leben."
+  },
+  {
+   "id": "s94",
+   "kapitel": "k5",
+   "text": "Ein möglicher Plan: 300.000 € fürs Haus, 50.000 als Reserve, 50.000 für einen echten Traum, zum Beispiel eine große Reise",
+   "sprechtext": "Ein möglicher Plan: dreihunderttausend Euro fürs Haus, fünfzigtausend als Reserve, fünfzigtausend für einen echten Traum, zum Beispiel eine große Reise."
+  },
+  {
+   "id": "s95",
+   "kapitel": "k5",
+   "text": "Und die restlichen 600.000 € gut und breit gestreut angelegt",
+   "sprechtext": "Und die restlichen sechshunderttausend Euro gut und breit gestreut angelegt."
+  },
+  {
+   "id": "s96",
+   "kapitel": "k5",
+   "text": "Mit diesem Plan könnte Marco jedes Jahr etwa 24.000 € entnehmen",
+   "sprechtext": "Mit diesem Plan könnte Marco jedes Jahr etwa vierundzwanzigtausend Euro entnehmen."
+  },
+  {
+   "id": "s97",
+   "kapitel": "k5",
+   "text": "Das sind 2.000 € im Monat, zusätzlich zu seinem Gehalt",
+   "sprechtext": "Das sind zweitausend Euro im Monat, zusätzlich zu seinem Gehalt."
+  },
+  {
+   "id": "s98",
+   "kapitel": "k5",
+   "text": "Und zwar dauerhaft, ohne dass das Geld je ganz aufgebraucht wäre",
+   "sprechtext": "Und zwar dauerhaft, ohne dass das Geld je ganz aufgebraucht wäre."
+  },
+  {
+   "id": "s99",
+   "kapitel": "k5",
+   "text": "Mit seinem alten Job dazu hätte er ein richtig entspanntes Leben, für immer",
+   "sprechtext": "Mit seinem alten Job dazu hätte er ein richtig entspanntes Leben, für immer."
+  },
+  {
+   "id": "s100",
+   "kapitel": "k5",
+   "text": "Er hätte keinen Stress, keine Schulden und trotzdem jede Menge Freiheit",
+   "sprechtext": "Er hätte keinen Stress, keine Schulden und trotzdem jede Menge Freiheit."
+  },
+  {
+   "id": "s101",
+   "kapitel": "k5",
+   "text": "Das ist der Unterschied zwischen reich werden und reich bleiben",
+   "sprechtext": "Das ist der Unterschied zwischen reich werden und reich bleiben."
+  },
+  {
+   "id": "s102",
+   "kapitel": "k5",
+   "text": "Und jetzt die Frage: Lohnt sich Lotto spielen überhaupt?",
+   "sprechtext": "Und jetzt die Frage: Lohnt sich Lotto spielen überhaupt?"
+  },
+  {
+   "id": "s103",
+   "kapitel": "k5",
+   "text": "Von jedem Euro, den alle Spieler einsetzen, wird im Schnitt nur ungefähr die Hälfte als Gewinn wieder ausgeschüttet",
+   "sprechtext": "Von jedem Euro, den alle Spieler einsetzen, wird im Schnitt nur ungefähr die Hälfte als Gewinn wieder ausgeschüttet."
+  },
+  {
+   "id": "s104",
+   "kapitel": "k5",
+   "text": "Statistisch bekommst du also nur etwa die Hälfte deines Einsatzes zurück",
+   "sprechtext": "Statistisch bekommst du also nur etwa die Hälfte deines Einsatzes zurück."
+  },
+  {
+   "id": "s105",
+   "kapitel": "k5",
+   "text": "Wer jede Woche 10 € spielt, setzt in 40 Jahren über 20.000 € ein",
+   "sprechtext": "Wer jede Woche zehn Euro spielt, setzt in vierzig Jahren über zwanzigtausend Euro ein."
+  },
+  {
+   "id": "s106",
+   "kapitel": "k5",
+   "text": "Hättest du dieses Geld stattdessen jeden Monat zur Seite gelegt, hättest du einen sicheren Gewinn",
+   "sprechtext": "Hättest du dieses Geld stattdessen jeden Monat zur Seite gelegt, hättest du einen sicheren Gewinn."
+  },
+  {
+   "id": "s107",
+   "kapitel": "k5",
+   "text": "Denn beim Sparen gewinnst du jedes Mal, beim Lotto fast nie",
+   "sprechtext": "Denn beim Sparen gewinnst du jedes Mal, beim Lotto fast nie."
+  },
+  {
+   "id": "s108",
+   "kapitel": "k5",
+   "text": "Spiel also gern zum Spaß, aber nie als Plan, um reich zu werden",
+   "sprechtext": "Spiel also gern zum Spaß, aber nie als Plan, um reich zu werden."
+  },
+  {
+   "id": "s109",
+   "kapitel": "k5",
+   "text": "Der sicherste Weg zu Wohlstand ist nicht der Jackpot, sondern ein guter Umgang mit dem Geld, das du schon hast",
+   "sprechtext": "Der sicherste Weg zu Wohlstand ist nicht der Jackpot, sondern ein guter Umgang mit dem Geld, das du schon hast."
+  },
+  {
+   "id": "s110",
+   "kapitel": "k5",
+   "text": "Und jetzt bist du dran: Was würdest du mit einer Million als Erstes machen? Schreib es in die Kommentare",
+   "sprechtext": "Und jetzt bist du dran: Was würdest du mit einer Million als Erstes machen? Schreib es in die Kommentare."
+  },
+  {
+   "id": "s111",
+   "kapitel": "k5",
+   "text": "Wenn dir das Video gefallen hat, teile es mit jemandem, der jede Woche Lotto spielt",
+   "sprechtext": "Wenn dir das Video gefallen hat, teile es mit jemandem, der jede Woche Lotto spielt."
+  },
+  {
+   "id": "s112",
+   "kapitel": "k5",
+   "text": "Wir sind HundeFinanzTV, wir sehen uns morgen im nächsten Video",
+   "sprechtext": "Wir sind HundeFinanzTV, wir sehen uns morgen im nächsten Video!"
+  }
+ ]
+}

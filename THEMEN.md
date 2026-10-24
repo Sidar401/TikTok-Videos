@@ -31,6 +31,9 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | longform-zwei-leben | Leon vs. Felix 25→40, gleiches Gehalt, 137.000 € vs. −8.000 €, 5 Lehren | Duell-Spalten grün/rot |
 | longform-einkommen | Arm oder reich? Einkommens-Stufen in Deutschland, Median vs. Durchschnitt, Wege eine Stufe höher | Einkommens-Leiter |
 | longform-supermarkt | 10 Supermarkt-Tricks mit Jana (Wagen, Obst vorne, Musik/Duft, Milch hinten, Augenhöhe, 99, Mengenangebote, Mogelpackung, Quengelware, Kunden-App), 6 Gegentricks | Supermarkt-Grundriss als Rundgang |
+| longform-steuer | 7 legale Steuertricks mit Tim (Pauschbetrag 1.230 €, Arbeitsweg, Homeoffice 6 €/Tag, Arbeitsmittel, Fortbildung, Kleinkram, Handwerker 20 %, Spenden), 4 Jahre rückwirkend | Steuer-Tresor mit 7 Schlössern |
+| longform-lotto | Lottogewinner Marco: 1 Mio., Absturz in 4 Jahren, Gründe, 5 Regeln, Lotto-Ausschüttung ~50 % | Kontostand-Countdown / Lottokugeln |
+| longform-freiheit | Nie wieder arbeiten: 4-%-Regel, ×25, 3 Gipfel (450k/750k/1,2 Mio.), Zwischenstationen, 3 Hebel, Sophie | Freiheits-Berg mit Hütten |
 
 **Schon oft verwendet – nur noch sparsam:** Kassenzettel-Szene, kaputte Waschmaschine als Notfall-Beispiel, Coffee-to-go-Beispiel, Abos, Dispo, „Auto zu teuer“, Notgroschen, ETF-Zinseszins mit 7 %.
 
