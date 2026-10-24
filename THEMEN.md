@@ -42,7 +42,8 @@ Nutzer: „nicht immer die gleichen/ähnlichen Thumbnails“ – z. B. **Geldbeu
 | longform-hundekosten | Kassenzettel, Hund = Auto, große rote Zahl + Hund |
 | longform-geldfehler | Kassenzettel, roter „Nr. 7“-Kreis, **Geldbeutel** + −58.000 € |
 | longform-zwei-leben | Grün/Rot-Split mit Figuren, „vs“, große grüne Zahl + Figuren |
+| longform-einkommen | Einkommens-Leiter „Wo stehst DU?“, Farbskala arm→reich mit „DU?“-Marker, Podest + Krone „Ab wann bist du REICH?“ |
 
-**Gesperrt / ausgereizt:** Geldbeutel, Kassenzettel als Thumbnail (3×), „große Zahl + Icon links“-Layout (4×), Strichmännchen-Figuren.
-**Noch frisch:** Leiter/Treppe als Hauptmotiv, Pfeil/Diagramm, Thermometer/Skala, Pokal/Podest, Lupe, Ampel, Waage, Fragezeichen-Typo, Vorher/Nachher, Daumen-Bewertung, Handy-Screen-Mockup.
+**Gesperrt / ausgereizt:** Geldbeutel, Kassenzettel als Thumbnail (3×), „große Zahl + Icon links“-Layout (4×), Strichmännchen-Figuren, Leiter, Farbskala, Podest (je 1× – nicht direkt wieder).
+**Noch frisch:** Pfeil/Diagramm, Thermometer, Lupe, Ampel, Waage, Fragezeichen-Typo, Vorher/Nachher, Daumen-Bewertung, Handy-Screen-Mockup.
 Auch in Videos: Geldbeutel-Icon sparsam, nicht in jedem Video.

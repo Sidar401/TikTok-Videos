@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="de" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Abril Fatface"; src: url("assets/fonts/abril-fatface.woff2") format("woff2"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #fff; }
+      #root { position: relative; width: 100%; height: 100%; background: #fff; font-family: Montserrat, sans-serif; }
+      .scene { position: absolute; inset: 0; }
+      .serif { font-family: "Abril Fatface", serif; }
+      #frame { position: absolute; inset: 0; border: 30px solid #DB8622; z-index: 10; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="3" data-width="1920" data-height="1080">
+<div id="v0" class="scene clip" data-start="0" data-duration="1" data-track-index="1">
+  <div style="position:absolute;left:110px;top:90px"><div style="width:760px;height:900px;display:flex;flex-direction:column;justify-content:space-between;border-left:14px solid #8a5a2b;border-right:14px solid #8a5a2b;padding:0 16px"><div style="display:flex;align-items:center;gap:16px;height:129px;padding:0 24px;border-radius:16px;background:#9b59b6;color:#fff;font-weight:900;font-size:50px"><span class="serif" style="font-size:65px">6</span>Top 1 %</div><div style="display:flex;align-items:center;gap:16px;height:129px;padding:0 24px;border-radius:16px;background:#1f7a4d;color:#fff;font-weight:900;font-size:50px"><span class="serif" style="font-size:65px">5</span>> 4.600 €</div><div style="display:flex;align-items:center;gap:16px;height:129px;padding:0 24px;border-radius:16px;background:#3d7be0;color:#fff;font-weight:900;font-size:50px"><span class="serif" style="font-size:65px">4</span>2.300 – 4.600 €</div><div style="display:flex;align-items:center;gap:16px;height:129px;padding:0 24px;border-radius:16px;background:#c99a06;color:#fff;font-weight:900;font-size:50px"><span class="serif" style="font-size:65px">3</span>≈ 2.300 €</div><div style="display:flex;align-items:center;gap:16px;height:129px;padding:0 24px;border-radius:16px;background:#DB8622;color:#fff;font-weight:900;font-size:50px"><span class="serif" style="font-size:65px">2</span>1.400 – 2.300 €</div><div style="display:flex;align-items:center;gap:16px;height:129px;padding:0 24px;border-radius:16px;background:#e24b4b;color:#fff;font-weight:900;font-size:50px"><span class="serif" style="font-size:65px">1</span>< 1.400 €</div></div></div>
+  <div style="position:absolute;left:1030px;top:200px;width:820px">
+    <div class="serif" style="font-size:170px;line-height:1;color:#111">Wo stehst</div>
+    <div style="display:inline-block;margin-top:20px;padding:10px 60px;border-radius:40px;background:#DB8622;color:#fff;font-weight:900;font-size:170px;transform:rotate(-3deg)">DU?</div>
+  </div>
+  <div style="position:absolute;left:880px;top:520px;width:170px;height:100px;transform:rotate(180deg)"><svg viewBox="0 0 100 60" style="width:100%;height:100%"><path d="M96 30 L50 4 L50 20 L4 20 L4 40 L50 40 L50 56 Z" fill="#111" /></svg></div>
+</div>
+<div id="v1" class="scene clip" data-start="1" data-duration="1" data-track-index="1">
+  <div class="serif" style="position:absolute;left:0;top:110px;width:1920px;text-align:center;font-size:150px;line-height:1;color:#111">
+    Bist du <span style="color:#e24b4b">arm</span> oder <span style="color:#1f7a4d">reich</span>?</div>
+  <div style="position:absolute;left:160px;top:520px"><div style="position:relative;width:1600px;height:120px;border-radius:60px;background:linear-gradient(90deg,#e24b4b,#DB8622,#c99a06,#3d7be0,#1f7a4d,#9b59b6)"><div style="position:absolute;left:880px;top:-150px;display:flex;flex-direction:column;align-items:center"><div style="padding:10px 34px;border-radius:24px;background:#111;color:#fff;font-weight:900;font-size:70px">DU?</div><div style="width:0;height:0;border-left:30px solid transparent;border-right:30px solid transparent;border-top:40px solid #111"></div></div></div></div>
+  <div style="position:absolute;left:160px;top:660px;width:1600px;display:flex;justify-content:space-between;font-weight:900;font-size:60px;color:#353a3d">
+    <span>1.400 €</span><span>2.300 €</span><span>4.600 €</span><span>Top 1 %</span></div>
+  <div style="position:absolute;left:0;top:820px;width:1920px;text-align:center"><span style="display:inline-block;padding:14px 50px;border-radius:30px;background:#DB8622;color:#fff;font-weight:900;font-size:70px">Die Einkommens-Leiter 2026</span></div>
+</div>
+<div id="v2" class="scene clip" data-start="2" data-duration="1" data-track-index="1">
+  <div style="position:absolute;left:90px;top:150px;width:900px">
+    <div class="serif" style="font-size:140px;line-height:1.02;color:#111">Ab wann<br/>bist du</div>
+    <div style="display:inline-block;margin-top:24px;padding:12px 56px;border-radius:36px;background:#1f7a4d;color:#fff;font-weight:900;font-size:140px;transform:rotate(-3deg)">REICH?</div>
+  </div>
+  <div style="position:absolute;left:960px;bottom:30px;display:flex;align-items:flex-end;gap:10px"><div style="display:flex;flex-direction:column;align-items:center;gap:14px"><div class="serif" style="font-size:64px;color:#c99a06">2.300 €</div><div style="width:260px;height:220px;border-radius:16px 16px 0 0;background:#c99a06;display:flex;justify-content:center;padding-top:20px;color:#fff;font-weight:900;font-size:80px">3</div></div><div style="display:flex;flex-direction:column;align-items:center;gap:14px"><div class="serif" style="font-size:64px;color:#9b59b6">Top 1 %</div><div style="width:260px;height:420px;border-radius:16px 16px 0 0;background:#9b59b6;display:flex;justify-content:center;padding-top:20px;color:#fff;font-weight:900;font-size:80px">1</div></div><div style="display:flex;flex-direction:column;align-items:center;gap:14px"><div class="serif" style="font-size:64px;color:#1f7a4d">4.600 €</div><div style="width:260px;height:320px;border-radius:16px 16px 0 0;background:#1f7a4d;display:flex;justify-content:center;padding-top:20px;color:#fff;font-weight:900;font-size:80px">2</div></div></div>
+  <div style="position:absolute;left:1250px;top:170px;width:220px;height:220px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M10 80 L5 25 L30 45 L50 12 L70 45 L95 25 L90 80 Z" fill="#f2c418" stroke="#c99a06" stroke-width="4" stroke-linejoin="round" /><circle cx="50" cy="62" r="7" fill="#e24b4b" /></svg></div>
+</div>
+      <div id="frame"></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#root", { opacity: 1 }, 0);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
