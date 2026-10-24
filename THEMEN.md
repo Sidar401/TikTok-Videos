@@ -32,3 +32,17 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | longform-einkommen | Arm oder reich? Einkommens-Stufen in Deutschland, Median vs. Durchschnitt, Wege eine Stufe höher | Einkommens-Leiter |
 
 **Schon oft verwendet – nur noch sparsam:** Kassenzettel-Szene, kaputte Waschmaschine als Notfall-Beispiel, Coffee-to-go-Beispiel, Abos, Dispo, „Auto zu teuer“, Notgroschen, ETF-Zinseszins mit 7 %.
+
+## Thumbnail-Archiv (Motive nicht wiederholen!)
+Nutzer: „nicht immer die gleichen/ähnlichen Thumbnails“ – z. B. **Geldbeutel schon 3× benutzt → gesperrt**.
+| Video | Motive |
+|---|---|
+| longform-100k | Geldsack + „0 → 100.000 €“, Balken-Treppe, Geldbeutel „Reicht dein Gehalt?“ |
+| longform-lebenskosten | Kassenzettel 4.000 €, Single/Paar/Familie-Figuren mit Preisschildern, **Geldbeutel** |
+| longform-hundekosten | Kassenzettel, Hund = Auto, große rote Zahl + Hund |
+| longform-geldfehler | Kassenzettel, roter „Nr. 7“-Kreis, **Geldbeutel** + −58.000 € |
+| longform-zwei-leben | Grün/Rot-Split mit Figuren, „vs“, große grüne Zahl + Figuren |
+
+**Gesperrt / ausgereizt:** Geldbeutel, Kassenzettel als Thumbnail (3×), „große Zahl + Icon links“-Layout (4×), Strichmännchen-Figuren.
+**Noch frisch:** Leiter/Treppe als Hauptmotiv, Pfeil/Diagramm, Thermometer/Skala, Pokal/Podest, Lupe, Ampel, Waage, Fragezeichen-Typo, Vorher/Nachher, Daumen-Bewertung, Handy-Screen-Mockup.
+Auch in Videos: Geldbeutel-Icon sparsam, nicht in jedem Video.
