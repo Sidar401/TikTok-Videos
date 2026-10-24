@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Abril Fatface"; src: url("assets/fonts/abril-fatface.woff2") format("woff2"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #fff; }
+      #root { position: relative; width: 100%; height: 100%; background: #fff; font-family: Montserrat, sans-serif; }
+      .scene { position: absolute; inset: 0; }
+      .serif { font-family: "Abril Fatface", serif; }
+      #frame { position: absolute; inset: 0; border: 30px solid #DB8622; z-index: 10; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="3" data-width="1920" data-height="1080">
+<div id="v0" class="scene clip" data-start="0" data-duration="1" data-track-index="1">
+  <div style="position:absolute;left:90px;top:170px"><svg viewBox="0 0 100 80" style="width:820px;height:656px"><rect width="100" height="80" fill="#eaf4fb" rx="6" /><path d="M0 80 L30 30 L45 50 L62 12 L100 80 Z" fill="#9aa3a8" stroke="#555c60" stroke-width="1.2" /><path d="M56 24 L62 12 L68 24 L64 22 L62 26 L60 22 Z" fill="#fff" /><rect x="61.5" y="2" width="1" height="10" fill="#353a3d" /><path d="M62.5 2 L72 4.5 L62.5 7 Z" fill="#1f7a4d" /><path d="M0 80 Q30 70 55 76 Q80 82 100 74 L100 80 Z" fill="#6fbf86" /></svg></div>
+  <div style="position:absolute;left:980px;top:200px;width:880px">
+    <div class="serif" style="font-size:120px;line-height:1.05;color:#111">So viel Geld,</div>
+    <div class="serif" style="font-size:120px;line-height:1.05;color:#111">um <span style="color:#1f7a4d">NIE</span> wieder</div>
+    <div class="serif" style="font-size:120px;line-height:1.05;color:#111">zu arbeiten</div>
+  </div>
+</div>
+<div id="v1" class="scene clip" data-start="1" data-duration="1" data-track-index="1">
+  <div style="position:absolute;left:0;top:300px;width:1920px;display:flex;justify-content:center;align-items:center;gap:36px">
+    <div style="padding:30px 50px;border-radius:30px;background:#3d7be0;color:#fff;font-weight:900;font-size:90px">Ausgaben</div>
+    <div class="serif" style="font-size:130px;color:#DB8622">× 25</div>
+    <div style="padding:30px 50px;border-radius:30px;background:#1f7a4d;color:#fff;font-weight:900;font-size:90px">= FREI</div>
+  </div>
+  <div class="serif" style="position:absolute;left:0;top:640px;width:1920px;text-align:center;font-size:110px;color:#111">Die Formel für finanzielle Freiheit</div>
+</div>
+<div id="v2" class="scene clip" data-start="2" data-duration="1" data-track-index="1">
+  <div class="serif" style="position:absolute;left:0;top:120px;width:1920px;text-align:center;font-size:130px;color:#111">Nie wieder arbeiten?</div>
+  <div style="position:absolute;left:0;top:380px;width:1920px;display:flex;justify-content:center;gap:50px">
+    <div style="width:540px;padding:40px 0;border-radius:30px;background:#1f7a4d;color:#fff;text-align:center"><div style="font-weight:900;font-size:60px">Sparsam</div><div class="serif" style="font-size:88px;white-space:nowrap">450.000 €</div></div><div style="width:540px;padding:40px 0;border-radius:30px;background:#3d7be0;color:#fff;text-align:center"><div style="font-weight:900;font-size:60px">Normal</div><div class="serif" style="font-size:88px;white-space:nowrap">750.000 €</div></div><div style="width:540px;padding:40px 0;border-radius:30px;background:#9b59b6;color:#fff;text-align:center"><div style="font-weight:900;font-size:60px">Luxus</div><div class="serif" style="font-size:88px;white-space:nowrap">1,2 Mio. €</div></div>
+  </div>
+  <div style="position:absolute;left:0;top:820px;width:1920px;text-align:center;font-weight:900;font-size:70px;color:#353a3d">Welcher Gipfel ist deiner?</div>
+</div>
+      <div id="frame"></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#root", { opacity: 1 }, 0);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

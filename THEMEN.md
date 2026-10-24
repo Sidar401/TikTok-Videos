@@ -48,7 +48,10 @@ Nutzer: „nicht immer die gleichen/ähnlichen Thumbnails“ – z. B. **Geldbeu
 | longform-zwei-leben | Grün/Rot-Split mit Figuren, „vs“, große grüne Zahl + Figuren |
 | longform-einkommen | Einkommens-Leiter „Wo stehst DU?“, Farbskala arm→reich mit „DU?“-Marker, Podest + Krone „Ab wann bist du REICH?“ |
 | longform-supermarkt | voller Einkaufswagen „Der Supermarkt TRICKST dich aus!“, Regal + Auge „Achtung AUGENHÖHE!“, Preisschild 4,99 „Fällst du darauf rein?“ |
+| longform-steuer | Tresor „Das Finanzamt schuldet dir GELD!“, 7 Schloss-Kreise, Stempel „VERSCHENKT!“ + 2.500 € |
+| longform-lotto | Lottokugeln „1 Million gewonnen … und PLEITE!“, Kontostand 1.000.000 € → 0 €, Titel-Typo + Kugeln |
+| longform-freiheit | Berg mit Flagge „So viel Geld, um NIE wieder zu arbeiten“, Formel „Ausgaben × 25 = FREI“, 3 Gipfel-Kacheln |
 
-**Gesperrt / ausgereizt:** Geldbeutel, Kassenzettel als Thumbnail (3×), „große Zahl + Icon links“-Layout (4×), Strichmännchen-Figuren, Leiter, Farbskala, Podest, Einkaufswagen, Regal/Auge, Preisschild (je 1× – nicht direkt wieder).
+**Gesperrt / ausgereizt:** Geldbeutel, Kassenzettel als Thumbnail (3×), „große Zahl + Icon links“-Layout (4×), Strichmännchen-Figuren, Leiter, Farbskala, Podest, Einkaufswagen, Regal/Auge, Preisschild, Tresor, Stempel, Lottokugeln, Kontostand-Display, Berg, Formel-Kacheln (je 1× – nicht direkt wieder).
 **Noch frisch:** Pfeil/Diagramm, Thermometer, Lupe, Ampel, Waage, Fragezeichen-Typo, Vorher/Nachher, Daumen-Bewertung, Handy-Screen-Mockup.
 Auch in Videos: Geldbeutel-Icon sparsam, nicht in jedem Video.
