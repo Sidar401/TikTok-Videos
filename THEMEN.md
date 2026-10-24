@@ -30,6 +30,7 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | longform-geldfehler | 10 Geldfehler Countdown (Abos, Girokonto, Coffee, Verträge, Dispo, Raten, Lieferdienst, Tagesgeld, Auto, nicht investieren) ≈ 5.800 €/Jahr | Platz-Kreise, Kassenzettel-Summe |
 | longform-zwei-leben | Leon vs. Felix 25→40, gleiches Gehalt, 137.000 € vs. −8.000 €, 5 Lehren | Duell-Spalten grün/rot |
 | longform-einkommen | Arm oder reich? Einkommens-Stufen in Deutschland, Median vs. Durchschnitt, Wege eine Stufe höher | Einkommens-Leiter |
+| longform-supermarkt | 10 Supermarkt-Tricks mit Jana (Wagen, Obst vorne, Musik/Duft, Milch hinten, Augenhöhe, 99, Mengenangebote, Mogelpackung, Quengelware, Kunden-App), 6 Gegentricks | Supermarkt-Grundriss als Rundgang |
 
 **Schon oft verwendet – nur noch sparsam:** Kassenzettel-Szene, kaputte Waschmaschine als Notfall-Beispiel, Coffee-to-go-Beispiel, Abos, Dispo, „Auto zu teuer“, Notgroschen, ETF-Zinseszins mit 7 %.
 

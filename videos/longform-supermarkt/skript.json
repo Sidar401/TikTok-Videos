@@ -1,0 +1,672 @@
+{
+ "titel": "Supermarkt-Tricks",
+ "format": "16:9",
+ "saetze": [
+  {
+   "id": "s1",
+   "kapitel": "k1",
+   "text": "Du gehst in den Supermarkt, um schnell Milch und Brot zu holen",
+   "sprechtext": "Du gehst in den Supermarkt, um schnell Milch und Brot zu holen."
+  },
+  {
+   "id": "s2",
+   "kapitel": "k1",
+   "text": "Und 20 Minuten später stehst du an der Kasse mit einem vollen Wagen und einer Rechnung von über 50 €",
+   "sprechtext": "Und zwanzig Minuten später stehst du an der Kasse mit einem vollen Wagen und einer Rechnung von über fünfzig Euro."
+  },
+  {
+   "id": "s3",
+   "kapitel": "k1",
+   "text": "Kommt dir bekannt vor?",
+   "sprechtext": "Kommt dir bekannt vor?"
+  },
+  {
+   "id": "s4",
+   "kapitel": "k1",
+   "text": "Das ist kein Zufall, das ist Absicht",
+   "sprechtext": "Das ist kein Zufall, das ist Absicht."
+  },
+  {
+   "id": "s5",
+   "kapitel": "k1",
+   "text": "Hinter jedem Regal, jeder Lampe und sogar hinter der Musik steckt Psychologie",
+   "sprechtext": "Hinter jedem Regal, jeder Lampe und sogar hinter der Musik steckt Psychologie."
+  },
+  {
+   "id": "s6",
+   "kapitel": "k1",
+   "text": "Ganze Teams von Experten tüfteln daran, wie sie dir noch einen Euro mehr aus der Tasche ziehen",
+   "sprechtext": "Ganze Teams von Experten tüfteln daran, wie sie dir noch einen Euro mehr aus der Tasche ziehen."
+  },
+  {
+   "id": "s7",
+   "kapitel": "k1",
+   "text": "Supermärkte sind bis ins kleinste Detail darauf ausgelegt, dass du mehr kaufst, als du eigentlich wolltest",
+   "sprechtext": "Supermärkte sind bis ins kleinste Detail darauf ausgelegt, dass du mehr kaufst, als du eigentlich wolltest."
+  },
+  {
+   "id": "s8",
+   "kapitel": "k1",
+   "text": "Vom Eingang bis zur Kasse wartet ein Trick nach dem anderen auf dich",
+   "sprechtext": "Vom Eingang bis zur Kasse wartet ein Trick nach dem anderen auf dich."
+  },
+  {
+   "id": "s9",
+   "kapitel": "k1",
+   "text": "Heute machen wir deshalb einen Rundgang durch den Supermarkt, gemeinsam mit Jana",
+   "sprechtext": "Heute machen wir deshalb einen Rundgang durch den Supermarkt, gemeinsam mit Jana."
+  },
+  {
+   "id": "s10",
+   "kapitel": "k1",
+   "text": "Jana will eigentlich nur ein paar Sachen fürs Abendessen kaufen",
+   "sprechtext": "Jana will eigentlich nur ein paar Sachen fürs Abendessen kaufen."
+  },
+  {
+   "id": "s11",
+   "kapitel": "k1",
+   "text": "Sie hat einen Zettel dabei mit genau fünf Sachen: Nudeln, Tomaten, Käse, Milch und Salat",
+   "sprechtext": "Sie hat einen Zettel dabei mit genau fünf Sachen: Nudeln, Tomaten, Käse, Milch und Salat."
+  },
+  {
+   "id": "s12",
+   "kapitel": "k1",
+   "text": "Und wir decken unterwegs zehn Tricks auf, die fast jeder Supermarkt benutzt",
+   "sprechtext": "Und wir decken unterwegs zehn Tricks auf, die fast jeder Supermarkt benutzt."
+  },
+  {
+   "id": "s13",
+   "kapitel": "k1",
+   "text": "Am Ende rechnen wir aus, was dich diese Tricks im Jahr kosten, und zeigen dir, wie du sie ganz einfach austrickst",
+   "sprechtext": "Am Ende rechnen wir aus, was dich diese Tricks im Jahr kosten, und zeigen dir, wie du sie ganz einfach austrickst."
+  },
+  {
+   "id": "s14",
+   "kapitel": "k1",
+   "text": "Bevor wir starten, eine Frage an dich",
+   "sprechtext": "Bevor wir starten, eine Frage an dich."
+  },
+  {
+   "id": "s15",
+   "kapitel": "k1",
+   "text": "Welcher Trick hat dich schon mal erwischt?",
+   "sprechtext": "Welcher Trick hat dich schon mal erwischt?"
+  },
+  {
+   "id": "s16",
+   "kapitel": "k1",
+   "text": "Merk dir die Nummer und schreib sie am Ende in die Kommentare",
+   "sprechtext": "Merk dir die Nummer und schreib sie am Ende in die Kommentare."
+  },
+  {
+   "id": "s17",
+   "kapitel": "k1",
+   "text": "Und wenn du in Zukunft cleverer einkaufen willst, folge HundeFinanzTV",
+   "sprechtext": "Und wenn du in Zukunft cleverer einkaufen willst, folge HundeFinanzTV."
+  },
+  {
+   "id": "s18",
+   "kapitel": "k1",
+   "text": "Wir bringen jeden Tag neue Videos rund um Geld und Finanzen",
+   "sprechtext": "Wir bringen jeden Tag neue Videos rund um Geld und Finanzen."
+  },
+  {
+   "id": "s19",
+   "kapitel": "k1",
+   "text": "Also, Jana schnappt sich einen Einkaufswagen, und los geht's",
+   "sprechtext": "Also, Jana schnappt sich einen Einkaufswagen, und los geht's."
+  },
+  {
+   "id": "s20",
+   "kapitel": "k2",
+   "text": "Und damit sind wir schon beim ersten Trick: der Einkaufswagen selbst",
+   "sprechtext": "Und damit sind wir schon beim ersten Trick: der Einkaufswagen selbst."
+  },
+  {
+   "id": "s21",
+   "kapitel": "k2",
+   "text": "Einkaufswagen sind über die Jahre immer größer geworden",
+   "sprechtext": "Einkaufswagen sind über die Jahre immer größer geworden."
+  },
+  {
+   "id": "s22",
+   "kapitel": "k2",
+   "text": "Das hat einen einfachen Grund: In einem riesigen Wagen sehen drei Teile nach fast nichts aus",
+   "sprechtext": "Das hat einen einfachen Grund: In einem riesigen Wagen sehen drei Teile nach fast nichts aus."
+  },
+  {
+   "id": "s23",
+   "kapitel": "k2",
+   "text": "Unser Gehirn will den Wagen füllen, und wir kaufen automatisch mehr",
+   "sprechtext": "Unser Gehirn will den Wagen füllen, und wir kaufen automatisch mehr."
+  },
+  {
+   "id": "s24",
+   "kapitel": "k2",
+   "text": "Jana hat nur fünf Sachen auf ihrem Zettel, aber einen Wagen, in den locker ein ganzer Wocheneinkauf passt",
+   "sprechtext": "Jana hat nur fünf Sachen auf ihrem Zettel, aber einen Wagen, in den locker ein ganzer Wocheneinkauf passt."
+  },
+  {
+   "id": "s25",
+   "kapitel": "k2",
+   "text": "Trick Nummer zwei wartet direkt hinter dem Eingang: Obst und Gemüse",
+   "sprechtext": "Trick Nummer zwei wartet direkt hinter dem Eingang: Obst und Gemüse."
+  },
+  {
+   "id": "s26",
+   "kapitel": "k2",
+   "text": "Bunte Farben, frische Ware, oft sogar mit kleinen Wassertropfen besprüht",
+   "sprechtext": "Bunte Farben, frische Ware, oft sogar mit kleinen Wassertropfen besprüht."
+  },
+  {
+   "id": "s27",
+   "kapitel": "k2",
+   "text": "Und sogar das Licht über der Obsttheke ist oft extra warm eingestellt, damit alles noch frischer aussieht",
+   "sprechtext": "Und sogar das Licht über der Obsttheke ist oft extra warm eingestellt, damit alles noch frischer aussieht."
+  },
+  {
+   "id": "s28",
+   "kapitel": "k2",
+   "text": "Das gibt uns sofort ein gutes Gefühl, wir fühlen uns gesund und gönnen uns später umso leichter etwas",
+   "sprechtext": "Das gibt uns sofort ein gutes Gefühl, wir fühlen uns gesund und gönnen uns später umso leichter etwas."
+  },
+  {
+   "id": "s29",
+   "kapitel": "k2",
+   "text": "Und weil man hier langsam auswählt, wird gleich am Anfang unser Tempo gebremst",
+   "sprechtext": "Und weil man hier langsam auswählt, wird gleich am Anfang unser Tempo gebremst."
+  },
+  {
+   "id": "s30",
+   "kapitel": "k2",
+   "text": "Wer langsamer geht, sieht mehr, und wer mehr sieht, kauft mehr",
+   "sprechtext": "Wer langsamer geht, sieht mehr, und wer mehr sieht, kauft mehr."
+  },
+  {
+   "id": "s31",
+   "kapitel": "k2",
+   "text": "Trick Nummer drei: Musik und Duft",
+   "sprechtext": "Trick Nummer drei: Musik und Duft."
+  },
+  {
+   "id": "s32",
+   "kapitel": "k2",
+   "text": "Hast du schon mal gemerkt, dass im Supermarkt fast immer ruhige Musik läuft?",
+   "sprechtext": "Hast du schon mal gemerkt, dass im Supermarkt fast immer ruhige Musik läuft?"
+  },
+  {
+   "id": "s33",
+   "kapitel": "k2",
+   "text": "Langsame Musik sorgt dafür, dass wir langsamer gehen und länger bleiben",
+   "sprechtext": "Langsame Musik sorgt dafür, dass wir langsamer gehen und länger bleiben."
+  },
+  {
+   "id": "s34",
+   "kapitel": "k2",
+   "text": "Und dann der Duft von frischen Brötchen aus dem Backautomaten",
+   "sprechtext": "Und dann der Duft von frischen Brötchen aus dem Backautomaten."
+  },
+  {
+   "id": "s35",
+   "kapitel": "k2",
+   "text": "Der macht Appetit, und wer Appetit hat, packt mehr ein",
+   "sprechtext": "Der macht Appetit, und wer Appetit hat, packt mehr ein."
+  },
+  {
+   "id": "s36",
+   "kapitel": "k2",
+   "text": "Jana wollte eigentlich kein Gebäck, aber jetzt liegt ein Croissant im Wagen",
+   "sprechtext": "Jana wollte eigentlich kein Gebäck, aber jetzt liegt ein Croissant im Wagen."
+  },
+  {
+   "id": "s37",
+   "kapitel": "k2",
+   "text": "Trick Nummer vier: Die wichtigsten Produkte stehen ganz hinten",
+   "sprechtext": "Trick Nummer vier: Die wichtigsten Produkte stehen ganz hinten."
+  },
+  {
+   "id": "s38",
+   "kapitel": "k2",
+   "text": "Milch, Butter, Eier und oft auch das Brot findest du fast nie vorne am Eingang",
+   "sprechtext": "Milch, Butter, Eier und oft auch das Brot findest du fast nie vorne am Eingang."
+  },
+  {
+   "id": "s39",
+   "kapitel": "k2",
+   "text": "Denn das sind Dinge, die fast jeder braucht",
+   "sprechtext": "Denn das sind Dinge, die fast jeder braucht."
+  },
+  {
+   "id": "s40",
+   "kapitel": "k2",
+   "text": "Und auf dem Weg dorthin musst du an hunderten anderen Produkten vorbei",
+   "sprechtext": "Und auf dem Weg dorthin musst du an hunderten anderen Produkten vorbei."
+  },
+  {
+   "id": "s41",
+   "kapitel": "k2",
+   "text": "Jana will nur Milch, läuft dafür aber einmal quer durch den ganzen Laden",
+   "sprechtext": "Jana will nur Milch, läuft dafür aber einmal quer durch den ganzen Laden."
+  },
+  {
+   "id": "s42",
+   "kapitel": "k2",
+   "text": "Ganz nebenbei landen bei ihr Chips und eine Flasche Saft im Wagen, die nicht auf dem Zettel standen",
+   "sprechtext": "Ganz nebenbei landen bei ihr Chips und eine Flasche Saft im Wagen, die nicht auf dem Zettel standen."
+  },
+  {
+   "id": "s43",
+   "kapitel": "k3",
+   "text": "Jetzt wird es richtig raffiniert, denn jetzt geht es um die Regale",
+   "sprechtext": "Jetzt wird es richtig raffiniert, denn jetzt geht es um die Regale."
+  },
+  {
+   "id": "s44",
+   "kapitel": "k3",
+   "text": "Trick Nummer fünf: Augenhöhe ist Kaufhöhe",
+   "sprechtext": "Trick Nummer fünf: Augenhöhe ist Kaufhöhe."
+  },
+  {
+   "id": "s45",
+   "kapitel": "k3",
+   "text": "Die Produkte, an denen der Supermarkt am meisten verdient, stehen genau auf Höhe deiner Augen",
+   "sprechtext": "Die Produkte, an denen der Supermarkt am meisten verdient, stehen genau auf Höhe deiner Augen."
+  },
+  {
+   "id": "s46",
+   "kapitel": "k3",
+   "text": "Hersteller zahlen oft sogar Geld dafür, damit ihre Produkte auf diesen besten Plätzen stehen",
+   "sprechtext": "Hersteller zahlen oft sogar Geld dafür, damit ihre Produkte auf diesen besten Plätzen stehen."
+  },
+  {
+   "id": "s47",
+   "kapitel": "k3",
+   "text": "Die günstigen Eigenmarken findest du dagegen meistens ganz unten, da, wo man sich bücken muss",
+   "sprechtext": "Die günstigen Eigenmarken findest du dagegen meistens ganz unten, da, wo man sich bücken muss."
+  },
+  {
+   "id": "s48",
+   "kapitel": "k3",
+   "text": "Und die Süßigkeiten und das bunte Müsli stehen gerne auf Augenhöhe von Kindern",
+   "sprechtext": "Und die Süßigkeiten und das bunte Müsli stehen gerne auf Augenhöhe von Kindern."
+  },
+  {
+   "id": "s49",
+   "kapitel": "k3",
+   "text": "Jana greift ganz automatisch zur Marke vor ihren Augen und zahlt dafür fast doppelt so viel wie für die Eigenmarke unten",
+   "sprechtext": "Jana greift ganz automatisch zur Marke vor ihren Augen und zahlt dafür fast doppelt so viel wie für die Eigenmarke unten."
+  },
+  {
+   "id": "s50",
+   "kapitel": "k3",
+   "text": "Trick Nummer sechs: die magische 99",
+   "sprechtext": "Trick Nummer sechs: die magische Neunundneunzig."
+  },
+  {
+   "id": "s51",
+   "kapitel": "k3",
+   "text": "Ein Preis von 4,99 € fühlt sich viel eher nach 4 € an als nach 5 €",
+   "sprechtext": "Ein Preis von vier Euro neunundneunzig fühlt sich viel eher nach vier Euro an als nach fünf."
+  },
+  {
+   "id": "s52",
+   "kapitel": "k3",
+   "text": "Unser Gehirn liest von links nach rechts und bleibt an der ersten Zahl hängen",
+   "sprechtext": "Unser Gehirn liest von links nach rechts und bleibt an der ersten Zahl hängen."
+  },
+  {
+   "id": "s53",
+   "kapitel": "k3",
+   "text": "Ein Cent Unterschied, aber gefühlt ein ganzer Euro",
+   "sprechtext": "Ein Cent Unterschied, aber gefühlt ein ganzer Euro."
+  },
+  {
+   "id": "s54",
+   "kapitel": "k3",
+   "text": "Trick Nummer sieben: Mengenangebote",
+   "sprechtext": "Trick Nummer sieben: Mengenangebote."
+  },
+  {
+   "id": "s55",
+   "kapitel": "k3",
+   "text": "Drei für zwei, XXL-Packung, jetzt 20 % mehr Inhalt",
+   "sprechtext": "Drei für zwei, XXL-Packung, jetzt zwanzig Prozent mehr Inhalt."
+  },
+  {
+   "id": "s56",
+   "kapitel": "k3",
+   "text": "Das klingt immer nach einem Schnäppchen",
+   "sprechtext": "Das klingt immer nach einem Schnäppchen."
+  },
+  {
+   "id": "s57",
+   "kapitel": "k3",
+   "text": "Jana nimmt die Familienpackung Käse, obwohl sie allein wohnt",
+   "sprechtext": "Jana nimmt die Familienpackung Käse, obwohl sie allein wohnt."
+  },
+  {
+   "id": "s58",
+   "kapitel": "k3",
+   "text": "Aber manchmal ist die Großpackung pro Kilo sogar teurer als die normale Packung",
+   "sprechtext": "Aber manchmal ist die Großpackung pro Kilo sogar teurer als die normale Packung."
+  },
+  {
+   "id": "s59",
+   "kapitel": "k3",
+   "text": "Und selbst wenn sie günstiger ist: Wenn die Hälfte im Müll landet, hast du nichts gespart",
+   "sprechtext": "Und selbst wenn sie günstiger ist: Wenn die Hälfte im Müll landet, hast du nichts gespart."
+  },
+  {
+   "id": "s60",
+   "kapitel": "k3",
+   "text": "Der Profi-Tipp: Schau immer auf den Grundpreis, also den Preis pro Kilo oder Liter, der klein auf dem Preisschild steht",
+   "sprechtext": "Der Profi-Tipp: Schau immer auf den Grundpreis, also den Preis pro Kilo oder Liter, der klein auf dem Preisschild steht."
+  },
+  {
+   "id": "s61",
+   "kapitel": "k3",
+   "text": "Trick Nummer acht: die Mogelpackung",
+   "sprechtext": "Trick Nummer acht: die Mogelpackung."
+  },
+  {
+   "id": "s62",
+   "kapitel": "k3",
+   "text": "Die Verpackung bleibt gleich groß, der Preis bleibt gleich, aber es ist plötzlich weniger drin",
+   "sprechtext": "Die Verpackung bleibt gleich groß, der Preis bleibt gleich, aber es ist plötzlich weniger drin."
+  },
+  {
+   "id": "s63",
+   "kapitel": "k3",
+   "text": "Statt 500 Gramm sind es nur noch 400",
+   "sprechtext": "Statt fünfhundert Gramm sind es nur noch vierhundert."
+  },
+  {
+   "id": "s64",
+   "kapitel": "k3",
+   "text": "Das nennt man auch Shrinkflation, und es ist eine versteckte Preiserhöhung um 20 %",
+   "sprechtext": "Das nennt man auch Shrinkflation, und es ist eine versteckte Preiserhöhung um zwanzig Prozent."
+  },
+  {
+   "id": "s65",
+   "kapitel": "k3",
+   "text": "Die meisten merken es nie, weil sie nur auf den Preis schauen und nicht auf die Menge",
+   "sprechtext": "Die meisten merken es nie, weil sie nur auf den Preis schauen und nicht auf die Menge."
+  },
+  {
+   "id": "s66",
+   "kapitel": "k4",
+   "text": "Jana ist fast fertig und steht an der Kasse",
+   "sprechtext": "Jana ist fast fertig und steht an der Kasse."
+  },
+  {
+   "id": "s67",
+   "kapitel": "k4",
+   "text": "Aber auch hier warten noch zwei Tricks",
+   "sprechtext": "Aber auch hier warten noch zwei Tricks."
+  },
+  {
+   "id": "s68",
+   "kapitel": "k4",
+   "text": "Trick Nummer neun: die Quengelware",
+   "sprechtext": "Trick Nummer neun: die Quengelware."
+  },
+  {
+   "id": "s69",
+   "kapitel": "k4",
+   "text": "Direkt an der Kasse liegen Schokoriegel, Kaugummis und kleine Snacks",
+   "sprechtext": "Direkt an der Kasse liegen Schokoriegel, Kaugummis und kleine Snacks."
+  },
+  {
+   "id": "s70",
+   "kapitel": "k4",
+   "text": "Genau dort, wo man warten muss und sich langweilt",
+   "sprechtext": "Genau dort, wo man warten muss und sich langweilt."
+  },
+  {
+   "id": "s71",
+   "kapitel": "k4",
+   "text": "Und genau auf der Höhe, auf der Kinder sie sehen und quengeln",
+   "sprechtext": "Und genau auf der Höhe, auf der Kinder sie sehen und quengeln."
+  },
+  {
+   "id": "s72",
+   "kapitel": "k4",
+   "text": "Gerade wenn man hungrig und müde ist, sind diese kleinen Snacks besonders verführerisch",
+   "sprechtext": "Gerade wenn man hungrig und müde ist, sind diese kleinen Snacks besonders verführerisch."
+  },
+  {
+   "id": "s73",
+   "kapitel": "k4",
+   "text": "Für ein paar Euro landet schnell noch etwas auf dem Band, ganz ohne Plan",
+   "sprechtext": "Für ein paar Euro landet schnell noch etwas auf dem Band, ganz ohne Plan."
+  },
+  {
+   "id": "s74",
+   "kapitel": "k4",
+   "text": "Trick Nummer zehn: Kundenkarten und Apps",
+   "sprechtext": "Trick Nummer zehn: Kundenkarten und Apps."
+  },
+  {
+   "id": "s75",
+   "kapitel": "k4",
+   "text": "An der Kasse fragt man Jana: Haben Sie unsere App?",
+   "sprechtext": "An der Kasse fragt man Jana: Haben Sie unsere App?"
+  },
+  {
+   "id": "s76",
+   "kapitel": "k4",
+   "text": "Die Rabatte dort klingen toll, aber du bezahlst sie mit deinen Daten",
+   "sprechtext": "Die Rabatte dort klingen toll, aber du bezahlst sie mit deinen Daten."
+  },
+  {
+   "id": "s77",
+   "kapitel": "k4",
+   "text": "Der Supermarkt weiß dann genau, was du kaufst, wann du kaufst und wie viel",
+   "sprechtext": "Der Supermarkt weiß dann genau, was du kaufst, wann du kaufst und wie viel."
+  },
+  {
+   "id": "s78",
+   "kapitel": "k4",
+   "text": "Und schickt dir persönliche Angebote, die dich wieder in den Laden locken",
+   "sprechtext": "Und schickt dir persönliche Angebote, die dich wieder in den Laden locken."
+  },
+  {
+   "id": "s79",
+   "kapitel": "k4",
+   "text": "Wer nur für einen Coupon in den Laden kommt, kauft am Ende fast immer noch mehr",
+   "sprechtext": "Wer nur für einen Coupon in den Laden kommt, kauft am Ende fast immer noch mehr."
+  },
+  {
+   "id": "s80",
+   "kapitel": "k4",
+   "text": "Schauen wir uns Janas Kassenbon an",
+   "sprechtext": "Schauen wir uns Janas Kassenbon an."
+  },
+  {
+   "id": "s81",
+   "kapitel": "k4",
+   "text": "Geplant hatte sie fünf Sachen für etwa 15 €",
+   "sprechtext": "Geplant hatte sie fünf Sachen für etwa fünfzehn Euro."
+  },
+  {
+   "id": "s82",
+   "kapitel": "k4",
+   "text": "Bezahlt hat sie 32 €",
+   "sprechtext": "Bezahlt hat sie zweiunddreißig Euro."
+  },
+  {
+   "id": "s83",
+   "kapitel": "k4",
+   "text": "Mehr als das Doppelte, und das ganz ohne, dass sie es gemerkt hat",
+   "sprechtext": "Mehr als das Doppelte, und das ganz ohne, dass sie es gemerkt hat."
+  },
+  {
+   "id": "s84",
+   "kapitel": "k5",
+   "text": "Was kosten dich diese Tricks im ganzen Jahr?",
+   "sprechtext": "Was kosten dich diese Tricks im ganzen Jahr?"
+  },
+  {
+   "id": "s85",
+   "kapitel": "k5",
+   "text": "Schätzungen zufolge entscheiden wir einen großen Teil unserer Einkäufe erst spontan im Laden",
+   "sprechtext": "Schätzungen zufolge entscheiden wir einen großen Teil unserer Einkäufe erst spontan im Laden."
+  },
+  {
+   "id": "s86",
+   "kapitel": "k5",
+   "text": "Nehmen wir an, du gibst 100 € pro Woche im Supermarkt aus",
+   "sprechtext": "Nehmen wir an, du gibst hundert Euro pro Woche im Supermarkt aus."
+  },
+  {
+   "id": "s87",
+   "kapitel": "k5",
+   "text": "Und nur 10 % davon gehen auf das Konto solcher Tricks",
+   "sprechtext": "Und nur zehn Prozent davon gehen auf das Konto solcher Tricks."
+  },
+  {
+   "id": "s88",
+   "kapitel": "k5",
+   "text": "Dann sind das 10 € pro Woche, oder über 500 € im Jahr",
+   "sprechtext": "Dann sind das zehn Euro pro Woche, oder über fünfhundert Euro im Jahr."
+  },
+  {
+   "id": "s89",
+   "kapitel": "k5",
+   "text": "Für eine Familie, die mehr einkauft, schnell auch 1.000 € und mehr",
+   "sprechtext": "Für eine Familie, die mehr einkauft, schnell auch tausend Euro und mehr."
+  },
+  {
+   "id": "s90",
+   "kapitel": "k5",
+   "text": "Die gute Nachricht: Du kannst den Spieß umdrehen",
+   "sprechtext": "Die gute Nachricht: Du kannst den Spieß umdrehen."
+  },
+  {
+   "id": "s91",
+   "kapitel": "k5",
+   "text": "Hier sind sechs Gegentricks, mit denen du die Supermärkte austrickst",
+   "sprechtext": "Hier sind sechs Gegentricks, mit denen du die Supermärkte austrickst."
+  },
+  {
+   "id": "s92",
+   "kapitel": "k5",
+   "text": "Gegentrick eins: Geh nie hungrig einkaufen",
+   "sprechtext": "Gegentrick eins: Geh nie hungrig einkaufen."
+  },
+  {
+   "id": "s93",
+   "kapitel": "k5",
+   "text": "Mit leerem Magen landen nachweislich mehr Snacks und Fertiggerichte im Wagen",
+   "sprechtext": "Mit leerem Magen landen nachweislich mehr Snacks und Fertiggerichte im Wagen."
+  },
+  {
+   "id": "s94",
+   "kapitel": "k5",
+   "text": "Ein kleiner Snack vor dem Einkauf kann dir also bares Geld sparen",
+   "sprechtext": "Ein kleiner Snack vor dem Einkauf kann dir also bares Geld sparen."
+  },
+  {
+   "id": "s95",
+   "kapitel": "k5",
+   "text": "Gegentrick zwei: Nimm einen Korb statt einem Wagen, wenn du nur ein paar Sachen brauchst",
+   "sprechtext": "Gegentrick zwei: Nimm einen Korb statt einem Wagen, wenn du nur ein paar Sachen brauchst."
+  },
+  {
+   "id": "s96",
+   "kapitel": "k5",
+   "text": "Ein voller Korb wird schwer, und schon kaufst du weniger",
+   "sprechtext": "Ein voller Korb wird schwer, und schon kaufst du weniger."
+  },
+  {
+   "id": "s97",
+   "kapitel": "k5",
+   "text": "Gegentrick drei: Schau im Regal nach oben und nach unten, nicht nur geradeaus",
+   "sprechtext": "Gegentrick drei: Schau im Regal nach oben und nach unten, nicht nur geradeaus."
+  },
+  {
+   "id": "s98",
+   "kapitel": "k5",
+   "text": "Die Eigenmarken unten sind oft genauso gut und deutlich günstiger",
+   "sprechtext": "Die Eigenmarken unten sind oft genauso gut und deutlich günstiger."
+  },
+  {
+   "id": "s99",
+   "kapitel": "k5",
+   "text": "Im Blindtest merken viele Menschen kaum einen Unterschied",
+   "sprechtext": "Im Blindtest merken viele Menschen kaum einen Unterschied."
+  },
+  {
+   "id": "s100",
+   "kapitel": "k5",
+   "text": "Gegentrick vier: Vergleiche immer den Grundpreis, besonders bei Angeboten und Großpackungen",
+   "sprechtext": "Gegentrick vier: Vergleiche immer den Grundpreis, besonders bei Angeboten und Großpackungen."
+  },
+  {
+   "id": "s101",
+   "kapitel": "k5",
+   "text": "Gegentrick fünf: Schreib dir vorher genau auf, was du brauchst, und halt dich daran",
+   "sprechtext": "Gegentrick fünf: Schreib dir vorher genau auf, was du brauchst, und halt dich daran."
+  },
+  {
+   "id": "s102",
+   "kapitel": "k5",
+   "text": "Alles, was nicht auf dem Zettel steht, bleibt im Regal",
+   "sprechtext": "Alles, was nicht auf dem Zettel steht, bleibt im Regal."
+  },
+  {
+   "id": "s103",
+   "kapitel": "k5",
+   "text": "Und Gegentrick sechs: Geh lieber einmal pro Woche groß einkaufen statt jeden Tag ein bisschen",
+   "sprechtext": "Und Gegentrick sechs: Geh lieber einmal pro Woche groß einkaufen statt jeden Tag ein bisschen."
+  },
+  {
+   "id": "s104",
+   "kapitel": "k5",
+   "text": "Denn jeder Besuch im Supermarkt ist eine neue Chance für die Tricks",
+   "sprechtext": "Denn jeder Besuch im Supermarkt ist eine neue Chance für die Tricks."
+  },
+  {
+   "id": "s105",
+   "kapitel": "k5",
+   "text": "So sparst du nicht nur Geld, sondern auch jede Menge Zeit",
+   "sprechtext": "So sparst du nicht nur Geld, sondern auch jede Menge Zeit."
+  },
+  {
+   "id": "s106",
+   "kapitel": "k5",
+   "text": "Beim nächsten Einkauf macht Jana es anders: satt, mit Zettel und mit Korb",
+   "sprechtext": "Beim nächsten Einkauf macht Jana es anders: satt, mit Zettel und mit Korb."
+  },
+  {
+   "id": "s107",
+   "kapitel": "k5",
+   "text": "Ergebnis: fünf Sachen, 16 €, fertig",
+   "sprechtext": "Ergebnis: fünf Sachen, sechzehn Euro, fertig."
+  },
+  {
+   "id": "s108",
+   "kapitel": "k5",
+   "text": "Und jetzt bist du dran",
+   "sprechtext": "Und jetzt bist du dran."
+  },
+  {
+   "id": "s109",
+   "kapitel": "k5",
+   "text": "Welcher Trick hat dich schon erwischt? Schreib die Nummer in die Kommentare",
+   "sprechtext": "Welcher Trick hat dich schon erwischt? Schreib die Nummer in die Kommentare."
+  },
+  {
+   "id": "s110",
+   "kapitel": "k5",
+   "text": "Und wenn dich das Video überrascht hat, teile es mit jemandem, der im Supermarkt immer mehr kauft als geplant",
+   "sprechtext": "Und wenn dich das Video überrascht hat, teile es mit jemandem, der im Supermarkt immer mehr kauft als geplant."
+  },
+  {
+   "id": "s111",
+   "kapitel": "k5",
+   "text": "Wir sind HundeFinanzTV, wir sehen uns morgen im nächsten Video",
+   "sprechtext": "Wir sind HundeFinanzTV, wir sehen uns morgen im nächsten Video!"
+  }
+ ]
+}
