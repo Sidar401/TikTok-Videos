@@ -1,0 +1,2718 @@
+{
+  "dauer": 531.3,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 4.403,
+      "captions": [
+        {
+          "text": "Jedes Jahr verschenken",
+          "start": 0.0,
+          "end": 1.196
+        },
+        {
+          "text": "Millionen Menschen",
+          "start": 1.196,
+          "end": 2.174
+        },
+        {
+          "text": "in Deutschland bares",
+          "start": 2.174,
+          "end": 3.261
+        },
+        {
+          "text": "Geld an das Finanzamt",
+          "start": 3.261,
+          "end": 4.403
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 4.403,
+      "end": 9.954,
+      "captions": [
+        {
+          "text": "Nicht,",
+          "start": 4.403,
+          "end": 4.746
+        },
+        {
+          "text": "weil sie etwas falsch machen,",
+          "start": 4.746,
+          "end": 6.406
+        },
+        {
+          "text": "sondern weil sie",
+          "start": 6.406,
+          "end": 7.322
+        },
+        {
+          "text": "gar nicht wissen,",
+          "start": 7.322,
+          "end": 8.294
+        },
+        {
+          "text": "was sie alles absetzen dürfen",
+          "start": 8.294,
+          "end": 9.954
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 9.954,
+      "end": 14.077,
+      "captions": [
+        {
+          "text": "Dabei ist das völlig",
+          "start": 9.954,
+          "end": 11.328
+        },
+        {
+          "text": "legal und oft in wenigen",
+          "start": 11.328,
+          "end": 12.978
+        },
+        {
+          "text": "Minuten erledigt",
+          "start": 12.978,
+          "end": 14.077
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 14.077,
+      "end": 21.513,
+      "captions": [
+        {
+          "text": "Schätzungen zufolge geben",
+          "start": 14.077,
+          "end": 15.626
+        },
+        {
+          "text": "Millionen Arbeitnehmer gar",
+          "start": 15.626,
+          "end": 17.237
+        },
+        {
+          "text": "keine Steuererklärung ab,",
+          "start": 17.237,
+          "end": 18.786
+        },
+        {
+          "text": "obwohl die meisten Geld",
+          "start": 18.786,
+          "end": 20.212
+        },
+        {
+          "text": "zurückbekommen würden",
+          "start": 20.212,
+          "end": 21.513
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 21.513,
+      "end": 25.277,
+      "captions": [
+        {
+          "text": "Und viele, die eine machen,",
+          "start": 21.513,
+          "end": 23.675
+        },
+        {
+          "text": "vergessen die Hälfte",
+          "start": 23.675,
+          "end": 25.277
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 25.277,
+      "end": 29.748,
+      "captions": [
+        {
+          "text": "Das Finanzamt erinnert",
+          "start": 25.277,
+          "end": 26.554
+        },
+        {
+          "text": "dich nämlich nicht daran,",
+          "start": 26.554,
+          "end": 28.006
+        },
+        {
+          "text": "was du alles absetzen könntest",
+          "start": 28.006,
+          "end": 29.748
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 29.748,
+      "end": 33.251,
+      "captions": [
+        {
+          "text": "Heute knacken wir gemeinsam",
+          "start": 29.748,
+          "end": 31.804
+        },
+        {
+          "text": "einen Steuer‑Tresor",
+          "start": 31.804,
+          "end": 33.251
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 33.251,
+      "end": 39.605,
+      "captions": [
+        {
+          "text": "Er hat sieben Schlösser,",
+          "start": 33.251,
+          "end": 34.676
+        },
+        {
+          "text": "und hinter",
+          "start": 34.676,
+          "end": 35.27
+        },
+        {
+          "text": "jedem Schloss steckt",
+          "start": 35.27,
+          "end": 36.458
+        },
+        {
+          "text": "ein legaler Steuertrick,",
+          "start": 36.458,
+          "end": 37.883
+        },
+        {
+          "text": "den fast keiner richtig nutzt",
+          "start": 37.883,
+          "end": 39.605
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 39.605,
+      "end": 43.824,
+      "captions": [
+        {
+          "text": "Und damit es nicht",
+          "start": 39.605,
+          "end": 40.675
+        },
+        {
+          "text": "trocken wird,",
+          "start": 40.675,
+          "end": 41.447
+        },
+        {
+          "text": "rechnen wir alles",
+          "start": 41.447,
+          "end": 42.457
+        },
+        {
+          "text": "an einem Beispiel durch",
+          "start": 42.457,
+          "end": 43.824
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 43.824,
+      "end": 48.552,
+      "captions": [
+        {
+          "text": "Das ist Tim,",
+          "start": 43.824,
+          "end": 45.357
+        },
+        {
+          "text": "35 Jahre alt,",
+          "start": 45.357,
+          "end": 47.019
+        },
+        {
+          "text": "Bürokaufmann",
+          "start": 47.019,
+          "end": 48.552
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 48.552,
+      "end": 51.836,
+      "captions": [
+        {
+          "text": "Tim hat noch nie",
+          "start": 48.552,
+          "end": 49.209
+        },
+        {
+          "text": "eine Steuererklärung gemacht,",
+          "start": 49.209,
+          "end": 50.399
+        },
+        {
+          "text": "weil er dachte,",
+          "start": 50.399,
+          "end": 51.015
+        },
+        {
+          "text": "das lohnt sich nicht",
+          "start": 51.015,
+          "end": 51.836
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 51.836,
+      "end": 56.655,
+      "captions": [
+        {
+          "text": "Er sagt immer: Das ist",
+          "start": 51.836,
+          "end": 53.308
+        },
+        {
+          "text": "mir zu kompliziert,",
+          "start": 53.308,
+          "end": 54.58
+        },
+        {
+          "text": "und am Ende kommt",
+          "start": 54.58,
+          "end": 55.718
+        },
+        {
+          "text": "eh nichts raus",
+          "start": 55.718,
+          "end": 56.655
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 56.655,
+      "end": 58.343,
+      "captions": [
+        {
+          "text": "Mal sehen, ob er recht hat",
+          "start": 56.655,
+          "end": 58.343
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "start": 58.343,
+      "end": 62.926,
+      "captions": [
+        {
+          "text": "Am Ende des Videos siehst du,",
+          "start": 58.343,
+          "end": 59.964
+        },
+        {
+          "text": "wie viel Geld Tim die ganzen",
+          "start": 59.964,
+          "end": 61.529
+        },
+        {
+          "text": "Jahre liegen gelassen hat",
+          "start": 61.529,
+          "end": 62.926
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "start": 62.926,
+      "end": 69.123,
+      "captions": [
+        {
+          "text": "Kleiner Hinweis vorweg:",
+          "start": 62.926,
+          "end": 64.296
+        },
+        {
+          "text": "Das ist keine Steuerberatung,",
+          "start": 64.296,
+          "end": 66.025
+        },
+        {
+          "text": "und die genauen Beträge",
+          "start": 66.025,
+          "end": 67.395
+        },
+        {
+          "text": "können sich jedes Jahr ändern",
+          "start": 67.395,
+          "end": 69.123
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "start": 69.123,
+      "end": 71.902,
+      "captions": [
+        {
+          "text": "Bevor wir starten,",
+          "start": 69.123,
+          "end": 70.513
+        },
+        {
+          "text": "eine Frage an dich",
+          "start": 70.513,
+          "end": 71.902
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "start": 71.902,
+      "end": 74.563,
+      "captions": [
+        {
+          "text": "Machst du",
+          "start": 71.902,
+          "end": 72.372
+        },
+        {
+          "text": "eigentlich jedes Jahr",
+          "start": 72.372,
+          "end": 73.467
+        },
+        {
+          "text": "eine Steuererklärung?",
+          "start": 73.467,
+          "end": 74.563
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "start": 74.563,
+      "end": 78.906,
+      "captions": [
+        {
+          "text": "Schreib einfach Ja",
+          "start": 74.563,
+          "end": 75.804
+        },
+        {
+          "text": "oder Nein in die Kommentare,",
+          "start": 75.804,
+          "end": 77.734
+        },
+        {
+          "text": "wir sind gespannt",
+          "start": 77.734,
+          "end": 78.906
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "start": 78.906,
+      "end": 82.973,
+      "captions": [
+        {
+          "text": "Und wenn du mehr",
+          "start": 78.906,
+          "end": 80.089
+        },
+        {
+          "text": "solche Tipps willst,",
+          "start": 80.089,
+          "end": 81.568
+        },
+        {
+          "text": "folge HundeFinanzTV",
+          "start": 81.568,
+          "end": 82.973
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "start": 82.973,
+      "end": 87.124,
+      "captions": [
+        {
+          "text": "Wir bringen jeden Tag",
+          "start": 82.973,
+          "end": 84.502
+        },
+        {
+          "text": "neue Videos rund",
+          "start": 84.502,
+          "end": 85.668
+        },
+        {
+          "text": "um Geld und Finanzen",
+          "start": 85.668,
+          "end": 87.124
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "start": 87.124,
+      "end": 91.48,
+      "captions": [
+        {
+          "text": "Bevor wir das erste",
+          "start": 87.124,
+          "end": 88.323
+        },
+        {
+          "text": "Schloss knacken,",
+          "start": 88.323,
+          "end": 89.334
+        },
+        {
+          "text": "musst du eine wichtige",
+          "start": 89.334,
+          "end": 90.722
+        },
+        {
+          "text": "Regel kennen",
+          "start": 90.722,
+          "end": 91.48
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "start": 91.48,
+      "end": 99.466,
+      "captions": [
+        {
+          "text": "Jeder Arbeitnehmer bekommt",
+          "start": 91.48,
+          "end": 93.894
+        },
+        {
+          "text": "automatisch einen Pauschbetrag",
+          "start": 93.894,
+          "end": 96.68
+        },
+        {
+          "text": "von 1.230 € für Werbungskosten",
+          "start": 96.68,
+          "end": 99.466
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "start": 99.466,
+      "end": 104.931,
+      "captions": [
+        {
+          "text": "Das heißt: Das Finanzamt",
+          "start": 99.466,
+          "end": 101.009
+        },
+        {
+          "text": "geht sowieso davon aus,",
+          "start": 101.009,
+          "end": 102.488
+        },
+        {
+          "text": "dass du so viel",
+          "start": 102.488,
+          "end": 103.452
+        },
+        {
+          "text": "für deinen Job ausgibst",
+          "start": 103.452,
+          "end": 104.931
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "start": 104.931,
+      "end": 110.294,
+      "captions": [
+        {
+          "text": "Alles,",
+          "start": 104.931,
+          "end": 105.36
+        },
+        {
+          "text": "was du darüber hinaus",
+          "start": 105.36,
+          "end": 106.862
+        },
+        {
+          "text": "nachweisen kannst,",
+          "start": 106.862,
+          "end": 108.149
+        },
+        {
+          "text": "senkt deine Steuern zusätzlich",
+          "start": 108.149,
+          "end": 110.294
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "start": 110.294,
+      "end": 113.843,
+      "captions": [
+        {
+          "text": "Und genau deshalb",
+          "start": 110.294,
+          "end": 111.432
+        },
+        {
+          "text": "lohnt es sich,",
+          "start": 111.432,
+          "end": 112.37
+        },
+        {
+          "text": "alles zusammenzuzählen",
+          "start": 112.37,
+          "end": 113.843
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "start": 113.843,
+      "end": 117.811,
+      "captions": [
+        {
+          "text": "Viele hören hier schon",
+          "start": 113.843,
+          "end": 115.09
+        },
+        {
+          "text": "auf und denken: Dann lohnt",
+          "start": 115.09,
+          "end": 116.564
+        },
+        {
+          "text": "es sich für mich nicht",
+          "start": 116.564,
+          "end": 117.811
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "start": 117.811,
+      "end": 123.546,
+      "captions": [
+        {
+          "text": "Doch genau das ist",
+          "start": 117.811,
+          "end": 118.804
+        },
+        {
+          "text": "der größte Irrtum,",
+          "start": 118.804,
+          "end": 119.796
+        },
+        {
+          "text": "denn zwei der sieben",
+          "start": 119.796,
+          "end": 120.899
+        },
+        {
+          "text": "Schlösser zählen gar nicht",
+          "start": 120.899,
+          "end": 122.333
+        },
+        {
+          "text": "zu diesem Pauschbetrag",
+          "start": 122.333,
+          "end": 123.546
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "start": 123.546,
+      "end": 126.631,
+      "captions": [
+        {
+          "text": "Schloss Nummer eins:",
+          "start": 123.546,
+          "end": 125.17
+        },
+        {
+          "text": "der Weg zur Arbeit",
+          "start": 125.17,
+          "end": 126.631
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "start": 126.631,
+      "end": 131.471,
+      "captions": [
+        {
+          "text": "Für jeden Kilometer",
+          "start": 126.631,
+          "end": 127.752
+        },
+        {
+          "text": "der einfachen Strecke kannst",
+          "start": 127.752,
+          "end": 129.405
+        },
+        {
+          "text": "du die Entfernungspauschale",
+          "start": 129.405,
+          "end": 130.999
+        },
+        {
+          "text": "ansetzen",
+          "start": 130.999,
+          "end": 131.471
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "start": 131.471,
+      "end": 137.088,
+      "captions": [
+        {
+          "text": "Dabei ist es egal,",
+          "start": 131.471,
+          "end": 132.66
+        },
+        {
+          "text": "ob du mit dem Auto,",
+          "start": 132.66,
+          "end": 133.916
+        },
+        {
+          "text": "dem Fahrrad,",
+          "start": 133.916,
+          "end": 134.709
+        },
+        {
+          "text": "dem Bus oder zu Fuß",
+          "start": 134.709,
+          "end": 135.965
+        },
+        {
+          "text": "zur Arbeit kommst",
+          "start": 135.965,
+          "end": 137.088
+        }
+      ]
+    },
+    {
+      "id": "s31",
+      "start": 137.088,
+      "end": 142.079,
+      "captions": [
+        {
+          "text": "Selbst als Mitfahrer",
+          "start": 137.088,
+          "end": 138.419
+        },
+        {
+          "text": "in einer Fahrgemeinschaft",
+          "start": 138.419,
+          "end": 140.083
+        },
+        {
+          "text": "kannst du die Pauschale nutzen",
+          "start": 140.083,
+          "end": 142.079
+        }
+      ]
+    },
+    {
+      "id": "s32",
+      "start": 142.079,
+      "end": 146.139,
+      "captions": [
+        {
+          "text": "Viele unterschätzen",
+          "start": 142.079,
+          "end": 143.108
+        },
+        {
+          "text": "diesen Posten,",
+          "start": 143.108,
+          "end": 143.865
+        },
+        {
+          "text": "weil sie die Strecke",
+          "start": 143.865,
+          "end": 144.948
+        },
+        {
+          "text": "nie ausgerechnet haben",
+          "start": 144.948,
+          "end": 146.139
+        }
+      ]
+    },
+    {
+      "id": "s33",
+      "start": 146.139,
+      "end": 150.451,
+      "captions": [
+        {
+          "text": "Tim fährt 20 Kilometer",
+          "start": 146.139,
+          "end": 147.833
+        },
+        {
+          "text": "zur Arbeit,",
+          "start": 147.833,
+          "end": 148.68
+        },
+        {
+          "text": "an drei Tagen pro Woche",
+          "start": 148.68,
+          "end": 150.451
+        }
+      ]
+    },
+    {
+      "id": "s34",
+      "start": 150.451,
+      "end": 155.099,
+      "captions": [
+        {
+          "text": "Das sind im Jahr",
+          "start": 150.451,
+          "end": 151.854
+        },
+        {
+          "text": "schon rund 800 €,",
+          "start": 151.854,
+          "end": 153.345
+        },
+        {
+          "text": "die er ansetzen kann",
+          "start": 153.345,
+          "end": 155.099
+        }
+      ]
+    },
+    {
+      "id": "s35",
+      "start": 155.099,
+      "end": 157.102,
+      "captions": [
+        {
+          "text": "Schloss Nummer",
+          "start": 155.099,
+          "end": 155.924
+        },
+        {
+          "text": "zwei: das Homeoffice",
+          "start": 155.924,
+          "end": 157.102
+        }
+      ]
+    },
+    {
+      "id": "s36",
+      "start": 157.102,
+      "end": 161.896,
+      "captions": [
+        {
+          "text": "Für jeden Tag,",
+          "start": 157.102,
+          "end": 158.135
+        },
+        {
+          "text": "an dem du überwiegend",
+          "start": 158.135,
+          "end": 159.683
+        },
+        {
+          "text": "zu Hause arbeitest,",
+          "start": 159.683,
+          "end": 161.085
+        },
+        {
+          "text": "gibt es 6 €",
+          "start": 161.085,
+          "end": 161.896
+        }
+      ]
+    },
+    {
+      "id": "s37",
+      "start": 161.896,
+      "end": 168.277,
+      "captions": [
+        {
+          "text": "Und das für bis",
+          "start": 161.896,
+          "end": 163.636
+        },
+        {
+          "text": "zu 210 Tage im Jahr,",
+          "start": 163.636,
+          "end": 165.957
+        },
+        {
+          "text": "also maximal 1.260 €",
+          "start": 165.957,
+          "end": 168.277
+        }
+      ]
+    },
+    {
+      "id": "s38",
+      "start": 168.277,
+      "end": 172.462,
+      "captions": [
+        {
+          "text": "Dafür brauchst du nicht mal",
+          "start": 168.277,
+          "end": 169.784
+        },
+        {
+          "text": "ein eigenes Arbeitszimmer,",
+          "start": 169.784,
+          "end": 171.234
+        },
+        {
+          "text": "der Küchentisch reicht",
+          "start": 171.234,
+          "end": 172.462
+        }
+      ]
+    },
+    {
+      "id": "s39",
+      "start": 172.462,
+      "end": 177.501,
+      "captions": [
+        {
+          "text": "Einfach im Kalender notieren,",
+          "start": 172.462,
+          "end": 174.033
+        },
+        {
+          "text": "an welchen Tagen",
+          "start": 174.033,
+          "end": 174.9
+        },
+        {
+          "text": "du zu Hause warst,",
+          "start": 174.9,
+          "end": 175.876
+        },
+        {
+          "text": "und schon hast du den Nachweis",
+          "start": 175.876,
+          "end": 177.501
+        }
+      ]
+    },
+    {
+      "id": "s40",
+      "start": 177.501,
+      "end": 183.825,
+      "captions": [
+        {
+          "text": "Tim arbeitet an zwei",
+          "start": 177.501,
+          "end": 179.282
+        },
+        {
+          "text": "Tagen pro Woche zu Hause,",
+          "start": 179.282,
+          "end": 181.509
+        },
+        {
+          "text": "das sind bei ihm",
+          "start": 181.509,
+          "end": 182.934
+        },
+        {
+          "text": "rund 500 €",
+          "start": 182.934,
+          "end": 183.825
+        }
+      ]
+    },
+    {
+      "id": "s41",
+      "start": 183.825,
+      "end": 190.564,
+      "captions": [
+        {
+          "text": "Wichtig: Für einen Tag",
+          "start": 183.825,
+          "end": 185.436
+        },
+        {
+          "text": "gibt es entweder Fahrtkosten",
+          "start": 185.436,
+          "end": 187.487
+        },
+        {
+          "text": "oder die Homeoffice‑Pauschale,",
+          "start": 187.487,
+          "end": 189.685
+        },
+        {
+          "text": "nicht beides",
+          "start": 189.685,
+          "end": 190.564
+        }
+      ]
+    },
+    {
+      "id": "s42",
+      "start": 190.564,
+      "end": 192.869,
+      "captions": [
+        {
+          "text": "Schloss Nummer",
+          "start": 190.564,
+          "end": 191.542
+        },
+        {
+          "text": "drei: Arbeitsmittel",
+          "start": 191.542,
+          "end": 192.869
+        }
+      ]
+    },
+    {
+      "id": "s43",
+      "start": 192.869,
+      "end": 196.33,
+      "captions": [
+        {
+          "text": "Alles,",
+          "start": 192.869,
+          "end": 193.261
+        },
+        {
+          "text": "was du für deinen Job kaufst,",
+          "start": 193.261,
+          "end": 195.155
+        },
+        {
+          "text": "kannst du absetzen",
+          "start": 195.155,
+          "end": 196.33
+        }
+      ]
+    },
+    {
+      "id": "s44",
+      "start": 196.33,
+      "end": 202.488,
+      "captions": [
+        {
+          "text": "Laptop, Schreibtisch,",
+          "start": 196.33,
+          "end": 197.946
+        },
+        {
+          "text": "Bürostuhl, Fachbücher,",
+          "start": 197.946,
+          "end": 199.64
+        },
+        {
+          "text": "Software oder sogar",
+          "start": 199.64,
+          "end": 201.102
+        },
+        {
+          "text": "die Berufskleidung",
+          "start": 201.102,
+          "end": 202.488
+        }
+      ]
+    },
+    {
+      "id": "s45",
+      "start": 202.488,
+      "end": 206.933,
+      "captions": [
+        {
+          "text": "Selbst Fachzeitschriften",
+          "start": 202.488,
+          "end": 203.991
+        },
+        {
+          "text": "oder ein Werkzeugkoffer",
+          "start": 203.991,
+          "end": 205.43
+        },
+        {
+          "text": "für den Job gehören dazu",
+          "start": 205.43,
+          "end": 206.933
+        }
+      ]
+    },
+    {
+      "id": "s46",
+      "start": 206.933,
+      "end": 211.092,
+      "captions": [
+        {
+          "text": "Ein Computer darf heute",
+          "start": 206.933,
+          "end": 208.361
+        },
+        {
+          "text": "sogar komplett in einem Jahr",
+          "start": 208.361,
+          "end": 210.099
+        },
+        {
+          "text": "abgesetzt werden",
+          "start": 210.099,
+          "end": 211.092
+        }
+      ]
+    },
+    {
+      "id": "s47",
+      "start": 211.092,
+      "end": 216.798,
+      "captions": [
+        {
+          "text": "Auch ein Teil deiner",
+          "start": 211.092,
+          "end": 212.374
+        },
+        {
+          "text": "Internet‑ und Handykosten",
+          "start": 212.374,
+          "end": 213.977
+        },
+        {
+          "text": "kann dazugehören,",
+          "start": 213.977,
+          "end": 215.067
+        },
+        {
+          "text": "wenn du sie beruflich nutzt",
+          "start": 215.067,
+          "end": 216.798
+        }
+      ]
+    },
+    {
+      "id": "s48",
+      "start": 216.798,
+      "end": 221.678,
+      "captions": [
+        {
+          "text": "Gerade bei teureren",
+          "start": 216.798,
+          "end": 218.162
+        },
+        {
+          "text": "Geräten lohnt es sich,",
+          "start": 218.162,
+          "end": 219.74
+        },
+        {
+          "text": "die Rechnung gut aufzuheben",
+          "start": 219.74,
+          "end": 221.678
+        }
+      ]
+    },
+    {
+      "id": "s49",
+      "start": 221.678,
+      "end": 226.144,
+      "captions": [
+        {
+          "text": "Tim hat sich",
+          "start": 221.678,
+          "end": 222.542
+        },
+        {
+          "text": "für die Arbeit einen neuen",
+          "start": 222.542,
+          "end": 224.415
+        },
+        {
+          "text": "Laptop für 600 € gekauft",
+          "start": 224.415,
+          "end": 226.144
+        }
+      ]
+    },
+    {
+      "id": "s50",
+      "start": 226.144,
+      "end": 228.411,
+      "captions": [
+        {
+          "text": "Schloss Nummer",
+          "start": 226.144,
+          "end": 227.106
+        },
+        {
+          "text": "vier: Fortbildungen",
+          "start": 227.106,
+          "end": 228.411
+        }
+      ]
+    },
+    {
+      "id": "s51",
+      "start": 228.411,
+      "end": 233.769,
+      "captions": [
+        {
+          "text": "Kurse, Seminare,",
+          "start": 228.411,
+          "end": 229.585
+        },
+        {
+          "text": "Online‑Schulungen",
+          "start": 229.585,
+          "end": 230.833
+        },
+        {
+          "text": "oder ein Sprachkurs,",
+          "start": 230.833,
+          "end": 232.301
+        },
+        {
+          "text": "der dir im Job hilft",
+          "start": 232.301,
+          "end": 233.769
+        }
+      ]
+    },
+    {
+      "id": "s52",
+      "start": 233.769,
+      "end": 237.521,
+      "captions": [
+        {
+          "text": "Sogar die Fahrtkosten",
+          "start": 233.769,
+          "end": 235.127
+        },
+        {
+          "text": "und Übernachtungen",
+          "start": 235.127,
+          "end": 236.292
+        },
+        {
+          "text": "dorthin zählen dazu",
+          "start": 236.292,
+          "end": 237.521
+        }
+      ]
+    },
+    {
+      "id": "s53",
+      "start": 237.521,
+      "end": 241.873,
+      "captions": [
+        {
+          "text": "Sogar ein Studium",
+          "start": 237.521,
+          "end": 238.642
+        },
+        {
+          "text": "nach der Ausbildung kann",
+          "start": 238.642,
+          "end": 240.225
+        },
+        {
+          "text": "als Werbungskosten zählen",
+          "start": 240.225,
+          "end": 241.873
+        }
+      ]
+    },
+    {
+      "id": "s54",
+      "start": 241.873,
+      "end": 246.395,
+      "captions": [
+        {
+          "text": "Tim hat einen Excel‑Kurs",
+          "start": 241.873,
+          "end": 243.543
+        },
+        {
+          "text": "für 300 € gemacht,",
+          "start": 243.543,
+          "end": 244.795
+        },
+        {
+          "text": "auch der kommt mit rein",
+          "start": 244.795,
+          "end": 246.395
+        }
+      ]
+    },
+    {
+      "id": "s55",
+      "start": 246.395,
+      "end": 249.533,
+      "captions": [
+        {
+          "text": "Schloss Nummer fünf:",
+          "start": 246.395,
+          "end": 247.424
+        },
+        {
+          "text": "die kleinen Dinge,",
+          "start": 247.424,
+          "end": 248.35
+        },
+        {
+          "text": "die fast jeder vergisst",
+          "start": 248.35,
+          "end": 249.533
+        }
+      ]
+    },
+    {
+      "id": "s56",
+      "start": 249.533,
+      "end": 256.684,
+      "captions": [
+        {
+          "text": "Für die Kontoführung",
+          "start": 249.533,
+          "end": 251.277
+        },
+        {
+          "text": "akzeptiert das Finanzamt",
+          "start": 251.277,
+          "end": 253.37
+        },
+        {
+          "text": "meistens pauschal 16 €,",
+          "start": 253.37,
+          "end": 255.376
+        },
+        {
+          "text": "ganz ohne Beleg",
+          "start": 255.376,
+          "end": 256.684
+        }
+      ]
+    },
+    {
+      "id": "s57",
+      "start": 256.684,
+      "end": 262.883,
+      "captions": [
+        {
+          "text": "Dazu kommen Bewerbungskosten,",
+          "start": 256.684,
+          "end": 258.85
+        },
+        {
+          "text": "Gewerkschaftsbeiträge",
+          "start": 258.85,
+          "end": 260.418
+        },
+        {
+          "text": "oder ein beruflich",
+          "start": 260.418,
+          "end": 261.763
+        },
+        {
+          "text": "genutztes Handy",
+          "start": 261.763,
+          "end": 262.883
+        }
+      ]
+    },
+    {
+      "id": "s58",
+      "start": 262.883,
+      "end": 268.395,
+      "captions": [
+        {
+          "text": "Wer umzieht,",
+          "start": 262.883,
+          "end": 263.731
+        },
+        {
+          "text": "weil er einen neuen",
+          "start": 263.731,
+          "end": 265.074
+        },
+        {
+          "text": "Job anfängt,",
+          "start": 265.074,
+          "end": 265.922
+        },
+        {
+          "text": "kann sogar",
+          "start": 265.922,
+          "end": 266.628
+        },
+        {
+          "text": "die Umzugskosten absetzen",
+          "start": 266.628,
+          "end": 268.395
+        }
+      ]
+    },
+    {
+      "id": "s59",
+      "start": 268.395,
+      "end": 272.155,
+      "captions": [
+        {
+          "text": "Einzeln klein,",
+          "start": 268.395,
+          "end": 269.469
+        },
+        {
+          "text": "zusammen aber oft",
+          "start": 269.469,
+          "end": 270.774
+        },
+        {
+          "text": "ein schöner Betrag",
+          "start": 270.774,
+          "end": 272.155
+        }
+      ]
+    },
+    {
+      "id": "s60",
+      "start": 272.155,
+      "end": 273.624,
+      "captions": [
+        {
+          "text": "Jetzt zählen wir",
+          "start": 272.155,
+          "end": 272.889
+        },
+        {
+          "text": "bei Tim zusammen",
+          "start": 272.889,
+          "end": 273.624
+        }
+      ]
+    },
+    {
+      "id": "s61",
+      "start": 273.624,
+      "end": 280.842,
+      "captions": [
+        {
+          "text": "Fahrtkosten, Homeoffice,",
+          "start": 273.624,
+          "end": 276.289
+        },
+        {
+          "text": "Laptop,",
+          "start": 276.289,
+          "end": 277.066
+        },
+        {
+          "text": "Kurs und Kontoführung:",
+          "start": 277.066,
+          "end": 279.509
+        },
+        {
+          "text": "rund 2.200 €",
+          "start": 279.509,
+          "end": 280.842
+        }
+      ]
+    },
+    {
+      "id": "s62",
+      "start": 280.842,
+      "end": 285.901,
+      "captions": [
+        {
+          "text": "Davon ziehen wir",
+          "start": 280.842,
+          "end": 282.602
+        },
+        {
+          "text": "den Pauschbetrag",
+          "start": 282.602,
+          "end": 284.361
+        },
+        {
+          "text": "von 1.230 € ab",
+          "start": 284.361,
+          "end": 285.901
+        }
+      ]
+    },
+    {
+      "id": "s63",
+      "start": 285.901,
+      "end": 290.244,
+      "captions": [
+        {
+          "text": "Bleiben rund 1.000 €,",
+          "start": 285.901,
+          "end": 287.59
+        },
+        {
+          "text": "die Tims Steuern",
+          "start": 287.59,
+          "end": 288.877
+        },
+        {
+          "text": "zusätzlich senken",
+          "start": 288.877,
+          "end": 290.244
+        }
+      ]
+    },
+    {
+      "id": "s64",
+      "start": 290.244,
+      "end": 294.009,
+      "captions": [
+        {
+          "text": "Bei seinem Steuersatz bringt",
+          "start": 290.244,
+          "end": 292.093
+        },
+        {
+          "text": "ihm das ungefähr 300 € zurück",
+          "start": 292.093,
+          "end": 294.009
+        }
+      ]
+    },
+    {
+      "id": "s65",
+      "start": 294.009,
+      "end": 298.159,
+      "captions": [
+        {
+          "text": "Wie viel du zurückbekommst,",
+          "start": 294.009,
+          "end": 295.633
+        },
+        {
+          "text": "hängt von deinem persönlichen",
+          "start": 295.633,
+          "end": 297.377
+        },
+        {
+          "text": "Steuersatz ab",
+          "start": 297.377,
+          "end": 298.159
+        }
+      ]
+    },
+    {
+      "id": "s66",
+      "start": 298.159,
+      "end": 302.29,
+      "captions": [
+        {
+          "text": "Je mehr du verdienst,",
+          "start": 298.159,
+          "end": 299.536
+        },
+        {
+          "text": "desto mehr bringt dir",
+          "start": 299.536,
+          "end": 300.913
+        },
+        {
+          "text": "jeder abgesetzte Euro",
+          "start": 300.913,
+          "end": 302.29
+        }
+      ]
+    },
+    {
+      "id": "s67",
+      "start": 302.29,
+      "end": 305.6,
+      "captions": [
+        {
+          "text": "Klingt erstmal",
+          "start": 302.29,
+          "end": 303.089
+        },
+        {
+          "text": "nicht nach viel,",
+          "start": 303.089,
+          "end": 304.002
+        },
+        {
+          "text": "aber das ist erst der Anfang",
+          "start": 304.002,
+          "end": 305.6
+        }
+      ]
+    },
+    {
+      "id": "s68",
+      "start": 305.6,
+      "end": 311.417,
+      "captions": [
+        {
+          "text": "Und jetzt kommen",
+          "start": 305.6,
+          "end": 306.55
+        },
+        {
+          "text": "die zwei Schlösser,",
+          "start": 306.55,
+          "end": 307.678
+        },
+        {
+          "text": "die richtig Geld bringen,",
+          "start": 307.678,
+          "end": 309.161
+        },
+        {
+          "text": "denn die wirken direkt",
+          "start": 309.161,
+          "end": 310.467
+        },
+        {
+          "text": "auf deine Steuer",
+          "start": 310.467,
+          "end": 311.417
+        }
+      ]
+    },
+    {
+      "id": "s69",
+      "start": 311.417,
+      "end": 315.117,
+      "captions": [
+        {
+          "text": "Schloss Nummer sechs:",
+          "start": 311.417,
+          "end": 312.941
+        },
+        {
+          "text": "Handwerker und Haushaltshilfen",
+          "start": 312.941,
+          "end": 315.117
+        }
+      ]
+    },
+    {
+      "id": "s70",
+      "start": 315.117,
+      "end": 324.801,
+      "captions": [
+        {
+          "text": "Wenn ein Handwerker in deiner",
+          "start": 315.117,
+          "end": 317.152
+        },
+        {
+          "text": "Wohnung etwas repariert,",
+          "start": 317.152,
+          "end": 318.836
+        },
+        {
+          "text": "streicht oder wartet,",
+          "start": 318.836,
+          "end": 320.31
+        },
+        {
+          "text": "kannst du 20 %",
+          "start": 320.31,
+          "end": 321.292
+        },
+        {
+          "text": "der Arbeitskosten direkt",
+          "start": 321.292,
+          "end": 322.976
+        },
+        {
+          "text": "von deiner Steuer abziehen",
+          "start": 322.976,
+          "end": 324.801
+        }
+      ]
+    },
+    {
+      "id": "s71",
+      "start": 324.801,
+      "end": 329.672,
+      "captions": [
+        {
+          "text": "Nicht vom Einkommen,",
+          "start": 324.801,
+          "end": 326.004
+        },
+        {
+          "text": "sondern direkt von der Steuer,",
+          "start": 326.004,
+          "end": 327.808
+        },
+        {
+          "text": "das ist ein riesiger",
+          "start": 327.808,
+          "end": 329.011
+        },
+        {
+          "text": "Unterschied",
+          "start": 329.011,
+          "end": 329.672
+        }
+      ]
+    },
+    {
+      "id": "s72",
+      "start": 329.672,
+      "end": 335.397,
+      "captions": [
+        {
+          "text": "Das gilt auch",
+          "start": 329.672,
+          "end": 330.569
+        },
+        {
+          "text": "für den Schornsteinfeger,",
+          "start": 330.569,
+          "end": 332.293
+        },
+        {
+          "text": "den Gärtner,",
+          "start": 332.293,
+          "end": 333.121
+        },
+        {
+          "text": "die Putzhilfe",
+          "start": 333.121,
+          "end": 334.017
+        },
+        {
+          "text": "oder den Hausmeister",
+          "start": 334.017,
+          "end": 335.397
+        }
+      ]
+    },
+    {
+      "id": "s73",
+      "start": 335.397,
+      "end": 340.289,
+      "captions": [
+        {
+          "text": "Auch die Wartung der Heizung",
+          "start": 335.397,
+          "end": 337.273
+        },
+        {
+          "text": "oder eine Reparatur",
+          "start": 337.273,
+          "end": 338.547
+        },
+        {
+          "text": "in der Wohnung zählen dazu",
+          "start": 338.547,
+          "end": 340.289
+        }
+      ]
+    },
+    {
+      "id": "s74",
+      "start": 340.289,
+      "end": 345.361,
+      "captions": [
+        {
+          "text": "Sogar als Mieter,",
+          "start": 340.289,
+          "end": 341.38
+        },
+        {
+          "text": "denn viele dieser",
+          "start": 341.38,
+          "end": 342.472
+        },
+        {
+          "text": "Kosten stecken in deiner",
+          "start": 342.472,
+          "end": 344.013
+        },
+        {
+          "text": "Nebenkostenabrechnung",
+          "start": 344.013,
+          "end": 345.361
+        }
+      ]
+    },
+    {
+      "id": "s75",
+      "start": 345.361,
+      "end": 352.22,
+      "captions": [
+        {
+          "text": "Ein Blick in die Abrechnung",
+          "start": 345.361,
+          "end": 347.125
+        },
+        {
+          "text": "lohnt sich also richtig,",
+          "start": 347.125,
+          "end": 348.693
+        },
+        {
+          "text": "denn dort steht oft schon,",
+          "start": 348.693,
+          "end": 350.391
+        },
+        {
+          "text": "wie viel davon absetzbar ist",
+          "start": 350.391,
+          "end": 352.22
+        }
+      ]
+    },
+    {
+      "id": "s76",
+      "start": 352.22,
+      "end": 360.739,
+      "captions": [
+        {
+          "text": "Für Handwerker kannst",
+          "start": 352.22,
+          "end": 353.957
+        },
+        {
+          "text": "du so bis zu 1.200 €",
+          "start": 353.957,
+          "end": 355.611
+        },
+        {
+          "text": "Steuern im Jahr sparen,",
+          "start": 355.611,
+          "end": 357.513
+        },
+        {
+          "text": "für Haushaltshilfen",
+          "start": 357.513,
+          "end": 359.085
+        },
+        {
+          "text": "sogar bis zu 4.000 €",
+          "start": 359.085,
+          "end": 360.739
+        }
+      ]
+    },
+    {
+      "id": "s77",
+      "start": 360.739,
+      "end": 364.317,
+      "captions": [
+        {
+          "text": "Wichtig ist nur: Du musst",
+          "start": 360.739,
+          "end": 362.255
+        },
+        {
+          "text": "per Überweisung bezahlen,",
+          "start": 362.255,
+          "end": 363.771
+        },
+        {
+          "text": "nicht bar",
+          "start": 363.771,
+          "end": 364.317
+        }
+      ]
+    },
+    {
+      "id": "s78",
+      "start": 364.317,
+      "end": 368.491,
+      "captions": [
+        {
+          "text": "Viele Menschen haben",
+          "start": 364.317,
+          "end": 365.663
+        },
+        {
+          "text": "solche Kosten jedes Jahr,",
+          "start": 365.663,
+          "end": 367.347
+        },
+        {
+          "text": "ohne es zu wissen",
+          "start": 367.347,
+          "end": 368.491
+        }
+      ]
+    },
+    {
+      "id": "s79",
+      "start": 368.491,
+      "end": 374.235,
+      "captions": [
+        {
+          "text": "Tim hat sein Bad",
+          "start": 368.491,
+          "end": 369.785
+        },
+        {
+          "text": "renovieren lassen,",
+          "start": 369.785,
+          "end": 371.242
+        },
+        {
+          "text": "die reinen Arbeitskosten",
+          "start": 371.242,
+          "end": 373.183
+        },
+        {
+          "text": "waren 1.500 €",
+          "start": 373.183,
+          "end": 374.235
+        }
+      ]
+    },
+    {
+      "id": "s80",
+      "start": 374.235,
+      "end": 379.755,
+      "captions": [
+        {
+          "text": "20 % davon sind 300 €,",
+          "start": 374.235,
+          "end": 376.875
+        },
+        {
+          "text": "direkt zurück aufs Konto",
+          "start": 376.875,
+          "end": 379.755
+        }
+      ]
+    },
+    {
+      "id": "s81",
+      "start": 379.755,
+      "end": 381.393,
+      "captions": [
+        {
+          "text": "Schloss Nummer sieben: Spenden",
+          "start": 379.755,
+          "end": 381.393
+        }
+      ]
+    },
+    {
+      "id": "s82",
+      "start": 381.393,
+      "end": 385.706,
+      "captions": [
+        {
+          "text": "Jede Spende",
+          "start": 381.393,
+          "end": 382.158
+        },
+        {
+          "text": "an eine gemeinnützige",
+          "start": 382.158,
+          "end": 383.619
+        },
+        {
+          "text": "Organisation",
+          "start": 383.619,
+          "end": 384.454
+        },
+        {
+          "text": "kannst du absetzen",
+          "start": 384.454,
+          "end": 385.706
+        }
+      ]
+    },
+    {
+      "id": "s83",
+      "start": 385.706,
+      "end": 389.99,
+      "captions": [
+        {
+          "text": "Bis 300 € reicht dafür sogar",
+          "start": 385.706,
+          "end": 388.058
+        },
+        {
+          "text": "einfach der Kontoauszug",
+          "start": 388.058,
+          "end": 389.99
+        }
+      ]
+    },
+    {
+      "id": "s84",
+      "start": 389.99,
+      "end": 395.545,
+      "captions": [
+        {
+          "text": "Auch Beiträge an gemeinnützige",
+          "start": 389.99,
+          "end": 391.656
+        },
+        {
+          "text": "Vereine können dazugehören,",
+          "start": 391.656,
+          "end": 393.156
+        },
+        {
+          "text": "je nachdem,",
+          "start": 393.156,
+          "end": 393.767
+        },
+        {
+          "text": "um welchen Verein",
+          "start": 393.767,
+          "end": 394.712
+        },
+        {
+          "text": "es sich handelt",
+          "start": 394.712,
+          "end": 395.545
+        }
+      ]
+    },
+    {
+      "id": "s85",
+      "start": 395.545,
+      "end": 401.79,
+      "captions": [
+        {
+          "text": "Tim spendet jedes Jahr",
+          "start": 395.545,
+          "end": 397.284
+        },
+        {
+          "text": "200 € an das Tierheim,",
+          "start": 397.284,
+          "end": 399.023
+        },
+        {
+          "text": "das bringt ihm noch",
+          "start": 399.023,
+          "end": 400.525
+        },
+        {
+          "text": "einmal rund 60 €",
+          "start": 400.525,
+          "end": 401.79
+        }
+      ]
+    },
+    {
+      "id": "s86",
+      "start": 401.79,
+      "end": 404.338,
+      "captions": [
+        {
+          "text": "Damit sind alle sieben",
+          "start": 401.79,
+          "end": 403.191
+        },
+        {
+          "text": "Schlösser geknackt",
+          "start": 403.191,
+          "end": 404.338
+        }
+      ]
+    },
+    {
+      "id": "s87",
+      "start": 404.338,
+      "end": 406.248,
+      "captions": [
+        {
+          "text": "Und jetzt öffnen",
+          "start": 404.338,
+          "end": 405.357
+        },
+        {
+          "text": "wir den Tresor",
+          "start": 405.357,
+          "end": 406.248
+        }
+      ]
+    },
+    {
+      "id": "s88",
+      "start": 406.248,
+      "end": 410.539,
+      "captions": [
+        {
+          "text": "Arbeitskosten",
+          "start": 406.248,
+          "end": 407.643
+        },
+        {
+          "text": "und Fortbildung: rund 300 €",
+          "start": 407.643,
+          "end": 410.539
+        }
+      ]
+    },
+    {
+      "id": "s89",
+      "start": 410.539,
+      "end": 412.561,
+      "captions": [
+        {
+          "text": "Handwerker: 300 €",
+          "start": 410.539,
+          "end": 412.561
+        }
+      ]
+    },
+    {
+      "id": "s90",
+      "start": 412.561,
+      "end": 414.206,
+      "captions": [
+        {
+          "text": "Spenden: rund 60 €",
+          "start": 412.561,
+          "end": 414.206
+        }
+      ]
+    },
+    {
+      "id": "s91",
+      "start": 414.206,
+      "end": 420.055,
+      "captions": [
+        {
+          "text": "Zusammen bekommt Tim",
+          "start": 414.206,
+          "end": 415.854
+        },
+        {
+          "text": "also rund 650 € zurück,",
+          "start": 415.854,
+          "end": 417.748
+        },
+        {
+          "text": "nur für eine Steuererklärung",
+          "start": 417.748,
+          "end": 420.055
+        }
+      ]
+    },
+    {
+      "id": "s92",
+      "start": 420.055,
+      "end": 422.978,
+      "captions": [
+        {
+          "text": "Aber jetzt kommt",
+          "start": 420.055,
+          "end": 421.254
+        },
+        {
+          "text": "der eigentliche Knaller",
+          "start": 421.254,
+          "end": 422.978
+        }
+      ]
+    },
+    {
+      "id": "s93",
+      "start": 422.978,
+      "end": 428.525,
+      "captions": [
+        {
+          "text": "Wer nicht verpflichtet ist,",
+          "start": 422.978,
+          "end": 424.461
+        },
+        {
+          "text": "eine Steuererklärung",
+          "start": 424.461,
+          "end": 425.559
+        },
+        {
+          "text": "abzugeben,",
+          "start": 425.559,
+          "end": 426.108
+        },
+        {
+          "text": "kann sie bis zu vier",
+          "start": 426.108,
+          "end": 427.207
+        },
+        {
+          "text": "Jahre rückwirkend machen",
+          "start": 427.207,
+          "end": 428.525
+        }
+      ]
+    },
+    {
+      "id": "s94",
+      "start": 428.525,
+      "end": 432.391,
+      "captions": [
+        {
+          "text": "Tim kann also auch",
+          "start": 428.525,
+          "end": 429.685
+        },
+        {
+          "text": "für die letzten Jahre",
+          "start": 429.685,
+          "end": 431.038
+        },
+        {
+          "text": "noch Geld zurückholen",
+          "start": 431.038,
+          "end": 432.391
+        }
+      ]
+    },
+    {
+      "id": "s95",
+      "start": 432.391,
+      "end": 437.981,
+      "captions": [
+        {
+          "text": "Wenn es jedes Jahr",
+          "start": 432.391,
+          "end": 434.068
+        },
+        {
+          "text": "ähnlich war,",
+          "start": 434.068,
+          "end": 435.186
+        },
+        {
+          "text": "sind das insgesamt",
+          "start": 435.186,
+          "end": 436.863
+        },
+        {
+          "text": "über 2.500 €",
+          "start": 436.863,
+          "end": 437.981
+        }
+      ]
+    },
+    {
+      "id": "s96",
+      "start": 437.981,
+      "end": 440.711,
+      "captions": [
+        {
+          "text": "Geld,",
+          "start": 437.981,
+          "end": 438.36
+        },
+        {
+          "text": "das sonst einfach",
+          "start": 438.36,
+          "end": 439.649
+        },
+        {
+          "text": "verfallen wäre",
+          "start": 439.649,
+          "end": 440.711
+        }
+      ]
+    },
+    {
+      "id": "s97",
+      "start": 440.711,
+      "end": 445.73,
+      "captions": [
+        {
+          "text": "Für Tim bedeutet das: Er",
+          "start": 440.711,
+          "end": 442.064
+        },
+        {
+          "text": "hat in den letzten Jahren",
+          "start": 442.064,
+          "end": 443.474
+        },
+        {
+          "text": "jedes Mal einen kleinen",
+          "start": 443.474,
+          "end": 444.771
+        },
+        {
+          "text": "Urlaub verschenkt",
+          "start": 444.771,
+          "end": 445.73
+        }
+      ]
+    },
+    {
+      "id": "s98",
+      "start": 445.73,
+      "end": 449.815,
+      "captions": [
+        {
+          "text": "Und das,",
+          "start": 445.73,
+          "end": 446.233
+        },
+        {
+          "text": "obwohl die ganze",
+          "start": 446.233,
+          "end": 447.238
+        },
+        {
+          "text": "Arbeit nur ein paar",
+          "start": 447.238,
+          "end": 448.432
+        },
+        {
+          "text": "Stunden gedauert hätte",
+          "start": 448.432,
+          "end": 449.815
+        }
+      ]
+    },
+    {
+      "id": "s99",
+      "start": 449.815,
+      "end": 452.08,
+      "captions": [
+        {
+          "text": "Und wie macht man",
+          "start": 449.815,
+          "end": 450.885
+        },
+        {
+          "text": "das am einfachsten?",
+          "start": 450.885,
+          "end": 452.08
+        }
+      ]
+    },
+    {
+      "id": "s100",
+      "start": 452.08,
+      "end": 459.027,
+      "captions": [
+        {
+          "text": "Mit dem kostenlosen",
+          "start": 452.08,
+          "end": 453.248
+        },
+        {
+          "text": "Elster‑Portal vom Finanzamt",
+          "start": 453.248,
+          "end": 454.908
+        },
+        {
+          "text": "oder einer Steuer‑App,",
+          "start": 454.908,
+          "end": 456.26
+        },
+        {
+          "text": "die dich Schritt für Schritt",
+          "start": 456.26,
+          "end": 457.982
+        },
+        {
+          "text": "durch alles führt",
+          "start": 457.982,
+          "end": 459.027
+        }
+      ]
+    },
+    {
+      "id": "s101",
+      "start": 459.027,
+      "end": 464.051,
+      "captions": [
+        {
+          "text": "Viele Daten wie dein Gehalt",
+          "start": 459.027,
+          "end": 460.938
+        },
+        {
+          "text": "sind dort sogar schon",
+          "start": 460.938,
+          "end": 462.424
+        },
+        {
+          "text": "automatisch eingetragen",
+          "start": 462.424,
+          "end": 464.051
+        }
+      ]
+    },
+    {
+      "id": "s102",
+      "start": 464.051,
+      "end": 469.678,
+      "captions": [
+        {
+          "text": "Und wenn du einmal",
+          "start": 464.051,
+          "end": 465.025
+        },
+        {
+          "text": "eine Steuererklärung",
+          "start": 465.025,
+          "end": 466.107
+        },
+        {
+          "text": "gemacht hast,",
+          "start": 466.107,
+          "end": 466.81
+        },
+        {
+          "text": "kannst du die Daten",
+          "start": 466.81,
+          "end": 467.838
+        },
+        {
+          "text": "im nächsten Jahr",
+          "start": 467.838,
+          "end": 468.704
+        },
+        {
+          "text": "einfach übernehmen",
+          "start": 468.704,
+          "end": 469.678
+        }
+      ]
+    },
+    {
+      "id": "s103",
+      "start": 469.678,
+      "end": 475.463,
+      "captions": [
+        {
+          "text": "Die Bearbeitung dauert",
+          "start": 469.678,
+          "end": 471.018
+        },
+        {
+          "text": "beim Finanzamt meist",
+          "start": 471.018,
+          "end": 472.236
+        },
+        {
+          "text": "nur ein paar Wochen,",
+          "start": 472.236,
+          "end": 473.453
+        },
+        {
+          "text": "dann ist das Geld",
+          "start": 473.453,
+          "end": 474.489
+        },
+        {
+          "text": "auf deinem Konto",
+          "start": 474.489,
+          "end": 475.463
+        }
+      ]
+    },
+    {
+      "id": "s104",
+      "start": 475.463,
+      "end": 481.374,
+      "captions": [
+        {
+          "text": "Sammle unterm Jahr",
+          "start": 475.463,
+          "end": 476.595
+        },
+        {
+          "text": "einfach alle Rechnungen",
+          "start": 476.595,
+          "end": 478.041
+        },
+        {
+          "text": "und Belege in einem Ordner",
+          "start": 478.041,
+          "end": 479.676
+        },
+        {
+          "text": "oder als Foto auf dem Handy",
+          "start": 479.676,
+          "end": 481.374
+        }
+      ]
+    },
+    {
+      "id": "s105",
+      "start": 481.374,
+      "end": 483.463,
+      "captions": [
+        {
+          "text": "Dann bist du",
+          "start": 481.374,
+          "end": 482.111
+        },
+        {
+          "text": "in einer Stunde fertig",
+          "start": 482.111,
+          "end": 483.463
+        }
+      ]
+    },
+    {
+      "id": "s106",
+      "start": 483.463,
+      "end": 490.756,
+      "captions": [
+        {
+          "text": "Und falls dir",
+          "start": 483.463,
+          "end": 484.366
+        },
+        {
+          "text": "das trotzdem zu viel ist:",
+          "start": 484.366,
+          "end": 486.102
+        },
+        {
+          "text": "Ein Lohnsteuerhilfeverein",
+          "start": 486.102,
+          "end": 487.839
+        },
+        {
+          "text": "hilft dir gegen",
+          "start": 487.839,
+          "end": 488.881
+        },
+        {
+          "text": "einen kleinen Jahresbeitrag",
+          "start": 488.881,
+          "end": 490.756
+        }
+      ]
+    },
+    {
+      "id": "s107",
+      "start": 490.756,
+      "end": 497.878,
+      "captions": [
+        {
+          "text": "Bei komplizierteren",
+          "start": 490.756,
+          "end": 491.997
+        },
+        {
+          "text": "Fällen lohnt sich auch",
+          "start": 491.997,
+          "end": 493.435
+        },
+        {
+          "text": "ein Steuerberater,",
+          "start": 493.435,
+          "end": 494.611
+        },
+        {
+          "text": "dessen Kosten du zum Teil",
+          "start": 494.611,
+          "end": 496.245
+        },
+        {
+          "text": "ebenfalls absetzen kannst",
+          "start": 496.245,
+          "end": 497.878
+        }
+      ]
+    },
+    {
+      "id": "s108",
+      "start": 497.878,
+      "end": 500.162,
+      "captions": [
+        {
+          "text": "Fassen wir die sieben",
+          "start": 497.878,
+          "end": 499.108
+        },
+        {
+          "text": "Schlösser zusammen",
+          "start": 499.108,
+          "end": 500.162
+        }
+      ]
+    },
+    {
+      "id": "s109",
+      "start": 500.162,
+      "end": 507.25,
+      "captions": [
+        {
+          "text": "Arbeitsweg, Homeoffice,",
+          "start": 500.162,
+          "end": 501.953
+        },
+        {
+          "text": "Arbeitsmittel, Fortbildung,",
+          "start": 501.953,
+          "end": 504.057
+        },
+        {
+          "text": "die kleinen Kosten,",
+          "start": 504.057,
+          "end": 505.536
+        },
+        {
+          "text": "Handwerker und Spenden",
+          "start": 505.536,
+          "end": 507.25
+        }
+      ]
+    },
+    {
+      "id": "s110",
+      "start": 507.25,
+      "end": 509.534,
+      "captions": [
+        {
+          "text": "Schon zwei oder drei davon",
+          "start": 507.25,
+          "end": 508.392
+        },
+        {
+          "text": "können sich richtig lohnen",
+          "start": 508.392,
+          "end": 509.534
+        }
+      ]
+    },
+    {
+      "id": "s111",
+      "start": 509.534,
+      "end": 515.667,
+      "captions": [
+        {
+          "text": "Tim hat übrigens direkt",
+          "start": 509.534,
+          "end": 511.101
+        },
+        {
+          "text": "alle vier Jahre nachgeholt",
+          "start": 511.101,
+          "end": 512.873
+        },
+        {
+          "text": "und sich vom Geld",
+          "start": 512.873,
+          "end": 514.032
+        },
+        {
+          "text": "einen Kurzurlaub gegönnt",
+          "start": 514.032,
+          "end": 515.667
+        }
+      ]
+    },
+    {
+      "id": "s112",
+      "start": 515.667,
+      "end": 522.078,
+      "captions": [
+        {
+          "text": "Und jetzt bist du dran: Machst",
+          "start": 515.667,
+          "end": 517.692
+        },
+        {
+          "text": "du eine Steuererklärung,",
+          "start": 517.692,
+          "end": 519.311
+        },
+        {
+          "text": "ja oder nein? Schreib",
+          "start": 519.311,
+          "end": 520.728
+        },
+        {
+          "text": "es in die Kommentare",
+          "start": 520.728,
+          "end": 522.078
+        }
+      ]
+    },
+    {
+      "id": "s113",
+      "start": 522.078,
+      "end": 526.67,
+      "captions": [
+        {
+          "text": "Und wenn du jemanden kennst,",
+          "start": 522.078,
+          "end": 523.665
+        },
+        {
+          "text": "der noch nie eine gemacht hat,",
+          "start": 523.665,
+          "end": 525.366
+        },
+        {
+          "text": "teile das Video mit ihm",
+          "start": 525.366,
+          "end": 526.67
+        }
+      ]
+    },
+    {
+      "id": "s114",
+      "start": 526.67,
+      "end": 530.725,
+      "captions": [
+        {
+          "text": "Wir sind HundeFinanzTV,",
+          "start": 526.67,
+          "end": 528.224
+        },
+        {
+          "text": "wir sehen uns morgen",
+          "start": 528.224,
+          "end": 529.576
+        },
+        {
+          "text": "im nächsten Video",
+          "start": 529.576,
+          "end": 530.725
+        }
+      ]
+    }
+  ]
+}

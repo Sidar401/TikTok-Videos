@@ -117,11 +117,11 @@ def kuehlschrank():
             f'<div style="position:absolute;left:0;right:0;top:210px;height:8px;background:#9aa3a8"></div><div style="position:absolute;right:26px;top:80px;width:14px;height:90px;border-radius:7px;background:#9aa3a8"></div>'
             f'<div style="position:absolute;left:70px;top:260px;width:280px;height:340px;background:#fff;border:4px solid #353a3d;transform:rotate(-3deg)">'
             f'<div style="position:absolute;inset:20px 20px 60px">{berg_mini}</div>'
-            f'<div id="ks-f" style="position:absolute;left:46px;bottom:62px;width:24px;height:220px;background:#e24b4b;transform-origin:bottom center;transform:scaleY(0.15)"></div></div></div>'
+            f'<div id="ks-f" style="position:absolute;left:46px;bottom:62px;width:24px;height:220px;background:#e24b4b;transform-origin:bottom center"></div></div></div>'
             f'<div style="display:flex;flex-direction:column;gap:30px;max-width:900px"><div id="ks-t" class="serif" style="font-size:90px;color:#111;line-height:1.05">Sophies Berg am Kühlschrank</div>'
             f'<div id="ks-s" style="font-weight:800;font-size:50px;color:#1f7a4d">jeden Monat ein Stück höher</div>'
             f'<div id="ks-u" style="font-weight:700;font-size:42px;color:#555c60">kleine Rituale halten dich dran</div></div></div>')
-    return dict(html=html, js=lambda t0, d: f'pop("#ks-k", {t0}); pop("#ks-t", {t0} + 0.3); pop("#ks-s", {t0} + 1.2); tl.to("#ks-f", {{ scaleY: 0.7, duration: 4, ease: "power1.inOut" }}, {t0} + 1.2); pop("#ks-u", {st("s96")});')
+    return dict(html=html, js=lambda t0, d: f'pop("#ks-k", {t0}); pop("#ks-t", {t0} + 0.3); pop("#ks-s", {t0} + 1.2); tl.fromTo("#ks-f", {{ scaleY: 0.15 }}, {{ scaleY: 0.7, duration: 4, ease: "power1.inOut" }}, {t0} + 1.2); pop("#ks-u", {st("s96")});')
 
 
 KAPITEL = {"k1": "Einstieg", "k2": "Die 4-%-Regel", "k3": "Die 3 Gipfel", "k4": "Zwischenstationen", "k5": "3 Hebel & Sophies Plan"}
@@ -151,7 +151,7 @@ SZENEN = [
                                                     ("Auto · Urlaub · Freunde & Familie", "s49", "k")], von="sparsam")),
     ("s50", "s53", "frei", berg("b4", "luxus", [("Gipfel 3: Luxus", None, "h"), ("4.000 € im Monat", "s51", "s"), ("= 1,2 Mio. €", "s52", "g"),
                                                    ("nur mit sehr hohem Einkommen", "s53", "r")], von="normal")),
-    ("s54", "s56", "frei", balken3(Z, "gi", [("Sparsam", "450.000 €", 200, GRUEN, None), ("Normal", "750.000 €", 330, BLAU, None), ("Luxus", "1,2 Mio. €", 530, LILA, None)],
+    ("s54", "s56", "frei", balken3(Z, "gi", [("Sparsam", "450.000 €", 140, GRUEN, None), ("Normal", "750.000 €", 240, BLAU, None), ("Luxus", "1,2 Mio. €", 350, LILA, None)],
                                      "über 700.000 € Unterschied", "s55")),
     ("s57", "s59", "zahl", dict(zahl="−100 € / Monat", sub="= 30.000 € weniger, die du brauchst", farbe=GRUEN)),
     # ---- Zwischenstationen ----
