@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="de" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Abril Fatface"; src: url("assets/fonts/abril-fatface.woff2") format("woff2"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #fff; }
+      #root { position: relative; width: 100%; height: 100%; background: #fff; font-family: Montserrat, sans-serif; }
+      .scene { position: absolute; inset: 0; }
+      .serif { font-family: "Abril Fatface", serif; }
+      #frame { position: absolute; inset: 0; border: 30px solid #DB8622; z-index: 10; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="3" data-width="1920" data-height="1080">
+<div id="v0" class="scene clip" data-start="0" data-duration="1" data-track-index="1">
+  <div style="position:absolute;left:70px;top:200px"><div style="position:relative;width:640px;height:640px"><div style="position:absolute;left:28%;top:8%;width:77px;height:90px;border-radius:8px;background:#e24b4b;transform:rotate(-15deg)"></div><div style="position:absolute;left:37%;top:8%;width:77px;height:90px;border-radius:8px;background:#1f7a4d;transform:rotate(2deg)"></div><div style="position:absolute;left:46%;top:8%;width:77px;height:90px;border-radius:8px;background:#DB8622;transform:rotate(-11deg)"></div><div style="position:absolute;left:55%;top:8%;width:77px;height:90px;border-radius:8px;background:#3d7be0;transform:rotate(6deg)"></div><div style="position:absolute;left:64%;top:8%;width:77px;height:90px;border-radius:8px;background:#9b59b6;transform:rotate(-7deg)"></div><div style="position:absolute;left:28%;top:-1%;width:77px;height:90px;border-radius:8px;background:#f2c418;transform:rotate(10deg)"></div><div style="position:absolute;left:37%;top:-1%;width:77px;height:90px;border-radius:8px;background:#e24b4b;transform:rotate(-3deg)"></div><div style="position:absolute;left:46%;top:-1%;width:77px;height:90px;border-radius:8px;background:#1f7a4d;transform:rotate(14deg)"></div><div style="position:absolute;left:55%;top:-1%;width:77px;height:90px;border-radius:8px;background:#3d7be0;transform:rotate(1deg)"></div><svg viewBox="0 0 100 100" style="width:100%;height:100%"><path d="M6 14 L20 14 L30 64 L80 64 L90 30 L24 30" fill="none" stroke="#353a3d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /><rect x="34" y="20" width="14" height="16" rx="2" fill="#2c9a63" /><rect x="52" y="14" width="12" height="22" rx="2" fill="#e24b4b" /><rect x="68" y="22" width="12" height="14" rx="2" fill="#f2c418" /><circle cx="36" cy="80" r="8" fill="#353a3d" /><circle cx="72" cy="80" r="8" fill="#353a3d" /></svg></div></div>
+  <div style="position:absolute;left:820px;top:160px;width:1020px">
+    <div class="serif" style="font-size:130px;line-height:1.02;color:#111">Der Supermarkt</div>
+    <div style="display:inline-block;margin:18px 0;padding:10px 50px;border-radius:34px;background:#e24b4b;color:#fff;font-weight:900;font-size:140px;transform:rotate(-3deg)">TRICKST</div>
+    <div class="serif" style="font-size:130px;line-height:1.02;color:#111">dich aus!</div>
+  </div>
+</div>
+<div id="v1" class="scene clip" data-start="1" data-duration="1" data-track-index="1">
+  <div style="position:absolute;left:90px;top:420px;border-left:16px solid #8a5a2b;border-right:16px solid #8a5a2b"><div style="display:flex;justify-content:space-between;align-items:center;width:760px;padding:22px 34px;border-bottom:16px solid #8a5a2b;background:#faf5ef"><span style="font-weight:900;font-size:50px;color:#e24b4b">Marke</span><span class="serif" style="font-size:64px;color:#e24b4b">3,49 €</span></div><div style="display:flex;justify-content:space-between;align-items:center;width:760px;padding:22px 34px;border-bottom:16px solid #8a5a2b;background:#faf5ef"><span style="font-weight:900;font-size:50px;color:#1f7a4d">Eigenmarke</span><span class="serif" style="font-size:64px;color:#1f7a4d">1,79 €</span></div></div>
+  <div style="position:absolute;left:290px;top:200px;width:320px;height:190px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><ellipse cx="50" cy="50" rx="46" ry="28" fill="#fff" stroke="#111" stroke-width="6" /><circle cx="50" cy="50" r="18" fill="#3d7be0" /><circle cx="50" cy="50" r="8" fill="#111" /><circle cx="56" cy="44" r="4" fill="#fff" /></svg></div>
+  <div style="position:absolute;left:970px;top:280px;width:880px">
+    <div class="serif" style="font-size:120px;line-height:1.05;color:#111">Achtung</div>
+    <div style="display:inline-block;margin-top:18px;padding:10px 46px;border-radius:30px;background:#DB8622;color:#fff;font-weight:900;font-size:92px">AUGENHÖHE!</div>
+    <div style="font-weight:900;font-size:60px;color:#353a3d;margin-top:30px">Hier zahlst du fast das Doppelte</div>
+  </div>
+</div>
+<div id="v2" class="scene clip" data-start="2" data-duration="1" data-track-index="1">
+  <div style="position:absolute;left:120px;top:320px;padding:40px 70px;background:#f2c418;border:10px solid #111;border-radius:28px;transform:rotate(-6deg)">
+    <span class="serif" style="font-size:260px;line-height:1;color:#111">4,<span style="font-size:160px;vertical-align:top">99</span></span></div>
+  <div style="position:absolute;left:880px;top:300px;width:960px">
+    <div class="serif" style="font-size:140px;line-height:1.02;color:#111">Fällst du</div>
+    <div class="serif" style="font-size:140px;line-height:1.02;color:#e24b4b">darauf rein?</div>
+    <div style="display:inline-block;margin-top:30px;padding:12px 46px;border-radius:30px;background:#1f7a4d;color:#fff;font-weight:900;font-size:64px">10 Supermarkt-Tricks</div>
+  </div>
+</div>
+      <div id="frame"></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#root", { opacity: 1 }, 0);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
