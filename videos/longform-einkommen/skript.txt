@@ -24,7 +24,7 @@ k2|Wer als Single darunter liegt, gilt in Deutschland offiziell als armutsgefäh
 k2|Das betrifft ungefähr jeden siebten Menschen in Deutschland.
 k2|Oft sind das Studierende, Alleinerziehende, Menschen in Teilzeit oder Rentner mit kleiner Rente.
 k2|Auf dieser Stufe reicht das Geld meistens gerade so für Miete, Essen und das Nötigste.
-k2|Eine kaputte Waschmaschine kann hier schon zu einem echten Problem werden.
+k2|Schon eine Nachzahlung bei den Nebenkosten kann hier zu einem echten Problem werden.
 k2|Sparen ist hier kaum möglich, deshalb gibt es zum Beispiel Wohngeld, das viele gar nicht beantragen, obwohl es ihnen zusteht.
 k2|Stufe zwei: zwischen eintausendvierhundert und zweitausenddreihundert Euro netto.
 k2|Das ist die untere Mitte.

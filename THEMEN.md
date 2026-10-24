@@ -31,4 +31,4 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | longform-zwei-leben | Leon vs. Felix 25→40, gleiches Gehalt, 137.000 € vs. −8.000 €, 5 Lehren | Duell-Spalten grün/rot |
 | longform-einkommen | Arm oder reich? Einkommens-Stufen in Deutschland, Median vs. Durchschnitt, Wege eine Stufe höher | Einkommens-Leiter |
 
-**Schon oft verwendet – nur noch sparsam:** Kassenzettel-Szene, Coffee-to-go-Beispiel, Abos, Dispo, „Auto zu teuer“, Notgroschen, ETF-Zinseszins mit 7 %.
+**Schon oft verwendet – nur noch sparsam:** Kassenzettel-Szene, kaputte Waschmaschine als Notfall-Beispiel, Coffee-to-go-Beispiel, Abos, Dispo, „Auto zu teuer“, Notgroschen, ETF-Zinseszins mit 7 %.
