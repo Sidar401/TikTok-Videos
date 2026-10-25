@@ -1,99 +1,44 @@
 #!/usr/bin/env python3
-"""Thumbnails (1920×1080) + TikTok-Cover (1080×1920) für longform-supermarkt. Neue Motive: voller Einkaufswagen, Regal mit Auge, Preisschild. Ohne Logo/Beagle.
-Aufruf: python3 build.py        -> 3 Varianten (je 1 s)
-        python3 build.py tiktok -> 9:16-Cover (Variante 1)"""
+"""Thumbnail (1920×1080, YouTube) + Cover (1080×1920, TikTok/Instagram) für longform-supermarkt – Stil „Dark Glow“.
+Aufruf: python3 build.py | python3 build.py tiktok"""
 import sys
 from pathlib import Path
 
 HERE = Path(__file__).parent
 sys.path.insert(0, str(HERE.parent.parent / "scripts"))
-from icons import WAGEN  # noqa: E402
-from longform import svg  # noqa: E402
-from longform import GRUEN, ORANGE, ROT  # noqa: E402
+from thumbs import GRUEN, OR, ROT, seite, titel  # noqa: E402
 
-LILA = "#9b59b6"
-AUGE = svg('<ellipse cx="50" cy="50" rx="46" ry="28" fill="#fff" stroke="#111" stroke-width="6" /><circle cx="50" cy="50" r="18" fill="#3d7be0" /><circle cx="50" cy="50" r="8" fill="#111" /><circle cx="56" cy="44" r="4" fill="#fff" />')
-
-
-def voller_wagen(gr):
-    farben = [ROT, GRUEN, ORANGE, "#3d7be0", LILA, "#f2c418", ROT, GRUEN, "#3d7be0"]
-    berg = "".join(f'<div style="position:absolute;left:{28 + (i % 5) * 9}%;top:{8 - (i // 5) * 9}%;width:{gr * 0.12:.0f}px;height:{gr * 0.14:.0f}px;border-radius:8px;background:{c};transform:rotate({(i * 17) % 30 - 15}deg)"></div>'
-                   for i, c in enumerate(farben))
-    return f'<div style="position:relative;width:{gr}px;height:{gr}px">{berg}{WAGEN}</div>'
+WAREN = [(150, 70, 80, 100, "#ffc533", -8), (225, 62, 90, 105, ROT, 4), (305, 66, 80, 100, "#2c9a63", -10), (375, 60, 85, 100, "#4d8ff0", 3),
+         (440, 92, 80, 92, "#b36bdb", 6), (165, 145, 92, 80, ROT, -6), (245, 150, 80, 80, GRUEN, 0), (310, 150, 75, 80, OR, 8),
+         (380, 150, 80, 80, "#4d8ff0", -3)]
 
 
-V1 = f"""
-  <div style="position:absolute;left:70px;top:200px">{voller_wagen(640)}</div>
-  <div style="position:absolute;left:820px;top:160px;width:1020px">
-    <div class="serif" style="font-size:130px;line-height:1.02;color:#111">Der Supermarkt</div>
-    <div style="display:inline-block;margin:18px 0;padding:10px 50px;border-radius:34px;background:{ROT};color:#fff;font-weight:900;font-size:140px;transform:rotate(-3deg)">TRICKST</div>
-    <div class="serif" style="font-size:130px;line-height:1.02;color:#111">dich aus!</div>
-  </div>
-"""
+def wagen(x, y, w):
+    ware = "".join(f'<g transform="rotate({r} {bx + bw / 2} {by + bh / 2})"><rect x="{bx}" y="{by}" width="{bw}" height="{bh}" rx="10" fill="{c}"/>'
+                   f'<rect x="{bx}" y="{by}" width="{bw}" height="{bh * 0.35}" rx="10" fill="#ffffff33"/><rect x="{bx + bw * 0.2}" y="{by + bh * 0.5}" width="{bw * 0.6}" height="{bh * 0.18}" rx="4" fill="#ffffffcc"/></g>'
+                   for bx, by, bw, bh, c, r in WAREN)
+    korb = "M20 40 L95 40 L150 300 L470 300 L530 150 L118 150"
+    return (f'<svg viewBox="0 0 560 420" style="position:absolute;left:{x}px;top:{y}px;width:{w}px;height:{w * 0.75}px;overflow:visible;z-index:2">'
+            f'<defs><filter id="gl" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="12"/></filter></defs>'
+            f'{ware}'
+            f'<path d="{korb}" fill="none" stroke="{OR}" stroke-width="34" stroke-linejoin="round" stroke-linecap="round" opacity="0.7" filter="url(#gl)"/>'
+            f'<path d="M128 195 L505 195 M138 245 L488 245" stroke="{OR}" stroke-width="8" opacity="0.5"/>'
+            f'<path d="{korb}" fill="none" stroke="{OR}" stroke-width="22" stroke-linejoin="round" stroke-linecap="round"/>'
+            f'<path d="{korb}" fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="round" opacity="0.5"/>'
+            f'<circle cx="190" cy="370" r="34" fill="#16191b" stroke="{OR}" stroke-width="14"/><circle cx="430" cy="370" r="34" fill="#16191b" stroke="{OR}" stroke-width="14"/></svg>')
 
-REGAL = "".join(f'<div style="display:flex;justify-content:space-between;align-items:center;width:760px;padding:22px 34px;border-bottom:16px solid #8a5a2b;background:#faf5ef">'
-                f'<span style="font-weight:900;font-size:50px;color:{c}">{t}</span><span class="serif" style="font-size:64px;color:{c}">{p}</span></div>'
-                for t, p, c in [("Marke", "3,49 €", ROT), ("Eigenmarke", "1,79 €", GRUEN)])
-V2 = f"""
-  <div style="position:absolute;left:90px;top:420px;border-left:16px solid #8a5a2b;border-right:16px solid #8a5a2b">{REGAL}</div>
-  <div style="position:absolute;left:290px;top:200px;width:320px;height:190px">{AUGE}</div>
-  <div style="position:absolute;left:970px;top:280px;width:880px">
-    <div class="serif" style="font-size:120px;line-height:1.05;color:#111">Achtung</div>
-    <div style="display:inline-block;margin-top:18px;padding:10px 46px;border-radius:30px;background:{ORANGE};color:#fff;font-weight:900;font-size:92px">AUGENHÖHE!</div>
-    <div style="font-weight:900;font-size:60px;color:#353a3d;margin-top:30px">Hier zahlst du fast das Doppelte</div>
-  </div>
-"""
 
-V3 = f"""
-  <div style="position:absolute;left:120px;top:320px;padding:40px 70px;background:#f2c418;border:10px solid #111;border-radius:28px;transform:rotate(-6deg)">
-    <span class="serif" style="font-size:260px;line-height:1;color:#111">4,<span style="font-size:160px;vertical-align:top">99</span></span></div>
-  <div style="position:absolute;left:880px;top:300px;width:960px">
-    <div class="serif" style="font-size:140px;line-height:1.02;color:#111">Fällst du</div>
-    <div class="serif" style="font-size:140px;line-height:1.02;color:{ROT}">darauf rein?</div>
-    <div style="display:inline-block;margin-top:30px;padding:12px 46px;border-radius:30px;background:{GRUEN};color:#fff;font-weight:900;font-size:64px">10 Supermarkt-Tricks</div>
-  </div>
-"""
+def preis(x, y, text, dreh=-8, gr=60):
+    return (f'<div style="position:absolute;left:{x}px;top:{y}px;padding:10px 34px 14px 54px;background:#ffc533;color:#111;font-weight:900;font-size:{gr}px;white-space:nowrap;'
+            f'clip-path:polygon(28px 0,100% 0,100% 100%,28px 100%,0 50%);transform:rotate({dreh}deg);filter:drop-shadow(0 0 20px #ffc53399);z-index:3">{text}</div>')
 
-TIKTOK = f"""
-  <div style="position:absolute;left:0;top:250px;width:1080px;text-align:center">
-    <div class="serif" style="font-size:120px;line-height:1.02;color:#111">Der Supermarkt</div>
-    <div style="display:inline-block;margin:16px 0;padding:8px 50px;border-radius:34px;background:{ROT};color:#fff;font-weight:900;font-size:130px;transform:rotate(-3deg)">TRICKST</div>
-    <div class="serif" style="font-size:120px;line-height:1.02;color:#111">dich aus!</div>
-  </div>
-  <div style="position:absolute;left:190px;top:900px">{voller_wagen(700)}</div>
-"""
 
-tiktok = len(sys.argv) > 1 and sys.argv[1] == "tiktok"
-W, H, rand = (1080, 1920, 26) if tiktok else (1920, 1080, 30)
-inhalt = [TIKTOK] if tiktok else [V1, V2, V3]
-szenen = "\n".join(f'<div id="v{i}" class="scene clip" data-start="{i}" data-duration="1" data-track-index="1">{h}</div>' for i, h in enumerate(inhalt))
-(HERE / "index.html").write_text(f"""<!doctype html>
-<html lang="de" data-resolution="{"portrait" if tiktok else "landscape"}">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width={W}, height={H}" />
-    <script src="assets/gsap.min.js"></script>
-    <style>
-      @font-face {{ font-family: "Abril Fatface"; src: url("assets/fonts/abril-fatface.woff2") format("woff2"); }}
-      * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-      html, body {{ width: {W}px; height: {H}px; overflow: hidden; background: #fff; }}
-      #root {{ position: relative; width: 100%; height: 100%; background: #fff; font-family: Montserrat, sans-serif; }}
-      .scene {{ position: absolute; inset: 0; }}
-      .serif {{ font-family: "Abril Fatface", serif; }}
-      #frame {{ position: absolute; inset: 0; border: {rand}px solid #DB8622; z-index: 10; }}
-    </style>
-  </head>
-  <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="{len(inhalt)}" data-width="{W}" data-height="{H}">
-{szenen}
-      <div id="frame"></div>
-    </div>
-    <script>
-      const tl = gsap.timeline({{ paused: true }});
-      tl.set("#root", {{ opacity: 1 }}, 0);
-      window.__timelines["main"] = tl;
-    </script>
-  </body>
-</html>
-""")
-print("gebaut:", "TikTok-Cover" if tiktok else "3 Thumbnails")
+YT = (wagen(40, 340, 720) + preis(470, 250, "nur 0,99 €?", -10)
+      + titel([("Der Supermarkt", "w"), ("TRICKST", "rot"), ("dich aus!", "w")], 790, 330, 114))
+
+TT = (titel([("Der Supermarkt", "w"), ("TRICKST", "rot"), ("dich aus!", "w")], 0, 220, 120, w=1080, align="center")
+      + wagen(140, 960, 800) + preis(600, 880, "nur 0,99 €?", -10, 56))
+
+if __name__ == "__main__":
+    tiktok = sys.argv[1:2] == ["tiktok"]
+    seite(HERE, [TT] if tiktok else [YT], tiktok=tiktok, glow=("30%", "50%"))
