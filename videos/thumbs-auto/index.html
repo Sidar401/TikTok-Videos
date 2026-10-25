@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0e1012; }
+      #root { position: relative; width: 100%; height: 100%; font-family: Montserrat, sans-serif; overflow: hidden;
+        background: radial-gradient(ellipse at 50% 62%, #ff8a1f40 0%, #ff8a1f10 35%, transparent 60%),
+                    radial-gradient(ellipse at 50% 50%, #1b1f22 0%, #0e1012 75%); }
+      #raster { position: absolute; inset: 0; background-image: linear-gradient(#ffffff0d 2px, transparent 2px), linear-gradient(90deg, #ffffff0d 2px, transparent 2px);
+        background-size: 96px 96px; }
+      .scene { position: absolute; inset: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="1" data-width="1080" data-height="1920">
+      <div id="raster"></div>
+<div id="v0" class="scene clip" data-start="0" data-duration="1" data-track-index="1"><div style="position:absolute;left:0px;top:160px;width:1080px;font-weight:900;font-size:112px;line-height:1.02;letter-spacing:-2px;text-align:center;display:flex;flex-direction:column;gap:14px;z-index:3"><div style="color:#fff;text-shadow:0 6px 0 #000">Dein Auto</div><div style="color:#fff;text-shadow:0 6px 0 #000">kostet dich</div><div><span style="display:inline-block;padding:4px 30px 10px;border-radius:22px;background:#ff4d4d;color:#fff;box-shadow:0 0 60px #ff4d4d88">MEHR</span></div><div style="color:#fff;text-shadow:0 6px 0 #000">als du denkst</div></div><svg viewBox="0 0 880 420" style="position:absolute;left:100px;top:1110px;width:880px;height:419.76px;overflow:visible;z-index:2"><defs><filter id="ag" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="14"/></filter><linearGradient id="af" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff6b5e"/><stop offset="1" stop-color="#b8241c"/></linearGradient></defs><path d="M40 300 L40 230 Q40 200 80 195 L170 190 L250 90 Q265 70 300 70 L560 70 Q600 70 625 95 L720 190 L800 200 Q840 205 840 240 L840 300 Z" fill="url(#af)"/><path d="M275 100 L410 100 L410 190 L205 190 Z M440 100 L570 100 Q590 100 605 115 L680 190 L440 190 Z" fill="#cfe6f5" opacity="0.85"/><path d="M40 300 L40 230 Q40 200 80 195 L170 190 L250 90 Q265 70 300 70 L560 70 Q600 70 625 95 L720 190 L800 200 Q840 205 840 240 L840 300 Z" fill="none" stroke="#ff4d4d" stroke-width="30" stroke-linejoin="round" opacity="0.6" filter="url(#ag)"/><path d="M40 300 L40 230 Q40 200 80 195 L170 190 L250 90 Q265 70 300 70 L560 70 Q600 70 625 95 L720 190 L800 200 Q840 205 840 240 L840 300 Z" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round" opacity="0.5"/><rect x="790" y="225" width="40" height="22" rx="8" fill="#ffc533"/><circle cx="210" cy="305" r="72" fill="#16191b" stroke="#353a3d" stroke-width="10"/><circle cx="210" cy="305" r="30" fill="#9aa3a8"/><circle cx="670" cy="305" r="72" fill="#16191b" stroke="#353a3d" stroke-width="10"/><circle cx="670" cy="305" r="30" fill="#9aa3a8"/></svg><div style="position:absolute;left:70px;top:1010px;padding:8px 30px 12px;border-radius:20px;background:#2a2f33;color:#ff4d4d;border:3px solid #ff4d4d;font-weight:900;font-size:46px;white-space:nowrap;box-shadow:0 0 40px #2a2f3399;transform:rotate(-6deg);z-index:3">Versicherung</div><div style="position:absolute;left:620px;top:980px;padding:8px 30px 12px;border-radius:20px;background:#2a2f33;color:#ff4d4d;border:3px solid #ff4d4d;font-weight:900;font-size:46px;white-space:nowrap;box-shadow:0 0 40px #2a2f3399;transform:rotate(5deg);z-index:3">Steuer</div><div style="position:absolute;left:90px;top:1520px;padding:8px 30px 12px;border-radius:20px;background:#2a2f33;color:#ff4d4d;border:3px solid #ff4d4d;font-weight:900;font-size:46px;white-space:nowrap;box-shadow:0 0 40px #2a2f3399;transform:rotate(4deg);z-index:3">Werkstatt</div><div style="position:absolute;left:430px;top:1560px;padding:8px 30px 12px;border-radius:20px;background:#2a2f33;color:#ff4d4d;border:3px solid #ff4d4d;font-weight:900;font-size:46px;white-space:nowrap;box-shadow:0 0 40px #2a2f3399;transform:rotate(-5deg);z-index:3">Reifen</div><div style="position:absolute;left:690px;top:1490px;padding:8px 30px 12px;border-radius:20px;background:#2a2f33;color:#ff4d4d;border:3px solid #ff4d4d;font-weight:900;font-size:46px;white-space:nowrap;box-shadow:0 0 40px #2a2f3399;transform:rotate(6deg);z-index:3">Wertverlust</div><div style="position:absolute;left:720px;top:730px;font-weight:900;font-size:150px;color:#ff4d4d;text-shadow:0 0 60px #ff4d4daa;transform:rotate(10deg);z-index:3">?€</div><div style="position:absolute;left:220px;top:1700px;padding:8px 30px 12px;border-radius:20px;background:#ff8a1f;color:#111;font-weight:900;font-size:64px;white-space:nowrap;box-shadow:0 0 40px #ff8a1f99;transform:rotate(0deg);z-index:3">≈ 5.000 € pro Jahr</div></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#root", { opacity: 1 }, 0);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
