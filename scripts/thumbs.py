@@ -2,7 +2,7 @@
 
 Dunkler Hintergrund mit Raster + orangem Leuchten, riesige fette Schrift (weiß + orange Akzente,
 oranger Kasten), leuchtende Chart-Linien mit Wert-Pillen, plastische Objekte (Geldbündel, Münzen, Kugeln),
-Kein Pfoten-Badge (Nutzer: weglassen), kein Rahmen, kein Beagle.
+Orange (Markenfarbe) muss dominieren: Titel-Kasten immer "box" (orange), Rot/Grün nur für kleine Akzente. Kein Pfoten-Badge (Nutzer: weglassen), kein Rahmen, kein Beagle.
 
   from thumbs import *            # in videos/thumbs-<name>/build.py
   seite(HERE, [V1, V2, V3])       # 1920×1080, je 1 s

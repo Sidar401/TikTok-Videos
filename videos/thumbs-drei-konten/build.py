@@ -17,7 +17,7 @@ def karte(x, y, dreh, name, sub, c1, c2, nr):
             f'<div style="font-weight:800;font-size:40px;color:#111c;margin-top:30px">{sub}</div></div>')
 
 
-TT = (titel([("Warum", "w"), ("EIN Konto", "rot"), ("nicht reicht", "w")], 0, 210, 124, w=1080, align="center")
+TT = (titel([("Warum", "w"), ("EIN Konto", "box"), ("nicht reicht", "w")], 0, 210, 124, w=1080, align="center")
       + karte(150, 830, -12, "Girokonto", "Gehalt & Fixkosten", "#4d8ff0", "#2a5cb8", 1)
       + karte(260, 1010, -3, "Tagesgeld", "Notgroschen + Zinsen", "#3ddc84", "#1f9a5a", 2)
       + karte(330, 1190, 7, "Depot", "ETF-Sparplan", "#ffa040", "#d46a00", 3)
