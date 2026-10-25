@@ -1,90 +1,58 @@
 #!/usr/bin/env python3
-"""Thumbnails (1920×1080) + TikTok-Cover (1080×1920) für longform-zwei-leben. Ohne Logo/Beagle.
-Aufruf: python3 build.py        -> 3 Varianten (je 1 s)
-        python3 build.py tiktok -> 9:16-Cover (Variante 1)"""
+"""Thumbnail (1920×1080, YouTube) + Cover (1080×1920, TikTok/Instagram) für longform-zwei-leben – Stil „Dark Glow“.
+Aufruf: python3 build.py | python3 build.py tiktok"""
 import sys
 from pathlib import Path
 
 HERE = Path(__file__).parent
 sys.path.insert(0, str(HERE.parent.parent / "scripts"))
+from thumbs import GRUEN, OR, ROT, chart, seite, titel  # noqa: E402
 from icons import person  # noqa: E402
-from longform import GRUEN, ORANGE, ROT  # noqa: E402
 
-LEON = person(GRUEN, "#353a3d")
-FELIX = person(ROT, "#8a5a2b")
-
-
-def fig(p, w):
-    return f'<div style="width:{w}px;height:{w * 1.3:.0f}px">{p}</div>'
+STEIG = [(0, 0.05), (0.2, 0.18), (0.35, 0.14), (0.55, 0.45), (0.7, 0.4), (0.85, 0.7), (1, 0.97)]
+FALL = [(0, 0.6), (0.2, 0.52), (0.35, 0.58), (0.55, 0.34), (0.7, 0.4), (0.85, 0.15), (1, 0.04)]
 
 
-def haelfte(p, name, betrag, farbe, w, h, fs, ausr="center"):
-    return (f'<div style="width:{w}px;height:{h}px;background:{farbe};display:flex;flex-direction:column;align-items:center;justify-content:{ausr};padding:110px 0;gap:10px;color:#fff">'
-            f'<div style="background:#fff;border-radius:50%;padding:20px">{fig(p, int(fs * 2.4))}</div>'
-            f'<div style="font-weight:900;font-size:{fs * 0.7:.0f}px">{name} mit 40</div>'
-            f'<div class="serif" style="font-size:{fs * 1.4:.0f}px;line-height:1">{betrag}</div></div>')
+def glow(x, y, farbe, gr=900):
+    return f'<div style="position:absolute;left:{x - gr / 2}px;top:{y - gr / 2}px;width:{gr}px;height:{gr}px;border-radius:50%;background:radial-gradient(circle,{farbe}33 0%,transparent 65%);z-index:0"></div>'
 
 
-V1 = f"""
-  <div style="position:absolute;inset:0;display:flex">{haelfte(LEON, "Leon", "+137.000 €", GRUEN, 960, 1080, 100)}{haelfte(FELIX, "Felix", "−8.000 €", ROT, 960, 1080, 100)}</div>
-  <div style="position:absolute;left:0;top:50px;width:1920px;text-align:center"><span style="display:inline-block;padding:14px 50px;border-radius:30px;background:#fff;color:#111;font-weight:900;font-size:70px;transform:rotate(-2deg)">Gleiches Gehalt!</span></div>
-"""
+def avatar(x, y, farbe, haar, gr=230):
+    return (f'<div style="position:absolute;left:{x}px;top:{y}px;width:{gr}px;height:{gr}px;border-radius:50%;background:#1b1f22;border:8px solid {farbe};'
+            f'box-shadow:0 0 60px {farbe}99;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;z-index:2">'
+            f'<div style="width:78%;height:85%">{person(farbe, haar)}</div></div>')
 
-V2 = f"""
-  <div class="serif" style="position:absolute;left:0;top:90px;width:1920px;text-align:center;font-size:130px;line-height:1.05;color:#111">
-    <span style="color:{GRUEN}">Reich</span> mit 40 oder<br/><span style="color:{ROT}">pleite</span> mit 40?</div>
-  <div style="position:absolute;left:0;top:500px;width:1920px;display:flex;justify-content:center;align-items:flex-end;gap:160px">
-    <div style="display:flex;flex-direction:column;align-items:center;gap:14px">{fig(LEON, 300)}<div style="padding:8px 36px;border-radius:30px;background:{GRUEN};color:#fff;font-weight:900;font-size:56px">Leon</div></div>
-    <div class="serif" style="font-size:140px;color:{ORANGE};margin-bottom:120px">vs</div>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:14px">{fig(FELIX, 300)}<div style="padding:8px 36px;border-radius:30px;background:{ROT};color:#fff;font-weight:900;font-size:56px">Felix</div></div>
-  </div>
-"""
 
-V3 = f"""
-  <div style="position:absolute;left:80px;top:230px;display:flex;align-items:flex-end;gap:10px">{fig(LEON, 330)}{fig(FELIX, 330)}</div>
-  <div style="position:absolute;left:790px;top:250px;width:1060px;text-align:center">
-    <div class="serif" style="font-size:220px;line-height:1;color:{GRUEN};white-space:nowrap">145.000&nbsp;€</div>
-    <div style="font-weight:900;font-size:90px;color:#111;margin-top:20px">Unterschied</div>
-    <div style="display:inline-block;margin-top:30px;padding:14px 46px;border-radius:30px;background:{ORANGE};color:#fff;font-weight:900;font-size:68px">bei GLEICHEM Gehalt</div>
-  </div>
-"""
+def zahl(x, y, text, farbe, gr=118, w=None, align="left"):
+    ww = f"width:{w}px;" if w else ""
+    return (f'<div style="position:absolute;left:{x}px;top:{y}px;{ww}text-align:{align};font-weight:900;font-size:{gr}px;line-height:1;white-space:nowrap;'
+            f'color:{farbe};text-shadow:0 0 50px {farbe}aa;z-index:3">{text}</div>')
 
-TIKTOK = f"""
-  <div style="position:absolute;inset:0;display:flex;flex-direction:column">{haelfte(LEON, "Leon", "+137.000 €", GRUEN, 1080, 960, 95, "flex-end")}{haelfte(FELIX, "Felix", "−8.000 €", ROT, 1080, 960, 95, "flex-start")}</div>
-  <div style="position:absolute;left:0;top:900px;width:1080px;text-align:center"><span style="display:inline-block;padding:16px 50px;border-radius:30px;background:#fff;color:#111;font-weight:900;font-size:76px;box-shadow:0 8px 0 rgba(0,0,0,0.15)">Gleiches Gehalt!</span></div>
-"""
 
-tiktok = len(sys.argv) > 1 and sys.argv[1] == "tiktok"
-W, H, rand = (1080, 1920, 26) if tiktok else (1920, 1080, 30)
-inhalt = [TIKTOK] if tiktok else [V1, V2, V3]
-szenen = "\n".join(f'<div id="v{i}" class="scene clip" data-start="{i}" data-duration="1" data-track-index="1">{h}</div>' for i, h in enumerate(inhalt))
-(HERE / "index.html").write_text(f"""<!doctype html>
-<html lang="de" data-resolution="{"portrait" if tiktok else "landscape"}">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width={W}, height={H}" />
-    <script src="assets/gsap.min.js"></script>
-    <style>
-      @font-face {{ font-family: "Abril Fatface"; src: url("assets/fonts/abril-fatface.woff2") format("woff2"); }}
-      * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-      html, body {{ width: {W}px; height: {H}px; overflow: hidden; background: #fff; }}
-      #root {{ position: relative; width: 100%; height: 100%; background: #fff; font-family: Montserrat, sans-serif; }}
-      .scene {{ position: absolute; inset: 0; }}
-      .serif {{ font-family: "Abril Fatface", serif; }}
-      #frame {{ position: absolute; inset: 0; border: {rand}px solid #DB8622; z-index: 10; }}
-    </style>
-  </head>
-  <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="{len(inhalt)}" data-width="{W}" data-height="{H}">
-{szenen}
-      <div id="frame"></div>
-    </div>
-    <script>
-      const tl = gsap.timeline({{ paused: true }});
-      tl.set("#root", {{ opacity: 1 }}, 0);
-      window.__timelines["main"] = tl;
-    </script>
-  </body>
-</html>
-""")
-print("gebaut:", "TikTok-Cover" if tiktok else "3 Thumbnails")
+def name(x, y, text, gr=58, w=None, align="left"):
+    ww = f"width:{w}px;" if w else ""
+    return f'<div style="position:absolute;left:{x}px;top:{y}px;{ww}text-align:{align};font-weight:900;font-size:{gr}px;color:#fff;text-shadow:0 5px 0 #000;z-index:3">{text}</div>'
+
+
+VS = (f'<div style="position:absolute;left:957px;top:220px;width:6px;height:820px;background:linear-gradient({OR}00,{OR},{OR}00);box-shadow:0 0 30px {OR};z-index:1"></div>'
+      f'<div style="position:absolute;left:890px;top:520px;width:140px;height:140px;border-radius:50%;background:{OR};color:#111;font-weight:900;font-size:62px;'
+      f'display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 10px #0e1012, 0 0 60px {OR};z-index:4">VS</div>')
+
+YT = (glow(480, 600, GRUEN) + glow(1440, 600, ROT)
+      + titel([("Gleiches Gehalt!", "box")], 0, 40, 100, w=1920, align="center")
+      + VS
+      + avatar(100, 250, GRUEN, "#353a3d") + name(370, 300, "Leon mit 40") + zahl(100, 520, "+137.000 €", GRUEN)
+      + chart(STEIG, 110, 720, 760, 260, GRUEN)
+      + avatar(1590, 250, ROT, "#8a5a2b") + name(1060, 300, "Felix mit 40", w=500, align="right") + zahl(1060, 520, "−8.000 €", ROT, w=760, align="right")
+      + chart(FALL, 1050, 720, 760, 260, ROT))
+
+TT = (glow(540, 480, GRUEN, 1000) + glow(540, 1450, ROT, 1000)
+      + avatar(110, 230, GRUEN, "#353a3d", 250) + name(400, 280, "Leon mit 40", 64) + zahl(400, 380, "+137.000 €", GRUEN, 100)
+      + chart(STEIG, 110, 560, 860, 220, GRUEN)
+      + titel([("Gleiches Gehalt!", "box")], 0, 880, 104, w=1080, align="center")
+      + avatar(110, 1130, ROT, "#8a5a2b", 250) + name(400, 1180, "Felix mit 40", 64) + zahl(400, 1280, "−8.000 €", ROT, 100)
+      + chart(FALL, 110, 1460, 860, 220, ROT))
+
+if __name__ == "__main__":
+    tiktok = sys.argv[1:2] == ["tiktok"]
+    seite(HERE, [TT] if tiktok else [YT], tiktok=tiktok, glow=("50%", "50%"))
