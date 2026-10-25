@@ -1,7 +1,7 @@
 """Kasse: kürzeste Schlange vs. wenigste Artikel – Simulation mit Sprecher.
 
 Aufruf:  FONT_DIR=... AUDIO_DIR=... python3 render.py [out.mp4]
-Ohne AUDIO_DIR wird ein stummes Vorschauvideo gerendert.
+Ohne AUDIO_DIR: nur Untertitel und Effekte, ohne Sprecher.
 """
 import math
 import os
@@ -615,12 +615,14 @@ def main():
     total = int(DURATION * FPS)
     cmd = ["ffmpeg", "-y", "-v", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
            "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"]
+    sfx = os.path.join(os.path.dirname(OUT) or ".", "_sfx.wav")
+    make_sfx(sfx)
     if AUDIO_DIR:
-        sfx = os.path.join(os.path.dirname(OUT) or ".", "_sfx.wav")
-        make_sfx(sfx)
         a_in, filt = audio_args(sfx)
-        cmd += a_in + ["-filter_complex", filt, "-map", "0:v", "-map", "[aout]",
-                       "-c:a", "aac", "-b:a", "192k"]
+        cmd += a_in + ["-filter_complex", filt, "-map", "0:v", "-map", "[aout]"]
+    else:
+        cmd += ["-i", sfx, "-map", "0:v", "-map", "1:a"]
+    cmd += ["-c:a", "aac", "-b:a", "192k"]
     cmd += ["-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p",
             "-t", f"{DURATION:.2f}", "-movflags", "+faststart", OUT]
     ff = subprocess.Popen(cmd, stdin=subprocess.PIPE)
@@ -631,6 +633,7 @@ def main():
                 print(f"{k}/{total}", flush=True)
     ff.stdin.close()
     ff.wait()
+    os.remove(sfx)
     print("fertig:", OUT, f"{DURATION:.1f}s")
 
 
