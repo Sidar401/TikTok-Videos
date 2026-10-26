@@ -117,167 +117,168 @@
         z-index: 5;
       }
       #brand-dog { width: 84px; height: 84px; }
+
+      .scene { position: absolute; inset: 0; top: 0; height: 1920px; display: block; }
+      .tile { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 30px 10px; border-radius: 30px; background: #faf5ef; }
+      .tile svg { width: 230px; height: 230px; }
+      .tile span { font-family: Montserrat; font-weight: 800; font-size: 54px; color: #111; }
+      .big { font-family: var(--font-display); text-align: center; color: #111; }
+      .cap span { max-width: 990px; font-size: 50px; }
     </style>
   </head>
   <body>
-    <div
-      id="root"
-      data-composition-id="main"
-      data-start="0"
-      data-duration="15"
-      data-width="1080"
-      data-height="1920"
-    >
-      <!-- ============ SZENEN ============ -->
-
-      <!-- 1: Geldsack -->
-      <div id="s1" class="scene clip" data-start="0" data-duration="3" data-track-index="1">
-        <div id="s1-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <g id="s1-coins">
-              <g fill="#f2c418" stroke="#c99a06" stroke-width="3">
-                <rect x="250" y="300" width="110" height="22" rx="8" />
-                <rect x="250" y="276" width="110" height="22" rx="8" />
-                <rect x="250" y="252" width="110" height="22" rx="8" />
-                <rect x="250" y="228" width="110" height="22" rx="8" />
-                <rect x="250" y="204" width="110" height="22" rx="8" />
-                <rect x="265" y="180" width="110" height="22" rx="8" />
-                <rect x="258" y="156" width="110" height="22" rx="8" />
-              </g>
-            </g>
-            <g id="s1-bag">
-              <path d="M150 110 C120 70 140 50 160 70 C175 50 205 50 220 70 C240 50 260 70 230 110 Z" fill="#1f7a4d" />
-              <rect x="145" y="104" width="90" height="18" rx="9" fill="#f2c418" />
-              <path d="M150 120 C60 170 40 330 120 340 L260 340 C340 330 320 170 230 120 Z" fill="#1f7a4d" />
-              <path d="M155 135 C90 180 75 300 125 325" fill="none" stroke="#2c9a63" stroke-width="10" stroke-linecap="round" />
-              <circle cx="190" cy="245" r="62" fill="#f2c418" />
-              <text x="190" y="272" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="80" fill="#1f7a4d">€</text>
-            </g>
-            <g fill="#f2c418" stroke="#c99a06" stroke-width="3">
-              <ellipse cx="80" cy="345" rx="34" ry="12" />
-              <ellipse cx="110" cy="360" rx="34" ry="12" />
-            </g>
-          </svg>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="40.59" data-width="1080" data-height="1920">
+      <div id="hook" class="scene clip" data-start="0.0" data-duration="3.914" data-track-index="1"><div id="hk-t" style="position:absolute;top:300px;left:40px;width:1000px;text-align:center;font-family:Montserrat;font-weight:800;font-size:100px;line-height:1.05;color:#111">Sparen, ohne es<br /><span style="color:#DB8622">zu merken?</span></div><div id="hk-s" style="position:absolute;left:290px;top:620px;width:500px;height:433px;"><svg viewBox="0 0 300 260" style="width:100%;height:100%">
+  <ellipse cx="150" cy="150" rx="120" ry="90" fill="#f4a6b5" />
+  <circle cx="250" cy="140" r="38" fill="#f4a6b5" /><ellipse cx="265" cy="140" rx="20" ry="16" fill="#e98a9c" />
+  <circle cx="258" cy="136" r="4" fill="#8a3a4a" /><circle cx="272" cy="136" r="4" fill="#8a3a4a" />
+  <circle cx="215" cy="110" r="7" fill="#111" /><path d="M200 70 L225 40 L235 80 Z" fill="#e98a9c" />
+  <rect x="85" y="225" width="30" height="34" rx="10" fill="#e98a9c" /><rect x="180" y="225" width="30" height="34" rx="10" fill="#e98a9c" />
+  <rect x="120" y="62" width="70" height="12" rx="6" fill="#8a3a4a" />
+</svg></div>
+      </div>
+      <div id="app" class="scene clip" data-start="3.914" data-duration="4.958" data-track-index="1"><div id="ap-h" style="position:absolute;left:390px;top:330px;width:300px;height:560px;"><svg viewBox="0 0 300 560" style="width:100%;height:100%">
+  <rect x="5" y="5" width="290" height="550" rx="44" fill="#353a3d" /><rect x="22" y="40" width="256" height="480" rx="20" fill="#fff" />
+  <rect x="110" y="18" width="80" height="12" rx="6" fill="#1a1a1a" />
+  <text x="150" y="110" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="30" fill="#111">Banking-App</text>
+  <rect x="45" y="170" width="210" height="70" rx="16" fill="#faf5ef" />
+  <text x="62" y="215" font-family="Montserrat" font-weight="800" font-size="24" fill="#111">Aufrunden</text>
+  <rect x="190" y="188" width="56" height="34" rx="17" fill="#1f7a4d" /><circle id="ap-k" cx="229" cy="205" r="13" fill="#fff" />
+  <rect x="45" y="270" width="210" height="14" rx="7" fill="#eee" /><rect x="45" y="305" width="160" height="14" rx="7" fill="#eee" /></svg></div><div id="ap-t" class="big" style="position:absolute;left:0;top:960px;width:1080px;font-size:100px;line-height:1.05;color:#1f7a4d">Aufrunden: AN</div>
+      </div>
+      <div id="bon" class="scene clip" data-start="8.872" data-duration="7.902" data-track-index="1"><div id="bo-b" style="position:absolute;left:150px;top:340px;width:460px;padding:36px 40px;background:#fff;border:6px solid #353a3d;border-radius:16px;font-family:Montserrat;font-weight:800;color:#111"><div style="font-size:40px;color:#888">Einkauf</div><div id="bo-a" style="font-size:96px">12,30 €</div><div id="bo-n" style="font-size:96px;color:#DB8622">13,00 €</div></div><div id="bo-s" style="position:absolute;left:640px;top:560px;width:380px;height:329px;"><svg viewBox="0 0 300 260" style="width:100%;height:100%">
+  <ellipse cx="150" cy="150" rx="120" ry="90" fill="#f4a6b5" />
+  <circle cx="250" cy="140" r="38" fill="#f4a6b5" /><ellipse cx="265" cy="140" rx="20" ry="16" fill="#e98a9c" />
+  <circle cx="258" cy="136" r="4" fill="#8a3a4a" /><circle cx="272" cy="136" r="4" fill="#8a3a4a" />
+  <circle cx="215" cy="110" r="7" fill="#111" /><path d="M200 70 L225 40 L235 80 Z" fill="#e98a9c" />
+  <rect x="85" y="225" width="30" height="34" rx="10" fill="#e98a9c" /><rect x="180" y="225" width="30" height="34" rx="10" fill="#e98a9c" />
+  <rect x="120" y="62" width="70" height="12" rx="6" fill="#8a3a4a" />
+</svg></div><div id="bo-m" style="position:absolute;left:760px;top:360px;width:130px;height:130px;"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><circle cx="50" cy="50" r="46" fill="#f2c418" stroke="#c99a06" stroke-width="6" /><text x="50" y="62" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="30" fill="#8a5a00">0,70</text></svg></div><div id="bo-t" style="position:absolute;left:60px;top:1010px;width:960px;text-align:center;font-family:Montserrat;font-weight:800;font-size:66px;line-height:1.15;color:#1f7a4d">+0,70 € aufs Sparkonto</div>
+      </div>
+      <div id="jahr" class="scene clip" data-start="16.774" data-duration="6.09" data-track-index="1"><div id="ja-a" style="position:absolute;left:60px;top:400px;width:960px;text-align:center;font-family:Montserrat;font-weight:800;font-size:70px;line-height:1.15;color:#555c60">1 Kartenkauf pro Tag</div><div id="ja-z" class="big" style="position:absolute;left:0;top:560px;width:1080px;font-size:200px;line-height:1.05;color:#1f7a4d">0 €</div><div id="ja-s" style="position:absolute;left:60px;top:840px;width:960px;text-align:center;font-family:Montserrat;font-weight:800;font-size:70px;line-height:1.15;color:#111">pro Jahr – nebenbei</div>
+      </div>
+      <div id="stufen" class="scene clip" data-start="22.864" data-duration="3.597" data-track-index="1"><div id="st-t" class="big" style="position:absolute;left:0;top:330px;width:1080px;font-size:120px;line-height:1.05;color:#DB8622">Noch mehr?</div><div id="st-a" style="position:absolute;left:0;width:1080px;display:flex;justify-content:center;top:600px"><span style="padding:16px 34px;border-radius:24px;background:#1f7a4d;color:#fff;font-family:Montserrat;font-weight:800;font-size:70px">auf 1 €</span></div><div id="st-b" style="position:absolute;left:0;width:1080px;display:flex;justify-content:center;top:760px"><span style="padding:16px 34px;border-radius:24px;background:#1f7a4d;color:#fff;font-family:Montserrat;font-weight:800;font-size:80px">auf 5 €</span></div><div id="st-c" style="position:absolute;left:0;width:1080px;display:flex;justify-content:center;top:940px"><span style="padding:16px 34px;border-radius:24px;background:#1f7a4d;color:#fff;font-family:Montserrat;font-weight:800;font-size:90px">auf 10 €</span></div>
+      </div>
+      <div id="check" class="scene clip" data-start="26.461" data-duration="3.731" data-track-index="1"><div id="ch-h" style="position:absolute;left:390px;top:330px;width:300px;height:560px;"><svg viewBox="0 0 300 560" style="width:100%;height:100%">
+  <rect x="5" y="5" width="290" height="550" rx="44" fill="#353a3d" /><rect x="22" y="40" width="256" height="480" rx="20" fill="#fff" />
+  <rect x="110" y="18" width="80" height="12" rx="6" fill="#1a1a1a" />
+  <text x="150" y="110" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="30" fill="#111">Banking-App</text>
+  <rect x="45" y="170" width="210" height="70" rx="16" fill="#faf5ef" />
+  <text x="62" y="215" font-family="Montserrat" font-weight="800" font-size="24" fill="#111">Aufrunden</text>
+  <rect x="190" y="188" width="56" height="34" rx="17" fill="#1f7a4d" /><circle id="ap-k" cx="229" cy="205" r="13" fill="#fff" />
+  <rect x="45" y="270" width="210" height="14" rx="7" fill="#eee" /><rect x="45" y="305" width="160" height="14" rx="7" fill="#eee" /></svg></div><div id="ch-t" class="big" style="position:absolute;left:0;top:960px;width:1080px;font-size:100px;line-height:1.05;color:#DB8622">Check deine App!</div>
+      </div>
+      <div id="teilen" class="scene clip" data-start="30.192" data-duration="4.581" data-track-index="1"><div id="te-i" style="position:absolute;left:340px;top:380px;width:400px;height:400px;"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><circle cx="50" cy="50" r="46" fill="#DB8622" /><path d="M28 70 Q31 42 56 40 L56 26 L78 49 L56 72 L56 57 Q38 56 28 70 Z" fill="#fff" /></svg></div><div id="te-t" class="big" style="position:absolute;left:0;top:880px;width:1080px;font-size:90px;line-height:1.05;color:#DB8622">Schick's deinem<br />Spar-Muffel!</div>
+      </div>
+      <div id="outro" class="scene clip" data-start="34.773" data-duration="5.817" data-track-index="1">
+        <div style="position:absolute;left:0;top:330px;width:1080px;display:flex;flex-direction:column;align-items:center;gap:30px">
+          <div id="outro-dog" style="width:520px;height:520px"><img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:contain" /></div>
+          <div id="outro-name" style="font-family:Montserrat;font-weight:800;font-size:92px;color:#111">HundeFinanzTV</div>
+          <div id="outro-btn" style="padding:18px 64px;border-radius:60px;background:var(--brand);color:#fff;font-family:Montserrat;font-weight:700;font-size:56px">+ Folgen</div>
         </div>
       </div>
 
-      <!-- 2: Zielscheibe -->
-      <div id="s2" class="scene clip" data-start="3" data-duration="3" data-track-index="1">
-        <div id="s2-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <circle cx="190" cy="210" r="160" fill="#e24b4b" />
-            <circle cx="190" cy="210" r="125" fill="#f6efe1" />
-            <circle cx="190" cy="210" r="92" fill="#e24b4b" />
-            <circle cx="190" cy="210" r="58" fill="#f6efe1" />
-            <circle cx="190" cy="210" r="26" fill="#e24b4b" />
-            <g id="s2-arrow">
-              <line x1="196" y1="204" x2="340" y2="60" stroke="#555" stroke-width="10" stroke-linecap="round" />
-              <path d="M320 50 L370 30 L350 80 L340 60 Z" fill="#e8742c" />
-              <path d="M335 35 L375 15 L365 45 Z" fill="#e8742c" />
-            </g>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 3: Zahlen-Vergleich -->
-      <div id="s3" class="scene clip" data-start="6" data-duration="3.5" data-track-index="1">
-        <div class="cmp">
-          <div id="s3-h1" style="grid-column:1"><div class="head">Konto</div><div class="sub">0 %</div></div>
-          <div class="divider"></div>
-          <div id="s3-h2" style="grid-column:3"><div class="head">ETF</div><div class="sub">~7 %</div></div>
-          <div class="arrow" style="grid-column:1">
-            <svg viewBox="0 0 70 110"><path id="s3-a1" d="M40 6 C10 30 8 70 40 98" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" /><path d="M24 92 L42 100 L44 80" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></svg>
-          </div>
-          <div class="arrow" style="grid-column:3">
-            <svg viewBox="0 0 70 110"><path id="s3-a2" d="M30 6 C60 30 62 70 30 98" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" /><path d="M46 92 L28 100 L26 80" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></svg>
-          </div>
-          <div id="s3-n1" class="num green" style="grid-column:1">36.000€</div>
-          <div style="grid-column:3">
-            <div id="s3-n2" class="num green">36.000€</div>
-            <div id="s3-n3" class="num gold">77.000€</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4: Rendite-Chart -->
-      <div id="s4" class="scene clip" data-start="9.5" data-duration="3" data-track-index="1">
-        <div class="art">
-          <svg viewBox="0 0 400 400">
-            <path d="M40 40 L40 340 L370 340" fill="none" stroke="#111" stroke-width="8" stroke-linecap="square" />
-            <path id="s4-solid" d="M60 300 C140 285 220 280 290 255" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" />
-            <path id="s4-dots" d="M60 285 C150 250 230 190 300 95" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 16" />
-            <text id="s4-label" class="chart-label" x="70" y="100" font-size="70" fill="#1f7a4d">~7%</text>
-            <g id="s4-check">
-              <circle cx="320" cy="80" r="42" fill="#111" />
-              <path d="M300 82 L315 97 L342 66" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-            </g>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 5: Outro -->
-      <div id="s5" class="scene clip" data-start="12.5" data-duration="2.5" data-track-index="1">
-        <div id="s5-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <circle cx="200" cy="200" r="150" fill="#DB8622" />
-            <path d="M120 260 L180 200 L220 235 L290 150" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M250 145 L295 145 L295 190" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </div>
-      </div>
-
+      <div id="brand"><span>HundeFinanzTV</span></div>
       <div id="frame"></div>
 
-      <!-- ============ UNTERTITEL ============ -->
       <div id="captions" data-track-kind="captions">
-        <div id="c1" class="cap clip" data-start="0" data-duration="1.6" data-track-index="2"><span>du hast 100 € im Monat übrig</span></div>
-        <div id="c2" class="cap clip" data-start="1.6" data-duration="1.4" data-track-index="2"><span>und fragst dich, was du damit machst</span></div>
-        <div id="c3" class="cap clip" data-start="3" data-duration="3" data-track-index="2"><span>die Frage aller Fragen</span></div>
-        <div id="c4" class="cap clip" data-start="6" data-duration="1.7" data-track-index="2"><span>100 € im Monat, 30 Jahre lang</span></div>
-        <div id="c5" class="cap clip" data-start="7.7" data-duration="1.8" data-track-index="2"><span>auf dem Konto bleiben es 36.000 €</span></div>
-        <div id="c6" class="cap clip" data-start="9.5" data-duration="3" data-track-index="2"><span>im ETF kommen ~77.000 € Rendite dazu</span></div>
-        <div id="c7" class="cap clip" data-start="12.5" data-duration="2.5" data-track-index="2"><span>folg mir für mehr Geld-Tipps</span></div>
+        <div id="c1" class="cap clip" data-start="0.0" data-duration="0.528" data-track-index="2"><span>Sparen,</span></div>
+        <div id="c2" class="cap clip" data-start="0.528" data-duration="1.803" data-track-index="2"><span>ohne es zu merken? Das geht</span></div>
+        <div id="c3" class="cap clip" data-start="2.331" data-duration="1.583" data-track-index="2"><span>mit dem Aufrunden‑Trick</span></div>
+        <div id="c4" class="cap clip" data-start="3.914" data-duration="1.493" data-track-index="2"><span>Viele Banking‑Apps können</span></div>
+        <div id="c5" class="cap clip" data-start="5.407" data-duration="1.644" data-track-index="2"><span>jeden Einkauf automatisch</span></div>
+        <div id="c6" class="cap clip" data-start="7.051" data-duration="1.821" data-track-index="2"><span>auf den vollen Euro aufrunden</span></div>
+        <div id="c7" class="cap clip" data-start="8.872" data-duration="2.736" data-track-index="2"><span>Kostet dein Einkauf 12,30 €,</span></div>
+        <div id="c8" class="cap clip" data-start="11.608" data-duration="1.942" data-track-index="2"><span>werden 13 € abgebucht</span></div>
+        <div id="c9" class="cap clip" data-start="13.55" data-duration="1.745" data-track-index="2"><span>Die 70 Cent landen direkt</span></div>
+        <div id="c10" class="cap clip" data-start="15.295" data-duration="1.479" data-track-index="2"><span>auf deinem Sparkonto</span></div>
+        <div id="c11" class="cap clip" data-start="16.774" data-duration="2.313" data-track-index="2"><span>Aber bei etwa einem Kartenkauf</span></div>
+        <div id="c12" class="cap clip" data-start="19.087" data-duration="1.696" data-track-index="2"><span>pro Tag kommen im Jahr</span></div>
+        <div id="c13" class="cap clip" data-start="20.783" data-duration="2.081" data-track-index="2"><span>schnell rund 180 € zusammen</span></div>
+        <div id="c14" class="cap clip" data-start="22.864" data-duration="1.877" data-track-index="2"><span>Manche Apps runden sogar</span></div>
+        <div id="c15" class="cap clip" data-start="24.741" data-duration="1.72" data-track-index="2"><span>auf 5 oder 10 € auf</span></div>
+        <div id="c16" class="cap clip" data-start="26.461" data-duration="1.056" data-track-index="2"><span>Schau einfach mal</span></div>
+        <div id="c17" class="cap clip" data-start="27.517" data-duration="1.305" data-track-index="2"><span>in deine Banking‑App,</span></div>
+        <div id="c18" class="cap clip" data-start="28.822" data-duration="1.37" data-track-index="2"><span>ob es die Funktion gibt</span></div>
+        <div id="c19" class="cap clip" data-start="30.192" data-duration="1.087" data-track-index="2"><span>Kennst du jemanden,</span></div>
+        <div id="c20" class="cap clip" data-start="31.279" data-duration="0.542" data-track-index="2"><span>der sagt,</span></div>
+        <div id="c21" class="cap clip" data-start="31.821" data-duration="1.566" data-track-index="2"><span>er kann nicht sparen? Dann</span></div>
+        <div id="c22" class="cap clip" data-start="33.387" data-duration="1.386" data-track-index="2"><span>schick ihm dieses Video</span></div>
+        <div id="c23" class="cap clip" data-start="34.773" data-duration="1.602" data-track-index="2"><span>Folge HundeFinanzTV,</span></div>
+        <div id="c24" class="cap clip" data-start="36.375" data-duration="1.663" data-track-index="2"><span>wir bringen jeden Tag</span></div>
+        <div id="c25" class="cap clip" data-start="38.038" data-duration="1.965" data-track-index="2"><span>neue Videos rund ums Geld</span></div>
       </div>
+
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="40.59" data-track-index="3"></audio>
     </div>
 
     <script>
       const tl = gsap.timeline({ paused: true });
       const pop = (sel, at) =>
         tl.fromTo(sel, { scale: 0.82, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.8)" }, at);
-      const drift = (sel, at, dur) =>
-        tl.fromTo(sel, { scale: 1 }, { scale: 1.05, duration: dur, ease: "sine.inOut" }, at);
+      const zaehl = (sel, von, bis, at, dur, nach) => {
+        const o = { v: von };
+        tl.fromTo(o, { v: von }, { v: bis, duration: dur, ease: "power1.out", onUpdate: () => {
+          document.querySelector(sel).textContent = Math.round(o.v).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (nach || ""); } }, at);
+      };
       const draw = (sel, at, dur) => {
         const len = document.querySelector(sel).getTotalLength();
         tl.fromTo(sel, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: dur, ease: "power2.out" }, at);
       };
 
-      // 1: Geldsack
-      pop("#s1-art", 0);
-      drift("#s1-bag", 0.35, 2.5);
-      tl.fromTo("#s1-coins", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 0.25);
-
-      // 2: Zielscheibe, Pfeil schlägt ein
-      pop("#s2-art", 3);
-      tl.fromTo("#s2-arrow", { x: 160, y: -160, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 0.3, ease: "power4.in" }, 3.3);
-      tl.fromTo("#s2-art", { rotation: 0 }, { rotation: 2, duration: 0.06, yoyo: true, repeat: 3, ease: "none" }, 3.6);
-
-      // 3: Zahlen-Vergleich
-      pop("#s3-h1", 6);
-      pop("#s3-h2", 6.15);
-      tl.fromTo(["#s3-a1", "#s3-a2"], { opacity: 0 }, { opacity: 1, duration: 0.2 }, 6.5);
-      pop("#s3-n1", 7.7);
-      pop("#s3-n2", 7.85);
-      pop("#s3-n3", 9.0);
-
-      // 4: Chart zeichnet sich
-      draw("#s4-solid", 9.6, 0.7);
-      tl.fromTo("#s4-dots", { opacity: 0 }, { opacity: 1, duration: 0.6 }, 10.1);
-      pop("#s4-label", 10.6);
-      pop("#s4-check", 10.9);
-
-      // 5: Outro
-      pop("#s5-art", 12.5);
-      drift("#s5-art", 12.85, 2.0);
+      // hook
+      (() => {
+      tl.fromTo("#hk-t", { scale: 1.05 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 0.0);
+      tl.fromTo("#hk-s", { scale: 1.05 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 0.0);
+      tl.fromTo("#hk-s", { rotation: -4 }, { rotation: 4, duration: 0.25, yoyo: true, repeat: 5, ease: "sine.inOut" }, 2.331);
+      })();
+      // app
+      (() => {
+      pop("#ap-h", 3.914);
+      pop("#ap-t", 7.051);
+      })();
+      // bon
+      (() => {
+      pop("#bo-b", 8.872);
+      tl.fromTo("#bo-n", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 11.608);
+      pop("#bo-s", 13.55);
+      tl.fromTo("#bo-m", { x: 0, y: 0, opacity: 1, scale: 1 }, { x: 0, y: 240, scale: 0.6, duration: 0.9, ease: "power2.in" }, 13.55 + 0.2);
+      tl.to("#bo-m", { opacity: 0, duration: 0.15 }, 13.55 + 1.1);
+      pop("#bo-t", 15.295);
+      })();
+      // jahr
+      (() => {
+      pop("#ja-a", 16.774);
+      pop("#ja-z", 19.087);
+      zaehl("#ja-z", 0, 180, 19.087, 2.5, " €");
+      pop("#ja-s", 20.783);
+      })();
+      // stufen
+      (() => {
+      pop("#st-t", 22.864);
+      pop("#st-a", 22.864 + 0.4);
+      pop("#st-b", 24.741);
+      pop("#st-c", 24.741 + 0.5);
+      })();
+      // check
+      (() => {
+      pop("#ch-h", 26.461);
+      tl.fromTo("#ch-h", { rotation: -5 }, { rotation: 5, duration: 0.2, yoyo: true, repeat: 3 }, 26.461 + 0.4);
+      pop("#ch-t", 27.517);
+      })();
+      // teilen
+      (() => {
+      pop("#te-i", 30.192);
+      tl.fromTo("#te-i", { rotation: -6 }, { rotation: 6, duration: 0.25, yoyo: true, repeat: 3, ease: "sine.inOut" }, 30.192 + 0.4);
+      pop("#te-t", 33.387);
+      })();
+      // outro
+      (() => {
+      pop("#outro-dog", 34.773);
+      pop("#outro-name", 34.773 + 0.25);
+      pop("#outro-btn", 34.773 + 0.5);
+      tl.fromTo("#outro-btn", { scale: 1 }, { scale: 1.08, duration: 0.3, yoyo: true, repeat: 1, ease: "sine.inOut" }, 34.773 + 1.1);
+      })();
 
       window.__timelines["main"] = tl;
     </script>

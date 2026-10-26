@@ -1,0 +1,200 @@
+{
+ "dauer": 36.89,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 3.258,
+   "captions": [
+    {
+     "text": "Bevor du das nächste",
+     "start": 0.0,
+     "end": 1.198
+    },
+    {
+     "text": "Mal etwas kaufst,",
+     "start": 1.198,
+     "end": 2.215
+    },
+    {
+     "text": "stell dir eine Frage",
+     "start": 2.215,
+     "end": 3.258
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 3.258,
+   "end": 5.036,
+   "captions": [
+    {
+     "text": "Wie lange muss ich",
+     "start": 3.258,
+     "end": 4.259
+    },
+    {
+     "text": "dafür arbeiten?",
+     "start": 4.259,
+     "end": 5.036
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 5.036,
+   "end": 11.312,
+   "captions": [
+    {
+     "text": "Ein Beispiel: Du verdienst",
+     "start": 5.036,
+     "end": 7.044
+    },
+    {
+     "text": "2.000 € netto und arbeitest",
+     "start": 7.044,
+     "end": 9.325
+    },
+    {
+     "text": "rund 160 Stunden im Monat",
+     "start": 9.325,
+     "end": 11.312
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 11.312,
+   "end": 14.535,
+   "captions": [
+    {
+     "text": "Dann bekommst du etwa",
+     "start": 11.312,
+     "end": 13.07
+    },
+    {
+     "text": "12,50 € pro Stunde",
+     "start": 13.07,
+     "end": 14.535
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 14.535,
+   "end": 19.029,
+   "captions": [
+    {
+     "text": "Das neue Handy",
+     "start": 14.535,
+     "end": 15.489
+    },
+    {
+     "text": "für 1.000 € kostet dich",
+     "start": 15.489,
+     "end": 17.299
+    },
+    {
+     "text": "also 80 Stunden Arbeit",
+     "start": 17.299,
+     "end": 19.029
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 19.029,
+   "end": 20.632,
+   "captions": [
+    {
+     "text": "Das sind zwei volle Wochen",
+     "start": 19.029,
+     "end": 20.632
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 20.632,
+   "end": 23.125,
+   "captions": [
+    {
+     "text": "Plötzlich wirkt",
+     "start": 20.632,
+     "end": 21.529
+    },
+    {
+     "text": "der Preis ganz anders, oder?",
+     "start": 21.529,
+     "end": 23.125
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 23.125,
+   "end": 27.611,
+   "captions": [
+    {
+     "text": "Rechne deinen Stundenlohn",
+     "start": 23.125,
+     "end": 24.601
+    },
+    {
+     "text": "einmal aus und nutze ihn",
+     "start": 24.601,
+     "end": 26.186
+    },
+    {
+     "text": "bei jedem größeren Kauf",
+     "start": 26.186,
+     "end": 27.611
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 27.611,
+   "end": 31.522,
+   "captions": [
+    {
+     "text": "Kennst du jemanden,",
+     "start": 27.611,
+     "end": 28.717
+    },
+    {
+     "text": "der das wissen sollte?",
+     "start": 28.717,
+     "end": 30.084
+    },
+    {
+     "text": "Dann teile dieses Video",
+     "start": 30.084,
+     "end": 31.522
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 31.522,
+   "end": 36.285,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTV,",
+     "start": 31.522,
+     "end": 32.964
+    },
+    {
+     "text": "wir bringen jeden Tag",
+     "start": 32.964,
+     "end": 34.494
+    },
+    {
+     "text": "neue Videos rund ums Geld",
+     "start": 34.494,
+     "end": 36.285
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,193 @@
+{
+ "dauer": 40.59,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 3.914,
+   "captions": [
+    {
+     "text": "Sparen,",
+     "start": 0.0,
+     "end": 0.528
+    },
+    {
+     "text": "ohne es zu merken? Das geht",
+     "start": 0.528,
+     "end": 2.331
+    },
+    {
+     "text": "mit dem Aufrunden‑Trick",
+     "start": 2.331,
+     "end": 3.914
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 3.914,
+   "end": 8.872,
+   "captions": [
+    {
+     "text": "Viele Banking‑Apps können",
+     "start": 3.914,
+     "end": 5.407
+    },
+    {
+     "text": "jeden Einkauf automatisch",
+     "start": 5.407,
+     "end": 7.051
+    },
+    {
+     "text": "auf den vollen Euro aufrunden",
+     "start": 7.051,
+     "end": 8.872
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 8.872,
+   "end": 13.55,
+   "captions": [
+    {
+     "text": "Kostet dein Einkauf 12,30 €,",
+     "start": 8.872,
+     "end": 11.608
+    },
+    {
+     "text": "werden 13 € abgebucht",
+     "start": 11.608,
+     "end": 13.55
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 13.55,
+   "end": 16.774,
+   "captions": [
+    {
+     "text": "Die 70 Cent landen direkt",
+     "start": 13.55,
+     "end": 15.295
+    },
+    {
+     "text": "auf deinem Sparkonto",
+     "start": 15.295,
+     "end": 16.774
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 16.774,
+   "end": 22.864,
+   "captions": [
+    {
+     "text": "Aber bei etwa einem Kartenkauf",
+     "start": 16.774,
+     "end": 19.087
+    },
+    {
+     "text": "pro Tag kommen im Jahr",
+     "start": 19.087,
+     "end": 20.783
+    },
+    {
+     "text": "schnell rund 180 € zusammen",
+     "start": 20.783,
+     "end": 22.864
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 22.864,
+   "end": 26.461,
+   "captions": [
+    {
+     "text": "Manche Apps runden sogar",
+     "start": 22.864,
+     "end": 24.741
+    },
+    {
+     "text": "auf 5 oder 10 € auf",
+     "start": 24.741,
+     "end": 26.461
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 26.461,
+   "end": 30.192,
+   "captions": [
+    {
+     "text": "Schau einfach mal",
+     "start": 26.461,
+     "end": 27.517
+    },
+    {
+     "text": "in deine Banking‑App,",
+     "start": 27.517,
+     "end": 28.822
+    },
+    {
+     "text": "ob es die Funktion gibt",
+     "start": 28.822,
+     "end": 30.192
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 30.192,
+   "end": 34.773,
+   "captions": [
+    {
+     "text": "Kennst du jemanden,",
+     "start": 30.192,
+     "end": 31.279
+    },
+    {
+     "text": "der sagt,",
+     "start": 31.279,
+     "end": 31.821
+    },
+    {
+     "text": "er kann nicht sparen? Dann",
+     "start": 31.821,
+     "end": 33.387
+    },
+    {
+     "text": "schick ihm dieses Video",
+     "start": 33.387,
+     "end": 34.773
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 34.773,
+   "end": 40.003,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTV,",
+     "start": 34.773,
+     "end": 36.375
+    },
+    {
+     "text": "wir bringen jeden Tag",
+     "start": 36.375,
+     "end": 38.038
+    },
+    {
+     "text": "neue Videos rund ums Geld",
+     "start": 38.038,
+     "end": 40.003
+    }
+   ]
+  }
+ ]
+}
