@@ -1,0 +1,60 @@
+{
+ "titel": "Karte oder Bargeld?",
+ "saetze": [
+  {
+   "id": "s1",
+   "text": "Zahlst du lieber mit Karte oder mit Bargeld?",
+   "sprechtext": "Zahlst du lieber mit Karte oder mit Bargeld?"
+  },
+  {
+   "id": "s2",
+   "text": "Das macht einen größeren Unterschied, als du denkst",
+   "sprechtext": "Das macht einen größeren Unterschied, als du denkst."
+  },
+  {
+   "id": "s3",
+   "text": "Studien zeigen: Wer mit Karte bezahlt, gibt oft mehr aus",
+   "sprechtext": "Studien zeigen: Wer mit Karte bezahlt, gibt oft mehr aus."
+  },
+  {
+   "id": "s4",
+   "text": "Denn Bargeld tut weh, du siehst, wie die Scheine weniger werden",
+   "sprechtext": "Denn Bargeld tut weh, du siehst, wie die Scheine weniger werden."
+  },
+  {
+   "id": "s5",
+   "text": "Bei der Karte spürst du davon nichts, ein kurzes Piep und fertig",
+   "sprechtext": "Bei der Karte spürst du davon nichts, ein kurzes Piep und fertig."
+  },
+  {
+   "id": "s6",
+   "text": "Unser Tipp: Probier einen Bargeld-Monat für Freizeit und Shopping",
+   "sprechtext": "Unser Tipp: Probier einen Bargeld-Monat für Freizeit und Shopping."
+  },
+  {
+   "id": "s7",
+   "text": "Heb dir am Monatsanfang einen festen Betrag ab",
+   "sprechtext": "Heb dir am Monatsanfang einen festen Betrag ab."
+  },
+  {
+   "id": "s8",
+   "text": "Ist er weg, ist Schluss",
+   "sprechtext": "Ist er weg, ist Schluss."
+  },
+  {
+   "id": "s9",
+   "text": "Viele merken so zum ersten Mal, wohin ihr Geld wirklich fließt",
+   "sprechtext": "Viele merken so zum ersten Mal, wohin ihr Geld wirklich fließt."
+  },
+  {
+   "id": "s10",
+   "text": "Und du: Karte oder Bargeld? Schreib es in die Kommentare",
+   "sprechtext": "Und du: Karte oder Bargeld? Schreib es in die Kommentare!"
+  },
+  {
+   "id": "s11",
+   "text": "Folge HundeFinanzTV, wir bringen jeden Tag neue Videos rund ums Geld",
+   "sprechtext": "Folge HundeFinanzTV, wir bringen jeden Tag neue Videos rund ums Geld!"
+  }
+ ]
+}

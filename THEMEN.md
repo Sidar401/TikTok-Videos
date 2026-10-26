@@ -25,6 +25,9 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | kfz-wechsel | Kfz-Versicherung: Stichtag 30.11., Tom 780 € → 520 € = 260 € gespart, SF-Rabatt mitnehmen, Sonderkündigung |
 | black-friday | 3 Händler-Tricks: Preis vorher erhöhen, UVP-Streichpreis (50 % → 10 %), Countdown/Knappheit; Wunschliste + Preisverlauf |
 | dreissig-tage-regel | 30-Tage-Regel gegen Spontankäufe, 3×50 €/Monat = 1.800 €/Jahr, Hälfte = 900 € |
+| arbeitsstunden | Preise in Arbeitsstunden: 2.000 € netto / 160 h = 12,50 €/h, Handy 1.000 € = 80 h = 2 Wochen |
+| karte-bargeld | Mit Karte gibt man mehr aus, Bargeld-Monat für Freizeit/Shopping |
+| aufrunden | Aufrunden-Funktion der Banking-App, 12,30 € → 13 €, ~180 €/Jahr, Aufrunden auf 5/10 € |
 | handyvertrag | Vertrag 50 €×24 = 1.200 € vs. Handy 700 € + SIM-only 10 € = 940 € |
 
 ## Longform (16:9)

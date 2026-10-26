@@ -1,0 +1,60 @@
+{
+ "titel": "Der Aufrunden-Trick",
+ "saetze": [
+  {
+   "id": "s1",
+   "text": "Sparen, ohne es zu merken? Das geht mit dem Aufrunden-Trick",
+   "sprechtext": "Sparen, ohne es zu merken? Das geht mit dem Aufrunden-Trick."
+  },
+  {
+   "id": "s2",
+   "text": "Viele Banking-Apps können jeden Einkauf automatisch auf den vollen Euro aufrunden",
+   "sprechtext": "Viele Banking-Apps können jeden Einkauf automatisch auf den vollen Euro aufrunden."
+  },
+  {
+   "id": "s3",
+   "text": "Kostet dein Einkauf 12 € 30, werden 13 € abgebucht",
+   "sprechtext": "Kostet dein Einkauf zwölf Euro dreißig, werden dreizehn Euro abgebucht."
+  },
+  {
+   "id": "s4",
+   "text": "Die 70 Cent landen direkt auf deinem Sparkonto",
+   "sprechtext": "Die siebzig Cent landen direkt auf deinem Sparkonto."
+  },
+  {
+   "id": "s5",
+   "text": "Das klingt nach wenig",
+   "sprechtext": "Das klingt nach wenig."
+  },
+  {
+   "id": "s6",
+   "text": "Aber bei etwa einem Kartenkauf pro Tag kommen im Jahr schnell rund 180 € zusammen",
+   "sprechtext": "Aber bei etwa einem Kartenkauf pro Tag kommen im Jahr schnell rund hundertachtzig Euro zusammen."
+  },
+  {
+   "id": "s7",
+   "text": "Manche Apps runden sogar auf fünf oder 10 € auf",
+   "sprechtext": "Manche Apps runden sogar auf fünf oder zehn Euro auf."
+  },
+  {
+   "id": "s8",
+   "text": "Dann wird aus Kleingeld schnell ein richtiges Polster",
+   "sprechtext": "Dann wird aus Kleingeld schnell ein richtiges Polster."
+  },
+  {
+   "id": "s9",
+   "text": "Schau einfach mal in deine Banking-App, ob es die Funktion gibt",
+   "sprechtext": "Schau einfach mal in deine Banking-App, ob es die Funktion gibt."
+  },
+  {
+   "id": "s10",
+   "text": "Kennst du jemanden, der sagt, er kann nicht sparen? Dann schick ihm dieses Video",
+   "sprechtext": "Kennst du jemanden, der sagt, er kann nicht sparen? Dann schick ihm dieses Video!"
+  },
+  {
+   "id": "s11",
+   "text": "Folge HundeFinanzTV, wir bringen jeden Tag neue Videos rund ums Geld",
+   "sprechtext": "Folge HundeFinanzTV, wir bringen jeden Tag neue Videos rund ums Geld!"
+  }
+ ]
+}
