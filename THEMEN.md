@@ -22,6 +22,9 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | frueh-anfangen | (Skript, noch nicht produziert) früh anfangen |
 | wochen-challenge | 52-Wochen-Challenge 1 € → 52 € = 1.378 €, rückwärts starten |
 | rentenluecke | Rentenniveau 48 %, Lena 2.500 € netto → ~1.400 € Rente, 200 €/Monat ab 30 mit 6 % ≈ 320.000 € |
+| kfz-wechsel | Kfz-Versicherung: Stichtag 30.11., Tom 780 € → 520 € = 260 € gespart, SF-Rabatt mitnehmen, Sonderkündigung |
+| black-friday | 3 Händler-Tricks: Preis vorher erhöhen, UVP-Streichpreis (50 % → 10 %), Countdown/Knappheit; Wunschliste + Preisverlauf |
+| dreissig-tage-regel | 30-Tage-Regel gegen Spontankäufe, 3×50 €/Monat = 1.800 €/Jahr, Hälfte = 900 € |
 | handyvertrag | Vertrag 50 €×24 = 1.200 € vs. Handy 700 € + SIM-only 10 € = 940 € |
 
 ## Longform (16:9)
