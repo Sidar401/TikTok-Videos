@@ -1,0 +1,230 @@
+{
+ "dauer": 47.864,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 7.98,
+   "captions": [
+    {
+     "text": "Der Black Friday",
+     "start": 0,
+     "end": 0.891
+    },
+    {
+     "text": "ist für viele Händler",
+     "start": 0.891,
+     "end": 2.061
+    },
+    {
+     "text": "der beste Tag des Jahres,",
+     "start": 2.061,
+     "end": 3.454
+    },
+    {
+     "text": "aber nicht unbedingt für dich",
+     "start": 3.454,
+     "end": 5.07
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 7.98,
+   "end": 12.541,
+   "captions": [
+    {
+     "text": "Hier sind drei Tricks,",
+     "start": 7.98,
+     "end": 9.681
+    },
+    {
+     "text": "auf die du nicht",
+     "start": 9.681,
+     "end": 11.064
+    },
+    {
+     "text": "reinfallen solltest",
+     "start": 11.064,
+     "end": 12.541
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 12.541,
+   "end": 17.843,
+   "captions": [
+    {
+     "text": "Trick eins: Manche Preise",
+     "start": 12.541,
+     "end": 14.05
+    },
+    {
+     "text": "werden kurz vorher erhöht,",
+     "start": 14.05,
+     "end": 15.864
+    },
+    {
+     "text": "damit der Rabatt",
+     "start": 15.864,
+     "end": 16.98
+    },
+    {
+     "text": "größer aussieht",
+     "start": 16.98,
+     "end": 17.843
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 17.843,
+   "end": 24.659,
+   "captions": [
+    {
+     "text": "Trick zwei:",
+     "start": 17.843,
+     "end": 18.38
+    },
+    {
+     "text": "Der durchgestrichene Preis",
+     "start": 18.38,
+     "end": 19.847
+    },
+    {
+     "text": "ist oft nur die unverbindliche",
+     "start": 19.847,
+     "end": 21.811
+    },
+    {
+     "text": "Preisempfehlung,",
+     "start": 21.811,
+     "end": 22.858
+    },
+    {
+     "text": "die sowieso kaum jemand zahlt",
+     "start": 22.858,
+     "end": 24.659
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 24.659,
+   "end": 28.615,
+   "captions": [
+    {
+     "text": "Aus angeblich 50 % Rabatt",
+     "start": 24.659,
+     "end": 26.66
+    },
+    {
+     "text": "werden so schnell nur zehn",
+     "start": 26.66,
+     "end": 28.615
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 28.615,
+   "end": 34.525,
+   "captions": [
+    {
+     "text": "Trick drei: Countdowns",
+     "start": 28.615,
+     "end": 30.182
+    },
+    {
+     "text": "und Hinweise wie",
+     "start": 30.182,
+     "end": 31.321
+    },
+    {
+     "text": "„nur noch 2 auf Lager“",
+     "start": 31.321,
+     "end": 32.887
+    },
+    {
+     "text": "setzen dich unter Druck",
+     "start": 32.887,
+     "end": 34.525
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 34.525,
+   "end": 37.152,
+   "captions": [
+    {
+     "text": "Du sollst schnell kaufen,",
+     "start": 34.525,
+     "end": 36.075
+    },
+    {
+     "text": "ohne nachzudenken",
+     "start": 36.075,
+     "end": 37.152
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 37.152,
+   "end": 38.307,
+   "captions": [
+    {
+     "text": "So schützt du dich:",
+     "start": 37.152,
+     "end": 38.307
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 38.307,
+   "end": 42.45,
+   "captions": [
+    {
+     "text": "Schreib dir vorher",
+     "start": 38.307,
+     "end": 39.58
+    },
+    {
+     "text": "eine Wunschliste und kauf nur,",
+     "start": 39.58,
+     "end": 41.748
+    },
+    {
+     "text": "was draufsteht",
+     "start": 41.748,
+     "end": 42.3
+    }
+   ]
+  },
+  {
+   "id": "sF",
+   "start": 42.45,
+   "end": 47.281,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTV,",
+     "start": 42.45,
+     "end": 43.922
+    },
+    {
+     "text": "wir bringen jeden Tag",
+     "start": 43.922,
+     "end": 45.469
+    },
+    {
+     "text": "neue Videos rund ums Geld",
+     "start": 45.469,
+     "end": 47.281
+    }
+   ]
+  }
+ ]
+}

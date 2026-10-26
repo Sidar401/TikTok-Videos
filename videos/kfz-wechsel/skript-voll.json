@@ -1,0 +1,70 @@
+{
+ "titel": "Kfz-Versicherung bis 30. November wechseln",
+ "saetze": [
+  {
+   "id": "s1",
+   "text": "Hast du deine Autoversicherung dieses Jahr schon verglichen?",
+   "sprechtext": "Hast du deine Autoversicherung dieses Jahr schon verglichen?"
+  },
+  {
+   "id": "s2",
+   "text": "Dann solltest du dir jetzt den dreißigsten November merken",
+   "sprechtext": "Dann solltest du dir jetzt den dreißigsten November merken."
+  },
+  {
+   "id": "s3",
+   "text": "Bei den meisten Verträgen ist das der Stichtag zum Kündigen",
+   "sprechtext": "Bei den meisten Verträgen ist das der Stichtag zum Kündigen."
+  },
+  {
+   "id": "s4",
+   "text": "Wer bis dahin kündigt, kann zum ersten Januar in einen günstigeren Tarif wechseln",
+   "sprechtext": "Wer bis dahin kündigt, kann zum ersten Januar in einen günstigeren Tarif wechseln."
+  },
+  {
+   "id": "s5",
+   "text": "Und das lohnt sich oft richtig",
+   "sprechtext": "Und das lohnt sich oft richtig."
+  },
+  {
+   "id": "s6",
+   "text": "Ein Beispiel: Tom zahlt für sein Auto 780 € im Jahr",
+   "sprechtext": "Ein Beispiel: Tom zahlt für sein Auto siebenhundertachtzig Euro im Jahr."
+  },
+  {
+   "id": "s7",
+   "text": "Nach einem Vergleich findet er die gleiche Leistung für 520 €",
+   "sprechtext": "Nach einem Vergleich findet er die gleiche Leistung für fünfhundertzwanzig Euro."
+  },
+  {
+   "id": "s8",
+   "text": "Das sind 260 € gespart, für eine halbe Stunde Arbeit",
+   "sprechtext": "Das sind zweihundertsechzig Euro gespart, für eine halbe Stunde Arbeit."
+  },
+  {
+   "id": "s9",
+   "text": "Wichtig: Deinen Schadenfreiheitsrabatt nimmst du einfach mit",
+   "sprechtext": "Wichtig: Deinen Schadenfreiheitsrabatt nimmst du einfach mit."
+  },
+  {
+   "id": "s10",
+   "text": "Achte beim Vergleich auf die gleiche Leistung und gib deine Kilometer ehrlich an",
+   "sprechtext": "Achte beim Vergleich auf die gleiche Leistung und gib deine Kilometer ehrlich an."
+  },
+  {
+   "id": "s11",
+   "text": "Und erhöht deine Versicherung den Beitrag, darfst du sogar außerhalb der Frist kündigen",
+   "sprechtext": "Und erhöht deine Versicherung den Beitrag, darfst du sogar außerhalb der Frist kündigen."
+  },
+  {
+   "id": "s12",
+   "text": "Wie viel zahlst du für deine Autoversicherung? Schreib es in die Kommentare",
+   "sprechtext": "Wie viel zahlst du für deine Autoversicherung? Schreib es in die Kommentare!"
+  },
+  {
+   "id": "s13",
+   "text": "Folge HundeFinanzTV, wir bringen jeden Tag neue Videos rund ums Geld",
+   "sprechtext": "Folge HundeFinanzTV, wir bringen jeden Tag neue Videos rund ums Geld!"
+  }
+ ]
+}
