@@ -49,4 +49,4 @@ Code-Vorlage: `vorlage/` (Demo: `renders/stil-demo.mp4`).
 ## Thumbnails & Cover (ab 25.10., Nutzer-Wunsch)
 - Stil „Dark Glow“ (`scripts/thumbs.py`): dunkler Raster-Hintergrund, leuchtende Linien, fette Montserrat, plastische Objekte – nach Vorbild Finanzbär, aber in **Orange**.
 - **Orange muss dominieren:** Hervorhebungs-Kasten im Titel immer orange; Rot/Grün nur als kleine Akzente (Zahlen, Kurven).
-- **Kein Pfoten-Badge**, kein Beagle, kein Rahmen.
+- **Immer oranger Rahmen** (wie in den Videos). **Kein Pfoten-Badge**, kein Beagle.

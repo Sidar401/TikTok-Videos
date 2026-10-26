@@ -34,9 +34,9 @@ def preis(x, y, text, dreh=-8, gr=60):
 
 
 YT = (wagen(40, 340, 720) + preis(470, 250, "nur 0,99 €?", -10)
-      + titel([("Der Supermarkt", "w"), ("TRICKST", "rot"), ("dich aus!", "w")], 790, 330, 114))
+      + titel([("Der Supermarkt", "w"), ("TRICKST", "box"), ("dich aus!", "w")], 790, 330, 114))
 
-TT = (titel([("Der Supermarkt", "w"), ("TRICKST", "rot"), ("dich aus!", "w")], 0, 220, 120, w=1080, align="center")
+TT = (titel([("Der Supermarkt", "w"), ("TRICKST", "box"), ("dich aus!", "w")], 0, 220, 120, w=1080, align="center")
       + wagen(140, 960, 800) + preis(600, 880, "nur 0,99 €?", -10, 56))
 
 if __name__ == "__main__":

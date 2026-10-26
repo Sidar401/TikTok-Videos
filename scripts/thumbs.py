@@ -2,7 +2,7 @@
 
 Dunkler Hintergrund mit Raster + orangem Leuchten, riesige fette Schrift (weiß + orange Akzente,
 oranger Kasten), leuchtende Chart-Linien mit Wert-Pillen, plastische Objekte (Geldbündel, Münzen, Kugeln),
-Orange (Markenfarbe) muss dominieren: Titel-Kasten immer "box" (orange), Rot/Grün nur für kleine Akzente. Kein Pfoten-Badge (Nutzer: weglassen), kein Rahmen, kein Beagle.
+Orange (Markenfarbe) muss dominieren: Titel-Kasten immer "box" (orange), Rot/Grün nur für kleine Akzente. Kein Pfoten-Badge (Nutzer: weglassen), IMMER oranger Rahmen (Nutzer), kein Beagle.
 
   from thumbs import *            # in videos/thumbs-<name>/build.py
   seite(HERE, [V1, V2, V3])       # 1920×1080, je 1 s
@@ -149,12 +149,14 @@ def seite(here, inhalte, tiktok=False, glow=("78%", "55%")):
       #raster {{ position: absolute; inset: 0; background-image: linear-gradient(#ffffff0d 2px, transparent 2px), linear-gradient(90deg, #ffffff0d 2px, transparent 2px);
         background-size: 96px 96px; }}
       .scene {{ position: absolute; inset: 0; }}
+      #frame {{ position: absolute; inset: 0; border: {26 if tiktok else 30}px solid #DB8622; z-index: 10; }}
     </style>
   </head>
   <body>
     <div id="root" data-composition-id="main" data-start="0" data-duration="{len(inhalte)}" data-width="{W}" data-height="{H}">
       <div id="raster"></div>
 {szenen}
+      <div id="frame"></div>
     </div>
     <script>
       const tl = gsap.timeline({{ paused: true }});

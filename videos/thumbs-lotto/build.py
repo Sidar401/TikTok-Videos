@@ -11,11 +11,11 @@ from thumbs import OR, ROT, buendel, chart, kugel, muenzen, pill, seite, titel  
 BLAU, LILA, GOLD = "#3d7be0", "#9b59b6", "#e0a800"
 FALL = [(0, 0.95), (0.18, 0.78), (0.32, 0.84), (0.52, 0.5), (0.68, 0.56), (0.84, 0.22), (1, 0.04)]
 
-V1 = (titel([("1 MILLION", "w"), ("gewonnen …", "o"), ("… und PLEITE!", "rot")], 90, 80, 150)
+V1 = (titel([("1 MILLION", "w"), ("gewonnen …", "o"), ("… und PLEITE!", "box")], 90, 80, 150)
       + chart(FALL, 330, 760, 1400, 230, ROT, pills=[(0, "1 Mio. €"), (6, "0 €")])
       + kugel(1440, 60, 7, ROT, 200) + kugel(1660, 150, 42, BLAU, 170) + kugel(1230, 130, 21, "#e08a00", 140))
 
-V2 = (titel([("In 4 Jahren", "w"), ("ALLES", "w"), ("WEG?!", "rot")], 90, 170, 140)
+V2 = (titel([("In 4 Jahren", "w"), ("ALLES", "w"), ("WEG?!", "box")], 90, 170, 140)
       + f'''<div style="position:absolute;left:1060px;top:200px;width:780px;padding:50px 56px;border-radius:44px;background:#16191b;border:4px solid {OR};
              box-shadow:0 0 80px {OR}66, 0 30px 60px #000;z-index:2">
           <div style="font-weight:800;font-size:44px;color:#9aa3a8;letter-spacing:3px">KONTOSTAND</div>
@@ -28,7 +28,7 @@ V3 = (titel([("Warum Lottogewinner", "w"), ("PLEITE gehen", "box")], 90, 50, 130
               pills=[(0, "1.000.000 €"), (1, "200.000 €"), (4, "0 €")], achse=["Gewinn", "Jahr 1", "Jahr 2", "Jahr 3", "Jahr 4"]))
 
 TT = (kugel(170, 300, 7, ROT, 200) + kugel(440, 250, 42, BLAU, 200) + kugel(710, 300, 21, "#e08a00", 200)
-      + titel([("1 MILLION", "w"), ("gewonnen …", "o"), ("… und PLEITE!", "rot")], 0, 600, 125, w=1080, align="center")
+      + titel([("1 MILLION", "w"), ("gewonnen …", "o"), ("… und PLEITE!", "box")], 0, 600, 125, w=1080, align="center")
       + chart(FALL, 140, 1240, 800, 330, ROT, pills=[(0, "1 Mio. €"), (6, "0 €")]))
 
 if __name__ == "__main__":
