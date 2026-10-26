@@ -1,0 +1,75 @@
+{
+ "titel": "Dein Handyvertrag ist zu teuer",
+ "saetze": [
+  {
+   "id": "s1",
+   "text": "Dein Handyvertrag kostet dich wahrscheinlich hunderte Euro zu viel",
+   "sprechtext": "Dein Handyvertrag kostet dich wahrscheinlich hunderte Euro zu viel."
+  },
+  {
+   "id": "s2",
+   "text": "Schau mal genau auf die Rechnung",
+   "sprechtext": "Schau mal genau auf die Rechnung."
+  },
+  {
+   "id": "s3",
+   "text": "Viele zahlen 50 € im Monat für einen Vertrag mit neuem Handy",
+   "sprechtext": "Viele zahlen fünfzig Euro im Monat für einen Vertrag mit neuem Handy."
+  },
+  {
+   "id": "s4",
+   "text": "Über zwei Jahre sind das 1.200 €",
+   "sprechtext": "Über zwei Jahre sind das eintausendzweihundert Euro."
+  },
+  {
+   "id": "s5",
+   "text": "Das gleiche Handy kostet im Laden aber nur 700 €",
+   "sprechtext": "Das gleiche Handy kostet im Laden aber nur siebenhundert Euro."
+  },
+  {
+   "id": "s6",
+   "text": "Die Alternative: Du kaufst das Handy einzeln und nimmst einen Tarif ohne Handy",
+   "sprechtext": "Die Alternative: Du kaufst das Handy einzeln und nimmst einen Tarif ohne Handy."
+  },
+  {
+   "id": "s7",
+   "text": "Gute Tarife gibt es schon für rund 10 € im Monat",
+   "sprechtext": "Gute Tarife gibt es schon für rund zehn Euro im Monat."
+  },
+  {
+   "id": "s8",
+   "text": "Das macht in zwei Jahren 240 €, plus 700 € für das Handy",
+   "sprechtext": "Das macht in zwei Jahren zweihundertvierzig Euro, plus siebenhundert Euro für das Handy."
+  },
+  {
+   "id": "s9",
+   "text": "Zusammen also 940 €",
+   "sprechtext": "Zusammen also neunhundertvierzig Euro."
+  },
+  {
+   "id": "s10",
+   "text": "Du sparst über 250 €, mit genau demselben Handy",
+   "sprechtext": "Du sparst über zweihundertfünfzig Euro, mit genau demselben Handy."
+  },
+  {
+   "id": "s11",
+   "text": "Und wenn du dein altes Handy einfach ein Jahr länger nutzt, sparst du sogar noch mehr",
+   "sprechtext": "Und wenn du dein altes Handy einfach ein Jahr länger nutzt, sparst du sogar noch mehr."
+  },
+  {
+   "id": "s12",
+   "text": "Kennst du jemanden, der gerade einen neuen Vertrag abschließen will?",
+   "sprechtext": "Kennst du jemanden, der gerade einen neuen Vertrag abschließen will?"
+  },
+  {
+   "id": "s13",
+   "text": "Dann schick ihm dieses Video",
+   "sprechtext": "Dann schick ihm dieses Video!"
+  },
+  {
+   "id": "s14",
+   "text": "Folge HundeFinanzTV, wir bringen jeden Tag neue Videos rund ums Geld",
+   "sprechtext": "Folge HundeFinanzTV, wir bringen jeden Tag neue Videos rund ums Geld!"
+  }
+ ]
+}

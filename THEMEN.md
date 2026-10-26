@@ -20,6 +20,9 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | auto-kosten | Was ein Auto wirklich kostet |
 | dispo-falle | Dispozinsen, raus aus dem Dispo |
 | frueh-anfangen | (Skript, noch nicht produziert) früh anfangen |
+| wochen-challenge | 52-Wochen-Challenge 1 € → 52 € = 1.378 €, rückwärts starten |
+| rentenluecke | Rentenniveau 48 %, Lena 2.500 € netto → ~1.400 € Rente, 200 €/Monat ab 30 mit 6 % ≈ 320.000 € |
+| handyvertrag | Vertrag 50 €×24 = 1.200 € vs. Handy 700 € + SIM-only 10 € = 940 € |
 
 ## Longform (16:9)
 | Video | Kern / Beispiele | Bildidee |

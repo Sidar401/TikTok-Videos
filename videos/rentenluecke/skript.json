@@ -1,0 +1,65 @@
+{
+ "titel": "Wie viel Rente bekommst du wirklich?",
+ "saetze": [
+  {
+   "id": "s1",
+   "text": "Wie viel Rente bekommst du später eigentlich?",
+   "sprechtext": "Wie viel Rente bekommst du später eigentlich?"
+  },
+  {
+   "id": "s2",
+   "text": "Die ehrliche Antwort: wahrscheinlich viel weniger, als du denkst",
+   "sprechtext": "Die ehrliche Antwort: wahrscheinlich viel weniger, als du denkst."
+  },
+  {
+   "id": "s3",
+   "text": "Die gesetzliche Rente liegt nur bei rund 48 % des Durchschnittslohns, und zwar vor Steuern",
+   "sprechtext": "Die gesetzliche Rente liegt nur bei rund achtundvierzig Prozent des Durchschnittslohns, und zwar vor Steuern."
+  },
+  {
+   "id": "s4",
+   "text": "Ein Beispiel: Lena verdient heute 2.500 € netto",
+   "sprechtext": "Ein Beispiel: Lena verdient heute zweitausendfünfhundert Euro netto."
+  },
+  {
+   "id": "s5",
+   "text": "Im Alter bleiben ihr nach Steuern und Krankenkasse vielleicht etwa 1.400 €",
+   "sprechtext": "Im Alter bleiben ihr nach Steuern und Krankenkasse vielleicht etwa eintausendvierhundert Euro."
+  },
+  {
+   "id": "s6",
+   "text": "Jeden Monat fehlen ihr also über 1.000 €",
+   "sprechtext": "Jeden Monat fehlen ihr also über tausend Euro."
+  },
+  {
+   "id": "s7",
+   "text": "Das nennt man Rentenlücke",
+   "sprechtext": "Das nennt man Rentenlücke."
+  },
+  {
+   "id": "s8",
+   "text": "Die gute Nachricht: Mit Zeit kannst du sie schließen",
+   "sprechtext": "Die gute Nachricht: Mit Zeit kannst du sie schließen."
+  },
+  {
+   "id": "s9",
+   "text": "Legt Lena ab 30 jeden Monat 200 € in einen breit gestreuten ETF, hat sie mit 6 % Rendite bis zur Rente rund 320.000 €",
+   "sprechtext": "Legt Lena ab dreißig jeden Monat zweihundert Euro in einen breit gestreuten ETF, hat sie mit sechs Prozent Rendite bis zur Rente rund dreihundertzwanzigtausend Euro."
+  },
+  {
+   "id": "s10",
+   "text": "Damit kann sie ihre Lücke viele Jahre lang auffüllen",
+   "sprechtext": "Damit kann sie ihre Lücke viele Jahre lang auffüllen."
+  },
+  {
+   "id": "s11",
+   "text": "Und jetzt du: Schätz mal, wie viel Rente du bekommst, und schreib es in die Kommentare",
+   "sprechtext": "Und jetzt du: Schätz mal, wie viel Rente du bekommst, und schreib es in die Kommentare!"
+  },
+  {
+   "id": "s12",
+   "text": "Folge HundeFinanzTV, wir bringen jeden Tag neue Videos rund ums Geld",
+   "sprechtext": "Folge HundeFinanzTV, wir bringen jeden Tag neue Videos rund ums Geld!"
+  }
+ ]
+}
