@@ -19,7 +19,7 @@ Der Nutzer arbeitet am iPad: Antworten kurz, Ergebnisse per `SendUserFile` schic
      { "id": "s1", "text": "du hast 100 € im Monat übrig", "sprechtext": "Du hast hundert Euro im Monat übrig.", "bild": "Geldsack mit Münzen" }
    ] }
    ```
-   - **40–50 s** (Nutzerwunsch: mind. 10 s länger als früher) ≈ 115–135 Wörter, 12–14 Sätze (ein Satz = ein Bild, 2–4 s).
+   - **Höchstens 40 s** (Nutzerwunsch ab 26.10.) ≈ 90–100 Wörter, 9–11 Sätze (ein Satz = ein Bild, 2–4 s).
    - Aufbau aus `STIL.md`: Hook (0–3 s) → Frage/Problem → Beispiel mit echten Zahlen → Visualisierung → Faustregel/Meinung → kurzer CTA.
    - **Zusatz-CTAs abwechselnd:** Video A → Kommentar-CTA („Schreib uns in die Kommentare …“), Video B → Teilen-CTA („Teile das Video mit jemandem, der …“), dann wieder A. Nie beide in einem Video. Im Chat beim Skript angeben, welcher CTA drin ist.
    - **CTA immer in Wir-Form**, nie „folg mir“: z. B. „Folge HundeFinanzTV, wir haben noch mehr Geld-Tipps für dich!“ (Outro-Button bleibt „+ Folgen“).
