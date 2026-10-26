@@ -1,0 +1,268 @@
+{
+ "dauer": 56.034,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 4.048,
+   "captions": [
+    {
+     "text": "Dein Handyvertrag kostet",
+     "start": 0.0,
+     "end": 1.521
+    },
+    {
+     "text": "dich wahrscheinlich",
+     "start": 1.521,
+     "end": 2.725
+    },
+    {
+     "text": "hunderte Euro zu viel",
+     "start": 2.725,
+     "end": 4.048
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 4.048,
+   "end": 5.736,
+   "captions": [
+    {
+     "text": "Schau mal genau",
+     "start": 4.048,
+     "end": 4.86
+    },
+    {
+     "text": "auf die Rechnung",
+     "start": 4.86,
+     "end": 5.736
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 5.736,
+   "end": 9.986,
+   "captions": [
+    {
+     "text": "Viele zahlen 50 €",
+     "start": 5.736,
+     "end": 7.009
+    },
+    {
+     "text": "im Monat für einen Vertrag",
+     "start": 7.009,
+     "end": 8.955
+    },
+    {
+     "text": "mit neuem Handy",
+     "start": 8.955,
+     "end": 9.986
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 9.986,
+   "end": 13.313,
+   "captions": [
+    {
+     "text": "Über zwei Jahre",
+     "start": 9.986,
+     "end": 11.555
+    },
+    {
+     "text": "sind das 1.200 €",
+     "start": 11.555,
+     "end": 13.313
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 13.313,
+   "end": 16.851,
+   "captions": [
+    {
+     "text": "Das gleiche Handy kostet",
+     "start": 13.313,
+     "end": 15.114
+    },
+    {
+     "text": "im Laden aber nur 700 €",
+     "start": 15.114,
+     "end": 16.851
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 16.851,
+   "end": 22.409,
+   "captions": [
+    {
+     "text": "Die Alternative: Du kaufst",
+     "start": 16.851,
+     "end": 18.779
+    },
+    {
+     "text": "das Handy einzeln und nimmst",
+     "start": 18.779,
+     "end": 20.855
+    },
+    {
+     "text": "einen Tarif ohne Handy",
+     "start": 20.855,
+     "end": 22.409
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 22.409,
+   "end": 26.188,
+   "captions": [
+    {
+     "text": "Gute Tarife gibt es schon",
+     "start": 22.409,
+     "end": 24.383
+    },
+    {
+     "text": "für rund 10 € im Monat",
+     "start": 24.383,
+     "end": 26.188
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 26.188,
+   "end": 31.964,
+   "captions": [
+    {
+     "text": "Das macht in zwei",
+     "start": 26.188,
+     "end": 28.076
+    },
+    {
+     "text": "Jahren 240 €,",
+     "start": 28.076,
+     "end": 29.52
+    },
+    {
+     "text": "plus 700 € für das Handy",
+     "start": 29.52,
+     "end": 31.964
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 31.964,
+   "end": 35.14,
+   "captions": [
+    {
+     "text": "Zusammen also 940 €",
+     "start": 31.964,
+     "end": 35.14
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 35.14,
+   "end": 39.865,
+   "captions": [
+    {
+     "text": "Du sparst über 250 €,",
+     "start": 35.14,
+     "end": 37.332
+    },
+    {
+     "text": "mit genau demselben Handy",
+     "start": 37.332,
+     "end": 39.865
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 39.87,
+   "end": 44.84,
+   "captions": [
+    {
+     "text": "Und wenn du dein altes Handy",
+     "start": 39.87,
+     "end": 41.547
+    },
+    {
+     "text": "einfach ein Jahr länger nutzt,",
+     "start": 41.547,
+     "end": 43.343
+    },
+    {
+     "text": "sparst du sogar noch mehr",
+     "start": 43.343,
+     "end": 44.84
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 44.84,
+   "end": 48.7,
+   "captions": [
+    {
+     "text": "Kennst du jemanden,",
+     "start": 44.84,
+     "end": 45.951
+    },
+    {
+     "text": "der gerade einen neuen",
+     "start": 45.951,
+     "end": 47.238
+    },
+    {
+     "text": "Vertrag abschließen will?",
+     "start": 47.238,
+     "end": 48.7
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 48.7,
+   "end": 50.62,
+   "captions": [
+    {
+     "text": "Dann schick ihm dieses Video",
+     "start": 48.7,
+     "end": 50.62
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 50.62,
+   "end": 55.451,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTV,",
+     "start": 50.62,
+     "end": 52.092
+    },
+    {
+     "text": "wir bringen jeden Tag",
+     "start": 52.092,
+     "end": 53.639
+    },
+    {
+     "text": "neue Videos rund ums Geld",
+     "start": 53.639,
+     "end": 55.451
+    }
+   ]
+  }
+ ]
+}

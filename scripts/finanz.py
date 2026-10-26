@@ -153,6 +153,11 @@ def build(here, scenes):
       const tl = gsap.timeline({{ paused: true }});
       const pop = (sel, at) =>
         tl.fromTo(sel, {{ scale: 0.82, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.8)" }}, at);
+      const zaehl = (sel, von, bis, at, dur, nach) => {{
+        const o = {{ v: von }};
+        tl.fromTo(o, {{ v: von }}, {{ v: bis, duration: dur, ease: "power1.out", onUpdate: () => {{
+          document.querySelector(sel).textContent = Math.round(o.v).toString().replace(/\\B(?=(\\d{{3}})+(?!\\d))/g, ".") + (nach || ""); }} }}, at);
+      }};
       const draw = (sel, at, dur) => {{
         const len = document.querySelector(sel).getTotalLength();
         tl.fromTo(sel, {{ strokeDasharray: len, strokeDashoffset: len }}, {{ strokeDashoffset: 0, duration: dur, ease: "power2.out" }}, at);

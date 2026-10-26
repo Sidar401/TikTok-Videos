@@ -117,167 +117,172 @@
         z-index: 5;
       }
       #brand-dog { width: 84px; height: 84px; }
+
+      .scene { position: absolute; inset: 0; top: 0; height: 1920px; display: block; }
+      .tile { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 30px 10px; border-radius: 30px; background: #faf5ef; }
+      .tile svg { width: 230px; height: 230px; }
+      .tile span { font-family: Montserrat; font-weight: 800; font-size: 54px; color: #111; }
+      .big { font-family: var(--font-display); text-align: center; color: #111; }
+      .cap span { max-width: 990px; font-size: 50px; }
     </style>
   </head>
   <body>
-    <div
-      id="root"
-      data-composition-id="main"
-      data-start="0"
-      data-duration="15"
-      data-width="1080"
-      data-height="1920"
-    >
-      <!-- ============ SZENEN ============ -->
-
-      <!-- 1: Geldsack -->
-      <div id="s1" class="scene clip" data-start="0" data-duration="3" data-track-index="1">
-        <div id="s1-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <g id="s1-coins">
-              <g fill="#f2c418" stroke="#c99a06" stroke-width="3">
-                <rect x="250" y="300" width="110" height="22" rx="8" />
-                <rect x="250" y="276" width="110" height="22" rx="8" />
-                <rect x="250" y="252" width="110" height="22" rx="8" />
-                <rect x="250" y="228" width="110" height="22" rx="8" />
-                <rect x="250" y="204" width="110" height="22" rx="8" />
-                <rect x="265" y="180" width="110" height="22" rx="8" />
-                <rect x="258" y="156" width="110" height="22" rx="8" />
-              </g>
-            </g>
-            <g id="s1-bag">
-              <path d="M150 110 C120 70 140 50 160 70 C175 50 205 50 220 70 C240 50 260 70 230 110 Z" fill="#1f7a4d" />
-              <rect x="145" y="104" width="90" height="18" rx="9" fill="#f2c418" />
-              <path d="M150 120 C60 170 40 330 120 340 L260 340 C340 330 320 170 230 120 Z" fill="#1f7a4d" />
-              <path d="M155 135 C90 180 75 300 125 325" fill="none" stroke="#2c9a63" stroke-width="10" stroke-linecap="round" />
-              <circle cx="190" cy="245" r="62" fill="#f2c418" />
-              <text x="190" y="272" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="80" fill="#1f7a4d">€</text>
-            </g>
-            <g fill="#f2c418" stroke="#c99a06" stroke-width="3">
-              <ellipse cx="80" cy="345" rx="34" ry="12" />
-              <ellipse cx="110" cy="360" rx="34" ry="12" />
-            </g>
-          </svg>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="56.034" data-width="1080" data-height="1920">
+      <div id="hook" class="scene clip" data-start="0.0" data-duration="5.736" data-track-index="1"><div id="hk-t" style="position:absolute;top:290px;left:40px;width:1000px;text-align:center;font-family:Montserrat;font-weight:800;font-size:84px;line-height:1.05;color:#111">Dein Handyvertrag<br />ist <span style="color:#e24b4b">zu teuer</span></div><div id="hk-h" style="position:absolute;left:390px;top:600px;width:300px;height:560px;"><svg viewBox="0 0 300 560" style="width:100%;height:100%">
+  <rect x="5" y="5" width="290" height="550" rx="44" fill="#353a3d" />
+  <rect x="22" y="40" width="256" height="480" rx="20" fill="#fff" />
+  <rect x="110" y="18" width="80" height="12" rx="6" fill="#1a1a1a" /><text x="150" y="120" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="28" fill="#888">Rechnung</text><text x="150" y="200" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="36" fill="#e24b4b">50 € / Monat</text><rect x="50" y="300" width="200" height="14" rx="7" fill="#eee" /><rect x="50" y="335" width="160" height="14" rx="7" fill="#eee" /></svg></div>
+      </div>
+      <div id="vertrag" class="scene clip" data-start="5.736" data-duration="7.577" data-track-index="1"><div id="vt-h" style="position:absolute;left:390px;top:330px;width:300px;height:560px;"><svg viewBox="0 0 300 560" style="width:100%;height:100%">
+  <rect x="5" y="5" width="290" height="550" rx="44" fill="#353a3d" />
+  <rect x="22" y="40" width="256" height="480" rx="20" fill="#fff" />
+  <rect x="110" y="18" width="80" height="12" rx="6" fill="#1a1a1a" /><text x="150" y="120" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="28" fill="#888">Vertrag</text><text x="150" y="200" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="36" fill="#111">50 €</text><rect x="50" y="300" width="200" height="14" rx="7" fill="#eee" /><rect x="50" y="335" width="160" height="14" rx="7" fill="#eee" /></svg></div><div id="vt-x" class="big" style="position:absolute;left:0;top:920px;width:1080px;font-size:80px;line-height:1.05;color:#555c60">× 24 Monate</div><div id="vt-n" class="big" style="position:absolute;left:0;top:1030px;width:1080px;font-size:150px;line-height:1.05;color:#e24b4b">1.200 €</div>
+      </div>
+      <div id="laden" class="scene clip" data-start="13.313" data-duration="3.538" data-track-index="1"><div id="la-h" style="position:absolute;left:160px;top:360px;width:300px;height:560px;"><svg viewBox="0 0 300 560" style="width:100%;height:100%">
+  <rect x="5" y="5" width="290" height="550" rx="44" fill="#353a3d" />
+  <rect x="22" y="40" width="256" height="480" rx="20" fill="#fff" />
+  <rect x="110" y="18" width="80" height="12" rx="6" fill="#1a1a1a" /></svg></div><div id="la-p" style="position:absolute;left:480px;top:520px;width:480px;height:240px;"><svg viewBox="0 0 400 200" style="width:100%;height:100%">
+  <path d="M10 60 L270 60 L380 100 L270 140 L10 140 Z" fill="#1f7a4d" /><circle cx="300" cy="100" r="12" fill="#fff" />
+  <text x="140" y="118" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="56" fill="#fff">700 €</text></svg></div><div id="la-t" class="big" style="position:absolute;left:0;top:980px;width:1080px;font-size:96px;line-height:1.05;color:#1f7a4d">im Laden</div>
+      </div>
+      <div id="alternative" class="scene clip" data-start="16.851" data-duration="9.337" data-track-index="1"><div id="al-t" class="big" style="position:absolute;left:0;top:300px;width:1080px;font-size:100px;line-height:1.05;color:#1f7a4d">Die Alternative</div><div id="al-h" style="position:absolute;left:180px;top:470px;width:260px;height:485px;"><svg viewBox="0 0 300 560" style="width:100%;height:100%">
+  <rect x="5" y="5" width="290" height="550" rx="44" fill="#353a3d" />
+  <rect x="22" y="40" width="256" height="480" rx="20" fill="#fff" />
+  <rect x="110" y="18" width="80" height="12" rx="6" fill="#1a1a1a" /></svg></div><div id="al-p" class="big" style="position:absolute;left:0;top:600px;width:1080px;font-size:160px;line-height:1.05;color:#111">+</div><div id="al-s" style="position:absolute;left:640px;top:520px;width:260px;height:338px;"><svg viewBox="0 0 200 260" style="width:100%;height:100%">
+  <path d="M20 10 L140 10 L190 60 L190 250 L20 250 Z" fill="#DB8622" />
+  <rect x="55" y="90" width="100" height="120" rx="14" fill="#f2c418" stroke="#c99a06" stroke-width="5" />
+  <path d="M55 130 L155 130 M55 170 L155 170 M105 90 L105 210" stroke="#c99a06" stroke-width="5" /></svg></div><div id="al-n" class="big" style="position:absolute;left:0;top:1030px;width:1080px;font-size:84px;line-height:1.05;color:#DB8622">ab 10 € / Monat</div>
+      </div>
+      <div id="duell" class="scene clip" data-start="26.188" data-duration="13.677" data-track-index="1"><div id="dv" style="position:absolute;left:50px;top:340px;width:470px;padding:36px 30px;border-radius:30px;background:#faf5ef;border-top:16px solid #e24b4b;display:flex;flex-direction:column;gap:22px"><div style="font-family:Montserrat;font-weight:800;font-size:54px;color:#e24b4b">Vertrag</div><div id="dv-z0" style="display:flex;justify-content:space-between;font-family:Montserrat;font-weight:700;font-size:36px;white-space:nowrap;color:#353a3d"><span>50 € × 24</span><span>1.200 €</span></div><div style="height:5px;background:#353a3d"></div><div id="dv-s" class="big" style="font-size:96px;color:#e24b4b;text-align:right">1.200 €</div></div><div id="de" style="position:absolute;left:560px;top:340px;width:470px;padding:36px 30px;border-radius:30px;background:#faf5ef;border-top:16px solid #1f7a4d;display:flex;flex-direction:column;gap:22px"><div style="font-family:Montserrat;font-weight:800;font-size:54px;color:#1f7a4d">Einzeln</div><div id="de-z0" style="display:flex;justify-content:space-between;font-family:Montserrat;font-weight:700;font-size:36px;white-space:nowrap;color:#353a3d"><span>Tarif 10 € × 24</span><span>240 €</span></div><div id="de-z1" style="display:flex;justify-content:space-between;font-family:Montserrat;font-weight:700;font-size:36px;white-space:nowrap;color:#353a3d"><span>Handy</span><span>700 €</span></div><div style="height:5px;background:#353a3d"></div><div id="de-s" class="big" style="font-size:96px;color:#1f7a4d;text-align:right">940 €</div></div><div id="du-g" style="position:absolute;left:140px;top:960px;width:800px;display:flex;align-items:center;justify-content:center;gap:24px;padding:24px;border-radius:30px;background:#1f7a4d"><div style="width:100px;height:100px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><circle cx="50" cy="50" r="46" fill="#fff" /><path d="M28 52 L44 68 L74 36" fill="none" stroke="#1f7a4d" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" /></svg></div><span style="font-family:Montserrat;font-weight:800;font-size:72px;color:#fff">+260 € gespart</span></div>
+      </div>
+      <div id="laenger" class="scene clip" data-start="39.87" data-duration="4.97" data-track-index="1"><div id="lg-h" style="position:absolute;left:390px;top:330px;width:300px;height:560px;"><svg viewBox="0 0 300 560" style="width:100%;height:100%">
+  <rect x="5" y="5" width="290" height="550" rx="44" fill="#353a3d" />
+  <rect x="22" y="40" width="256" height="480" rx="20" fill="#fff" />
+  <rect x="110" y="18" width="80" height="12" rx="6" fill="#1a1a1a" /><text x="150" y="120" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="28" fill="#888">noch 1 Jahr</text><text x="150" y="200" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="36" fill="#1f7a4d">weiter nutzen</text><rect x="50" y="300" width="200" height="14" rx="7" fill="#eee" /><rect x="50" y="335" width="160" height="14" rx="7" fill="#eee" /></svg></div><div id="lg-t" class="big" style="position:absolute;left:0;top:940px;width:1080px;font-size:100px;line-height:1.05;color:#1f7a4d">= noch mehr<br />gespart</div>
+      </div>
+      <div id="teilen" class="scene clip" data-start="44.84" data-duration="5.78" data-track-index="1"><div id="te-i" style="position:absolute;left:340px;top:380px;width:400px;height:400px;"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><circle cx="50" cy="50" r="46" fill="#DB8622" /><path d="M28 70 Q31 42 56 40 L56 26 L78 49 L56 72 L56 57 Q38 56 28 70 Z" fill="#fff" /></svg></div><div id="te-t" class="big" style="position:absolute;left:0;top:880px;width:1080px;font-size:72px;line-height:1.05;color:#DB8622">Schick's jemandem,<br />der gerade wechseln will!</div>
+      </div>
+      <div id="outro" class="scene clip" data-start="50.62" data-duration="5.414" data-track-index="1">
+        <div style="position:absolute;left:0;top:330px;width:1080px;display:flex;flex-direction:column;align-items:center;gap:30px">
+          <div id="outro-dog" style="width:520px;height:520px"><img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:contain" /></div>
+          <div id="outro-name" style="font-family:Montserrat;font-weight:800;font-size:92px;color:#111">HundeFinanzTV</div>
+          <div id="outro-btn" style="padding:18px 64px;border-radius:60px;background:var(--brand);color:#fff;font-family:Montserrat;font-weight:700;font-size:56px">+ Folgen</div>
         </div>
       </div>
 
-      <!-- 2: Zielscheibe -->
-      <div id="s2" class="scene clip" data-start="3" data-duration="3" data-track-index="1">
-        <div id="s2-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <circle cx="190" cy="210" r="160" fill="#e24b4b" />
-            <circle cx="190" cy="210" r="125" fill="#f6efe1" />
-            <circle cx="190" cy="210" r="92" fill="#e24b4b" />
-            <circle cx="190" cy="210" r="58" fill="#f6efe1" />
-            <circle cx="190" cy="210" r="26" fill="#e24b4b" />
-            <g id="s2-arrow">
-              <line x1="196" y1="204" x2="340" y2="60" stroke="#555" stroke-width="10" stroke-linecap="round" />
-              <path d="M320 50 L370 30 L350 80 L340 60 Z" fill="#e8742c" />
-              <path d="M335 35 L375 15 L365 45 Z" fill="#e8742c" />
-            </g>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 3: Zahlen-Vergleich -->
-      <div id="s3" class="scene clip" data-start="6" data-duration="3.5" data-track-index="1">
-        <div class="cmp">
-          <div id="s3-h1" style="grid-column:1"><div class="head">Konto</div><div class="sub">0 %</div></div>
-          <div class="divider"></div>
-          <div id="s3-h2" style="grid-column:3"><div class="head">ETF</div><div class="sub">~7 %</div></div>
-          <div class="arrow" style="grid-column:1">
-            <svg viewBox="0 0 70 110"><path id="s3-a1" d="M40 6 C10 30 8 70 40 98" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" /><path d="M24 92 L42 100 L44 80" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></svg>
-          </div>
-          <div class="arrow" style="grid-column:3">
-            <svg viewBox="0 0 70 110"><path id="s3-a2" d="M30 6 C60 30 62 70 30 98" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" /><path d="M46 92 L28 100 L26 80" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></svg>
-          </div>
-          <div id="s3-n1" class="num green" style="grid-column:1">36.000€</div>
-          <div style="grid-column:3">
-            <div id="s3-n2" class="num green">36.000€</div>
-            <div id="s3-n3" class="num gold">77.000€</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4: Rendite-Chart -->
-      <div id="s4" class="scene clip" data-start="9.5" data-duration="3" data-track-index="1">
-        <div class="art">
-          <svg viewBox="0 0 400 400">
-            <path d="M40 40 L40 340 L370 340" fill="none" stroke="#111" stroke-width="8" stroke-linecap="square" />
-            <path id="s4-solid" d="M60 300 C140 285 220 280 290 255" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" />
-            <path id="s4-dots" d="M60 285 C150 250 230 190 300 95" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 16" />
-            <text id="s4-label" class="chart-label" x="70" y="100" font-size="70" fill="#1f7a4d">~7%</text>
-            <g id="s4-check">
-              <circle cx="320" cy="80" r="42" fill="#111" />
-              <path d="M300 82 L315 97 L342 66" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-            </g>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 5: Outro -->
-      <div id="s5" class="scene clip" data-start="12.5" data-duration="2.5" data-track-index="1">
-        <div id="s5-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <circle cx="200" cy="200" r="150" fill="#DB8622" />
-            <path d="M120 260 L180 200 L220 235 L290 150" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M250 145 L295 145 L295 190" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </div>
-      </div>
-
+      <div id="brand"><span>HundeFinanzTV</span></div>
       <div id="frame"></div>
 
-      <!-- ============ UNTERTITEL ============ -->
       <div id="captions" data-track-kind="captions">
-        <div id="c1" class="cap clip" data-start="0" data-duration="1.6" data-track-index="2"><span>du hast 100 € im Monat übrig</span></div>
-        <div id="c2" class="cap clip" data-start="1.6" data-duration="1.4" data-track-index="2"><span>und fragst dich, was du damit machst</span></div>
-        <div id="c3" class="cap clip" data-start="3" data-duration="3" data-track-index="2"><span>die Frage aller Fragen</span></div>
-        <div id="c4" class="cap clip" data-start="6" data-duration="1.7" data-track-index="2"><span>100 € im Monat, 30 Jahre lang</span></div>
-        <div id="c5" class="cap clip" data-start="7.7" data-duration="1.8" data-track-index="2"><span>auf dem Konto bleiben es 36.000 €</span></div>
-        <div id="c6" class="cap clip" data-start="9.5" data-duration="3" data-track-index="2"><span>im ETF kommen ~77.000 € Rendite dazu</span></div>
-        <div id="c7" class="cap clip" data-start="12.5" data-duration="2.5" data-track-index="2"><span>folg mir für mehr Geld-Tipps</span></div>
+        <div id="c1" class="cap clip" data-start="0.0" data-duration="1.521" data-track-index="2"><span>Dein Handyvertrag kostet</span></div>
+        <div id="c2" class="cap clip" data-start="1.521" data-duration="1.204" data-track-index="2"><span>dich wahrscheinlich</span></div>
+        <div id="c3" class="cap clip" data-start="2.725" data-duration="1.323" data-track-index="2"><span>hunderte Euro zu viel</span></div>
+        <div id="c4" class="cap clip" data-start="4.048" data-duration="0.812" data-track-index="2"><span>Schau mal genau</span></div>
+        <div id="c5" class="cap clip" data-start="4.86" data-duration="0.876" data-track-index="2"><span>auf die Rechnung</span></div>
+        <div id="c6" class="cap clip" data-start="5.736" data-duration="1.273" data-track-index="2"><span>Viele zahlen 50 €</span></div>
+        <div id="c7" class="cap clip" data-start="7.009" data-duration="1.946" data-track-index="2"><span>im Monat für einen Vertrag</span></div>
+        <div id="c8" class="cap clip" data-start="8.955" data-duration="1.031" data-track-index="2"><span>mit neuem Handy</span></div>
+        <div id="c9" class="cap clip" data-start="9.986" data-duration="1.569" data-track-index="2"><span>Über zwei Jahre</span></div>
+        <div id="c10" class="cap clip" data-start="11.555" data-duration="1.758" data-track-index="2"><span>sind das 1.200 €</span></div>
+        <div id="c11" class="cap clip" data-start="13.313" data-duration="1.801" data-track-index="2"><span>Das gleiche Handy kostet</span></div>
+        <div id="c12" class="cap clip" data-start="15.114" data-duration="1.737" data-track-index="2"><span>im Laden aber nur 700 €</span></div>
+        <div id="c13" class="cap clip" data-start="16.851" data-duration="1.928" data-track-index="2"><span>Die Alternative: Du kaufst</span></div>
+        <div id="c14" class="cap clip" data-start="18.779" data-duration="2.076" data-track-index="2"><span>das Handy einzeln und nimmst</span></div>
+        <div id="c15" class="cap clip" data-start="20.855" data-duration="1.554" data-track-index="2"><span>einen Tarif ohne Handy</span></div>
+        <div id="c16" class="cap clip" data-start="22.409" data-duration="1.974" data-track-index="2"><span>Gute Tarife gibt es schon</span></div>
+        <div id="c17" class="cap clip" data-start="24.383" data-duration="1.805" data-track-index="2"><span>für rund 10 € im Monat</span></div>
+        <div id="c18" class="cap clip" data-start="26.188" data-duration="1.888" data-track-index="2"><span>Das macht in zwei</span></div>
+        <div id="c19" class="cap clip" data-start="28.076" data-duration="1.444" data-track-index="2"><span>Jahren 240 €,</span></div>
+        <div id="c20" class="cap clip" data-start="29.52" data-duration="2.444" data-track-index="2"><span>plus 700 € für das Handy</span></div>
+        <div id="c21" class="cap clip" data-start="31.964" data-duration="3.176" data-track-index="2"><span>Zusammen also 940 €</span></div>
+        <div id="c22" class="cap clip" data-start="35.14" data-duration="2.192" data-track-index="2"><span>Du sparst über 250 €,</span></div>
+        <div id="c23" class="cap clip" data-start="37.332" data-duration="2.533" data-track-index="2"><span>mit genau demselben Handy</span></div>
+        <div id="c24" class="cap clip" data-start="39.87" data-duration="1.677" data-track-index="2"><span>Und wenn du dein altes Handy</span></div>
+        <div id="c25" class="cap clip" data-start="41.547" data-duration="1.796" data-track-index="2"><span>einfach ein Jahr länger nutzt,</span></div>
+        <div id="c26" class="cap clip" data-start="43.343" data-duration="1.497" data-track-index="2"><span>sparst du sogar noch mehr</span></div>
+        <div id="c27" class="cap clip" data-start="44.84" data-duration="1.111" data-track-index="2"><span>Kennst du jemanden,</span></div>
+        <div id="c28" class="cap clip" data-start="45.951" data-duration="1.287" data-track-index="2"><span>der gerade einen neuen</span></div>
+        <div id="c29" class="cap clip" data-start="47.238" data-duration="1.462" data-track-index="2"><span>Vertrag abschließen will?</span></div>
+        <div id="c30" class="cap clip" data-start="48.7" data-duration="1.92" data-track-index="2"><span>Dann schick ihm dieses Video</span></div>
+        <div id="c31" class="cap clip" data-start="50.62" data-duration="1.472" data-track-index="2"><span>Folge HundeFinanzTV,</span></div>
+        <div id="c32" class="cap clip" data-start="52.092" data-duration="1.547" data-track-index="2"><span>wir bringen jeden Tag</span></div>
+        <div id="c33" class="cap clip" data-start="53.639" data-duration="1.812" data-track-index="2"><span>neue Videos rund ums Geld</span></div>
       </div>
+
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="56.034" data-track-index="3"></audio>
     </div>
 
     <script>
       const tl = gsap.timeline({ paused: true });
       const pop = (sel, at) =>
         tl.fromTo(sel, { scale: 0.82, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.8)" }, at);
-      const drift = (sel, at, dur) =>
-        tl.fromTo(sel, { scale: 1 }, { scale: 1.05, duration: dur, ease: "sine.inOut" }, at);
+      const zaehl = (sel, von, bis, at, dur, nach) => {
+        const o = { v: von };
+        tl.fromTo(o, { v: von }, { v: bis, duration: dur, ease: "power1.out", onUpdate: () => {
+          document.querySelector(sel).textContent = Math.round(o.v).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (nach || ""); } }, at);
+      };
       const draw = (sel, at, dur) => {
         const len = document.querySelector(sel).getTotalLength();
         tl.fromTo(sel, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: dur, ease: "power2.out" }, at);
       };
 
-      // 1: Geldsack
-      pop("#s1-art", 0);
-      drift("#s1-bag", 0.35, 2.5);
-      tl.fromTo("#s1-coins", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 0.25);
-
-      // 2: Zielscheibe, Pfeil schlägt ein
-      pop("#s2-art", 3);
-      tl.fromTo("#s2-arrow", { x: 160, y: -160, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 0.3, ease: "power4.in" }, 3.3);
-      tl.fromTo("#s2-art", { rotation: 0 }, { rotation: 2, duration: 0.06, yoyo: true, repeat: 3, ease: "none" }, 3.6);
-
-      // 3: Zahlen-Vergleich
-      pop("#s3-h1", 6);
-      pop("#s3-h2", 6.15);
-      tl.fromTo(["#s3-a1", "#s3-a2"], { opacity: 0 }, { opacity: 1, duration: 0.2 }, 6.5);
-      pop("#s3-n1", 7.7);
-      pop("#s3-n2", 7.85);
-      pop("#s3-n3", 9.0);
-
-      // 4: Chart zeichnet sich
-      draw("#s4-solid", 9.6, 0.7);
-      tl.fromTo("#s4-dots", { opacity: 0 }, { opacity: 1, duration: 0.6 }, 10.1);
-      pop("#s4-label", 10.6);
-      pop("#s4-check", 10.9);
-
-      // 5: Outro
-      pop("#s5-art", 12.5);
-      drift("#s5-art", 12.85, 2.0);
+      // hook
+      (() => {
+      tl.fromTo("#hk-t", { scale: 1.05 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 0.0);
+      tl.fromTo("#hk-h", { scale: 1.05 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 0.0);
+      tl.fromTo("#hk-h", { rotation: -5 }, { rotation: 5, duration: 0.2, yoyo: true, repeat: 3, ease: "sine.inOut" }, 4.048);
+      })();
+      // vertrag
+      (() => {
+      pop("#vt-h", 5.736);
+      pop("#vt-x", 9.986);
+      pop("#vt-n", 11.555 - 0.3);
+      zaehl("#vt-n", 50, 1200, 11.555 - 0.3, 1.2, " €");
+      })();
+      // laden
+      (() => {
+      pop("#la-h", 13.313);
+      pop("#la-p", 15.114);
+      tl.fromTo("#la-p", { rotation: -6 }, { rotation: 0, duration: 0.4, ease: "back.out(3)" }, 15.114);
+      pop("#la-t", 15.114 + 0.2);
+      })();
+      // alternative
+      (() => {
+      pop("#al-t", 16.851);
+      pop("#al-h", 18.779);
+      pop("#al-p", 20.855 - 0.2);
+      pop("#al-s", 20.855);
+      pop("#al-n", 24.383);
+      })();
+      // duell
+      (() => {
+      pop("#dv", 26.188);
+      pop("#de", 26.188 + 0.2);
+      tl.fromTo("#de-z0", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 28.076);
+      tl.fromTo("#de-z1", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 29.52);
+      tl.fromTo("#de-s", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 31.964);
+      tl.fromTo("#de-s", { scale: 1 }, { scale: 1.12, duration: 0.2, yoyo: true, repeat: 1 }, 31.964 + 0.4);
+      pop("#du-g", 35.14);
+      })();
+      // laenger
+      (() => {
+      pop("#lg-h", 39.87);
+      tl.fromTo("#lg-h", { rotation: 0 }, { rotation: 360, duration: 0.8, ease: "power2.inOut" }, 41.547);
+      pop("#lg-t", 43.343);
+      })();
+      // teilen
+      (() => {
+      pop("#te-i", 44.84);
+      tl.fromTo("#te-i", { rotation: -6 }, { rotation: 6, duration: 0.25, yoyo: true, repeat: 3, ease: "sine.inOut" }, 44.84 + 0.4);
+      pop("#te-t", 45.951);
+      })();
+      // outro
+      (() => {
+      pop("#outro-dog", 50.62);
+      pop("#outro-name", 50.62 + 0.25);
+      pop("#outro-btn", 50.62 + 0.5);
+      tl.fromTo("#outro-btn", { scale: 1 }, { scale: 1.08, duration: 0.3, yoyo: true, repeat: 1, ease: "sine.inOut" }, 50.62 + 1.1);
+      })();
 
       window.__timelines["main"] = tl;
     </script>

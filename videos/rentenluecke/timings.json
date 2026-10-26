@@ -1,0 +1,254 @@
+{
+ "dauer": 59.014,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 2.716,
+   "captions": [
+    {
+     "text": "Wie viel Rente bekommst",
+     "start": 0.0,
+     "end": 1.53
+    },
+    {
+     "text": "du später eigentlich?",
+     "start": 1.53,
+     "end": 2.716
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 2.716,
+   "end": 6.612,
+   "captions": [
+    {
+     "text": "Die ehrliche Antwort:",
+     "start": 2.716,
+     "end": 3.921
+    },
+    {
+     "text": "wahrscheinlich viel weniger,",
+     "start": 3.921,
+     "end": 5.809
+    },
+    {
+     "text": "als du denkst",
+     "start": 5.809,
+     "end": 6.612
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 6.612,
+   "end": 13.367,
+   "captions": [
+    {
+     "text": "Die gesetzliche Rente",
+     "start": 6.612,
+     "end": 8.238
+    },
+    {
+     "text": "liegt nur bei rund 48 %",
+     "start": 8.238,
+     "end": 10.099
+    },
+    {
+     "text": "des Durchschnittslohns,",
+     "start": 10.099,
+     "end": 11.961
+    },
+    {
+     "text": "und zwar vor Steuern",
+     "start": 11.961,
+     "end": 13.367
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 13.367,
+   "end": 18.626,
+   "captions": [
+    {
+     "text": "Ein Beispiel: Lena verdient",
+     "start": 13.367,
+     "end": 16.384
+    },
+    {
+     "text": "heute 2.500 € netto",
+     "start": 16.384,
+     "end": 18.626
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 18.626,
+   "end": 24.426,
+   "captions": [
+    {
+     "text": "Im Alter bleiben ihr",
+     "start": 18.626,
+     "end": 20.216
+    },
+    {
+     "text": "nach Steuern und Krankenkasse",
+     "start": 20.216,
+     "end": 22.564
+    },
+    {
+     "text": "vielleicht etwa 1.400 €",
+     "start": 22.564,
+     "end": 24.426
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 24.426,
+   "end": 28.006,
+   "captions": [
+    {
+     "text": "Jeden Monat fehlen",
+     "start": 24.426,
+     "end": 26.078
+    },
+    {
+     "text": "ihr also über 1.000 €",
+     "start": 26.078,
+     "end": 28.006
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 28.006,
+   "end": 30.072,
+   "captions": [
+    {
+     "text": "Das nennt man Rentenlücke",
+     "start": 28.006,
+     "end": 30.072
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 30.072,
+   "end": 33.422,
+   "captions": [
+    {
+     "text": "Die gute Nachricht: Mit Zeit",
+     "start": 30.072,
+     "end": 31.874
+    },
+    {
+     "text": "kannst du sie schließen",
+     "start": 31.874,
+     "end": 33.422
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 33.422,
+   "end": 45.626,
+   "captions": [
+    {
+     "text": "Legt Lena ab 30 jeden Monat",
+     "start": 33.422,
+     "end": 36.416
+    },
+    {
+     "text": "200 € in einen breit",
+     "start": 36.416,
+     "end": 38.625
+    },
+    {
+     "text": "gestreuten ETF,",
+     "start": 38.625,
+     "end": 40.13
+    },
+    {
+     "text": "hat sie mit 6 % Rendite",
+     "start": 40.13,
+     "end": 42.692
+    },
+    {
+     "text": "bis zur Rente rund 320.000 €",
+     "start": 42.692,
+     "end": 45.626
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 45.626,
+   "end": 48.795,
+   "captions": [
+    {
+     "text": "Damit kann sie ihre Lücke",
+     "start": 45.626,
+     "end": 47.084
+    },
+    {
+     "text": "viele Jahre lang auffüllen",
+     "start": 47.084,
+     "end": 48.795
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 48.795,
+   "end": 53.6,
+   "captions": [
+    {
+     "text": "Und jetzt du: Schätz mal,",
+     "start": 48.795,
+     "end": 50.242
+    },
+    {
+     "text": "wie viel Rente du bekommst,",
+     "start": 50.242,
+     "end": 51.805
+    },
+    {
+     "text": "und schreib es",
+     "start": 51.805,
+     "end": 52.616
+    },
+    {
+     "text": "in die Kommentare",
+     "start": 52.616,
+     "end": 53.6
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 53.6,
+   "end": 58.431,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTV,",
+     "start": 53.6,
+     "end": 55.072
+    },
+    {
+     "text": "wir bringen jeden Tag",
+     "start": 55.072,
+     "end": 56.619
+    },
+    {
+     "text": "neue Videos rund ums Geld",
+     "start": 56.619,
+     "end": 58.431
+    }
+   ]
+  }
+ ]
+}

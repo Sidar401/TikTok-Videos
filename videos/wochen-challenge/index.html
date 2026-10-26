@@ -117,167 +117,172 @@
         z-index: 5;
       }
       #brand-dog { width: 84px; height: 84px; }
+
+      .scene { position: absolute; inset: 0; top: 0; height: 1920px; display: block; }
+      .tile { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 30px 10px; border-radius: 30px; background: #faf5ef; }
+      .tile svg { width: 230px; height: 230px; }
+      .tile span { font-family: Montserrat; font-weight: 800; font-size: 54px; color: #111; }
+      .big { font-family: var(--font-display); text-align: center; color: #111; }
+      .cap span { max-width: 990px; font-size: 50px; }
     </style>
   </head>
   <body>
-    <div
-      id="root"
-      data-composition-id="main"
-      data-start="0"
-      data-duration="15"
-      data-width="1080"
-      data-height="1920"
-    >
-      <!-- ============ SZENEN ============ -->
-
-      <!-- 1: Geldsack -->
-      <div id="s1" class="scene clip" data-start="0" data-duration="3" data-track-index="1">
-        <div id="s1-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <g id="s1-coins">
-              <g fill="#f2c418" stroke="#c99a06" stroke-width="3">
-                <rect x="250" y="300" width="110" height="22" rx="8" />
-                <rect x="250" y="276" width="110" height="22" rx="8" />
-                <rect x="250" y="252" width="110" height="22" rx="8" />
-                <rect x="250" y="228" width="110" height="22" rx="8" />
-                <rect x="250" y="204" width="110" height="22" rx="8" />
-                <rect x="265" y="180" width="110" height="22" rx="8" />
-                <rect x="258" y="156" width="110" height="22" rx="8" />
-              </g>
-            </g>
-            <g id="s1-bag">
-              <path d="M150 110 C120 70 140 50 160 70 C175 50 205 50 220 70 C240 50 260 70 230 110 Z" fill="#1f7a4d" />
-              <rect x="145" y="104" width="90" height="18" rx="9" fill="#f2c418" />
-              <path d="M150 120 C60 170 40 330 120 340 L260 340 C340 330 320 170 230 120 Z" fill="#1f7a4d" />
-              <path d="M155 135 C90 180 75 300 125 325" fill="none" stroke="#2c9a63" stroke-width="10" stroke-linecap="round" />
-              <circle cx="190" cy="245" r="62" fill="#f2c418" />
-              <text x="190" y="272" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="80" fill="#1f7a4d">€</text>
-            </g>
-            <g fill="#f2c418" stroke="#c99a06" stroke-width="3">
-              <ellipse cx="80" cy="345" rx="34" ry="12" />
-              <ellipse cx="110" cy="360" rx="34" ry="12" />
-            </g>
-          </svg>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="50.25" data-width="1080" data-height="1920">
+      <div id="hook" class="scene clip" data-start="0.0" data-duration="3.619" data-track-index="1"><div id="hk-t" style="position:absolute;top:300px;left:40px;width:1000px;text-align:center;font-family:Montserrat;font-weight:800;font-size:104px;line-height:1.05;color:#111">Am Monatsende<br /><span style="color:#e24b4b">nie was übrig?</span></div><div id="hk-g" style="position:absolute;left:340px;top:620px;width:400px;height:507px;"><svg viewBox="0 0 300 380" style="width:100%;height:100%">
+  <defs><clipPath id="g0-k"><path d="M50 90 L250 90 L250 330 Q250 360 220 360 L80 360 Q50 360 50 330 Z" /></clipPath></defs>
+  <rect x="70" y="40" width="160" height="40" rx="10" fill="#8a5a2b" />
+  <g clip-path="url(#g0-k)"><g id="g0-f" transform="translate(0 345.6) scale(1 0.04)">
+    <rect x="40" y="90" width="220" height="280" fill="#f2c418" />
+    <ellipse cx="70" cy="110" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="122" cy="110" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="174" cy="110" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="226" cy="110" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="70" cy="150" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="122" cy="150" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="174" cy="150" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="226" cy="150" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="70" cy="190" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="122" cy="190" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="174" cy="190" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="226" cy="190" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="70" cy="230" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="122" cy="230" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="174" cy="230" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="226" cy="230" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="70" cy="270" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="122" cy="270" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="174" cy="270" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="226" cy="270" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="70" cy="310" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="122" cy="310" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="174" cy="310" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="226" cy="310" rx="22" ry="9" fill="#c99a06" opacity="0.6" />
+  </g></g>
+  <path d="M50 90 L250 90 L250 330 Q250 360 220 360 L80 360 Q50 360 50 330 Z" fill="none" stroke="#353a3d" stroke-width="10" />
+  <rect x="70" y="120" width="18" height="180" rx="9" fill="#fff" opacity="0.6" />
+</svg></div>
+      </div>
+      <div id="challenge" class="scene clip" data-start="3.619" data-duration="4.196" data-track-index="1"><div id="ch-t" class="big" style="position:absolute;left:0;top:300px;width:1080px;font-size:130px;line-height:1.05;color:#111">52-Wochen-<br /><span style="color:#DB8622">Challenge</span></div><div id="ch-k" style="position:absolute;left:115px;top:660px;width:850px;display:grid;grid-template-columns:repeat(13,56px);gap:10px"><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#1f7a4d"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#1f7a4d"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#1f7a4d"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#DB8622"></div><div class="kz" style="width:56px;height:56px;border-radius:12px;background:#1f7a4d"></div></div><div id="ch-r" class="big" style="position:absolute;left:0;top:1000px;width:1080px;font-size:90px;line-height:1.05;color:#1f7a4d">Die Regel:</div>
+      </div>
+      <div id="wochen" class="scene clip" data-start="7.815" data-duration="8.236" data-track-index="1"><div id="wo-1" style="position:absolute;left:150px;top:360px;width:780px;display:flex;align-items:center;justify-content:space-between;padding:26px 44px;border-radius:30px;background:#faf5ef;font-family:Montserrat;font-weight:800;font-size:62px;color:#111"><span>Woche 1</span><span style="color:#1f7a4d">+ 1 €</span></div><div id="wo-2" style="position:absolute;left:150px;top:560px;width:780px;display:flex;align-items:center;justify-content:space-between;padding:26px 44px;border-radius:30px;background:#faf5ef;font-family:Montserrat;font-weight:800;font-size:62px;color:#111"><span>Woche 2</span><span style="color:#1f7a4d">+ 2 €</span></div><div id="wo-3" style="position:absolute;left:150px;top:760px;width:780px;display:flex;align-items:center;justify-content:space-between;padding:26px 44px;border-radius:30px;background:#faf5ef;font-family:Montserrat;font-weight:800;font-size:62px;color:#111"><span>Woche 3</span><span style="color:#1f7a4d">+ 3 €</span></div><div id="wo-m" class="big" style="position:absolute;left:0;top:1010px;width:1080px;font-size:92px;line-height:1.05;color:#111">jede Woche <span style='color:#1f7a4d'>+1 €</span></div>
+      </div>
+      <div id="treppe" class="scene clip" data-start="16.051" data-duration="6.224" data-track-index="1"><div id="tr-c" style="position:absolute;left:90px;top:560px;width:900px;height:420px;"><svg viewBox="0 0 900 420" style="width:100%;height:100%"><line x1="0" y1="420" x2="900" y2="420" stroke="#111" stroke-width="6" /><rect class="tr-b" x="1.0" y="411.9" width="15.3" height="8.1" fill="#DB8622" /><rect class="tr-b" x="18.3" y="403.8" width="15.3" height="16.2" fill="#DB8622" /><rect class="tr-b" x="35.6" y="395.8" width="15.3" height="24.2" fill="#DB8622" /><rect class="tr-b" x="52.9" y="387.7" width="15.3" height="32.3" fill="#DB8622" /><rect class="tr-b" x="70.2" y="379.6" width="15.3" height="40.4" fill="#DB8622" /><rect class="tr-b" x="87.5" y="371.5" width="15.3" height="48.5" fill="#DB8622" /><rect class="tr-b" x="104.8" y="363.5" width="15.3" height="56.5" fill="#DB8622" /><rect class="tr-b" x="122.2" y="355.4" width="15.3" height="64.6" fill="#DB8622" /><rect class="tr-b" x="139.5" y="347.3" width="15.3" height="72.7" fill="#DB8622" /><rect class="tr-b" x="156.8" y="339.2" width="15.3" height="80.8" fill="#DB8622" /><rect class="tr-b" x="174.1" y="331.2" width="15.3" height="88.8" fill="#DB8622" /><rect class="tr-b" x="191.4" y="323.1" width="15.3" height="96.9" fill="#DB8622" /><rect class="tr-b" x="208.7" y="315.0" width="15.3" height="105.0" fill="#1f7a4d" /><rect class="tr-b" x="226.0" y="306.9" width="15.3" height="113.1" fill="#DB8622" /><rect class="tr-b" x="243.3" y="298.8" width="15.3" height="121.2" fill="#DB8622" /><rect class="tr-b" x="260.6" y="290.8" width="15.3" height="129.2" fill="#DB8622" /><rect class="tr-b" x="277.9" y="282.7" width="15.3" height="137.3" fill="#DB8622" /><rect class="tr-b" x="295.2" y="274.6" width="15.3" height="145.4" fill="#DB8622" /><rect class="tr-b" x="312.5" y="266.5" width="15.3" height="153.5" fill="#DB8622" /><rect class="tr-b" x="329.8" y="258.5" width="15.3" height="161.5" fill="#DB8622" /><rect class="tr-b" x="347.2" y="250.4" width="15.3" height="169.6" fill="#DB8622" /><rect class="tr-b" x="364.5" y="242.3" width="15.3" height="177.7" fill="#DB8622" /><rect class="tr-b" x="381.8" y="234.2" width="15.3" height="185.8" fill="#DB8622" /><rect class="tr-b" x="399.1" y="226.2" width="15.3" height="193.8" fill="#DB8622" /><rect class="tr-b" x="416.4" y="218.1" width="15.3" height="201.9" fill="#DB8622" /><rect class="tr-b" x="433.7" y="210.0" width="15.3" height="210.0" fill="#1f7a4d" /><rect class="tr-b" x="451.0" y="201.9" width="15.3" height="218.1" fill="#DB8622" /><rect class="tr-b" x="468.3" y="193.8" width="15.3" height="226.2" fill="#DB8622" /><rect class="tr-b" x="485.6" y="185.8" width="15.3" height="234.2" fill="#DB8622" /><rect class="tr-b" x="502.9" y="177.7" width="15.3" height="242.3" fill="#DB8622" /><rect class="tr-b" x="520.2" y="169.6" width="15.3" height="250.4" fill="#DB8622" /><rect class="tr-b" x="537.5" y="161.5" width="15.3" height="258.5" fill="#DB8622" /><rect class="tr-b" x="554.8" y="153.5" width="15.3" height="266.5" fill="#DB8622" /><rect class="tr-b" x="572.2" y="145.4" width="15.3" height="274.6" fill="#DB8622" /><rect class="tr-b" x="589.5" y="137.3" width="15.3" height="282.7" fill="#DB8622" /><rect class="tr-b" x="606.8" y="129.2" width="15.3" height="290.8" fill="#DB8622" /><rect class="tr-b" x="624.1" y="121.2" width="15.3" height="298.8" fill="#DB8622" /><rect class="tr-b" x="641.4" y="113.1" width="15.3" height="306.9" fill="#DB8622" /><rect class="tr-b" x="658.7" y="105.0" width="15.3" height="315.0" fill="#1f7a4d" /><rect class="tr-b" x="676.0" y="96.9" width="15.3" height="323.1" fill="#DB8622" /><rect class="tr-b" x="693.3" y="88.8" width="15.3" height="331.2" fill="#DB8622" /><rect class="tr-b" x="710.6" y="80.8" width="15.3" height="339.2" fill="#DB8622" /><rect class="tr-b" x="727.9" y="72.7" width="15.3" height="347.3" fill="#DB8622" /><rect class="tr-b" x="745.2" y="64.6" width="15.3" height="355.4" fill="#DB8622" /><rect class="tr-b" x="762.5" y="56.5" width="15.3" height="363.5" fill="#DB8622" /><rect class="tr-b" x="779.8" y="48.5" width="15.3" height="371.5" fill="#DB8622" /><rect class="tr-b" x="797.2" y="40.4" width="15.3" height="379.6" fill="#DB8622" /><rect class="tr-b" x="814.5" y="32.3" width="15.3" height="387.7" fill="#DB8622" /><rect class="tr-b" x="831.8" y="24.2" width="15.3" height="395.8" fill="#DB8622" /><rect class="tr-b" x="849.1" y="16.2" width="15.3" height="403.8" fill="#DB8622" /><rect class="tr-b" x="866.4" y="8.1" width="15.3" height="411.9" fill="#DB8622" /><rect class="tr-b" x="883.7" y="0.0" width="15.3" height="420.0" fill="#1f7a4d" /></svg></div><div id="tr-k" class="big" style="position:absolute;left:0;top:330px;width:1080px;font-size:90px;line-height:1.05;color:#9aa3a8">kaum spürbar …</div><div id="tr-e" class="big" style="position:absolute;left:0;top:330px;width:1080px;font-size:96px;line-height:1.05;color:#111">Woche 52: <span style='color:#e24b4b'>52 €</span></div>
+      </div>
+      <div id="summe" class="scene clip" data-start="22.275" data-duration="8.357" data-track-index="1"><div id="su-g" style="position:absolute;left:340px;top:300px;width:400px;height:507px;"><svg viewBox="0 0 300 380" style="width:100%;height:100%">
+  <defs><clipPath id="g1-k"><path d="M50 90 L250 90 L250 330 Q250 360 220 360 L80 360 Q50 360 50 330 Z" /></clipPath></defs>
+  <rect x="70" y="40" width="160" height="40" rx="10" fill="#8a5a2b" />
+  <g clip-path="url(#g1-k)"><g id="g1-f">
+    <rect x="40" y="90" width="220" height="280" fill="#f2c418" />
+    <ellipse cx="70" cy="110" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="122" cy="110" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="174" cy="110" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="226" cy="110" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="70" cy="150" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="122" cy="150" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="174" cy="150" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="226" cy="150" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="70" cy="190" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="122" cy="190" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="174" cy="190" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="226" cy="190" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="70" cy="230" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="122" cy="230" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="174" cy="230" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="226" cy="230" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="70" cy="270" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="122" cy="270" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="174" cy="270" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="226" cy="270" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="70" cy="310" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="122" cy="310" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="174" cy="310" rx="22" ry="9" fill="#c99a06" opacity="0.6" /><ellipse cx="226" cy="310" rx="22" ry="9" fill="#c99a06" opacity="0.6" />
+  </g></g>
+  <path d="M50 90 L250 90 L250 330 Q250 360 220 360 L80 360 Q50 360 50 330 Z" fill="none" stroke="#353a3d" stroke-width="10" />
+  <rect x="70" y="120" width="18" height="180" rx="9" fill="#fff" opacity="0.6" />
+</svg></div><div id="su-n" class="big" style="position:absolute;left:0;top:850px;width:1080px;font-size:190px;line-height:1.05;color:#1f7a4d">0 €</div><div id="su-c" style="position:absolute;left:0;top:1080px;width:1080px;display:flex;justify-content:center;align-items:center;gap:24px"><div style="width:100px;height:100px"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><circle cx="50" cy="50" r="46" fill="#1f7a4d" /><path d="M28 52 L44 68 L74 36" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" /></svg></div><span style="font-family:Montserrat;font-weight:800;font-size:60px;color:#111">fast ohne Verzicht</span></div>
+      </div>
+      <div id="rueckwaerts" class="scene clip" data-start="30.632" data-duration="9.487" data-track-index="1"><div id="rw-t" class="big" style="position:absolute;left:0;top:300px;width:1080px;font-size:110px;line-height:1.05;color:#111">Unser Tipp:<br /><span style="color:#DB8622">rückwärts!</span></div><div id="rw-p" style="position:absolute;left:440px;top:560px;width:200px;height:120px;"><svg viewBox="0 0 200 120" style="width:100%;height:100%"><path d="M180 60 L40 60 M80 20 L36 60 L80 100" fill="none" stroke="#DB8622" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" /></svg></div><div id="rw-c" style="position:absolute;left:90px;top:720px;width:900px;height:300px;"><svg viewBox="0 0 900 300" style="width:100%;height:100%"><line x1="0" y1="300" x2="900" y2="300" stroke="#111" stroke-width="6" /><rect class="rw-b" x="1.0" y="0.0" width="15.3" height="300.0" fill="#DB8622" /><rect class="rw-b" x="18.3" y="5.8" width="15.3" height="294.2" fill="#DB8622" /><rect class="rw-b" x="35.6" y="11.5" width="15.3" height="288.5" fill="#DB8622" /><rect class="rw-b" x="52.9" y="17.3" width="15.3" height="282.7" fill="#DB8622" /><rect class="rw-b" x="70.2" y="23.1" width="15.3" height="276.9" fill="#DB8622" /><rect class="rw-b" x="87.5" y="28.8" width="15.3" height="271.2" fill="#DB8622" /><rect class="rw-b" x="104.8" y="34.6" width="15.3" height="265.4" fill="#DB8622" /><rect class="rw-b" x="122.2" y="40.4" width="15.3" height="259.6" fill="#DB8622" /><rect class="rw-b" x="139.5" y="46.2" width="15.3" height="253.8" fill="#DB8622" /><rect class="rw-b" x="156.8" y="51.9" width="15.3" height="248.1" fill="#DB8622" /><rect class="rw-b" x="174.1" y="57.7" width="15.3" height="242.3" fill="#DB8622" /><rect class="rw-b" x="191.4" y="63.5" width="15.3" height="236.5" fill="#DB8622" /><rect class="rw-b" x="208.7" y="69.2" width="15.3" height="230.8" fill="#1f7a4d" /><rect class="rw-b" x="226.0" y="75.0" width="15.3" height="225.0" fill="#DB8622" /><rect class="rw-b" x="243.3" y="80.8" width="15.3" height="219.2" fill="#DB8622" /><rect class="rw-b" x="260.6" y="86.5" width="15.3" height="213.5" fill="#DB8622" /><rect class="rw-b" x="277.9" y="92.3" width="15.3" height="207.7" fill="#DB8622" /><rect class="rw-b" x="295.2" y="98.1" width="15.3" height="201.9" fill="#DB8622" /><rect class="rw-b" x="312.5" y="103.8" width="15.3" height="196.2" fill="#DB8622" /><rect class="rw-b" x="329.8" y="109.6" width="15.3" height="190.4" fill="#DB8622" /><rect class="rw-b" x="347.2" y="115.4" width="15.3" height="184.6" fill="#DB8622" /><rect class="rw-b" x="364.5" y="121.2" width="15.3" height="178.8" fill="#DB8622" /><rect class="rw-b" x="381.8" y="126.9" width="15.3" height="173.1" fill="#DB8622" /><rect class="rw-b" x="399.1" y="132.7" width="15.3" height="167.3" fill="#DB8622" /><rect class="rw-b" x="416.4" y="138.5" width="15.3" height="161.5" fill="#DB8622" /><rect class="rw-b" x="433.7" y="144.2" width="15.3" height="155.8" fill="#1f7a4d" /><rect class="rw-b" x="451.0" y="150.0" width="15.3" height="150.0" fill="#DB8622" /><rect class="rw-b" x="468.3" y="155.8" width="15.3" height="144.2" fill="#DB8622" /><rect class="rw-b" x="485.6" y="161.5" width="15.3" height="138.5" fill="#DB8622" /><rect class="rw-b" x="502.9" y="167.3" width="15.3" height="132.7" fill="#DB8622" /><rect class="rw-b" x="520.2" y="173.1" width="15.3" height="126.9" fill="#DB8622" /><rect class="rw-b" x="537.5" y="178.8" width="15.3" height="121.2" fill="#DB8622" /><rect class="rw-b" x="554.8" y="184.6" width="15.3" height="115.4" fill="#DB8622" /><rect class="rw-b" x="572.2" y="190.4" width="15.3" height="109.6" fill="#DB8622" /><rect class="rw-b" x="589.5" y="196.2" width="15.3" height="103.8" fill="#DB8622" /><rect class="rw-b" x="606.8" y="201.9" width="15.3" height="98.1" fill="#DB8622" /><rect class="rw-b" x="624.1" y="207.7" width="15.3" height="92.3" fill="#DB8622" /><rect class="rw-b" x="641.4" y="213.5" width="15.3" height="86.5" fill="#DB8622" /><rect class="rw-b" x="658.7" y="219.2" width="15.3" height="80.8" fill="#1f7a4d" /><rect class="rw-b" x="676.0" y="225.0" width="15.3" height="75.0" fill="#DB8622" /><rect class="rw-b" x="693.3" y="230.8" width="15.3" height="69.2" fill="#DB8622" /><rect class="rw-b" x="710.6" y="236.5" width="15.3" height="63.5" fill="#DB8622" /><rect class="rw-b" x="727.9" y="242.3" width="15.3" height="57.7" fill="#DB8622" /><rect class="rw-b" x="745.2" y="248.1" width="15.3" height="51.9" fill="#DB8622" /><rect class="rw-b" x="762.5" y="253.8" width="15.3" height="46.2" fill="#DB8622" /><rect class="rw-b" x="779.8" y="259.6" width="15.3" height="40.4" fill="#DB8622" /><rect class="rw-b" x="797.2" y="265.4" width="15.3" height="34.6" fill="#DB8622" /><rect class="rw-b" x="814.5" y="271.2" width="15.3" height="28.8" fill="#DB8622" /><rect class="rw-b" x="831.8" y="276.9" width="15.3" height="23.1" fill="#DB8622" /><rect class="rw-b" x="849.1" y="282.7" width="15.3" height="17.3" fill="#DB8622" /><rect class="rw-b" x="866.4" y="288.5" width="15.3" height="11.5" fill="#DB8622" /><rect class="rw-b" x="883.7" y="294.2" width="15.3" height="5.8" fill="#1f7a4d" /></svg></div><div id="rw-a" style="position:absolute;left:90px;top:1060px;font-family:Montserrat;font-weight:800;font-size:54px;color:#1f7a4d">Januar: 52 €</div><div id="rw-b" style="position:absolute;right:90px;top:1060px;font-family:Montserrat;font-weight:800;font-size:54px;color:#DB8622">Dezember: 1 €</div>
+      </div>
+      <div id="teilen" class="scene clip" data-start="40.119" data-duration="4.717" data-track-index="1"><div id="te-i" style="position:absolute;left:340px;top:380px;width:400px;height:400px;"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><circle cx="50" cy="50" r="46" fill="#DB8622" /><path d="M28 70 Q31 42 56 40 L56 26 L78 49 L56 72 L56 57 Q38 56 28 70 Z" fill="#fff" /></svg></div><div id="te-t" class="big" style="position:absolute;left:0;top:880px;width:1080px;font-size:76px;line-height:1.05;color:#DB8622">Teile das Video<br />mit deinem Spar-Buddy!</div>
+      </div>
+      <div id="outro" class="scene clip" data-start="44.836" data-duration="5.414" data-track-index="1">
+        <div style="position:absolute;left:0;top:330px;width:1080px;display:flex;flex-direction:column;align-items:center;gap:30px">
+          <div id="outro-dog" style="width:520px;height:520px"><img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:contain" /></div>
+          <div id="outro-name" style="font-family:Montserrat;font-weight:800;font-size:92px;color:#111">HundeFinanzTV</div>
+          <div id="outro-btn" style="padding:18px 64px;border-radius:60px;background:var(--brand);color:#fff;font-family:Montserrat;font-weight:700;font-size:56px">+ Folgen</div>
         </div>
       </div>
 
-      <!-- 2: Zielscheibe -->
-      <div id="s2" class="scene clip" data-start="3" data-duration="3" data-track-index="1">
-        <div id="s2-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <circle cx="190" cy="210" r="160" fill="#e24b4b" />
-            <circle cx="190" cy="210" r="125" fill="#f6efe1" />
-            <circle cx="190" cy="210" r="92" fill="#e24b4b" />
-            <circle cx="190" cy="210" r="58" fill="#f6efe1" />
-            <circle cx="190" cy="210" r="26" fill="#e24b4b" />
-            <g id="s2-arrow">
-              <line x1="196" y1="204" x2="340" y2="60" stroke="#555" stroke-width="10" stroke-linecap="round" />
-              <path d="M320 50 L370 30 L350 80 L340 60 Z" fill="#e8742c" />
-              <path d="M335 35 L375 15 L365 45 Z" fill="#e8742c" />
-            </g>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 3: Zahlen-Vergleich -->
-      <div id="s3" class="scene clip" data-start="6" data-duration="3.5" data-track-index="1">
-        <div class="cmp">
-          <div id="s3-h1" style="grid-column:1"><div class="head">Konto</div><div class="sub">0 %</div></div>
-          <div class="divider"></div>
-          <div id="s3-h2" style="grid-column:3"><div class="head">ETF</div><div class="sub">~7 %</div></div>
-          <div class="arrow" style="grid-column:1">
-            <svg viewBox="0 0 70 110"><path id="s3-a1" d="M40 6 C10 30 8 70 40 98" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" /><path d="M24 92 L42 100 L44 80" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></svg>
-          </div>
-          <div class="arrow" style="grid-column:3">
-            <svg viewBox="0 0 70 110"><path id="s3-a2" d="M30 6 C60 30 62 70 30 98" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" /><path d="M46 92 L28 100 L26 80" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></svg>
-          </div>
-          <div id="s3-n1" class="num green" style="grid-column:1">36.000€</div>
-          <div style="grid-column:3">
-            <div id="s3-n2" class="num green">36.000€</div>
-            <div id="s3-n3" class="num gold">77.000€</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4: Rendite-Chart -->
-      <div id="s4" class="scene clip" data-start="9.5" data-duration="3" data-track-index="1">
-        <div class="art">
-          <svg viewBox="0 0 400 400">
-            <path d="M40 40 L40 340 L370 340" fill="none" stroke="#111" stroke-width="8" stroke-linecap="square" />
-            <path id="s4-solid" d="M60 300 C140 285 220 280 290 255" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" />
-            <path id="s4-dots" d="M60 285 C150 250 230 190 300 95" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 16" />
-            <text id="s4-label" class="chart-label" x="70" y="100" font-size="70" fill="#1f7a4d">~7%</text>
-            <g id="s4-check">
-              <circle cx="320" cy="80" r="42" fill="#111" />
-              <path d="M300 82 L315 97 L342 66" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-            </g>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 5: Outro -->
-      <div id="s5" class="scene clip" data-start="12.5" data-duration="2.5" data-track-index="1">
-        <div id="s5-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <circle cx="200" cy="200" r="150" fill="#DB8622" />
-            <path d="M120 260 L180 200 L220 235 L290 150" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M250 145 L295 145 L295 190" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </div>
-      </div>
-
+      <div id="brand"><span>HundeFinanzTV</span></div>
       <div id="frame"></div>
 
-      <!-- ============ UNTERTITEL ============ -->
       <div id="captions" data-track-kind="captions">
-        <div id="c1" class="cap clip" data-start="0" data-duration="1.6" data-track-index="2"><span>du hast 100 € im Monat übrig</span></div>
-        <div id="c2" class="cap clip" data-start="1.6" data-duration="1.4" data-track-index="2"><span>und fragst dich, was du damit machst</span></div>
-        <div id="c3" class="cap clip" data-start="3" data-duration="3" data-track-index="2"><span>die Frage aller Fragen</span></div>
-        <div id="c4" class="cap clip" data-start="6" data-duration="1.7" data-track-index="2"><span>100 € im Monat, 30 Jahre lang</span></div>
-        <div id="c5" class="cap clip" data-start="7.7" data-duration="1.8" data-track-index="2"><span>auf dem Konto bleiben es 36.000 €</span></div>
-        <div id="c6" class="cap clip" data-start="9.5" data-duration="3" data-track-index="2"><span>im ETF kommen ~77.000 € Rendite dazu</span></div>
-        <div id="c7" class="cap clip" data-start="12.5" data-duration="2.5" data-track-index="2"><span>folg mir für mehr Geld-Tipps</span></div>
+        <div id="c1" class="cap clip" data-start="0.0" data-duration="1.121" data-track-index="2"><span>Du willst sparen,</span></div>
+        <div id="c2" class="cap clip" data-start="1.121" data-duration="1.187" data-track-index="2"><span>aber am Monatsende</span></div>
+        <div id="c3" class="cap clip" data-start="2.308" data-duration="1.311" data-track-index="2"><span>ist nie etwas übrig?</span></div>
+        <div id="c4" class="cap clip" data-start="3.619" data-duration="1.266" data-track-index="2"><span>Dann probier die</span></div>
+        <div id="c5" class="cap clip" data-start="4.885" data-duration="1.503" data-track-index="2"><span>52-Wochen-Challenge</span></div>
+        <div id="c6" class="cap clip" data-start="6.388" data-duration="1.427" data-track-index="2"><span>Die Regel ist ganz einfach</span></div>
+        <div id="c7" class="cap clip" data-start="7.815" data-duration="1.594" data-track-index="2"><span>In Woche 1 legst du</span></div>
+        <div id="c8" class="cap clip" data-start="9.409" data-duration="1.091" data-track-index="2"><span>1 € zur Seite</span></div>
+        <div id="c9" class="cap clip" data-start="10.5" data-duration="1.729" data-track-index="2"><span>In Woche 2: 2 €,</span></div>
+        <div id="c10" class="cap clip" data-start="12.229" data-duration="1.429" data-track-index="2"><span>in Woche 3: 3 €</span></div>
+        <div id="c11" class="cap clip" data-start="13.658" data-duration="1.238" data-track-index="2"><span>Jede Woche also</span></div>
+        <div id="c12" class="cap clip" data-start="14.896" data-duration="1.155" data-track-index="2"><span>genau 1 € mehr</span></div>
+        <div id="c13" class="cap clip" data-start="16.051" data-duration="1.641" data-track-index="2"><span>Am Anfang merkst du das kaum</span></div>
+        <div id="c14" class="cap clip" data-start="17.692" data-duration="2.206" data-track-index="2"><span>Erst am Ende wird es spürbar,</span></div>
+        <div id="c15" class="cap clip" data-start="19.898" data-duration="1.082" data-track-index="2"><span>in der letzten</span></div>
+        <div id="c16" class="cap clip" data-start="20.98" data-duration="1.295" data-track-index="2"><span>Woche sind es 52 €</span></div>
+        <div id="c17" class="cap clip" data-start="22.275" data-duration="0.603" data-track-index="2"><span>Und weißt du,</span></div>
+        <div id="c18" class="cap clip" data-start="22.878" data-duration="1.289" data-track-index="2"><span>wie viel nach einem Jahr</span></div>
+        <div id="c19" class="cap clip" data-start="24.167" data-duration="0.714" data-track-index="2"><span>zusammenkommt?</span></div>
+        <div id="c20" class="cap clip" data-start="24.881" data-duration="2.774" data-track-index="2"><span>1.378 €</span></div>
+        <div id="c21" class="cap clip" data-start="27.655" data-duration="1.785" data-track-index="2"><span>Fast ohne Verzicht und ohne</span></div>
+        <div id="c22" class="cap clip" data-start="29.44" data-duration="1.192" data-track-index="2"><span>es richtig zu merken</span></div>
+        <div id="c23" class="cap clip" data-start="30.632" data-duration="0.9" data-track-index="2"><span>Unser Tipp: Mach</span></div>
+        <div id="c24" class="cap clip" data-start="31.532" data-duration="1.553" data-track-index="2"><span>die Challenge rückwärts</span></div>
+        <div id="c25" class="cap clip" data-start="33.085" data-duration="2.078" data-track-index="2"><span>Starte im Januar mit 52 €,</span></div>
+        <div id="c26" class="cap clip" data-start="35.163" data-duration="2.478" data-track-index="2"><span>solange du noch motiviert bist,</span></div>
+        <div id="c27" class="cap clip" data-start="37.641" data-duration="1.918" data-track-index="2"><span>und ende vor Weihnachten</span></div>
+        <div id="c28" class="cap clip" data-start="39.559" data-duration="0.56" data-track-index="2"><span>mit 1 €</span></div>
+        <div id="c29" class="cap clip" data-start="40.119" data-duration="1.004" data-track-index="2"><span>Kennst du jemanden,</span></div>
+        <div id="c30" class="cap clip" data-start="41.123" data-duration="0.922" data-track-index="2"><span>der das unbedingt</span></div>
+        <div id="c31" class="cap clip" data-start="42.045" data-duration="0.911" data-track-index="2"><span>mitmachen sollte?</span></div>
+        <div id="c32" class="cap clip" data-start="42.956" data-duration="1.06" data-track-index="2"><span>Dann teile dieses</span></div>
+        <div id="c33" class="cap clip" data-start="44.016" data-duration="0.82" data-track-index="2"><span>Video mit ihm</span></div>
+        <div id="c34" class="cap clip" data-start="44.836" data-duration="1.472" data-track-index="2"><span>Folge HundeFinanzTV,</span></div>
+        <div id="c35" class="cap clip" data-start="46.308" data-duration="1.547" data-track-index="2"><span>wir bringen jeden Tag</span></div>
+        <div id="c36" class="cap clip" data-start="47.855" data-duration="1.812" data-track-index="2"><span>neue Videos rund ums Geld</span></div>
       </div>
+
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="50.25" data-track-index="3"></audio>
     </div>
 
     <script>
       const tl = gsap.timeline({ paused: true });
       const pop = (sel, at) =>
         tl.fromTo(sel, { scale: 0.82, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.8)" }, at);
-      const drift = (sel, at, dur) =>
-        tl.fromTo(sel, { scale: 1 }, { scale: 1.05, duration: dur, ease: "sine.inOut" }, at);
+      const zaehl = (sel, von, bis, at, dur, nach) => {
+        const o = { v: von };
+        tl.fromTo(o, { v: von }, { v: bis, duration: dur, ease: "power1.out", onUpdate: () => {
+          document.querySelector(sel).textContent = Math.round(o.v).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (nach || ""); } }, at);
+      };
       const draw = (sel, at, dur) => {
         const len = document.querySelector(sel).getTotalLength();
         tl.fromTo(sel, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: dur, ease: "power2.out" }, at);
       };
 
-      // 1: Geldsack
-      pop("#s1-art", 0);
-      drift("#s1-bag", 0.35, 2.5);
-      tl.fromTo("#s1-coins", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 0.25);
-
-      // 2: Zielscheibe, Pfeil schlägt ein
-      pop("#s2-art", 3);
-      tl.fromTo("#s2-arrow", { x: 160, y: -160, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 0.3, ease: "power4.in" }, 3.3);
-      tl.fromTo("#s2-art", { rotation: 0 }, { rotation: 2, duration: 0.06, yoyo: true, repeat: 3, ease: "none" }, 3.6);
-
-      // 3: Zahlen-Vergleich
-      pop("#s3-h1", 6);
-      pop("#s3-h2", 6.15);
-      tl.fromTo(["#s3-a1", "#s3-a2"], { opacity: 0 }, { opacity: 1, duration: 0.2 }, 6.5);
-      pop("#s3-n1", 7.7);
-      pop("#s3-n2", 7.85);
-      pop("#s3-n3", 9.0);
-
-      // 4: Chart zeichnet sich
-      draw("#s4-solid", 9.6, 0.7);
-      tl.fromTo("#s4-dots", { opacity: 0 }, { opacity: 1, duration: 0.6 }, 10.1);
-      pop("#s4-label", 10.6);
-      pop("#s4-check", 10.9);
-
-      // 5: Outro
-      pop("#s5-art", 12.5);
-      drift("#s5-art", 12.85, 2.0);
+      // hook
+      (() => {
+      tl.fromTo("#hk-t", { scale: 1.05 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 0.0);
+      tl.fromTo("#hk-g", { scale: 1.05 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 0.0);
+      tl.fromTo("#hk-g", { rotation: -4 }, { rotation: 4, duration: 0.25, yoyo: true, repeat: 5, ease: "sine.inOut" }, 2.308);
+      })();
+      // challenge
+      (() => {
+      pop("#ch-t", 4.885);
+      tl.fromTo(".kz", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.2, stagger: 0.025, ease: "back.out(2)" }, 4.885 + 0.3);
+      pop("#ch-r", 6.388);
+      })();
+      // wochen
+      (() => {
+      pop("#wo-1", 7.815);
+      pop("#wo-2", 10.5);
+      pop("#wo-3", 12.229);
+      pop("#wo-m", 14.896);
+      })();
+      // treppe
+      (() => {
+      tl.fromTo(".tr-b", { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.25, stagger: 0.097, ease: "power2.out" }, 16.051);
+      pop("#tr-k", 16.051 + 0.2);
+      tl.to("#tr-k", { opacity: 0, duration: 0.2 }, 19.898 - 0.2);
+      pop("#tr-e", 20.98);
+      })();
+      // summe
+      (() => {
+      pop("#su-g", 22.275);
+      tl.fromTo("#g1-f", { scaleY: 0.02, svgOrigin: "150 360" }, { scaleY: 0.95, svgOrigin: "150 360", duration: 2.2, ease: "power1.inOut" }, 22.275 + 0.4);
+      pop("#su-n", 24.881 - 0.3);
+      zaehl("#su-n", 0, 1378, 24.881 - 0.3, 1.6, " €");
+      tl.fromTo("#su-n", { scale: 1 }, { scale: 1.12, duration: 0.2, yoyo: true, repeat: 1 }, 24.881 + 1.4);
+      pop("#su-c", 27.655);
+      })();
+      // rueckwaerts
+      (() => {
+      pop("#rw-t", 30.632);
+      pop("#rw-p", 31.532);
+      tl.fromTo(".rw-b", { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.2, stagger: 0.03, ease: "power2.out" }, 33.085);
+      pop("#rw-a", 33.085 + 0.4);
+      pop("#rw-b", 39.559);
+      })();
+      // teilen
+      (() => {
+      pop("#te-i", 40.119);
+      tl.fromTo("#te-i", { rotation: -6 }, { rotation: 6, duration: 0.25, yoyo: true, repeat: 3, ease: "sine.inOut" }, 40.119 + 0.4);
+      pop("#te-t", 42.956);
+      })();
+      // outro
+      (() => {
+      pop("#outro-dog", 44.836);
+      pop("#outro-name", 44.836 + 0.25);
+      pop("#outro-btn", 44.836 + 0.5);
+      tl.fromTo("#outro-btn", { scale: 1 }, { scale: 1.08, duration: 0.3, yoyo: true, repeat: 1, ease: "sine.inOut" }, 44.836 + 1.1);
+      })();
 
       window.__timelines["main"] = tl;
     </script>
