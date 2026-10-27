@@ -1,0 +1,40 @@
+{
+ "titel": "So viel kostet dich Rauchen",
+ "saetze": [
+  {
+   "id": "s1",
+   "text": "So viel kostet dich Rauchen wirklich",
+   "sprechtext": "So viel kostet dich Rauchen wirklich."
+  },
+  {
+   "id": "s2",
+   "text": "Eine Schachtel kostet rund 9 €",
+   "sprechtext": "Eine Schachtel kostet rund neun Euro."
+  },
+  {
+   "id": "s3",
+   "text": "Bei einer Schachtel am Tag sind das über 3.200 € im Jahr",
+   "sprechtext": "Bei einer Schachtel am Tag sind das über dreitausendzweihundert Euro im Jahr."
+  },
+  {
+   "id": "s4",
+   "text": "In zehn Jahren über 32.000 €",
+   "sprechtext": "In zehn Jahren über zweiunddreißigtausend Euro."
+  },
+  {
+   "id": "s5",
+   "text": "Hättest du das Geld investiert, wären es mit 7 % sogar rund 46.000 €",
+   "sprechtext": "Hättest du das Geld investiert, wären es mit sieben Prozent sogar rund sechsundvierzigtausend Euro."
+  },
+  {
+   "id": "s6",
+   "text": "Rauchst du, oder hast du aufgehört? Schreib es in die Kommentare",
+   "sprechtext": "Rauchst du, oder hast du aufgehört? Schreib es in die Kommentare!"
+  },
+  {
+   "id": "s7",
+   "text": "Folge HundeFinanzTV, wir bringen jeden Tag neue Geld-Fakten",
+   "sprechtext": "Folge HundeFinanzTV, wir bringen jeden Tag neue Geld-Fakten!"
+  }
+ ]
+}

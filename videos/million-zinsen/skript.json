@@ -1,0 +1,40 @@
+{
+ "titel": "1 Million: So viel Zinsen pro Tag",
+ "saetze": [
+  {
+   "id": "s1",
+   "text": "Stell dir vor, du hast eine Million Euro auf dem Tagesgeldkonto",
+   "sprechtext": "Stell dir vor, du hast eine Million Euro auf dem Tagesgeldkonto."
+  },
+  {
+   "id": "s2",
+   "text": "Bei 2 % Zinsen bekommst du 20.000 € im Jahr",
+   "sprechtext": "Bei zwei Prozent Zinsen bekommst du zwanzigtausend Euro im Jahr."
+  },
+  {
+   "id": "s3",
+   "text": "Das sind rund 55 € pro Tag, ohne einen Finger zu rühren",
+   "sprechtext": "Das sind rund fünfundfünfzig Euro pro Tag, ohne einen Finger zu rühren."
+  },
+  {
+   "id": "s4",
+   "text": "Auch nachts, am Wochenende und im Urlaub",
+   "sprechtext": "Auch nachts, am Wochenende und im Urlaub."
+  },
+  {
+   "id": "s5",
+   "text": "Nach Steuern bleiben dir immer noch rund 40 € täglich",
+   "sprechtext": "Nach Steuern bleiben dir immer noch rund vierzig Euro täglich."
+  },
+  {
+   "id": "s6",
+   "text": "Teile das mit jemandem, der vom Reichsein träumt",
+   "sprechtext": "Teile das mit jemandem, der vom Reichsein träumt!"
+  },
+  {
+   "id": "s7",
+   "text": "Folge HundeFinanzTV, wir bringen jeden Tag neue Geld-Fakten",
+   "sprechtext": "Folge HundeFinanzTV, wir bringen jeden Tag neue Geld-Fakten!"
+  }
+ ]
+}

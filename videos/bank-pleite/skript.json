@@ -1,0 +1,45 @@
+{
+ "titel": "Was passiert, wenn deine Bank pleite geht?",
+ "saetze": [
+  {
+   "id": "s1",
+   "text": "Was passiert mit deinem Geld, wenn deine Bank pleite geht?",
+   "sprechtext": "Was passiert mit deinem Geld, wenn deine Bank pleite geht?"
+  },
+  {
+   "id": "s2",
+   "text": "Keine Panik: In der EU ist dein Erspartes pro Bank bis 100.000 € gesetzlich geschützt",
+   "sprechtext": "Keine Panik: In der EU ist dein Erspartes pro Bank bis hunderttausend Euro gesetzlich geschützt."
+  },
+  {
+   "id": "s3",
+   "text": "Das gilt für Girokonto, Tagesgeld und Festgeld",
+   "sprechtext": "Das gilt für Girokonto, Tagesgeld und Festgeld."
+  },
+  {
+   "id": "s4",
+   "text": "Alles darüber ist nicht gesetzlich abgesichert",
+   "sprechtext": "Alles darüber ist nicht gesetzlich abgesichert."
+  },
+  {
+   "id": "s5",
+   "text": "Und dein Depot? Aktien und ETFs gehören dir, nicht der Bank",
+   "sprechtext": "Und dein Depot? Aktien und ETFs gehören dir, nicht der Bank."
+  },
+  {
+   "id": "s6",
+   "text": "Hast du mehr als 100.000 €, verteil es auf mehrere Banken",
+   "sprechtext": "Hast du mehr als hunderttausend Euro, verteil es auf mehrere Banken."
+  },
+  {
+   "id": "s7",
+   "text": "Schick das jemandem, der es wissen sollte",
+   "sprechtext": "Schick das jemandem, der es wissen sollte!"
+  },
+  {
+   "id": "s8",
+   "text": "Folge HundeFinanzTV, wir bringen jeden Tag neue Geld-Fakten",
+   "sprechtext": "Folge HundeFinanzTV, wir bringen jeden Tag neue Geld-Fakten!"
+  }
+ ]
+}
