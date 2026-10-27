@@ -1,0 +1,139 @@
+{
+ "dauer": 26.848,
+ "saetze": [
+  {
+   "id": "s2",
+   "start": 0.0,
+   "end": 1.778,
+   "captions": [
+    {
+     "text": "Wie lange muss ich",
+     "start": 0.0,
+     "end": 1.001
+    },
+    {
+     "text": "dafür arbeiten?",
+     "start": 1.001,
+     "end": 1.778
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 1.978,
+   "end": 8.254,
+   "captions": [
+    {
+     "text": "Ein Beispiel: Du verdienst",
+     "start": 1.978,
+     "end": 3.986
+    },
+    {
+     "text": "2.000 € netto und arbeitest",
+     "start": 3.986,
+     "end": 6.267
+    },
+    {
+     "text": "rund 160 Stunden im Monat",
+     "start": 6.267,
+     "end": 8.254
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 8.254,
+   "end": 11.477,
+   "captions": [
+    {
+     "text": "Dann bekommst du etwa",
+     "start": 8.254,
+     "end": 10.012
+    },
+    {
+     "text": "12,50 € pro Stunde",
+     "start": 10.012,
+     "end": 11.477
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 11.477,
+   "end": 15.971,
+   "captions": [
+    {
+     "text": "Das neue Handy",
+     "start": 11.477,
+     "end": 12.431
+    },
+    {
+     "text": "für 1.000 € kostet dich",
+     "start": 12.431,
+     "end": 14.241
+    },
+    {
+     "text": "also 80 Stunden Arbeit",
+     "start": 14.241,
+     "end": 15.971
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 15.971,
+   "end": 17.574,
+   "captions": [
+    {
+     "text": "Das sind zwei volle Wochen",
+     "start": 15.971,
+     "end": 17.574
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 17.774,
+   "end": 21.685,
+   "captions": [
+    {
+     "text": "Kennst du jemanden,",
+     "start": 17.774,
+     "end": 18.88
+    },
+    {
+     "text": "der das wissen sollte?",
+     "start": 18.88,
+     "end": 20.247
+    },
+    {
+     "text": "Dann teile dieses Video",
+     "start": 20.247,
+     "end": 21.685
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 21.685,
+   "end": 26.448,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTV,",
+     "start": 21.685,
+     "end": 23.127
+    },
+    {
+     "text": "wir bringen jeden Tag",
+     "start": 23.127,
+     "end": 24.657
+    },
+    {
+     "text": "neue Videos rund ums Geld",
+     "start": 24.657,
+     "end": 26.448
+    }
+   ]
+  }
+ ]
+}

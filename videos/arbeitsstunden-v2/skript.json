@@ -1,0 +1,40 @@
+{
+ "titel": "Short aus arbeitsstunden",
+ "saetze": [
+  {
+   "id": "s2",
+   "text": "Wie lange muss ich dafür arbeiten?",
+   "sprechtext": "Wie lange muss ich dafür arbeiten?"
+  },
+  {
+   "id": "s3",
+   "text": "Ein Beispiel: Du verdienst 2.000 € netto und arbeitest rund 160 Stunden im Monat",
+   "sprechtext": "Ein Beispiel: Du verdienst zweitausend Euro netto und arbeitest rund hundertsechzig Stunden im Monat."
+  },
+  {
+   "id": "s4",
+   "text": "Dann bekommst du etwa 12 € 50 pro Stunde",
+   "sprechtext": "Dann bekommst du etwa zwölf Euro fünfzig pro Stunde."
+  },
+  {
+   "id": "s5",
+   "text": "Das neue Handy für 1.000 € kostet dich also 80 Stunden Arbeit",
+   "sprechtext": "Das neue Handy für tausend Euro kostet dich also achtzig Stunden Arbeit."
+  },
+  {
+   "id": "s6",
+   "text": "Das sind zwei volle Wochen",
+   "sprechtext": "Das sind zwei volle Wochen."
+  },
+  {
+   "id": "s9",
+   "text": "Kennst du jemanden, der das wissen sollte? Dann teile dieses Video",
+   "sprechtext": "Kennst du jemanden, der das wissen sollte? Dann teile dieses Video!"
+  },
+  {
+   "id": "s10",
+   "text": "Folge HundeFinanzTV, wir bringen jeden Tag neue Videos rund ums Geld",
+   "sprechtext": "Folge HundeFinanzTV, wir bringen jeden Tag neue Videos rund ums Geld!"
+  }
+ ]
+}
