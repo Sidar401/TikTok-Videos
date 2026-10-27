@@ -5,280 +5,194 @@
     <meta name="viewport" content="width=1080, height=1920" />
     <script src="assets/gsap.min.js"></script>
     <style>
-      /* Kanal-Stil (siehe STIL.md) */
-      @font-face {
-        font-family: "Abril Fatface";
-        src: url("assets/fonts/abril-fatface.woff2") format("woff2");
-      }
-      :root {
-        --bg: #ffffff;
-        --ink: #111111;
-        --brand: #DB8622; /* Kanalfarbe aus kanal.json */
-        --green: #1f7a4d;
-        --gold: #f2c418;
-        --red: #e24b4b;
-        --blue: #3d7be0;
-        --font-caption: "Montserrat", sans-serif;
-        --font-display: "Abril Fatface", serif;
-      }
       * { margin: 0; padding: 0; box-sizing: border-box; }
-      html, body {
-        width: 1080px;
-        height: 1920px;
-        overflow: hidden;
-        background: var(--bg);
-      }
-      #root {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        background: var(--bg);
-      }
-
-      /* Szene: eine Illustration, zentriert im oberen Bereich */
-      .scene {
-        position: absolute;
-        left: 0;
-        top: 230px;
-        width: 1080px;
-        height: 1080px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .art { width: 820px; height: 820px; }
-      .art svg { width: 100%; height: 100%; display: block; }
-
-      /* Oranger Rahmen wie bei HundeWissenTv */
-      #frame {
-        position: absolute;
-        inset: 0;
-        border: 26px solid var(--brand);
-        z-index: 10;
-        pointer-events: none;
-      }
-
-      /* Untertitel-Box (TikTok-Look) */
-      .cap {
-        position: absolute;
-        left: 0;
-        top: 1360px;
-        width: 1080px;
-        display: flex;
-        justify-content: center;
-      }
-      .cap span {
-        display: block;
-        max-width: 880px;
-        padding: 20px 44px 22px;
-        border-radius: 28px;
-        background: var(--brand);
-        color: #ffffff;
-        font-family: var(--font-caption);
-        font-weight: 600;
-        font-size: 54px;
-        line-height: 1.15;
-        text-align: center;
-      }
-
-      /* Zahlen-Vergleich in Serifen-Schrift */
-      .cmp {
-        width: 940px;
-        display: grid;
-        grid-template-columns: 1fr 6px 1fr;
-        column-gap: 40px;
-        font-family: var(--font-display);
-        color: var(--ink);
-        text-align: center;
-      }
-      .cmp .head { font-size: 104px; line-height: 1.1; }
-      .cmp .sub { font-size: 76px; line-height: 1.1; }
-      .cmp .divider { background: var(--ink); grid-row: 1 / span 3; grid-column: 2; }
-      .cmp .arrow { height: 260px; display: flex; justify-content: center; align-items: center; }
-      .cmp .arrow svg { width: 140px; height: 220px; }
-      .cmp .num { font-size: 96px; line-height: 1.2; }
-      .green { color: var(--green); }
-      .gold { color: var(--gold); }
-      .chart-label { font-family: var(--font-display); }
-      .serif { font-family: var(--font-display); }
-      #brand {
-        position: absolute;
-        top: 190px;
-        left: 0;
-        width: 1080px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 14px;
-        font-family: var(--font-caption);
-        font-weight: 800;
-        font-size: 42px;
-        color: #353a3d;
-        z-index: 5;
-      }
-      #brand-dog { width: 84px; height: 84px; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0e1012; }
+      #root { position: relative; width: 100%; height: 100%; font-family: Montserrat, sans-serif; overflow: hidden;
+        background: radial-gradient(ellipse at 50% 42%, #ff8a1f33 0%, #ff8a1f0d 38%, transparent 62%), radial-gradient(ellipse at 50% 50%, #1b1f22 0%, #0e1012 75%); }
+      #raster { position: absolute; inset: 0; background-image: linear-gradient(#ffffff0c 2px, transparent 2px), linear-gradient(90deg, #ffffff0c 2px, transparent 2px); background-size: 90px 90px; }
+      .scene { position: absolute; inset: 0; }
+      .inner { position: absolute; inset: 0; }
+      .t { position: absolute; left: 0; width: 1080px; text-align: center; font-weight: 900; line-height: 1.02; letter-spacing: -1px; color: #fff; }
+      .glow-o { color: #ff8a1f; text-shadow: 0 0 50px #ff8a1faa; }
+      .glow-g { color: #2fd27a; text-shadow: 0 0 50px #2fd27aaa; }
+      .glow-r { color: #ff4d4d; text-shadow: 0 0 50px #ff4d4daa; }
+      .box { display: inline-block; padding: 6px 34px 14px; border-radius: 24px; background: #ff8a1f; color: #111; box-shadow: 0 0 60px #ff8a1f88; }
+      #brand { position: absolute; left: 0; top: 170px; width: 1080px; text-align: center; font-weight: 800; font-size: 34px; color: #ffffff99; letter-spacing: 2px; z-index: 5; }
+      #frame { position: absolute; inset: 0; border: 26px solid #DB8622; z-index: 10; }
+      .cap { position: absolute; left: 60px; top: 1330px; width: 960px; text-align: center; z-index: 6; }
+      .cap span { display: inline-block; margin: 0 11px; font-weight: 900; font-size: 74px; line-height: 1.15; color: #fff; text-shadow: 0 6px 0 #000, 0 0 30px #000; }
     </style>
   </head>
   <body>
-    <div
-      id="root"
-      data-composition-id="main"
-      data-start="0"
-      data-duration="15"
-      data-width="1080"
-      data-height="1920"
-    >
-      <!-- ============ SZENEN ============ -->
-
-      <!-- 1: Geldsack -->
-      <div id="s1" class="scene clip" data-start="0" data-duration="3" data-track-index="1">
-        <div id="s1-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <g id="s1-coins">
-              <g fill="#f2c418" stroke="#c99a06" stroke-width="3">
-                <rect x="250" y="300" width="110" height="22" rx="8" />
-                <rect x="250" y="276" width="110" height="22" rx="8" />
-                <rect x="250" y="252" width="110" height="22" rx="8" />
-                <rect x="250" y="228" width="110" height="22" rx="8" />
-                <rect x="250" y="204" width="110" height="22" rx="8" />
-                <rect x="265" y="180" width="110" height="22" rx="8" />
-                <rect x="258" y="156" width="110" height="22" rx="8" />
-              </g>
-            </g>
-            <g id="s1-bag">
-              <path d="M150 110 C120 70 140 50 160 70 C175 50 205 50 220 70 C240 50 260 70 230 110 Z" fill="#1f7a4d" />
-              <rect x="145" y="104" width="90" height="18" rx="9" fill="#f2c418" />
-              <path d="M150 120 C60 170 40 330 120 340 L260 340 C340 330 320 170 230 120 Z" fill="#1f7a4d" />
-              <path d="M155 135 C90 180 75 300 125 325" fill="none" stroke="#2c9a63" stroke-width="10" stroke-linecap="round" />
-              <circle cx="190" cy="245" r="62" fill="#f2c418" />
-              <text x="190" y="272" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="80" fill="#1f7a4d">€</text>
-            </g>
-            <g fill="#f2c418" stroke="#c99a06" stroke-width="3">
-              <ellipse cx="80" cy="345" rx="34" ry="12" />
-              <ellipse cx="110" cy="360" rx="34" ry="12" />
-            </g>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 2: Zielscheibe -->
-      <div id="s2" class="scene clip" data-start="3" data-duration="3" data-track-index="1">
-        <div id="s2-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <circle cx="190" cy="210" r="160" fill="#e24b4b" />
-            <circle cx="190" cy="210" r="125" fill="#f6efe1" />
-            <circle cx="190" cy="210" r="92" fill="#e24b4b" />
-            <circle cx="190" cy="210" r="58" fill="#f6efe1" />
-            <circle cx="190" cy="210" r="26" fill="#e24b4b" />
-            <g id="s2-arrow">
-              <line x1="196" y1="204" x2="340" y2="60" stroke="#555" stroke-width="10" stroke-linecap="round" />
-              <path d="M320 50 L370 30 L350 80 L340 60 Z" fill="#e8742c" />
-              <path d="M335 35 L375 15 L365 45 Z" fill="#e8742c" />
-            </g>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 3: Zahlen-Vergleich -->
-      <div id="s3" class="scene clip" data-start="6" data-duration="3.5" data-track-index="1">
-        <div class="cmp">
-          <div id="s3-h1" style="grid-column:1"><div class="head">Konto</div><div class="sub">0 %</div></div>
-          <div class="divider"></div>
-          <div id="s3-h2" style="grid-column:3"><div class="head">ETF</div><div class="sub">~7 %</div></div>
-          <div class="arrow" style="grid-column:1">
-            <svg viewBox="0 0 70 110"><path id="s3-a1" d="M40 6 C10 30 8 70 40 98" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" /><path d="M24 92 L42 100 L44 80" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></svg>
-          </div>
-          <div class="arrow" style="grid-column:3">
-            <svg viewBox="0 0 70 110"><path id="s3-a2" d="M30 6 C60 30 62 70 30 98" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" /><path d="M46 92 L28 100 L26 80" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></svg>
-          </div>
-          <div id="s3-n1" class="num green" style="grid-column:1">36.000€</div>
-          <div style="grid-column:3">
-            <div id="s3-n2" class="num green">36.000€</div>
-            <div id="s3-n3" class="num gold">77.000€</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4: Rendite-Chart -->
-      <div id="s4" class="scene clip" data-start="9.5" data-duration="3" data-track-index="1">
-        <div class="art">
-          <svg viewBox="0 0 400 400">
-            <path d="M40 40 L40 340 L370 340" fill="none" stroke="#111" stroke-width="8" stroke-linecap="square" />
-            <path id="s4-solid" d="M60 300 C140 285 220 280 290 255" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" />
-            <path id="s4-dots" d="M60 285 C150 250 230 190 300 95" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 16" />
-            <text id="s4-label" class="chart-label" x="70" y="100" font-size="70" fill="#1f7a4d">~7%</text>
-            <g id="s4-check">
-              <circle cx="320" cy="80" r="42" fill="#111" />
-              <path d="M300 82 L315 97 L342 66" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-            </g>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 5: Outro -->
-      <div id="s5" class="scene clip" data-start="12.5" data-duration="2.5" data-track-index="1">
-        <div id="s5-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <circle cx="200" cy="200" r="150" fill="#DB8622" />
-            <path d="M120 260 L180 200 L220 235 L290 150" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M250 145 L295 145 L295 190" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </div>
-      </div>
-
+    <div id="root" data-composition-id="main" data-start="0" data-duration="26.97" data-width="1080" data-height="1920">
+      <div id="raster"></div>
+      <div id="z0" class="scene clip" data-start="0.0" data-duration="2.275" data-track-index="1"><div id="z0-i" class="inner"><svg viewBox="0 0 600 260" style="position:absolute;left:140px;top:420px;width:800px;height:347px;overflow:visible;z-index:2"><rect x="40" y="150" width="420" height="60" rx="10" fill="#f2f2f2"/><rect x="40" y="150" width="130" height="60" rx="10" fill="#ff8a1f"/><rect x="455" y="150" width="40" height="60" rx="8" fill="#ff4d4d" filter="drop-shadow(0 0 24px #ff4d4d)"/><path id="rk-r" d="M480 140 C440 100 520 80 480 40 C450 10 500 -10 470 -40" fill="none" stroke="#ffffff88" stroke-width="16" stroke-linecap="round"/></svg><div id="hk-t" class="t " style="top:900px;font-size:120px">So viel kostet<br/><span class="box">RAUCHEN</span></div></div></div>
+      <div id="z1" class="scene clip" data-start="2.275" data-duration="2.472" data-track-index="1"><div id="z1-i" class="inner"><div id="pk" style="position:absolute;left:340px;top:360px;width:400px;height:520px;border-radius:30px;background:linear-gradient(160deg,#2a2f33,#16191b);border:8px solid #ff8a1f;box-shadow:0 0 80px #ff8a1f66;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:50px"><div style="position:absolute;top:0;left:0;right:0;height:130px;border-radius:22px 22px 0 0;background:#ff4d4d"></div><div style="font-weight:900;font-size:60px;color:#fff;letter-spacing:4px">20 STÜCK</div></div><div id="pk-p" style="position:absolute;left:0;width:1080px;display:flex;justify-content:center;top:940px;z-index:3"><span style="display:inline-block;padding:12px 34px 16px;border-radius:22px;background:#ff4d4d;color:#111;font-weight:900;font-size:110px;box-shadow:0 0 50px #ff4d4d88">≈ 9 €</span></div></div></div>
+      <div id="z2" class="scene clip" data-start="4.747" data-duration="4.313" data-track-index="1"><div id="z2-i" class="inner"><div id="ja-k" class="t glow-o" style="top:460px;font-size:66px">1 Schachtel × 365 Tage</div><div id="ja-z" class="t " style="top:600px;font-size:200px">0 €</div><div id="ja-s" class="t " style="top:860px;font-size:80px">pro Jahr</div></div></div>
+      <div id="z3" class="scene clip" data-start="9.06" data-duration="3.122" data-track-index="1"><div id="z3-i" class="inner"><div id="zj-k" class="t glow-o" style="top:420px;font-size:120px">10 JAHRE</div><div id="zj-z" class="t glow-r" style="top:640px;font-size:190px">32.850 €</div><div id="zj-s" class="t " style="top:900px;font-size:70px">einfach verraucht</div></div></div>
+      <div id="z4" class="scene clip" data-start="12.182" data-duration="5.881" data-track-index="1"><div id="z4-i" class="inner"><svg viewBox="0 0 800 380" style="position:absolute;left:140px;top:380px;width:800px;height:380px;overflow:visible;z-index:2"><path d="M10 370 L790 370" stroke="#ffffff33" stroke-width="4"/><path id="iv-l" d="M10 360 C250 340 450 270 790 30" fill="none" stroke="#2fd27a" stroke-width="14" stroke-linecap="round" filter="drop-shadow(0 0 16px #2fd27a)"/></svg><div id="iv-c" style="position:absolute;left:0;width:1080px;display:flex;justify-content:center;top:820px;z-index:3"><span style="display:inline-block;padding:12px 34px 16px;border-radius:22px;background:#2fd27a;color:#111;font-weight:900;font-size:60px;box-shadow:0 0 50px #2fd27a88">investiert · 7 %</span></div><div id="iv-z" class="t glow-g" style="top:960px;font-size:170px">0 €</div></div></div>
+      <div id="z5" class="scene clip" data-start="18.063" data-duration="3.827" data-track-index="1"><div id="z5-i" class="inner"><div id="fr-r" style="position:absolute;left:340px;top:380px;width:400px;height:400px;border-radius:50%;background:#16191b;border:10px solid #ff8a1f;box-shadow:0 0 80px #ff8a1f88, inset 0 0 40px #000;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2"><svg viewBox="0 0 100 100" style="width:62%;height:62%"><path d="M12 14 L88 14 Q94 14 94 20 L94 62 Q94 68 88 68 L42 68 L22 88 L26 68 L12 68 Q6 68 6 62 L6 20 Q6 14 12 14 Z" fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round"/><circle cx="32" cy="41" r="6" fill="#ff8a1f"/><circle cx="50" cy="41" r="6" fill="#ff8a1f"/><circle cx="68" cy="41" r="6" fill="#ff8a1f"/></svg></div><div id="fr-t" class="t " style="top:900px;font-size:66px">Rauchst du – oder<br/>hast du aufgehört?</div></div></div>
+      <div id="z6" class="scene clip" data-start="21.89" data-duration="5.08" data-track-index="1"><div id="z6-i" class="inner"><div id="ou-r" style="position:absolute;left:290px;top:330px;width:500px;height:500px;border-radius:50%;background:#16191b;border:10px solid #ff8a1f;box-shadow:0 0 80px #ff8a1f88, inset 0 0 40px #000;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2"><div style="width:100%;height:100%;border-radius:50%;overflow:hidden"><img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:contain" /></div></div><div id="ou-n" class="t " style="top:900px;font-size:96px">HundeFinanzTV</div><div id="ou-f" style="position:absolute;left:0;width:1080px;display:flex;justify-content:center;top:1040px;z-index:3"><span style="display:inline-block;padding:12px 34px 16px;border-radius:22px;background:#ff8a1f;color:#111;font-weight:900;font-size:64px;box-shadow:0 0 50px #ff8a1f88">+ Folgen</span></div></div></div>
+      <div id="brand">HUNDEFINANZTV</div>
       <div id="frame"></div>
-
-      <!-- ============ UNTERTITEL ============ -->
       <div id="captions" data-track-kind="captions">
-        <div id="c1" class="cap clip" data-start="0" data-duration="1.6" data-track-index="2"><span>du hast 100 € im Monat übrig</span></div>
-        <div id="c2" class="cap clip" data-start="1.6" data-duration="1.4" data-track-index="2"><span>und fragst dich, was du damit machst</span></div>
-        <div id="c3" class="cap clip" data-start="3" data-duration="3" data-track-index="2"><span>die Frage aller Fragen</span></div>
-        <div id="c4" class="cap clip" data-start="6" data-duration="1.7" data-track-index="2"><span>100 € im Monat, 30 Jahre lang</span></div>
-        <div id="c5" class="cap clip" data-start="7.7" data-duration="1.8" data-track-index="2"><span>auf dem Konto bleiben es 36.000 €</span></div>
-        <div id="c6" class="cap clip" data-start="9.5" data-duration="3" data-track-index="2"><span>im ETF kommen ~77.000 € Rendite dazu</span></div>
-        <div id="c7" class="cap clip" data-start="12.5" data-duration="2.5" data-track-index="2"><span>folg mir für mehr Geld-Tipps</span></div>
+        <div id="c1" class="cap clip" data-start="0.0" data-duration="1.259" data-track-index="2"><span id="w1-0">So</span> <span id="w1-1">viel</span> <span id="w1-2">kostet</span> <span id="w1-3">dich</span> </div>
+        <div id="c2" class="cap clip" data-start="1.259" data-duration="1.016" data-track-index="2"><span id="w2-0">Rauchen</span> <span id="w2-1">wirklich</span> </div>
+        <div id="c3" class="cap clip" data-start="2.275" data-duration="2.472" data-track-index="2"><span id="w3-0">Eine</span> <span id="w3-1">Schachtel</span> <span id="w3-2">kostet</span> <span id="w3-3">rund</span> <span id="w3-4">9</span> <span id="w3-5">€</span> </div>
+        <div id="c4" class="cap clip" data-start="4.747" data-duration="1.514" data-track-index="2"><span id="w4-0">Bei</span> <span id="w4-1">einer</span> <span id="w4-2">Schachtel</span> </div>
+        <div id="c5" class="cap clip" data-start="6.261" data-duration="1.628" data-track-index="2"><span id="w5-0">am</span> <span id="w5-1">Tag</span> <span id="w5-2">sind</span> <span id="w5-3">das</span> <span id="w5-4">über</span> </div>
+        <div id="c6" class="cap clip" data-start="7.889" data-duration="1.171" data-track-index="2"><span id="w6-0">3.200</span> <span id="w6-1">€</span> <span id="w6-2">im</span> <span id="w6-3">Jahr</span> </div>
+        <div id="c7" class="cap clip" data-start="9.06" data-duration="3.122" data-track-index="2"><span id="w7-0">In</span> <span id="w7-1">zehn</span> <span id="w7-2">Jahren</span> <span id="w7-3">über</span> <span id="w7-4">32.000</span> <span id="w7-5">€</span> </div>
+        <div id="c8" class="cap clip" data-start="12.182" data-duration="1.644" data-track-index="2"><span id="w8-0">Hättest</span> <span id="w8-1">du</span> <span id="w8-2">das</span> <span id="w8-3">Geld</span> </div>
+        <div id="c9" class="cap clip" data-start="13.826" data-duration="1.016" data-track-index="2"><span id="w9-0">investiert,</span> </div>
+        <div id="c10" class="cap clip" data-start="14.842" data-duration="1.478" data-track-index="2"><span id="w10-0">wären</span> <span id="w10-1">es</span> <span id="w10-2">mit</span> <span id="w10-3">7</span> <span id="w10-4">%</span> </div>
+        <div id="c11" class="cap clip" data-start="16.32" data-duration="1.743" data-track-index="2"><span id="w11-0">sogar</span> <span id="w11-1">rund</span> <span id="w11-2">46.000</span> <span id="w11-3">€</span> </div>
+        <div id="c12" class="cap clip" data-start="18.063" data-duration="0.699" data-track-index="2"><span id="w12-0">Rauchst</span> <span id="w12-1">du,</span> </div>
+        <div id="c13" class="cap clip" data-start="18.762" data-duration="1.486" data-track-index="2"><span id="w13-0">oder</span> <span id="w13-1">hast</span> <span id="w13-2">du</span> <span id="w13-3">aufgehört?</span> </div>
+        <div id="c14" class="cap clip" data-start="20.248" data-duration="1.642" data-track-index="2"><span id="w14-0">Schreib</span> <span id="w14-1">es</span> <span id="w14-2">in</span> <span id="w14-3">die</span> <span id="w14-4">Kommentare</span> </div>
+        <div id="c15" class="cap clip" data-start="21.89" data-duration="1.541" data-track-index="2"><span id="w15-0">Folge</span> <span id="w15-1">HundeFinanzTV,</span> </div>
+        <div id="c16" class="cap clip" data-start="23.431" data-duration="1.71" data-track-index="2"><span id="w16-0">wir</span> <span id="w16-1">bringen</span> <span id="w16-2">jeden</span> <span id="w16-3">Tag</span> </div>
+        <div id="c17" class="cap clip" data-start="25.141" data-duration="1.251" data-track-index="2"><span id="w17-0">neue</span> <span id="w17-1">Geld‑Fakten</span> </div>
       </div>
+      <audio id="voice" src="assets/mix.wav" data-start="0" data-duration="26.97" data-track-index="3"></audio>
     </div>
-
     <script>
       const tl = gsap.timeline({ paused: true });
-      const pop = (sel, at) =>
-        tl.fromTo(sel, { scale: 0.82, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.8)" }, at);
-      const drift = (sel, at, dur) =>
-        tl.fromTo(sel, { scale: 1 }, { scale: 1.05, duration: dur, ease: "sine.inOut" }, at);
+      const pop = (sel, at) => tl.fromTo(sel, { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.2)" }, at);
+      const slam = (sel, at) => tl.fromTo(sel, { scale: 2.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.28, ease: "power4.in" }, at);
+      const shake = (sel, at) => tl.fromTo(sel, { x: -14 }, { x: 14, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }, at);
       const draw = (sel, at, dur) => {
         const len = document.querySelector(sel).getTotalLength();
         tl.fromTo(sel, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: dur, ease: "power2.out" }, at);
       };
-
-      // 1: Geldsack
-      pop("#s1-art", 0);
-      drift("#s1-bag", 0.35, 2.5);
-      tl.fromTo("#s1-coins", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 0.25);
-
-      // 2: Zielscheibe, Pfeil schlägt ein
-      pop("#s2-art", 3);
-      tl.fromTo("#s2-arrow", { x: 160, y: -160, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 0.3, ease: "power4.in" }, 3.3);
-      tl.fromTo("#s2-art", { rotation: 0 }, { rotation: 2, duration: 0.06, yoyo: true, repeat: 3, ease: "none" }, 3.6);
-
-      // 3: Zahlen-Vergleich
-      pop("#s3-h1", 6);
-      pop("#s3-h2", 6.15);
-      tl.fromTo(["#s3-a1", "#s3-a2"], { opacity: 0 }, { opacity: 1, duration: 0.2 }, 6.5);
-      pop("#s3-n1", 7.7);
-      pop("#s3-n2", 7.85);
-      pop("#s3-n3", 9.0);
-
-      // 4: Chart zeichnet sich
-      draw("#s4-solid", 9.6, 0.7);
-      tl.fromTo("#s4-dots", { opacity: 0 }, { opacity: 1, duration: 0.6 }, 10.1);
-      pop("#s4-label", 10.6);
-      pop("#s4-check", 10.9);
-
-      // 5: Outro
-      pop("#s5-art", 12.5);
-      drift("#s5-art", 12.85, 2.0);
-
+      const zaehl = (sel, von, bis, at, dur, nach) => {
+        const o = { v: von };
+        tl.fromTo(o, { v: von }, { v: bis, duration: dur, ease: "power2.out", onUpdate: () => {
+          document.querySelector(sel).textContent = Math.round(o.v).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (nach || ""); } }, at);
+      };
+      tl.fromTo("#z0-i", { scale: 1.0 }, { scale: 1.06, duration: 2.275, ease: "none" }, 0.0);
+      tl.fromTo("#rk-r", { y: 0, opacity: 0.9 }, { y: -40, opacity: 0.2, duration: 2.275, ease: "none" }, 0.0); tl.fromTo("#hk-t", { scale: 1.15 }, { scale: 1, duration: 0.4 }, 0.0);
+      tl.fromTo("#z1-i", { scale: 1.0 }, { scale: 1.06, duration: 2.472, ease: "none" }, 2.275);
+      pop("#pk", 2.275); slam("#pk-p", 2.275 + 0.9); shake("#pk-p", 2.275 + 1.2);
+      tl.fromTo("#z2-i", { scale: 1.0 }, { scale: 1.06, duration: 4.313, ease: "none" }, 4.747);
+      pop("#ja-k", 4.747); pop("#ja-z", 7.889); zaehl("#ja-z", 0, 3285, 7.889, 1.0, " €"); pop("#ja-s", 7.889 + 0.5);
+      tl.fromTo("#z3-i", { scale: 1.0 }, { scale: 1.06, duration: 3.122, ease: "none" }, 9.06);
+      pop("#zj-k", 9.06); slam("#zj-z", 9.06 + 0.7); shake("#zj-z", 9.06 + 1.0); pop("#zj-s", 9.06 + 1.4);
+      tl.fromTo("#z4-i", { scale: 1.0 }, { scale: 1.06, duration: 5.881, ease: "none" }, 12.182);
+      draw("#iv-l", 12.182 + 0.2, 2.0); pop("#iv-c", 14.842); pop("#iv-z", 16.32); zaehl("#iv-z", 0, 46000, 16.32, 1.1, " €");
+      tl.fromTo("#z5-i", { scale: 1.0 }, { scale: 1.06, duration: 3.827, ease: "none" }, 18.063);
+      pop("#fr-r", 18.063); tl.fromTo("#fr-r", { rotation: -8 }, { rotation: 8, duration: 0.25, yoyo: true, repeat: 5, ease: "sine.inOut" }, 18.063 + 0.4); pop("#fr-t", 18.063 + 0.6);
+      tl.fromTo("#z6-i", { scale: 1.0 }, { scale: 1.06, duration: 5.08, ease: "none" }, 21.89);
+      pop("#ou-r", 21.89); pop("#ou-n", 21.89 + 0.3); slam("#ou-f", 21.89 + 0.6); tl.fromTo("#ou-f", { scale: 1 }, { scale: 1.1, duration: 0.25, yoyo: true, repeat: 5 }, 21.89 + 1.2);
+      tl.fromTo("#w1-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 0.0);
+      tl.to("#w1-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 0.189);
+      tl.fromTo("#w1-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 0.189);
+      tl.to("#w1-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 0.504);
+      tl.fromTo("#w1-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 0.504);
+      tl.to("#w1-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 0.944);
+      tl.fromTo("#w1-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 0.944);
+      tl.fromTo("#w2-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 1.259);
+      tl.to("#w2-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 1.737);
+      tl.fromTo("#w2-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 1.737);
+      tl.fromTo("#w3-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 2.275);
+      tl.to("#w3-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 2.674);
+      tl.fromTo("#w3-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 2.674);
+      tl.to("#w3-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 3.471);
+      tl.fromTo("#w3-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 3.471);
+      tl.to("#w3-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 4.029);
+      tl.fromTo("#w3-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 4.029);
+      tl.to("#w3-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 4.428);
+      tl.fromTo("#w3-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 4.428);
+      tl.to("#w3-4", { color: "#ffffff", scale: 1, duration: 0.08 }, 4.588);
+      tl.fromTo("#w3-5", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 4.588);
+      tl.fromTo("#w4-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 4.747);
+      tl.to("#w4-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 5.05);
+      tl.fromTo("#w4-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 5.05);
+      tl.to("#w4-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 5.504);
+      tl.fromTo("#w4-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 5.504);
+      tl.fromTo("#w5-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 6.261);
+      tl.to("#w5-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 6.494);
+      tl.fromTo("#w5-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 6.494);
+      tl.to("#w5-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 6.804);
+      tl.fromTo("#w5-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 6.804);
+      tl.to("#w5-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 7.191);
+      tl.fromTo("#w5-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 7.191);
+      tl.to("#w5-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 7.501);
+      tl.fromTo("#w5-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 7.501);
+      tl.fromTo("#w6-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 7.889);
+      tl.to("#w6-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 8.328);
+      tl.fromTo("#w6-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 8.328);
+      tl.to("#w6-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 8.475);
+      tl.fromTo("#w6-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 8.475);
+      tl.to("#w6-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 8.694);
+      tl.fromTo("#w6-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 8.694);
+      tl.fromTo("#w7-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 9.06);
+      tl.to("#w7-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 9.383);
+      tl.fromTo("#w7-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 9.383);
+      tl.to("#w7-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 9.921);
+      tl.fromTo("#w7-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 9.921);
+      tl.to("#w7-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 10.675);
+      tl.fromTo("#w7-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 10.675);
+      tl.to("#w7-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 11.213);
+      tl.fromTo("#w7-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 11.213);
+      tl.to("#w7-4", { color: "#ffffff", scale: 1, duration: 0.08 }, 11.967);
+      tl.fromTo("#w7-5", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 11.967);
+      tl.fromTo("#w8-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 12.182);
+      tl.to("#w8-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 12.84);
+      tl.fromTo("#w8-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 12.84);
+      tl.to("#w8-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 13.086);
+      tl.fromTo("#w8-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 13.086);
+      tl.to("#w8-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 13.415);
+      tl.fromTo("#w8-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 13.415);
+      tl.fromTo("#w9-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 13.826);
+      tl.fromTo("#w10-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 14.842);
+      tl.to("#w10-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 15.364);
+      tl.fromTo("#w10-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 15.364);
+      tl.to("#w10-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 15.624);
+      tl.fromTo("#w10-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 15.624);
+      tl.to("#w10-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 15.972);
+      tl.fromTo("#w10-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 15.972);
+      tl.to("#w10-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 16.146);
+      tl.fromTo("#w10-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 16.146);
+      tl.fromTo("#w11-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 16.32);
+      tl.to("#w11-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 16.843);
+      tl.fromTo("#w11-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 16.843);
+      tl.to("#w11-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 17.279);
+      tl.fromTo("#w11-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 17.279);
+      tl.to("#w11-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 17.889);
+      tl.fromTo("#w11-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 17.889);
+      tl.fromTo("#w12-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 18.063);
+      tl.to("#w12-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 18.529);
+      tl.fromTo("#w12-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 18.529);
+      tl.fromTo("#w13-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 18.762);
+      tl.to("#w13-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 19.072);
+      tl.fromTo("#w13-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 19.072);
+      tl.to("#w13-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 19.381);
+      tl.fromTo("#w13-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 19.381);
+      tl.to("#w13-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 19.567);
+      tl.fromTo("#w13-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 19.567);
+      tl.fromTo("#w14-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 20.248);
+      tl.to("#w14-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 20.701);
+      tl.fromTo("#w14-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 20.701);
+      tl.to("#w14-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 20.871);
+      tl.fromTo("#w14-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 20.871);
+      tl.to("#w14-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 21.041);
+      tl.fromTo("#w14-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 21.041);
+      tl.to("#w14-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 21.267);
+      tl.fromTo("#w14-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 21.267);
+      tl.fromTo("#w15-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 21.89);
+      tl.to("#w15-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 22.33);
+      tl.fromTo("#w15-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 22.33);
+      tl.fromTo("#w16-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 23.431);
+      tl.to("#w16-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 23.742);
+      tl.fromTo("#w16-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 23.742);
+      tl.to("#w16-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 24.364);
+      tl.fromTo("#w16-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 24.364);
+      tl.to("#w16-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 24.83);
+      tl.fromTo("#w16-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 24.83);
+      tl.fromTo("#w17-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 25.141);
+      tl.to("#w17-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 25.509);
+      tl.fromTo("#w17-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.12, duration: 0.08 }, 25.509);
       window.__timelines["main"] = tl;
     </script>
   </body>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0e1012; }
+      #root { position: relative; width: 100%; height: 100%; font-family: Montserrat, sans-serif; overflow: hidden;
+        background: radial-gradient(ellipse at 50% 55%, #ff8a1f40 0%, #ff8a1f10 35%, transparent 60%),
+                    radial-gradient(ellipse at 50% 50%, #1b1f22 0%, #0e1012 75%); }
+      #raster { position: absolute; inset: 0; background-image: linear-gradient(#ffffff0d 2px, transparent 2px), linear-gradient(90deg, #ffffff0d 2px, transparent 2px);
+        background-size: 96px 96px; }
+      .scene { position: absolute; inset: 0; }
+      #frame { position: absolute; inset: 0; border: 26px solid #DB8622; z-index: 10; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="1" data-width="1080" data-height="1920">
+      <div id="raster"></div>
+<div id="v0" class="scene clip" data-start="0" data-duration="1" data-track-index="1"><div style="position:absolute;left:0px;top:220px;width:1080px;font-weight:900;font-size:120px;line-height:1.02;letter-spacing:-2px;text-align:center;display:flex;flex-direction:column;gap:14px;z-index:3"><div style="color:#fff;text-shadow:0 6px 0 #000">So viel kostet</div><div><span style="display:inline-block;padding:4px 30px 10px;border-radius:22px;background:#ff8a1f;color:#111;box-shadow:0 0 60px #ff8a1f88">RAUCHEN</span></div><div style="color:#fff;text-shadow:0 6px 0 #000">wirklich</div></div><svg viewBox="0 0 600 260" style="position:absolute;left:140px;top:760px;width:800px;height:347px;overflow:visible;z-index:2"><rect x="40" y="150" width="420" height="60" rx="10" fill="#f2f2f2"/><rect x="40" y="150" width="130" height="60" rx="10" fill="#ff8a1f"/><rect x="455" y="150" width="40" height="60" rx="8" fill="#ff4d4d" filter="drop-shadow(0 0 24px #ff4d4d)"/><path d="M480 140 C440 100 520 80 480 40 C450 10 500 -10 470 -40" fill="none" stroke="#ffffff77" stroke-width="16" stroke-linecap="round"/></svg><div style="position:absolute;left:0;top:1200px;width:1080px;text-align:center;font-weight:900;font-size:150px;color:#ff4d4d;text-shadow:0 0 50px #ff4d4daa">32.850 €</div><div style="position:absolute;left:0;top:1380px;width:1080px;text-align:center;font-weight:900;font-size:66px;color:#fff">in nur 10 Jahren</div></div>
+      <div id="frame"></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#root", { opacity: 1 }, 0);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

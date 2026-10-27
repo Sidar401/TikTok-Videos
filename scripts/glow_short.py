@@ -59,6 +59,33 @@ def chip(id_, txt, farbe, top, size=60, x=None):
             f'background:{farbe};color:#111;font-weight:900;font-size:{size}px;box-shadow:0 0 50px {farbe}88">{txt}</span></div>')
 
 
+TEILEN_SVG = (f'<svg viewBox="0 0 100 100" style="width:60%;height:60%"><path d="M22 74 Q26 40 58 38 L58 22 L84 48 L58 74 L58 58 Q36 57 22 74 Z" fill="{OR}"/></svg>')
+BLASE_SVG = ('<svg viewBox="0 0 100 100" style="width:62%;height:62%"><path d="M12 14 L88 14 Q94 14 94 20 L94 62 Q94 68 88 68 L42 68 L22 88 L26 68 L12 68 Q6 68 6 62 L6 20 Q6 14 12 14 Z" '
+             'fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round"/><circle cx="32" cy="41" r="6" fill="#ff8a1f"/><circle cx="50" cy="41" r="6" fill="#ff8a1f"/><circle cx="68" cy="41" r="6" fill="#ff8a1f"/></svg>')
+
+
+def cta_szene(uid, svg, text):
+    """Teilen-/Kommentar-Szene: leuchtender Ring + Text. Liefert (html, js)."""
+    html = ring(f"{uid}-r", svg, 340, 380, 400) + t(f"{uid}-t", text, 900, 66)
+    return html, lambda a, d: (f'pop("#{uid}-r", {a}); tl.fromTo("#{uid}-r", {{ rotation: -8 }}, {{ rotation: 8, duration: 0.25, yoyo: true, repeat: 5, ease: "sine.inOut" }}, {a} + 0.4);'
+                               f' pop("#{uid}-t", {a} + 0.6);')
+
+
+def outro_szene(beagle):
+    html = (ring("ou-r", f'<div style="width:100%;height:100%;border-radius:50%;overflow:hidden">{beagle}</div>', 290, 330, 500) +
+            t("ou-n", "HundeFinanzTV", 900, 96) + chip("ou-f", "+ Folgen", OR, 1040, 64))
+    return html, lambda a, d: (f'pop("#ou-r", {a}); pop("#ou-n", {a} + 0.3); slam("#ou-f", {a} + 0.6);'
+                               f' tl.fromTo("#ou-f", {{ scale: 1 }}, {{ scale: 1.1, duration: 0.25, yoyo: true, repeat: 5 }}, {a} + 1.2);')
+
+
+def zeiten(here):
+    """cap(sid, i) = Start der i-ten Untertitel-Box, st(sid)/en(sid) = Satzgrenzen."""
+    T = json.loads((Path(here) / "timings.json").read_text())
+    S = {s["id"]: s for s in T["saetze"]}
+    return (lambda sid, i: S[sid]["captions"][min(i, len(S[sid]["captions"]) - 1)]["start"],
+            lambda sid: S[sid]["start"], lambda sid: S[sid]["end"], T["dauer"])
+
+
 # ---------------- Soundeffekte (synthetisch, lizenzfrei) ----------------
 def _env(n, a=0.005, d=0.2):
     t_ = np.arange(n) / SR
@@ -171,6 +198,10 @@ def build(here, szenen, sfx):
       const pop = (sel, at) => tl.fromTo(sel, {{ scale: 0.6, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.2)" }}, at);
       const slam = (sel, at) => tl.fromTo(sel, {{ scale: 2.4, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.28, ease: "power4.in" }}, at);
       const shake = (sel, at) => tl.fromTo(sel, {{ x: -14 }}, {{ x: 14, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }}, at);
+      const draw = (sel, at, dur) => {{
+        const len = document.querySelector(sel).getTotalLength();
+        tl.fromTo(sel, {{ strokeDasharray: len, strokeDashoffset: len }}, {{ strokeDashoffset: 0, duration: dur, ease: "power2.out" }}, at);
+      }};
       const zaehl = (sel, von, bis, at, dur, nach) => {{
         const o = {{ v: von }};
         tl.fromTo(o, {{ v: von }}, {{ v: bis, duration: dur, ease: "power2.out", onUpdate: () => {{

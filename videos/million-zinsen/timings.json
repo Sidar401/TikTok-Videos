@@ -1,0 +1,139 @@
+{
+  "dauer": 27.45,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 4.195,
+      "captions": [
+        {
+          "text": "Stell dir vor,",
+          "start": 0.0,
+          "end": 0.965
+        },
+        {
+          "text": "du hast eine Million Euro",
+          "start": 0.965,
+          "end": 2.688
+        },
+        {
+          "text": "auf dem Tagesgeldkonto",
+          "start": 2.688,
+          "end": 4.195
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 4.195,
+      "end": 8.07,
+      "captions": [
+        {
+          "text": "Bei 2 % Zinsen bekommst",
+          "start": 4.195,
+          "end": 6.334
+        },
+        {
+          "text": "du 20.000 € im Jahr",
+          "start": 6.334,
+          "end": 8.07
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 8.07,
+      "end": 12.717,
+      "captions": [
+        {
+          "text": "Das sind rund",
+          "start": 8.07,
+          "end": 9.19
+        },
+        {
+          "text": "55 € pro Tag,",
+          "start": 9.19,
+          "end": 10.348
+        },
+        {
+          "text": "ohne einen Finger zu rühren",
+          "start": 10.348,
+          "end": 12.717
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 12.717,
+      "end": 15.392,
+      "captions": [
+        {
+          "text": "Auch nachts,",
+          "start": 12.717,
+          "end": 13.521
+        },
+        {
+          "text": "am Wochenende und im Urlaub",
+          "start": 13.521,
+          "end": 15.392
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 15.392,
+      "end": 19.701,
+      "captions": [
+        {
+          "text": "Nach Steuern bleiben dir",
+          "start": 15.392,
+          "end": 17.369
+        },
+        {
+          "text": "immer noch rund 40 € täglich",
+          "start": 17.369,
+          "end": 19.701
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 19.701,
+      "end": 22.404,
+      "captions": [
+        {
+          "text": "Teile das mit jemandem,",
+          "start": 19.701,
+          "end": 21.024
+        },
+        {
+          "text": "der vom Reichsein träumt",
+          "start": 21.024,
+          "end": 22.404
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 22.404,
+      "end": 26.869,
+      "captions": [
+        {
+          "text": "Folge HundeFinanzTV,",
+          "start": 22.404,
+          "end": 24.108
+        },
+        {
+          "text": "wir bringen jeden Tag",
+          "start": 24.108,
+          "end": 25.898
+        },
+        {
+          "text": "neue Geld‑Fakten",
+          "start": 25.898,
+          "end": 26.869
+        }
+      ]
+    }
+  ]
+}
