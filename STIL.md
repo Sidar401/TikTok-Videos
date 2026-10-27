@@ -52,4 +52,4 @@ Code-Vorlage: `vorlage/` (Demo: `renders/stil-demo.mp4`).
 - **Immer oranger Rahmen** (wie in den Videos). **Kein Pfoten-Badge**, kein Beagle.
 
 ## Shorts-Stil ab 27.10.: „Dark Glow“
-Ersetzt den weißen Clipart-Stil für Shorts. Details + Regeln: `.claude/skills/finanz-video/SKILL.md` (Abschnitt NEUER STANDARD), Code: `scripts/glow_short.py`.
+Ersetzt den weißen Clipart-Stil für Shorts UND Longform (Nutzer, 27.10.). Details + Regeln: `.claude/skills/finanz-video/SKILL.md` (Abschnitt NEUER STANDARD), Code: `scripts/glow_short.py`.
