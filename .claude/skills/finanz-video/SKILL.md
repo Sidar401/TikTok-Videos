@@ -80,3 +80,5 @@ Das Einkommen-Video (`videos/longform-einkommen`) ist der Qualitäts-Maßstab: �
 - Alte Aufnahmen lassen sich ohne Credits umbauen: `scripts/kurz.py` (Sätze auswählen/kürzen) → neues build.py.
 - **Gilt ab 27.10. auch für Longform (16:9)**: gleicher Dark-Glow-Look (dunkel, Glow, oranger Rahmen, Wort-Untertitel, Soundeffekte, schnellere Bildwechsel). `scripts/longform.py` dafür beim nächsten Longform auf den Glow-Stil umstellen (Vorbild `scripts/glow_short.py`).
 - Alte, schon fertige Videos postet der Nutzer unverändert – nicht neu bauen.
+
+- **Logo in Shorts (Nutzer, 27.10.):** Beagle-Logo oben über „HUNDEFINANZTV“, im ganzen Video durchgehend sichtbar (ersetzt für Shorts die alte Regel „Beagle nur im CTA“). Ist in `glow_short.py` eingebaut.

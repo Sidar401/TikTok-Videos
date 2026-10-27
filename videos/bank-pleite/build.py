@@ -24,7 +24,7 @@ CHECK = '<svg viewBox="0 0 100 100" style="width:56px;height:56px"><path d="M20 
 KONTEN = "".join(f'<div class="ko" style="display:flex;align-items:center;gap:24px;padding:22px 40px;border-radius:26px;background:#16191b;border:5px solid {GRUEN};'
                  f'box-shadow:0 0 36px {GRUEN}55"><div style="width:84px;height:84px;border-radius:50%;background:{GRUEN};display:flex;align-items:center;justify-content:center">{CHECK}</div>'
                  f'<span style="font-weight:900;font-size:68px;color:#fff">{k}</span></div>' for k in ["Girokonto", "Tagesgeld", "Festgeld"])
-KURVE = (f'<svg viewBox="0 0 800 360" style="position:absolute;left:140px;top:360px;width:800px;height:360px;overflow:visible;z-index:2">'
+KURVE = (f'<svg viewBox="0 0 800 360" style="position:absolute;left:140px;top:500px;width:800px;height:320px;overflow:visible;z-index:2">'
          f'<path id="dp-l" d="M10 330 L150 280 L260 300 L400 190 L520 220 L680 90 L790 40" fill="none" stroke="{GRUEN}" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" filter="drop-shadow(0 0 14px {GRUEN})"/></svg>')
 
 teilen_html, teilen_js = cta_szene("te", TEILEN_SVG, "Schick's jemandem,<br/>der das wissen muss!")
@@ -32,7 +32,7 @@ outro_html, outro_js = outro_szene(BEAGLE)
 
 SZENEN = [
     (0.0, st("s2"),
-     bank("hk-b", 290, 330, 500) + STEMPEL + t("hk-t", 'Dein Geld <span class="box">WEG?</span>', 1010, 96),
+     bank("hk-b", 290, 390, 500) + STEMPEL + t("hk-t", 'Dein Geld <span class="box">WEG?</span>', 1010, 96),
      lambda a, d: f'tl.fromTo("#hk-b", {{ scale: 1.12 }}, {{ scale: 1, duration: 0.4 }}, {a}); slam("#hk-s", {cap("s1", 1)}); shake("#hk-b", {cap("s1", 1)} + 0.3);'),
     (st("s2"), cap("s2", 1),
      t("np-t", "Keine Panik!", 620, 128, "glow-g"),
@@ -49,10 +49,10 @@ SZENEN = [
      t("da-z", "> 100.000 €", 520, 150, "glow-r") + t("da-t", "nicht gesetzlich<br/>abgesichert", 760, 90),
      lambda a, d: f'slam("#da-z", {a}); shake("#da-z", {a} + 0.35); pop("#da-t", {cap("s4", 1)});'),
     (st("s5"), st("s6"),
-     t("dp-q", "Dein Depot?", 220 + 80, 110, "glow-o") + KURVE + t("dp-t", 'gehört <span class="box">DIR</span>', 860, 130),
+     t("dp-q", "Dein Depot?", 380, 100, "glow-o") + KURVE + t("dp-t", 'gehört <span class="box">DIR</span>', 860, 130),
      lambda a, d: f'pop("#dp-q", {a}); draw("#dp-l", {a} + 0.4, 1.4); slam("#dp-t", {cap("s5", 1)});'),
     (st("s6"), st("s7"),
-     t("vb-z", "100.000 € +", 320, 110, "glow-o") +
+     t("vb-z", "100.000 € +", 400, 110, "glow-o") +
      bank("vb-1", 60, 640, 280) + bank("vb-2", 400, 640, 280, GRUEN) + bank("vb-3", 740, 640, 280, "#4d8ff0") +
      t("vb-t", "auf mehrere Banken", 1000, 76),
      lambda a, d: f'pop("#vb-z", {a}); pop("#vb-1", {cap("s6", 1)}); pop("#vb-2", {cap("s6", 1)} + 0.2); pop("#vb-3", {cap("s6", 1)} + 0.4); pop("#vb-t", {cap("s6", 1)} + 0.6);'),

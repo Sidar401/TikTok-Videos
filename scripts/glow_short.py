@@ -1,6 +1,6 @@
 """Neuer Short-Stil „Dark Glow“ (ab 27.10., Nutzer-Feedback: mehr Tempo, Hook, Sound).
 
-Dunkler Raster-Hintergrund + oranges Leuchten (wie die Thumbnails), oranger Rahmen, Bildwechsel alle 1–2 s,
+Dunkler Raster-Hintergrund + oranges Leuchten (wie die Thumbnails), oranger Rahmen, Beagle-Logo oben durchgehend (Nutzer 27.10.), Bildwechsel alle 1–2 s,
 Zoom-Drift pro Szene, große Wort-für-Wort-Untertitel (aktives Wort orange), Soundeffekte (lokal synthetisiert).
 
   from glow_short import *
@@ -30,7 +30,9 @@ CSS = f"""
       .glow-g {{ color: {GRUEN}; text-shadow: 0 0 50px {GRUEN}aa; }}
       .glow-r {{ color: {ROT}; text-shadow: 0 0 50px {ROT}aa; }}
       .box {{ display: inline-block; padding: 6px 34px 14px; border-radius: 24px; background: {OR}; color: #111; box-shadow: 0 0 60px {OR}88; }}
-      #brand {{ position: absolute; left: 0; top: 170px; width: 1080px; text-align: center; font-weight: 800; font-size: 34px; color: #ffffff99; letter-spacing: 2px; z-index: 5; }}
+      #logo {{ position: absolute; left: 445px; top: 135px; width: 190px; height: 190px; border-radius: 50%; overflow: hidden; border: 5px solid #DB8622; box-shadow: 0 0 30px #ff8a1f88; z-index: 5; }}
+      #logo img {{ width: 100%; height: 100%; object-fit: cover; }}
+      #brand {{ position: absolute; left: 0; top: 335px; width: 1080px; text-align: center; font-weight: 800; font-size: 30px; color: #ffffffcc; letter-spacing: 2px; z-index: 5; }}
       #frame {{ position: absolute; inset: 0; border: 26px solid #DB8622; z-index: 10; }}
       .cap {{ position: absolute; left: 60px; top: 1330px; width: 960px; text-align: center; z-index: 6; }}
       .cap span {{ display: inline-block; margin: 0 11px; font-weight: 900; font-size: 74px; line-height: 1.15; color: #fff; text-shadow: 0 6px 0 #000, 0 0 30px #000; }}
@@ -186,6 +188,7 @@ def build(here, szenen, sfx):
     <div id="root" data-composition-id="main" data-start="0" data-duration="{dauer}" data-width="1080" data-height="1920">
       <div id="raster"></div>
 {chr(10).join(out)}
+      <div id="logo"><img src="assets/beagle.png" alt="" /></div>
       <div id="brand">HUNDEFINANZTV</div>
       <div id="frame"></div>
       <div id="captions" data-track-kind="captions">

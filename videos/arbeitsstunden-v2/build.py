@@ -18,8 +18,8 @@ TAGE = "".join(f'<div class="tg" style="width:150px;height:150px;border-radius:2
 SZENEN = [
     # Hook: Frame 0 schon voll
     (0.0, 1.98,
-     handy("hk-h", 360, 330, 360, f'<div style="font-weight:900;font-size:86px;white-space:nowrap;color:#fff;text-shadow:0 0 40px {OR}">1.000 €</div>') +
-     t("hk-t", 'Wie lange musst du<br/><span class="box">DAFÜR</span> arbeiten?', 1060, 84),
+     handy("hk-h", 380, 390, 320, f'<div style="font-weight:900;font-size:86px;white-space:nowrap;color:#fff;text-shadow:0 0 40px {OR}">1.000 €</div>') +
+     t("hk-t", 'Wie lange musst du<br/><span class="box">DAFÜR</span> arbeiten?', 1030, 80),
      lambda a, d: f'tl.fromTo("#hk-h", {{ scale: 1.15 }}, {{ scale: 1, duration: 0.4, ease: "power3.out" }}, {a}); shake("#hk-h", {a} + 1.0);'),
 
     (1.98, 3.99,
@@ -43,11 +43,11 @@ SZENEN = [
      lambda a, d: f'slam("#lo-z", {a}); pop("#lo-s", {a} + 0.4);'),
 
     (11.48, 12.43,
-     handy("nh-h", 360, 360, 360, '<div style="font-weight:900;font-size:56px;color:#fff">NEU</div>'),
+     handy("nh-h", 380, 390, 320, '<div style="font-weight:900;font-size:56px;color:#fff">NEU</div>'),
      lambda a, d: f'tl.fromTo("#nh-h", {{ y: 600, rotation: -20 }}, {{ y: 0, rotation: 0, duration: 0.4, ease: "back.out(1.6)" }}, {a});'),
 
     (12.43, 14.24,
-     handy("pr-h", 360, 330, 360) + chip("pr-p", "1.000 €", ROT, 860, 120),
+     handy("pr-h", 380, 390, 320) + chip("pr-p", "1.000 €", ROT, 860, 120),
      lambda a, d: f'pop("#pr-h", {a}); slam("#pr-p", {a} + 0.6); shake("#pr-p", {a} + 0.9);'),
 
     (14.24, 15.97,
