@@ -50,3 +50,6 @@ Code-Vorlage: `vorlage/` (Demo: `renders/stil-demo.mp4`).
 - Stil „Dark Glow“ (`scripts/thumbs.py`): dunkler Raster-Hintergrund, leuchtende Linien, fette Montserrat, plastische Objekte – nach Vorbild Finanzbär, aber in **Orange**.
 - **Orange muss dominieren:** Hervorhebungs-Kasten im Titel immer orange; Rot/Grün nur als kleine Akzente (Zahlen, Kurven).
 - **Immer oranger Rahmen** (wie in den Videos). **Kein Pfoten-Badge**, kein Beagle.
+
+## Shorts-Stil ab 27.10.: „Dark Glow“
+Ersetzt den weißen Clipart-Stil für Shorts. Details + Regeln: `.claude/skills/finanz-video/SKILL.md` (Abschnitt NEUER STANDARD), Code: `scripts/glow_short.py`.

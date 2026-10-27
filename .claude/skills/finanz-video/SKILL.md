@@ -70,3 +70,11 @@ Das Einkommen-Video (`videos/longform-einkommen`) ist der Qualitäts-Maßstab: �
 - Aus jedem Longform-Video 4–8 Shorts (9:16) schneiden – **ohne neue Voice** (Original-Voice-Ausschnitte wiederverwenden).
 - Jeder Short endet mit Verweis aufs Hauptvideo („Das ganze Video findest du auf YouTube/in unserem Profil“).
 - Starke Einzelszenen wählen (Hook, Aha-Zahl, Twist), Grafiken für 9:16 neu anordnen.
+
+## NEUER STANDARD für Shorts (ab 27.10., Nutzer: „viel besser“)
+- Stil „Dark Glow“ mit `scripts/glow_short.py` (Vorlage: `videos/arbeitsstunden-v2/build.py`): dunkler Raster-Hintergrund, oranges Leuchten, oranger Rahmen.
+- **20–30 s**, Hook im ersten Bild (stärkste Aussage + Motiv sofort sichtbar, keine Einleitung).
+- Bildwechsel alle 1–2 s, Zoom-Drift je Szene, slam/pop/shake, Zahlen zählen hoch.
+- Wort-für-Wort-Untertitel (aktives Wort orange), Soundeffekte (whoosh bei Szenenwechsel, pop, ding, boom, tick, kasse).
+- Musik wählt der Nutzer in TikTok (Trend-Sound leise).
+- Alte Aufnahmen lassen sich ohne Credits umbauen: `scripts/kurz.py` (Sätze auswählen/kürzen) → neues build.py.
