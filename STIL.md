@@ -11,6 +11,7 @@ Code-Vorlage: `vorlage/` (Demo: `renders/stil-demo.mp4`).
 - Voiceover (männlich, locker, schnell) + durchgehende Untertitel
 
 ## Branding HundeFinanzTV
+- **Name im Video immer „HundeFinanzTv“ schreiben, nie in Großbuchstaben** (Nutzer, 27.10.).
 - **Maskottchen HundeFinanzTV = der Beagle** (vom Nutzer so gewollt). **Nur in CTA-Szenen** (Folgen-CTA, Outro) – sonst nirgends im Video, auch nicht als Bild für Hund/Beispiele (Nutzer: „Logo zu oft“). Der Aussie gehört nur zu HundeWissenTv.
 - Orange `#DB8622` aus HundeWissenTv: Untertitel-Box + **26 px oranger Rahmen** ums ganze Video (wie auf HundeWissenTv)
 - Maskottchen: Beagle aus `brand/hundewissentv-logo.jpg` (dunkler Kreis `#353A3D`, Creme `#FAF5EF`)

@@ -6,7 +6,7 @@ from pathlib import Path
 HERE = Path(__file__).parent
 sys.path.insert(0, str(HERE.parent.parent / "scripts"))
 from finanz import BEAGLE  # noqa: E402
-from glow_short import GRUEN, OR, ROT, build, chip, handy, ring, t  # noqa: E402
+from glow_short import outro_szene, GRUEN, OR, ROT, build, chip, handy, ring, t  # noqa: E402
 
 UHR = (f'<svg viewBox="0 0 100 100" style="width:62%;height:62%"><circle cx="50" cy="50" r="44" fill="none" stroke="#fff" stroke-width="6"/>'
        f'<line id="uz-g" x1="50" y1="50" x2="50" y2="16" stroke="{OR}" stroke-width="7" stroke-linecap="round"/>'
@@ -18,7 +18,7 @@ TAGE = "".join(f'<div class="tg" style="width:150px;height:150px;border-radius:2
 SZENEN = [
     # Hook: Frame 0 schon voll
     (0.0, 1.98,
-     handy("hk-h", 380, 390, 320, f'<div style="font-weight:900;font-size:86px;white-space:nowrap;color:#fff;text-shadow:0 0 40px {OR}">1.000 €</div>') +
+     handy("hk-h", 380, 420, 320, f'<div style="font-weight:900;font-size:86px;white-space:nowrap;color:#fff;text-shadow:0 0 40px {OR}">1.000 €</div>') +
      t("hk-t", 'Wie lange musst du<br/><span class="box">DAFÜR</span> arbeiten?', 1030, 80),
      lambda a, d: f'tl.fromTo("#hk-h", {{ scale: 1.15 }}, {{ scale: 1, duration: 0.4, ease: "power3.out" }}, {a}); shake("#hk-h", {a} + 1.0);'),
 
@@ -43,11 +43,11 @@ SZENEN = [
      lambda a, d: f'slam("#lo-z", {a}); pop("#lo-s", {a} + 0.4);'),
 
     (11.48, 12.43,
-     handy("nh-h", 380, 390, 320, '<div style="font-weight:900;font-size:56px;color:#fff">NEU</div>'),
+     handy("nh-h", 380, 420, 320, '<div style="font-weight:900;font-size:56px;color:#fff">NEU</div>'),
      lambda a, d: f'tl.fromTo("#nh-h", {{ y: 600, rotation: -20 }}, {{ y: 0, rotation: 0, duration: 0.4, ease: "back.out(1.6)" }}, {a});'),
 
     (12.43, 14.24,
-     handy("pr-h", 380, 390, 320) + chip("pr-p", "1.000 €", ROT, 860, 120),
+     handy("pr-h", 380, 420, 320) + chip("pr-p", "1.000 €", ROT, 860, 120),
      lambda a, d: f'pop("#pr-h", {a}); slam("#pr-p", {a} + 0.6); shake("#pr-p", {a} + 0.9);'),
 
     (14.24, 15.97,
@@ -66,9 +66,7 @@ SZENEN = [
      lambda a, d: f'pop("#te-r", {a}); tl.fromTo("#te-r", {{ rotation: -8 }}, {{ rotation: 8, duration: 0.25, yoyo: true, repeat: 5, ease: "sine.inOut" }}, {a} + 0.4); pop("#te-t", {a} + 1.1);'),
 
     (21.69, 26.848,
-     ring("ou-r", f'<div style="width:100%;height:100%;border-radius:50%;overflow:hidden">{BEAGLE}</div>', 290, 330, 500) +
-     t("ou-n", "HundeFinanzTV", 900, 96) + chip("ou-f", "+ Folgen", OR, 1040, 64),
-     lambda a, d: f'pop("#ou-r", {a}); pop("#ou-n", {a} + 0.3); slam("#ou-f", {a} + 0.6); tl.fromTo("#ou-f", {{ scale: 1 }}, {{ scale: 1.1, duration: 0.25, yoyo: true, repeat: 5 }}, {a} + 1.2);'),
+     *outro_szene(BEAGLE)),
 ]
 
 SFX = [(0.0, "boom"), (1.0, "pop"), (1.98, "whoosh"), (2.33, "pop"), (3.99, "whoosh"), (4.85, "ding"), (6.27, "whoosh")] + \

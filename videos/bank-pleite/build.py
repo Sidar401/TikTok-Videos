@@ -39,7 +39,7 @@ SZENEN = [
      lambda a, d: f'slam("#np-t", {a});'),
     (cap("s2", 1), st("s3"),
      ring("ab-r", f'<div id="ab-z" style="font-weight:900;font-size:96px;line-height:1;white-space:nowrap;color:#fff;text-shadow:0 0 40px {GRUEN}">0 €</div>'
-                  f'<div style="font-weight:900;font-size:50px;color:{GRUEN}">GESCHÜTZT</div>', 240, 360, 600, GRUEN) +
+                  f'<div style="font-weight:900;font-size:50px;color:{GRUEN}">GESCHÜTZT</div>', 240, 410, 600, GRUEN) +
      t("ab-t", "pro Bank · EU-Gesetz", 1040, 64),
      lambda a, d: f'pop("#ab-r", {a}); zaehl("#ab-z", 0, 100000, {a} + 0.2, 1.2, " €"); pop("#ab-t", {cap("s2", 2)});'),
     (st("s3"), st("s4"),

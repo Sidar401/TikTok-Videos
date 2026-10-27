@@ -32,10 +32,10 @@ CSS = f"""
       .box {{ display: inline-block; padding: 6px 34px 14px; border-radius: 24px; background: {OR}; color: #111; box-shadow: 0 0 60px {OR}88; }}
       #logo {{ position: absolute; left: 445px; top: 135px; width: 190px; height: 190px; border-radius: 50%; overflow: hidden; border: 5px solid #DB8622; box-shadow: 0 0 30px #ff8a1f88; z-index: 5; }}
       #logo img {{ width: 100%; height: 100%; object-fit: cover; }}
-      #brand {{ position: absolute; left: 0; top: 335px; width: 1080px; text-align: center; font-weight: 800; font-size: 30px; color: #ffffffcc; letter-spacing: 2px; z-index: 5; }}
+      #brand {{ position: absolute; left: 0; top: 335px; width: 1080px; text-align: center; font-weight: 800; font-size: 38px; color: #ffffffdd; letter-spacing: 1px; z-index: 5; }}
       #frame {{ position: absolute; inset: 0; border: 26px solid #DB8622; z-index: 10; }}
       .cap {{ position: absolute; left: 60px; top: 1330px; width: 960px; text-align: center; z-index: 6; }}
-      .cap span {{ display: inline-block; margin: 0 11px; font-weight: 900; font-size: 74px; line-height: 1.15; color: #fff; text-shadow: 0 6px 0 #000, 0 0 30px #000; }}
+      .cap span {{ display: inline-block; margin: 0 16px; font-weight: 900; font-size: 74px; line-height: 1.15; color: #fff; text-shadow: 0 6px 0 #000, 0 0 30px #000; }}
 """
 
 
@@ -75,8 +75,8 @@ def cta_szene(uid, svg, text):
 
 def outro_szene(beagle):
     html = (ring("ou-r", f'<div style="width:100%;height:100%;border-radius:50%;overflow:hidden">{beagle}</div>', 290, 330, 500) +
-            t("ou-n", "HundeFinanzTV", 900, 96) + chip("ou-f", "+ Folgen", OR, 1040, 64))
-    return html, lambda a, d: (f'pop("#ou-r", {a}); pop("#ou-n", {a} + 0.3); slam("#ou-f", {a} + 0.6);'
+            t("ou-n", "HundeFinanzTv", 900, 96) + chip("ou-f", "+ Folgen", OR, 1040, 64))
+    return html, lambda a, d: (f'tl.fromTo(["#logo", "#brand"], {{ opacity: 1 }}, {{ opacity: 0, duration: 0.2 }}, {a}); pop("#ou-r", {a}); pop("#ou-n", {a} + 0.3); slam("#ou-f", {a} + 0.6);'
                                f' tl.fromTo("#ou-f", {{ scale: 1 }}, {{ scale: 1.1, duration: 0.25, yoyo: true, repeat: 5 }}, {a} + 1.2);')
 
 
@@ -170,7 +170,7 @@ def build(here, szenen, sfx):
             for k, w in enumerate(words):
                 spans.append(f'<span id="w{n}-{k}">{w}</span> ')
                 ende = cur + (cp["end"] - cp["start"]) * (len(w) + 1) / L
-                js.append(f'      tl.fromTo("#w{n}-{k}", {{ color: "#ffffff", scale: 1 }}, {{ color: "{OR}", scale: 1.12, duration: 0.08 }}, {round(cur, 3)});')
+                js.append(f'      tl.fromTo("#w{n}-{k}", {{ color: "#ffffff", scale: 1 }}, {{ color: "{OR}", scale: 1.06, duration: 0.08 }}, {round(cur, 3)});')
                 if k < len(words) - 1:
                     js.append(f'      tl.to("#w{n}-{k}", {{ color: "#ffffff", scale: 1, duration: 0.08 }}, {round(ende, 3)});')
                 cur = ende
@@ -189,7 +189,7 @@ def build(here, szenen, sfx):
       <div id="raster"></div>
 {chr(10).join(out)}
       <div id="logo"><img src="assets/beagle.png" alt="" /></div>
-      <div id="brand">HUNDEFINANZTV</div>
+      <div id="brand">HundeFinanzTv</div>
       <div id="frame"></div>
       <div id="captions" data-track-kind="captions">
 {chr(10).join(caps)}
