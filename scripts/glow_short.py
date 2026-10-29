@@ -33,6 +33,9 @@ CSS = f"""
       #logo {{ position: absolute; left: 445px; top: 135px; width: 190px; height: 190px; border-radius: 50%; overflow: hidden; border: 5px solid #DB8622; box-shadow: 0 0 30px #ff8a1f88; z-index: 5; }}
       #logo img {{ width: 100%; height: 100%; object-fit: cover; }}
       #brand {{ position: absolute; left: 0; top: 335px; width: 1080px; text-align: center; font-weight: 800; font-size: 38px; color: #ffffffdd; letter-spacing: 1px; z-index: 5; }}
+      #flash {{ position: absolute; inset: 0; background: #fff; opacity: 0; z-index: 9; pointer-events: none; }}
+      .p {{ position: absolute; border-radius: 50%; }}
+      .l {{ display: inline-block; }}
       #frame {{ position: absolute; inset: 0; border: 26px solid #DB8622; z-index: 10; }}
       .cap {{ position: absolute; left: 60px; top: 1330px; width: 960px; text-align: center; z-index: 6; }}
       .cap span {{ display: inline-block; margin: 0 16px; font-weight: 900; font-size: 74px; line-height: 1.15; color: #fff; text-shadow: 0 6px 0 #000, 0 0 30px #000; }}
@@ -41,6 +44,25 @@ CSS = f"""
 
 def t(id_, html, top, size=120, cls=""):
     return f'<div id="{id_}" class="t {cls}" style="top:{top}px;font-size:{size}px">{html}</div>'
+
+
+def partikel(id_, cx, cy, n=28, farben=(OR, GOLD, "#ffffff"), weite=520, groesse=(10, 26), z=4):
+    """Partikel-Explosion (deterministisch). JS: burst("#id", t)."""
+    teile = []
+    for i in range(n):
+        w = 2 * np.pi * i / n + 0.37 * np.sin(i * 7.3)
+        r = weite * (0.55 + 0.45 * abs(np.sin(i * 2.1)))
+        g = groesse[0] + (groesse[1] - groesse[0]) * abs(np.cos(i * 1.7))
+        f = farben[i % len(farben)]
+        teile.append(f'<div class="p" data-dx="{r * np.cos(w):.0f}" data-dy="{r * np.sin(w):.0f}" style="left:{cx - g / 2:.0f}px;top:{cy - g / 2:.0f}px;'
+                     f'width:{g:.0f}px;height:{g:.0f}px;background:{f};box-shadow:0 0 {g:.0f}px {f};opacity:0"></div>')
+    return f'<div id="{id_}" style="position:absolute;inset:0;z-index:{z};pointer-events:none">{"".join(teile)}</div>'
+
+
+def buchstaben(id_, text, top, size=120, cls=""):
+    """Text, dessen Buchstaben einzeln reinfliegen. JS: letters("#id", t)."""
+    sp = "".join('<span class="l">&nbsp;</span>' if c == " " else f'<span class="l">{c}</span>' for c in text)
+    return t(id_, sp, top, size, cls)
 
 
 def ring(id_, inner, x, y, gr, farbe=OR):
@@ -132,13 +154,19 @@ def _sfx(art):
     raise ValueError(art)
 
 
-def mix(here, sfx, dauer):
-    v, sr = sf.read(str(Path(here) / "assets/voice.wav"))
-    if v.ndim > 1:
-        v = v.mean(axis=1)
-    assert sr == SR, sr
+def mix(here, sfx, dauer, musik=None):
+    vp = Path(here) / "assets/voice.wav"
+    v = np.zeros(0)
+    if vp.exists():
+        v, sr = sf.read(str(vp))
+        if v.ndim > 1:
+            v = v.mean(axis=1)
+        assert sr == SR, sr
     out = np.zeros(max(len(v), int(dauer * SR)) + SR)
-    out[: len(v)] += v / (np.abs(v).max() + 1e-9) * 0.9
+    if len(v):
+        out[: len(v)] += v / (np.abs(v).max() + 1e-9) * 0.9
+    if musik is not None:  # Videos ohne Stimme: Beat als Bett
+        out[: len(musik)] += 0.6 * musik[: len(out)]
     for zeit, art in sfx:
         s = _sfx(art) * 0.55
         i = int(zeit * SR)
@@ -149,15 +177,17 @@ def mix(here, sfx, dauer):
 
 
 # ---------------- Bau ----------------
-def build(here, szenen, sfx):
+def build(here, szenen, sfx, dauer=None, musik=None):
+    """Ohne timings.json (kein Voice): dauer angeben, keine Untertitel; musik = numpy-Array (scripts/musik.py)."""
     here = Path(here)
-    T = json.loads((here / "timings.json").read_text())
+    tp = here / "timings.json"
+    T = json.loads(tp.read_text()) if tp.exists() else {"dauer": dauer, "saetze": []}
     dauer = T["dauer"]
     out, js = [], []
-    for n, (a, b, html, code) in enumerate(szenen):
+    for n, (a, b, html, code, *spur) in enumerate(szenen):
         d = round(b - a, 3)
         sid = f"z{n}"
-        out.append(f'      <div id="{sid}" class="scene clip" data-start="{a}" data-duration="{d}" data-track-index="1"><div id="{sid}-i" class="inner">{html}</div></div>')
+        out.append(f'      <div id="{sid}" class="scene clip" data-start="{a}" data-duration="{d}" data-track-index="{spur[0] if spur else 1}"><div id="{sid}-i" class="inner">{html}</div></div>')
         js.append(f'      tl.fromTo("#{sid}-i", {{ scale: 1.0 }}, {{ scale: 1.06, duration: {d}, ease: "none" }}, {a});')
         js.append(f"      {code(a, d)}")
     caps, n = [], 0
@@ -175,7 +205,7 @@ def build(here, szenen, sfx):
                     js.append(f'      tl.to("#w{n}-{k}", {{ color: "#ffffff", scale: 1, duration: 0.08 }}, {round(ende, 3)});')
                 cur = ende
             caps.append(f'        <div id="c{n}" class="cap clip" data-start="{cp["start"]}" data-duration="{round(cp["end"] - cp["start"], 3)}" data-track-index="2">{"".join(spans)}</div>')
-    mix(here, sfx, dauer)
+    mix(here, sfx, dauer, musik)
     html = f"""<!doctype html>
 <html lang="de" data-resolution="portrait">
   <head>
@@ -190,6 +220,7 @@ def build(here, szenen, sfx):
 {chr(10).join(out)}
       <div id="logo"><img src="assets/beagle.png" alt="" /></div>
       <div id="brand">HundeFinanzTv</div>
+      <div id="flash"></div>
       <div id="frame"></div>
       <div id="captions" data-track-kind="captions">
 {chr(10).join(caps)}
@@ -210,6 +241,12 @@ def build(here, szenen, sfx):
         tl.fromTo(o, {{ v: von }}, {{ v: bis, duration: dur, ease: "power2.out", onUpdate: () => {{
           document.querySelector(sel).textContent = Math.round(o.v).toString().replace(/\\B(?=(\\d{{3}})+(?!\\d))/g, ".") + (nach || ""); }} }}, at);
       }};
+      const flash = (at, st) => tl.fromTo("#flash", {{ opacity: st || 0.85 }}, {{ opacity: 0, duration: 0.35, ease: "power2.out", immediateRender: false }}, at);
+      const burst = (sel, at, dur) => tl.fromTo(sel + " .p", {{ x: 0, y: 0, scale: 1.4, opacity: 1 }},
+        {{ x: (i, el) => +el.dataset.dx, y: (i, el) => +el.dataset.dy, scale: 0.2, opacity: 0, duration: dur || 1.0, ease: "power3.out" }}, at);
+      const letters = (sel, at) => tl.fromTo(sel + " .l", {{ y: 140, opacity: 0, rotation: 12, scale: 0.6 }},
+        {{ y: 0, opacity: 1, rotation: 0, scale: 1, duration: 0.45, stagger: 0.035, ease: "back.out(2.2)" }}, at);
+      const glitch = (sel, at) => tl.fromTo(sel, {{ x: -22, skewX: 18 }}, {{ x: 0, skewX: 0, duration: 0.24, ease: "steps(6)" }}, at);
 {chr(10).join(js)}
       window.__timelines["main"] = tl;
     </script>
