@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      /* TikTok-Shop-Video 1: Problem → Lösung (HundeWissenTv 2.0) */
+      :root {
+        --brand: #DB8622;
+        --dark: #353A3D;
+        --creme: #FAF5EF;
+        --font: "Montserrat", sans-serif;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--dark); }
+      #root { position: relative; width: 100%; height: 100%; background: var(--dark); font-family: var(--font); }
+
+      .scene { position: absolute; inset: 0; overflow: hidden; }
+      .bg { position: absolute; inset: 0; width: 1080px; height: 1920px; object-fit: cover; }
+
+      /* Foto-Karte in der Mitte */
+      .card {
+        position: absolute; left: 70px; top: 560px; width: 940px; height: 760px;
+        border-radius: 44px; overflow: hidden;
+        box-shadow: 0 30px 80px rgba(0,0,0,0.55);
+      }
+      .card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+      /* Überschrift oben */
+      .head {
+        position: absolute; left: 80px; top: 230px; width: 920px;
+        text-align: center; color: #fff; font-weight: 900; font-size: 80px; line-height: 1.08;
+        text-shadow: 0 6px 24px rgba(0,0,0,0.45);
+      }
+      .hl {
+        display: inline-block; background: var(--brand); color: #fff;
+        padding: 6px 26px 12px; border-radius: 22px; margin-top: 14px; text-shadow: none;
+      }
+
+      /* Produkt-Szene */
+      #s3 { background: radial-gradient(circle at 50% 42%, #4a5054 0%, var(--dark) 62%); }
+      #s3-ball { position: absolute; left: 190px; top: 470px; width: 700px; }
+      .chips { position: absolute; left: 110px; top: 1010px; width: 860px; display: flex; flex-direction: column; gap: 18px; }
+      .chip {
+        display: flex; align-items: center; gap: 22px;
+        background: #fff; color: var(--dark); border-radius: 999px;
+        padding: 12px 34px 12px 14px; font-weight: 800; font-size: 46px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      }
+      .chip b {
+        width: 56px; height: 56px; border-radius: 50%; background: var(--brand); color: #fff;
+        display: flex; align-items: center; justify-content: center; font-size: 34px; flex: none;
+      }
+
+      .tag {
+        position: absolute; left: 0; top: 1360px; width: 1080px; text-align: center;
+      }
+      .tag span {
+        display: inline-block; background: rgba(255,255,255,0.95); color: var(--dark);
+        font-weight: 800; font-size: 44px; padding: 14px 36px; border-radius: 999px;
+      }
+
+      /* CTA */
+      #s5 { background: var(--brand); }
+      #s5-brand {
+        position: absolute; top: 200px; left: 0; width: 1080px;
+        display: flex; justify-content: center; align-items: center; gap: 16px;
+        color: #fff; font-weight: 800; font-size: 44px;
+      }
+      #s5-brand img { width: 92px; height: 92px; border-radius: 50%; border: 4px solid #fff; }
+      #s5-ball { position: absolute; left: 290px; top: 340px; width: 500px; }
+      #s5-stars { position: absolute; top: 760px; left: 0; width: 1080px; text-align: center; color: #fff; font-weight: 800; font-size: 46px; }
+      #s5-price { position: absolute; top: 830px; left: 0; width: 1080px; text-align: center; color: #fff; font-weight: 900; font-size: 210px; line-height: 1; letter-spacing: -4px; }
+      #s5-price small { font-size: 70px; letter-spacing: 0; vertical-align: 0.9em; margin-right: 22px; }
+      #s5-cta {
+        position: absolute; top: 1110px; left: 120px; width: 840px; text-align: center;
+        background: var(--dark); color: #fff; font-weight: 900; font-size: 56px;
+        padding: 30px 20px; border-radius: 999px;
+      }
+      #s5-arrow { position: absolute; top: 1260px; left: 490px; width: 100px; height: 110px; }
+
+      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; z-index: 20; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="18" data-width="1080" data-height="1920">
+
+      <!-- 1: Hook – Hund langweilt sich -->
+      <div id="s1" class="scene clip" data-start="0" data-duration="3.2" data-track-index="1" data-track-kind="graphics">
+        <img class="bg" src="assets/ruhe-grau-bg.jpg" alt="" />
+        <div id="s1-card" class="card"><img src="assets/ruhe-grau.jpg" alt="" /></div>
+        <div class="head">
+          <div id="s1-t1">Dein Hund ist</div>
+          <div id="s1-t2" class="hl">allein zu Hause?</div>
+        </div>
+      </div>
+
+      <!-- 2: Wendung -->
+      <div id="s2" class="scene clip" data-start="3.2" data-duration="2.4" data-track-index="1" data-track-kind="graphics">
+        <img class="bg" src="assets/szene-bg.jpg" alt="" />
+        <div id="s2-card" class="card"><img src="assets/szene.jpg" alt="" /></div>
+        <div class="head">
+          <div id="s2-t1">Dann kennt er</div>
+          <div id="s2-t2" class="hl">DAS hier noch nicht</div>
+        </div>
+      </div>
+
+      <!-- 3: Produkt + Vorteile -->
+      <div id="s3" class="scene clip" data-start="5.6" data-duration="6.4" data-track-index="1" data-track-kind="graphics">
+        <div class="head" style="top:220px">
+          <div id="s3-t1">Der Ball, der</div>
+          <div id="s3-t2" class="hl">von selbst spielt</div>
+        </div>
+        <img id="s3-ball" src="assets/ball.png" alt="" />
+        <div class="chips">
+          <div id="c1" class="chip"><b>✓</b>Rollt &amp; springt allein</div>
+          <div id="c2" class="chip"><b>✓</b>Zwitschert wie ein Vogel</div>
+          <div id="c3" class="chip"><b>✓</b>Startet bei Berührung</div>
+          <div id="c4" class="chip"><b>✓</b>Per USB aufladbar</div>
+        </div>
+      </div>
+
+      <!-- 4: Ergebnis -->
+      <div id="s4" class="scene clip" data-start="12" data-duration="3" data-track-index="1" data-track-kind="graphics">
+        <img class="bg" src="assets/spiel-bg.jpg" alt="" />
+        <div id="s4-card" class="card"><img src="assets/spiel.jpg" alt="" style="object-position:50% 40%" /></div>
+        <div class="head">
+          <div id="s4-t1">Er spielt –</div>
+          <div id="s4-t2" class="hl">auch ohne dich</div>
+        </div>
+        <div id="s4-tag" class="tag"><span>Für kleine Hunde &amp; Katzen</span></div>
+      </div>
+
+      <!-- 5: CTA -->
+      <div id="s5" class="scene clip" data-start="15" data-duration="3" data-track-index="1" data-track-kind="graphics">
+        <div id="s5-brand"><img src="assets/beagle.png" alt="" />HundeWissenTv 2.0</div>
+        <img id="s5-ball" src="assets/ball.png" alt="" />
+        <div id="s5-stars">★ 4,1 · über 12.500× verkauft</div>
+        <div id="s5-price"><small>nur</small>15,17 €</div>
+        <div id="s5-cta">Unten im Warenkorb 🛒</div>
+        <svg id="s5-arrow" viewBox="0 0 100 110"><path d="M50 8 L50 90 M18 60 L50 94 L82 60" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" /></svg>
+      </div>
+
+      <div id="flash" class="clip" data-start="0" data-duration="18" data-track-index="3"></div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const pop = (sel, at, d = 0.38) =>
+        tl.fromTo(sel, { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: d, ease: "back.out(2)" }, at);
+      const slam = (sel, at) =>
+        tl.fromTo(sel, { scale: 1.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.28, ease: "power4.out" }, at);
+      const flash = (at) =>
+        tl.fromTo("#flash", { opacity: 0.85 }, { opacity: 0, duration: 0.22, ease: "power2.out", immediateRender: false }, at);
+      const card = (sel, at, dur) => {
+        tl.fromTo(sel, { scale: 1.12 }, { scale: 1, duration: 0.35, ease: "power3.out" }, at);
+        tl.fromTo(sel + " img", { scale: 1 }, { scale: 1.1, duration: dur, ease: "none" }, at);
+      };
+
+      // 1: Hook steht ab Frame 0 (Thumbnail)
+      tl.fromTo("#s1-card img", { scale: 1.02 }, { scale: 1.12, duration: 3.2, ease: "none" }, 0);
+      tl.fromTo("#s1-t2", { scale: 1 }, { scale: 1.06, duration: 0.25, yoyo: true, repeat: 1, ease: "sine.inOut" }, 0.6);
+
+      // 2: Wendung
+      flash(3.2);
+      card("#s2-card", 3.2, 2.4);
+      slam("#s2-t1", 3.25);
+      slam("#s2-t2", 3.5);
+      tl.fromTo("#s2-card", { rotation: 0 }, { rotation: 1.5, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }, 3.6);
+
+      // 3: Produkt + Vorteile
+      flash(5.6);
+      slam("#s3-t1", 5.65);
+      slam("#s3-t2", 5.85);
+      tl.fromTo("#s3-ball", { y: -700, rotation: -25 }, { y: 0, rotation: 0, duration: 0.6, ease: "bounce.out" }, 5.7);
+      tl.to("#s3-ball", { rotation: 6, duration: 0.18, yoyo: true, repeat: 25, ease: "sine.inOut" }, 6.35);
+      tl.to("#s3-ball", { y: -30, duration: 0.36, yoyo: true, repeat: 7, ease: "sine.inOut" }, 6.6);
+      ["#c1", "#c2", "#c3", "#c4"].forEach((c, i) =>
+        tl.fromTo(c, { x: -900, opacity: 0 }, { x: 0, opacity: 1, duration: 0.4, ease: "back.out(1.4)" }, 6.6 + i * 1.25));
+
+      // 4: Ergebnis
+      flash(12);
+      card("#s4-card", 12, 3);
+      slam("#s4-t1", 12.05);
+      slam("#s4-t2", 12.3);
+      pop("#s4-tag", 13);
+
+      // 5: CTA
+      flash(15);
+      pop("#s5-brand", 15.05);
+      tl.fromTo("#s5-ball", { y: 300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "back.out(1.6)" }, 15.05);
+      tl.to("#s5-ball", { rotation: 5, duration: 0.2, yoyo: true, repeat: 9, ease: "sine.inOut" }, 15.5);
+      pop("#s5-stars", 15.3);
+      slam("#s5-price", 15.5);
+      pop("#s5-cta", 15.9);
+      tl.fromTo("#s5-arrow", { y: -20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.25 }, 16.2);
+      tl.to("#s5-arrow", { y: 26, duration: 0.3, yoyo: true, repeat: 4, ease: "sine.inOut" }, 16.45);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
