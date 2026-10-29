@@ -32,6 +32,9 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | rauchen-kosten | 9 €/Schachtel, 1/Tag = 3.285 €/Jahr, 32.850 € in 10 J., investiert (7 %) ≈ 46.000 € |
 | million-zinsen | 1 Mio. × 2 % = 20.000 €/Jahr ≈ 55 €/Tag, nach Steuern ≈ 40 €/Tag |
 | handyvertrag | Vertrag 50 €×24 = 1.200 € vs. Handy 700 € + SIM-only 10 € = 940 € |
+| willkommen-muenze | Kanal-Trailer ohne Stimme: Münze fällt → Chart → Logo, Wort-Schläge, Münzregen, 50-30-20-Donut, Duell ohne/mit Plan |
+| willkommen-million | Kanal-Trailer ohne Stimme: Zähler 0 → 1.000.000 € mit 8 Stationen (Sparschwein … Haus), Drop, Logo |
+| willkommen-reise | Kanal-Trailer ohne Stimme: Kamerafahrt mit Parallax durch 9 Fragen-Stationen, Tresor öffnet sich, Logo |
 
 ## Longform (16:9)
 | Video | Kern / Beispiele | Bildidee |
