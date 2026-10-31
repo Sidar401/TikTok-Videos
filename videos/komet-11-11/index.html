@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      #hook { top: 560px; }
+      #hook .big { font-size: 110px; }
+      #q { top: 700px; }
+      #v-name { top: 560px; font-size: 52px; }
+      #v-name small { display: block; font-size: 34px; color: #cfc9e6; font-weight: 700; }
+      #fin { top: 1400px; font-size: 60px; line-height: 1.15; }
+      #fin small { display: block; font-size: 36px; color: #ddd8ef; font-weight: 700; margin-top: 10px; }
+      #cta { top: 1420px; font-size: 56px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Am <span class="y">11.11.</span> kommt<br />ein Komet!</span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in">Abstand: <b>60.000.000 km</b></span></div>
+
+      <div id="hook" class="line clip" data-start="0.6" data-duration="1.9" data-track-index="3"><span id="hook-in" class="big r glow-r">Gefährlich?</span></div>
+      <div id="q" class="line mid clip" data-start="2.6" data-duration="2.3" data-track-index="3"><span id="q-in">Wie weit sind<br /><span class="y">60 Mio. km</span> wirklich?</span></div>
+      <div id="v-name" class="line clip" data-start="5.0" data-duration="18.7" data-track-index="4"><span id="v-name-in"></span></div>
+
+      <div id="fin" class="line clip" data-start="24.0" data-duration="3.2" data-track-index="5"><span id="fin-in">Gefährlich? <span class="g">NEIN!</span><small>Er bleibt 156-mal weiter weg als der Mond.</small></span></div>
+      <div id="cta" class="line clip" data-start="27.3" data-duration="2.7" data-track-index="5"><span id="cta-in">Wie würdest <span class="y">DU</span> hinreisen?<br /><span class="g">Ab in die Kommentare!</span></span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      T.slam("hook-in", 0.6, 1.9);
+      T.pop("q-in", 2.6, 2.3);
+      T.slam("fin-in", 24.0, 3.2);
+      T.pop("cta-in", 27.3); T.pulse("cta-in", 27.8, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C } = K;
+      const vname = document.getElementById("v-name-in");
+      const info = document.getElementById("info-in");
+      const V = [
+        { n: "Zu Fuß", sp: "5 km/h", icon: "you", val: 1370, unit: "Jahre", col: C.red },
+        { n: "Fahrrad", sp: "20 km/h", icon: "you", val: 342, unit: "Jahre", col: C.orange },
+        { n: "Auto", sp: "130 km/h", icon: "car", val: 53, unit: "Jahre", col: C.gold },
+        { n: "Flugzeug", sp: "900 km/h", icon: "plane", val: 7.6, unit: "Jahre", col: C.icon, dec: 1 },
+        { n: "Rakete", sp: "40.000 km/h", icon: "rocket", val: 62, unit: "Tage", col: C.purple },
+        { n: "Licht", sp: "300.000 km/s", icon: "light", val: 200, unit: "s", col: C.mint, light: true },
+      ];
+      const S0 = 5.0, SD = 3.1;
+      const X0 = 150, X1 = 930, TY = 1000;
+      function stepAt(t) { return cl(Math.floor((t - S0) / SD), 0, 5); }
+      function fmt(v, s) {
+        if (s.light) { const m = Math.floor(v / 60), sec = Math.round(v % 60); return m + " Min " + sec + " s"; }
+        return de(v, s.dec || 0) + " " + s.unit;
+      }
+
+      function comet(x, y, s, t) {
+        // Schweif zeigt von der Sonne weg (nach rechts oben)
+        g.save();
+        const tg = g.createLinearGradient(x, y, x + 260 * s, y - 120 * s);
+        tg.addColorStop(0, "rgba(160,230,255,0.75)"); tg.addColorStop(1, "rgba(160,230,255,0)");
+        g.fillStyle = tg; g.beginPath(); g.moveTo(x, y - 14 * s); g.lineTo(x + 280 * s, y - 150 * s); g.lineTo(x + 300 * s, y - 70 * s); g.lineTo(x, y + 14 * s); g.closePath(); g.fill();
+        g.restore();
+        K.dot(x, y, 18 * s, "#e6fbff", 40);
+        K.rock(x, y, 11 * s, t, 0, ["#cfd8e0", "#7d8894", "#3d4650"]);
+      }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.8 });
+        const sh = K.shake(t, [[21.2, 14], [24.0, 8]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+
+        // Einstieg: Komet fliegt durchs Bild
+        if (t < 5.0) {
+          const f = prog(t, 0, 4.6);
+          const x = lerp(1150, 650, eout(f)), y = lerp(500, 1150, eout(f));
+          comet(x, y, 1.6, t);
+          K.earth(260, 1500, 150);
+          K.label("Komet 11P · ca. 1 km groß", x, y + 70, 32, "#dff6ff");
+        }
+
+        // Reise-Strecke
+        if (t >= 4.6 && t < 24.0) {
+          const a = prog(t, 4.6, 0.4) * (1 - prog(t, 23.7, 0.3));
+          g.save(); g.globalAlpha = a;
+          K.glowLine(X0, TY, X1, TY, "rgba(255,255,255,0.5)", 3, 1, [12, 12]);
+          K.earth(X0, TY, 46);
+          K.label("Erde", X0, TY + 80, 32, "#cfe8ff");
+          comet(X1, TY, 0.9, t);
+          K.label("Komet", X1, TY + 80, 32, "#dff6ff");
+          const si = stepAt(t), s = V[si], st = S0 + si * SD;
+          const mv = s.light ? 0.45 : 1.9;
+          const f = eio(prog(t, st + 0.3, mv));
+          const x = lerp(X0 + 50, X1 - 40, f);
+          if (s.light) {
+            K.glowLine(X0 + 50, TY, x, TY, C.mint, 10, 1);
+            K.dot(x, TY, 16, "#ffffff", 40);
+          } else {
+            K.icon(s.icon, x, TY - 18, s.icon === "plane" || s.icon === "car" ? 80 : 150, 1, s.col, "rgba(255,255,255,0.08)");
+          }
+          // Zähler
+          const v = s.val * eout(prog(t, st + 0.3, mv));
+          K.mono(fmt(v, s), 540, 800, s.light ? 104 : 120, "#ffffff", s.col);
+          // Ergebnis-Liste
+          for (let i = 0; i < si + (t >= st + 0.3 + mv ? 1 : 0); i++) {
+            const r = V[i], y = 1140 + i * 54;
+            K.label(r.n, 400, y, 40, "#ddd8ef", "right", 700);
+            K.label(fmt(r.val, r), 440, y, 44, r.col, "left");
+          }
+          g.restore();
+          const html = s.n + " <small>" + s.sp + "</small>";
+          if (vname.innerHTML !== html) vname.innerHTML = html;
+        }
+
+        // Schluss: Mond-Vergleich
+        if (t >= 24.0) {
+          const a = prog(t, 24.0, 0.4);
+          g.save(); g.globalAlpha = a;
+          const y = 980;
+          K.earth(130, y, 12);
+          K.moon(135, y - 3, 4);
+          K.label("Erde + Mond", 150, y - 60, 30, "#fff");
+          const f = eout(prog(t, 24.2, 1.2));
+          K.glowLine(130, y + 70, lerp(130, 950, f), y + 70, C.mint, 8, 1);
+          comet(lerp(130, 950, f), y, 0.8, t);
+          K.label("60 Mio. km = 156 × Erde–Mond", 540, y + 150, 38, C.mint);
+          g.restore();
+        }
+
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[21.2, 0.45]]);
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
