@@ -22,3 +22,18 @@ Rezept: Frage oben → Zahl zählt hoch → wird immer größer → Überraschun
 13. Wie endet das Universum? (Umfrage 1, 2 oder 3)
 14. KI gegen Mathe-Genies (OpenAI-Arbeiten vom 6.10.2026, noch ungeprüft)
 15. Warum Krokodile den Dino-Asteroiden überlebten
+
+## Status: alle 10 fertig (in `renders/`)
+| Tag | Datei | Beschreibung zum Posten | Angepinnter Kommentar |
+|-----|-------|-------------------------|-----------------------|
+| 1 | `komet-11-11.mp4` | Am 11.11. fliegt ein Komet an der Erde vorbei ☄️ #komet #weltall #wissen #fyp | Wie würdest du hinreisen? 🚀 |
+| 1 | `ziegen-raetsel.mp4` | Die meisten liegen hier falsch 🐐🚗 #matherätsel #rätsel #wissen #fyp | Hättest du gewechselt? Ehrlich 👇 |
+| 2 | `jackpot-chance.mp4` | Eurojackpot: So klein ist deine Chance wirklich 💸 #lotto #eurojackpot #wissen #fyp | Spielst du trotzdem? JA oder NEIN |
+| 2 | `asteroid-7h.mp4` (schon fertig) | Nur 7 Stunden Vorwarnung 😳 #asteroid #weltall #wissen #fyp | Was würdest du in 7 Stunden machen? |
+| 3 | `antimaterie.mp4` | Das teuerste Zeug der Welt 🤯 #physik #wissen #fyp | Was würdest du mit 1 Gramm machen? |
+| 3 | `geburtstag-raetsel.mp4` | Nur 23 Leute?! 🎂 #mathe #wissen #fyp | Gab es in deiner Klasse zwei? 👇 |
+| 4 | `sternschnuppe-speed.mp4` (vor dem 17.11.!) | Wie schnell ist eine Sternschnuppe? 🌠 #leoniden #sternschnuppe #wissen #fyp | Was wünschst du dir? 🌠 |
+| 4 | `sekunden.mp4` | 1 Milliarde Sekunden = ? ⏰ #wissen #mathe #fyp | Wie alt bist du in Sekunden? |
+| 5 | `mars-rekord.mp4` | Neuer Rekord auf dem Mars 🚀 #mars #nasa #wissen #fyp | Würdest du zum Mars fliegen? |
+| 5 | `reis-schachbrett.mp4` | 1 Reiskorn, immer doppelt … 🍚 #mathe #wissen #fyp | Hättest du das gedacht? |
+| 6 | `sonne-fussball.mp4` | Wenn die Sonne ein Fußball wäre ⚽☀️ #weltall #wissen #fyp | Was hast du geschätzt? |

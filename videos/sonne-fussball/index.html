@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1440px; }
+      #chips { top: 1440px; }
+      #ny { top: 1400px; font-size: 92px; }
+      #ny small { font-size: 38px; }
+      #cta { top: 1420px; font-size: 56px; line-height: 1.2; }
+      #q { top: 1330px; font-size: 46px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Wenn die Sonne<br />ein <span class="y">Fußball</span> wäre …</span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="q" class="line clip" data-start="0.5" data-duration="2.1" data-track-index="3"><span id="q-in">Wie weit weg wäre der nächste Stern?</span></div>
+      <div id="chips" class="line chips clip" data-start="1.0" data-duration="1.6" data-track-index="4"><span id="k1" class="chip">100 m?</span><span id="k2" class="chip">1 km?</span><span id="k3" class="chip">10 km?</span></div>
+      <div id="c1" class="line cap clip" data-start="4.6" data-duration="2.5" data-track-index="3"><span id="c1-in">Erde = <span class="g">Pfefferkorn</span><small>24 Meter entfernt</small></span></div>
+      <div id="c2" class="line cap clip" data-start="7.2" data-duration="3.0" data-track-index="3"><span id="c2-in">Mond = <span class="y">Sandkorn</span><small>nur 6 cm neben der Erde</small></span></div>
+      <div id="c3" class="line cap clip" data-start="12.4" data-duration="1.9" data-track-index="3"><span id="c3-in">Jupiter = <span class="o">Murmel</span><small>123 m · weiter als ein Fußballfeld</small></span></div>
+      <div id="c4" class="line cap clip" data-start="16.4" data-duration="1.8" data-track-index="3"><span id="c4-in">Neptun = <span class="v">Erbse</span><small>710 m entfernt</small></span></div>
+      <div id="c5" class="line cap clip" data-start="18.2" data-duration="4.3" data-track-index="3"><span id="c5-in">Und der <span class="y">nächste Stern?</span><small>ein Tischtennisball</small></span></div>
+      <div id="ny" class="line big clip" data-start="22.5" data-duration="1.9" data-track-index="3"><span id="ny-in"><span class="y glow-y">in New York!</span><small>6.300 km entfernt</small></span></div>
+      <div id="c6" class="line cap clip" data-start="24.4" data-duration="3.1" data-track-index="3"><span id="c6-in">Und dazwischen: <span class="r">fast NICHTS.</span><small>Das Weltall ist leer.</small></span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Was hast <span class="y">DU</span> geschätzt?<br /><span class="g">Ab in die Kommentare!</span></span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      T.pop("q-in", 0.5, 2.1);
+      ["k1", "k2", "k3"].forEach((id, i) => tl.from("#" + id, { opacity: 0, scale: 0.4, y: 30, duration: 0.25, ease: "back.out(3)" }, 1.0 + i * 0.4));
+      tl.to("#chips .chip", { opacity: 0, duration: 0.15 }, 2.45);
+      T.slam("c1-in", 4.6, 2.5); T.pop("c2-in", 7.2, 3.0); T.slam("c3-in", 12.4, 1.9); T.slam("c4-in", 16.4, 1.8);
+      T.pop("c5-in", 18.2, 4.3); T.slam("ny-in", 22.5, 1.9); T.pop("c6-in", 24.4, 3.1);
+      T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+
+      function ball(x, y, r, t) {
+        g.save();
+        g.shadowColor = "#ffb347"; g.shadowBlur = Math.min(80, r * 0.6 + 10);
+        const gr = g.createRadialGradient(x - r * 0.3, y - r * 0.3, r * 0.1, x, y, r);
+        gr.addColorStop(0, "#fff3b0"); gr.addColorStop(0.6, "#ffc04a"); gr.addColorStop(1, "#ff7a1a");
+        g.fillStyle = gr; g.beginPath(); g.arc(x, y, r, 0, Math.PI * 2); g.fill(); g.shadowBlur = 0;
+        if (r > 12) {
+          g.beginPath(); g.arc(x, y, r, 0, Math.PI * 2); g.clip();
+          g.fillStyle = "rgba(120,50,0,0.55)";
+          const pent = (cx, cy, s, rot) => { g.beginPath(); for (let i = 0; i < 5; i++) { const a = rot + (i / 5) * Math.PI * 2; i ? g.lineTo(cx + Math.cos(a) * s, cy + Math.sin(a) * s) : g.moveTo(cx + Math.cos(a) * s, cy + Math.sin(a) * s); } g.closePath(); g.fill(); };
+          const rot = t * 0.4;
+          pent(x, y, r * 0.28, rot - Math.PI / 2);
+          for (let i = 0; i < 5; i++) { const a = rot + (i / 5) * Math.PI * 2 - Math.PI / 2; pent(x + Math.cos(a) * r * 0.78, y + Math.sin(a) * r * 0.78, r * 0.22, a + Math.PI / 2); }
+        }
+        g.restore();
+      }
+      function inset(x, y, r, draw, label, col) {
+        K.ring(x, y, r, "#e9e4ff", 6, 1);
+        g.save(); g.beginPath(); g.arc(x, y, r - 3, 0, Math.PI * 2); g.clip(); g.fillStyle = "#08060f"; g.fillRect(x - r, y - r, 2 * r, 2 * r); draw(); g.restore();
+        K.label(label, x, y + r + 34, 32, col);
+      }
+      function strip(t, s0, s1, dist, unit, objDraw, objLabel, col) {
+        const a = prog(t, s0, 0.3) * (1 - prog(t, s1 - 0.3, 0.3));
+        if (a <= 0) return;
+        g.save(); g.globalAlpha = a;
+        const f = eout(prog(t, s0 + 0.2, 1.8));
+        ball(170, 980, 90, t);
+        K.label("Sonne", 170, 1110, 34, C.gold);
+        const x1 = lerp(280, 880, f);
+        K.glowLine(280, 980, x1, 980, "rgba(255,255,255,0.6)", 4, 1, [14, 10]);
+        K.dot(x1, 980, 6, col, 16);
+        K.mono(de(Math.round(dist * f)) + " " + unit, 600, 830, 88, "#ffffff", col);
+        if (f > 0.97) inset(880, 1150, 120, () => objDraw(880, 1150), objLabel, col);
+        g.restore();
+      }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.7 });
+        const sh = K.shake(t, [[22.5, 16]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+
+        if (t < 2.8) {
+          ball(540, 930, 230 + 8 * Math.sin(t * 3), t);
+          ih = "Sonne = Fußball (22 cm)";
+        }
+        // Erde
+        strip(t, 2.6, 7.2, 24, "m", (x, y) => { K.earth(x, y, 40); K.label("2 mm", x, y + 70, 30, "#cfe8ff"); }, "Pfefferkorn", C.mint);
+        if (t >= 2.6 && t < 7.2) ih = "Die Erde";
+        // Mond
+        if (t >= 7.0 && t < 10.4) {
+          const a = prog(t, 7.0, 0.3) * (1 - prog(t, 10.1, 0.3));
+          g.save(); g.globalAlpha = a;
+          K.earth(420, 960, 150); K.moon(780, 960, 41);
+          K.glowLine(580, 1160, 740, 1160, C.gold, 4, 1);
+          K.label("6 cm", 660, 1200, 40, C.gold);
+          K.label("Pfefferkorn", 420, 750, 34, C.mint); K.label("Sandkorn", 780, 860, 34, C.gold);
+          g.restore();
+          ih = "Erde und Mond (vergrößert)";
+        }
+        // Jupiter
+        strip(t, 10.2, 14.4, 123, "m", (x, y) => { K.planet(x, y, 60, "#f3d2a2", "#a86a3a", "#ffcf9a"); g.fillStyle = "rgba(150,90,50,0.6)"; g.fillRect(x - 60, y - 14, 120, 10); g.fillRect(x - 60, y + 12, 120, 8); K.label("2,2 cm", x, y + 84, 30, "#ffd9b0"); }, "Murmel", C.orange);
+        if (t >= 10.2 && t < 14.4) ih = "Jupiter";
+        // Neptun
+        strip(t, 14.2, 18.4, 710, "m", (x, y) => { K.planet(x, y, 42, "#9fc6ff", "#2a4fb8", "#6fa0ff"); K.label("8 mm", x, y + 70, 30, "#cfe0ff"); }, "Erbse", C.purple);
+        if (t >= 14.2 && t < 18.4) ih = "Neptun · äußerster Planet";
+
+        // Nächster Stern: New York
+        if (t >= 18.2 && t < 24.6) {
+          const a = prog(t, 18.2, 0.3) * (1 - prog(t, 24.3, 0.3));
+          g.save(); g.globalAlpha = a;
+          // Meer-Band
+          const gr = g.createLinearGradient(0, 760, 0, 1220); gr.addColorStop(0, "rgba(40,90,180,0.0)"); gr.addColorStop(0.5, "rgba(40,90,180,0.35)"); gr.addColorStop(1, "rgba(40,90,180,0.0)");
+          g.fillStyle = gr; g.fillRect(0, 760, 1080, 460);
+          K.label("Atlantik", 540, 1060, 34, "rgba(200,225,255,0.7)", "center", 700);
+          const ax = 900, ay = 1000, bx = 180, by = 1000;
+          K.dot(ax, ay, 14, C.gold); K.label("Deutschland", ax, ay + 50, 34, "#fff");
+          ball(ax, ay - 50, 18, t);
+          K.dot(bx, by, 14, C.gold); K.label("New York", bx, by + 50, 34, "#fff");
+          const f = eio(prog(t, 19.0, 3.4));
+          g.save(); g.strokeStyle = C.gold; g.lineWidth = 6; g.shadowColor = C.gold; g.shadowBlur = 18; g.setLineDash([14, 10]);
+          g.beginPath();
+          const steps = 40;
+          for (let i = 0; i <= steps * f; i++) { const u = i / steps; const x = lerp(ax, bx, u), y = ay - Math.sin(u * Math.PI) * 320; i ? g.lineTo(x, y) : g.moveTo(x, y); }
+          g.stroke(); g.restore();
+          K.mono(de(Math.round(6336 * f)) + " km", 540, 610, 88, "#ffffff", C.gold);
+          if (t > 22.4) { K.dot(bx, by - 60, 22, "#ff8a6a", 40); K.label("Proxima Centauri", bx + 10, by - 110, 30, "#ffb3a0", "left"); }
+          g.restore();
+          ih = "Proxima Centauri · 4,2 Lichtjahre";
+        }
+        // Leere
+        if (t >= 24.4) {
+          const a = prog(t, 24.4, 0.4);
+          g.save(); g.globalAlpha = a;
+          ball(150, 980, 46, t);
+          K.dot(930, 980, 16, "#ff8a6a", 30);
+          K.glowLine(210, 980, 900, 980, "rgba(255,255,255,0.3)", 3, 1, [6, 18]);
+          K.mono("6.300 km", 540, 820, 92, "#ffffff", C.gold);
+          K.label("Sonne", 150, 1070, 34, C.gold); K.label("Nächster Stern", 930, 1050, 32, "#ffb3a0");
+          g.restore();
+          ih = "Sonne → nächster Stern";
+        }
+
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[22.5, 0.4]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
