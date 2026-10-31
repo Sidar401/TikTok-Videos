@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/data.js"></script>
+    <style>
+      :root { --mint: #5ef2c2; --gold: #ffc94d; --pink: #ff5f8f; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0b0816; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; }
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .line { position: absolute; left: 0; width: 1080px; text-align: center; font-weight: 800; }
+      .line span { display: inline-block; }
+      #title { top: 200px; font-size: 64px; line-height: 1.1; }
+      #info { top: 360px; font-size: 50px; font-weight: 700; white-space: nowrap; }
+      #info b { color: var(--mint); }
+      .cap { top: 1440px; font-size: 54px; white-space: nowrap; text-shadow: 0 4px 18px rgba(0,0,0,0.95), 0 0 6px rgba(0,0,0,0.9); }
+      .cap .g { color: var(--mint); }
+      .cap .y { color: var(--gold); }
+      .cap .p { color: var(--pink); }
+      #hook { top: 640px; font-size: 92px; color: var(--gold); text-shadow: 0 0 30px rgba(255, 201, 77, 0.6); }
+      .chips { top: 800px; display: flex; justify-content: center; gap: 28px; }
+      .chip { font-size: 52px; padding: 16px 30px; border-radius: 22px; border: 4px solid var(--mint); color: #fff; background: rgba(94, 242, 194, 0.12); }
+      #big42 { top: 600px; font-size: 130px; color: var(--gold); text-shadow: 0 0 40px rgba(255, 201, 77, 0.8); white-space: nowrap; }
+      #cta { top: 1430px; font-size: 50px; line-height: 1.25; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+
+      <div id="title" class="line clip" data-start="0" data-duration="30" data-track-index="1"><span>Wie oft falten<br />bis zum Mond?</span></div>
+      <div id="info" class="line clip" data-start="2.2" data-duration="27.8" data-track-index="2"><span id="info-in">0-mal = <b>0,1 mm</b></span></div>
+
+      <div id="hook" class="line clip" data-start="0.15" data-duration="2.05" data-track-index="3"><span id="hook-in">Dein Tipp?</span></div>
+      <div id="chips" class="line chips clip" data-start="0.5" data-duration="1.7" data-track-index="4">
+        <span id="c1" class="chip">100?</span><span id="c2" class="chip">1.000?</span><span id="c3" class="chip">1 Million?</span>
+      </div>
+
+      <div id="q0" class="line cap clip" data-start="2.3" data-duration="4.6" data-track-index="5"><span id="q0-in">Jedes Falten = <span class="g">doppelt</span> so dick</span></div>
+      <div id="q1" class="line cap clip" data-start="6.93" data-duration="1.15" data-track-index="5"><span id="q1-in">Schon größer als eine <span class="g">Katze!</span></span></div>
+      <div id="q2" class="line cap clip" data-start="8.1" data-duration="2.95" data-track-index="5"><span id="q2-in">Jetzt größer als <span class="y">DU!</span></span></div>
+      <div id="q3" class="line cap clip" data-start="11.08" data-duration="1.37" data-track-index="5"><span id="q3-in">Höher als der <span class="g">Burj Khalifa!</span></span></div>
+      <div id="q4" class="line cap clip" data-start="12.47" data-duration="1.0" data-track-index="5"><span id="q4-in">Über dem <span class="g">Everest!</span></span></div>
+      <div id="q5" class="line cap clip" data-start="13.48" data-duration="2.18" data-track-index="5"><span id="q5-in">Hallo, <span class="g">Weltall!</span></span></div>
+      <div id="q6" class="line cap clip" data-start="15.68" data-duration="1.45" data-track-index="5"><span id="q6-in">Dicker als die ganze <span class="g">Erde!</span></span></div>
+      <div id="big42" class="line clip" data-start="17.14" data-duration="3.4" data-track-index="3"><span id="big42-in">NUR 42-mal!</span></div>
+      <div id="q7" class="line cap clip" data-start="17.5" data-duration="3.0" data-track-index="5"><span id="q7-in">Und wenn wir <span class="y">weiterfalten?</span></span></div>
+      <div id="q8" class="line cap clip" data-start="21.83" data-duration="2.3" data-track-index="5"><span id="q8-in">Vorbei an der <span class="y">Sonne!</span></span></div>
+      <div id="q9" class="line cap clip" data-start="24.16" data-duration="1.4" data-track-index="5"><span id="q9-in">Zum nächsten <span class="g">Stern!</span></span></div>
+      <div id="q10" class="line cap clip" data-start="25.57" data-duration="1.38" data-track-index="5"><span id="q10-in">Raus aus der <span class="g">Milchstraße!</span></span></div>
+      <div id="q11" class="line cap clip" data-start="26.96" data-duration="1.14" data-track-index="5"><span id="q11-in"><span class="y">103-mal:</span> größer als das <span class="p">Universum!</span></span></div>
+      <div id="cta" class="line clip" data-start="28.1" data-duration="1.9" data-track-index="5"><span id="cta-in">Was war dein Tipp?<br /><span style="color: var(--mint)">Ab in die Kommentare!</span></span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+
+    <script>
+      const F = window.FALT;
+      // ---------------- Texte ----------------
+      const tl = gsap.timeline({ paused: true });
+      const pop = (id, at, dur) => {
+        tl.from("#" + id, { opacity: 0, y: 30, scale: 0.85, duration: 0.25, ease: "back.out(2.4)" }, at);
+        if (dur) tl.to("#" + id, { opacity: 0, duration: 0.15 }, at + dur - 0.17);
+      };
+      tl.from("#hook-in", { opacity: 0, scale: 0.5, duration: 0.3, ease: "back.out(2.5)" }, 0.15);
+      tl.to("#hook-in", { opacity: 0, duration: 0.2 }, 1.98);
+      ["c1", "c2", "c3"].forEach((id, i) => tl.from("#" + id, { opacity: 0, scale: 0.4, y: 30, duration: 0.25, ease: "back.out(3)" }, 0.55 + i * 0.4));
+      tl.to("#chips .chip", { opacity: 0, y: -20, duration: 0.2 }, 2.0);
+      tl.from("#info-in", { opacity: 0, duration: 0.2 }, 2.2);
+      [["q0", 2.3, 4.6], ["q1", 6.93, 1.15], ["q2", 8.1, 2.95], ["q3", 11.08, 1.37], ["q4", 12.47, 1.0], ["q5", 13.48, 2.18],
+       ["q6", 15.68, 1.45], ["q7", 17.5, 3.0], ["q8", 21.83, 2.3], ["q9", 24.16, 1.4], ["q10", 25.57, 1.38], ["q11", 26.96, 1.14]]
+        .forEach(([id, a, d]) => pop(id + "-in", a, d));
+      tl.from("#big42-in", { opacity: 0, scale: 2.4, duration: 0.3, ease: "power3.out" }, 17.14);
+      tl.to("#big42-in", { scale: 1.08, duration: 0.25, yoyo: true, repeat: 3, ease: "sine.inOut" }, 17.5);
+      tl.to("#big42-in", { opacity: 0, y: -40, duration: 0.25 }, 20.3);
+      pop("cta-in", 28.1);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      // ---------------- Zeichnen ----------------
+      const cv = document.getElementById("stage");
+      const g = cv.getContext("2d");
+      const info = document.getElementById("info-in");
+      const MINT = "#5ef2c2", GOLD = "#ffc94d", AMBER = "#ffb347", ICON = "#8fe9ff";
+      const YG = 1330, TOP = 380, P = F.P, T = F.T, T42 = F.T42, T103 = T[103];
+      const cl = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+      const lerp = (a, b, f) => a + (b - a) * f;
+      const eout = (f) => 1 - Math.pow(1 - f, 3);
+      const prog = (t, a, d) => cl((t - a) / d);
+      function rnd(i) { const x = Math.sin(i * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); }
+
+      function nAt(t) {
+        let k = 0;
+        while (k < 103 && T[k + 1] <= t) k++;
+        if (k === 0) return 0;
+        const next = k < 103 ? T[k + 1] : T[k] + 0.4;
+        const dur = Math.min(0.16, 0.8 * (next - T[k]));
+        return k - 1 + eout(cl((t - T[k]) / dur));
+      }
+      function foldsDone(t) { let k = 0; while (k < 103 && T[k + 1] <= t) k++; return k; }
+
+      const STARS = Array.from({ length: 170 }, (_, i) => [rnd(i) * 1080, 480 + rnd(i + 500) * 1000, 0.6 + rnd(i + 900) * 2.2, rnd(i + 1300)]);
+
+      function bg(alt) {
+        const gr = g.createLinearGradient(0, 0, 0, 1920);
+        gr.addColorStop(0, "#1b1232"); gr.addColorStop(0.5, "#100b1e"); gr.addColorStop(1, "#06050b");
+        g.fillStyle = gr; g.fillRect(0, 0, 1080, 1920);
+        const sa = cl((Math.log10(alt) - 3) / 2);
+        if (sa > 0) STARS.forEach((s) => { g.fillStyle = "rgba(255,255,255," + sa * (0.3 + 0.6 * s[3]) + ")"; g.fillRect(s[0], s[1], s[2], s[2]); });
+      }
+      function label(txt, x, y, size, col, align = "center", weight = 800) {
+        g.font = weight + " " + size + "px Montserrat, sans-serif"; g.textAlign = align; g.textBaseline = "middle";
+        g.lineWidth = 6; g.strokeStyle = "rgba(10,7,20,0.85)"; g.strokeText(txt, x, y);
+        g.fillStyle = col; g.fillText(txt, x, y);
+      }
+
+      // Vergleichs-Symbole (Linienzeichnung), h = Höhe in px, Fuß auf (x, y)
+      function icon(kind, x, y, h) {
+        g.beginPath();
+        if (kind === "dice") {
+          g.roundRect(x - h / 2, y - h, h, h, h * 0.15);
+          [[0.25, 0.25], [0.75, 0.75], [0.5, 0.5], [0.75, 0.25], [0.25, 0.75]].forEach((d) => { g.moveTo(x - h / 2 + d[0] * h + h * 0.07, y - h + d[1] * h); g.arc(x - h / 2 + d[0] * h, y - h + d[1] * h, h * 0.07, 0, Math.PI * 2); });
+        } else if (kind === "mug") {
+          g.roundRect(x - h * 0.4, y - h, h * 0.8, h, h * 0.08);
+          g.moveTo(x + h * 0.4, y - h * 0.75); g.arc(x + h * 0.4, y - h * 0.5, h * 0.25, -Math.PI / 2, Math.PI / 2);
+        } else if (kind === "cat") {
+          g.ellipse(x, y - h * 0.3, h * 0.32, h * 0.3, 0, 0, Math.PI * 2);
+          g.moveTo(x + h * 0.22, y - h * 0.72); g.arc(x, y - h * 0.72, h * 0.22, 0, Math.PI * 2);
+          g.moveTo(x - h * 0.2, y - h * 0.82); g.lineTo(x - h * 0.17, y - h); g.lineTo(x - h * 0.05, y - h * 0.92);
+          g.moveTo(x + h * 0.2, y - h * 0.82); g.lineTo(x + h * 0.17, y - h); g.lineTo(x + h * 0.05, y - h * 0.92);
+          g.moveTo(x + h * 0.3, y - h * 0.15); g.quadraticCurveTo(x + h * 0.6, y - h * 0.2, x + h * 0.5, y - h * 0.55);
+        } else if (kind === "you") {
+          g.arc(x, y - h * 0.9, h * 0.1, 0, Math.PI * 2);
+          g.moveTo(x, y - h * 0.8); g.lineTo(x, y - h * 0.42);
+          g.moveTo(x - h * 0.13, y); g.lineTo(x, y - h * 0.42); g.lineTo(x + h * 0.13, y);
+          g.moveTo(x - h * 0.2, y - h * 0.62); g.lineTo(x, y - h * 0.72); g.lineTo(x + h * 0.18, y - h * 0.95);
+        } else if (kind === "giraffe") {
+          g.moveTo(x - h * 0.3, y - h * 0.5); g.lineTo(x + h * 0.12, y - h * 0.52); g.lineTo(x + h * 0.14, y - h * 0.33); g.lineTo(x - h * 0.3, y - h * 0.33); g.closePath();
+          [-0.26, -0.17, 0.03, 0.11].forEach((k) => { g.moveTo(x + k * h, y - h * 0.33); g.lineTo(x + k * h, y); });
+          g.moveTo(x + h * 0.04, y - h * 0.51); g.lineTo(x + h * 0.19, y - h * 0.9); g.lineTo(x + h * 0.34, y - h * 0.86); g.lineTo(x + h * 0.25, y - h * 0.81); g.lineTo(x + h * 0.13, y - h * 0.45);
+          g.moveTo(x + h * 0.2, y - h * 0.91); g.lineTo(x + h * 0.19, y - h);
+        } else if (kind === "house") {
+          g.moveTo(x - h * 0.55, y); g.lineTo(x - h * 0.55, y - h * 0.55); g.lineTo(x, y - h); g.lineTo(x + h * 0.55, y - h * 0.55); g.lineTo(x + h * 0.55, y); g.closePath();
+          g.rect(x - h * 0.12, y - h * 0.33, h * 0.24, h * 0.33);
+        } else if (kind === "pisa") {
+          g.save(); g.translate(x, y); g.rotate(0.07); g.rect(-h * 0.13, -h, h * 0.26, h);
+          for (let i = 1; i < 7; i++) { g.moveTo(-h * 0.13, -h * i / 7); g.lineTo(h * 0.13, -h * i / 7); } g.restore();
+        } else if (kind === "eiffel") {
+          g.moveTo(x - h * 0.3, y); g.quadraticCurveTo(x - h * 0.07, y - h * 0.4, x - h * 0.02, y - h * 0.95); g.lineTo(x, y - h);
+          g.lineTo(x + h * 0.02, y - h * 0.95); g.quadraticCurveTo(x + h * 0.07, y - h * 0.4, x + h * 0.3, y);
+          g.moveTo(x - h * 0.17, y - h * 0.3); g.lineTo(x + h * 0.17, y - h * 0.3); g.moveTo(x - h * 0.08, y - h * 0.6); g.lineTo(x + h * 0.08, y - h * 0.6);
+        } else if (kind === "burj") {
+          g.moveTo(x - h * 0.13, y); g.lineTo(x - h * 0.1, y - h * 0.35); g.lineTo(x - h * 0.06, y - h * 0.36); g.lineTo(x - h * 0.04, y - h * 0.62);
+          g.lineTo(x - h * 0.015, y - h * 0.64); g.lineTo(x, y - h); g.lineTo(x + h * 0.025, y - h * 0.7); g.lineTo(x + h * 0.06, y - h * 0.5); g.lineTo(x + h * 0.1, y - h * 0.48); g.lineTo(x + h * 0.13, y); g.closePath();
+        } else if (kind === "everest") {
+          g.moveTo(x - h * 0.7, y); g.lineTo(x - h * 0.3, y - h * 0.6); g.lineTo(x - h * 0.12, y - h * 0.5); g.lineTo(x + h * 0.08, y - h); g.lineTo(x + h * 0.3, y - h * 0.72); g.lineTo(x + h * 0.42, y - h * 0.78); g.lineTo(x + h * 0.75, y); g.closePath();
+        }
+      }
+
+      function drawObjects(stackH, ppm, ox) {
+        F.objs.forEach((o) => {
+          if (o.kind === "earth") return;
+          const hp = o.h * ppm;
+          const aIn = cl((stackH / o.h - 0.45) / 0.35);
+          const line = o.kind === "space" || o.kind === "iss";
+          const aOut = cl((hp - (line ? 40 : 14)) / (line ? 60 : 30));
+          const aOld = 1 - cl((stackH / o.h - 2.6) / 1.2);
+          const a = aIn * aOut * aOld;
+          if (a <= 0.01) return;
+          g.save(); g.globalAlpha = a;
+          g.strokeStyle = ICON; g.fillStyle = "rgba(120,200,255,0.10)"; g.lineWidth = 5; g.lineJoin = "round"; g.lineCap = "round";
+          g.shadowColor = "#5fd0ff"; g.shadowBlur = 14;
+          const y = YG - hp;
+          if (line) {
+            g.setLineDash([14, 12]); g.beginPath(); g.moveTo(0, y); g.lineTo(1080, y); g.stroke(); g.setLineDash([]);
+            if (o.kind === "iss") { g.beginPath(); g.rect(ox - 10, y - 10, 20, 20); g.rect(ox - 70, y - 20, 50, 40); g.rect(ox + 20, y - 20, 50, 40); g.stroke(); }
+            g.shadowBlur = 0;
+            label(o.name + " · " + o.hl, o.kind === "iss" ? ox : 240, y - 34, 32, "#ffffff");
+          } else {
+            icon(o.kind, ox, YG, hp); g.fill(); g.stroke();
+            g.shadowBlur = 0;
+            label(o.name + " · " + o.hl, ox, Math.max(560, YG - hp - 34), 32, "#ffffff");
+          }
+          g.restore();
+        });
+      }
+
+      function drawEarth(ppm, sx) {
+        const R = 6.371e6 * ppm;
+        const e = cl((Math.log10(8000) - Math.log10(R)) / 1.2); // 0 = flacher Boden, 1 = Planet
+        if (R > 2e5) {
+          g.fillStyle = "#0f0a16"; g.fillRect(0, YG, 1080, 1920 - YG);
+        } else {
+          const cy = YG + R;
+          const gr = g.createRadialGradient(sx - R * 0.3, cy - R * 0.3, R * 0.1, sx, cy, R);
+          gr.addColorStop(0, "rgb(" + lerp(25, 80, e) + "," + lerp(18, 150, e) + "," + lerp(30, 240, e) + ")");
+          gr.addColorStop(1, "rgb(" + lerp(12, 25, e) + "," + lerp(9, 60, e) + "," + lerp(18, 140, e) + ")");
+          g.fillStyle = gr; g.beginPath(); g.arc(sx, cy, R, 0, Math.PI * 2); g.fill();
+          if (e > 0) {
+            g.save(); g.globalAlpha = e * 0.55; g.fillStyle = "#3fbf8a"; g.beginPath(); g.arc(sx, cy, R, 0, Math.PI * 2); g.clip();
+            [[-0.4, -0.3, 0.3], [0.35, -0.1, 0.25], [-0.1, 0.4, 0.28], [0.5, 0.5, 0.2]].forEach((c) => { g.beginPath(); g.ellipse(sx + c[0] * R, cy + c[1] * R, c[2] * R, c[2] * R * 0.7, 0.5, 0, Math.PI * 2); g.fill(); });
+            g.restore();
+          }
+        }
+        // Rand: Bodenlinie (orange) -> Atmosphäre (cyan)
+        g.save();
+        const col = e < 0.5 ? AMBER : "#7fd8ff";
+        g.strokeStyle = col; g.shadowColor = col; g.shadowBlur = 22; g.lineWidth = 6;
+        g.beginPath();
+        if (R > 2e5) { g.moveTo(0, YG); g.lineTo(1080, YG); } else g.arc(sx, YG + R, R, 0, Math.PI * 2);
+        g.stroke(); g.restore();
+        if (R < 260 && R > 4) label("Erde", sx - R - 20, YG + R, 30, "#ffffff", "right");
+      }
+
+      function drawStack(n, ppm, sx, t) {
+        const h = P * Math.pow(2, n) * ppm;
+        const w = Math.max(70, 620 / Math.pow(2, n));
+        // kleiner Hüpfer bei jedem Falten
+        const k = foldsDone(t);
+        const since = k > 0 ? t - T[k] : 9;
+        const b = since < 0.2 ? Math.sin((since / 0.2) * Math.PI) * 0.12 : 0;
+        const ww = w * (1 + b), hh = h;
+        g.save();
+        g.shadowColor = "#ffcf7a"; g.shadowBlur = 30;
+        const gr = g.createLinearGradient(sx - ww / 2, 0, sx + ww / 2, 0);
+        gr.addColorStop(0, "#ffd58a"); gr.addColorStop(0.5, "#fff6e0"); gr.addColorStop(1, "#ffcf7a");
+        g.fillStyle = gr; g.beginPath(); g.roundRect(sx - ww / 2, YG - hh, ww, hh, Math.min(10, hh / 2)); g.fill();
+        g.shadowBlur = 0;
+        const layers = Math.pow(2, Math.floor(n + 0.001));
+        if (layers <= 64 && hh / layers >= 4) {
+          g.strokeStyle = "rgba(190,120,40,0.55)"; g.lineWidth = 1.5;
+          for (let i = 1; i < layers; i++) { const y = YG - (hh * i) / layers; g.beginPath(); g.moveTo(sx - ww / 2 + 4, y); g.lineTo(sx + ww / 2 - 4, y); g.stroke(); }
+        }
+        g.restore();
+        return h;
+      }
+
+      function drawMoon(ppm, sx, t) {
+        const y = YG - F.moon * ppm;
+        const r = Math.max(18, 1.737e6 * ppm);
+        const a = cl((y - 500) / 120) * cl((F.moon * ppm - 30) / 40);
+        if (a <= 0) return;
+        g.save(); g.globalAlpha = a;
+        const glow = t > T42 && t < 20.6 ? 0.5 + 0.5 * Math.sin((t - T42) * 9) : 0;
+        g.shadowColor = "#e8e2ff"; g.shadowBlur = 20 + 30 * glow;
+        g.fillStyle = "#e6e0f5"; g.beginPath(); g.arc(sx + 80, y, r, 0, Math.PI * 2); g.fill();
+        g.shadowBlur = 0;
+        if (glow > 0) { g.strokeStyle = "rgba(255,201,77," + (0.4 + 0.6 * glow) + ")"; g.lineWidth = 5; g.beginPath(); g.arc(sx + 80, y, r + 16 + 8 * glow, 0, Math.PI * 2); g.stroke(); }
+        label("Mond · 384.400 km", sx + 80, y - r - 32, 34, "#ffffff");
+        g.restore();
+      }
+
+      function drawFar(stackH, ppm, sx) {
+        F.far.forEach((o, i) => {
+          if (o.kind === "uni") return;
+          const y = YG - o.h * ppm;
+          const a = cl((stackH / o.h - 0.8) / 0.25) * cl((YG - y - 25) / 60);
+          if (a <= 0) return;
+          g.save(); g.globalAlpha = a;
+          const col = o.kind === "sun" ? "#ffcf5a" : o.kind === "star" ? "#bfe3ff" : "#d9b8ff";
+          const r = o.kind === "sun" ? 22 : o.kind === "star" ? 12 : 34;
+          g.shadowColor = col; g.shadowBlur = 30; g.fillStyle = col;
+          if (o.kind === "milky" || o.kind === "andro") { g.beginPath(); g.ellipse(sx + 90, y, r * 1.6, r * 0.55, -0.4, 0, Math.PI * 2); g.fill(); }
+          else { g.beginPath(); g.arc(sx + 90, y, r, 0, Math.PI * 2); g.fill(); }
+          g.shadowBlur = 0;
+          label(o.name + " · " + o.hl, sx - 60, y, 32, "#ffffff", "right");
+          g.restore();
+        });
+      }
+
+      function warp(t) {
+        const a = prog(t, 20.4, 0.5) * (1 - prog(t, T103 - 0.15, 0.2));
+        if (a <= 0) return;
+        const speed = lerp(0.6, 2.6, prog(t, 20.6, 6.3));
+        const cx = 660, cy = 760;
+        g.save(); g.globalAlpha = a; g.lineCap = "round";
+        for (let i = 0; i < 160; i++) {
+          const ang = rnd(i + 40) * Math.PI * 2;
+          const ph = (rnd(i + 77) + (t - 20.4) * speed * (0.5 + rnd(i + 3))) % 1;
+          const r0 = Math.pow(ph, 2) * 1300, len = 20 + ph * 160 * speed;
+          g.strokeStyle = "rgba(220,235,255," + (0.15 + 0.6 * ph) + ")"; g.lineWidth = 1 + 2.5 * ph;
+          g.beginPath(); g.moveTo(cx + Math.cos(ang) * r0, cy + Math.sin(ang) * r0);
+          g.lineTo(cx + Math.cos(ang) * (r0 + len), cy + Math.sin(ang) * (r0 + len)); g.stroke();
+        }
+        g.restore();
+      }
+
+      function progressBar(n, t) {
+        const x0 = 140, x1 = 880, y = 455;
+        const uni = t >= 20.6;
+        const f = uni ? cl(n / 103) : cl(n / 42);
+        g.save();
+        g.strokeStyle = "rgba(255,255,255,0.25)"; g.lineWidth = 6; g.lineCap = "round";
+        g.beginPath(); g.moveTo(x0, y); g.lineTo(x1, y); g.stroke();
+        g.strokeStyle = MINT; g.shadowColor = MINT; g.shadowBlur = 14;
+        g.beginPath(); g.moveTo(x0, y); g.lineTo(lerp(x0, x1, f), y); g.stroke();
+        g.shadowBlur = 0; g.fillStyle = "#fff"; g.beginPath(); g.arc(lerp(x0, x1, f), y, 9, 0, Math.PI * 2); g.fill();
+        if (!uni) {
+          g.fillStyle = "#e6e0f5"; g.shadowColor = "#fff"; g.shadowBlur = 12; g.beginPath(); g.arc(x1 + 34, y, 18, 0, Math.PI * 2); g.fill();
+        } else {
+          g.fillStyle = "#c9a8ff"; g.shadowColor = "#c9a8ff"; g.shadowBlur = 16; g.beginPath(); g.ellipse(x1 + 36, y, 26, 10, -0.4, 0, Math.PI * 2); g.fill();
+        }
+        g.restore();
+      }
+
+      function finale(t) {
+        const a = prog(t, T103, 0.3);
+        if (a <= 0) return;
+        g.save(); g.globalAlpha = a;
+        g.fillStyle = "#08060e"; g.fillRect(0, 480, 1080, 1440);
+        const cx = 640, cy = 1010, r = 290;
+        g.strokeStyle = "rgba(170,140,255,0.8)"; g.lineWidth = 4; g.shadowColor = "#a98cff"; g.shadowBlur = 24;
+        g.beginPath(); g.arc(cx, cy, r, 0, Math.PI * 2); g.stroke(); g.shadowBlur = 0;
+        for (let i = 0; i < 420; i++) {
+          const rr = Math.sqrt(rnd(i + 2000)) * r * 0.97, an = rnd(i + 3000) * Math.PI * 2;
+          const col = ["#ffffff", "#ffb3e6", "#9fd8ff", "#ffe08a"][i % 4];
+          g.fillStyle = col; g.globalAlpha = a * (0.4 + 0.6 * rnd(i + 4000));
+          const s = 1.5 + rnd(i + 5000) * 3; g.fillRect(cx + Math.cos(an) * rr, cy + Math.sin(an) * rr, s, s);
+        }
+        g.globalAlpha = a;
+        // Papierstapel: 107 Mrd. Lj gegen 93 Mrd. Lj Durchmesser
+        const ph = 2 * r * (107 / 93), bx = 250, by = cy + r;
+        const grow = eout(prog(t, T103 + 0.1, 0.6));
+        g.shadowColor = "#ffcf7a"; g.shadowBlur = 30; g.fillStyle = "#fff1d0";
+        g.fillRect(bx - 16, by - ph * grow, 32, ph * grow); g.shadowBlur = 0;
+        label("Papier · 107 Mrd. Lj", bx, by - ph * grow - 32, 32, GOLD);
+        label("Universum", cx, cy - r - 60, 34, "#ffffff");
+        label("93 Mrd. Lichtjahre", cx, cy - r - 22, 28, "#c9a8ff", "center", 700);
+        g.restore();
+      }
+
+      let lastInfo = "";
+      function setInfo(html) { if (html !== lastInfo) { info.innerHTML = html; lastInfo = html; } }
+
+      function renderAt(t) {
+        const n = nAt(t);
+        const stackH = P * Math.pow(2, n);
+        const ppm = TOP / Math.max(stackH, 0.0035);
+        const sx = lerp(540, 660, cl(n / 4));
+
+        // Wackeln bei 42 und 103
+        let sh = 0;
+        [T42, T103].forEach((ti) => { const d = t - ti; if (d > 0 && d < 0.5) sh += 22 * Math.exp(-d * 8) * Math.sin(d * 70); });
+
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        bg(stackH);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        warp(t);
+        drawFar(stackH, ppm, sx);
+        drawEarth(ppm, sx);
+        drawObjects(stackH, ppm, sx - 290);
+        drawStack(n, ppm, sx, t);
+        drawMoon(ppm, sx, t);
+        finale(t);
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        progressBar(n, t);
+
+        // Blitz
+        [T42, T103].forEach((ti) => { const d = t - ti; if (d > 0 && d < 0.35) { g.fillStyle = "rgba(255,255,255," + 0.55 * (1 - d / 0.35) + ")"; g.fillRect(0, 0, 1080, 1920); } });
+
+        const k = foldsDone(t);
+        if (t >= T42 && t < 20.6) setInfo("42-mal = <b>439.805 km</b>");
+        else if (t >= T103) setInfo("103-mal = <b>107 Mrd. Lichtjahre</b>");
+        else setInfo(k + "-mal = <b>" + F.labels[k] + "</b>");
+      }
+
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
