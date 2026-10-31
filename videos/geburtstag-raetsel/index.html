@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      #chips { top: 1420px; }
+      #hit { top: 1420px; font-size: 76px; }
+      #hit small { font-size: 38px; }
+      #cta { top: 1420px; font-size: 54px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Gleicher Geburtstag:<br /><span class="y">wie viele Leute?</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="chips" class="line chips clip" data-start="0.6" data-duration="1.9" data-track-index="3"><span id="k1" class="chip">183?</span><span id="k2" class="chip">100?</span><span id="k3" class="chip">50?</span></div>
+      <div id="c1" class="line cap clip" data-start="2.6" data-duration="10.3" data-track-index="3"><span id="c1-in">Für eine <span class="y">50 % Chance</span> braucht man …</span></div>
+      <div id="hit" class="line big clip" data-start="12.97" data-duration="2.2" data-track-index="3"><span id="hit-in"><span class="y glow-y">NUR 23 Leute!</span><small>Treffer: zwei am selben Tag!</small></span></div>
+      <div id="c2" class="line cap clip" data-start="15.2" data-duration="5.7" data-track-index="3"><span id="c2-in">Bei <span class="g">70 Leuten</span> ist es fast sicher!</span></div>
+      <div id="c3" class="line cap clip" data-start="21.0" data-duration="4.0" data-track-index="3"><span id="c3-in">Warum? 23 Leute = <span class="y">253 Paare!</span><small>Jeder mit jedem</small></span></div>
+      <div id="c4" class="line cap clip" data-start="25.0" data-duration="2.5" data-track-index="3"><span id="c4-in">Es geht nicht um <span class="r">DEINEN</span> Tag –<br />sondern um <span class="g">irgendein</span> Paar.</span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Gab es in <span class="y">deiner Klasse</span><br />zwei mit gleichem Geburtstag?</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      ["k1", "k2", "k3"].forEach((id, i) => tl.from("#" + id, { opacity: 0, scale: 0.4, y: 30, duration: 0.25, ease: "back.out(3)" }, 0.6 + i * 0.5));
+      tl.to("#chips .chip", { opacity: 0, duration: 0.15 }, 2.35);
+      T.pop("c1-in", 2.6, 10.3); T.slam("hit-in", 12.97, 2.2); T.pop("c2-in", 15.2, 5.7);
+      T.pop("c3-in", 21.0, 4.0); T.pop("c4-in", 25.0, 2.5);
+      T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+      const PT = []; for (let k = 0; k < 70; k++) PT.push(k < 23 ? 2.6 + k * 0.47 : 15.2 + (k - 23) * 0.12);
+      const DAY = []; for (let i = 0; i < 70; i++) DAY.push(Math.floor(rnd(i + 600) * 365));
+      const ML = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      function date(d) { let m = 0; while (d >= ML[m]) { d -= ML[m]; m++; } return String(d + 1).padStart(2, "0") + "." + String(m + 1).padStart(2, "0") + "."; }
+      const P = (n) => { let p = 1; for (let k = 0; k < n; k++) p *= (365 - k) / 365; return 1 - p; };
+      const HIT_A = 9, HIT_B = 22;
+      function nAt(t) { let k = 0; while (k < 70 && PT[k] <= t) k++; return k; }
+
+      const COLS = 10, CW = 100, CH = 104, GX = 540 - (COLS * CW) / 2 + CW / 2, GY = 730;
+      function pos(i) { return [GX + (i % COLS) * CW, GY + Math.floor(i / COLS) * CH]; }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.35 });
+        const sh = K.shake(t, [[12.97, 12], [20.85, 8]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        const n = nAt(t);
+        let ih = "";
+
+        if (t < 21.2) {
+          const a = 1 - prog(t, 20.95, 0.25);
+          g.save(); g.globalAlpha = a;
+          // Prozent
+          const p = P(n);
+          K.mono(de(p * 100, 1) + " %", 540, 540, 92, "#ffffff", p > 0.5 ? C.gold : C.mint);
+          K.bar(140, 610, 800, p, p > 0.5 ? C.gold : C.mint, 24);
+          // Leute
+          const hit = t >= 12.97;
+          for (let i = 0; i < n; i++) {
+            const [x, y] = pos(i);
+            const age = t - PT[i], s = eout(cl(age / 0.2));
+            const isHit = hit && (i === HIT_A || i === HIT_B);
+            const col = isHit ? C.gold : C.icon;
+            g.save(); g.translate(x, y); g.scale(s, s); g.translate(-x, -y);
+            K.icon("you", x, y + 30, 76, 1, col, isHit ? "rgba(255,201,77,0.2)" : "rgba(120,200,255,0.08)");
+            if (i < 23) K.label(date(DAY[i]), x, y + 54, 24, isHit ? C.gold : "#cfc9e6", "center", 700);
+            g.restore();
+            if (isHit) K.ring(x, y, 50 + 6 * Math.sin(t * 8), C.gold, 4, 0.9);
+          }
+          if (hit && t < 15.2) {
+            const [ax, ay] = pos(HIT_A), [bx, by] = pos(HIT_B);
+            K.glowLine(ax, ay, bx, by, C.gold, 5, 1, [10, 8]);
+          }
+          g.restore();
+          ih = n + (n === 1 ? " Person" : " Leute") + " im Raum";
+        }
+
+        // 253 Paare
+        if (t >= 21.0) {
+          const a = prog(t, 21.0, 0.3);
+          g.save(); g.globalAlpha = a;
+          const cx = 540, cy = 930, R = 330;
+          const pts = []; for (let i = 0; i < 23; i++) { const an = (i / 23) * Math.PI * 2 - Math.PI / 2; pts.push([cx + Math.cos(an) * R, cy + Math.sin(an) * R]); }
+          const f = prog(t, 21.3, 2.2);
+          let k = 0; const total = 253, shown = Math.floor(total * f);
+          g.lineWidth = 1.5;
+          for (let i = 0; i < 23; i++) for (let j = i + 1; j < 23; j++) {
+            if (k++ >= shown) continue;
+            g.strokeStyle = "hsla(" + (160 + (k / total) * 120) + ",90%,65%,0.55)";
+            g.beginPath(); g.moveTo(pts[i][0], pts[i][1]); g.lineTo(pts[j][0], pts[j][1]); g.stroke();
+          }
+          pts.forEach(([x, y]) => K.dot(x, y, 12, "#ffffff", 14));
+          K.mono(de(Math.min(total, shown)) + " Paare", 540, 1340, 64, C.gold, C.gold);
+          g.restore();
+          ih = "23 Leute, jeder mit jedem";
+        }
+
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[12.97, 0.35]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
