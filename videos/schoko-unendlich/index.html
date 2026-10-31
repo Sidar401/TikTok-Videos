@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/data.js"></script>
+    <style>
+      :root { --mint: #5ef2c2; --gold: #ffc94d; --pink: #ff5f8f; --muted: #a59fc2; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0d0a18; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; }
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .line { position: absolute; left: 0; width: 1080px; text-align: center; font-weight: 800; }
+      .line span { display: inline-block; }
+      #title { top: 205px; font-size: 60px; line-height: 1.12; }
+      #info { top: 375px; font-size: 46px; font-weight: 700; }
+      #info b { color: var(--mint); }
+      #info i { font-style: normal; color: var(--pink); }
+      #info em { font-style: normal; color: var(--gold); }
+      .cap { top: 1415px; font-size: 50px; }
+      .cap .g { color: var(--mint); }
+      .cap .y { color: var(--gold); }
+      .badge { position: absolute; font-weight: 900; padding: 14px 30px; border-radius: 18px; background: rgba(12, 9, 24, 0.88); }
+      #b-shrink { left: 150px; top: 455px; font-size: 54px; color: var(--pink); text-shadow: 0 0 24px rgba(255, 95, 143, 0.6); }
+      #b-stolen { left: 150px; top: 455px; font-size: 54px; color: var(--gold); text-shadow: 0 0 24px rgba(255, 201, 77, 0.6); }
+      #b-6465 { left: 520px; top: 760px; font-size: 90px; white-space: nowrap; color: var(--gold); text-shadow: 0 0 34px rgba(255, 201, 77, 0.7); }
+      .final { left: 60px; width: 960px; text-align: center; top: 1385px; }
+      #b-atom { font-size: 54px; color: var(--mint); white-space: nowrap; }
+      #b-atom small, #b-none small { display: block; font-size: 34px; color: #fff; font-weight: 700; margin-top: 6px; }
+      #b-none { font-size: 64px; line-height: 1.05; white-space: nowrap; }
+      #b-none .r { color: var(--pink); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+
+      <div id="title" class="line clip" data-start="0" data-duration="30" data-track-index="1"><span>Gibt es unendlich<br />Schokolade?</span></div>
+      <div id="info" class="line clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in">Gratis-Stücke: <b>0</b></span></div>
+
+      <div id="cap-a" class="line cap clip" data-start="0.3" data-duration="2.2" data-track-index="3"><span id="cap-a-in">Schneiden, schieben … <span class="g">GRATIS!</span></span></div>
+      <div id="cap-b" class="line cap clip" data-start="2.5" data-duration="3.1" data-track-index="3"><span id="cap-b-in">Unendlich <span class="y">Schokolade?!</span></span></div>
+      <div id="cap-c" class="line cap clip" data-start="8.6" data-duration="2.6" data-track-index="3"><span id="cap-c-in">Ein <span class="y">schlauerer</span> Schnitt …</span></div>
+      <div id="cap-d" class="line cap clip" data-start="11.3" data-duration="1.7" data-track-index="3"><span id="cap-d-in">Genauer hinschauen …</span></div>
+      <div id="cap-e" class="line cap clip" data-start="13.0" data-duration="1.8" data-track-index="3"><span id="cap-e-in">Die Lücke = genau <span class="g">1 Stück!</span></span></div>
+      <div id="cap-f" class="line cap clip" data-start="14.8" data-duration="9.2" data-track-index="3"><span id="cap-f-in">Größere Tafel → <span class="g">dünnere Lücke</span></span></div>
+
+      <div id="b-shrink" class="badge clip" data-start="5.65" data-duration="1.35" data-track-index="4"><span id="b-shrink-in">Die Tafel ist GESCHRUMPFT!</span></div>
+      <div id="b-stolen" class="badge clip" data-start="7.0" data-duration="0.95" data-track-index="4"><span id="b-stolen-in">Nicht gratis – GEKLAUT!</span></div>
+      <div id="b-6465" class="badge clip" data-start="10.5" data-duration="1.3" data-track-index="4"><span id="b-6465-in">64 = 65?!</span></div>
+      <div id="b-atom" class="badge final clip" data-start="24.0" data-duration="2.6" data-track-index="4"><span id="b-atom-in">Eine Lücke, nur 1 ATOM breit<small>in einem Turm, höher als der Mond breit ist!</small></span></div>
+      <div id="b-none" class="badge final clip" data-start="26.6" data-duration="3.4" data-track-index="4"><span id="b-none-in"><span class="r">KEINE</span> Gratis-Schokolade!<small>Jedes +1 ist eine versteckte Lücke.</small></span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="5" data-volume="1"></audio>
+    </div>
+
+    <script>
+      // ---------------- Texte (GSAP) ----------------
+      const tl = gsap.timeline({ paused: true });
+      const pop = (id, at) => tl.from("#" + id, { opacity: 0, y: 26, scale: 0.9, duration: 0.3, ease: "back.out(2)" }, at);
+      const out = (id, at) => tl.to("#" + id, { opacity: 0, duration: 0.2 }, at);
+      const slam = (id, at) => tl.from("#" + id, { opacity: 0, scale: 1.6, duration: 0.3, ease: "power3.out" }, at);
+      pop("cap-a-in", 0.3); out("cap-a-in", 2.3);
+      pop("cap-b-in", 2.5); out("cap-b-in", 5.4);
+      pop("cap-c-in", 8.6); out("cap-c-in", 11.0);
+      pop("cap-d-in", 11.3); out("cap-d-in", 12.8);
+      pop("cap-e-in", 13.0); out("cap-e-in", 14.6);
+      pop("cap-f-in", 14.8); out("cap-f-in", 23.8);
+      slam("b-shrink-in", 5.65); out("b-shrink-in", 6.8);
+      slam("b-stolen-in", 7.0); out("b-stolen-in", 7.75);
+      slam("b-6465-in", 10.5); out("b-6465-in", 11.6);
+      slam("b-atom-in", 24.0); out("b-atom-in", 26.4);
+      slam("b-none-in", 26.6);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      // ---------------- Zeichnen (rein aus t) ----------------
+      const D = window.SCHOKO;
+      const cv = document.getElementById("stage");
+      const g = cv.getContext("2d");
+      const info = document.getElementById("info-in");
+      const MINT = "#5ef2c2", GOLD = "#ffc94d", PINK = "#ff5f8f", AMBER = "#ffb347";
+
+      const cl = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+      const lerp = (a, b, f) => a + (b - a) * f;
+      const eio = (f) => (f < 0.5 ? 4 * f * f * f : 1 - Math.pow(-2 * f + 2, 3) / 2);
+      const eout = (f) => 1 - Math.pow(1 - f, 3);
+      const ein = (f) => f * f * f;
+      const prog = (t, a, d) => cl((t - a) / d);
+
+      function bg() {
+        const gr = g.createLinearGradient(0, 0, 0, 1920);
+        gr.addColorStop(0, "#1d1430"); gr.addColorStop(0.5, "#120d1f"); gr.addColorStop(1, "#07060c");
+        g.fillStyle = gr; g.fillRect(0, 0, 1080, 1920);
+        const rg = g.createRadialGradient(540, 900, 50, 540, 900, 700);
+        rg.addColorStop(0, "rgba(120,70,40,0.18)"); rg.addColorStop(1, "rgba(0,0,0,0)");
+        g.fillStyle = rg; g.fillRect(0, 0, 1080, 1920);
+      }
+
+      // Ein Schokostück (lokale Koordinaten)
+      function cell(x, y, w, h) {
+        const r = Math.min(w, h) * 0.12;
+        g.fillStyle = "#4a2814"; g.beginPath(); g.roundRect(x, y, w, h, r); g.fill();
+        const i = Math.min(w, h) * 0.13;
+        const gr = g.createLinearGradient(x, y, x + w, y + h);
+        gr.addColorStop(0, "#a3663a"); gr.addColorStop(1, "#71431f");
+        g.fillStyle = gr; g.beginPath(); g.roundRect(x + i, y + i, w - 2 * i, h - 2 * i, r * 0.7); g.fill();
+        g.fillStyle = "rgba(255,220,180,0.16)"; g.fillRect(x + i, y + i, w - 2 * i, Math.max(1, h * 0.06));
+      }
+      function grid(x, y, cols, rows, cw, ch) {
+        for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) cell(x + c * cw, y + r * ch, cw, ch);
+      }
+      function glowLine(x1, y1, x2, y2, col, w, a) {
+        g.save(); g.globalAlpha *= a; g.strokeStyle = col; g.lineWidth = w; g.lineCap = "round";
+        g.shadowColor = col; g.shadowBlur = 18; g.beginPath(); g.moveTo(x1, y1); g.lineTo(x2, y2); g.stroke(); g.restore();
+      }
+      function knife(x, y, ang) {
+        g.save(); g.translate(x, y); g.rotate(ang);
+        const gr = g.createLinearGradient(0, -12, 0, 12); gr.addColorStop(0, "#f4f6fb"); gr.addColorStop(1, "#9aa3b5");
+        g.fillStyle = gr; g.beginPath(); g.moveTo(0, 0); g.lineTo(-30, -16); g.lineTo(-230, -16); g.lineTo(-230, 10); g.closePath(); g.fill();
+        g.fillStyle = "#2b2b38"; g.beginPath(); g.roundRect(-330, -16, 100, 28, 8); g.fill();
+        g.restore();
+      }
+      function label(txt, x, y, size, col, align = "center", weight = 800) {
+        g.font = weight + " " + size + "px Montserrat, sans-serif"; g.textAlign = align; g.textBaseline = "middle";
+        g.fillStyle = col; g.fillText(txt, x, y);
+      }
+      function plate(x, y) {
+        g.save(); g.shadowColor = "rgba(255,255,255,0.5)"; g.shadowBlur = 30;
+        const gr = g.createLinearGradient(0, y - 30, 0, y + 30); gr.addColorStop(0, "#ffffff"); gr.addColorStop(1, "#b9b6c8");
+        g.fillStyle = gr; g.beginPath(); g.ellipse(x, y, 380, 30, 0, 0, Math.PI * 2); g.fill(); g.restore();
+      }
+
+      // ---------- Szene 1+2: Trick mit 6x4 ----------
+      const B1 = { x0: 210, bottom: 1000, cols: 6, c: 110 };
+      const CUTS = [0.5, 1.5, 2.4, 3.2], ADD = [1, 1, 2, 2];
+      const PLATE_Y = 1215;
+
+      function scene12(t) {
+        const off = -1150 * ein(prog(t, 7.7, 0.6));
+        if (off < -1140) return;
+        g.save(); g.translate(off, 0);
+        const c = B1.c, W = 6 * c;
+        // geschrumpfter Anteil
+        let p = 0;
+        CUTS.forEach((tc, j) => (p += ADD[j] * eio(prog(t, tc + 0.3, 0.25))));
+        const hf = 1 - 0.25 * (p / 6);
+        let dx = 0;
+        CUTS.forEach((tc) => { const u = t - tc; if (u > 0.3 && u < 0.7) dx += 0.3 * c * Math.sin(Math.PI * (u - 0.3) / 0.4); });
+        const H = 4 * c * hf;
+        // Umriss der Original-Tafel (Szene 2)
+        const rv = prog(t, 5.6, 0.25);
+        if (rv > 0) {
+          g.save(); g.globalAlpha = rv; g.setLineDash([16, 12]); g.strokeStyle = PINK; g.lineWidth = 5;
+          g.shadowColor = PINK; g.shadowBlur = 14;
+          g.strokeRect(B1.x0 - 10, B1.bottom - 4 * c - 10, W + 20, 4 * c + 20); g.restore();
+          g.fillStyle = "rgba(255,95,143," + 0.12 * rv + ")"; g.fillRect(B1.x0, B1.bottom - 4 * c, W, c);
+          label("1 Reihe weg!", B1.x0 + W / 2, B1.bottom - 3.5 * c, 44, PINK);
+        }
+        grid(B1.x0 + dx, B1.bottom - H, 6, 4, c, H / 4);
+        // Schnitte + Messer
+        CUTS.forEach((tc) => {
+          const u = t - tc;
+          const x1 = B1.x0 + W + 30, y1 = B1.bottom - H * 0.85, x2 = B1.x0 - 30, y2 = B1.bottom - H * 0.2;
+          const f = eout(cl(u / 0.3));
+          if (u > 0 && u < 1.0) glowLine(x1, y1, lerp(x1, x2, f), lerp(y1, y2, f), "#ffe2a8", 4, 1 - cl((u - 0.6) / 0.4));
+          if (u > -0.1 && u < 0.45) {
+            g.save(); g.globalAlpha = 1 - cl((u - 0.3) / 0.15);
+            knife(lerp(x1, x2, f), lerp(y1, y2, f) - 4, Math.atan2(y2 - y1, x2 - x1) + Math.PI + 0.5); g.restore();
+          }
+        });
+        g.restore();
+        // Teller + Gratis-Stücke
+        g.save(); g.translate(off, 0);
+        plate(540, PLATE_Y);
+        let idx = 0, landed = 0;
+        CUTS.forEach((tc, j) => {
+          for (let k = 0; k < ADD[j]; k++, idx++) {
+            const s = tc + 0.45 + 0.12 * k, e = s + 0.38;
+            const tx = B1.x0 + idx * c, ty = PLATE_Y - c - 8;
+            if (t < s) continue;
+            const f = cl((t - s) / (e - s));
+            if (f >= 1) landed++;
+            const sx = B1.x0 + W + 10, sy = B1.bottom - H * 0.55;
+            const x = lerp(sx, tx, eio(f)), y = lerp(sy, ty, eio(f)) - Math.sin(Math.PI * f) * 160;
+            cell(x, y, c, c);
+            if (f >= 1 && t - e < 0.35) {
+              g.save(); g.globalAlpha = 1 - (t - e) / 0.35; g.strokeStyle = GOLD; g.lineWidth = 5;
+              g.shadowColor = GOLD; g.shadowBlur = 20; g.strokeRect(x, y, c, c);
+              label("+1", x + c / 2, y - 34, 40, GOLD); g.restore();
+            }
+          }
+        });
+        g.restore();
+        return landed;
+      }
+
+      // ---------- Szene 3+4: 8x8 -> 5x13 ----------
+      const SQ = { x0: 276, y0: 530, c: 66 };
+      const TW = { x0: 150, y0: 520, c: 62 };
+      const GROUND = TW.y0 + 13 * TW.c; // 1326
+      const MAG = { x: 150 + 2.5 * 62, y: 520 + 6.5 * 62, r: 150 };
+
+      function pieces(t) {
+        const f = eio(prog(t, 9.5, 1.0));
+        const c = lerp(SQ.c, TW.c, f);
+        D.pieces.forEach((pc) => {
+          const cx0 = SQ.x0 + pc.c0[0] * SQ.c, cy0 = SQ.y0 + pc.c0[1] * SQ.c;
+          const cx1 = TW.x0 + pc.c1[0] * TW.c, cy1 = TW.y0 + pc.c1[1] * TW.c;
+          g.save();
+          g.translate(lerp(cx0, cx1, f), lerp(cy0, cy1, f));
+          g.rotate(pc.th * f);
+          g.scale(c, c);
+          g.translate(-pc.c0[0], -pc.c0[1]);
+          g.beginPath(); pc.poly.forEach((p, i) => (i ? g.lineTo(p[0], p[1]) : g.moveTo(p[0], p[1]))); g.closePath();
+          g.save(); g.clip(); grid(0, 0, 8, 8, 1, 1); g.restore();
+          g.lineWidth = 0.04; g.strokeStyle = "#2a1408"; g.stroke();
+          g.restore();
+        });
+      }
+
+      function scene34(t) {
+        const off = 1150 * (1 - eout(prog(t, 8.3, 0.45)));
+        g.save(); g.translate(off, 0);
+        const lf = prog(t, 9.5, 1.0);
+        if (lf > 0) { g.save(); g.globalAlpha = lf; ground(); g.restore(); }
+        pieces(t);
+        // Schnittlinien
+        const L = [[0, 5, 8, 5], [5, 0, 3, 5], [0, 5, 8, 8]];
+        L.forEach((l, i) => {
+          const s = 8.8 + i * 0.22, f = eout(prog(t, s, 0.18));
+          const a = 1 - prog(t, 9.4, 0.3);
+          if (f > 0 && a > 0) {
+            const X = (u) => SQ.x0 + u * SQ.c, Y = (v) => SQ.y0 + v * SQ.c;
+            glowLine(X(l[0]), Y(l[1]), X(lerp(l[0], l[2], f)), Y(lerp(l[1], l[3], f)), "#ffe2a8", 5, a);
+          }
+        });
+        g.restore();
+        // Lupe (echter Zoom)
+        const m = t >= 11.3 ? eout(prog(t, 11.3, 0.35)) : 0;
+        if (m > 0) {
+          const r = MAG.r * m;
+          g.save(); g.beginPath(); g.arc(MAG.x, MAG.y, r, 0, Math.PI * 2); g.clip();
+          g.fillStyle = "#07050c"; g.fillRect(MAG.x - r, MAG.y - r, 2 * r, 2 * r);
+          g.translate(MAG.x, MAG.y); g.scale(6, 6); g.translate(-MAG.x, -MAG.y);
+          pieces(t);
+          g.restore();
+          magRing(MAG.x, MAG.y, r);
+          if (t > 11.9) {
+            const a = prog(t, 11.9, 0.25);
+            g.save(); g.globalAlpha = a;
+            label("Lücke: " + D.first.gap, MAG.x, MAG.y + r + 44, 40, MINT);
+            label("eine LÜCKE!", MAG.x, MAG.y + r + 92, 36, "#ffffff", "center", 700);
+            g.restore();
+          }
+        }
+      }
+
+      function magRing(x, y, r) {
+        g.save();
+        g.strokeStyle = "#e9e4ff"; g.lineWidth = 9; g.shadowColor = "#bfaaff"; g.shadowBlur = 22;
+        g.beginPath(); g.arc(x, y, r, 0, Math.PI * 2); g.stroke();
+        g.shadowBlur = 0; g.lineWidth = 22; g.lineCap = "round"; g.strokeStyle = "#3a3354";
+        const a = Math.PI * 0.75;
+        g.beginPath(); g.moveTo(x + Math.cos(a) * (r + 8), y + Math.sin(a) * (r + 8));
+        g.lineTo(x + Math.cos(a) * (r + 80), y + Math.sin(a) * (r + 80)); g.stroke();
+        g.restore();
+      }
+      function ground() {
+        glowLine(-20, GROUND + 3, 1100, GROUND + 3, AMBER, 5, 0.9);
+      }
+
+      // ---------- Szene 5+6: immer größere Tafeln ----------
+      const STEP0 = 13.0, STEPD = 1.2;
+      function stepAt(t) { return cl(Math.floor((t - STEP0) / STEPD), 0, D.steps.length - 1); }
+
+      function compObj(kind, x, h, a) {
+        g.save(); g.globalAlpha = a;
+        g.strokeStyle = "#8fe9ff"; g.fillStyle = "rgba(120,200,255,0.10)"; g.lineWidth = 5; g.lineJoin = "round";
+        g.shadowColor = "#5fd0ff"; g.shadowBlur = 14;
+        const y = GROUND;
+        g.beginPath();
+        if (kind === "table") {
+          g.rect(x - 0.4 * h, y - h, 0.8 * h, 0.08 * h);
+          g.moveTo(x - 0.33 * h, y - 0.92 * h); g.lineTo(x - 0.33 * h, y);
+          g.moveTo(x + 0.33 * h, y - 0.92 * h); g.lineTo(x + 0.33 * h, y);
+        } else if (kind === "giraffe") {
+          g.fillStyle = "rgba(0,0,0,0)";
+          g.moveTo(x - 0.3 * h, y - 0.5 * h); g.lineTo(x + 0.12 * h, y - 0.52 * h); g.lineTo(x + 0.14 * h, y - 0.33 * h); g.lineTo(x - 0.3 * h, y - 0.33 * h); g.closePath();
+          [-0.26, -0.17, 0.03, 0.11].forEach((k) => { g.moveTo(x + k * h, y - 0.33 * h); g.lineTo(x + k * h, y); });
+          g.moveTo(x + 0.04 * h, y - 0.51 * h); g.lineTo(x + 0.19 * h, y - 0.9 * h); g.lineTo(x + 0.34 * h, y - 0.86 * h);
+          g.lineTo(x + 0.25 * h, y - 0.81 * h); g.lineTo(x + 0.13 * h, y - 0.45 * h);
+          g.moveTo(x + 0.2 * h, y - 0.91 * h); g.lineTo(x + 0.19 * h, y - h); g.moveTo(x + 0.24 * h, y - 0.9 * h); g.lineTo(x + 0.24 * h, y - 0.98 * h);
+          g.moveTo(x - 0.3 * h, y - 0.48 * h); g.lineTo(x - 0.37 * h, y - 0.34 * h);
+        } else if (kind === "house") {
+          g.moveTo(x - 0.6 * h, y); g.lineTo(x - 0.6 * h, y - 0.55 * h); g.lineTo(x, y - h); g.lineTo(x + 0.6 * h, y - 0.55 * h);
+          g.lineTo(x + 0.6 * h, y); g.closePath(); g.rect(x - 0.12 * h, y - 0.35 * h, 0.24 * h, 0.35 * h);
+        } else if (kind === "dom") {
+          g.moveTo(x - 0.45 * h, y); g.lineTo(x - 0.45 * h, y - 0.6 * h); g.lineTo(x - 0.36 * h, y - h); g.lineTo(x - 0.27 * h, y - 0.6 * h);
+          g.lineTo(x - 0.27 * h, y - 0.4 * h); g.lineTo(x + 0.27 * h, y - 0.4 * h); g.lineTo(x + 0.27 * h, y - 0.6 * h);
+          g.lineTo(x + 0.36 * h, y - h); g.lineTo(x + 0.45 * h, y - 0.6 * h); g.lineTo(x + 0.45 * h, y); g.closePath();
+        } else if (kind === "eiffel") {
+          g.moveTo(x - 0.35 * h, y); g.quadraticCurveTo(x - 0.08 * h, y - 0.4 * h, x - 0.02 * h, y - 0.95 * h); g.lineTo(x, y - h);
+          g.lineTo(x + 0.02 * h, y - 0.95 * h); g.quadraticCurveTo(x + 0.08 * h, y - 0.4 * h, x + 0.35 * h, y);
+          g.moveTo(x - 0.2 * h, y - 0.3 * h); g.lineTo(x + 0.2 * h, y - 0.3 * h);
+          g.moveTo(x - 0.1 * h, y - 0.6 * h); g.lineTo(x + 0.1 * h, y - 0.6 * h);
+        } else if (kind === "burj") {
+          g.moveTo(x - 0.16 * h, y); g.lineTo(x - 0.13 * h, y - 0.35 * h); g.lineTo(x - 0.08 * h, y - 0.36 * h);
+          g.lineTo(x - 0.06 * h, y - 0.62 * h); g.lineTo(x - 0.02 * h, y - 0.64 * h); g.lineTo(x, y - h);
+          g.lineTo(x + 0.03 * h, y - 0.7 * h); g.lineTo(x + 0.07 * h, y - 0.5 * h); g.lineTo(x + 0.12 * h, y - 0.48 * h); g.lineTo(x + 0.16 * h, y); g.closePath();
+        } else if (kind === "everest") {
+          g.moveTo(x - 0.9 * h, y); g.lineTo(x - 0.35 * h, y - 0.6 * h); g.lineTo(x - 0.15 * h, y - 0.5 * h);
+          g.lineTo(x + 0.1 * h, y - h); g.lineTo(x + 0.35 * h, y - 0.7 * h); g.lineTo(x + 0.5 * h, y - 0.78 * h); g.lineTo(x + 1.0 * h, y); g.closePath();
+        } else if (kind === "plane") {
+          g.setLineDash([14, 12]); g.moveTo(480, y - h); g.lineTo(1100, y - h); g.stroke(); g.setLineDash([]);
+          g.beginPath(); g.ellipse(x, y - h, 70, 14, 0, 0, Math.PI * 2);
+          g.moveTo(x + 5, y - h); g.lineTo(x - 25, y - h - 55); g.moveTo(x + 5, y - h); g.lineTo(x - 25, y - h + 55);
+          g.moveTo(x - 58, y - h); g.lineTo(x - 72, y - h - 30);
+        } else if (kind === "space" || kind === "iss") {
+          g.setLineDash([14, 12]); g.moveTo(480, y - h); g.lineTo(1100, y - h); g.stroke(); g.setLineDash([]);
+          g.beginPath();
+          if (kind === "iss") {
+            g.rect(x - 10, y - h - 10, 20, 20);
+            g.rect(x - 70, y - h - 22, 50, 44); g.rect(x + 20, y - h - 22, 50, 44);
+          }
+        } else if (kind === "moon") {
+          g.arc(x + 0.08 * h, y - h / 2, h / 2, 0, Math.PI * 2);
+          g.fillStyle = "rgba(225,220,245,0.92)";
+        }
+        g.fill(); g.stroke();
+        if (kind === "moon") {
+          g.shadowBlur = 0; g.fillStyle = "rgba(160,150,190,0.7)";
+          [[-0.15, -0.6, 0.09], [0.22, -0.42, 0.13], [0.05, -0.25, 0.06], [0.28, -0.72, 0.05]].forEach((k) => {
+            g.beginPath(); g.arc(x + 0.08 * h + k[0] * h, y + k[1] * h, k[2] * h, 0, Math.PI * 2); g.fill();
+          });
+        }
+        g.restore();
+      }
+
+      function tower(st, a) {
+        const w = 5 * TW.c, h = 13 * TW.c, x0 = TW.x0, y0 = TW.y0;
+        g.save(); g.globalAlpha = a;
+        const cw = w / st.a, chh = h / st.b;
+        if (cw >= 7) grid(x0, y0, st.a, st.b, cw, chh);
+        else {
+          const gr = g.createLinearGradient(x0, y0, x0 + w, y0 + h);
+          gr.addColorStop(0, "#9a5e34"); gr.addColorStop(1, "#6a3d1f");
+          g.fillStyle = gr; g.fillRect(x0, y0, w, h);
+          g.strokeStyle = "rgba(40,20,8,0.35)"; g.lineWidth = 1;
+          for (let i = 1; i < 26; i++) { g.beginPath(); g.moveTo(x0, y0 + i * h / 26); g.lineTo(x0 + w, y0 + i * h / 26); g.stroke(); }
+          for (let i = 1; i < 10; i++) { g.beginPath(); g.moveTo(x0 + i * w / 10, y0); g.lineTo(x0 + i * w / 10, y0 + h); g.stroke(); }
+        }
+        g.strokeStyle = "rgba(20,10,4,0.9)"; g.lineWidth = 2;
+        g.beginPath(); g.moveTo(x0 + w, y0); g.lineTo(x0, y0 + h); g.stroke();
+        label("Turm " + st.tower, x0 + w / 2, y0 - 32, 36, MINT);
+        g.restore();
+      }
+
+      function magStyl(st, si, a) {
+        const r = MAG.r;
+        g.save(); g.globalAlpha = a;
+        g.beginPath(); g.arc(MAG.x, MAG.y, r, 0, Math.PI * 2); g.clip();
+        g.translate(MAG.x, MAG.y);
+        const ang = Math.atan2(13 * TW.c, -5 * TW.c);
+        g.rotate(ang);
+        g.fillStyle = "#8a532d"; g.fillRect(-r, -r, 2 * r, 2 * r);
+        g.save(); g.rotate(-ang);
+        for (let i = -4; i <= 4; i++) { g.strokeStyle = "rgba(40,20,8,0.35)"; g.lineWidth = 3; g.beginPath(); g.moveTo(i * 60, -r); g.lineTo(i * 60, r); g.stroke(); g.beginPath(); g.moveTo(-r, i * 60); g.lineTo(r, i * 60); g.stroke(); }
+        g.restore();
+        const sw = 34;
+        g.fillStyle = "#06040a"; g.fillRect(-r, -sw / 2, 2 * r, sw);
+        const kind = st.note;
+        if (kind.indexOf("Haar") >= 0) {
+          g.strokeStyle = "#3b2416"; g.lineWidth = 70; g.lineCap = "round";
+          g.beginPath(); g.moveTo(-40, -r); g.bezierCurveTo(40, -40, -40, 40, 40, r); g.stroke();
+        } else if (kind.indexOf("Bakterie") >= 0) {
+          g.fillStyle = "#7be36a"; g.shadowColor = "#7be36a"; g.shadowBlur = 16;
+          g.beginPath(); g.roundRect(-70, -34, 140, 68, 34); g.fill();
+        } else if (kind.indexOf("DNA") >= 0) {
+          g.lineWidth = 4;
+          for (let i = -r; i < r; i += 4) {
+            const y1 = Math.sin(i / 14) * (sw / 2 - 2), y2 = -y1;
+            g.fillStyle = "#7fd7ff"; g.fillRect(i, y1 - 2, 4, 4); g.fillStyle = "#ff8fd8"; g.fillRect(i, y2 - 2, 4, 4);
+          }
+        } else if (kind.indexOf("ATOM") >= 0) {
+          g.fillStyle = "#cfe8ff"; g.shadowColor = "#9fd4ff"; g.shadowBlur = 22;
+          g.beginPath(); g.arc(0, 0, sw / 2 - 2, 0, Math.PI * 2); g.fill();
+        }
+        g.restore();
+        magRing(MAG.x, MAG.y, r);
+        g.save(); g.globalAlpha = a;
+        label("Lücke: " + st.gap, MAG.x, MAG.y + r + 44, 40, MINT);
+        if (st.note) label(st.note, MAG.x, MAG.y + r + 92, 36, "#ffffff", "center", 800);
+        g.restore();
+      }
+
+      function scene56(t) {
+        const si = stepAt(t), st = D.steps[si];
+        const sStart = STEP0 + si * STEPD;
+        const a = si === 0 ? prog(t, STEP0, 0.2) : 1;
+        const pa = prog(t, sStart, 0.25);
+        ground();
+        // Vergleichsobjekt
+        const scale = (13 * TW.c) / st.towerM;
+        const hh = st.cH * scale;
+        compObj(st.kind, st.kind === "moon" ? 760 : 770, hh, pa);
+        g.save(); g.globalAlpha = pa;
+        const ly = st.kind === "space" || st.kind === "iss" || st.kind === "plane" ? GROUND - hh - 80 : Math.max(500, GROUND - hh - 34);
+        label(st.cname + " · " + st.cname_h, st.kind === "moon" ? 840 : 790, st.kind === "moon" ? GROUND - hh * 0.5 + hh * 0.25 : ly, 32, st.kind === "moon" ? "#2a2440" : "#ffffff", "center", 800);
+        g.restore();
+        tower(st, a);
+        magStyl(st, si, a);
+        // kleiner Blitz beim Wechsel
+        const fl = 1 - prog(t, sStart, 0.25);
+        if (si > 0 && fl > 0) { g.fillStyle = "rgba(255,255,255," + 0.12 * fl + ")"; g.fillRect(0, 470, 1080, 900); }
+        // Abschluss: Lupe leuchtet
+        if (t > 24.0) {
+          const f = 0.5 + 0.5 * Math.sin((t - 24.0) * 6);
+          g.save(); g.strokeStyle = "rgba(94,242,194," + (0.5 + 0.5 * f) + ")"; g.lineWidth = 6; g.shadowColor = MINT; g.shadowBlur = 30;
+          g.beginPath(); g.arc(MAG.x, MAG.y, MAG.r + 16, 0, Math.PI * 2); g.stroke(); g.restore();
+        }
+      }
+
+      // ---------- Info-Zeile ----------
+      let lastInfo = "";
+      function setInfo(html) {
+        if (html === lastInfo) return;
+        info.innerHTML = html; lastInfo = html;
+        const n = html.replace(/<[^>]+>/g, "").length;
+        info.style.fontSize = n > 44 ? "31px" : n > 36 ? "36px" : n > 30 ? "40px" : "46px";
+      }
+
+      function renderAt(t) {
+        g.clearRect(0, 0, 1080, 1920);
+        bg();
+        if (t < 8.3) {
+          const n = scene12(t);
+          if (t < 5.6) setInfo("Gratis-Stücke: <b>" + n + "</b>");
+          else setInfo("Tafel <i>18</i> + gratis <b>6</b> = 24");
+        }
+        if (t >= 8.3 && t < STEP0) {
+          scene34(t);
+          setInfo(t < 10.5 ? "8 × 8 = <b>64</b> Stücke" : "5 × 13 = <em>65</em> Stücke");
+        }
+        if (t >= STEP0) {
+          if (t < STEP0 + 0.2) { g.save(); g.globalAlpha = 1 - prog(t, STEP0, 0.2); scene34(t); g.restore(); }
+          scene56(t);
+          const st = D.steps[stepAt(t)];
+          setInfo(st.sq + " → <b>" + st.sq1 + "</b>");
+        }
+      }
+
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
