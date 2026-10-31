@@ -36,9 +36,9 @@ def words_html(text, cid):
             if start:
                 hot = True
             cls = "w hot" if hot else "w"
-            if w.endswith("*"):
+            if "*" in w[1:]:  # Ende der Hervorhebung, auch vor Satzzeichen („*Wort*,“)
                 hot = False
-            out.append(f'<span class="{cls}">{html.escape(w.strip("*"))}</span>')
+            out.append(f'<span class="{cls}">{html.escape(w.replace("*", ""))}</span>')
     return " ".join(out).replace(" <br /> ", "<br />")
 
 
