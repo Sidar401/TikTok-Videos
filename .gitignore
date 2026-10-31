@@ -7,3 +7,5 @@ renders/.*.hf-transaction-*/
 renders/work-*/
 .voice-orig.wav
 videos/shop-spielball-*/assets/ki*
+shop/*/clips/
+videos/*/assets/clips/

@@ -1,0 +1,8 @@
+{"name": "shop-ball-c-sofa", "produkt": {"bild": "shop/spielball/produkt.png", "preis": "nur 15,17 €", "sterne": "4,1", "verkauft": "12.500× verkauft"}, "ende": 3,
+ "clips": [
+  {"src": "k7.mp4", "from": 0.5, "dur": 2.8, "text": "Wenn dein Hund|sich *langweilt*…"},
+  {"src": "k1.mp4", "from": 2.0, "dur": 1.8, "text": "…wird's *teuer* 💸"},
+  {"src": "k3.mp4", "from": 0.5, "dur": 2.4, "text": "Die Lösung|für *15 €*"},
+  {"src": "k5.mp4", "from": 1.5, "dur": 2.6, "text": "Beschäftigt ihn,|*während du weg bist*"},
+  {"src": "k6.mp4", "from": 2.0, "dur": 2.4, "text": "Und dein Sofa|bleibt *heil* 😅"}
+ ]}

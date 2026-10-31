@@ -1,0 +1,7 @@
+{"name": "shop-ball-d-gruende", "produkt": {"bild": "shop/spielball/produkt.png", "preis": "nur 15,17 €", "sterne": "4,1", "verkauft": "12.500× verkauft"}, "ende": 3,
+ "clips": [
+  {"src": "k2.mp4", "from": 0.0, "dur": 2.8, "text": "*3 Gründe*, warum|12.500 Hundehalter|diesen Ball haben"},
+  {"src": "k8.mp4", "from": 0.0, "dur": 2.6, "text": "1. Startet bei|*Berührung*"},
+  {"src": "k9.mp4", "from": 2.0, "dur": 2.6, "text": "2. Rollt *allein*|& zwitschert 🐦"},
+  {"src": "k6.mp4", "from": 0.5, "dur": 2.6, "text": "3. Macht ihn|richtig *müde* 😴"}
+ ]}

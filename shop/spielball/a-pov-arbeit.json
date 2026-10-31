@@ -1,0 +1,9 @@
+{"name": "shop-ball-a-pov", "produkt": {"bild": "shop/spielball/produkt.png", "preis": "nur 15,17 €", "sterne": "4,1", "verkauft": "12.500× verkauft"}, "ende": 3,
+ "clips": [
+  {"src": "k10.mp4", "from": 0.5, "dur": 2.4, "text": "POV: Du musst|zur *Arbeit* 🥲"},
+  {"src": "k1.mp4",  "from": 1.0, "dur": 2.0, "text": "…und er ist|*8 Stunden* allein"},
+  {"src": "k9.mp4",  "from": 0.0, "dur": 2.8, "text": "Bis ich *DAS*|hingestellt hab 👀"},
+  {"src": "k2.mp4",  "from": 1.0, "dur": 2.6, "text": "Er dreht|*komplett* durch 😂"},
+  {"src": "k4.mp4",  "from": 0.5, "dur": 2.4, "text": "Rollt ganz|*von allein*"},
+  {"src": "k6.mp4",  "from": 1.0, "dur": 2.2, "text": "Abends:|*tiefenentspannt* 😴"}
+ ]}

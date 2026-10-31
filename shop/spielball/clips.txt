@@ -1,0 +1,11 @@
+# Higgsfield-Clips (Kling 3.0, 5 s, 9:16): Name  URL  Inhalt
+k1  https://d8j0ntlcm91z4.cloudfront.net/user_3EaPlydsH5kGn6HYj95n2mOllAM/hf_20261031_155950_6b575517-d099-4cab-a43e-7f5e9d2c2cc2.mp4  Hund gelangweilt auf Sofa
+k2  https://d8j0ntlcm91z4.cloudfront.net/user_3EaPlydsH5kGn6HYj95n2mOllAM/hf_20261031_155950_dc31264d-f8a3-44e9-b245-6b48bc2dbb21.mp4  Ball startet, Hund springt vom Sofa
+k3  https://d8j0ntlcm91z4.cloudfront.net/user_3EaPlydsH5kGn6HYj95n2mOllAM/hf_20261031_155950_48a523cb-6414-4e04-943b-0b0477a0d9e8.mp4  Produkt-Hero, Ball dreht sich
+k4  https://d8j0ntlcm91z4.cloudfront.net/user_3EaPlydsH5kGn6HYj95n2mOllAM/hf_20261031_155950_dc4d6104-85ef-4bcd-95df-88f58a68989d.mp4  Hund jagt Ball
+k5  https://d8j0ntlcm91z4.cloudfront.net/user_3EaPlydsH5kGn6HYj95n2mOllAM/hf_20261031_155951_ea810470-3faf-4166-8f0a-65419c8bc9c6.mp4  Hund springt auf Ball
+k6  https://d8j0ntlcm91z4.cloudfront.net/user_3EaPlydsH5kGn6HYj95n2mOllAM/hf_20261031_155950_bb737972-216e-43ff-8214-5a98dacbeee6.mp4  Hund schläft neben Ball
+k7  https://d8j0ntlcm91z4.cloudfront.net/user_3EaPlydsH5kGn6HYj95n2mOllAM/hf_20261031_155957_b21ce7a4-86a6-4c5f-9411-1c05409d4413.mp4  zerfetztes Kissen
+k8  https://d8j0ntlcm91z4.cloudfront.net/user_3EaPlydsH5kGn6HYj95n2mOllAM/hf_20261031_155950_76793b47-dacd-41a4-84f3-b6dd63a89a98.mp4  Pfote stupst Ball an
+k9  https://d8j0ntlcm91z4.cloudfront.net/user_3EaPlydsH5kGn6HYj95n2mOllAM/hf_20261031_155950_25c2f764-e9e8-49a5-949c-df491d5a0ea7.mp4  Hand stellt Ball hin
+k10 https://d8j0ntlcm91z4.cloudfront.net/user_3EaPlydsH5kGn6HYj95n2mOllAM/hf_20261031_155950_0b8a17be-9791-43a1-9e81-7c2323aefa06.mp4  Besitzer geht zur Tür raus
