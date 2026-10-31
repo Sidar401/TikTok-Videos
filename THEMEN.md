@@ -35,6 +35,7 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | willkommen-muenze | Kanal-Trailer ohne Stimme: Münze fällt → Chart → Logo, Wort-Schläge, Münzregen, 50-30-20-Donut, Duell ohne/mit Plan |
 | willkommen-million | Kanal-Trailer ohne Stimme: Zähler 0 → 1.000.000 € mit 8 Stationen (Sparschwein … Haus), Drop, Logo |
 | willkommen-reise | Kanal-Trailer ohne Stimme: Kamerafahrt mit Parallax durch 9 Fragen-Stationen, Tresor öffnet sich, Logo |
+| short-steuer-1 | aus longform-steuer: 650 €/Jahr, 4 Jahre rückwirkend = über 2.500 €, 2022 nur noch bis 31.12.2026, Verweis aufs ganze Video |
 
 ## Longform (16:9)
 | Video | Kern / Beispiele | Bildidee |

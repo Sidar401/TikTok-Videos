@@ -1,0 +1,35 @@
+{
+ "titel": "Short aus longform-steuer",
+ "saetze": [
+  {
+   "id": "s1",
+   "kapitel": "k1",
+   "text": "Jedes Jahr verschenken Millionen Menschen in Deutschland bares Geld an das Finanzamt",
+   "sprechtext": "Jedes Jahr verschenken Millionen Menschen in Deutschland bares Geld an das Finanzamt."
+  },
+  {
+   "id": "s91",
+   "kapitel": "k5",
+   "text": "Zusammen bekommt Tim also rund 650 € zurück, nur für eine Steuererklärung",
+   "sprechtext": "Zusammen bekommt Tim also rund sechshundertfünfzig Euro zurück, nur für eine Steuererklärung."
+  },
+  {
+   "id": "s93",
+   "kapitel": "k5",
+   "text": "Wer nicht verpflichtet ist, eine Steuererklärung abzugeben, kann sie bis zu vier Jahre rückwirkend machen",
+   "sprechtext": "Wer nicht verpflichtet ist, eine Steuererklärung abzugeben, kann sie bis zu vier Jahre rückwirkend machen."
+  },
+  {
+   "id": "s95",
+   "kapitel": "k5",
+   "text": "Wenn es jedes Jahr ähnlich war, sind das insgesamt über 2.500 €",
+   "sprechtext": "Wenn es jedes Jahr ähnlich war, sind das insgesamt über zweitausendfünfhundert Euro."
+  },
+  {
+   "id": "s96",
+   "kapitel": "k5",
+   "text": "Geld, das sonst einfach verfallen wäre",
+   "sprechtext": "Geld, das sonst einfach verfallen wäre."
+  }
+ ]
+}
