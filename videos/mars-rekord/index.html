@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      #rec { top: 520px; font-size: 44px; }
+      #rec span { background: var(--red); color: #fff; padding: 8px 22px; border-radius: 14px; font-weight: 900; }
+      #slow { top: 1400px; font-size: 92px; }
+      #cta { top: 1430px; font-size: 56px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Neuer Rekord<br /><span class="o">auf dem Mars!</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+      <div id="rec" class="line clip" data-start="0.5" data-duration="6.4" data-track-index="4"><span id="rec-in">REKORD · 11. Oktober 2026</span></div>
+
+      <div id="c0" class="line cap clip" data-start="0.6" data-duration="2.0" data-track-index="3"><span id="c0-in">Der Rover <span class="o">Perseverance</span> …</span></div>
+      <div id="c1" class="line cap clip" data-start="2.6" data-duration="4.4" data-track-index="3"><span id="c1-in">… ist am weitesten gefahren:<br /><span class="g">je auf einem anderen Planeten!</span></span></div>
+      <div id="c2" class="line cap clip" data-start="7.0" data-duration="3.2" data-track-index="3"><span id="c2-in">Ein Marathon-Läufer: <span class="g">4 Stunden.</span></span></div>
+      <div id="slow" class="line big clip" data-start="10.2" data-duration="2.0" data-track-index="3"><span id="slow-in" class="r glow-r">Rover: 5,5 Jahre!</span></div>
+      <div id="c3" class="line cap clip" data-start="12.2" data-duration="1.8" data-track-index="3"><span id="c3-in">Nur <span class="y">3×</span> so schnell wie eine Schnecke!</span></div>
+      <div id="c4" class="line cap clip" data-start="14.0" data-duration="8.2" data-track-index="3"><span id="c4-in">Wie lange bis zum Mars?<small>mindestens 55 Mio. km</small></span></div>
+      <div id="c5" class="line cap clip" data-start="22.2" data-duration="5.1" data-track-index="3"><span id="c5-in">Sein Job: Spuren von <span class="g">uraltem Leben</span> finden.</span></div>
+      <div id="cta" class="line clip" data-start="27.3" data-duration="2.7" data-track-index="3"><span id="cta-in">Würdest <span class="y">DU</span> zum Mars fliegen?<br /><span class="g">JA</span> oder <span class="r">NEIN</span>?</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      T.slam("rec-in", 0.5, 6.4);
+      T.pop("c0-in", 0.6, 2.0); T.pop("c1-in", 2.6, 4.4); T.pop("c2-in", 7.0, 3.2);
+      T.slam("slow-in", 10.2, 2.0); T.pop("c3-in", 12.2, 1.8); T.pop("c4-in", 14.0, 8.2); T.pop("c5-in", 22.2, 5.1);
+      T.pop("cta-in", 27.3); T.pulse("cta-in", 27.8, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+      const GY = 1300;
+
+      function marsBg(t) {
+        const gr = g.createLinearGradient(0, 0, 0, 1920);
+        gr.addColorStop(0, "#2a1420"); gr.addColorStop(0.55, "#4a2020"); gr.addColorStop(0.68, "#7a3622"); gr.addColorStop(1, "#2a0f0a");
+        g.fillStyle = gr; g.fillRect(0, 0, 1080, 1920);
+        // Hügel
+        g.fillStyle = "#8a3e24";
+        g.beginPath(); g.moveTo(0, GY - 80);
+        for (let x = 0; x <= 1080; x += 60) g.lineTo(x, GY - 90 - 60 * Math.sin(x * 0.006 + 1) - 30 * Math.sin(x * 0.017));
+        g.lineTo(1080, GY); g.lineTo(0, GY); g.closePath(); g.fill();
+        g.fillStyle = "#5e2414"; g.fillRect(0, GY, 1080, 1920 - GY);
+        for (let i = 0; i < 30; i++) { g.fillStyle = "rgba(40,12,6,0.6)"; g.beginPath(); g.ellipse(rnd(i) * 1080, GY + 30 + rnd(i + 9) * 560, 10 + rnd(i + 3) * 30, 5 + rnd(i + 4) * 10, 0, 0, Math.PI * 2); g.fill(); }
+        K.glowLine(-20, GY, 1100, GY, "#ff9a5c", 4, 0.6);
+      }
+      function rover(x, y, s, t) {
+        g.save(); g.translate(x, y); g.scale(s, s);
+        g.strokeStyle = "#f2efe6"; g.fillStyle = "#d7d2c4"; g.lineWidth = 4;
+        // Räder
+        [-70, 0, 70].forEach((wx) => { g.fillStyle = "#3a3330"; g.beginPath(); g.arc(wx, -22, 22, 0, Math.PI * 2); g.fill(); g.strokeStyle = "#8b8378"; g.stroke();
+          const a = t * 3; g.beginPath(); g.moveTo(wx, -22); g.lineTo(wx + Math.cos(a) * 18, -22 + Math.sin(a) * 18); g.stroke(); });
+        g.strokeStyle = "#cfc8b8"; g.beginPath(); g.moveTo(-70, -22); g.lineTo(-30, -60); g.lineTo(30, -60); g.lineTo(70, -22); g.stroke();
+        g.fillStyle = "#e9e4d8"; g.beginPath(); g.roundRect(-80, -110, 160, 55, 8); g.fill();
+        g.fillStyle = "#b9b2a2"; g.fillRect(-80, -70, 160, 12);
+        // Mast + Kamera
+        g.strokeStyle = "#e9e4d8"; g.lineWidth = 7; g.beginPath(); g.moveTo(45, -110); g.lineTo(45, -200); g.stroke();
+        g.fillStyle = "#e9e4d8"; g.beginPath(); g.roundRect(25, -225, 50, 26, 6); g.fill();
+        g.fillStyle = "#2b6fd6"; g.beginPath(); g.arc(68, -212, 6, 0, Math.PI * 2); g.fill();
+        g.restore();
+      }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        marsBg(t);
+        const sh = K.shake(t, [[0.5, 8], [10.2, 12], [21.0, 10]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+
+        if (t < 7.0) {
+          const a = 1 - prog(t, 6.7, 0.3);
+          g.save(); g.globalAlpha = a;
+          const x = lerp(-100, 640, eout(prog(t, 0, 6.5)));
+          // Spur
+          g.strokeStyle = "rgba(60,20,10,0.6)"; g.lineWidth = 10; g.setLineDash([16, 10]);
+          g.beginPath(); g.moveTo(-40, GY - 6); g.lineTo(x - 80, GY - 6); g.stroke(); g.setLineDash([]);
+          rover(x, GY, 1.8, t);
+          const km = 45.22 * eout(prog(t, 2.8, 3.0));
+          if (t > 2.6) { K.mono(de(km, 2) + " km", 540, 760, 120, "#ffffff", C.orange); }
+          g.restore();
+          ih = t < 2.6 ? "" : "Vorher-Rekord: Opportunity, 45,16 km";
+        }
+
+        // Marathon vs. Rover
+        if (t >= 7.0 && t < 14.2) {
+          const a = prog(t, 7.0, 0.3) * (1 - prog(t, 13.9, 0.3));
+          g.save(); g.globalAlpha = a;
+          const x0 = 140, x1 = 940;
+          K.icon("you", lerp(x0, x1, eout(prog(t, 7.3, 1.2))), 760, 130, 1, C.mint, "rgba(94,242,194,0.1)");
+          K.bar(x0, 790, x1 - x0, eout(prog(t, 7.3, 1.2)), C.mint, 26);
+          K.label("Mensch · 4 Stunden", x0, 850, 36, C.mint, "left");
+          const rf = 0.04 * prog(t, 7.3, 3) + (t > 10.2 ? 0.96 * eout(prog(t, 10.2, 0.6)) : 0);
+          g.save(); g.translate(lerp(x0, x1, rf), 1100); rover(0, 0, 0.6, t); g.restore();
+          K.bar(x0, 1130, x1 - x0, rf, C.orange, 26);
+          K.label("Rover · 5,5 Jahre", x0, 1190, 36, C.orange, "left");
+          g.restore();
+          ih = "45 km ≈ ein Marathon";
+          if (t >= 12.2) ih = "Höchstens 0,15 km/h schnell";
+        }
+
+        // Bis zum Mars
+        if (t >= 14.0 && t < 22.4) {
+          const a = prog(t, 14.0, 0.3) * (1 - prog(t, 22.1, 0.3));
+          g.save(); g.globalAlpha = a;
+          K.earth(170, 720, 70); K.planet(910, 720, 52, "#ff9a6a", "#8a2f18", "#ff7a4a");
+          K.label("Erde", 170, 830, 34, "#cfe8ff"); K.label("Mars", 910, 830, 34, "#ffc2a8");
+          K.glowLine(260, 720, 840, 720, "rgba(255,255,255,0.5)", 3, 1, [12, 12]);
+          const rows = [
+            { n: "Rover", v: 41000, u: "Jahre", c: C.red, s: 14.4 },
+            { n: "Auto (130 km/h)", v: 48, u: "Jahre", c: C.gold, s: 16.8 },
+            { n: "Rakete", v: 7, u: "Monate", c: C.mint, s: 19.2 },
+          ];
+          rows.forEach((r, i) => {
+            if (t < r.s) return;
+            const f = eout(prog(t, r.s, 1.5));
+            const y = 960 + i * 150;
+            g.globalAlpha = a * prog(t, r.s, 0.3);
+            K.label(r.n, 540, y, 40, "#ffffff");
+            K.mono(de(Math.round(r.v * f)) + " " + r.u, 540, y + 62, 68, r.c, r.c);
+            g.textAlign = "left";
+          });
+          g.restore();
+          ih = "Erde → Mars, wenn er am nächsten ist";
+        }
+
+        // Leben + Schluss
+        if (t >= 22.2) {
+          const a = prog(t, 22.2, 0.4);
+          g.save(); g.globalAlpha = a;
+          rover(540, GY, 1.7, t);
+          // Probenröhrchen
+          [0, 1, 2].forEach((i) => { const yy = 620 + Math.sin(t * 2 + i) * 10; g.strokeStyle = C.mint; g.lineWidth = 5; g.shadowColor = C.mint; g.shadowBlur = 16; g.beginPath(); g.roundRect(380 + i * 130, yy, 50, 170, 25); g.stroke(); g.shadowBlur = 0; g.fillStyle = "rgba(200,90,50,0.8)"; g.fillRect(386 + i * 130, yy + 90, 38, 74); });
+          K.label("Gesteins-Proben", 540, 850, 36, C.mint);
+          g.restore();
+          ih = "Perseverance · seit 2021 auf dem Mars";
+        }
+
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[0.5, 0.3], [10.2, 0.3]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
