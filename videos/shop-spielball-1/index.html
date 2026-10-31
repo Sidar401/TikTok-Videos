@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      /* TikTok-Shop-Video 1: Problem → Lösung (HundeWissenTv 2.0)
+         ki1–ki5 = Higgsfield-Bilder (9:16), szene/spiel = echte Shop-Fotos */
+      :root {
+        --brand: #DB8622;
+        --dark: #353A3D;
+        --font: "Montserrat", sans-serif;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+      #root { position: relative; width: 100%; height: 100%; background: #000; font-family: var(--font); }
+
+      .scene { position: absolute; inset: 0; overflow: hidden; }
+      .full { position: absolute; inset: 0; width: 1080px; height: 1920px; object-fit: cover; }
+
+      /* Echtes Produktfoto als Karte über unscharfem Hintergrund */
+      .card {
+        position: absolute; left: 70px; top: 520px; width: 940px; height: 800px;
+        border-radius: 44px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+      }
+      .card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+      /* TikTok-Textsticker */
+      .cap { position: absolute; left: 60px; width: 960px; top: 1040px; text-align: center; }
+      .cap.top { top: 250px; }
+      .cap span {
+        display: inline; background: #fff; color: #111; font-weight: 800; font-size: 66px; line-height: 1.42;
+        padding: 6px 22px; border-radius: 18px;
+        -webkit-box-decoration-break: clone; box-decoration-break: clone;
+      }
+      .cap span.o { background: var(--brand); color: #fff; }
+
+      /* CTA */
+      #s8 { background: var(--brand); }
+      #s8-bg { opacity: 0.35; }
+      #s8-brand {
+        position: absolute; top: 210px; left: 0; width: 1080px;
+        display: flex; justify-content: center; align-items: center; gap: 16px;
+        color: #fff; font-weight: 800; font-size: 44px;
+      }
+      #s8-brand img { width: 92px; height: 92px; border-radius: 50%; border: 4px solid #fff; }
+      #s8-ball { position: absolute; left: 290px; top: 360px; width: 500px; }
+      #s8-stars { position: absolute; top: 780px; left: 0; width: 1080px; text-align: center; color: #fff; font-weight: 800; font-size: 46px; }
+      #s8-price { position: absolute; top: 850px; left: 0; width: 1080px; text-align: center; color: #fff; font-weight: 900; font-size: 210px; line-height: 1; letter-spacing: -4px; }
+      #s8-price small { font-size: 70px; letter-spacing: 0; vertical-align: 0.9em; margin-right: 22px; }
+      #s8-cta {
+        position: absolute; top: 1110px; left: 120px; width: 840px; text-align: center;
+        background: var(--dark); color: #fff; font-weight: 900; font-size: 56px;
+        padding: 30px 20px; border-radius: 999px;
+      }
+      #s8-arrow { position: absolute; top: 1260px; left: 490px; width: 100px; height: 110px; }
+
+      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; z-index: 20; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="18" data-width="1080" data-height="1920">
+
+      <!-- 1: allein auf dem Sofa (Hook ab Frame 0) -->
+      <div id="s1" class="scene clip" data-start="0" data-duration="2.6" data-track-index="1" data-track-kind="graphics">
+        <img id="s1-img" class="full" src="assets/ki1.png" alt="" />
+        <div id="s1-cap" class="cap top"><span>Mein Hund, wenn ich</span><br /><span class="o">zur Arbeit muss…</span></div>
+      </div>
+
+      <!-- 2: Tür geht zu -->
+      <div id="s2" class="scene clip" data-start="2.6" data-duration="1.8" data-track-index="1" data-track-kind="graphics">
+        <img id="s2-img" class="full" src="assets/ki2.png" alt="" />
+        <div id="s2-cap" class="cap"><span>8 Stunden allein 😔</span></div>
+      </div>
+
+      <!-- 3: Wendung -->
+      <div id="s3" class="scene clip" data-start="4.4" data-duration="2" data-track-index="1" data-track-kind="graphics">
+        <img id="s3-img" class="full" src="assets/ki3.png" alt="" />
+        <div id="s3-cap" class="cap"><span>Bis ich DAS hier</span><br /><span class="o">gefunden hab 👀</span></div>
+      </div>
+
+      <!-- 4: echtes Produkt -->
+      <div id="s4" class="scene clip" data-start="6.4" data-duration="1.9" data-track-index="1" data-track-kind="graphics">
+        <img class="full" src="assets/szene-bg.jpg" alt="" />
+        <div id="s4-card" class="card"><img src="assets/szene.jpg" alt="" /></div>
+        <div id="s4-cap" class="cap top"><span>Rollt ganz von allein</span></div>
+      </div>
+
+      <!-- 5: Sprung -->
+      <div id="s5" class="scene clip" data-start="8.3" data-duration="1.8" data-track-index="1" data-track-kind="graphics">
+        <img id="s5-img" class="full" src="assets/ki5.png" alt="" />
+        <div id="s5-cap" class="cap"><span>Zwitschert wie ein Vogel</span></div>
+      </div>
+
+      <!-- 6: Berührung (echtes Foto) -->
+      <div id="s6" class="scene clip" data-start="10.1" data-duration="1.8" data-track-index="1" data-track-kind="graphics">
+        <img class="full" src="assets/spiel-bg.jpg" alt="" />
+        <div id="s6-card" class="card"><img src="assets/spiel.jpg" alt="" style="object-position:50% 40%" /></div>
+        <div id="s6-cap" class="cap top"><span>Startet, sobald er ihn anstupst</span></div>
+      </div>
+
+      <!-- 7: abends müde -->
+      <div id="s7" class="scene clip" data-start="11.9" data-duration="2.6" data-track-index="1" data-track-kind="graphics">
+        <img id="s7-img" class="full" src="assets/ki4.png" alt="" />
+        <div id="s7-cap" class="cap"><span>Und abends?</span><br /><span class="o">Endlich ausgepowert 😴</span></div>
+      </div>
+
+      <!-- 8: CTA -->
+      <div id="s8" class="scene clip" data-start="14.5" data-duration="3.5" data-track-index="1" data-track-kind="graphics">
+        <img id="s8-bg" class="full" src="assets/ki3-bg.jpg" alt="" />
+        <div id="s8-brand"><img src="assets/beagle.png" alt="" />HundeWissenTv 2.0</div>
+        <img id="s8-ball" src="assets/ball.png" alt="" />
+        <div id="s8-stars">★ 4,1 · über 12.500× verkauft</div>
+        <div id="s8-price"><small>nur</small>15,17 €</div>
+        <div id="s8-cta">Unten im Warenkorb 🛒</div>
+        <svg id="s8-arrow" viewBox="0 0 100 110"><path d="M50 8 L50 90 M18 60 L50 94 L82 60" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" /></svg>
+      </div>
+
+      <div id="flash" class="clip" data-start="0" data-duration="18" data-track-index="3"></div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const pop = (sel, at, d = 0.35) =>
+        tl.fromTo(sel, { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: d, ease: "back.out(2)" }, at);
+      const cap = (sel, at) =>
+        tl.fromTo(sel, { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.25, ease: "power3.out" }, at);
+      const flash = (at) =>
+        tl.fromTo("#flash", { opacity: 0.7 }, { opacity: 0, duration: 0.18, ease: "power2.out", immediateRender: false }, at);
+      // Langsamer Zoom (Ken Burns), Richtung wechselt pro Bild
+      const zoom = (sel, at, dur, inward = true) =>
+        tl.fromTo(sel, { scale: inward ? 1.0 : 1.14 }, { scale: inward ? 1.14 : 1.0, duration: dur, ease: "none" }, at);
+      const card = (sel, at, dur) => {
+        tl.fromTo(sel, { scale: 1.12 }, { scale: 1, duration: 0.3, ease: "power3.out" }, at);
+        tl.fromTo(sel + " img", { scale: 1 }, { scale: 1.1, duration: dur, ease: "none" }, at);
+      };
+
+      // 1: Text steht ab Frame 0
+      zoom("#s1-img", 0, 2.6);
+
+      zoom("#s2-img", 2.6, 1.8, false);
+      cap("#s2-cap", 2.7);
+
+      flash(4.4);
+      zoom("#s3-img", 4.4, 2);
+      cap("#s3-cap", 4.5);
+      tl.fromTo("#s3-img", { x: 0 }, { x: 10, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }, 4.45);
+
+      card("#s4-card", 6.4, 1.9);
+      cap("#s4-cap", 6.5);
+
+      zoom("#s5-img", 8.3, 1.8, false);
+      cap("#s5-cap", 8.4);
+
+      card("#s6-card", 10.1, 1.8);
+      cap("#s6-cap", 10.2);
+
+      zoom("#s7-img", 11.9, 2.6);
+      cap("#s7-cap", 12.0);
+
+      // 8: CTA
+      flash(14.5);
+      pop("#s8-brand", 14.55);
+      tl.fromTo("#s8-ball", { y: 300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "back.out(1.6)" }, 14.55);
+      tl.to("#s8-ball", { rotation: 5, duration: 0.2, yoyo: true, repeat: 11, ease: "sine.inOut" }, 15);
+      pop("#s8-stars", 14.8);
+      tl.fromTo("#s8-price", { scale: 1.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.28, ease: "power4.out" }, 15.0);
+      pop("#s8-cta", 15.4);
+      tl.fromTo("#s8-arrow", { y: -20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.25 }, 15.7);
+      tl.to("#s8-arrow", { y: 26, duration: 0.3, yoyo: true, repeat: 6, ease: "sine.inOut" }, 15.95);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
