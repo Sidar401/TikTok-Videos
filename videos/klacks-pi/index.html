@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/data.js"></script>
+    <style>
+      :root {
+        --ink: #ffffff;
+        --mint: #5ef2c2;
+        --muted: #9a93b8;
+        --font: "Montserrat", sans-serif;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0b0918; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--font); color: var(--ink); }
+      #sim { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .line { position: absolute; left: 0; width: 1080px; text-align: center; font-weight: 800; }
+      .line span { display: inline-block; }
+      #title { top: 250px; font-size: 64px; }
+      #counter { top: 345px; font-size: 54px; font-weight: 700; }
+      #counter b, .mint { color: var(--mint); }
+      .cap { top: 1470px; font-size: 50px; color: var(--muted); font-weight: 700; }
+      .cap.win { color: var(--mint); font-size: 58px; font-weight: 800; }
+      .slow { position: absolute; left: 700px; top: 560px; font-size: 40px; color: var(--muted); font-weight: 600; }
+      #final-top { top: 345px; font-size: 52px; color: var(--mint); }
+      #final-pi { top: 1450px; font-size: 92px; color: var(--mint); text-shadow: 0 0 30px rgba(94, 242, 194, 0.55); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="27" data-width="1080" data-height="1920">
+      <canvas id="sim" data-layout-allow-overflow width="1080" height="1920"></canvas>
+
+      <div id="title" class="line clip" data-start="0" data-duration="27" data-track-index="1">
+        <span>Wie oft macht es Klack?</span>
+      </div>
+      <div id="counter" class="line clip" data-start="0" data-duration="23.7" data-track-index="2">
+        <span id="counter-in">Klacks: <b id="count">0</b></span>
+      </div>
+      <div id="final-top" class="line clip" data-start="23.5" data-duration="3.5" data-track-index="2">
+        <span id="final-top-in">3, 31, 314: die Ziffern von π</span>
+      </div>
+
+      <div id="cap-rules" class="line cap clip" data-start="0.3" data-duration="3.3" data-track-index="3">
+        <span id="cap-rules-in">keine Reibung, perfekte Stöße</span>
+      </div>
+      <div id="cap-1" class="line cap win clip" data-start="3.8" data-duration="2.6" data-track-index="3">
+        <span id="cap-1-in">1 kg: 3 Klacks</span>
+      </div>
+      <div id="cap-100" class="line cap win clip" data-start="11.5" data-duration="2.3" data-track-index="3">
+        <span id="cap-100-in">100 kg: 31 Klacks</span>
+      </div>
+      <div id="cap-10k" class="line cap win clip" data-start="21.9" data-duration="1.6" data-track-index="3">
+        <span id="cap-10k-in">10.000 kg: 314 Klacks</span>
+      </div>
+      <div id="final-pi" class="line clip" data-start="23.9" data-duration="3.1" data-track-index="3">
+        <span id="final-pi-in">π = 3,14159…</span>
+      </div>
+
+      <div id="slow-1" class="slow clip" data-start="8.0" data-duration="3.5" data-track-index="4"><span id="slow-1-in">Zeitlupe</span></div>
+      <div id="slow-2" class="slow clip" data-start="15.4" data-duration="6.7" data-track-index="4"><span id="slow-2-in">Zeitlupe</span></div>
+
+      <audio id="klacks" src="assets/klacks.wav" data-start="0" data-duration="27" data-track-index="5" data-volume="1"></audio>
+    </div>
+
+    <script>
+      // ---------- Texte ----------
+      const tl = gsap.timeline({ paused: true });
+      const pop = (id, at) => tl.from("#" + id, { opacity: 0, y: 24, scale: 0.92, duration: 0.35, ease: "back.out(2)" }, at);
+      const out = (id, at) => tl.to("#" + id, { opacity: 0, duration: 0.25, ease: "power1.in" }, at);
+      out("counter-in", 23.4);
+      pop("final-top-in", 23.5);
+      pop("cap-rules-in", 0.3); out("cap-rules-in", 3.35);
+      pop("cap-1-in", 3.8); out("cap-1-in", 6.1);
+      pop("cap-100-in", 11.5); out("cap-100-in", 13.5);
+      pop("cap-10k-in", 21.9); out("cap-10k-in", 23.2);
+      tl.from("#final-pi-in", { opacity: 0, scale: 0.6, duration: 0.5, ease: "back.out(2.2)" }, 23.9);
+      tl.from("#slow-1-in", { opacity: 0, duration: 0.3 }, 8.0); out("slow-1-in", 11.2);
+      tl.from("#slow-2-in", { opacity: 0, duration: 0.3 }, 15.4); out("slow-2-in", 21.85);
+      tl.to({}, { duration: 0.01 }, 26.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      // ---------- Simulation (aus berechneten Stößen, rein von t abhängig) ----------
+      const D = window.KLACK_DATA;
+      const cv = document.getElementById("sim");
+      const cx = cv.getContext("2d");
+      const countEl = document.getElementById("count");
+
+      const WALL_X = 130, UNIT = 100, FLOOR_Y = 780;
+      const CX = 540, CY = 1130, R = 290;
+      const CYAN = "#4fd8ff", PINK = "#ff7ad9", AMBER = "#ffb347";
+
+      function segAt(t) {
+        for (let i = 0; i < D.segs.length; i++) if (t < D.segs[i].end) return i;
+        return D.segs.length - 1;
+      }
+
+      // Zustand eines Segments zur Video-Zeit t
+      function stateAt(seg, t) {
+        const T = seg.T, ev = seg.ev, n = seg.n;
+        let k, s;
+        if (t <= T[0]) { k = 0; s = 0; }
+        else if (t >= T[n]) {
+          k = n;
+          const f = Math.min(1, (t - T[n]) / (seg.tEnd - T[n]));
+          s = ev[n][0] + f * seg.exitSim;
+        } else {
+          k = 0;
+          while (k < n && T[k + 1] <= t) k++;
+          const f = (t - T[k]) / (T[k + 1] - T[k]);
+          s = ev[k][0] + f * (ev[k + 1][0] - ev[k][0]);
+        }
+        const e = ev[k], ds = s - e[0];
+        return { k, x1: Math.max(0, e[1] + e[3] * ds), x2: e[2] + e[4] * ds };
+      }
+
+      function glowRect(x, y, w, h, color, fillA) {
+        const r = 12;
+        cx.beginPath();
+        cx.roundRect(x, y, w, h, r);
+        cx.fillStyle = color + fillA;
+        cx.fill();
+        cx.shadowColor = color; cx.shadowBlur = 22;
+        cx.lineWidth = 5; cx.strokeStyle = color; cx.stroke();
+        cx.shadowBlur = 0;
+      }
+
+      function label(txt, x, y, size) {
+        cx.font = "700 " + size + "px Montserrat, sans-serif";
+        cx.fillStyle = "#ffffff"; cx.textAlign = "center"; cx.textBaseline = "middle";
+        cx.fillText(txt, x, y);
+      }
+
+      function hue(f) { return "hsl(" + (28 + f * 262) + ", 95%, 64%)"; }
+      function P(p) { return [CX + p[0] * R, CY - p[1] * R]; }
+
+      function drawBackground() {
+        const g = cx.createLinearGradient(0, 0, 0, 1920);
+        g.addColorStop(0, "#1a1235"); g.addColorStop(0.55, "#0c0a1c"); g.addColorStop(1, "#06060c");
+        cx.fillStyle = g; cx.fillRect(0, 0, 1080, 1920);
+      }
+
+      function drawFloor() {
+        cx.save();
+        cx.shadowColor = AMBER; cx.shadowBlur = 24;
+        cx.strokeStyle = AMBER; cx.lineWidth = 7; cx.lineCap = "round";
+        cx.beginPath(); cx.moveTo(WALL_X - 4, 470); cx.lineTo(WALL_X - 4, FLOOR_Y + 3); cx.lineTo(1100, FLOOR_Y + 3); cx.stroke();
+        cx.restore();
+      }
+
+      function renderAt(t) {
+        const si = segAt(t), seg = D.segs[si];
+        const last = si === D.segs.length - 1;
+        const st = stateAt(seg, t);
+
+        // Ein-/Ausblenden je Abschnitt
+        let a = Math.min(1, Math.max(0, (t - seg.T0) / 0.3));
+        if (!last) a = Math.min(a, Math.max(0, (seg.end - t) / 0.3));
+        if (si === 0) a = Math.min(1, Math.max(0, (seg.end - t) / 0.3)); // erstes Bild sofort sichtbar
+
+        cx.clearRect(0, 0, 1080, 1920);
+        drawBackground();
+        drawFloor();
+
+        // Zähler
+        countEl.textContent = String(Math.min(st.k, seg.n));
+
+        cx.save();
+        cx.globalAlpha = a;
+
+        // Blöcke
+        const w1 = D.w1 * UNIT, bw = seg.bw * UNIT;
+        const x1 = WALL_X + st.x1 * UNIT, x2 = WALL_X + st.x2 * UNIT;
+        // Großer Block verschwindet am Ende rechts aus dem Bild
+        glowRect(x2, FLOOR_Y - bw, bw, bw, PINK, "40");
+        label(seg.label, x2 + bw / 2, FLOOR_Y - bw / 2, seg.M >= 10000 ? 36 : 38);
+        glowRect(x1, FLOOR_Y - w1, w1, w1, CYAN, "38");
+        label("1 kg", x1 + w1 / 2, FLOOR_Y - w1 / 2, 34);
+
+        // Lichtblitz bei jedem Stoß
+        for (let k = Math.max(1, st.k - 6); k <= st.k && k <= seg.n; k++) {
+          const age = t - seg.T[k];
+          if (age < 0 || age > 0.14) continue;
+          const isWall = seg.ev[k][5] === 1;
+          const fx = isWall ? WALL_X : WALL_X + (seg.ev[k][1] + D.w1) * UNIT;
+          const fy = FLOOR_Y - w1 / 2;
+          const al = 1 - age / 0.14;
+          const rg = cx.createRadialGradient(fx, fy, 0, fx, fy, 70);
+          rg.addColorStop(0, "rgba(255,255,255," + 0.9 * al + ")");
+          rg.addColorStop(1, "rgba(255,255,255,0)");
+          cx.fillStyle = rg; cx.fillRect(fx - 70, fy - 70, 140, 140);
+        }
+
+        // Kreis
+        cx.lineWidth = 3; cx.strokeStyle = "rgba(200,190,235,0.35)";
+        cx.beginPath(); cx.arc(CX, CY, R, 0, Math.PI * 2); cx.stroke();
+
+        // Abschluss: Kreis leuchtet farbig
+        if (last && t > seg.tEnd - 0.4) {
+          const f = Math.min(1, (t - (seg.tEnd - 0.4)) / 1.0);
+          const lg = cx.createLinearGradient(CX - R, 0, CX + R, 0);
+          lg.addColorStop(0, "rgba(255,170,80," + 0.35 * f + ")");
+          lg.addColorStop(0.5, "rgba(60,220,190," + 0.3 * f + ")");
+          lg.addColorStop(1, "rgba(150,120,255," + 0.35 * f + ")");
+          cx.fillStyle = lg;
+          cx.beginPath(); cx.arc(CX, CY, R, 0, Math.PI * 2); cx.fill();
+          cx.shadowColor = "#7fe9ff"; cx.shadowBlur = 40 * f;
+          cx.lineWidth = 5; cx.strokeStyle = "rgba(170,240,255," + f + ")";
+          cx.beginPath(); cx.arc(CX, CY, R, 0, Math.PI * 2); cx.stroke();
+          cx.shadowBlur = 0;
+        }
+
+        // Linien von Stoß zu Stoß
+        const n = seg.n, dense = n > 40;
+        const kk = Math.min(st.k, n);
+        let dot = P(seg.pts[0]);
+        const gap = Math.min(0.2, 0.9 * (n > 1 ? (seg.T[2] - seg.T[1]) : 0.5));
+        cx.lineCap = "round";
+        for (let k = 1; k <= kk; k++) {
+          const p0 = P(seg.pts[k - 1]), p1 = P(seg.pts[k]);
+          const f = Math.min(1, (t - seg.T[k]) / gap);
+          const ex = p0[0] + (p1[0] - p0[0]) * f, ey = p0[1] + (p1[1] - p0[1]) * f;
+          cx.strokeStyle = hue((k - 1) / Math.max(1, n - 1));
+          cx.lineWidth = dense ? 2 : 4;
+          cx.globalAlpha = a * (dense ? 0.85 : 1);
+          cx.beginPath(); cx.moveTo(p0[0], p0[1]); cx.lineTo(ex, ey); cx.stroke();
+          if (!dense && f >= 1) {
+            cx.fillStyle = hue((k - 1) / Math.max(1, n - 1));
+            cx.beginPath(); cx.arc(p1[0], p1[1], 6, 0, Math.PI * 2); cx.fill();
+          }
+          dot = [ex, ey];
+        }
+        cx.globalAlpha = a;
+        // Startpunkt (Ring)
+        const s0 = P(seg.pts[0]);
+        cx.lineWidth = 3; cx.strokeStyle = "rgba(255,255,255,0.6)";
+        cx.beginPath(); cx.arc(s0[0], s0[1], 10, 0, Math.PI * 2); cx.stroke();
+        // Aktueller Punkt
+        cx.shadowColor = "#ffffff"; cx.shadowBlur = 20; cx.fillStyle = "#ffffff";
+        cx.beginPath(); cx.arc(dot[0], dot[1], 13, 0, Math.PI * 2); cx.fill();
+        cx.shadowBlur = 0;
+
+        cx.restore();
+      }
+
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
