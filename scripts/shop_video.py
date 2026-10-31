@@ -27,14 +27,18 @@ ROOT = Path(__file__).resolve().parent.parent
 def words_html(text, cid):
     """Untertitel in Wort-Spans zerlegen; *x* → orange, | → Umbruch."""
     out = []
+    hot = False
     for li, line in enumerate(text.split("|")):
         if li:
             out.append("<br />")
-        for wi, w in enumerate(line.split()):
-            hot = w.startswith("*") and w.endswith("*")
-            w = w.strip("*")
+        for w in line.split():
+            start = w.startswith("*")
+            if start:
+                hot = True
             cls = "w hot" if hot else "w"
-            out.append(f'<span class="{cls}">{html.escape(w)}</span>')
+            if w.endswith("*"):
+                hot = False
+            out.append(f'<span class="{cls}">{html.escape(w.strip("*"))}</span>')
     return " ".join(out).replace(" <br /> ", "<br />")
 
 
@@ -177,14 +181,14 @@ TEMPLATE = """<!doctype html>
         tl.to("#stage", { scale: 1.04, duration: Math.max(d - 0.25, 0.1), ease: "none" }, s + 0.25);
         // Untertitel: Wörter ploppen nacheinander auf
         const ws = document.querySelectorAll("#c" + i + " .w");
-        if (ws.length) {
+        if (ws.length && i > 1) {
           tl.fromTo(ws, { scale: 0.4, opacity: 0, y: 20 },
             { scale: 1, opacity: 1, y: 0, duration: 0.18, ease: "back.out(2.4)", stagger: Math.min(0.09, 0.6 / ws.length) },
-            i === 1 ? 0 : s + 0.05);
+            s + 0.05);
         }
       });
-      // Erster Untertitel steht ab Frame 0 (Thumbnail)
-      tl.set("#c1 .w", { scale: 1, opacity: 1, y: 0 }, 0);
+      // Erster Untertitel steht ab Frame 0 (Thumbnail) und pulsiert kurz
+      tl.fromTo("#c1 .capin", { scale: 1 }, { scale: 1.06, duration: 0.2, yoyo: true, repeat: 1, ease: "sine.inOut" }, 0.4);
 
       // Endkarte
       tl.fromTo("#flash", { opacity: 0.8 }, { opacity: 0, duration: 0.2, ease: "power2.out", immediateRender: false }, tEnd);

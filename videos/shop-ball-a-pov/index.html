@@ -61,10 +61,10 @@
 
       <div id="captions" data-track-kind="captions">
         <div id="c1" class="cap clip" data-start="0.00" data-duration="2.40" data-track-index="2"><div class="capin"><span class="w">POV:</span> <span class="w">Du</span> <span class="w">musst</span><br /><span class="w">zur</span> <span class="w hot">Arbeit</span> <span class="w">🥲</span></div></div>
-        <div id="c2" class="cap clip" data-start="2.40" data-duration="2.00" data-track-index="2"><div class="capin"><span class="w">…und</span> <span class="w">er</span> <span class="w">ist</span><br /><span class="w">8</span> <span class="w">Stunden</span> <span class="w">allein</span></div></div>
+        <div id="c2" class="cap clip" data-start="2.40" data-duration="2.00" data-track-index="2"><div class="capin"><span class="w">…und</span> <span class="w">er</span> <span class="w">ist</span><br /><span class="w hot">8</span> <span class="w hot">Stunden</span> <span class="w">allein</span></div></div>
         <div id="c3" class="cap clip" data-start="4.40" data-duration="2.80" data-track-index="2"><div class="capin"><span class="w">Bis</span> <span class="w">ich</span> <span class="w hot">DAS</span><br /><span class="w">hingestellt</span> <span class="w">hab</span> <span class="w">👀</span></div></div>
         <div id="c4" class="cap clip" data-start="7.20" data-duration="2.60" data-track-index="2"><div class="capin"><span class="w">Er</span> <span class="w">dreht</span><br /><span class="w hot">komplett</span> <span class="w">durch</span> <span class="w">😂</span></div></div>
-        <div id="c5" class="cap clip" data-start="9.80" data-duration="2.40" data-track-index="2"><div class="capin"><span class="w">Rollt</span> <span class="w">ganz</span><br /><span class="w">von</span> <span class="w">allein</span></div></div>
+        <div id="c5" class="cap clip" data-start="9.80" data-duration="2.40" data-track-index="2"><div class="capin"><span class="w">Rollt</span> <span class="w">ganz</span><br /><span class="w hot">von</span> <span class="w hot">allein</span></div></div>
         <div id="c6" class="cap clip" data-start="12.20" data-duration="2.20" data-track-index="2"><div class="capin"><span class="w">Abends:</span><br /><span class="w hot">tiefenentspannt</span> <span class="w">😴</span></div></div>
       </div>
 
@@ -94,14 +94,14 @@
         tl.to("#stage", { scale: 1.04, duration: Math.max(d - 0.25, 0.1), ease: "none" }, s + 0.25);
         // Untertitel: Wörter ploppen nacheinander auf
         const ws = document.querySelectorAll("#c" + i + " .w");
-        if (ws.length) {
+        if (ws.length && i > 1) {
           tl.fromTo(ws, { scale: 0.4, opacity: 0, y: 20 },
             { scale: 1, opacity: 1, y: 0, duration: 0.18, ease: "back.out(2.4)", stagger: Math.min(0.09, 0.6 / ws.length) },
-            i === 1 ? 0 : s + 0.05);
+            s + 0.05);
         }
       });
-      // Erster Untertitel steht ab Frame 0 (Thumbnail)
-      tl.set("#c1 .w", { scale: 1, opacity: 1, y: 0 }, 0);
+      // Erster Untertitel steht ab Frame 0 (Thumbnail) und pulsiert kurz
+      tl.fromTo("#c1 .capin", { scale: 1 }, { scale: 1.06, duration: 0.2, yoyo: true, repeat: 1, ease: "sine.inOut" }, 0.4);
 
       // Endkarte
       tl.fromTo("#flash", { opacity: 0.8 }, { opacity: 0, duration: 0.2, ease: "power2.out", immediateRender: false }, tEnd);
