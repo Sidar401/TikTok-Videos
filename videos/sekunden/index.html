@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      #r1, #r2, #r3 { top: 1420px; }
+      #res small { font-size: 36px; }
+      #cta { top: 1410px; font-size: 56px; line-height: 1.2; }
+      #cta small { display: block; font-size: 36px; color: #ddd8ef; font-weight: 700; margin-top: 10px; }
+      #chips { top: 1400px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Wie lange sind<br /><span class="y">1 Milliarde Sekunden?</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="chips" class="line chips clip" data-start="0.6" data-duration="2.0" data-track-index="3"><span id="k1" class="chip">1 Woche?</span><span id="k2" class="chip">1 Jahr?</span><span id="k3" class="chip">10 Jahre?</span></div>
+      <div id="c1" class="line cap clip" data-start="2.6" data-duration="4.4" data-track-index="3"><span id="c1-in">Wie lange sind <span class="g">1 Million</span> Sekunden?</span></div>
+      <div id="r1" class="line big clip" data-start="7.0" data-duration="1.8" data-track-index="3"><span id="r1-in" class="g glow-g" style="font-size: 80px">fast 12 Tage</span></div>
+      <div id="c2" class="line cap clip" data-start="8.8" data-duration="5.8" data-track-index="3"><span id="c2-in">Und <span class="y">1 Milliarde</span> Sekunden?</span></div>
+      <div id="r2" class="line big clip" data-start="14.6" data-duration="2.0" data-track-index="3"><span id="r2-in" class="y glow-y" style="font-size: 80px">fast 32 JAHRE!</span></div>
+      <div id="c3" class="line cap clip" data-start="16.6" data-duration="5.8" data-track-index="3"><span id="c3-in">Und <span class="r">1 Billion</span> Sekunden?</span></div>
+      <div id="r3" class="line big clip" data-start="22.4" data-duration="2.6" data-track-index="3"><span id="r3-in" class="r glow-r" style="font-size: 80px">31.700 JAHRE!</span></div>
+      <div id="c4" class="line cap clip" data-start="25.0" data-duration="2.5" data-track-index="3"><span id="c4-in">Zurück bis in die <span class="o">Steinzeit</span><small>als es noch Mammuts gab</small></span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Wie alt bist <span class="y">DU</span> in Sekunden?<small>Tipp: 20 Jahre ≈ 631 Millionen</small></span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      ["k1", "k2", "k3"].forEach((id, i) => tl.from("#" + id, { opacity: 0, scale: 0.4, y: 30, duration: 0.25, ease: "back.out(3)" }, 0.6 + i * 0.6));
+      tl.to("#chips .chip", { opacity: 0, duration: 0.15 }, 2.45);
+      T.pop("c1-in", 2.6, 4.4); T.slam("r1-in", 7.0, 1.8); T.pop("c2-in", 8.8, 5.8); T.slam("r2-in", 14.6, 2.0);
+      T.pop("c3-in", 16.6, 5.8); T.slam("r3-in", 22.4, 2.6); T.pop("c4-in", 25.0, 2.5);
+      T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+
+      function clock(x, y, r, sec, col) {
+        K.ring(x, y, r, col, 8, 1);
+        for (let i = 0; i < 60; i++) { const a = (i / 60) * Math.PI * 2; const l = i % 5 ? 10 : 24; g.strokeStyle = "rgba(255,255,255,0.5)"; g.lineWidth = i % 5 ? 2 : 4; g.beginPath(); g.moveTo(x + Math.cos(a) * (r - 16), y + Math.sin(a) * (r - 16)); g.lineTo(x + Math.cos(a) * (r - 16 - l), y + Math.sin(a) * (r - 16 - l)); g.stroke(); }
+        const a = (sec / 60) * Math.PI * 2 - Math.PI / 2, am = (sec / 3600) * Math.PI * 2 - Math.PI / 2;
+        K.glowLine(x, y, x + Math.cos(am) * r * 0.55, y + Math.sin(am) * r * 0.55, "#ffffff", 10);
+        K.glowLine(x, y, x + Math.cos(a) * r * 0.8, y + Math.sin(a) * r * 0.8, col, 5);
+        K.dot(x, y, 12, "#fff", 10);
+      }
+      function counter(v, unitText, col) {
+        K.mono(de(Math.round(v)), 540, 640, 92, "#ffffff", col);
+        K.label("Sekunden", 540, 715, 36, "#cfc9e6");
+      }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.4 });
+        const sh = K.shake(t, [[14.6, 10], [22.4, 18]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+
+        if (t < 2.6) {
+          clock(540, 950, 260, t * 9, C.mint);
+          ih = "Rate mal!";
+        }
+        // 1 Million
+        if (t >= 2.6 && t < 8.9) {
+          const a = prog(t, 2.6, 0.3) * (1 - prog(t, 8.6, 0.3));
+          g.save(); g.globalAlpha = a;
+          const f = eio(prog(t, 2.8, 4.1)), v = 1e6 * f;
+          counter(v, "", C.mint);
+          clock(540, 1000, 200, v, C.mint);
+          // Kalender-Tage
+          const days = v / 86400;
+          for (let d = 0; d < 12; d++) {
+            const x = 150 + (d % 6) * 135, y = 1250 + Math.floor(d / 6) * 0;
+            if (d >= 6) continue;
+          }
+          for (let d = 0; d < 12; d++) {
+            const x = 175 + (d % 6) * 146, y = 1265 + Math.floor(d / 6) * 90;
+            const on = cl(days - d);
+            g.fillStyle = on > 0 ? "rgba(94,242,194," + (0.25 + 0.6 * on) + ")" : "rgba(255,255,255,0.08)";
+            g.beginPath(); g.roundRect(x - 55, y - 35, 110, 74, 12); g.fill();
+            K.label(String(d + 1), x, y + 2, 34, on > 0.5 ? "#06231a" : "#8f88aa");
+          }
+          g.restore();
+          ih = "1 Million Sekunden = ?";
+        }
+        // 1 Milliarde
+        if (t >= 8.8 && t < 16.8) {
+          const a = prog(t, 8.8, 0.3) * (1 - prog(t, 16.5, 0.3));
+          g.save(); g.globalAlpha = a;
+          const f = eio(prog(t, 9.2, 5.2)), v = 1e9 * f;
+          counter(v, "", C.gold);
+          const yrs = v / 31557600;
+          // Mensch wächst mit
+          const age = Math.min(31.7, yrs), h = 120 + 330 * cl(age / 20);
+          K.icon("you", 540, 1300, h, 1, C.gold, "rgba(255,201,77,0.08)");
+          K.mono(de(age, 1) + " Jahre alt", 540, 830, 64, C.gold, C.gold);
+          K.glowLine(160, 1300, 920, 1300, "rgba(255,255,255,0.4)", 3);
+          g.restore();
+          ih = "Stell dir vor, du wirst heute geboren …";
+        }
+        // 1 Billion: Zeitreise
+        if (t >= 16.6 && t < 27.6) {
+          const a = prog(t, 16.6, 0.3) * (1 - prog(t, 27.3, 0.3));
+          g.save(); g.globalAlpha = a;
+          const f = eio(prog(t, 17.0, 5.4)), v = 1e12 * f;
+          counter(v, "", C.red);
+          const back = v / 31557600; // Jahre zurück
+          const yr = 2026 - back;
+          const yrTxt = yr > 0 ? "Jahr " + de(Math.round(yr)) : de(Math.round(-yr)) + " v. Chr.";
+          K.mono(yrTxt, 540, 830, 64, C.red, C.red);
+          // Zeitstrahl (rückwärts)
+          const x0 = 940, x1 = 140, max = 31700;
+          K.glowLine(x1, 1010, x0, 1010, "rgba(255,255,255,0.4)", 4);
+          const marks = [[0, "heute"], [2000, "Jesus"], [4500, "Pyramiden"], [11700, "Ende der Eiszeit"], [31680, "Steinzeit · Mammuts"]];
+          marks.forEach(([y, n], i) => {
+            const x = lerp(x0, x1, Math.sqrt(y / max));
+            const on = back >= y - 1;
+            K.dot(x, 1010, on ? 12 : 7, on ? (i === 4 ? C.red : C.icon) : "rgba(255,255,255,0.3)", on ? 18 : 0);
+            if (on) K.label(n, i === 4 ? x - 10 : x, i % 2 ? 1070 : 950, 30, i === 4 ? C.red : "#ffffff", i === 4 ? "left" : "center");
+          });
+          const px = lerp(x0, x1, Math.sqrt(cl(back / max)));
+          K.dot(px, 1010, 16, "#ffffff", 30);
+          if (t > 22.4) {
+            // Mammut-Silhouette (einfach)
+            const ma = prog(t, 22.6, 0.5);
+            g.globalAlpha = a * ma;
+            g.strokeStyle = C.orange; g.lineWidth = 6; g.shadowColor = C.orange; g.shadowBlur = 16; g.fillStyle = "rgba(255,154,60,0.12)";
+            const mx = 500, my = 1360;
+            g.beginPath(); g.ellipse(mx, my - 110, 120, 80, 0, 0, Math.PI * 2); g.fill(); g.stroke();
+            g.beginPath(); g.arc(mx + 120, my - 150, 50, 0, Math.PI * 2); g.fill(); g.stroke();
+            g.beginPath(); g.moveTo(mx + 160, my - 130); g.quadraticCurveTo(mx + 190, my - 40, mx + 150, my - 20); g.stroke();
+            g.beginPath(); g.moveTo(mx + 140, my - 120); g.quadraticCurveTo(mx + 220, my - 70, mx + 220, my - 140); g.stroke();
+            [-80, -30, 40, 90].forEach((dx) => { g.beginPath(); g.moveTo(mx + dx, my - 50); g.lineTo(mx + dx, my); g.stroke(); });
+          }
+          g.restore();
+          ih = "Zeitreise zurück …";
+        }
+        if (t >= 27.5) {
+          const a = prog(t, 27.5, 0.3);
+          g.save(); g.globalAlpha = a; clock(540, 950, 260, t * 30, C.gold); g.restore();
+          ih = "1 Mio. · 1 Mrd. · 1 Billion";
+        }
+
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[14.6, 0.3], [22.4, 0.45]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
