@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      #odds { top: 640px; }
+      #odds .k { font-size: 54px; color: #ddd8ef; display: block; margin-bottom: 10px; }
+      #odds .n { font-family: "JetBrains Mono", monospace; font-size: 104px; color: var(--gold); text-shadow: 0 0 34px rgba(255, 201, 77, 0.7); }
+      .cap { top: 1440px; }
+      #loss { top: 1380px; font-size: 92px; }
+      #cta { top: 1400px; font-size: 64px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Eurojackpot:<br /><span class="y">120 Mio. €!</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="c0" class="line cap clip" data-start="0.4" data-duration="2.2" data-track-index="3"><span id="c0-in">Wie groß ist <span class="y">deine</span> Chance?</span></div>
+      <div id="odds" class="line clip" data-start="2.6" data-duration="3.4" data-track-index="3"><span id="odds-in"><span class="k">Deine Chance:</span><span class="n">1 : 139.838.160</span></span></div>
+      <div id="c1" class="line cap clip" data-start="6.0" data-duration="3.0" data-track-index="4"><span id="c1-in">1-€-Münzen in einer Reihe:<br /><span class="g">Nur EINE</span> gewinnt.</span></div>
+      <div id="c2" class="line cap clip" data-start="12.0" data-duration="2.0" data-track-index="4"><span id="c2-in"><span class="y">3.251 km</span> lang!<small>weiter als Berlin → Lissabon</small></span></div>
+      <div id="c3" class="line cap clip" data-start="14.0" data-duration="3.2" data-track-index="4"><span id="c3-in">Jede Woche 2× spielen?</span></div>
+      <div id="c4" class="line cap clip" data-start="17.4" data-duration="1.8" data-track-index="4"><span id="c4-in">Im Schnitt <span class="r">1,3 Mio. Jahre</span> warten!</span></div>
+      <div id="c5" class="line cap clip" data-start="19.2" data-duration="3.3" data-track-index="4"><span id="c5-in">Und wenn du <span class="y">ALLE</span> Tipps kaufst?</span></div>
+      <div id="loss" class="line big clip" data-start="22.6" data-duration="2.4" data-track-index="4"><span id="loss-in" class="r glow-r">280 Mio. €!</span></div>
+      <div id="c6" class="line cap clip" data-start="25.0" data-duration="2.5" data-track-index="4"><span id="c6-in">Mehr als <span class="r">doppelt so viel</span><br />wie der Jackpot!</span></div>
+      <div id="cta" class="line clip" data-start="27.6" data-duration="2.4" data-track-index="4"><span id="cta-in">Spielst du trotzdem?<br /><span class="g">JA</span> oder <span class="r">NEIN</span>?</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      T.pop("c0-in", 0.4, 2.2);
+      T.slam("odds-in", 2.6, 3.4);
+      T.pop("c1-in", 6.0, 3.0);
+      T.slam("c2-in", 12.0, 2.0);
+      T.pop("c3-in", 14.0, 3.2);
+      T.slam("c4-in", 17.4, 1.8);
+      T.pop("c5-in", 19.2, 3.3);
+      T.slam("loss-in", 22.6, 2.4);
+      T.pop("c6-in", 25.0, 2.5);
+      T.pop("cta-in", 27.6); T.pulse("cta-in", 28.1, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+
+      function coin(x, y, r, win, a = 1) {
+        if (r < 0.6) return;
+        g.save(); g.globalAlpha *= a;
+        const gr = g.createRadialGradient(x - r * 0.3, y - r * 0.3, r * 0.1, x, y, r);
+        if (win) { gr.addColorStop(0, "#d6fff1"); gr.addColorStop(1, "#2fb98c"); g.shadowColor = C.mint; g.shadowBlur = 30; }
+        else { gr.addColorStop(0, "#fff0b8"); gr.addColorStop(0.6, "#e0b040"); gr.addColorStop(1, "#8a6420"); }
+        g.fillStyle = gr; g.beginPath(); g.arc(x, y, r, 0, Math.PI * 2); g.fill(); g.shadowBlur = 0;
+        if (r > 14) {
+          g.strokeStyle = "rgba(90,60,10,0.6)"; g.lineWidth = r * 0.06; g.beginPath(); g.arc(x, y, r * 0.78, 0, Math.PI * 2); g.stroke();
+          g.font = "900 " + r * 0.9 + "px Montserrat"; g.textAlign = "center"; g.textBaseline = "middle"; g.fillStyle = "rgba(90,60,10,0.75)"; g.fillText("1", x, y + r * 0.05);
+        }
+        g.restore();
+      }
+      function rain(t, a) {
+        for (let i = 0; i < 26; i++) {
+          const sp = 600 + rnd(i) * 500, y = ((t * sp + rnd(i + 9) * 1900) % 1500) + 420;
+          coin(rnd(i + 5) * 1080, y, 18 + rnd(i + 7) * 16, false, a * 0.85);
+        }
+      }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.4, glow: t < 6 ? "rgba(255,190,60,0.16)" : null });
+        const sh = K.shake(t, [[2.6, 14], [12.0, 10], [22.6, 16]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+
+        // Einstieg: Jackpot zählt hoch + Münzregen
+        if (t < 6.0) {
+          const a = 1 - prog(t, 5.6, 0.4);
+          rain(t, a);
+          const v = 120000000 * eout(prog(t, 0.1, 1.9));
+          g.save(); g.globalAlpha = a * (1 - prog(t, 2.4, 0.3));
+          K.mono(de(Math.round(v)) + " €", 540, 900, 96, C.gold, C.gold);
+          g.restore();
+          ih = "Jackpot geknackt? Rechnen wir mal …";
+        }
+
+        // Münzreihe, Kamera fährt raus
+        if (t >= 6.0 && t < 14.2) {
+          const a = prog(t, 6.0, 0.3) * (1 - prog(t, 13.9, 0.3));
+          g.save(); g.globalAlpha = a;
+          const z = Math.pow(10, -7.3 * eio(prog(t, 7.0, 4.9))); // 1 -> ~1e-6
+          const r = 70 * z, step = 2 * r * 1.02;
+          const y = 980, winX = 540;
+          // Länge der sichtbaren Reihe
+          const visKm = (1080 / step) * 0.02325 / 1000;
+          if (r >= 1.5) {
+            const n = Math.ceil(1080 / step / 2) + 2;
+            for (let i = -n; i <= n; i++) coin(winX + i * step, y, r, i === 0);
+          } else {
+            const gl = g.createLinearGradient(0, 0, 1080, 0);
+            gl.addColorStop(0, "rgba(224,176,64,0)"); gl.addColorStop(0.08, "rgba(224,176,64,1)"); gl.addColorStop(0.92, "rgba(224,176,64,1)"); gl.addColorStop(1, "rgba(224,176,64,0)");
+            g.fillStyle = gl; g.shadowColor = C.gold; g.shadowBlur = 16; g.fillRect(0, y - 4, 1080, 8); g.shadowBlur = 0;
+            K.ring(winX, y, 26 + 6 * Math.sin(t * 8), C.mint, 4, 0.9);
+            K.label("dein Gewinn-Tipp", winX, y - 70, 32, C.mint);
+          }
+          if (r >= 1.5 && r < 40) K.label("dein Gewinn-Tipp", winX, y - Math.max(70, r + 40), 32, C.mint);
+          // Maßstab
+          const km = Math.min(3251, visKm);
+          const lab = km < 0.01 ? de(km * 1000, 1) + " m" : km < 1 ? de(km * 1000) + " m" : de(km) + " km";
+          K.glowLine(120, y + 120, 960, y + 120, "rgba(255,255,255,0.6)", 3);
+          K.label("sichtbar: " + lab, 540, y + 165, 40, "#ffffff");
+          if (t > 11.4) {
+            // Vergleich Berlin – Lissabon
+            const f = prog(t, 11.6, 0.4);
+            g.globalAlpha = a * f;
+            const w = 840 * (2300 / 3251);
+            K.glowLine(120, y + 240, 120 + w, y + 240, C.icon, 10);
+            K.label("Berlin → Lissabon · 2.300 km", 120, y + 285, 34, C.icon, "left");
+            K.glowLine(120, y + 340, 960, y + 340, C.gold, 10);
+            K.label("Münz-Reihe · 3.251 km", 120, y + 385, 34, C.gold, "left");
+          }
+          g.restore();
+          ih = "139.838.160 Münzen";
+        }
+
+        // Wartezeit
+        if (t >= 14.0 && t < 19.4) {
+          const a = prog(t, 14.0, 0.3) * (1 - prog(t, 19.1, 0.3));
+          g.save(); g.globalAlpha = a;
+          const f = eout(prog(t, 14.4, 3.0));
+          const yrs = 1344598 * Math.pow(f, 2.2);
+          K.mono(de(Math.round(yrs)), 540, 820, 120, "#ffffff", C.red);
+          K.label("Jahre", 540, 920, 48, "#ddd8ef");
+          // Zeitleiste
+          const items = [["Pyramiden", 4500], ["Steinzeit-Höhlenbilder", 40000], ["erste Menschen", 300000], ["deine Wartezeit", 1344598]];
+          const x0 = 140, x1 = 940, max = 1344598;
+          items.forEach(([n, y], i) => {
+            const yy = 1030 + i * 82;
+            const show = yrs >= Math.min(y, yrs + 1) || i < 3 ? cl((yrs / y) * 3 - 0.2) : 0;
+            const w = (x1 - x0) * Math.min(1, y / max) * (i === 3 ? Math.min(1, yrs / max) : 1);
+            g.globalAlpha = a * (i === 3 ? 1 : cl(prog(t, 14.6 + i * 0.6, 0.3)));
+            K.bar(x0, yy, x1 - x0, i === 3 ? yrs / max : y / max, i === 3 ? C.red : C.icon, 20);
+            K.label(n + " · " + de(i === 3 ? Math.round(yrs) : y) + " J.", x0, yy - 22, 30, "#ffffff", "left", 700);
+          });
+          g.restore();
+          ih = "2 Ziehungen pro Woche";
+        }
+
+        // Alle Tipps kaufen
+        if (t >= 19.2 && t < 25.2) {
+          const a = prog(t, 19.2, 0.3) * (1 - prog(t, 24.9, 0.3));
+          g.save(); g.globalAlpha = a;
+          const base = 1250, x1 = 330, x2 = 750, max = 280;
+          const h1 = 680 * (120 / max) * eout(prog(t, 19.8, 0.6));
+          const h2 = 680 * (279.7 / max) * eout(prog(t, 21.0, 0.9));
+          g.fillStyle = C.gold; g.shadowColor = C.gold; g.shadowBlur = 24; g.fillRect(x1 - 100, base - h1, 200, h1);
+          g.fillStyle = C.red; g.shadowColor = C.red; g.fillRect(x2 - 100, base - h2, 200, h2); g.shadowBlur = 0;
+          K.label("Jackpot", x1, base + 40, 38, "#fff"); K.label("120 Mio. €", x1, base - h1 - 40, 44, C.gold);
+          K.label("Alle Tipps", x2, base + 40, 38, "#fff");
+          if (t > 21.2) K.label(de(Math.round(279676320 * eout(prog(t, 21.0, 0.9)) / 1e6)) + " Mio. €", x2, base - h2 - 40, 44, C.red);
+          K.glowLine(160, base, 920, base, "rgba(255,255,255,0.5)", 3);
+          g.restore();
+          ih = "139.838.160 × 2 € pro Tipp";
+        }
+
+        // Schluss
+        if (t >= 25.0) {
+          const a = prog(t, 25.0, 0.4);
+          g.save(); g.globalAlpha = a;
+          K.icon("trophy", 540, 1180, 360, 1, C.gold, "rgba(255,201,77,0.12)");
+          g.restore();
+          ih = "Nur 50 % der Einsätze gehen an Gewinner";
+        }
+
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[2.6, 0.35], [22.6, 0.35]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
