@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      :root { --mint: #5ef2c2; --gold: #ffc94d; --red: #ff4d5e; --orange: #ff9a3c; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0a0712; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: "Montserrat", sans-serif; color: #fff; }
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .line { position: absolute; left: 0; width: 1080px; text-align: center; font-weight: 800; }
+      .line span { display: inline-block; }
+      #title { top: 205px; font-size: 64px; line-height: 1.1; }
+      #title .r { color: var(--red); text-shadow: 0 0 26px rgba(255, 77, 94, 0.7); }
+      #info { top: 370px; font-size: 48px; font-weight: 700; white-space: nowrap; }
+      #info b { color: var(--gold); }
+      #alarm { top: 560px; font-size: 62px; color: var(--red); letter-spacing: 2px; text-shadow: 0 0 30px rgba(255, 77, 94, 0.8); }
+      #clock { top: 650px; font-family: "JetBrains Mono", monospace; font-size: 150px; font-weight: 800; color: #fff; text-shadow: 0 0 40px rgba(255, 77, 94, 0.9); }
+      #clock-sub { top: 830px; font-size: 38px; color: #ffb3ba; font-weight: 700; }
+      .cap { top: 1440px; font-size: 52px; line-height: 1.2; text-shadow: 0 4px 18px rgba(0, 0, 0, 0.95); }
+      .cap small { display: block; font-size: 34px; font-weight: 700; color: #c9c3e0; margin-top: 8px; }
+      .g { color: var(--mint); } .y { color: var(--gold); } .o { color: var(--orange); } .r { color: var(--red); }
+      #what { top: 760px; font-size: 84px; line-height: 1.1; text-shadow: 0 0 30px rgba(255, 201, 77, 0.5); }
+      .big { top: 1430px; font-size: 64px; font-weight: 900; text-shadow: 0 0 30px rgba(0, 0, 0, 0.9), 0 4px 18px rgba(0, 0, 0, 0.95); white-space: nowrap; }
+      .big small { display: block; font-size: 34px; font-weight: 700; color: #e6e1f5; margin-top: 10px; white-space: nowrap; }
+      #end1 { top: 1440px; font-size: 48px; line-height: 1.25; }
+      #cta { top: 1420px; font-size: 60px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+
+      <div id="title" class="line clip" data-start="0" data-duration="30" data-track-index="1"><span>Nur <span class="r">7 Stunden</span><br />Vorwarnung!</span></div>
+      <div id="info" class="line clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="alarm" class="line clip" data-start="0" data-duration="8.0" data-track-index="3"><span id="alarm-in">ASTEROID ENTDECKT!</span></div>
+      <div id="clock" class="line clip" data-start="0" data-duration="8.3" data-track-index="4"><span id="clock-in">07:22:00</span></div>
+      <div id="clock-sub" class="line clip" data-start="0.3" data-duration="7.7" data-track-index="5"><span id="clock-sub-in">bis zum Einschlag</span></div>
+
+      <div id="c1" class="line cap clip" data-start="1.2" data-duration="5.0" data-track-index="6"><span id="c1-in">6. Sept. 2026: Teleskop in Arizona<small>entdeckt ihn erst kurz vor dem Einschlag</small></span></div>
+      <div id="c2" class="line cap clip" data-start="8.2" data-duration="2.3" data-track-index="6"><span id="c2-in">Nur 1 Meter groß: <span class="g">verglüht!</span><small>über dem Indischen Ozean · Glück gehabt</small></span></div>
+      <div id="what" class="line clip" data-start="10.5" data-duration="1.55" data-track-index="7"><span id="what-in">Aber was, wenn er<br /><span class="y">GRÖSSER</span> wäre?</span></div>
+
+      <div id="s0" class="line big clip" data-start="13.0" data-duration="1.4" data-track-index="6"><span id="s0-in"><span class="g">Verglüht. Harmlos.</span><small>kommt öfter vor, als du denkst</small></span></div>
+      <div id="s1" class="line big clip" data-start="15.4" data-duration="1.4" data-track-index="6"><span id="s1-in"><span class="y">1.500 Verletzte</span><small>Tscheljabinsk, Russland 2013</small></span></div>
+      <div id="s2" class="line big clip" data-start="17.8" data-duration="1.4" data-track-index="6"><span id="s2-in"><span class="o">80 Mio. Bäume umgeknickt</span><small>Tunguska, Sibirien 1908</small></span></div>
+      <div id="s3" class="line big clip" data-start="20.2" data-duration="1.4" data-track-index="6"><span id="s3-in"><span class="r">Eine ganze Großstadt: weg</span><small>darum suchen Teleskope den Himmel ab</small></span></div>
+      <div id="s4" class="line big clip" data-start="22.6" data-duration="1.4" data-track-index="6"><span id="s4-in"><span class="r">Folgen für die ganze Welt</span><small>Ernten, Klima, Wetter</small></span></div>
+      <div id="s5" class="line big clip" data-start="25.0" data-duration="1.4" data-track-index="6"><span id="s5-in"><span class="r">Das Ende der Dinosaurier</span><small>vor 66 Millionen Jahren</small></span></div>
+
+      <div id="end1" class="line clip" data-start="26.4" data-duration="1.6" data-track-index="6"><span id="end1-in">Den nächsten sehen wir vielleicht<br />auch erst <span class="r">7 Stunden</span> vorher …</span></div>
+      <div id="cta" class="line clip" data-start="28.0" data-duration="2.0" data-track-index="6"><span id="cta-in">Was würdest <span class="y">DU</span> in<br /><span class="r">7 Stunden</span> machen?</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="8" data-volume="1"></audio>
+    </div>
+
+    <script>
+      // ---------------- Texte ----------------
+      const tl = gsap.timeline({ paused: true });
+      const pop = (id, at, dur) => {
+        tl.from("#" + id, { opacity: 0, y: 30, scale: 0.85, duration: 0.25, ease: "back.out(2.4)" }, at);
+        if (dur) tl.to("#" + id, { opacity: 0, duration: 0.15 }, at + dur - 0.17);
+      };
+      const slam = (id, at, dur) => {
+        tl.from("#" + id, { opacity: 0, scale: 1.7, duration: 0.22, ease: "power3.out" }, at);
+        if (dur) tl.to("#" + id, { opacity: 0, duration: 0.15 }, at + dur - 0.17);
+      };
+      // Alarm blinkt
+      tl.from("#alarm-in", { opacity: 0, scale: 1.5, duration: 0.2 }, 0);
+      for (let i = 0; i < 7; i++) tl.to("#alarm-in", { opacity: 0.25, duration: 0.18, yoyo: true, repeat: 1 }, 0.5 + i * 1.0);
+      tl.to("#alarm-in", { opacity: 0, duration: 0.15 }, 7.83);
+      tl.from("#clock-in", { opacity: 0, scale: 0.6, duration: 0.3, ease: "back.out(2)" }, 0.05);
+      tl.to("#clock-in", { scale: 1.25, duration: 0.15 }, 7.9);
+      tl.to("#clock-in", { opacity: 0, duration: 0.15 }, 8.12);
+      tl.from("#clock-sub-in", { opacity: 0, duration: 0.3 }, 0.3);
+      tl.to("#clock-sub-in", { opacity: 0, duration: 0.15 }, 7.83);
+      pop("c1-in", 1.2, 5.0);
+      pop("c2-in", 8.2, 2.3);
+      slam("what-in", 10.5, 1.55);
+      [13.0, 15.4, 17.8, 20.2, 22.6, 25.0].forEach((a, i) => slam("s" + i + "-in", a, 1.4));
+      pop("end1-in", 26.4, 1.6);
+      slam("cta-in", 28.0);
+      tl.to("#cta-in", { scale: 1.06, duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" }, 28.4);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      // ---------------- Zeichnen ----------------
+      const cv = document.getElementById("stage");
+      const g = cv.getContext("2d");
+      const info = document.getElementById("info-in");
+      const clock = document.getElementById("clock-in");
+      const cl = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+      const lerp = (a, b, f) => a + (b - a) * f;
+      const eio = (f) => (f < 0.5 ? 4 * f * f * f : 1 - Math.pow(-2 * f + 2, 3) / 2);
+      const eout = (f) => 1 - Math.pow(1 - f, 3);
+      const ein = (f) => f * f;
+      const prog = (t, a, d) => cl((t - a) / d);
+      function rnd(i) { const x = Math.sin(i * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); }
+      function label(txt, x, y, size, col, align = "center", weight = 800) {
+        g.font = weight + " " + size + "px Montserrat, sans-serif"; g.textAlign = align; g.textBaseline = "middle";
+        g.lineWidth = 7; g.strokeStyle = "rgba(10,7,20,0.9)"; g.strokeText(txt, x, y); g.fillStyle = col; g.fillText(txt, x, y);
+      }
+      const STARS = Array.from({ length: 160 }, (_, i) => [rnd(i) * 1080, rnd(i + 500) * 1920, 0.6 + rnd(i + 900) * 2.2, rnd(i + 1300)]);
+      function bg(t, redA) {
+        const gr = g.createLinearGradient(0, 0, 0, 1920);
+        gr.addColorStop(0, "#1a1028"); gr.addColorStop(0.55, "#0d0918"); gr.addColorStop(1, "#05040a");
+        g.fillStyle = gr; g.fillRect(0, 0, 1080, 1920);
+        STARS.forEach((s, i) => { g.fillStyle = "rgba(255,255,255," + (0.25 + 0.6 * s[3]) * (0.7 + 0.3 * Math.sin(t * 3 + i)) + ")"; g.fillRect(s[0], s[1], s[2], s[2]); });
+        if (redA > 0) {
+          const rg = g.createRadialGradient(540, 960, 400, 540, 960, 1150);
+          rg.addColorStop(0, "rgba(255,40,60,0)"); rg.addColorStop(1, "rgba(255,40,60," + redA + ")");
+          g.fillStyle = rg; g.fillRect(0, 0, 1080, 1920);
+        }
+      }
+
+      // Asteroid (gefüllte, unregelmäßige Form)
+      const ROCK = Array.from({ length: 30 }, (_, i) => 1 + 0.13 * (rnd(i + 70) - 0.5) + 0.07 * Math.sin(i * 1.7));
+      const CRAT = Array.from({ length: 7 }, (_, i) => [(rnd(i + 200) - 0.5) * 1.1, (rnd(i + 300) - 0.5) * 1.1, 0.08 + rnd(i + 400) * 0.14]);
+      function rock(x, y, r, rot, heat) {
+        g.save(); g.translate(x, y); g.rotate(rot);
+        if (heat > 0) { g.shadowColor = "rgba(255,140,60," + heat + ")"; g.shadowBlur = 50 * heat; }
+        g.beginPath();
+        ROCK.forEach((k, i) => { const a = (i / ROCK.length) * Math.PI * 2; const px = Math.cos(a) * r * k, py = Math.sin(a) * r * k; i ? g.lineTo(px, py) : g.moveTo(px, py); });
+        g.closePath();
+        const gr = g.createRadialGradient(-r * 0.35, -r * 0.35, r * 0.1, 0, 0, r * 1.1);
+        gr.addColorStop(0, "#9b8c80"); gr.addColorStop(0.6, "#5e5149"); gr.addColorStop(1, "#2e2622");
+        g.fillStyle = gr; g.fill(); g.shadowBlur = 0;
+        g.save(); g.clip();
+        CRAT.forEach((c) => { g.fillStyle = "rgba(30,22,18,0.45)"; g.beginPath(); g.arc(c[0] * r, c[1] * r, c[2] * r, 0, Math.PI * 2); g.fill(); g.strokeStyle = "rgba(200,180,160,0.25)"; g.lineWidth = Math.max(1, r * 0.02); g.stroke(); });
+        g.restore();
+        if (heat > 0) { g.strokeStyle = "rgba(255,170,80," + heat + ")"; g.lineWidth = Math.max(2, r * 0.05); g.stroke(); }
+        g.restore();
+      }
+
+      // ---------- Szene 1: Countdown + Anflug ----------
+      const IMPACT = 8.0;
+      function earth(cx, cy, r) {
+        g.save();
+        g.shadowColor = "#5fb8ff"; g.shadowBlur = 60;
+        const gr = g.createRadialGradient(cx - r * 0.3, cy - r * 0.4, r * 0.1, cx, cy, r);
+        gr.addColorStop(0, "#4a9cf0"); gr.addColorStop(1, "#123a7a");
+        g.fillStyle = gr; g.beginPath(); g.arc(cx, cy, r, 0, Math.PI * 2); g.fill(); g.shadowBlur = 0;
+        g.beginPath(); g.arc(cx, cy, r, 0, Math.PI * 2); g.clip();
+        // Australien (vereinfacht)
+        g.fillStyle = "#3fae7a";
+        g.beginPath(); g.ellipse(cx + r * 0.32, cy - r * 0.62, r * 0.2, r * 0.11, 0.15, 0, Math.PI * 2); g.fill();
+        g.beginPath(); g.ellipse(cx - r * 0.55, cy - r * 0.5, r * 0.2, r * 0.3, 0.4, 0, Math.PI * 2); g.fill();
+        g.restore();
+        g.strokeStyle = "rgba(140,210,255,0.8)"; g.lineWidth = 5; g.beginPath(); g.arc(cx, cy, r + 4, 0, Math.PI * 2); g.stroke();
+      }
+      function scene1(t) {
+        const a = 1 - prog(t, 10.3, 0.4);
+        if (a <= 0) return;
+        g.save(); g.globalAlpha = a;
+        const ex = 540, ey = 1720, er = 720;
+        earth(ex, ey, er);
+        label("Australien", ex + er * 0.32, ey - er * 0.62 - 4, 30, "#e9fff4");
+        label("Indischer Ozean", ex - 120, ey - er * 0.82, 30, "#cfe8ff", "center", 700);
+        // Flugbahn
+        const sx = 60, sy = 470, tx = 610, ty = 1035;
+        const f = cl((t - 0.3) / (IMPACT - 0.3));
+        const pf = Math.pow(f, 2.2);
+        const x = lerp(sx, tx, pf), y = lerp(sy, ty, pf);
+        if (t < IMPACT) {
+          g.setLineDash([10, 14]); g.strokeStyle = "rgba(255,120,130,0.55)"; g.lineWidth = 3;
+          g.beginPath(); g.moveTo(x, y); g.lineTo(tx, ty); g.stroke(); g.setLineDash([]);
+          // Zielkreuz
+          const p = 0.5 + 0.5 * Math.sin(t * 10);
+          g.strokeStyle = "rgba(255,77,94," + (0.5 + 0.5 * p) + ")"; g.lineWidth = 4;
+          g.beginPath(); g.arc(tx, ty, 26 + 10 * p, 0, Math.PI * 2); g.stroke();
+          // Schweif
+          const heat = cl((f - 0.6) / 0.4);
+          const tg = g.createLinearGradient(x, y, x - (tx - sx) * 0.18, y - (ty - sy) * 0.18);
+          tg.addColorStop(0, "rgba(255,170,80," + (0.2 + 0.7 * heat) + ")"); tg.addColorStop(1, "rgba(255,120,60,0)");
+          g.strokeStyle = tg; g.lineWidth = 18 + 20 * heat; g.lineCap = "round";
+          g.beginPath(); g.moveTo(x, y); g.lineTo(x - (tx - sx) * 0.18, y - (ty - sy) * 0.18); g.stroke();
+          rock(x, y, 26, t * 2, heat);
+        } else {
+          // Feuerball + verglühen
+          const d = t - IMPACT;
+          const r = 40 + d * 260, al = cl(1 - d / 0.9);
+          const rg = g.createRadialGradient(tx, ty, 0, tx, ty, r);
+          rg.addColorStop(0, "rgba(255,255,230," + al + ")"); rg.addColorStop(0.4, "rgba(255,170,70," + al * 0.8 + ")"); rg.addColorStop(1, "rgba(255,80,40,0)");
+          g.fillStyle = rg; g.fillRect(tx - r, ty - r, 2 * r, 2 * r);
+          for (let i = 0; i < 14; i++) {
+            const an = rnd(i + 50) * Math.PI * 2, sp = 120 + rnd(i + 60) * 260;
+            g.fillStyle = "rgba(255,200,120," + al + ")"; g.beginPath(); g.arc(tx + Math.cos(an) * sp * d, ty + Math.sin(an) * sp * d * 0.6, 4, 0, Math.PI * 2); g.fill();
+          }
+        }
+        g.restore();
+      }
+
+      // ---------- Szene 3: immer größer ----------
+      const STEPS = [
+        { d: 1, name: "1 m", cmp: "kleiner als du", obj: "you", oh: 1.75, col: "#5ef2c2" },
+        { d: 20, name: "20 m", cmp: "höher als ein Haus", obj: "house", oh: 10, col: "#ffc94d" },
+        { d: 50, name: "50 m", cmp: "fast so lang wie ein Jumbo-Jet", obj: "jet", oh: 70, col: "#ff9a3c" },
+        { d: 140, name: "140 m", cmp: "fast so hoch wie der Kölner Dom", obj: "dom", oh: 157, col: "#ff6a4d" },
+        { d: 1000, name: "1 km", cmp: "höher als der Burj Khalifa", obj: "burj", oh: 828, col: "#ff4d5e" },
+        { d: 10000, name: "10 km", cmp: "höher als der Mount Everest", obj: "everest", oh: 8849, col: "#ff2d6f" },
+      ];
+      const S0 = 12.0, SD = 2.4, GY = 1300, AX = 720, AR = 165;
+      function stepAt(t) { return cl(Math.floor((t - S0) / SD), 0, 5); }
+
+      function icon(kind, x, y, h) {
+        g.beginPath();
+        if (kind === "you") {
+          g.arc(x, y - h * 0.9, h * 0.1, 0, Math.PI * 2);
+          g.moveTo(x, y - h * 0.8); g.lineTo(x, y - h * 0.42);
+          g.moveTo(x - h * 0.13, y); g.lineTo(x, y - h * 0.42); g.lineTo(x + h * 0.13, y);
+          g.moveTo(x - h * 0.2, y - h * 0.55); g.lineTo(x, y - h * 0.72); g.lineTo(x + h * 0.2, y - h * 0.55);
+        } else if (kind === "house") {
+          g.moveTo(x - h * 0.55, y); g.lineTo(x - h * 0.55, y - h * 0.55); g.lineTo(x, y - h); g.lineTo(x + h * 0.55, y - h * 0.55); g.lineTo(x + h * 0.55, y); g.closePath();
+          g.rect(x - h * 0.12, y - h * 0.33, h * 0.24, h * 0.33);
+        } else if (kind === "jet") { // h = Länge
+          const L = h, H = L * 0.25;
+          g.moveTo(x - L / 2, y - H * 0.5); g.lineTo(x + L * 0.42, y - H * 0.5); g.quadraticCurveTo(x + L / 2, y - H * 0.35, x + L * 0.42, y - H * 0.2);
+          g.lineTo(x - L * 0.45, y - H * 0.2); g.lineTo(x - L / 2, y - H * 0.95); g.lineTo(x - L * 0.42, y - H * 0.95); g.lineTo(x - L * 0.36, y - H * 0.5);
+          g.moveTo(x - L * 0.05, y - H * 0.35); g.lineTo(x - L * 0.2, y - H * 0.02); g.lineTo(x - L * 0.12, y - H * 0.02); g.lineTo(x + L * 0.08, y - H * 0.35);
+        } else if (kind === "dom") {
+          g.moveTo(x - h * 0.45, y); g.lineTo(x - h * 0.45, y - h * 0.6); g.lineTo(x - h * 0.36, y - h); g.lineTo(x - h * 0.27, y - h * 0.6);
+          g.lineTo(x - h * 0.27, y - h * 0.4); g.lineTo(x + h * 0.27, y - h * 0.4); g.lineTo(x + h * 0.27, y - h * 0.6);
+          g.lineTo(x + h * 0.36, y - h); g.lineTo(x + h * 0.45, y - h * 0.6); g.lineTo(x + h * 0.45, y); g.closePath();
+        } else if (kind === "burj") {
+          g.moveTo(x - h * 0.13, y); g.lineTo(x - h * 0.1, y - h * 0.35); g.lineTo(x - h * 0.06, y - h * 0.36); g.lineTo(x - h * 0.04, y - h * 0.62);
+          g.lineTo(x - h * 0.015, y - h * 0.64); g.lineTo(x, y - h); g.lineTo(x + h * 0.025, y - h * 0.7); g.lineTo(x + h * 0.06, y - h * 0.5); g.lineTo(x + h * 0.1, y - h * 0.48); g.lineTo(x + h * 0.13, y); g.closePath();
+        } else if (kind === "everest") {
+          g.moveTo(x - h * 0.75, y); g.lineTo(x - h * 0.3, y - h * 0.6); g.lineTo(x - h * 0.12, y - h * 0.5); g.lineTo(x + h * 0.08, y - h); g.lineTo(x + h * 0.3, y - h * 0.72); g.lineTo(x + h * 0.42, y - h * 0.78); g.lineTo(x + h * 0.75, y); g.closePath();
+        }
+      }
+
+      function scene3(t) {
+        const a = prog(t, 11.9, 0.35);
+        if (a <= 0) return 0;
+        const si = stepAt(t), st = STEPS[si], s = S0 + si * SD;
+        // Größe: weich zum nächsten Schritt wachsen
+        const prev = si > 0 ? STEPS[si - 1].d : 1;
+        const gf = si > 0 ? eio(prog(t, s, 0.45)) : 1;
+        const D = Math.exp(lerp(Math.log(prev), Math.log(st.d), gf));
+        const ppm = (2 * AR) / D;
+        g.save(); g.globalAlpha = a;
+        // Boden
+        g.fillStyle = "#0e0a16"; g.fillRect(0, GY, 1080, 1920 - GY);
+        g.strokeStyle = "#ffb347"; g.shadowColor = "#ffb347"; g.shadowBlur = 20; g.lineWidth = 6;
+        g.beginPath(); g.moveTo(0, GY); g.lineTo(1080, GY); g.stroke(); g.shadowBlur = 0;
+        // Vergleichsobjekte (alle maßstabsgetreu)
+        STEPS.forEach((o, i) => {
+          const hp = o.oh * ppm;
+          const oa = i === si ? cl(gf * 1.6 - 0.3) : i === si - 1 ? 1 - cl(gf * 1.6) : 0;
+          if (oa <= 0.01) return;
+          g.save(); g.globalAlpha = a * oa;
+          g.strokeStyle = "#8fe9ff"; g.fillStyle = "rgba(120,200,255,0.10)"; g.lineWidth = 5; g.lineJoin = "round"; g.lineCap = "round";
+          g.shadowColor = "#5fd0ff"; g.shadowBlur = 14;
+          const ox = 300;
+          icon(o.obj, ox, GY, hp); g.fill(); g.stroke(); g.shadowBlur = 0;
+          if (i === si) label(o.cmp, ox, Math.max(560, GY - (o.obj === "jet" ? hp * 0.25 : hp) - 36), 32, "#ffffff");
+          g.restore();
+        });
+        // Einschlag
+        const ti = s + 1.0, d = t - ti;
+        const ay = GY - AR - 70;
+        let yy = ay, vis = 1;
+        if (d > -0.25 && d < 0) yy = lerp(ay, GY - AR * 0.4, ein((d + 0.25) / 0.25));
+        if (d >= 0 && d < 0.5) vis = 0;
+        if (d >= 0.5) { yy = ay; vis = cl((d - 0.5) / 0.3); }
+        if (vis > 0) { g.save(); g.globalAlpha = a * vis; rock(AX, yy, AR, t * 0.6, d > -0.25 && d < 0 ? 1 : 0.25); g.restore(); }
+        if (vis > 0) label(st.name, AX, yy - AR - 40, 44, st.col);
+        if (d >= 0 && d < 1.0) {
+          const pw = (si + 1) / 6;
+          const rr = 60 + eout(d / 1.0) * (300 + 900 * pw);
+          const al = 1 - d / 1.0;
+          g.strokeStyle = st.col; g.globalAlpha = a * al; g.lineWidth = 10 + 16 * pw; g.shadowColor = st.col; g.shadowBlur = 40;
+          g.beginPath(); g.ellipse(AX, GY, rr, rr * 0.28, 0, 0, Math.PI * 2); g.stroke(); g.shadowBlur = 0;
+          const fr = 80 + 260 * pw * eout(cl(d / 0.4));
+          const rg = g.createRadialGradient(AX, GY - 40, 0, AX, GY - 40, fr);
+          rg.addColorStop(0, "rgba(255,250,220," + al + ")"); rg.addColorStop(0.5, "rgba(255,160,60," + al * 0.8 + ")"); rg.addColorStop(1, "rgba(255,60,40,0)");
+          g.fillStyle = rg; g.fillRect(AX - fr, GY - 40 - fr, 2 * fr, 2 * fr);
+        }
+        g.restore();
+        return si;
+      }
+
+      // Gefahr-Balken
+      function danger(t) {
+        if (t < 11.9) return;
+        const si = stepAt(t), s = S0 + si * SD;
+        const lit = t >= s + 1.0 ? si + 1 : si;
+        const x0 = 150, w = 780, y = 500, n = 6, gap = 10, sw = (w - gap * (n - 1)) / n;
+        g.save(); g.globalAlpha = prog(t, 11.9, 0.3);
+        label("GEFAHR", 540, y - 30, 30, "#ffffff");
+        for (let i = 0; i < n; i++) {
+          const on = i < lit;
+          g.fillStyle = on ? STEPS[i].col : "rgba(255,255,255,0.12)";
+          if (on) { g.shadowColor = STEPS[i].col; g.shadowBlur = 16; }
+          g.beginPath(); g.roundRect(x0 + i * (sw + gap), y, sw, 26, 8); g.fill(); g.shadowBlur = 0;
+        }
+        g.restore();
+      }
+
+      // Schluss: Countdown-Ring
+      function scene4(t) {
+        const a = prog(t, 26.4, 0.4);
+        if (a <= 0) return;
+        g.save(); g.globalAlpha = a;
+        g.fillStyle = "#08060e"; g.fillRect(0, 440, 1080, 1480);
+        const p = 0.5 + 0.5 * Math.sin(t * 6);
+        g.strokeStyle = "rgba(255,77,94," + (0.5 + 0.5 * p) + ")"; g.lineWidth = 8; g.shadowColor = "#ff4d5e"; g.shadowBlur = 30;
+        g.beginPath(); g.arc(540, 930, 300, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * (7 / 7.37)); g.stroke(); g.shadowBlur = 0;
+        g.font = "800 150px 'JetBrains Mono', monospace"; g.textAlign = "center"; g.textBaseline = "middle";
+        g.fillStyle = "#ffffff"; g.fillText("07:00:00", 540, 930);
+        rock(540, 1360, 50, t, 0.6);
+        g.restore();
+      }
+
+      let lastInfo = "", lastClock = "";
+      function setInfo(h) { if (h !== lastInfo) { info.innerHTML = h; lastInfo = h; } }
+      function pad(n) { return String(n).padStart(2, "0"); }
+
+      function renderAt(t) {
+        // Wackeln
+        let sh = 0;
+        const d0 = t - IMPACT; if (d0 > 0 && d0 < 0.4) sh += 10 * Math.exp(-d0 * 8) * Math.sin(d0 * 70);
+        for (let i = 0; i < 6; i++) { const d = t - (S0 + i * SD + 1.0); if (d > 0 && d < 0.6) sh += (6 + 7 * i) * Math.exp(-d * 7) * Math.sin(d * 75); }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        const redA = t < IMPACT ? 0.25 + 0.2 * Math.sin(t * 6.3) : 0;
+        bg(t, redA);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.7);
+        scene1(t);
+        scene3(t);
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        danger(t);
+        scene4(t);
+        // Blitze
+        const flashes = [IMPACT].concat([0, 1, 2, 3, 4, 5].map((i) => S0 + i * SD + 1.0));
+        flashes.forEach((ft, i) => { const d = t - ft; if (d > 0 && d < 0.3) { g.fillStyle = "rgba(255,245,230," + (0.25 + 0.07 * i) * (1 - d / 0.3) + ")"; g.fillRect(0, 0, 1080, 1920); } });
+
+        // Countdown 07:22:00 -> 00:00:00
+        const R = Math.round(26520 * Math.pow(1 - cl((t - 0.3) / (IMPACT - 0.3)), 1.15));
+        const ct = pad(Math.floor(R / 3600)) + ":" + pad(Math.floor((R % 3600) / 60)) + ":" + pad(R % 60);
+        if (ct !== lastClock) { clock.textContent = ct; lastClock = ct; }
+
+        if (t < 10.5) setInfo("Größe: <b>1 Meter</b>");
+        else if (t < 11.9) setInfo("Und wenn …");
+        else if (t < 26.4) { const st = STEPS[stepAt(t)]; setInfo('Größe: <b style="color:' + st.col + '">' + st.name + "</b>"); }
+        else setInfo("Das passiert <b>wirklich</b>.");
+      }
+
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
