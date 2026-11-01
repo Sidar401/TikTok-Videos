@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      .chips { top: 1440px; }
+      .big { top: 1420px; font-size: 64px; }
+      .big small { font-size: 36px; }
+      #cta { top: 1440px; font-size: 58px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Mehr Sterne oder mehr<br /><span class="y">Sandkörner?</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="chips" class="line chips clip" data-start="1.0" data-duration="1.7" data-track-index="3"><span id="k1" class="chip">Sand!</span><span id="k2" class="chip">Sterne!</span></div>
+      <div id="c1" class="line cap clip" data-start="2.8" data-duration="5.2" data-track-index="3"><span id="c1-in">Alle Sandkörner an allen<br /><span class="y">Stränden der Welt:</span></span></div>
+      <div id="c2" class="line cap clip" data-start="8.0" data-duration="4.0" data-track-index="3"><span id="c2-in">Nachts siehst du nur<br />ca. <span class="g">5.000 Sterne</span> …</span></div>
+      <div id="c3" class="line cap clip" data-start="12.0" data-duration="4.0" data-track-index="3"><span id="c3-in">Unsere Milchstraße allein:<br /><span class="v">100 bis 400 Milliarden</span></span></div>
+      <div id="c4" class="line cap clip" data-start="16.0" data-duration="4.0" data-track-index="3"><span id="c4-in">Und es gibt <span class="o">Hunderte Milliarden</span><br />Galaxien!</span></div>
+      <div id="c5" class="line cap clip" data-start="20.0" data-duration="4.5" data-track-index="3"><span id="c5-in">Sterne im ganzen Universum:</span></div>
+      <div id="b1" class="line big clip" data-start="24.5" data-duration="3.0" data-track-index="3"><span id="b1-in"><span class="g glow-g">Über 1.000-mal mehr Sterne!</span><small>als Sandkörner auf der Erde</small></span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Hast <span class="y">DU</span> richtig getippt?<br /><span class="y">Sand</span> oder <span class="g">Sterne</span>?</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      ["k1", "k2"].forEach((id, i) => tl.from("#" + id, { opacity: 0, scale: 0.4, y: 30, duration: 0.25, ease: "back.out(3)" }, 1.0 + i * 0.5));
+      tl.to("#chips .chip", { opacity: 0, duration: 0.15 }, 2.55);
+      T.pop("c1-in", 2.8, 5.2); T.pop("c2-in", 8.0, 4.0); T.pop("c3-in", 12.0, 4.0); T.pop("c4-in", 16.0, 4.0); T.pop("c5-in", 20.0, 4.5);
+      T.slam("b1-in", 24.5, 3.0); T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+      const SUP = (n) => String(n).split("").map((d) => "⁰¹²³⁴⁵⁶⁷⁸⁹"[+d]).join("");
+      const big = (exp, f) => { const v = Math.pow(10, exp * f); return v < 1e15 ? de(Math.round(v)) : (v / Math.pow(10, Math.floor(Math.log10(v)))).toFixed(1).replace(".", ",") + " · 10" + SUP(Math.floor(Math.log10(v))); };
+
+      function galaxy(x, y, r, rot, n, seed, a = 1) {
+        g.save(); g.globalAlpha *= a;
+        for (let i = 0; i < n; i++) { const arm = i % 2, d = Math.pow(rnd(i + seed), 0.6) * r, an = arm * Math.PI + d / r * 4 + rot + (rnd(i + seed + 5) - 0.5) * 0.6;
+          g.fillStyle = ["#c9b8ff", "#8fe9ff", "#ffe2a8"][i % 3]; g.fillRect(x + Math.cos(an) * d, y + Math.sin(an) * d * 0.55, 2, 2); }
+        K.dot(x, y, r * 0.08, "#fff4d6", r * 0.3); g.restore();
+      }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: t < 8 ? 0.2 : 1 });
+        const sh = K.shake(t, [[24.5, 14]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+        if (t < 8.2) {
+          const a = 1 - prog(t, 7.9, 0.3);
+          g.save(); g.globalAlpha = a;
+          // Strand
+          const gr = g.createLinearGradient(0, 1000, 0, 1400); gr.addColorStop(0, "#e9c78a"); gr.addColorStop(1, "#b98b4a");
+          g.fillStyle = "#2f6fb8"; g.fillRect(0, 760, 1080, 240); g.fillStyle = gr; g.beginPath(); g.moveTo(0, 1000); g.quadraticCurveTo(540, 940, 1080, 1000); g.lineTo(1080, 1400); g.lineTo(0, 1400); g.fill();
+          for (let i = 0; i < 500; i++) { g.fillStyle = "rgba(120,80,30," + (0.3 + 0.4 * rnd(i)) + ")"; g.fillRect(rnd(i + 1) * 1080, 1000 + rnd(i + 2) * 400, 3, 3); }
+          if (t > 2.8) K.mono(big(18.875, eout(prog(t, 2.9, 3.8))), 540, 620, t > 6 ? 60 : 64, "#ffffff", C.gold);
+          if (t > 6.8) K.label("7,5 Trillionen Sandkörner", 540, 700, 40, C.gold);
+          g.restore();
+          ih = t < 2.8 ? "Rate mal!" : "Schätzung der Uni Hawaii";
+        } else if (t < 12.2) {
+          for (let i = 0; i < 120; i++) K.dot(rnd(i) * 1080, 520 + rnd(i + 3) * 900, 2 + rnd(i + 5) * 3, "#fff", 10);
+          K.mono("5.000", 540, 620, 96, "#ffffff", C.mint);
+          ih = "Mit bloßem Auge";
+        } else if (t < 16.2) {
+          const a = prog(t, 12.0, 0.4);
+          galaxy(540, 980, 420, (t - 12) * 0.2, 1400, 7, a);
+          K.mono(de(Math.round(400e9 * eout(prog(t, 12.2, 2.4)))), 540, 620, 80, "#ffffff", C.purple);
+          ih = "Unsere Galaxie";
+        } else if (t < 20.2) {
+          const z = 1 - 0.85 * eout(prog(t, 16.0, 2.0));
+          for (let i = 0; i < 60; i++) { const x = 540 + (rnd(i) - 0.5) * 1100, y = 980 + (rnd(i + 2) - 0.5) * 900; galaxy(x, y, (14 + rnd(i + 4) * 26) * (1 + (1 - z) * 0), rnd(i) * 6, 40, i * 13, prog(t, 16.3, 0.6)); }
+          galaxy(540, 980, 420 * z, (t - 12) * 0.2, 900, 7, 1);
+          ih = "Galaxien, so weit man sehen kann";
+        } else {
+          for (let i = 0; i < 260; i++) K.dot(rnd(i) * 1080, 480 + rnd(i + 3) * 1000, 1.5 + rnd(i + 5) * 2.5, ["#fff", "#c9b8ff", "#8fe9ff"][i % 3], 8);
+          const f = eout(prog(t, 20.2, 3.6));
+          K.mono(big(22, f), 540, 620, 64, "#ffffff", C.mint);
+          if (t > 24.5) { K.label("Sand: 7,5 Trillionen", 540, 760, 40, C.gold); K.label("Sterne: über 10.000 Trillionen", 540, 820, 40, C.mint); }
+          ih = "Mindestens 10.000 Trillionen";
+        }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[24.5, 0.35]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
