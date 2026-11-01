@@ -30,6 +30,11 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
 - Ziel: ab ca. Mitte Nov. 2026 **ca. 5 Videos pro Tag**.
 - Freigegebenes Muster (Nutzer: „super“, 31.10.): `shop/spielball/` – 4 Videos, Links in `shop/spielball/videos.md`.
 
+## Kanal 4: Wissens-Kanal (Name noch offen)
+- Stil wie die viralen Mathe/Physik-Videos: Frage → Zahl zählt hoch → Überraschung → Frage an Zuschauer.
+- **Regeln in `wissen/REGELN.md` IMMER einhalten** (große Hook am Anfang, „Folg mir“-Aufruf am Ende, 30 s, ohne Musik).
+- Baukasten: `wissen/kit/` · Ideen & Post-Pläne: `wissen/`.
+
 ## Regeln vom Nutzer
 - Alles auf Deutsch, Antworten sehr kurz und iPad-tauglich, ohne Fachwörter
 - Higgsfield nur für Kanal 2 (siehe oben), sonst nicht (kostet Credits)
