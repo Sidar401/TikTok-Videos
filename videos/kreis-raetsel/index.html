@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      .big { top: 1420px; font-size: 76px; }
+      .big small { font-size: 36px; }
+      #cta { top: 1440px; font-size: 58px; line-height: 1.2; }
+      #guess { top: 1430px; }
+      #guess .chip { font-size: 70px; border-color: var(--gold); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Wie viele Stücke<br /><span class="y">entstehen?</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="c0" class="line cap clip" data-start="0.6" data-duration="1.9" data-track-index="3"><span id="c0-in">Punkte auf einen Kreis –<br />alle miteinander <span class="y">verbinden</span>.</span></div>
+      <div id="c1" class="line cap clip" data-start="13.4" data-duration="3.0" data-track-index="3"><span id="c1-in">1, 2, 4, 8, 16 …<br /><span class="g">immer doppelt!</span></span></div>
+      <div id="guess" class="line chips clip" data-start="16.4" data-duration="2.6" data-track-index="3"><span id="guess-in" class="chip">Also 32?</span></div>
+      <div id="b1" class="line big clip" data-start="20.8" data-duration="2.4" data-track-index="3"><span id="b1-in"><span class="r glow-r">NEIN! Nur 31!</span></span></div>
+      <div id="c2" class="line cap clip" data-start="23.2" data-duration="4.3" data-track-index="3"><span id="c2-in">Muster können <span class="r">lügen!</span><small>danach: 57, 99, 163 …</small></span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Hättest <span class="y">DU</span> 32 gesagt?<br /><span class="g">JA</span> oder <span class="r">NEIN</span>?</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      T.pop("c0-in", 0.6, 1.9); T.pop("c1-in", 13.4, 3.0); T.slam("guess-in", 16.4, 2.6); T.slam("b1-in", 20.8, 2.4); T.pop("c2-in", 23.2, 4.3);
+      T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+      const CX = 540, CY = 920, R = 300;
+      const ANG = [-90, 18, 77, 148, 205, 302].map((d) => (d * Math.PI) / 180);
+      const PTS = ANG.map((a) => [CX + Math.cos(a) * R, CY + Math.sin(a) * R]);
+      const REG = [1, 2, 4, 8, 16, 31];
+      const ST = [2.6, 5.3, 8.0, 10.7, 13.4, 19.0];
+      const COLS = ["#8fe9ff", "#ffc94d", "#ff5f8f", "#5ef2c2", "#b99cff", "#ff9a3c"];
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.3 });
+        const sh = K.shake(t, [[20.8, 16]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let n = 0; for (let i = 0; i < 6; i++) if (t >= ST[i]) n = i + 1;
+        // Kreis
+        g.save(); g.fillStyle = "rgba(120,100,200,0.10)"; g.beginPath(); g.arc(CX, CY, R, 0, Math.PI * 2); g.fill(); g.restore();
+        K.ring(CX, CY, R, "#cfc9ff", 5, 0.9);
+        // Sehnen: alle zwischen den ersten n Punkten; die neuen wachsen
+        for (let j = 1; j < n; j++) for (let i = 0; i < j; i++) {
+          const fresh = j === n - 1, f = fresh ? eio(prog(t, ST[j] + 0.5, 1.0)) : 1;
+          if (f <= 0) continue;
+          const [x0, y0] = PTS[j], [x1, y1] = PTS[i];
+          K.glowLine(x0, y0, lerp(x0, x1, f), lerp(y0, y1, f), COLS[i % 6], 4, 0.95);
+        }
+        for (let i = 0; i < n; i++) { const s = K.back(cl((t - ST[i]) / 0.3)); K.dot(PTS[i][0], PTS[i][1], 16 * s, "#ffffff", 20); }
+        // Zähler
+        let shown = n > 0 ? (t >= ST[n - 1] + 1.7 ? REG[n - 1] : n > 1 ? REG[n - 2] : 1) : 0;
+        if (t >= 16.4 && t < 20.8) shown = "?";
+        if (n > 0) K.mono(String(shown) + " Stücke", 540, 1310, 84, "#ffffff", n === 6 && t >= 20.8 ? C.red : C.mint);
+        // Verlauf oben
+        const seq = REG.slice(0, n).map((v, i) => (t >= ST[i] + 1.7 ? v : "·")).join(" · ");
+        const ih = n === 0 ? "Rätsel" : n + (n === 1 ? " Punkt" : " Punkte") + ": <b>" + seq + "</b>";
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[20.8, 0.35]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
