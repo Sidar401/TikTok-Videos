@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      .big { top: 1420px; font-size: 64px; }
+      .big small { font-size: 36px; }
+      #cta { top: 1440px; font-size: 56px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Diese Reihenfolge gab es<br /><span class="r">noch NIE!</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="c0" class="line cap clip" data-start="0.4" data-duration="2.2" data-track-index="3"><span id="c0-in">Einmal gut mischen …</span></div>
+      <div id="c1" class="line cap clip" data-start="2.6" data-duration="4.6" data-track-index="3"><span id="c1-in">52 Karten: <span class="y">52 × 51 × 50 × …</span></span></div>
+      <div id="b1" class="line big clip" data-start="7.2" data-duration="4.8" data-track-index="3"><span id="b1-in"><span class="r glow-r">68 Stellen lang!</span><small>so viele mögliche Reihenfolgen</small></span></div>
+      <div id="c2" class="line cap clip" data-start="12.0" data-duration="6.6" data-track-index="3"><span id="c2-in">Alle 8 Mrd. Menschen mischen<br /><span class="y">jede Sekunde – seit dem Urknall</span></span></div>
+      <div id="c3" class="line cap clip" data-start="18.6" data-duration="5.4" data-track-index="3"><span id="c3-in">Geschafft hätten sie:<br /><span class="r">nicht mal ein Winzling</span> davon!</span></div>
+      <div id="b2" class="line big clip" data-start="24.0" data-duration="3.5" data-track-index="3"><span id="b2-in"><span class="g glow-g">Dein Deck ist EINZIGARTIG</span><small>(mit fast völliger Sicherheit)</small></span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Wann hast <span class="y">DU</span> zuletzt gemischt?<br />Ab in die Kommentare!</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      T.pop("c0-in", 0.4, 2.2); T.pop("c1-in", 2.6, 4.6); T.slam("b1-in", 7.2, 4.8); T.pop("c2-in", 12.0, 6.6); T.pop("c3-in", 18.6, 5.4);
+      T.slam("b2-in", 24.0, 3.5); T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+      const FACT = "80.658.175.170.943.878.571.660.636.856.403.766.975.289.505.440.883.277.824.000.000.000.000";
+      const SUITS = ["♠", "♥", "♦", "♣"], RANKS = ["A", "K", "D", "B", "10", "9", "8", "7", "6", "5", "4", "3", "2"];
+      function card(x, y, w, rot, i, a = 1) {
+        g.save(); g.globalAlpha *= a; g.translate(x, y); g.rotate(rot);
+        g.fillStyle = "#fbfaff"; g.shadowColor = "rgba(0,0,0,0.5)"; g.shadowBlur = 16; g.beginPath(); g.roundRect(-w / 2, -w * 0.7, w, w * 1.4, w * 0.08); g.fill(); g.shadowBlur = 0;
+        const s = SUITS[i % 4], col = s === "♥" || s === "♦" ? "#e0304a" : "#1a1430";
+        g.fillStyle = col; g.font = "800 " + w * 0.32 + "px Montserrat"; g.textAlign = "center"; g.textBaseline = "middle";
+        g.fillText(RANKS[i % 13], -w * 0.24, -w * 0.48); g.font = w * 0.6 + "px serif"; g.fillText(s, 0, w * 0.1);
+        g.restore();
+      }
+      function SUP(n) { return String(n).split("").map((d) => "⁰¹²³⁴⁵⁶⁷⁸⁹"[+d]).join(""); }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.3, top: "#1a1232" });
+        const sh = K.shake(t, [[7.2, 14], [24.0, 10]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+        if (t < 2.7) {
+          for (let i = 0; i < 12; i++) { const ph = (t * 2.2 + i / 12) % 1; const side = i % 2 ? 1 : -1; card(540 + side * 160 * Math.sin(ph * Math.PI), 950 - ph * 40 + i * 3, 180, side * 0.25 * Math.sin(ph * Math.PI), (i * 7 + Math.floor(t * 4)) % 52); }
+          ih = "Ein ganz normales Kartenspiel";
+        } else if (t < 12.2) {
+          const a = 1 - prog(t, 11.9, 0.3);
+          g.save(); g.globalAlpha = a;
+          const n = Math.min(52, Math.floor(prog(t, 2.8, 4.2) * 52));
+          for (let i = 0; i < n; i++) card(170 + (i % 13) * 62, 640 + Math.floor(i / 13) * 140, 70, (rnd(i) - 0.5) * 0.2, (i * 19) % 52);
+          if (t > 7.2) {
+            const grp = FACT.split("."), lines = [];
+            for (let k = 0; k < grp.length; k += 6) lines.push(grp.slice(k, k + 6).join("."));
+            lines.forEach((ln, k) => K.mono(ln, 540, 1150 + k * 56, 44, "#ffffff", C.red));
+          } else {
+            const prod = n > 0 ? Array.from({ length: Math.min(n, 6) }, (_, k) => 52 - k).join(" × ") + (n > 6 ? " × …" : "") : "";
+            K.mono(prod, 540, 1260, 44, "#ffffff", C.gold);
+          }
+          g.restore();
+          ih = t < 7.2 ? "Karte " + Math.max(1, n) + " von 52" : "≈ 8 · 10" + SUP(67) + " Möglichkeiten";
+        } else if (t < 24.0) {
+          const a = prog(t, 12.0, 0.3);
+          g.save(); g.globalAlpha = a;
+          // Menschen-Wimmelbild
+          for (let i = 0; i < 70; i++) { const x = 140 + (i % 10) * 88, y = 760 + Math.floor(i / 10) * 72; K.icon("you", x, y, 56, 1, ["#8fe9ff", "#ffc94d", "#ff5f8f", "#5ef2c2"][i % 4], "rgba(255,255,255,0.04)"); if ((Math.floor(t * 6) + i) % 5 === 0) card(x + 18, y - 40, 22, 0.3, i); }
+          const f = eout(prog(t, 12.6, 5.6));
+          const exp = Math.floor(lerp(0, 27.54, f));
+          K.mono(t < 18.6 ? "10" + SUP(exp) + " Mischungen" : "3,5 · 10²⁷ Mischungen", 540, 640, 66, "#ffffff", C.gold);
+          if (t > 18.6) {
+            K.bar(140, 1340, 800, 0.0005, C.gold, 30);
+            K.label("davon geschafft: 0,000 000 000 000 000 000 000 000 000 000 000 000 004 %", 540, 1392, 22, C.gold);
+          }
+          g.restore();
+          ih = t < 18.6 ? "13,8 Mrd. Jahre lang" : "Nicht mal ein Billionstel davon";
+        } else {
+          for (let i = 0; i < 52; i++) { const an = (i / 52) * Math.PI * 2 + t * 0.4; card(540 + Math.cos(an) * 340, 980 + Math.sin(an) * 300, 70, an + Math.PI / 2, (i * 11) % 52); }
+          K.label("1 von 8 · 10" + SUP(67), 540, 980, 64, C.mint);
+          ih = "Einmalig in der Geschichte";
+        }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[7.2, 0.3]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
