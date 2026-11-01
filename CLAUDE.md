@@ -32,7 +32,7 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
 
 ## Kanal 4: Wissens-Kanal (Name noch offen)
 - Stil wie die viralen Mathe/Physik-Videos: Frage → Zahl zählt hoch → Überraschung → Frage an Zuschauer.
-- **Regeln in `wissen/REGELN.md` IMMER einhalten** (große Hook am Anfang, „Folg mir“-Aufruf am Ende, 30 s, ohne Musik).
+- **Regeln in `wissen/REGELN.md` IMMER einhalten** (große Hook am Anfang, „Folg uns für mehr!“-Aufruf am Ende, 30 s, ohne Musik).
 - Baukasten: `wissen/kit/` · Ideen & Post-Pläne: `wissen/`.
 
 ## Regeln vom Nutzer
