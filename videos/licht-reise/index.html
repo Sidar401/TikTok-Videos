@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      .big { top: 1420px; font-size: 62px; }
+      .big small { font-size: 36px; }
+      #cta { top: 1440px; font-size: 56px; line-height: 1.2; }
+      #new { top: 520px; font-size: 40px; }
+      #new span { background: var(--red); color: #fff; padding: 8px 22px; border-radius: 14px; font-weight: 900; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Wie lange braucht<br /><span class="y">das Licht?</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="c0" class="line cap clip" data-start="0.4" data-duration="2.2" data-track-index="3"><span id="c0-in">Licht schafft <span class="y">7,5-mal</span> um die Erde –<br />in EINER Sekunde!</span></div>
+      <div id="c1" class="line cap clip" data-start="3.8" data-duration="2.2" data-track-index="3"><span id="c1-in">Zum Mond: <span class="g">1,3 Sekunden</span></span></div>
+      <div id="c2" class="line cap clip" data-start="7.6" data-duration="2.4" data-track-index="3"><span id="c2-in">Zur Sonne: <span class="y">8 Minuten</span><small>du siehst die Sonne, wie sie vor 8 Min. war!</small></span></div>
+      <div id="c3" class="line cap clip" data-start="11.6" data-duration="2.4" data-track-index="3"><span id="c3-in">Zum Neptun: <span class="v">4 Stunden</span></span></div>
+      <div id="new" class="line clip" data-start="14.0" data-duration="6.0" data-track-index="4"><span id="new-in">NEU · 18. November 2026</span></div>
+      <div id="b1" class="line big clip" data-start="15.6" data-duration="4.4" data-track-index="3"><span id="b1-in"><span class="r glow-r">Voyager 1: 1 ganzer TAG!</span><small>erstes Ding von Menschen so weit weg</small></span></div>
+      <div id="c4" class="line cap clip" data-start="21.6" data-duration="2.4" data-track-index="3"><span id="c4-in">Zum nächsten Stern: <span class="o">4,2 Jahre</span></span></div>
+      <div id="b2" class="line big clip" data-start="25.6" data-duration="1.9" data-track-index="3"><span id="b2-in"><span class="v glow-y">Andromeda: 2,5 Mio. Jahre</span><small>das Licht startete, bevor es Menschen gab</small></span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Was findest <span class="y">DU</span> am krassesten?<br />Ab in die Kommentare!</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      T.pop("c0-in", 0.4, 2.2); T.pop("c1-in", 3.8, 2.2); T.pop("c2-in", 7.6, 2.4); T.pop("c3-in", 11.6, 2.4);
+      T.slam("new-in", 14.0, 6.0); T.slam("b1-in", 15.6, 4.4); T.pop("c4-in", 21.6, 2.4); T.slam("b2-in", 25.6, 1.9);
+      T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+      const STEPS = [
+        { s: 2.6, n: "Mond", txt: (f) => de(1.3 * f, 1) + " s", col: C.mint, draw: (x, y) => K.moon(x, y, 40) },
+        { s: 6.0, n: "Sonne", txt: (f) => { const v = 500 * f; return Math.floor(v / 60) + " min " + String(Math.floor(v % 60)).padStart(2, "0") + " s"; }, col: C.gold, draw: (x, y) => K.planet(x, y, 70, "#fff3b0", "#ff8a1a", "#ffb347") },
+        { s: 10.0, n: "Neptun", txt: (f) => de(4.17 * f, 1) + " h", col: C.purple, draw: (x, y) => K.planet(x, y, 40, "#9fc6ff", "#2a4fb8", "#6fa0ff") },
+        { s: 14.0, n: "Voyager 1", txt: (f) => de(24 * f, 1) + " h", col: C.red, draw: (x, y) => voyager(x, y) },
+        { s: 20.0, n: "Proxima Centauri", txt: (f) => de(4.24 * f, 2) + " Jahre", col: C.orange, draw: (x, y) => K.dot(x, y, 22, "#ff8a6a", 40) },
+        { s: 24.0, n: "Andromeda", txt: (f) => de(2.5 * f, 2) + " Mio. Jahre", col: C.purple, draw: (x, y) => { g.save(); g.translate(x, y); g.rotate(-0.5); g.fillStyle = "rgba(200,180,255,0.7)"; g.shadowColor = "#b99cff"; g.shadowBlur = 40; g.beginPath(); g.ellipse(0, 0, 90, 28, 0, 0, Math.PI * 2); g.fill(); g.restore(); K.dot(x, y, 10, "#fff4d6", 20); } },
+      ];
+      function voyager(x, y) {
+        g.save(); g.strokeStyle = "#e9e4ff"; g.lineWidth = 5; g.shadowColor = "#fff"; g.shadowBlur = 16;
+        g.beginPath(); g.arc(x, y, 40, Math.PI * 0.15, Math.PI * 0.85, true); g.stroke();
+        g.beginPath(); g.moveTo(x, y - 10); g.lineTo(x, y + 40); g.moveTo(x - 60, y + 30); g.lineTo(x + 60, y + 30); g.stroke();
+        g.fillStyle = "#e9e4ff"; g.fillRect(x - 14, y + 18, 28, 24); g.restore();
+      }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.8 });
+        const sh = K.shake(t, [[15.6, 12], [25.6, 10]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+        if (t < 2.7) {
+          K.earth(540, 980, 180);
+          const an = t * 2 * Math.PI * 7.5 / 2.5 * 0.4;
+          g.strokeStyle = "rgba(255,250,220,0.9)"; g.lineWidth = 6; g.shadowColor = "#fff"; g.shadowBlur = 20;
+          g.beginPath(); g.arc(540, 980, 230, an, an + 4); g.stroke(); g.shadowBlur = 0;
+          ih = "300.000 km pro Sekunde";
+        } else {
+          let si = 0; for (let i = 0; i < STEPS.length; i++) if (t >= STEPS[i].s) si = i;
+          const s = STEPS[si], nx = si + 1 < STEPS.length ? STEPS[si + 1].s : 27.5;
+          const a = prog(t, s.s, 0.3) * (si < 5 ? 1 - prog(t, nx - 0.3, 0.3) : 1);
+          g.save(); g.globalAlpha = a;
+          const x0 = 150, x1 = 900, y = 1000;
+          K.earth(x0, y, 50); K.label("Erde", x0, y + 80, 32, "#cfe8ff");
+          s.draw(x1, y); K.label(s.n, x1, y + 100, 34, s.col);
+          const f = eio(prog(t, s.s + 0.2, si === 3 ? 1.4 : 1.4));
+          const bx = lerp(x0 + 60, x1 - 60, f);
+          K.glowLine(x0 + 60, y, bx, y, "#fff8dc", 8, 1);
+          K.dot(bx, y, 12, "#ffffff", 30);
+          K.mono(s.txt(eout(prog(t, s.s + 0.2, 1.4))), 540, 760, 88, "#ffffff", s.col);
+          if (si === 3 && t > 16) K.label("gestartet 1977 · 26 Mrd. km entfernt", 540, 1200, 36, "#ddd8ef");
+          g.restore();
+          ih = "Lichtgeschwindigkeit";
+        }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[15.6, 0.3]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
