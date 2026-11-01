@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      .chips { top: 1440px; }
+      .big { top: 1420px; font-size: 72px; }
+      .big small { font-size: 36px; }
+      #cta { top: 1440px; font-size: 56px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Wie viele Jahre<br /><span class="v">verschläfst du?</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="chips" class="line chips clip" data-start="0.9" data-duration="1.8" data-track-index="3"><span id="k1" class="chip">5?</span><span id="k2" class="chip">15?</span><span id="k3" class="chip">25?</span></div>
+      <div id="c1" class="line cap clip" data-start="2.8" data-duration="6.0" data-track-index="3"><span id="c1-in">Rund <span class="v">8 Stunden</span> pro Nacht …<br />ein ganzes Leben lang</span></div>
+      <div id="b1" class="line big clip" data-start="8.8" data-duration="1.2" data-track-index="3"><span id="b1-in"><span class="v glow-y">26 JAHRE!</span></span></div>
+      <div id="c2" class="line cap clip" data-start="10.0" data-duration="4.0" data-track-index="3"><span id="c2-in">Davon ca. <span class="y">6 Jahre</span> nur Träume! 💭</span></div>
+      <div id="c3" class="line cap clip" data-start="14.0" data-duration="5.0" data-track-index="3"><span id="c3-in">Der <span class="g">Koala</span> schläft bis 20 Std. am Tag,<br />die <span class="o">Giraffe</span> nur 2–4!</span></div>
+      <div id="c4" class="line cap clip" data-start="19.0" data-duration="4.5" data-track-index="3"><span id="c4-in">Rekord ohne Schlaf:<br /><span class="r">11 Tage</span> (ein Schüler, 1964)</span></div>
+      <div id="c5" class="line cap clip" data-start="23.5" data-duration="4.0" data-track-index="3"><span id="c5-in">Und wir sagen trotzdem:<br /><span class="y">„Ich hab keine Zeit“</span> 😅</span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Wie viele Stunden<br />schläfst <span class="y">DU</span>? 👇</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      ["k1", "k2", "k3"].forEach((id, i) => tl.from("#" + id, { opacity: 0, scale: 0.4, y: 30, duration: 0.25, ease: "back.out(3)" }, 0.9 + i * 0.4));
+      tl.to("#chips .chip", { opacity: 0, duration: 0.15 }, 2.55);
+      T.pop("c1-in", 2.8, 6.0); T.slam("b1-in", 8.8, 1.2); T.pop("c2-in", 10.0, 4.0); T.pop("c3-in", 14.0, 5.0); T.pop("c4-in", 19.0, 4.5);
+      T.pop("c5-in", 23.5, 4.0); T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+
+      function moon(x, y, r) { g.save(); g.fillStyle = "#ffe8a8"; g.shadowColor = "#ffe8a8"; g.shadowBlur = 40; g.beginPath(); g.arc(x, y, r, 0, Math.PI * 2); g.fill(); g.shadowBlur = 0; g.fillStyle = "#15123a"; g.beginPath(); g.arc(x + r * 0.45, y - r * 0.25, r * 0.9, 0, Math.PI * 2); g.fill(); g.restore(); }
+      function zzz(x, y, t) { for (let i = 0; i < 3; i++) { const ph = (t * 0.6 + i / 3) % 1; g.save(); g.globalAlpha = 1 - ph; K.label("Z", x + ph * 80 + i * 10, y - ph * 160, 40 + i * 14, "#cfc9ff"); g.restore(); } }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.8, top: "#141238" });
+        const sh = K.shake(t, [[8.8, 12], [19.0, 8]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+        if (t < 14.0) {
+          // Lebens-Balken: 80 Jahre, 1 Kästchen = 1 Jahr
+          const f = prog(t, 2.9, 5.8);
+          const yrs = Math.floor(80 * f);
+          for (let i = 0; i < 80; i++) {
+            const x = 150 + (i % 10) * 80, y = 600 + Math.floor(i / 10) * 80;
+            const on = i < yrs, sleep = on && i % 3 === 0 && Math.floor(i / 3) < 26;
+            g.fillStyle = !on ? "rgba(255,255,255,0.08)" : sleep ? (t > 10 && Math.floor(i / 3) < 6 ? C.gold : C.purple) : "rgba(94,242,194,0.35)";
+            if (sleep) { g.shadowColor = g.fillStyle; g.shadowBlur = 14; }
+            g.beginPath(); g.roundRect(x - 32, y - 32, 64, 64, 12); g.fill(); g.shadowBlur = 0;
+          }
+          const asleep = Math.min(26, Math.round(80 * f / 3.08));
+          K.mono(de(asleep) + " Jahre", 540, 1300, 72, "#ffffff", C.purple);
+          moon(900, 520, 40); zzz(150, 560, t);
+          ih = t < 2.8 ? "Rate mal!" : t < 10 ? "Leben: " + de(yrs) + " von 80 Jahren" : "Gelb: Jahre voller Träume";
+        } else if (t < 19.2) {
+          const a = prog(t, 14.0, 0.3);
+          g.save(); g.globalAlpha = a;
+          const rows = [["Koala", 20, C.mint], ["Fledermaus", 20, C.icon], ["Mensch", 8, C.purple], ["Giraffe", 3, C.orange]];
+          rows.forEach(([n, h, col], i) => { const y = 680 + i * 170; const f = eout(prog(t, 14.4 + i * 0.4, 0.8)); K.label(n, 150, y - 40, 40, col, "left"); K.bar(150, y, 780, (h / 24) * f, col, 40); K.label(de(Math.round(h * f)) + " h", 930, y - 40, 38, "#fff", "right"); });
+          g.restore();
+          ih = "Schlaf pro Tag (ungefähr)";
+        } else if (t < 23.6) {
+          const a = prog(t, 19.0, 0.3);
+          g.save(); g.globalAlpha = a;
+          const h = Math.min(264, Math.floor(264 * eout(prog(t, 19.3, 2.5))));
+          K.mono(de(h) + " Stunden", 540, 820, 92, "#ffffff", C.red);
+          K.label("wach am Stück", 540, 910, 40, "#ddd8ef");
+          for (let i = 0; i < 11; i++) { const on = i < h / 24; K.dot(190 + i * 70, 1080, 22, on ? C.red : "rgba(255,255,255,0.12)", on ? 14 : 0); }
+          g.restore();
+          ih = "Bitte nicht nachmachen!";
+        } else {
+          moon(540, 900, 140); zzz(640, 820, t);
+          ih = "8 Stunden Schlaf = 1/3 vom Tag";
+        }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[8.8, 0.3]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
