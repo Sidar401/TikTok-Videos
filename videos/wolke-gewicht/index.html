@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      .chips { top: 1440px; }
+      .big { top: 1420px; font-size: 70px; }
+      .big small { font-size: 36px; }
+      #cta { top: 1440px; font-size: 58px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Wie schwer ist<br /><span class="g">eine Wolke?</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="chips" class="line chips clip" data-start="0.9" data-duration="1.8" data-track-index="3"><span id="k1" class="chip">1 kg?</span><span id="k2" class="chip">1 Tonne?</span><span id="k3" class="chip">500 Tonnen?</span></div>
+      <div id="c1" class="line cap clip" data-start="2.8" data-duration="6.2" data-track-index="3"><span id="c1-in">Eine normale Schäfchenwolke:<br />ca. <span class="y">1 km × 1 km × 1 km</span></span></div>
+      <div id="c2" class="line cap clip" data-start="9.2" data-duration="4.6" data-track-index="3"><span id="c2-in">In jedem m³: nur <span class="g">0,5 g</span> Wasser …<small>aber es sind 1 Milliarde m³!</small></span></div>
+      <div id="b1" class="line big clip" data-start="13.8" data-duration="5.2" data-track-index="3"><span id="b1-in"><span class="r glow-r">500 TONNEN!</span><small>so schwer wie 100 Elefanten</small></span></div>
+      <div id="c3" class="line cap clip" data-start="19.0" data-duration="5.0" data-track-index="3"><span id="c3-in">Warum fällt sie nicht runter?<br />Die Luft darunter ist <span class="y">noch schwerer!</span></span></div>
+      <div id="c4" class="line cap clip" data-start="24.0" data-duration="3.5" data-track-index="3"><span id="c4-in">Erst <span class="g">1 Million</span> Wolkentröpfchen<br />ergeben 1 Regentropfen.</span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Hättest <span class="y">DU</span> das gedacht?<br /><span class="g">JA</span> oder <span class="r">NEIN</span>?</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      ["k1", "k2", "k3"].forEach((id, i) => tl.from("#" + id, { opacity: 0, scale: 0.4, y: 30, duration: 0.25, ease: "back.out(3)" }, 0.9 + i * 0.5));
+      tl.to("#chips .chip", { opacity: 0, duration: 0.15 }, 2.55);
+      T.pop("c1-in", 2.8, 6.2); T.pop("c2-in", 9.2, 4.6); T.slam("b1-in", 13.8, 5.2); T.pop("c3-in", 19.0, 5.0); T.pop("c4-in", 24.0, 3.5);
+      T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+
+      function cloud(x, y, s, a = 1) {
+        g.save(); g.globalAlpha *= a; g.fillStyle = "#f4f6ff"; g.shadowColor = "#ffffff"; g.shadowBlur = 40;
+        [[0, 0, 1], [-0.9, 0.25, 0.7], [0.9, 0.25, 0.75], [-0.4, -0.45, 0.75], [0.45, -0.4, 0.7], [0, 0.35, 0.8]].forEach(([dx, dy, r]) => { g.beginPath(); g.arc(x + dx * s, y + dy * s, r * s, 0, Math.PI * 2); g.fill(); });
+        g.restore();
+      }
+      function elephant(x, y, s, col) {
+        g.save(); g.translate(x, y); g.scale(s, s); g.fillStyle = col;
+        g.beginPath(); g.ellipse(0, -40, 60, 38, 0, 0, Math.PI * 2); g.fill();
+        g.beginPath(); g.arc(55, -55, 28, 0, Math.PI * 2); g.fill();
+        g.fillRect(-45, -15, 16, 30); g.fillRect(-15, -15, 16, 30); g.fillRect(15, -15, 16, 30); g.fillRect(38, -15, 14, 30);
+        g.lineWidth = 9; g.strokeStyle = col; g.lineCap = "round"; g.beginPath(); g.moveTo(75, -45); g.quadraticCurveTo(95, -10, 80, 10); g.stroke();
+        g.restore();
+      }
+      function scale(x, y, tilt, lText, rText) {
+        g.save(); g.translate(x, y);
+        g.strokeStyle = "#ddd8ef"; g.lineWidth = 8; g.beginPath(); g.moveTo(0, 0); g.lineTo(0, 260); g.moveTo(-90, 260); g.lineTo(90, 260); g.stroke();
+        g.rotate(tilt); g.beginPath(); g.moveTo(-320, 0); g.lineTo(320, 0); g.stroke();
+        g.restore();
+        const ly = y - Math.sin(tilt) * 320, ry = y + Math.sin(tilt) * 320;
+        K.label(lText, x - 300, ly + 60, 38, C.mint); K.label(rText, x + 300, ry + 60, 38, C.gold);
+        return [ly, ry];
+      }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        const gr = g.createLinearGradient(0, 0, 0, 1920); gr.addColorStop(0, "#1b3d7a"); gr.addColorStop(0.6, "#3c6fb8"); gr.addColorStop(1, "#0d1a33");
+        g.fillStyle = gr; g.fillRect(0, 0, 1080, 1920);
+        const sh = K.shake(t, [[13.8, 14]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+        if (t < 9.3) {
+          const bob = Math.sin(t * 1.5) * 10;
+          cloud(540, 960 + bob, 200);
+          if (t > 3.2) {
+            const f = eout(prog(t, 3.2, 1.6));
+            g.save(); g.strokeStyle = C.gold; g.lineWidth = 5; g.setLineDash([14, 10]); g.shadowColor = C.gold; g.shadowBlur = 14;
+            const s = 330 * f; g.strokeRect(540 - s, 960 - s, 2 * s, 2 * s);
+            g.beginPath(); g.moveTo(540 - s, 960 - s); g.lineTo(540 - s + 120 * f, 960 - s - 90 * f); g.lineTo(540 + s + 120 * f, 960 - s - 90 * f); g.lineTo(540 + s, 960 - s); g.moveTo(540 + s + 120 * f, 960 - s - 90 * f); g.lineTo(540 + s + 120 * f, 960 + s - 90 * f); g.lineTo(540 + s, 960 + s); g.stroke(); g.restore();
+            if (f > 0.9) K.label("1 km", 540, 960 + s + 40, 40, C.gold);
+          }
+          ih = t < 2.8 ? "Rate mal!" : "Volumen: 1.000.000.000 m³";
+        } else if (t < 19.2) {
+          const a = prog(t, 9.2, 0.3) * (1 - prog(t, 18.9, 0.3));
+          g.save(); g.globalAlpha = a;
+          if (t < 13.8) {
+            cloud(540, 900, 200);
+            for (let i = 0; i < 80; i++) K.dot(360 + rnd(i) * 360, 760 + rnd(i + 2) * 280, 4, "rgba(80,160,255,0.9)", 6);
+            const kg = 500000 * Math.pow(eout(prog(t, 10.2, 3.4)), 2);
+            K.mono(de(Math.round(kg)) + " kg", 540, 1250, 92, "#ffffff", C.mint);
+          } else {
+            cloud(540, 680, 150, 0.9);
+            const n = Math.min(100, Math.floor(100 * prog(t, 14.4, 2.6)));
+            for (let i = 0; i < n; i++) elephant(140 + (i % 10) * 90, 910 + Math.floor(i / 10) * 50, 0.42, ["#9aa3c2", "#b5bdd8", "#8a93b0"][i % 3]);
+            
+          }
+          g.restore();
+          ih = t < 13.8 ? "Wasser in der Wolke" : "1 Elefant ≈ 5 Tonnen";
+        } else if (t < 24.2) {
+          const a = prog(t, 19.0, 0.3) * (1 - prog(t, 23.9, 0.3));
+          g.save(); g.globalAlpha = a;
+          const tilt = 0.25 * eout(prog(t, 21.0, 1.0));
+          const [ly, ry] = scale(540, 900, tilt, "Wolke · 500 t", "Luft · 1 Mio. t");
+          cloud(220, ly - 150, 70);
+          g.fillStyle = "rgba(200,230,255,0.35)"; g.fillRect(780, ry - 220, 200, 200); K.label("Luft", 880, ry - 120, 34, "#fff");
+          g.restore();
+          ih = "Gleich großer Würfel Luft";
+        } else {
+          const a = prog(t, 24.0, 0.4);
+          g.save(); g.globalAlpha = a;
+          for (let i = 0; i < 400; i++) K.dot(300 + rnd(i) * 480, 700 + rnd(i + 1) * 300, 3, "rgba(200,230,255,0.9)", 0);
+          const f = eout(prog(t, 24.8, 1.6));
+          g.fillStyle = "#59a8ff"; g.shadowColor = "#8fe9ff"; g.shadowBlur = 30;
+          const y = lerp(860, 1160, f);
+          g.beginPath(); g.moveTo(540, y - 90); g.quadraticCurveTo(610, y, 540, y + 50); g.quadraticCurveTo(470, y, 540, y - 90); g.fill(); g.shadowBlur = 0;
+          g.restore();
+          ih = "Tröpfchen: 0,01 mm klein";
+        }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[13.8, 0.35]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
