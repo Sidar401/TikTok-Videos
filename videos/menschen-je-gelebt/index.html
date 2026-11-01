@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      .chips { top: 1440px; }
+      .big { top: 1420px; font-size: 70px; }
+      .big small { font-size: 36px; }
+      #cta { top: 1430px; font-size: 52px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Wie viele Menschen<br /><span class="y">haben JE gelebt?</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="chips" class="line chips clip" data-start="0.9" data-duration="1.8" data-track-index="3"><span id="k1" class="chip">20 Mrd.?</span><span id="k2" class="chip">50 Mrd.?</span><span id="k3" class="chip">100 Mrd.?</span></div>
+      <div id="c1" class="line cap clip" data-start="2.8" data-duration="4.0" data-track-index="3"><span id="c1-in">Seit es Menschen gibt …</span></div>
+      <div id="b1" class="line big clip" data-start="6.8" data-duration="1.2" data-track-index="3"><span id="b1-in"><span class="y glow-y">rund 117 MILLIARDEN!</span></span></div>
+      <div id="c2" class="line cap clip" data-start="8.0" data-duration="4.8" data-track-index="3"><span id="c2-in">Heute leben 8,2 Mrd. –<br />nur <span class="g">7 %</span> von allen!</span></div>
+      <div id="c3" class="line cap clip" data-start="12.8" data-duration="6.2" data-track-index="3"><span id="c3-in">Und wir werden <span class="r">immer schneller</span> mehr</span></div>
+      <div id="c4" class="line cap clip" data-start="19.0" data-duration="4.5" data-track-index="3"><span id="c4-in">Auf jeden Lebenden kommen<br /><span class="v">13 Menschen</span> vor uns.</span></div>
+      <div id="b2" class="line big clip" data-start="23.5" data-duration="4.0" data-track-index="3"><span id="b2-in"><span class="g glow-g">Und DU bist einer davon ✨</span><small>1 von 117 Milliarden</small></span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Wen aus der Geschichte würdest<br /><span class="y">DU</span> gern treffen? 👇</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      ["k1", "k2", "k3"].forEach((id, i) => tl.from("#" + id, { opacity: 0, scale: 0.4, y: 30, duration: 0.25, ease: "back.out(3)" }, 0.9 + i * 0.4));
+      tl.to("#chips .chip", { opacity: 0, duration: 0.15 }, 2.55);
+      T.pop("c1-in", 2.8, 4.0); T.slam("b1-in", 6.8, 1.2); T.pop("c2-in", 8.0, 4.8); T.pop("c3-in", 12.8, 6.2); T.pop("c4-in", 19.0, 4.5); T.slam("b2-in", 23.5, 4.0);
+      T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+      const COLS = ["#8fe9ff", "#ffc94d", "#ff5f8f", "#5ef2c2", "#b99cff", "#ff9a3c"];
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.4 });
+        const sh = K.shake(t, [[6.8, 12]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+        if (t < 8.0) {
+          const n = Math.floor(300 * prog(t, 2.0, 4.8));
+          for (let i = 0; i < n; i++) K.dot(80 + rnd(i) * 920, 700 + rnd(i + 3) * 620, 4, COLS[i % 6], 6);
+          if (t > 2.8) K.mono(de(Math.round(117e9 * Math.pow(eout(prog(t, 2.9, 3.8)), 2))), 540, 600, 76, "#ffffff", C.gold);
+          ih = t < 2.8 ? "Rate mal!" : "Schätzung von Bevölkerungsforschern";
+        } else if (t < 12.9) {
+          for (let i = 0; i < 100; i++) { const x = 180 + (i % 10) * 80, y = 640 + Math.floor(i / 10) * 72; const live = i < 7; const on = live && t > 8.0 + i * 0.15;
+            K.icon("you", x, y + 30, 56, 1, on ? C.mint : "rgba(160,150,190,0.35)", on ? "rgba(94,242,194,0.15)" : "rgba(255,255,255,0.02)"); }
+          ih = "Jedes Symbol = 1,17 Mrd. Menschen";
+        } else if (t < 19.1) {
+          const pts = [[1804, 1], [1927, 2], [1974, 4], [2022, 8]];
+          const x0 = 150, x1 = 930, y0 = 1300, y1 = 640, X = (y) => lerp(x0, x1, (y - 1750) / (2030 - 1750)), Y = (v) => lerp(y0, y1, v / 8.5);
+          K.glowLine(x0, y0, x1, y0, "rgba(255,255,255,0.4)", 3);
+          const f = prog(t, 13.0, 4.8);
+          g.save(); g.strokeStyle = C.red; g.lineWidth = 7; g.shadowColor = C.red; g.shadowBlur = 20; g.beginPath();
+          const PP = [[1750, 0.79], [1804, 1], [1850, 1.26], [1900, 1.65], [1927, 2], [1950, 2.5], [1960, 3], [1974, 4], [1987, 5], [1999, 6], [2011, 7], [2022, 8], [2026, 8.2]];
+          const pop = (yr) => { for (let k = 0; k < PP.length - 1; k++) if (yr <= PP[k + 1][0]) return lerp(PP[k][1], PP[k + 1][1], (yr - PP[k][0]) / (PP[k + 1][0] - PP[k][0])); return 8.2; };
+          for (let yr = 1750; yr <= 1750 + 276 * f; yr += 2) { const px = X(yr), py = Y(pop(yr)); yr === 1750 ? g.moveTo(px, py) : g.lineTo(px, py); }
+          g.stroke(); g.restore();
+          pts.forEach(([yr, v], i) => { if (t < 13.0 + i * 1.5) return; K.dot(X(yr), Y(v), 12, C.gold, 20); K.label(v + " Mrd. · " + yr, X(yr) - (i === 3 ? 10 : 0), Y(v) - 44, 32, "#ffffff", i === 3 ? "right" : "center"); });
+          ih = "Weltbevölkerung";
+        } else if (t < 23.6) {
+          K.icon("you", 540, 1080, 220, 1, C.mint, "rgba(94,242,194,0.12)");
+          for (let i = 0; i < 13; i++) { const a = (i / 13) * Math.PI * 2 + t * 0.2; const r = 330; const s = eout(prog(t, 19.3 + i * 0.12, 0.3));
+            g.save(); g.globalAlpha = 0.55 * s; K.icon("you", 540 + Math.cos(a) * r, 980 + Math.sin(a) * r * 0.85 + 40, 100, 1, "#b9b2d8", "rgba(255,255,255,0.03)"); g.restore(); }
+          ih = "(117 − 8,2) ÷ 8,2 ≈ 13";
+        } else {
+          for (let i = 0; i < 260; i++) K.dot(80 + rnd(i) * 920, 620 + rnd(i + 3) * 700, 3, "rgba(200,190,240,0.4)", 0);
+          K.icon("you", 540, 1100, 240, 1, C.gold, "rgba(255,201,77,0.15)");
+          K.ring(540, 990, 170 + 10 * Math.sin(t * 5), C.gold, 6, 0.9);
+          ih = "Du bist einzigartig";
+        }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[6.8, 0.3]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
