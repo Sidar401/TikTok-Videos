@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      .big { top: 1420px; font-size: 72px; }
+      .big small { font-size: 36px; }
+      #cta { top: 1430px; font-size: 54px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Was dein <span class="r">Herz</span><br />alles schafft</span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="c0" class="line cap clip" data-start="0.5" data-duration="2.2" data-track-index="3"><span id="c0-in">Hörst du es? Bum-bum … ❤️</span></div>
+      <div id="c1" class="line cap clip" data-start="2.8" data-duration="4.2" data-track-index="3"><span id="c1-in">Pro Tag schlägt es<br />rund <span class="r">100.000-mal</span></span></div>
+      <div id="b1" class="line big clip" data-start="7.0" data-duration="5.0" data-track-index="3"><span id="b1-in"><span class="r glow-r">3 MILLIARDEN</span><small>Schläge in einem Leben</small></span></div>
+      <div id="c2" class="line cap clip" data-start="12.0" data-duration="5.0" data-track-index="3"><span id="c2-in">Es pumpt <span class="y">7.000 Liter</span> Blut am Tag<small>so viel wie 47 volle Badewannen</small></span></div>
+      <div id="c3" class="line cap clip" data-start="17.0" data-duration="4.5" data-track-index="3"><span id="c3-in">Alle deine Adern hintereinander:<br /><span class="g">2,5-mal um die Erde!</span></span></div>
+      <div id="c4" class="line cap clip" data-start="21.5" data-duration="3.5" data-track-index="3"><span id="c4-in">Maus: <span class="y">600</span> pro Minute.<br />Blauwal beim Tauchen: <span class="v">2!</span></span></div>
+      <div id="c5" class="line cap clip" data-start="25.0" data-duration="2.5" data-track-index="3"><span id="c5-in">Und es macht <span class="r">nie</span> Pause.<br />Danke, Herz! ❤️</span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Hand aufs Herz:<br />wie schnell schlägt <span class="y">deins</span>? 👇</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      T.pop("c0-in", 0.5, 2.2); T.pop("c1-in", 2.8, 4.2); T.slam("b1-in", 7.0, 5.0); T.pop("c2-in", 12.0, 5.0); T.pop("c3-in", 17.0, 4.5);
+      T.pop("c4-in", 21.5, 3.5); T.pop("c5-in", 25.0, 2.5); T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+      const BEAT = 60 / 70, B0 = 0.15;
+      function pulse(t) { const ph = ((t - B0) % BEAT + BEAT) % BEAT; return Math.exp(-ph * 14) + 0.6 * Math.exp(-Math.max(0, ph - 0.24) * 16) * (ph > 0.24 ? 1 : 0); }
+      function heart(x, y, s) {
+        g.save(); g.translate(x, y); g.scale(s, s);
+        g.fillStyle = "#ff3d5a"; g.shadowColor = "#ff3d5a"; g.shadowBlur = 50;
+        g.beginPath(); g.moveTo(0, 60); g.bezierCurveTo(-140, -30, -70, -140, 0, -70); g.bezierCurveTo(70, -140, 140, -30, 0, 60); g.fill();
+        g.restore();
+      }
+      function ecg(t, y) {
+        g.save(); g.strokeStyle = C.mint; g.lineWidth = 5; g.shadowColor = C.mint; g.shadowBlur = 16; g.beginPath();
+        for (let x = 0; x <= 1080; x += 6) { const tt = t - (1080 - x) / 600; const ph = ((tt - B0) % BEAT + BEAT) % BEAT;
+          let v = 0; if (ph < 0.04) v = -ph / 0.04 * 0.3; else if (ph < 0.08) v = 1.4 * Math.sin((ph - 0.04) / 0.04 * Math.PI); else if (ph < 0.12) v = -0.4 * Math.sin((ph - 0.08) / 0.04 * Math.PI); else if (ph > 0.3 && ph < 0.45) v = 0.3 * Math.sin((ph - 0.3) / 0.15 * Math.PI);
+          const yy = y - v * 70; x ? g.lineTo(x, yy) : g.moveTo(x, yy); }
+        g.stroke(); g.restore();
+      }
+      function tub(x, y, s, fill) { g.save(); g.translate(x, y); g.scale(s, s); g.strokeStyle = "#e9e4ff"; g.lineWidth = 4; g.fillStyle = "rgba(90,170,255," + (0.3 + 0.5 * fill) + ")";
+        g.beginPath(); g.moveTo(-50, -20); g.lineTo(50, -20); g.quadraticCurveTo(50, 25, 0, 25); g.quadraticCurveTo(-50, 25, -50, -20); g.fill(); g.stroke(); g.restore(); }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.2, top: "#2a0f22", mid: "#150a18" });
+        const sh = K.shake(t, [[7.0, 10]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        const p = pulse(t);
+        let ih = "Schläge seit Videostart: <b>" + Math.max(0, Math.floor((t - B0) / BEAT) + 1) + "</b>";
+        if (t < 12.0) {
+          heart(540, 980, 2.0 * (1 + 0.08 * p));
+          ecg(t, 1300);
+          if (t > 2.8 && t < 7.0) K.mono(de(Math.round(100800 * eout(prog(t, 2.9, 3.0)))), 540, 640, 84, "#ffffff", C.red);
+          if (t >= 7.0) K.mono(de(Math.round(2.9e9 * eout(prog(t, 7.0, 1.5)))), 540, 640, 84, "#ffffff", C.red);
+        } else if (t < 17.0) {
+          heart(540, 640, 0.9 * (1 + 0.08 * p));
+          const n = Math.min(47, Math.floor(47 * prog(t, 12.4, 3.4)));
+          for (let i = 0; i < n; i++) tub(165 + (i % 8) * 107, 840 + Math.floor(i / 8) * 85, 0.85, rnd(i));
+        } else if (t < 21.5) {
+          K.earth(540, 960, 220);
+          const f = eio(prog(t, 17.3, 3.0));
+          g.save(); g.strokeStyle = "#ff3d5a"; g.lineWidth = 7; g.shadowColor = "#ff3d5a"; g.shadowBlur = 20; g.beginPath();
+          const turns = 2.5 * f;
+          for (let a = 0; a <= turns * Math.PI * 2; a += 0.04) { const r = 250 + a * 9; const x = 540 + Math.cos(a - Math.PI / 2) * r, y = 960 + Math.sin(a - Math.PI / 2) * r * 0.9; a ? g.lineTo(x, y) : g.moveTo(x, y); }
+          g.stroke(); g.restore();
+          K.mono(de(Math.round(100000 * f)) + " km", 540, 620, 76, "#ffffff", C.red);
+        } else if (t < 25.0) {
+          // Maus vs. Wal: zwei Herzen in unterschiedlichem Takt
+          const pm = Math.exp(-(((t * 10) % 1)) * 10), pw = Math.exp(-(((t / 30) % 1)) * 10);
+          heart(300, 900, 0.6 * (1 + 0.15 * pm)); heart(780, 900, 1.3 * (1 + 0.05 * pw));
+          K.label("Maus · 600/min", 300, 1100, 38, C.gold); K.label("Blauwal · 2/min", 780, 1150, 38, C.purple);
+        } else {
+          heart(540, 980, 2.0 * (1 + 0.08 * p)); ecg(t, 1300);
+        }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[7.0, 0.25]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
