@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      .chips { top: 1440px; }
+      .opt { top: 540px; font-size: 64px; }
+      .opt small { display: block; font-size: 36px; color: #ddd8ef; font-weight: 700; margin-top: 8px; }
+      #cta { top: 1430px; font-size: 60px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Wie endet<br /><span class="v">das Universum?</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="chips" class="line chips clip" data-start="1.0" data-duration="1.9" data-track-index="3"><span id="k1" class="chip">1</span><span id="k2" class="chip">2</span><span id="k3" class="chip">3</span></div>
+      <div id="o1" class="line opt clip" data-start="3.0" data-duration="7.0" data-track-index="4"><span id="o1-in"><span class="g">1 · Der Kälte-Tod</span><small>alles wird kalt und dunkel</small></span></div>
+      <div id="c1" class="line cap clip" data-start="5.5" data-duration="4.5" data-track-index="3"><span id="c1-in">In ca. <span class="y">100 Billionen Jahren</span><br />erlischt der letzte Stern.</span></div>
+      <div id="o2" class="line opt clip" data-start="10.0" data-duration="7.0" data-track-index="4"><span id="o2-in"><span class="r">2 · Das große Zerreißen</span><small>alles fliegt auseinander</small></span></div>
+      <div id="c2" class="line cap clip" data-start="12.5" data-duration="4.5" data-track-index="3"><span id="c2-in">Erst Galaxien, dann Sterne …<br />am Ende sogar <span class="r">Atome!</span></span></div>
+      <div id="o3" class="line opt clip" data-start="17.0" data-duration="6.5" data-track-index="4"><span id="o3-in"><span class="o">3 · Der große Crash</span><small>alles stürzt wieder zusammen</small></span></div>
+      <div id="c3" class="line cap clip" data-start="19.0" data-duration="4.5" data-track-index="3"><span id="c3-in">Wie der Urknall –<br /><span class="o">nur rückwärts.</span></span></div>
+      <div id="c4" class="line cap clip" data-start="23.5" data-duration="4.0" data-track-index="3"><span id="c4-in">Lange galt <span class="g">Nr. 1</span> als sicher.<br />Neue Messungen: <span class="o">Nr. 3</span> geht vielleicht doch!</span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Was glaubst <span class="y">DU</span>?<br /><span class="g">1</span>, <span class="r">2</span> oder <span class="o">3</span>?</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      ["k1", "k2", "k3"].forEach((id, i) => tl.from("#" + id, { opacity: 0, scale: 0.4, y: 30, duration: 0.25, ease: "back.out(3)" }, 1.0 + i * 0.3));
+      tl.to("#chips .chip", { opacity: 0, duration: 0.15 }, 2.75);
+      T.slam("o1-in", 3.0, 7.0); T.pop("c1-in", 5.5, 4.5); T.slam("o2-in", 10.0, 7.0); T.pop("c2-in", 12.5, 4.5);
+      T.slam("o3-in", 17.0, 6.5); T.pop("c3-in", 19.0, 4.5); T.pop("c4-in", 23.5, 4.0); T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+      const N = 260;
+      const P = Array.from({ length: N }, (_, i) => { const an = rnd(i) * 6.283, r = Math.sqrt(rnd(i + 1)) * 420; return [540 + Math.cos(an) * r, 1000 + Math.sin(an) * r * 0.9, an, r, ["#fff", "#c9b8ff", "#8fe9ff", "#ffe2a8"][i % 4]]; });
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.25 });
+        const sh = K.shake(t, [[10.0, 10], [22.6, 18]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+        if (t < 3.0) {
+          P.forEach((p, i) => K.dot(p[0], p[1], (3 + (i % 3) * 1.6), p[4], 10));
+          ih = "Stimm ab!";
+        } else if (t < 10.0) {
+          const f = prog(t, 4.3, 5.3);
+          P.forEach((p, i) => { const off = rnd(i + 9) < f; if (!off) K.dot(p[0], p[1], (3 + (i % 3) * 1.6), p[4], 10); else K.dot(p[0], p[1], 1.5, "rgba(120,110,150,0.25)", 0); });
+          ih = "Big Freeze";
+        } else if (t < 17.0) {
+          const f = eio(prog(t, 10.2, 6.5));
+          P.forEach((p, i) => { const k = 1 + f * 2.2 * (0.5 + rnd(i + 4)); const x = 540 + (p[0] - 540) * k, y = 1000 + (p[1] - 1000) * k;
+            const parts = t > 14 ? 3 : 1; for (let j = 0; j < parts; j++) K.dot(x + j * 8 * f * (rnd(i + j) - 0.5) * 6, y + j * 8 * f * (rnd(i + j + 2) - 0.5) * 6, ((3 + (i % 3) * 1.6)) / parts, p[4], 8); });
+          ih = "Big Rip";
+        } else if (t < 23.5) {
+          const f = eio(prog(t, 18.5, 4.1));
+          P.forEach((p, i) => { const k = 1 - f * 0.995; const spin = f * 3; const an = p[2] + spin, r = p[3] * k; K.dot(540 + Math.cos(an) * r, 1000 + Math.sin(an) * r * 0.9, (3 + (i % 3) * 1.6), p[4], 8); });
+          if (t > 22.6) K.boom(540, 1000, t - 22.6, 700, "255,200,120");
+          ih = "Big Crunch";
+        } else {
+          const a = prog(t, 23.5, 0.4);
+          g.save(); g.globalAlpha = a;
+          const cols = [C.mint, C.red, C.orange];
+          ["1", "2", "3"].forEach((n, i) => { const x = 220 + i * 320; K.ring(x, 960, 110, cols[i], 8, 1); K.label(n, x, 965, 120, cols[i]); });
+          g.restore();
+          ih = "Forschung zur dunklen Energie";
+        }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[22.6, 0.5]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
