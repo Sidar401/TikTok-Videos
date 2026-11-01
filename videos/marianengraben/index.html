@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      .big { top: 1420px; font-size: 70px; }
+      .big small { font-size: 36px; }
+      #cta { top: 1440px; font-size: 58px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Wie tief ist der<br /><span class="g">tiefste Ort im Meer?</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="c0" class="line cap clip" data-start="0.6" data-duration="2.0" data-track-index="3"><span id="c0-in">Wir tauchen ab … 🌊</span></div>
+      <div id="m1" class="line cap clip" data-start="4.5" data-duration="3.0" data-track-index="3"><span id="m1-in"><span class="y">332 m:</span> Rekord für Taucher</span></div>
+      <div id="m2" class="line cap clip" data-start="7.5" data-duration="3.0" data-track-index="3"><span id="m2-in"><span class="y">1.000 m:</span> kein Sonnenlicht mehr<small>ab hier: stockdunkel</small></span></div>
+      <div id="m3" class="line cap clip" data-start="10.5" data-duration="3.0" data-track-index="3"><span id="m3-in"><span class="y">2.000 m:</span> hier jagen Pottwale</span></div>
+      <div id="m4" class="line cap clip" data-start="13.5" data-duration="4.0" data-track-index="3"><span id="m4-in"><span class="y">3.800 m:</span> die Titanic<small>… und wir sind nicht mal bei der Hälfte</small></span></div>
+      <div id="b1" class="line big clip" data-start="17.5" data-duration="1.5" data-track-index="3"><span id="b1-in"><span class="r glow-r">10.935 m!</span><small>Marianengraben, Pazifik</small></span></div>
+      <div id="c5" class="line cap clip" data-start="19.0" data-duration="2.0" data-track-index="3"><span id="c5-in">Der <span class="o">Mount Everest</span> würde darin<br />komplett verschwinden!</span></div>
+      <div id="c6" class="line cap clip" data-start="21.0" data-duration="4.0" data-track-index="3"><span id="c6-in">Der Druck: über <span class="r">1 Tonne</span><br />auf deinem Daumennagel!</span></div>
+      <div id="c7" class="line cap clip" data-start="25.0" data-duration="2.5" data-track-index="3"><span id="c7-in">Und trotzdem lebt dort unten <span class="g">was!</span></span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Würdest <span class="y">DU</span> mittauchen?<br /><span class="g">JA</span> oder <span class="r">NEIN</span>?</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      T.pop("c0-in", 0.6, 2.0);
+      [["m1", 4.5, 3.0], ["m2", 7.5, 3.0], ["m3", 10.5, 3.0], ["m4", 13.5, 4.0]].forEach(([id, a, d]) => T.pop(id + "-in", a, d));
+      T.slam("b1-in", 17.5, 1.5); T.pop("c5-in", 19.0, 2.0); T.pop("c6-in", 21.0, 4.0); T.pop("c7-in", 25.0, 2.5); T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+      const TS = [2.6, 4.5, 7.5, 10.5, 13.5, 17.5], DEP = [0, 332, 1000, 2000, 3800, 10935];
+      function depth(t) { if (t <= TS[0]) return 0; for (let i = 0; i < TS.length - 1; i++) if (t < TS[i + 1]) return lerp(DEP[i], DEP[i + 1], eio((t - TS[i]) / (TS[i + 1] - TS[i]))); return DEP[DEP.length - 1]; }
+
+      function diver(x, y) { K.icon("you", x, y, 220, 1, "#ffd166", "rgba(255,209,102,0.1)"); K.dot(x, y - 198, 26, "rgba(140,220,255,0.5)", 10); }
+      function whale(x, y, s) {
+        g.save(); g.translate(x, y); g.scale(s, s); g.fillStyle = "#4a5a78"; g.shadowColor = "#8fe9ff"; g.shadowBlur = 12;
+        g.beginPath(); g.moveTo(-160, 0); g.quadraticCurveTo(-150, -60, 0, -55); g.quadraticCurveTo(120, -50, 150, 0); g.quadraticCurveTo(100, 40, -100, 30); g.closePath(); g.fill();
+        g.beginPath(); g.moveTo(150, 0); g.lineTo(220, -40); g.lineTo(210, 0); g.lineTo(220, 40); g.closePath(); g.fill(); g.restore();
+      }
+      function titanic(x, y, s) {
+        g.save(); g.translate(x, y); g.scale(s, s); g.rotate(0.12); g.strokeStyle = "#c9b38a"; g.lineWidth = 5; g.fillStyle = "rgba(90,70,50,0.6)";
+        g.beginPath(); g.moveTo(-220, 0); g.lineTo(220, 0); g.lineTo(190, 50); g.lineTo(-200, 50); g.closePath(); g.fill(); g.stroke();
+        for (let i = 0; i < 4; i++) { g.fillRect(-120 + i * 70, -60, 34, 60); g.strokeRect(-120 + i * 70, -60, 34, 60); }
+        g.restore();
+      }
+      function fish(x, y) { g.fillStyle = "rgba(220,240,255,0.7)"; g.beginPath(); g.ellipse(x, y, 40, 14, 0, 0, Math.PI * 2); g.fill(); g.beginPath(); g.moveTo(x + 38, y); g.lineTo(x + 60, y - 14); g.lineTo(x + 60, y + 14); g.closePath(); g.fill(); K.dot(x - 26, y - 3, 4, "#8fe9ff", 10); }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        const d = depth(t), dark = cl(d / 1000);
+        const gr = g.createLinearGradient(0, 0, 0, 1920);
+        gr.addColorStop(0, "rgb(" + Math.round(lerp(40, 2, dark)) + "," + Math.round(lerp(140, 6, dark)) + "," + Math.round(lerp(200, 18, dark)) + ")");
+        gr.addColorStop(1, "rgb(" + Math.round(lerp(10, 1, dark)) + "," + Math.round(lerp(40, 3, dark)) + "," + Math.round(lerp(90, 10, dark)) + ")");
+        g.fillStyle = gr; g.fillRect(0, 0, 1080, 1920);
+        // Blasen + Schwebeteilchen
+        for (let i = 0; i < 50; i++) { const y = ((rnd(i) * 1920) - t * 260 * (0.4 + rnd(i + 2))) % 1920; g.fillStyle = "rgba(200,240,255," + (0.1 + 0.25 * rnd(i + 4)) + ")"; g.beginPath(); g.arc(rnd(i + 6) * 1080, y < 0 ? y + 1920 : y, 2 + rnd(i + 8) * 5, 0, Math.PI * 2); g.fill(); }
+        const sh = K.shake(t, [[17.5, 14], [21.0, 10]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "Tiefe: <b>" + de(Math.round(d)) + " m</b>";
+
+        if (t < 17.5) {
+          // Begegnungen kommen von unten nach oben
+          const show = (t0, draw) => { const f = (t - t0 + 1.2) / 3.2; if (f < 0 || f > 1) return; const y = lerp(1500, 520, f); draw(y); };
+          show(4.5, (y) => diver(760, y));
+          show(10.5, (y) => whale(540, y, 1.4));
+          show(13.5, (y) => titanic(540, y + 120, 1.3));
+          // U-Boot
+          g.save(); g.fillStyle = "#ffd166"; g.shadowColor = "#ffd166"; g.shadowBlur = 20; g.beginPath(); g.ellipse(380, 1000, 90, 50, 0, 0, Math.PI * 2); g.fill(); g.shadowBlur = 0;
+          g.fillStyle = "#2b6fd6"; g.beginPath(); g.arc(410, 990, 20, 0, Math.PI * 2); g.fill(); g.restore();
+          if (d > 600) { const lg = g.createRadialGradient(470, 1000, 10, 700, 1000, 380); lg.addColorStop(0, "rgba(255,240,180,0.35)"); lg.addColorStop(1, "rgba(255,240,180,0)"); g.fillStyle = lg; g.beginPath(); g.moveTo(470, 1000); g.lineTo(1080, 760); g.lineTo(1080, 1240); g.closePath(); g.fill(); }
+          K.mono(de(Math.round(d)) + " m", 540, 600, 96, "#ffffff", "#8fe9ff");
+        } else if (t < 21.0) {
+          // Graben + Everest
+          const base = 1380, top = 560, px = (top - base) / 10935;
+          g.fillStyle = "#06101e"; g.fillRect(0, base, 1080, 600);
+          K.glowLine(0, top, 1080, top, "rgba(120,200,255,0.8)", 4);
+          K.label("Meeresoberfläche", 540, top - 30, 30, "#cfe8ff");
+          const rise = eout(prog(t, 18.3, 1.4));
+          const h = 8849 * -px * rise;
+          g.save(); g.fillStyle = "rgba(200,190,230,0.85)"; g.shadowColor = "#e8e2ff"; g.shadowBlur = 20;
+          g.beginPath(); g.moveTo(240, base); g.lineTo(470, base - h * 0.75); g.lineTo(540, base - h); g.lineTo(640, base - h * 0.8); g.lineTo(840, base); g.closePath(); g.fill(); g.restore();
+          if (rise > 0.9) { K.label("Mount Everest 8.849 m", 540, base - h - 40, 36, "#ffffff"); K.glowLine(180, top, 180, base - h, C.mint, 4, 1, [8, 8]); K.label("noch 2 km Wasser!", 200, (top + base - h) / 2, 32, C.mint, "left"); }
+          ih = "Tiefe: <b>10.935 m</b>";
+        } else {
+          // Druck + Leben
+          g.save();
+          K.mono("1.086 bar", 540, 640, 96, "#ffffff", C.red);
+          if (t < 25) { K.icon("you", 540, 1300, 520, 1, "#8fe9ff", "rgba(120,200,255,0.06)"); for (let i = 0; i < 10; i++) { const a = (i / 10) * Math.PI * 2; const r = 330 - 20 * Math.sin(t * 6); K.glowLine(540 + Math.cos(a) * (r + 80), 1040 + Math.sin(a) * (r + 80), 540 + Math.cos(a) * r, 1040 + Math.sin(a) * r, C.red, 6); } }
+          else { for (let i = 0; i < 6; i++) fish(200 + i * 130 + Math.sin(t * 2 + i) * 30, 900 + (i % 3) * 120 + Math.sin(t * 3 + i) * 15); }
+          g.restore();
+          ih = t < 25 ? "Wasserdruck ganz unten" : "Scheibenbäuche, Flohkrebse & Co.";
+        }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[17.5, 0.35]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
