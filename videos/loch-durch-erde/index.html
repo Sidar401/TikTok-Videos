@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      .big { top: 1420px; font-size: 72px; }
+      .big small { font-size: 38px; }
+      #cta { top: 1440px; font-size: 58px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Ein Loch quer<br /><span class="o">durch die Erde</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="c0" class="line cap clip" data-start="0.5" data-duration="2.2" data-track-index="3"><span id="c0-in">Du springst rein …<br /><span class="y">wie lange fällst du?</span></span></div>
+      <div id="c1" class="line cap clip" data-start="2.7" data-duration="2.9" data-track-index="3"><span id="c1-in">Einmal quer durch: <span class="o">12.742 km</span></span></div>
+      <div id="c2" class="line cap clip" data-start="5.6" data-duration="5.4" data-track-index="3"><span id="c2-in">Du wirst immer <span class="r">schneller</span> …</span></div>
+      <div id="b1" class="line big clip" data-start="11.0" data-duration="5.0" data-track-index="3"><span id="b1-in"><span class="r glow-r">28.000 km/h</span><small>mitten durch den Erdkern!</small></span></div>
+      <div id="b2" class="line big clip" data-start="16.0" data-duration="4.0" data-track-index="3"><span id="b2-in"><span class="g glow-g">Nur ca. 42 Minuten!</span><small>Du kommst raus … im Meer bei Neuseeland</small></span></div>
+      <div id="c3" class="line cap clip" data-start="20.0" data-duration="4.0" data-track-index="3"><span id="c3-in">Ohne Luft fällst du zurück –<br /><span class="y">für immer hin und her!</span></span></div>
+      <div id="c4" class="line cap clip" data-start="24.0" data-duration="3.5" data-track-index="3"><span id="c4-in">Das tiefste Loch der Welt:<br /><span class="r">nur 12 km</span> (0,2 % bis zur Mitte)</span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Würdest <span class="y">DU</span> springen?<br /><span class="g">JA</span> oder <span class="r">NEIN</span>?</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      T.pop("c0-in", 0.5, 2.2); T.pop("c1-in", 2.7, 2.9); T.pop("c2-in", 5.6, 5.4); T.slam("b1-in", 11.0, 5.0);
+      T.slam("b2-in", 16.0, 4.0); T.pop("c3-in", 20.0, 4.0); T.pop("c4-in", 24.0, 3.5); T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+      const CX = 540, CY = 985, R = 360;
+
+      function crossSection() {
+        // Schichten: Kruste/Mantel/äußerer Kern/innerer Kern (Radien grob maßstäblich)
+        const layers = [[1.0, "#3b6fd0", "#2a4fa0"], [0.99, "#d9682a", "#8a2f12"], [0.55, "#ffb347", "#e0731f"], [0.19, "#fff3b0", "#ffd166"]];
+        layers.forEach(([f, c1, c2]) => { const gr = g.createRadialGradient(CX, CY, 0, CX, CY, R * f); gr.addColorStop(0, c1); gr.addColorStop(1, c2); g.fillStyle = gr; g.beginPath(); g.arc(CX, CY, R * f, 0, Math.PI * 2); g.fill(); });
+        g.save(); g.shadowColor = "#ff9a3c"; g.shadowBlur = 40; g.strokeStyle = "rgba(255,180,90,0.6)"; g.lineWidth = 4; g.beginPath(); g.arc(CX, CY, R * 0.19, 0, Math.PI * 2); g.stroke(); g.restore();
+        // Tunnel
+        g.fillStyle = "#07050c"; g.fillRect(CX - 22, CY - R - 10, 44, 2 * R + 20);
+        K.label("Kruste", CX + R * 0.72, CY - R * 0.78, 28, "#cfe8ff"); K.label("Mantel", CX + 200, CY - 120, 30, "#ffe0c8"); K.label("Kern", CX - 120, CY + 40, 30, "#3a2004");
+        K.label("Deutschland", CX, CY - R - 40, 32, C.gold); K.label("Neuseeland (Meer)", CX, CY + R + 40, 32, C.mint);
+      }
+      function faller(y, s = 1) { K.icon("you", CX, y + 30, 60 * s, 1, "#ffffff", "rgba(255,255,255,0.2)"); }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.6 });
+        const sh = K.shake(t, [[2.7, 6], [11.0, 14]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+        crossSection();
+        const top = CY - R, bot = CY + R;
+        if (t < 5.8) {
+          const bob = Math.sin(t * 4) * 6;
+          faller(top - 60 + bob);
+          if (t > 2.7) { K.glowLine(CX + 70, top, CX + 70, top + 2 * R * eout(prog(t, 2.8, 1.5)), C.orange, 5, 1, [10, 8]); }
+          ih = t < 2.7 ? "Kein Luftwiderstand, keine Hitze" : "Durchmesser der Erde";
+        } else if (t < 16.0) {
+          const f = cl((t - 5.8) / 10.0);
+          const y = CY - R * Math.cos(Math.PI * f);
+          const v = 28400 * Math.sin(Math.PI * f);
+          for (let i = 1; i < 6; i++) { const yy = CY - R * Math.cos(Math.PI * cl(f - i * 0.012)); K.dot(CX, yy, 10 - i * 1.5, "rgba(255,255,255," + (0.5 - i * 0.08) + ")", 0); }
+          faller(y - 40);
+          K.mono(de(Math.round(v)) + " km/h", 540, 505, 64, "#ffffff", C.red);
+          const min = 42 * f; K.mono(Math.floor(min) + ":" + String(Math.floor((min % 1) * 60)).padStart(2, "0") + " min", 900, 1180, 46, C.mint);
+          ih = "Fallzeit läuft …";
+        } else if (t < 20.0) {
+          faller(bot - 50 + Math.sin(t * 4) * 6);
+          K.ring(CX, bot, 60 + 10 * Math.sin(t * 6), C.mint, 5, 0.9);
+          ih = "Gegenüber von Deutschland: Pazifik";
+        } else {
+          const f = (t - 20) / 1.3;
+          const y = CY + R * Math.cos(Math.PI * f) * Math.exp(-0.02 * (t - 20));
+          faller(y - 40);
+          ih = t < 24 ? "Hin … und her … und hin …" : "Kola-Bohrloch, Russland: 12,2 km";
+          if (t > 24) { g.fillStyle = C.red; g.shadowColor = C.red; g.shadowBlur = 20; g.fillRect(CX + 70, top, 14, Math.max(3, 2 * R * 0.001)); g.shadowBlur = 0; K.label("← 12 km", CX + 100, top + 10, 30, C.red, "left"); }
+        }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[11.0, 0.3]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
