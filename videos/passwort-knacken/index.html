@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      .big { top: 1420px; font-size: 66px; }
+      .big small { font-size: 36px; }
+      #cta { top: 1430px; font-size: 54px; line-height: 1.2; }
+      #cta small { display: block; font-size: 36px; color: #ddd8ef; font-weight: 700; margin-top: 8px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Wie schnell wird dein<br /><span class="r">Passwort geknackt?</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="c0" class="line cap clip" data-start="0.6" data-duration="2.0" data-track-index="3"><span id="c0-in">Ein Hacker probiert einfach <span class="r">ALLES</span> aus …</span></div>
+      <div id="c1" class="line cap clip" data-start="22.2" data-duration="2.1" data-track-index="3"><span id="c1-in">Länger, als das <span class="g">Universum</span> alt ist!</span></div>
+      <div id="b1" class="line big clip" data-start="24.3" data-duration="3.2" data-track-index="3"><span id="b1-in"><span class="g glow-g">Tipp: LÄNGE schlägt alles!</span><small>z. B. ein ganzer Satz als Passwort</small></span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Wie viele Zeichen hat deins?<small>(nur die Zahl – nicht verraten! 😅)</small></span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      T.pop("c0-in", 0.6, 2.0); T.pop("c1-in", 22.2, 2.1); T.slam("b1-in", 24.3, 3.2); T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+      const PW = [
+        { s: 2.6, pw: "123456", what: "steht in jeder Hacker-Liste", res: "SOFORT", col: C.red },
+        { s: 6.2, pw: "katzen", what: "6 kleine Buchstaben", res: "0,003 Sekunden", col: C.red },
+        { s: 9.8, pw: "Sommer24", what: "8 Zeichen, groß/klein + Zahlen", res: "36 Minuten", col: C.orange },
+        { s: 13.4, pw: "T!g3r#Mond", what: "10 Zeichen + Sonderzeichen", res: "17 Jahre", col: C.gold },
+        { s: 17.0, pw: "Bl4u&Grün#7!", what: "12 Zeichen, alles gemischt", res: "151.000 Jahre", col: C.mint },
+        { s: 20.6, pw: "MeinHundBellt7!!", what: "16 Zeichen", res: "1,2 Billionen Jahre", col: C.mint },
+      ];
+
+      function lock(x, y, s, open, col) {
+        g.save(); g.translate(x, y); g.scale(s, s); g.strokeStyle = col; g.lineWidth = 14; g.shadowColor = col; g.shadowBlur = 24;
+        g.beginPath(); g.arc(0, -70 - open * 40, 60, Math.PI, 0); g.lineTo(60, -70 - open * 40 + (open ? 0 : 0)); g.stroke();
+        g.fillStyle = col; g.beginPath(); g.roundRect(-90, -70, 180, 140, 24); g.fill();
+        g.fillStyle = "#140c24"; g.beginPath(); g.arc(0, -10, 16, 0, Math.PI * 2); g.fill(); g.fillRect(-6, -10, 12, 40); g.restore();
+      }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.2 });
+        const sh = K.shake(t, [[4.2, 8], [22.2, 12]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "Annahme: 100 Mrd. Versuche/Sekunde";
+        if (t < 2.6) {
+          lock(540, 980, 1.6, 0, C.icon);
+          // fliegende Versuche
+          for (let i = 0; i < 30; i++) { const ph = (t * 1.5 + rnd(i)) % 1; K.label(["aaaa", "1234", "pass", "qwer", "abc1"][i % 5], 120 + rnd(i + 2) * 840, 600 + ph * 700, 26, "rgba(143,233,255," + (1 - ph) + ")"); }
+        } else {
+          let si = 0; for (let i = 0; i < PW.length; i++) if (t >= PW[i].s) si = i;
+          const p = PW[si], d = t - p.s;
+          // Passwort-Feld
+          g.save(); g.fillStyle = "#1b1534"; g.strokeStyle = "#8fe9ff"; g.lineWidth = 4; g.beginPath(); g.roundRect(140, 620, 800, 130, 26); g.fill(); g.stroke(); g.restore();
+          const n = Math.min(p.pw.length, Math.floor(d / 0.11) + 1);
+          K.mono(p.pw.slice(0, n) + (Math.floor(t * 3) % 2 && n < p.pw.length ? "|" : ""), 540, 688, 62, "#ffffff");
+          K.label(p.what, 540, 800, 36, "#ddd8ef", "center", 700);
+          // Knack-Balken
+          const f = eio(cl((d - 0.8) / 0.8));
+          K.bar(140, 900, 800, si < 2 ? f : f * [0, 0, 1, 0.6, 0.3, 0.08][si], p.col, 30);
+          const opened = si < 3 && d > 1.6;
+          lock(540, 1180, 1.0, opened ? 1 : 0, opened ? C.red : p.col);
+          if (d > 1.6) K.mono(p.res, 540, 1340, si === 5 ? 64 : 72, "#ffffff", p.col);
+        }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[22.2, 0.3]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
