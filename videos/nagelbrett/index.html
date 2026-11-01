@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1470px; }
+      .big { top: 1450px; font-size: 72px; }
+      .big small { font-size: 36px; }
+      #cta { top: 1460px; font-size: 56px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Zufall wird zur<br /><span class="g">perfekten Kurve</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="c0" class="line cap clip" data-start="0.5" data-duration="2.3" data-track-index="3"><span id="c0-in">Kugeln fallen durch Nägel …</span></div>
+      <div id="c1" class="line cap clip" data-start="2.8" data-duration="5.2" data-track-index="3"><span id="c1-in">An jedem Nagel: <span class="y">links oder rechts</span><small>reiner Zufall, 50 : 50</small></span></div>
+      <div id="c2" class="line cap clip" data-start="8.0" data-duration="6.0" data-track-index="3"><span id="c2-in">Wo <span class="y">EINE</span> Kugel landet,<br />weiß niemand …</span></div>
+      <div id="c3" class="line cap clip" data-start="14.0" data-duration="7.0" data-track-index="3"><span id="c3-in">… aber <span class="g">ALLE</span> zusammen?</span></div>
+      <div id="b1" class="line big clip" data-start="21.0" data-duration="3.0" data-track-index="3"><span id="b1-in"><span class="g glow-g">Die Glockenkurve!</span></span></div>
+      <div id="c4" class="line cap clip" data-start="24.0" data-duration="3.5" data-track-index="3"><span id="c4-in">Sie steckt überall: <span class="y">Körpergröße,<br />Schulnoten, Wurf-Weiten …</span></span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Hättest <span class="y">DU</span> das gedacht?<br /><span class="g">JA</span> oder <span class="r">NEIN</span>?</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      T.pop("c0-in", 0.5, 2.3); T.pop("c1-in", 2.8, 5.2); T.pop("c2-in", 8.0, 6.0); T.pop("c3-in", 14.0, 7.0); T.slam("b1-in", 21.0, 3.0);
+      T.pop("c4-in", 24.0, 3.5); T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+      const ROWS = 10, SP = 74, TOPY = 560, RS = 50, BX = 540, BIN_Y = TOPY + ROWS * RS + 20, BASE = 1400, FALL = 1.2, NB = 600;
+      // Startzeiten: zuerst einzeln, dann immer dichter
+      const START = []; for (let i = 0; i < NB; i++) START.push(1.0 + 18.7 * Math.pow(i / NB, 0.55));
+      const PATH = []; for (let i = 0; i < NB; i++) { const p = []; let r = 0; for (let k = 0; k < ROWS; k++) { r += rnd(i * 31 + k * 7 + 3) < 0.5 ? 0 : 1; p.push(r); } PATH.push(p); }
+      const COLS = ["#8fe9ff", "#ffc94d", "#ff5f8f", "#5ef2c2", "#b99cff"];
+
+      function ballPos(i, t) {
+        const d = (t - START[i]) / FALL; if (d < 0) return null;
+        if (d >= 1) return { done: true, bin: PATH[i][ROWS - 1] };
+        const rowf = d * ROWS, k = Math.floor(rowf), fr = rowf - k;
+        const prevR = k === 0 ? 0 : PATH[i][k - 1], nextR = PATH[i][k];
+        const xPrev = BX + (prevR - k / 2) * SP, xNext = BX + (nextR - (k + 1) / 2) * SP;
+        const x = lerp(xPrev, xNext, eio(fr)), y = TOPY - 40 + rowf * RS - Math.sin(fr * Math.PI) * 14;
+        return { x, y };
+      }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.2 });
+        const sh = K.shake(t, [[21.0, 8]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        // Nägel
+        for (let r = 0; r < ROWS; r++) for (let j = 0; j <= r; j++) K.dot(BX + (j - r / 2) * SP, TOPY + r * RS, 6, "#cfc9ff", 8);
+        // Fächer
+        const counts = new Array(ROWS + 1).fill(0);
+        let fallen = 0;
+        for (let i = 0; i < NB; i++) { const p = ballPos(i, t); if (!p) continue; if (p.done) { counts[p.bin]++; fallen++; } else K.dot(p.x, p.y, 9, COLS[i % 5], 12); }
+        for (let b = 0; b <= ROWS; b++) {
+          const x = BX + (b - ROWS / 2) * SP;
+          g.strokeStyle = "rgba(255,255,255,0.25)"; g.lineWidth = 3; g.beginPath(); g.moveTo(x - SP / 2, BIN_Y); g.lineTo(x - SP / 2, BASE); g.stroke();
+          const h = counts[b] * 2.2;
+          const gr = g.createLinearGradient(0, BASE - h, 0, BASE); gr.addColorStop(0, C.mint); gr.addColorStop(1, "#2a7d6a");
+          g.fillStyle = gr; g.fillRect(x - SP / 2 + 5, BASE - h, SP - 10, h);
+        }
+        g.strokeStyle = "rgba(255,255,255,0.25)"; g.beginPath(); g.moveTo(BX + (ROWS / 2 + 0.5) * SP, BIN_Y); g.lineTo(BX + (ROWS / 2 + 0.5) * SP, BASE); g.stroke();
+        K.glowLine(BX - (ROWS / 2 + 0.5) * SP, BASE, BX + (ROWS / 2 + 0.5) * SP, BASE, "#ffffff", 3);
+        // Glockenkurve
+        if (t > 21.0) {
+          const f = eout(prog(t, 21.0, 1.0));
+          g.save(); g.strokeStyle = C.gold; g.lineWidth = 7; g.shadowColor = C.gold; g.shadowBlur = 24; g.beginPath();
+          const n = ROWS, total = fallen; let first = true;
+          for (let xx = -n / 2 - 0.5; xx <= n / 2 + 0.5; xx += 0.05) {
+            const k = xx + n / 2, mu = n / 2, sd = Math.sqrt(n) / 2;
+            const v = total * Math.exp(-((k - mu) ** 2) / (2 * sd * sd)) / (sd * Math.sqrt(2 * Math.PI));
+            const px = BX + xx * SP, py = BASE - v * 2.2;
+            if ((xx + n / 2 + 0.5) / (n + 1) > f) break;
+            first ? g.moveTo(px, py) : g.lineTo(px, py); first = false;
+          }
+          g.stroke(); g.restore();
+        }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[21.0, 0.25]]);
+        const ih = "Kugeln: <b>" + de(fallen) + "</b>";
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
