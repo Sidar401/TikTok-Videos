@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      .big { top: 1420px; font-size: 76px; }
+      .big small { font-size: 36px; }
+      #cta { top: 1440px; font-size: 56px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Wie viele <span class="r">JAHRE</span><br />verbringst du am Handy?</span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="c0" class="line cap clip" data-start="0.6" data-duration="2.0" data-track-index="3"><span id="c0-in">Rechnen wir mal … 📱</span></div>
+      <div id="c1" class="line cap clip" data-start="2.7" data-duration="5.3" data-track-index="3"><span id="c1-in">Bei <span class="y">3 Stunden</span> am Tag:<br />pro Jahr <span class="r">45 Tage</span> nonstop!</span></div>
+      <div id="b1" class="line big clip" data-start="8.0" data-duration="6.0" data-track-index="3"><span id="b1-in"><span class="r glow-r">8,5 JAHRE!</span><small>vom 12. bis zum 80. Geburtstag</small></span></div>
+      <div id="c2" class="line cap clip" data-start="14.0" data-duration="6.0" data-track-index="3"><span id="c2-in">Und bei mehr Stunden?</span></div>
+      <div id="c3" class="line cap clip" data-start="20.0" data-duration="4.5" data-track-index="3"><span id="c3-in">Check deine <span class="y">Bildschirmzeit</span>:<small>iPhone: Einstellungen → Bildschirmzeit</small></span></div>
+      <div id="c4" class="line cap clip" data-start="24.5" data-duration="3.0" data-track-index="3"><span id="c4-in">… und du schaust gerade TikTok 😅</span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Wie viele Stunden<br />waren es <span class="y">heute</span>? 👇</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      T.pop("c0-in", 0.6, 2.0); T.pop("c1-in", 2.7, 5.3); T.slam("b1-in", 8.0, 6.0); T.pop("c2-in", 14.0, 6.0); T.pop("c3-in", 20.0, 4.5); T.pop("c4-in", 24.5, 3.0);
+      T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+
+      function phone(x, y, s, t, glow) {
+        g.save(); g.translate(x, y); g.scale(s, s);
+        g.fillStyle = "#1b1630"; g.strokeStyle = glow || "#8fe9ff"; g.lineWidth = 8; g.shadowColor = g.strokeStyle; g.shadowBlur = 30;
+        g.beginPath(); g.roundRect(-130, -250, 260, 500, 40); g.fill(); g.stroke(); g.shadowBlur = 0;
+        // scrollender Feed
+        g.save(); g.beginPath(); g.roundRect(-110, -220, 220, 440, 20); g.clip();
+        for (let i = 0; i < 8; i++) { const y = ((i * 130 - t * 260) % 1040 + 1040) % 1040 - 300; g.fillStyle = ["#ff5f8f", "#5ef2c2", "#ffc94d", "#b99cff"][i % 4]; g.globalAlpha = 0.6; g.beginPath(); g.roundRect(-95, y, 190, 110, 14); g.fill(); }
+        g.restore(); g.restore();
+      }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.3 });
+        const sh = K.shake(t, [[8.0, 14], [19.1, 6]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+        if (t < 8.0) {
+          phone(540, 960, 1.15, t);
+          if (t > 2.8) {
+            const f = eout(prog(t, 2.9, 2.8));
+            K.mono(de(Math.round(45 * f)) + " Tage", 540, 1340, 76, "#ffffff", C.red);
+          }
+          ih = t < 2.7 ? "Bildschirmzeit" : "3 h × 365 Tage = 1.095 Stunden";
+        } else if (t < 14.0) {
+          // Lebens-Leiste 12–80 mit Handy-Anteil
+          const x0 = 140, x1 = 940, y = 900;
+          g.fillStyle = "rgba(255,255,255,0.1)"; g.beginPath(); g.roundRect(x0, y, x1 - x0, 90, 20); g.fill();
+          const f = eout(prog(t, 8.2, 1.4));
+          g.fillStyle = C.red; g.shadowColor = C.red; g.shadowBlur = 24; g.beginPath(); g.roundRect(x0, y, (x1 - x0) * (8.5 / 68) * f, 90, 20); g.fill(); g.shadowBlur = 0;
+          K.label("12 Jahre", x0, y + 140, 34, "#cfc9e6", "left"); K.label("80 Jahre", x1, y + 140, 34, "#cfc9e6", "right");
+          K.label("Handy", x0 + 20, y - 40, 36, C.red, "left");
+          phone(780, 700, 0.45, t, C.red);
+          ih = "68 Jahre × 45 Tage";
+        } else if (t < 20.2) {
+          const rows = [[1, 2.8, C.mint], [3, 8.5, C.gold], [5, 14.2, C.orange], [7, 19.8, C.red]];
+          rows.forEach(([h, y, col], i) => { const s = 14.5 + i * 1.5; if (t < s) return; const f = eout(prog(t, s, 0.6)); const yy = 640 + i * 170;
+            K.label(h + " Std./Tag", 140, yy, 42, col, "left"); K.bar(140, yy + 40, 800, (y / 20) * f, col, 40); K.label(de(y * f, 1) + " Jahre", 940, yy, 42, "#fff", "right"); });
+          ih = "Lebenszeit am Handy (12–80 Jahre)";
+        } else {
+          phone(540, 960, 1.15, t, t > 24.5 ? C.pink : C.gold);
+          if (t < 24.5) { g.save(); g.fillStyle = "rgba(10,7,20,0.85)"; g.beginPath(); g.roundRect(330, 780, 420, 300, 30); g.fill(); g.restore(); K.label("Bildschirmzeit", 540, 840, 40, C.gold); K.mono("3:12 h", 540, 940, 80, "#ffffff", C.gold); K.label("Tagesdurchschnitt", 540, 1020, 30, "#ddd8ef"); }
+          ih = "Probier's aus!";
+        }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[8.0, 0.3]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
