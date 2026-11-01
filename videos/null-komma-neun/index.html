@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      .chips { top: 1440px; }
+      .big { top: 1420px; font-size: 72px; }
+      .big small { font-size: 36px; }
+      #cta { top: 1440px; font-size: 58px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Ist 0,999… <span class="y">= 1?</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="chips" class="line chips clip" data-start="1.2" data-duration="1.5" data-track-index="3"><span id="k1" class="chip">JA</span><span id="k2" class="chip">NEIN</span></div>
+      <div id="c1" class="line cap clip" data-start="2.8" data-duration="3.2" data-track-index="3"><span id="c1-in">Die meisten sagen: <span class="r">NEIN!</span><small>Da fehlt doch ein winziges Stück …?</small></span></div>
+      <div id="c2" class="line cap clip" data-start="6.0" data-duration="6.0" data-track-index="3"><span id="c2-in">Beweis 1: <span class="y">Drittel</span></span></div>
+      <div id="c3" class="line cap clip" data-start="12.0" data-duration="6.0" data-track-index="3"><span id="c3-in">Beweis 2: Welche Zahl liegt<br /><span class="y">dazwischen?</span> Keine!</span></div>
+      <div id="c4" class="line cap clip" data-start="18.0" data-duration="5.0" data-track-index="3"><span id="c4-in">Beweis 3: <span class="y">Mal 10</span></span></div>
+      <div id="b1" class="line big clip" data-start="23.0" data-duration="4.5" data-track-index="3"><span id="b1-in"><span class="g glow-g">JA – es ist GENAU 1!</span><small>nur anders geschrieben</small></span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Bist <span class="y">DU</span> überzeugt?<br /><span class="g">JA</span> oder <span class="r">NEIN</span>?</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      ["k1", "k2"].forEach((id, i) => tl.from("#" + id, { opacity: 0, scale: 0.4, y: 30, duration: 0.25, ease: "back.out(3)" }, 1.2 + i * 0.4));
+      tl.to("#chips .chip", { opacity: 0, duration: 0.15 }, 2.55);
+      T.pop("c1-in", 2.8, 3.2); T.pop("c2-in", 6.0, 6.0); T.pop("c3-in", 12.0, 6.0); T.pop("c4-in", 18.0, 5.0); T.slam("b1-in", 23.0, 4.5);
+      T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+
+      function eqLines(t, lines) {
+        lines.forEach(([t0, txt, col], i) => {
+          const a = eout(prog(t, t0, 0.3)); if (a <= 0) return;
+          g.save(); g.globalAlpha = a; K.mono(txt, 540, 640 + i * 150 + (1 - a) * 30, 76, "#ffffff", col); g.restore();
+        });
+      }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.3 });
+        const sh = K.shake(t, [[11.0, 8], [23.0, 14]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+        if (t < 6.0) {
+          K.mono("0,999999…", 540, 820, 120, "#ffffff", C.gold);
+          K.mono("1", 540, 1040, 160, "#ffffff", C.mint);
+          K.label("?", 540, 930, 80, C.red);
+          if (t > 2.8) { K.bar(200, 1200, 680, 0.78 * eout(prog(t, 2.9, 1.0)), C.red, 34); K.label("NEIN", 160, 1217, 36, C.red, "right"); K.bar(200, 1270, 680, 0.22 * eout(prog(t, 2.9, 1.0)), C.mint, 34); K.label("JA", 160, 1287, 36, C.mint, "right"); }
+          ih = t < 2.8 ? "Unendlich viele Neunen" : "Was viele denken";
+        } else if (t < 12.0) {
+          eqLines(t, [[6.6, "1/3 = 0,333…", C.mint], [7.8, "× 3", C.gold], [9.0, "3/3 = 0,999…", C.gold], [10.4, "3/3 = 1  ✓", C.mint]]);
+          if (t > 11.0) { g.save(); g.strokeStyle = C.mint; g.lineWidth = 6; g.shadowColor = C.mint; g.shadowBlur = 20; g.strokeRect(190, 1030, 700, 130); g.restore(); }
+          ih = "Ein Drittel mal drei";
+        } else if (t < 18.0) {
+          // Zahlenstrahl-Zoom
+          const k = Math.floor((t - 12.6) / 0.55) + 1, n = cl(k, 1, 9);
+          const zf = prog(t, 12.6 + (n - 1) * 0.55, 0.4);
+          K.glowLine(120, 1000, 960, 1000, "#ffffff", 5);
+          K.dot(940, 1000, 14, C.mint, 20); K.label("1", 940, 1060, 50, C.mint);
+          const x = lerp(120, 940, 1 - Math.pow(0.1, 0.3 + zf * 0.7));
+          K.dot(x, 1000, 14, C.gold, 20);
+          K.label("0," + "9".repeat(n), Math.min(x, 760), 920, 46, C.gold);
+          K.mono("Abstand: 0," + "0".repeat(n - 1) + "1", 540, 700, n > 6 ? 54 : 64, "#ffffff", C.red);
+          K.label("… und unendlich weiter → Abstand = 0", 540, 1180, 38, "#ddd8ef");
+          ih = "Immer näher ran zoomen";
+        } else if (t < 23.0) {
+          eqLines(t, [[18.6, "x = 0,999…", C.gold], [19.6, "10x = 9,999…", C.gold], [20.6, "10x − x = 9", C.mint], [21.6, "9x = 9  →  x = 1", C.mint]]);
+          ih = "Einfache Gleichung";
+        } else {
+          K.mono("0,999… = 1", 540, 900, 120, "#ffffff", C.mint);
+          for (let i = 0; i < 24; i++) { const an = (i / 24) * Math.PI * 2 + t; K.dot(540 + Math.cos(an) * (420 + 20 * Math.sin(t * 4 + i)), 900 + Math.sin(an) * 240, 6, i % 2 ? C.gold : C.mint, 14); }
+          ih = "Mathematisch bewiesen";
+        }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[23.0, 0.35]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
