@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      .big { top: 1420px; font-size: 66px; }
+      .big small { font-size: 36px; }
+      #cta { top: 1440px; font-size: 56px; line-height: 1.2; }
+      .typ { top: 520px; font-size: 54px; }
+      #new { top: 520px; font-size: 40px; }
+      #new span { background: var(--red); color: #fff; padding: 8px 22px; border-radius: 14px; font-weight: 900; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Forscher finden eine<br /><span class="v">NEUE Art Magnet!</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="c0" class="line cap clip" data-start="0.6" data-duration="2.0" data-track-index="3"><span id="c0-in">Es gibt nicht nur <span class="y">2</span> Arten …</span></div>
+      <div id="t1" class="line typ clip" data-start="2.6" data-duration="5.4" data-track-index="4"><span id="t1-in"><span class="r">1 · Normaler Magnet</span></span></div>
+      <div id="c1" class="line cap clip" data-start="2.8" data-duration="5.2" data-track-index="3"><span id="c1-in">Alle Pfeile zeigen <span class="y">gleich</span> –<br />klebt am Kühlschrank!</span></div>
+      <div id="t2" class="line typ clip" data-start="8.0" data-duration="5.0" data-track-index="4"><span id="t2-in"><span class="y">2 · Anti-Magnet</span></span></div>
+      <div id="c2" class="line cap clip" data-start="8.2" data-duration="4.8" data-track-index="3"><span id="c2-in">Pfeile abwechselnd –<br />sie <span class="y">heben sich auf.</span></span></div>
+      <div id="t3" class="line typ clip" data-start="13.0" data-duration="5.0" data-track-index="4"><span id="t3-in"><span class="g">3 · ALTER-Magnet!</span></span></div>
+      <div id="c3" class="line cap clip" data-start="13.2" data-duration="4.8" data-track-index="3"><span id="c3-in">Außen unsichtbar –<br />innen trotzdem <span class="g">nutzbar!</span></span></div>
+      <div id="new" class="line clip" data-start="18.0" data-duration="5.0" data-track-index="4"><span id="new-in">NEU · Oktober 2026</span></div>
+      <div id="b1" class="line big clip" data-start="20.0" data-duration="3.0" data-track-index="3"><span id="b1-in"><span class="g glow-g">Speicher bis zu 1.000× schneller!</span><small>im Labor getestet</small></span></div>
+      <div id="c4" class="line cap clip" data-start="23.0" data-duration="4.5" data-track-index="3"><span id="c4-in">Die Entdecker bekamen 2026<br />einen <span class="y">großen Physik-Preis</span> 🏆</span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Schon mal davon gehört?<br /><span class="g">JA</span> oder <span class="r">NEIN</span>?</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      T.pop("c0-in", 0.6, 2.0); T.slam("t1-in", 2.6, 5.4); T.pop("c1-in", 2.8, 5.2); T.slam("t2-in", 8.0, 5.0); T.pop("c2-in", 8.2, 4.8);
+      T.slam("t3-in", 13.0, 5.0); T.pop("c3-in", 13.2, 4.8); T.slam("new-in", 18.0, 5.0); T.slam("b1-in", 20.0, 3.0); T.pop("c4-in", 23.0, 4.5);
+      T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+      function arrow(x, y, ang, len, col) {
+        g.save(); g.translate(x, y); g.rotate(ang); g.strokeStyle = col; g.fillStyle = col; g.lineWidth = 7; g.shadowColor = col; g.shadowBlur = 12; g.lineCap = "round";
+        g.beginPath(); g.moveTo(-len / 2, 0); g.lineTo(len / 2 - 14, 0); g.stroke(); g.beginPath(); g.moveTo(len / 2, 0); g.lineTo(len / 2 - 22, -13); g.lineTo(len / 2 - 22, 13); g.closePath(); g.fill(); g.restore();
+      }
+      function grid(type, t, col) {
+        const N = 5, S = 130, x0 = 540 - (N - 1) * S / 2, y0 = 980 - (N - 1) * S / 2;
+        for (let i = 0; i < N; i++) for (let j = 0; j < N; j++) {
+          const x = x0 + i * S, y = y0 + j * S, odd = (i + j) % 2;
+          let a = -Math.PI / 2;
+          if (type === 2) a = odd ? Math.PI / 2 : -Math.PI / 2;
+          if (type === 3) a = odd ? Math.PI / 2 + 0.6 : -Math.PI / 2 + 0.6, a += odd ? 0 : 0;
+          if (type === 3) { a = odd ? Math.PI / 2 : -Math.PI / 2; g.save(); g.translate(x, y); g.rotate(odd ? Math.PI / 4 : -Math.PI / 4); g.strokeStyle = "rgba(94,242,194,0.35)"; g.lineWidth = 3; g.strokeRect(-40, -22, 80, 44); g.restore(); }
+          arrow(x, y, a + Math.sin(t * 3 + i + j) * 0.05, 90, type === 3 ? (odd ? C.mint : C.icon) : col);
+        }
+      }
+      function fieldLines(a) { g.save(); g.globalAlpha = a; g.strokeStyle = "rgba(255,95,94,0.5)"; g.lineWidth = 3; for (let k = 1; k <= 3; k++) { g.beginPath(); g.ellipse(540, 980, 330 + k * 60, 420 + k * 70, 0, 0, Math.PI * 2); g.stroke(); } g.restore(); }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.25 });
+        const sh = K.shake(t, [[13.0, 10], [20.0, 10]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+        if (t < 2.7) { for (let i = 0; i < 40; i++) { const a = rnd(i) * 6.28 + t; arrow(540 + Math.cos(a) * (150 + rnd(i + 2) * 300), 980 + Math.sin(a) * (150 + rnd(i + 3) * 300), a * 2, 60, [C.red, C.gold, C.mint][i % 3]); } ih = "Physik-Neuheit"; }
+        else if (t < 8.0) { fieldLines(0.4 + 0.3 * Math.sin(t * 3)); grid(1, t, C.red); ih = "Ferromagnet"; }
+        else if (t < 13.0) { grid(2, t, C.gold); ih = "Antiferromagnet"; }
+        else if (t < 18.0) { grid(3, t, C.mint); ih = "Altermagnet · seit 2024 bestätigt"; }
+        else if (t < 23.0) {
+          const f1 = eout(prog(t, 18.6, 3.6)), f2 = eout(prog(t, 18.6, 0.6));
+          K.label("Heutiger Speicher", 140, 760, 40, "#ffffff", "left"); K.bar(140, 800, 800, f1 * 0.15 + 0.02, C.icon, 50);
+          K.label("Alter-Magnet-Speicher", 140, 960, 40, C.mint, "left"); K.bar(140, 1000, 800, f2, C.mint, 50);
+          for (let i = 0; i < 12; i++) K.glowLine(140 + 800 * f2 - 20 - i * 30, 1025 + (i % 3 - 1) * 14, 140 + 800 * f2 - 80 - i * 30, 1025 + (i % 3 - 1) * 14, "rgba(255,255,255,0.4)", 3);
+          ih = "Forschung u. a. aus Nottingham";
+        } else { K.icon("trophy", 540, 1250, 420, 1, C.gold, "rgba(255,201,77,0.12)"); ih = "Europhysik-Preis 2026"; }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[13.0, 0.25]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
