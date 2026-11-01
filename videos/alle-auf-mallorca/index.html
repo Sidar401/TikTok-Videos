@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      .chips { top: 1440px; }
+      .big { top: 1420px; font-size: 68px; }
+      .big small { font-size: 36px; }
+      #cta { top: 1440px; font-size: 56px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Wie viel Platz brauchen<br /><span class="y">alle 8 Mrd. Menschen?</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="chips" class="line chips clip" data-start="0.9" data-duration="1.8" data-track-index="3"><span id="k1" class="chip">Afrika?</span><span id="k2" class="chip">Europa?</span><span id="k3" class="chip">Deutschland?</span></div>
+      <div id="c1" class="line cap clip" data-start="2.8" data-duration="5.2" data-track-index="3"><span id="c1-in">Dicht an dicht wie im Konzert:<br /><span class="y">4 Menschen pro m²</span></span></div>
+      <div id="c2" class="line cap clip" data-start="8.0" data-duration="4.0" data-track-index="3"><span id="c2-in">8,2 Mrd. ÷ 4 = <span class="g">2.050 km²</span></span></div>
+      <div id="b1" class="line big clip" data-start="14.6" data-duration="2.4" data-track-index="3"><span id="b1-in"><span class="y glow-y">Passt auf MALLORCA!</span><small>und die Hälfte bleibt frei 🌴</small></span></div>
+      <div id="c3" class="line cap clip" data-start="17.0" data-duration="2.0" data-track-index="3"><span id="c3-in">Es geht sogar noch kleiner …</span></div>
+      <div id="b2" class="line big clip" data-start="19.0" data-duration="3.0" data-track-index="3"><span id="b2-in"><span class="g glow-g">… ins SAARLAND!</span><small>2.570 km² – alle Menschen der Welt</small></span></div>
+      <div id="c4" class="line cap clip" data-start="22.0" data-duration="5.5" data-track-index="3"><span id="c4-in">Platz ist also genug da –<br />eng wird's bei <span class="r">Essen, Wasser & Energie.</span></span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Wer kommt mit nach Mallorca? 🌴<br /><span class="g">Markier jemanden!</span></span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      ["k1", "k2", "k3"].forEach((id, i) => tl.from("#" + id, { opacity: 0, scale: 0.4, y: 30, duration: 0.25, ease: "back.out(3)" }, 0.9 + i * 0.4));
+      tl.to("#chips .chip", { opacity: 0, duration: 0.15 }, 2.55);
+      T.pop("c1-in", 2.8, 5.2); T.pop("c2-in", 8.0, 4.0); T.slam("b1-in", 14.6, 2.4); T.pop("c3-in", 17.0, 2.0); T.slam("b2-in", 19.0, 3.0); T.pop("c4-in", 22.0, 5.5);
+      T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+      // Vereinfachte Umrisse (normiert, ungefähr)
+      const MALLORCA = [[0.05, 0.45], [0.18, 0.25], [0.32, 0.12], [0.5, 0.05], [0.62, 0.12], [0.78, 0.1], [0.95, 0.3], [0.9, 0.5], [0.97, 0.65], [0.8, 0.88], [0.6, 0.95], [0.45, 0.82], [0.3, 0.86], [0.2, 0.7], [0.08, 0.62]];
+      const SAAR = [[0.2, 0.05], [0.45, 0.0], [0.6, 0.12], [0.85, 0.15], [0.95, 0.4], [0.82, 0.6], [0.9, 0.85], [0.6, 0.95], [0.4, 0.82], [0.2, 0.9], [0.05, 0.6], [0.12, 0.3]];
+      function shape(pts, x, y, w, h, fill, stroke) {
+        g.save(); g.beginPath(); pts.forEach(([u, v], i) => (i ? g.lineTo(x + u * w, y + v * h) : g.moveTo(x + u * w, y + v * h))); g.closePath();
+        g.fillStyle = fill; g.fill(); g.strokeStyle = stroke; g.lineWidth = 6; g.shadowColor = stroke; g.shadowBlur = 20; g.stroke(); g.restore();
+      }
+      function crowd(pts, x, y, w, h, f, n) {
+        g.save(); g.beginPath(); pts.forEach(([u, v], i) => (i ? g.lineTo(x + u * w, y + v * h) : g.moveTo(x + u * w, y + v * h))); g.closePath(); g.clip();
+        const cols = ["#8fe9ff", "#ffc94d", "#ff5f8f", "#5ef2c2", "#b99cff"];
+        const m = Math.floor(n * f);
+        for (let i = 0; i < m; i++) { const px = x + rnd(i) * w * f, py = y + rnd(i + 5) * h; g.fillStyle = cols[i % 5]; g.fillRect(px, py, 4, 4); }
+        g.restore();
+      }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.25, top: "#0f2238", mid: "#0b1626" });
+        const sh = K.shake(t, [[14.6, 10], [19.0, 12]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+        if (t < 2.8) {
+          K.earth(540, 960, 300);
+          for (let i = 0; i < 80; i++) { const a = rnd(i) * 6.28, r = Math.sqrt(rnd(i + 2)) * 280; K.dot(540 + Math.cos(a) * r, 960 + Math.sin(a) * r, 3, "#ffe08a", 6); }
+          ih = "Rate mal!";
+        } else if (t < 8.1) {
+          g.save(); g.strokeStyle = C.gold; g.lineWidth = 6; g.setLineDash([16, 10]); g.shadowColor = C.gold; g.shadowBlur = 16; g.strokeRect(290, 700, 500, 500); g.restore();
+          K.label("1 m", 540, 670, 40, C.gold);
+          [[400, 900], [680, 900], [400, 1160], [680, 1160]].forEach(([x, y], i) => { if (t < 3.2 + i * 0.3) return; K.icon("you", x, y, 200 * K.back(cl((t - 3.2 - i * 0.3) / 0.3)), 1, ["#8fe9ff", "#ffc94d", "#ff5f8f", "#5ef2c2"][i], "rgba(255,255,255,0.06)"); });
+          ih = "1 Quadratmeter";
+        } else if (t < 12.1) {
+          K.mono(de(Math.round(2050 * eout(prog(t, 8.2, 3.0)))) + " km²", 540, 900, 110, "#ffffff", C.mint);
+          K.label("Fläche für alle Menschen", 540, 1010, 40, "#ddd8ef");
+          ih = "Stehplätze für die ganze Welt";
+        } else if (t < 19.0) {
+          const a = prog(t, 12.0, 0.4);
+          g.save(); g.globalAlpha = a;
+          const gr = g.createLinearGradient(0, 600, 0, 1300); gr.addColorStop(0, "#1f6fb8"); gr.addColorStop(1, "#0f3a70");
+          g.fillStyle = gr; g.fillRect(60, 560, 960, 820);
+          shape(MALLORCA, 130, 650, 820, 640, "#d9c08a", "#ffe8b0");
+          crowd(MALLORCA, 130, 650, 820, 640, 0.56 * eout(prog(t, 13.0, 1.6)), 3500);
+          K.label("Mallorca · 3.640 km²", 540, 1340, 38, "#ffffff");
+          g.restore();
+          ih = "Umriss vereinfacht";
+        } else {
+          const a = prog(t, 19.0, 0.3);
+          g.save(); g.globalAlpha = a;
+          shape(SAAR, 230, 620, 620, 680, "#2c5a3a", C.mint);
+          crowd(SAAR, 230, 620, 620, 680, 0.8 * eout(prog(t, 19.2, 1.4)), 3200);
+          K.label("Saarland · 2.570 km²", 540, 1340, 38, "#ffffff");
+          g.restore();
+          ih = t < 22 ? "Umriss vereinfacht" : "Rechnung: 4 Personen pro m²";
+        }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[14.6, 0.25], [19.0, 0.3]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
