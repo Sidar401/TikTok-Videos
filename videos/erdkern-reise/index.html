@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      .chips { top: 1440px; }
+      .big { top: 1420px; font-size: 70px; }
+      .big small { font-size: 36px; }
+      #cta { top: 1440px; font-size: 58px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Wie heiß ist es im<br /><span class="o">Mittelpunkt der Erde?</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="chips" class="line chips clip" data-start="0.7" data-duration="1.9" data-track-index="3"><span id="k1" class="chip">500 °C?</span><span id="k2" class="chip">1.000 °C?</span><span id="k3" class="chip">5.000 °C?</span></div>
+      <div id="m1" class="line cap clip" data-start="3.5" data-duration="2.0" data-track-index="3"><span id="m1-in"><span class="y">4 km:</span> tiefstes Bergwerk<small>Fels: 60 °C heiß</small></span></div>
+      <div id="m2" class="line cap clip" data-start="5.5" data-duration="2.0" data-track-index="3"><span id="m2-in"><span class="y">12 km:</span> tiefstes Bohrloch<small>180 °C · weiter kam noch niemand</small></span></div>
+      <div id="m3" class="line cap clip" data-start="7.5" data-duration="4.0" data-track-index="3"><span id="m3-in"><span class="o">Der Mantel:</span> zähes, heißes Gestein<small>fast 3.000 km dick</small></span></div>
+      <div id="m4" class="line cap clip" data-start="11.5" data-duration="4.0" data-track-index="3"><span id="m4-in"><span class="o">2.900 km:</span> ein Meer aus<br /><span class="r">flüssigem Eisen!</span></span></div>
+      <div id="m5" class="line cap clip" data-start="15.5" data-duration="3.0" data-track-index="3"><span id="m5-in"><span class="y">5.150 km:</span> der innere Kern …</span></div>
+      <div id="b1" class="line big clip" data-start="18.5" data-duration="2.5" data-track-index="3"><span id="b1-in"><span class="r glow-r">Über 5.000 °C!</span><small>so heiß wie die Oberfläche der Sonne</small></span></div>
+      <div id="c6" class="line cap clip" data-start="21.0" data-duration="4.0" data-track-index="3"><span id="c6-in">Und trotzdem <span class="y">fest</span> – wegen<br /><span class="r">3,6 Mio. bar</span> Druck!</span></div>
+      <div id="c7" class="line cap clip" data-start="25.0" data-duration="2.5" data-track-index="3"><span id="c7-in">Wir Menschen kamen nur<br /><span class="g">0,2 %</span> des Weges nach unten.</span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Hast <span class="y">DU</span> richtig geschätzt?<br />Ab in die Kommentare!</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      ["k1", "k2", "k3"].forEach((id, i) => tl.from("#" + id, { opacity: 0, scale: 0.4, y: 30, duration: 0.25, ease: "back.out(3)" }, 0.7 + i * 0.5));
+      tl.to("#chips .chip", { opacity: 0, duration: 0.15 }, 2.45);
+      [["m1", 3.5, 2.0], ["m2", 5.5, 2.0], ["m3", 7.5, 4.0], ["m4", 11.5, 4.0], ["m5", 15.5, 3.0]].forEach(([id, a, d]) => T.pop(id + "-in", a, d));
+      T.slam("b1-in", 18.5, 2.5); T.pop("c6-in", 21.0, 4.0); T.pop("c7-in", 25.0, 2.5); T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+      const TS = [2.6, 3.5, 5.5, 7.5, 11.5, 15.5, 18.5];
+      const DEP = [0, 4, 12.2, 35, 2900, 5150, 6371];
+      const TMP = [15, 60, 180, 500, 3800, 5000, 5400];
+      function at(t, arr) {
+        if (t <= TS[0]) return arr[0];
+        for (let i = 0; i < TS.length - 1; i++) if (t < TS[i + 1]) { const f = eio((t - TS[i]) / (TS[i + 1] - TS[i])); return lerp(arr[i], arr[i + 1], f); }
+        return arr[arr.length - 1];
+      }
+      function colorAt(d) {
+        const stops = [[0, [40, 60, 110]], [35, [90, 55, 40]], [500, [150, 55, 25]], [2900, [220, 90, 25]], [5150, [255, 170, 60]], [6371, [255, 240, 190]]];
+        for (let i = 0; i < stops.length - 1; i++) if (d <= stops[i + 1][0]) { const f = (d - stops[i][0]) / (stops[i + 1][0] - stops[i][0]); return stops[i][1].map((c, k) => Math.round(lerp(c, stops[i + 1][1][k], f))); }
+        return stops[stops.length - 1][1];
+      }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        const d = at(t, DEP), temp = at(t, TMP);
+        const c = colorAt(d);
+        const gr = g.createLinearGradient(0, 0, 0, 1920);
+        gr.addColorStop(0, "#120c22"); gr.addColorStop(0.35, "rgb(" + c.map((x) => Math.round(x * 0.55)).join(",") + ")"); gr.addColorStop(0.6, "rgb(" + c.map((x) => Math.round(x * 0.8)).join(",") + ")"); gr.addColorStop(1, "rgb(" + c.map((x) => Math.round(x * 0.35)).join(",") + ")");
+        g.fillStyle = gr; g.fillRect(0, 0, 1080, 1920);
+        const band = g.createLinearGradient(0, 1340, 0, 1700); band.addColorStop(0, "rgba(8,5,14,0)"); band.addColorStop(0.3, "rgba(8,5,14,0.7)"); band.addColorStop(1, "rgba(8,5,14,0.7)");
+        g.fillStyle = band; g.fillRect(0, 1340, 1080, 580);
+        // vorbeiziehende Gesteins-Brocken (Tempo)
+        const speed = t > 2.6 && t < 18.5 ? 1 : 0.1;
+        for (let i = 0; i < 40; i++) {
+          const y = ((rnd(i) * 1920) - t * 900 * speed * (0.5 + rnd(i + 3))) % 1920; const yy = y < 0 ? y + 1920 : y;
+          g.fillStyle = "rgba(0,0,0," + (0.15 + 0.2 * rnd(i + 5)) + ")"; g.beginPath(); g.ellipse(rnd(i + 7) * 1080, yy, 20 + rnd(i + 9) * 60, 10 + rnd(i + 2) * 20, 0, 0, Math.PI * 2); g.fill();
+        }
+        const sh = K.shake(t, [[11.5, 6], [18.5, 16]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        // Kapsel
+        const cy = 980 + Math.sin(t * 5) * 6;
+        g.save(); g.shadowColor = "#fff"; g.shadowBlur = 30; g.fillStyle = "#e9e4ff";
+        g.beginPath(); g.moveTo(540, cy + 150); g.lineTo(470, cy + 40); g.lineTo(470, cy - 110); g.quadraticCurveTo(540, cy - 170, 610, cy - 110); g.lineTo(610, cy + 40); g.closePath(); g.fill(); g.restore();
+        g.fillStyle = "#2b6fd6"; g.beginPath(); g.arc(540, cy - 60, 28, 0, Math.PI * 2); g.fill();
+        if (t > 2.6 && t < 18.5) for (let i = 0; i < 6; i++) K.glowLine(500 + i * 16, cy - 190 - i * 10, 500 + i * 16, cy - 300 - i * 30, "rgba(255,240,200,0.5)", 3);
+        // Tiefe + Temperatur
+        K.mono(de(Math.round(d)) + " km", 300, 560, 64, "#ffffff", "#8fe9ff");
+        K.label("Tiefe", 300, 625, 32, "#ddd8ef");
+        K.mono(de(Math.round(temp)) + " °C", 790, 560, 64, "#ffffff", C.red);
+        K.label("Temperatur", 790, 625, 32, "#ddd8ef");
+        // Fortschritt links
+        K.bar(70, 700, 560, 0, "#000", 0);
+        g.fillStyle = "rgba(255,255,255,0.15)"; g.fillRect(70, 700, 14, 560);
+        g.fillStyle = C.gold; g.shadowColor = C.gold; g.shadowBlur = 14; g.fillRect(70, 700, 14, 560 * (d / 6371)); g.shadowBlur = 0;
+        K.label("Mitte", 100, 1280, 26, "#fff", "left");
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[18.5, 0.45]]);
+        const ih = t < 2.6 ? "Rate mal!" : t < 25 ? "Reise nach unten: 6.371 km" : "Kola-Bohrloch: 12,2 km";
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
