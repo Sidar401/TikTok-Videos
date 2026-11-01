@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1440px; }
+      .big { top: 1400px; font-size: 84px; }
+      .big small { font-size: 38px; }
+      #cta { top: 1420px; font-size: 58px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Black Friday:<br /><span class="r">Der Rabatt-Trick</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="h1" class="line big clip" data-start="1.4" data-duration="1.5" data-track-index="3"><span id="h1-in" class="y glow-y">= GRATIS?</span></div>
+      <div id="c1" class="line cap clip" data-start="2.9" data-duration="3.6" data-track-index="3"><span id="c1-in">Erst <span class="y">−50 %</span>, dann nochmal <span class="y">−50 %</span> …</span></div>
+      <div id="b1" class="line big clip" data-start="6.5" data-duration="1.4" data-track-index="3"><span id="b1-in"><span class="r glow-r">25 € zahlen!</span><small>nicht 0 €</small></span></div>
+      <div id="c2" class="line cap clip" data-start="7.9" data-duration="1.6" data-track-index="3"><span id="c2-in">Der 2. Rabatt gilt nur noch<br />auf die <span class="y">50 €</span>.</span></div>
+      <div id="c3" class="line cap clip" data-start="9.5" data-duration="4.0" data-track-index="3"><span id="c3-in"><span class="y">−20 %</span> und <span class="y">−30 %</span> = 50 %?</span></div>
+      <div id="b2" class="line big clip" data-start="13.5" data-duration="1.5" data-track-index="3"><span id="b2-in"><span class="r glow-r">Nur 44 %!</span></span></div>
+      <div id="c4" class="line cap clip" data-start="15.0" data-duration="3.9" data-track-index="3"><span id="c4-in">Der Händler-Trick:<br />Preis erst <span class="r">+50 %</span> hoch …</span></div>
+      <div id="c5" class="line cap clip" data-start="18.9" data-duration="1.7" data-track-index="3"><span id="c5-in">… dann <span class="g">−50 %</span> „Mega-Rabatt“!</span></div>
+      <div id="b3" class="line big clip" data-start="20.6" data-duration="2.4" data-track-index="3"><span id="b3-in"><span class="r glow-r">Gespart: nur 25 %</span><small>statt der versprochenen 50 %</small></span></div>
+      <div id="c6" class="line cap clip" data-start="23.0" data-duration="4.5" data-track-index="3"><span id="c6-in">Tipp: Preis <span class="g">vorher</span> merken<br />oder Preisverlauf checken!</span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Bist <span class="y">DU</span> schon mal<br />reingefallen?</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      T.slam("h1-in", 1.4, 1.5); T.pop("c1-in", 2.9, 3.6); T.slam("b1-in", 6.5, 1.4); T.pop("c2-in", 7.9, 1.6);
+      T.pop("c3-in", 9.5, 4.0); T.slam("b2-in", 13.5, 1.5); T.pop("c4-in", 15.0, 3.9); T.pop("c5-in", 18.9, 1.7);
+      T.slam("b3-in", 20.6, 2.4); T.pop("c6-in", 23.0, 4.5); T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C } = K;
+      const info = document.getElementById("info-in");
+
+      function tag(x, y, w, h, price, old, col, rot) {
+        g.save(); g.translate(x, y); g.rotate(rot);
+        g.shadowColor = col; g.shadowBlur = 30;
+        g.fillStyle = "#1c1430"; g.strokeStyle = col; g.lineWidth = 8;
+        g.beginPath(); g.moveTo(-w / 2 + 70, -h / 2); g.lineTo(w / 2, -h / 2); g.lineTo(w / 2, h / 2); g.lineTo(-w / 2 + 70, h / 2); g.lineTo(-w / 2, 0); g.closePath(); g.fill(); g.stroke();
+        g.shadowBlur = 0; g.beginPath(); g.arc(-w / 2 + 50, 0, 14, 0, Math.PI * 2); g.stroke();
+        if (old) { K.label(old, 40, -h * 0.22, 46, "#9f97bb"); K.glowLine(-60, -h * 0.22, 140, -h * 0.22 + 4, C.red, 6); }
+        K.mono(price, 40, old ? h * 0.12 : 0, 110, "#ffffff", col);
+        g.restore();
+      }
+      function badge(x, y, txt, col, s) {
+        if (s <= 0) return;
+        g.save(); g.translate(x, y); g.scale(s, s); g.rotate(-0.15);
+        g.fillStyle = col; g.shadowColor = col; g.shadowBlur = 24;
+        g.beginPath(); for (let i = 0; i < 24; i++) { const a = (i / 24) * Math.PI * 2, r = i % 2 ? 108 : 126; i ? g.lineTo(Math.cos(a) * r, Math.sin(a) * r) : g.moveTo(Math.cos(a) * r, Math.sin(a) * r); } g.closePath(); g.fill();
+        g.shadowBlur = 0; K.label(txt, 0, 4, 40, "#1a0f24"); g.restore();
+      }
+      const pop = (t, a) => K.back(cl((t - a) / 0.3));
+      function money(v) { return de(v) + " €"; }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.3, red: t < 2.9 ? 0.18 : 0 });
+        const sh = K.shake(t, [[1.4, 8], [6.5, 12], [13.5, 10], [20.6, 14]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+        const wob = Math.sin(t * 2) * 0.03;
+
+        if (t < 9.5) {
+          const a = 1 - prog(t, 9.2, 0.3);
+          g.save(); g.globalAlpha = a;
+          let p = 100, old = null;
+          if (t > 3.0) { p = lerp(100, 50, eout(prog(t, 3.0, 0.5))); old = "100 €"; }
+          if (t > 5.0) { p = lerp(50, 25, eout(prog(t, 5.0, 0.5))); old = "50 €"; }
+          tag(540, 900, 680, 320, money(Math.round(p)), old, t > 6.5 ? C.red : C.gold, wob);
+          badge(250, 680, "−50 %", C.gold, t < 3.0 ? pop(t, 0.5) : pop(t, 0.5) * (1 - prog(t, 3.0, 0.2)));
+          badge(830, 680, "−50 %", C.gold, t < 5.0 ? pop(t, 0.9) : pop(t, 0.9) * (1 - prog(t, 5.0, 0.2)));
+          if (t > 7.9) { K.bar(200, 1200, 680, 0.75, C.mint, 30); K.label("Rabatt insgesamt: 75 %", 540, 1270, 40, C.mint); }
+          g.restore();
+          ih = "Jacke für 100 €";
+        }
+        if (t >= 9.5 && t < 15.2) {
+          const a = prog(t, 9.5, 0.3) * (1 - prog(t, 14.9, 0.3));
+          g.save(); g.globalAlpha = a;
+          let p = 100, old = null;
+          if (t > 10.6) { p = lerp(100, 80, eout(prog(t, 10.6, 0.5))); old = "100 €"; }
+          if (t > 12.0) { p = lerp(80, 56, eout(prog(t, 12.0, 0.5))); old = "80 €"; }
+          tag(540, 900, 680, 320, money(Math.round(p)), old, C.gold, wob);
+          badge(250, 680, "−20 %", C.gold, t < 10.6 ? pop(t, 9.8) : 1 - prog(t, 10.6, 0.2));
+          badge(830, 680, "−30 %", C.gold, t < 12.0 ? pop(t, 10.1) : 1 - prog(t, 12.0, 0.2));
+          if (t > 13.5) { K.bar(200, 1200, 680, 0.44, C.red, 30); K.label("44 % gespart", 540, 1270, 40, C.red); }
+          g.restore();
+          ih = "Gleiche Jacke, anderer Rabatt";
+        }
+        if (t >= 15.0 && t < 23.2) {
+          const a = prog(t, 15.0, 0.3) * (1 - prog(t, 22.9, 0.3));
+          g.save(); g.globalAlpha = a;
+          let p = 100, old = null, col = C.gold;
+          if (t > 16.5) { p = lerp(100, 150, eout(prog(t, 16.5, 0.6))); col = C.red; }
+          if (t > 19.0) { p = lerp(150, 75, eout(prog(t, 19.0, 0.6))); old = "150 €"; col = C.mint; }
+          tag(540, 900, 680, 320, money(Math.round(p)), old, col, wob);
+          if (t > 16.5 && t < 19.0) badge(830, 680, "+50 %", C.red, pop(t, 16.5));
+          if (t > 19.0) badge(830, 680, "−50 %", C.mint, pop(t, 19.0));
+          if (t > 20.6) { K.label("Vorher: 100 €  →  Jetzt: 75 €", 540, 1240, 42, "#ffffff"); }
+          g.restore();
+          ih = t < 16.5 ? "Vor Black Friday: 100 €" : "Kurz vorher: Preis erhöht";
+        }
+        if (t >= 23.0) {
+          const a = prog(t, 23.0, 0.4);
+          g.save(); g.globalAlpha = a;
+          // Preis-Kurve
+          const pts = [[160, 1100], [300, 1090], [430, 1095], [560, 900], [690, 905], [820, 1160], [940, 1150]];
+          g.strokeStyle = C.icon; g.lineWidth = 8; g.shadowColor = C.icon; g.shadowBlur = 20; g.lineJoin = "round";
+          const f = prog(t, 23.2, 1.5);
+          g.beginPath(); pts.forEach((p, i) => { if (i / (pts.length - 1) <= f + 0.01) i ? g.lineTo(p[0], p[1]) : g.moveTo(p[0], p[1]); }); g.stroke(); g.shadowBlur = 0;
+          if (f > 0.5) K.label("Preis erhöht!", 620, 840, 36, C.red);
+          if (f > 0.9) K.label("„Rabatt“", 880, 1220, 36, C.mint);
+          K.glowLine(140, 1260, 960, 1260, "rgba(255,255,255,0.3)", 3);
+          g.restore();
+          ih = "Black Friday: 27. November";
+        }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[6.5, 0.25], [20.6, 0.3]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>

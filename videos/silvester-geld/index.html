@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1440px; }
+      .big { top: 1400px; font-size: 80px; }
+      .big small { font-size: 38px; }
+      #cta { top: 1420px; font-size: 58px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>So viel Geld<br /><span class="y">verballern wir an Silvester</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="c0" class="line cap clip" data-start="0.6" data-duration="2.0" data-track-index="3"><span id="c0-in">Rate mal! 💸</span></div>
+      <div id="b1" class="line big clip" data-start="6.0" data-duration="1.0" data-track-index="3"><span id="b1-in"><span class="y glow-y">197 Mio. €!</span></span></div>
+      <div id="c1" class="line cap clip" data-start="7.0" data-duration="5.0" data-track-index="3"><span id="c1-in">Knallt alles in einer Stunde:<br /><span class="r">55.000 € pro Sekunde!</span></span></div>
+      <div id="c2" class="line cap clip" data-start="12.0" data-duration="3.2" data-track-index="3"><span id="c2-in">Davon gäbe es …</span></div>
+      <div id="b2" class="line big clip" data-start="15.2" data-duration="1.8" data-track-index="3"><span id="b2-in"><span class="g glow-g">3.900 Neuwagen</span><small>à 50.000 €</small></span></div>
+      <div id="c3" class="line cap clip" data-start="17.0" data-duration="3.2" data-track-index="3"><span id="c3-in">… oder …</span></div>
+      <div id="b3" class="line big clip" data-start="20.2" data-duration="1.8" data-track-index="3"><span id="b3-in"><span class="o glow-y">28 Mio. Döner!</span><small>einen für jeden 3. Deutschen</small></span></div>
+      <div id="c4" class="line cap clip" data-start="22.0" data-duration="5.5" data-track-index="3"><span id="c4-in">… und alles ist nach<br /><span class="y">ein paar Minuten</span> Rauch.</span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Böllern: <span class="g">JA</span> oder <span class="r">NEIN</span>?<br />Ab in die Kommentare!</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      T.pop("c0-in", 0.6, 2.0); T.slam("b1-in", 6.0, 1.0); T.pop("c1-in", 7.0, 5.0); T.pop("c2-in", 12.0, 3.2);
+      T.slam("b2-in", 15.2, 1.8); T.pop("c3-in", 17.0, 3.2); T.slam("b3-in", 20.2, 1.8); T.pop("c4-in", 22.0, 5.5);
+      T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+      const COLS = ["#ff5f8f", "#ffc94d", "#5ef2c2", "#8fe9ff", "#b99cff", "#ff9a3c"];
+
+      function firework(x, y, t0, t, size, col, n = 36) {
+        const d = t - t0; if (d < 0 || d > 1.6) return;
+        const up = 0.45;
+        if (d < up) { const yy = lerp(1500, y, eout(d / up)); K.dot(x, yy, 5, "#fff", 14); K.glowLine(x, yy, x, yy + 60, "rgba(255,220,160,0.6)", 3); return; }
+        const e = (d - up) / (1.6 - up), r = size * eout(Math.min(1, e * 1.6)), al = 1 - e;
+        for (let i = 0; i < n; i++) {
+          const an = (i / n) * Math.PI * 2 + rnd(i + t0) * 0.2;
+          const px = x + Math.cos(an) * r, py = y + Math.sin(an) * r + e * e * 80;
+          g.save(); g.globalAlpha *= al; K.dot(px, py, 4, col, 12);
+          g.strokeStyle = col; g.lineWidth = 2; g.beginPath(); g.moveTo(px, py); g.lineTo(x + Math.cos(an) * r * 0.75, y + Math.sin(an) * r * 0.75 + e * e * 60); g.stroke(); g.restore();
+        }
+      }
+      function show(t, from, to, count, seed) {
+        for (let i = 0; i < count; i++) {
+          const per = 1.6, t0 = from + ((i * 0.37 + rnd(i + seed) * 0.5) % (to - from - 1.2));
+          firework(140 + rnd(i + seed + 5) * 800, 560 + rnd(i + seed + 9) * 420, t0, t, 130 + rnd(i + seed) * 90, COLS[i % 6]);
+        }
+      }
+      function bill(x, y, rot, s) {
+        g.save(); g.translate(x, y); g.rotate(rot); g.scale(s, s);
+        g.fillStyle = "#3fae7a"; g.fillRect(-60, -30, 120, 60); g.strokeStyle = "#bff5d8"; g.lineWidth = 3; g.strokeRect(-54, -24, 108, 48);
+        K.label("€", 0, 2, 34, "#e8fff2"); g.restore();
+      }
+      function doener(x, y, s) {
+        g.save(); g.translate(x, y); g.scale(s, s);
+        g.fillStyle = "#e9c48a"; g.beginPath(); g.moveTo(-40, -40); g.quadraticCurveTo(0, 60, 40, -40); g.closePath(); g.fill();
+        g.fillStyle = "#b5652e"; g.fillRect(-30, -48, 60, 12); g.fillStyle = "#5ccf6a"; g.fillRect(-28, -56, 56, 9); g.fillStyle = "#e0453a"; g.fillRect(-20, -62, 40, 7);
+        g.restore();
+      }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.7, top: "#120c2a" });
+        const sh = K.shake(t, [[6.0, 12], [15.2, 8], [20.2, 10]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+        if (t < 2.8) { firework(300, 700, 0.1, t, 220, COLS[0]); firework(780, 640, 0.9, t, 240, COLS[1]); firework(520, 860, 1.4, t, 180, COLS[2]); ih = "Silvester in Deutschland"; }
+        if (t >= 2.6 && t < 7.2) {
+          const a = prog(t, 2.6, 0.3) * (1 - prog(t, 6.9, 0.3));
+          g.save(); g.globalAlpha = a;
+          for (let i = 0; i < 30; i++) { const sp = 300 + rnd(i) * 300; bill(rnd(i + 3) * 1080, ((t - 2.6) * sp + rnd(i + 7) * 900) % 1100 + 480, t * (rnd(i) - 0.5) * 3, 0.8); }
+          const v = 197e6 * eout(prog(t, 2.8, 3.0));
+          g.fillStyle = "rgba(10,7,20,0.85)"; g.beginPath(); g.roundRect(90, 830, 900, 140, 30); g.fill();
+          K.mono(de(Math.round(v)) + " €", 540, 900, 92, "#ffffff", C.gold);
+          g.restore();
+          ih = "Feuerwerk-Umsatz 2024/25 · Rekord";
+        }
+        if (t >= 7.0 && t < 12.2) {
+          const a = prog(t, 7.0, 0.3) * (1 - prog(t, 11.9, 0.3));
+          g.save(); g.globalAlpha = a;
+          show(t, 7.3, 12.0, 9, 40);
+          const s = Math.floor((t - 7.6) / 0.5) + 1;
+          K.mono(de(Math.max(0, s) * 55000) + " €", 540, 1220, 84, C.red, C.red);
+          K.label("verballert seit " + Math.max(0, s) + " s", 540, 1300, 38, "#ddd8ef");
+          g.restore();
+          ih = "197 Mio. € ÷ 3.600 Sekunden";
+        }
+        if (t >= 12.0 && t < 17.2) {
+          const a = prog(t, 12.0, 0.3) * (1 - prog(t, 16.9, 0.3));
+          g.save(); g.globalAlpha = a;
+          const n = Math.floor(60 * prog(t, 12.4, 2.6));
+          for (let i = 0; i < n; i++) K.icon("car", 165 + (i % 6) * 150, 640 + Math.floor(i / 6) * 70, 50, 1, COLS[i % 6], "rgba(255,255,255,0.05)");
+          if (t > 15.2) K.label("1 Symbol = 65 Autos", 540, 1360, 40, C.mint);
+          g.restore();
+          ih = "Was man dafür kaufen könnte";
+        }
+        if (t >= 17.0 && t < 22.2) {
+          const a = prog(t, 17.0, 0.3) * (1 - prog(t, 21.9, 0.3));
+          g.save(); g.globalAlpha = a;
+          const n = Math.floor(48 * prog(t, 17.4, 2.6));
+          for (let i = 0; i < n; i++) doener(170 + (i % 8) * 106, 660 + Math.floor(i / 8) * 110, 0.9);
+          g.restore();
+          ih = "Döner à 7 €";
+        }
+        if (t >= 22.0) {
+          const a = prog(t, 22.0, 0.4);
+          g.save(); g.globalAlpha = a;
+          show(t, 22.0, 24.0, 4, 90);
+          for (let i = 0; i < 26; i++) { const r = 60 + rnd(i) * 140 + (t - 22) * 30; g.fillStyle = "rgba(150,140,170," + 0.035 * cl(t - 23) + ")"; g.beginPath(); g.arc(150 + rnd(i + 2) * 780, 700 + rnd(i + 4) * 500 - (t - 22) * 20, r, 0, Math.PI * 2); g.fill(); }
+          g.restore();
+          ih = "Prost Neujahr! 🎆";
+        }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[6.0, 0.25]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>

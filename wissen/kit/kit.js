@@ -38,7 +38,7 @@
   K.label = function (txt, x, y, size, col = "#fff", align = "center", weight = 800) {
     const g = K.g;
     g.font = weight + " " + size + "px Montserrat, sans-serif"; g.textAlign = align; g.textBaseline = "middle";
-    g.lineJoin = "round"; g.lineWidth = Math.max(5, size * 0.18); g.strokeStyle = "rgba(10,7,20,0.9)"; g.strokeText(txt, x, y);
+    g.lineJoin = "round"; if (col !== "#1a0f24") { g.lineWidth = Math.max(5, size * 0.18); g.strokeStyle = "rgba(10,7,20,0.9)"; g.strokeText(txt, x, y); }
     g.fillStyle = col; g.fillText(txt, x, y);
   };
   K.mono = function (txt, x, y, size, col = "#fff", glow) {

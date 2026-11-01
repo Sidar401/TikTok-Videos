@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1440px; }
+      .big { top: 1400px; font-size: 80px; }
+      .big small { font-size: 38px; }
+      #cta { top: 1420px; font-size: 56px; line-height: 1.2; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Wie schafft das der<br /><span class="r">Weihnachtsmann?</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="c0" class="line cap clip" data-start="0.8" data-duration="1.7" data-track-index="3"><span id="c0-in">Alle Geschenke in <span class="y">EINER</span> Nacht?</span></div>
+      <div id="c1" class="line cap clip" data-start="2.6" data-duration="4.4" data-track-index="3"><span id="c1-in">Rund <span class="y">2 Milliarden</span> Kinder …<small>≈ 800 Mio. Häuser (grob gerechnet)</small></span></div>
+      <div id="c2" class="line cap clip" data-start="7.0" data-duration="4.0" data-track-index="3"><span id="c2-in">Dank Zeitzonen hat er<br /><span class="g">32 Stunden</span> Zeit.</span></div>
+      <div id="b1" class="line big clip" data-start="11.0" data-duration="5.0" data-track-index="3"><span id="b1-in"><span class="r glow-r">6.944 Häuser</span><small>pro SEKUNDE!</small></span></div>
+      <div id="c3" class="line cap clip" data-start="16.0" data-duration="4.0" data-track-index="3"><span id="c3-in">Pro Haus: <span class="y">0,00014 Sekunden</span><small>für Kamin, Geschenke und Kekse</small></span></div>
+      <div id="c4" class="line cap clip" data-start="20.0" data-duration="3.4" data-track-index="3"><span id="c4-in">Und wenn er überall<br /><span class="y">1 Keks</span> isst …</span></div>
+      <div id="b2" class="line big clip" data-start="23.4" data-duration="2.1" data-track-index="3"><span id="b2-in"><span class="r glow-r">+5.700 Tonnen!</span><small>so schwer wie 1.000 Elefanten</small></span></div>
+      <div id="c5" class="line cap clip" data-start="25.5" data-duration="2.0" data-track-index="3"><span id="c5-in">Fazit: Er ist wohl <span class="y">magisch</span> ✨</span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Was stellst <span class="y">DU</span> ihm hin?<br /><span class="g">Kekse</span> oder <span class="g">Milch</span>?</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      T.pop("c0-in", 0.8, 1.7); T.pop("c1-in", 2.6, 4.4); T.pop("c2-in", 7.0, 4.0); T.slam("b1-in", 11.0, 5.0);
+      T.pop("c3-in", 16.0, 4.0); T.pop("c4-in", 20.0, 3.4); T.slam("b2-in", 23.4, 2.1); T.pop("c5-in", 25.5, 2.0);
+      T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+
+      function snow(t) {
+        for (let i = 0; i < 90; i++) {
+          const sp = 60 + rnd(i) * 90, x = (rnd(i + 3) * 1080 + Math.sin(t * 0.8 + i) * 30) % 1080;
+          const y = ((t * sp + rnd(i + 7) * 1920) % 1920);
+          g.fillStyle = "rgba(255,255,255," + (0.3 + 0.5 * rnd(i + 9)) + ")"; g.beginPath(); g.arc(x, y, 2 + rnd(i + 5) * 3, 0, Math.PI * 2); g.fill();
+        }
+      }
+      function gift(x, y, s, col) {
+        g.save(); g.translate(x, y); g.scale(s, s);
+        g.fillStyle = col; g.shadowColor = col; g.shadowBlur = 18; g.fillRect(-50, -50, 100, 90); g.shadowBlur = 0;
+        g.fillStyle = "#fff6"; g.fillRect(-8, -50, 16, 90); g.fillRect(-50, -12, 100, 14);
+        g.strokeStyle = "#ffe08a"; g.lineWidth = 6; g.beginPath(); g.ellipse(-16, -60, 16, 10, -0.5, 0, Math.PI * 2); g.ellipse(16, -60, 16, 10, 0.5, 0, Math.PI * 2); g.stroke();
+        g.restore();
+      }
+      function sled(x, y, s) {
+        g.save(); g.translate(x, y); g.scale(s, s);
+        g.strokeStyle = C.gold; g.lineWidth = 8; g.shadowColor = C.gold; g.shadowBlur = 16; g.lineCap = "round";
+        g.beginPath(); g.moveTo(-120, 30); g.lineTo(110, 30); g.quadraticCurveTo(150, 30, 150, 0); g.stroke();
+        g.fillStyle = "#c8243a"; g.beginPath(); g.moveTo(-110, 20); g.lineTo(90, 20); g.lineTo(110, -40); g.lineTo(-90, -40); g.closePath(); g.fill();
+        g.shadowBlur = 0; gift(-40, -60, 0.5, "#3fbf8a"); gift(20, -70, 0.6, "#4f7dff");
+        g.restore();
+      }
+      function cookie(x, y, r) {
+        g.fillStyle = "#c98a4a"; g.beginPath(); g.arc(x, y, r, 0, Math.PI * 2); g.fill();
+        g.fillStyle = "#4a2a14"; [[-0.3, -0.2], [0.25, -0.35], [0.1, 0.3], [-0.35, 0.3], [0.4, 0.15]].forEach((d) => { g.beginPath(); g.arc(x + d[0] * r, y + d[1] * r, r * 0.11, 0, Math.PI * 2); g.fill(); });
+      }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.6, top: "#14183a", mid: "#0c0f24" });
+        snow(t);
+        const sh = K.shake(t, [[11.0, 12], [23.4, 14]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+
+        if (t < 2.6) {
+          sled(lerp(-200, 560, eout(prog(t, 0, 2.0))), 950 + Math.sin(t * 3) * 20, 2.0);
+          ih = "24. Dezember";
+        }
+        if (t >= 2.6 && t < 7.2) {
+          const a = prog(t, 2.6, 0.3) * (1 - prog(t, 6.9, 0.3));
+          g.save(); g.globalAlpha = a;
+          const v = 2e9 * eout(prog(t, 2.8, 1.8));
+          K.mono(de(Math.round(v)), 540, 700, 96, "#ffffff", C.gold);
+          K.label("Kinder", 540, 780, 40, "#ddd8ef");
+          const n = Math.floor(60 * prog(t, 3.0, 2.0));
+          for (let i = 0; i < n; i++) K.icon("you", 170 + (i % 12) * 67, 960 + Math.floor(i / 12) * 80, 64, 1, ["#8fe9ff", "#ffc94d", "#ff5f8f", "#5ef2c2"][i % 4], "rgba(255,255,255,0.05)");
+          if (t > 5.6) K.label("≈ 800.000.000 Häuser", 540, 1330, 44, C.mint);
+          g.restore();
+          ih = "Kinder auf der ganzen Welt";
+        }
+        if (t >= 7.0 && t < 11.2) {
+          const a = prog(t, 7.0, 0.3) * (1 - prog(t, 10.9, 0.3));
+          g.save(); g.globalAlpha = a;
+          const h = 32 * eio(prog(t, 7.3, 2.2));
+          K.ring(540, 930, 260, C.mint, 10, 1);
+          g.strokeStyle = C.mint; g.lineWidth = 34; g.shadowColor = C.mint; g.shadowBlur = 20;
+          g.beginPath(); g.arc(540, 930, 220, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * (h / 32)); g.stroke(); g.shadowBlur = 0;
+          K.mono(de(Math.round(h)) + " h", 540, 930, 110, "#ffffff", C.mint);
+          g.restore();
+          ih = "Nacht wandert um die Erde";
+        }
+        if (t >= 11.0 && t < 16.2) {
+          const a = prog(t, 11.0, 0.2) * (1 - prog(t, 15.9, 0.3));
+          g.save(); g.globalAlpha = a;
+          // Häuser blitzen in hohem Tempo auf
+          for (let i = 0; i < 48; i++) {
+            const x = 150 + (i % 8) * 112, y = 640 + Math.floor(i / 8) * 120;
+            const on = (Math.floor(t * 40) + i * 7) % 11 < 3;
+            K.icon("house", x, y + 90, 80, 1, on ? C.gold : "#5b6aa8", on ? "rgba(255,201,77,0.25)" : "rgba(255,255,255,0.04)");
+          }
+          g.restore();
+          ih = "800 Mio. Häuser ÷ 115.200 Sekunden";
+        }
+        if (t >= 16.0 && t < 20.2) {
+          const a = prog(t, 16.0, 0.3) * (1 - prog(t, 19.9, 0.3));
+          g.save(); g.globalAlpha = a;
+          K.mono("0,00014 s", 540, 760, 110, "#ffffff", C.red);
+          K.label("Ein Blinzeln dauert 0,3 s …", 540, 870, 40, "#ddd8ef");
+          K.label("… das ist 2.000-mal länger!", 540, 930, 40, C.gold);
+          sled(lerp(-300, 1400, prog(t, 16.2, 0.25) - Math.floor(prog(t, 16.2, 0.25))), 1180, 1.2);
+          g.restore();
+          ih = "Kamin rein, Geschenke ab, Kamin raus";
+        }
+        if (t >= 20.0 && t < 25.7) {
+          const a = prog(t, 20.0, 0.3) * (1 - prog(t, 25.4, 0.3));
+          g.save(); g.globalAlpha = a;
+          const n = Math.min(40, Math.floor(40 * prog(t, 20.4, 2.8)));
+          for (let i = 0; i < n; i++) cookie(160 + (i % 8) * 108, 660 + Math.floor(i / 8) * 108, 42);
+
+          g.restore();
+          ih = "800 Mio. Kekse à 50 kcal";
+        }
+        if (t >= 25.5) {
+          const a = prog(t, 25.5, 0.4);
+          g.save(); g.globalAlpha = a;
+          sled(540, 980 + Math.sin(t * 3) * 20, 2.2);
+          for (let i = 0; i < 20; i++) { const an = rnd(i) * 6.28, r = 280 + 60 * Math.sin(t * 3 + i); K.dot(540 + Math.cos(an) * r, 950 + Math.sin(an) * r * 0.6, 4, C.gold, 14); }
+          g.restore();
+          ih = "Frohe Weihnachten!";
+        }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[11.0, 0.3], [23.4, 0.3]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
