@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      .big { top: 1420px; font-size: 52px; }
+      .big small { font-size: 36px; }
+      #cta { top: 1430px; font-size: 54px; line-height: 1.2; }
+      #new { top: 520px; font-size: 40px; }
+      #new span { background: var(--red); color: #fff; padding: 8px 22px; border-radius: 14px; font-weight: 900; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>KI gegen<br /><span class="g">Mathe-Genies</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="c0" class="line cap clip" data-start="0.5" data-duration="2.1" data-track-index="3"><span id="c0-in">Ist KI schon schlauer als wir? 🤖</span></div>
+      <div id="c1" class="line cap clip" data-start="2.6" data-duration="4.4" data-track-index="3"><span id="c1-in">2025: KI holt <span class="y">Gold</span> bei der<br />Mathe-Olympiade für Schüler!</span></div>
+      <div id="new" class="line clip" data-start="7.0" data-duration="6.0" data-track-index="4"><span id="new-in">NEU · Oktober 2026</span></div>
+      <div id="c2" class="line cap clip" data-start="7.0" data-duration="4.0" data-track-index="3"><span id="c2-in">Eine KI-Firma veröffentlicht<br /><span class="g">722 Mathe-Arbeiten</span> …</span></div>
+      <div id="b1" class="line big clip" data-start="11.0" data-duration="2.0" data-track-index="3"><span id="b1-in"><span class="g glow-g">… mit 377 neuen Ergebnissen?!</span><small>so behauptet es die Firma</small></span></div>
+      <div id="c3" class="line cap clip" data-start="13.0" data-duration="5.0" data-track-index="3"><span id="c3-in">Jetzt prüfen <span class="y">Mathematiker</span>:<br />Stimmt das wirklich alles?</span></div>
+      <div id="c4" class="line cap clip" data-start="18.0" data-duration="5.0" data-track-index="3"><span id="c4-in">Noch ist <span class="r">nicht alles bestätigt</span> –<br />manches könnte falsch sein.</span></div>
+      <div id="c5" class="line cap clip" data-start="23.0" data-duration="4.5" data-track-index="3"><span id="c5-in">Sicher ist: KI wird zum<br /><span class="g">Werkzeug</span> für Forscher.</span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Wird KI bald schlauer<br />als alle Mathematiker? <span class="g">JA</span> / <span class="r">NEIN</span></span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      T.pop("c0-in", 0.5, 2.1); T.pop("c1-in", 2.6, 4.4); T.slam("new-in", 7.0, 6.0); T.pop("c2-in", 7.0, 4.0); T.slam("b1-in", 11.0, 2.0);
+      T.pop("c3-in", 13.0, 5.0); T.pop("c4-in", 18.0, 5.0); T.pop("c5-in", 23.0, 4.5); T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+      const SYM = ["∫", "∑", "π", "√", "∞", "x²", "≠", "Δ", "∂", "e", "λ", "≈"];
+      function chip(x, y, s, t) {
+        g.save(); g.translate(x, y); g.scale(s, s);
+        g.strokeStyle = C.mint; g.lineWidth = 6; g.shadowColor = C.mint; g.shadowBlur = 24; g.fillStyle = "rgba(94,242,194,0.1)";
+        g.beginPath(); g.roundRect(-110, -110, 220, 220, 24); g.fill(); g.stroke();
+        for (let i = -3; i <= 3; i++) { [[-110, i * 28, -150, i * 28], [110, i * 28, 150, i * 28], [i * 28, -110, i * 28, -150], [i * 28, 110, i * 28, 150]].forEach(([a, b, c2, d]) => { g.beginPath(); g.moveTo(a, b); g.lineTo(c2, d); g.stroke(); }); }
+        g.shadowBlur = 0; K.label("KI", 0, 4, 80, C.mint); g.restore();
+      }
+      function paper(x, y, s, col) { g.save(); g.translate(x, y); g.scale(s, s); g.fillStyle = "#f4f2ff"; g.beginPath(); g.roundRect(-30, -40, 60, 80, 6); g.fill(); g.fillStyle = col; for (let i = 0; i < 4; i++) g.fillRect(-20, -26 + i * 15, 40 - (i % 2) * 12, 5); g.restore(); }
+      function medal(x, y, r) { g.save(); g.strokeStyle = C.red; g.lineWidth = 18; g.beginPath(); g.moveTo(x - 50, y - r - 140); g.lineTo(x, y - r); g.lineTo(x + 50, y - r - 140); g.stroke(); g.restore(); K.planet(x, y, r, "#fff3b0", "#d99a1a", C.gold); K.label("1", x, y + 4, r, "#7a4a00"); }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.25 });
+        const sh = K.shake(t, [[11.0, 12]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+        // schwebende Mathe-Zeichen
+        for (let i = 0; i < 24; i++) { const y = ((rnd(i) * 1500 - t * 40 * (0.5 + rnd(i + 2))) % 1500 + 1500) % 1500 + 450; g.save(); g.globalAlpha = 0.18; K.label(SYM[i % SYM.length], 60 + rnd(i + 4) * 960, y, 40 + rnd(i + 6) * 40, "#cfc9ff", "center", 700); g.restore(); }
+        if (t < 2.6) { chip(540, 980, 1.4, t); ih = "Künstliche Intelligenz"; }
+        else if (t < 7.0) { chip(330, 1000, 0.9, t); medal(760, 1060, 110 * K.back(cl((t - 3.4) / 0.4))); ih = "Internationale Mathe-Olympiade 2025"; }
+        else if (t < 13.0) {
+          chip(540, 760, 0.7, t);
+          const n = Math.floor(722 * eout(prog(t, 7.4, 3.4)));
+          for (let i = 0; i < Math.min(n, 120); i++) paper(160 + (i % 12) * 70, 980 + Math.floor(i / 12) * 34, 0.55, i % 3 ? "#8fe9ff" : C.mint);
+          K.mono(de(n) + " Arbeiten", 540, 1360, 64, "#ffffff", C.mint);
+          ih = "veröffentlicht am 6. Oktober 2026";
+        } else if (t < 23.0) {
+          for (let i = 0; i < 6; i++) { const x = 220 + (i % 3) * 320, y = 820 + Math.floor(i / 3) * 300, s = 14.0 + i * 0.6;
+            paper(x, y, 2.0, C.icon);
+            if (t > s) { const ok = i % 2 === 0; const q = "?"; K.label(q, x + 60, y - 70, 70, q === "?" ? C.gold : ok ? C.mint : C.red); } }
+          ih = t < 18 ? "Mathematiker prüfen nach" : "Prüfung läuft noch";
+        } else {
+          chip(380, 1000, 0.9, t); K.icon("you", 760, 1150, 300, 1, C.gold, "rgba(255,201,77,0.08)");
+          K.glowLine(500, 1000, 640, 1000, "#ffffff", 4, 1, [10, 8]);
+          ih = "Mensch + KI";
+        }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[11.0, 0.3]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
