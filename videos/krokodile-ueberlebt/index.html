@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/kit.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      .cap { top: 1460px; }
+      .big { top: 1420px; font-size: 62px; }
+      .big small { font-size: 36px; }
+      #cta { top: 1430px; font-size: 52px; line-height: 1.2; }
+      .grund { top: 520px; font-size: 50px; }
+      #new { top: 520px; font-size: 40px; }
+      #new span { background: var(--red); color: #fff; padding: 8px 22px; border-radius: 14px; font-weight: 900; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="title" class="line title clip" data-start="0" data-duration="30" data-track-index="1"><span>Dinos weg –<br /><span class="g">Krokodile NICHT!</span></span></div>
+      <div id="info" class="line info clip" data-start="0" data-duration="30" data-track-index="2"><span id="info-in"></span></div>
+
+      <div id="c0" class="line cap clip" data-start="0.9" data-duration="2.1" data-track-index="3"><span id="c0-in">Vor 66 Millionen Jahren …</span></div>
+      <div id="b1" class="line big clip" data-start="3.0" data-duration="4.0" data-track-index="3"><span id="b1-in"><span class="r glow-r">3 von 4 Arten: ausgestorben</span><small>aber die Krokodile überlebten. Warum?</small></span></div>
+      <div id="new" class="line clip" data-start="7.0" data-duration="4.0" data-track-index="4"><span id="new-in">NEUE STUDIE · Oktober 2026</span></div>
+      <div id="c1" class="line cap clip" data-start="7.0" data-duration="4.0" data-track-index="3"><span id="c1-in">Forscher werteten über<br /><span class="y">7.000 Fossilien</span> aus.</span></div>
+      <div id="g1" class="line grund clip" data-start="11.0" data-duration="4.0" data-track-index="4"><span id="g1-in"><span class="o">Grund 1</span></span></div>
+      <div id="c2" class="line cap clip" data-start="11.0" data-duration="4.0" data-track-index="3"><span id="c2-in">Sie zogen immer dahin,<br />wo es <span class="o">warm</span> war.</span></div>
+      <div id="g2" class="line grund clip" data-start="15.0" data-duration="4.0" data-track-index="4"><span id="g2-in"><span class="y">Grund 2</span></span></div>
+      <div id="c3" class="line cap clip" data-start="15.0" data-duration="4.0" data-track-index="3"><span id="c3-in"><span class="y">Monatelang</span> ohne Essen –<br />manchmal über ein Jahr!</span></div>
+      <div id="g3" class="line grund clip" data-start="19.0" data-duration="4.0" data-track-index="4"><span id="g3-in"><span class="g">Grund 3</span></span></div>
+      <div id="c4" class="line cap clip" data-start="19.0" data-duration="4.0" data-track-index="3"><span id="c4-in">Halb im Wasser und sie<br /><span class="g">fressen fast alles.</span></span></div>
+      <div id="c5" class="line cap clip" data-start="23.0" data-duration="4.5" data-track-index="3"><span id="c5-in">Ihre Vorfahren gibt es seit<br /><span class="v">über 200 Mio. Jahren!</span> 🐊</span></div>
+      <div id="cta" class="line clip" data-start="27.5" data-duration="2.5" data-track-index="3"><span id="cta-in">Welches Tier überlebt den<br /><span class="y">nächsten</span> Asteroiden? 👇</span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="6" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const T = K.texts(tl);
+      T.pop("c0-in", 0.9, 2.1); T.slam("b1-in", 3.0, 4.0); T.slam("new-in", 7.0, 4.0); T.pop("c1-in", 7.0, 4.0);
+      [["g1", "c2", 11.0], ["g2", "c3", 15.0], ["g3", "c4", 19.0]].forEach(([a, b, s]) => { T.slam(a + "-in", s, 4.0); T.pop(b + "-in", s, 4.0); });
+      T.pop("c5-in", 23.0, 4.5); T.pop("cta-in", 27.5); T.pulse("cta-in", 28.0, 3);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+
+      const g = K.init("stage");
+      const { cl, lerp, eio, eout, prog, de, C, rnd } = K;
+      const info = document.getElementById("info-in");
+      function croc(x, y, s, t, col = "#4fbf6a") {
+        g.save(); g.translate(x, y); g.scale(s, s); g.fillStyle = col; g.shadowColor = col; g.shadowBlur = 16;
+        const j = Math.max(0, Math.sin(t * 2.5)) * 0.25;
+        g.beginPath(); g.moveTo(-260, -10); g.quadraticCurveTo(-200, -40, -100, -40); g.lineTo(90, -40); g.lineTo(230, -26 - j * 40); g.lineTo(240, -14); g.lineTo(100, -8); g.lineTo(100, 4); g.lineTo(230, 8 + j * 20); g.lineTo(220, 18); g.lineTo(90, 20); g.lineTo(-100, 26); g.quadraticCurveTo(-200, 26, -260, -10); g.fill();
+        g.shadowBlur = 0; [[-110, 20], [-40, 20], [30, 20], [70, 20]].forEach(([lx, ly]) => g.fillRect(lx, ly, 18, 34));
+        g.fillStyle = "#2c7a42"; for (let i = 0; i < 9; i++) { g.beginPath(); g.moveTo(-200 + i * 30, -38); g.lineTo(-188 + i * 30, -56); g.lineTo(-176 + i * 30, -38); g.fill(); }
+        K.dot(70, -46, 8, "#ffe08a", 10); g.restore();
+      }
+      function dino(x, y, s, a) {
+        g.save(); g.globalAlpha *= a; g.translate(x, y); g.scale(s, s); g.fillStyle = "#8a7a9a";
+        g.beginPath(); g.ellipse(0, 0, 90, 50, 0, 0, Math.PI * 2); g.fill(); g.beginPath(); g.moveTo(60, -20); g.quadraticCurveTo(120, -140, 150, -150); g.lineTo(165, -130); g.quadraticCurveTo(130, -110, 95, -10); g.fill();
+        g.beginPath(); g.moveTo(-80, 0); g.lineTo(-200, 30); g.lineTo(-80, 20); g.fill(); g.fillRect(-50, 30, 22, 60); g.fillRect(30, 30, 22, 60); g.restore();
+      }
+
+      function renderAt(t) {
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.bg(t, { stars: 0.25, top: "#1a1228", red: t < 3 ? 0.2 : 0 });
+        const sh = K.shake(t, [[0.9, 20]]);
+        g.setTransform(1, 0, 0, 1, sh, sh * 0.6);
+        let ih = "";
+        K.ground(1250, "#ff9a5c");
+        if (t < 7.0) {
+          if (t < 0.9) { const f = t / 0.9; K.rock(lerp(1100, 700, f), lerp(300, 1100, f), 50, t * 3, 1); }
+          K.boom(700, 1180, t - 0.9, 700);
+          const fade = 1 - prog(t, 2.0, 2.0);
+          dino(330, 1140, 1.2, fade); dino(800, 1150, 0.9, fade);
+          croc(540, 1220, 0.8, t);
+          ih = "Asteroid, ca. 10 km groß";
+        } else if (t < 11.0) {
+          for (let i = 0; i < 40; i++) { const x = 150 + (i % 10) * 85, y = 700 + Math.floor(i / 10) * 110; const on = t > 7.3 + i * 0.06; if (on) K.rock(x, y, 26, i, 0, ["#e8dcc4", "#a99a80", "#6a5e4a"]); }
+          croc(540, 1220, 0.8, t);
+          ih = "über 400 Arten untersucht";
+        } else if (t < 15.0) {
+          // Thermometer + Pfeil zur Wärme
+          K.planet(820, 760, 90, "#fff3b0", "#ff8a1a", "#ffb347");
+          K.glowLine(300, 1000, 680, 820, C.orange, 8, 1, [16, 10]);
+          croc(lerp(320, 600, eio(prog(t, 11.3, 3.0))), 1220, 0.8, t);
+          ih = "Krokodile lieben Wärme";
+        } else if (t < 19.0) {
+          const days = Math.floor(400 * eout(prog(t, 15.3, 3.0)));
+          K.mono(de(days) + " Tage", 540, 780, 96, "#ffffff", C.gold);
+          K.label("ohne Futter", 540, 870, 40, "#ddd8ef");
+          croc(540, 1220, 0.8, t * 0.3);
+          ih = "Kaum Energie nötig";
+        } else if (t < 23.0) {
+          g.fillStyle = "rgba(60,140,220,0.35)"; g.fillRect(0, 1180, 1080, 70);
+          croc(540, 1210, 0.8, t);
+          ["🐟", "🐸", "🦀", "🐢"].forEach((e, i) => K.label(e, 200 + i * 230, 900 + Math.sin(t * 3 + i) * 20, 80, "#fff"));
+          ih = "Fisch, Frosch, Krebs … alles!";
+        } else {
+          croc(540, 1220, 1.1, t);
+          K.mono("200.000.000", 540, 800, 84, "#ffffff", C.purple);
+          K.label("Jahre", 540, 880, 40, "#ddd8ef");
+          ih = "Überlebens-Profis";
+        }
+        g.setTransform(1, 0, 0, 1, 0, 0);
+        K.flash(t, [[0.9, 0.6]]);
+        if (info.innerHTML !== ih) info.innerHTML = ih;
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+    </script>
+  </body>
+</html>
