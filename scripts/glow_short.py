@@ -214,7 +214,8 @@ def build(here, szenen, sfx, dauer=None, musik=None, ein_wort=None, drift=True):
                     cur = ende
                 continue
             for k, w in enumerate(words):
-                spans.append(f'<span id="w{n}-{k}">{w}</span> ')
+                gr = f' style="font-size:{int(960 / (0.66 * len(w)))}px"' if len(w) > 19 else ""  # Bandwurmwörter verkleinern
+                spans.append(f'<span id="w{n}-{k}"{gr}>{w}</span> ')
                 ende = cur + (cp["end"] - cp["start"]) * (len(w) + 1) / L
                 js.append(f'      tl.fromTo("#w{n}-{k}", {{ color: "#ffffff", scale: 1 }}, {{ color: "{OR}", scale: 1.06, duration: 0.08 }}, {round(cur, 3)});')
                 if k < len(words) - 1:
