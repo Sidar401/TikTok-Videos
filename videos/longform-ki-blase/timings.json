@@ -1,0 +1,1301 @@
+{
+ "dauer": 293.726,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 5.974,
+   "captions": [
+    {
+     "text": "Am fünften November haben",
+     "start": 0.0,
+     "end": 1.585
+    },
+    {
+     "text": "Anleger an einem einzigen",
+     "start": 1.585,
+     "end": 3.17
+    },
+    {
+     "text": "Tag rund zweieinhalb",
+     "start": 3.17,
+     "end": 4.438
+    },
+    {
+     "text": "Billionen Dollar verloren",
+     "start": 4.438,
+     "end": 5.974
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 5.974,
+   "end": 11.092,
+   "captions": [
+    {
+     "text": "Die US‑Technologiebörse",
+     "start": 5.974,
+     "end": 7.47
+    },
+    {
+     "text": "Nasdaq hatte ihren schlimmsten",
+     "start": 7.47,
+     "end": 9.485
+    },
+    {
+     "text": "Tag seit dem Corona‑Crash",
+     "start": 9.485,
+     "end": 11.092
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 11.092,
+   "end": 17.915,
+   "captions": [
+    {
+     "text": "Chip‑Aktien stürzten",
+     "start": 11.092,
+     "end": 12.66
+    },
+    {
+     "text": "um mehr als 12 % ab,",
+     "start": 12.66,
+     "end": 14.302
+    },
+    {
+     "text": "und auch der DAX rutschte",
+     "start": 14.302,
+     "end": 16.355
+    },
+    {
+     "text": "unter 26.000 Punkte",
+     "start": 16.355,
+     "end": 17.915
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 17.915,
+   "end": 21.562,
+   "captions": [
+    {
+     "text": "Jetzt fragen sich viele:",
+     "start": 17.915,
+     "end": 19.568
+    },
+    {
+     "text": "Platzt gerade die KI‑Blase?",
+     "start": 19.568,
+     "end": 21.562
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 21.562,
+   "end": 24.386,
+   "captions": [
+    {
+     "text": "Und was heißt das für dich,",
+     "start": 21.562,
+     "end": 23.087
+    },
+    {
+     "text": "wenn du einen ETF hast?",
+     "start": 23.087,
+     "end": 24.386
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 24.386,
+   "end": 30.411,
+   "captions": [
+    {
+     "text": "Denn auch wenn du",
+     "start": 24.386,
+     "end": 25.42
+    },
+    {
+     "text": "noch nie eine einzige",
+     "start": 25.42,
+     "end": 26.852
+    },
+    {
+     "text": "KI‑Aktie gekauft hast,",
+     "start": 26.852,
+     "end": 28.352
+    },
+    {
+     "text": "steckst du vermutlich",
+     "start": 28.352,
+     "end": 29.784
+    },
+    {
+     "text": "mitten drin",
+     "start": 29.784,
+     "end": 30.411
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 30.411,
+   "end": 38.383,
+   "captions": [
+    {
+     "text": "Heute schauen wir uns",
+     "start": 30.411,
+     "end": 31.799
+    },
+    {
+     "text": "gemeinsam den KI‑Geldkreis an,",
+     "start": 31.799,
+     "end": 33.956
+    },
+    {
+     "text": "und am Ende zeigen wir dir,",
+     "start": 33.956,
+     "end": 35.808
+    },
+    {
+     "text": "was du jetzt tun",
+     "start": 35.808,
+     "end": 36.958
+    },
+    {
+     "text": "solltest und was nicht",
+     "start": 36.958,
+     "end": 38.383
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 38.383,
+   "end": 45.472,
+   "captions": [
+    {
+     "text": "Kurzer Hinweis vorweg:",
+     "start": 38.383,
+     "end": 39.644
+    },
+    {
+     "text": "Das ist keine Anlageberatung,",
+     "start": 39.644,
+     "end": 41.417
+    },
+    {
+     "text": "sondern eine Erklärung,",
+     "start": 41.417,
+     "end": 42.898
+    },
+    {
+     "text": "damit du die Nachrichten",
+     "start": 42.898,
+     "end": 44.442
+    },
+    {
+     "text": "besser verstehst",
+     "start": 44.442,
+     "end": 45.472
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 45.472,
+   "end": 52.469,
+   "captions": [
+    {
+     "text": "Und wenn du solche",
+     "start": 45.472,
+     "end": 46.774
+    },
+    {
+     "text": "Videos magst,",
+     "start": 46.774,
+     "end": 47.715
+    },
+    {
+     "text": "folge HundeFinanzTv,",
+     "start": 47.715,
+     "end": 49.161
+    },
+    {
+     "text": "wir bringen jeden Tag",
+     "start": 49.161,
+     "end": 50.681
+    },
+    {
+     "text": "neue Videos rund ums Geld",
+     "start": 50.681,
+     "end": 52.469
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 52.469,
+   "end": 57.761,
+   "captions": [
+    {
+     "text": "Fangen wir an mit dem ersten",
+     "start": 52.469,
+     "end": 54.693
+    },
+    {
+     "text": "Spieler: OpenAI,",
+     "start": 54.693,
+     "end": 55.885
+    },
+    {
+     "text": "die Firma hinter ChatGPT",
+     "start": 55.885,
+     "end": 57.761
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 57.761,
+   "end": 64.442,
+   "captions": [
+    {
+     "text": "OpenAI braucht unvorstellbar",
+     "start": 57.761,
+     "end": 59.775
+    },
+    {
+     "text": "viel Rechenleistung,",
+     "start": 59.775,
+     "end": 61.185
+    },
+    {
+     "text": "also riesige Rechenzentren",
+     "start": 61.185,
+     "end": 63.095
+    },
+    {
+     "text": "voller Spezial‑Chips",
+     "start": 63.095,
+     "end": 64.442
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 64.442,
+   "end": 70.998,
+   "captions": [
+    {
+     "text": "Der erste große",
+     "start": 64.442,
+     "end": 65.653
+    },
+    {
+     "text": "Geldgeber ist Microsoft,",
+     "start": 65.653,
+     "end": 67.79
+    },
+    {
+     "text": "dem heute rund 27 %",
+     "start": 67.79,
+     "end": 69.482
+    },
+    {
+     "text": "von OpenAI gehören",
+     "start": 69.482,
+     "end": 70.998
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 70.998,
+   "end": 77.624,
+   "captions": [
+    {
+     "text": "Doch das reicht nicht. Also",
+     "start": 70.998,
+     "end": 72.705
+    },
+    {
+     "text": "bestellt OpenAI bei Oracle",
+     "start": 72.705,
+     "end": 74.58
+    },
+    {
+     "text": "Rechenleistung für rund",
+     "start": 74.58,
+     "end": 76.237
+    },
+    {
+     "text": "300 Milliarden Dollar",
+     "start": 76.237,
+     "end": 77.624
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 77.624,
+   "end": 81.861,
+   "captions": [
+    {
+     "text": "Oracle braucht dafür Chips,",
+     "start": 77.624,
+     "end": 79.449
+    },
+    {
+     "text": "und die kauft es",
+     "start": 79.449,
+     "end": 80.569
+    },
+    {
+     "text": "vor allem bei Nvidia",
+     "start": 80.569,
+     "end": 81.861
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "start": 81.861,
+   "end": 87.92,
+   "captions": [
+    {
+     "text": "Und jetzt wird es spannend:",
+     "start": 81.861,
+     "end": 83.574
+    },
+    {
+     "text": "Nvidia investiert selbst",
+     "start": 83.574,
+     "end": 85.33
+    },
+    {
+     "text": "bis zu 100 Milliarden",
+     "start": 85.33,
+     "end": 86.867
+    },
+    {
+     "text": "Dollar in OpenAI",
+     "start": 86.867,
+     "end": 87.92
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "start": 87.92,
+   "end": 92.948,
+   "captions": [
+    {
+     "text": "Mit diesem Geld kauft OpenAI",
+     "start": 87.92,
+     "end": 89.636
+    },
+    {
+     "text": "dann wieder Rechenleistung,",
+     "start": 89.636,
+     "end": 91.377
+    },
+    {
+     "text": "die auf Nvidia‑Chips läuft",
+     "start": 91.377,
+     "end": 92.948
+    }
+   ]
+  },
+  {
+   "id": "s17",
+   "start": 92.948,
+   "end": 101.625,
+   "captions": [
+    {
+     "text": "Siehst du den Kreis? Das Geld",
+     "start": 92.948,
+     "end": 95.154
+    },
+    {
+     "text": "fließt von Nvidia zu OpenAI,",
+     "start": 95.154,
+     "end": 97.5
+    },
+    {
+     "text": "von OpenAI zu Oracle",
+     "start": 97.5,
+     "end": 99.199
+    },
+    {
+     "text": "und von Oracle",
+     "start": 99.199,
+     "end": 100.377
+    },
+    {
+     "text": "zurück zu Nvidia",
+     "start": 100.377,
+     "end": 101.625
+    }
+   ]
+  },
+  {
+   "id": "s18",
+   "start": 101.625,
+   "end": 110.171,
+   "captions": [
+    {
+     "text": "Auch der Chiphersteller",
+     "start": 101.625,
+     "end": 103.413
+    },
+    {
+     "text": "AMD hat einen Riesen‑Deal",
+     "start": 103.413,
+     "end": 105.489
+    },
+    {
+     "text": "mit OpenAI,",
+     "start": 105.489,
+     "end": 106.344
+    },
+    {
+     "text": "bei dem OpenAI sogar",
+     "start": 106.344,
+     "end": 108.006
+    },
+    {
+     "text": "Anteile an AMD bekommen kann",
+     "start": 108.006,
+     "end": 110.171
+    }
+   ]
+  },
+  {
+   "id": "s19",
+   "start": 110.171,
+   "end": 114.857,
+   "captions": [
+    {
+     "text": "Das Problem ist nur:",
+     "start": 110.171,
+     "end": 111.3
+    },
+    {
+     "text": "Ein großer Teil dieses Geldes",
+     "start": 111.3,
+     "end": 113.209
+    },
+    {
+     "text": "ist bisher nur versprochen",
+     "start": 113.209,
+     "end": 114.857
+    }
+   ]
+  },
+  {
+   "id": "s20",
+   "start": 114.857,
+   "end": 123.413,
+   "captions": [
+    {
+     "text": "OpenAI hat Zusagen",
+     "start": 114.857,
+     "end": 116.041
+    },
+    {
+     "text": "über rund eins Komma vier",
+     "start": 116.041,
+     "end": 117.841
+    },
+    {
+     "text": "Billionen Dollar gemacht,",
+     "start": 117.841,
+     "end": 119.64
+    },
+    {
+     "text": "macht aber nur rund",
+     "start": 119.64,
+     "end": 121.007
+    },
+    {
+     "text": "50 Milliarden Dollar",
+     "start": 121.007,
+     "end": 122.447
+    },
+    {
+     "text": "Umsatz im Jahr",
+     "start": 122.447,
+     "end": 123.413
+    }
+   ]
+  },
+  {
+   "id": "s21",
+   "start": 123.413,
+   "end": 130.364,
+   "captions": [
+    {
+     "text": "Das ist so,",
+     "start": 123.413,
+     "end": 124.28
+    },
+    {
+     "text": "als würdest du mit 2.000 €",
+     "start": 124.28,
+     "end": 126.424
+    },
+    {
+     "text": "im Monat Verträge über fast",
+     "start": 126.424,
+     "end": 128.651
+    },
+    {
+     "text": "700.000 € unterschreiben",
+     "start": 128.651,
+     "end": 130.364
+    }
+   ]
+  },
+  {
+   "id": "s22",
+   "start": 130.364,
+   "end": 134.51,
+   "captions": [
+    {
+     "text": "Am fünften November bekamen",
+     "start": 130.364,
+     "end": 132.312
+    },
+    {
+     "text": "dann viele Anleger kalte Füße",
+     "start": 132.312,
+     "end": 134.51
+    }
+   ]
+  },
+  {
+   "id": "s23",
+   "start": 134.51,
+   "end": 140.791,
+   "captions": [
+    {
+     "text": "Nach den US‑Wahlen",
+     "start": 134.51,
+     "end": 135.67
+    },
+    {
+     "text": "wuchs die Sorge,",
+     "start": 135.67,
+     "end": 136.862
+    },
+    {
+     "text": "dass der Bau",
+     "start": 136.862,
+     "end": 137.647
+    },
+    {
+     "text": "neuer KI‑Rechenzentren",
+     "start": 137.647,
+     "end": 139.285
+    },
+    {
+     "text": "gebremst werden könnte",
+     "start": 139.285,
+     "end": 140.791
+    }
+   ]
+  },
+  {
+   "id": "s24",
+   "start": 140.791,
+   "end": 146.593,
+   "captions": [
+    {
+     "text": "Dazu kamen Zwangsverkäufe",
+     "start": 140.791,
+     "end": 142.451
+    },
+    {
+     "text": "großer Hedgefonds,",
+     "start": 142.451,
+     "end": 143.742
+    },
+    {
+     "text": "und plötzlich wollten",
+     "start": 143.742,
+     "end": 145.248
+    },
+    {
+     "text": "alle gleichzeitig raus",
+     "start": 145.248,
+     "end": 146.593
+    }
+   ]
+  },
+  {
+   "id": "s25",
+   "start": 146.593,
+   "end": 149.791,
+   "captions": [
+    {
+     "text": "Ist das jetzt",
+     "start": 146.593,
+     "end": 147.301
+    },
+    {
+     "text": "der Anfang vom Ende?",
+     "start": 147.301,
+     "end": 148.432
+    },
+    {
+     "text": "Ein Blick zurück hilft",
+     "start": 148.432,
+     "end": 149.791
+    }
+   ]
+  },
+  {
+   "id": "s26",
+   "start": 149.791,
+   "end": 155.762,
+   "captions": [
+    {
+     "text": "Im Jahr 2.000 platzte",
+     "start": 149.791,
+     "end": 151.395
+    },
+    {
+     "text": "die Dotcom‑Blase,",
+     "start": 151.395,
+     "end": 152.77
+    },
+    {
+     "text": "und die Nasdaq stürzte",
+     "start": 152.77,
+     "end": 154.549
+    },
+    {
+     "text": "um fast 80 % ab",
+     "start": 154.549,
+     "end": 155.762
+    }
+   ]
+  },
+  {
+   "id": "s27",
+   "start": 155.762,
+   "end": 163.669,
+   "captions": [
+    {
+     "text": "Der Unterschied zu heute:",
+     "start": 155.762,
+     "end": 157.276
+    },
+    {
+     "text": "Firmen wie Nvidia,",
+     "start": 157.276,
+     "end": 158.7
+    },
+    {
+     "text": "Microsoft oder Apple",
+     "start": 158.7,
+     "end": 160.382
+    },
+    {
+     "text": "verdienen echtes Geld,",
+     "start": 160.382,
+     "end": 162.232
+    },
+    {
+     "text": "und zwar sehr viel",
+     "start": 162.232,
+     "end": 163.669
+    }
+   ]
+  },
+  {
+   "id": "s28",
+   "start": 163.669,
+   "end": 171.26,
+   "captions": [
+    {
+     "text": "Trotzdem sind viele",
+     "start": 163.669,
+     "end": 164.695
+    },
+    {
+     "text": "dieser Aktien teuer,",
+     "start": 164.695,
+     "end": 166.271
+    },
+    {
+     "text": "und ein Rückschlag",
+     "start": 166.271,
+     "end": 167.788
+    },
+    {
+     "text": "von 20 oder 30 % wäre",
+     "start": 167.788,
+     "end": 169.594
+    },
+    {
+     "text": "nichts Ungewöhnliches",
+     "start": 169.594,
+     "end": 171.26
+    }
+   ]
+  },
+  {
+   "id": "s29",
+   "start": 171.26,
+   "end": 174.238,
+   "captions": [
+    {
+     "text": "Und jetzt kommt der Teil,",
+     "start": 171.26,
+     "end": 172.814
+    },
+    {
+     "text": "der dich direkt betrifft",
+     "start": 172.814,
+     "end": 174.238
+    }
+   ]
+  },
+  {
+   "id": "s30",
+   "start": 174.238,
+   "end": 179.38,
+   "captions": [
+    {
+     "text": "Der beliebteste",
+     "start": 174.238,
+     "end": 175.62
+    },
+    {
+     "text": "ETF in Deutschland",
+     "start": 175.62,
+     "end": 177.577
+    },
+    {
+     "text": "ist der MSCI World",
+     "start": 177.577,
+     "end": 179.38
+    }
+   ]
+  },
+  {
+   "id": "s31",
+   "start": 179.38,
+   "end": 186.054,
+   "captions": [
+    {
+     "text": "Viele denken,",
+     "start": 179.38,
+     "end": 180.332
+    },
+    {
+     "text": "da ist die ganze Welt drin,",
+     "start": 180.332,
+     "end": 182.398
+    },
+    {
+     "text": "aber rund 72 % davon",
+     "start": 182.398,
+     "end": 184.102
+    },
+    {
+     "text": "sind amerikanische Firmen",
+     "start": 184.102,
+     "end": 186.054
+    }
+   ]
+  },
+  {
+   "id": "s32",
+   "start": 186.054,
+   "end": 195.936,
+   "captions": [
+    {
+     "text": "Die größten Positionen",
+     "start": 186.054,
+     "end": 187.569
+    },
+    {
+     "text": "sind ausgerechnet Nvidia,",
+     "start": 187.569,
+     "end": 189.488
+    },
+    {
+     "text": "Apple und Microsoft,",
+     "start": 189.488,
+     "end": 191.027
+    },
+    {
+     "text": "und die zehn größten Firmen",
+     "start": 191.027,
+     "end": 193.065
+    },
+    {
+     "text": "machen mehr als ein Viertel",
+     "start": 193.065,
+     "end": 195.142
+    },
+    {
+     "text": "des ETFs aus",
+     "start": 195.142,
+     "end": 195.936
+    }
+   ]
+  },
+  {
+   "id": "s33",
+   "start": 195.936,
+   "end": 198.597,
+   "captions": [
+    {
+     "text": "Nehmen wir Nina,",
+     "start": 195.936,
+     "end": 197.454
+    },
+    {
+     "text": "28 Jahre alt",
+     "start": 197.454,
+     "end": 198.597
+    }
+   ]
+  },
+  {
+   "id": "s34",
+   "start": 198.597,
+   "end": 207.32,
+   "captions": [
+    {
+     "text": "Sie spart seit fünf",
+     "start": 198.597,
+     "end": 200.208
+    },
+    {
+     "text": "Jahren 200 € im Monat",
+     "start": 200.208,
+     "end": 202.103
+    },
+    {
+     "text": "in einen MSCI World",
+     "start": 202.103,
+     "end": 203.818
+    },
+    {
+     "text": "und hat inzwischen",
+     "start": 203.818,
+     "end": 205.374
+    },
+    {
+     "text": "rund 15.000 € im Depot",
+     "start": 205.374,
+     "end": 207.32
+    }
+   ]
+  },
+  {
+   "id": "s35",
+   "start": 207.32,
+   "end": 212.85,
+   "captions": [
+    {
+     "text": "Fallen die KI‑Aktien stark,",
+     "start": 207.32,
+     "end": 209.219
+    },
+    {
+     "text": "fällt auch ihr Depot,",
+     "start": 209.219,
+     "end": 210.653
+    },
+    {
+     "text": "vielleicht um",
+     "start": 210.653,
+     "end": 211.476
+    },
+    {
+     "text": "mehrere tausend Euro",
+     "start": 211.476,
+     "end": 212.85
+    }
+   ]
+  },
+  {
+   "id": "s36",
+   "start": 212.85,
+   "end": 216.064,
+   "captions": [
+    {
+     "text": "Was sollte Nina jetzt",
+     "start": 212.85,
+     "end": 214.372
+    },
+    {
+     "text": "tun? Hier sind vier Regeln",
+     "start": 214.372,
+     "end": 216.064
+    }
+   ]
+  },
+  {
+   "id": "s37",
+   "start": 216.064,
+   "end": 222.835,
+   "captions": [
+    {
+     "text": "Regel eins: Nicht",
+     "start": 216.064,
+     "end": 217.28
+    },
+    {
+     "text": "in Panik verkaufen.",
+     "start": 217.28,
+     "end": 218.846
+    },
+    {
+     "text": "Wer im Crash verkauft,",
+     "start": 218.846,
+     "end": 220.425
+    },
+    {
+     "text": "macht den Verlust",
+     "start": 220.425,
+     "end": 221.792
+    },
+    {
+     "text": "erst endgültig",
+     "start": 221.792,
+     "end": 222.835
+    }
+   ]
+  },
+  {
+   "id": "s38",
+   "start": 222.835,
+   "end": 231.333,
+   "captions": [
+    {
+     "text": "Nach der Dotcom‑Blase",
+     "start": 222.835,
+     "end": 224.139
+    },
+    {
+     "text": "und nach der Finanzkrise",
+     "start": 224.139,
+     "end": 225.755
+    },
+    {
+     "text": "hat sich der Weltmarkt",
+     "start": 225.755,
+     "end": 227.236
+    },
+    {
+     "text": "jedes Mal wieder erholt,",
+     "start": 227.236,
+     "end": 228.852
+    },
+    {
+     "text": "auch wenn es ein paar",
+     "start": 228.852,
+     "end": 230.266
+    },
+    {
+     "text": "Jahre gedauert hat",
+     "start": 230.266,
+     "end": 231.333
+    }
+   ]
+  },
+  {
+   "id": "s39",
+   "start": 231.333,
+   "end": 234.621,
+   "captions": [
+    {
+     "text": "Regel zwei: Den Sparplan",
+     "start": 231.333,
+     "end": 233.123
+    },
+    {
+     "text": "weiterlaufen lassen",
+     "start": 233.123,
+     "end": 234.621
+    }
+   ]
+  },
+  {
+   "id": "s40",
+   "start": 234.621,
+   "end": 241.132,
+   "captions": [
+    {
+     "text": "Wenn die Kurse fallen,",
+     "start": 234.621,
+     "end": 236.188
+    },
+    {
+     "text": "bekommt Nina für ihre",
+     "start": 236.188,
+     "end": 237.865
+    },
+    {
+     "text": "200 € mehr Anteile,",
+     "start": 237.865,
+     "end": 239.296
+    },
+    {
+     "text": "quasi Aktien im Angebot",
+     "start": 239.296,
+     "end": 241.132
+    }
+   ]
+  },
+  {
+   "id": "s41",
+   "start": 241.132,
+   "end": 243.446,
+   "captions": [
+    {
+     "text": "Regel drei: Breiter streuen",
+     "start": 241.132,
+     "end": 243.446
+    }
+   ]
+  },
+  {
+   "id": "s42",
+   "start": 243.446,
+   "end": 251.551,
+   "captions": [
+    {
+     "text": "Wer weniger von den großen",
+     "start": 243.446,
+     "end": 244.941
+    },
+    {
+     "text": "US‑Tech‑Firmen abhängen will,",
+     "start": 244.941,
+     "end": 246.903
+    },
+    {
+     "text": "kann zum Beispiel",
+     "start": 246.903,
+     "end": 248.053
+    },
+    {
+     "text": "einen ETF auf Europa",
+     "start": 248.053,
+     "end": 249.407
+    },
+    {
+     "text": "oder die Schwellenländer",
+     "start": 249.407,
+     "end": 251.03
+    },
+    {
+     "text": "beimischen",
+     "start": 251.03,
+     "end": 251.551
+    }
+   ]
+  },
+  {
+   "id": "s43",
+   "start": 251.551,
+   "end": 258.981,
+   "captions": [
+    {
+     "text": "Regel vier: Nur Geld anlegen,",
+     "start": 251.551,
+     "end": 253.098
+    },
+    {
+     "text": "das du die nächsten zehn",
+     "start": 253.098,
+     "end": 254.634
+    },
+    {
+     "text": "Jahre nicht brauchst,",
+     "start": 254.634,
+     "end": 255.987
+    },
+    {
+     "text": "und immer einen Notgroschen",
+     "start": 255.987,
+     "end": 257.726
+    },
+    {
+     "text": "auf dem Tagesgeld haben",
+     "start": 257.726,
+     "end": 258.981
+    }
+   ]
+  },
+  {
+   "id": "s44",
+   "start": 258.981,
+   "end": 267.14,
+   "captions": [
+    {
+     "text": "Fassen wir zusammen:",
+     "start": 258.981,
+     "end": 260.091
+    },
+    {
+     "text": "Rund um die KI dreht sich",
+     "start": 260.091,
+     "end": 261.65
+    },
+    {
+     "text": "ein riesiger Geldkreis,",
+     "start": 261.65,
+     "end": 263.188
+    },
+    {
+     "text": "in dem sich dieselben",
+     "start": 263.188,
+     "end": 264.592
+    },
+    {
+     "text": "Firmen gegenseitig",
+     "start": 264.592,
+     "end": 265.795
+    },
+    {
+     "text": "Milliarden zuschieben",
+     "start": 265.795,
+     "end": 267.14
+    }
+   ]
+  },
+  {
+   "id": "s45",
+   "start": 267.14,
+   "end": 273.191,
+   "captions": [
+    {
+     "text": "Ob die Blase platzt,",
+     "start": 267.14,
+     "end": 268.664
+    },
+    {
+     "text": "weiß niemand,",
+     "start": 268.664,
+     "end": 269.693
+    },
+    {
+     "text": "aber über deinen ETF bist",
+     "start": 269.693,
+     "end": 271.671
+    },
+    {
+     "text": "du wahrscheinlich dabei",
+     "start": 271.671,
+     "end": 273.191
+    }
+   ]
+  },
+  {
+   "id": "s46",
+   "start": 273.191,
+   "end": 281.543,
+   "captions": [
+    {
+     "text": "Panik ist trotzdem",
+     "start": 273.191,
+     "end": 274.201
+    },
+    {
+     "text": "der schlechteste Ratgeber,",
+     "start": 274.201,
+     "end": 275.98
+    },
+    {
+     "text": "wer ruhig bleibt",
+     "start": 275.98,
+     "end": 277.075
+    },
+    {
+     "text": "und weiterspart,",
+     "start": 277.075,
+     "end": 278.17
+    },
+    {
+     "text": "lag in der Vergangenheit",
+     "start": 278.17,
+     "end": 279.812
+    },
+    {
+     "text": "langfristig fast immer vorne",
+     "start": 279.812,
+     "end": 281.543
+    }
+   ]
+  },
+  {
+   "id": "s47",
+   "start": 281.543,
+   "end": 288.312,
+   "captions": [
+    {
+     "text": "Und jetzt bist du",
+     "start": 281.543,
+     "end": 282.634
+    },
+    {
+     "text": "dran: Glaubst du,",
+     "start": 282.634,
+     "end": 283.759
+    },
+    {
+     "text": "die KI‑Blase platzt? Ja",
+     "start": 283.759,
+     "end": 285.401
+    },
+    {
+     "text": "oder nein? Schreib es",
+     "start": 285.401,
+     "end": 286.608
+    },
+    {
+     "text": "uns in die Kommentare",
+     "start": 286.608,
+     "end": 288.162
+    }
+   ]
+  },
+  {
+   "id": "sF",
+   "start": 288.312,
+   "end": 293.143,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTv,",
+     "start": 288.312,
+     "end": 289.784
+    },
+    {
+     "text": "wir bringen jeden Tag",
+     "start": 289.784,
+     "end": 291.331
+    },
+    {
+     "text": "neue Videos rund ums Geld",
+     "start": 291.331,
+     "end": 293.143
+    }
+   ]
+  }
+ ]
+}

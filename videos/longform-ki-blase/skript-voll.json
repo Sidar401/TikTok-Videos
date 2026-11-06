@@ -1,0 +1,245 @@
+{
+ "titel": "Platzt die KI-Blase? Der KI-Geldkreis und dein ETF",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Am fünften November haben Anleger an einem einzigen Tag rund zweieinhalb Billionen Dollar verloren.",
+   "text": "Am fünften November haben Anleger an einem einzigen Tag rund zweieinhalb Billionen Dollar verloren"
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Die US-Technologiebörse Nasdaq hatte ihren schlimmsten Tag seit dem Corona-Crash.",
+   "text": "Die US-Technologiebörse Nasdaq hatte ihren schlimmsten Tag seit dem Corona-Crash"
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Chip-Aktien stürzten um mehr als zwölf Prozent ab, und auch der DAX rutschte unter sechsundzwanzigtausend Punkte.",
+   "text": "Chip-Aktien stürzten um mehr als 12 % ab, und auch der DAX rutschte unter 26.000 Punkte"
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Jetzt fragen sich viele: Platzt gerade die KI-Blase?",
+   "text": "Jetzt fragen sich viele: Platzt gerade die KI-Blase?"
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Und was heißt das für dich, wenn du einen ETF hast?",
+   "text": "Und was heißt das für dich, wenn du einen ETF hast?"
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Denn auch wenn du noch nie eine einzige KI-Aktie gekauft hast, steckst du vermutlich mitten drin.",
+   "text": "Denn auch wenn du noch nie eine einzige KI-Aktie gekauft hast, steckst du vermutlich mitten drin"
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Heute schauen wir uns gemeinsam den KI-Geldkreis an, und am Ende zeigen wir dir, was du jetzt tun solltest und was nicht.",
+   "text": "Heute schauen wir uns gemeinsam den KI-Geldkreis an, und am Ende zeigen wir dir, was du jetzt tun solltest und was nicht"
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Kurzer Hinweis vorweg: Das ist keine Anlageberatung, sondern eine Erklärung, damit du die Nachrichten besser verstehst.",
+   "text": "Kurzer Hinweis vorweg: Das ist keine Anlageberatung, sondern eine Erklärung, damit du die Nachrichten besser verstehst"
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Und wenn du solche Videos magst, folge HundeFinanzTv, wir bringen jeden Tag neue Videos rund ums Geld.",
+   "text": "Und wenn du solche Videos magst, folge HundeFinanzTv, wir bringen jeden Tag neue Videos rund ums Geld"
+  },
+  {
+   "id": "s10",
+   "sprechtext": "Fangen wir an mit dem ersten Spieler: OpenAI, die Firma hinter ChatGPT.",
+   "text": "Fangen wir an mit dem ersten Spieler: OpenAI, die Firma hinter ChatGPT"
+  },
+  {
+   "id": "s11",
+   "sprechtext": "OpenAI braucht unvorstellbar viel Rechenleistung, also riesige Rechenzentren voller Spezial-Chips.",
+   "text": "OpenAI braucht unvorstellbar viel Rechenleistung, also riesige Rechenzentren voller Spezial-Chips"
+  },
+  {
+   "id": "s12",
+   "sprechtext": "Der erste große Geldgeber ist Microsoft, dem heute rund siebenundzwanzig Prozent von OpenAI gehören.",
+   "text": "Der erste große Geldgeber ist Microsoft, dem heute rund 27 % von OpenAI gehören"
+  },
+  {
+   "id": "s13",
+   "sprechtext": "Doch das reicht nicht. Also bestellt OpenAI bei Oracle Rechenleistung für rund dreihundert Milliarden Dollar.",
+   "text": "Doch das reicht nicht. Also bestellt OpenAI bei Oracle Rechenleistung für rund 300 Milliarden Dollar"
+  },
+  {
+   "id": "s14",
+   "sprechtext": "Oracle braucht dafür Chips, und die kauft es vor allem bei Nvidia.",
+   "text": "Oracle braucht dafür Chips, und die kauft es vor allem bei Nvidia"
+  },
+  {
+   "id": "s15",
+   "sprechtext": "Und jetzt wird es spannend: Nvidia investiert selbst bis zu hundert Milliarden Dollar in OpenAI.",
+   "text": "Und jetzt wird es spannend: Nvidia investiert selbst bis zu 100 Milliarden Dollar in OpenAI"
+  },
+  {
+   "id": "s16",
+   "sprechtext": "Mit diesem Geld kauft OpenAI dann wieder Rechenleistung, die auf Nvidia-Chips läuft.",
+   "text": "Mit diesem Geld kauft OpenAI dann wieder Rechenleistung, die auf Nvidia-Chips läuft"
+  },
+  {
+   "id": "s17",
+   "sprechtext": "Siehst du den Kreis? Das Geld fließt von Nvidia zu OpenAI, von OpenAI zu Oracle und von Oracle zurück zu Nvidia.",
+   "text": "Siehst du den Kreis? Das Geld fließt von Nvidia zu OpenAI, von OpenAI zu Oracle und von Oracle zurück zu Nvidia"
+  },
+  {
+   "id": "s18",
+   "sprechtext": "Auch der Chiphersteller AMD hat einen Riesen-Deal mit OpenAI, bei dem OpenAI sogar Anteile an AMD bekommen kann.",
+   "text": "Auch der Chiphersteller AMD hat einen Riesen-Deal mit OpenAI, bei dem OpenAI sogar Anteile an AMD bekommen kann"
+  },
+  {
+   "id": "s19",
+   "sprechtext": "Das Problem ist nur: Ein großer Teil dieses Geldes ist bisher nur versprochen.",
+   "text": "Das Problem ist nur: Ein großer Teil dieses Geldes ist bisher nur versprochen"
+  },
+  {
+   "id": "s20",
+   "sprechtext": "OpenAI hat Zusagen über rund eins Komma vier Billionen Dollar gemacht, macht aber nur rund fünfzig Milliarden Dollar Umsatz im Jahr.",
+   "text": "OpenAI hat Zusagen über rund eins Komma vier Billionen Dollar gemacht, macht aber nur rund 50 Milliarden Dollar Umsatz im Jahr"
+  },
+  {
+   "id": "s21",
+   "sprechtext": "Das ist so, als würdest du mit zweitausend Euro im Monat Verträge über fast siebenhunderttausend Euro unterschreiben.",
+   "text": "Das ist so, als würdest du mit 2.000 € im Monat Verträge über fast 700.000 € unterschreiben"
+  },
+  {
+   "id": "s22",
+   "sprechtext": "Am fünften November bekamen dann viele Anleger kalte Füße.",
+   "text": "Am fünften November bekamen dann viele Anleger kalte Füße"
+  },
+  {
+   "id": "s23",
+   "sprechtext": "Nach den US-Wahlen wuchs die Sorge, dass der Bau neuer KI-Rechenzentren gebremst werden könnte.",
+   "text": "Nach den US-Wahlen wuchs die Sorge, dass der Bau neuer KI-Rechenzentren gebremst werden könnte"
+  },
+  {
+   "id": "s24",
+   "sprechtext": "Dazu kamen Zwangsverkäufe großer Hedgefonds, und plötzlich wollten alle gleichzeitig raus.",
+   "text": "Dazu kamen Zwangsverkäufe großer Hedgefonds, und plötzlich wollten alle gleichzeitig raus"
+  },
+  {
+   "id": "s25",
+   "sprechtext": "Ist das jetzt der Anfang vom Ende? Ein Blick zurück hilft.",
+   "text": "Ist das jetzt der Anfang vom Ende? Ein Blick zurück hilft"
+  },
+  {
+   "id": "s26",
+   "sprechtext": "Im Jahr zweitausend platzte die Dotcom-Blase, und die Nasdaq stürzte um fast achtzig Prozent ab.",
+   "text": "Im Jahr 2.000 platzte die Dotcom-Blase, und die Nasdaq stürzte um fast 80 % ab"
+  },
+  {
+   "id": "s27",
+   "sprechtext": "Der Unterschied zu heute: Firmen wie Nvidia, Microsoft oder Apple verdienen echtes Geld, und zwar sehr viel.",
+   "text": "Der Unterschied zu heute: Firmen wie Nvidia, Microsoft oder Apple verdienen echtes Geld, und zwar sehr viel"
+  },
+  {
+   "id": "s28",
+   "sprechtext": "Trotzdem sind viele dieser Aktien teuer, und ein Rückschlag von zwanzig oder dreißig Prozent wäre nichts Ungewöhnliches.",
+   "text": "Trotzdem sind viele dieser Aktien teuer, und ein Rückschlag von 20 oder 30 % wäre nichts Ungewöhnliches"
+  },
+  {
+   "id": "s29",
+   "sprechtext": "Und jetzt kommt der Teil, der dich direkt betrifft.",
+   "text": "Und jetzt kommt der Teil, der dich direkt betrifft"
+  },
+  {
+   "id": "s30",
+   "sprechtext": "Der beliebteste ETF in Deutschland ist der MSCI World.",
+   "text": "Der beliebteste ETF in Deutschland ist der MSCI World"
+  },
+  {
+   "id": "s31",
+   "sprechtext": "Viele denken, da ist die ganze Welt drin, aber rund zweiundsiebzig Prozent davon sind amerikanische Firmen.",
+   "text": "Viele denken, da ist die ganze Welt drin, aber rund 72 % davon sind amerikanische Firmen"
+  },
+  {
+   "id": "s32",
+   "sprechtext": "Die größten Positionen sind ausgerechnet Nvidia, Apple und Microsoft, und die zehn größten Firmen machen mehr als ein Viertel des ETFs aus.",
+   "text": "Die größten Positionen sind ausgerechnet Nvidia, Apple und Microsoft, und die zehn größten Firmen machen mehr als ein Viertel des ETFs aus"
+  },
+  {
+   "id": "s33",
+   "sprechtext": "Nehmen wir Nina, achtundzwanzig Jahre alt.",
+   "text": "Nehmen wir Nina, 28 Jahre alt"
+  },
+  {
+   "id": "s34",
+   "sprechtext": "Sie spart seit fünf Jahren zweihundert Euro im Monat in einen MSCI World und hat inzwischen rund fünfzehntausend Euro im Depot.",
+   "text": "Sie spart seit fünf Jahren 200 € im Monat in einen MSCI World und hat inzwischen rund 15.000 € im Depot"
+  },
+  {
+   "id": "s35",
+   "sprechtext": "Fallen die KI-Aktien stark, fällt auch ihr Depot, vielleicht um mehrere tausend Euro.",
+   "text": "Fallen die KI-Aktien stark, fällt auch ihr Depot, vielleicht um mehrere tausend Euro"
+  },
+  {
+   "id": "s36",
+   "sprechtext": "Was sollte Nina jetzt tun? Hier sind vier Regeln.",
+   "text": "Was sollte Nina jetzt tun? Hier sind vier Regeln"
+  },
+  {
+   "id": "s37",
+   "sprechtext": "Regel eins: Nicht in Panik verkaufen. Wer im Crash verkauft, macht den Verlust erst endgültig.",
+   "text": "Regel eins: Nicht in Panik verkaufen. Wer im Crash verkauft, macht den Verlust erst endgültig"
+  },
+  {
+   "id": "s38",
+   "sprechtext": "Nach der Dotcom-Blase und nach der Finanzkrise hat sich der Weltmarkt jedes Mal wieder erholt, auch wenn es ein paar Jahre gedauert hat.",
+   "text": "Nach der Dotcom-Blase und nach der Finanzkrise hat sich der Weltmarkt jedes Mal wieder erholt, auch wenn es ein paar Jahre gedauert hat"
+  },
+  {
+   "id": "s39",
+   "sprechtext": "Regel zwei: Den Sparplan weiterlaufen lassen.",
+   "text": "Regel zwei: Den Sparplan weiterlaufen lassen"
+  },
+  {
+   "id": "s40",
+   "sprechtext": "Wenn die Kurse fallen, bekommt Nina für ihre zweihundert Euro mehr Anteile, quasi Aktien im Angebot.",
+   "text": "Wenn die Kurse fallen, bekommt Nina für ihre 200 € mehr Anteile, quasi Aktien im Angebot"
+  },
+  {
+   "id": "s41",
+   "sprechtext": "Regel drei: Breiter streuen.",
+   "text": "Regel drei: Breiter streuen"
+  },
+  {
+   "id": "s42",
+   "sprechtext": "Wer weniger von den großen US-Tech-Firmen abhängen will, kann zum Beispiel einen ETF auf Europa oder die Schwellenländer beimischen.",
+   "text": "Wer weniger von den großen US-Tech-Firmen abhängen will, kann zum Beispiel einen ETF auf Europa oder die Schwellenländer beimischen"
+  },
+  {
+   "id": "s43",
+   "sprechtext": "Regel vier: Nur Geld anlegen, das du die nächsten zehn Jahre nicht brauchst, und immer einen Notgroschen auf dem Tagesgeld haben.",
+   "text": "Regel vier: Nur Geld anlegen, das du die nächsten zehn Jahre nicht brauchst, und immer einen Notgroschen auf dem Tagesgeld haben"
+  },
+  {
+   "id": "s44",
+   "sprechtext": "Fassen wir zusammen: Rund um die KI dreht sich ein riesiger Geldkreis, in dem sich dieselben Firmen gegenseitig Milliarden zuschieben.",
+   "text": "Fassen wir zusammen: Rund um die KI dreht sich ein riesiger Geldkreis, in dem sich dieselben Firmen gegenseitig Milliarden zuschieben"
+  },
+  {
+   "id": "s45",
+   "sprechtext": "Ob die Blase platzt, weiß niemand, aber über deinen ETF bist du wahrscheinlich dabei.",
+   "text": "Ob die Blase platzt, weiß niemand, aber über deinen ETF bist du wahrscheinlich dabei"
+  },
+  {
+   "id": "s46",
+   "sprechtext": "Panik ist trotzdem der schlechteste Ratgeber, wer ruhig bleibt und weiterspart, lag in der Vergangenheit langfristig fast immer vorne.",
+   "text": "Panik ist trotzdem der schlechteste Ratgeber, wer ruhig bleibt und weiterspart, lag in der Vergangenheit langfristig fast immer vorne"
+  },
+  {
+   "id": "s47",
+   "sprechtext": "Und jetzt bist du dran: Glaubst du, die KI-Blase platzt? Ja oder nein? Schreib es uns in die Kommentare.",
+   "text": "Und jetzt bist du dran: Glaubst du, die KI-Blase platzt? Ja oder nein? Schreib es uns in die Kommentare"
+  },
+  {
+   "id": "s48",
+   "sprechtext": "Wir sind HundeFinanzTv, wir sehen uns morgen im nächsten Video.",
+   "text": "Wir sind HundeFinanzTv, wir sehen uns morgen im nächsten Video"
+  }
+ ]
+}
