@@ -50,7 +50,7 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | longform-einkommen | Arm oder reich? Einkommens-Stufen in Deutschland, Median vs. Durchschnitt, Wege eine Stufe höher | Einkommens-Leiter |
 | longform-supermarkt | 10 Supermarkt-Tricks mit Jana (Wagen, Obst vorne, Musik/Duft, Milch hinten, Augenhöhe, 99, Mengenangebote, Mogelpackung, Quengelware, Kunden-App), 6 Gegentricks | Supermarkt-Grundriss als Rundgang |
 | longform-steuer | 7 legale Steuertricks mit Tim (Pauschbetrag 1.230 €, Arbeitsweg, Homeoffice 6 €/Tag, Arbeitsmittel, Fortbildung, Kleinkram, Handwerker 20 %, Spenden), 4 Jahre rückwirkend | Steuer-Tresor mit 7 Schlössern |
-| longform-ki-blase | (Skript) Tech-Crash 5.11.2026 (Nasdaq −6,4 %, 2,5 Bio. $), KI-Geldkreis Microsoft 27 %/OpenAI/Oracle 300 Mrd/Nvidia 100 Mrd/AMD, 1,4 Bio. Zusagen vs. 50 Mrd. Umsatz, Dotcom −80 %, MSCI World 72 % USA, Nina 200 €/Monat 15.000 €, 4 Regeln | KI-Geldkreis (Pfeile im Kreis) |
+| longform-ki-blase | Tech-Crash 5.11.2026 (Nasdaq −6,4 %, 2,5 Bio. $), KI-Geldkreis Microsoft 27 %/OpenAI/Oracle 300 Mrd/Nvidia 100 Mrd/AMD, 1,4 Bio. Zusagen vs. 50 Mrd. Umsatz, Dotcom −80 %, MSCI World 72 % USA, Nina 200 €/Monat 15.000 €, 4 Regeln | KI-Geldkreis (Pfeile im Kreis) |
 | longform-lotto | Lottogewinner Marco: 1 Mio., Absturz in 4 Jahren, Gründe, 5 Regeln, Lotto-Ausschüttung ~50 % | Kontostand-Countdown / Lottokugeln |
 | longform-freiheit | Nie wieder arbeiten: 4-%-Regel, ×25, 3 Gipfel (450k/750k/1,2 Mio.), Zwischenstationen, 3 Hebel, Sophie | Freiheits-Berg mit Hütten |
 
@@ -70,6 +70,7 @@ Nutzer: „nicht immer die gleichen/ähnlichen Thumbnails“ – z. B. **Geldbeu
 | longform-steuer | Tresor „Das Finanzamt schuldet dir GELD!“, 7 Schloss-Kreise, Stempel „VERSCHENKT!“ + 2.500 € |
 | freistellungsauftrag (Cover) | „Deine Bank zieht dir STEUERN AB“, 3 Münzstapel, rote Pille −26 %, grünes 1.000 € steuerfrei |
 | gehalt-fluss (Cover) | „Wohin fließt DEIN GELD?“, Box 3.600 € orange → Pfeil → 2.028 € grün, 4 rote Abzugs-Pillen |
+| longform-ki-blase | „Platzt jetzt die KI-BLASE?“, orange Blase „KI“ mit weißem Riss, rote Pille −2,5 Billionen $, „…und was ist mit deinem ETF?“ |
 | longform-lotto | Lottokugeln „1 Million gewonnen … und PLEITE!“, Kontostand 1.000.000 € → 0 €, Titel-Typo + Kugeln |
 | longform-freiheit | Berg mit Flagge „So viel Geld, um NIE wieder zu arbeiten“, Formel „Ausgaben × 25 = FREI“, 3 Gipfel-Kacheln |
 

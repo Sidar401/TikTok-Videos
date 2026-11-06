@@ -17,30 +17,41 @@ import soundfile as sf
 OR, GRUEN, ROT, GOLD, BG = "#ff8a1f", "#2fd27a", "#ff4d4d", "#ffc533", "#0e1012"
 SR = 44100
 
-CSS = f"""
+W, H = 1080, 1920
+
+
+def querformat():
+    """Longform 16:9 (1920×1080) im Dark-Glow-Stil: vor dem Bau der Szenen aufrufen."""
+    global W, H
+    W, H = 1920, 1080
+
+
+def css():
+    q = H < W  # 16:9 Longform
+    return f"""
       * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-      html, body {{ width: 1080px; height: 1920px; overflow: hidden; background: {BG}; }}
+      html, body {{ width: {W}px; height: {H}px; overflow: hidden; background: {BG}; }}
       #root {{ position: relative; width: 100%; height: 100%; font-family: Montserrat, sans-serif; overflow: hidden;
         background: radial-gradient(ellipse at 50% 42%, #ff8a1f33 0%, #ff8a1f0d 38%, transparent 62%), radial-gradient(ellipse at 50% 50%, #1b1f22 0%, {BG} 75%); }}
       #raster {{ position: absolute; inset: 0; background-image: linear-gradient(#ffffff0c 2px, transparent 2px), linear-gradient(90deg, #ffffff0c 2px, transparent 2px); background-size: 90px 90px; }}
       .scene {{ position: absolute; inset: 0; }}
       .inner {{ position: absolute; inset: 0; }}
-      .t {{ position: absolute; left: 0; width: 1080px; text-align: center; font-weight: 900; line-height: 1.02; letter-spacing: -1px; color: #fff; }}
+      .t {{ position: absolute; left: 0; width: {W}px; text-align: center; font-weight: 900; line-height: 1.02; letter-spacing: -1px; color: #fff; }}
       .glow-o {{ color: {OR}; text-shadow: 0 0 50px {OR}aa; }}
       .glow-g {{ color: {GRUEN}; text-shadow: 0 0 50px {GRUEN}aa; }}
       .glow-r {{ color: {ROT}; text-shadow: 0 0 50px {ROT}aa; }}
       .box {{ display: inline-block; padding: 6px 34px 14px; border-radius: 24px; background: {OR}; color: #111; box-shadow: 0 0 60px {OR}88; }}
-      #logo {{ position: absolute; left: 445px; top: 135px; width: 190px; height: 190px; border-radius: 50%; overflow: hidden; border: 5px solid #DB8622; box-shadow: 0 0 30px #ff8a1f88; z-index: 5; }}
+      #logo {{ position: absolute; {"left: 52px; top: 44px; width: 112px; height: 112px;" if q else "left: 445px; top: 135px; width: 190px; height: 190px;"} border-radius: 50%; overflow: hidden; border: 5px solid #DB8622; box-shadow: 0 0 30px #ff8a1f88; z-index: 5; }}
       #logo img {{ width: 100%; height: 100%; object-fit: cover; }}
-      #brand {{ position: absolute; left: 0; top: 335px; width: 1080px; text-align: center; font-weight: 800; font-size: 38px; color: #ffffffdd; letter-spacing: 1px; z-index: 5; }}
+      #brand {{ position: absolute; {"left: 180px; top: 80px; text-align: left; font-size: 36px;" if q else "left: 0; top: 335px; width: 1080px; text-align: center; font-size: 38px;"} font-weight: 800; color: #ffffffdd; letter-spacing: 1px; z-index: 5; }}
       #flash {{ position: absolute; inset: 0; background: #fff; opacity: 0; z-index: 9; pointer-events: none; }}
       .p {{ position: absolute; border-radius: 50%; }}
       .l {{ display: inline-block; }}
-      #frame {{ position: absolute; inset: 0; border: 26px solid #DB8622; z-index: 10; }}
-      .ew {{ position: absolute; left: 0; width: 1080px; text-align: center; z-index: 6; font-weight: 900; font-size: 104px; line-height: 1; color: #fff; text-transform: uppercase;
+      #frame {{ position: absolute; inset: 0; border: {22 if q else 26}px solid #DB8622; z-index: 10; }}
+      .ew {{ position: absolute; left: 0; width: {W}px; text-align: center; z-index: 6; font-weight: 900; font-size: 104px; line-height: 1; color: #fff; text-transform: uppercase;
         letter-spacing: -1px; text-shadow: 0 6px 0 #000, 0 0 30px #000; white-space: nowrap; }}
-      .cap {{ position: absolute; left: 60px; top: 1330px; width: 960px; text-align: center; z-index: 6; }}
-      .cap span {{ display: inline-block; margin: 0 16px; font-weight: 900; font-size: 74px; line-height: 1.15; color: #fff; text-shadow: 0 6px 0 #000, 0 0 30px #000; }}
+      .cap {{ position: absolute; {"left: 160px; top: 900px; width: 1600px;" if q else "left: 60px; top: 1330px; width: 960px;"} text-align: center; z-index: 6; }}
+      .cap span {{ display: inline-block; margin: 0 {12 if q else 16}px; font-weight: 900; font-size: {60 if q else 74}px; line-height: 1.15; color: #fff; text-shadow: 0 6px 0 #000, 0 0 30px #000; }}
 """
 
 
@@ -80,7 +91,7 @@ def handy(id_, x, y, w, inhalt="", farbe=OR):
 
 
 def chip(id_, txt, farbe, top, size=60, x=None):
-    pos = f"left:{x}px" if x is not None else "left:0;width:1080px;display:flex;justify-content:center"
+    pos = f"left:{x}px" if x is not None else f"left:0;width:{W}px;display:flex;justify-content:center"
     return (f'<div id="{id_}" style="position:absolute;{pos};top:{top}px;z-index:3"><span style="display:inline-block;padding:12px 34px 16px;border-radius:22px;'
             f'background:{farbe};color:#111;font-weight:900;font-size:{size}px;box-shadow:0 0 50px {farbe}88">{txt}</span></div>')
 
@@ -224,15 +235,15 @@ def build(here, szenen, sfx, dauer=None, musik=None, ein_wort=None, drift=True):
             caps.append(f'        <div id="c{n}" class="cap clip" data-start="{cp["start"]}" data-duration="{round(cp["end"] - cp["start"], 3)}" data-track-index="2">{"".join(spans)}</div>')
     mix(here, sfx, dauer, musik)
     html = f"""<!doctype html>
-<html lang="de" data-resolution="portrait">
+<html lang="de" data-resolution="{"landscape" if W > H else "portrait"}">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1080, height=1920" />
+    <meta name="viewport" content="width={W}, height={H}" />
     <script src="assets/gsap.min.js"></script>
-    <style>{CSS}    </style>
+    <style>{css()}    </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="{dauer}" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{dauer}" data-width="{W}" data-height="{H}">
       <div id="raster"></div>
 {chr(10).join(out)}
       <div id="logo"><img src="assets/beagle.png" alt="" /></div>

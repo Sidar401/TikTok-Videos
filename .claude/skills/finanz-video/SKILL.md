@@ -85,3 +85,5 @@ Das Einkommen-Video (`videos/longform-einkommen`) ist der Qualitäts-Maßstab: �
 - **Videos ohne Stimme** (z. B. Kanal-Trailer, Nutzer 29.10.): `build(HERE, SZENEN, SFX, dauer=30.0, musik=beat(30.0, pausen=[(a, drop)]))` – Beat aus `scripts/musik.py` (120 BPM, Breakdown + Drop) plus Soundeffekte; Helfer `partikel`/`burst`, `buchstaben`/`letters`, `flash`, `glitch`. Vorlagen: `videos/willkommen-*/build.py`.
 
 - **Abgelehnt (Nutzer 6.11.):** Stil „wachsendes Leitbild“ mit Beagle unten + Ein-Wort-Untertiteln („zu viele Hundelogos“) → beim Dark-Glow-Stil wie `videos/freistellungsauftrag` bleiben. Alte Probe: `videos/gehalt-fluss/build-probe-leitbild.py`.
+
+- **Longform 16:9 im Dark-Glow-Stil (ab 6.11.):** `import glow_short as g; g.querformat()` vor dem Szenenbau, dann wie Shorts mit `build(...)` (Logo klein oben links, Untertitel unten bei y=900). Vorlage: `videos/longform-ki-blase/build.py` (Firmen-Plaketten statt echter Logos, Nutzer wählte „Weg 2“).
