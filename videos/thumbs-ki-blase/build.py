@@ -18,5 +18,15 @@ YT = (titel([("Platzt jetzt die", "w"), ("KI-BLASE?", "box")], 90, 150, 140)
       + pill(110, 640, "−2,5 Billionen $", ROT, 92, -4)
       + '<div style="position:absolute;left:110px;top:830px;font-weight:900;font-size:64px;color:#fff">…und was ist mit deinem ETF?</div>')
 
+BLASE_TT = (BLASE.replace("left:1120px;top:170px;width:640px;height:640px", "left:220px;top:650px;width:640px;height:640px")
+            .replace("left:1500px;top:180px", "left:600px;top:660px"))
+TT = (titel([("Platzt jetzt", "w"), ("die", "w"), ("KI-BLASE?", "box")], 0, 170, 130, w=1080, align="center")
+      + BLASE_TT
+      + pill(150, 1350, "−2,5 Billionen $", ROT, 92, -4)
+      + '<div style="position:absolute;left:0;top:1560px;width:1080px;text-align:center;font-weight:900;font-size:64px;color:#fff">…und dein ETF?</div>')
+
 if __name__ == "__main__":
-    seite(HERE, [YT], tiktok=False, glow=("75%", "45%"))
+    if "tiktok" in sys.argv:
+        seite(HERE, [TT], tiktok=True, glow=("50%", "45%"))
+    else:
+        seite(HERE, [YT], tiktok=False, glow=("75%", "45%"))

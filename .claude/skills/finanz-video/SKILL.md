@@ -87,3 +87,5 @@ Das Einkommen-Video (`videos/longform-einkommen`) ist der Qualitäts-Maßstab: �
 - **Abgelehnt (Nutzer 6.11.):** Stil „wachsendes Leitbild“ mit Beagle unten + Ein-Wort-Untertiteln („zu viele Hundelogos“) → beim Dark-Glow-Stil wie `videos/freistellungsauftrag` bleiben. Alte Probe: `videos/gehalt-fluss/build-probe-leitbild.py`.
 
 - **Longform 16:9 im Dark-Glow-Stil (ab 6.11.):** `import glow_short as g; g.querformat()` vor dem Szenenbau, dann wie Shorts mit `build(...)` (Logo klein oben links, Untertitel unten bei y=900). Vorlage: `videos/longform-ki-blase/build.py` (Firmen-Plaketten statt echter Logos, Nutzer wählte „Weg 2“).
+
+- **Thumbnails bei Longform (Nutzer 6.11.):** IMMER zwei Versionen liefern: 16:9 für YouTube (`<name>-1.jpg`) **und zusätzlich 9:16** (`<name>-tiktok.jpg`), gleiches Motiv, für Hochformat neu angeordnet.

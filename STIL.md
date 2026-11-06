@@ -56,3 +56,5 @@ Code-Vorlage: `vorlage/` (Demo: `renders/stil-demo.mp4`).
 Ersetzt den weißen Clipart-Stil für Shorts UND Longform (Nutzer, 27.10.). Details + Regeln: `.claude/skills/finanz-video/SKILL.md` (Abschnitt NEUER STANDARD), Code: `scripts/glow_short.py`.
 
 - **Ausnahme Shorts (ab 27.10.):** Beagle-Logo oben durchgehend sichtbar (Nutzer-Wunsch). Longform weiterhin nur im CTA.
+
+- **Longform-Thumbnails immer zusätzlich in 9:16** (Nutzer 6.11.).
