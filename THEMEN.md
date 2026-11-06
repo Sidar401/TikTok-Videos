@@ -50,6 +50,7 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | longform-einkommen | Arm oder reich? Einkommens-Stufen in Deutschland, Median vs. Durchschnitt, Wege eine Stufe höher | Einkommens-Leiter |
 | longform-supermarkt | 10 Supermarkt-Tricks mit Jana (Wagen, Obst vorne, Musik/Duft, Milch hinten, Augenhöhe, 99, Mengenangebote, Mogelpackung, Quengelware, Kunden-App), 6 Gegentricks | Supermarkt-Grundriss als Rundgang |
 | longform-steuer | 7 legale Steuertricks mit Tim (Pauschbetrag 1.230 €, Arbeitsweg, Homeoffice 6 €/Tag, Arbeitsmittel, Fortbildung, Kleinkram, Handwerker 20 %, Spenden), 4 Jahre rückwirkend | Steuer-Tresor mit 7 Schlössern |
+| longform-ki-blase | (Skript) Tech-Crash 5.11.2026 (Nasdaq −6,4 %, 2,5 Bio. $), KI-Geldkreis Microsoft 27 %/OpenAI/Oracle 300 Mrd/Nvidia 100 Mrd/AMD, 1,4 Bio. Zusagen vs. 50 Mrd. Umsatz, Dotcom −80 %, MSCI World 72 % USA, Nina 200 €/Monat 15.000 €, 4 Regeln | KI-Geldkreis (Pfeile im Kreis) |
 | longform-lotto | Lottogewinner Marco: 1 Mio., Absturz in 4 Jahren, Gründe, 5 Regeln, Lotto-Ausschüttung ~50 % | Kontostand-Countdown / Lottokugeln |
 | longform-freiheit | Nie wieder arbeiten: 4-%-Regel, ×25, 3 Gipfel (450k/750k/1,2 Mio.), Zwischenstationen, 3 Hebel, Sophie | Freiheits-Berg mit Hütten |
 
