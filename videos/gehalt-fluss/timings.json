@@ -1,0 +1,193 @@
+{
+ "dauer": 39.059,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 3.57,
+   "captions": [
+    {
+     "text": "Dein Chef zahlt für dich",
+     "start": 0.0,
+     "end": 1.904
+    },
+    {
+     "text": "rund 3.600 € im Monat",
+     "start": 1.904,
+     "end": 3.57
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 3.57,
+   "end": 7.375,
+   "captions": [
+    {
+     "text": "Auf deinem Konto",
+     "start": 3.57,
+     "end": 4.913
+    },
+    {
+     "text": "landen aber nur",
+     "start": 4.913,
+     "end": 6.172
+    },
+    {
+     "text": "2.000. Wo ist der Rest?",
+     "start": 6.172,
+     "end": 7.375
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 7.375,
+   "end": 11.603,
+   "captions": [
+    {
+     "text": "600 € zahlt dein Chef",
+     "start": 7.375,
+     "end": 8.762
+    },
+    {
+     "text": "direkt an die Sozialkassen,",
+     "start": 8.762,
+     "end": 10.546
+    },
+    {
+     "text": "die siehst du nie",
+     "start": 10.546,
+     "end": 11.603
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 11.603,
+   "end": 17.58,
+   "captions": [
+    {
+     "text": "Von deinen 3.000 brutto",
+     "start": 11.603,
+     "end": 13.592
+    },
+    {
+     "text": "gehen dann rund 320 €",
+     "start": 13.592,
+     "end": 15.469
+    },
+    {
+     "text": "Lohnsteuer ans Finanzamt",
+     "start": 15.469,
+     "end": 17.58
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 17.58,
+   "end": 20.584,
+   "captions": [
+    {
+     "text": "Fast 300 € fließen",
+     "start": 17.58,
+     "end": 19.395
+    },
+    {
+     "text": "in die Rente",
+     "start": 19.395,
+     "end": 20.584
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 20.584,
+   "end": 26.128,
+   "captions": [
+    {
+     "text": "Rund 260 in die Krankenkasse,",
+     "start": 20.584,
+     "end": 23.046
+    },
+    {
+     "text": "dazu Pflege",
+     "start": 23.046,
+     "end": 23.922
+    },
+    {
+     "text": "und Arbeitslosenversicherung",
+     "start": 23.922,
+     "end": 26.128
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 26.128,
+   "end": 30.309,
+   "captions": [
+    {
+     "text": "Am Ende bekommst du also",
+     "start": 26.128,
+     "end": 27.597
+    },
+    {
+     "text": "nur gut die Hälfte von dem,",
+     "start": 27.597,
+     "end": 29.464
+    },
+    {
+     "text": "was du kostest",
+     "start": 29.464,
+     "end": 30.309
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 30.309,
+   "end": 33.645,
+   "captions": [
+    {
+     "text": "Schick das jemandem,",
+     "start": 30.309,
+     "end": 31.501
+    },
+    {
+     "text": "der sich über",
+     "start": 31.501,
+     "end": 32.343
+    },
+    {
+     "text": "sein Netto wundert",
+     "start": 32.343,
+     "end": 33.495
+    }
+   ]
+  },
+  {
+   "id": "sF",
+   "start": 33.645,
+   "end": 38.476,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTv,",
+     "start": 33.645,
+     "end": 35.117
+    },
+    {
+     "text": "wir bringen jeden Tag",
+     "start": 35.117,
+     "end": 36.664
+    },
+    {
+     "text": "neue Videos rund ums Geld",
+     "start": 36.664,
+     "end": 38.476
+    }
+   ]
+  }
+ ]
+}

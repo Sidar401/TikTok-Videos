@@ -83,3 +83,5 @@ Das Einkommen-Video (`videos/longform-einkommen`) ist der Qualitäts-Maßstab: �
 - **Logo in Shorts (Nutzer, 27.10.):** Beagle-Logo oben über „HundeFinanzTv“ (Name normal geschrieben, **nicht in Großbuchstaben** – Nutzer, 27.10.), im ganzen Video durchgehend sichtbar (ersetzt für Shorts die alte Regel „Beagle nur im CTA“). Ist in `glow_short.py` eingebaut.
 
 - **Videos ohne Stimme** (z. B. Kanal-Trailer, Nutzer 29.10.): `build(HERE, SZENEN, SFX, dauer=30.0, musik=beat(30.0, pausen=[(a, drop)]))` – Beat aus `scripts/musik.py` (120 BPM, Breakdown + Drop) plus Soundeffekte; Helfer `partikel`/`burst`, `buchstaben`/`letters`, `flash`, `glitch`. Vorlagen: `videos/willkommen-*/build.py`.
+
+- **Probe-Stil „wachsendes Leitbild“ (Nutzer 6.11., nach Referenz „KI-Geldkreis“, noch in Prüfung):** ein Bild, das Satz für Satz wächst (Pfeile + Kästen), Beagle unten reagiert (Sprechblasen ?/Hä?!/WOW!), Ein-Wort-Untertitel: `build(..., ein_wort=1270, drift=False)`. Vorlage: `videos/gehalt-fluss/build.py`. Später evtl. zweite Figur (Bilder vom Nutzer), vorerst nur Beagle + eine Stimme.

@@ -37,6 +37,8 @@ CSS = f"""
       .p {{ position: absolute; border-radius: 50%; }}
       .l {{ display: inline-block; }}
       #frame {{ position: absolute; inset: 0; border: 26px solid #DB8622; z-index: 10; }}
+      .ew {{ position: absolute; left: 0; width: 1080px; text-align: center; z-index: 6; font-weight: 900; font-size: 104px; line-height: 1; color: #fff; text-transform: uppercase;
+        letter-spacing: -1px; text-shadow: 0 6px 0 #000, 0 0 30px #000; white-space: nowrap; }}
       .cap {{ position: absolute; left: 60px; top: 1330px; width: 960px; text-align: center; z-index: 6; }}
       .cap span {{ display: inline-block; margin: 0 16px; font-weight: 900; font-size: 74px; line-height: 1.15; color: #fff; text-shadow: 0 6px 0 #000, 0 0 30px #000; }}
 """
@@ -177,8 +179,9 @@ def mix(here, sfx, dauer, musik=None):
 
 
 # ---------------- Bau ----------------
-def build(here, szenen, sfx, dauer=None, musik=None):
-    """Ohne timings.json (kein Voice): dauer angeben, keine Untertitel; musik = numpy-Array (scripts/musik.py)."""
+def build(here, szenen, sfx, dauer=None, musik=None, ein_wort=None, drift=True):
+    """Ohne timings.json (kein Voice): dauer angeben, keine Untertitel; musik = numpy-Array (scripts/musik.py).
+    ein_wort=Top-Position (px): Untertitel als ein großes Wort auf einmal (Stil „wachsendes Leitbild“, Nutzer 6.11.)."""
     here = Path(here)
     tp = here / "timings.json"
     T = json.loads(tp.read_text()) if tp.exists() else {"dauer": dauer, "saetze": []}
@@ -188,7 +191,8 @@ def build(here, szenen, sfx, dauer=None, musik=None):
         d = round(b - a, 3)
         sid = f"z{n}"
         out.append(f'      <div id="{sid}" class="scene clip" data-start="{a}" data-duration="{d}" data-track-index="{spur[0] if spur else 1}"><div id="{sid}-i" class="inner">{html}</div></div>')
-        js.append(f'      tl.fromTo("#{sid}-i", {{ scale: 1.0 }}, {{ scale: 1.06, duration: {d}, ease: "none" }}, {a});')
+        if drift:
+            js.append(f'      tl.fromTo("#{sid}-i", {{ scale: 1.0 }}, {{ scale: 1.06, duration: {d}, ease: "none" }}, {a});')
         js.append(f"      {code(a, d)}")
     caps, n = [], 0
     for s in T["saetze"]:
@@ -202,6 +206,13 @@ def build(here, szenen, sfx, dauer=None, musik=None):
                     words.append(w)
             L = sum(len(w) + 1 for w in words)
             cur, spans = cp["start"], []
+            if ein_wort is not None:
+                for k, w in enumerate(words):
+                    ende = cur + (cp["end"] - cp["start"]) * (len(w) + 1) / L
+                    caps.append(f'        <div id="e{n}-{k}" class="ew clip" style="top:{ein_wort}px;font-size:{min(104, int(1250 / max(len(w), 1)))}px" data-start="{round(cur, 3)}" data-duration="{round(ende - cur, 3)}" data-track-index="2">{w.rstrip(",.?!")}</div>')
+                    js.append(f'      tl.fromTo("#e{n}-{k}", {{ scale: 1.35 }}, {{ scale: 1, duration: 0.12, ease: "power2.out" }}, {round(cur, 3)});')
+                    cur = ende
+                continue
             for k, w in enumerate(words):
                 spans.append(f'<span id="w{n}-{k}">{w}</span> ')
                 ende = cur + (cp["end"] - cp["start"]) * (len(w) + 1) / L
@@ -244,11 +255,11 @@ def build(here, szenen, sfx, dauer=None, musik=None):
       const zaehl = (sel, von, bis, at, dur, nach) => {{
         const o = {{ v: von }};
         tl.fromTo(o, {{ v: von }}, {{ v: bis, duration: dur, ease: "power2.out", onUpdate: () => {{
-          document.querySelector(sel).textContent = Math.round(o.v).toString().replace(/\\B(?=(\\d{{3}})+(?!\\d))/g, ".") + (nach || ""); }} }}, at);
+          document.querySelector(sel).textContent = Math.round(o.v).toString().replace(/\\B(?=(\\d{{3}})+(?!\\d))/g, ".") + (nach || ""); }}, immediateRender: false }}, at);
       }};
       const flash = (at, st) => tl.fromTo("#flash", {{ opacity: st || 0.85 }}, {{ opacity: 0, duration: 0.35, ease: "power2.out", immediateRender: false }}, at);
       const burst = (sel, at, dur) => tl.fromTo(sel + " .p", {{ x: 0, y: 0, scale: 1.4, opacity: 1 }},
-        {{ x: (i, el) => +el.dataset.dx, y: (i, el) => +el.dataset.dy, scale: 0.2, opacity: 0, duration: dur || 1.0, ease: "power3.out" }}, at);
+        {{ x: (i, el) => +el.dataset.dx, y: (i, el) => +el.dataset.dy, scale: 0.2, opacity: 0, duration: dur || 1.0, ease: "power3.out", immediateRender: false }}, at);
       const letters = (sel, at) => tl.fromTo(sel + " .l", {{ y: 140, opacity: 0, rotation: 12, scale: 0.6 }},
         {{ y: 0, opacity: 1, rotation: 0, scale: 1, duration: 0.45, stagger: 0.035, ease: "back.out(2.2)" }}, at);
       const glitch = (sel, at) => tl.fromTo(sel, {{ x: -22, skewX: 18 }}, {{ x: 0, skewX: 0, duration: 0.24, ease: "steps(6)" }}, at);

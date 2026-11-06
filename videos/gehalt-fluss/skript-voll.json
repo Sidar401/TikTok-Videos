@@ -1,0 +1,50 @@
+{
+ "titel": "Wohin fließt dein Gehalt? (Probe neuer Stil: wachsendes Leitbild + Beagle + Ein-Wort-Untertitel)",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Dein Chef zahlt für dich rund dreitausendsechshundert Euro im Monat.",
+   "text": "Dein Chef zahlt für dich rund 3.600 € im Monat"
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Auf deinem Konto landen aber nur zweitausend. Wo ist der Rest?",
+   "text": "Auf deinem Konto landen aber nur 2.000. Wo ist der Rest?"
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Sechshundert Euro zahlt dein Chef direkt an die Sozialkassen, die siehst du nie.",
+   "text": "600 € zahlt dein Chef direkt an die Sozialkassen, die siehst du nie"
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Von deinen dreitausend brutto gehen dann rund dreihundertzwanzig Euro Lohnsteuer ans Finanzamt.",
+   "text": "Von deinen 3.000 brutto gehen dann rund 320 € Lohnsteuer ans Finanzamt"
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Fast dreihundert Euro fließen in die Rente.",
+   "text": "Fast 300 € fließen in die Rente"
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Rund zweihundertsechzig in die Krankenkasse, dazu Pflege und Arbeitslosenversicherung.",
+   "text": "Rund 260 in die Krankenkasse, dazu Pflege und Arbeitslosenversicherung"
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Am Ende bekommst du also nur gut die Hälfte von dem, was du kostest.",
+   "text": "Am Ende bekommst du also nur gut die Hälfte von dem, was du kostest"
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Schick das jemandem, der sich über sein Netto wundert.",
+   "text": "Schick das jemandem, der sich über sein Netto wundert"
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Folge HundeFinanzTv, wir bringen jeden Tag neue Videos.",
+   "text": "Folge HundeFinanzTv, wir bringen jeden Tag neue Videos"
+  }
+ ]
+}

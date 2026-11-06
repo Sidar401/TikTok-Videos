@@ -37,6 +37,7 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | willkommen-reise | Kanal-Trailer ohne Stimme: Kamerafahrt mit Parallax durch 9 Fragen-Stationen, Tresor öffnet sich, Logo |
 | short-steuer-1 | aus longform-steuer: 650 €/Jahr, 4 Jahre rückwirkend = über 2.500 €, 2022 nur noch bis 31.12.2026, Verweis aufs ganze Video |
 | freistellungsauftrag | Bank zieht 26,4 % ab, 1.000 € steuerfrei nur mit Freistellungsauftrag, Jonas 500 € Zinsen → 130 € weg, 2 Min in der App (Magnet, Torte, Schild) |
+| gehalt-fluss | PROBE neuer Stil: Chef zahlt 3.600 €, Brutto 3.000, Sozialkassen AG 600, Lohnsteuer 320, Rente 279, KV 262, Pflege/ALV 111 → Konto 2.028 € (56 %); wachsendes Geldfluss-Bild, Beagle reagiert, Ein-Wort-Untertitel |
 
 ## Longform (16:9)
 | Video | Kern / Beispiele | Bildidee |
@@ -67,6 +68,7 @@ Nutzer: „nicht immer die gleichen/ähnlichen Thumbnails“ – z. B. **Geldbeu
 | longform-supermarkt | voller Einkaufswagen „Der Supermarkt TRICKST dich aus!“, Regal + Auge „Achtung AUGENHÖHE!“, Preisschild 4,99 „Fällst du darauf rein?“ |
 | longform-steuer | Tresor „Das Finanzamt schuldet dir GELD!“, 7 Schloss-Kreise, Stempel „VERSCHENKT!“ + 2.500 € |
 | freistellungsauftrag (Cover) | „Deine Bank zieht dir STEUERN AB“, 3 Münzstapel, rote Pille −26 %, grünes 1.000 € steuerfrei |
+| gehalt-fluss (Cover) | „Wohin fließt DEIN GELD?“, Box 3.600 € orange → Pfeil → 2.028 € grün, 4 rote Abzugs-Pillen |
 | longform-lotto | Lottokugeln „1 Million gewonnen … und PLEITE!“, Kontostand 1.000.000 € → 0 €, Titel-Typo + Kugeln |
 | longform-freiheit | Berg mit Flagge „So viel Geld, um NIE wieder zu arbeiten“, Formel „Ausgaben × 25 = FREI“, 3 Gipfel-Kacheln |
 
