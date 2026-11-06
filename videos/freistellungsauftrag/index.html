@@ -5,280 +5,240 @@
     <meta name="viewport" content="width=1080, height=1920" />
     <script src="assets/gsap.min.js"></script>
     <style>
-      /* Kanal-Stil (siehe STIL.md) */
-      @font-face {
-        font-family: "Abril Fatface";
-        src: url("assets/fonts/abril-fatface.woff2") format("woff2");
-      }
-      :root {
-        --bg: #ffffff;
-        --ink: #111111;
-        --brand: #DB8622; /* Kanalfarbe aus kanal.json */
-        --green: #1f7a4d;
-        --gold: #f2c418;
-        --red: #e24b4b;
-        --blue: #3d7be0;
-        --font-caption: "Montserrat", sans-serif;
-        --font-display: "Abril Fatface", serif;
-      }
       * { margin: 0; padding: 0; box-sizing: border-box; }
-      html, body {
-        width: 1080px;
-        height: 1920px;
-        overflow: hidden;
-        background: var(--bg);
-      }
-      #root {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        background: var(--bg);
-      }
-
-      /* Szene: eine Illustration, zentriert im oberen Bereich */
-      .scene {
-        position: absolute;
-        left: 0;
-        top: 230px;
-        width: 1080px;
-        height: 1080px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .art { width: 820px; height: 820px; }
-      .art svg { width: 100%; height: 100%; display: block; }
-
-      /* Oranger Rahmen wie bei HundeWissenTv */
-      #frame {
-        position: absolute;
-        inset: 0;
-        border: 26px solid var(--brand);
-        z-index: 10;
-        pointer-events: none;
-      }
-
-      /* Untertitel-Box (TikTok-Look) */
-      .cap {
-        position: absolute;
-        left: 0;
-        top: 1360px;
-        width: 1080px;
-        display: flex;
-        justify-content: center;
-      }
-      .cap span {
-        display: block;
-        max-width: 880px;
-        padding: 20px 44px 22px;
-        border-radius: 28px;
-        background: var(--brand);
-        color: #ffffff;
-        font-family: var(--font-caption);
-        font-weight: 600;
-        font-size: 54px;
-        line-height: 1.15;
-        text-align: center;
-      }
-
-      /* Zahlen-Vergleich in Serifen-Schrift */
-      .cmp {
-        width: 940px;
-        display: grid;
-        grid-template-columns: 1fr 6px 1fr;
-        column-gap: 40px;
-        font-family: var(--font-display);
-        color: var(--ink);
-        text-align: center;
-      }
-      .cmp .head { font-size: 104px; line-height: 1.1; }
-      .cmp .sub { font-size: 76px; line-height: 1.1; }
-      .cmp .divider { background: var(--ink); grid-row: 1 / span 3; grid-column: 2; }
-      .cmp .arrow { height: 260px; display: flex; justify-content: center; align-items: center; }
-      .cmp .arrow svg { width: 140px; height: 220px; }
-      .cmp .num { font-size: 96px; line-height: 1.2; }
-      .green { color: var(--green); }
-      .gold { color: var(--gold); }
-      .chart-label { font-family: var(--font-display); }
-      .serif { font-family: var(--font-display); }
-      #brand {
-        position: absolute;
-        top: 190px;
-        left: 0;
-        width: 1080px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 14px;
-        font-family: var(--font-caption);
-        font-weight: 800;
-        font-size: 42px;
-        color: #353a3d;
-        z-index: 5;
-      }
-      #brand-dog { width: 84px; height: 84px; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0e1012; }
+      #root { position: relative; width: 100%; height: 100%; font-family: Montserrat, sans-serif; overflow: hidden;
+        background: radial-gradient(ellipse at 50% 42%, #ff8a1f33 0%, #ff8a1f0d 38%, transparent 62%), radial-gradient(ellipse at 50% 50%, #1b1f22 0%, #0e1012 75%); }
+      #raster { position: absolute; inset: 0; background-image: linear-gradient(#ffffff0c 2px, transparent 2px), linear-gradient(90deg, #ffffff0c 2px, transparent 2px); background-size: 90px 90px; }
+      .scene { position: absolute; inset: 0; }
+      .inner { position: absolute; inset: 0; }
+      .t { position: absolute; left: 0; width: 1080px; text-align: center; font-weight: 900; line-height: 1.02; letter-spacing: -1px; color: #fff; }
+      .glow-o { color: #ff8a1f; text-shadow: 0 0 50px #ff8a1faa; }
+      .glow-g { color: #2fd27a; text-shadow: 0 0 50px #2fd27aaa; }
+      .glow-r { color: #ff4d4d; text-shadow: 0 0 50px #ff4d4daa; }
+      .box { display: inline-block; padding: 6px 34px 14px; border-radius: 24px; background: #ff8a1f; color: #111; box-shadow: 0 0 60px #ff8a1f88; }
+      #logo { position: absolute; left: 445px; top: 135px; width: 190px; height: 190px; border-radius: 50%; overflow: hidden; border: 5px solid #DB8622; box-shadow: 0 0 30px #ff8a1f88; z-index: 5; }
+      #logo img { width: 100%; height: 100%; object-fit: cover; }
+      #brand { position: absolute; left: 0; top: 335px; width: 1080px; text-align: center; font-weight: 800; font-size: 38px; color: #ffffffdd; letter-spacing: 1px; z-index: 5; }
+      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; z-index: 9; pointer-events: none; }
+      .p { position: absolute; border-radius: 50%; }
+      .l { display: inline-block; }
+      #frame { position: absolute; inset: 0; border: 26px solid #DB8622; z-index: 10; }
+      .cap { position: absolute; left: 60px; top: 1330px; width: 960px; text-align: center; z-index: 6; }
+      .cap span { display: inline-block; margin: 0 16px; font-weight: 900; font-size: 74px; line-height: 1.15; color: #fff; text-shadow: 0 6px 0 #000, 0 0 30px #000; }
     </style>
   </head>
   <body>
-    <div
-      id="root"
-      data-composition-id="main"
-      data-start="0"
-      data-duration="15"
-      data-width="1080"
-      data-height="1920"
-    >
-      <!-- ============ SZENEN ============ -->
-
-      <!-- 1: Geldsack -->
-      <div id="s1" class="scene clip" data-start="0" data-duration="3" data-track-index="1">
-        <div id="s1-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <g id="s1-coins">
-              <g fill="#f2c418" stroke="#c99a06" stroke-width="3">
-                <rect x="250" y="300" width="110" height="22" rx="8" />
-                <rect x="250" y="276" width="110" height="22" rx="8" />
-                <rect x="250" y="252" width="110" height="22" rx="8" />
-                <rect x="250" y="228" width="110" height="22" rx="8" />
-                <rect x="250" y="204" width="110" height="22" rx="8" />
-                <rect x="265" y="180" width="110" height="22" rx="8" />
-                <rect x="258" y="156" width="110" height="22" rx="8" />
-              </g>
-            </g>
-            <g id="s1-bag">
-              <path d="M150 110 C120 70 140 50 160 70 C175 50 205 50 220 70 C240 50 260 70 230 110 Z" fill="#1f7a4d" />
-              <rect x="145" y="104" width="90" height="18" rx="9" fill="#f2c418" />
-              <path d="M150 120 C60 170 40 330 120 340 L260 340 C340 330 320 170 230 120 Z" fill="#1f7a4d" />
-              <path d="M155 135 C90 180 75 300 125 325" fill="none" stroke="#2c9a63" stroke-width="10" stroke-linecap="round" />
-              <circle cx="190" cy="245" r="62" fill="#f2c418" />
-              <text x="190" y="272" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="80" fill="#1f7a4d">€</text>
-            </g>
-            <g fill="#f2c418" stroke="#c99a06" stroke-width="3">
-              <ellipse cx="80" cy="345" rx="34" ry="12" />
-              <ellipse cx="110" cy="360" rx="34" ry="12" />
-            </g>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 2: Zielscheibe -->
-      <div id="s2" class="scene clip" data-start="3" data-duration="3" data-track-index="1">
-        <div id="s2-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <circle cx="190" cy="210" r="160" fill="#e24b4b" />
-            <circle cx="190" cy="210" r="125" fill="#f6efe1" />
-            <circle cx="190" cy="210" r="92" fill="#e24b4b" />
-            <circle cx="190" cy="210" r="58" fill="#f6efe1" />
-            <circle cx="190" cy="210" r="26" fill="#e24b4b" />
-            <g id="s2-arrow">
-              <line x1="196" y1="204" x2="340" y2="60" stroke="#555" stroke-width="10" stroke-linecap="round" />
-              <path d="M320 50 L370 30 L350 80 L340 60 Z" fill="#e8742c" />
-              <path d="M335 35 L375 15 L365 45 Z" fill="#e8742c" />
-            </g>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 3: Zahlen-Vergleich -->
-      <div id="s3" class="scene clip" data-start="6" data-duration="3.5" data-track-index="1">
-        <div class="cmp">
-          <div id="s3-h1" style="grid-column:1"><div class="head">Konto</div><div class="sub">0 %</div></div>
-          <div class="divider"></div>
-          <div id="s3-h2" style="grid-column:3"><div class="head">ETF</div><div class="sub">~7 %</div></div>
-          <div class="arrow" style="grid-column:1">
-            <svg viewBox="0 0 70 110"><path id="s3-a1" d="M40 6 C10 30 8 70 40 98" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" /><path d="M24 92 L42 100 L44 80" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></svg>
-          </div>
-          <div class="arrow" style="grid-column:3">
-            <svg viewBox="0 0 70 110"><path id="s3-a2" d="M30 6 C60 30 62 70 30 98" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" /><path d="M46 92 L28 100 L26 80" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></svg>
-          </div>
-          <div id="s3-n1" class="num green" style="grid-column:1">36.000€</div>
-          <div style="grid-column:3">
-            <div id="s3-n2" class="num green">36.000€</div>
-            <div id="s3-n3" class="num gold">77.000€</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4: Rendite-Chart -->
-      <div id="s4" class="scene clip" data-start="9.5" data-duration="3" data-track-index="1">
-        <div class="art">
-          <svg viewBox="0 0 400 400">
-            <path d="M40 40 L40 340 L370 340" fill="none" stroke="#111" stroke-width="8" stroke-linecap="square" />
-            <path id="s4-solid" d="M60 300 C140 285 220 280 290 255" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" />
-            <path id="s4-dots" d="M60 285 C150 250 230 190 300 95" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 16" />
-            <text id="s4-label" class="chart-label" x="70" y="100" font-size="70" fill="#1f7a4d">~7%</text>
-            <g id="s4-check">
-              <circle cx="320" cy="80" r="42" fill="#111" />
-              <path d="M300 82 L315 97 L342 66" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-            </g>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 5: Outro -->
-      <div id="s5" class="scene clip" data-start="12.5" data-duration="2.5" data-track-index="1">
-        <div id="s5-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <circle cx="200" cy="200" r="150" fill="#DB8622" />
-            <path d="M120 260 L180 200 L220 235 L290 150" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M250 145 L295 145 L295 190" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </div>
-      </div>
-
+    <div id="root" data-composition-id="main" data-start="0" data-duration="36.76" data-width="1080" data-height="1920">
+      <div id="raster"></div>
+      <div id="z0" class="scene clip" data-start="0.0" data-duration="4.099" data-track-index="1"><div id="z0-i" class="inner"><div id="hk-t" class="t " style="top:420px;font-size:80px">Deine Bank zieht dir<br/><span class="box">STEUERN</span> ab</div><svg id="hk-m" viewBox="0 0 300 260" style="position:absolute;left:360px;top:690px;width:360px;height:312px;overflow:visible;z-index:2"><path d="M50 20 L50 130 A100 100 0 0 0 250 130 L250 20" fill="none" stroke="#ff4d4d" stroke-width="70" filter="drop-shadow(0 0 24px #ff4d4d)"/><rect x="15" y="0" width="70" height="44" fill="#c9d0d4"/><rect x="215" y="0" width="70" height="44" fill="#c9d0d4"/><text x="150" y="150" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="46" fill="#fff">BANK</text></svg><div id="hm0" class="mz" style="position:absolute;left:150px;top:1150px;width:110px;height:110px;border-radius:50%;z-index:3;background:radial-gradient(circle at 35% 30%, #fff3b0 0%, #ffc533 40%, #c98a00 100%);border:5px solid #b47c00;box-shadow:0 0 24px #ffc53388;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:50px;color:#8a5a00">€</div><div id="hm1" class="mz" style="position:absolute;left:310px;top:1110px;width:110px;height:110px;border-radius:50%;z-index:3;background:radial-gradient(circle at 35% 30%, #fff3b0 0%, #ffc533 40%, #c98a00 100%);border:5px solid #b47c00;box-shadow:0 0 24px #ffc53388;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:50px;color:#8a5a00">€</div><div id="hm2" class="mz" style="position:absolute;left:470px;top:1150px;width:110px;height:110px;border-radius:50%;z-index:3;background:radial-gradient(circle at 35% 30%, #fff3b0 0%, #ffc533 40%, #c98a00 100%);border:5px solid #b47c00;box-shadow:0 0 24px #ffc53388;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:50px;color:#8a5a00">€</div><div id="hm3" class="mz" style="position:absolute;left:630px;top:1110px;width:110px;height:110px;border-radius:50%;z-index:3;background:radial-gradient(circle at 35% 30%, #fff3b0 0%, #ffc533 40%, #c98a00 100%);border:5px solid #b47c00;box-shadow:0 0 24px #ffc53388;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:50px;color:#8a5a00">€</div><div id="hm4" class="mz" style="position:absolute;left:790px;top:1150px;width:110px;height:110px;border-radius:50%;z-index:3;background:radial-gradient(circle at 35% 30%, #fff3b0 0%, #ffc533 40%, #c98a00 100%);border:5px solid #b47c00;box-shadow:0 0 24px #ffc53388;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:50px;color:#8a5a00">€</div></div></div>
+      <div id="z1" class="scene clip" data-start="4.099" data-duration="4.901" data-track-index="1"><div id="z1-i" class="inner"><svg viewBox="0 0 500 500" style="position:absolute;left:290px;top:470px;width:500px;height:500px;overflow:visible;z-index:2"><circle cx="250" cy="250" r="200" fill="none" stroke="#2fd27a" stroke-width="110" filter="drop-shadow(0 0 18px #2fd27a)"/><circle id="tt-r" cx="250" cy="250" r="200" fill="none" stroke="#ff4d4d" stroke-width="120" stroke-dasharray="331.8 1256.6" transform="rotate(-90 250 250)" filter="drop-shadow(0 0 22px #ff4d4d)"/><text x="250" y="240" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="48" fill="#fff">Zinsen &amp;</text><text x="250" y="295" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="48" fill="#fff">ETF-Gewinne</text></svg><div id="tt-c" style="position:absolute;left:0;width:1080px;display:flex;justify-content:center;top:1040px;z-index:3"><span style="display:inline-block;padding:12px 34px 16px;border-radius:22px;background:#ff4d4d;color:#111;font-weight:900;font-size:56px;box-shadow:0 0 50px #ff4d4d88">automatisch abgezogen</span></div></div></div>
+      <div id="z2" class="scene clip" data-start="9.0" data-duration="2.329" data-track-index="1"><div id="z2-i" class="inner"><div id="pz-z" class="t glow-r" style="top:520px;font-size:300px">26 %</div><div id="pz-t" class="t " style="top:900px;font-size:90px">ans Finanzamt</div></div></div>
+      <div id="z3" class="scene clip" data-start="11.329" data-duration="2.845" data-track-index="1"><div id="z3-i" class="inner"><svg id="fr-s" viewBox="0 0 300 340" style="position:absolute;left:330px;top:440px;width:420px;height:476px;overflow:visible;z-index:2"><path d="M150 10 L280 60 L280 170 C280 250 220 300 150 330 C80 300 20 250 20 170 L20 60 Z" fill="#16191b" stroke="#2fd27a" stroke-width="16" filter="drop-shadow(0 0 30px #2fd27a)"/><text x="150" y="185" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="54" fill="#2fd27a">1.000 €</text><text x="150" y="235" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="30" fill="#fff">steuerfrei</text></svg><div id="fr-c" style="position:absolute;left:0;width:1080px;display:flex;justify-content:center;top:970px;z-index:3"><span style="display:inline-block;padding:12px 34px 16px;border-radius:22px;background:#2fd27a;color:#111;font-weight:900;font-size:60px;box-shadow:0 0 50px #2fd27a88">pro Jahr</span></div><div id="fr-p" style="position:absolute;inset:0;z-index:4;pointer-events:none"><div class="p" data-dx="308" data-dy="0" style="left:527px;top:667px;width:26px;height:26px;background:#2fd27a;box-shadow:0 0 26px #2fd27a;opacity:0"></div><div class="p" data-dx="446" data-dy="278" style="left:534px;top:674px;width:12px;height:12px;background:#fff;box-shadow:0 0 12px #fff;opacity:0"></div><div class="p" data-dx="362" data-dy="384" style="left:527px;top:667px;width:25px;height:25px;background:#ffc533;box-shadow:0 0 25px #ffc533;opacity:0"></div><div class="p" data-dx="227" data-dy="215" style="left:532px;top:672px;width:16px;height:16px;background:#2fd27a;box-shadow:0 0 16px #2fd27a;opacity:0"></div><div class="p" data-dx="410" data-dy="325" style="left:528px;top:668px;width:24px;height:24px;background:#fff;box-shadow:0 0 24px #fff;opacity:0"></div><div class="p" data-dx="344" data-dy="403" style="left:530px;top:670px;width:20px;height:20px;background:#ffc533;box-shadow:0 0 20px #ffc533;opacity:0"></div><div class="p" data-dx="59" data-dy="311" style="left:529px;top:669px;width:21px;height:21px;background:#2fd27a;box-shadow:0 0 21px #2fd27a;opacity:0"></div><div class="p" data-dx="-201" data-dy="481" style="left:529px;top:669px;width:23px;height:23px;background:#fff;box-shadow:0 0 23px #fff;opacity:0"></div><div class="p" data-dx="-350" data-dy="400" style="left:531px;top:671px;width:18px;height:18px;background:#ffc533;box-shadow:0 0 18px #ffc533;opacity:0"></div><div class="p" data-dx="-208" data-dy="244" style="left:528px;top:668px;width:25px;height:25px;background:#2fd27a;box-shadow:0 0 25px #2fd27a;opacity:0"></div><div class="p" data-dx="-291" data-dy="430" style="left:533px;top:673px;width:14px;height:14px;background:#fff;box-shadow:0 0 14px #fff;opacity:0"></div><div class="p" data-dx="-353" data-dy="400" style="left:527px;top:667px;width:26px;height:26px;background:#ffc533;box-shadow:0 0 26px #ffc533;opacity:0"></div><div class="p" data-dx="-303" data-dy="119" style="left:535px;top:675px;width:10px;height:10px;background:#2fd27a;box-shadow:0 0 10px #2fd27a;opacity:0"></div><div class="p" data-dx="-504" data-dy="-115" style="left:527px;top:667px;width:26px;height:26px;background:#fff;box-shadow:0 0 26px #fff;opacity:0"></div><div class="p" data-dx="-439" data-dy="-307" style="left:533px;top:673px;width:14px;height:14px;background:#ffc533;box-shadow:0 0 14px #ffc533;opacity:0"></div><div class="p" data-dx="-263" data-dy="-198" style="left:528px;top:668px;width:25px;height:25px;background:#2fd27a;box-shadow:0 0 25px #2fd27a;opacity:0"></div><div class="p" data-dx="-444" data-dy="-259" style="left:531px;top:671px;width:18px;height:18px;background:#fff;box-shadow:0 0 18px #fff;opacity:0"></div><div class="p" data-dx="-444" data-dy="-302" style="left:529px;top:669px;width:23px;height:23px;background:#ffc533;box-shadow:0 0 23px #ffc533;opacity:0"></div><div class="p" data-dx="-176" data-dy="-283" style="left:530px;top:670px;width:21px;height:21px;background:#2fd27a;box-shadow:0 0 21px #2fd27a;opacity:0"></div><div class="p" data-dx="24" data-dy="-511" style="left:530px;top:670px;width:20px;height:20px;background:#fff;box-shadow:0 0 20px #fff;opacity:0"></div><div class="p" data-dx="253" data-dy="-476" style="left:528px;top:668px;width:24px;height:24px;background:#ffc533;box-shadow:0 0 24px #ffc533;opacity:0"></div><div class="p" data-dx="186" data-dy="-282" style="left:532px;top:672px;width:17px;height:17px;background:#2fd27a;box-shadow:0 0 17px #2fd27a;opacity:0"></div><div class="p" data-dx="229" data-dy="-454" style="left:527px;top:667px;width:25px;height:25px;background:#fff;box-shadow:0 0 25px #fff;opacity:0"></div><div class="p" data-dx="250" data-dy="-479" style="left:534px;top:674px;width:13px;height:13px;background:#ffc533;box-shadow:0 0 13px #ffc533;opacity:0"></div><div class="p" data-dx="255" data-dy="-228" style="left:527px;top:667px;width:26px;height:26px;background:#2fd27a;box-shadow:0 0 26px #2fd27a;opacity:0"></div><div class="p" data-dx="502" data-dy="-69" style="left:534px;top:674px;width:11px;height:11px;background:#fff;box-shadow:0 0 11px #fff;opacity:0"></div></div></div></div>
+      <div id="z4" class="scene clip" data-start="14.174" data-duration="2.907" data-track-index="1"><div id="z4-i" class="inner"><div id="nu-a" class="t " style="top:500px;font-size:96px">aber NUR mit</div><div id="nu-b" class="t " style="top:680px;font-size:104px"><span class="box">Freistellungs-<br/>auftrag</span></div></div></div>
+      <div id="z5" class="scene clip" data-start="17.081" data-duration="3.355" data-track-index="1"><div id="z5-i" class="inner"><div id="jo-c" style="position:absolute;left:0;width:1080px;display:flex;justify-content:center;top:470px;z-index:3"><span style="display:inline-block;padding:12px 34px 16px;border-radius:22px;background:#ff8a1f;color:#111;font-weight:900;font-size:60px;box-shadow:0 0 50px #ff8a1f88">Beispiel: Jonas</span></div><div id="jo-z" class="t glow-g" style="top:640px;font-size:200px">+500 €</div><div id="jo-t" class="t " style="top:900px;font-size:80px">Zinsen im Jahr</div><svg viewBox="0 0 150 196.0" style="position:absolute;left:780px;top:980px;width:150px;height:196.0px;overflow:visible;filter:drop-shadow(0 20px 20px #000a);z-index:2"><defs><linearGradient id="m1s" x1="0" x2="1"><stop offset="0" stop-color="#a86a00"/><stop offset="0.45" stop-color="#ffd25e"/><stop offset="1" stop-color="#9a5c00"/></linearGradient><radialGradient id="m1t" cx="0.4" cy="0.35"><stop offset="0" stop-color="#fff2b0"/><stop offset="0.6" stop-color="#ffc533"/><stop offset="1" stop-color="#d48a00"/></radialGradient></defs><path d="M0 134.0 L0 158.0 A75.0 33.0 0 0 0 150 158.0 L150 134.0 Z" fill="url(#m1s)" stroke="#8a5200" stroke-width="1.5"/><ellipse cx="75.0" cy="134.0" rx="75.0" ry="33.0" fill="url(#m1t)" stroke="#b87800" stroke-width="2"/><path d="M0 110.0 L0 134.0 A75.0 33.0 0 0 0 150 134.0 L150 110.0 Z" fill="url(#m1s)" stroke="#8a5200" stroke-width="1.5"/><ellipse cx="75.0" cy="110.0" rx="75.0" ry="33.0" fill="url(#m1t)" stroke="#b87800" stroke-width="2"/><path d="M0 86.0 L0 110.0 A75.0 33.0 0 0 0 150 110.0 L150 86.0 Z" fill="url(#m1s)" stroke="#8a5200" stroke-width="1.5"/><ellipse cx="75.0" cy="86.0" rx="75.0" ry="33.0" fill="url(#m1t)" stroke="#b87800" stroke-width="2"/><path d="M0 62.0 L0 86.0 A75.0 33.0 0 0 0 150 86.0 L150 62.0 Z" fill="url(#m1s)" stroke="#8a5200" stroke-width="1.5"/><ellipse cx="75.0" cy="62.0" rx="75.0" ry="33.0" fill="url(#m1t)" stroke="#b87800" stroke-width="2"/><path d="M0 38.0 L0 62.0 A75.0 33.0 0 0 0 150 62.0 L150 38.0 Z" fill="url(#m1s)" stroke="#8a5200" stroke-width="1.5"/><ellipse cx="75.0" cy="38.0" rx="75.0" ry="33.0" fill="url(#m1t)" stroke="#b87800" stroke-width="2"/><text x="75.0" y="51.5" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="39.0" fill="#b87800">€</text></svg></div></div>
+      <div id="z6" class="scene clip" data-start="20.436" data-duration="4.086" data-track-index="1"><div id="z6-i" class="inner"><div id="we-k" class="t glow-o" style="top:470px;font-size:90px">ohne Auftrag</div><div id="we-z" class="t glow-r" style="top:620px;font-size:230px">−130 €</div><div id="we-t" class="t " style="top:940px;font-size:90px">einfach weg</div><div id="wm0" class="mz" style="position:absolute;left:230px;top:1080px;width:100px;height:100px;border-radius:50%;z-index:3;background:radial-gradient(circle at 35% 30%, #fff3b0 0%, #ffc533 40%, #c98a00 100%);border:5px solid #b47c00;box-shadow:0 0 24px #ffc53388;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:45px;color:#8a5a00">€</div><div id="wm1" class="mz" style="position:absolute;left:390px;top:1080px;width:100px;height:100px;border-radius:50%;z-index:3;background:radial-gradient(circle at 35% 30%, #fff3b0 0%, #ffc533 40%, #c98a00 100%);border:5px solid #b47c00;box-shadow:0 0 24px #ffc53388;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:45px;color:#8a5a00">€</div><div id="wm2" class="mz" style="position:absolute;left:550px;top:1080px;width:100px;height:100px;border-radius:50%;z-index:3;background:radial-gradient(circle at 35% 30%, #fff3b0 0%, #ffc533 40%, #c98a00 100%);border:5px solid #b47c00;box-shadow:0 0 24px #ffc53388;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:45px;color:#8a5a00">€</div><div id="wm3" class="mz" style="position:absolute;left:710px;top:1080px;width:100px;height:100px;border-radius:50%;z-index:3;background:radial-gradient(circle at 35% 30%, #fff3b0 0%, #ffc533 40%, #c98a00 100%);border:5px solid #b47c00;box-shadow:0 0 24px #ffc53388;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:45px;color:#8a5a00">€</div></div></div>
+      <div id="z7" class="scene clip" data-start="24.522" data-duration="3.127" data-track-index="1"><div id="z7-i" class="inner"><div id="ap" style="position:absolute;left:380px;top:440px;width:320px;height:608.0px;border-radius:51.2px;background:#16191b;border:8px solid #ff8a1f;box-shadow:0 0 90px #ff8a1f77, 0 40px 60px #000;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px"><div style="position:absolute;top:22px;width:30%;height:14px;border-radius:7px;background:#2a2f33"></div><div style="font-weight:900;font-size:34px;color:#fff;text-align:center;line-height:1.15">Freistellungs-<br/>auftrag</div><svg id="ap-c" viewBox="0 0 100 100" style="width:150px;height:150px"><circle cx="50" cy="50" r="46" fill="#2fd27a"/><path id="ap-h" d="M28 52 L44 68 L74 36" fill="none" stroke="#111" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg><div style="font-weight:800;font-size:26px;color:#ffffffaa;text-align:center">1.000 €<br/>eingetragen</div></div><svg viewBox="0 0 200 200" style="position:absolute;left:760px;top:430px;width:200px;height:200px;z-index:3"><circle cx="100" cy="100" r="80" fill="#16191b" stroke="#ffffff22" stroke-width="16"/><circle id="uh-r" cx="100" cy="100" r="80" fill="none" stroke="#ff8a1f" stroke-width="16" stroke-linecap="round" transform="rotate(-90 100 100)"/><text x="100" y="115" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="46" fill="#fff">2 Min</text></svg></div></div>
+      <div id="z8" class="scene clip" data-start="27.649" data-duration="2.791" data-track-index="1"><div id="z8-i" class="inner"><div id="fr-r" style="position:absolute;left:340px;top:380px;width:400px;height:400px;border-radius:50%;background:#16191b;border:10px solid #ff8a1f;box-shadow:0 0 80px #ff8a1f88, inset 0 0 40px #000;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2"><svg viewBox="0 0 100 100" style="width:62%;height:62%"><path d="M12 14 L88 14 Q94 14 94 20 L94 62 Q94 68 88 68 L42 68 L22 88 L26 68 L12 68 Q6 68 6 62 L6 20 Q6 14 12 14 Z" fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round"/><circle cx="32" cy="41" r="6" fill="#ff8a1f"/><circle cx="50" cy="41" r="6" fill="#ff8a1f"/><circle cx="68" cy="41" r="6" fill="#ff8a1f"/></svg></div><div id="fr-t" class="t " style="top:900px;font-size:66px">Hast du schon einen?</div></div></div>
+      <div id="z9" class="scene clip" data-start="30.44" data-duration="6.32" data-track-index="1"><div id="z9-i" class="inner"><div id="ou-r" style="position:absolute;left:290px;top:330px;width:500px;height:500px;border-radius:50%;background:#16191b;border:10px solid #ff8a1f;box-shadow:0 0 80px #ff8a1f88, inset 0 0 40px #000;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2"><div style="width:100%;height:100%;border-radius:50%;overflow:hidden"><img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:contain" /></div></div><div id="ou-n" class="t " style="top:900px;font-size:96px">HundeFinanzTv</div><div id="ou-f" style="position:absolute;left:0;width:1080px;display:flex;justify-content:center;top:1040px;z-index:3"><span style="display:inline-block;padding:12px 34px 16px;border-radius:22px;background:#ff8a1f;color:#111;font-weight:900;font-size:64px;box-shadow:0 0 50px #ff8a1f88">+ Folgen</span></div></div></div>
+      <div id="logo"><img src="assets/beagle.png" alt="" /></div>
+      <div id="brand">HundeFinanzTv</div>
+      <div id="flash"></div>
       <div id="frame"></div>
-
-      <!-- ============ UNTERTITEL ============ -->
       <div id="captions" data-track-kind="captions">
-        <div id="c1" class="cap clip" data-start="0" data-duration="1.6" data-track-index="2"><span>du hast 100 € im Monat übrig</span></div>
-        <div id="c2" class="cap clip" data-start="1.6" data-duration="1.4" data-track-index="2"><span>und fragst dich, was du damit machst</span></div>
-        <div id="c3" class="cap clip" data-start="3" data-duration="3" data-track-index="2"><span>die Frage aller Fragen</span></div>
-        <div id="c4" class="cap clip" data-start="6" data-duration="1.7" data-track-index="2"><span>100 € im Monat, 30 Jahre lang</span></div>
-        <div id="c5" class="cap clip" data-start="7.7" data-duration="1.8" data-track-index="2"><span>auf dem Konto bleiben es 36.000 €</span></div>
-        <div id="c6" class="cap clip" data-start="9.5" data-duration="3" data-track-index="2"><span>im ETF kommen ~77.000 € Rendite dazu</span></div>
-        <div id="c7" class="cap clip" data-start="12.5" data-duration="2.5" data-track-index="2"><span>folg mir für mehr Geld-Tipps</span></div>
+        <div id="c1" class="cap clip" data-start="0.0" data-duration="1.021" data-track-index="2"><span id="w1-0">Deine</span> <span id="w1-1">Bank</span> <span id="w1-2">zieht</span> </div>
+        <div id="c2" class="cap clip" data-start="1.021" data-duration="0.915" data-track-index="2"><span id="w2-0">dir</span> <span id="w2-1">Steuern</span> <span id="w2-2">ab,</span> </div>
+        <div id="c3" class="cap clip" data-start="1.936" data-duration="1.213" data-track-index="2"><span id="w3-0">obwohl</span> <span id="w3-1">du</span> <span id="w3-2">gar</span> <span id="w3-3">keine</span> </div>
+        <div id="c4" class="cap clip" data-start="3.149" data-duration="0.95" data-track-index="2"><span id="w4-0">zahlen</span> <span id="w4-1">müsstest</span> </div>
+        <div id="c5" class="cap clip" data-start="4.099" data-duration="2.897" data-track-index="2"><span id="w5-0">Auf</span> <span id="w5-1">Zinsen</span> <span id="w5-2">und</span> <span id="w5-3">ETF‑Gewinne</span> </div>
+        <div id="c6" class="cap clip" data-start="6.996" data-duration="2.004" data-track-index="2"><span id="w6-0">kassiert</span> <span id="w6-1">der</span> <span id="w6-2">Staat</span> </div>
+        <div id="c7" class="cap clip" data-start="9.0" data-duration="2.329" data-track-index="2"><span id="w7-0">automatisch</span> <span id="w7-1">rund</span> <span id="w7-2">26 %</span> </div>
+        <div id="c8" class="cap clip" data-start="11.329" data-duration="1.375" data-track-index="2"><span id="w8-0">Dabei</span> <span id="w8-1">sind</span> <span id="w8-2">1.000 €</span> </div>
+        <div id="c9" class="cap clip" data-start="12.704" data-duration="1.47" data-track-index="2"><span id="w9-0">im</span> <span id="w9-1">Jahr</span> <span id="w9-2">steuerfrei,</span> </div>
+        <div id="c10" class="cap clip" data-start="14.174" data-duration="0.619" data-track-index="2"><span id="w10-0">aber</span> <span id="w10-1">nur</span> </div>
+        <div id="c11" class="cap clip" data-start="14.793" data-duration="2.288" data-track-index="2"><span id="w11-0">mit</span> <span id="w11-1">einem</span> <span id="w11-2">Freistellungsauftrag</span> </div>
+        <div id="c12" class="cap clip" data-start="17.081" data-duration="1.966" data-track-index="2"><span id="w12-0">Jonas</span> <span id="w12-1">bekommt</span> <span id="w12-2">500 €</span> </div>
+        <div id="c13" class="cap clip" data-start="19.047" data-duration="1.389" data-track-index="2"><span id="w13-0">Zinsen</span> <span id="w13-1">im</span> <span id="w13-2">Jahr</span> </div>
+        <div id="c14" class="cap clip" data-start="20.436" data-duration="2.102" data-track-index="2"><span id="w14-0">Ohne</span> <span id="w14-1">Auftrag</span> <span id="w14-2">sind</span> <span id="w14-3">davon</span> </div>
+        <div id="c15" class="cap clip" data-start="22.538" data-duration="1.984" data-track-index="2"><span id="w15-0">rund</span> <span id="w15-1">130 €</span> <span id="w15-2">einfach</span> <span id="w15-3">weg</span> </div>
+        <div id="c16" class="cap clip" data-start="24.522" data-duration="1.363" data-track-index="2"><span id="w16-0">Das</span> <span id="w16-1">Ganze</span> <span id="w16-2">dauert</span> <span id="w16-3">zwei</span> </div>
+        <div id="c17" class="cap clip" data-start="25.885" data-duration="1.764" data-track-index="2"><span id="w17-0">Minuten</span> <span id="w17-1">in</span> <span id="w17-2">deiner</span> <span id="w17-3">Banking‑App</span> </div>
+        <div id="c18" class="cap clip" data-start="27.649" data-duration="1.497" data-track-index="2"><span id="w18-0">Hast</span> <span id="w18-1">du</span> <span id="w18-2">schon</span> <span id="w18-3">einen?</span> <span id="w18-4">Schreib's</span> </div>
+        <div id="c19" class="cap clip" data-start="29.146" data-duration="1.294" data-track-index="2"><span id="w19-0">uns</span> <span id="w19-1">in</span> <span id="w19-2">die</span> <span id="w19-3">Kommentare</span> </div>
+        <div id="c20" class="cap clip" data-start="30.44" data-duration="1.731" data-track-index="2"><span id="w20-0">Folge</span> <span id="w20-1">HundeFinanzTv,</span> </div>
+        <div id="c21" class="cap clip" data-start="32.171" data-duration="1.835" data-track-index="2"><span id="w21-0">wir</span> <span id="w21-1">bringen</span> <span id="w21-2">jeden</span> <span id="w21-3">Tag</span> </div>
+        <div id="c22" class="cap clip" data-start="34.006" data-duration="2.174" data-track-index="2"><span id="w22-0">neue</span> <span id="w22-1">Videos</span> <span id="w22-2">rund</span> <span id="w22-3">ums</span> <span id="w22-4">Geld</span> </div>
       </div>
+      <audio id="voice" src="assets/mix.wav" data-start="0" data-duration="36.76" data-track-index="3"></audio>
     </div>
-
     <script>
       const tl = gsap.timeline({ paused: true });
-      const pop = (sel, at) =>
-        tl.fromTo(sel, { scale: 0.82, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.8)" }, at);
-      const drift = (sel, at, dur) =>
-        tl.fromTo(sel, { scale: 1 }, { scale: 1.05, duration: dur, ease: "sine.inOut" }, at);
+      const pop = (sel, at) => tl.fromTo(sel, { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.2)" }, at);
+      const slam = (sel, at) => tl.fromTo(sel, { scale: 2.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.28, ease: "power4.in" }, at);
+      const shake = (sel, at) => tl.fromTo(sel, { x: -14 }, { x: 14, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }, at);
       const draw = (sel, at, dur) => {
         const len = document.querySelector(sel).getTotalLength();
         tl.fromTo(sel, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: dur, ease: "power2.out" }, at);
       };
-
-      // 1: Geldsack
-      pop("#s1-art", 0);
-      drift("#s1-bag", 0.35, 2.5);
-      tl.fromTo("#s1-coins", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 0.25);
-
-      // 2: Zielscheibe, Pfeil schlägt ein
-      pop("#s2-art", 3);
-      tl.fromTo("#s2-arrow", { x: 160, y: -160, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 0.3, ease: "power4.in" }, 3.3);
-      tl.fromTo("#s2-art", { rotation: 0 }, { rotation: 2, duration: 0.06, yoyo: true, repeat: 3, ease: "none" }, 3.6);
-
-      // 3: Zahlen-Vergleich
-      pop("#s3-h1", 6);
-      pop("#s3-h2", 6.15);
-      tl.fromTo(["#s3-a1", "#s3-a2"], { opacity: 0 }, { opacity: 1, duration: 0.2 }, 6.5);
-      pop("#s3-n1", 7.7);
-      pop("#s3-n2", 7.85);
-      pop("#s3-n3", 9.0);
-
-      // 4: Chart zeichnet sich
-      draw("#s4-solid", 9.6, 0.7);
-      tl.fromTo("#s4-dots", { opacity: 0 }, { opacity: 1, duration: 0.6 }, 10.1);
-      pop("#s4-label", 10.6);
-      pop("#s4-check", 10.9);
-
-      // 5: Outro
-      pop("#s5-art", 12.5);
-      drift("#s5-art", 12.85, 2.0);
-
+      const zaehl = (sel, von, bis, at, dur, nach) => {
+        const o = { v: von };
+        tl.fromTo(o, { v: von }, { v: bis, duration: dur, ease: "power2.out", onUpdate: () => {
+          document.querySelector(sel).textContent = Math.round(o.v).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (nach || ""); } }, at);
+      };
+      const flash = (at, st) => tl.fromTo("#flash", { opacity: st || 0.85 }, { opacity: 0, duration: 0.35, ease: "power2.out", immediateRender: false }, at);
+      const burst = (sel, at, dur) => tl.fromTo(sel + " .p", { x: 0, y: 0, scale: 1.4, opacity: 1 },
+        { x: (i, el) => +el.dataset.dx, y: (i, el) => +el.dataset.dy, scale: 0.2, opacity: 0, duration: dur || 1.0, ease: "power3.out" }, at);
+      const letters = (sel, at) => tl.fromTo(sel + " .l", { y: 140, opacity: 0, rotation: 12, scale: 0.6 },
+        { y: 0, opacity: 1, rotation: 0, scale: 1, duration: 0.45, stagger: 0.035, ease: "back.out(2.2)" }, at);
+      const glitch = (sel, at) => tl.fromTo(sel, { x: -22, skewX: 18 }, { x: 0, skewX: 0, duration: 0.24, ease: "steps(6)" }, at);
+      tl.fromTo("#z0-i", { scale: 1.0 }, { scale: 1.06, duration: 4.099, ease: "none" }, 0.0);
+      tl.fromTo("#hk-t", { scale: 1.15 }, { scale: 1, duration: 0.35 }, 0.0); shake("#hk-m", 0.0 + 0.4); tl.fromTo("#hm0", { x: 0, y: 0, rotation: 0 }, { x: 335, y: -260, rotation: 360, scale: 0.5, duration: 0.45, ease: "power3.in" }, 0.0 + 0.60); tl.fromTo("#hm1", { x: 0, y: 0, rotation: 0 }, { x: 175, y: -220, rotation: 360, scale: 0.5, duration: 0.45, ease: "power3.in" }, 0.0 + 1.05); tl.fromTo("#hm2", { x: 0, y: 0, rotation: 0 }, { x: 15, y: -260, rotation: 360, scale: 0.5, duration: 0.45, ease: "power3.in" }, 0.0 + 1.50); tl.fromTo("#hm3", { x: 0, y: 0, rotation: 0 }, { x: -145, y: -220, rotation: 360, scale: 0.5, duration: 0.45, ease: "power3.in" }, 0.0 + 1.95); tl.fromTo("#hm4", { x: 0, y: 0, rotation: 0 }, { x: -305, y: -260, rotation: 360, scale: 0.5, duration: 0.45, ease: "power3.in" }, 0.0 + 2.40); tl.fromTo("#hk-m", { scale: 1 }, { scale: 1.08, duration: 0.12, yoyo: true, repeat: 15 }, 0.0 + 0.9);
+      tl.fromTo("#z1-i", { scale: 1.0 }, { scale: 1.06, duration: 4.901, ease: "none" }, 4.099);
+      tl.fromTo("#tt-r", { strokeDashoffset: 331.8 }, { strokeDashoffset: 0, duration: 0.8, ease: "power2.out" }, 4.099 + 0.6); pop("#tt-c", 6.996);
+      tl.fromTo("#z2-i", { scale: 1.0 }, { scale: 1.06, duration: 2.329, ease: "none" }, 9.0);
+      slam("#pz-z", 9.0); shake("#pz-z", 9.0 + 0.3); pop("#pz-t", 9.0 + 0.4);
+      tl.fromTo("#z3-i", { scale: 1.0 }, { scale: 1.06, duration: 2.845, ease: "none" }, 11.329);
+      tl.fromTo("#fr-s", { scale: 0, rotation: -20 }, { scale: 1, rotation: 0, duration: 0.45, ease: "back.out(1.8)" }, 11.329); burst("#fr-p", 11.329 + 0.3); pop("#fr-c", 12.704);
+      tl.fromTo("#z4-i", { scale: 1.0 }, { scale: 1.06, duration: 2.907, ease: "none" }, 14.174);
+      pop("#nu-a", 14.174); slam("#nu-b", 14.793 - 0.1);
+      tl.fromTo("#z5-i", { scale: 1.0 }, { scale: 1.06, duration: 3.355, ease: "none" }, 17.081);
+      pop("#jo-c", 17.081); pop("#jo-z", 17.081 + 0.2); zaehl("#jo-z", 0, 500, 17.081 + 0.2, 1.0, " €"); pop("#jo-t", 19.047);
+      tl.fromTo("#z6-i", { scale: 1.0 }, { scale: 1.06, duration: 4.086, ease: "none" }, 20.436);
+      pop("#we-k", 20.436); slam("#we-z", 22.538); shake("#we-z", 22.538 + 0.3); pop("#we-t", 22.538 + 0.5); tl.fromTo("#wm0", { y: 0, opacity: 1, rotation: 0 }, { y: 500, opacity: 0, rotation: 90, duration: 0.6, ease: "power2.in" }, 22.538 + 0.30); tl.fromTo("#wm1", { y: 0, opacity: 1, rotation: 0 }, { y: 500, opacity: 0, rotation: -90, duration: 0.6, ease: "power2.in" }, 22.538 + 0.42); tl.fromTo("#wm2", { y: 0, opacity: 1, rotation: 0 }, { y: 500, opacity: 0, rotation: 90, duration: 0.6, ease: "power2.in" }, 22.538 + 0.54); tl.fromTo("#wm3", { y: 0, opacity: 1, rotation: 0 }, { y: 500, opacity: 0, rotation: -90, duration: 0.6, ease: "power2.in" }, 22.538 + 0.66);
+      tl.fromTo("#z7-i", { scale: 1.0 }, { scale: 1.06, duration: 3.127, ease: "none" }, 24.522);
+      pop("#ap", 24.522); tl.fromTo("#ap-c", { scale: 0 }, { scale: 1, duration: 0.3, ease: "back.out(3)" }, 24.522 + 0.6); draw("#ap-h", 24.522 + 0.75, 0.3); draw("#uh-r", 24.522 + 0.3, 2.2);
+      tl.fromTo("#z8-i", { scale: 1.0 }, { scale: 1.06, duration: 2.791, ease: "none" }, 27.649);
+      pop("#fr-r", 27.649); tl.fromTo("#fr-r", { rotation: -8 }, { rotation: 8, duration: 0.25, yoyo: true, repeat: 5, ease: "sine.inOut" }, 27.649 + 0.4); pop("#fr-t", 27.649 + 0.6);
+      tl.fromTo("#z9-i", { scale: 1.0 }, { scale: 1.06, duration: 6.32, ease: "none" }, 30.44);
+      tl.fromTo(["#logo", "#brand"], { opacity: 1 }, { opacity: 0, duration: 0.2 }, 30.44); pop("#ou-r", 30.44); pop("#ou-n", 30.44 + 0.3); slam("#ou-f", 30.44 + 0.6); tl.fromTo("#ou-f", { scale: 1 }, { scale: 1.1, duration: 0.25, yoyo: true, repeat: 5 }, 30.44 + 1.2);
+      tl.fromTo("#w1-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 0.0);
+      tl.to("#w1-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 0.36);
+      tl.fromTo("#w1-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 0.36);
+      tl.to("#w1-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 0.661);
+      tl.fromTo("#w1-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 0.661);
+      tl.fromTo("#w2-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 1.021);
+      tl.to("#w2-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 1.25);
+      tl.fromTo("#w2-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 1.25);
+      tl.to("#w2-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 1.707);
+      tl.fromTo("#w2-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 1.707);
+      tl.fromTo("#w3-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 1.936);
+      tl.to("#w3-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 2.361);
+      tl.fromTo("#w3-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 2.361);
+      tl.to("#w3-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 2.542);
+      tl.fromTo("#w3-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 2.542);
+      tl.to("#w3-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 2.785);
+      tl.fromTo("#w3-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 2.785);
+      tl.fromTo("#w4-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 3.149);
+      tl.to("#w4-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 3.565);
+      tl.fromTo("#w4-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 3.565);
+      tl.fromTo("#w5-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 4.099);
+      tl.to("#w5-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 4.528);
+      tl.fromTo("#w5-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 4.528);
+      tl.to("#w5-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 5.279);
+      tl.fromTo("#w5-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 5.279);
+      tl.to("#w5-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 5.708);
+      tl.fromTo("#w5-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 5.708);
+      tl.fromTo("#w6-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 6.996);
+      tl.to("#w6-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 7.945);
+      tl.fromTo("#w6-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 7.945);
+      tl.to("#w6-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 8.367);
+      tl.fromTo("#w6-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 8.367);
+      tl.fromTo("#w7-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 9.0);
+      tl.to("#w7-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 10.27);
+      tl.fromTo("#w7-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 10.27);
+      tl.to("#w7-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 10.8);
+      tl.fromTo("#w7-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 10.8);
+      tl.fromTo("#w8-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 11.329);
+      tl.to("#w8-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 11.763);
+      tl.fromTo("#w8-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 11.763);
+      tl.to("#w8-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 12.125);
+      tl.fromTo("#w8-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 12.125);
+      tl.fromTo("#w9-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 12.704);
+      tl.to("#w9-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 12.925);
+      tl.fromTo("#w9-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 12.925);
+      tl.to("#w9-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 13.292);
+      tl.fromTo("#w9-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 13.292);
+      tl.fromTo("#w10-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 14.174);
+      tl.to("#w10-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 14.518);
+      tl.fromTo("#w10-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 14.518);
+      tl.fromTo("#w11-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 14.793);
+      tl.to("#w11-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 15.088);
+      tl.fromTo("#w11-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 15.088);
+      tl.to("#w11-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 15.531);
+      tl.fromTo("#w11-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 15.531);
+      tl.fromTo("#w12-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 17.081);
+      tl.to("#w12-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 17.671);
+      tl.fromTo("#w12-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 17.671);
+      tl.to("#w12-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 18.457);
+      tl.fromTo("#w12-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 18.457);
+      tl.fromTo("#w13-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 19.047);
+      tl.to("#w13-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 19.695);
+      tl.fromTo("#w13-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 19.695);
+      tl.to("#w13-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 19.973);
+      tl.fromTo("#w13-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 19.973);
+      tl.fromTo("#w14-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 20.436);
+      tl.to("#w14-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 20.874);
+      tl.fromTo("#w14-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 20.874);
+      tl.to("#w14-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 21.575);
+      tl.fromTo("#w14-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 21.575);
+      tl.to("#w14-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 22.012);
+      tl.fromTo("#w14-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 22.012);
+      tl.fromTo("#w15-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 22.538);
+      tl.to("#w15-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 22.969);
+      tl.fromTo("#w15-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 22.969);
+      tl.to("#w15-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 23.487);
+      tl.fromTo("#w15-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 23.487);
+      tl.to("#w15-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 24.177);
+      tl.fromTo("#w15-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 24.177);
+      tl.fromTo("#w16-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 24.522);
+      tl.to("#w16-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 24.77);
+      tl.fromTo("#w16-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 24.77);
+      tl.to("#w16-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 25.142);
+      tl.fromTo("#w16-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 25.142);
+      tl.to("#w16-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 25.575);
+      tl.fromTo("#w16-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 25.575);
+      tl.fromTo("#w17-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 25.885);
+      tl.to("#w17-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 26.355);
+      tl.fromTo("#w17-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 26.355);
+      tl.to("#w17-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 26.532);
+      tl.fromTo("#w17-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 26.532);
+      tl.to("#w17-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 26.943);
+      tl.fromTo("#w17-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 26.943);
+      tl.fromTo("#w18-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 27.649);
+      tl.to("#w18-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 27.89);
+      tl.fromTo("#w18-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 27.89);
+      tl.to("#w18-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 28.035);
+      tl.fromTo("#w18-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 28.035);
+      tl.to("#w18-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 28.325);
+      tl.fromTo("#w18-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 28.325);
+      tl.to("#w18-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 28.663);
+      tl.fromTo("#w18-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 28.663);
+      tl.fromTo("#w19-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 29.146);
+      tl.to("#w19-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 29.381);
+      tl.fromTo("#w19-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 29.381);
+      tl.to("#w19-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 29.558);
+      tl.fromTo("#w19-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 29.558);
+      tl.to("#w19-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 29.793);
+      tl.fromTo("#w19-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 29.793);
+      tl.fromTo("#w20-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 30.44);
+      tl.to("#w20-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 30.935);
+      tl.fromTo("#w20-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 30.935);
+      tl.fromTo("#w21-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 32.171);
+      tl.to("#w21-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 32.505);
+      tl.fromTo("#w21-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 32.505);
+      tl.to("#w21-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 33.172);
+      tl.fromTo("#w21-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 33.172);
+      tl.to("#w21-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 33.672);
+      tl.fromTo("#w21-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 33.672);
+      tl.fromTo("#w22-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 34.006);
+      tl.to("#w22-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 34.424);
+      tl.fromTo("#w22-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 34.424);
+      tl.to("#w22-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 35.009);
+      tl.fromTo("#w22-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 35.009);
+      tl.to("#w22-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 35.427);
+      tl.fromTo("#w22-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 35.427);
+      tl.to("#w22-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 35.762);
+      tl.fromTo("#w22-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 35.762);
       window.__timelines["main"] = tl;
     </script>
   </body>

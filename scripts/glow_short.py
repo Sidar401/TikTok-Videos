@@ -194,7 +194,12 @@ def build(here, szenen, sfx, dauer=None, musik=None):
     for s in T["saetze"]:
         for cp in s["captions"]:
             n += 1
-            words = cp["text"].split()
+            words = []
+            for w in cp["text"].split():  # „26 %“, „500 €“ nicht umbrechen
+                if words and w in ("%", "€"):
+                    words[-1] += "\u00a0" + w
+                else:
+                    words.append(w)
             L = sum(len(w) + 1 for w in words)
             cur, spans = cp["start"], []
             for k, w in enumerate(words):
