@@ -1,0 +1,53 @@
+{
+ "titel": "Die Bank zieht dir Steuern ab – Freistellungsauftrag",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Deine Bank zieht dir Steuern ab, obwohl du gar keine zahlen müsstest.",
+   "bild": "Bank-Symbol saugt Münzen ab, Hook",
+   "text": "Deine Bank zieht dir Steuern ab, obwohl du gar keine zahlen müsstest"
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Auf Zinsen und ETF-Gewinne kassiert der Staat automatisch rund sechsundzwanzig Prozent.",
+   "bild": "26 % groß, rot, Kuchenstück fehlt",
+   "text": "Auf Zinsen und ETF-Gewinne kassiert der Staat automatisch rund 26 %"
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Dabei sind tausend Euro im Jahr steuerfrei, aber nur mit einem Freistellungsauftrag.",
+   "bild": "1.000 € grün, Schild/Schutz",
+   "text": "Dabei sind 1.000 € im Jahr steuerfrei, aber nur mit einem Freistellungsauftrag"
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Jonas bekommt fünfhundert Euro Zinsen im Jahr.",
+   "bild": "Jonas-Chip, 500 € zählt hoch",
+   "text": "Jonas bekommt 500 € Zinsen im Jahr"
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Ohne Auftrag sind davon rund hundertdreißig Euro einfach weg.",
+   "bild": "-130 € rot, Münzen fallen weg",
+   "text": "Ohne Auftrag sind davon rund 130 € einfach weg"
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Das Ganze dauert zwei Minuten in deiner Banking-App.",
+   "bild": "Handy mit Haken, Timer 2 Min",
+   "text": "Das Ganze dauert zwei Minuten in deiner Banking-App"
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Hast du schon einen? Schreib's uns in die Kommentare.",
+   "bild": "Kommentar-CTA",
+   "text": "Hast du schon einen? Schreib's uns in die Kommentare"
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Folge HundeFinanzTv, wir bringen jeden Tag neue Videos rund ums Geld.",
+   "bild": "Outro",
+   "text": "Folge HundeFinanzTv, wir bringen jeden Tag neue Videos rund ums Geld"
+  }
+ ]
+}
