@@ -66,6 +66,7 @@ Nutzer: „nicht immer die gleichen/ähnlichen Thumbnails“ – z. B. **Geldbeu
 | longform-einkommen | Einkommens-Leiter „Wo stehst DU?“, Farbskala arm→reich mit „DU?“-Marker, Podest + Krone „Ab wann bist du REICH?“ |
 | longform-supermarkt | voller Einkaufswagen „Der Supermarkt TRICKST dich aus!“, Regal + Auge „Achtung AUGENHÖHE!“, Preisschild 4,99 „Fällst du darauf rein?“ |
 | longform-steuer | Tresor „Das Finanzamt schuldet dir GELD!“, 7 Schloss-Kreise, Stempel „VERSCHENKT!“ + 2.500 € |
+| freistellungsauftrag (Cover) | „Deine Bank zieht dir STEUERN AB“, 3 Münzstapel, rote Pille −26 %, grünes 1.000 € steuerfrei |
 | longform-lotto | Lottokugeln „1 Million gewonnen … und PLEITE!“, Kontostand 1.000.000 € → 0 €, Titel-Typo + Kugeln |
 | longform-freiheit | Berg mit Flagge „So viel Geld, um NIE wieder zu arbeiten“, Formel „Ausgaben × 25 = FREI“, 3 Gipfel-Kacheln |
 
