@@ -1,0 +1,75 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"ID";font-weight:900;src:url("InterDisplay-Black.otf")}
+html,body{margin:0;background:#000}
+#root{position:relative;width:1080px;height:1080px;overflow:hidden}
+canvas{position:absolute;inset:0}
+</style></head><body>
+<div id="root"><canvas id="bg" width="1080" height="1080"></canvas><canvas id="c" width="1080" height="1080"></canvas><canvas id="o" width="1080" height="1080"></canvas></div>
+<script type="module">
+import * as THREE from "./three.module.js";
+await document.fonts.load('900 100px ID');
+const V=+new URLSearchParams(location.search).get("v");const W=1080,H=1080;
+let s=3;const rnd=()=>((s=s*16807%2147483647)/2147483647);
+const bg=document.getElementById("bg").getContext("2d"),g=document.getElementById("o").getContext("2d");
+function grad(c0,c1,c2){const gr=bg.createRadialGradient(W*.5,H*.42,0,W*.5,H*.5,W*.75);gr.addColorStop(0,c0);gr.addColorStop(.55,c1);gr.addColorStop(1,c2);bg.fillStyle=gr;bg.fillRect(0,0,W,H)}
+function stars(n,a=1){for(let i=0;i<n;i++){const r=rnd()<.06?2.6:.8+rnd()*1.3;bg.globalAlpha=(.3+rnd()*.7)*a;bg.fillStyle="#fff";bg.beginPath();bg.arc(rnd()*W,rnd()*H,r,0,7);bg.fill()}bg.globalAlpha=1}
+function nova(x,y,sz,col=[255,235,190],rays=true){g.save();g.globalCompositeOperation="lighter";
+ let gr=g.createRadialGradient(x,y,0,x,y,sz*1.6);gr.addColorStop(0,"rgba(255,252,240,1)");gr.addColorStop(.07,`rgba(${col},.95)`);gr.addColorStop(.22,`rgba(${col},.35)`);gr.addColorStop(.55,"rgba(120,140,255,.1)");gr.addColorStop(1,"rgba(0,0,0,0)");g.fillStyle=gr;g.fillRect(x-sz*2,y-sz*2,sz*4,sz*4);
+ if(rays){const ray=(ang,len,wd,a)=>{g.save();g.translate(x,y);g.rotate(ang);const lg=g.createLinearGradient(-len,0,len,0);lg.addColorStop(0,"rgba(255,230,200,0)");lg.addColorStop(.5,`rgba(255,250,240,${a})`);lg.addColorStop(1,"rgba(255,230,200,0)");g.fillStyle=lg;g.beginPath();g.ellipse(0,0,len,wd,0,0,7);g.fill();g.restore()};
+ ray(0,sz*2.6,sz*.04,1);ray(Math.PI/2,sz*2.6,sz*.04,1);ray(Math.PI/4,sz*1.1,sz*.025,.55);ray(-Math.PI/4,sz*1.1,sz*.025,.55);}
+ g.restore()}
+// 3D-Helfer
+const R=new THREE.WebGLRenderer({canvas:document.getElementById("c"),antialias:true,alpha:true,preserveDrawingBuffer:true});R.setSize(W,H,false);R.outputColorSpace=THREE.SRGBColorSpace;R.toneMapping=THREE.ACESFilmicToneMapping;R.setClearColor(0,0);
+const sc=new THREE.Scene();const cam=new THREE.PerspectiveCamera(30,1,.1,1000);cam.position.set(0,0,30);
+const L=new THREE.TextureLoader();const ld=u=>new Promise(r=>L.load(u,t=>{t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=8;r(t)}));
+async function earth(rad,pos,sun,rot){const [d,n]=await Promise.all([ld("earth-blue-marble.jpg"),ld("earth-night.jpg")]);
+ const m=new THREE.ShaderMaterial({uniforms:{d:{value:d},n:{value:n},sun:{value:sun}},vertexShader:`varying vec2 vUv;varying vec3 vN;varying vec3 vV;void main(){vUv=uv;vN=normalize(mat3(modelMatrix)*normal);vec4 w=modelMatrix*vec4(position,1.);vV=normalize(cameraPosition-w.xyz);gl_Position=projectionMatrix*viewMatrix*w;}`,
+ fragmentShader:`uniform sampler2D d,n;uniform vec3 sun;varying vec2 vUv;varying vec3 vN;varying vec3 vV;void main(){float l=dot(vN,sun);float k=smoothstep(-.12,.2,l);vec3 dc=texture2D(d,vUv).rgb*(.1+1.3*max(l,0.));vec3 nc=texture2D(n,vUv).rgb*vec3(1.4,1.05,.65)*1.9;vec3 c=mix(nc,dc,k);float f=pow(1.-clamp(dot(vN,vV),0.,1.),2.5);c+=vec3(.3,.6,1.)*f*(.15+1.4*smoothstep(-.3,.4,l));gl_FragColor=vec4(c,1.);}`});
+ const e=new THREE.Mesh(new THREE.SphereGeometry(rad,160,160),m);e.position.copy(pos);e.rotation.set(...rot);sc.add(e);
+ const a=new THREE.Mesh(new THREE.SphereGeometry(rad*1.07,128,128),new THREE.ShaderMaterial({transparent:true,blending:THREE.AdditiveBlending,side:THREE.BackSide,depthWrite:false,uniforms:{sun:{value:sun}},
+ vertexShader:`varying vec3 vN;varying vec3 vW;void main(){vN=normalize(mat3(modelMatrix)*normal);vec4 w=modelMatrix*vec4(position,1.);vW=w.xyz;gl_Position=projectionMatrix*viewMatrix*w;}`,
+ fragmentShader:`uniform vec3 sun;varying vec3 vN;varying vec3 vW;void main(){vec3 v=normalize(cameraPosition-vW);float i=pow(max(.62-dot(vN,v),0.),3.);float l=smoothstep(-.5,.6,dot(vN,sun));gl_FragColor=vec4(vec3(.35,.65,1.)*i*(.2+2.2*l),1.);}`}));a.position.copy(pos);sc.add(a);}
+function moonTex(){const mc=document.createElement("canvas");mc.width=2048;mc.height=1024;const m=mc.getContext("2d");m.fillStyle="#a19d96";m.fillRect(0,0,2048,1024);
+ for(let i=0;i<16;i++){m.fillStyle=`rgba(62,60,60,${.22+rnd()*.25})`;m.beginPath();m.ellipse(rnd()*2048,250+rnd()*500,80+rnd()*220,60+rnd()*150,rnd()*3,0,7);m.fill()}
+ for(let i=0;i<380;i++){const x=rnd()*2048,y=rnd()*1024,rr=Math.pow(rnd(),3)*40+2;m.fillStyle="rgba(45,43,40,.28)";m.beginPath();m.arc(x,y,rr,0,7);m.fill();m.strokeStyle="rgba(235,232,224,.3)";m.lineWidth=Math.max(1,rr*.16);m.beginPath();m.arc(x-rr*.1,y-rr*.1,rr,2.4,5.5);m.stroke()}
+ const t=new THREE.CanvasTexture(mc);t.colorSpace=THREE.SRGBColorSpace;return t}
+function letter(txt,x,y,size,c0="#ffffff",c1="#ffd98a",glow="rgba(255,190,90,.7)"){g.font=`900 ${size}px ID`;g.textAlign="center";g.textBaseline="middle";const tg=g.createLinearGradient(0,y-size/2,0,y+size/2);tg.addColorStop(0,c0);tg.addColorStop(1,c1);g.shadowColor=glow;g.shadowBlur=size*.12;g.fillStyle=tg;g.fillText(txt,x,y);g.shadowBlur=0}
+
+if(V===1){ // Nur der Nova-Stern, tiefblau-lila
+ grad("#3a2a7a","#140f3a","#05040f");stars(260);
+ // Nebel-Wolken
+ for(let i=0;i<40;i++){const x=W*.5+(rnd()-.5)*700,y=H*.5+(rnd()-.5)*500,r=120+rnd()*220;const gr=bg.createRadialGradient(x,y,0,x,y,r);const c=rnd()<.5?"180,90,255":"60,140,255";gr.addColorStop(0,`rgba(${c},.08)`);gr.addColorStop(1,`rgba(${c},0)`);bg.fillStyle=gr;bg.fillRect(x-r,y-r,2*r,2*r)}
+ R.render(sc,cam);nova(W/2,H/2,W*.3);
+}else if(V===2){ // Ganze Erde mit goldenem Orbit + Mond
+ grad("#0d1430","#060a1c","#000");stars(300);cam.position.set(0,0,44);
+ const sun=new THREE.Vector3(-.6,.4,.7).normalize();await earth(7.2,new THREE.Vector3(0,0,0),sun,[.35,-1.9,.2]);
+ const mm=new THREE.Mesh(new THREE.SphereGeometry(1.2,96,96),new THREE.MeshStandardMaterial({map:moonTex(),roughness:1}));mm.position.set(8.6,6.2,2);sc.add(mm);
+ const dl=new THREE.DirectionalLight(0xffffff,3);dl.position.copy(sun).multiplyScalar(10);sc.add(dl);
+ const ring=new THREE.Mesh(new THREE.TorusGeometry(10.2,.06,16,300),new THREE.MeshBasicMaterial({color:0xffcf6a}));ring.rotation.set(1.25,.3,0);sc.add(ring);
+ R.render(sc,cam);nova(W*.82,H*.22,W*.07);
+}else if(V===3){ // Diamantring: Mond verdeckt Stern
+ grad("#0a0a12","#040408","#000");stars(220,.7);
+ const cx=W/2,cy=H/2,r=W*.3;
+ g.save();g.globalCompositeOperation="lighter";for(let i=0;i<220;i++){const a=rnd()*6.283,l=r*(1.05+Math.pow(rnd(),2)*.9);g.strokeStyle=`rgba(${rnd()<.5?"255,230,190":"190,210,255"},${.05+rnd()*.08})`;g.lineWidth=2+rnd()*6;g.beginPath();g.moveTo(cx+Math.cos(a)*r,cy+Math.sin(a)*r);g.lineTo(cx+Math.cos(a)*l,cy+Math.sin(a)*l);g.stroke()}
+ const cg=g.createRadialGradient(cx,cy,r*.95,cx,cy,r*1.5);cg.addColorStop(0,"rgba(255,240,215,.9)");cg.addColorStop(.12,"rgba(255,220,170,.4)");cg.addColorStop(1,"rgba(0,0,0,0)");g.fillStyle=cg;g.beginPath();g.arc(cx,cy,r*1.5,0,7);g.fill();g.restore();
+ g.fillStyle="#020203";g.beginPath();g.arc(cx,cy,r,0,7);g.fill();
+ nova(cx+r*.62,cy-r*.79,W*.16);
+}else if(V===4){ // Modernes App-Icon: "N" auf Verlauf
+ const gr=bg.createLinearGradient(0,0,W,H);gr.addColorStop(0,"#ff5f8f");gr.addColorStop(.5,"#7b4dff");gr.addColorStop(1,"#1e3cff");bg.fillStyle=gr;bg.fillRect(0,0,W,H);
+ stars(120,.6);
+ R.render(sc,cam);
+ letter("N",W/2,H*.53,W*.62,"#ffffff","#ffffff","rgba(20,0,60,.55)");
+ nova(W*.73,H*.24,W*.12);
+}else if(V===5){ // Mondsichel + Erde klein + N-Stern
+ grad("#101a3a","#070b1e","#000");stars(260);
+ const sun=new THREE.Vector3(-1,.25,.35).normalize();
+ cam.position.set(-6,0,30);const mm=new THREE.Mesh(new THREE.SphereGeometry(8.5,128,128),new THREE.MeshStandardMaterial({map:moonTex(),bumpScale:2,roughness:1}));mm.rotation.y=1;mm.position.set(6.2,0,0);sc.add(mm);
+ const dl=new THREE.DirectionalLight(0xfff2e0,4);dl.position.copy(sun).multiplyScalar(10);sc.add(dl);
+ R.render(sc,cam);
+ letter("N",W*.42,H*.52,W*.42);
+ nova(W*.8,H*.2,W*.09);
+}
+window.ready=true;
+</script></body></html>
