@@ -1,0 +1,34 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"ID";font-weight:900;src:url("InterDisplay-Black.otf")}
+html,body{margin:0;background:#000}canvas{display:block}
+</style></head><body>
+<canvas id="o" width="2560" height="1440"></canvas>
+<script type="module">
+await document.fonts.load('900 100px ID');
+const W=2560,H=1440,g=document.getElementById("o").getContext("2d");
+let s=3;const rnd=()=>((s=s*16807%2147483647)/2147483647);
+// Hintergrund wie Profilbild 3
+let gr=g.createRadialGradient(W/2,H/2,0,W/2,H/2,W*.7);gr.addColorStop(0,"#0b0b14");gr.addColorStop(.55,"#040408");gr.addColorStop(1,"#000");g.fillStyle=gr;g.fillRect(0,0,W,H);
+for(let i=0;i<900;i++){const r=rnd()<.05?2.6:.7+rnd()*1.3;g.globalAlpha=.25+rnd()*.6;g.fillStyle="#fff";g.beginPath();g.arc(rnd()*W,rnd()*H,r,0,7);g.fill()}g.globalAlpha=1;
+function nova(x,y,sz){g.save();g.globalCompositeOperation="lighter";
+ let gr=g.createRadialGradient(x,y,0,x,y,sz*1.6);gr.addColorStop(0,"rgba(255,252,240,1)");gr.addColorStop(.07,"rgba(255,235,190,.95)");gr.addColorStop(.22,"rgba(255,235,190,.35)");gr.addColorStop(.55,"rgba(120,140,255,.1)");gr.addColorStop(1,"rgba(0,0,0,0)");g.fillStyle=gr;g.fillRect(x-sz*2,y-sz*2,sz*4,sz*4);
+ const ray=(ang,len,wd,a)=>{g.save();g.translate(x,y);g.rotate(ang);const lg=g.createLinearGradient(-len,0,len,0);lg.addColorStop(0,"rgba(255,230,200,0)");lg.addColorStop(.5,`rgba(255,250,240,${a})`);lg.addColorStop(1,"rgba(255,230,200,0)");g.fillStyle=lg;g.beginPath();g.ellipse(0,0,len,wd,0,0,7);g.fill();g.restore()};
+ ray(0,sz*1.5,sz*.04,1);ray(Math.PI/2,sz*1.8,sz*.04,1);ray(Math.PI/4,sz*1.1,sz*.025,.55);ray(-Math.PI/4,sz*1.1,sz*.025,.55);g.restore()}
+// Finsternis links im sicheren Bereich
+const cx=W/2-470,cy=H/2,r=150;
+g.save();g.globalCompositeOperation="lighter";
+for(let i=0;i<260;i++){const a=rnd()*6.283,l=r*(1.05+Math.pow(rnd(),2)*1.1);g.strokeStyle=`rgba(${rnd()<.5?"255,230,190":"190,210,255"},${.05+rnd()*.08})`;g.lineWidth=1.5+rnd()*4;g.beginPath();g.moveTo(cx+Math.cos(a)*r,cy+Math.sin(a)*r);g.lineTo(cx+Math.cos(a)*l,cy+Math.sin(a)*l);g.stroke()}
+const cg=g.createRadialGradient(cx,cy,r*.95,cx,cy,r*1.6);cg.addColorStop(0,"rgba(255,240,215,.9)");cg.addColorStop(.12,"rgba(255,220,170,.4)");cg.addColorStop(1,"rgba(0,0,0,0)");g.fillStyle=cg;g.beginPath();g.arc(cx,cy,r*1.6,0,7);g.fill();g.restore();
+g.fillStyle="#020203";g.beginPath();g.arc(cx,cy,r,0,7);g.fill();
+nova(cx+r*.62,cy-r*.79,130);
+// Schrift rechts
+const tx=W/2-250;g.textAlign="left";g.textBaseline="alphabetic";
+g.font="900 172px ID";g.letterSpacing="18px";
+const tg=g.createLinearGradient(0,cy-170,0,cy+30);tg.addColorStop(0,"#ffffff");tg.addColorStop(1,"#ffd98a");
+g.shadowColor="rgba(255,200,120,.45)";g.shadowBlur=40;g.fillStyle=tg;g.fillText("NOVARO",tx,cy+40);
+g.shadowBlur=0;g.letterSpacing="2px";g.font="600 40px Inter";g.fillStyle="rgba(255,255,255,.82)";
+g.fillText("Was wäre, wenn …?  ·  Unglaubliche Fakten",tx+6,cy+110);
+window.ready=true;
+</script></body></html>
