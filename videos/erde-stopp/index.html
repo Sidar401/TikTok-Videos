@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      @font-face { font-family: "Inter Display"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.otf"); }
+      @font-face { font-family: "Inter Display"; font-weight: 800; src: url("assets/fonts/InterDisplay-ExtraBold.otf"); }
+      @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/Inter-SemiBold.otf"); }
+      html, body { background: #000; }
+      #root { font-family: "Inter Display", "Inter", sans-serif; }
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .vig { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, transparent 45%, rgba(0,0,0,0.78) 100%); }
+      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+      .tag { top: 140px; font-family: "Inter", sans-serif; font-weight: 600; font-size: 34px; letter-spacing: 8px; color: rgba(255,255,255,0.72); }
+      .bar { position: absolute; left: 90px; right: 90px; top: 200px; height: 6px; border-radius: 3px; background: rgba(255,255,255,0.15); }
+      .bar i { display: block; width: 0; height: 100%; border-radius: 3px; background: #ffd23f; box-shadow: 0 0 14px rgba(255,210,63,0.7); }
+      .lbl { top: 330px; font-size: 62px; font-weight: 800; letter-spacing: 1px; text-shadow: 0 4px 24px rgba(0,0,0,0.9); }
+      .lbl small { display: block; font-family: "Inter", sans-serif; font-weight: 600; font-size: 36px; color: rgba(255,255,255,0.78); margin-top: 10px; letter-spacing: 0; }
+      .lbl .big { display: block; font-size: 120px; font-weight: 900; color: #ffd23f; text-shadow: 0 0 40px rgba(255,210,63,0.5), 0 4px 24px rgba(0,0,0,0.9); white-space: nowrap; }
+      .capw { top: 1400px; font-size: 92px; font-weight: 900; line-height: 1.12; letter-spacing: -1px; color: #fff; text-shadow: 0 6px 30px rgba(0,0,0,0.85), 0 0 3px #000; }
+      .capw .w { display: inline-block; margin: 0 10px; padding: 0 4px 6px; }
+      .capw .on { background: #ffd23f; color: #111; padding: 0 20px 6px; border-radius: 18px; transform: rotate(-2deg) scale(1.06); text-shadow: none; box-shadow: 0 10px 40px rgba(255,210,63,0.45); }
+      .hookbig { top: 540px; font-size: 132px; }
+      .hookbig .y { color: #ffd23f; }
+      .hookdim { background: radial-gradient(circle at 50% 42%, rgba(0,0,10,0.25), rgba(0,0,6,0.8)); }
+      .follow { top: 1080px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div class="vig"></div>
+      <div id="flash"></div>
+      <div id="tag" class="line tag clip" data-start="0" data-duration="30" data-track-index="1"><span>WAS WÄRE, WENN …</span></div>
+      <div id="bar" class="bar clip" data-start="0" data-duration="30" data-track-index="2"><i id="bar-in"></i></div>
+      <div id="lbl" class="line lbl clip" data-start="0" data-duration="30" data-track-index="3"><span id="lbl-in"></span></div>
+      <div id="cap" class="line capw clip" data-start="3.0" data-duration="27" data-track-index="4"><span id="cap-in"></span></div>
+
+      <div id="hookdim" class="hookdim clip" data-start="0" data-duration="3.0" data-track-index="8"><span id="hookdim-in"></span></div>
+      <div id="hookbig" class="line hookbig clip" data-start="0" data-duration="3.0" data-track-index="7"><span id="hookbig-in">Was wäre,<br />wenn die Erde<br /><span class="y">STOPPT?</span></span></div>
+      <div id="follow" class="line follow clip" data-start="27.6" data-duration="2.4" data-track-index="6"><span id="follow-in" class="box"><span class="t">Folg uns für mehr! 👆</span><span class="pill">+ Folgen</span></span></div>
+
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="29.75" data-track-index="9" data-volume="1"></audio>
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="10" data-volume="0.45"></audio>
+    </div>
+    <img id="tex-day" src="assets/earth-blue-marble.jpg" style="display:none" alt="" />
+    <img id="tex-night" src="assets/earth-night.jpg" style="display:none" alt="" />
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.from("#hookbig-in", { opacity: 0, scale: 1.35, duration: 0.35, ease: "power3.out" }, 0);
+      tl.to("#hookbig-in", { scale: 0.6, opacity: 0, filter: "blur(12px)", duration: 0.35, ease: "power2.in" }, 2.6);
+      tl.to("#hookdim", { opacity: 0, duration: 0.3 }, 2.65);
+      tl.from("#follow-in", { opacity: 0, scale: 0.6, duration: 0.3, ease: "back.out(2.5)" }, 27.6);
+      tl.to("#follow-in .pill", { scale: 1.1, duration: 0.3, yoyo: true, repeat: 3 }, 28.0);
+      tl.to("#bar-in", { width: "100%", duration: 30, ease: "none" }, 0);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+    <script type="module">
+      import * as THREE from "./assets/three.module.js";
+      const WORDS = [{"w": "Was", "s": 0.0, "e": 0.38}, {"w": "wäre,", "s": 0.38, "e": 0.74}, {"w": "wenn", "s": 0.74, "e": 0.9}, {"w": "die", "s": 0.9, "e": 1.05}, {"w": "Erde", "s": 1.05, "e": 1.44}, {"w": "plötzlich", "s": 1.44, "e": 1.97}, {"w": "aufhört,", "s": 1.97, "e": 2.34}, {"w": "sich", "s": 2.34, "e": 2.48}, {"w": "zu", "s": 2.48, "e": 2.6}, {"w": "drehen?", "s": 2.6, "e": 2.9}, {"w": "Gerade", "s": 3.06, "e": 3.7}, {"w": "rasen", "s": 3.7, "e": 3.86}, {"w": "wir", "s": 3.86, "e": 4.05}, {"w": "am", "s": 4.05, "e": 4.17}, {"w": "Äquator", "s": 4.17, "e": 4.52}, {"w": "mit", "s": 4.52, "e": 4.77}, {"w": "über", "s": 4.77, "e": 4.91}, {"w": "1.600", "s": 4.91, "e": 6.29}, {"w": "km/h.", "s": 6.29, "e": 7.0}, {"w": "Stoppt", "s": 7.16, "e": 7.59}, {"w": "die", "s": 7.59, "e": 7.76}, {"w": "Erde,", "s": 7.76, "e": 8.19}, {"w": "fliegt", "s": 8.19, "e": 8.5}, {"w": "alles", "s": 8.5, "e": 8.84}, {"w": "andere", "s": 8.84, "e": 9.22}, {"w": "einfach", "s": 9.22, "e": 9.6}, {"w": "weiter.", "s": 9.6, "e": 9.91}, {"w": "Menschen,", "s": 10.07, "e": 10.67}, {"w": "Autos,", "s": 10.67, "e": 11.31}, {"w": "Häuser.", "s": 11.31, "e": 12.1}, {"w": "Alles", "s": 12.1, "e": 12.45}, {"w": "rast", "s": 12.45, "e": 12.76}, {"w": "nach", "s": 12.76, "e": 13.0}, {"w": "Osten.", "s": 13.0, "e": 13.36}, {"w": "Dazu", "s": 13.52, "e": 13.88}, {"w": "ein", "s": 13.88, "e": 14.16}, {"w": "Sturm,", "s": 14.16, "e": 14.72}, {"w": "stärker", "s": 14.72, "e": 15.02}, {"w": "als", "s": 15.02, "e": 15.39}, {"w": "jeder", "s": 15.39, "e": 15.8}, {"w": "Wirbelsturm.", "s": 15.8, "e": 16.34}, {"w": "Die", "s": 16.5, "e": 16.74}, {"w": "Meere", "s": 16.74, "e": 17.31}, {"w": "fließen", "s": 17.31, "e": 17.68}, {"w": "zu", "s": 17.68, "e": 17.73}, {"w": "den", "s": 17.73, "e": 17.95}, {"w": "Polen.", "s": 17.95, "e": 18.19}, {"w": "Und", "s": 18.36, "e": 18.66}, {"w": "in", "s": 18.66, "e": 18.73}, {"w": "der", "s": 18.73, "e": 18.85}, {"w": "Mitte", "s": 18.85, "e": 19.26}, {"w": "taucht", "s": 19.26, "e": 19.45}, {"w": "ein", "s": 19.45, "e": 19.84}, {"w": "riesiger", "s": 19.84, "e": 20.37}, {"w": "Kontinent", "s": 20.37, "e": 20.88}, {"w": "auf.", "s": 20.88, "e": 21.16}, {"w": "Ein", "s": 21.32, "e": 21.82}, {"w": "Tag", "s": 21.82, "e": 22.15}, {"w": "und", "s": 22.15, "e": 22.34}, {"w": "eine", "s": 22.34, "e": 22.63}, {"w": "Nacht", "s": 22.63, "e": 23.04}, {"w": "dauern", "s": 23.04, "e": 23.34}, {"w": "dann", "s": 23.34, "e": 23.53}, {"w": "ein", "s": 23.53, "e": 23.87}, {"w": "ganzes", "s": 23.87, "e": 24.33}, {"w": "Jahr.", "s": 24.33, "e": 24.52}, {"w": "Sechs", "s": 24.68, "e": 25.21}, {"w": "Monate", "s": 25.21, "e": 25.66}, {"w": "Sonne.", "s": 25.66, "e": 25.88}, {"w": "Sechs", "s": 26.04, "e": 26.43}, {"w": "Monate", "s": 26.43, "e": 26.93}, {"w": "Dunkelheit.", "s": 26.93, "e": 27.5}, {"w": "Hättest", "s": 27.66, "e": 27.92}, {"w": "du", "s": 27.92, "e": 27.99}, {"w": "das", "s": 27.99, "e": 28.18}, {"w": "gewusst?", "s": 28.18, "e": 28.61}, {"w": "Folg", "s": 28.77, "e": 28.99}, {"w": "uns", "s": 28.99, "e": 29.17}, {"w": "für", "s": 29.17, "e": 29.33}, {"w": "mehr!", "s": 29.33, "e": 29.74}];
+      const CH = [[0.0, 2.9], [3.06, 7.0], [7.16, 9.91], [10.07, 13.36], [13.52, 16.34], [16.5, 18.19], [18.36, 21.16], [21.32, 24.52], [24.68, 25.88], [26.04, 27.5], [27.66, 28.61], [28.77, 29.74]];
+      const GROUPS = [];
+      let wi = 0;
+      CH.forEach(([a, b]) => {
+        const ws = []; while (wi < WORDS.length && WORDS[wi].s < b + 0.01) ws.push(WORDS[wi++]);
+        let cur = [];
+        ws.forEach((w) => { const len = cur.map((x) => x.w).join(" ").length + w.w.length; if (cur.length && (cur.length >= 3 || len > 16)) { GROUPS.push(cur); cur = []; } cur.push(w); });
+        if (cur.length) GROUPS.push(cur);
+      });
+      GROUPS.forEach((g, i) => { g.s = g[0].s; g.e = i + 1 < GROUPS.length ? GROUPS[i + 1][0].s : 30; });
+      const capEl = document.getElementById("cap-in"), lblEl = document.getElementById("lbl-in"), flashEl = document.getElementById("flash");
+      let lastCap = "", lastLbl = "";
+      function captions(t) {
+        let h = "";
+        const g = GROUPS.find((g) => t >= g.s - 0.05 && t < g.e);
+        if (g && t >= 3.0) h = g.map((w) => { const on = t >= w.s - 0.04 && t < w.e + 0.02; return `<span class="w${on ? " on" : ""}">${w.w.replace(/[,.:]$/, "")}</span>`; }).join("");
+        if (h !== lastCap) { capEl.innerHTML = h; lastCap = h; }
+      }
+      function label(h) { if (h !== lastLbl) { lblEl.innerHTML = h; lastLbl = h; } }
+      const cl = (x) => Math.max(0, Math.min(1, x));
+      const lerp = (a, b, f) => a + (b - a) * f;
+      const eio = (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+      const eout = (x) => 1 - Math.pow(1 - x, 3);
+      const prog = (t, s, d) => cl((t - s) / d);
+      let seed = 7; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+      const V = (x, y, z) => new THREE.Vector3(x, y, z);
+      const de = (n) => n.toLocaleString("de-DE");
+
+      const cv = document.getElementById("stage");
+      const R = new THREE.WebGLRenderer({ canvas: cv, antialias: true, preserveDrawingBuffer: true });
+      R.setSize(1080, 1920, false); R.outputColorSpace = THREE.SRGBColorSpace; R.toneMapping = THREE.ACESFilmicToneMapping;
+      const sc = new THREE.Scene();
+      const cam = new THREE.PerspectiveCamera(32, 1080 / 1920, 0.1, 2000);
+
+      // Sterne
+      const sp = [], scol = [];
+      for (let i = 0; i < 4000; i++) { const u = rnd() * 2 - 1, a = rnd() * 6.283, r = 600; sp.push(Math.sqrt(1 - u * u) * Math.cos(a) * r, u * r, Math.sqrt(1 - u * u) * Math.sin(a) * r); scol.push(0.8 + rnd() * 0.2, 0.85 + rnd() * 0.15, 1); }
+      const sg = new THREE.BufferGeometry(); sg.setAttribute("position", new THREE.Float32BufferAttribute(sp, 3)); sg.setAttribute("color", new THREE.Float32BufferAttribute(scol, 3));
+      const starMat = new THREE.PointsMaterial({ size: 2.4, vertexColors: true, transparent: true, opacity: 0.85, depthWrite: false });
+      sc.add(new THREE.Points(sg, starMat));
+
+      const sunDir = V(-0.75, 0.35, 0.75).normalize();
+      const U = { d: { value: null }, n: { value: null }, sun: { value: sunDir }, shift: { value: 0 }, heat: { value: 0 } };
+      const earthMat = new THREE.ShaderMaterial({
+        uniforms: U,
+        vertexShader: `varying vec2 vUv;varying vec3 vN;varying vec3 vV;varying vec3 vL;
+          void main(){vUv=uv;vL=normal;vN=normalize(mat3(modelMatrix)*normal);vec4 w=modelMatrix*vec4(position,1.);vV=normalize(cameraPosition-w.xyz);gl_Position=projectionMatrix*viewMatrix*w;}`,
+        fragmentShader: `uniform sampler2D d,n;uniform vec3 sun;uniform float shift,heat;varying vec2 vUv;varying vec3 vN;varying vec3 vV;varying vec3 vL;
+          void main(){float l=dot(vN,sun);float k=smoothstep(-.15,.25,l);
+          vec3 dt=texture2D(d,vUv).rgb;float lat=abs(vL.y);
+          float water=smoothstep(.0,.03,dt.b-dt.r)*(1.-step(.3,dt.r));
+          // Meere wandern zu den Polen: Äquator wird Land, Pole werden Meer
+          float eq=1.-smoothstep(.45,.62,lat);float po=smoothstep(.6,.75,lat);
+          vec3 sand=vec3(.62,.48,.3)*(.75+.5*dt.g);vec3 sea=vec3(.03,.13,.3);
+          dt=mix(dt,sand,water*eq*shift);dt=mix(dt,sea,(1.-water)*po*shift);
+          dt+=water*(1.-shift*eq)*vec3(.015,.04,.08);dt=mix(dt,dt*vec3(1.2,.9,.7),heat);
+          vec3 dc=dt*(.12+1.25*max(l,0.));
+          vec3 nc=texture2D(n,vUv).rgb*vec3(1.4,1.05,.65)*1.8;
+          vec3 c=mix(nc,dc,k);
+          float f=pow(1.-clamp(dot(vN,vV),0.,1.),3.);c+=vec3(.3,.6,1.)*f*(.2+k);
+          float s=pow(max(dot(reflect(-sun,vN),vV),0.),60.)*.15*k*water;c+=s;
+          gl_FragColor=vec4(c,1.);}`,
+      });
+      const earth = new THREE.Mesh(new THREE.SphereGeometry(2.6, 160, 160), earthMat);
+      const earthG = new THREE.Group(); earthG.add(earth); sc.add(earthG);
+      const atmU = { sun: { value: sunDir } };
+      const atm = new THREE.Mesh(new THREE.SphereGeometry(2.6 * 1.17, 96, 96), new THREE.ShaderMaterial({
+        transparent: true, blending: THREE.AdditiveBlending, side: THREE.BackSide, depthWrite: false, uniforms: atmU,
+        vertexShader: `varying vec3 vN;varying vec3 vW;void main(){vN=normalize(mat3(modelMatrix)*normal);vec4 w=modelMatrix*vec4(position,1.);vW=w.xyz;gl_Position=projectionMatrix*viewMatrix*w;}`,
+        fragmentShader: `uniform vec3 sun;varying vec3 vN;varying vec3 vW;void main(){vec3 v=normalize(cameraPosition-vW);float i=pow(max(.72-dot(vN,v),0.),4.);float l=smoothstep(-.4,.6,dot(vN,sun));gl_FragColor=vec4(vec3(.35,.65,1.)*i*(.3+1.5*l),1.);}`,
+      }));
+      sc.add(atm);
+      // Sturm-Wolken: Schicht mit Schlieren
+      const wc = document.createElement("canvas"); wc.width = 2048; wc.height = 1024; const w2 = wc.getContext("2d");
+      for (let i = 0; i < 900; i++) { const y = 120 + rnd() * 784, x = rnd() * 2048, len = 120 + rnd() * 520, th = 2 + rnd() * 9; const lg = w2.createLinearGradient(x, 0, x + len, 0); lg.addColorStop(0, "rgba(255,255,255,0)"); lg.addColorStop(0.7, `rgba(255,255,255,${0.15 + rnd() * 0.45})`); lg.addColorStop(1, "rgba(255,255,255,0)"); w2.fillStyle = lg; w2.beginPath(); w2.ellipse(x + len / 2, y, len / 2, th, 0, 0, 7); w2.fill(); }
+      const wt = new THREE.CanvasTexture(wc); wt.wrapS = THREE.RepeatWrapping;
+      const storm = new THREE.Mesh(new THREE.SphereGeometry(2.66, 128, 128), new THREE.MeshLambertMaterial({ map: wt, transparent: true, opacity: 0, depthWrite: false }));
+      earthG.add(storm);
+      const dl = new THREE.DirectionalLight(0xffffff, 2.6); sc.add(dl); sc.add(new THREE.AmbientLight(0x334466, 0.25));
+      // Äquator-Ring
+      const eqRing = new THREE.Mesh(new THREE.TorusGeometry(2.64, 0.018, 8, 240), new THREE.MeshBasicMaterial({ color: 0xffd23f, transparent: true, opacity: 0 }));
+      eqRing.rotation.x = Math.PI / 2; earthG.add(eqRing);
+      // Weggeschleuderte Teilchen (Häuser, Autos …): Start auf der Oberfläche, fliegen tangential nach Osten
+      const NP = 900, P0 = [], pp = new Float32Array(NP * 3);
+      for (let i = 0; i < NP; i++) { const lat = (rnd() - 0.5) * 1.8, lon = rnd() * 6.283; P0.push([lat, lon, 0.6 + rnd() * 0.8]); }
+      const pg = new THREE.BufferGeometry(); pg.setAttribute("position", new THREE.BufferAttribute(pp, 3));
+      const pmat = new THREE.PointsMaterial({ color: 0xffd9a0, size: 0.1, transparent: true, opacity: 0, blending: THREE.AdditiveBlending, depthWrite: false });
+      const parts = new THREE.Points(pg, pmat); sc.add(parts);
+      // Sonne (für Tag/Nacht)
+      const gcv = document.createElement("canvas"); gcv.width = gcv.height = 256; const gg = gcv.getContext("2d");
+      const gr = gg.createRadialGradient(128, 128, 0, 128, 128, 128); gr.addColorStop(0, "rgba(255,250,235,1)"); gr.addColorStop(0.15, "rgba(255,220,150,.8)"); gr.addColorStop(1, "rgba(255,180,80,0)"); gg.fillStyle = gr; gg.fillRect(0, 0, 256, 256);
+      const sun = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(gcv), blending: THREE.AdditiveBlending, transparent: true, depthWrite: false, opacity: 0 })); sc.add(sun);
+
+      function setCam(p, look) { cam.position.copy(look).add(p.clone().sub(look).multiplyScalar(1.42)); cam.lookAt(look); }
+      function shake(t, t0, amp) { const d = t - t0; if (d < 0 || d > 0.7) return V(0, 0, 0); const k = amp * (1 - d / 0.7); return V(Math.sin(d * 90) * k, Math.cos(d * 77) * k, 0); }
+      // Drehwinkel der Erde: schnell bis 7.4 s, dann abrupter Stopp
+      function spin(t) {
+        const w = 1.6; // rad/s (sichtbar schnell)
+        if (t < 7.3) return t * w;
+        const d = Math.min(t - 7.3, 0.35); return 7.3 * w + w * (d - (d * d) / 0.7);
+      }
+
+      function renderAt(t) {
+        if (!U.d.value) return;
+        seed = 99;
+        earthG.position.set(0, -0.3, 0); earthG.rotation.set(0, 0, 0.41);
+        U.shift.value = 0; U.heat.value = 0; storm.material.opacity = 0; eqRing.material.opacity = 0; pmat.opacity = 0; sun.material.opacity = 0;
+        sunDir.set(-0.75, 0.35, 0.75).normalize(); R.toneMappingExposure = 1; flashEl.style.opacity = 0;
+        let lbl = "";
+        const rotStop = spin(t);
+        earth.rotation.y = rotStop - 1.2;
+        if (t < 3.0) {
+          sunDir.set(-0.4, 0.3, 1).normalize();
+          setCam(V(0, 0.8, lerp(15, 12.5, eio(t / 3))), V(0, -0.2, 0));
+        } else if (t < 7.16) {
+          // Tempo am Äquator
+          earthG.rotation.z = 0.2;
+          const f = eio(prog(t, 3.0, 1.5));
+          setCam(V(0, lerp(0.8, 0.1, f), lerp(12.5, 9.5, f)), V(0, -0.3, 0));
+          eqRing.material.opacity = prog(t, 3.4, 0.4);
+          const v = Math.round(1670 * eout(prog(t, 3.6, 2.2)));
+          lbl = `<span class="big">${de(v)} km/h</span><small>so schnell drehen wir uns am Äquator</small>`;
+        } else if (t < 10.07) {
+          // STOPP
+          earthG.rotation.z = 0.2;
+          setCam(V(0, 0.1, 9.5).add(shake(t, 7.3, 0.12)), V(0, -0.3, 0));
+          eqRing.material.opacity = 1 - prog(t, 7.3, 0.4);
+          flashEl.style.opacity = t > 7.3 && t < 7.7 ? 0.6 * (1 - (t - 7.3) / 0.4) : 0;
+          lbl = t > 7.3 ? `<span class="big" style="color:#ff4d5e">STOPP!</span><small>doch alles andere fliegt weiter</small>` : "";
+        } else if (t < 13.52) {
+          // Alles rast nach Osten: Teilchen lösen sich tangential
+          earthG.rotation.z = 0.2;
+          const f = eio(prog(t, 10.07, 3.4));
+          setCam(V(lerp(0, -3, f), lerp(0.1, 1.2, f), lerp(9.5, 10.5, f)), V(0, -0.3, 0));
+          earthG.updateMatrixWorld(true);
+          const d = t - 10.07; pmat.opacity = Math.min(1, d * 3);
+          for (let i = 0; i < NP; i++) {
+            const [la, lo, sp2] = P0[i]; const ang = lo + earth.rotation.y;
+            const local = V(Math.cos(la) * Math.cos(ang), Math.sin(la), -Math.cos(la) * Math.sin(ang)).multiplyScalar(2.62);
+            const east = V(-Math.sin(ang), 0, -Math.cos(ang));
+            const fly = Math.max(0, d - (i % 7) * 0.12) * sp2 * 1.6;
+            local.addScaledVector(east, fly).addScaledVector(local.clone().normalize(), fly * fly * 0.08);
+            const wpos = local.applyMatrix4(earthG.matrixWorld); pp[i * 3] = wpos.x; pp[i * 3 + 1] = wpos.y; pp[i * 3 + 2] = wpos.z;
+          }
+          pg.attributes.position.needsUpdate = true;
+          lbl = t > 10.6 ? `Alles rast nach Osten<small>mit über 1.600 km/h</small>` : "";
+        } else if (t < 16.5) {
+          // Sturm
+          earthG.rotation.z = 0.2;
+          setCam(V(-3, 1.2, 10.5).add(shake(t, 13.6, 0.03)).add(V(Math.sin(t * 40) * 0.01, 0, 0)), V(0, -0.3, 0));
+          storm.material.opacity = 0.9 * prog(t, 13.5, 0.5); storm.rotation.y = -(t - 13.5) * 2.2;
+          R.toneMappingExposure = 0.9;
+          lbl = t > 13.9 ? `Ein Mega-Sturm<small>stärker als jeder Hurrikan</small>` : "";
+        } else if (t < 21.32) {
+          // Meere zu den Polen, Kontinent am Äquator
+          earthG.rotation.z = 0.2;
+          storm.material.opacity = 0.9 * (1 - prog(t, 16.5, 0.6)); storm.rotation.y = -3 * 2.2 - (t - 16.5) * 0.5;
+          const f = eio(prog(t, 16.6, 3.2));
+          U.shift.value = f;
+          setCam(V(lerp(-3, 0, f), lerp(1.2, 3.5, f), lerp(10.5, 11.5, f)), V(0, -0.3, 0));
+          lbl = t < 18.3 ? `Die Meere wandern<small>zu Nord- und Südpol</small>` : `Ein Super-Kontinent<small>einmal rund um den Äquator</small>`;
+        } else if (t < 24.68) {
+          // 1 Tag = 1 Jahr: Sonne wandert langsam
+          U.shift.value = 1; earthG.rotation.z = 0.2;
+          const f = prog(t, 21.32, 3.36);
+          const a = lerp(-1.2, 1.4, eio(f));
+          sunDir.set(Math.sin(a), 0.1, Math.cos(a)).normalize();
+          setCam(V(0, 0.6, 12.5), V(0, -0.3, 0));
+          sun.position.copy(sunDir).multiplyScalar(60).add(V(0, -0.3, 0)); sun.material.opacity = 0.9; sun.scale.set(14, 14, 1);
+          lbl = `<span class="big">1 Tag = 1 Jahr</span><small>die Sonne wandert ganz langsam</small>`;
+        } else if (t < 26.04) {
+          // 6 Monate Sonne
+          U.shift.value = 1; U.heat.value = prog(t, 24.68, 1); earthG.rotation.z = 0.2;
+          sunDir.set(0.15, 0.2, 1).normalize();
+          setCam(V(0, 0.3, lerp(11, 9.5, prog(t, 24.68, 1.4))), V(0, -0.3, 0));
+          sun.position.set(6, 9, -20); sun.material.opacity = 0.9; sun.scale.set(16, 16, 1);
+          R.toneMappingExposure = 1.15;
+          lbl = `☀ 6 Monate Sonne`;
+        } else {
+          // 6 Monate Dunkelheit + Schluss
+          U.shift.value = 1; earthG.rotation.z = 0.2;
+          sunDir.set(0.1, 0.2, -1).normalize();
+          setCam(V(0, 0.3, lerp(9.5, 12, prog(t, 26.04, 3.5))), V(0, -0.3, 0));
+          lbl = t < 27.6 ? `🌑 6 Monate Nacht` : "";
+        }
+        atm.position.copy(earthG.position);
+        dl.position.copy(sunDir).multiplyScalar(10);
+        storm.visible = storm.material.opacity > 0.01; eqRing.visible = eqRing.material.opacity > 0.01; parts.visible = pmat.opacity > 0.01; sun.visible = sun.material.opacity > 0.01;
+        R.render(sc, cam);
+        captions(t); label(lbl);
+      }
+
+      const ready = Promise.all(["tex-day", "tex-night"].map((id) => { const im = document.getElementById(id); return im.complete ? Promise.resolve(im) : new Promise((r) => (im.onload = () => r(im))); })).then(([a, b]) => {
+        const mk = (im) => { const tx = new THREE.Texture(im); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8; tx.needsUpdate = true; return tx; };
+        U.d.value = mk(a); U.n.value = mk(b); renderAt(lastT);
+      });
+      window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady || {}; window.__hf.buildReady.scene = ready;
+      let lastT = 0;
+      window.addEventListener("hf-seek", (e) => { lastT = e.detail.time; renderAt(lastT); });
+    </script>
+  </body>
+</html>
