@@ -58,3 +58,5 @@ Ersetzt den weißen Clipart-Stil für Shorts UND Longform (Nutzer, 27.10.). Deta
 - **Ausnahme Shorts (ab 27.10.):** Beagle-Logo oben durchgehend sichtbar (Nutzer-Wunsch). Longform weiterhin nur im CTA.
 
 - **Longform-Thumbnails immer zusätzlich in 9:16** (Nutzer 6.11.).
+
+- **CTAs früh/Mitte, nie am Ende** (Nutzer 7.11.).

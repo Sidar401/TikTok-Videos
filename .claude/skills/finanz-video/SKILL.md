@@ -89,3 +89,5 @@ Das Einkommen-Video (`videos/longform-einkommen`) ist der Qualitäts-Maßstab: �
 - **Longform 16:9 im Dark-Glow-Stil (ab 6.11.):** `import glow_short as g; g.querformat()` vor dem Szenenbau, dann wie Shorts mit `build(...)` (Logo klein oben links, Untertitel unten bei y=900). Vorlage: `videos/longform-ki-blase/build.py` (Firmen-Plaketten statt echter Logos, Nutzer wählte „Weg 2“).
 
 - **Thumbnails bei Longform (Nutzer 6.11.):** IMMER zwei Versionen liefern: 16:9 für YouTube (`<name>-1.jpg`) **und zusätzlich 9:16** (`<name>-tiktok.jpg`), gleiches Motiv, für Hochformat neu angeordnet.
+
+- **CTAs nicht ans Ende (Nutzer 7.11.):** Folgen-CTA früh (nach dem Hook), Teilen-/Kommentar-CTA in der Mitte. Kein Schluss-CTA wie „Wir sind HundeFinanzTv, wir sehen uns morgen“ – das Video endet mit dem letzten Inhalts-Satz (Nutzer schneidet späte CTAs raus).

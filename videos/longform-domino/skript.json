@@ -123,78 +123,73 @@
   },
   {
    "id": "s25",
-   "sprechtext": "Aber jetzt die spannende Frage: Wie kann eine Firma mit Rekordzahlen abstürzen?",
-   "text": "Aber jetzt die spannende Frage: Wie kann eine Firma mit Rekordzahlen abstürzen?"
-  },
-  {
-   "id": "s26",
-   "sprechtext": "Die Antwort: An der Börse zählt nicht, was gerade passiert, sondern was in Zukunft erwartet wird.",
-   "text": "Die Antwort: An der Börse zählt nicht, was gerade passiert, sondern was in Zukunft erwartet wird"
-  },
-  {
-   "id": "s27",
-   "sprechtext": "Die Rekordzahlen waren längst im Kurs eingepreist.",
-   "text": "Die Rekordzahlen waren längst im Kurs eingepreist"
-  },
-  {
-   "id": "s28",
-   "sprechtext": "Als dann die Sorge kam, dass künftig weniger Rechenzentren gebaut werden, wollten viele Anleger gleichzeitig raus.",
-   "text": "Als dann die Sorge kam, dass künftig weniger Rechenzentren gebaut werden, wollten viele Anleger gleichzeitig raus"
-  },
-  {
-   "id": "s29",
-   "sprechtext": "Und jetzt das Überraschende: Schon am nächsten Tag ging es teilweise wieder nach oben.",
-   "text": "Und jetzt das Überraschende: Schon am nächsten Tag ging es teilweise wieder nach oben"
-  },
-  {
-   "id": "s30",
-   "sprechtext": "Nvidia legte am Freitag zeitweise über sechs Prozent zu.",
-   "text": "Nvidia legte am Freitag zeitweise über 6 % zu"
-  },
-  {
-   "id": "s31",
-   "sprechtext": "Wer am fünften November in Panik verkauft hat, hat seinen Verlust also genau am Tiefpunkt festgemacht.",
-   "text": "Wer am fünften November in Panik verkauft hat, hat seinen Verlust also genau am Tiefpunkt festgemacht"
-  },
-  {
-   "id": "s32",
-   "sprechtext": "Was lernen wir daraus? Drei Dinge.",
-   "text": "Was lernen wir daraus? Drei Dinge"
-  },
-  {
-   "id": "s33",
-   "sprechtext": "Erstens: Politik bewegt die Börse, oft schneller, als man denkt.",
-   "text": "Erstens: Politik bewegt die Börse, oft schneller, als man denkt"
-  },
-  {
-   "id": "s34",
-   "sprechtext": "Zweitens: Gute Zahlen schützen nicht vor einem Kurssturz, wenn die Erwartungen zu hoch sind.",
-   "text": "Zweitens: Gute Zahlen schützen nicht vor einem Kurssturz, wenn die Erwartungen zu hoch sind"
-  },
-  {
-   "id": "s35",
-   "sprechtext": "Drittens: Kurze Panik ist kein guter Grund zum Verkaufen, wer langfristig anlegt, sitzt solche Tage aus.",
-   "text": "Drittens: Kurze Panik ist kein guter Grund zum Verkaufen, wer langfristig anlegt, sitzt solche Tage aus"
-  },
-  {
-   "id": "s36",
-   "sprechtext": "Ob der Crash nur ein Schreck war oder der Anfang von mehr, weiß niemand.",
-   "text": "Ob der Crash nur ein Schreck war oder der Anfang von mehr, weiß niemand"
-  },
-  {
-   "id": "s37",
-   "sprechtext": "Aber wer die Dominosteine kennt, versteht die Nachrichten besser und bleibt ruhiger.",
-   "text": "Aber wer die Dominosteine kennt, versteht die Nachrichten besser und bleibt ruhiger"
-  },
-  {
-   "id": "s38",
    "sprechtext": "Kennst du jemanden, der nach dem Crash nervös geworden ist? Dann schick ihm dieses Video.",
    "text": "Kennst du jemanden, der nach dem Crash nervös geworden ist? Dann schick ihm dieses Video"
   },
   {
-   "id": "s39",
-   "sprechtext": "Wir sind HundeFinanzTv, wir sehen uns morgen im nächsten Video.",
-   "text": "Wir sind HundeFinanzTv, wir sehen uns morgen im nächsten Video"
+   "id": "s26",
+   "sprechtext": "Aber jetzt die spannende Frage: Wie kann eine Firma mit Rekordzahlen abstürzen?",
+   "text": "Aber jetzt die spannende Frage: Wie kann eine Firma mit Rekordzahlen abstürzen?"
+  },
+  {
+   "id": "s27",
+   "sprechtext": "Die Antwort: An der Börse zählt nicht, was gerade passiert, sondern was in Zukunft erwartet wird.",
+   "text": "Die Antwort: An der Börse zählt nicht, was gerade passiert, sondern was in Zukunft erwartet wird"
+  },
+  {
+   "id": "s28",
+   "sprechtext": "Die Rekordzahlen waren längst im Kurs eingepreist.",
+   "text": "Die Rekordzahlen waren längst im Kurs eingepreist"
+  },
+  {
+   "id": "s29",
+   "sprechtext": "Als dann die Sorge kam, dass künftig weniger Rechenzentren gebaut werden, wollten viele Anleger gleichzeitig raus.",
+   "text": "Als dann die Sorge kam, dass künftig weniger Rechenzentren gebaut werden, wollten viele Anleger gleichzeitig raus"
+  },
+  {
+   "id": "s30",
+   "sprechtext": "Und jetzt das Überraschende: Schon am nächsten Tag ging es teilweise wieder nach oben.",
+   "text": "Und jetzt das Überraschende: Schon am nächsten Tag ging es teilweise wieder nach oben"
+  },
+  {
+   "id": "s31",
+   "sprechtext": "Nvidia legte am Freitag zeitweise über sechs Prozent zu.",
+   "text": "Nvidia legte am Freitag zeitweise über 6 % zu"
+  },
+  {
+   "id": "s32",
+   "sprechtext": "Wer am fünften November in Panik verkauft hat, hat seinen Verlust also genau am Tiefpunkt festgemacht.",
+   "text": "Wer am fünften November in Panik verkauft hat, hat seinen Verlust also genau am Tiefpunkt festgemacht"
+  },
+  {
+   "id": "s33",
+   "sprechtext": "Was lernen wir daraus? Drei Dinge.",
+   "text": "Was lernen wir daraus? Drei Dinge"
+  },
+  {
+   "id": "s34",
+   "sprechtext": "Erstens: Politik bewegt die Börse, oft schneller, als man denkt.",
+   "text": "Erstens: Politik bewegt die Börse, oft schneller, als man denkt"
+  },
+  {
+   "id": "s35",
+   "sprechtext": "Zweitens: Gute Zahlen schützen nicht vor einem Kurssturz, wenn die Erwartungen zu hoch sind.",
+   "text": "Zweitens: Gute Zahlen schützen nicht vor einem Kurssturz, wenn die Erwartungen zu hoch sind"
+  },
+  {
+   "id": "s36",
+   "sprechtext": "Drittens: Kurze Panik ist kein guter Grund zum Verkaufen, wer langfristig anlegt, sitzt solche Tage aus.",
+   "text": "Drittens: Kurze Panik ist kein guter Grund zum Verkaufen, wer langfristig anlegt, sitzt solche Tage aus"
+  },
+  {
+   "id": "s37",
+   "sprechtext": "Ob der Crash nur ein Schreck war oder der Anfang von mehr, weiß niemand.",
+   "text": "Ob der Crash nur ein Schreck war oder der Anfang von mehr, weiß niemand"
+  },
+  {
+   "id": "s38",
+   "sprechtext": "Aber wer die Dominosteine kennt, versteht die Nachrichten besser und bleibt ruhiger.",
+   "text": "Aber wer die Dominosteine kennt, versteht die Nachrichten besser und bleibt ruhiger"
   }
  ]
 }
