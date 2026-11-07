@@ -75,6 +75,7 @@ Nutzer: „nicht immer die gleichen/ähnlichen Thumbnails“ – z. B. **Geldbeu
 | gehalt-fluss (Cover) | „Wohin fließt DEIN GELD?“, Box 3.600 € orange → Pfeil → 2.028 € grün, 4 rote Abzugs-Pillen |
 | longform-ki-blase | „Platzt jetzt die KI-BLASE?“, orange Blase „KI“ mit weißem Riss, rote Pille −2,5 Billionen $, „…und was ist mit deinem ETF?“ |
 | longform-domino | „Diese WAHL crasht die Börse“, 4 fallende Dominosteine (blau/orange/grün/rot mit Punkten), rote Pille −2,5 Billionen $ |
+| deutschlandticket-2027 (Cover) | „Schon wieder TEURER!“, schräges Ticket 66,80 €, rote Pille +36 % |
 | longform-lotto | Lottokugeln „1 Million gewonnen … und PLEITE!“, Kontostand 1.000.000 € → 0 €, Titel-Typo + Kugeln |
 | longform-freiheit | Berg mit Flagge „So viel Geld, um NIE wieder zu arbeiten“, Formel „Ausgaben × 25 = FREI“, 3 Gipfel-Kacheln |
 

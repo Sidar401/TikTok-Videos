@@ -1,0 +1,50 @@
+{
+ "titel": "Deutschlandticket 2027: 66,80 €",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Das Deutschlandticket wird schon wieder teurer.",
+   "text": "Das Deutschlandticket wird schon wieder teurer"
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Ab Januar kostet es sechsundsechzig Euro achtzig im Monat.",
+   "text": "Ab Januar kostet es 66 € 80 im Monat"
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Folge HundeFinanzTv, wir bringen jeden Tag neue Geld-Tipps.",
+   "text": "Folge HundeFinanzTv, wir bringen jeden Tag neue Geld-Tipps"
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Gestartet ist es mit neunundvierzig Euro, also über ein Drittel mehr.",
+   "text": "Gestartet ist es mit 49 €, also über ein Drittel mehr"
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Aufs Jahr gerechnet zahlst du über achthundert Euro.",
+   "text": "Aufs Jahr gerechnet zahlst du über 800 €"
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Lohnt es sich trotzdem? Gegenüber Einzeltickets meist ab etwa zwanzig Fahrten im Monat.",
+   "text": "Lohnt es sich trotzdem? Gegenüber Einzeltickets meist ab etwa 20 Fahrten im Monat"
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Fährst du weniger? Dann kündige es, das geht jeden Monat.",
+   "text": "Fährst du weniger? Dann kündige es, das geht jeden Monat"
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Lohnt es sich für dich noch? Schreib's uns in die Kommentare.",
+   "text": "Lohnt es sich für dich noch? Schreib's uns in die Kommentare"
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Und frag deinen Chef nach dem Jobticket, damit wird es oft deutlich günstiger.",
+   "text": "Und frag deinen Chef nach dem Jobticket, damit wird es oft deutlich günstiger"
+  }
+ ]
+}

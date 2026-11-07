@@ -1,0 +1,188 @@
+{
+ "dauer": 36.411,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 2.493,
+   "captions": [
+    {
+     "text": "Das Deutschlandticket",
+     "start": 0.0,
+     "end": 1.166
+    },
+    {
+     "text": "wird schon wieder teurer",
+     "start": 1.166,
+     "end": 2.493
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 2.493,
+   "end": 6.305,
+   "captions": [
+    {
+     "text": "Ab Januar kostet",
+     "start": 2.493,
+     "end": 4.252
+    },
+    {
+     "text": "es 66,80 € im Monat",
+     "start": 4.252,
+     "end": 6.305
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 6.455,
+   "end": 10.845,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTv,",
+     "start": 6.455,
+     "end": 7.856
+    },
+    {
+     "text": "wir bringen jeden Tag",
+     "start": 7.856,
+     "end": 9.601
+    },
+    {
+     "text": "neue Geld‑Tipps",
+     "start": 9.601,
+     "end": 10.845
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 10.995,
+   "end": 15.153,
+   "captions": [
+    {
+     "text": "Gestartet ist es mit 49 €,",
+     "start": 10.995,
+     "end": 13.073
+    },
+    {
+     "text": "also über ein Drittel mehr",
+     "start": 13.073,
+     "end": 15.153
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 15.153,
+   "end": 18.225,
+   "captions": [
+    {
+     "text": "Aufs Jahr gerechnet",
+     "start": 15.153,
+     "end": 16.698
+    },
+    {
+     "text": "zahlst du über 800 €",
+     "start": 16.698,
+     "end": 18.225
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 18.225,
+   "end": 23.768,
+   "captions": [
+    {
+     "text": "Lohnt es sich trotzdem?",
+     "start": 18.225,
+     "end": 19.592
+    },
+    {
+     "text": "Gegenüber Einzeltickets meist",
+     "start": 19.592,
+     "end": 21.769
+    },
+    {
+     "text": "ab etwa 20 Fahrten im Monat",
+     "start": 21.769,
+     "end": 23.768
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 23.768,
+   "end": 27.624,
+   "captions": [
+    {
+     "text": "Fährst du weniger?",
+     "start": 23.768,
+     "end": 24.887
+    },
+    {
+     "text": "Dann kündige es,",
+     "start": 24.887,
+     "end": 26.146
+    },
+    {
+     "text": "das geht jeden Monat",
+     "start": 26.146,
+     "end": 27.624
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 27.624,
+   "end": 30.923,
+   "captions": [
+    {
+     "text": "Lohnt es sich für dich",
+     "start": 27.624,
+     "end": 28.943
+    },
+    {
+     "text": "noch? Schreib's",
+     "start": 28.943,
+     "end": 29.671
+    },
+    {
+     "text": "uns in die Kommentare",
+     "start": 29.671,
+     "end": 30.923
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 30.923,
+   "end": 35.811,
+   "captions": [
+    {
+     "text": "Und frag deinen Chef",
+     "start": 30.923,
+     "end": 32.27
+    },
+    {
+     "text": "nach dem Jobticket,",
+     "start": 32.27,
+     "end": 33.608
+    },
+    {
+     "text": "damit wird es oft",
+     "start": 33.608,
+     "end": 34.804
+    },
+    {
+     "text": "deutlich günstiger",
+     "start": 34.804,
+     "end": 35.811
+    }
+   ]
+  }
+ ]
+}
