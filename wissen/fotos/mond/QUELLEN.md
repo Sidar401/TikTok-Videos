@@ -1,0 +1,10 @@
+# Fotos Mond-Video (alle NASA, frei nutzbar / Public Domain)
+- vollmond.jpg – GSFC_20171208_Archive_e000868 (Full Moon)
+- erdeuntergang.jpg – art002e021278 (Earthset from Orion, Artemis II)
+- erde.jpg – GSFC_20171208_Archive_e001386 (Blue Marble 2012)
+- erde-nacht.jpg – GSFC_20171208_Archive_e001593 (Black Marble 2012)
+- milchstrasse.jpg – iss073e0982261 (Milky Way from ISS)
+- gletscher.jpg – PIA17283 (Pine Island Glacier)
+- riff.jpg – PIA03401 (Great Barrier Reef)
+- wueste.jpg – PIA17632 (Namib Desert)
+Quelle: images.nasa.gov
