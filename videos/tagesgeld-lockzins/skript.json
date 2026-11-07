@@ -1,0 +1,50 @@
+{
+ "titel": "Tagesgeld 4,5 % – der Haken (Lockzins, Zins-Hopping)",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Banken locken gerade mit bis zu vier Komma fünf Prozent Zinsen aufs Tagesgeld.",
+   "text": "Banken locken gerade mit bis zu vier Komma 5 % Zinsen aufs Tagesgeld"
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Klingt super, aber es gibt einen Haken.",
+   "text": "Klingt super, aber es gibt einen Haken"
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Folge HundeFinanzTv, wir bringen jeden Tag neue Videos rund ums Geld.",
+   "text": "Folge HundeFinanzTv, wir bringen jeden Tag neue Videos rund ums Geld"
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Die hohen Zinsen gelten meistens nur für vier Monate und nur für Neukunden.",
+   "text": "Die hohen Zinsen gelten meistens nur für vier Monate und nur für Neukunden"
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Danach fällt der Zins oft auf unter zwei Prozent.",
+   "text": "Danach fällt der Zins oft auf unter 2 %"
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Der Trick: Trag dir das Enddatum in den Kalender ein und wechsle dann zur nächsten Bank mit Neukundenangebot.",
+   "text": "Der Trick: Trag dir das Enddatum in den Kalender ein und wechsle dann zur nächsten Bank mit Neukundenangebot"
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Das nennt man Zins-Hopping.",
+   "text": "Das nennt man Zins-Hopping"
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Wie viel Zinsen bekommst du gerade? Schreib's uns in die Kommentare.",
+   "text": "Wie viel Zinsen bekommst du gerade? Schreib's uns in die Kommentare"
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Und vergiss bei der neuen Bank den Freistellungsauftrag nicht, sonst zahlst du Steuern auf deine Zinsen.",
+   "text": "Und vergiss bei der neuen Bank den Freistellungsauftrag nicht, sonst zahlst du Steuern auf deine Zinsen"
+  }
+ ]
+}
