@@ -91,3 +91,6 @@ Das Einkommen-Video (`videos/longform-einkommen`) ist der Qualitäts-Maßstab: �
 - **Thumbnails bei Longform (Nutzer 6.11.):** IMMER zwei Versionen liefern: 16:9 für YouTube (`<name>-1.jpg`) **und zusätzlich 9:16** (`<name>-tiktok.jpg`), gleiches Motiv, für Hochformat neu angeordnet.
 
 - **CTAs nicht ans Ende (Nutzer 7.11.):** Folgen-CTA früh (nach dem Hook), Teilen-/Kommentar-CTA in der Mitte. Kein Schluss-CTA wie „Wir sind HundeFinanzTv, wir sehen uns morgen“ – das Video endet mit dem letzten Inhalts-Satz (Nutzer schneidet späte CTAs raus).
+
+- **Aussprache (Nutzer 7.11., „sehr gute Idee“):** Abkürzungen im `sprechtext` lautschriftlich: ETF → „E-Te-Eff“, USA → „U-Es-A“ (oder „Amerika“), KI → „Ka-I“, MSCI World → „Em-Es-Ze-I World“, DAX bleibt. Im Untertitel-`text` normal schreiben.
+- **Tempo ab 7.11.: `--tempo 1.12`** bei sync.py (1,08 zu langsam, 1,15 zu schnell).

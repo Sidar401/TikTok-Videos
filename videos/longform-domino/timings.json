@@ -1,0 +1,916 @@
+{
+  "dauer": 185.95,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 5.206,
+      "captions": [
+        {
+          "text": "Eine einzige Wahl in Amerika",
+          "start": 0.0,
+          "end": 1.762
+        },
+        {
+          "text": "hat an der Börse zweieinhalb",
+          "start": 1.762,
+          "end": 3.525
+        },
+        {
+          "text": "Billionen Dollar vernichtet",
+          "start": 3.525,
+          "end": 5.206
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 5.206,
+      "end": 6.238,
+      "captions": [
+        {
+          "text": "An nur einem Tag",
+          "start": 5.206,
+          "end": 6.238
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 6.238,
+      "end": 11.905,
+      "captions": [
+        {
+          "text": "Und das Verrückte:",
+          "start": 6.238,
+          "end": 7.411
+        },
+        {
+          "text": "Eine Firma ist abgestürzt,",
+          "start": 7.411,
+          "end": 9.062
+        },
+        {
+          "text": "obwohl sie gerade",
+          "start": 9.062,
+          "end": 10.193
+        },
+        {
+          "text": "Rekordzahlen gemeldet hatte",
+          "start": 10.193,
+          "end": 11.905
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 11.905,
+      "end": 18.077,
+      "captions": [
+        {
+          "text": "Heute zeigen wir dir",
+          "start": 11.905,
+          "end": 13.036
+        },
+        {
+          "text": "den Domino‑Effekt",
+          "start": 13.036,
+          "end": 14.068
+        },
+        {
+          "text": "hinter dem Crash,",
+          "start": 14.068,
+          "end": 15.043
+        },
+        {
+          "text": "und was du daraus",
+          "start": 15.043,
+          "end": 16.075
+        },
+        {
+          "text": "für dein eigenes",
+          "start": 16.075,
+          "end": 17.047
+        },
+        {
+          "text": "Geld lernen kannst",
+          "start": 17.047,
+          "end": 18.077
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 18.077,
+      "end": 24.595,
+      "captions": [
+        {
+          "text": "Im letzten Video haben wir",
+          "start": 18.077,
+          "end": 19.719
+        },
+        {
+          "text": "dir den KI‑Geldkreis erklärt,",
+          "start": 19.719,
+          "end": 21.619
+        },
+        {
+          "text": "heute geht es darum,",
+          "start": 21.619,
+          "end": 22.93
+        },
+        {
+          "text": "was den Crash ausgelöst hat",
+          "start": 22.93,
+          "end": 24.595
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 24.595,
+      "end": 27.752,
+      "captions": [
+        {
+          "text": "Wie immer gilt: Das ist",
+          "start": 24.595,
+          "end": 26.248
+        },
+        {
+          "text": "keine Anlageberatung",
+          "start": 26.248,
+          "end": 27.752
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 27.752,
+      "end": 34.363,
+      "captions": [
+        {
+          "text": "Und wenn dich",
+          "start": 27.752,
+          "end": 28.611
+        },
+        {
+          "text": "das interessiert,",
+          "start": 28.611,
+          "end": 29.827
+        },
+        {
+          "text": "folge HundeFinanzTv,",
+          "start": 29.827,
+          "end": 31.262
+        },
+        {
+          "text": "wir bringen jeden Tag",
+          "start": 31.262,
+          "end": 32.769
+        },
+        {
+          "text": "neue Videos rund ums Geld",
+          "start": 32.769,
+          "end": 34.363
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 34.363,
+      "end": 36.998,
+      "captions": [
+        {
+          "text": "Dominostein Nummer",
+          "start": 34.363,
+          "end": 36.068
+        },
+        {
+          "text": "eins: die Wahl",
+          "start": 36.068,
+          "end": 36.998
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 36.998,
+      "end": 42.639,
+      "captions": [
+        {
+          "text": "Bei den Zwischenwahlen",
+          "start": 36.998,
+          "end": 38.526
+        },
+        {
+          "text": "in den USA haben",
+          "start": 38.526,
+          "end": 39.526
+        },
+        {
+          "text": "die Demokraten die Mehrheit",
+          "start": 39.526,
+          "end": 41.402
+        },
+        {
+          "text": "im Kongress gewonnen",
+          "start": 41.402,
+          "end": 42.639
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 42.639,
+      "end": 49.68,
+      "captions": [
+        {
+          "text": "Einige Politiker",
+          "start": 42.639,
+          "end": 43.633
+        },
+        {
+          "text": "wollen den Bau neuer",
+          "start": 43.633,
+          "end": 45.065
+        },
+        {
+          "text": "KI‑Rechenzentren bremsen,",
+          "start": 45.065,
+          "end": 46.804
+        },
+        {
+          "text": "in Texas wurde sogar",
+          "start": 46.804,
+          "end": 48.171
+        },
+        {
+          "text": "ein Baustopp gefordert",
+          "start": 48.171,
+          "end": 49.68
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 49.68,
+      "end": 57.429,
+      "captions": [
+        {
+          "text": "Der Grund: Rechenzentren",
+          "start": 49.68,
+          "end": 51.06
+        },
+        {
+          "text": "verbrauchen riesige",
+          "start": 51.06,
+          "end": 52.31
+        },
+        {
+          "text": "Mengen Strom und Wasser,",
+          "start": 52.31,
+          "end": 53.89
+        },
+        {
+          "text": "und das treibt",
+          "start": 53.89,
+          "end": 54.668
+        },
+        {
+          "text": "in manchen Regionen",
+          "start": 54.668,
+          "end": 55.918
+        },
+        {
+          "text": "die Strompreise nach oben",
+          "start": 55.918,
+          "end": 57.429
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 57.429,
+      "end": 60.153,
+      "captions": [
+        {
+          "text": "Dominostein Nummer",
+          "start": 57.429,
+          "end": 58.661
+        },
+        {
+          "text": "zwei: die Rechenzentren",
+          "start": 58.661,
+          "end": 60.153
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 60.153,
+      "end": 64.131,
+      "captions": [
+        {
+          "text": "Weniger neue Rechenzentren",
+          "start": 60.153,
+          "end": 61.688
+        },
+        {
+          "text": "heißt: Es werden",
+          "start": 61.688,
+          "end": 62.68
+        },
+        {
+          "text": "weniger Chips gebraucht",
+          "start": 62.68,
+          "end": 64.131
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "start": 64.131,
+      "end": 69.723,
+      "captions": [
+        {
+          "text": "Und genau mit diesen",
+          "start": 64.131,
+          "end": 65.363
+        },
+        {
+          "text": "Chips verdienen einige",
+          "start": 65.363,
+          "end": 66.932
+        },
+        {
+          "text": "der größten Firmen",
+          "start": 66.932,
+          "end": 68.215
+        },
+        {
+          "text": "der Welt gerade ihr Geld",
+          "start": 68.215,
+          "end": 69.723
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "start": 69.723,
+      "end": 72.479,
+      "captions": [
+        {
+          "text": "Dominostein Nummer",
+          "start": 69.723,
+          "end": 71.15
+        },
+        {
+          "text": "drei: die Chip‑Aktien",
+          "start": 71.15,
+          "end": 72.479
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "start": 72.479,
+      "end": 76.662,
+      "captions": [
+        {
+          "text": "Nvidia,",
+          "start": 72.479,
+          "end": 72.734
+        },
+        {
+          "text": "der größte",
+          "start": 72.734,
+          "end": 73.512
+        },
+        {
+          "text": "Chip‑Hersteller der Welt,",
+          "start": 73.512,
+          "end": 75.417
+        },
+        {
+          "text": "fiel um rund 9 %",
+          "start": 75.417,
+          "end": 76.662
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "start": 76.662,
+      "end": 81.31,
+      "captions": [
+        {
+          "text": "Das sind über 400 Milliarden",
+          "start": 76.662,
+          "end": 78.573
+        },
+        {
+          "text": "Dollar Börsenwert,",
+          "start": 78.573,
+          "end": 79.876
+        },
+        {
+          "text": "an einem einzigen Tag",
+          "start": 79.876,
+          "end": 81.31
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "start": 81.31,
+      "end": 83.485,
+      "captions": [
+        {
+          "text": "Noch verrückter traf es AMD",
+          "start": 81.31,
+          "end": 83.485
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "start": 83.485,
+      "end": 91.253,
+      "captions": [
+        {
+          "text": "Nur zwei Tage vorher hatte AMD",
+          "start": 83.485,
+          "end": 85.52
+        },
+        {
+          "text": "ein Rekordquartal gemeldet,",
+          "start": 85.52,
+          "end": 87.505
+        },
+        {
+          "text": "das Geschäft mit Rechenzentren",
+          "start": 87.505,
+          "end": 89.71
+        },
+        {
+          "text": "war um 97 % gewachsen",
+          "start": 89.71,
+          "end": 91.253
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "start": 91.253,
+      "end": 94.647,
+      "captions": [
+        {
+          "text": "Trotzdem stürzte",
+          "start": 91.253,
+          "end": 92.287
+        },
+        {
+          "text": "die Aktie zweistellig ab",
+          "start": 92.287,
+          "end": 94.647
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "start": 94.647,
+      "end": 102.322,
+      "captions": [
+        {
+          "text": "Auch SpaceX fiel deutlich,",
+          "start": 94.647,
+          "end": 96.23
+        },
+        {
+          "text": "denn SpaceX",
+          "start": 96.23,
+          "end": 97.094
+        },
+        {
+          "text": "plant eines der größten",
+          "start": 97.094,
+          "end": 98.899
+        },
+        {
+          "text": "Rechenzentren der Welt,",
+          "start": 98.899,
+          "end": 100.705
+        },
+        {
+          "text": "ausgerechnet in Texas",
+          "start": 100.705,
+          "end": 102.322
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "start": 102.322,
+      "end": 104.683,
+      "captions": [
+        {
+          "text": "Dominostein Nummer",
+          "start": 102.322,
+          "end": 103.622
+        },
+        {
+          "text": "vier: dein Depot",
+          "start": 103.622,
+          "end": 104.683
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "start": 104.683,
+      "end": 110.804,
+      "captions": [
+        {
+          "text": "Denn diese Firmen stecken",
+          "start": 104.683,
+          "end": 106.772
+        },
+        {
+          "text": "in fast jedem großen ETF,",
+          "start": 106.772,
+          "end": 108.772
+        },
+        {
+          "text": "allen voran im MSCI World",
+          "start": 108.772,
+          "end": 110.804
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "start": 110.804,
+      "end": 116.618,
+      "captions": [
+        {
+          "text": "Wer einen Sparplan hat,",
+          "start": 110.804,
+          "end": 112.19
+        },
+        {
+          "text": "hat am fünften November",
+          "start": 112.19,
+          "end": 113.647
+        },
+        {
+          "text": "also auch Geld verloren,",
+          "start": 113.647,
+          "end": 115.2
+        },
+        {
+          "text": "ob er wollte oder nicht",
+          "start": 115.2,
+          "end": 116.618
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "start": 116.618,
+      "end": 121.497,
+      "captions": [
+        {
+          "text": "Kennst du jemanden,",
+          "start": 116.618,
+          "end": 117.73
+        },
+        {
+          "text": "der nach dem Crash",
+          "start": 117.73,
+          "end": 118.851
+        },
+        {
+          "text": "nervös geworden ist? Dann",
+          "start": 118.851,
+          "end": 120.149
+        },
+        {
+          "text": "schick ihm dieses Video",
+          "start": 120.149,
+          "end": 121.497
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "start": 121.497,
+      "end": 126.369,
+      "captions": [
+        {
+          "text": "Aber jetzt die spannende",
+          "start": 121.497,
+          "end": 122.992
+        },
+        {
+          "text": "Frage: Wie kann eine Firma",
+          "start": 122.992,
+          "end": 124.659
+        },
+        {
+          "text": "mit Rekordzahlen abstürzen?",
+          "start": 124.659,
+          "end": 126.369
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "start": 126.369,
+      "end": 132.252,
+      "captions": [
+        {
+          "text": "Die Antwort:",
+          "start": 126.369,
+          "end": 127.093
+        },
+        {
+          "text": "An der Börse zählt nicht,",
+          "start": 127.093,
+          "end": 128.663
+        },
+        {
+          "text": "was gerade passiert,",
+          "start": 128.663,
+          "end": 129.982
+        },
+        {
+          "text": "sondern was in Zukunft",
+          "start": 129.982,
+          "end": 131.432
+        },
+        {
+          "text": "erwartet wird",
+          "start": 131.432,
+          "end": 132.252
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "start": 132.252,
+      "end": 135.358,
+      "captions": [
+        {
+          "text": "Die Rekordzahlen waren",
+          "start": 132.252,
+          "end": 133.695
+        },
+        {
+          "text": "längst im Kurs eingepreist",
+          "start": 133.695,
+          "end": 135.358
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "start": 135.358,
+      "end": 142.126,
+      "captions": [
+        {
+          "text": "Als dann die Sorge kam,",
+          "start": 135.358,
+          "end": 136.72
+        },
+        {
+          "text": "dass künftig weniger",
+          "start": 136.72,
+          "end": 137.98
+        },
+        {
+          "text": "Rechenzentren gebaut werden,",
+          "start": 137.98,
+          "end": 139.745
+        },
+        {
+          "text": "wollten viele Anleger",
+          "start": 139.745,
+          "end": 141.068
+        },
+        {
+          "text": "gleichzeitig raus",
+          "start": 141.068,
+          "end": 142.126
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "start": 142.126,
+      "end": 146.581,
+      "captions": [
+        {
+          "text": "Und jetzt das Überraschende:",
+          "start": 142.126,
+          "end": 143.624
+        },
+        {
+          "text": "Schon am nächsten Tag ging",
+          "start": 143.624,
+          "end": 145.027
+        },
+        {
+          "text": "es teilweise wieder nach oben",
+          "start": 145.027,
+          "end": 146.581
+        }
+      ]
+    },
+    {
+      "id": "s31",
+      "start": 146.581,
+      "end": 150.527,
+      "captions": [
+        {
+          "text": "Nvidia legte am Freitag",
+          "start": 146.581,
+          "end": 148.681
+        },
+        {
+          "text": "zeitweise über 6 % zu",
+          "start": 148.681,
+          "end": 150.527
+        }
+      ]
+    },
+    {
+      "id": "s32",
+      "start": 150.527,
+      "end": 156.659,
+      "captions": [
+        {
+          "text": "Wer am fünften November",
+          "start": 150.527,
+          "end": 151.97
+        },
+        {
+          "text": "in Panik verkauft hat,",
+          "start": 151.97,
+          "end": 153.428
+        },
+        {
+          "text": "hat seinen Verlust also genau",
+          "start": 153.428,
+          "end": 155.35
+        },
+        {
+          "text": "am Tiefpunkt festgemacht",
+          "start": 155.35,
+          "end": 156.659
+        }
+      ]
+    },
+    {
+      "id": "s33",
+      "start": 156.659,
+      "end": 158.835,
+      "captions": [
+        {
+          "text": "Was lernen wir",
+          "start": 156.659,
+          "end": 157.625
+        },
+        {
+          "text": "daraus? Drei Dinge",
+          "start": 157.625,
+          "end": 158.835
+        }
+      ]
+    },
+    {
+      "id": "s34",
+      "start": 158.835,
+      "end": 163.093,
+      "captions": [
+        {
+          "text": "Erstens: Politik",
+          "start": 158.835,
+          "end": 159.717
+        },
+        {
+          "text": "bewegt die Börse,",
+          "start": 159.717,
+          "end": 161.084
+        },
+        {
+          "text": "oft schneller, als man denkt",
+          "start": 161.084,
+          "end": 163.093
+        }
+      ]
+    },
+    {
+      "id": "s35",
+      "start": 163.093,
+      "end": 168.162,
+      "captions": [
+        {
+          "text": "Zweitens: Gute Zahlen schützen",
+          "start": 163.093,
+          "end": 164.59
+        },
+        {
+          "text": "nicht vor einem Kurssturz,",
+          "start": 164.59,
+          "end": 166.248
+        },
+        {
+          "text": "wenn die Erwartungen",
+          "start": 166.248,
+          "end": 167.524
+        },
+        {
+          "text": "zu hoch sind",
+          "start": 167.524,
+          "end": 168.162
+        }
+      ]
+    },
+    {
+      "id": "s36",
+      "start": 168.162,
+      "end": 175.822,
+      "captions": [
+        {
+          "text": "Drittens: Kurze Panik ist kein",
+          "start": 168.162,
+          "end": 170.25
+        },
+        {
+          "text": "guter Grund zum Verkaufen,",
+          "start": 170.25,
+          "end": 172.32
+        },
+        {
+          "text": "wer langfristig anlegt,",
+          "start": 172.32,
+          "end": 174.15
+        },
+        {
+          "text": "sitzt solche Tage aus",
+          "start": 174.15,
+          "end": 175.822
+        }
+      ]
+    },
+    {
+      "id": "s37",
+      "start": 175.822,
+      "end": 180.384,
+      "captions": [
+        {
+          "text": "Ob der Crash nur ein Schreck",
+          "start": 175.822,
+          "end": 177.724
+        },
+        {
+          "text": "war oder der Anfang von mehr,",
+          "start": 177.724,
+          "end": 179.695
+        },
+        {
+          "text": "weiß niemand",
+          "start": 179.695,
+          "end": 180.384
+        }
+      ]
+    },
+    {
+      "id": "s38",
+      "start": 180.384,
+      "end": 185.362,
+      "captions": [
+        {
+          "text": "Aber wer",
+          "start": 180.384,
+          "end": 180.775
+        },
+        {
+          "text": "die Dominosteine kennt,",
+          "start": 180.775,
+          "end": 182.258
+        },
+        {
+          "text": "versteht die Nachrichten",
+          "start": 182.258,
+          "end": 183.805
+        },
+        {
+          "text": "besser und bleibt ruhiger",
+          "start": 183.805,
+          "end": 185.362
+        }
+      ]
+    }
+  ]
+}
