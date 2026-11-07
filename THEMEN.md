@@ -38,7 +38,8 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | short-steuer-1 | aus longform-steuer: 650 €/Jahr, 4 Jahre rückwirkend = über 2.500 €, 2022 nur noch bis 31.12.2026, Verweis aufs ganze Video |
 | freistellungsauftrag | Bank zieht 26,4 % ab, 1.000 € steuerfrei nur mit Freistellungsauftrag, Jonas 500 € Zinsen → 130 € weg, 2 Min in der App (Magnet, Torte, Schild) |
 | gehalt-fluss | Chef zahlt 3.600 €, Brutto 3.000, Sozialkassen AG 600, Lohnsteuer 320, Rente 279, KV 262, Pflege/ALV 111 → Konto 2.028 € (56 %); Dark Glow (Leitbild-Probe vom Nutzer abgelehnt) |
-| tagesgeld-lockzins | (Skript) Tagesgeld bis 4,5 % nur 4 Monate für Neukunden, danach < 2 % (Schnitt ~2,2 %), Zins-Hopping mit Kalender, Freistellungsauftrag bei neuer Bank |
+| tagesgeld-lockzins | (Skript, noch nicht produziert – Nutzer wählte Deutschlandticket) Tagesgeld bis 4,5 % nur 4 Monate für Neukunden, danach < 2 % (Schnitt ~2,2 %), Zins-Hopping mit Kalender, Freistellungsauftrag bei neuer Bank |
+| deutschlandticket-2027 | 63 → 66,80 € ab 1.1.2027 (Start 49 €, +36 %), > 800 €/Jahr, Break-even ~20 Einzelfahrten à 3,50 €, monatlich kündbar bis 10., Jobticket ≥ 25 % Zuschuss → 5 % Rabatt |
 
 ## Longform (16:9)
 | Video | Kern / Beispiele | Bildidee |
