@@ -18,8 +18,8 @@
   },
   {
    "id": "s4",
-   "sprechtext": "Gestartet ist es mal mit neunundvierzig Euro, das ist jetzt über ein Drittel mehr.",
-   "text": "Gestartet ist es mal mit 49 €, das ist jetzt über ein Drittel mehr"
+   "sprechtext": "Gestartet ist es mit neunundvierzig Euro, also über ein Drittel mehr.",
+   "text": "Gestartet ist es mit 49 €, also über ein Drittel mehr"
   },
   {
    "id": "s5",
@@ -28,13 +28,13 @@
   },
   {
    "id": "s6",
-   "sprechtext": "Lohnt es sich trotzdem? Bei Einzeltickets für drei Euro fünfzig hast du es ab etwa zwanzig Fahrten im Monat raus.",
-   "text": "Lohnt es sich trotzdem? Bei Einzeltickets für 3 € 50 hast du es ab etwa 20 Fahrten im Monat raus"
+   "sprechtext": "Lohnt es sich trotzdem? Gegenüber Einzeltickets meist ab etwa zwanzig Fahrten im Monat.",
+   "text": "Lohnt es sich trotzdem? Gegenüber Einzeltickets meist ab etwa 20 Fahrten im Monat"
   },
   {
    "id": "s7",
-   "sprechtext": "Fährst du weniger? Dann kündige es einfach, das geht jeden Monat bis zum Zehnten.",
-   "text": "Fährst du weniger? Dann kündige es einfach, das geht jeden Monat bis zum Zehnten"
+   "sprechtext": "Fährst du weniger? Dann kündige es, das geht jeden Monat.",
+   "text": "Fährst du weniger? Dann kündige es, das geht jeden Monat"
   },
   {
    "id": "s8",
@@ -43,8 +43,8 @@
   },
   {
    "id": "s9",
-   "sprechtext": "Und frag deinen Chef nach dem Jobticket: Zahlt er mindestens ein Viertel dazu, gibt es noch fünf Prozent Rabatt obendrauf.",
-   "text": "Und frag deinen Chef nach dem Jobticket: Zahlt er mindestens ein Viertel dazu, gibt es noch 5 % Rabatt obendrauf"
+   "sprechtext": "Und frag deinen Chef nach dem Jobticket, damit wird es oft deutlich günstiger.",
+   "text": "Und frag deinen Chef nach dem Jobticket, damit wird es oft deutlich günstiger"
   }
  ]
 }
