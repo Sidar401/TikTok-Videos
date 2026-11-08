@@ -100,3 +100,7 @@ Das Einkommen-Video (`videos/longform-einkommen`) ist der Qualitäts-Maßstab: �
 ## Tagesablauf (Nutzer 7.11.)
 - Täglich **1 Longform (zuerst posten) + 2 Shorts**.
 - Geplante Aufgabe „HundeFinanzTv Tagesideen“ jeden Tag 11:40 Uhr (Berlin): aktuelle Trends recherchieren, `THEMEN.md` prüfen, je 3 Ideen für Longform, Short 1, Short 2 + Empfehlung. Skripte erst nach Auswahl des Nutzers.
+
+## Stimme per API (Nutzer 8.11.)
+- Ablauf: Skript schreiben → Nutzer gibt frei („passt“) → `python3 scripts/stimme.py videos/<name>` (Stimme „HundeTV“, eleven_v4) → `sync.py … --tempo 1.12` → bauen/rendern. Kein MP3-Upload mehr nötig.
+- Credits: Schlüssel-Limit 100.000/Monat, **geteilt mit Kanal Novaro**; Abo ~121.000. Vor jeder Erzeugung `python3 scripts/stimme.py --stand`; bei < 15.000 frei den Nutzer warnen.
