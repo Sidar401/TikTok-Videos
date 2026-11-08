@@ -98,7 +98,7 @@ Das Einkommen-Video (`videos/longform-einkommen`) ist der Qualitäts-Maßstab: �
 - **Satz-Reihenfolge der Aufnahme prüfen:** Liegt ein Satz an anderer Stelle (z. B. Folgen-CTA am Ende), Skript in Aufnahme-Reihenfolge syncen und Audio-Blöcke danach umschneiden (Muster: `videos/deutschlandticket-2027`, `skript-plan.json`).
 
 ## Tagesablauf (Nutzer 7.11.)
-- Täglich **1 Longform (zuerst posten) + 2 Shorts**.
+- Täglich **1 Longform (zuerst posten) + 2–3 Shorts** (Nutzer 8.11.). Longform läuft auf TikTok/Instagram; auf **YouTube nur 2–3 Longforms pro Woche** (die besten), Shorts täglich, jeder Short mit „Verwandtes Video“ zu einem Longform (neuer Kanal: Longforms bekommen sonst 0 Impressionen).
 - Geplante Aufgabe „HundeFinanzTv Tagesideen“ jeden Tag 11:40 Uhr (Berlin): aktuelle Trends recherchieren, `THEMEN.md` prüfen, je 3 Ideen für Longform, Short 1, Short 2 + Empfehlung. Skripte erst nach Auswahl des Nutzers.
 
 ## Stimme per API (Nutzer 8.11.)
