@@ -7,3 +7,8 @@
 4. Fakten vorher prüfen; Annahmen im Video nennen.
 Vorlage/Baukasten: `wissen/kit/` (neu.sh, kit.js, kit.css, mix.py, fertig.sh, snap.sh).
 5. Vom Nutzer freigegeben (01.11.2026): Look der Probebilder in `wissen/probe/` (Hook 150 px + dunkle Fläche, Folgen-Kasten mit roter Pille). Text immer „Folg uns für mehr! 👆“.
+
+## Ablauf ab 08.11.2026 (Kanal heißt jetzt **Novaro**)
+- Stil: **3D-Kino** (three.js, echte Erde aus NASA-Texturen, große Wort-für-Wort-Untertitel mit gelbem Wort, Fortschrittsbalken oben). Vorlagen: `videos/mond-weg/`, `videos/erde-stopp/`.
+- Ablauf: 3–4 Themen vorschlagen → Nutzer wählt → Sprechtext (Zahlen ausgeschrieben) → Nutzer sagt „passt“ → **Stimme selbst erzeugen** mit `python3 wissen/kit/stimme.py videos/<name> sprechtext.txt` (ElevenLabs, Stimme „Dan – Engaging Science Instructor“, Modell eleven_v4; Schlüssel liegt sicher in der Umgebung) → Pausen kürzen, auf 30 s bringen → Video bauen → rendern → schicken.
+- API-Schlüssel hat ein Limit von 20.000 Credits/Monat (ca. 35–40 Videos). Vor dem Limit dem Nutzer Bescheid sagen.
