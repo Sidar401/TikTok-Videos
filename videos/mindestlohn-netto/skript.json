@@ -1,0 +1,50 @@
+{
+ "titel": "Mindestlohn 14,60 € – was bleibt netto?",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Ab Januar steigt der Mindestlohn auf vierzehn Euro sechzig.",
+   "text": "Ab Januar steigt der Mindestlohn auf 14 € 60"
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Aber wie viel davon landet wirklich auf deinem Konto?",
+   "text": "Aber wie viel davon landet wirklich auf deinem Konto?"
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Folge HundeFinanzTv, wir bringen jeden Tag neue Geld-Tipps.",
+   "text": "Folge HundeFinanzTv, wir bringen jeden Tag neue Geld-Tipps"
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Bisher sind es dreizehn Euro neunzig, also siebzig Cent mehr pro Stunde.",
+   "text": "Bisher sind es 13 € 90, also 70 Cent mehr pro Stunde"
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Bei Vollzeit sind das rund hundertzwanzig Euro mehr im Monat, brutto.",
+   "text": "Bei Vollzeit sind das rund 120 € mehr im Monat, brutto"
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Nach Steuern und Abgaben bleiben in Steuerklasse eins etwa achtzig Euro übrig.",
+   "text": "Nach Steuern und Abgaben bleiben in Steuerklasse eins etwa 80 € übrig"
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Schick das jemandem, der zum Mindestlohn arbeitet.",
+   "text": "Schick das jemandem, der zum Mindestlohn arbeitet"
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Und für Minijobber steigt die Grenze auf sechshundertdreiunddreißig Euro im Monat.",
+   "text": "Und für Minijobber steigt die Grenze auf 633 € im Monat"
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Damit bleibt es bei rund dreiundvierzig Stunden im Monat.",
+   "text": "Damit bleibt es bei rund 43 Stunden im Monat"
+  }
+ ]
+}
