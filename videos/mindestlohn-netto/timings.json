@@ -1,0 +1,178 @@
+{
+  "dauer": 31.58,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 3.388,
+      "captions": [
+        {
+          "text": "Ab Januar steigt",
+          "start": 0.0,
+          "end": 1.322
+        },
+        {
+          "text": "der Mindestlohn auf 14,60 €",
+          "start": 1.322,
+          "end": 3.388
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 3.388,
+      "end": 5.971,
+      "captions": [
+        {
+          "text": "Aber wie viel davon landet",
+          "start": 3.388,
+          "end": 4.739
+        },
+        {
+          "text": "wirklich auf deinem Konto?",
+          "start": 4.739,
+          "end": 5.971
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 5.971,
+      "end": 9.624,
+      "captions": [
+        {
+          "text": "Folge HundeFinanzTv,",
+          "start": 5.971,
+          "end": 7.294
+        },
+        {
+          "text": "wir bringen jeden Tag",
+          "start": 7.294,
+          "end": 8.809
+        },
+        {
+          "text": "neue Geld‑Tipps",
+          "start": 8.809,
+          "end": 9.624
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 9.624,
+      "end": 13.792,
+      "captions": [
+        {
+          "text": "Bisher sind es 13,90 €,",
+          "start": 9.624,
+          "end": 11.385
+        },
+        {
+          "text": "also 70 Cent mehr pro Stunde",
+          "start": 11.385,
+          "end": 13.792
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 13.792,
+      "end": 17.456,
+      "captions": [
+        {
+          "text": "Bei Vollzeit sind das rund",
+          "start": 13.792,
+          "end": 15.643
+        },
+        {
+          "text": "120 € mehr im Monat,",
+          "start": 15.643,
+          "end": 17.089
+        },
+        {
+          "text": "brutto",
+          "start": 17.089,
+          "end": 17.456
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 17.456,
+      "end": 21.659,
+      "captions": [
+        {
+          "text": "Nach Steuern und Abgaben",
+          "start": 17.456,
+          "end": 18.938
+        },
+        {
+          "text": "bleiben in Steuerklasse",
+          "start": 18.938,
+          "end": 20.429
+        },
+        {
+          "text": "eins etwa 80 € übrig",
+          "start": 20.429,
+          "end": 21.659
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 21.659,
+      "end": 24.008,
+      "captions": [
+        {
+          "text": "Schick das jemandem,",
+          "start": 21.659,
+          "end": 22.669
+        },
+        {
+          "text": "der zum Mindestlohn arbeitet",
+          "start": 22.669,
+          "end": 24.008
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 24.008,
+      "end": 28.083,
+      "captions": [
+        {
+          "text": "Und für Minijobber",
+          "start": 24.008,
+          "end": 25.295
+        },
+        {
+          "text": "steigt die Grenze",
+          "start": 25.295,
+          "end": 26.666
+        },
+        {
+          "text": "auf 633 € im Monat",
+          "start": 26.666,
+          "end": 28.083
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 28.083,
+      "end": 30.973,
+      "captions": [
+        {
+          "text": "Damit bleibt es bei rund",
+          "start": 28.083,
+          "end": 29.681
+        },
+        {
+          "text": "43 Stunden im Monat",
+          "start": 29.681,
+          "end": 30.973
+        }
+      ]
+    }
+  ]
+}

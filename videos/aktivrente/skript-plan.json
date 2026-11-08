@@ -1,0 +1,45 @@
+{
+ "titel": "Aktivrente: 2.000 € steuerfrei",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Rentner aufgepasst: Bis zu zweitausend Euro im Monat steuerfrei dazuverdienen.",
+   "text": "Rentner aufgepasst: Bis zu 2.000 € im Monat steuerfrei dazuverdienen"
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Das geht mit der Aktivrente, und viele wissen es nicht.",
+   "text": "Das geht mit der Aktivrente, und viele wissen es nicht"
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Folge HundeFinanzTv, wir bringen jeden Tag neue Geld-Tipps.",
+   "text": "Folge HundeFinanzTv, wir bringen jeden Tag neue Geld-Tipps"
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Wer das reguläre Rentenalter erreicht hat und weiter angestellt arbeitet, zahlt auf bis zu zweitausend Euro Lohn im Monat keine Steuer.",
+   "text": "Wer das reguläre Rentenalter erreicht hat und weiter angestellt arbeitet, zahlt auf bis zu 2.000 € Lohn im Monat keine Steuer"
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Das sind bis zu vierundzwanzigtausend Euro im Jahr.",
+   "text": "Das sind bis zu 24.000 € im Jahr"
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Je nach Rente spart das schnell mehrere hundert Euro Steuern im Monat.",
+   "text": "Je nach Rente spart das schnell mehrere hundert Euro Steuern im Monat"
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Kennst du jemanden im Rentenalter, der noch arbeitet? Schreib's uns in die Kommentare.",
+   "text": "Kennst du jemanden im Rentenalter, der noch arbeitet? Schreib's uns in die Kommentare"
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Wichtig: Das gilt nur für Angestellte, und Kranken- und Pflegeversicherung zahlst du trotzdem.",
+   "text": "Wichtig: Das gilt nur für Angestellte, und Kranken- und Pflegeversicherung zahlst du trotzdem"
+  }
+ ]
+}

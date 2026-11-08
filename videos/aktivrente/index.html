@@ -5,280 +5,254 @@
     <meta name="viewport" content="width=1080, height=1920" />
     <script src="assets/gsap.min.js"></script>
     <style>
-      /* Kanal-Stil (siehe STIL.md) */
-      @font-face {
-        font-family: "Abril Fatface";
-        src: url("assets/fonts/abril-fatface.woff2") format("woff2");
-      }
-      :root {
-        --bg: #ffffff;
-        --ink: #111111;
-        --brand: #DB8622; /* Kanalfarbe aus kanal.json */
-        --green: #1f7a4d;
-        --gold: #f2c418;
-        --red: #e24b4b;
-        --blue: #3d7be0;
-        --font-caption: "Montserrat", sans-serif;
-        --font-display: "Abril Fatface", serif;
-      }
       * { margin: 0; padding: 0; box-sizing: border-box; }
-      html, body {
-        width: 1080px;
-        height: 1920px;
-        overflow: hidden;
-        background: var(--bg);
-      }
-      #root {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        background: var(--bg);
-      }
-
-      /* Szene: eine Illustration, zentriert im oberen Bereich */
-      .scene {
-        position: absolute;
-        left: 0;
-        top: 230px;
-        width: 1080px;
-        height: 1080px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .art { width: 820px; height: 820px; }
-      .art svg { width: 100%; height: 100%; display: block; }
-
-      /* Oranger Rahmen wie bei HundeWissenTv */
-      #frame {
-        position: absolute;
-        inset: 0;
-        border: 26px solid var(--brand);
-        z-index: 10;
-        pointer-events: none;
-      }
-
-      /* Untertitel-Box (TikTok-Look) */
-      .cap {
-        position: absolute;
-        left: 0;
-        top: 1360px;
-        width: 1080px;
-        display: flex;
-        justify-content: center;
-      }
-      .cap span {
-        display: block;
-        max-width: 880px;
-        padding: 20px 44px 22px;
-        border-radius: 28px;
-        background: var(--brand);
-        color: #ffffff;
-        font-family: var(--font-caption);
-        font-weight: 600;
-        font-size: 54px;
-        line-height: 1.15;
-        text-align: center;
-      }
-
-      /* Zahlen-Vergleich in Serifen-Schrift */
-      .cmp {
-        width: 940px;
-        display: grid;
-        grid-template-columns: 1fr 6px 1fr;
-        column-gap: 40px;
-        font-family: var(--font-display);
-        color: var(--ink);
-        text-align: center;
-      }
-      .cmp .head { font-size: 104px; line-height: 1.1; }
-      .cmp .sub { font-size: 76px; line-height: 1.1; }
-      .cmp .divider { background: var(--ink); grid-row: 1 / span 3; grid-column: 2; }
-      .cmp .arrow { height: 260px; display: flex; justify-content: center; align-items: center; }
-      .cmp .arrow svg { width: 140px; height: 220px; }
-      .cmp .num { font-size: 96px; line-height: 1.2; }
-      .green { color: var(--green); }
-      .gold { color: var(--gold); }
-      .chart-label { font-family: var(--font-display); }
-      .serif { font-family: var(--font-display); }
-      #brand {
-        position: absolute;
-        top: 190px;
-        left: 0;
-        width: 1080px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 14px;
-        font-family: var(--font-caption);
-        font-weight: 800;
-        font-size: 42px;
-        color: #353a3d;
-        z-index: 5;
-      }
-      #brand-dog { width: 84px; height: 84px; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0e1012; }
+      #root { position: relative; width: 100%; height: 100%; font-family: Montserrat, sans-serif; overflow: hidden;
+        background: radial-gradient(ellipse at 50% 42%, #ff8a1f33 0%, #ff8a1f0d 38%, transparent 62%), radial-gradient(ellipse at 50% 50%, #1b1f22 0%, #0e1012 75%); }
+      #raster { position: absolute; inset: 0; background-image: linear-gradient(#ffffff0c 2px, transparent 2px), linear-gradient(90deg, #ffffff0c 2px, transparent 2px); background-size: 90px 90px; }
+      .scene { position: absolute; inset: 0; }
+      .inner { position: absolute; inset: 0; }
+      .t { position: absolute; left: 0; width: 1080px; text-align: center; font-weight: 900; line-height: 1.02; letter-spacing: -1px; color: #fff; }
+      .glow-o { color: #ff8a1f; text-shadow: 0 0 50px #ff8a1faa; }
+      .glow-g { color: #2fd27a; text-shadow: 0 0 50px #2fd27aaa; }
+      .glow-r { color: #ff4d4d; text-shadow: 0 0 50px #ff4d4daa; }
+      .box { display: inline-block; padding: 6px 34px 14px; border-radius: 24px; background: #ff8a1f; color: #111; box-shadow: 0 0 60px #ff8a1f88; }
+      #logo { position: absolute; left: 445px; top: 135px; width: 190px; height: 190px; border-radius: 50%; overflow: hidden; border: 5px solid #DB8622; box-shadow: 0 0 30px #ff8a1f88; z-index: 5; }
+      #logo img { width: 100%; height: 100%; object-fit: cover; }
+      #brand { position: absolute; left: 0; top: 335px; width: 1080px; text-align: center; font-size: 38px; font-weight: 800; color: #ffffffdd; letter-spacing: 1px; z-index: 5; }
+      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; z-index: 9; pointer-events: none; }
+      .p { position: absolute; border-radius: 50%; }
+      .l { display: inline-block; }
+      #frame { position: absolute; inset: 0; border: 26px solid #DB8622; z-index: 10; }
+      .ew { position: absolute; left: 0; width: 1080px; text-align: center; z-index: 6; font-weight: 900; font-size: 104px; line-height: 1; color: #fff; text-transform: uppercase;
+        letter-spacing: -1px; text-shadow: 0 6px 0 #000, 0 0 30px #000; white-space: nowrap; }
+      .cap { position: absolute; left: 60px; top: 1330px; width: 960px; text-align: center; z-index: 6; }
+      .cap span { display: inline-block; margin: 0 16px; font-weight: 900; font-size: 74px; line-height: 1.15; color: #fff; text-shadow: 0 6px 0 #000, 0 0 30px #000; }
     </style>
   </head>
   <body>
-    <div
-      id="root"
-      data-composition-id="main"
-      data-start="0"
-      data-duration="15"
-      data-width="1080"
-      data-height="1920"
-    >
-      <!-- ============ SZENEN ============ -->
-
-      <!-- 1: Geldsack -->
-      <div id="s1" class="scene clip" data-start="0" data-duration="3" data-track-index="1">
-        <div id="s1-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <g id="s1-coins">
-              <g fill="#f2c418" stroke="#c99a06" stroke-width="3">
-                <rect x="250" y="300" width="110" height="22" rx="8" />
-                <rect x="250" y="276" width="110" height="22" rx="8" />
-                <rect x="250" y="252" width="110" height="22" rx="8" />
-                <rect x="250" y="228" width="110" height="22" rx="8" />
-                <rect x="250" y="204" width="110" height="22" rx="8" />
-                <rect x="265" y="180" width="110" height="22" rx="8" />
-                <rect x="258" y="156" width="110" height="22" rx="8" />
-              </g>
-            </g>
-            <g id="s1-bag">
-              <path d="M150 110 C120 70 140 50 160 70 C175 50 205 50 220 70 C240 50 260 70 230 110 Z" fill="#1f7a4d" />
-              <rect x="145" y="104" width="90" height="18" rx="9" fill="#f2c418" />
-              <path d="M150 120 C60 170 40 330 120 340 L260 340 C340 330 320 170 230 120 Z" fill="#1f7a4d" />
-              <path d="M155 135 C90 180 75 300 125 325" fill="none" stroke="#2c9a63" stroke-width="10" stroke-linecap="round" />
-              <circle cx="190" cy="245" r="62" fill="#f2c418" />
-              <text x="190" y="272" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="80" fill="#1f7a4d">€</text>
-            </g>
-            <g fill="#f2c418" stroke="#c99a06" stroke-width="3">
-              <ellipse cx="80" cy="345" rx="34" ry="12" />
-              <ellipse cx="110" cy="360" rx="34" ry="12" />
-            </g>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 2: Zielscheibe -->
-      <div id="s2" class="scene clip" data-start="3" data-duration="3" data-track-index="1">
-        <div id="s2-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <circle cx="190" cy="210" r="160" fill="#e24b4b" />
-            <circle cx="190" cy="210" r="125" fill="#f6efe1" />
-            <circle cx="190" cy="210" r="92" fill="#e24b4b" />
-            <circle cx="190" cy="210" r="58" fill="#f6efe1" />
-            <circle cx="190" cy="210" r="26" fill="#e24b4b" />
-            <g id="s2-arrow">
-              <line x1="196" y1="204" x2="340" y2="60" stroke="#555" stroke-width="10" stroke-linecap="round" />
-              <path d="M320 50 L370 30 L350 80 L340 60 Z" fill="#e8742c" />
-              <path d="M335 35 L375 15 L365 45 Z" fill="#e8742c" />
-            </g>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 3: Zahlen-Vergleich -->
-      <div id="s3" class="scene clip" data-start="6" data-duration="3.5" data-track-index="1">
-        <div class="cmp">
-          <div id="s3-h1" style="grid-column:1"><div class="head">Konto</div><div class="sub">0 %</div></div>
-          <div class="divider"></div>
-          <div id="s3-h2" style="grid-column:3"><div class="head">ETF</div><div class="sub">~7 %</div></div>
-          <div class="arrow" style="grid-column:1">
-            <svg viewBox="0 0 70 110"><path id="s3-a1" d="M40 6 C10 30 8 70 40 98" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" /><path d="M24 92 L42 100 L44 80" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></svg>
-          </div>
-          <div class="arrow" style="grid-column:3">
-            <svg viewBox="0 0 70 110"><path id="s3-a2" d="M30 6 C60 30 62 70 30 98" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" /><path d="M46 92 L28 100 L26 80" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></svg>
-          </div>
-          <div id="s3-n1" class="num green" style="grid-column:1">36.000€</div>
-          <div style="grid-column:3">
-            <div id="s3-n2" class="num green">36.000€</div>
-            <div id="s3-n3" class="num gold">77.000€</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4: Rendite-Chart -->
-      <div id="s4" class="scene clip" data-start="9.5" data-duration="3" data-track-index="1">
-        <div class="art">
-          <svg viewBox="0 0 400 400">
-            <path d="M40 40 L40 340 L370 340" fill="none" stroke="#111" stroke-width="8" stroke-linecap="square" />
-            <path id="s4-solid" d="M60 300 C140 285 220 280 290 255" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" />
-            <path id="s4-dots" d="M60 285 C150 250 230 190 300 95" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 16" />
-            <text id="s4-label" class="chart-label" x="70" y="100" font-size="70" fill="#1f7a4d">~7%</text>
-            <g id="s4-check">
-              <circle cx="320" cy="80" r="42" fill="#111" />
-              <path d="M300 82 L315 97 L342 66" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-            </g>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 5: Outro -->
-      <div id="s5" class="scene clip" data-start="12.5" data-duration="2.5" data-track-index="1">
-        <div id="s5-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <circle cx="200" cy="200" r="150" fill="#DB8622" />
-            <path d="M120 260 L180 200 L220 235 L290 150" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M250 145 L295 145 L295 190" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </div>
-      </div>
-
+    <div id="root" data-composition-id="main" data-start="0" data-duration="31.18" data-width="1080" data-height="1920">
+      <div id="raster"></div>
+      <div id="z0" class="scene clip" data-start="0.0" data-duration="4.598" data-track-index="1"><div id="z0-i" class="inner"><div id="hk-a" class="t glow-o" style="top:430px;font-size:84px">Rentner aufgepasst!</div><div id="hk-z" class="t glow-g" style="top:600px;font-size:230px">2.000 €</div><div id="sf" style="position:absolute;left:0;top:900px;width:1080px;display:flex;justify-content:center;z-index:4"><span style="padding:8px 40px;border:10px solid #2fd27a;border-radius:20px;color:#2fd27a;font-weight:900;font-size:100px;transform:rotate(-6deg);box-shadow:0 0 50px #2fd27a88;background:#0e1012dd">STEUERFREI</span></div></div></div>
+      <div id="z1" class="scene clip" data-start="4.598" data-duration="3.084" data-track-index="1"><div id="z1-i" class="inner"><div id="ar-t" class="t " style="top:560px;font-size:130px"><span class="box">AKTIVRENTE</span></div><div id="ar-u" class="t " style="top:820px;font-size:80px">kennen viele nicht</div></div></div>
+      <div id="z2" class="scene clip" data-start="7.682" data-duration="4.294" data-track-index="1"><div id="z2-i" class="inner"><svg id="op" viewBox="0 0 200 260" style="position:absolute;left:390px;top:460px;width:300px;height:390px;z-index:2"><g filter="drop-shadow(0 0 20px #ff8a1f)"><circle cx="100" cy="60" r="46" fill="#f4f1ea"/><path d="M60 40 Q100 0 140 40" fill="none" stroke="#bbb" stroke-width="10"/><circle cx="82" cy="62" r="7" fill="#111"/><circle cx="118" cy="62" r="7" fill="#111"/><path d="M85 82 Q100 92 115 82" fill="none" stroke="#111" stroke-width="5"/><path d="M30 250 C30 150 170 150 170 250 Z" fill="#ff8a1f"/><rect x="88" y="150" width="24" height="70" fill="#fff"/></g></svg><div id="op-c" style="position:absolute;left:0;width:1080px;display:flex;justify-content:center;top:900px;z-index:3"><span style="display:inline-block;padding:12px 34px 16px;border-radius:22px;background:#ff8a1f;color:#111;font-weight:900;font-size:60px;box-shadow:0 0 50px #ff8a1f88">Rentenalter erreicht</span></div><div id="op-d" style="position:absolute;left:0;width:1080px;display:flex;justify-content:center;top:1020px;z-index:3"><span style="display:inline-block;padding:12px 34px 16px;border-radius:22px;background:#2fd27a;color:#111;font-weight:900;font-size:60px;box-shadow:0 0 50px #2fd27a88">+ weiter angestellt</span></div></div></div>
+      <div id="z3" class="scene clip" data-start="11.976" data-duration="3.054" data-track-index="1"><div id="z3-i" class="inner"><div id="ls-a" class="t " style="top:520px;font-size:100px">bis 2.000 € Lohn</div><div id="ls-z" class="t glow-g" style="top:680px;font-size:150px">0 € Steuer</div><div id="ls-p" style="position:absolute;inset:0;z-index:4;pointer-events:none"><div class="p" data-dx="286" data-dy="0" style="left:527px;top:767px;width:26px;height:26px;background:#2fd27a;box-shadow:0 0 26px #2fd27a;opacity:0"></div><div class="p" data-dx="414" data-dy="258" style="left:534px;top:774px;width:12px;height:12px;background:#ffc533;box-shadow:0 0 12px #ffc533;opacity:0"></div><div class="p" data-dx="336" data-dy="356" style="left:527px;top:767px;width:25px;height:25px;background:#fff;box-shadow:0 0 25px #fff;opacity:0"></div><div class="p" data-dx="210" data-dy="199" style="left:532px;top:772px;width:16px;height:16px;background:#2fd27a;box-shadow:0 0 16px #2fd27a;opacity:0"></div><div class="p" data-dx="381" data-dy="302" style="left:528px;top:768px;width:24px;height:24px;background:#ffc533;box-shadow:0 0 24px #ffc533;opacity:0"></div><div class="p" data-dx="320" data-dy="374" style="left:530px;top:770px;width:20px;height:20px;background:#fff;box-shadow:0 0 20px #fff;opacity:0"></div><div class="p" data-dx="55" data-dy="289" style="left:529px;top:769px;width:21px;height:21px;background:#2fd27a;box-shadow:0 0 21px #2fd27a;opacity:0"></div><div class="p" data-dx="-186" data-dy="447" style="left:529px;top:769px;width:23px;height:23px;background:#ffc533;box-shadow:0 0 23px #ffc533;opacity:0"></div><div class="p" data-dx="-325" data-dy="372" style="left:531px;top:771px;width:18px;height:18px;background:#fff;box-shadow:0 0 18px #fff;opacity:0"></div><div class="p" data-dx="-193" data-dy="227" style="left:528px;top:768px;width:25px;height:25px;background:#2fd27a;box-shadow:0 0 25px #2fd27a;opacity:0"></div><div class="p" data-dx="-270" data-dy="399" style="left:533px;top:773px;width:14px;height:14px;background:#ffc533;box-shadow:0 0 14px #ffc533;opacity:0"></div><div class="p" data-dx="-328" data-dy="371" style="left:527px;top:767px;width:26px;height:26px;background:#fff;box-shadow:0 0 26px #fff;opacity:0"></div><div class="p" data-dx="-281" data-dy="110" style="left:535px;top:775px;width:10px;height:10px;background:#2fd27a;box-shadow:0 0 10px #2fd27a;opacity:0"></div><div class="p" data-dx="-468" data-dy="-107" style="left:527px;top:767px;width:26px;height:26px;background:#ffc533;box-shadow:0 0 26px #ffc533;opacity:0"></div><div class="p" data-dx="-408" data-dy="-285" style="left:533px;top:773px;width:14px;height:14px;background:#fff;box-shadow:0 0 14px #fff;opacity:0"></div><div class="p" data-dx="-244" data-dy="-184" style="left:528px;top:768px;width:25px;height:25px;background:#2fd27a;box-shadow:0 0 25px #2fd27a;opacity:0"></div><div class="p" data-dx="-412" data-dy="-241" style="left:531px;top:771px;width:18px;height:18px;background:#ffc533;box-shadow:0 0 18px #ffc533;opacity:0"></div><div class="p" data-dx="-413" data-dy="-280" style="left:529px;top:769px;width:23px;height:23px;background:#fff;box-shadow:0 0 23px #fff;opacity:0"></div><div class="p" data-dx="-163" data-dy="-263" style="left:530px;top:770px;width:21px;height:21px;background:#2fd27a;box-shadow:0 0 21px #2fd27a;opacity:0"></div><div class="p" data-dx="22" data-dy="-475" style="left:530px;top:770px;width:20px;height:20px;background:#ffc533;box-shadow:0 0 20px #ffc533;opacity:0"></div><div class="p" data-dx="235" data-dy="-442" style="left:528px;top:768px;width:24px;height:24px;background:#fff;box-shadow:0 0 24px #fff;opacity:0"></div><div class="p" data-dx="173" data-dy="-262" style="left:532px;top:772px;width:17px;height:17px;background:#2fd27a;box-shadow:0 0 17px #2fd27a;opacity:0"></div><div class="p" data-dx="213" data-dy="-422" style="left:527px;top:767px;width:25px;height:25px;background:#ffc533;box-shadow:0 0 25px #ffc533;opacity:0"></div><div class="p" data-dx="232" data-dy="-445" style="left:534px;top:774px;width:13px;height:13px;background:#fff;box-shadow:0 0 13px #fff;opacity:0"></div><div class="p" data-dx="237" data-dy="-212" style="left:527px;top:767px;width:26px;height:26px;background:#2fd27a;box-shadow:0 0 26px #2fd27a;opacity:0"></div><div class="p" data-dx="466" data-dy="-64" style="left:534px;top:774px;width:11px;height:11px;background:#ffc533;box-shadow:0 0 11px #ffc533;opacity:0"></div></div></div></div>
+      <div id="z4" class="scene clip" data-start="15.03" data-duration="2.743" data-track-index="1"><div id="z4-i" class="inner"><div id="jr-c" style="position:absolute;left:0;width:1080px;display:flex;justify-content:center;top:470px;z-index:3"><span style="display:inline-block;padding:12px 34px 16px;border-radius:22px;background:#ff8a1f;color:#111;font-weight:900;font-size:70px;box-shadow:0 0 50px #ff8a1f88">pro Jahr</span></div><div id="jr-z" class="t glow-g" style="top:620px;font-size:200px">24.000 €</div><div id="jr-u" class="t " style="top:880px;font-size:90px">steuerfrei</div></div></div>
+      <div id="z5" class="scene clip" data-start="17.773" data-duration="3.711" data-track-index="1"><div id="z5-i" class="inner"><div id="sp-a" class="t " style="top:500px;font-size:100px">spart oft</div><div id="sp-z" class="t glow-g" style="top:660px;font-size:120px">mehrere 100 €</div><div id="sp-u" class="t " style="top:880px;font-size:80px">Steuern im Monat</div></div></div>
+      <div id="z6" class="scene clip" data-start="21.484" data-duration="3.889" data-track-index="1"><div id="z6-i" class="inner"><div id="fr-r" style="position:absolute;left:340px;top:380px;width:400px;height:400px;border-radius:50%;background:#16191b;border:10px solid #ff8a1f;box-shadow:0 0 80px #ff8a1f88, inset 0 0 40px #000;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2"><svg viewBox="0 0 100 100" style="width:62%;height:62%"><path d="M12 14 L88 14 Q94 14 94 20 L94 62 Q94 68 88 68 L42 68 L22 88 L26 68 L12 68 Q6 68 6 62 L6 20 Q6 14 12 14 Z" fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round"/><circle cx="32" cy="41" r="6" fill="#ff8a1f"/><circle cx="50" cy="41" r="6" fill="#ff8a1f"/><circle cx="68" cy="41" r="6" fill="#ff8a1f"/></svg></div><div id="fr-t" class="t " style="top:900px;font-size:66px">Kennst du jemanden,<br/>der im Rentenalter arbeitet?</div></div></div>
+      <div id="z7" class="scene clip" data-start="25.373" data-duration="5.807" data-track-index="1"><div id="z7-i" class="inner"><div id="wi-t" class="t glow-r" style="top:460px;font-size:110px">Wichtig:</div><div id="wi-1" style="position:absolute;left:0;width:1080px;display:flex;justify-content:center;top:660px;z-index:3"><span style="display:inline-block;padding:12px 34px 16px;border-radius:22px;background:#ff8a1f;color:#111;font-weight:900;font-size:70px;box-shadow:0 0 50px #ff8a1f88">nur für Angestellte</span></div><div id="wi-2" style="position:absolute;left:0;width:1080px;display:flex;justify-content:center;top:820px;z-index:3"><span style="display:inline-block;padding:12px 34px 16px;border-radius:22px;background:#ff4d4d;color:#111;font-weight:900;font-size:56px;box-shadow:0 0 50px #ff4d4d88">Kranken- & Pflegevers. bleiben</span></div></div></div>
+      <div id="logo"><img src="assets/beagle.png" alt="" /></div>
+      <div id="brand">HundeFinanzTv</div>
+      <div id="flash"></div>
       <div id="frame"></div>
-
-      <!-- ============ UNTERTITEL ============ -->
       <div id="captions" data-track-kind="captions">
-        <div id="c1" class="cap clip" data-start="0" data-duration="1.6" data-track-index="2"><span>du hast 100 € im Monat übrig</span></div>
-        <div id="c2" class="cap clip" data-start="1.6" data-duration="1.4" data-track-index="2"><span>und fragst dich, was du damit machst</span></div>
-        <div id="c3" class="cap clip" data-start="3" data-duration="3" data-track-index="2"><span>die Frage aller Fragen</span></div>
-        <div id="c4" class="cap clip" data-start="6" data-duration="1.7" data-track-index="2"><span>100 € im Monat, 30 Jahre lang</span></div>
-        <div id="c5" class="cap clip" data-start="7.7" data-duration="1.8" data-track-index="2"><span>auf dem Konto bleiben es 36.000 €</span></div>
-        <div id="c6" class="cap clip" data-start="9.5" data-duration="3" data-track-index="2"><span>im ETF kommen ~77.000 € Rendite dazu</span></div>
-        <div id="c7" class="cap clip" data-start="12.5" data-duration="2.5" data-track-index="2"><span>folg mir für mehr Geld-Tipps</span></div>
+        <div id="c1" class="cap clip" data-start="0.0" data-duration="1.281" data-track-index="2"><span id="w1-0">Rentner</span> <span id="w1-1">aufgepasst:</span> </div>
+        <div id="c2" class="cap clip" data-start="1.281" data-duration="1.673" data-track-index="2"><span id="w2-0">Bis</span> <span id="w2-1">zu</span> <span id="w2-2">2.000 €</span> <span id="w2-3">im</span> <span id="w2-4">Monat</span> </div>
+        <div id="c3" class="cap clip" data-start="2.954" data-duration="1.644" data-track-index="2"><span id="w3-0">steuerfrei</span> <span id="w3-1">dazuverdienen</span> </div>
+        <div id="c4" class="cap clip" data-start="4.598" data-duration="1.624" data-track-index="2"><span id="w4-0">Das</span> <span id="w4-1">geht</span> <span id="w4-2">mit</span> <span id="w4-3">der</span> <span id="w4-4">Aktivrente,</span> </div>
+        <div id="c5" class="cap clip" data-start="6.222" data-duration="1.46" data-track-index="2"><span id="w5-0">und</span> <span id="w5-1">viele</span> <span id="w5-2">wissen</span> <span id="w5-3">es</span> <span id="w5-4">nicht</span> </div>
+        <div id="c6" class="cap clip" data-start="7.682" data-duration="1.598" data-track-index="2"><span id="w6-0">Wer</span> <span id="w6-1">das</span> <span id="w6-2">reguläre</span> <span id="w6-3">Rentenalter</span> </div>
+        <div id="c7" class="cap clip" data-start="9.28" data-duration="1.442" data-track-index="2"><span id="w7-0">erreicht</span> <span id="w7-1">hat</span> <span id="w7-2">und</span> <span id="w7-3">weiter</span> </div>
+        <div id="c8" class="cap clip" data-start="10.722" data-duration="1.254" data-track-index="2"><span id="w8-0">angestellt</span> <span id="w8-1">arbeitet,</span> </div>
+        <div id="c9" class="cap clip" data-start="11.976" data-duration="1.505" data-track-index="2"><span id="w9-0">zahlt</span> <span id="w9-1">auf</span> <span id="w9-2">bis</span> <span id="w9-3">zu</span> <span id="w9-4">2.000 €</span> </div>
+        <div id="c10" class="cap clip" data-start="13.481" data-duration="1.549" data-track-index="2"><span id="w10-0">Lohn</span> <span id="w10-1">im</span> <span id="w10-2">Monat</span> <span id="w10-3">keine</span> <span id="w10-4">Steuer</span> </div>
+        <div id="c11" class="cap clip" data-start="15.03" data-duration="1.048" data-track-index="2"><span id="w11-0">Das</span> <span id="w11-1">sind</span> <span id="w11-2">bis</span> </div>
+        <div id="c12" class="cap clip" data-start="16.078" data-duration="1.695" data-track-index="2"><span id="w12-0">zu</span> <span id="w12-1">24.000 €</span> <span id="w12-2">im</span> <span id="w12-3">Jahr</span> </div>
+        <div id="c13" class="cap clip" data-start="17.773" data-duration="1.009" data-track-index="2"><span id="w13-0">Je</span> <span id="w13-1">nach</span> <span id="w13-2">Rente</span> <span id="w13-3">spart</span> </div>
+        <div id="c14" class="cap clip" data-start="18.782" data-duration="1.569" data-track-index="2"><span id="w14-0">das</span> <span id="w14-1">schnell</span> <span id="w14-2">mehrere</span> <span id="w14-3">hundert</span> </div>
+        <div id="c15" class="cap clip" data-start="20.351" data-duration="1.133" data-track-index="2"><span id="w15-0">Euro</span> <span id="w15-1">Steuern</span> <span id="w15-2">im</span> <span id="w15-3">Monat</span> </div>
+        <div id="c16" class="cap clip" data-start="21.484" data-duration="0.845" data-track-index="2"><span id="w16-0">Kennst</span> <span id="w16-1">du</span> <span id="w16-2">jemanden</span> </div>
+        <div id="c17" class="cap clip" data-start="22.329" data-duration="0.778" data-track-index="2"><span id="w17-0">im</span> <span id="w17-1">Rentenalter,</span> </div>
+        <div id="c18" class="cap clip" data-start="23.107" data-duration="1.33" data-track-index="2"><span id="w18-0">der</span> <span id="w18-1">noch</span> <span id="w18-2">arbeitet?</span> <span id="w18-3">Schreib's</span> </div>
+        <div id="c19" class="cap clip" data-start="24.437" data-duration="0.936" data-track-index="2"><span id="w19-0">uns</span> <span id="w19-1">in</span> <span id="w19-2">die</span> <span id="w19-3">Kommentare</span> </div>
+        <div id="c20" class="cap clip" data-start="25.373" data-duration="0.795" data-track-index="2"><span id="w20-0">Wichtig:</span> <span id="w20-1">Das</span> <span id="w20-2">gilt</span> </div>
+        <div id="c21" class="cap clip" data-start="26.168" data-duration="1.224" data-track-index="2"><span id="w21-0">nur</span> <span id="w21-1">für</span> <span id="w21-2">Angestellte,</span> </div>
+        <div id="c22" class="cap clip" data-start="27.392" data-duration="0.73" data-track-index="2"><span id="w22-0">und</span> <span id="w22-1">Kranken‑</span> </div>
+        <div id="c23" class="cap clip" data-start="28.122" data-duration="1.346" data-track-index="2"><span id="w23-0">und</span> <span id="w23-1">Pflegeversicherung</span> </div>
+        <div id="c24" class="cap clip" data-start="29.468" data-duration="1.101" data-track-index="2"><span id="w24-0">zahlst</span> <span id="w24-1">du</span> <span id="w24-2">trotzdem</span> </div>
       </div>
+      <audio id="voice" src="assets/mix.wav" data-start="0" data-duration="31.18" data-track-index="3"></audio>
     </div>
-
     <script>
       const tl = gsap.timeline({ paused: true });
-      const pop = (sel, at) =>
-        tl.fromTo(sel, { scale: 0.82, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.8)" }, at);
-      const drift = (sel, at, dur) =>
-        tl.fromTo(sel, { scale: 1 }, { scale: 1.05, duration: dur, ease: "sine.inOut" }, at);
+      const pop = (sel, at) => tl.fromTo(sel, { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.2)" }, at);
+      const slam = (sel, at) => tl.fromTo(sel, { scale: 2.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.28, ease: "power4.in" }, at);
+      const shake = (sel, at) => tl.fromTo(sel, { x: -14 }, { x: 14, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }, at);
       const draw = (sel, at, dur) => {
         const len = document.querySelector(sel).getTotalLength();
         tl.fromTo(sel, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: dur, ease: "power2.out" }, at);
       };
-
-      // 1: Geldsack
-      pop("#s1-art", 0);
-      drift("#s1-bag", 0.35, 2.5);
-      tl.fromTo("#s1-coins", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 0.25);
-
-      // 2: Zielscheibe, Pfeil schlägt ein
-      pop("#s2-art", 3);
-      tl.fromTo("#s2-arrow", { x: 160, y: -160, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 0.3, ease: "power4.in" }, 3.3);
-      tl.fromTo("#s2-art", { rotation: 0 }, { rotation: 2, duration: 0.06, yoyo: true, repeat: 3, ease: "none" }, 3.6);
-
-      // 3: Zahlen-Vergleich
-      pop("#s3-h1", 6);
-      pop("#s3-h2", 6.15);
-      tl.fromTo(["#s3-a1", "#s3-a2"], { opacity: 0 }, { opacity: 1, duration: 0.2 }, 6.5);
-      pop("#s3-n1", 7.7);
-      pop("#s3-n2", 7.85);
-      pop("#s3-n3", 9.0);
-
-      // 4: Chart zeichnet sich
-      draw("#s4-solid", 9.6, 0.7);
-      tl.fromTo("#s4-dots", { opacity: 0 }, { opacity: 1, duration: 0.6 }, 10.1);
-      pop("#s4-label", 10.6);
-      pop("#s4-check", 10.9);
-
-      // 5: Outro
-      pop("#s5-art", 12.5);
-      drift("#s5-art", 12.85, 2.0);
-
+      const zaehl = (sel, von, bis, at, dur, nach) => {
+        const o = { v: von };
+        tl.fromTo(o, { v: von }, { v: bis, duration: dur, ease: "power2.out", onUpdate: () => {
+          document.querySelector(sel).textContent = Math.round(o.v).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (nach || ""); }, immediateRender: false }, at);
+      };
+      const flash = (at, st) => tl.fromTo("#flash", { opacity: st || 0.85 }, { opacity: 0, duration: 0.35, ease: "power2.out", immediateRender: false }, at);
+      const burst = (sel, at, dur) => tl.fromTo(sel + " .p", { x: 0, y: 0, scale: 1.4, opacity: 1 },
+        { x: (i, el) => +el.dataset.dx, y: (i, el) => +el.dataset.dy, scale: 0.2, opacity: 0, duration: dur || 1.0, ease: "power3.out", immediateRender: false }, at);
+      const letters = (sel, at) => tl.fromTo(sel + " .l", { y: 140, opacity: 0, rotation: 12, scale: 0.6 },
+        { y: 0, opacity: 1, rotation: 0, scale: 1, duration: 0.45, stagger: 0.035, ease: "back.out(2.2)" }, at);
+      const glitch = (sel, at) => tl.fromTo(sel, { x: -22, skewX: 18 }, { x: 0, skewX: 0, duration: 0.24, ease: "steps(6)" }, at);
+      tl.fromTo("#z0-i", { scale: 1.0 }, { scale: 1.06, duration: 4.598, ease: "none" }, 0.0);
+      tl.fromTo("#hk-z", { scale: 1.2 }, { scale: 1, duration: 0.35 }, 0.0); slam("#sf", 2.954); shake("#sf", 2.954 + 0.3);
+      tl.fromTo("#z1-i", { scale: 1.0 }, { scale: 1.06, duration: 3.084, ease: "none" }, 4.598);
+      slam("#ar-t", 4.598); pop("#ar-u", 6.222);
+      tl.fromTo("#z2-i", { scale: 1.0 }, { scale: 1.06, duration: 4.294, ease: "none" }, 7.682);
+      pop("#op", 7.682); pop("#op-c", 9.28 - 0.3); pop("#op-d", 10.722);
+      tl.fromTo("#z3-i", { scale: 1.0 }, { scale: 1.06, duration: 3.054, ease: "none" }, 11.976);
+      pop("#ls-a", 11.976); slam("#ls-z", 13.481); burst("#ls-p", 13.481 + 0.25);
+      tl.fromTo("#z4-i", { scale: 1.0 }, { scale: 1.06, duration: 2.743, ease: "none" }, 15.03);
+      pop("#jr-c", 15.03); slam("#jr-z", 16.078); pop("#jr-u", 16.078 + 0.4);
+      tl.fromTo("#z5-i", { scale: 1.0 }, { scale: 1.06, duration: 3.711, ease: "none" }, 17.773);
+      pop("#sp-a", 17.773); slam("#sp-z", 18.782); pop("#sp-u", 20.351);
+      tl.fromTo("#z6-i", { scale: 1.0 }, { scale: 1.06, duration: 3.889, ease: "none" }, 21.484);
+      pop("#fr-r", 21.484); tl.fromTo("#fr-r", { rotation: -8 }, { rotation: 8, duration: 0.25, yoyo: true, repeat: 5, ease: "sine.inOut" }, 21.484 + 0.4); pop("#fr-t", 21.484 + 0.6);
+      tl.fromTo("#z7-i", { scale: 1.0 }, { scale: 1.06, duration: 5.807, ease: "none" }, 25.373);
+      pop("#wi-t", 25.373); slam("#wi-1", 26.168); slam("#wi-2", 28.122);
+      tl.fromTo("#w1-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 0.0);
+      tl.to("#w1-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 0.512);
+      tl.fromTo("#w1-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 0.512);
+      tl.fromTo("#w2-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 1.281);
+      tl.to("#w2-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 1.56);
+      tl.fromTo("#w2-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 1.56);
+      tl.to("#w2-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 1.769);
+      tl.fromTo("#w2-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 1.769);
+      tl.to("#w2-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 2.327);
+      tl.fromTo("#w2-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 2.327);
+      tl.to("#w2-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 2.536);
+      tl.fromTo("#w2-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 2.536);
+      tl.fromTo("#w3-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 2.954);
+      tl.to("#w3-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 3.677);
+      tl.fromTo("#w3-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 3.677);
+      tl.fromTo("#w4-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 4.598);
+      tl.to("#w4-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 4.822);
+      tl.fromTo("#w4-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 4.822);
+      tl.to("#w4-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 5.102);
+      tl.fromTo("#w4-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 5.102);
+      tl.to("#w4-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 5.326);
+      tl.fromTo("#w4-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 5.326);
+      tl.to("#w4-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 5.55);
+      tl.fromTo("#w4-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 5.55);
+      tl.fromTo("#w5-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 6.222);
+      tl.to("#w5-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 6.447);
+      tl.fromTo("#w5-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 6.447);
+      tl.to("#w5-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 6.784);
+      tl.fromTo("#w5-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 6.784);
+      tl.to("#w5-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 7.177);
+      tl.fromTo("#w5-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 7.177);
+      tl.to("#w5-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 7.345);
+      tl.fromTo("#w5-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 7.345);
+      tl.fromTo("#w6-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 7.682);
+      tl.to("#w6-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 7.902);
+      tl.fromTo("#w6-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 7.902);
+      tl.to("#w6-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 8.123);
+      tl.fromTo("#w6-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 8.123);
+      tl.to("#w6-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 8.619);
+      tl.fromTo("#w6-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 8.619);
+      tl.fromTo("#w7-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 9.28);
+      tl.to("#w7-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 9.821);
+      tl.fromTo("#w7-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 9.821);
+      tl.to("#w7-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 10.061);
+      tl.fromTo("#w7-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 10.061);
+      tl.to("#w7-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 10.301);
+      tl.fromTo("#w7-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 10.301);
+      tl.fromTo("#w8-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 10.722);
+      tl.to("#w8-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 11.379);
+      tl.fromTo("#w8-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 11.379);
+      tl.fromTo("#w9-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 11.976);
+      tl.to("#w9-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 12.337);
+      tl.fromTo("#w9-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 12.337);
+      tl.to("#w9-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 12.578);
+      tl.fromTo("#w9-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 12.578);
+      tl.to("#w9-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 12.819);
+      tl.fromTo("#w9-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 12.819);
+      tl.to("#w9-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 12.999);
+      tl.fromTo("#w9-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 12.999);
+      tl.fromTo("#w10-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 13.481);
+      tl.to("#w10-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 13.768);
+      tl.fromTo("#w10-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 13.768);
+      tl.to("#w10-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 13.94);
+      tl.fromTo("#w10-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 13.94);
+      tl.to("#w10-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 14.284);
+      tl.fromTo("#w10-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 14.284);
+      tl.to("#w10-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 14.628);
+      tl.fromTo("#w10-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 14.628);
+      tl.fromTo("#w11-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 15.03);
+      tl.to("#w11-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 15.352);
+      tl.fromTo("#w11-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 15.352);
+      tl.to("#w11-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 15.756);
+      tl.fromTo("#w11-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 15.756);
+      tl.fromTo("#w12-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 16.078);
+      tl.to("#w12-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 16.332);
+      tl.fromTo("#w12-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 16.332);
+      tl.to("#w12-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 17.095);
+      tl.fromTo("#w12-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 17.095);
+      tl.to("#w12-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 17.349);
+      tl.fromTo("#w12-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 17.349);
+      tl.fromTo("#w13-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 17.773);
+      tl.to("#w13-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 17.924);
+      tl.fromTo("#w13-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 17.924);
+      tl.to("#w13-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 18.177);
+      tl.fromTo("#w13-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 18.177);
+      tl.to("#w13-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 18.479);
+      tl.fromTo("#w13-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 18.479);
+      tl.fromTo("#w14-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 18.782);
+      tl.to("#w14-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 19.006);
+      tl.fromTo("#w14-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 19.006);
+      tl.to("#w14-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 19.454);
+      tl.fromTo("#w14-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 19.454);
+      tl.to("#w14-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 19.903);
+      tl.fromTo("#w14-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 19.903);
+      tl.fromTo("#w15-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 20.351);
+      tl.to("#w15-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 20.608);
+      tl.fromTo("#w15-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 20.608);
+      tl.to("#w15-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 21.021);
+      tl.fromTo("#w15-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 21.021);
+      tl.to("#w15-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 21.175);
+      tl.fromTo("#w15-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 21.175);
+      tl.fromTo("#w16-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 21.484);
+      tl.to("#w16-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 21.795);
+      tl.fromTo("#w16-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 21.795);
+      tl.to("#w16-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 21.929);
+      tl.fromTo("#w16-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 21.929);
+      tl.fromTo("#w17-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 22.329);
+      tl.to("#w17-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 22.475);
+      tl.fromTo("#w17-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 22.475);
+      tl.fromTo("#w18-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 23.107);
+      tl.to("#w18-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 23.29);
+      tl.fromTo("#w18-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 23.29);
+      tl.to("#w18-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 23.52);
+      tl.fromTo("#w18-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 23.52);
+      tl.to("#w18-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 23.978);
+      tl.fromTo("#w18-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 23.978);
+      tl.fromTo("#w19-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 24.437);
+      tl.to("#w19-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 24.607);
+      tl.fromTo("#w19-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 24.607);
+      tl.to("#w19-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 24.735);
+      tl.fromTo("#w19-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 24.735);
+      tl.to("#w19-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 24.905);
+      tl.fromTo("#w19-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 24.905);
+      tl.fromTo("#w20-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 25.373);
+      tl.to("#w20-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 25.77);
+      tl.fromTo("#w20-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 25.77);
+      tl.to("#w20-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 25.947);
+      tl.fromTo("#w20-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 25.947);
+      tl.fromTo("#w21-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 26.168);
+      tl.to("#w21-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 26.401);
+      tl.fromTo("#w21-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 26.401);
+      tl.to("#w21-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 26.634);
+      tl.fromTo("#w21-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 26.634);
+      tl.fromTo("#w22-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 27.392);
+      tl.to("#w22-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 27.617);
+      tl.fromTo("#w22-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 27.617);
+      tl.fromTo("#w23-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 28.122);
+      tl.to("#w23-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 28.356);
+      tl.fromTo("#w23-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 28.356);
+      tl.fromTo("#w24-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 29.468);
+      tl.to("#w24-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 29.874);
+      tl.fromTo("#w24-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 29.874);
+      tl.to("#w24-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 30.047);
+      tl.fromTo("#w24-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 30.047);
       window.__timelines["main"] = tl;
     </script>
   </body>

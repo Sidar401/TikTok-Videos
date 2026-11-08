@@ -90,6 +90,7 @@ Das Einkommen-Video (`videos/longform-einkommen`) ist der Qualitäts-Maßstab: �
 
 - **Thumbnails bei Longform (Nutzer 6.11.):** IMMER zwei Versionen liefern: 16:9 für YouTube (`<name>-1.jpg`) **und zusätzlich 9:16** (`<name>-tiktok.jpg`), gleiches Motiv, für Hochformat neu angeordnet.
 
+- **CTA-Regel (Nutzer 8.11.):** Nicht jedes Video braucht „Folge HundeFinanzTv, wir posten jeden Tag“. Ein CTA reicht oft – z. B. Teilen-CTA („Schick das jemandem, der …“) schon als **3. Satz**. Der Nutzer bearbeitet Skripte manchmal selbst → Aufnahme immer per DTW gegen Varianten (ohne s3, CTA verschoben) prüfen.
 - **CTAs nicht ans Ende (Nutzer 7.11.):** Folgen-CTA früh (nach dem Hook), Teilen-/Kommentar-CTA in der Mitte. Kein Schluss-CTA wie „Wir sind HundeFinanzTv, wir sehen uns morgen“ – das Video endet mit dem letzten Inhalts-Satz (Nutzer schneidet späte CTAs raus).
 
 - **Aussprache (Nutzer 7.11., „sehr gute Idee“):** Abkürzungen im `sprechtext` lautschriftlich: ETF → „E-Te-Eff“, USA → „U-Es-A“ (oder „Amerika“), KI → „Ka-I“, MSCI World → „Em-Es-Ze-I World“, DAX bleibt. Im Untertitel-`text` normal schreiben.

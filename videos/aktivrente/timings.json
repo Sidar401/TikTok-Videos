@@ -1,0 +1,174 @@
+{
+  "dauer": 31.18,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 4.598,
+      "captions": [
+        {
+          "text": "Rentner aufgepasst:",
+          "start": 0.0,
+          "end": 1.281
+        },
+        {
+          "text": "Bis zu 2.000 € im Monat",
+          "start": 1.281,
+          "end": 2.954
+        },
+        {
+          "text": "steuerfrei dazuverdienen",
+          "start": 2.954,
+          "end": 4.598
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 4.598,
+      "end": 7.682,
+      "captions": [
+        {
+          "text": "Das geht mit der Aktivrente,",
+          "start": 4.598,
+          "end": 6.222
+        },
+        {
+          "text": "und viele wissen es nicht",
+          "start": 6.222,
+          "end": 7.682
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 7.682,
+      "end": 15.03,
+      "captions": [
+        {
+          "text": "Wer das reguläre Rentenalter",
+          "start": 7.682,
+          "end": 9.28
+        },
+        {
+          "text": "erreicht hat und weiter",
+          "start": 9.28,
+          "end": 10.722
+        },
+        {
+          "text": "angestellt arbeitet,",
+          "start": 10.722,
+          "end": 11.976
+        },
+        {
+          "text": "zahlt auf bis zu 2.000 €",
+          "start": 11.976,
+          "end": 13.481
+        },
+        {
+          "text": "Lohn im Monat keine Steuer",
+          "start": 13.481,
+          "end": 15.03
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 15.03,
+      "end": 17.773,
+      "captions": [
+        {
+          "text": "Das sind bis",
+          "start": 15.03,
+          "end": 16.078
+        },
+        {
+          "text": "zu 24.000 € im Jahr",
+          "start": 16.078,
+          "end": 17.773
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 17.773,
+      "end": 21.484,
+      "captions": [
+        {
+          "text": "Je nach Rente spart",
+          "start": 17.773,
+          "end": 18.782
+        },
+        {
+          "text": "das schnell mehrere hundert",
+          "start": 18.782,
+          "end": 20.351
+        },
+        {
+          "text": "Euro Steuern im Monat",
+          "start": 20.351,
+          "end": 21.484
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 21.484,
+      "end": 25.373,
+      "captions": [
+        {
+          "text": "Kennst du jemanden",
+          "start": 21.484,
+          "end": 22.329
+        },
+        {
+          "text": "im Rentenalter,",
+          "start": 22.329,
+          "end": 23.107
+        },
+        {
+          "text": "der noch arbeitet? Schreib's",
+          "start": 23.107,
+          "end": 24.437
+        },
+        {
+          "text": "uns in die Kommentare",
+          "start": 24.437,
+          "end": 25.373
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 25.373,
+      "end": 30.569,
+      "captions": [
+        {
+          "text": "Wichtig: Das gilt",
+          "start": 25.373,
+          "end": 26.168
+        },
+        {
+          "text": "nur für Angestellte,",
+          "start": 26.168,
+          "end": 27.392
+        },
+        {
+          "text": "und Kranken‑",
+          "start": 27.392,
+          "end": 28.122
+        },
+        {
+          "text": "und Pflegeversicherung",
+          "start": 28.122,
+          "end": 29.468
+        },
+        {
+          "text": "zahlst du trotzdem",
+          "start": 29.468,
+          "end": 30.569
+        }
+      ]
+    }
+  ]
+}

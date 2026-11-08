@@ -40,8 +40,8 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | gehalt-fluss | Chef zahlt 3.600 €, Brutto 3.000, Sozialkassen AG 600, Lohnsteuer 320, Rente 279, KV 262, Pflege/ALV 111 → Konto 2.028 € (56 %); Dark Glow (Leitbild-Probe vom Nutzer abgelehnt) |
 | tagesgeld-lockzins | (Skript, noch nicht produziert – Nutzer wählte Deutschlandticket) Tagesgeld bis 4,5 % nur 4 Monate für Neukunden, danach < 2 % (Schnitt ~2,2 %), Zins-Hopping mit Kalender, Freistellungsauftrag bei neuer Bank |
 | deutschlandticket-2027 | 63 → 66,80 € ab 1.1.2027 (Start 49 €, +36 %), > 800 €/Jahr, Break-even ~20 Einzelfahrten à 3,50 €, monatlich kündbar bis 10., Jobticket ≥ 25 % Zuschuss → 5 % Rabatt |
-| mindestlohn-netto | (Skript) 13,90 → 14,60 € (+0,70/h), Vollzeit +~120 € brutto ≈ +80 € netto (StKl 1), Minijob 633 € ≈ 43 h/Monat |
-| aktivrente | (Skript) Aktivrente: ab Regelaltersgrenze angestellt bis 2.000 €/Monat (24.000 €/Jahr) steuerfrei, KV/PV fällig, nur Angestellte |
+| mindestlohn-netto | 13,90 → 14,60 € (+0,70/h), Vollzeit +~120 € brutto ≈ +80 € netto (StKl 1), Minijob 633 € ≈ 43 h/Monat |
+| aktivrente | Aktivrente: ab Regelaltersgrenze angestellt bis 2.000 €/Monat (24.000 €/Jahr) steuerfrei, KV/PV fällig, nur Angestellte |
 
 ## Longform (16:9)
 | Video | Kern / Beispiele | Bildidee |
@@ -80,6 +80,8 @@ Nutzer: „nicht immer die gleichen/ähnlichen Thumbnails“ – z. B. **Geldbeu
 | longform-domino | „Diese WAHL crasht die Börse“, 4 fallende Dominosteine (blau/orange/grün/rot mit Punkten), rote Pille −2,5 Billionen $ |
 | deutschlandticket-2027 (Cover) | „Schon wieder TEURER!“, schräges Ticket 66,80 €, rote Pille +36 % |
 | longform-2027 | „Das ändert sich für DEIN Geld“, Kalenderblatt JAN 2027 schräg, Stempel GEWINNER (grün) + VERLIERER (rot) |
+| mindestlohn-netto (Cover) | „Mindestlohn 14,60 €“ Box, „Was bleibt WIRKLICH?“, grünes +80 €, Pille netto im Monat |
+| aktivrente (Cover) | „Rentner: 2.000 € im Monat“, großer grüner Stempel STEUERFREI, „Kennt fast keiner!“ |
 | longform-lotto | Lottokugeln „1 Million gewonnen … und PLEITE!“, Kontostand 1.000.000 € → 0 €, Titel-Typo + Kugeln |
 | longform-freiheit | Berg mit Flagge „So viel Geld, um NIE wieder zu arbeiten“, Formel „Ausgaben × 25 = FREI“, 3 Gipfel-Kacheln |
 
