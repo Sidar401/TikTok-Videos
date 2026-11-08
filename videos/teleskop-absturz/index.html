@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      @font-face { font-family: "Inter Display"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.otf"); }
+      @font-face { font-family: "Inter Display"; font-weight: 800; src: url("assets/fonts/InterDisplay-ExtraBold.otf"); }
+      @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/Inter-SemiBold.otf"); }
+      html, body { background: #000; }
+      #root { font-family: "Inter Display", "Inter", sans-serif; }
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .vig { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, transparent 45%, rgba(0,0,0,0.78) 100%); }
+      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+      .tag { top: 140px; font-family: "Inter", sans-serif; font-weight: 600; font-size: 34px; letter-spacing: 8px; color: rgba(255,255,255,0.72); }
+      .bar { position: absolute; left: 90px; right: 90px; top: 200px; height: 6px; border-radius: 3px; background: rgba(255,255,255,0.15); }
+      .bar i { display: block; width: 0; height: 100%; border-radius: 3px; background: #ffd23f; box-shadow: 0 0 14px rgba(255,210,63,0.7); }
+      .lbl { top: 330px; font-size: 62px; font-weight: 800; letter-spacing: 1px; text-shadow: 0 4px 24px rgba(0,0,0,0.9); }
+      .lbl small { display: block; font-family: "Inter", sans-serif; font-weight: 600; font-size: 36px; color: rgba(255,255,255,0.78); margin-top: 10px; letter-spacing: 0; }
+      .lbl .big { display: block; font-size: 120px; font-weight: 900; color: #ffd23f; text-shadow: 0 0 40px rgba(255,210,63,0.5), 0 4px 24px rgba(0,0,0,0.9); white-space: nowrap; }
+      .lbl .red { color: #ff4d5e; text-shadow: 0 0 40px rgba(255,77,94,0.5), 0 4px 24px rgba(0,0,0,0.9); }
+      .capw { top: 1400px; font-size: 92px; font-weight: 900; line-height: 1.12; letter-spacing: -1px; color: #fff; text-shadow: 0 6px 30px rgba(0,0,0,0.85), 0 0 3px #000; }
+      .capw .w { display: inline-block; margin: 0 10px; padding: 0 4px 6px; }
+      .capw .on { background: #ffd23f; color: #111; padding: 0 20px 6px; border-radius: 18px; transform: rotate(-2deg) scale(1.06); text-shadow: none; box-shadow: 0 10px 40px rgba(255,210,63,0.45); }
+      .hookbig { top: 560px; font-size: 136px; }
+      .hookbig .y { color: #ff5a3c; text-shadow: 0 0 46px rgba(255,90,60,0.8); }
+      .hookdim { background: radial-gradient(circle at 50% 42%, rgba(0,0,10,0.25), rgba(0,0,6,0.8)); }
+      .follow { top: 1080px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div class="vig"></div>
+      <div id="flash"></div>
+      <div id="tag" class="line tag clip" data-start="0" data-duration="30" data-track-index="1"><span>NEU · NOVEMBER 2026</span></div>
+      <div id="bar" class="bar clip" data-start="0" data-duration="30" data-track-index="2"><i id="bar-in"></i></div>
+      <div id="lbl" class="line lbl clip" data-start="0" data-duration="30" data-track-index="3"><span id="lbl-in"></span></div>
+      <div id="cap" class="line capw clip" data-start="2.8" data-duration="27.2" data-track-index="4"><span id="cap-in"></span></div>
+
+      <div id="hookdim" class="hookdim clip" data-start="0" data-duration="2.8" data-track-index="8"><span id="hookdim-in"></span></div>
+      <div id="hookbig" class="line hookbig clip" data-start="0" data-duration="2.8" data-track-index="7"><span id="hookbig-in">NASA-<br />Teleskop<br /><span class="y">ABGESTÜRZT!</span></span></div>
+      <div id="follow" class="line follow clip" data-start="27.2" data-duration="2.8" data-track-index="6"><span id="follow-in" class="box"><span class="t">Folg uns für mehr! 👆</span><span class="pill">+ Folgen</span></span></div>
+
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="29.42" data-track-index="9" data-volume="1"></audio>
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="10" data-volume="0.45"></audio>
+    </div>
+    <img id="tex-day" src="assets/earth-blue-marble.jpg" style="display:none" alt="" />
+    <img id="tex-night" src="assets/earth-night.jpg" style="display:none" alt="" />
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.from("#hookbig-in", { opacity: 0, scale: 1.35, duration: 0.35, ease: "power3.out" }, 0);
+      tl.to("#hookbig-in", { scale: 0.6, opacity: 0, filter: "blur(12px)", duration: 0.3, ease: "power2.in" }, 2.45);
+      tl.to("#hookdim", { opacity: 0, duration: 0.3 }, 2.5);
+      tl.from("#follow-in", { opacity: 0, scale: 0.6, duration: 0.3, ease: "back.out(2.5)" }, 27.2);
+      tl.to("#follow-in .pill", { scale: 1.1, duration: 0.3, yoyo: true, repeat: 3 }, 27.6);
+      tl.to("#bar-in", { width: "100%", duration: 30, ease: "none" }, 0);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+    <script type="module">
+      import * as THREE from "./assets/three.module.js";
+      const WORDS = [{"w": "Ein", "s": 0.0, "e": 0.143}, {"w": "NASA-Teleskop", "s": 0.214, "e": 0.929}, {"w": "ist", "s": 1.0, "e": 1.143}, {"w": "gerade", "s": 1.25, "e": 1.5}, {"w": "vom", "s": 1.571, "e": 1.714}, {"w": "Himmel", "s": 1.786, "e": 1.929}, {"w": "gestürzt!", "s": 2.0, "e": 2.571}, {"w": "Es", "s": 2.848, "e": 2.92}, {"w": "heißt", "s": 2.991, "e": 3.241}, {"w": "Swift", "s": 3.277, "e": 3.705}, {"w": "und", "s": 3.777, "e": 3.848}, {"w": "kreiste", "s": 3.92, "e": 4.277}, {"w": "zweiundzwanzig", "s": 4.348, "e": 5.062}, {"w": "Jahre", "s": 5.134, "e": 5.348}, {"w": "um", "s": 5.42, "e": 5.491}, {"w": "die", "s": 5.527, "e": 5.562}, {"w": "Erde.", "s": 5.634, "e": 5.991}, {"w": "Es", "s": 6.268, "e": 6.411}, {"w": "wog", "s": 6.446, "e": 6.625}, {"w": "so", "s": 6.696, "e": 6.768}, {"w": "viel", "s": 6.839, "e": 6.982}, {"w": "wie", "s": 7.054, "e": 7.125}, {"w": "ein", "s": 7.196, "e": 7.268}, {"w": "Auto,", "s": 7.339, "e": 7.839}, {"w": "fast", "s": 7.982, "e": 8.125}, {"w": "anderthalb", "s": 8.196, "e": 8.696}, {"w": "Tonnen.", "s": 8.768, "e": 9.125}, {"w": "Doch", "s": 9.402, "e": 9.545}, {"w": "dann", "s": 9.616, "e": 9.83}, {"w": "wurde", "s": 9.902, "e": 10.045}, {"w": "die", "s": 10.116, "e": 10.188}, {"w": "Sonne", "s": 10.33, "e": 10.545}, {"w": "wild.", "s": 10.616, "e": 11.188}, {"w": "Sie", "s": 11.464, "e": 11.5}, {"w": "hat", "s": 11.571, "e": 11.643}, {"w": "die", "s": 11.714, "e": 11.786}, {"w": "Luft", "s": 11.857, "e": 12.071}, {"w": "der", "s": 12.107, "e": 12.143}, {"w": "Erde", "s": 12.286, "e": 12.5}, {"w": "aufgebläht.", "s": 12.607, "e": 13.321}, {"w": "Und", "s": 13.598, "e": 13.741}, {"w": "diese", "s": 13.812, "e": 14.027}, {"w": "Luft", "s": 14.098, "e": 14.312}, {"w": "hat", "s": 14.384, "e": 14.455}, {"w": "das", "s": 14.527, "e": 14.598}, {"w": "Teleskop", "s": 14.634, "e": 15.17}, {"w": "immer", "s": 15.241, "e": 15.527}, {"w": "weiter", "s": 15.562, "e": 15.812}, {"w": "abgebremst.", "s": 15.884, "e": 16.741}, {"w": "Eine", "s": 17.018, "e": 17.161}, {"w": "Rettungsmission", "s": 17.232, "e": 17.875}, {"w": "sollte", "s": 17.946, "e": 18.161}, {"w": "es", "s": 18.232, "e": 18.304}, {"w": "retten.", "s": 18.375, "e": 18.661}, {"w": "Sie", "s": 19.018, "e": 19.089}, {"w": "ist", "s": 19.161, "e": 19.232}, {"w": "gescheitert.", "s": 19.304, "e": 19.875}, {"w": "Am", "s": 20.152, "e": 20.366}, {"w": "vierten", "s": 20.402, "e": 20.652}, {"w": "November", "s": 20.866, "e": 21.08}, {"w": "verglühte", "s": 21.152, "e": 21.652}, {"w": "Swift", "s": 21.723, "e": 22.009}, {"w": "über", "s": 22.08, "e": 22.223}, {"w": "Indonesien.", "s": 22.295, "e": 23.188}, {"w": "Zweiundzwanzig", "s": 23.464, "e": 24.179}, {"w": "Jahre", "s": 24.321, "e": 24.536}, {"w": "lang", "s": 24.643, "e": 24.75}, {"w": "hat", "s": 24.821, "e": 24.893}, {"w": "es", "s": 24.964, "e": 25.036}, {"w": "Explosionen", "s": 25.143, "e": 25.75}, {"w": "im", "s": 25.821, "e": 25.893}, {"w": "All", "s": 25.964, "e": 26.107}, {"w": "beobachtet.", "s": 26.179, "e": 26.929}, {"w": "Hättest", "s": 27.205, "e": 27.491}, {"w": "du", "s": 27.527, "e": 27.562}, {"w": "das", "s": 27.634, "e": 27.777}, {"w": "gewusst?", "s": 27.848, "e": 28.491}, {"w": "Folg", "s": 28.527, "e": 28.705}, {"w": "uns", "s": 28.777, "e": 28.848}, {"w": "für", "s": 28.92, "e": 28.991}, {"w": "mehr!", "s": 29.062, "e": 29.491}];
+      const CH = [[0.0, 2.571], [2.848, 5.991], [6.268, 9.125], [9.402, 11.188], [11.464, 13.321], [13.598, 16.741], [17.018, 19.875], [20.152, 23.188], [23.464, 26.929], [27.205, 29.491]];
+      const GROUPS = [];
+      let wi = 0;
+      CH.forEach(([a, b]) => {
+        const ws = []; while (wi < WORDS.length && WORDS[wi].s < b + 0.01) ws.push(WORDS[wi++]);
+        let cur = [];
+        ws.forEach((w) => { const len = cur.map((x) => x.w).join(" ").length + w.w.length; if (cur.length && (cur.length >= 3 || len > 16 || /[.?!]$/.test(cur[cur.length - 1].w))) { GROUPS.push(cur); cur = []; } cur.push(w); });
+        if (cur.length) GROUPS.push(cur);
+      });
+      GROUPS.forEach((g, i) => { g.s = g[0].s; g.e = i + 1 < GROUPS.length ? GROUPS[i + 1][0].s : 30; });
+      const capEl = document.getElementById("cap-in"), lblEl = document.getElementById("lbl-in"), flashEl = document.getElementById("flash");
+      let lastCap = "", lastLbl = "";
+      function captions(t) {
+        let h = "";
+        const g = GROUPS.find((g) => t >= g.s - 0.05 && t < g.e);
+        if (g && t >= 2.8) h = g.map((w) => { const on = t >= w.s - 0.04 && t < w.e + 0.02; return `<span class="w${on ? " on" : ""}">${w.w.replace(/[,.:]$/, "")}</span>`; }).join("");
+        if (h !== lastCap) { capEl.innerHTML = h; lastCap = h; }
+      }
+      function label(h) { if (h !== lastLbl) { lblEl.innerHTML = h; lastLbl = h; } }
+      const cl = (x) => Math.max(0, Math.min(1, x));
+      const lerp = (a, b, f) => a + (b - a) * f;
+      const eio = (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+      const eout = (x) => 1 - Math.pow(1 - x, 3);
+      const prog = (t, s, d) => cl((t - s) / d);
+      let seed = 7; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+      const V = (x, y, z) => new THREE.Vector3(x, y, z);
+
+      const cv = document.getElementById("stage");
+      const R = new THREE.WebGLRenderer({ canvas: cv, antialias: true, preserveDrawingBuffer: true });
+      R.setSize(1080, 1920, false); R.outputColorSpace = THREE.SRGBColorSpace; R.toneMapping = THREE.ACESFilmicToneMapping;
+      const sc = new THREE.Scene();
+      const cam = new THREE.PerspectiveCamera(32, 1080 / 1920, 0.01, 2000);
+
+      // Sterne
+      const sp = [], scol = [];
+      for (let i = 0; i < 4000; i++) { const u = rnd() * 2 - 1, a = rnd() * 6.283, r = 600; sp.push(Math.sqrt(1 - u * u) * Math.cos(a) * r, u * r, Math.sqrt(1 - u * u) * Math.sin(a) * r); scol.push(0.8 + rnd() * 0.2, 0.85 + rnd() * 0.15, 1); }
+      const sg = new THREE.BufferGeometry(); sg.setAttribute("position", new THREE.Float32BufferAttribute(sp, 3)); sg.setAttribute("color", new THREE.Float32BufferAttribute(scol, 3));
+      const starMat = new THREE.PointsMaterial({ size: 2.4, vertexColors: true, transparent: true, opacity: 0.85, depthWrite: false });
+      sc.add(new THREE.Points(sg, starMat));
+
+      // Erde
+      const sunDir = V(-0.75, 0.35, 0.75).normalize();
+      const U = { d: { value: null }, n: { value: null }, sun: { value: sunDir } };
+      const earth = new THREE.Mesh(new THREE.SphereGeometry(2.6, 160, 160), new THREE.ShaderMaterial({
+        uniforms: U,
+        vertexShader: `varying vec2 vUv;varying vec3 vN;varying vec3 vV;void main(){vUv=uv;vN=normalize(mat3(modelMatrix)*normal);vec4 w=modelMatrix*vec4(position,1.);vV=normalize(cameraPosition-w.xyz);gl_Position=projectionMatrix*viewMatrix*w;}`,
+        fragmentShader: `uniform sampler2D d,n;uniform vec3 sun;varying vec2 vUv;varying vec3 vN;varying vec3 vV;
+          void main(){float l=dot(vN,sun);float k=smoothstep(-.15,.25,l);vec3 dt=texture2D(d,vUv).rgb;float water=smoothstep(.0,.03,dt.b-dt.r)*(1.-step(.3,dt.r));dt+=water*vec3(.015,.04,.08);
+          vec3 dc=dt*(.12+1.25*max(l,0.));vec3 nc=texture2D(n,vUv).rgb*vec3(1.4,1.05,.65)*1.8;vec3 c=mix(nc,dc,k);
+          float f=pow(1.-clamp(dot(vN,vV),0.,1.),3.);c+=vec3(.3,.6,1.)*f*(.2+k);c+=pow(max(dot(reflect(-sun,vN),vV),0.),60.)*.15*k*water;gl_FragColor=vec4(c,1.);}`,
+      }));
+      const earthG = new THREE.Group(); earthG.add(earth); sc.add(earthG);
+      const atmU = { sun: { value: sunDir }, glow: { value: 1 }, tint: { value: 0 } };
+      const atm = new THREE.Mesh(new THREE.SphereGeometry(2.6 * 1.17, 96, 96), new THREE.ShaderMaterial({
+        transparent: true, blending: THREE.AdditiveBlending, side: THREE.BackSide, depthWrite: false, uniforms: atmU,
+        vertexShader: `varying vec3 vN;varying vec3 vW;void main(){vN=normalize(mat3(modelMatrix)*normal);vec4 w=modelMatrix*vec4(position,1.);vW=w.xyz;gl_Position=projectionMatrix*viewMatrix*w;}`,
+        fragmentShader: `uniform vec3 sun;uniform float glow,tint;varying vec3 vN;varying vec3 vW;void main(){vec3 v=normalize(cameraPosition-vW);float i=pow(max(.72-dot(vN,v),0.),4.);float l=smoothstep(-.4,.6,dot(vN,sun));vec3 c=mix(vec3(.35,.65,1.),vec3(1.,.55,.3),tint);gl_FragColor=vec4(c*i*(.3+1.5*l)*glow,1.);}`,
+      }));
+      earthG.add(atm);
+      // Aufgeblähte Lufthülle (sichtbarer Dunst)
+      const haze = new THREE.Mesh(new THREE.SphereGeometry(2.6, 96, 96), new THREE.ShaderMaterial({
+        transparent: true, blending: THREE.AdditiveBlending, depthWrite: false, uniforms: { a: { value: 0 } },
+        vertexShader: `varying vec3 vN;varying vec3 vW;void main(){vN=normalize(mat3(modelMatrix)*normal);vec4 w=modelMatrix*vec4(position,1.);vW=w.xyz;gl_Position=projectionMatrix*viewMatrix*w;}`,
+        fragmentShader: `uniform float a;varying vec3 vN;varying vec3 vW;void main(){vec3 v=normalize(cameraPosition-vW);float r=1.-clamp(dot(vN,v),0.,1.);gl_FragColor=vec4(vec3(1.,.5,.3)*pow(r,4.)*a,1.);}`,
+      }));
+      earthG.add(haze);
+
+      // Swift-Teleskop (vereinfacht): Körper, Röhre, zwei Solarflügel
+      function makeSat(gold = true) {
+        const g = new THREE.Group();
+        const foil = new THREE.MeshStandardMaterial({ color: gold ? 0xd9a441 : 0xbfc6d0, metalness: 0.6, roughness: 0.45 });
+        const dark = new THREE.MeshStandardMaterial({ color: 0x2a2f3a, metalness: 0.3, roughness: 0.6 });
+        const body = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1.4), foil); g.add(body);
+        const tube = new THREE.Mesh(new THREE.CylinderGeometry(0.24, 0.24, 0.9, 32), new THREE.MeshStandardMaterial({ color: 0xe8e8ec, metalness: 0.4, roughness: 0.5 })); tube.rotation.x = Math.PI / 2; tube.position.set(0.15, 0.3, 1.1); g.add(tube);
+        const cap = new THREE.Mesh(new THREE.CylinderGeometry(0.25, 0.25, 0.05, 32), dark); cap.rotation.x = Math.PI / 2; cap.position.set(0.15, 0.3, 1.56); g.add(cap);
+        const pc = document.createElement("canvas"); pc.width = 256; pc.height = 128; const q = pc.getContext("2d");
+        q.fillStyle = "#0e1e4a"; q.fillRect(0, 0, 256, 128); q.strokeStyle = "#5a7bd6"; q.lineWidth = 2;
+        for (let x = 0; x <= 256; x += 32) { q.beginPath(); q.moveTo(x, 0); q.lineTo(x, 128); q.stroke(); }
+        for (let y = 0; y <= 128; y += 32) { q.beginPath(); q.moveTo(0, y); q.lineTo(256, y); q.stroke(); }
+        const pt = new THREE.CanvasTexture(pc); pt.colorSpace = THREE.SRGBColorSpace;
+        const pm = new THREE.MeshStandardMaterial({ map: pt, metalness: 0.5, roughness: 0.35, emissive: 0x0a1430 });
+        [-1, 1].forEach((s) => { const p = new THREE.Mesh(new THREE.BoxGeometry(1.8, 0.04, 0.9), pm); p.position.set(s * 1.45, 0, -0.1); g.add(p);
+          const arm = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.03, 0.5, 8), dark); arm.rotation.z = Math.PI / 2; arm.position.set(s * 0.6, 0, -0.1); g.add(arm); });
+        return g;
+      }
+      const sat = makeSat(); sc.add(sat);
+      const rescue = makeSat(false); rescue.scale.setScalar(0.7); sc.add(rescue);
+      const dl = new THREE.DirectionalLight(0xfff4e6, 3); sc.add(dl); sc.add(new THREE.AmbientLight(0x334466, 0.35));
+
+      // Leucht-Sprites
+      function glowTex(c0, c1) { const c = document.createElement("canvas"); c.width = c.height = 256; const g = c.getContext("2d"); const gr = g.createRadialGradient(128, 128, 0, 128, 128, 128); gr.addColorStop(0, c0); gr.addColorStop(0.18, c1); gr.addColorStop(1, "rgba(0,0,0,0)"); g.fillStyle = gr; g.fillRect(0, 0, 256, 256); return new THREE.CanvasTexture(c); }
+      const fireTex = glowTex("rgba(255,250,230,1)", "rgba(255,140,40,.75)");
+      const sunTex = glowTex("rgba(255,252,240,1)", "rgba(255,200,90,.8)");
+      const burstTex = glowTex("rgba(255,255,255,1)", "rgba(120,170,255,.9)");
+      const spr = (tex) => { const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, blending: THREE.AdditiveBlending, transparent: true, depthWrite: false, opacity: 0 })); sc.add(s); return s; };
+      const sun = spr(sunTex);
+      const flares = []; for (let i = 0; i < 40; i++) flares.push(spr(sunTex));
+      const trail = []; for (let i = 0; i < 46; i++) trail.push(spr(fireTex));
+      const bursts = []; for (let i = 0; i < 14; i++) bursts.push(spr(burstTex));
+      // Umlaufbahn-Linie
+      const orbitLine = new THREE.Mesh(new THREE.TorusGeometry(1, 0.006, 6, 300), new THREE.MeshBasicMaterial({ color: 0xffd23f, transparent: true, opacity: 0 }));
+      sc.add(orbitLine);
+      // Marker Indonesien
+      const ring = new THREE.Mesh(new THREE.RingGeometry(0.075, 0.095, 64), new THREE.MeshBasicMaterial({ color: 0xff5a3c, transparent: true, opacity: 0, side: THREE.DoubleSide, depthWrite: false }));
+      sc.add(ring);
+
+      const INC = 0.36; // Bahnneigung (ca. 20,6°)
+      const orbitPos = (ang, r) => V(Math.cos(ang) * r, Math.sin(ang) * r * Math.sin(INC), Math.sin(ang) * r * Math.cos(INC)).multiplyScalar(1);
+      const ll = (lat, lon, r = 2.6) => { earthG.updateMatrixWorld(true); const la = (lat * Math.PI) / 180, lo = (lon * Math.PI) / 180; return earth.localToWorld(V(Math.cos(la) * Math.cos(lo) * r, Math.sin(la) * r, -Math.cos(la) * Math.sin(lo) * r)); };
+      function setCam(p, look, k = 1) { cam.position.copy(look).add(p.clone().sub(look).multiplyScalar(k)); cam.lookAt(look); }
+      function shake(t, t0, amp) { const d = t - t0; if (d < 0 || d > 0.7) return V(0, 0, 0); const k = amp * (1 - d / 0.7); return V(Math.sin(d * 90) * k, Math.cos(d * 77) * k, 0); }
+
+      function renderAt(t) {
+        if (!U.d.value) return;
+        seed = 99;
+        earthG.position.set(0, 0, 0); earthG.rotation.set(0, 0, 0.41); earth.rotation.y = -1.2 + t * 0.03;
+        sat.visible = true; sat.scale.setScalar(0.09); rescue.visible = false;
+        [sun, ...flares, ...trail, ...bursts].forEach((s) => (s.material.opacity = 0));
+        orbitLine.material.opacity = 0; ring.material.opacity = 0; haze.material.uniforms.a.value = 0; atm.scale.setScalar(1); atmU.glow.value = 1; atmU.tint.value = 0;
+        sunDir.set(-0.75, 0.35, 0.75).normalize(); R.toneMappingExposure = 1; flashEl.style.opacity = 0;
+        let lbl = "";
+        const ORB = 3.25;
+        if (t < 2.85) {
+          // Hook: Feuerball rast durch das Bild an der Erde vorbei
+          const f = t / 2.85;
+          setCam(V(0, 0.6, lerp(13, 11, eio(f))), V(0, 0, 0));
+          const p0 = V(-2.6, 4.4, 4.5), p1 = V(2.2, -2.6, 4.5);
+          const head = p0.clone().lerp(p1, f);
+          sat.position.copy(head); sat.rotation.set(t * 3, t * 2, t); sat.scale.setScalar(0.07);
+          trail.forEach((s, i) => { const k = i / trail.length; const p = p0.clone().lerp(p1, Math.max(0, f - k * 0.25)); s.position.copy(p); s.scale.setScalar(0.7 * (1 - k) + 0.08); s.material.opacity = (1 - k) * 0.95; });
+        } else if (t < 6.27) {
+          // Swift auf der Umlaufbahn, 22 Jahre
+          const f = eio(prog(t, 2.85, 3.4));
+          setCam(V(lerp(2, -1, f), lerp(2.2, 1.6, f), lerp(10, 9.5, f)), V(0, -0.2, 0), 1.45);
+          orbitLine.scale.setScalar(ORB); orbitLine.rotation.set(Math.PI / 2 - INC, 0, 0); orbitLine.material.opacity = 0.6 * prog(t, 2.9, 0.4);
+          const ang = 0.6 + t * 0.35; sat.position.copy(orbitPos(ang, ORB)); sat.lookAt(0, 0, 0); sat.scale.setScalar(0.17);
+          const yrs = Math.round(22 * eout(prog(t, 3.3, 2.4)));
+          lbl = `<span class="big">${yrs} Jahre</span><small>Teleskop „Swift“ · seit 2004 im All</small>`;
+        } else if (t < 9.4) {
+          // Nahaufnahme: so schwer wie ein Auto
+          const f = prog(t, 6.27, 3.13);
+          earthG.position.set(0, -4.2, -2);
+          sat.position.set(0, 0.2, 0); sat.rotation.set(0.35, -0.6 + f * 1.4, 0.15); sat.scale.setScalar(1);
+          setCam(V(0, 0.6, lerp(9, 7.8, eio(f))), V(0, 0.1, 0));
+          sunDir.set(-0.6, 0.6, 0.7).normalize();
+          lbl = t > 6.9 ? `<span class="big">≈ 1.450 kg</span><small>so schwer wie ein Auto</small>` : "";
+        } else if (t < 11.46) {
+          // Die Sonne wird wild
+          const f = prog(t, 9.4, 2.06);
+          sunDir.set(-1, 0.25, 0.2).normalize();
+          earthG.position.set(1.6, -2.2, 0);
+          setCam(V(0.5, 0.8, 15), V(-0.5, 0.6, 0));
+          sun.position.set(-1.6, 3.4, -4); sun.scale.setScalar(lerp(4.5, 6, eio(f)) + Math.sin(t * 9) * 0.2); sun.material.opacity = 1;
+          flares.forEach((s, i) => { const a = (i / flares.length) * 6.283 + rnd() * 0.3; const ph = (t * (0.8 + rnd()) + rnd()) % 1; const d = 1 + ph * (2.5 + rnd() * 2); s.position.set(-1.6 + Math.cos(a) * d * 0.6, 3.4 + Math.sin(a) * d * 0.6, -4); s.scale.setScalar((1 - ph) * (0.25 + rnd() * 0.35)); s.material.opacity = (1 - ph) * 0.7 * prog(t, 9.6, 0.4); });
+          sat.visible = false;
+          R.toneMappingExposure = 1 + f * 0.2;
+          lbl = `Die Sonne wird wild<small>riesige Ausbrüche</small>`;
+        } else if (t < 13.6) {
+          // Luft bläht sich auf
+          const f = eio(prog(t, 11.46, 1.8));
+          setCam(V(0, 1.2, 11), V(0, -0.1, 0), 1.4);
+          atm.scale.setScalar(1 + f * 0.05); atmU.glow.value = 1 + f * 0.3; atmU.tint.value = f * 0.6;
+          haze.scale.setScalar(1 + f * 0.16); haze.material.uniforms.a.value = f * 0.9;
+          orbitLine.scale.setScalar(ORB); orbitLine.rotation.set(Math.PI / 2 - INC, 0, 0); orbitLine.material.opacity = 0.5;
+          sat.position.copy(orbitPos(0.6 + t * 0.35, ORB)); sat.lookAt(0, 0, 0); sat.scale.setScalar(0.17);
+          lbl = `Die Luft bläht sich auf<small>und reicht plötzlich viel höher</small>`;
+        } else if (t < 17.0) {
+          // Abbremsen: Spirale nach unten
+          const f = prog(t, 13.6, 3.4);
+          setCam(V(0, 2.4, 11.5), V(0, -0.2, 0), 1.4);
+          atm.scale.setScalar(1.05); atmU.glow.value = 1.3; atmU.tint.value = 0.6; haze.scale.setScalar(1.16); haze.material.uniforms.a.value = 0.9;
+          const r = lerp(ORB, 2.95, eio(f)); const ang = 0.6 + 13.6 * 0.35 + (t - 13.6) * 0.5;
+          sat.position.copy(orbitPos(ang, r)); sat.lookAt(0, 0, 0); sat.scale.setScalar(0.17);
+          trail.forEach((s, i) => { if (i > 24) return; const k = i / 24; const p = orbitPos(ang - k * 0.6, lerp(ORB, 2.95, eio(Math.max(0, f - k * 0.15)))); s.position.copy(p); s.scale.setScalar(0.12 * (1 - k)); s.material.opacity = 0.5 * (1 - k); });
+          lbl = `Bremsen … bremsen …<small>und es sinkt immer tiefer</small>`;
+        } else if (t < 20.15) {
+          // Rettungsmission scheitert
+          const f = prog(t, 17.0, 3.15);
+          earthG.position.set(0, -4.5, -2);
+          sat.position.set(0.9, 0.4, 0); sat.rotation.set(0.3, -0.8, 0.1); sat.scale.setScalar(0.55);
+          rescue.visible = true;
+          const appr = eout(prog(t, 17.0, 1.4));
+          const fail = prog(t, 18.6, 1.5);
+          rescue.position.set(lerp(-3.5, -0.9, appr) - fail * 2.2, lerp(1.6, 0.6, appr) + fail * 1.2, fail * 0.8);
+          rescue.rotation.set(fail * 9, fail * 6, fail * 4); rescue.scale.setScalar(0.35);
+          setCam(V(0, 0.7, 7).add(shake(t, 18.6, 0.05)), V(0, 0.4, 0));
+          sunDir.set(-0.4, 0.6, 0.8).normalize();
+          lbl = t < 18.6 ? `Rettung im Anflug …` : `<span class="big red">GESCHEITERT</span><small>die Rettungs-Sonde geriet außer Kontrolle</small>`;
+        } else if (t < 23.46) {
+          // Verglüht über Indonesien
+          const f = prog(t, 20.15, 3.3);
+          earth.rotation.y = -1.2 + 20.15 * 0.03;
+          const tgt = ll(2, 99); const dir = tgt.clone().normalize();
+          sunDir.copy(dir).add(V(-0.3, 0.3, 0)).normalize();
+          setCam(dir.clone().multiplyScalar(lerp(9, 6.5, eio(f))).add(V(0, 0.8, 0)), tgt);
+          const start = ll(14, 70, 3.15), end = ll(2, 99, 2.66);
+          const k = eio(prog(t, 20.3, 2.6)); const head = start.clone().lerp(end, k);
+          sat.position.copy(head); sat.scale.setScalar(0.05); sat.rotation.set(t * 4, t * 3, 0); sat.visible = k < 0.85;
+          trail.forEach((s, i) => { const q = i / trail.length; const p = start.clone().lerp(end, Math.max(0, k - q * 0.35)); s.position.copy(p); s.scale.setScalar((0.22 * (1 - q) + 0.03) * (0.5 + k)); s.material.opacity = (1 - q) * (k < 1 ? 1 : 1 - prog(t, 22.9, 0.5)); });
+          const rp = ll(2, 99, 2.63); ring.position.copy(rp); ring.lookAt(rp.clone().multiplyScalar(2)); ring.material.opacity = prog(t, 22.2, 0.3); ring.scale.setScalar(1 + 0.15 * Math.sin(t * 6));
+          flashEl.style.opacity = t > 22.8 && t < 23.2 ? 0.35 * (1 - (t - 22.8) / 0.4) : 0;
+          lbl = t > 20.4 ? `Verglüht über Indonesien<small>am 4. November 2026</small>` : "";
+        } else if (t < 27.2) {
+          // 22 Jahre Explosionen beobachtet
+          const f = prog(t, 23.46, 3.74);
+          setCam(V(0, 0.4, 13 + f * 2), V(0, 3, -10));
+          sat.position.set(0.4, 1.0, 8.5); sat.rotation.set(-0.5, 0.4 + f * 0.3, 0.2); sat.scale.setScalar(0.2);
+          earthG.position.set(0, -4.2, 0);
+          bursts.forEach((s, i) => { const t0 = 23.6 + i * 0.26; const d = t - t0; if (d < 0) return; const life = Math.max(0, 1 - d / 1.4); seed = 1000 + i * 7919; rnd(); rnd(); s.position.set((rnd() - 0.5) * 9, 2 + rnd() * 6, -6 - rnd() * 8); s.scale.setScalar((1 + rnd() * 1.6) * (0.3 + Math.min(1, d * 8)) * (1 + 0.6 * Math.max(0, 1 - d * 3))); s.material.opacity = life; });
+          lbl = `Die stärksten Explosionen im All<small>Swift hat über 1.000 davon entdeckt</small>`;
+        } else {
+          const f = prog(t, 27.2, 2.8);
+          setCam(V(0, 0.8, lerp(12, 13.5, f)), V(0, -0.2, 0), 1.4);
+          sat.visible = false;
+          lbl = "";
+        }
+        atm.position.set(0, 0, 0);
+        dl.position.copy(sunDir).multiplyScalar(10);
+        orbitLine.visible = orbitLine.material.opacity > 0.01; ring.visible = ring.material.opacity > 0.01; haze.visible = haze.material.uniforms.a.value > 0.01;
+        [sun, ...flares, ...trail, ...bursts].forEach((s) => (s.visible = s.material.opacity > 0.01));
+        R.render(sc, cam);
+        captions(t); label(lbl);
+      }
+
+      const ready = Promise.all(["tex-day", "tex-night"].map((id) => { const im = document.getElementById(id); return im.complete ? Promise.resolve(im) : new Promise((r) => (im.onload = () => r(im))); })).then(([a, b]) => {
+        const mk = (im) => { const tx = new THREE.Texture(im); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8; tx.needsUpdate = true; return tx; };
+        U.d.value = mk(a); U.n.value = mk(b); renderAt(lastT);
+      });
+      window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady || {}; window.__hf.buildReady.scene = ready;
+      let lastT = 0;
+      window.addEventListener("hf-seek", (e) => { lastT = e.detail.time; renderAt(lastT); });
+    </script>
+  </body>
+</html>
