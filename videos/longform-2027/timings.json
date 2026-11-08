@@ -1,0 +1,824 @@
+{
+ "dauer": 141.88,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 2.529,
+   "captions": [
+    {
+     "text": "Ab Januar ändert sich",
+     "start": 0.0,
+     "end": 1.154
+    },
+    {
+     "text": "so einiges bei deinem Geld",
+     "start": 1.154,
+     "end": 2.529
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 2.529,
+   "end": 4.976,
+   "captions": [
+    {
+     "text": "Manche bekommen mehr,",
+     "start": 2.529,
+     "end": 3.846
+    },
+    {
+     "text": "andere zahlen drauf",
+     "start": 3.846,
+     "end": 4.976
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 4.976,
+   "end": 11.514,
+   "captions": [
+    {
+     "text": "Heute gehen wir sieben",
+     "start": 4.976,
+     "end": 6.351
+    },
+    {
+     "text": "Änderungen für 2027 durch,",
+     "start": 6.351,
+     "end": 8.21
+    },
+    {
+     "text": "und bei jeder sagen wir dir:",
+     "start": 8.21,
+     "end": 10.026
+    },
+    {
+     "text": "Gewinner oder Verlierer?",
+     "start": 10.026,
+     "end": 11.514
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 11.514,
+   "end": 15.705,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTv,",
+     "start": 11.514,
+     "end": 12.695
+    },
+    {
+     "text": "wir bringen jeden Tag",
+     "start": 12.695,
+     "end": 14.107
+    },
+    {
+     "text": "neue Videos rund ums Geld",
+     "start": 14.107,
+     "end": 15.705
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 15.705,
+   "end": 18.971,
+   "captions": [
+    {
+     "text": "Und wie immer gilt:",
+     "start": 15.705,
+     "end": 16.698
+    },
+    {
+     "text": "Das ist keine Anlage‑",
+     "start": 16.698,
+     "end": 18.046
+    },
+    {
+     "text": "oder Steuerberatung",
+     "start": 18.046,
+     "end": 18.971
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 18.971,
+   "end": 21.169,
+   "captions": [
+    {
+     "text": "Änderung Nummer",
+     "start": 18.971,
+     "end": 19.817
+    },
+    {
+     "text": "eins: der Mindestlohn",
+     "start": 19.817,
+     "end": 21.169
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 21.169,
+   "end": 24.954,
+   "captions": [
+    {
+     "text": "Er steigt von 13,90 €",
+     "start": 21.169,
+     "end": 22.431
+    },
+    {
+     "text": "auf 14,60 €",
+     "start": 22.431,
+     "end": 23.692
+    },
+    {
+     "text": "pro Stunde",
+     "start": 23.692,
+     "end": 24.954
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 24.954,
+   "end": 28.879,
+   "captions": [
+    {
+     "text": "Bei einem Vollzeitjob",
+     "start": 24.954,
+     "end": 26.314
+    },
+    {
+     "text": "sind das rund",
+     "start": 26.314,
+     "end": 27.229
+    },
+    {
+     "text": "120 € mehr im Monat,",
+     "start": 27.229,
+     "end": 28.587
+    },
+    {
+     "text": "brutto",
+     "start": 28.587,
+     "end": 28.879
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 28.879,
+   "end": 31.349,
+   "captions": [
+    {
+     "text": "Gewinner: alle,",
+     "start": 28.879,
+     "end": 29.677
+    },
+    {
+     "text": "die zum Mindestlohn arbeiten",
+     "start": 29.677,
+     "end": 31.349
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 31.349,
+   "end": 33.294,
+   "captions": [
+    {
+     "text": "Änderung Nummer",
+     "start": 31.349,
+     "end": 32.154
+    },
+    {
+     "text": "zwei: der Minijob",
+     "start": 32.154,
+     "end": 33.294
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 33.294,
+   "end": 39.653,
+   "captions": [
+    {
+     "text": "Weil der Mindestlohn steigt,",
+     "start": 33.294,
+     "end": 35.274
+    },
+    {
+     "text": "steigt auch",
+     "start": 35.274,
+     "end": 36.167
+    },
+    {
+     "text": "die Minijob‑Grenze,",
+     "start": 36.167,
+     "end": 37.709
+    },
+    {
+     "text": "von 603 auf 633 €",
+     "start": 37.709,
+     "end": 39.089
+    },
+    {
+     "text": "im Monat",
+     "start": 39.089,
+     "end": 39.653
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 39.653,
+   "end": 42.902,
+   "captions": [
+    {
+     "text": "Du darfst also 30 € mehr",
+     "start": 39.653,
+     "end": 41.655
+    },
+    {
+     "text": "im Monat dazuverdienen",
+     "start": 41.655,
+     "end": 42.902
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 42.902,
+   "end": 44.936,
+   "captions": [
+    {
+     "text": "Änderung Nummer drei:",
+     "start": 42.902,
+     "end": 43.925
+    },
+    {
+     "text": "das Deutschlandticket",
+     "start": 43.925,
+     "end": 44.936
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 44.936,
+   "end": 48.932,
+   "captions": [
+    {
+     "text": "Es kostet ab Januar",
+     "start": 44.936,
+     "end": 46.934
+    },
+    {
+     "text": "66,80 € statt 63 €",
+     "start": 46.934,
+     "end": 48.932
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "start": 48.932,
+   "end": 51.377,
+   "captions": [
+    {
+     "text": "Das sind über",
+     "start": 48.932,
+     "end": 50.011
+    },
+    {
+     "text": "45 € mehr im Jahr",
+     "start": 50.011,
+     "end": 51.377
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "start": 51.377,
+   "end": 54.889,
+   "captions": [
+    {
+     "text": "Verlierer: alle Pendler,",
+     "start": 51.377,
+     "end": 52.682
+    },
+    {
+     "text": "die kein günstigeres",
+     "start": 52.682,
+     "end": 54.035
+    },
+    {
+     "text": "Jobticket bekommen",
+     "start": 54.035,
+     "end": 54.889
+    }
+   ]
+  },
+  {
+   "id": "s17",
+   "start": 54.889,
+   "end": 57.288,
+   "captions": [
+    {
+     "text": "Änderung Nummer vier:",
+     "start": 54.889,
+     "end": 56.102
+    },
+    {
+     "text": "die Frühstart‑Rente",
+     "start": 56.102,
+     "end": 57.288
+    }
+   ]
+  },
+  {
+   "id": "s18",
+   "start": 57.288,
+   "end": 63.286,
+   "captions": [
+    {
+     "text": "Für jedes Kind zwischen",
+     "start": 57.288,
+     "end": 58.519
+    },
+    {
+     "text": "sechs und 18 Jahren soll",
+     "start": 58.519,
+     "end": 59.974
+    },
+    {
+     "text": "der Staat jeden Monat 10 €",
+     "start": 59.974,
+     "end": 61.551
+    },
+    {
+     "text": "in ein Vorsorgedepot einzahlen",
+     "start": 61.551,
+     "end": 63.286
+    }
+   ]
+  },
+  {
+   "id": "s19",
+   "start": 63.286,
+   "end": 66.246,
+   "captions": [
+    {
+     "text": "Starten soll",
+     "start": 63.286,
+     "end": 64.064
+    },
+    {
+     "text": "das mit dem Geburtsjahrgang",
+     "start": 64.064,
+     "end": 66.005
+    },
+    {
+     "text": "2020",
+     "start": 66.005,
+     "end": 66.246
+    }
+   ]
+  },
+  {
+   "id": "s20",
+   "start": 66.246,
+   "end": 71.911,
+   "captions": [
+    {
+     "text": "10 € klingen wenig,",
+     "start": 66.246,
+     "end": 67.556
+    },
+    {
+     "text": "aber über zwölf Jahre sind",
+     "start": 67.556,
+     "end": 69.476
+    },
+    {
+     "text": "das schon über 1.400 €,",
+     "start": 69.476,
+     "end": 71.141
+    },
+    {
+     "text": "plus Rendite",
+     "start": 71.141,
+     "end": 71.911
+    }
+   ]
+  },
+  {
+   "id": "s21",
+   "start": 71.911,
+   "end": 73.841,
+   "captions": [
+    {
+     "text": "Gewinner: Familien mit Kindern",
+     "start": 71.911,
+     "end": 73.841
+    }
+   ]
+  },
+  {
+   "id": "s22",
+   "start": 73.841,
+   "end": 77.604,
+   "captions": [
+    {
+     "text": "Schreib uns in die Kommentare:",
+     "start": 73.841,
+     "end": 75.647
+    },
+    {
+     "text": "Welche Änderung",
+     "start": 75.647,
+     "end": 76.68
+    },
+    {
+     "text": "trifft dich am meisten?",
+     "start": 76.68,
+     "end": 77.604
+    }
+   ]
+  },
+  {
+   "id": "s23",
+   "start": 77.604,
+   "end": 79.459,
+   "captions": [
+    {
+     "text": "Änderung Nummer",
+     "start": 77.604,
+     "end": 78.463
+    },
+    {
+     "text": "fünf: die Mütterrente",
+     "start": 78.463,
+     "end": 79.459
+    }
+   ]
+  },
+  {
+   "id": "s24",
+   "start": 79.459,
+   "end": 86.821,
+   "captions": [
+    {
+     "text": "Ab 2027 sollen",
+     "start": 79.459,
+     "end": 80.436
+    },
+    {
+     "text": "Erziehungszeiten für alle",
+     "start": 80.436,
+     "end": 82.314
+    },
+    {
+     "text": "Kinder gleich zählen,",
+     "start": 82.314,
+     "end": 83.791
+    },
+    {
+     "text": "auch für Kinder,",
+     "start": 83.791,
+     "end": 84.993
+    },
+    {
+     "text": "die vor 1992 geboren sind",
+     "start": 84.993,
+     "end": 86.821
+    }
+   ]
+  },
+  {
+   "id": "s25",
+   "start": 86.821,
+   "end": 90.865,
+   "captions": [
+    {
+     "text": "Gewinner: viele Mütter",
+     "start": 86.821,
+     "end": 88.095
+    },
+    {
+     "text": "und Väter in Rente,",
+     "start": 88.095,
+     "end": 89.388
+    },
+    {
+     "text": "die bisher weniger",
+     "start": 89.388,
+     "end": 90.613
+    },
+    {
+     "text": "bekommen haben",
+     "start": 90.613,
+     "end": 90.865
+    }
+   ]
+  },
+  {
+   "id": "s26",
+   "start": 90.865,
+   "end": 93.044,
+   "captions": [
+    {
+     "text": "Änderung Nummer sechs:",
+     "start": 90.865,
+     "end": 92.202
+    },
+    {
+     "text": "die Krankenkasse",
+     "start": 92.202,
+     "end": 93.044
+    }
+   ]
+  },
+  {
+   "id": "s27",
+   "start": 93.044,
+   "end": 96.531,
+   "captions": [
+    {
+     "text": "Der durchschnittliche",
+     "start": 93.044,
+     "end": 94.212
+    },
+    {
+     "text": "Zusatzbeitrag bleibt",
+     "start": 94.212,
+     "end": 95.471
+    },
+    {
+     "text": "bei 2,9 %",
+     "start": 95.471,
+     "end": 96.531
+    }
+   ]
+  },
+  {
+   "id": "s28",
+   "start": 96.531,
+   "end": 100.724,
+   "captions": [
+    {
+     "text": "Aber jede Kasse legt ihren",
+     "start": 96.531,
+     "end": 97.928
+    },
+    {
+     "text": "eigenen Beitrag fest,",
+     "start": 97.928,
+     "end": 99.114
+    },
+    {
+     "text": "und die Unterschiede sind groß",
+     "start": 99.114,
+     "end": 100.724
+    }
+   ]
+  },
+  {
+   "id": "s29",
+   "start": 100.724,
+   "end": 104.15,
+   "captions": [
+    {
+     "text": "Ein Wechsel kann sich lohnen,",
+     "start": 100.724,
+     "end": 102.387
+    },
+    {
+     "text": "und das geht oft",
+     "start": 102.387,
+     "end": 103.354
+    },
+    {
+     "text": "ganz einfach online",
+     "start": 103.354,
+     "end": 104.15
+    }
+   ]
+  },
+  {
+   "id": "s30",
+   "start": 104.15,
+   "end": 106.889,
+   "captions": [
+    {
+     "text": "Änderung Nummer sieben:",
+     "start": 104.15,
+     "end": 105.327
+    },
+    {
+     "text": "Gutverdiener zahlen mehr",
+     "start": 105.327,
+     "end": 106.889
+    }
+   ]
+  },
+  {
+   "id": "s31",
+   "start": 106.889,
+   "end": 112.518,
+   "captions": [
+    {
+     "text": "Die Beitragsbemessungsgrenze",
+     "start": 106.889,
+     "end": 108.711
+    },
+    {
+     "text": "in der Rentenversicherung",
+     "start": 108.711,
+     "end": 110.457
+    },
+    {
+     "text": "steigt",
+     "start": 110.457,
+     "end": 110.876
+    },
+    {
+     "text": "auf rund 8.850 € im Monat",
+     "start": 110.876,
+     "end": 112.518
+    }
+   ]
+  },
+  {
+   "id": "s32",
+   "start": 112.518,
+   "end": 116.744,
+   "captions": [
+    {
+     "text": "Wer viel verdient,",
+     "start": 112.518,
+     "end": 113.429
+    },
+    {
+     "text": "zahlt",
+     "start": 113.429,
+     "end": 113.711
+    },
+    {
+     "text": "also auf einen größeren Teil",
+     "start": 113.711,
+     "end": 115.289
+    },
+    {
+     "text": "seines Gehalts Rentenbeitrag",
+     "start": 115.289,
+     "end": 116.744
+    }
+   ]
+  },
+  {
+   "id": "s33",
+   "start": 116.744,
+   "end": 119.825,
+   "captions": [
+    {
+     "text": "Verlierer: Gutverdiener,",
+     "start": 116.744,
+     "end": 118.029
+    },
+    {
+     "text": "zumindest auf den ersten Blick",
+     "start": 118.029,
+     "end": 119.825
+    }
+   ]
+  },
+  {
+   "id": "s34",
+   "start": 119.825,
+   "end": 126.651,
+   "captions": [
+    {
+     "text": "Und ein Bonus für alle,",
+     "start": 119.825,
+     "end": 121.03
+    },
+    {
+     "text": "die im Rentenalter",
+     "start": 121.03,
+     "end": 122.091
+    },
+    {
+     "text": "noch arbeiten wollen:",
+     "start": 122.091,
+     "end": 123.13
+    },
+    {
+     "text": "Mit der Aktivrente bleiben bis",
+     "start": 123.13,
+     "end": 124.897
+    },
+    {
+     "text": "zu 2.000 € im Monat steuerfrei",
+     "start": 124.897,
+     "end": 126.651
+    }
+   ]
+  },
+  {
+   "id": "s35",
+   "start": 126.651,
+   "end": 131.962,
+   "captions": [
+    {
+     "text": "Unterm Strich: Wer",
+     "start": 126.651,
+     "end": 127.597
+    },
+    {
+     "text": "wenig verdient,",
+     "start": 127.597,
+     "end": 128.54
+    },
+    {
+     "text": "Kinder hat oder in Rente ist,",
+     "start": 128.54,
+     "end": 130.363
+    },
+    {
+     "text": "gehört eher zu den Gewinnern",
+     "start": 130.363,
+     "end": 131.962
+    }
+   ]
+  },
+  {
+   "id": "s36",
+   "start": 131.962,
+   "end": 134.336,
+   "captions": [
+    {
+     "text": "Pendler und Gutverdiener",
+     "start": 131.962,
+     "end": 133.344
+    },
+    {
+     "text": "zahlen eher drauf",
+     "start": 133.344,
+     "end": 134.336
+    }
+   ]
+  },
+  {
+   "id": "s37",
+   "start": 134.336,
+   "end": 141.266,
+   "captions": [
+    {
+     "text": "Und egal,",
+     "start": 134.336,
+     "end": 134.802
+    },
+    {
+     "text": "wo du stehst: Wer",
+     "start": 134.802,
+     "end": 135.812
+    },
+    {
+     "text": "die Änderungen kennt,",
+     "start": 135.812,
+     "end": 136.909
+    },
+    {
+     "text": "kann früh reagieren,",
+     "start": 136.909,
+     "end": 138.097
+    },
+    {
+     "text": "zum Beispiel",
+     "start": 138.097,
+     "end": 138.712
+    },
+    {
+     "text": "mit einem Kassenwechsel",
+     "start": 138.712,
+     "end": 140.078
+    },
+    {
+     "text": "oder einem Jobticket",
+     "start": 140.078,
+     "end": 141.266
+    }
+   ]
+  }
+ ]
+}

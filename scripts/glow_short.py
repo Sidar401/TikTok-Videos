@@ -51,7 +51,7 @@ def css():
       .ew {{ position: absolute; left: 0; width: {W}px; text-align: center; z-index: 6; font-weight: 900; font-size: 104px; line-height: 1; color: #fff; text-transform: uppercase;
         letter-spacing: -1px; text-shadow: 0 6px 0 #000, 0 0 30px #000; white-space: nowrap; }}
       .cap {{ position: absolute; {"left: 160px; top: 900px; width: 1600px;" if q else "left: 60px; top: 1330px; width: 960px;"} text-align: center; z-index: 6; }}
-      .cap span {{ display: inline-block; margin: 0 {12 if q else 16}px; font-weight: 900; font-size: {60 if q else 74}px; line-height: 1.15; color: #fff; text-shadow: 0 6px 0 #000, 0 0 30px #000; }}
+      .cap span {{ display: inline-block; margin: 0 {16 if q else 16}px; font-weight: 900; font-size: {60 if q else 74}px; line-height: 1.15; color: #fff; text-shadow: 0 6px 0 #000, 0 0 30px #000; }}
 """
 
 
