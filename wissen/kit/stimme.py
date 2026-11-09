@@ -23,3 +23,17 @@ d = json.load(urllib.request.urlopen(req, timeout=180))
 (proj / "assets" / "voice-orig.mp3").write_bytes(base64.b64decode(d["audio_base64"]))
 json.dump({"text": text, "alignment": d.get("alignment")}, open(proj / "alignment.json", "w"), ensure_ascii=False)
 print("Stimme ok:", len(text), "Zeichen")
+
+# Kontrolle: Aufnahme zurück in Text und mit dem Skript vergleichen
+import difflib, re, uuid
+def norm(s): return re.sub(r"[^a-zäöüß0-9 ]", " ", s.lower()).split()
+bnd = uuid.uuid4().hex; mp3 = (proj / "assets" / "voice-orig.mp3").read_bytes()
+body = (f"--{bnd}\r\nContent-Disposition: form-data; name=\"model_id\"\r\n\r\nscribe_v1\r\n--{bnd}\r\nContent-Disposition: form-data; name=\"language_code\"\r\n\r\ndeu\r\n"
+        f"--{bnd}\r\nContent-Disposition: form-data; name=\"file\"; filename=\"v.mp3\"\r\nContent-Type: audio/mpeg\r\n\r\n").encode() + mp3 + f"\r\n--{bnd}--\r\n".encode()
+req = urllib.request.Request("https://api.elevenlabs.io/v1/speech-to-text", data=body, headers={"Content-Type": f"multipart/form-data; boundary={bnd}", "xi-api-key": "proxy-injected"})
+heard = json.load(urllib.request.urlopen(req, timeout=180))["text"]
+a, b = norm(text), norm(heard)
+diff = [(op, " ".join(a[i1:i2]), " ".join(b[j1:j2])) for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b).get_opcodes() if op != "equal"]
+json.dump({"gehoert": heard, "abweichungen": diff}, open(proj / "kontrolle.json", "w"), ensure_ascii=False, indent=1)
+print("Gehört:", heard)
+print("Abweichungen:", diff if diff else "keine")
