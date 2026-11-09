@@ -42,6 +42,8 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | deutschlandticket-2027 | 63 → 66,80 € ab 1.1.2027 (Start 49 €, +36 %), > 800 €/Jahr, Break-even ~20 Einzelfahrten à 3,50 €, monatlich kündbar bis 10., Jobticket ≥ 25 % Zuschuss → 5 % Rabatt |
 | mindestlohn-netto | 13,90 → 14,60 € (+0,70/h), Vollzeit +~120 € brutto ≈ +80 € netto (StKl 1), Minijob 633 € ≈ 43 h/Monat |
 | aktivrente | Aktivrente: ab Regelaltersgrenze angestellt bis 2.000 €/Monat (24.000 €/Jahr) steuerfrei, KV/PV fällig, nur Angestellte |
+| fruehstart-rente | (Skript, Motor-Short → longform-2027) 10 €/Monat 6–18 J. = 1.440 €, bei 6 % ≈ 2.100 € mit 18, bis 67 > 30.000 € |
+| lohnsteuer-freibetrag | (Skript) Freibetrag 2027 beantragen, Pendler 30 km × 220 Tage ≈ 2.500 € (> 1.230 € Pauschale), ≈ +30 €/Monat netto, Elster, dann Steuererklärungspflicht |
 
 ## Longform (16:9)
 | Video | Kern / Beispiele | Bildidee |
@@ -57,6 +59,7 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | longform-ki-blase | Tech-Crash 5.11.2026 (Nasdaq −6,4 %, 2,5 Bio. $), KI-Geldkreis Microsoft 27 %/OpenAI/Oracle 300 Mrd/Nvidia 100 Mrd/AMD, 1,4 Bio. Zusagen vs. 50 Mrd. Umsatz, Dotcom −80 %, MSCI World 72 % USA, Nina 200 €/Monat 15.000 €, 4 Regeln | KI-Geldkreis (Pfeile im Kreis) |
 | longform-domino | Folgevideo zum Crash 5.11.: Domino-Effekt Wahl (Demokraten Kongress, Texas Baustopp) → Rechenzentren → Chips (Nvidia −9 % >400 Mrd $, AMD Rekord +97 % RZ trotzdem zweistellig minus, SpaceX Texas) → Depot/MSCI World; eingepreist; Erholung am Freitag; 3 Lehren | Dominosteine |
 | longform-2027 | Das ändert sich 2027: 7 Änderungen Gewinner/Verlierer – Mindestlohn 13,90→14,60 (+~120 € brutto), Minijob 603→633, D-Ticket 66,80, Frühstart-Rente 10 €/Kind (Jg. 2020, 12 J. = 1.440 €), Mütterrente III, Zusatzbeitrag Ø 2,9 %, BBG RV ~8.850 €, Bonus Aktivrente 2.000 € | Kalender 2027 + Gewinner/Verlierer-Stempel |
+| longform-klarna | (Skript, 9:16) BNPL: Shop zahlt Gebühr, Leute kaufen mehr (Schmerz des Bezahlens), Mahngebühren/Schufa, ab 20.11.2026 EU-Verbraucherkreditrichtlinie: BNPL + Kredite < 200 € mit Bonitätsprüfung, 3 Regeln | Kassenbon „später“ / Ratenkette |
 | longform-lotto | Lottogewinner Marco: 1 Mio., Absturz in 4 Jahren, Gründe, 5 Regeln, Lotto-Ausschüttung ~50 % | Kontostand-Countdown / Lottokugeln |
 | longform-freiheit | Nie wieder arbeiten: 4-%-Regel, ×25, 3 Gipfel (450k/750k/1,2 Mio.), Zwischenstationen, 3 Hebel, Sophie | Freiheits-Berg mit Hütten |
 

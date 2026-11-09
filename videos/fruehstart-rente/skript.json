@@ -1,0 +1,45 @@
+{
+ "titel": "Frühstart-Rente: Was aus 10 € wird (Motor-Short → Das ändert sich 2027)",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Der Staat schenkt jedem Kind ab zweitausendsiebenundzwanzig zehn Euro im Monat fürs Alter.",
+   "text": "Der Staat schenkt jedem Kind ab 2.027 10 € im Monat fürs Alter"
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Klingt nach wenig, aber rechnen wir mal nach.",
+   "text": "Klingt nach wenig, aber rechnen wir mal nach"
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Die Frühstart-Rente zahlt von sechs bis achtzehn Jahren, das sind zwölf Jahre.",
+   "text": "Die Frühstart-Rente zahlt von sechs bis 18 Jahren, das sind zwölf Jahre"
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Zusammen gerechnet also tausendvierhundertvierzig Euro.",
+   "text": "Zusammen gerechnet also 1.440 €"
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Bei sechs Prozent Rendite wären es mit achtzehn schon rund zweitausendeinhundert Euro.",
+   "text": "Bei 6 % Rendite wären es mit 18 schon rund 2.100 €"
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Und wenn das Geld bis zur Rente mit siebenundsechzig liegen bleibt, könnten daraus über dreißigtausend Euro werden.",
+   "text": "Und wenn das Geld bis zur Rente mit 67 liegen bleibt, könnten daraus über 30.000 € werden"
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Wer als Eltern selbst ein paar Euro dazulegt, kommt sogar auf deutlich mehr.",
+   "text": "Wer als Eltern selbst ein paar Euro dazulegt, kommt sogar auf deutlich mehr"
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Was sich zweitausendsiebenundzwanzig sonst noch alles ändert, siehst du im ganzen Video, unten verlinkt.",
+   "text": "Was sich 2.027 sonst noch alles ändert, siehst du im ganzen Video, unten verlinkt"
+  }
+ ]
+}

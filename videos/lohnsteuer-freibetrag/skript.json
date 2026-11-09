@@ -1,0 +1,45 @@
+{
+ "titel": "Lohnsteuer-Freibetrag: jeden Monat mehr Netto",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Du kannst dir dein Steuergeld jeden Monat holen, statt ein Jahr darauf zu warten.",
+   "text": "Du kannst dir dein Steuergeld jeden Monat holen, statt ein Jahr darauf zu warten"
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Das geht mit dem Lohnsteuer-Freibetrag, und den kannst du jetzt für zweitausendsiebenundzwanzig beantragen.",
+   "text": "Das geht mit dem Lohnsteuer-Freibetrag, und den kannst du jetzt für 2.027 beantragen"
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Schick das jemandem, der jeden Tag weit zur Arbeit fährt.",
+   "text": "Schick das jemandem, der jeden Tag weit zur Arbeit fährt"
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Ein Beispiel: Du fährst dreißig Kilometer zur Arbeit, an zweihundertzwanzig Tagen im Jahr.",
+   "text": "Ein Beispiel: Du fährst 30 Kilometer zur Arbeit, an 220 Tagen im Jahr"
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Das sind rund zweitausendfünfhundert Euro Fahrtkosten, über tausend Euro mehr als die Pauschale.",
+   "text": "Das sind rund 2.500 € Fahrtkosten, über 1.000 € mehr als die Pauschale"
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Trägst du das als Freibetrag ein, hast du jeden Monat rund dreißig Euro mehr netto.",
+   "text": "Trägst du das als Freibetrag ein, hast du jeden Monat rund 30 € mehr netto"
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Den Antrag stellst du einfach online über Elster beim Finanzamt.",
+   "text": "Den Antrag stellst du einfach online über Elster beim Finanzamt"
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Wichtig: Dann musst du für das Jahr auch eine Steuererklärung machen.",
+   "text": "Wichtig: Dann musst du für das Jahr auch eine Steuererklärung machen"
+  }
+ ]
+}
