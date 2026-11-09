@@ -1,0 +1,706 @@
+{
+  "dauer": 126.85,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 2.888,
+      "captions": [
+        {
+          "text": "Jetzt kaufen,",
+          "start": 0.0,
+          "end": 0.882
+        },
+        {
+          "text": "später zahlen. Klingt super,",
+          "start": 0.882,
+          "end": 2.68
+        },
+        {
+          "text": "oder?",
+          "start": 2.68,
+          "end": 2.888
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 2.888,
+      "end": 6.659,
+      "captions": [
+        {
+          "text": "Genau mit diesem",
+          "start": 2.888,
+          "end": 3.841
+        },
+        {
+          "text": "Satz machen Klarna,",
+          "start": 3.841,
+          "end": 5.127
+        },
+        {
+          "text": "PayPal und Co. Milliarden",
+          "start": 5.127,
+          "end": 6.659
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 6.659,
+      "end": 12.122,
+      "captions": [
+        {
+          "text": "Aber ab dem zwanzigsten",
+          "start": 6.659,
+          "end": 7.784
+        },
+        {
+          "text": "November ändert",
+          "start": 7.784,
+          "end": 8.624
+        },
+        {
+          "text": "sich etwas Wichtiges,",
+          "start": 8.624,
+          "end": 9.769
+        },
+        {
+          "text": "und das betrifft fast jeden,",
+          "start": 9.769,
+          "end": 11.302
+        },
+        {
+          "text": "der online shoppt",
+          "start": 11.302,
+          "end": 12.122
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 12.122,
+      "end": 16.716,
+      "captions": [
+        {
+          "text": "Folge HundeFinanzTv,",
+          "start": 12.122,
+          "end": 13.272
+        },
+        {
+          "text": "wir erklären dir jeden Tag,",
+          "start": 13.272,
+          "end": 14.965
+        },
+        {
+          "text": "wie Geld wirklich funktioniert",
+          "start": 14.965,
+          "end": 16.716
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 16.716,
+      "end": 19.722,
+      "captions": [
+        {
+          "text": "Kurz vorweg: Das ist keine",
+          "start": 16.716,
+          "end": 18.12
+        },
+        {
+          "text": "Anlage‑ oder Rechtsberatung",
+          "start": 18.12,
+          "end": 19.722
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 19.722,
+      "end": 23.538,
+      "captions": [
+        {
+          "text": "Fangen wir an:",
+          "start": 19.722,
+          "end": 20.449
+        },
+        {
+          "text": "Wie funktioniert jetzt kaufen,",
+          "start": 20.449,
+          "end": 22.091
+        },
+        {
+          "text": "später zahlen eigentlich?",
+          "start": 22.091,
+          "end": 23.538
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 23.538,
+      "end": 28.715,
+      "captions": [
+        {
+          "text": "Du bestellst Schuhe für 100 €,",
+          "start": 23.538,
+          "end": 25.539
+        },
+        {
+          "text": "zahlst aber erst in 30 Tagen",
+          "start": 25.539,
+          "end": 27.525
+        },
+        {
+          "text": "oder in vier Raten",
+          "start": 27.525,
+          "end": 28.715
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 28.715,
+      "end": 33.535,
+      "captions": [
+        {
+          "text": "Für dich wirkt das kostenlos,",
+          "start": 28.715,
+          "end": 30.296
+        },
+        {
+          "text": "aber das Geld bekommt",
+          "start": 30.296,
+          "end": 31.523
+        },
+        {
+          "text": "der Shop sofort,",
+          "start": 31.523,
+          "end": 32.473
+        },
+        {
+          "text": "vom Zahlungsanbieter",
+          "start": 32.473,
+          "end": 33.535
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 33.535,
+      "end": 37.646,
+      "captions": [
+        {
+          "text": "Und der Shop zahlt",
+          "start": 33.535,
+          "end": 34.58
+        },
+        {
+          "text": "dafür eine Gebühr,",
+          "start": 34.58,
+          "end": 35.717
+        },
+        {
+          "text": "oft mehrere Prozent",
+          "start": 35.717,
+          "end": 36.949
+        },
+        {
+          "text": "vom Kaufpreis",
+          "start": 36.949,
+          "end": 37.646
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 37.646,
+      "end": 42.626,
+      "captions": [
+        {
+          "text": "Warum machen Shops das?",
+          "start": 37.646,
+          "end": 38.991
+        },
+        {
+          "text": "Weil Leute mit später",
+          "start": 38.991,
+          "end": 40.11
+        },
+        {
+          "text": "zahlen mehr kaufen,",
+          "start": 40.11,
+          "end": 41.312
+        },
+        {
+          "text": "und zwar deutlich mehr",
+          "start": 41.312,
+          "end": 42.626
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 42.626,
+      "end": 47.047,
+      "captions": [
+        {
+          "text": "Das Gehirn spürt den Schmerz",
+          "start": 42.626,
+          "end": 43.941
+        },
+        {
+          "text": "des Bezahlens einfach nicht,",
+          "start": 43.941,
+          "end": 45.367
+        },
+        {
+          "text": "wenn das Geld nicht",
+          "start": 45.367,
+          "end": 46.334
+        },
+        {
+          "text": "sofort weggeht",
+          "start": 46.334,
+          "end": 47.047
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 47.047,
+      "end": 48.87,
+      "captions": [
+        {
+          "text": "Und genau hier liegt die Falle",
+          "start": 47.047,
+          "end": 48.87
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 48.87,
+      "end": 53.771,
+      "captions": [
+        {
+          "text": "Zahlst du nicht pünktlich,",
+          "start": 48.87,
+          "end": 50.351
+        },
+        {
+          "text": "kommen Mahngebühren dazu,",
+          "start": 50.351,
+          "end": 51.856
+        },
+        {
+          "text": "und bei Ratenkäufen",
+          "start": 51.856,
+          "end": 53.052
+        },
+        {
+          "text": "oft auch Zinsen",
+          "start": 53.052,
+          "end": 53.771
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "start": 53.771,
+      "end": 59.642,
+      "captions": [
+        {
+          "text": "Viele haben gleichzeitig",
+          "start": 53.771,
+          "end": 54.905
+        },
+        {
+          "text": "mehrere offene Rechnungen",
+          "start": 54.905,
+          "end": 56.321
+        },
+        {
+          "text": "bei verschiedenen",
+          "start": 56.321,
+          "end": 57.284
+        },
+        {
+          "text": "Anbietern und verlieren",
+          "start": 57.284,
+          "end": 58.587
+        },
+        {
+          "text": "komplett den Überblick",
+          "start": 58.587,
+          "end": 59.642
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "start": 59.642,
+      "end": 65.588,
+      "captions": [
+        {
+          "text": "Gerade junge Leute rutschen",
+          "start": 59.642,
+          "end": 61.073
+        },
+        {
+          "text": "so schnell in die Schulden,",
+          "start": 61.073,
+          "end": 62.697
+        },
+        {
+          "text": "und am Ende wartet sogar",
+          "start": 62.697,
+          "end": 64.139
+        },
+        {
+          "text": "ein negativer Schufa‑Eintrag",
+          "start": 64.139,
+          "end": 65.588
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "start": 65.588,
+      "end": 69.894,
+      "captions": [
+        {
+          "text": "Kennst du jemanden,",
+          "start": 65.588,
+          "end": 66.57
+        },
+        {
+          "text": "der ständig mit Klarna",
+          "start": 66.57,
+          "end": 67.98
+        },
+        {
+          "text": "bezahlt? Dann schick",
+          "start": 67.98,
+          "end": 69.035
+        },
+        {
+          "text": "ihm dieses Video",
+          "start": 69.035,
+          "end": 69.894
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "start": 69.894,
+      "end": 71.557,
+      "captions": [
+        {
+          "text": "Und jetzt zur neuen Regel",
+          "start": 69.894,
+          "end": 71.557
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "start": 71.557,
+      "end": 76.432,
+      "captions": [
+        {
+          "text": "Ab dem zwanzigsten November",
+          "start": 71.557,
+          "end": 72.959
+        },
+        {
+          "text": "gilt in Deutschland",
+          "start": 72.959,
+          "end": 74.106
+        },
+        {
+          "text": "eine neue E‑U‑Regel",
+          "start": 74.106,
+          "end": 75.253
+        },
+        {
+          "text": "für Verbraucherkredite",
+          "start": 75.253,
+          "end": 76.432
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "start": 76.432,
+      "end": 83.199,
+      "captions": [
+        {
+          "text": "Dann zählen auch jetzt kaufen,",
+          "start": 76.432,
+          "end": 78.562
+        },
+        {
+          "text": "später zahlen und kleine",
+          "start": 78.562,
+          "end": 80.385
+        },
+        {
+          "text": "Kredite unter 200 €",
+          "start": 80.385,
+          "end": 81.828
+        },
+        {
+          "text": "als richtiger Kredit",
+          "start": 81.828,
+          "end": 83.199
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "start": 83.199,
+      "end": 87.411,
+      "captions": [
+        {
+          "text": "Das heißt: Der Anbieter",
+          "start": 83.199,
+          "end": 84.263
+        },
+        {
+          "text": "muss vorher prüfen,",
+          "start": 84.263,
+          "end": 85.383
+        },
+        {
+          "text": "ob du dir das überhaupt",
+          "start": 85.383,
+          "end": 86.739
+        },
+        {
+          "text": "leisten kannst",
+          "start": 86.739,
+          "end": 87.411
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "start": 87.411,
+      "end": 92.947,
+      "captions": [
+        {
+          "text": "Außerdem müssen die Kosten",
+          "start": 87.411,
+          "end": 88.785
+        },
+        {
+          "text": "klarer angezeigt werden,",
+          "start": 88.785,
+          "end": 90.195
+        },
+        {
+          "text": "und du hast mehr Rechte,",
+          "start": 90.195,
+          "end": 91.605
+        },
+        {
+          "text": "zum Beispiel beim Widerruf",
+          "start": 91.605,
+          "end": 92.947
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "start": 92.947,
+      "end": 98.481,
+      "captions": [
+        {
+          "text": "Für dich bedeutet",
+          "start": 92.947,
+          "end": 93.88
+        },
+        {
+          "text": "das: mehr Schutz,",
+          "start": 93.88,
+          "end": 94.867
+        },
+        {
+          "text": "aber manchmal auch ein Nein,",
+          "start": 94.867,
+          "end": 96.663
+        },
+        {
+          "text": "wenn deine Finanzen knapp sind",
+          "start": 96.663,
+          "end": 98.481
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "start": 98.481,
+      "end": 101.502,
+      "captions": [
+        {
+          "text": "Und gerade vor",
+          "start": 98.481,
+          "end": 99.17
+        },
+        {
+          "text": "dem Black Friday ist",
+          "start": 99.17,
+          "end": 100.379
+        },
+        {
+          "text": "das wichtiger denn je",
+          "start": 100.379,
+          "end": 101.502
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "start": 101.502,
+      "end": 104.473,
+      "captions": [
+        {
+          "text": "Damit du nicht",
+          "start": 101.502,
+          "end": 102.189
+        },
+        {
+          "text": "in die Falle tappst,",
+          "start": 102.189,
+          "end": 103.381
+        },
+        {
+          "text": "hier sind drei Regeln",
+          "start": 103.381,
+          "end": 104.473
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "start": 104.473,
+      "end": 109.056,
+      "captions": [
+        {
+          "text": "Regel eins: Kauf",
+          "start": 104.473,
+          "end": 105.361
+        },
+        {
+          "text": "auf später nur,",
+          "start": 105.361,
+          "end": 106.199
+        },
+        {
+          "text": "wenn du das Geld heute",
+          "start": 106.199,
+          "end": 107.635
+        },
+        {
+          "text": "schon auf dem Konto hast",
+          "start": 107.635,
+          "end": 109.056
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "start": 109.056,
+      "end": 114.98,
+      "captions": [
+        {
+          "text": "Regel zwei: Höchstens",
+          "start": 109.056,
+          "end": 110.049
+        },
+        {
+          "text": "eine offene Rechnung",
+          "start": 110.049,
+          "end": 111.339
+        },
+        {
+          "text": "gleichzeitig,",
+          "start": 111.339,
+          "end": 112.177
+        },
+        {
+          "text": "und das Fälligkeitsdatum",
+          "start": 112.177,
+          "end": 113.724
+        },
+        {
+          "text": "direkt in den Kalender",
+          "start": 113.724,
+          "end": 114.98
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "start": 114.98,
+      "end": 119.881,
+      "captions": [
+        {
+          "text": "Regel drei: Vor dem Kauf",
+          "start": 114.98,
+          "end": 116.18
+        },
+        {
+          "text": "eine Nacht drüber schlafen,",
+          "start": 116.18,
+          "end": 117.958
+        },
+        {
+          "text": "gerade bei Angeboten",
+          "start": 117.958,
+          "end": 119.213
+        },
+        {
+          "text": "mit Countdown",
+          "start": 119.213,
+          "end": 119.881
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "start": 119.881,
+      "end": 126.237,
+      "captions": [
+        {
+          "text": "Jetzt kaufen,",
+          "start": 119.881,
+          "end": 120.512
+        },
+        {
+          "text": "später zahlen ist nicht böse,",
+          "start": 120.512,
+          "end": 122.338
+        },
+        {
+          "text": "aber es ist ein Kredit,",
+          "start": 122.338,
+          "end": 123.722
+        },
+        {
+          "text": "und genau so solltest",
+          "start": 123.722,
+          "end": 125.03
+        },
+        {
+          "text": "du es auch behandeln",
+          "start": 125.03,
+          "end": 126.237
+        }
+      ]
+    }
+  ]
+}

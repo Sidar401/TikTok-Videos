@@ -1,0 +1,181 @@
+{
+  "dauer": 34.09,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 4.786,
+      "captions": [
+        {
+          "text": "Der Staat schenkt",
+          "start": 0.0,
+          "end": 1.39
+        },
+        {
+          "text": "jedem Kind ab 2027 10 €",
+          "start": 1.39,
+          "end": 3.353
+        },
+        {
+          "text": "im Monat fürs Alter",
+          "start": 3.353,
+          "end": 4.786
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 4.786,
+      "end": 7.425,
+      "captions": [
+        {
+          "text": "Klingt nach wenig,",
+          "start": 4.786,
+          "end": 5.879
+        },
+        {
+          "text": "aber rechnen wir mal nach",
+          "start": 5.879,
+          "end": 7.425
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 7.425,
+      "end": 11.538,
+      "captions": [
+        {
+          "text": "Die Frühstart‑Rente zahlt",
+          "start": 7.425,
+          "end": 8.891
+        },
+        {
+          "text": "von sechs bis 18 Jahren,",
+          "start": 8.891,
+          "end": 10.368
+        },
+        {
+          "text": "das sind zwölf Jahre",
+          "start": 10.368,
+          "end": 11.538
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 11.538,
+      "end": 14.509,
+      "captions": [
+        {
+          "text": "Zusammen gerechnet",
+          "start": 11.538,
+          "end": 13.363
+        },
+        {
+          "text": "also 1.440 €",
+          "start": 13.363,
+          "end": 14.509
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 14.509,
+      "end": 18.961,
+      "captions": [
+        {
+          "text": "Bei 6 % Rendite wären es",
+          "start": 14.509,
+          "end": 16.679
+        },
+        {
+          "text": "mit 18 schon rund 2.100 €",
+          "start": 16.679,
+          "end": 18.961
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 18.961,
+      "end": 24.615,
+      "captions": [
+        {
+          "text": "Und wenn das Geld",
+          "start": 18.961,
+          "end": 20.022
+        },
+        {
+          "text": "bis zur Rente",
+          "start": 20.022,
+          "end": 20.929
+        },
+        {
+          "text": "mit 67 liegen bleibt,",
+          "start": 20.929,
+          "end": 22.395
+        },
+        {
+          "text": "könnten daraus über",
+          "start": 22.395,
+          "end": 23.722
+        },
+        {
+          "text": "30.000 € werden",
+          "start": 23.722,
+          "end": 24.615
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 24.615,
+      "end": 28.361,
+      "captions": [
+        {
+          "text": "Wer als Eltern selbst",
+          "start": 24.615,
+          "end": 25.627
+        },
+        {
+          "text": "ein paar Euro dazulegt,",
+          "start": 25.627,
+          "end": 26.903
+        },
+        {
+          "text": "kommt sogar auf deutlich mehr",
+          "start": 26.903,
+          "end": 28.361
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 28.361,
+      "end": 33.489,
+      "captions": [
+        {
+          "text": "Was sich 2027 sonst",
+          "start": 28.361,
+          "end": 29.565
+        },
+        {
+          "text": "noch alles ändert,",
+          "start": 29.565,
+          "end": 30.785
+        },
+        {
+          "text": "siehst du im ganzen Video,",
+          "start": 30.785,
+          "end": 32.547
+        },
+        {
+          "text": "unten verlinkt",
+          "start": 32.547,
+          "end": 33.489
+        }
+      ]
+    }
+  ]
+}

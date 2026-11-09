@@ -50,6 +50,8 @@ def wert(wort):
 
 
 def fmt(n):
+    if 1900 <= n <= 2100:  # Jahreszahlen ohne Punkt
+        return str(n)
     return f"{n:,}".replace(",", ".")
 
 

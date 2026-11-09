@@ -34,8 +34,38 @@ if __name__ == "__main__":
     text = "\n".join(s["sprechtext"] for s in saetze)
     v, g = stand()
     print(f"{len(text)} Zeichen, frei vorher {g - v}")
-    body = json.dumps({"text": text, "model_id": MODELL}).encode()
-    r = urllib.request.Request(f"{API}/text-to-speech/{VOICE}?output_format=mp3_44100_128", data=body, headers=H, method="POST")
+    # In Abschnitte (≤ ~900 Zeichen) teilen – lange Texte brechen sonst mit 502 ab; mit previous_text für gleichmäßigen Klang
+    teile, cur = [], []
+    for satz in (s["sprechtext"] for s in saetze):
+        if cur and sum(len(x) + 1 for x in cur) + len(satz) > 900:
+            teile.append("\n".join(cur)); cur = []
+        cur.append(satz)
+    teile.append("\n".join(cur))
     ziel = ordner / "assets/voice-original.mp3"
-    ziel.write_bytes(urllib.request.urlopen(r, timeout=300).read())
+    roh = []
+    for i, teil in enumerate(teile):
+        daten = {"text": teil, "model_id": MODELL}
+        if i:
+            daten["previous_text"] = teile[i - 1][-300:]
+        if i < len(teile) - 1:
+            daten["next_text"] = teile[i + 1][:300]
+        r = urllib.request.Request(f"{API}/text-to-speech/{VOICE}?output_format=mp3_44100_128", data=json.dumps(daten).encode(), headers=H, method="POST")
+        for versuch in range(3):
+            try:
+                roh.append(urllib.request.urlopen(r, timeout=300).read()); break
+            except Exception as e:  # noqa: BLE001
+                if versuch == 2:
+                    raise
+                print("Fehler, neuer Versuch:", e)
+        print(f"Teil {i + 1}/{len(teile)} ok")
+    if len(roh) == 1:
+        ziel.write_bytes(roh[0])
+    else:
+        import subprocess, tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            liste = []
+            for i, b in enumerate(roh):
+                f = Path(tmp) / f"t{i}.mp3"; f.write_bytes(b); liste.append(f"file '{f}'")
+            (Path(tmp) / "l.txt").write_text("\n".join(liste))
+            subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(Path(tmp) / "l.txt"), "-c", "copy", str(ziel)], check=True)
     print("gespeichert:", ziel)
