@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <style>
+      @font-face { font-family: "Inter Display"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.otf"); }
+      @font-face { font-family: "Inter Display"; font-weight: 800; src: url("assets/fonts/InterDisplay-ExtraBold.otf"); }
+      @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/Inter-SemiBold.otf"); }
+      html, body { background: #000; }
+      #root { font-family: "Inter Display", "Inter", sans-serif; }
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .vig { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, transparent 45%, rgba(0,0,0,0.78) 100%); }
+      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+      .tag { top: 140px; font-family: "Inter", sans-serif; font-weight: 600; font-size: 34px; letter-spacing: 8px; color: rgba(255,255,255,0.72); }
+      .bar { position: absolute; left: 90px; right: 90px; top: 200px; height: 6px; border-radius: 3px; background: rgba(255,255,255,0.15); }
+      .bar i { display: block; width: 0; height: 100%; border-radius: 3px; background: #ffd23f; box-shadow: 0 0 14px rgba(255,210,63,0.7); }
+      .lbl { top: 330px; font-size: 62px; font-weight: 800; letter-spacing: 1px; text-shadow: 0 4px 24px rgba(0,0,0,0.9); }
+      .lbl small { display: block; font-family: "Inter", sans-serif; font-weight: 600; font-size: 36px; color: rgba(255,255,255,0.78); margin-top: 10px; letter-spacing: 0; }
+      .lbl .big { display: block; font-size: 120px; font-weight: 900; color: #ffd23f; text-shadow: 0 0 40px rgba(255,210,63,0.5), 0 4px 24px rgba(0,0,0,0.9); white-space: nowrap; }
+      .lbl .red { color: #ff4d5e; text-shadow: 0 0 40px rgba(255,77,94,0.5), 0 4px 24px rgba(0,0,0,0.9); }
+      .capw { top: 1400px; font-size: 92px; font-weight: 900; line-height: 1.12; letter-spacing: -1px; color: #fff; text-shadow: 0 6px 30px rgba(0,0,0,0.85), 0 0 3px #000; }
+      .capw .w { display: inline-block; margin: 0 10px; padding: 0 4px 6px; }
+      .capw .on { background: #ffd23f; color: #111; padding: 0 20px 6px; border-radius: 18px; transform: rotate(-2deg) scale(1.06); text-shadow: none; box-shadow: 0 10px 40px rgba(255,210,63,0.45); }
+      .hookbig { top: 560px; font-size: 136px; }
+      .hookbig .y { color: #ffd23f; text-shadow: 0 0 46px rgba(255,210,63,0.8); }
+      .share { position: absolute; right: 40px; top: 1050px; }
+      .share span { display: inline-block; background: #fe2c55; color: #fff; font-weight: 900; font-size: 54px; padding: 16px 34px; border-radius: 60px; box-shadow: 0 0 40px rgba(254,44,85,0.7); }
+      .hookdim { background: radial-gradient(circle at 50% 42%, rgba(0,0,10,0.25), rgba(0,0,6,0.8)); }
+      .follow { top: 1080px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div class="vig"></div>
+      <div id="flash"></div>
+      <div id="tag" class="line tag clip" data-start="0" data-duration="30" data-track-index="1"><span>NEU ENTDECKT · 2026</span></div>
+      <div id="bar" class="bar clip" data-start="0" data-duration="30" data-track-index="2"><i id="bar-in"></i></div>
+      <div id="lbl" class="line lbl clip" data-start="0" data-duration="30" data-track-index="3"><span id="lbl-in"></span></div>
+      <div id="cap" class="line capw clip" data-start="2.6" data-duration="27.4" data-track-index="4"><span id="cap-in"></span></div>
+
+      <div id="hookdim" class="hookdim clip" data-start="0" data-duration="2.6" data-track-index="8"><span id="hookdim-in"></span></div>
+      <div id="hookbig" class="line hookbig clip" data-start="0" data-duration="2.6" data-track-index="7"><span id="hookbig-in">Die Erde hat<br />einen<br /><span class="y">ZWEITEN</span><br />Mond!</span></div>
+      <div id="share" class="share clip" data-start="2.7" data-duration="2.9" data-track-index="5"><span id="share-in">Teilen ➜</span></div>
+      <div id="follow" class="line follow clip" data-start="27.3" data-duration="2.7" data-track-index="6"><span id="follow-in" class="box"><span class="t">Folg uns für mehr! 👆</span><span class="pill">+ Folgen</span></span></div>
+
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="28.6" data-track-index="9" data-volume="1"></audio>
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="10" data-volume="0.3"></audio>
+    </div>
+    <img id="tex-day" src="assets/earth-blue-marble.jpg" style="display:none" alt="" />
+    <img id="tex-night" src="assets/earth-night.jpg" style="display:none" alt="" />
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.from("#hookbig-in", { opacity: 0, scale: 1.35, duration: 0.35, ease: "power3.out" }, 0);
+      tl.to("#hookbig-in", { scale: 0.6, opacity: 0, filter: "blur(12px)", duration: 0.3, ease: "power2.in" }, 2.3);
+      tl.to("#hookdim", { opacity: 0, duration: 0.3 }, 2.3);
+      tl.from("#share-in", { opacity: 0, x: 80, scale: 0.6, duration: 0.3, ease: "back.out(2.5)" }, 2.7);
+      tl.to("#share-in", { x: 18, duration: 0.25, yoyo: true, repeat: 7, ease: "sine.inOut" }, 3.1);
+      tl.to("#share-in", { opacity: 0, duration: 0.2 }, 5.35);
+      tl.from("#follow-in", { opacity: 0, scale: 0.6, duration: 0.3, ease: "back.out(2.5)" }, 27.3);
+      tl.to("#follow-in .pill", { scale: 1.1, duration: 0.3, yoyo: true, repeat: 3 }, 27.7);
+      tl.to("#bar-in", { width: "100%", duration: 30, ease: "none" }, 0);
+      tl.to({}, { duration: 0.01 }, 29.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+        <script type="module">
+      import * as THREE from "./assets/three.module.js";
+      const WORDS = [{"w": "Die", "s": 0.0, "e": 0.16}, {"w": "Erde", "s": 0.24, "e": 0.56}, {"w": "hat", "s": 0.64, "e": 0.72}, {"w": "gerade", "s": 0.84, "e": 1.12}, {"w": "einen", "s": 1.2, "e": 1.36}, {"w": "zweiten", "s": 1.4, "e": 1.84}, {"w": "Mond!", "s": 1.92, "e": 2.4}, {"w": "Teile", "s": 2.71, "e": 3.03}, {"w": "das", "s": 3.11, "e": 3.19}, {"w": "Video", "s": 3.27, "e": 3.51}, {"w": "mit", "s": 3.59, "e": 3.67}, {"w": "jemandem,", "s": 3.71, "e": 4.11}, {"w": "der", "s": 4.15, "e": 4.23}, {"w": "das", "s": 4.35, "e": 4.47}, {"w": "nicht", "s": 4.55, "e": 4.79}, {"w": "weiß!", "s": 4.91, "e": 5.35}, {"w": "Er", "s": 5.66, "e": 5.74}, {"w": "ist", "s": 5.82, "e": 5.98}, {"w": "winzig,", "s": 6.14, "e": 6.86}, {"w": "nur", "s": 6.9, "e": 7.02}, {"w": "so", "s": 7.1, "e": 7.18}, {"w": "groß", "s": 7.26, "e": 7.5}, {"w": "wie", "s": 7.54, "e": 7.58}, {"w": "eine", "s": 7.633, "e": 7.74}, {"w": "Waschmaschine.", "s": 7.82, "e": 8.7}, {"w": "Im", "s": 9.01, "e": 9.09}, {"w": "April", "s": 9.17, "e": 9.57}, {"w": "hat", "s": 9.65, "e": 9.73}, {"w": "die", "s": 9.81, "e": 9.89}, {"w": "Erde", "s": 9.97, "e": 10.21}, {"w": "ihn", "s": 10.29, "e": 10.37}, {"w": "eingefangen.", "s": 10.45, "e": 11.25}, {"w": "Seitdem", "s": 11.56, "e": 12.04}, {"w": "fliegt", "s": 12.12, "e": 12.36}, {"w": "er", "s": 12.4, "e": 12.44}, {"w": "in", "s": 12.56, "e": 12.68}, {"w": "wilden", "s": 12.72, "e": 13.08}, {"w": "Schleifen", "s": 13.16, "e": 13.56}, {"w": "um", "s": 13.6, "e": 13.64}, {"w": "uns", "s": 13.72, "e": 13.88}, {"w": "herum.", "s": 13.96, "e": 14.28}, {"w": "Entdeckt", "s": 14.59, "e": 15.07}, {"w": "wurde", "s": 15.11, "e": 15.31}, {"w": "er", "s": 15.39, "e": 15.47}, {"w": "aber", "s": 15.59, "e": 15.71}, {"w": "erst", "s": 15.79, "e": 15.95}, {"w": "im", "s": 15.99, "e": 16.03}, {"w": "August.", "s": 16.11, "e": 16.83}, {"w": "Sein", "s": 17.14, "e": 17.3}, {"w": "Name:", "s": 17.38, "e": 17.86}, {"w": "2026", "s": 18.02, "e": 19.38}, {"w": "QQ8.", "s": 19.62, "e": 20.82}, {"w": "Lange", "s": 21.13, "e": 21.41}, {"w": "bleibt", "s": 21.45, "e": 21.65}, {"w": "er", "s": 21.69, "e": 21.73}, {"w": "nicht.", "s": 21.81, "e": 22.25}, {"w": "Ende", "s": 22.56, "e": 22.76}, {"w": "des", "s": 22.8, "e": 22.96}, {"w": "Jahres", "s": 23.04, "e": 23.36}, {"w": "fliegt", "s": 23.4, "e": 23.6}, {"w": "er", "s": 23.64, "e": 23.68}, {"w": "wieder", "s": 23.72, "e": 23.92}, {"w": "davon", "s": 24.0, "e": 24.32}, {"w": "ins", "s": 24.48, "e": 24.72}, {"w": "All.", "s": 24.84, "e": 25.28}, {"w": "Welchen", "s": 25.59, "e": 25.83}, {"w": "Namen", "s": 25.91, "e": 26.15}, {"w": "würdest", "s": 26.19, "e": 26.47}, {"w": "du", "s": 26.55, "e": 26.63}, {"w": "ihm", "s": 26.67, "e": 26.79}, {"w": "geben?", "s": 26.87, "e": 27.43}, {"w": "Folg", "s": 27.51, "e": 27.75}, {"w": "uns", "s": 27.83, "e": 27.91}, {"w": "für", "s": 27.99, "e": 28.07}, {"w": "mehr!", "s": 28.11, "e": 28.63}];
+      const CH = [[0.0, 2.4], [2.71, 5.35], [5.66, 8.7], [9.01, 11.25], [11.56, 14.28], [14.59, 16.83], [17.14, 20.82], [21.13, 22.25], [22.56, 25.28], [25.59, 28.63]];
+      const GROUPS = [];
+      let wi = 0;
+      CH.forEach(([a, b]) => {
+        const ws = []; while (wi < WORDS.length && WORDS[wi].s < b + 0.01) ws.push(WORDS[wi++]);
+        let cur = [];
+        ws.forEach((w) => { const len = cur.map((x) => x.w).join(" ").length + w.w.length; if (cur.length && (cur.length >= 3 || len > 16 || /[.?!]$/.test(cur[cur.length - 1].w))) { GROUPS.push(cur); cur = []; } cur.push(w); });
+        if (cur.length) GROUPS.push(cur);
+      });
+      GROUPS.forEach((g, i) => { g.s = g[0].s; g.e = i + 1 < GROUPS.length ? GROUPS[i + 1][0].s : 30; });
+      const capEl = document.getElementById("cap-in"), lblEl = document.getElementById("lbl-in"), flashEl = document.getElementById("flash");
+      let lastCap = "", lastLbl = "";
+      function captions(t) {
+        let h = "";
+        const g = GROUPS.find((g) => t >= g.s - 0.05 && t < g.e);
+        if (g && t >= 2.6) h = g.map((w) => { const on = t >= w.s - 0.04 && t < w.e + 0.02; return `<span class="w${on ? " on" : ""}">${w.w.replace(/[,.:]$/, "")}</span>`; }).join("");
+        if (h !== lastCap) { capEl.innerHTML = h; lastCap = h; }
+      }
+      function label(h) { if (h !== lastLbl) { lblEl.innerHTML = h; lastLbl = h; } }
+      const cl = (x) => Math.max(0, Math.min(1, x));
+      const lerp = (a, b, f) => a + (b - a) * f;
+      const eio = (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+      const eout = (x) => 1 - Math.pow(1 - x, 3);
+      const prog = (t, s, d) => cl((t - s) / d);
+      let seed = 7; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+      const V = (x, y, z) => new THREE.Vector3(x, y, z);
+
+      const cv = document.getElementById("stage");
+      const R = new THREE.WebGLRenderer({ canvas: cv, antialias: true, preserveDrawingBuffer: true });
+      R.setSize(1080, 1920, false); R.outputColorSpace = THREE.SRGBColorSpace; R.toneMapping = THREE.ACESFilmicToneMapping;
+      const sc = new THREE.Scene();
+      const cam = new THREE.PerspectiveCamera(32, 1080 / 1920, 0.01, 2000);
+      const sp = [], scol = [];
+      for (let i = 0; i < 4000; i++) { const u = rnd() * 2 - 1, a = rnd() * 6.283, r = 600; sp.push(Math.sqrt(1 - u * u) * Math.cos(a) * r, u * r, Math.sqrt(1 - u * u) * Math.sin(a) * r); scol.push(0.8 + rnd() * 0.2, 0.85 + rnd() * 0.15, 1); }
+      const sg = new THREE.BufferGeometry(); sg.setAttribute("position", new THREE.Float32BufferAttribute(sp, 3)); sg.setAttribute("color", new THREE.Float32BufferAttribute(scol, 3));
+      sc.add(new THREE.Points(sg, new THREE.PointsMaterial({ size: 2.4, vertexColors: true, transparent: true, opacity: 0.85, depthWrite: false })));
+
+      const sunDir = V(-0.6, 0.35, 0.75).normalize();
+      const U = { d: { value: null }, n: { value: null }, sun: { value: sunDir } };
+      const earth = new THREE.Mesh(new THREE.SphereGeometry(2.6, 160, 160), new THREE.ShaderMaterial({
+        uniforms: U,
+        vertexShader: `varying vec2 vUv;varying vec3 vN;varying vec3 vV;void main(){vUv=uv;vN=normalize(mat3(modelMatrix)*normal);vec4 w=modelMatrix*vec4(position,1.);vV=normalize(cameraPosition-w.xyz);gl_Position=projectionMatrix*viewMatrix*w;}`,
+        fragmentShader: `uniform sampler2D d,n;uniform vec3 sun;varying vec2 vUv;varying vec3 vN;varying vec3 vV;
+          void main(){float l=dot(vN,sun);float k=smoothstep(-.15,.25,l);vec3 dt=texture2D(d,vUv).rgb;float water=smoothstep(.0,.03,dt.b-dt.r)*(1.-step(.3,dt.r));dt+=water*vec3(.015,.04,.08);
+          vec3 dc=dt*(.12+1.25*max(l,0.));vec3 nc=texture2D(n,vUv).rgb*vec3(1.4,1.05,.65)*1.8;vec3 c=mix(nc,dc,k);
+          float f=pow(1.-clamp(dot(vN,vV),0.,1.),3.);c+=vec3(.3,.6,1.)*f*(.2+k);c+=pow(max(dot(reflect(-sun,vN),vV),0.),60.)*.15*k*water;gl_FragColor=vec4(c,1.);}`,
+      }));
+      const earthG = new THREE.Group(); earthG.add(earth); earthG.rotation.z = 0.41; sc.add(earthG);
+      const atm = new THREE.Mesh(new THREE.SphereGeometry(2.6 * 1.17, 96, 96), new THREE.ShaderMaterial({
+        transparent: true, blending: THREE.AdditiveBlending, side: THREE.BackSide, depthWrite: false, uniforms: { sun: { value: sunDir } },
+        vertexShader: `varying vec3 vN;varying vec3 vW;void main(){vN=normalize(mat3(modelMatrix)*normal);vec4 w=modelMatrix*vec4(position,1.);vW=w.xyz;gl_Position=projectionMatrix*viewMatrix*w;}`,
+        fragmentShader: `uniform vec3 sun;varying vec3 vN;varying vec3 vW;void main(){vec3 v=normalize(cameraPosition-vW);float i=pow(max(.72-dot(vN,v),0.),4.);float l=smoothstep(-.4,.6,dot(vN,sun));gl_FragColor=vec4(vec3(.35,.65,1.)*i*(.3+1.5*l),1.);}`,
+      }));
+      sc.add(atm);
+      // großer Mond
+      const mc = document.createElement("canvas"); mc.width = 2048; mc.height = 1024; const g = mc.getContext("2d");
+      g.fillStyle = "#a19d96"; g.fillRect(0, 0, 2048, 1024);
+      for (let i = 0; i < 16; i++) { g.fillStyle = `rgba(62,60,60,${0.22 + rnd() * 0.25})`; g.beginPath(); g.ellipse(rnd() * 2048, 250 + rnd() * 500, 80 + rnd() * 220, 60 + rnd() * 150, rnd() * 3, 0, 7); g.fill(); }
+      for (let i = 0; i < 380; i++) { const x = rnd() * 2048, y = rnd() * 1024, rr = Math.pow(rnd(), 3) * 40 + 2; g.fillStyle = "rgba(45,43,40,0.28)"; g.beginPath(); g.arc(x, y, rr, 0, 7); g.fill(); g.strokeStyle = "rgba(235,232,224,0.3)"; g.lineWidth = Math.max(1, rr * 0.16); g.beginPath(); g.arc(x - rr * 0.1, y - rr * 0.1, rr, 2.4, 5.5); g.stroke(); }
+      const mt = new THREE.CanvasTexture(mc); mt.colorSpace = THREE.SRGBColorSpace;
+      const moon = new THREE.Mesh(new THREE.SphereGeometry(0.75, 96, 96), new THREE.MeshStandardMaterial({ map: mt, roughness: 1 }));
+      sc.add(moon);
+      // Mini-Mond: unförmiger Felsbrocken
+      const BLOBS = []; for (let k = 0; k < 46; k++) { const u = rnd() * 2 - 1, a = rnd() * 6.283; BLOBS.push([V(Math.sqrt(1 - u * u) * Math.cos(a), u, Math.sqrt(1 - u * u) * Math.sin(a)), (rnd() - 0.55) * (k < 8 ? 0.5 : 0.14), k < 8 ? 0.7 + rnd() * 0.4 : 0.12 + rnd() * 0.2]); }
+      const rg = new THREE.SphereGeometry(1, 160, 110); const pa = rg.attributes.position;
+      for (let i = 0; i < pa.count; i++) { const v = V(pa.getX(i), pa.getY(i), pa.getZ(i)); let n = 1; BLOBS.forEach(([b, a, s]) => { const d = v.clone().normalize().distanceTo(b); n += a * Math.exp(-(d * d) / (s * s)); });
+        v.multiplyScalar(n); v.x *= 1.25; pa.setXYZ(i, v.x, v.y, v.z); }
+      rg.computeVertexNormals();
+      const rc = document.createElement("canvas"); rc.width = 1024; rc.height = 512; const rq = rc.getContext("2d"); rq.fillStyle = "#8a8076"; rq.fillRect(0, 0, 1024, 512);
+      for (let i = 0; i < 26000; i++) { const c = 90 + rnd() * 80; rq.fillStyle = `rgba(${c},${c * 0.95},${c * 0.88},0.35)`; rq.fillRect(rnd() * 1024, rnd() * 512, 1 + rnd() * 3, 1 + rnd() * 3); }
+      for (let i = 0; i < 60; i++) { rq.fillStyle = `rgba(40,36,32,${0.15 + rnd() * 0.2})`; rq.beginPath(); rq.arc(rnd() * 1024, rnd() * 512, 4 + rnd() * 18, 0, 7); rq.fill(); }
+      const rt = new THREE.CanvasTexture(rc); rt.colorSpace = THREE.SRGBColorSpace;
+      const rock = new THREE.Mesh(rg, new THREE.MeshStandardMaterial({ map: rt, bumpMap: rt, bumpScale: 3, roughness: 0.95, metalness: 0.02 }));
+      sc.add(rock);
+      const dl = new THREE.DirectionalLight(0xfff4e6, 3); sc.add(dl);
+      const camLight = new THREE.DirectionalLight(0xdfe8ff, 1.1); sc.add(camLight); sc.add(camLight.target); sc.add(new THREE.AmbientLight(0x334466, 0.35));
+      function glowTex(c0, c1) { const c = document.createElement("canvas"); c.width = c.height = 256; const q = c.getContext("2d"); const gr = q.createRadialGradient(128, 128, 0, 128, 128, 128); gr.addColorStop(0, c0); gr.addColorStop(0.2, c1); gr.addColorStop(1, "rgba(0,0,0,0)"); q.fillStyle = gr; q.fillRect(0, 0, 256, 256); return new THREE.CanvasTexture(c); }
+      const mark = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex("rgba(255,250,220,1)", "rgba(255,210,63,.6)"), blending: THREE.AdditiveBlending, transparent: true, depthWrite: false, opacity: 0 })); sc.add(mark);
+      // Ziel-Ring um den Mini-Mond
+      const ring = new THREE.Mesh(new THREE.RingGeometry(0.9, 1.0, 64), new THREE.MeshBasicMaterial({ color: 0xffd23f, transparent: true, opacity: 0, side: THREE.DoubleSide, depthWrite: false }));
+      sc.add(ring);
+      // Schleifen-Bahn
+      const LOOP = (a) => V(5.2 * Math.cos(a) + 1.6 * Math.cos(4 * a), 0.9 * Math.sin(2 * a), 5.2 * Math.sin(a) + 1.6 * Math.sin(4 * a));
+      const pts = []; for (let i = 0; i <= 600; i++) pts.push(LOOP((i / 600) * Math.PI * 2));
+      const path = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({ color: 0xffd23f, transparent: true, opacity: 0 }));
+      sc.add(path);
+      // Spur hinter dem Mini-Mond
+      const NT = 160, tp = new Float32Array(NT * 3); const tg = new THREE.BufferGeometry(); tg.setAttribute("position", new THREE.BufferAttribute(tp, 3));
+      const trailMat = new THREE.PointsMaterial({ color: 0xffd98a, size: 0.06, transparent: true, opacity: 0, blending: THREE.AdditiveBlending, depthWrite: false });
+      const trail = new THREE.Points(tg, trailMat); sc.add(trail);
+      function setTrail(fn, a0, span) { for (let i = 0; i < NT; i++) { const p = fn(a0 - (i / NT) * span); tp[i * 3] = p.x; tp[i * 3 + 1] = p.y; tp[i * 3 + 2] = p.z; } tg.attributes.position.needsUpdate = true; }
+
+      function setCam(p, look) { cam.position.copy(p); cam.lookAt(look); }
+      const MOON = V(-4.2, 3.6, -3);
+      // Anflug-Bahn (April): von weit draußen in die Schleife
+      const IN = (f) => { const a = V(18, 4, -22), b = LOOP(0.2); const c = V(9, 1.5, -2); return a.clone().multiplyScalar((1 - f) * (1 - f)).add(c.clone().multiplyScalar(2 * f * (1 - f))).add(b.clone().multiplyScalar(f * f)); };
+      const OUT = (f) => { const a = LOOP(4.0), c = V(-12, 3, 10), b = V(-30, 8, 30); return a.clone().multiplyScalar((1 - f) * (1 - f)).add(c.clone().multiplyScalar(2 * f * (1 - f))).add(b.clone().multiplyScalar(f * f)); };
+
+      function renderAt(t) {
+        if (!U.d.value) return;
+        seed = 99;
+        earth.rotation.y = -1.6 + t * 0.04;
+        moon.position.copy(MOON); moon.rotation.y = t * 0.02;
+        rock.scale.setScalar(0.16); rock.rotation.set(t * 0.7, t * 0.5, t * 0.3); rock.visible = true;
+        mark.material.opacity = 0; ring.material.opacity = 0; path.material.opacity = 0; trailMat.opacity = 0;
+        flashEl.style.opacity = 0;
+        let lbl = "";
+        const loopA = (t) => 0.2 + (t - 11.5) * 0.55;
+        if (t < 5.6) {
+          // Erde + großer Mond, dann leuchtet ein zweiter Punkt auf
+          const f = eio(prog(t, 0, 5.6));
+          setCam(V(lerp(2, 0, f), lerp(3.5, 2.6, f), lerp(22, 19, f)), V(-1.2, 0.3, -1));
+          rock.position.copy(LOOP(1.2 + t * 0.12));
+          mark.position.copy(rock.position); mark.scale.setScalar(1.4 + 0.25 * Math.sin(t * 6)); mark.material.opacity = prog(t, 1.4, 0.4);
+          ring.position.copy(rock.position); ring.lookAt(cam.position); ring.scale.setScalar(0.9 + 0.1 * Math.sin(t * 5)); ring.material.opacity = prog(t, 1.6, 0.4);
+          lbl = t > 2.6 ? `Mond Nr. 2 entdeckt!<small>klein, aber echt</small>` : "";
+        } else if (t < 8.95) {
+          // Nahaufnahme: winzig wie eine Waschmaschine
+          const f = prog(t, 5.6, 3.35);
+          rock.position.set(0, 0.4, 0); rock.scale.setScalar(0.95);
+          earthG.position.set(0, -6.2, -6); atm.position.copy(earthG.position);
+          setCam(V(0, 0.8, lerp(8.5, 7, eio(f))), V(0, 0.4, 0));
+          lbl = t > 6.1 ? `<span class="big">1–2 Meter</span><small>so groß wie eine Waschmaschine</small>` : "";
+        } else if (t < 11.5) {
+          // April: eingefangen
+          const f = eio(prog(t, 8.95, 2.55));
+          rock.position.copy(IN(f));
+          setTrail((q) => IN(Math.max(0, q)), f, 0.5); trailMat.opacity = 0.9;
+          mark.position.copy(rock.position); mark.scale.setScalar(2.4); mark.material.opacity = 0.9;
+          setCam(V(4, 6, 24), V(2, 0.5, -3));
+          lbl = `April 2026<small>die Erde fängt ihn ein</small>`;
+        } else if (t < 14.5) {
+          // Wilde Schleifen
+          const a = loopA(t);
+          rock.position.copy(LOOP(a)); setTrail(LOOP, a, 2.2); trailMat.opacity = 1;
+          path.material.opacity = 0.35 * prog(t, 11.6, 0.6);
+          mark.position.copy(rock.position); mark.scale.setScalar(1.2); mark.material.opacity = 0.8;
+          setCam(V(Math.sin(t * 0.2) * 3, 14, 15), V(0, -0.5, 0));
+          lbl = `Wilde Schleifen<small>einmal rund um die Erde – und wieder</small>`;
+        } else if (t < 17.1) {
+          // Entdeckt erst im August: Fadenkreuz
+          const a = loopA(t); rock.position.copy(LOOP(a)); setTrail(LOOP, a, 2.2); trailMat.opacity = 0.8; path.material.opacity = 0.25;
+          const f = eio(prog(t, 14.5, 1.2));
+          const look = rock.position.clone(); const out = look.clone().setY(0).normalize();
+          setCam(look.clone().add(out.multiplyScalar(6 * lerp(3, 1, f))).add(V(0, 1.5, 0)), look);
+          rock.scale.setScalar(0.3);
+          ring.position.copy(rock.position); ring.lookAt(cam.position); ring.scale.setScalar(lerp(3, 0.55, eout(prog(t, 14.8, 0.8)))); ring.material.opacity = prog(t, 14.8, 0.3);
+          flashEl.style.opacity = t > 15.6 && t < 15.9 ? 0.25 * (1 - (t - 15.6) / 0.3) : 0;
+          lbl = t > 15.0 ? `Entdeckt erst im August<small>monatelang hat ihn niemand bemerkt</small>` : "";
+        } else if (t < 21.1) {
+          // Sein Name
+          const a = loopA(t); rock.position.copy(LOOP(a)); setTrail(LOOP, a, 2.2); trailMat.opacity = 0.8; path.material.opacity = 0.25;
+          const look = rock.position.clone(); rock.scale.setScalar(0.3); const out = look.clone().setY(0).normalize();
+          setCam(look.clone().add(out.multiplyScalar(6)).add(V(Math.sin(t * 0.5) * 1.2, 1.5, 0)), look);
+          ring.position.copy(rock.position); ring.lookAt(cam.position); ring.scale.setScalar(0.55); ring.material.opacity = 0.9;
+          lbl = t > 17.9 ? `<span class="big">2026 QQ8</span><small>sein offizieller Name</small>` : "";
+        } else if (t < 25.5) {
+          // Tschüss: fliegt davon
+          const f = eio(prog(t, 22.4, 3.0));
+          if (t < 22.4) { const a = loopA(t); rock.position.copy(LOOP(a)); setTrail(LOOP, a, 2.2); }
+          else { rock.position.copy(OUT(f)); setTrail((q) => (q < 0 ? LOOP(4.0 + q * 3) : OUT(q)), f, 0.6); }
+          trailMat.opacity = 0.9; path.material.opacity = 0.25 * (1 - f);
+          mark.position.copy(rock.position); mark.scale.setScalar(1.2); mark.material.opacity = 0.8;
+          setCam(V(-3, 8, 22), V(-3, 0.5, 2));
+          lbl = t > 22.4 ? `Ende 2026: Tschüss! 👋<small>er fliegt zurück ins All</small>` : `Lange bleibt er nicht …`;
+        } else {
+          // Schluss: Erde + Mond
+          const f = eio(prog(t, 25.5, 4.5));
+          setCam(V(lerp(1, -1, f), 2.8, lerp(19, 21, f)), V(-0.8, 0.6, -1));
+          rock.visible = false;
+          lbl = t < 27.3 ? `Welchen Namen gibst du ihm? 👇` : "";
+        }
+        dl.position.copy(sunDir).multiplyScalar(10);
+        camLight.target.position.copy(rock.position); camLight.position.copy(cam.position).add(V(-2, 3, 0));
+        mark.visible = mark.material.opacity > 0.01; ring.visible = ring.material.opacity > 0.01; path.visible = path.material.opacity > 0.01; trail.visible = trailMat.opacity > 0.01;
+        if (t >= 8.95 || t < 5.6) { earthG.position.set(0, 0, 0); atm.position.set(0, 0, 0); }
+        R.render(sc, cam);
+        captions(t); label(lbl);
+      }
+
+      const ready = Promise.all(["tex-day", "tex-night"].map((id) => { const im = document.getElementById(id); return im.complete ? Promise.resolve(im) : new Promise((r) => (im.onload = () => r(im))); })).then(([a, b]) => {
+        const mk = (im) => { const tx = new THREE.Texture(im); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8; tx.needsUpdate = true; return tx; };
+        U.d.value = mk(a); U.n.value = mk(b); renderAt(lastT);
+      });
+      window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady || {}; window.__hf.buildReady.scene = ready;
+      let lastT = 0;
+      window.addEventListener("hf-seek", (e) => { lastT = e.detail.time; renderAt(lastT); });
+    </script>
+  </body>
+</html>
