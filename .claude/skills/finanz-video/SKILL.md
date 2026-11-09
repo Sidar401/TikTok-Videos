@@ -105,3 +105,4 @@ Das Einkommen-Video (`videos/longform-einkommen`) ist der Qualitäts-Maßstab: �
 - Ablauf: Skript schreiben → Nutzer gibt frei („passt“) → `python3 scripts/stimme.py videos/<name>` (Stimme „HundeTV“, eleven_v4) → `sync.py … --tempo 1.12` → bauen/rendern. Kein MP3-Upload mehr nötig.
 - Credits: Schlüssel-Limit 100.000/Monat, **geteilt mit Kanal Novaro**; Abo ~121.000. Vor jeder Erzeugung `python3 scripts/stimme.py --stand`; bei < 15.000 frei den Nutzer warnen.
 - **Motor-Short (Nutzer 8.11.):** Täglich bei **einem der 2 Shorts** auf ein YouTube-Longform hinweisen – Thema passend zum letzten YouTube-Longform. Letzter Satz z. B. „Das ganze Video dazu findest du unten verlinkt.“ + Endkarte (Longform-Thumbnail klein + Pfeil ▼ „Video unten antippen“). Ausnahme von der Regel „kein Schluss-CTA“. Nutzer verlinkt beim Hochladen per „Verwandtes Video“.
+- **Longform-Länge ab 9.11.: 2–3 Minuten** (≈ 300–450 Wörter, ≈ 2.500–3.500 Credits) – Nutzer: „erstmal“ so.
