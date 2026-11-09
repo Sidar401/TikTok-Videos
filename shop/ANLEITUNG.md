@@ -32,3 +32,6 @@ wiederverwenden (z. B. „Hund langweilt sich“, „Besitzer geht“, „Hund s
 - Schalter **„KI-generiert“** an (KI-Clips!)
 - Trend-Sound drunter, Produkt im Warenkorb verlinken
 - Preis im Video vor dem Posten prüfen (Deals ändern sich)
+
+## Stimme (ab ca. 19.11.)
+Siehe `.claude/skills/shop-video/SKILL.md` → Abschnitt „Stimme“. Werkzeug: `scripts/stimme.py`.

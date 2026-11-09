@@ -19,3 +19,8 @@ Kurz:
 
 Regeln: Deutsch, sehr kurze Antworten fürs iPad. Erster Untertitel steht ab Frame 0. Text nie über Hundegesichtern.
 Beim Posten erinnern: Schalter „KI-generiert“ an, Trend-Sound drunter, Preis prüfen.
+
+## Stimme (vorbereitet 9.11., ab ca. 19.11. geplant)
+- ElevenLabs ist über die Umgebung „Standard“ freigeschaltet (Schlüssel setzt der Proxy ein, nie selbst eintragen).
+- Sprechtext pro Video in `skript.json` (`saetze[].sprechtext`, max. ~20 s ≈ 50 Wörter), dann `python3 scripts/stimme.py <ordner> --stimme <voice_id>` → `assets/voice-original.mp3`, danach `python3 scripts/sync.py <ordner> <ordner>/assets/voice-original.mp3 --tempo 1.12` für Untertitel-Zeiten.
+- Shop-Stimme: **noch vom Nutzer festzulegen** (Liste: `python3 scripts/stimme.py --stimmen`). Credits geteilt mit HundeFinanzTv, Novaro, HundeWissenTv – Stand mit `--stand` prüfen.

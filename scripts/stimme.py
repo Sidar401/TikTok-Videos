@@ -2,6 +2,8 @@
 """Stimme direkt per ElevenLabs-API erzeugen (Nutzer 8.11.: statt MP3-Upload).
 
   python3 scripts/stimme.py videos/<name>        → videos/<name>/assets/voice-original.mp3
+  python3 scripts/stimme.py videos/<name> --stimme <voice_id>   (andere Stimme, z. B. für den Shop-Kanal)
+  python3 scripts/stimme.py --stimmen                            (alle Stimmen im Konto auflisten)
   danach wie immer: python3 scripts/sync.py videos/<name> videos/<name>/assets/voice-original.mp3 --tempo 1.12
 
 Stimme „HundeTV“, Modell eleven_v4. Der Schlüssel wird vom Proxy eingesetzt (Header-Wert ist nur ein Platzhalter).
@@ -25,6 +27,13 @@ def stand():
 
 
 if __name__ == "__main__":
+    if "--stimme" in sys.argv:
+        i = sys.argv.index("--stimme"); VOICE = sys.argv[i + 1]; del sys.argv[i:i + 2]
+    if sys.argv[1] == "--stimmen":
+        r = urllib.request.Request(f"{API}/voices", headers=H)
+        for v in json.load(urllib.request.urlopen(r))["voices"]:
+            print(v["voice_id"], "|", v["name"], "|", v.get("category"))
+        sys.exit()
     if sys.argv[1] == "--stand":
         v, g = stand()
         print(f"verbraucht {v} / {g} Credits, frei {g - v}")
