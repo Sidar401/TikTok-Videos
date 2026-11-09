@@ -14,3 +14,4 @@ Vorlage/Baukasten: `wissen/kit/` (neu.sh, kit.js, kit.css, mix.py, fertig.sh, sn
 - API-Schlüssel hat ein Limit von 20.000 Credits/Monat (ca. 35–40 Videos). Vor dem Limit dem Nutzer Bescheid sagen.
 - **Ton (Nutzer-Feedback 09.11.):** Effekte waren lauter als die Stimme („Zischen“). Ab jetzt: wenige kurze Effekte, kein Riser/Glitzern/Glitch während der Stimme, `data-volume` 0.3 und nach `mix.py` immer `python3 -I wissen/kit/duck.py videos/<name>` (Effekte beim Sprechen auf 25 %).
 - Nach dem ersten Satz ein Teilen-Aufruf („Teile das Video mit jemandem, der das nicht weiß!“) + rote „Teilen ➜“-Pille rechts (Nutzer-Wunsch 09.11.).
+- **Oben im Bild (Zeile über dem Fortschrittsbalken) immer das aktuelle Datum**, z. B. „9. NOVEMBER 2026“ – kein „NEU“, kein „WAS WÄRE, WENN …“ (Nutzer-Wunsch 09.11.).
