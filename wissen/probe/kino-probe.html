@@ -1,0 +1,160 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"ID";font-weight:900;src:url("InterDisplay-Black.otf")}
+@font-face{font-family:"ID";font-weight:800;src:url("InterDisplay-ExtraBold.otf")}
+@font-face{font-family:"IS";font-weight:600;src:url("Inter-SemiBold.otf")}
+html,body{margin:0;background:#000}
+#root{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:"ID",sans-serif;color:#fff}
+canvas{position:absolute;inset:0}
+.tag{position:absolute;top:140px;left:0;right:0;text-align:center;font:600 34px "IS";letter-spacing:8px;color:rgba(255,255,255,.75)}
+.bar{position:absolute;left:90px;right:90px;top:200px;height:6px;border-radius:3px;background:rgba(255,255,255,.15)}
+.bar i{display:block;width:38%;height:100%;border-radius:3px;background:#ffd23f;box-shadow:0 0 14px rgba(255,210,63,.7)}
+.lbl{position:absolute;top:330px;left:0;right:0;text-align:center;font-weight:800;font-size:62px;text-shadow:0 4px 24px rgba(0,0,0,.9)}
+.lbl .big{display:block;font-size:120px;font-weight:900;color:#ffd23f;text-shadow:0 0 40px rgba(255,210,63,.5),0 4px 24px rgba(0,0,0,.9)}
+.lbl small{display:block;font:600 36px "IS";color:rgba(255,255,255,.8);margin-top:10px}
+.cap{position:absolute;top:1400px;left:0;right:0;text-align:center;font-weight:900;font-size:92px;letter-spacing:-1px;text-shadow:0 6px 30px rgba(0,0,0,.85)}
+.cap .w{display:inline-block;margin:0 10px}
+.cap .on{background:#ffd23f;color:#111;padding:0 20px 6px;border-radius:18px;transform:rotate(-2deg) scale(1.06);text-shadow:none;box-shadow:0 10px 40px rgba(255,210,63,.45)}
+.mk{position:absolute;font-weight:900;font-size:58px;color:#ffd23f;text-shadow:0 0 30px rgba(255,210,63,.6),0 4px 18px rgba(0,0,0,.9)}
+.mk small{display:block;font:600 32px "IS";color:#fff}
+</style>
+<script type="importmap">{"imports":{"three":"./package/build/three.module.js","three/addons/":"./package/examples/jsm/"}}</script>
+</head><body>
+<div id="root"><canvas id="c" width="1080" height="1920"></canvas><div id="ov"></div></div>
+<script type="module">
+import * as THREE from "three";
+import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
+import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
+await document.fonts.load("900 100px ID");
+const SCN = +new URLSearchParams(location.search).get("s");
+let seed = 11; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+const V = (x, y, z) => new THREE.Vector3(x, y, z);
+const R = new THREE.WebGLRenderer({ canvas: document.getElementById("c"), antialias: true, preserveDrawingBuffer: true });
+R.setSize(1080, 1920, false); R.toneMapping = THREE.ACESFilmicToneMapping; R.outputColorSpace = THREE.SRGBColorSpace;
+const sc = new THREE.Scene(); const cam = new THREE.PerspectiveCamera(40, 1080 / 1920, 0.1, 5000);
+
+// --- Helfer: Rauschen für Wolken ---
+function noiseCanvas(w, h, scale, oct, cover, soft) {
+  const c = document.createElement("canvas"); c.width = w; c.height = h; const g = c.getContext("2d"); const im = g.createImageData(w, h);
+  const G = 64, grid = []; for (let i = 0; i < G * G; i++) grid.push(rnd());
+  const vn = (x, y) => { const xi = Math.floor(x), yi = Math.floor(y), xf = x - xi, yf = y - yi; const s = (t) => t * t * (3 - 2 * t);
+    const a = grid[((yi % G + G) % G) * G + ((xi % G + G) % G)], b = grid[((yi % G + G) % G) * G + (((xi + 1) % G + G) % G)], c2 = grid[(((yi + 1) % G + G) % G) * G + ((xi % G + G) % G)], d = grid[(((yi + 1) % G + G) % G) * G + (((xi + 1) % G + G) % G)];
+    return a + (b - a) * s(xf) + (c2 - a) * s(yf) + (a - b - c2 + d) * s(xf) * s(yf); };
+  for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) { let v = 0, amp = 0.5, f = scale; for (let o = 0; o < oct; o++) { v += amp * vn(x * f / w * G / 8, y * f / h * G / 8); amp *= 0.5; f *= 2; }
+    const a = Math.max(0, Math.min(1, (v - cover) / soft)); const i = (y * w + x) * 4; im.data[i] = im.data[i + 1] = im.data[i + 2] = 255; im.data[i + 3] = a * 255; }
+  g.putImageData(im, 0, 0); return c;
+}
+// Fenster-Textur
+function windowsTex(lit, warm) {
+  const c = document.createElement("canvas"); c.width = 128; c.height = 512; const g = c.getContext("2d"); g.fillStyle = "#06080e"; g.fillRect(0, 0, 128, 512);
+  for (let y = 6; y < 512; y += 14) for (let x = 6; x < 128; x += 12) if (rnd() < lit) { const k = 0.55 + rnd() * 0.45; g.fillStyle = warm ? `rgba(255,${190 + rnd() * 40},${110 + rnd() * 50},${k})` : `rgba(170,200,255,${k * 0.6})`; g.fillRect(x, y, 6, 8); }
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.wrapS = t.wrapT = THREE.RepeatWrapping; return t;
+}
+// Himmels-Kuppel
+function sky(top, mid, hor) {
+  const m = new THREE.ShaderMaterial({ side: THREE.BackSide, depthWrite: false, uniforms: { t: { value: new THREE.Color(top) }, m: { value: new THREE.Color(mid) }, h: { value: new THREE.Color(hor) } },
+    vertexShader: `varying vec3 vP;void main(){vP=normalize(position);gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+    fragmentShader: `uniform vec3 t,m,h;varying vec3 vP;void main(){float y=vP.y;vec3 c=mix(h,m,smoothstep(-.02,.18,y));c=mix(c,t,smoothstep(.18,.6,y));gl_FragColor=vec4(c,1.);}` });
+  sc.add(new THREE.Mesh(new THREE.SphereGeometry(3000, 48, 24), m));
+}
+function stars(n, minY) { const p = []; for (let i = 0; i < n; i++) { const a = rnd() * 6.283, u = minY + rnd() * (1 - minY); const r = 2800; p.push(Math.cos(a) * Math.sqrt(1 - u * u) * r, u * r, Math.sin(a) * Math.sqrt(1 - u * u) * r); }
+  const g = new THREE.BufferGeometry(); g.setAttribute("position", new THREE.Float32BufferAttribute(p, 3)); sc.add(new THREE.Points(g, new THREE.PointsMaterial({ color: 0xdfe8ff, size: 3, sizeAttenuation: false, transparent: true, opacity: 0.8 }))); }
+function city(n, rMin, rMax, arc, lit, warm, hMax, baseY = 0, center = 0) {
+  const g = new THREE.Group();
+  for (let i = 0; i < n; i++) { const a = center + (rnd() - 0.5) * arc, r = rMin + rnd() * (rMax - rMin); const w = 6 + rnd() * 14, d = 6 + rnd() * 14, h = 10 + Math.pow(rnd(), 2.2) * hMax;
+    const tx = windowsTex(lit, warm); tx.repeat.set(w / 12, h / 40);
+    const m = new THREE.MeshStandardMaterial({ color: 0x0b0e16, roughness: 0.8, metalness: 0.2, emissiveMap: tx, emissive: 0xffffff, emissiveIntensity: 1.2 });
+    const b = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), m); b.position.set(Math.sin(a) * r, baseY + h / 2, -Math.cos(a) * r); b.rotation.y = -a; g.add(b);
+    if (rnd() < 0.25) { const ant = new THREE.Mesh(new THREE.SphereGeometry(0.5, 8, 8), new THREE.MeshBasicMaterial({ color: 0xff3030 })); ant.position.set(b.position.x, baseY + h + 1, b.position.z); g.add(ant); } }
+  sc.add(g); return g;
+}
+function moonTex() { const c = document.createElement("canvas"); c.width = 2048; c.height = 1024; const g = c.getContext("2d");
+  const base = noiseCanvas(512, 256, 1.5, 6, 0.0, 1.0); g.fillStyle = "#c4beb2"; g.fillRect(0, 0, 2048, 1024);
+  // Meere (dunkle Flächen) aus Rauschen
+  const mare = noiseCanvas(512, 256, 1.2, 5, 0.5, 0.18); g.globalCompositeOperation = "multiply"; g.globalAlpha = 0.55; g.filter = "brightness(0.45)"; g.drawImage(mare, 0, 0, 2048, 1024); g.filter = "none";
+  g.globalAlpha = 0.35; g.drawImage(base, 0, 0, 2048, 1024); g.globalCompositeOperation = "source-over"; g.globalAlpha = 1;
+  for (let i = 0; i < 900; i++) { const x = rnd() * 2048, y = rnd() * 1024, rr = Math.pow(rnd(), 4) * 30 + 1.5; const gr = g.createRadialGradient(x - rr * 0.2, y - rr * 0.2, 0, x, y, rr);
+    gr.addColorStop(0, "rgba(60,56,50,.35)"); gr.addColorStop(0.75, "rgba(80,76,70,.18)"); gr.addColorStop(0.9, "rgba(235,230,220,.22)"); gr.addColorStop(1, "rgba(0,0,0,0)"); g.fillStyle = gr; g.fillRect(x - rr, y - rr, rr * 2, rr * 2); }
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; }
+function glow(col, size, pos, op = 1) { const c = document.createElement("canvas"); c.width = c.height = 256; const g = c.getContext("2d"); const gr = g.createRadialGradient(128, 128, 0, 128, 128, 128); gr.addColorStop(0, col); gr.addColorStop(1, "rgba(0,0,0,0)"); g.fillStyle = gr; g.fillRect(0, 0, 256, 256);
+  const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(c), blending: THREE.AdditiveBlending, transparent: true, depthWrite: false, opacity: op })); s.scale.setScalar(size); s.position.copy(pos); sc.add(s); return s; }
+// Wasser (Shader: Wellen + Spiegelung)
+function water(y, deep, skyCol, glint, glintDir) {
+  const m = new THREE.ShaderMaterial({ transparent: false, uniforms: { deep: { value: new THREE.Color(deep) }, skyc: { value: new THREE.Color(skyCol) }, gl: { value: new THREE.Color(glint) }, gd: { value: glintDir } },
+    vertexShader: `varying vec3 vW;void main(){vec4 w=modelMatrix*vec4(position,1.);vW=w.xyz;gl_Position=projectionMatrix*viewMatrix*w;}`,
+    fragmentShader: `uniform vec3 deep,skyc,gl;uniform vec3 gd;varying vec3 vW;
+      float h(vec2 p){float s=0.;float a=.5;mat2 m=mat2(.8,.6,-.6,.8);for(int i=0;i<6;i++){s+=a*sin(p.x*.4+sin(p.y*.31+float(i))*1.7)*cos(p.y*.37+float(i)*1.3);p=m*p*1.9;a*=.5;}return s;}
+      void main(){vec2 p=vW.xz;float e=.15;vec3 n=normalize(vec3(h(p-vec2(e,0))-h(p+vec2(e,0)),2.2,h(p-vec2(0,e))-h(p+vec2(0,e))));
+      vec3 v=normalize(cameraPosition-vW);float fr=pow(1.-max(dot(n,v),0.),4.);vec3 c=mix(deep,skyc,.15+.85*fr);
+      vec3 r=reflect(-v,n);float s=pow(max(dot(r,normalize(gd)),0.),180.)*1.6+pow(max(dot(r,normalize(gd)),0.),18.)*.25;c+=gl*s;
+      float fog=1.-exp(-length(cameraPosition-vW)*.004);c=mix(c,skyc,fog*.7);gl_FragColor=vec4(c,1.);}` });
+  const w = new THREE.Mesh(new THREE.PlaneGeometry(6000, 6000, 1, 1), m); w.rotation.x = -Math.PI / 2; w.position.y = y; sc.add(w); return w;
+}
+// Nachbearbeitung: Farbstimmung, Vignette, Körnung, leichte Farbsäume
+const Grade = { uniforms: { tDiffuse: { value: null }, tint: { value: new THREE.Vector3(1, 1, 1) }, lift: { value: new THREE.Vector3(0, 0, 0) }, seed: { value: 1 } },
+  vertexShader: `varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+  fragmentShader: `uniform sampler2D tDiffuse;uniform vec3 tint,lift;uniform float seed;varying vec2 vUv;
+    float r(vec2 c){return fract(sin(dot(c,vec2(12.9898,78.233))+seed)*43758.5453);}
+    void main(){vec2 d=vUv-.5;float ca=.0018*length(d)*2.;vec3 c;c.r=texture2D(tDiffuse,vUv+d*ca).r;c.g=texture2D(tDiffuse,vUv).g;c.b=texture2D(tDiffuse,vUv-d*ca).b;
+    c=c*tint+lift*(1.-c);float vig=smoothstep(.95,.25,length(d*vec2(1.,.8)));c*=mix(.55,1.,vig);c+=(r(vUv*vec2(1080.,1920.))-.5)*.045;gl_FragColor=vec4(c,1.);}` };
+const comp = new EffectComposer(R); comp.addPass(new RenderPass(sc, cam));
+const bloom = new UnrealBloomPass(new THREE.Vector2(1080, 1920), 0.9, 0.6, 0.72); comp.addPass(bloom);
+const grade = new ShaderPass(Grade); comp.addPass(grade); comp.addPass(new OutputPass());
+const ov = document.getElementById("ov");
+
+if (SCN === 1) {
+  // ===== Supermond über der Stadt =====
+  sky(0x060a1a, 0x141a3c, 0x6a4a52); stars(700, 0.3);
+  const mp = V(-60, 390, -1400);
+  const moon = new THREE.Mesh(new THREE.SphereGeometry(170, 128, 128), new THREE.MeshStandardMaterial({ map: moonTex(), roughness: 1, emissive: 0xffcf90, emissiveIntensity: 0.06 }));
+  moon.position.copy(mp); moon.rotation.y = 0.4; sc.add(moon);
+  const dl = new THREE.DirectionalLight(0xfff0d8, 3.2); dl.position.set(-100, 300, 400); dl.target = moon; sc.add(dl); sc.add(new THREE.AmbientLight(0x404a70, 0.45));
+  glow("rgba(255,214,150,.45)", 900, mp.clone().add(V(0, 0, -200)), 0.7); glow("rgba(255,190,120,.22)", 2400, mp.clone().add(V(0, 0, -90)), 0.8);
+  const cl = new THREE.CanvasTexture(noiseCanvas(512, 256, 2.5, 5, 0.55, 0.25)); cl.colorSpace = THREE.SRGBColorSpace;
+  [[mp.x + 120, mp.y - 150, -1150, 800, 150, 0.5], [mp.x - 220, mp.y + 90, -1100, 600, 120, 0.35]].forEach(([x, y, z, w, hh, o]) => { const p = new THREE.Mesh(new THREE.PlaneGeometry(w, hh), new THREE.MeshBasicMaterial({ map: cl, transparent: true, opacity: o, color: 0x8a7a90, depthWrite: false })); p.position.set(x, y, z); sc.add(p); });
+  city(150, 520, 950, 0.55, 0.14, true, 75, -2);
+  city(40, 380, 480, 0.6, 0.12, true, 30, -2);
+  water(-1.5, 0x04060c, 0x1e2240, 0xffd49a, mp.clone().normalize());
+  cam.position.set(0, 12, 0); cam.lookAt(0, 12 + Math.tan(0.147) * 1000, -1000);
+  grade.uniforms.tint.value.set(1.08, 0.98, 0.86); grade.uniforms.lift.value.set(0.012, 0.01, 0.028);
+  bloom.strength = 0.8; bloom.threshold = 0.82; bloom.radius = 0.55;
+  ov.innerHTML = `<div class="tag">10. NOVEMBER 2026</div><div class="bar"><i></i></div>
+    <div class="lbl"><span class="big">SUPERMOND</span><small>am 24. November – größer &amp; heller</small></div>
+    <div class="cap"><span class="w">3</span><span class="w on">Supermonde</span><span class="w">hintereinander</span></div>`;
+} else {
+  // ===== Stadt im Hochwasser (+70 m) =====
+  sky(0x16203a, 0x4a5878, 0xd8946e); 
+  sc.fog = new THREE.FogExp2(0x5a6a88, 0.0016);
+  const sunP = V(-500, 90, -1500);
+  const dl = new THREE.DirectionalLight(0xffc49a, 2.4); dl.position.copy(sunP); sc.add(dl); sc.add(new THREE.HemisphereLight(0xbfd0e6, 0x203040, 0.9));
+  glow("rgba(255,200,150,.6)", 900, sunP, 0.9);
+  const W = 70;
+  // Hochhäuser, die aus dem Wasser ragen
+  const g = new THREE.Group();
+  for (let i = 0; i < 90; i++) { const a = (rnd() - 0.5) * 1.1, r = 170 + rnd() * 700; const w = 10 + rnd() * 18, d = 10 + rnd() * 18, h = 40 + Math.pow(rnd(), 1.6) * 170;
+    const tx = windowsTex(0.22, true); tx.repeat.set(w / 12, h / 40);
+    const m = new THREE.MeshStandardMaterial({ color: [0x2a3244, 0x3a4256, 0x232a3a, 0x454e62][i % 4], roughness: 0.85, metalness: 0.1, emissiveMap: tx, emissive: 0xffffff, emissiveIntensity: 0.9 });
+    const b = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), m); b.position.set(Math.sin(a) * r, h / 2, -Math.cos(a) * r); b.rotation.y = -a + (rnd() - 0.5) * 0.3; g.add(b); }
+  sc.add(g);
+  // Turm im Vordergrund mit Messlatte
+  const tower = new THREE.Mesh(new THREE.BoxGeometry(26, 190, 26), new THREE.MeshStandardMaterial({ color: 0x55607a, roughness: 0.7, metalness: 0.15, emissiveMap: (() => { const t = windowsTex(0.3, true); t.repeat.set(2.2, 4.8); return t; })(), emissive: 0xffffff, emissiveIntensity: 1 }));
+  tower.position.set(14, 95, -70); tower.rotation.y = -0.35; sc.add(tower);
+  const line = new THREE.Mesh(new THREE.BoxGeometry(27.5, 1.6, 27.5), new THREE.MeshBasicMaterial({ color: 0xffd23f })); line.position.set(14, W + 0.8, -70); line.rotation.y = -0.35; sc.add(line);
+  // Treibgut
+  for (let i = 0; i < 40; i++) { const s = 0.8 + rnd() * 2.5; const m = new THREE.Mesh(new THREE.BoxGeometry(s * 2, s * 0.5, s), new THREE.MeshStandardMaterial({ color: [0x7a5a3a, 0x9a9a9a, 0x5a3a2a][i % 3], roughness: 0.9 })); m.position.set((rnd() - 0.5) * 200, W + 0.2, -20 - rnd() * 300); m.rotation.set(rnd(), rnd() * 6, rnd()); sc.add(m); }
+  water(W, 0x0a1424, 0x3a4a6a, 0xffc49a, sunP.clone().normalize());
+  cam.position.set(-10, W + 10, 90); cam.lookAt(10, W + 10 + Math.tan(0.16) * 400, -310);
+  grade.uniforms.tint.value.set(0.92, 1.0, 1.1); grade.uniforms.lift.value.set(0.0, 0.012, 0.03);
+  bloom.strength = 0.45; bloom.threshold = 0.9;
+  sc.updateMatrixWorld(true); cam.updateMatrixWorld(true);
+  const pt = V(14 - 14, W + 1, -70).project(cam); const px = (pt.x + 1) / 2 * 1080, py = (1 - pt.y) / 2 * 1920;
+  ov.innerHTML = `<div class="tag">10. NOVEMBER 2026</div><div class="bar"><i style="width:55%"></i></div>
+    <div class="lbl"><span class="big">+70 METER</span><small>so hoch wie 23 Stockwerke</small></div>
+    <div class="cap"><span class="w">Hamburg</span><span class="w on">unter</span><span class="w">Wasser</span></div>`;
+}
+comp.render(); window.ready = true;
+</script></body></html>
