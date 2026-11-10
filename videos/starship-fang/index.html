@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <script type="importmap">{"imports":{"three":"./assets/three/build/three.module.js","three/addons/":"./assets/three/jsm/"}}</script>
+    <style>
+      @font-face { font-family: "Inter Display"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.otf"); }
+      @font-face { font-family: "Inter Display"; font-weight: 800; src: url("assets/fonts/InterDisplay-ExtraBold.otf"); }
+      @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/Inter-SemiBold.otf"); }
+      html, body { background: #000; }
+      #root { font-family: "Inter Display", "Inter", sans-serif; }
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .tag { top: 140px; font-family: "Inter", sans-serif; font-weight: 600; font-size: 34px; letter-spacing: 8px; color: rgba(255,255,255,0.78); text-shadow: 0 2px 12px rgba(0,0,0,0.8); }
+      .bar { position: absolute; left: 90px; right: 90px; top: 200px; height: 6px; border-radius: 3px; background: rgba(255,255,255,0.15); }
+      .bar i { display: block; width: 0; height: 100%; border-radius: 3px; background: #ffd23f; box-shadow: 0 0 14px rgba(255,210,63,0.7); }
+      .lbl { top: 330px; font-size: 62px; font-weight: 800; letter-spacing: 1px; text-shadow: 0 4px 24px rgba(0,0,0,0.9); }
+      .lbl small { display: block; font-family: "Inter", sans-serif; font-weight: 600; font-size: 36px; color: rgba(255,255,255,0.82); margin-top: 10px; letter-spacing: 0; }
+      .lbl .big { display: block; font-size: 120px; font-weight: 900; color: #ffd23f; text-shadow: 0 0 40px rgba(255,210,63,0.5), 0 4px 24px rgba(0,0,0,0.9); white-space: nowrap; }
+      .lbl .red { color: #ff4d5e; text-shadow: 0 0 40px rgba(255,77,94,0.5), 0 4px 24px rgba(0,0,0,0.9); }
+      .lbl .blue { color: #7fd0ff; text-shadow: 0 0 40px rgba(127,208,255,0.5), 0 4px 24px rgba(0,0,0,0.9); }
+      .capw { top: 1400px; font-size: 92px; font-weight: 900; line-height: 1.12; letter-spacing: -1px; color: #fff; text-shadow: 0 6px 30px rgba(0,0,0,0.85), 0 0 3px #000; }
+      .capw .w { display: inline-block; margin: 0 10px; padding: 0 4px 6px; }
+      .capw .on { background: #ffd23f; color: #111; padding: 0 20px 6px; border-radius: 18px; transform: rotate(-2deg) scale(1.06); text-shadow: none; box-shadow: 0 10px 40px rgba(255,210,63,0.45); }
+      .hookbig { top: 560px; font-size: 136px; }
+      .hookbig .y { color: #ffd23f; text-shadow: 0 0 46px rgba(255,210,63,0.8); }
+      .hookdim { background: radial-gradient(circle at 50% 42%, rgba(0,0,10,0.15), rgba(0,0,6,0.7)); }
+      .share { position: absolute; right: 40px; top: 1050px; }
+      .share span { display: inline-block; background: #fe2c55; color: #fff; font-weight: 900; font-size: 54px; padding: 16px 34px; border-radius: 60px; box-shadow: 0 0 40px rgba(254,44,85,0.7); }
+      .follow { top: 1080px; }
+      .hookbig { font-size: 140px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="64" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="tag" class="line tag clip" data-start="0" data-duration="64" data-track-index="1"><span>11. NOVEMBER 2026</span></div>
+      <div id="bar" class="bar clip" data-start="0" data-duration="64" data-track-index="2"><i id="bar-in"></i></div>
+      <div id="lbl" class="line lbl clip" data-start="0" data-duration="64" data-track-index="3"><span id="lbl-in"></span></div>
+      <div id="cap" class="line capw clip" data-start="4.2" data-duration="59.80" data-track-index="4"><span id="cap-in"></span></div>
+      <div id="hookdim" class="hookdim clip" data-start="0" data-duration="4.2" data-track-index="8"><span id="hookdim-in"></span></div>
+      <div id="hookbig" class="line hookbig clip" data-start="0" data-duration="4.2" data-track-index="7"><span id="hookbig-in">Rakete mit<br /><span class="y">STÄBCHEN</span><br />fangen?!</span></div>
+      <div id="share" class="share clip" data-start="4.4" data-duration="2.9" data-track-index="5"><span id="share-in">Teilen ➜</span></div>
+      <div id="follow" class="line follow clip" data-start="59.7" data-duration="4.30" data-track-index="6"><span id="follow-in" class="box"><span class="t">Folg uns für mehr! 👆</span><span class="pill">+ Folgen</span></span></div>
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="61.20" data-track-index="9" data-volume="1"></audio>
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="64" data-track-index="10" data-volume="0.3"></audio>
+    </div>
+    <img id="tex-day" src="assets/earth-blue-marble.jpg" style="display:none" alt="" />
+    <img id="tex-night" src="assets/earth-night.jpg" style="display:none" alt="" />
+    <img id="tex-topo" src="assets/earth-topology.png" style="display:none" alt="" />
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.from("#hookbig-in", { opacity: 0, scale: 1.35, duration: 0.35, ease: "power3.out" }, 0);
+      tl.to("#hookbig-in", { scale: 0.6, opacity: 0, filter: "blur(12px)", duration: 0.3, ease: "power2.in" }, 4.2 - 0.32);
+      tl.to("#hookdim", { opacity: 0, duration: 0.3 }, 4.2 - 0.32);
+      tl.from("#share-in", { opacity: 0, x: 80, scale: 0.6, duration: 0.3, ease: "back.out(2.5)" }, 4.4);
+      tl.to("#share-in", { x: 18, duration: 0.25, yoyo: true, repeat: 7, ease: "sine.inOut" }, 4.4 + 0.4);
+      tl.to("#share-in", { opacity: 0, duration: 0.2 }, 4.4 + 2.9 - 0.25);
+      tl.from("#follow-in", { opacity: 0, scale: 0.6, duration: 0.3, ease: "back.out(2.5)" }, 59.7);
+      tl.to("#follow-in .pill", { scale: 1.1, duration: 0.3, yoyo: true, repeat: 3 }, 59.7 + 0.4);
+      tl.to("#bar-in", { width: "100%", duration: 64, ease: "none" }, 0);
+      tl.to({}, { duration: 0.01 }, 64 - 0.01);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+    <script type="module">
+      import * as K from "./assets/kino.js";
+      const { THREE, V, lerp, eio, eout, prog, cl, rnd, de } = K;
+      const WORDS = [{"w": "SpaceX", "s": 0.0, "e": 0.64}, {"w": "will", "s": 0.72, "e": 0.88}, {"w": "diese", "s": 0.92, "e": 1.2}, {"w": "Woche", "s": 1.24, "e": 1.44}, {"w": "etwas", "s": 1.52, "e": 1.76}, {"w": "schaffen,", "s": 1.8, "e": 2.12}, {"w": "das", "s": 2.16, "e": 2.32}, {"w": "noch", "s": 2.44, "e": 2.56}, {"w": "nie", "s": 2.72, "e": 2.96}, {"w": "jemand", "s": 3.0, "e": 3.28}, {"w": "geschafft", "s": 3.4, "e": 3.76}, {"w": "hat!", "s": 3.88, "e": 4.2}, {"w": "Teile", "s": 4.4, "e": 4.64}, {"w": "das", "s": 4.72, "e": 4.88}, {"w": "Video", "s": 5.0, "e": 5.12}, {"w": "mit", "s": 5.2, "e": 5.28}, {"w": "jemandem,", "s": 5.36, "e": 5.8}, {"w": "der", "s": 5.84, "e": 6.0}, {"w": "Raketen", "s": 6.04, "e": 6.64}, {"w": "liebt!", "s": 6.8, "e": 7.4}, {"w": "Am", "s": 7.6, "e": 7.76}, {"w": "dreizehnten", "s": 7.84, "e": 8.32}, {"w": "November", "s": 8.4, "e": 8.88}, {"w": "soll", "s": 8.96, "e": 9.04}, {"w": "das", "s": 9.12, "e": 9.28}, {"w": "Starship", "s": 9.44, "e": 9.84}, {"w": "wieder", "s": 9.92, "e": 10.08}, {"w": "starten.", "s": 10.16, "e": 10.76}, {"w": "Die", "s": 10.88, "e": 11.04}, {"w": "größte", "s": 11.12, "e": 11.6}, {"w": "Rakete", "s": 11.68, "e": 12.16}, {"w": "der", "s": 12.24, "e": 12.32}, {"w": "Welt:", "s": 12.4, "e": 12.88}, {"w": "hundertvierundzwanzig", "s": 13.04, "e": 14.16}, {"w": "Meter", "s": 14.32, "e": 14.56}, {"w": "hoch.", "s": 14.64, "e": 15.12}, {"w": "Das", "s": 15.28, "e": 15.36}, {"w": "ist", "s": 15.44, "e": 15.6}, {"w": "höher", "s": 15.68, "e": 16.0}, {"w": "als", "s": 16.08, "e": 16.16}, {"w": "die", "s": 16.24, "e": 16.32}, {"w": "Freiheitsstatue", "s": 16.4, "e": 17.36}, {"w": "mit", "s": 17.44, "e": 17.52}, {"w": "Sockel.", "s": 17.6, "e": 18.28}, {"w": "Unten", "s": 18.56, "e": 18.88}, {"w": "sitzt", "s": 18.96, "e": 19.2}, {"w": "der", "s": 19.24, "e": 19.28}, {"w": "Booster,", "s": 19.36, "e": 20.0}, {"w": "so", "s": 20.08, "e": 20.16}, {"w": "hoch", "s": 20.24, "e": 20.4}, {"w": "wie", "s": 20.48, "e": 20.56}, {"w": "ein", "s": 20.64, "e": 20.72}, {"w": "Hochhaus", "s": 20.8, "e": 21.36}, {"w": "mit", "s": 21.44, "e": 21.52}, {"w": "über", "s": 21.64, "e": 21.76}, {"w": "zwanzig", "s": 21.92, "e": 22.32}, {"w": "Stockwerken.", "s": 22.48, "e": 23.2}, {"w": "Nach", "s": 23.68, "e": 23.92}, {"w": "dem", "s": 24.0, "e": 24.08}, {"w": "Start", "s": 24.16, "e": 24.48}, {"w": "fliegt", "s": 24.56, "e": 24.8}, {"w": "er", "s": 24.84, "e": 24.88}, {"w": "zurück", "s": 24.96, "e": 25.28}, {"w": "zum", "s": 25.32, "e": 25.44}, {"w": "Startturm.", "s": 25.52, "e": 26.36}, {"w": "Und", "s": 26.56, "e": 26.8}, {"w": "dann", "s": 26.84, "e": 27.04}, {"w": "greifen", "s": 27.12, "e": 27.52}, {"w": "zwei", "s": 27.6, "e": 27.92}, {"w": "riesige", "s": 28.08, "e": 28.48}, {"w": "Arme", "s": 28.64, "e": 28.88}, {"w": "zu", "s": 28.96, "e": 29.2}, {"w": "und", "s": 29.44, "e": 29.52}, {"w": "fangen", "s": 29.6, "e": 29.84}, {"w": "ihn", "s": 29.96, "e": 30.08}, {"w": "mitten", "s": 30.16, "e": 30.48}, {"w": "in", "s": 30.52, "e": 30.56}, {"w": "der", "s": 30.64, "e": 30.72}, {"w": "Luft", "s": 30.8, "e": 30.96}, {"w": "auf.", "s": 31.04, "e": 31.48}, {"w": "Wie", "s": 31.6, "e": 31.68}, {"w": "mit", "s": 31.76, "e": 31.84}, {"w": "Essstäbchen.", "s": 31.92, "e": 32.64}, {"w": "Das", "s": 33.12, "e": 33.36}, {"w": "hat", "s": 33.44, "e": 33.52}, {"w": "SpaceX", "s": 33.72, "e": 34.08}, {"w": "schon", "s": 34.12, "e": 34.32}, {"w": "mehrmals", "s": 34.347, "e": 34.72}, {"w": "geschafft.", "s": 34.84, "e": 35.28}, {"w": "Aber", "s": 35.52, "e": 35.76}, {"w": "jetzt", "s": 35.84, "e": 36.16}, {"w": "kommt", "s": 36.24, "e": 36.4}, {"w": "das", "s": 36.48, "e": 36.64}, {"w": "Neue:", "s": 36.72, "e": 37.12}, {"w": "Zum", "s": 37.52, "e": 37.76}, {"w": "ersten", "s": 37.84, "e": 38.16}, {"w": "Mal", "s": 38.24, "e": 38.48}, {"w": "soll", "s": 38.56, "e": 38.72}, {"w": "auch", "s": 38.773, "e": 38.88}, {"w": "das", "s": 38.96, "e": 39.04}, {"w": "Raumschiff", "s": 39.2, "e": 39.68}, {"w": "oben", "s": 39.76, "e": 39.92}, {"w": "drauf", "s": 40.0, "e": 40.24}, {"w": "aufgefangen", "s": 40.32, "e": 40.8}, {"w": "werden.", "s": 40.88, "e": 41.28}, {"w": "Es", "s": 41.68, "e": 41.84}, {"w": "kommt", "s": 41.92, "e": 42.16}, {"w": "aus", "s": 42.24, "e": 42.32}, {"w": "dem", "s": 42.4, "e": 42.48}, {"w": "All", "s": 42.56, "e": 42.72}, {"w": "zurück,", "s": 42.8, "e": 43.44}, {"w": "glüht", "s": 43.52, "e": 43.84}, {"w": "beim", "s": 43.92, "e": 44.08}, {"w": "Eintritt", "s": 44.16, "e": 44.48}, {"w": "in", "s": 44.56, "e": 44.6}, {"w": "die", "s": 44.64, "e": 44.72}, {"w": "Atmosphäre", "s": 44.8, "e": 45.44}, {"w": "und", "s": 45.68, "e": 45.84}, {"w": "landet", "s": 45.92, "e": 46.24}, {"w": "dann", "s": 46.28, "e": 46.48}, {"w": "genauso", "s": 46.56, "e": 47.2}, {"w": "zwischen", "s": 47.36, "e": 47.6}, {"w": "den", "s": 47.68, "e": 47.84}, {"w": "Armen.", "s": 47.92, "e": 48.32}, {"w": "Klappt", "s": 48.72, "e": 49.04}, {"w": "das,", "s": 49.2, "e": 49.44}, {"w": "kann", "s": 49.493, "e": 49.6}, {"w": "die", "s": 49.68, "e": 49.76}, {"w": "ganze", "s": 49.84, "e": 50.16}, {"w": "Rakete", "s": 50.24, "e": 50.72}, {"w": "immer", "s": 50.88, "e": 51.12}, {"w": "wieder", "s": 51.2, "e": 51.44}, {"w": "fliegen,", "s": 51.52, "e": 52.0}, {"w": "wie", "s": 52.08, "e": 52.16}, {"w": "ein", "s": 52.2, "e": 52.24}, {"w": "Flugzeug.", "s": 52.32, "e": 52.96}, {"w": "Das", "s": 53.36, "e": 53.6}, {"w": "macht", "s": 53.64, "e": 53.84}, {"w": "Raumfahrt", "s": 53.88, "e": 54.4}, {"w": "viel", "s": 54.48, "e": 54.72}, {"w": "billiger.", "s": 54.8, "e": 55.56}, {"w": "Noch", "s": 55.84, "e": 56.08}, {"w": "fehlt", "s": 56.16, "e": 56.32}, {"w": "aber", "s": 56.4, "e": 56.48}, {"w": "die", "s": 56.56, "e": 56.64}, {"w": "Genehmigung", "s": 56.76, "e": 57.2}, {"w": "der", "s": 57.24, "e": 57.28}, {"w": "Behörden.", "s": 57.36, "e": 58.08}, {"w": "Glaubst", "s": 58.24, "e": 58.56}, {"w": "du,", "s": 58.64, "e": 58.76}, {"w": "der", "s": 58.8, "e": 58.88}, {"w": "Fang", "s": 58.96, "e": 59.2}, {"w": "klappt?", "s": 59.24, "e": 59.92}, {"w": "Folg", "s": 60.0, "e": 60.24}, {"w": "uns", "s": 60.36, "e": 60.48}, {"w": "für", "s": 60.56, "e": 60.64}, {"w": "mehr!", "s": 60.72, "e": 61.2}];
+      const CHUNKS = [[0.0, 4.2], [4.4, 7.4], [7.6, 10.76], [10.88, 15.12], [15.28, 18.28], [18.56, 23.2], [23.68, 26.36], [26.56, 31.48], [31.6, 32.64], [33.12, 35.28], [35.52, 37.12], [37.52, 41.28], [41.68, 48.32], [48.72, 52.96], [53.36, 55.56], [55.84, 58.08], [58.24, 61.2]];
+      const cap = K.captions(WORDS, CHUNKS, document.getElementById("cap-in"), 4.2, {"dreizehnten": "13.", "hundertvierundzwanzig": "124", "zwanzig": "20"});
+      const label = K.labeler(document.getElementById("lbl-in"));
+      const img = (id) => document.getElementById(id);
+      const imgsReady = Promise.all(["tex-day", "tex-night", "tex-topo"].map((id) => { const im = img(id); return im.complete ? Promise.resolve(im) : new Promise((r) => (im.onload = () => r(im))); }));
+      const E = K.setup(document.getElementById("stage"));
+      const cam = E.cam;
+      let renderAt = () => {};
+      const ready = imgsReady.then(async ([day, night, topo]) => {
+        const { Ebene, wortZeit, ORANGE, GELB, ROT, GRUEN, BLAU } = await import("./assets/analyse.js");
+        const WT = (w, ab = 0) => wortZeit(WORDS, w, ab);
+        K.reseed(5);
+        // ===== Welt: Starbase am Meer bei Abenddämmerung =====
+        const sc = new THREE.Scene();
+        K.sky(sc, 0x1a2140, 0x6a6a88, 0xf0a070, 4000); K.stars(sc, 300, 0.45, 3800, 2);
+        sc.fog = new THREE.FogExp2(0x9a8a98, 0.0011);
+        const sunP = V(-900, 120, -2200);
+        const sun = new THREE.DirectionalLight(0xffc89a, 2.6); sun.position.copy(sunP); sc.add(sun); sc.add(new THREE.HemisphereLight(0xc8d4ff, 0x40302a, 0.9));
+        K.sprite(sc, K.glowTex("rgba(255,190,130,.7)"), 900, sunP.clone().multiplyScalar(0.8), 0.9);
+        const ground = new THREE.Mesh(new THREE.PlaneGeometry(1400, 1400), new THREE.MeshStandardMaterial({ color: 0x6a5a48, roughness: 1 })); ground.rotation.x = -Math.PI / 2; ground.position.set(0, 0, 300); sc.add(ground);
+        const wat = K.water(sc, -0.5, 0x0a1424, 0x8a7a90, 0xffc49a, sunP.clone().normalize()); wat.mesh.position.z = -900; wat.u.fogD.value = 0.0015;
+        const steel = new THREE.MeshStandardMaterial({ color: 0xd8dce2, metalness: 0.35, roughness: 0.38 });
+        const dark = new THREE.MeshStandardMaterial({ color: 0x1b1d22, metalness: 0.4, roughness: 0.7 });
+        const beam = new THREE.MeshStandardMaterial({ color: 0x2a2d33, metalness: 0.6, roughness: 0.6 });
+        // Startturm (Gitter)
+        const tower = new THREE.Group(); sc.add(tower);
+        const TH = 146, TW = 12;
+        [[-1, -1], [1, -1], [-1, 1], [1, 1]].forEach(([a, b]) => { const p = new THREE.Mesh(new THREE.BoxGeometry(1.6, TH, 1.6), beam); p.position.set(a * TW / 2, TH / 2, b * TW / 2); tower.add(p); });
+        for (let y = 6; y < TH; y += 9) { [[0, -1, 0], [0, 1, 0]].forEach(([, b]) => { const h = new THREE.Mesh(new THREE.BoxGeometry(TW, 0.8, 0.8), beam); h.position.set(0, y, b * TW / 2); tower.add(h); }); [[-1], [1]].forEach(([a]) => { const h = new THREE.Mesh(new THREE.BoxGeometry(0.8, 0.8, TW), beam); h.position.set(a * TW / 2, y, 0); tower.add(h); });
+          const d = new THREE.Mesh(new THREE.BoxGeometry(0.5, Math.hypot(TW, 9), 0.5), beam); d.position.set(0, y + 4.5, TW / 2); d.rotation.z = Math.atan2(TW, 9); tower.add(d); }
+        const topLight = new THREE.Mesh(new THREE.SphereGeometry(1, 8, 8), new THREE.MeshBasicMaterial({ color: 0xff3030 })); topLight.position.set(0, TH + 1, 0); tower.add(topLight);
+        // Fangarme ("Stäbchen")
+        const ARMH = 118, RX = 24;
+        const arms = [-1, 1].map((s) => { const g = new THREE.Group(); g.position.set(TW / 2, ARMH, s * 5.5); const a = new THREE.Mesh(new THREE.BoxGeometry(34, 3.2, 2.4), steel); a.position.x = 17; g.add(a);
+          const r = new THREE.Mesh(new THREE.BoxGeometry(34, 0.6, 2.6), new THREE.MeshBasicMaterial({ color: 0xffd23f })); r.position.set(17, 1.9, 0); g.add(r); tower.add(g); return { g, s }; });
+        function setArms(close) { arms.forEach(({ g, s }) => (g.rotation.y = -s * K.lerp(0.62, 0.13, close))); }
+        // Startrampe
+        const mount = new THREE.Mesh(new THREE.CylinderGeometry(9, 10, 20, 24, 1, true), dark); mount.position.set(RX, 10, 0); sc.add(mount);
+        // Rakete: Booster (72 m) + Raumschiff (52 m), Radius 4.5
+        function makeBooster() { const g = new THREE.Group(); const c = new THREE.Mesh(new THREE.CylinderGeometry(4.5, 4.5, 72, 48), steel); c.position.y = 36; g.add(c);
+          const e = new THREE.Mesh(new THREE.CylinderGeometry(4.6, 4.2, 2.5, 48), dark); e.position.y = 1; g.add(e);
+          for (let i = 0; i < 4; i++) { const f = new THREE.Mesh(new THREE.BoxGeometry(3.5, 4, 0.5), dark); const a = i * Math.PI / 2 + 0.4; f.position.set(Math.cos(a) * 5.2, 68, Math.sin(a) * 5.2); f.rotation.y = -a; g.add(f); }
+          const ring = new THREE.Mesh(new THREE.CylinderGeometry(4.55, 4.55, 1.2, 48), dark); ring.position.y = 70; g.add(ring); return g; }
+        function makeShip() { const g = new THREE.Group(); const tc = document.createElement("canvas"); tc.width = 256; tc.height = 64; const q = tc.getContext("2d"); q.fillStyle = "#c9ced6"; q.fillRect(0, 0, 256, 64); q.fillStyle = "#16181c"; q.fillRect(0, 0, 128, 64);
+          for (let x = 0; x < 128; x += 8) for (let y = 0; y < 64; y += 6) { q.fillStyle = `rgba(255,255,255,${0.02 + (x * 7 + y * 3) % 5 * 0.01})`; q.fillRect(x, y, 7, 5); }
+          const tm = new THREE.MeshStandardMaterial({ map: new THREE.CanvasTexture(tc), metalness: 0.3, roughness: 0.42 });
+          const pts = []; for (let i = 0; i <= 20; i++) { const y = i / 20; pts.push(new THREE.Vector2(4.5 * Math.sqrt(1 - Math.pow(y, 2.2)), 38 + y * 14)); }
+          const nose = new THREE.Mesh(new THREE.LatheGeometry(pts, 48), tm); g.add(nose);
+          const body = new THREE.Mesh(new THREE.CylinderGeometry(4.5, 4.5, 38, 48), tm); body.position.y = 19; g.add(body);
+          [[-1, 6], [1, 6], [-1, 42], [1, 42]].forEach(([s, y]) => { const f = new THREE.Mesh(new THREE.BoxGeometry(0.5, y > 20 ? 6 : 9, 4), dark); f.position.set(s * 5, y, 0); g.add(f); }); return g; }
+        const booster = makeBooster(), ship = makeShip(); sc.add(booster); sc.add(ship);
+        // Feuer
+        const fireTex = K.glowTex("rgba(255,230,180,1)"), smokeTex = K.glowTex("rgba(160,150,150,.55)");
+        const flames = []; for (let i = 0; i < 18; i++) flames.push(K.sprite(sc, fireTex, 10, V(0, 0, 0), 0));
+        const smoke = []; for (let i = 0; i < 40; i++) smoke.push(new THREE.Sprite(new THREE.SpriteMaterial({ map: smokeTex, transparent: true, depthWrite: false, opacity: 0 }))), sc.add(smoke[i]);
+        const flameLight = new THREE.PointLight(0xffaa55, 0, 400); sc.add(flameLight);
+        function fire(base, power, t, down = true) { flames.forEach((s, i) => { const k = i / flames.length; s.position.set(base.x + Math.sin(t * 40 + i) * 0.6, base.y - (down ? 1 : -1) * (2 + k * 30 * power), base.z); s.scale.setScalar((14 - k * 9) * (0.6 + power * 0.6)); s.material.opacity = power * (1 - k) * 0.95; });
+          flameLight.position.copy(base).add(V(0, -6, 0)); flameLight.intensity = power * 4000; }
+        function puff(base, amount, t) { smoke.forEach((s, i) => { K.reseed(700 + i); const a = K.rnd() * 6.28, life = (t * 0.6 + K.rnd()) % 1; s.position.set(base.x + Math.cos(a) * life * 60, 4 + life * 20 + K.rnd() * 6, base.z + Math.sin(a) * life * 60); s.scale.setScalar(18 + life * 60); s.material.opacity = amount * (1 - life) * 0.6; }); }
+        // Wiedereintritt (eigene kleine Welt)
+        const sky2 = new THREE.Scene(); K.reseed(77); K.stars(sky2, 2500, -1, 2800, 2.2);
+        const EA = K.earth(sky2, { day, night, topo }, 400); EA.group.position.set(0, -560, -80); EA.U.sun.value.set(-0.5, 0.6, 0.3).normalize();
+        const ship2 = makeShip(); ship2.scale.setScalar(0.06); sky2.add(ship2); sky2.add(new THREE.AmbientLight(0x667799, 0.6)); const s2l = new THREE.DirectionalLight(0xffffff, 2); s2l.position.set(-5, 5, 5); sky2.add(s2l);
+        const plasma = []; for (let i = 0; i < 16; i++) plasma.push(K.sprite(sky2, K.glowTex("rgba(255,140,220,.9)"), 2, V(0, 0, 0), 0));
+        
+        // ===== Analyse-Ebene =====
+        const A = new Ebene(document.getElementById("root"));
+        const t13 = WT("dreizehn"), t124 = WT("hundertvier"), tFrei = WT("freiheitsstatue"), tBoo = WT("booster"), tStart = WT("nach"), tArme = WT("arme"), tEss = WT("wie", 31), tMehr = WT("mehrmals"), tNeu = WT("neue"), tErst = WT("ersten", 37), tAll = WT("all", 40), tGlueh = WT("glüht"), tLand = WT("landet"), tFlug = WT("flugzeug"), tBill = WT("billiger"), tGen = WT("genehmigung"), tGlaub = WT("glaubst");
+        // Termin
+        A.karte("Starship · Flug 15", 90, 560, 520, 330, { t0: t13 - 0.2, t1: 10.7, unter: "STARBASE, TEXAS" });
+        A.hand("13. Nov.", 350, 760, { t0: t13, t1: 10.7, size: 120, farbe: GELB, rot: -4 });
+        A.logo("assets/logos/spacex.svg", 640, 600, 360, 150, { t0: t13 + 0.3, t1: 10.7, rot: 3 });
+        A.zettel("frühestens!", 800, 840, { t0: t13 + 1.0, t1: 10.7, rot: 6, size: 58 });
+        A.strich(230, 815, 470, { t0: t13 + 0.5, t1: 10.7 });
+        // 124 m
+        A.zahl(330, 640, { von: 0, bis: 124, t0: t124 - 0.3, t1: 15.1, dauer: 1.3, fmt: (v) => Math.round(v) + " m", unter: "größte Rakete der Welt" });
+        A.pfeil(470, 760, 640, 980, { t0: t124 + 0.9, t1: 15.1, bogen: -0.3 });
+        A.hand("ganz oben bis ganz unten!", 360, 1240, { t0: t124 + 1.3, t1: 15.1, size: 56, rot: -3, farbe: "#fff" });
+        // Vergleich Freiheitsstatue
+        A.karte("Höhenvergleich", 80, 520, 600, 620, { t0: tFrei - 0.3, t1: 18.3, unter: "IN METERN" });
+        A.balken(130, 640, 500, 380, [{ name: "Freiheits-<br>statue", wert: 93, text: "93 m", farbe: "#8fb8a0" }, { name: "Starship", wert: 124.4, text: "124 m", farbe: ORANGE }], { t0: tFrei - 0.1, t1: 18.3, versatz: 0.15 });
+        A.stempel("+31 m", 830, 700, { t0: tFrei + 1.4, t1: 18.3, rot: 10, farbe: GELB });
+        // Booster
+        A.zettel("Booster<br>72 m ≈ 24 Stockwerke", 300, 700, { t0: tBoo, t1: 23.2, rot: -5, size: 54 });
+        A.pfeil(470, 790, 660, 1060, { t0: tBoo + 0.6, t1: 23.2, bogen: -0.25 });
+        A.kreis(745, 1150, 70, 220, { t0: tBoo + 1.0, t1: 23.2 });
+        // Rückflug
+        A.pfeil(860, 620, 690, 760, { t0: tStart + 0.6, t1: 26.4, bogen: 0.5, farbe: GELB });
+        A.hand("zurück zum Turm!", 700, 560, { t0: tStart + 0.8, t1: 26.4, size: 60 });
+        // Fang
+        A.stempel("GEFANGEN!", 540, 640, { t0: 30.0, t1: 31.4, rot: -9, farbe: GRUEN });
+        A.kreis(560, 980, 250, 120, { t0: tEss, t1: 32.6, farbe: GELB, dauer: 0.4 });
+        A.hand("wie Essstäbchen 🥢", 540, 760, { t0: tEss + 0.1, t1: 32.6, size: 76 });
+        // Schon mehrmals
+        A.karte("Booster-Fänge", 160, 560, 760, 420, { t0: tMehr - 0.4, t1: 35.3, unter: "SEIT OKTOBER 2024" });
+        A.hand("✓", 300, 800, { t0: tMehr, t1: 35.3, size: 140, farbe: GRUEN }); A.hand("✓", 470, 800, { t0: tMehr + 0.3, t1: 35.3, size: 140, farbe: GRUEN }); A.hand("✓", 640, 800, { t0: tMehr + 0.6, t1: 35.3, size: 140, farbe: GRUEN }); A.hand("…", 790, 800, { t0: tMehr + 0.9, t1: 35.3, size: 140, farbe: GRUEN });
+        // Das Neue
+        A.stempel("NEU", 540, 820, { t0: tNeu, t1: 37.2, rot: -6, farbe: GELB });
+        A.karte("Der Plan", 120, 540, 840, 560, { t0: tErst - 0.3, t1: 41.3, unter: "FLUG 15" });
+        A.hand("Booster", 330, 760, { t0: tErst, t1: 41.3, size: 70, farbe: "#fff" }); A.hand("✓ gefangen", 330, 860, { t0: tErst + 0.2, t1: 41.3, size: 60, farbe: GRUEN });
+        A.hand("Raumschiff", 730, 760, { t0: tErst + 0.6, t1: 41.3, size: 70, farbe: "#fff" }); A.hand("?", 730, 880, { t0: tErst + 0.8, t1: 41.3, size: 120, farbe: GELB });
+        A.stempel("ERSTMALS", 540, 1020, { t0: tErst + 1.4, t1: 41.3, rot: -7, farbe: ROT });
+        // Wiedereintritt
+        A.hand("glüht!", 760, 640, { t0: tGlueh, t1: 45.2, size: 92, farbe: "#ff8ad8", rot: 6 });
+        A.pfeil(700, 700, 600, 900, { t0: tGlueh + 0.2, t1: 45.2, farbe: "#ff8ad8", bogen: 0.2 });
+        A.stempel("GEFANGEN?", 540, 640, { t0: 47.3, t1: 48.3, rot: -8, farbe: GELB });
+        // Wiederverwendung: Kreislauf
+        const tImm = WT("immer", 48);
+        A.karte("Wie ein Flugzeug", 110, 520, 860, 700, { t0: tImm - 0.3, t1: 52.9, unter: "IMMER WIEDER FLIEGEN" });
+        const ab = [["Start", 540, 700], ["Flug", 820, 930], ["Fang", 540, 1120], ["Tanken", 260, 930]];
+        ab.forEach(([n, x, y], i) => A.zettel(n, x, y, { t0: tImm + i * 0.35, t1: 52.9, size: 52, rot: [-3, 4, -2, 5][i] }));
+        [[620, 720, 800, 860], [800, 1010, 630, 1110], [450, 1110, 280, 1010], [270, 860, 450, 720]].forEach(([a, b, c, d], i) => A.pfeil(a, b, c, d, { t0: tImm + 0.2 + i * 0.35, t1: 52.9, bogen: 0.25, breite: 7 }));
+        // Billiger
+        A.karte("Kosten pro Flug", 120, 560, 840, 560, { t0: tBill - 1.6, t1: 55.5, unter: "WEGWERFEN VS. WIEDERVERWENDEN" });
+        A.hand("€€€€€", 330, 820, { t0: tBill - 1.3, t1: 55.5, size: 130, farbe: ROT });
+        A.hand("neu bauen", 330, 940, { t0: tBill - 1.1, t1: 55.5, size: 52, farbe: "#fff" });
+        A.pfeil(520, 820, 640, 820, { t0: tBill - 0.7, t1: 55.5, bogen: 0.15, farbe: GELB });
+        A.hand("€", 780, 820, { t0: tBill - 0.4, t1: 55.5, size: 130, farbe: GRUEN });
+        A.hand("nur tanken", 780, 940, { t0: tBill - 0.3, t1: 55.5, size: 52, farbe: "#fff" });
+        A.stempel("VIEL BILLIGER", 540, 1050, { t0: tBill, t1: 55.5, rot: -6, farbe: GRUEN });
+        // Genehmigung
+        A.logo("assets/logos/faa.svg", 330, 560, 420, 420, { t0: tGen - 0.4, t1: 58.1 });
+        A.stempel("AUSSTEHEND", 540, 1060, { t0: tGen + 0.5, t1: 58.1, rot: -8, farbe: ORANGE });
+        A.hand("US-Luftfahrtbehörde", 540, 1190, { t0: tGen + 0.2, t1: 58.1, size: 54, farbe: "#fff" });
+        A.zettel("Klappt es? 🤔", 540, 760, { t0: tGlaub, t1: 59.6, rot: -4, size: 72 });
+        
+        // ===== Zeit-Logik =====
+        const PAD = V(RX, 20, 0);
+        renderAt = (t) => {
+          label(""); wat.u.time.value = t;
+          let scene = sc; E.look([1.06, 0.98, 0.92], [0.008, 0.008, 0.02], 0.55, 0.86); E.grade.uniforms.flash.value = 0;
+          flames.forEach((s) => (s.material.opacity = 0)); smoke.forEach((s) => (s.material.opacity = 0)); flameLight.intensity = 0;
+          booster.visible = true; ship.visible = true; setArms(0);
+          booster.position.copy(PAD); booster.rotation.set(0, 0, 0); ship.position.set(RX, 92, 0);
+          const tL = tStart + 0.2; // Abheben
+          if (t < tL) {
+            // auf der Rampe – Kamerafahrten
+            if (t < 7.5) { const f = K.eio(t / 7.5); cam.position.set(lerp(-260, -150, f), lerp(30, 60, f), lerp(360, 240, f)); cam.lookAt(RX, 80, 0); }
+            else if (t < 10.8) { const f = prog(t, 7.6, 3.2); cam.position.set(lerp(160, 120, f), 40, 240); cam.lookAt(RX - 10, 70, 0); }
+            else if (t < 15.2) { const f = K.eio(prog(t, 10.9, 4.2)); cam.position.set(RX + 70, lerp(6, 30, f), 110); cam.lookAt(RX, lerp(40, 120, f), 0); }
+            else if (t < 18.4) { cam.position.set(-160, 50, 260); cam.lookAt(RX, 70, 0); }
+            else { const f = prog(t, 18.5, 5); cam.position.set(RX + lerp(110, 90, f), 30, lerp(150, 130, f)); cam.lookAt(RX, 45, 0); }
+          } else if (t < 26.5) {
+            // Start
+            const d = t - tL; const y = 20 + 0.5 * 9 * d * d;
+            booster.position.set(RX, y, 0); ship.position.set(RX, y + 72, 0);
+            fire(V(RX, y, 0), Math.min(1, d * 2 + 0.3), t); puff(V(RX, 0, 0), Math.min(1, d * 1.5), t);
+            cam.position.set(-180, 20 + d * 6, 300); cam.lookAt(RX, 60 + y * 0.6, 0);
+            E.look([1.08, 0.98, 0.9], [0.01, 0.008, 0.015], 0.9, 0.8);
+          } else if (t < 37.5) {
+            // Booster kommt zurück und wird gefangen
+            ship.visible = false;
+            const tc = 29.9; const catchY = ARMH - 66; // Booster-Oberkante knapp über den Armen
+            let y; if (t < tc) { const k = prog(t, 26.5, tc - 26.5); y = lerp(420, catchY, 1 - Math.pow(1 - k, 2.2)); fire(V(RX, y, 0), 0.7 * (1 - prog(t, tc - 0.3, 0.3)), t); }
+            else { y = catchY + Math.max(0, Math.sin((t - tc) * 18) * 1.2 * Math.exp(-(t - tc) * 4)); }
+            booster.position.set(RX, y, 0); setArms(K.eio(prog(t, tc - 0.9, 0.9)));
+            if (t < 33) { cam.position.set(-150, 140, 170); cam.lookAt(RX - 4, lerp(150, 110, prog(t, 26.5, 3.5)), 0); }
+            else { const f = prog(t, 33, 4.5); cam.position.set(lerp(140, 100, f), 100, 160); cam.lookAt(RX - 6, 110, 0); }
+            E.grade.uniforms.flash.value = t > tc && t < tc + 0.2 ? 0.2 * (1 - (t - tc) / 0.2) : 0;
+          } else if (t < 45.2 && t >= tAll - 0.3) {
+            // Wiedereintritt aus dem All
+            scene = sky2; E.look([1.02, 0.98, 1.05], [0.005, 0.0, 0.02], 0.5, 0.82);
+            const f = prog(t, tAll - 0.3, 45.2 - tAll + 0.3);
+            ship2.position.set(lerp(-6, 4, f), lerp(6, -3, f), 0); ship2.rotation.set(0, 0.4, -1.25);
+            ship2.updateMatrixWorld(true); plasma.forEach((s, i) => { const k = i / plasma.length; s.position.copy(ship2.localToWorld(V(-6 - k * 10, 50 - k * 48, 0))); s.scale.setScalar(1.6 - k * 0.8 + Math.sin(t * 30 + i) * 0.12); s.material.opacity = (0.4 + 0.6 * prog(t, tAll, 1.5)) * (1 - k * 0.8); });
+            cam.position.set(0, 2, 18); cam.lookAt(0, 0, 0);
+          } else if (t < 48.4 && t >= 45.2) {
+            // Raumschiff landet zwischen den Armen
+            booster.visible = false; const tc = 47.3; const catchY = ARMH - 30;
+            let y; if (t < tc) { const k = prog(t, 45.2, tc - 45.2); y = lerp(330, catchY, 1 - Math.pow(1 - k, 2)); fire(V(RX, y, 0), 0.6, t); } else y = catchY;
+            ship.position.set(RX, y, 0); setArms(K.eio(prog(t, tc - 0.8, 0.8)));
+            cam.position.set(-140, 130, 170); cam.lookAt(RX - 4, 120, 0);
+            E.grade.uniforms.flash.value = t > tc && t < tc + 0.2 ? 0.2 * (1 - (t - tc) / 0.2) : 0;
+          } else if (t < 37.5 + 4.2) {
+            // "Das Neue" – Raumschiff oben auf dem Booster, Blick nach oben
+            booster.position.copy(PAD); ship.position.set(RX, 92, 0);
+            const f = prog(t, 37.5, 4.2); cam.position.set(RX + 60, 10, 80); cam.lookAt(RX, lerp(100, 140, f), 0);
+          } else {
+            // Rest: ganze Anlage, beide Teile wieder auf der Rampe
+            const f = prog(t, 48.4, 15); cam.position.set(lerp(-220, -300, f), lerp(60, 90, f), lerp(280, 380, f)); cam.lookAt(RX, 75, 0);
+          }
+          E.render(scene, t);
+          A.update(t); cap(t);
+        };
+        renderAt(lastT);
+      });
+      window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady || {}; window.__hf.buildReady.scene = ready;
+      let lastT = 0;
+      window.addEventListener("hf-seek", (e) => { lastT = e.detail.time; renderAt(lastT); });
+    </script>
+  </body>
+</html>

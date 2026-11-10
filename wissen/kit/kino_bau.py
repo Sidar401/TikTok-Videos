@@ -13,8 +13,9 @@ proj = Path(sys.argv[1]); kit = Path(__file__).resolve().parent
 c = json.load(open(proj / "szene.json")); w = json.load(open(proj / "words.json"))
 dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(proj / "assets/voice.wav")], capture_output=True, text=True).stdout)
 scene = "\n".join("        " + l for l in (proj / "szene.js").read_text().splitlines())
-rep = {"{{TAG}}": c["tag"], "{{HOOK}}": c["hook"], "{{HOOK_END}}": str(c["hook_end"]), "{{CAP_DUR}}": f"{30 - c['hook_end']:.2f}",
-       "{{SHARE_START}}": str(c["share"][0]), "{{SHARE_DUR}}": str(c["share"][1]), "{{FOLLOW}}": str(c["follow"]), "{{FOLLOW_DUR}}": f"{30 - c['follow']:.2f}",
+total = c.get("dauer", 30)
+rep = {"{{DUR}}": str(total), "{{TAG}}": c["tag"], "{{HOOK}}": c["hook"], "{{HOOK_END}}": str(c["hook_end"]), "{{CAP_DUR}}": f"{total - c['hook_end']:.2f}",
+       "{{SHARE_START}}": str(c["share"][0]), "{{SHARE_DUR}}": str(c["share"][1]), "{{FOLLOW}}": str(c["follow"]), "{{FOLLOW_DUR}}": f"{total - c['follow']:.2f}",
        "{{VOICE_DUR}}": f"{dur:.2f}", "{{WORDS}}": json.dumps(w["words"], ensure_ascii=False), "{{CHUNKS}}": json.dumps(w["chunks"]),
        "{{FIX}}": json.dumps(c.get("fix", {}), ensure_ascii=False), "{{CSS}}": c.get("css", ""), "{{SCENE}}": scene}
 h = (kit / "kino_vorlage.html").read_text()

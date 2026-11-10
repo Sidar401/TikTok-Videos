@@ -1,0 +1,25 @@
+{
+ "gehoert": "Diese Woche passieren drei Dinge am Himmel, die du nicht verpassen solltest. Teile das Video mit jemandem, der gern nach oben schaut. Nummer eins: In der Nacht auf den 16. November treffen sich Mars und Jupiter. Zwischen ihnen ist dann nur etwas mehr Platz als für zwei Vollmonde. Am besten siehst du sie früh am Morgen, kurz bevor es hell wird. Jupiter leuchtet hell und weiß, Mars daneben klein und rötlich. Nummer zwei: Nur einen Tag später kommen die Sternschnuppen der Leoniden. In der Nacht vom 17. auf den 18. November siehst du bis zu fünfzehn pro Stunde. Am besten nach Mitternacht, wenn der Mond untergegangen ist. Sie rasen mit über siebzig Kilometern pro Sekunde durch die Luft. Das sind die schnellsten Sternschnuppen des ganzen Jahres. Und Nummer drei: Am 24. November kommt der erste von drei Supermonden. Der Mond wirkt dann größer und heller als sonst. Mein Tipp: Such dir einen dunklen Ort, weg von der Stadt. Welches Ereignis schaust du dir an? Folg uns für mehr.",
+ "abweichungen": [
+  [
+   "replace",
+   "sechzehnten",
+   "16"
+  ],
+  [
+   "replace",
+   "siebzehnten",
+   "17"
+  ],
+  [
+   "replace",
+   "achtzehnten",
+   "18"
+  ],
+  [
+   "replace",
+   "vierundzwanzigsten",
+   "24"
+  ]
+ ]
+}

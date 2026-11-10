@@ -34,18 +34,18 @@
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{{DUR}}" data-width="1080" data-height="1920">
       <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
-      <div id="tag" class="line tag clip" data-start="0" data-duration="30" data-track-index="1"><span>{{TAG}}</span></div>
-      <div id="bar" class="bar clip" data-start="0" data-duration="30" data-track-index="2"><i id="bar-in"></i></div>
-      <div id="lbl" class="line lbl clip" data-start="0" data-duration="30" data-track-index="3"><span id="lbl-in"></span></div>
+      <div id="tag" class="line tag clip" data-start="0" data-duration="{{DUR}}" data-track-index="1"><span>{{TAG}}</span></div>
+      <div id="bar" class="bar clip" data-start="0" data-duration="{{DUR}}" data-track-index="2"><i id="bar-in"></i></div>
+      <div id="lbl" class="line lbl clip" data-start="0" data-duration="{{DUR}}" data-track-index="3"><span id="lbl-in"></span></div>
       <div id="cap" class="line capw clip" data-start="{{HOOK_END}}" data-duration="{{CAP_DUR}}" data-track-index="4"><span id="cap-in"></span></div>
       <div id="hookdim" class="hookdim clip" data-start="0" data-duration="{{HOOK_END}}" data-track-index="8"><span id="hookdim-in"></span></div>
       <div id="hookbig" class="line hookbig clip" data-start="0" data-duration="{{HOOK_END}}" data-track-index="7"><span id="hookbig-in">{{HOOK}}</span></div>
       <div id="share" class="share clip" data-start="{{SHARE_START}}" data-duration="{{SHARE_DUR}}" data-track-index="5"><span id="share-in">Teilen ➜</span></div>
       <div id="follow" class="line follow clip" data-start="{{FOLLOW}}" data-duration="{{FOLLOW_DUR}}" data-track-index="6"><span id="follow-in" class="box"><span class="t">Folg uns für mehr! 👆</span><span class="pill">+ Folgen</span></span></div>
       <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="{{VOICE_DUR}}" data-track-index="9" data-volume="1"></audio>
-      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="30" data-track-index="10" data-volume="0.3"></audio>
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="{{DUR}}" data-track-index="10" data-volume="0.3"></audio>
     </div>
     <img id="tex-day" src="assets/earth-blue-marble.jpg" style="display:none" alt="" />
     <img id="tex-night" src="assets/earth-night.jpg" style="display:none" alt="" />
@@ -60,8 +60,8 @@
       tl.to("#share-in", { opacity: 0, duration: 0.2 }, {{SHARE_START}} + {{SHARE_DUR}} - 0.25);
       tl.from("#follow-in", { opacity: 0, scale: 0.6, duration: 0.3, ease: "back.out(2.5)" }, {{FOLLOW}});
       tl.to("#follow-in .pill", { scale: 1.1, duration: 0.3, yoyo: true, repeat: 3 }, {{FOLLOW}} + 0.4);
-      tl.to("#bar-in", { width: "100%", duration: 30, ease: "none" }, 0);
-      tl.to({}, { duration: 0.01 }, 29.99);
+      tl.to("#bar-in", { width: "100%", duration: {{DUR}}, ease: "none" }, 0);
+      tl.to({}, { duration: 0.01 }, {{DUR}} - 0.01);
       window.__timelines = window.__timelines || {};
       window.__timelines["main"] = tl;
     </script>
@@ -77,7 +77,7 @@
       const E = K.setup(document.getElementById("stage"));
       const cam = E.cam;
       let renderAt = () => {};
-      const ready = imgsReady.then(([day, night, topo]) => {
+      const ready = imgsReady.then(async ([day, night, topo]) => {
 {{SCENE}}
         renderAt(lastT);
       });

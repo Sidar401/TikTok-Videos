@@ -1,0 +1,15 @@
+{
+ "gehoert": "SpaceX will diese Woche etwas schaffen, das noch nie jemand geschafft hat. Teile das Video mit jemandem, der Raketen liebt. Am 13. November soll das Starship wieder starten. Die größte Rakete der Welt. Hundertvierundzwanzig Meter hoch. Das ist höher als die Freiheitsstatue mit Sockel. Unten sitzt der Booster, so hoch wie ein Hochhaus mit über zwanzig Stockwerken. Nach dem Start fliegt er zurück zum Startturm und dann greifen zwei riesige Arme zu und fangen ihn mitten in der Luft auf, wie mit Essstäbchen. Das hat SpaceX schon mehrmals geschafft, aber jetzt kommt das Neue: Zum ersten Mal soll auch das Raumschiff obendrauf aufgefangen werden. Es kommt aus dem All zurück, glüht beim Eintritt in die Atmosphäre und landet dann genauso zwischen den Armen. Klappt das, kann die ganze Rakete immer wieder fliegen wie ein Flugzeug. Das macht Raumfahrt viel billiger. Noch fehlt aber die Genehmigung der Behörden. Glaubst du, der Fang klappt? Folg uns für mehr.",
+ "abweichungen": [
+  [
+   "replace",
+   "dreizehnten",
+   "13"
+  ],
+  [
+   "replace",
+   "oben drauf",
+   "obendrauf"
+  ]
+ ]
+}
