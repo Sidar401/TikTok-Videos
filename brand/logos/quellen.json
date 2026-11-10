@@ -4,5 +4,11 @@
  "amd": "AMD_Logo.svg",
  "microsoft": "Microsoft_logo_(2012).svg",
  "apple": "Apple_logo_black.svg",
- "openai": "OpenAI_Logo.svg"
+ "openai": "OpenAI_Logo.svg",
+ "google": "Google_2015_logo.svg",
+ "anthropic": "Anthropic_logo.svg",
+ "nasdaq": "NASDAQ_Logo.svg",
+ "micron": "Micron_Technology_logo.svg",
+ "broadcom": "Broadcom_Ltd_Logo.svg",
+ "claude": "Claude_AI_logo.svg"
 }
