@@ -59,6 +59,9 @@ EINHEIT = {"Euro": " €", "Prozent": " %"}
 
 
 def ziffern(text):
+    # „zwei Komma neun Prozent“ → „2,9 %“, „zweieinhalb Prozent“ → „2,5 %“
+    text = re.sub(r"\b([a-zäöüß]+) Komma ([a-zäöüß]+)\b", lambda m: (f"{wert(m.group(1))},{wert(m.group(2))}" if wert(m.group(1)) is not None and wert(m.group(2)) is not None else m.group(0)), text)
+    text = re.sub(r"\b([a-zäöüß]+)einhalb\b", lambda m: (f"{wert(m.group(1))},5" if wert(m.group(1)) is not None else m.group(0)), text)
     tok = re.split(r"(\s+)", text)
     worte = [(i, t) for i, t in enumerate(tok) if t.strip()]
     out = list(tok)
@@ -86,6 +89,7 @@ def ziffern(text):
             out[i] = fmt(n) + m.group(3)
     s = "".join(out)
     s = re.sub(r"(\d) (Euro|Prozent)\b", lambda x: x.group(1) + EINHEIT[x.group(2)], s)
+    s = re.sub(r"(\d+)[ \xa0]€ (\d\d)\b", "\\1,\\2\u00a0€", s)  # „66 € 80“ → „66,80 €“
     return re.sub(r"[.!]$", "", s)
 
 

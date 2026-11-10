@@ -1,0 +1,693 @@
+{
+  "dauer": 121.45,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 3.756,
+      "captions": [
+        {
+          "text": "Die Preise in der Eurozone",
+          "start": 0.0,
+          "end": 1.763
+        },
+        {
+          "text": "sind im Oktober",
+          "start": 1.763,
+          "end": 2.781
+        },
+        {
+          "text": "um 4 % gestiegen",
+          "start": 2.781,
+          "end": 3.756
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 3.756,
+      "end": 10.081,
+      "captions": [
+        {
+          "text": "Das ist so viel wie seit",
+          "start": 3.756,
+          "end": 5.15
+        },
+        {
+          "text": "Jahren nicht mehr,",
+          "start": 5.15,
+          "end": 6.142
+        },
+        {
+          "text": "und jetzt steht eine Frage",
+          "start": 6.142,
+          "end": 7.773
+        },
+        {
+          "text": "im Raum: Erhöht die E‑Z‑B",
+          "start": 7.773,
+          "end": 9.08
+        },
+        {
+          "text": "wieder die Zinsen?",
+          "start": 9.08,
+          "end": 10.081
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 10.081,
+      "end": 15.108,
+      "captions": [
+        {
+          "text": "Was das für dein Tagesgeld,",
+          "start": 10.081,
+          "end": 11.549
+        },
+        {
+          "text": "deinen Kredit",
+          "start": 11.549,
+          "end": 12.317
+        },
+        {
+          "text": "und deine E‑Te‑Effs bedeutet,",
+          "start": 12.317,
+          "end": 14.031
+        },
+        {
+          "text": "zeigen wir dir jetzt",
+          "start": 14.031,
+          "end": 15.108
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 15.108,
+      "end": 19.611,
+      "captions": [
+        {
+          "text": "Folge HundeFinanzTv,",
+          "start": 15.108,
+          "end": 16.244
+        },
+        {
+          "text": "wir erklären dir jeden Tag,",
+          "start": 16.244,
+          "end": 17.853
+        },
+        {
+          "text": "was in der Wirtschaft passiert",
+          "start": 17.853,
+          "end": 19.611
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 19.611,
+      "end": 22.343,
+      "captions": [
+        {
+          "text": "Wie immer gilt: Das ist",
+          "start": 19.611,
+          "end": 21.153
+        },
+        {
+          "text": "keine Anlageberatung",
+          "start": 21.153,
+          "end": 22.343
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 22.343,
+      "end": 25.433,
+      "captions": [
+        {
+          "text": "Erst mal: Was heißt 4 %",
+          "start": 22.343,
+          "end": 23.853
+        },
+        {
+          "text": "Inflation überhaupt?",
+          "start": 23.853,
+          "end": 25.433
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 25.433,
+      "end": 30.614,
+      "captions": [
+        {
+          "text": "Ein Einkauf,",
+          "start": 25.433,
+          "end": 26.146
+        },
+        {
+          "text": "der letztes Jahr",
+          "start": 26.146,
+          "end": 27.312
+        },
+        {
+          "text": "100 € gekostet hat,",
+          "start": 27.312,
+          "end": 28.632
+        },
+        {
+          "text": "kostet heute im Schnitt 104 €",
+          "start": 28.632,
+          "end": 30.614
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 30.614,
+      "end": 34.974,
+      "captions": [
+        {
+          "text": "In Deutschland liegt",
+          "start": 30.614,
+          "end": 31.742
+        },
+        {
+          "text": "die Inflation etwas niedriger,",
+          "start": 31.742,
+          "end": 33.63
+        },
+        {
+          "text": "bei rund 2,8 %",
+          "start": 33.63,
+          "end": 34.974
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 34.974,
+      "end": 38.004,
+      "captions": [
+        {
+          "text": "Und genau hier",
+          "start": 34.974,
+          "end": 35.683
+        },
+        {
+          "text": "kommt die Europäische",
+          "start": 35.683,
+          "end": 36.905
+        },
+        {
+          "text": "Zentralbank ins Spiel",
+          "start": 36.905,
+          "end": 38.004
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 38.004,
+      "end": 42.439,
+      "captions": [
+        {
+          "text": "Ihre Aufgabe ist,",
+          "start": 38.004,
+          "end": 39.069
+        },
+        {
+          "text": "die Preise stabil zu halten,",
+          "start": 39.069,
+          "end": 41.016
+        },
+        {
+          "text": "ihr Ziel liegt bei 2 %",
+          "start": 41.016,
+          "end": 42.439
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 42.439,
+      "end": 47.443,
+      "captions": [
+        {
+          "text": "Ihr wichtigstes Werkzeug",
+          "start": 42.439,
+          "end": 43.705
+        },
+        {
+          "text": "ist der Leitzins,",
+          "start": 43.705,
+          "end": 44.682
+        },
+        {
+          "text": "und der liegt gerade",
+          "start": 44.682,
+          "end": 45.833
+        },
+        {
+          "text": "bei rund 2,5 %",
+          "start": 45.833,
+          "end": 47.443
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 47.443,
+      "end": 53.832,
+      "captions": [
+        {
+          "text": "Steigen die Preise zu schnell,",
+          "start": 47.443,
+          "end": 49.291
+        },
+        {
+          "text": "erhöht die E‑Z‑B die Zinsen,",
+          "start": 49.291,
+          "end": 51.016
+        },
+        {
+          "text": "damit Geld teurer wird",
+          "start": 51.016,
+          "end": 52.371
+        },
+        {
+          "text": "und weniger ausgegeben wird",
+          "start": 52.371,
+          "end": 53.832
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 53.832,
+      "end": 58.694,
+      "captions": [
+        {
+          "text": "Am siebzehnten Dezember",
+          "start": 53.832,
+          "end": 54.964
+        },
+        {
+          "text": "ist die nächste Sitzung,",
+          "start": 54.964,
+          "end": 56.328
+        },
+        {
+          "text": "und viele Experten",
+          "start": 56.328,
+          "end": 57.372
+        },
+        {
+          "text": "rechnen mit einer Erhöhung",
+          "start": 57.372,
+          "end": 58.694
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "start": 58.694,
+      "end": 61.758,
+      "captions": [
+        {
+          "text": "Was heißt das jetzt",
+          "start": 58.694,
+          "end": 59.734
+        },
+        {
+          "text": "für dich? Schauen wir",
+          "start": 59.734,
+          "end": 60.707
+        },
+        {
+          "text": "uns vier Bereiche an",
+          "start": 60.707,
+          "end": 61.758
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "start": 61.758,
+      "end": 63.579,
+      "captions": [
+        {
+          "text": "Erstens: dein Tagesgeld",
+          "start": 61.758,
+          "end": 63.579
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "start": 63.579,
+      "end": 69.59,
+      "captions": [
+        {
+          "text": "Steigen die Leitzinsen,",
+          "start": 63.579,
+          "end": 64.851
+        },
+        {
+          "text": "steigen meist auch",
+          "start": 64.851,
+          "end": 65.997
+        },
+        {
+          "text": "die Zinsen aufs Tagesgeld,",
+          "start": 65.997,
+          "end": 67.635
+        },
+        {
+          "text": "für Sparer also",
+          "start": 67.635,
+          "end": 68.59
+        },
+        {
+          "text": "eine gute Nachricht",
+          "start": 68.59,
+          "end": 69.59
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "start": 69.59,
+      "end": 71.276,
+      "captions": [
+        {
+          "text": "Zweitens: dein Kredit",
+          "start": 69.59,
+          "end": 71.276
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "start": 71.276,
+      "end": 76.329,
+      "captions": [
+        {
+          "text": "Für neue Kredite",
+          "start": 71.276,
+          "end": 72.147
+        },
+        {
+          "text": "und Dispo wird es teurer,",
+          "start": 72.147,
+          "end": 73.736
+        },
+        {
+          "text": "wer gerade etwas",
+          "start": 73.736,
+          "end": 74.784
+        },
+        {
+          "text": "finanzieren will,",
+          "start": 74.784,
+          "end": 75.897
+        },
+        {
+          "text": "zahlt mehr",
+          "start": 75.897,
+          "end": 76.329
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "start": 76.329,
+      "end": 77.876,
+      "captions": [
+        {
+          "text": "Drittens: Immobilien",
+          "start": 76.329,
+          "end": 77.876
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "start": 77.876,
+      "end": 81.82,
+      "captions": [
+        {
+          "text": "Höhere Zinsen machen",
+          "start": 77.876,
+          "end": 79.032
+        },
+        {
+          "text": "Baukredite teurer,",
+          "start": 79.032,
+          "end": 80.207
+        },
+        {
+          "text": "das kann Hauspreise bremsen",
+          "start": 80.207,
+          "end": 81.82
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "start": 81.82,
+      "end": 83.842,
+      "captions": [
+        {
+          "text": "Viertens: deine E‑Te‑Effs",
+          "start": 81.82,
+          "end": 83.842
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "start": 83.842,
+      "end": 89.491,
+      "captions": [
+        {
+          "text": "Steigende Zinsen machen",
+          "start": 83.842,
+          "end": 85.077
+        },
+        {
+          "text": "Aktien kurzfristig oft nervös,",
+          "start": 85.077,
+          "end": 86.908
+        },
+        {
+          "text": "weil sichere Anlagen",
+          "start": 86.908,
+          "end": 88.129
+        },
+        {
+          "text": "wieder attraktiver werden",
+          "start": 88.129,
+          "end": 89.491
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "start": 89.491,
+      "end": 92.524,
+      "captions": [
+        {
+          "text": "Langfristig zählen",
+          "start": 89.491,
+          "end": 90.37
+        },
+        {
+          "text": "aber vor allem die Gewinne",
+          "start": 90.37,
+          "end": 91.876
+        },
+        {
+          "text": "der Unternehmen",
+          "start": 91.876,
+          "end": 92.524
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "start": 92.524,
+      "end": 96.85,
+      "captions": [
+        {
+          "text": "Bist du eher Sparer",
+          "start": 92.524,
+          "end": 93.419
+        },
+        {
+          "text": "oder hast du einen Kredit",
+          "start": 93.419,
+          "end": 94.887
+        },
+        {
+          "text": "laufen? Schreib",
+          "start": 94.887,
+          "end": 95.617
+        },
+        {
+          "text": "es uns in die Kommentare",
+          "start": 95.617,
+          "end": 96.85
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "start": 96.85,
+      "end": 99.689,
+      "captions": [
+        {
+          "text": "Und was kannst du jetzt",
+          "start": 96.85,
+          "end": 98.363
+        },
+        {
+          "text": "konkret tun? Drei Tipps",
+          "start": 98.363,
+          "end": 99.689
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "start": 99.689,
+      "end": 106.003,
+      "captions": [
+        {
+          "text": "Tipp eins:",
+          "start": 99.689,
+          "end": 100.217
+        },
+        {
+          "text": "Lass dein Notgeld nicht",
+          "start": 100.217,
+          "end": 101.509
+        },
+        {
+          "text": "auf dem Girokonto liegen,",
+          "start": 101.509,
+          "end": 103.133
+        },
+        {
+          "text": "sondern",
+          "start": 103.133,
+          "end": 103.563
+        },
+        {
+          "text": "auf einem Tagesgeldkonto",
+          "start": 103.563,
+          "end": 105.122
+        },
+        {
+          "text": "mit guten Zinsen",
+          "start": 105.122,
+          "end": 106.003
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "start": 106.003,
+      "end": 110.927,
+      "captions": [
+        {
+          "text": "Tipp zwei: Wenn du",
+          "start": 106.003,
+          "end": 106.756
+        },
+        {
+          "text": "einen Kredit brauchst,",
+          "start": 106.756,
+          "end": 108.096
+        },
+        {
+          "text": "vergleiche jetzt,",
+          "start": 108.096,
+          "end": 109.175
+        },
+        {
+          "text": "bevor die Zinsen",
+          "start": 109.175,
+          "end": 110.19
+        },
+        {
+          "text": "weiter steigen",
+          "start": 110.19,
+          "end": 110.927
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "start": 110.927,
+      "end": 115.878,
+      "captions": [
+        {
+          "text": "Tipp drei:",
+          "start": 110.927,
+          "end": 111.467
+        },
+        {
+          "text": "Lass deinen Sparplan",
+          "start": 111.467,
+          "end": 112.614
+        },
+        {
+          "text": "einfach weiterlaufen,",
+          "start": 112.614,
+          "end": 114.056
+        },
+        {
+          "text": "kurze Schwankungen",
+          "start": 114.056,
+          "end": 115.195
+        },
+        {
+          "text": "gehören dazu",
+          "start": 115.195,
+          "end": 115.878
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "start": 115.878,
+      "end": 120.849,
+      "captions": [
+        {
+          "text": "Inflation frisst jedes Jahr",
+          "start": 115.878,
+          "end": 117.367
+        },
+        {
+          "text": "ein Stück von deinem Geld,",
+          "start": 117.367,
+          "end": 118.893
+        },
+        {
+          "text": "wer es versteht,",
+          "start": 118.893,
+          "end": 119.83
+        },
+        {
+          "text": "kann gegensteuern",
+          "start": 119.83,
+          "end": 120.849
+        }
+      ]
+    }
+  ]
+}
