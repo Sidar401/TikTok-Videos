@@ -1,0 +1,5 @@
+{"tag": "10. NOVEMBER 2026",
+ "hook": "Was wäre, wenn<br />das ganze<br /><span class=\"y\">EIS</span> schmilzt?",
+ "hook_end": 3.2, "share": [3.4, 2.5], "follow": 28.0,
+ "fix": {"siebzig": "70", "dreiundzwanzig": "23"},
+ "css": ".pin { position: absolute; font-weight: 900; font-size: 46px; color: #fff; text-shadow: 0 3px 14px rgba(0,0,0,.95); white-space: nowrap; transform: translate(-50%, -130%); } .pin::after { content: ''; position: absolute; left: 50%; top: 115%; width: 16px; height: 16px; margin-left: -8px; border-radius: 50%; background: #ff4d5e; box-shadow: 0 0 18px #ff4d5e; } .floor { position: absolute; font-weight: 800; font-size: 34px; color: #ffd23f; text-shadow: 0 2px 10px rgba(0,0,0,.9); }"}
