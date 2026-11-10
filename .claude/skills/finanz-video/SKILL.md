@@ -159,3 +159,10 @@ Referenz = `videos/anthropic-boersengang/` (Render `renders/anthropic-boersengan
 - Passende echte Sounds pro Moment (Tabelle oben), ca. 2–3 pro Satz-Gruppe, plus Whoosh bei Szenenwechsel.
 - Zahlen aus Primärquellen prüfen; Quellen im Chat nennen.
 - Vor dem Render alle Szenen als Snapshot-Bogen prüfen (Überlappungen, Text hinter Karten → tz(), Ränder).
+
+## Aussprache-Update (Nutzer 11.11., per Hörprobe bestätigt) – gilt VOR der alten Liste
+- ETF → „Eh-Teh-Eff“ (deutsches E, NICHT „E-Te-Eff“, das klingt wie „Itf“)
+- MSCI World → „Em-Es-Si-Ai World“ (C wie „Si“)
+- USA → „Amerika“ / „amerikanisch“ (NICHT „U-Es-A“, das klingt wie „You SA“)
+- Dezimalzahlen mit eins: „eins Komma sieben“ (NICHT „ein Komma sieben“)
+- Fotos echter Personen: nur Personen des öffentlichen Lebens mit freiem Foto (Wikimedia Commons, Lizenz + Quelle klein einblenden); Privatpersonen/Verdächtige nie, nur Silhouette.
