@@ -113,3 +113,27 @@ Das Einkommen-Video (`videos/longform-einkommen`) ist der Qualitäts-Maßstab: �
 In `SFX` einfach den Dateinamen als Art nutzen, z. B. `(cap("s4", 2), "muenzen-glas")`, `"kurve-hoch"`, `"tresor"`, `"falsch"`/`"richtig"`.
 `kasse` und `pop` nutzen jetzt automatisch die echten Sounds; `whoosh`, `boom`, `ding`, `tick` bleiben synthetisch (Alternativen: `whoosh-schnell`, `whoosh-weich`, `bass-schlag`, `richtig`, `klick`).
 Pro Video passende Sounds abwechseln, nicht immer dieselben. Neue Sounds: Eintrag in `scripts/sfx_gen.py` (min. 0,5 s), dann `python3 scripts/sfx_gen.py <name>` (~10 Credits/Sound).
+
+### Novaro-Sounds (ab 10.11., Nutzer-Wunsch)
+32 weitere Sounds aus dem Novaro-Kanal liegen als `brand/sfx/nv-<name>.mp3` (Liste in `brand/sfx/LISTE.md`), Nutzung gleich: `"nv-gong"`.
+
+### Wann welcher Sound (MUSS zum Bild passen, sparsam: 1 Sound pro Moment, nicht jede Zeile)
+| Moment im Video | Sound |
+|---|---|
+| Hook / große Zahl knallt rein | `bass-schlag`, `nv-boom-tief`, `nv-film-horn` (selten) |
+| Geld kommt dazu, Ersparnis, Gewinn | `kasse`, `muenzen-glas`, `geld-erhalten`, `geldschein` |
+| Kurve/Kurs steigt bzw. fällt | `kurve-hoch` / `kurve-runter` |
+| Zahl zählt hoch | `zaehler` |
+| Fehler, Falle, „das ist falsch“ | `falsch`, `nv-falsch-buzzer`, `nv-platte-kratzer` (lustig) |
+| Richtig, Tipp, Lösung | `richtig`, `nv-pling-idee`, `level-up` |
+| Warnung, Achtung, Frist | `alarm`, `uhr-tickt`, `nv-countdown` |
+| Spannung vor Auflösung | `spannung`, `nv-sog`, `herzschlag`, `nv-dun-dun-dun` |
+| Auflösung / Enthüllung | `nv-tusch`, `nv-gong` |
+| Crash, Blase platzt, Schock | `glas-bricht`, `blase-platzt`, `nv-explosion-fern`, `nv-erdbeben` |
+| Handy/App/Bank-App | `handy-benachrichtigung`, `swipe`, `klick`, `karte-piep` |
+| Rechnen, Formular, Steuer | `taschenrechner`, `tippen`, `stempel`, `papier-reissen` |
+| Tresor, Sparen, Sicherheit | `tresor` |
+| Szenenwechsel | `whoosh-schnell`, `whoosh-weich`, `nv-whoosh-tief` |
+| Überraschung beim Zuschauer | `nv-staunen-wow` |
+Nicht für Finanz: `nv-laser`, `nv-raumschiff`, `nv-rakete` (nur bei „Aktie geht zum Mond“-Witz), `nv-sturm`, `nv-donner`, `nv-wasser-platsch`, `nv-publikum-lachen` (nur selten als Gag).
+Abwechseln: nicht in jedem Video dieselben; pro Video ca. 3–6 verschiedene echte Sounds + Whooshes.

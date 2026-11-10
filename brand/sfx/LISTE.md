@@ -35,3 +35,38 @@ Hörprobe: `renders/sfx-hoerprobe.mp3` (Zeit = Stelle in der Hörprobe).
 30. 0:52  tippen
 31. 0:54  blase-platzt
 32. 0:56  glitch
+
+## Von Novaro übernommen (Präfix `nv-`)
+
+- `nv-boom-tief` – massive deep cinematic sub bass boom, meme style dramatic impact, short tail
+- `nv-boom-kurz` – short punchy bass drop thud, viral meme style hit
+- `nv-platte-kratzer` – vinyl record scratch stop, comedic freeze moment
+- `nv-dun-dun-dun` – dramatic orchestral suspense sting, three heavy brass and timpani hits dun dun dun
+- `nv-film-horn` – huge cinematic trailer braam horn, deep brass blast, epic
+- `nv-herzschlag` – tense slow heartbeat, two deep thumps, cinematic suspense
+- `nv-whoosh-schnell` – fast clean air whoosh swipe transition, short
+- `nv-whoosh-tief` – deep cinematic whoosh pass by, low rumble swoosh transition
+- `nv-ding` – bright clean notification ding, single bell, positive
+- `nv-pling-idee` – magical sparkle pling, lightbulb idea moment, short and soft
+- `nv-falsch-buzzer` – game show wrong answer buzzer, short comedic
+- `nv-tusch` – short drum roll ending with cymbal crash, reveal moment
+- `nv-spannung` – rising tension riser, cinematic suspense build up ending abruptly
+- `nv-pop-blase` – satisfying cartoon bubble pop, short
+- `nv-kasse` – cash register cha-ching, coins, short and satisfying
+- `nv-staunen-wow` – small crowd gasp of amazement, wow reaction, short
+- `nv-alarm` – short sci-fi warning alarm, two pulsing tones, urgent but clean
+- `nv-countdown` – fast ticking clock countdown, tense, ends with a click
+- `nv-gong` – deep resonant gong hit, long shimmering tail, dramatic reveal
+- `nv-laser` – clean sci-fi laser zap, short
+- `nv-raumschiff` – spaceship fly by, deep hum passing from left to right, cinematic
+- `nv-rakete` – rocket launch ignition and powerful rumbling lift off, cinematic
+- `nv-explosion-fern` – distant massive explosion with rolling rumble, cinematic
+- `nv-donner` – sharp thunder crack followed by deep rolling thunder
+- `nv-wasser-platsch` – big water splash, something heavy falling into the sea
+- `nv-eis-knacken` – glacier ice cracking and creaking loudly, deep cracks
+- `nv-sturm` – strong howling wind gust, storm, cinematic
+- `nv-erdbeben` – deep earthquake rumble, ground shaking, low frequency
+- `nv-kamera-klick` – camera shutter click with flash, short
+- `nv-tippen` – fast keyboard typing, short burst
+- `nv-sog` – reverse cymbal swell sucking in, builds tension then stops
+- `nv-publikum-lachen` – small audience laughing briefly, friendly
