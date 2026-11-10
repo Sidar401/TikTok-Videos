@@ -1,0 +1,50 @@
+{
+ "titel": "Hörprobe Aussprache",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "E T F, Nummer eins: Ich spare jeden Monat in einen E T F.",
+   "text": "E T F, Nummer eins: Ich spare jeden Monat in einen E T F."
+  },
+  {
+   "id": "s2",
+   "sprechtext": "E T F, Nummer zwei: Ich spare jeden Monat in einen Eh-Teh-Eff.",
+   "text": "E T F, Nummer zwei: Ich spare jeden Monat in einen Eh-Teh-Eff."
+  },
+  {
+   "id": "s3",
+   "sprechtext": "E T F, Nummer drei: Ich spare jeden Monat in einen E.T.F.",
+   "text": "E T F, Nummer drei: Ich spare jeden Monat in einen E.T.F."
+  },
+  {
+   "id": "s4",
+   "sprechtext": "E T F, Nummer vier: Ich spare jeden Monat in einen ETF.",
+   "text": "E T F, Nummer vier: Ich spare jeden Monat in einen ETF."
+  },
+  {
+   "id": "s5",
+   "sprechtext": "M S C I, Nummer eins: Der beliebteste Fonds ist der M S C I World.",
+   "text": "M S C I, Nummer eins: Der beliebteste Fonds ist der M S C I World."
+  },
+  {
+   "id": "s6",
+   "sprechtext": "M S C I, Nummer zwei: Der beliebteste Fonds ist der Em Es Zeh I World.",
+   "text": "M S C I, Nummer zwei: Der beliebteste Fonds ist der Em Es Zeh I World."
+  },
+  {
+   "id": "s7",
+   "sprechtext": "M S C I, Nummer drei: Der beliebteste Fonds ist der MSCI World.",
+   "text": "M S C I, Nummer drei: Der beliebteste Fonds ist der MSCI World."
+  },
+  {
+   "id": "s8",
+   "sprechtext": "M S C I, Nummer vier: Der beliebteste Fonds ist der Em-Ess-Zee-Ih World.",
+   "text": "M S C I, Nummer vier: Der beliebteste Fonds ist der Em-Ess-Zee-Ih World."
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Zum Schluss: Nvidia hat rund eins Komma sieben Billionen Dollar verloren, in Amerika.",
+   "text": "Zum Schluss: Nvidia hat rund eins Komma sieben Billionen Dollar verloren, in Amerika."
+  }
+ ]
+}
