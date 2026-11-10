@@ -9,6 +9,7 @@ Zoom-Drift pro Szene, große Wort-für-Wort-Untertitel (aktives Wort orange), So
   build(HERE, SZENEN, SFX)  → index.html + assets/mix.wav
 """
 import json
+import subprocess
 from pathlib import Path
 
 import numpy as np
@@ -129,7 +130,24 @@ def _env(n, a=0.005, d=0.2):
     return np.minimum(1, t_ / a) * np.exp(-t_ / d)
 
 
+SFX_DIR = Path(__file__).resolve().parent.parent / "brand" / "sfx"
+
+
+def _datei_sfx(art):
+    """ElevenLabs-Sound aus brand/sfx/<art>.mp3 (mono, 44,1 kHz, Spitze auf 0,9 normalisiert)."""
+    f = SFX_DIR / f"{art}.mp3"
+    if not f.exists():
+        return None
+    roh = subprocess.run(["ffmpeg", "-v", "error", "-i", str(f), "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout
+    x = np.frombuffer(roh, dtype=np.float32).astype(np.float64)
+    return 0.9 * x / max(np.abs(x).max(), 1e-6)
+
+
 def _sfx(art):
+    """Echte Sounds (brand/sfx, siehe scripts/sfx_gen.py) haben Vorrang; sonst synthetisch (whoosh, pop, tick, ding, boom, kasse)."""
+    d = _datei_sfx(art)
+    if d is not None:
+        return d
     rng = np.random.default_rng(7)
     if art == "whoosh":
         n = int(0.4 * SR)

@@ -107,3 +107,9 @@ Das Einkommen-Video (`videos/longform-einkommen`) ist der Qualitäts-Maßstab: �
 - **Motor-Short (Nutzer 8.11.):** Täglich bei **einem der 2 Shorts** auf ein YouTube-Longform hinweisen – Thema passend zum letzten YouTube-Longform. Letzter Satz z. B. „Das ganze Video dazu findest du unten verlinkt.“ + Endkarte (Longform-Thumbnail klein + Pfeil ▼ „Video unten antippen“). Ausnahme von der Regel „kein Schluss-CTA“. Nutzer verlinkt beim Hochladen per „Verwandtes Video“.
 - **Longform-Länge ab 9.11.: 2–3 Minuten** (≈ 300–450 Wörter, ≈ 2.500–3.500 Credits) – Nutzer: „erstmal“ so.
 - **Echte Logos (Nutzer 10.11.: „immer die echten Logos holen, professioneller“):** `python3 scripts/logos.py <name> …` lädt von Wikimedia Commons nach `brand/logos/` (Cache). Ins Video nach `assets/logos/` kopieren und auf weißer/heller Plakette zeigen. Nur redaktionell, nie wie Partner/Werbung. Fehlt ein Logo: `--datei <name> <Commons-Dateiname>`; geht gar nicht → Namens-Plakette (glow_teile.plakette).
+
+## Soundeffekte (ab 10.11.)
+32 echte ElevenLabs-Sounds in `brand/sfx/` (Liste + Hörprobe: `brand/sfx/LISTE.md`, `renders/sfx-hoerprobe.mp3`).
+In `SFX` einfach den Dateinamen als Art nutzen, z. B. `(cap("s4", 2), "muenzen-glas")`, `"kurve-hoch"`, `"tresor"`, `"falsch"`/`"richtig"`.
+`kasse` und `pop` nutzen jetzt automatisch die echten Sounds; `whoosh`, `boom`, `ding`, `tick` bleiben synthetisch (Alternativen: `whoosh-schnell`, `whoosh-weich`, `bass-schlag`, `richtig`, `klick`).
+Pro Video passende Sounds abwechseln, nicht immer dieselben. Neue Sounds: Eintrag in `scripts/sfx_gen.py` (min. 0,5 s), dann `python3 scripts/sfx_gen.py <name>` (~10 Credits/Sound).
