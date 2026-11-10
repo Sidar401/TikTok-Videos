@@ -98,13 +98,13 @@ Das Einkommen-Video (`videos/longform-einkommen`) ist der Qualitäts-Maßstab: �
 - **Satz-Reihenfolge der Aufnahme prüfen:** Liegt ein Satz an anderer Stelle (z. B. Folgen-CTA am Ende), Skript in Aufnahme-Reihenfolge syncen und Audio-Blöcke danach umschneiden (Muster: `videos/deutschlandticket-2027`, `skript-plan.json`).
 
 ## Tagesablauf (Nutzer 7.11.)
-- Täglich **1 Longform + 2 Shorts** (Nutzer 8.11.). Longform **täglich im Hochformat 9:16** (für TikTok/Instagram, Thumbnail 9:16). **Jeden 3. Tag (8.11., 11.11., 14.11., …) zusätzlich 16:9** für YouTube (gleiche Stimme, Szenen neu angeordnet, Thumbnail 16:9). Shorts täglich überall, auf YouTube mit „Verwandtes Video“ zum letzten YouTube-Longform.
+- Täglich **1 Longform + 2 Shorts** (Nutzer 8.11.). Longform **täglich im Hochformat 9:16** (für TikTok/Instagram, Thumbnail 9:16). **Jeden 3. Tag (8.11., 11.11., 14.11., …) zusätzlich 16:9** für YouTube (gleiche Stimme, Szenen neu angeordnet, Thumbnail 16:9). Shorts täglich überall.
 - Geplante Aufgabe „HundeFinanzTv Tagesideen“ jeden Tag 11:40 Uhr (Berlin): aktuelle Trends recherchieren, `THEMEN.md` prüfen, je 3 Ideen für Longform, Short 1, Short 2 + Empfehlung. Skripte erst nach Auswahl des Nutzers.
 
 ## Stimme per API (Nutzer 8.11.)
 - Ablauf: Skript schreiben → Nutzer gibt frei („passt“) → `python3 scripts/stimme.py videos/<name>` (Stimme „HundeTV“, eleven_v4) → `sync.py … --tempo 1.12` → bauen/rendern. Kein MP3-Upload mehr nötig.
 - Credits: Schlüssel-Limit 100.000/Monat, **geteilt mit Kanal Novaro**; Abo ~121.000. Vor jeder Erzeugung `python3 scripts/stimme.py --stand`; bei < 15.000 frei den Nutzer warnen.
-- **Motor-Short (Nutzer 8.11.):** Täglich bei **einem der 2 Shorts** auf ein YouTube-Longform hinweisen – Thema passend zum letzten YouTube-Longform. Letzter Satz z. B. „Das ganze Video dazu findest du unten verlinkt.“ + Endkarte (Longform-Thumbnail klein + Pfeil ▼ „Video unten antippen“). Ausnahme von der Regel „kein Schluss-CTA“. Nutzer verlinkt beim Hochladen per „Verwandtes Video“.
+- **Motor-Short (Nutzer 8.11.):** Täglich bei **einem der 2 Shorts** auf ein YouTube-Longform hinweisen – Thema passend zum letzten YouTube-Longform. Letzter Satz NUR Hinweis, dass es das Video bei uns auf dem Kanal gibt (Nutzer 10.11.), z. B. „Ein ganzes Video dazu findest du bei uns auf dem Kanal.“ – NIE „unten verlinkt“/„unter dem Video“, kein Pfeil nach unten. Endkarte: Longform-Thumbnail + „Auf unserem Kanal“. Ausnahme von der Regel „kein Schluss-CTA“. Nutzer verlinkt NICHTS (kein „Verwandtes Video“ mehr nennen).
 - **Longform-Länge ab 9.11.: 2–3 Minuten** (≈ 300–450 Wörter, ≈ 2.500–3.500 Credits) – Nutzer: „erstmal“ so.
 - **Echte Logos (Nutzer 10.11.: „immer die echten Logos holen, professioneller“):** `python3 scripts/logos.py <name> …` lädt von Wikimedia Commons nach `brand/logos/` (Cache). Ins Video nach `assets/logos/` kopieren und auf weißer/heller Plakette zeigen. Nur redaktionell, nie wie Partner/Werbung. Fehlt ein Logo: `--datei <name> <Commons-Dateiname>`; geht gar nicht → Namens-Plakette (glow_teile.plakette).
 
