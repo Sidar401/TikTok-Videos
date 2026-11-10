@@ -149,3 +149,13 @@ handgezeichnete Pfeile/Kreise/Unterstriche (zeichnen sich selbst), Handschrift-N
 Millimeterpapier, Balken mit Notizen, Donut, Preis-Spanne, Kurs-Laufband, Aktien-Raster, Server-Racks, Ablauf-Kästen, Stempel.
 Pro Video Mischung wechseln, nicht jede Szene gleich. Text über Karten mit z-index (siehe `tz()` in anthropic-boersengang).
 Fehlt ein Original-Logo (z. B. TSMC nicht auf Commons): Wortmarke per `logo_karte(..., text="tsmc", farbe=…)`.
+
+## ⭐ QUALITÄTS-STANDARD (Nutzer 10.11.: „genau so professionell ab sofort immer … geil gemacht, wirklich super“)
+Referenz = `videos/anthropic-boersengang/` (Render `renders/anthropic-boersengang.mp4`). JEDES Video (Short + Longform) mindestens auf diesem Niveau:
+- Echte Original-Logos aller genannten Firmen/Institutionen (scripts/logos.py), als weiße Logo-Karten, gern als Netz mit Pfeilen.
+- Jede Szene „Analyse“-Charakter: Karte mit Millimeterpapier, Diagramm/Balken/Donut/Spanne/Raster, dazu Handschrift-Notizen,
+  selbst zeichnende Pfeile/Kreise/Unterstriche, Stempel, Klebezettel (scripts/analyse_kit.py). Keine Szene nur mit Text.
+- Pro Satz 1 neues Bild-Element genau auf dem gesprochenen Wort (cap(sid, i)); Zahlen zählen hoch, wichtige Zahl wird eingekreist.
+- Passende echte Sounds pro Moment (Tabelle oben), ca. 2–3 pro Satz-Gruppe, plus Whoosh bei Szenenwechsel.
+- Zahlen aus Primärquellen prüfen; Quellen im Chat nennen.
+- Vor dem Render alle Szenen als Snapshot-Bogen prüfen (Überlappungen, Text hinter Karten → tz(), Ränder).
