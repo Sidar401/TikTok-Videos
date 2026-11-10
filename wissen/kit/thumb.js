@@ -20,7 +20,7 @@ srv.listen(0, async () => {
   await p.evaluate((t) => { window.dispatchEvent(new CustomEvent("hf-seek", { detail: { time: t, waitUntil() {} } })); }, t);
   await p.evaluate((s) => (window.__TS = s), parseInt(process.env.SIZE || "150"));
   await p.evaluate((title) => {
-    document.querySelectorAll(".line, .bar, .hookdim, .share, #flash").forEach((e) => (e.style.display = "none"));
+    document.querySelectorAll(".line, .bar, .hookdim, .share, #flash, .pin").forEach((e) => (e.style.display = "none"));
     const s = document.createElement("style");
     s.textContent = `#th{position:absolute;inset:0;z-index:99;font-family:"Inter Display","Inter",sans-serif}
       #th .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.15) 30%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)}
