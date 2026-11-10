@@ -6,7 +6,7 @@ const http = require("http"), fs = require("fs"), path = require("path");
 const [dir, sec, title, outArg] = process.argv.slice(2);
 const root = path.resolve(dir);
 const out = path.resolve(outArg || path.join("renders", path.basename(root) + "-thumbnail.png"));
-const types = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".jpg": "image/jpeg", ".png": "image/png", ".otf": "font/otf", ".wav": "audio/wav", ".woff2": "font/woff2" };
+const types = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".jpg": "image/jpeg", ".png": "image/png", ".otf": "font/otf", ".wav": "audio/wav", ".woff2": "font/woff2", ".svg": "image/svg+xml" };
 const srv = http.createServer((q, r) => { const f = path.join(root, decodeURIComponent(q.url.split("?")[0])); if (!fs.existsSync(f) || fs.statSync(f).isDirectory()) { r.writeHead(404); return r.end(); } r.writeHead(200, { "Content-Type": types[path.extname(f)] || "application/octet-stream" }); fs.createReadStream(f).pipe(r); });
 srv.listen(0, async () => {
   const port = srv.address().port;
@@ -19,8 +19,9 @@ srv.listen(0, async () => {
   const t = parseFloat(sec);
   await p.evaluate((t) => { window.dispatchEvent(new CustomEvent("hf-seek", { detail: { time: t, waitUntil() {} } })); }, t);
   await p.evaluate((s) => (window.__TS = s), parseInt(process.env.SIZE || "150"));
+  await p.evaluate((l) => (window.__LOGO = l), process.env.LOGO || "");
   await p.evaluate((title) => {
-    document.querySelectorAll(".line, .bar, .hookdim, .share, #flash, .pin").forEach((e) => (e.style.display = "none"));
+    document.querySelectorAll(".line, .bar, .hookdim, .share, #flash, .pin, .an, .an-svg").forEach((e) => (e.style.display = "none"));
     const s = document.createElement("style");
     s.textContent = `#th{position:absolute;inset:0;z-index:99;font-family:"Inter Display","Inter",sans-serif}
       #th .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.15) 30%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)}
@@ -29,7 +30,7 @@ srv.listen(0, async () => {
       #th .brand{position:absolute;left:0;right:0;bottom:120px;text-align:center;color:rgba(255,255,255,.9);font-weight:900;font-size:56px;letter-spacing:14px;text-shadow:0 4px 20px rgba(0,0,0,.9)}`;
     document.head.appendChild(s);
     const d = document.createElement("div"); d.id = "th";
-    d.innerHTML = `<div class="shade"></div><div class="t">${title}</div><div class="brand">NOVARO</div>`;
+    d.innerHTML = `<div class="shade"></div><div class="t">${title}</div><div class="brand">NOVARO</div>` + (window.__LOGO ? `<div style="position:absolute;left:330px;top:1180px;width:420px;height:170px;background:#fff;border-radius:28px;display:flex;align-items:center;justify-content:center;padding:26px 34px;box-sizing:border-box;box-shadow:0 0 60px rgba(255,154,60,.45),0 20px 40px rgba(0,0,0,.6)"><img src="${window.__LOGO}" style="max-width:100%;max-height:100%"></div>` : "");
     document.getElementById("root").appendChild(d);
   }, title);
   await p.evaluate(() => document.fonts.ready);
