@@ -16,6 +16,13 @@ QUER = "quer" in sys.argv
 NV = "#76b900"
 kit_assets(HERE, ["nvidia", "apple", "microsoft", "amazon", "google", "amd", "doj", "flagge-usa", "flagge-china", "flagge-singapur", "msci"])
 cap, st, en, DAUER = zeiten(HERE)
+import shutil  # noqa: E402
+FOTO = HERE.parent.parent / "brand/fotos/jensen-huang.jpg"
+JH = {}
+if FOTO.exists():
+    (HERE / "assets/fotos").mkdir(parents=True, exist_ok=True)
+    shutil.copy(FOTO, HERE / "assets/fotos/jensen-huang.jpg")
+    JH = {"foto": "assets/fotos/jensen-huang.jpg", "credit": "Foto: Peter Dasilva · CC BY 4.0"}
 
 
 def tz(*a, **k):
@@ -56,7 +63,7 @@ szene(0.0, st("s2"), KIT_CSS + (QUER_CSS if QUER else "") + logo_karte("i-nv", "
                     f' pop("#i-l-w0", {cap("s1", 2)} + 0.3); slam("#i-z", {cap("s1", 2)}); stempeln("#i-s", {a} + 0.2); flash({a} + 0.2, 0.5);'))
 SFX += [(0.0, "nv-boom-tief"), (0.2, "stempel"), (cap("s1", 1), "kurve-runter"), (cap("s1", 2), "bass-schlag")]
 
-szene(st("s2"), st("s3"), person("j-p", "Jensen Huang", "Chef von Nvidia", 90, 470, 380, NV) + logo_karte("j-nv", "nvidia", 560, 520, 430, 130, glow=NV)
+szene(st("s2"), st("s3"), person("j-p", "Jensen Huang", "Chef von Nvidia", 90, 450, 380, NV, **JH) + logo_karte("j-nv", "nvidia", 560, 520, 430, 130, glow=NV)
       + hand("j-h", "wertvollste<br/>Chipfirma der Welt", 770, 680, 46, GELB, -4, True) + pfeil("j-pf", 760, 780, 520, 900, -0.3, GELB, 7)
       + kreis("j-k", 280, 735, 210, 60, GELB, 6),
       lambda a, d: (f'pop("#j-nv", {a}); pop("#j-h", {cap("s2", 2)}); draw("#j-pf-p", {cap("s2", 3)}, 0.4); pop("#j-pf-k", {cap("s2", 3)} + 0.35);'
@@ -89,7 +96,7 @@ SFX += [(st("s6"), "nv-dun-dun-dun")]
 
 VERB = ('<svg id="vb" viewBox="0 0 1080 1920" style="position:absolute;left:0;top:0;width:1080px;height:1920px;z-index:2">'
         f'<path id="vb-p" d="M400 760 Q540 690 680 760" fill="none" stroke="{GELB}" stroke-width="8" stroke-dasharray="18 16" stroke-linecap="round"/></svg>')
-szene(st("s7"), st("s9"), person("p1", "Jensen Huang", "Nvidia", 70, 560, 330, NV) + person("p2", "Alice Huang", "Megaspeed", 680, 560, 330, "#4d8ff0") + VERB
+szene(st("s7"), st("s9"), person("p1", "Jensen Huang", "Nvidia", 70, 560, 330, NV, **JH) + person("p2", "Alice Huang", "Megaspeed", 680, 560, 330, "#4d8ff0") + VERB
       + hand("vb-h", "enge private Beziehung", 540, 620, 50, GELB, -3, True) + chip("vb-c", "laut Berichten", GRAU, 460, 46)
       + stempel("vb-s", "NICHT VERWANDT", 200, 1080, OR, 66, -5) + hand("vb-h2", "nur gleicher Nachname", 540, 1210, 52, GELB, 2, True),
       lambda a, d: (f'pop("#vb-c", {a}); pop("#p1", {cap("s7", 1)}); pop("#p2", {cap("s7", 4)}); tl.fromTo("#vb-p", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.4 }}, {cap("s7", 3)});'
@@ -236,7 +243,7 @@ SFX += [(st("s27"), "swipe"), (cap("s27", 3), "nv-erdbeben")]
 szene(st("s28"), st("s29"), kapitel(5, "Was jetzt kommt").replace("font-size:110px", "font-size:84px"), kj(5))
 SFX += [(st("s28"), "nv-boom-kurz")]
 
-szene(st("s29"), st("s30"), kalender("wa-k", "NOV", "18", 110, 470, 330, ROT) + person("wa-p", "Jensen Huang", "Aussage", 620, 470, 330, NV)
+szene(st("s29"), st("s30"), kalender("wa-k", "NOV", "18", 110, 470, 330, ROT) + person("wa-p", "Jensen Huang", "Aussage", 620, 470, 330, NV, **JH)
       + flagge("wa-f", "flagge-usa", 250, 950, 260, -4) + hand("wa-h", "Washington", 720, 1010, 70, GELB, -3, True),
       lambda a, d: f'pop("#wa-k", {a}); pop("#wa-p", {cap("s29", 1)}); pop("#wa-f", {cap("s29", 2)}); pop("#wa-h", {cap("s29", 2)} + 0.2);')
 SFX += [(st("s29"), "whoosh-weich"), (st("s29"), "stempel"), (cap("s29", 2), "pop")]

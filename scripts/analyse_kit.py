@@ -219,14 +219,17 @@ def linie(id_, werte, x, y, w, h, farbe=ROT, fuellung=True, punkte=()):
     return html
 
 
-def person(id_, name, rolle, x, y, w=300, farbe=OR):
-    """Personen-Karte mit Silhouette (keine Fotos). """
-    return (f'<div id="{id_}" style="position:absolute;left:{x}px;top:{y}px;width:{w}px;padding:26px 16px 22px;border-radius:28px;background:#14181b;border:5px solid {farbe};'
-            f'box-shadow:0 0 50px {farbe}55;text-align:center;z-index:3">'
+def person(id_, name, rolle, x, y, w=300, farbe=OR, foto=None, credit=""):
+    """Personen-Karte. foto= Pfad (nur freie Fotos öffentlicher Personen, credit = Lizenzzeile), sonst Silhouette."""
+    bild = (f'<div style="width:{w * 0.62:.0f}px;height:{w * 0.62:.0f}px;margin:0 auto;border-radius:50%;overflow:hidden;border:5px solid {farbe};box-shadow:0 0 30px {farbe}88">'
+            f'<img src="{foto}" alt="" style="width:100%;height:100%;object-fit:cover;object-position:50% 18%"/></div>') if foto else (
             f'<svg viewBox="0 0 100 100" style="width:{w * 0.5:.0f}px;height:{w * 0.5:.0f}px"><circle cx="50" cy="36" r="20" fill="{farbe}"/>'
-            f'<path d="M14 96 Q16 62 50 62 Q84 62 86 96 Z" fill="{farbe}"/></svg>'
+            f'<path d="M14 96 Q16 62 50 62 Q84 62 86 96 Z" fill="{farbe}"/></svg>')
+    cr = f'<div class="mono" style="font-size:{max(14, w * 0.045):.0f}px;color:#ffffff88;margin-top:10px">{credit}</div>' if credit else ""
+    return (f'<div id="{id_}" style="position:absolute;left:{x}px;top:{y}px;width:{w}px;padding:26px 16px 22px;border-radius:28px;background:#14181b;border:5px solid {farbe};'
+            f'box-shadow:0 0 50px {farbe}55;text-align:center;z-index:3">' + bild +
             f'<div style="font-weight:900;font-size:{w * 0.13:.0f}px;color:#fff;margin-top:8px;line-height:1.05">{name}</div>'
-            f'<div class="mono" style="font-size:{w * 0.075:.0f}px;color:{GRAU};margin-top:8px">{rolle}</div></div>')
+            f'<div class="mono" style="font-size:{w * 0.075:.0f}px;color:{GRAU};margin-top:8px">{rolle}</div>{cr}</div>')
 
 
 def flagge(id_, name, x, y, w, dreh=0):
