@@ -44,6 +44,7 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | aktivrente | Aktivrente: ab Regelaltersgrenze angestellt bis 2.000 €/Monat (24.000 €/Jahr) steuerfrei, KV/PV fällig, nur Angestellte |
 | fruehstart-rente | (Motor-Short → longform-2027) 10 €/Monat 6–18 J. = 1.440 €, bei 6 % ≈ 2.100 € mit 18, bis 67 > 30.000 € |
 | lohnsteuer-freibetrag | Freibetrag 2027 beantragen, Pendler 30 km × 220 Tage ≈ 2.500 € (> 1.230 € Pauschale), ≈ +30 €/Monat netto, Elster, dann Steuererklärungspflicht |
+| krankenkasse-wechsel | (Skript, Motor-Short → longform-2027) Zusatzbeitrag Ø 2,9 %, günstigste ~2,2 %, 3.000 € brutto ≈ 11 €/Monat ≈ 130 €/Jahr (AN-Hälfte), Online-Wechsel 5 Min, Leistungen fast gleich |
 
 ## Longform (16:9)
 | Video | Kern / Beispiele | Bildidee |
@@ -60,6 +61,7 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | longform-domino | Folgevideo zum Crash 5.11.: Domino-Effekt Wahl (Demokraten Kongress, Texas Baustopp) → Rechenzentren → Chips (Nvidia −9 % >400 Mrd $, AMD Rekord +97 % RZ trotzdem zweistellig minus, SpaceX Texas) → Depot/MSCI World; eingepreist; Erholung am Freitag; 3 Lehren | Dominosteine |
 | longform-2027 | Das ändert sich 2027: 7 Änderungen Gewinner/Verlierer – Mindestlohn 13,90→14,60 (+~120 € brutto), Minijob 603→633, D-Ticket 66,80, Frühstart-Rente 10 €/Kind (Jg. 2020, 12 J. = 1.440 €), Mütterrente III, Zusatzbeitrag Ø 2,9 %, BBG RV ~8.850 €, Bonus Aktivrente 2.000 € | Kalender 2027 + Gewinner/Verlierer-Stempel |
 | longform-klarna | (9:16) BNPL: Shop zahlt Gebühr, Leute kaufen mehr (Schmerz des Bezahlens), Mahngebühren/Schufa, ab 20.11.2026 EU-Verbraucherkreditrichtlinie: BNPL + Kredite < 200 € mit Bonitätsprüfung, 3 Regeln | Kassenbon „später“ / Ratenkette |
+| longform-inflation-ezb | (Skript, 9:16 + 16:9 YouTube 11.11.) Eurozone 4,0 % / DE 2,8 %, EZB-Ziel 2 %, Leitzins ~2,5 %, Sitzung 17.12., 4 Bereiche (Tagesgeld, Kredit, Immobilien, ETFs), 3 Tipps; echtes EZB-Logo | Thermometer/Preis-Ballon + EZB-Logo |
 | longform-lotto | Lottogewinner Marco: 1 Mio., Absturz in 4 Jahren, Gründe, 5 Regeln, Lotto-Ausschüttung ~50 % | Kontostand-Countdown / Lottokugeln |
 | longform-freiheit | Nie wieder arbeiten: 4-%-Regel, ×25, 3 Gipfel (450k/750k/1,2 Mio.), Zwischenstationen, 3 Hebel, Sophie | Freiheits-Berg mit Hütten |
 

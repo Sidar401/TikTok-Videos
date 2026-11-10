@@ -1,0 +1,150 @@
+{
+ "titel": "Inflation 4 % – erhöht die EZB jetzt die Zinsen? Was das für dein Geld heißt",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Die Preise in der Eurozone sind im Oktober um vier Prozent gestiegen.",
+   "text": "Die Preise in der Eurozone sind im Oktober um 4 % gestiegen"
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Das ist so viel wie seit Jahren nicht mehr, und jetzt steht eine Frage im Raum: Erhöht die E-Z-B wieder die Zinsen?",
+   "text": "Das ist so viel wie seit Jahren nicht mehr, und jetzt steht eine Frage im Raum: Erhöht die E-Z-B wieder die Zinsen?"
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Was das für dein Tagesgeld, deinen Kredit und deine E-Te-Effs bedeutet, zeigen wir dir jetzt.",
+   "text": "Was das für dein Tagesgeld, deinen Kredit und deine E-Te-Effs bedeutet, zeigen wir dir jetzt"
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Folge HundeFinanzTv, wir erklären dir jeden Tag, was in der Wirtschaft passiert.",
+   "text": "Folge HundeFinanzTv, wir erklären dir jeden Tag, was in der Wirtschaft passiert"
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Wie immer gilt: Das ist keine Anlageberatung.",
+   "text": "Wie immer gilt: Das ist keine Anlageberatung"
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Erst mal: Was heißt vier Prozent Inflation überhaupt?",
+   "text": "Erst mal: Was heißt 4 % Inflation überhaupt?"
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Ein Einkauf, der letztes Jahr hundert Euro gekostet hat, kostet heute im Schnitt hundertvier Euro.",
+   "text": "Ein Einkauf, der letztes Jahr 100 € gekostet hat, kostet heute im Schnitt 104 €"
+  },
+  {
+   "id": "s8",
+   "sprechtext": "In Deutschland liegt die Inflation etwas niedriger, bei rund zwei Komma acht Prozent.",
+   "text": "In Deutschland liegt die Inflation etwas niedriger, bei rund zwei Komma 8 %"
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Und genau hier kommt die Europäische Zentralbank ins Spiel.",
+   "text": "Und genau hier kommt die Europäische Zentralbank ins Spiel"
+  },
+  {
+   "id": "s10",
+   "sprechtext": "Ihre Aufgabe ist, die Preise stabil zu halten, ihr Ziel liegt bei zwei Prozent.",
+   "text": "Ihre Aufgabe ist, die Preise stabil zu halten, ihr Ziel liegt bei 2 %"
+  },
+  {
+   "id": "s11",
+   "sprechtext": "Ihr wichtigstes Werkzeug ist der Leitzins, und der liegt gerade bei rund zweieinhalb Prozent.",
+   "text": "Ihr wichtigstes Werkzeug ist der Leitzins, und der liegt gerade bei rund zweieinhalb Prozent"
+  },
+  {
+   "id": "s12",
+   "sprechtext": "Steigen die Preise zu schnell, erhöht die E-Z-B die Zinsen, damit Geld teurer wird und weniger ausgegeben wird.",
+   "text": "Steigen die Preise zu schnell, erhöht die E-Z-B die Zinsen, damit Geld teurer wird und weniger ausgegeben wird"
+  },
+  {
+   "id": "s13",
+   "sprechtext": "Am siebzehnten Dezember ist die nächste Sitzung, und viele Experten rechnen mit einer Erhöhung.",
+   "text": "Am siebzehnten Dezember ist die nächste Sitzung, und viele Experten rechnen mit einer Erhöhung"
+  },
+  {
+   "id": "s14",
+   "sprechtext": "Was heißt das jetzt für dich? Schauen wir uns vier Bereiche an.",
+   "text": "Was heißt das jetzt für dich? Schauen wir uns vier Bereiche an"
+  },
+  {
+   "id": "s15",
+   "sprechtext": "Erstens: dein Tagesgeld.",
+   "text": "Erstens: dein Tagesgeld"
+  },
+  {
+   "id": "s16",
+   "sprechtext": "Steigen die Leitzinsen, steigen meist auch die Zinsen aufs Tagesgeld, für Sparer also eine gute Nachricht.",
+   "text": "Steigen die Leitzinsen, steigen meist auch die Zinsen aufs Tagesgeld, für Sparer also eine gute Nachricht"
+  },
+  {
+   "id": "s17",
+   "sprechtext": "Zweitens: dein Kredit.",
+   "text": "Zweitens: dein Kredit"
+  },
+  {
+   "id": "s18",
+   "sprechtext": "Für neue Kredite und Dispo wird es teurer, wer gerade etwas finanzieren will, zahlt mehr.",
+   "text": "Für neue Kredite und Dispo wird es teurer, wer gerade etwas finanzieren will, zahlt mehr"
+  },
+  {
+   "id": "s19",
+   "sprechtext": "Drittens: Immobilien.",
+   "text": "Drittens: Immobilien"
+  },
+  {
+   "id": "s20",
+   "sprechtext": "Höhere Zinsen machen Baukredite teurer, das kann Hauspreise bremsen.",
+   "text": "Höhere Zinsen machen Baukredite teurer, das kann Hauspreise bremsen"
+  },
+  {
+   "id": "s21",
+   "sprechtext": "Viertens: deine E-Te-Effs.",
+   "text": "Viertens: deine E-Te-Effs"
+  },
+  {
+   "id": "s22",
+   "sprechtext": "Steigende Zinsen machen Aktien kurzfristig oft nervös, weil sichere Anlagen wieder attraktiver werden.",
+   "text": "Steigende Zinsen machen Aktien kurzfristig oft nervös, weil sichere Anlagen wieder attraktiver werden"
+  },
+  {
+   "id": "s23",
+   "sprechtext": "Langfristig zählen aber vor allem die Gewinne der Unternehmen.",
+   "text": "Langfristig zählen aber vor allem die Gewinne der Unternehmen"
+  },
+  {
+   "id": "s24",
+   "sprechtext": "Bist du eher Sparer oder hast du einen Kredit laufen? Schreib es uns in die Kommentare.",
+   "text": "Bist du eher Sparer oder hast du einen Kredit laufen? Schreib es uns in die Kommentare"
+  },
+  {
+   "id": "s25",
+   "sprechtext": "Und was kannst du jetzt konkret tun? Drei Tipps.",
+   "text": "Und was kannst du jetzt konkret tun? Drei Tipps"
+  },
+  {
+   "id": "s26",
+   "sprechtext": "Tipp eins: Lass dein Notgeld nicht auf dem Girokonto liegen, sondern auf einem Tagesgeldkonto mit guten Zinsen.",
+   "text": "Tipp eins: Lass dein Notgeld nicht auf dem Girokonto liegen, sondern auf einem Tagesgeldkonto mit guten Zinsen"
+  },
+  {
+   "id": "s27",
+   "sprechtext": "Tipp zwei: Wenn du einen Kredit brauchst, vergleiche jetzt, bevor die Zinsen weiter steigen.",
+   "text": "Tipp zwei: Wenn du einen Kredit brauchst, vergleiche jetzt, bevor die Zinsen weiter steigen"
+  },
+  {
+   "id": "s28",
+   "sprechtext": "Tipp drei: Lass deinen Sparplan einfach weiterlaufen, kurze Schwankungen gehören dazu.",
+   "text": "Tipp drei: Lass deinen Sparplan einfach weiterlaufen, kurze Schwankungen gehören dazu"
+  },
+  {
+   "id": "s29",
+   "sprechtext": "Inflation frisst jedes Jahr ein Stück von deinem Geld, wer es versteht, kann gegensteuern.",
+   "text": "Inflation frisst jedes Jahr ein Stück von deinem Geld, wer es versteht, kann gegensteuern"
+  }
+ ]
+}

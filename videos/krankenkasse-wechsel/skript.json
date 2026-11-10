@@ -1,0 +1,45 @@
+{
+ "titel": "Krankenkasse wechseln – bis zu 130 € im Jahr (Motor-Short → Das ändert sich 2027)",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Du zahlst vielleicht jeden Monat zu viel für deine Krankenkasse.",
+   "text": "Du zahlst vielleicht jeden Monat zu viel für deine Krankenkasse"
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Denn der Zusatzbeitrag ist bei jeder Kasse anders, und die Unterschiede sind riesig.",
+   "text": "Denn der Zusatzbeitrag ist bei jeder Kasse anders, und die Unterschiede sind riesig"
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Im Schnitt liegt er bei zwei Komma neun Prozent, die günstigsten Kassen nehmen nur rund zwei Komma zwei Prozent.",
+   "text": "Im Schnitt liegt er bei zwei Komma 9 %, die günstigsten Kassen nehmen nur rund zwei Komma 2 %"
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Bei dreitausend Euro brutto sparst du so etwa elf Euro im Monat, also rund hundertdreißig Euro im Jahr.",
+   "text": "Bei 3.000 € brutto sparst du so etwa 11 € im Monat, also rund 130 € im Jahr"
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Der Wechsel dauert nur fünf Minuten online, die neue Kasse kündigt sogar für dich.",
+   "text": "Der Wechsel dauert nur fünf Minuten online, die neue Kasse kündigt sogar für dich"
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Und keine Sorge: Die Leistungen sind bei allen gesetzlichen Kassen fast gleich.",
+   "text": "Und keine Sorge: Die Leistungen sind bei allen gesetzlichen Kassen fast gleich"
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Wie viel Zusatzbeitrag zahlst du? Schreib's uns in die Kommentare.",
+   "text": "Wie viel Zusatzbeitrag zahlst du? Schreib's uns in die Kommentare"
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Was sich zweitausendsiebenundzwanzig sonst noch alles ändert, siehst du im ganzen Video, unten verlinkt.",
+   "text": "Was sich 2027 sonst noch alles ändert, siehst du im ganzen Video, unten verlinkt"
+  }
+ ]
+}
