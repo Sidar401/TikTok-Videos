@@ -195,12 +195,61 @@ def kasten(id_, text, x, y, w, h, farbe=OR, size=50, unter=""):
 def stempel(id_, text, x, y, farbe=ROT, size=78, dreh=-10):
     """Stempel. JS: stempeln("#id", t)."""
     return (f'<div id="{id_}" style="position:absolute;left:{x}px;top:{y}px;padding:12px 34px;border:9px solid {farbe};border-radius:18px;color:{farbe};'
-            f'font-weight:900;font-size:{size}px;letter-spacing:4px;transform:rotate({dreh}deg);text-shadow:0 0 20px {farbe}88;box-shadow:0 0 30px {farbe}55, inset 0 0 30px {farbe}33;'
+            f'font-weight:900;font-size:{size}px;letter-spacing:4px;white-space:nowrap;transform:rotate({dreh}deg);text-shadow:0 0 20px {farbe}88;box-shadow:0 0 30px {farbe}55, inset 0 0 30px {farbe}33;'
             f'background:#0e1012cc;z-index:6">{text}</div>')
 
 
 STEMPEL_JS = 'const stempeln = (sel, at) => tl.fromTo(sel, { scale: 3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "power4.in" }, at);'
 
+
+def linie(id_, werte, x, y, w, h, farbe=ROT, fuellung=True, punkte=()):
+    """Kurs-Linie (werte 0..1, oben=1). punkte=[(index, text)] Wert-Pillen. JS: draw("#id-p", t, 1.0)."""
+    n = len(werte) - 1
+    P = [(x + w * i / n, y + h * (1 - v)) for i, v in enumerate(werte)]
+    d = "M" + " L".join(f"{a:.0f} {b:.0f}" for a, b in P)
+    s = []
+    if fuellung:
+        s.append(f'<path id="{id_}-f" d="{d} L{P[-1][0]:.0f} {y + h} L{P[0][0]:.0f} {y + h} Z" fill="{farbe}" opacity="0.14"/>')
+    s.append(f'<path id="{id_}-p" d="{d}" fill="none" stroke="{farbe}" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" style="filter:drop-shadow(0 0 14px {farbe})"/>')
+    html = _svg(id_, "".join(s), 3)
+    for k, (i, txt) in enumerate(punkte):
+        px, py = P[i]
+        html += (f'<div id="{id_}-w{k}" class="mono" style="position:absolute;left:{px - 130:.0f}px;width:260px;top:{py - 80:.0f}px;text-align:center;z-index:5">'
+                 f'<span style="display:inline-block;padding:6px 16px;border-radius:12px;background:{farbe};color:#111;font-size:34px">{txt}</span></div>')
+    return html
+
+
+def person(id_, name, rolle, x, y, w=300, farbe=OR):
+    """Personen-Karte mit Silhouette (keine Fotos). """
+    return (f'<div id="{id_}" style="position:absolute;left:{x}px;top:{y}px;width:{w}px;padding:26px 16px 22px;border-radius:28px;background:#14181b;border:5px solid {farbe};'
+            f'box-shadow:0 0 50px {farbe}55;text-align:center;z-index:3">'
+            f'<svg viewBox="0 0 100 100" style="width:{w * 0.5:.0f}px;height:{w * 0.5:.0f}px"><circle cx="50" cy="36" r="20" fill="{farbe}"/>'
+            f'<path d="M14 96 Q16 62 50 62 Q84 62 86 96 Z" fill="{farbe}"/></svg>'
+            f'<div style="font-weight:900;font-size:{w * 0.13:.0f}px;color:#fff;margin-top:8px;line-height:1.05">{name}</div>'
+            f'<div class="mono" style="font-size:{w * 0.075:.0f}px;color:{GRAU};margin-top:8px">{rolle}</div></div>')
+
+
+def flagge(id_, name, x, y, w, dreh=0):
+    return (f'<img id="{id_}" src="assets/logos/{name}.svg" alt="" style="position:absolute;left:{x}px;top:{y}px;width:{w}px;border-radius:10px;'
+            f'outline:4px solid #ffffff55;box-shadow:0 20px 40px #000c;transform:rotate({dreh}deg);z-index:3"/>')
+
+
+def kalender(id_, monat, tag, x, y, w=260, farbe=ROT, unter=""):
+    u = f'<div class="mono" style="font-size:{w * 0.09:.0f}px;color:#555;margin-top:4px">{unter}</div>' if unter else ""
+    return (f'<div id="{id_}" style="position:absolute;left:{x}px;top:{y}px;width:{w}px;border-radius:26px;overflow:hidden;background:#fff;box-shadow:0 0 60px {farbe}66, 0 30px 50px #000;z-index:3;text-align:center">'
+            f'<div style="background:{farbe};color:#fff;font-weight:900;font-size:{w * 0.17:.0f}px;padding:12px 0">{monat}</div>'
+            f'<div style="font-weight:900;font-size:{w * (0.5 if len(str(tag)) <= 2 else 0.3):.0f}px;color:#111;line-height:1.1;padding:{0 if len(str(tag)) <= 2 else w * 0.08:.0f}px 0 14px">{tag}{u}</div></div>')
+
+
+def rahmen(html, quer):
+    """Für 16:9: Szene (1080×1920-Koordinaten, Inhalt y 420–1300) skaliert in die Bildmitte legen."""
+    if not quer:
+        return html
+    return f'<div class="qbox" style="position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:0 0;transform:translate(528px,-186px) scale(0.8)">{html}</div>'
+
+
+QUER_CSS = '<style>.qbox .t { width: 1080px !important; }</style>'
+
 KIT_JS = " ".join([WACHS_JS, SPANN_JS, LAUF_JS, BLINK_JS, STEMPEL_JS])
 __all__ = ["GELB", "GRAU", "KIT_CSS", "KIT_JS", "kit_assets", "logo_karte", "pfeil", "kreis", "unterstrich", "hand", "zettel", "karte",
-           "balken", "donut", "spanne", "ticker", "raster", "racks", "kasten", "stempel", "GOLD", "GRUEN", "OR", "ROT"]
+           "balken", "donut", "linie", "person", "flagge", "kalender", "rahmen", "QUER_CSS", "spanne", "ticker", "raster", "racks", "kasten", "stempel", "GOLD", "GRUEN", "OR", "ROT"]

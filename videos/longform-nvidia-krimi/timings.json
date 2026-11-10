@@ -1,0 +1,927 @@
+{
+  "dauer": 175.66,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 4.953,
+      "captions": [
+        {
+          "text": "Ein Spionage‑Verdacht",
+          "start": 0.0,
+          "end": 1.187
+        },
+        {
+          "text": "hat an nur zwei Tagen",
+          "start": 1.187,
+          "end": 2.374
+        },
+        {
+          "text": "hunderte Milliarden Dollar",
+          "start": 2.374,
+          "end": 3.844
+        },
+        {
+          "text": "an der Börse vernichtet",
+          "start": 3.844,
+          "end": 4.953
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 4.953,
+      "end": 10.745,
+      "captions": [
+        {
+          "text": "Im Mittelpunkt steht",
+          "start": 4.953,
+          "end": 6.054
+        },
+        {
+          "text": "ausgerechnet der Chef",
+          "start": 6.054,
+          "end": 7.412
+        },
+        {
+          "text": "der wertvollsten",
+          "start": 7.412,
+          "end": 8.446
+        },
+        {
+          "text": "Chipfirma der Welt:",
+          "start": 8.446,
+          "end": 9.452
+        },
+        {
+          "text": "Jensen Huang von Nvidia",
+          "start": 9.452,
+          "end": 10.745
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 10.745,
+      "end": 15.712,
+      "captions": [
+        {
+          "text": "Und auch wenn du nie",
+          "start": 10.745,
+          "end": 11.563
+        },
+        {
+          "text": "eine Nvidia‑Aktie",
+          "start": 11.563,
+          "end": 12.423
+        },
+        {
+          "text": "gekauft hast,",
+          "start": 12.423,
+          "end": 13.081
+        },
+        {
+          "text": "steckt diese Firma sehr",
+          "start": 13.081,
+          "end": 14.245
+        },
+        {
+          "text": "wahrscheinlich in deinem Geld",
+          "start": 14.245,
+          "end": 15.712
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 15.712,
+      "end": 22.288,
+      "captions": [
+        {
+          "text": "Heute schauen wir uns an,",
+          "start": 15.712,
+          "end": 17.108
+        },
+        {
+          "text": "was passiert ist,",
+          "start": 17.108,
+          "end": 18.313
+        },
+        {
+          "text": "warum die Aktie abstürzt,",
+          "start": 18.313,
+          "end": 20.085
+        },
+        {
+          "text": "und was das für deinen ETF",
+          "start": 20.085,
+          "end": 21.928
+        },
+        {
+          "text": "bedeutet",
+          "start": 21.928,
+          "end": 22.288
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 22.288,
+      "end": 29.172,
+      "captions": [
+        {
+          "text": "Wichtig vorweg: Das ist",
+          "start": 22.288,
+          "end": 23.366
+        },
+        {
+          "text": "keine Anlageberatung,",
+          "start": 23.366,
+          "end": 24.672
+        },
+        {
+          "text": "und alles, was wir zeigen,",
+          "start": 24.672,
+          "end": 26.29
+        },
+        {
+          "text": "sind Berichte und Vorwürfe,",
+          "start": 26.29,
+          "end": 27.915
+        },
+        {
+          "text": "nichts davon ist bewiesen",
+          "start": 27.915,
+          "end": 29.172
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 29.172,
+      "end": 30.903,
+      "captions": [
+        {
+          "text": "Teil eins: der Verdacht",
+          "start": 29.172,
+          "end": 30.903
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 30.903,
+      "end": 37.483,
+      "captions": [
+        {
+          "text": "Laut Berichten großer",
+          "start": 30.903,
+          "end": 32.051
+        },
+        {
+          "text": "USA‑Medien hatte Jensen",
+          "start": 32.051,
+          "end": 33.537
+        },
+        {
+          "text": "Huang eine enge private",
+          "start": 33.537,
+          "end": 35.022
+        },
+        {
+          "text": "Beziehung zu einer Frau",
+          "start": 35.022,
+          "end": 36.508
+        },
+        {
+          "text": "namens Alice Huang",
+          "start": 36.508,
+          "end": 37.483
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 37.483,
+      "end": 40.457,
+      "captions": [
+        {
+          "text": "Die beiden sind",
+          "start": 37.483,
+          "end": 38.073
+        },
+        {
+          "text": "nicht verwandt,",
+          "start": 38.073,
+          "end": 38.852
+        },
+        {
+          "text": "sie haben nur",
+          "start": 38.852,
+          "end": 39.527
+        },
+        {
+          "text": "den gleichen Nachnamen",
+          "start": 39.527,
+          "end": 40.457
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 40.457,
+      "end": 46.481,
+      "captions": [
+        {
+          "text": "Alice Huang war",
+          "start": 40.457,
+          "end": 41.251
+        },
+        {
+          "text": "Managerin bei Megaspeed,",
+          "start": 41.251,
+          "end": 42.86
+        },
+        {
+          "text": "einer Firma aus Singapur,",
+          "start": 42.86,
+          "end": 44.537
+        },
+        {
+          "text": "die KI‑Chips von Nvidia kauft",
+          "start": 44.537,
+          "end": 46.481
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 46.481,
+      "end": 51.379,
+      "captions": [
+        {
+          "text": "Und USA‑Geheimdienste",
+          "start": 46.481,
+          "end": 47.74
+        },
+        {
+          "text": "vermuten:",
+          "start": 47.74,
+          "end": 48.28
+        },
+        {
+          "text": "Sie soll für den chinesischen",
+          "start": 48.28,
+          "end": 49.781
+        },
+        {
+          "text": "Geheimdienst gearbeitet haben",
+          "start": 49.781,
+          "end": 51.379
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 51.379,
+      "end": 56.328,
+      "captions": [
+        {
+          "text": "China bestreitet das,",
+          "start": 51.379,
+          "end": 52.628
+        },
+        {
+          "text": "und Nvidia sagt,",
+          "start": 52.628,
+          "end": 53.598
+        },
+        {
+          "text": "es seien keine Geheimnisse",
+          "start": 53.598,
+          "end": 55.317
+        },
+        {
+          "text": "weitergegeben worden",
+          "start": 55.317,
+          "end": 56.328
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 56.328,
+      "end": 57.954,
+      "captions": [
+        {
+          "text": "Teil zwei: die Chips",
+          "start": 56.328,
+          "end": 57.954
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 57.954,
+      "end": 62.362,
+      "captions": [
+        {
+          "text": "Moderne KI‑Chips dürfen",
+          "start": 57.954,
+          "end": 59.229
+        },
+        {
+          "text": "aus den USA nicht einfach",
+          "start": 59.229,
+          "end": 60.839
+        },
+        {
+          "text": "nach China verkauft werden",
+          "start": 60.839,
+          "end": 62.362
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "start": 62.362,
+      "end": 70.007,
+      "captions": [
+        {
+          "text": "Der Verdacht ist,",
+          "start": 62.362,
+          "end": 63.237
+        },
+        {
+          "text": "dass über Megaspeed",
+          "start": 63.237,
+          "end": 64.385
+        },
+        {
+          "text": "trotzdem Chips nach China",
+          "start": 64.385,
+          "end": 65.897
+        },
+        {
+          "text": "geflossen sind,",
+          "start": 65.897,
+          "end": 66.749
+        },
+        {
+          "text": "laut einem Bericht im Wert",
+          "start": 66.749,
+          "end": 68.321
+        },
+        {
+          "text": "von rund 7,5 Milliarden Dollar",
+          "start": 68.321,
+          "end": 70.007
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "start": 70.007,
+      "end": 76.205,
+      "captions": [
+        {
+          "text": "Schon seit 2024 wird",
+          "start": 70.007,
+          "end": 71.318
+        },
+        {
+          "text": "gegen Megaspeed ermittelt,",
+          "start": 71.318,
+          "end": 73.187
+        },
+        {
+          "text": "inzwischen auch",
+          "start": 73.187,
+          "end": 74.253
+        },
+        {
+          "text": "vom Justizministerium der USA",
+          "start": 74.253,
+          "end": 76.205
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "start": 76.205,
+      "end": 80.527,
+      "captions": [
+        {
+          "text": "Der Nvidia‑Vorstand hat",
+          "start": 76.205,
+          "end": 77.45
+        },
+        {
+          "text": "deshalb eine eigene,",
+          "start": 77.45,
+          "end": 78.648
+        },
+        {
+          "text": "unabhängige",
+          "start": 78.648,
+          "end": 79.307
+        },
+        {
+          "text": "Untersuchung gestartet",
+          "start": 79.307,
+          "end": 80.527
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "start": 80.527,
+      "end": 85.941,
+      "captions": [
+        {
+          "text": "Schreib uns",
+          "start": 80.527,
+          "end": 81.088
+        },
+        {
+          "text": "in die Kommentare: Glaubst du,",
+          "start": 81.088,
+          "end": 82.665
+        },
+        {
+          "text": "das ist nur ein Sturm",
+          "start": 82.665,
+          "end": 83.924
+        },
+        {
+          "text": "im Wasserglas,",
+          "start": 83.924,
+          "end": 84.751
+        },
+        {
+          "text": "oder ein echtes Problem?",
+          "start": 84.751,
+          "end": 85.941
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "start": 85.941,
+      "end": 87.589,
+      "captions": [
+        {
+          "text": "Teil drei: die Aktie",
+          "start": 85.941,
+          "end": 87.589
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "start": 87.589,
+      "end": 93.347,
+      "captions": [
+        {
+          "text": "Am Montag fiel",
+          "start": 87.589,
+          "end": 88.528
+        },
+        {
+          "text": "die Nvidia‑Aktie um gut 4 %,",
+          "start": 88.528,
+          "end": 90.783
+        },
+        {
+          "text": "am Dienstag noch",
+          "start": 90.783,
+          "end": 92.009
+        },
+        {
+          "text": "einmal um fast 6 %",
+          "start": 92.009,
+          "end": 93.347
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "start": 93.347,
+      "end": 98.424,
+      "captions": [
+        {
+          "text": "Allein am Dienstag sind damit",
+          "start": 93.347,
+          "end": 95.237
+        },
+        {
+          "text": "rund 250 Milliarden Dollar",
+          "start": 95.237,
+          "end": 97.036
+        },
+        {
+          "text": "Börsenwert verschwunden",
+          "start": 97.036,
+          "end": 98.424
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "start": 98.424,
+      "end": 105.367,
+      "captions": [
+        {
+          "text": "Und seit dem Rekord im Oktober",
+          "start": 98.424,
+          "end": 100.566
+        },
+        {
+          "text": "hat Nvidia rund 30 % verloren,",
+          "start": 100.566,
+          "end": 102.911
+        },
+        {
+          "text": "das sind etwa",
+          "start": 102.911,
+          "end": 103.927
+        },
+        {
+          "text": "1,7 Billionen Dollar",
+          "start": 103.927,
+          "end": 105.367
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "start": 105.367,
+      "end": 111.209,
+      "captions": [
+        {
+          "text": "Dazu kam: Die Inflation",
+          "start": 105.367,
+          "end": 106.537
+        },
+        {
+          "text": "in den USA",
+          "start": 106.537,
+          "end": 107.207
+        },
+        {
+          "text": "ist wieder gestiegen,",
+          "start": 107.207,
+          "end": 108.614
+        },
+        {
+          "text": "viele rechnen jetzt",
+          "start": 108.614,
+          "end": 109.826
+        },
+        {
+          "text": "sogar mit höheren Zinsen",
+          "start": 109.826,
+          "end": 111.209
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "start": 111.209,
+      "end": 112.94,
+      "captions": [
+        {
+          "text": "Teil vier: dein Geld",
+          "start": 111.209,
+          "end": 112.94
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "start": 112.94,
+      "end": 119.414,
+      "captions": [
+        {
+          "text": "Nvidia ist",
+          "start": 112.94,
+          "end": 113.576
+        },
+        {
+          "text": "inzwischen die größte",
+          "start": 113.576,
+          "end": 115.264
+        },
+        {
+          "text": "Firma im MSCI World,",
+          "start": 115.264,
+          "end": 116.872
+        },
+        {
+          "text": "dem beliebtesten",
+          "start": 116.872,
+          "end": 118.135
+        },
+        {
+          "text": "ETF in Deutschland",
+          "start": 118.135,
+          "end": 119.414
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "start": 119.414,
+      "end": 124.207,
+      "captions": [
+        {
+          "text": "Von 100 € in diesem",
+          "start": 119.414,
+          "end": 120.975
+        },
+        {
+          "text": "ETF stecken knapp",
+          "start": 120.975,
+          "end": 122.522
+        },
+        {
+          "text": "6 € allein in Nvidia",
+          "start": 122.522,
+          "end": 124.207
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "start": 124.207,
+      "end": 129.861,
+      "captions": [
+        {
+          "text": "Fällt Nvidia also um 10 %,",
+          "start": 124.207,
+          "end": 126.027
+        },
+        {
+          "text": "verliert dein ETF",
+          "start": 126.027,
+          "end": 127.254
+        },
+        {
+          "text": "allein dadurch rund",
+          "start": 127.254,
+          "end": 128.683
+        },
+        {
+          "text": "ein halbes Prozent",
+          "start": 128.683,
+          "end": 129.861
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "start": 129.861,
+      "end": 135.881,
+      "captions": [
+        {
+          "text": "Das klingt wenig,",
+          "start": 129.861,
+          "end": 130.732
+        },
+        {
+          "text": "aber bei KI‑Firmen hängen",
+          "start": 130.732,
+          "end": 132.27
+        },
+        {
+          "text": "viele Aktien zusammen,",
+          "start": 132.27,
+          "end": 133.624
+        },
+        {
+          "text": "und wenn eine wackelt,",
+          "start": 133.624,
+          "end": 134.897
+        },
+        {
+          "text": "wackeln oft alle",
+          "start": 134.897,
+          "end": 135.881
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "start": 135.881,
+      "end": 138.339,
+      "captions": [
+        {
+          "text": "Teil fünf: was jetzt kommt",
+          "start": 135.881,
+          "end": 138.339
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "start": 138.339,
+      "end": 142.718,
+      "captions": [
+        {
+          "text": "Am 18. November soll",
+          "start": 138.339,
+          "end": 139.505
+        },
+        {
+          "text": "Jensen Huang vor Politikern",
+          "start": 139.505,
+          "end": 141.339
+        },
+        {
+          "text": "in Washington aussagen",
+          "start": 141.339,
+          "end": 142.718
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "start": 142.718,
+      "end": 146.714,
+      "captions": [
+        {
+          "text": "Und in den nächsten",
+          "start": 142.718,
+          "end": 143.827
+        },
+        {
+          "text": "Tagen legt Nvidia seine",
+          "start": 143.827,
+          "end": 145.309
+        },
+        {
+          "text": "neuen Quartalszahlen vor",
+          "start": 145.309,
+          "end": 146.714
+        }
+      ]
+    },
+    {
+      "id": "s31",
+      "start": 146.714,
+      "end": 151.594,
+      "captions": [
+        {
+          "text": "Sind die stark,",
+          "start": 146.714,
+          "end": 147.465
+        },
+        {
+          "text": "kann sich die Aktie",
+          "start": 147.465,
+          "end": 148.594
+        },
+        {
+          "text": "schnell erholen,",
+          "start": 148.594,
+          "end": 149.399
+        },
+        {
+          "text": "enttäuschen sie,",
+          "start": 149.399,
+          "end": 150.29
+        },
+        {
+          "text": "kann es weiter runtergehen",
+          "start": 150.29,
+          "end": 151.594
+        }
+      ]
+    },
+    {
+      "id": "s32",
+      "start": 151.594,
+      "end": 153.269,
+      "captions": [
+        {
+          "text": "Teil sechs: Was",
+          "start": 151.594,
+          "end": 152.29
+        },
+        {
+          "text": "heißt das für dich?",
+          "start": 152.29,
+          "end": 153.269
+        }
+      ]
+    },
+    {
+      "id": "s33",
+      "start": 153.269,
+      "end": 159.687,
+      "captions": [
+        {
+          "text": "Erstens: Panik ist fast",
+          "start": 153.269,
+          "end": 154.501
+        },
+        {
+          "text": "nie ein guter Ratgeber,",
+          "start": 154.501,
+          "end": 156.216
+        },
+        {
+          "text": "wer in Krisen verkauft,",
+          "start": 156.216,
+          "end": 157.878
+        },
+        {
+          "text": "verpasst oft die Erholung",
+          "start": 157.878,
+          "end": 159.687
+        }
+      ]
+    },
+    {
+      "id": "s34",
+      "start": 159.687,
+      "end": 164.134,
+      "captions": [
+        {
+          "text": "Zweitens: Schau dir an,",
+          "start": 159.687,
+          "end": 160.876
+        },
+        {
+          "text": "wie viel von deinem Geld",
+          "start": 160.876,
+          "end": 162.521
+        },
+        {
+          "text": "an wenigen KI‑Firmen hängt",
+          "start": 162.521,
+          "end": 164.134
+        }
+      ]
+    },
+    {
+      "id": "s35",
+      "start": 164.134,
+      "end": 170.274,
+      "captions": [
+        {
+          "text": "Und drittens:",
+          "start": 164.134,
+          "end": 164.742
+        },
+        {
+          "text": "Ein Sparplan läuft weiter,",
+          "start": 164.742,
+          "end": 166.105
+        },
+        {
+          "text": "auch wenn die Kurse fallen,",
+          "start": 166.105,
+          "end": 167.708
+        },
+        {
+          "text": "dann bekommst du sogar",
+          "start": 167.708,
+          "end": 168.942
+        },
+        {
+          "text": "mehr Anteile für dein Geld",
+          "start": 168.942,
+          "end": 170.274
+        }
+      ]
+    },
+    {
+      "id": "s36",
+      "start": 170.274,
+      "end": 175.047,
+      "captions": [
+        {
+          "text": "Der Nvidia‑Krimi ist",
+          "start": 170.274,
+          "end": 171.402
+        },
+        {
+          "text": "noch nicht vorbei,",
+          "start": 171.402,
+          "end": 172.536
+        },
+        {
+          "text": "also: ruhig bleiben",
+          "start": 172.536,
+          "end": 173.697
+        },
+        {
+          "text": "und genau hinschauen",
+          "start": 173.697,
+          "end": 175.047
+        }
+      ]
+    }
+  ]
+}

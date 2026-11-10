@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0e1012; }
+      #root { position: relative; width: 100%; height: 100%; font-family: Montserrat, sans-serif; overflow: hidden;
+        background: radial-gradient(ellipse at 50% 45%, #ff8a1f40 0%, #ff8a1f10 35%, transparent 60%),
+                    radial-gradient(ellipse at 50% 50%, #1b1f22 0%, #0e1012 75%); }
+      #raster { position: absolute; inset: 0; background-image: linear-gradient(#ffffff0d 2px, transparent 2px), linear-gradient(90deg, #ffffff0d 2px, transparent 2px);
+        background-size: 96px 96px; }
+      .scene { position: absolute; inset: 0; }
+      #frame { position: absolute; inset: 0; border: 26px solid #DB8622; z-index: 10; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="1" data-width="1080" data-height="1920">
+      <div id="raster"></div>
+<div id="v0" class="scene clip" data-start="0" data-duration="1" data-track-index="1"><div style="position:absolute;left:0px;top:220px;width:1080px;font-weight:900;font-size:130px;line-height:1.02;letter-spacing:-2px;text-align:center;display:flex;flex-direction:column;gap:14px;z-index:3"><div style="color:#fff;text-shadow:0 6px 0 #000">Bitcoin</div><div><span style="display:inline-block;padding:4px 30px 10px;border-radius:22px;background:#ff4d4d;color:#fff;box-shadow:0 0 60px #ff4d4d88">STÜRZT AB</span></div></div><div style="position:absolute;left:330px;top:640px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffd28a,#f7931a 55%,#a85e00);box-shadow:0 0 120px #f7931aaa, 0 40px 60px #000;display:flex;align-items:center;justify-content:center;transform:rotate(-12deg);z-index:2"><img src="assets/bitcoin.svg" style="width:80%"/></div><svg viewBox="0 0 420 420" style="position:absolute;left:330px;top:640px;width:420px;height:420px;z-index:3;transform:rotate(-12deg)"><path d="M210 0 L190 90 L240 150 L180 230 L230 300 L200 420" fill="none" stroke="#111" stroke-width="12" stroke-linejoin="round"/></svg><svg viewBox="0 0 820 330" style="position:absolute;left:100px;top:1110px;width:820px;height:330px;overflow:visible;z-index:1"><defs><linearGradient id="c1g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff4d4d" stop-opacity="0.35"/><stop offset="1" stop-color="#ff4d4d" stop-opacity="0"/></linearGradient><filter id="c1f" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="10"/></filter></defs><path d="M0 50 L123 16 L246 66 L369 40 L492 132 L615 182 L738 264 L820 304 L820 330 L0 330 Z" fill="url(#c1g)"/><path d="M0 50 L123 16 L246 66 L369 40 L492 132 L615 182 L738 264 L820 304" fill="none" stroke="#ff4d4d" stroke-width="22" stroke-linejoin="round" opacity="0.7" filter="url(#c1f)"/><path d="M0 50 L123 16 L246 66 L369 40 L492 132 L615 182 L738 264 L820 304" fill="none" stroke="#ff4d4d" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/><path d="M0 50 L123 16 L246 66 L369 40 L492 132 L615 182 L738 264 L820 304" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round" opacity="0.6"/></svg><div style="position:absolute;left:920px;top:1263.6px;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center"><div style="padding:6px 22px 8px;border-radius:14px;background:#ff4d4d;color:#111;font-weight:900;font-size:50px;white-space:nowrap;box-shadow:0 0 30px #ff4d4daa;border:3px solid #fff3">−40 %</div><div style="width:0;height:80px;border-left:5px dashed #ff4d4d;opacity:0.8"></div></div><div style="position:absolute;left:170px;top:1540px;padding:8px 30px 12px;border-radius:20px;background:#f7931a;color:#fff;font-weight:900;font-size:60px;white-space:nowrap;box-shadow:0 0 40px #f7931a99;transform:rotate(-3deg);z-index:3">3-Monats-Tief – warum?</div></div>
+      <div id="frame"></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#root", { opacity: 1 }, 0);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

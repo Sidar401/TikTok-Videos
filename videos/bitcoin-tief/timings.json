@@ -1,0 +1,389 @@
+{
+  "dauer": 69.7,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 3.331,
+      "captions": [
+        {
+          "text": "Bitcoin ist gerade",
+          "start": 0.0,
+          "end": 1.027
+        },
+        {
+          "text": "so tief gefallen wie seit",
+          "start": 1.027,
+          "end": 2.453
+        },
+        {
+          "text": "August nicht mehr",
+          "start": 2.453,
+          "end": 3.331
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 3.331,
+      "end": 8.401,
+      "captions": [
+        {
+          "text": "Unter 75.000 Dollar,",
+          "start": 3.331,
+          "end": 5.206
+        },
+        {
+          "text": "zwischendurch sogar",
+          "start": 5.206,
+          "end": 7.037
+        },
+        {
+          "text": "auf rund 73.500",
+          "start": 7.037,
+          "end": 8.401
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 8.401,
+      "end": 10.341,
+      "captions": [
+        {
+          "text": "Schick das jemandem,",
+          "start": 8.401,
+          "end": 9.616
+        },
+        {
+          "text": "der Bitcoin hat",
+          "start": 9.616,
+          "end": 10.341
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 10.341,
+      "end": 14.097,
+      "captions": [
+        {
+          "text": "Kurzer Hinweis: Das ist",
+          "start": 10.341,
+          "end": 11.539
+        },
+        {
+          "text": "keine Anlageberatung,",
+          "start": 11.539,
+          "end": 12.986
+        },
+        {
+          "text": "nur eine Erklärung",
+          "start": 12.986,
+          "end": 14.097
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 14.097,
+      "end": 20.271,
+      "captions": [
+        {
+          "text": "Zum Vergleich:",
+          "start": 14.097,
+          "end": 15.097
+        },
+        {
+          "text": "Das Rekordhoch lag im Oktober",
+          "start": 15.097,
+          "end": 17.77
+        },
+        {
+          "text": "2025 bei über 126.000 Dollar",
+          "start": 17.77,
+          "end": 20.271
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 20.271,
+      "end": 22.762,
+      "captions": [
+        {
+          "text": "Bitcoin hat also",
+          "start": 20.271,
+          "end": 21.543
+        },
+        {
+          "text": "rund 40 % verloren",
+          "start": 21.543,
+          "end": 22.762
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 22.762,
+      "end": 25.949,
+      "captions": [
+        {
+          "text": "Grund Nummer eins:",
+          "start": 22.762,
+          "end": 23.944
+        },
+        {
+          "text": "die Inflation in den USA",
+          "start": 23.944,
+          "end": 25.949
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 25.949,
+      "end": 30.514,
+      "captions": [
+        {
+          "text": "Sie ist höher als erwartet,",
+          "start": 25.949,
+          "end": 27.332
+        },
+        {
+          "text": "und jetzt rechnen viele damit,",
+          "start": 27.332,
+          "end": 28.996
+        },
+        {
+          "text": "dass die Zinsen sogar steigen",
+          "start": 28.996,
+          "end": 30.514
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 30.514,
+      "end": 36.763,
+      "captions": [
+        {
+          "text": "Steigen die Zinsen,",
+          "start": 30.514,
+          "end": 31.519
+        },
+        {
+          "text": "bekommst du für sicheres",
+          "start": 31.519,
+          "end": 32.905
+        },
+        {
+          "text": "Geld wieder mehr,",
+          "start": 32.905,
+          "end": 33.86
+        },
+        {
+          "text": "und riskante Anlagen",
+          "start": 33.86,
+          "end": 35.014
+        },
+        {
+          "text": "wie Bitcoin werden",
+          "start": 35.014,
+          "end": 36.053
+        },
+        {
+          "text": "weniger attraktiv",
+          "start": 36.053,
+          "end": 36.763
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 36.763,
+      "end": 39.649,
+      "captions": [
+        {
+          "text": "Grund Nummer zwei: Große",
+          "start": 36.763,
+          "end": 38.062
+        },
+        {
+          "text": "Anleger ziehen Geld ab",
+          "start": 38.062,
+          "end": 39.649
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 39.649,
+      "end": 45.713,
+      "captions": [
+        {
+          "text": "Aus den Bitcoin‑ETFs",
+          "start": 39.649,
+          "end": 40.843
+        },
+        {
+          "text": "in den USA sind",
+          "start": 40.843,
+          "end": 41.887
+        },
+        {
+          "text": "in nur einer Woche",
+          "start": 41.887,
+          "end": 43.139
+        },
+        {
+          "text": "rund 1,3 Milliarden",
+          "start": 43.139,
+          "end": 44.461
+        },
+        {
+          "text": "Dollar abgeflossen",
+          "start": 44.461,
+          "end": 45.713
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 45.713,
+      "end": 48.582,
+      "captions": [
+        {
+          "text": "Grund Nummer drei:",
+          "start": 45.713,
+          "end": 46.946
+        },
+        {
+          "text": "Wetten auf Kredit",
+          "start": 46.946,
+          "end": 48.582
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 48.582,
+      "end": 51.84,
+      "captions": [
+        {
+          "text": "Viele haben mit geliehenem",
+          "start": 48.582,
+          "end": 50.112
+        },
+        {
+          "text": "Geld auf steigende",
+          "start": 50.112,
+          "end": 51.185
+        },
+        {
+          "text": "Kurse gesetzt",
+          "start": 51.185,
+          "end": 51.84
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "start": 51.84,
+      "end": 57.513,
+      "captions": [
+        {
+          "text": "Fällt der Kurs,",
+          "start": 51.84,
+          "end": 52.594
+        },
+        {
+          "text": "werden diese Wetten",
+          "start": 52.594,
+          "end": 53.699
+        },
+        {
+          "text": "automatisch geschlossen,",
+          "start": 53.699,
+          "end": 55.002
+        },
+        {
+          "text": "und das drückt den Preis",
+          "start": 55.002,
+          "end": 56.394
+        },
+        {
+          "text": "noch weiter nach unten",
+          "start": 56.394,
+          "end": 57.513
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "start": 57.513,
+      "end": 62.839,
+      "captions": [
+        {
+          "text": "Am Kryptomarkt wurden",
+          "start": 57.513,
+          "end": 58.683
+        },
+        {
+          "text": "so an einem Wochenende",
+          "start": 58.683,
+          "end": 60.077
+        },
+        {
+          "text": "über eine Milliarde Dollar",
+          "start": 60.077,
+          "end": 61.725
+        },
+        {
+          "text": "zwangsweise aufgelöst",
+          "start": 61.725,
+          "end": 62.839
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "start": 62.839,
+      "end": 64.02,
+      "captions": [
+        {
+          "text": "Was heißt das für dich?",
+          "start": 62.839,
+          "end": 64.02
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "start": 64.02,
+      "end": 69.096,
+      "captions": [
+        {
+          "text": "Kauf nie Bitcoin auf Kredit,",
+          "start": 64.02,
+          "end": 65.561
+        },
+        {
+          "text": "und steck nur Geld hinein,",
+          "start": 65.561,
+          "end": 67.123
+        },
+        {
+          "text": "dessen Verlust du",
+          "start": 67.123,
+          "end": 68.165
+        },
+        {
+          "text": "verkraften kannst",
+          "start": 68.165,
+          "end": 69.096
+        }
+      ]
+    }
+  ]
+}

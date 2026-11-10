@@ -46,6 +46,8 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | lohnsteuer-freibetrag | Freibetrag 2027 beantragen, Pendler 30 km × 220 Tage ≈ 2.500 € (> 1.230 € Pauschale), ≈ +30 €/Monat netto, Elster, dann Steuererklärungspflicht |
 | krankenkasse-wechsel | (Motor-Short → longform-2027; Cover: Karte + ≈130 €) Zusatzbeitrag Ø 2,9 %, günstigste ~2,2 %, 3.000 € brutto ≈ 11 €/Monat ≈ 130 €/Jahr (AN-Hälfte), Online-Wechsel 5 Min, Leistungen fast gleich |
 | anthropic-boersengang | (Motor-Short 75 s → longform-ki-blase; nach Vorbild Eulen-Kanal; Analyse-Look) Anthropic-IPO Nasdaq „ANT“, 70–78 $, 825 Mio. Aktien, 26 Mrd. $ von Google/Nvidia/Microsoft/AMD/Broadcom/Micron/TSMC, bis 1,4 Bio. $ Wert, Umsatz 9 M. 2,5 → 33,2 Mrd. (13×), Verlust 104 Mrd. (94,3 Papier, 1,3 echt), ~900 Mrd. Zusagen | Cover: Anthropic+Nasdaq-Logo, 1,4 Billionen grün |
+| nvidia-im-etf | (Motor-Short 70 s → longform-nvidia-krimi) MSCI World 1.300+ Firmen/23 Länder, Nvidia ≈ 6 % (Platz 1), Top-10 ≈ 28 %, −10 % Nvidia ≈ −0,6 % ETF, 10.000 € ≈ −60 €, Nvidia −10 % in 2 Tagen / −30 % seit Okt. | Cover: Nvidia-Logo + 100er-Raster mit 6 grünen Feldern |
+| bitcoin-tief | (Short 70 s) BTC < 75.000 $ (Tief ~73.500), Rekord 126.000 $ Okt. 2025 → −40 %, 3 Gründe: US-Inflation/Zinsen, ETF-Abflüsse 1,3 Mrd. $/Woche, Hebel-Liquidationen > 1 Mrd. $ | Cover: Bitcoin-Münze mit Riss + Crash-Linie |
 
 ## Longform (16:9)
 | Video | Kern / Beispiele | Bildidee |
@@ -63,6 +65,7 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | longform-2027 | Das ändert sich 2027: 7 Änderungen Gewinner/Verlierer – Mindestlohn 13,90→14,60 (+~120 € brutto), Minijob 603→633, D-Ticket 66,80, Frühstart-Rente 10 €/Kind (Jg. 2020, 12 J. = 1.440 €), Mütterrente III, Zusatzbeitrag Ø 2,9 %, BBG RV ~8.850 €, Bonus Aktivrente 2.000 € | Kalender 2027 + Gewinner/Verlierer-Stempel |
 | longform-klarna | (9:16) BNPL: Shop zahlt Gebühr, Leute kaufen mehr (Schmerz des Bezahlens), Mahngebühren/Schufa, ab 20.11.2026 EU-Verbraucherkreditrichtlinie: BNPL + Kredite < 200 € mit Bonitätsprüfung, 3 Regeln | Kassenbon „später“ / Ratenkette |
 | longform-inflation-ezb | (nur 9:16, 10.11.; Cover: 4 % rot + EZB-Logo) Eurozone 4,0 % / DE 2,8 %, EZB-Ziel 2 %, Leitzins ~2,5 %, Sitzung 17.12., 4 Bereiche (Tagesgeld, Kredit, Immobilien, ETFs), 3 Tipps; echtes EZB-Logo | Thermometer/Preis-Ballon + EZB-Logo |
+| longform-nvidia-krimi | (11.11., 16:9 YouTube + 9:16, 2:56, Analyse-Look, 6 Kapitel) Spionage-Verdacht um Nvidia-Chef Jensen Huang / Alice Huang (Megaspeed, Singapur), Export-Verbot China, 7,5 Mrd. $ laut Bericht, Ermittlungen seit 2024 + US-Justizministerium, Aktie Mo −4 % / Di −6 % (≈250 Mrd. $), −30 % seit Okt.-Rekord (1,7 Bio. $), ETF-Anteil ≈ 6 %, 18.11. Aussage, Quartalszahlen, 3 Tipps | Thumbs: „SPIONAGE-KRIMI bei Nvidia“ + Crash-Linie + China-Flagge |
 | longform-lotto | Lottogewinner Marco: 1 Mio., Absturz in 4 Jahren, Gründe, 5 Regeln, Lotto-Ausschüttung ~50 % | Kontostand-Countdown / Lottokugeln |
 | longform-freiheit | Nie wieder arbeiten: 4-%-Regel, ×25, 3 Gipfel (450k/750k/1,2 Mio.), Zwischenstationen, 3 Hebel, Sophie | Freiheits-Berg mit Hütten |
 
