@@ -137,3 +137,15 @@ Pro Video passende Sounds abwechseln, nicht immer dieselben. Neue Sounds: Eintra
 | Überraschung beim Zuschauer | `nv-staunen-wow` |
 Nicht für Finanz: `nv-laser`, `nv-raumschiff`, `nv-rakete` (nur bei „Aktie geht zum Mond“-Witz), `nv-sturm`, `nv-donner`, `nv-wasser-platsch`, `nv-publikum-lachen` (nur selten als Gag).
 Abwechseln: nicht in jedem Video dieselben; pro Video ca. 3–6 verschiedene echte Sounds + Whooshes.
+
+## Shorts-Länge NEU (Nutzer 10.11.): alle Shorts 61–75 s
+Ab sofort jeder Short **61–75 Sekunden** (TikTok/IG/YouTube pushen > 1 Min.). Ca. 15–17 Sätze / ~200 Wörter bei Tempo 1.12.
+Ist die Stimme zu lang: Satz streichen (Audio-Schnitt wie bei anthropic-boersengang: Satz aus voice.wav schneiden, skript.json anpassen, `sync.py … --tempo 1.07`).
+Longform bleibt 2–3 Min.; YouTube-16:9 alle 3 Tage.
+
+## Analyse-Look (Nutzer 10.11.: „Skizzen, Analysen … professionell, nicht immer das Gleiche“)
+Baukasten `scripts/analyse_kit.py` (Vorbild: `videos/anthropic-boersengang/build.py`): echte Logo-Karten + Logo-Netz mit Pfeilen,
+handgezeichnete Pfeile/Kreise/Unterstriche (zeichnen sich selbst), Handschrift-Notizen (Caveat) und Klebezettel, Analyse-Karten mit
+Millimeterpapier, Balken mit Notizen, Donut, Preis-Spanne, Kurs-Laufband, Aktien-Raster, Server-Racks, Ablauf-Kästen, Stempel.
+Pro Video Mischung wechseln, nicht jede Szene gleich. Text über Karten mit z-index (siehe `tz()` in anthropic-boersengang).
+Fehlt ein Original-Logo (z. B. TSMC nicht auf Commons): Wortmarke per `logo_karte(..., text="tsmc", farbe=…)`.

@@ -45,6 +45,7 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | fruehstart-rente | (Motor-Short → longform-2027) 10 €/Monat 6–18 J. = 1.440 €, bei 6 % ≈ 2.100 € mit 18, bis 67 > 30.000 € |
 | lohnsteuer-freibetrag | Freibetrag 2027 beantragen, Pendler 30 km × 220 Tage ≈ 2.500 € (> 1.230 € Pauschale), ≈ +30 €/Monat netto, Elster, dann Steuererklärungspflicht |
 | krankenkasse-wechsel | (Motor-Short → longform-2027; Cover: Karte + ≈130 €) Zusatzbeitrag Ø 2,9 %, günstigste ~2,2 %, 3.000 € brutto ≈ 11 €/Monat ≈ 130 €/Jahr (AN-Hälfte), Online-Wechsel 5 Min, Leistungen fast gleich |
+| anthropic-boersengang | (Motor-Short 75 s → longform-ki-blase; nach Vorbild Eulen-Kanal; Analyse-Look) Anthropic-IPO Nasdaq „ANT“, 70–78 $, 825 Mio. Aktien, 26 Mrd. $ von Google/Nvidia/Microsoft/AMD/Broadcom/Micron/TSMC, bis 1,4 Bio. $ Wert, Umsatz 9 M. 2,5 → 33,2 Mrd. (13×), Verlust 104 Mrd. (94,3 Papier, 1,3 echt), ~900 Mrd. Zusagen | Cover: Anthropic+Nasdaq-Logo, 1,4 Billionen grün |
 
 ## Longform (16:9)
 | Video | Kern / Beispiele | Bildidee |

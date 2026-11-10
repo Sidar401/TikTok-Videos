@@ -1,0 +1,412 @@
+{
+  "dauer": 74.51,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 4.359,
+      "captions": [
+        {
+          "text": "Der größte Börsengang aller",
+          "start": 0.0,
+          "end": 1.731
+        },
+        {
+          "text": "Zeiten steht kurz bevor,",
+          "start": 1.731,
+          "end": 3.269
+        },
+        {
+          "text": "und es geht um KI",
+          "start": 3.269,
+          "end": 4.359
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 4.359,
+      "end": 7.949,
+      "captions": [
+        {
+          "text": "Anthropic,",
+          "start": 4.359,
+          "end": 4.929
+        },
+        {
+          "text": "die Firma hinter",
+          "start": 4.929,
+          "end": 5.842
+        },
+        {
+          "text": "dem Chatbot Claude,",
+          "start": 5.842,
+          "end": 6.925
+        },
+        {
+          "text": "will an die Nasdaq",
+          "start": 6.925,
+          "end": 7.949
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 7.949,
+      "end": 11.447,
+      "captions": [
+        {
+          "text": "Kurzer Hinweis: Das ist",
+          "start": 7.949,
+          "end": 9.243
+        },
+        {
+          "text": "keine Anlageberatung,",
+          "start": 9.243,
+          "end": 10.43
+        },
+        {
+          "text": "nur eine Erklärung",
+          "start": 10.43,
+          "end": 11.447
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 11.447,
+      "end": 14.468,
+      "captions": [
+        {
+          "text": "Eine Aktie soll zwischen",
+          "start": 11.447,
+          "end": 12.991
+        },
+        {
+          "text": "70 und 78 Dollar kosten",
+          "start": 12.991,
+          "end": 14.468
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 14.468,
+      "end": 19.026,
+      "captions": [
+        {
+          "text": "Verkauft werden",
+          "start": 14.468,
+          "end": 15.646
+        },
+        {
+          "text": "825 Millionen Aktien,",
+          "start": 15.646,
+          "end": 17.297
+        },
+        {
+          "text": "unter dem Kürzel „ANT“",
+          "start": 17.297,
+          "end": 19.026
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 19.026,
+      "end": 27.576,
+      "captions": [
+        {
+          "text": "Dazu kaufen Google,",
+          "start": 19.026,
+          "end": 20.573
+        },
+        {
+          "text": "Nvidia, Microsoft, AMD,",
+          "start": 20.573,
+          "end": 22.446
+        },
+        {
+          "text": "Broadcom,",
+          "start": 22.446,
+          "end": 23.179
+        },
+        {
+          "text": "Micron",
+          "start": 23.179,
+          "end": 23.668
+        },
+        {
+          "text": "und TSMC zusammen Aktien",
+          "start": 23.668,
+          "end": 25.622
+        },
+        {
+          "text": "für 26 Milliarden Dollar",
+          "start": 25.622,
+          "end": 27.576
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 27.576,
+      "end": 30.811,
+      "captions": [
+        {
+          "text": "Damit wäre Anthropic bis",
+          "start": 27.576,
+          "end": 29.069
+        },
+        {
+          "text": "zu 1,4 Billionen Dollar wert",
+          "start": 29.069,
+          "end": 30.811
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 30.811,
+      "end": 33.367,
+      "captions": [
+        {
+          "text": "Schick das jemandem,",
+          "start": 30.811,
+          "end": 31.922
+        },
+        {
+          "text": "der gerade KI‑Aktien kauft",
+          "start": 31.922,
+          "end": 33.367
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 33.367,
+      "end": 39.915,
+      "captions": [
+        {
+          "text": "Jetzt wird es spannend:",
+          "start": 33.367,
+          "end": 34.889
+        },
+        {
+          "text": "In den ersten 9 Monaten",
+          "start": 34.889,
+          "end": 36.411
+        },
+        {
+          "text": "2025 hat Anthropic",
+          "start": 36.411,
+          "end": 37.602
+        },
+        {
+          "text": "rund 2,5 Milliarden",
+          "start": 37.602,
+          "end": 38.86
+        },
+        {
+          "text": "Dollar umgesetzt",
+          "start": 38.86,
+          "end": 39.915
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 39.915,
+      "end": 44.929,
+      "captions": [
+        {
+          "text": "Im gleichen Zeitraum",
+          "start": 39.915,
+          "end": 41.12
+        },
+        {
+          "text": "dieses Jahr waren es",
+          "start": 41.12,
+          "end": 42.329
+        },
+        {
+          "text": "über 33 Milliarden,",
+          "start": 42.329,
+          "end": 43.478
+        },
+        {
+          "text": "also rund 13‑mal so viel",
+          "start": 43.478,
+          "end": 44.929
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 44.929,
+      "end": 48.378,
+      "captions": [
+        {
+          "text": "Aber unterm",
+          "start": 44.929,
+          "end": 45.561
+        },
+        {
+          "text": "Strich steht ein Verlust",
+          "start": 45.561,
+          "end": 46.941
+        },
+        {
+          "text": "von 104 Milliarden Dollar",
+          "start": 46.941,
+          "end": 48.378
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 48.378,
+      "end": 53.408,
+      "captions": [
+        {
+          "text": "Der Großteil davon,",
+          "start": 48.378,
+          "end": 49.544
+        },
+        {
+          "text": "über 94 Milliarden,",
+          "start": 49.544,
+          "end": 50.71
+        },
+        {
+          "text": "ist allerdings nur",
+          "start": 50.71,
+          "end": 51.815
+        },
+        {
+          "text": "ein Verlust auf dem Papier",
+          "start": 51.815,
+          "end": 53.408
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 53.408,
+      "end": 58.807,
+      "captions": [
+        {
+          "text": "Denn Anleihen,",
+          "start": 53.408,
+          "end": 54.133
+        },
+        {
+          "text": "die später in Aktien",
+          "start": 54.133,
+          "end": 55.172
+        },
+        {
+          "text": "getauscht werden,",
+          "start": 55.172,
+          "end": 56.055
+        },
+        {
+          "text": "sind durch den hohen",
+          "start": 56.055,
+          "end": 57.094
+        },
+        {
+          "text": "Firmenwert viel",
+          "start": 57.094,
+          "end": 57.873
+        },
+        {
+          "text": "mehr wert geworden",
+          "start": 57.873,
+          "end": 58.807
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "start": 58.807,
+      "end": 62.45,
+      "captions": [
+        {
+          "text": "Im echten Geschäft",
+          "start": 58.807,
+          "end": 59.9
+        },
+        {
+          "text": "lag der Verlust nur",
+          "start": 59.9,
+          "end": 61.054
+        },
+        {
+          "text": "bei rund 1,3 Milliarden",
+          "start": 61.054,
+          "end": 62.45
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "start": 62.45,
+      "end": 68.311,
+      "captions": [
+        {
+          "text": "Und das Geld fließt",
+          "start": 62.45,
+          "end": 63.491
+        },
+        {
+          "text": "weiter: Fast 900 Milliarden",
+          "start": 63.491,
+          "end": 64.971
+        },
+        {
+          "text": "Dollar hat Anthropic",
+          "start": 64.971,
+          "end": 66.067
+        },
+        {
+          "text": "schon für Rechenzentren",
+          "start": 66.067,
+          "end": 67.327
+        },
+        {
+          "text": "und Chips zugesagt",
+          "start": 67.327,
+          "end": 68.311
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "start": 68.311,
+      "end": 73.897,
+      "captions": [
+        {
+          "text": "Warum dieses Geld im Kreis",
+          "start": 68.311,
+          "end": 69.828
+        },
+        {
+          "text": "zwischen den KI‑Firmen fließt,",
+          "start": 69.828,
+          "end": 71.579
+        },
+        {
+          "text": "siehst du im ganzen Video,",
+          "start": 71.579,
+          "end": 73.092
+        },
+        {
+          "text": "unten verlinkt",
+          "start": 73.092,
+          "end": 73.897
+        }
+      ]
+    }
+  ]
+}
