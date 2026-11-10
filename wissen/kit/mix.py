@@ -4,12 +4,15 @@ import json, os, subprocess, sys, wave
 import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 SFX = os.path.join(HERE, "..", "..", ".claude", "skills", "media-use", "audio", "assets", "sfx")
+EIGEN = os.path.join(HERE, "sounds")  # eigene ElevenLabs-Sounds (Rechte bei uns)
 SR = 44100
 cues, out, dur = json.load(open(sys.argv[1])), sys.argv[2], float(sys.argv[3])
 cache = {}
 def snd(n):
     if n not in cache:
-        raw = subprocess.run(["ffmpeg", "-v", "error", "-i", os.path.join(SFX, n + ".mp3"), "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout
+        f = os.path.join(EIGEN, n + ".mp3")
+        f = f if os.path.exists(f) else os.path.join(SFX, n + ".mp3")
+        raw = subprocess.run(["ffmpeg", "-v", "error", "-i", f, "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout
         cache[n] = np.frombuffer(raw, dtype=np.float32).copy()
     return cache[n]
 def pitch(a, s):
