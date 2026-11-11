@@ -15,7 +15,7 @@ const CSS = `@font-face{font-family:Caveat;src:url(assets/caveat-700.woff2);font
 .an-card .tt{position:absolute;left:26px;top:18px;font:800 34px "Inter Display",sans-serif;color:#fff}
 .an-card .st{position:absolute;left:26px;top:60px;font:600 24px "Inter",sans-serif;color:rgba(255,255,255,.6);letter-spacing:1px}
 .an-logo{background:#fff;border-radius:24px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 50px rgba(255,154,60,.35),0 20px 40px rgba(0,0,0,.6)}
-.an-logo img{max-width:100%;max-height:100%;display:block}
+.an-logo img{width:100%;height:100%;object-fit:contain;display:block}
 .an-hand{font-family:Caveat,cursive;font-weight:700;line-height:1;white-space:nowrap;text-shadow:0 3px 14px rgba(0,0,0,.85)}
 .an-zettel{background:#ffd54a;color:#1a1408;font-family:Caveat,cursive;font-weight:700;line-height:1.05;padding:26px 30px;box-shadow:0 18px 40px rgba(0,0,0,.5);text-align:center}
 .an-zettel::before{content:"";position:absolute;left:50%;top:-18px;width:120px;height:36px;margin-left:-60px;background:rgba(255,255,255,.45);transform:rotate(-3deg)}
