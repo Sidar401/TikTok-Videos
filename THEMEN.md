@@ -48,6 +48,8 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | anthropic-boersengang | (Motor-Short 75 s → longform-ki-blase; nach Vorbild Eulen-Kanal; Analyse-Look) Anthropic-IPO Nasdaq „ANT“, 70–78 $, 825 Mio. Aktien, 26 Mrd. $ von Google/Nvidia/Microsoft/AMD/Broadcom/Micron/TSMC, bis 1,4 Bio. $ Wert, Umsatz 9 M. 2,5 → 33,2 Mrd. (13×), Verlust 104 Mrd. (94,3 Papier, 1,3 echt), ~900 Mrd. Zusagen | Cover: Anthropic+Nasdaq-Logo, 1,4 Billionen grün |
 | nvidia-im-etf | (Motor-Short 70 s → longform-nvidia-krimi) MSCI World 1.300+ Firmen/23 Länder, Nvidia ≈ 6 % (Platz 1), Top-10 ≈ 28 %, −10 % Nvidia ≈ −0,6 % ETF, 10.000 € ≈ −60 €, Nvidia −10 % in 2 Tagen / −30 % seit Okt. | Cover: Nvidia-Logo + 100er-Raster mit 6 grünen Feldern |
 | bitcoin-tief | (Short 70 s) BTC < 75.000 $ (Tief ~73.500), Rekord 126.000 $ Okt. 2025 → −40 %, 3 Gründe: US-Inflation/Zinsen, ETF-Abflüsse 1,3 Mrd. $/Woche, Hebel-Liquidationen > 1 Mrd. $ | Cover: Bitcoin-Münze mit Riss + Crash-Linie |
+| schufa-gratis | (Short 63 s, 12.11.) neuer Schufa-Score seit März 2026: 100–999, ab 776 hervorragend, 12 offengelegte Kriterien, gratis per App/Webseite (Konto + Online-Ausweis), Selbstabfrage schadet nicht, falsche Einträge berichtigen | Cover: Tacho + Schufa-Logo |
+| weihnachtsgeld-netto | (Short 68 s, 12.11.) kein gesetzlicher Anspruch, Vertrag/Tarif/Betriebsvereinbarung, 3× ohne Vorbehalt, Einmalzahlung, 3.000 € → ≈1.680 € (SK 1, ≈55 %), SK 5 weniger, Steuererklärung (Fahrtkosten/Arbeitsmittel) | Cover: halbiertes Geschenk |
 
 ## Longform (16:9)
 | Video | Kern / Beispiele | Bildidee |

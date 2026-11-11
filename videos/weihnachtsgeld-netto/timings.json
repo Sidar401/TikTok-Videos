@@ -1,0 +1,385 @@
+{
+  "dauer": 68.09,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 5.855,
+      "captions": [
+        {
+          "text": "Du bekommst 3.000 €",
+          "start": 0.0,
+          "end": 1.465
+        },
+        {
+          "text": "Weihnachtsgeld,",
+          "start": 1.465,
+          "end": 2.563
+        },
+        {
+          "text": "aber auf deinem Konto",
+          "start": 2.563,
+          "end": 4.182
+        },
+        {
+          "text": "landen nur rund 1.680 €",
+          "start": 4.182,
+          "end": 5.855
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 5.855,
+      "end": 6.903,
+      "captions": [
+        {
+          "text": "Wo ist der Rest hin?",
+          "start": 5.855,
+          "end": 6.903
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 6.903,
+      "end": 10.704,
+      "captions": [
+        {
+          "text": "Kurzer Hinweis: Das ist",
+          "start": 6.903,
+          "end": 8.189
+        },
+        {
+          "text": "keine Steuerberatung,",
+          "start": 8.189,
+          "end": 9.591
+        },
+        {
+          "text": "nur eine Erklärung",
+          "start": 9.591,
+          "end": 10.704
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 10.704,
+      "end": 13.858,
+      "captions": [
+        {
+          "text": "Schreib in die Kommentare:",
+          "start": 10.704,
+          "end": 11.968
+        },
+        {
+          "text": "Bekommst du dieses",
+          "start": 11.968,
+          "end": 12.932
+        },
+        {
+          "text": "Jahr Weihnachtsgeld?",
+          "start": 12.932,
+          "end": 13.858
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 13.858,
+      "end": 17.549,
+      "captions": [
+        {
+          "text": "Erstmal: Einen gesetzlichen",
+          "start": 13.858,
+          "end": 15.164
+        },
+        {
+          "text": "Anspruch auf Weihnachtsgeld",
+          "start": 15.164,
+          "end": 16.824
+        },
+        {
+          "text": "gibt es nicht",
+          "start": 16.824,
+          "end": 17.549
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 17.549,
+      "end": 22.965,
+      "captions": [
+        {
+          "text": "Ob du es bekommst,",
+          "start": 17.549,
+          "end": 18.551
+        },
+        {
+          "text": "steht",
+          "start": 18.551,
+          "end": 18.85
+        },
+        {
+          "text": "in deinem Arbeitsvertrag,",
+          "start": 18.85,
+          "end": 20.344
+        },
+        {
+          "text": "im Tarifvertrag",
+          "start": 20.344,
+          "end": 21.18
+        },
+        {
+          "text": "oder",
+          "start": 21.18,
+          "end": 21.419
+        },
+        {
+          "text": "in einer",
+          "start": 21.419,
+          "end": 21.838
+        },
+        {
+          "text": "Betriebsvereinbarung",
+          "start": 21.838,
+          "end": 22.965
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 22.965,
+      "end": 27.864,
+      "captions": [
+        {
+          "text": "Und wer es dreimal",
+          "start": 22.965,
+          "end": 23.932
+        },
+        {
+          "text": "hintereinander ohne",
+          "start": 23.932,
+          "end": 25.024
+        },
+        {
+          "text": "Vorbehalt bekommen hat,",
+          "start": 25.024,
+          "end": 26.318
+        },
+        {
+          "text": "kann oft weiter",
+          "start": 26.318,
+          "end": 27.181
+        },
+        {
+          "text": "darauf bestehen",
+          "start": 27.181,
+          "end": 27.864
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 27.864,
+      "end": 31.554,
+      "captions": [
+        {
+          "text": "Jetzt zu den Abzügen:",
+          "start": 27.864,
+          "end": 29.172
+        },
+        {
+          "text": "Weihnachtsgeld zählt",
+          "start": 29.172,
+          "end": 30.401
+        },
+        {
+          "text": "als Einmalzahlung",
+          "start": 30.401,
+          "end": 31.554
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 31.554,
+      "end": 37.983,
+      "captions": [
+        {
+          "text": "Darauf werden Lohnsteuer",
+          "start": 31.554,
+          "end": 32.835
+        },
+        {
+          "text": "und Sozialabgaben fällig,",
+          "start": 32.835,
+          "end": 34.221
+        },
+        {
+          "text": "und weil es oben",
+          "start": 34.221,
+          "end": 35.082
+        },
+        {
+          "text": "auf dein Gehalt kommt,",
+          "start": 35.082,
+          "end": 36.28
+        },
+        {
+          "text": "ist die Steuer",
+          "start": 36.28,
+          "end": 37.056
+        },
+        {
+          "text": "darauf meist höher",
+          "start": 37.056,
+          "end": 37.983
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 37.983,
+      "end": 43.801,
+      "captions": [
+        {
+          "text": "Bei 3.000 € brutto",
+          "start": 37.983,
+          "end": 39.478
+        },
+        {
+          "text": "in Steuerklasse 1 bleiben",
+          "start": 39.478,
+          "end": 41.652
+        },
+        {
+          "text": "so nur rund 1.680 € übrig",
+          "start": 41.652,
+          "end": 43.801
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 43.801,
+      "end": 47.449,
+      "captions": [
+        {
+          "text": "Das sind etwa 55 %,",
+          "start": 43.801,
+          "end": 45.457
+        },
+        {
+          "text": "fast die Hälfte ist weg",
+          "start": 45.457,
+          "end": 47.449
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 47.449,
+      "end": 50.358,
+      "captions": [
+        {
+          "text": "In Steuerklasse 5 bleibt",
+          "start": 47.449,
+          "end": 49.069
+        },
+        {
+          "text": "oft sogar noch weniger",
+          "start": 49.069,
+          "end": 50.358
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 50.358,
+      "end": 55.571,
+      "captions": [
+        {
+          "text": "Gibt es das Geld zurück?",
+          "start": 50.358,
+          "end": 51.609
+        },
+        {
+          "text": "Meist nicht einfach so,",
+          "start": 51.609,
+          "end": 52.69
+        },
+        {
+          "text": "denn die Steuer wird schon",
+          "start": 52.69,
+          "end": 54.196
+        },
+        {
+          "text": "fürs ganze Jahr berechnet",
+          "start": 54.196,
+          "end": 55.571
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "start": 55.571,
+      "end": 62.238,
+      "captions": [
+        {
+          "text": "Aber mit der Steuererklärung",
+          "start": 55.571,
+          "end": 57.048
+        },
+        {
+          "text": "holst du dir oft über",
+          "start": 57.048,
+          "end": 58.254
+        },
+        {
+          "text": "andere Kosten etwas zurück,",
+          "start": 58.254,
+          "end": 59.681
+        },
+        {
+          "text": "zum Beispiel über Fahrtkosten",
+          "start": 59.681,
+          "end": 61.348
+        },
+        {
+          "text": "oder Arbeitsmittel",
+          "start": 61.348,
+          "end": 62.238
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "start": 62.238,
+      "end": 67.481,
+      "captions": [
+        {
+          "text": "Also: Plan beim Weihnachtsgeld",
+          "start": 62.238,
+          "end": 63.764
+        },
+        {
+          "text": "lieber mit gut der Hälfte,",
+          "start": 63.764,
+          "end": 65.415
+        },
+        {
+          "text": "dann gibt es keine",
+          "start": 65.415,
+          "end": 66.463
+        },
+        {
+          "text": "böse Überraschung",
+          "start": 66.463,
+          "end": 67.481
+        }
+      ]
+    }
+  ]
+}

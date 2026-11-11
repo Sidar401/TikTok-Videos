@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0e1012; }
+      #root { position: relative; width: 100%; height: 100%; font-family: Montserrat, sans-serif; overflow: hidden;
+        background: radial-gradient(ellipse at 50% 55%, #ff8a1f40 0%, #ff8a1f10 35%, transparent 60%),
+                    radial-gradient(ellipse at 50% 50%, #1b1f22 0%, #0e1012 75%); }
+      #raster { position: absolute; inset: 0; background-image: linear-gradient(#ffffff0d 2px, transparent 2px), linear-gradient(90deg, #ffffff0d 2px, transparent 2px);
+        background-size: 96px 96px; }
+      .scene { position: absolute; inset: 0; }
+      #frame { position: absolute; inset: 0; border: 26px solid #DB8622; z-index: 10; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="1" data-width="1080" data-height="1920">
+      <div id="raster"></div>
+<div id="v0" class="scene clip" data-start="0" data-duration="1" data-track-index="1"><div style="position:absolute;left:0px;top:200px;width:1080px;font-weight:900;font-size:120px;line-height:1.02;letter-spacing:-2px;text-align:center;display:flex;flex-direction:column;gap:14px;z-index:3"><div style="color:#fff;text-shadow:0 6px 0 #000">Dein Score</div><div><span style="display:inline-block;padding:4px 30px 10px;border-radius:22px;background:#ff8a1f;color:#111;box-shadow:0 0 60px #ff8a1f88">GRATIS</span></div><div style="color:#fff;text-shadow:0 6px 0 #000">in 1 Minute</div></div><div style="position:absolute;left:290px;top:700px;width:500px;height:150px;border-radius:30px;background:#fff;padding:24px 50px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 90px #00a0e388;transform:rotate(-3deg);z-index:3"><img src="assets/schufa.svg" style="max-width:100%;max-height:100%"/></div><svg viewBox="0 0 1080 1920" style="position:absolute;inset:0;width:1080px;height:1920px;z-index:2"><path d="M200 1330 A340 340 0 0 1 481 995" fill="none" stroke="#ff4d4d" stroke-width="70" style="filter:drop-shadow(0 0 20px #ff4d4d)"/><path d="M481 995 A340 340 0 0 1 782 1091" fill="none" stroke="#ffd54a" stroke-width="70" style="filter:drop-shadow(0 0 20px #ffd54a)"/><path d="M782 1091 A340 340 0 0 1 880 1330" fill="none" stroke="#2fd27a" stroke-width="70" style="filter:drop-shadow(0 0 20px #2fd27a)"/><path d="M516 1330 L813 1232 L558 1330 Z" fill="#fff" stroke="#fff" stroke-width="10" stroke-linejoin="round"/><circle cx="540" cy="1330" r="36" fill="#fff"/></svg><div style="position:absolute;left:390px;top:1430px;padding:8px 30px 12px;border-radius:20px;background:#ff8a1f;color:#111;font-weight:900;font-size:70px;white-space:nowrap;box-shadow:0 0 40px #ff8a1f99;transform:rotate(-3deg);z-index:3">100 – 999</div></div>
+      <div id="frame"></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#root", { opacity: 1 }, 0);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

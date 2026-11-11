@@ -1,0 +1,367 @@
+{
+  "dauer": 62.87,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 4.979,
+      "captions": [
+        {
+          "text": "Die Schufa entscheidet mit,",
+          "start": 0.0,
+          "end": 1.523
+        },
+        {
+          "text": "ob du einen Kredit,",
+          "start": 1.523,
+          "end": 2.595
+        },
+        {
+          "text": "einen Handyvertrag",
+          "start": 2.595,
+          "end": 3.61
+        },
+        {
+          "text": "oder eine Wohnung bekommst",
+          "start": 3.61,
+          "end": 4.979
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 4.979,
+      "end": 8.814,
+      "captions": [
+        {
+          "text": "Und deinen Score kannst",
+          "start": 4.979,
+          "end": 6.315
+        },
+        {
+          "text": "du jetzt kostenlos",
+          "start": 6.315,
+          "end": 7.437
+        },
+        {
+          "text": "in einer Minute abfragen",
+          "start": 7.437,
+          "end": 8.814
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 8.814,
+      "end": 11.152,
+      "captions": [
+        {
+          "text": "Schick das jemandem,",
+          "start": 8.814,
+          "end": 9.797
+        },
+        {
+          "text": "der gerade eine Wohnung sucht",
+          "start": 9.797,
+          "end": 11.152
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 11.152,
+      "end": 14.795,
+      "captions": [
+        {
+          "text": "Kurzer Hinweis: Das ist",
+          "start": 11.152,
+          "end": 12.333
+        },
+        {
+          "text": "keine Finanzberatung,",
+          "start": 12.333,
+          "end": 13.732
+        },
+        {
+          "text": "nur eine Erklärung",
+          "start": 13.732,
+          "end": 14.795
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 14.795,
+      "end": 18.416,
+      "captions": [
+        {
+          "text": "Die Schufa ist",
+          "start": 14.795,
+          "end": 15.554
+        },
+        {
+          "text": "übrigens keine Behörde,",
+          "start": 15.554,
+          "end": 17.023
+        },
+        {
+          "text": "sondern eine private Firma",
+          "start": 17.023,
+          "end": 18.416
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 18.416,
+      "end": 22.047,
+      "captions": [
+        {
+          "text": "Seit März 2026 gibt es",
+          "start": 18.416,
+          "end": 20.062
+        },
+        {
+          "text": "einen neuen Schufa‑Score",
+          "start": 20.062,
+          "end": 22.047
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 22.047,
+      "end": 26.445,
+      "captions": [
+        {
+          "text": "Er geht von 100 bis",
+          "start": 22.047,
+          "end": 23.632
+        },
+        {
+          "text": "999 Punkten,",
+          "start": 23.632,
+          "end": 24.698
+        },
+        {
+          "text": "je höher, desto besser",
+          "start": 24.698,
+          "end": 26.445
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 26.445,
+      "end": 30.28,
+      "captions": [
+        {
+          "text": "Ab 776 Punkten gilt",
+          "start": 26.445,
+          "end": 28.006
+        },
+        {
+          "text": "dein Score als hervorragend",
+          "start": 28.006,
+          "end": 30.28
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 30.28,
+      "end": 34.304,
+      "captions": [
+        {
+          "text": "Und neu: Die Schufa",
+          "start": 30.28,
+          "end": 31.278
+        },
+        {
+          "text": "legt offen,",
+          "start": 31.278,
+          "end": 32.015
+        },
+        {
+          "text": "nach welchen zwölf",
+          "start": 32.015,
+          "end": 33.223
+        },
+        {
+          "text": "Punkten sie bewertet",
+          "start": 33.223,
+          "end": 34.304
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 34.304,
+      "end": 39.643,
+      "captions": [
+        {
+          "text": "So fragst du ihn ab:",
+          "start": 34.304,
+          "end": 35.324
+        },
+        {
+          "text": "Lade die offizielle",
+          "start": 35.324,
+          "end": 36.232
+        },
+        {
+          "text": "Schufa‑App herunter,",
+          "start": 36.232,
+          "end": 37.513
+        },
+        {
+          "text": "oder geh auf die Webseite",
+          "start": 37.513,
+          "end": 39.11
+        },
+        {
+          "text": "der Schufa",
+          "start": 39.11,
+          "end": 39.643
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 39.643,
+      "end": 42.852,
+      "captions": [
+        {
+          "text": "Leg ein kostenloses Konto an,",
+          "start": 39.643,
+          "end": 41.434
+        },
+        {
+          "text": "mit E‑Mail und Passwort",
+          "start": 41.434,
+          "end": 42.852
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 42.852,
+      "end": 46.526,
+      "captions": [
+        {
+          "text": "Dann bestätigst du,",
+          "start": 42.852,
+          "end": 43.817
+        },
+        {
+          "text": "wer du bist,",
+          "start": 43.817,
+          "end": 44.481
+        },
+        {
+          "text": "zum Beispiel",
+          "start": 44.481,
+          "end": 45.145
+        },
+        {
+          "text": "mit deinem Online‑Ausweis",
+          "start": 45.145,
+          "end": 46.526
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 46.526,
+      "end": 50.548,
+      "captions": [
+        {
+          "text": "Danach siehst du deinen Score,",
+          "start": 46.526,
+          "end": 48.53
+        },
+        {
+          "text": "jederzeit",
+          "start": 48.53,
+          "end": 49.143
+        },
+        {
+          "text": "und dauerhaft kostenlos",
+          "start": 49.143,
+          "end": 50.548
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "start": 50.548,
+      "end": 54.689,
+      "captions": [
+        {
+          "text": "Wichtig: Wenn du",
+          "start": 50.548,
+          "end": 51.23
+        },
+        {
+          "text": "deinen eigenen Score abfragst,",
+          "start": 51.23,
+          "end": 52.944
+        },
+        {
+          "text": "wird er dadurch",
+          "start": 52.944,
+          "end": 53.841
+        },
+        {
+          "text": "nicht schlechter",
+          "start": 53.841,
+          "end": 54.689
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "start": 54.689,
+      "end": 59.419,
+      "captions": [
+        {
+          "text": "Und schau dir auch",
+          "start": 54.689,
+          "end": 55.512
+        },
+        {
+          "text": "deine gespeicherten Daten an,",
+          "start": 55.512,
+          "end": 56.971
+        },
+        {
+          "text": "denn falsche Einträge",
+          "start": 56.971,
+          "end": 58.056
+        },
+        {
+          "text": "kannst du berichtigen lassen",
+          "start": 58.056,
+          "end": 59.419
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "start": 59.419,
+      "end": 62.267,
+      "captions": [
+        {
+          "text": "Das kann dir beim nächsten",
+          "start": 59.419,
+          "end": 60.84
+        },
+        {
+          "text": "Kredit richtig Geld sparen",
+          "start": 60.84,
+          "end": 62.267
+        }
+      ]
+    }
+  ]
+}

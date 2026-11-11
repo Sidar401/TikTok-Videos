@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0e1012; }
+      #root { position: relative; width: 100%; height: 100%; font-family: Montserrat, sans-serif; overflow: hidden;
+        background: radial-gradient(ellipse at 50% 50%, #ff8a1f40 0%, #ff8a1f10 35%, transparent 60%),
+                    radial-gradient(ellipse at 50% 50%, #1b1f22 0%, #0e1012 75%); }
+      #raster { position: absolute; inset: 0; background-image: linear-gradient(#ffffff0d 2px, transparent 2px), linear-gradient(90deg, #ffffff0d 2px, transparent 2px);
+        background-size: 96px 96px; }
+      .scene { position: absolute; inset: 0; }
+      #frame { position: absolute; inset: 0; border: 26px solid #DB8622; z-index: 10; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="1" data-width="1080" data-height="1920">
+      <div id="raster"></div>
+<div id="v0" class="scene clip" data-start="0" data-duration="1" data-track-index="1"><div style="position:absolute;left:0px;top:220px;width:1080px;font-weight:900;font-size:120px;line-height:1.02;letter-spacing:-2px;text-align:center;display:flex;flex-direction:column;gap:14px;z-index:3"><div style="color:#fff;text-shadow:0 6px 0 #000">Weihnachtsgeld</div><div><span style="display:inline-block;padding:4px 30px 10px;border-radius:22px;background:#ff4d4d;color:#fff;box-shadow:0 0 60px #ff4d4d88">HALB WEG?</span></div></div><div style="position:absolute;left:330px;top:760px;width:210px;height:440px;overflow:hidden;z-index:2"><svg viewBox="0 0 300 300" style="position:absolute;left:0px;top:0;width:420px;height:420px;z-index:2;transform:rotate(-6deg);filter:drop-shadow(0 0 40px #e6324b)"><rect x="30" y="110" width="240" height="170" rx="14" fill="#e6324b"/><rect x="15" y="80" width="270" height="50" rx="10" fill="#ff5a6e"/><rect x="135" y="80" width="30" height="200" fill="#ffd54a"/><path d="M150 80 Q100 20 80 60 Q90 85 150 80 Q210 85 220 60 Q200 20 150 80" fill="#ffd54a"/></svg></div><div style="position:absolute;left:600px;top:800px;width:210px;height:440px;overflow:hidden;z-index:2;transform:rotate(10deg)"><svg viewBox="0 0 300 300" style="position:absolute;left:-210px;top:0;width:420px;height:420px;z-index:2;transform:rotate(-6deg);filter:drop-shadow(0 0 40px #e6324b)"><rect x="30" y="110" width="240" height="170" rx="14" fill="#e6324b"/><rect x="15" y="80" width="270" height="50" rx="10" fill="#ff5a6e"/><rect x="135" y="80" width="30" height="200" fill="#ffd54a"/><path d="M150 80 Q100 20 80 60 Q90 85 150 80 Q210 85 220 60 Q200 20 150 80" fill="#ffd54a"/></svg></div><svg viewBox="0 0 1080 1920" style="position:absolute;inset:0;width:1080px;height:1920px;z-index:3"><path d="M565 720 L560 1260" stroke="#fff" stroke-width="10" stroke-dasharray="26 18"/></svg><div style="position:absolute;left:0;top:1300px;width:1080px;text-align:center;font-weight:900;font-size:96px;white-space:nowrap;color:#fff">3.000 € → <span style="color:#ff4d4d;text-shadow:0 0 50px #ff4d4daa">1.680 €</span></div><div style="position:absolute;left:330px;top:1520px;padding:8px 30px 12px;border-radius:20px;background:#ff8a1f;color:#111;font-weight:900;font-size:66px;white-space:nowrap;box-shadow:0 0 40px #ff8a1f99;transform:rotate(-3deg);z-index:3">Wo ist der Rest?</div></div>
+      <div id="frame"></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#root", { opacity: 1 }, 0);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
