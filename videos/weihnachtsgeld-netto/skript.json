@@ -1,0 +1,80 @@
+{
+ "titel": "Weihnachtsgeld: Warum nur gut die Hälfte ankommt",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Du bekommst dreitausend Euro Weihnachtsgeld, aber auf deinem Konto landen nur rund sechzehnhundertachtzig Euro.",
+   "text": "Du bekommst 3.000 € Weihnachtsgeld, aber auf deinem Konto landen nur rund 1.680 €"
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Wo ist der Rest hin?",
+   "text": "Wo ist der Rest hin?"
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Kurzer Hinweis: Das ist keine Steuerberatung, nur eine Erklärung.",
+   "text": "Kurzer Hinweis: Das ist keine Steuerberatung, nur eine Erklärung"
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Schreib in die Kommentare: Bekommst du dieses Jahr Weihnachtsgeld?",
+   "text": "Schreib in die Kommentare: Bekommst du dieses Jahr Weihnachtsgeld?"
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Erstmal: Einen gesetzlichen Anspruch auf Weihnachtsgeld gibt es nicht.",
+   "text": "Erstmal: Einen gesetzlichen Anspruch auf Weihnachtsgeld gibt es nicht"
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Ob du es bekommst, steht in deinem Arbeitsvertrag, im Tarifvertrag oder in einer Betriebsvereinbarung.",
+   "text": "Ob du es bekommst, steht in deinem Arbeitsvertrag, im Tarifvertrag oder in einer Betriebsvereinbarung"
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Und wer es dreimal hintereinander ohne Vorbehalt bekommen hat, kann oft weiter darauf bestehen.",
+   "text": "Und wer es dreimal hintereinander ohne Vorbehalt bekommen hat, kann oft weiter darauf bestehen"
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Jetzt zu den Abzügen: Weihnachtsgeld zählt als Einmalzahlung.",
+   "text": "Jetzt zu den Abzügen: Weihnachtsgeld zählt als Einmalzahlung"
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Darauf werden Lohnsteuer und Sozialabgaben fällig, und weil es oben auf dein Gehalt kommt, ist die Steuer darauf meist höher.",
+   "text": "Darauf werden Lohnsteuer und Sozialabgaben fällig, und weil es oben auf dein Gehalt kommt, ist die Steuer darauf meist höher"
+  },
+  {
+   "id": "s10",
+   "sprechtext": "Bei dreitausend Euro brutto in Steuerklasse 1 bleiben so nur rund sechzehnhundertachtzig Euro übrig.",
+   "text": "Bei 3.000 € brutto in Steuerklasse 1 bleiben so nur rund 1.680 € übrig"
+  },
+  {
+   "id": "s11",
+   "sprechtext": "Das sind etwa fünfundfünfzig Prozent, fast die Hälfte ist weg.",
+   "text": "Das sind etwa 55 %, fast die Hälfte ist weg"
+  },
+  {
+   "id": "s12",
+   "sprechtext": "In Steuerklasse fünf bleibt oft sogar noch weniger.",
+   "text": "In Steuerklasse 5 bleibt oft sogar noch weniger"
+  },
+  {
+   "id": "s13",
+   "sprechtext": "Gibt es das Geld zurück? Meist nicht einfach so, denn die Steuer wird schon fürs ganze Jahr berechnet.",
+   "text": "Gibt es das Geld zurück? Meist nicht einfach so, denn die Steuer wird schon fürs ganze Jahr berechnet"
+  },
+  {
+   "id": "s14",
+   "sprechtext": "Aber mit der Steuererklärung holst du dir oft über andere Kosten etwas zurück, zum Beispiel über Fahrtkosten oder Arbeitsmittel.",
+   "text": "Aber mit der Steuererklärung holst du dir oft über andere Kosten etwas zurück, zum Beispiel über Fahrtkosten oder Arbeitsmittel"
+  },
+  {
+   "id": "s15",
+   "sprechtext": "Also: Plan beim Weihnachtsgeld lieber mit gut der Hälfte, dann gibt es keine böse Überraschung.",
+   "text": "Also: Plan beim Weihnachtsgeld lieber mit gut der Hälfte, dann gibt es keine böse Überraschung"
+  }
+ ]
+}
