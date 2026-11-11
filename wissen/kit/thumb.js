@@ -30,7 +30,7 @@ srv.listen(0, async () => {
       #th .brand{position:absolute;left:0;right:0;bottom:120px;text-align:center;color:rgba(255,255,255,.9);font-weight:900;font-size:56px;letter-spacing:14px;text-shadow:0 4px 20px rgba(0,0,0,.9)}`;
     document.head.appendChild(s);
     const d = document.createElement("div"); d.id = "th";
-    d.innerHTML = `<div class="shade"></div><div class="t">${title}</div><div class="brand">NOVARO</div>` + (window.__LOGO ? `<div style="position:absolute;left:330px;top:1180px;width:420px;height:170px;background:#fff;border-radius:28px;display:flex;align-items:center;justify-content:center;padding:26px 34px;box-sizing:border-box;box-shadow:0 0 60px rgba(255,154,60,.45),0 20px 40px rgba(0,0,0,.6)"><img src="${window.__LOGO}" style="max-width:100%;max-height:100%"></div>` : "");
+    d.innerHTML = `<div class="shade"></div><div class="t">${title}</div><div class="brand">NOVARO</div>` + (window.__LOGO ? `<div style="position:absolute;left:330px;top:1180px;width:420px;height:170px;background:#fff;border-radius:28px;display:flex;align-items:center;justify-content:center;padding:26px 34px;box-sizing:border-box;box-shadow:0 0 60px rgba(255,154,60,.45),0 20px 40px rgba(0,0,0,.6)"><img src="${window.__LOGO}" style="width:100%;height:100%;object-fit:contain"></div>` : "");
     document.getElementById("root").appendChild(d);
   }, title);
   await p.evaluate(() => document.fonts.ready);
