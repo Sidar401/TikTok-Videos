@@ -188,3 +188,14 @@ Neue Wörter: Regel per API ergänzen (pronunciation-dictionaries/{id}/add-rules
 ### 10 neue Börsen-/Nachrichten-Sounds (12.11.)
 `boersenglocke` (Handelsstart), `eilmeldung` (Breaking News, Hook), `kamera-blitz` (Pressefoto/Person), `ticker-rauschen` (leise unter Laufband/Chart),
 `handschlag` (Deal/Nachfolger), `tuer-zu` (Rücktritt/Aus), `koffer-klick` (Job/Manager), `zeitung` (Bericht/Meldung), `hammer` (Gericht/Urteil/Ermittlung), `crash-bass` (Kurssturz).
+
+## 📰 NEWS-FORMAT v2 = Standard (Nutzer 12.11.: „für die nächsten Videos so machen“)
+Vorbild: videos/demo-news-nvidia + demo-news-dax (renders/*-v2.mp4). Bausteine in scripts/analyse_kit.py:
+- `news_kopf(datum)` als Szene über die ganze Länge: links „NEWS“, rechts Datum (KEIN „LIVE“, kein Kanalname).
+- `titel_zeile()` = Überschrift in Großbuchstaben in JEDER Szene.
+- Neues Bild ca. alle 2–3 s; `wechsel_js()` Übergang je Szene; `zoom_js()` auf Schlüsselzahl/Foto.
+- `hintergrund("boerse"|"skyline"|"saal"|"buero")` dezent je Szene.
+- `marke()` Original-Logo mit Symbol + Kurs-Schild; `foto_gross()` große freie Fotos mit Quelle; `icon_gross()` große Symbole.
+- `quelle()` Quellen-/Zeitzeile unter Zahlen; `vergleich()` zwei Karten nebeneinander.
+- Börsen-Laufband nur bei Börsen-Themen. Achtung: Element-IDs nie „z<Zahl>“ (kollidiert mit Szenen-IDs).
+Nutzer: „irgendwas fehlt noch“ – weiter testen und nachfragen.
