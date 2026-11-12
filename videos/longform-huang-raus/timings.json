@@ -1,0 +1,858 @@
+{
+  "dauer": 170.18,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 5.443,
+      "captions": [
+        {
+          "text": "Er hat Nvidia an einem Tisch",
+          "start": 0.0,
+          "end": 1.464
+        },
+        {
+          "text": "in einem Schnellrestaurant",
+          "start": 1.464,
+          "end": 2.823
+        },
+        {
+          "text": "gegründet und zur wertvollsten",
+          "start": 2.823,
+          "end": 4.391
+        },
+        {
+          "text": "Firma der Welt gemacht",
+          "start": 4.391,
+          "end": 5.443
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 5.443,
+      "end": 9.295,
+      "captions": [
+        {
+          "text": "Und jetzt ist er raus:",
+          "start": 5.443,
+          "end": 6.816
+        },
+        {
+          "text": "Jensen Huang ist nicht",
+          "start": 6.816,
+          "end": 8.085
+        },
+        {
+          "text": "mehr Chef von Nvidia",
+          "start": 8.085,
+          "end": 9.295
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 9.295,
+      "end": 16.57,
+      "captions": [
+        {
+          "text": "Heute schauen wir uns an,",
+          "start": 9.295,
+          "end": 10.614
+        },
+        {
+          "text": "was passiert ist,",
+          "start": 10.614,
+          "end": 11.59
+        },
+        {
+          "text": "wer jetzt übernimmt,",
+          "start": 11.59,
+          "end": 12.749
+        },
+        {
+          "text": "was Donald Trump",
+          "start": 12.749,
+          "end": 13.676
+        },
+        {
+          "text": "damit zu tun hat,",
+          "start": 13.676,
+          "end": 14.599
+        },
+        {
+          "text": "und was das für deinen ETF",
+          "start": 14.599,
+          "end": 16.106
+        },
+        {
+          "text": "bedeutet",
+          "start": 16.106,
+          "end": 16.57
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 16.57,
+      "end": 22.106,
+      "captions": [
+        {
+          "text": "Wie immer gilt: Das ist",
+          "start": 16.57,
+          "end": 17.958
+        },
+        {
+          "text": "keine Anlageberatung,",
+          "start": 17.958,
+          "end": 19.369
+        },
+        {
+          "text": "nur eine Erklärung",
+          "start": 19.369,
+          "end": 20.61
+        },
+        {
+          "text": "der aktuellen Nachrichten",
+          "start": 20.61,
+          "end": 22.106
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 22.106,
+      "end": 23.801,
+      "captions": [
+        {
+          "text": "Teil eins: der Rücktritt",
+          "start": 22.106,
+          "end": 23.801
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 23.801,
+      "end": 29.647,
+      "captions": [
+        {
+          "text": "33 Jahre lang hat Jensen",
+          "start": 23.801,
+          "end": 25.563
+        },
+        {
+          "text": "Huang Nvidia geführt,",
+          "start": 25.563,
+          "end": 27.285
+        },
+        {
+          "text": "seit der Gründung im Jahr 1993",
+          "start": 27.285,
+          "end": 29.647
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 29.647,
+      "end": 34.537,
+      "captions": [
+        {
+          "text": "Doch nach dem Spionage‑Verdacht",
+          "start": 29.647,
+          "end": 31.191
+        },
+        {
+          "text": "wurde laut Berichten",
+          "start": 31.191,
+          "end": 32.286
+        },
+        {
+          "text": "gestern auch noch",
+          "start": 32.286,
+          "end": 33.217
+        },
+        {
+          "text": "eine zweite Affäre bekannt",
+          "start": 33.217,
+          "end": 34.537
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 34.537,
+      "end": 41.968,
+      "captions": [
+        {
+          "text": "Noch in der Nacht hat",
+          "start": 34.537,
+          "end": 35.64
+        },
+        {
+          "text": "der Verwaltungsrat beraten,",
+          "start": 35.64,
+          "end": 37.145
+        },
+        {
+          "text": "und kurz vor Börsenstart",
+          "start": 37.145,
+          "end": 38.526
+        },
+        {
+          "text": "in Amerika kam die Meldung:",
+          "start": 38.526,
+          "end": 39.819
+        },
+        {
+          "text": "Huang tritt zurück,",
+          "start": 39.819,
+          "end": 40.841
+        },
+        {
+          "text": "mit sofortiger Wirkung",
+          "start": 40.841,
+          "end": 41.968
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 41.968,
+      "end": 45.947,
+      "captions": [
+        {
+          "text": "Offiziell freiwillig,",
+          "start": 41.968,
+          "end": 43.051
+        },
+        {
+          "text": "doch laut mehreren Berichten",
+          "start": 43.051,
+          "end": 44.666
+        },
+        {
+          "text": "wurde er dazu gedrängt",
+          "start": 44.666,
+          "end": 45.947
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 45.947,
+      "end": 48.037,
+      "captions": [
+        {
+          "text": "Teil zwei: Wer",
+          "start": 45.947,
+          "end": 46.873
+        },
+        {
+          "text": "übernimmt jetzt?",
+          "start": 46.873,
+          "end": 48.037
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 48.037,
+      "end": 54.279,
+      "captions": [
+        {
+          "text": "Übergangschefin",
+          "start": 48.037,
+          "end": 48.82
+        },
+        {
+          "text": "wird Colette Kress,",
+          "start": 48.82,
+          "end": 50.056
+        },
+        {
+          "text": "bisher die Finanzchefin",
+          "start": 50.056,
+          "end": 51.519
+        },
+        {
+          "text": "von Nvidia,",
+          "start": 51.519,
+          "end": 52.234
+        },
+        {
+          "text": "und diesen Job",
+          "start": 52.234,
+          "end": 53.113
+        },
+        {
+          "text": "behält sie gleich mit",
+          "start": 53.113,
+          "end": 54.279
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 54.279,
+      "end": 63.289,
+      "captions": [
+        {
+          "text": "Und zum ersten Mal",
+          "start": 54.279,
+          "end": 55.321
+        },
+        {
+          "text": "überhaupt bekommt Nvidia",
+          "start": 55.321,
+          "end": 56.978
+        },
+        {
+          "text": "einen eigenen Vorsitzenden",
+          "start": 56.978,
+          "end": 58.773
+        },
+        {
+          "text": "im Verwaltungsrat:",
+          "start": 58.773,
+          "end": 59.802
+        },
+        {
+          "text": "Harvey Jones,",
+          "start": 59.802,
+          "end": 60.699
+        },
+        {
+          "text": "früher Chef",
+          "start": 60.699,
+          "end": 61.459
+        },
+        {
+          "text": "der Chipdesign‑Firma Synopsys",
+          "start": 61.459,
+          "end": 63.289
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 63.289,
+      "end": 68.013,
+      "captions": [
+        {
+          "text": "Ein fester Nachfolger",
+          "start": 63.289,
+          "end": 64.479
+        },
+        {
+          "text": "wird jetzt gesucht,",
+          "start": 64.479,
+          "end": 65.712
+        },
+        {
+          "text": "ob intern oder von außen,",
+          "start": 65.712,
+          "end": 67.334
+        },
+        {
+          "text": "ist noch offen",
+          "start": 67.334,
+          "end": 68.013
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "start": 68.013,
+      "end": 69.684,
+      "captions": [
+        {
+          "text": "Teil drei: die Aktie",
+          "start": 68.013,
+          "end": 69.684
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "start": 69.684,
+      "end": 74.224,
+      "captions": [
+        {
+          "text": "Vor dem Börsenstart",
+          "start": 69.684,
+          "end": 71.006
+        },
+        {
+          "text": "fiel die Nvidia‑Aktie",
+          "start": 71.006,
+          "end": 72.654
+        },
+        {
+          "text": "zeitweise um rund 13 %",
+          "start": 72.654,
+          "end": 74.224
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "start": 74.224,
+      "end": 80.657,
+      "captions": [
+        {
+          "text": "Anfang Oktober stand sie",
+          "start": 74.224,
+          "end": 76.252
+        },
+        {
+          "text": "noch bei rund 239 Dollar,",
+          "start": 76.252,
+          "end": 78.51
+        },
+        {
+          "text": "heute zeitweise unter 155",
+          "start": 78.51,
+          "end": 80.657
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "start": 80.657,
+      "end": 85.63,
+      "captions": [
+        {
+          "text": "Das ist über",
+          "start": 80.657,
+          "end": 81.233
+        },
+        {
+          "text": "ein Drittel weniger,",
+          "start": 81.233,
+          "end": 82.406
+        },
+        {
+          "text": "und rund zwei Billionen Dollar",
+          "start": 82.406,
+          "end": 84.165
+        },
+        {
+          "text": "Börsenwert sind verschwunden",
+          "start": 84.165,
+          "end": 85.63
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "start": 85.63,
+      "end": 90.911,
+      "captions": [
+        {
+          "text": "Die große Bank Bernstein hat",
+          "start": 85.63,
+          "end": 87.463
+        },
+        {
+          "text": "ihr Kursziel sogar halbiert,",
+          "start": 87.463,
+          "end": 89.474
+        },
+        {
+          "text": "von 400 auf 200 Dollar",
+          "start": 89.474,
+          "end": 90.911
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "start": 90.911,
+      "end": 94.701,
+      "captions": [
+        {
+          "text": "Die Gewinner? Die Konkurrenten",
+          "start": 90.911,
+          "end": 92.847
+        },
+        {
+          "text": "AMD und Broadcom legen zu",
+          "start": 92.847,
+          "end": 94.701
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "start": 94.701,
+      "end": 99.068,
+      "captions": [
+        {
+          "text": "Schreib",
+          "start": 94.701,
+          "end": 95.01
+        },
+        {
+          "text": "in die Kommentare: Kauft",
+          "start": 95.01,
+          "end": 96.288
+        },
+        {
+          "text": "man Nvidia jetzt günstig,",
+          "start": 96.288,
+          "end": 97.861
+        },
+        {
+          "text": "oder bleibt man weg?",
+          "start": 97.861,
+          "end": 99.068
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "start": 99.068,
+      "end": 101.041,
+      "captions": [
+        {
+          "text": "Teil vier: Donald Trump",
+          "start": 99.068,
+          "end": 101.041
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "start": 101.041,
+      "end": 107.809,
+      "captions": [
+        {
+          "text": "Auf seiner Plattform",
+          "start": 101.041,
+          "end": 102.153
+        },
+        {
+          "text": "Truth Social schrieb",
+          "start": 102.153,
+          "end": 103.517
+        },
+        {
+          "text": "der amerikanische Präsident,",
+          "start": 103.517,
+          "end": 105.351
+        },
+        {
+          "text": "nur ein Mann könne",
+          "start": 105.351,
+          "end": 106.58
+        },
+        {
+          "text": "Huang ersetzen: Tim Cook",
+          "start": 106.58,
+          "end": 107.809
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "start": 107.809,
+      "end": 110.619,
+      "captions": [
+        {
+          "text": "Dazu schrieb er: Eine Legende",
+          "start": 107.809,
+          "end": 109.282
+        },
+        {
+          "text": "ersetzt eine Legende",
+          "start": 109.282,
+          "end": 110.619
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "start": 110.619,
+      "end": 116.431,
+      "captions": [
+        {
+          "text": "Tim Cook war 15 Jahre lang",
+          "start": 110.619,
+          "end": 111.89
+        },
+        {
+          "text": "Chef von Apple und sitzt",
+          "start": 111.89,
+          "end": 113.721
+        },
+        {
+          "text": "heute dem Verwaltungsrat",
+          "start": 113.721,
+          "end": 115.553
+        },
+        {
+          "text": "von Apple vor",
+          "start": 115.553,
+          "end": 116.431
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "start": 116.431,
+      "end": 123.898,
+      "captions": [
+        {
+          "text": "Aber: Wer Nvidia führt,",
+          "start": 116.431,
+          "end": 117.505
+        },
+        {
+          "text": "entscheidet",
+          "start": 117.505,
+          "end": 118.245
+        },
+        {
+          "text": "der Verwaltungsrat,",
+          "start": 118.245,
+          "end": 119.523
+        },
+        {
+          "text": "nicht der Präsident,",
+          "start": 119.523,
+          "end": 120.837
+        },
+        {
+          "text": "und dass Cook wechselt,",
+          "start": 120.837,
+          "end": 122.191
+        },
+        {
+          "text": "gilt als sehr unwahrscheinlich",
+          "start": 122.191,
+          "end": 123.898
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "start": 123.898,
+      "end": 125.663,
+      "captions": [
+        {
+          "text": "Teil fünf: dein Geld",
+          "start": 123.898,
+          "end": 125.663
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "start": 125.663,
+      "end": 130.552,
+      "captions": [
+        {
+          "text": "Nvidia ist die größte",
+          "start": 125.663,
+          "end": 127.478
+        },
+        {
+          "text": "Firma im MSCI World,",
+          "start": 127.478,
+          "end": 129.407
+        },
+        {
+          "text": "mit knapp 6 %",
+          "start": 129.407,
+          "end": 130.552
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "start": 130.552,
+      "end": 136.675,
+      "captions": [
+        {
+          "text": "Fällt Nvidia um 13 %,",
+          "start": 130.552,
+          "end": 132.549
+        },
+        {
+          "text": "verliert dein ETF allein",
+          "start": 132.549,
+          "end": 134.988
+        },
+        {
+          "text": "dadurch rund 0,8 %",
+          "start": 134.988,
+          "end": 136.675
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "start": 136.675,
+      "end": 141.571,
+      "captions": [
+        {
+          "text": "Weil aber andere Firmen",
+          "start": 136.675,
+          "end": 137.812
+        },
+        {
+          "text": "wie AMD gleichzeitig steigen,",
+          "start": 137.812,
+          "end": 139.44
+        },
+        {
+          "text": "wird ein Teil davon",
+          "start": 139.44,
+          "end": 140.505
+        },
+        {
+          "text": "wieder ausgeglichen",
+          "start": 140.505,
+          "end": 141.571
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "start": 141.571,
+      "end": 144.05,
+      "captions": [
+        {
+          "text": "Teil sechs:",
+          "start": 141.571,
+          "end": 142.152
+        },
+        {
+          "text": "Wie geht es weiter?",
+          "start": 142.152,
+          "end": 144.05
+        }
+      ]
+    },
+    {
+      "id": "s31",
+      "start": 144.05,
+      "end": 151.115,
+      "captions": [
+        {
+          "text": "Schon am 17. November",
+          "start": 144.05,
+          "end": 145.459
+        },
+        {
+          "text": "legt Nvidia seine",
+          "start": 145.459,
+          "end": 146.622
+        },
+        {
+          "text": "Quartalszahlen vor,",
+          "start": 146.622,
+          "end": 147.921
+        },
+        {
+          "text": "der erste große Auftritt",
+          "start": 147.921,
+          "end": 149.421
+        },
+        {
+          "text": "von Colette Kress als Chefin",
+          "start": 149.421,
+          "end": 151.115
+        }
+      ]
+    },
+    {
+      "id": "s32",
+      "start": 151.115,
+      "end": 159.406,
+      "captions": [
+        {
+          "text": "Und ein Blick zurück zeigt:",
+          "start": 151.115,
+          "end": 152.691
+        },
+        {
+          "text": "Auch Steve Jobs musste",
+          "start": 152.691,
+          "end": 154.279
+        },
+        {
+          "text": "1985 Apple verlassen,",
+          "start": 154.279,
+          "end": 155.821
+        },
+        {
+          "text": "und zwölf Jahre später stand",
+          "start": 155.821,
+          "end": 157.746
+        },
+        {
+          "text": "Apple kurz vor der Pleite",
+          "start": 157.746,
+          "end": 159.406
+        }
+      ]
+    },
+    {
+      "id": "s33",
+      "start": 159.406,
+      "end": 165.079,
+      "captions": [
+        {
+          "text": "Doch Nvidia verkauft",
+          "start": 159.406,
+          "end": 160.468
+        },
+        {
+          "text": "weiter die wichtigsten",
+          "start": 160.468,
+          "end": 161.827
+        },
+        {
+          "text": "KI‑Chips der Welt,",
+          "start": 161.827,
+          "end": 162.94
+        },
+        {
+          "text": "und das Geschäft läuft",
+          "start": 162.94,
+          "end": 164.16
+        },
+        {
+          "text": "erst einmal weiter",
+          "start": 164.16,
+          "end": 165.079
+        }
+      ]
+    },
+    {
+      "id": "s34",
+      "start": 165.079,
+      "end": 169.578,
+      "captions": [
+        {
+          "text": "Nvidia ohne Jensen Huang,",
+          "start": 165.079,
+          "end": 166.632
+        },
+        {
+          "text": "das hätte vor einer Woche",
+          "start": 166.632,
+          "end": 168.112
+        },
+        {
+          "text": "noch niemand geglaubt",
+          "start": 168.112,
+          "end": 169.578
+        }
+      ]
+    }
+  ]
+}
