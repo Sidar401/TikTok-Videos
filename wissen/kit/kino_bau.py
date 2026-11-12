@@ -17,7 +17,7 @@ total = c.get("dauer", 30)
 rep = {"{{DUR}}": str(total), "{{TAG}}": c["tag"], "{{HOOK}}": c["hook"], "{{HOOK_END}}": str(c["hook_end"]), "{{CAP_DUR}}": f"{total - c['hook_end']:.2f}",
        "{{SHARE_START}}": str(c["share"][0]), "{{SHARE_DUR}}": str(c["share"][1]), "{{FOLLOW}}": str(c["follow"]), "{{FOLLOW_DUR}}": f"{total - c['follow']:.2f}",
        "{{VOICE_DUR}}": f"{dur:.2f}", "{{WORDS}}": json.dumps(w["words"], ensure_ascii=False), "{{CHUNKS}}": json.dumps(w["chunks"]),
-       "{{FIX}}": json.dumps(c.get("fix", {}), ensure_ascii=False), "{{CSS}}": c.get("css", ""), "{{SCENE}}": scene}
+       "{{FIX}}": json.dumps(c.get("fix", {}), ensure_ascii=False), "{{SHARE_TEXT}}": c.get("share_text", "Teilen ➜"), "{{CSS}}": c.get("css", ""), "{{SCENE}}": scene}
 h = (kit / "kino_vorlage.html").read_text()
 for k, v in rep.items(): h = h.replace(k, v)
 (proj / "index.html").write_text(h)

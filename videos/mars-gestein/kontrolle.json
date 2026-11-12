@@ -1,0 +1,30 @@
+{
+ "gehoert": "Auf dem Mars liegen gerade Röhrchen, in denen vielleicht Spuren von Leben stecken. Folge uns, damit du erfährst, was in den Röhrchen steckt. Seit 2021 fährt der NASA-Rover Perseverance über den Mars. Er bohrt in Felsen und füllt Gesteinsproben in kleine Röhrchen, so groß wie ein Stift. 2025 fand er einen ganz besonderen Stein. Er hat seltsame Flecken, die aussehen wie ein Leopardenfell. Auf der Erde entstehen solche Muster oft durch winzige Lebewesen. Die NASA nennt es den bisher deutlichsten möglichen Hinweis auf früheres Leben auf dem Mars. Das Problem: Um das sicher zu wissen, müssen die Proben in ein Labor auf der Erde. Doch der alte Plan war zu teuer und wurde gestoppt. Jetzt sucht die NASA nach einem neuen, günstigeren Weg, die Röhrchen abzuholen. Und es gibt Konkurrenz. China will schon 2028 eine eigene Mission starten. Wer zuerst Marsgestein nach Hause bringt, schreibt Geschichte. Glaubst du, dass es auf dem Mars einmal Leben gab? Folg uns für mehr.",
+ "abweichungen": [
+  [
+   "replace",
+   "folg",
+   "folge"
+  ],
+  [
+   "replace",
+   "zweitausendeinundzwanzig",
+   "2021"
+  ],
+  [
+   "replace",
+   "zweitausendfünfundzwanzig",
+   "2025"
+  ],
+  [
+   "replace",
+   "zweitausendachtundzwanzig",
+   "2028"
+  ],
+  [
+   "replace",
+   "mars gestein",
+   "marsgestein"
+  ]
+ ]
+}

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <script type="importmap">{"imports":{"three":"./assets/three/build/three.module.js","three/addons/":"./assets/three/jsm/"}}</script>
+    <style>
+      @font-face { font-family: "Inter Display"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.otf"); }
+      @font-face { font-family: "Inter Display"; font-weight: 800; src: url("assets/fonts/InterDisplay-ExtraBold.otf"); }
+      @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/Inter-SemiBold.otf"); }
+      html, body { background: #000; }
+      #root { font-family: "Inter Display", "Inter", sans-serif; }
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .tag { top: 140px; font-family: "Inter", sans-serif; font-weight: 600; font-size: 34px; letter-spacing: 8px; color: rgba(255,255,255,0.78); text-shadow: 0 2px 12px rgba(0,0,0,0.8); }
+      .bar { position: absolute; left: 90px; right: 90px; top: 200px; height: 6px; border-radius: 3px; background: rgba(255,255,255,0.15); }
+      .bar i { display: block; width: 0; height: 100%; border-radius: 3px; background: #ffd23f; box-shadow: 0 0 14px rgba(255,210,63,0.7); }
+      .lbl { top: 330px; font-size: 62px; font-weight: 800; letter-spacing: 1px; text-shadow: 0 4px 24px rgba(0,0,0,0.9); }
+      .lbl small { display: block; font-family: "Inter", sans-serif; font-weight: 600; font-size: 36px; color: rgba(255,255,255,0.82); margin-top: 10px; letter-spacing: 0; }
+      .lbl .big { display: block; font-size: 120px; font-weight: 900; color: #ffd23f; text-shadow: 0 0 40px rgba(255,210,63,0.5), 0 4px 24px rgba(0,0,0,0.9); white-space: nowrap; }
+      .lbl .red { color: #ff4d5e; text-shadow: 0 0 40px rgba(255,77,94,0.5), 0 4px 24px rgba(0,0,0,0.9); }
+      .lbl .blue { color: #7fd0ff; text-shadow: 0 0 40px rgba(127,208,255,0.5), 0 4px 24px rgba(0,0,0,0.9); }
+      .capw { top: 1400px; font-size: 92px; font-weight: 900; line-height: 1.12; letter-spacing: -1px; color: #fff; text-shadow: 0 6px 30px rgba(0,0,0,0.85), 0 0 3px #000; }
+      .capw .w { display: inline-block; margin: 0 10px; padding: 0 4px 6px; }
+      .capw .on { background: #ffd23f; color: #111; padding: 0 20px 6px; border-radius: 18px; transform: rotate(-2deg) scale(1.06); text-shadow: none; box-shadow: 0 10px 40px rgba(255,210,63,0.45); }
+      .hookbig { top: 560px; font-size: 136px; }
+      .hookbig .y { color: #ffd23f; text-shadow: 0 0 46px rgba(255,210,63,0.8); }
+      .hookdim { background: radial-gradient(circle at 50% 42%, rgba(0,0,10,0.15), rgba(0,0,6,0.7)); }
+      .share { position: absolute; right: 40px; top: 1050px; }
+      .share span { display: inline-block; background: #fe2c55; color: #fff; font-weight: 900; font-size: 54px; padding: 16px 34px; border-radius: 60px; box-shadow: 0 0 40px rgba(254,44,85,0.7); }
+      .follow { top: 1080px; }
+      .hookbig { font-size: 170px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="70" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="tag" class="line tag clip" data-start="0" data-duration="70" data-track-index="1"><span>12. NOVEMBER 2026</span></div>
+      <div id="bar" class="bar clip" data-start="0" data-duration="70" data-track-index="2"><i id="bar-in"></i></div>
+      <div id="lbl" class="line lbl clip" data-start="0" data-duration="70" data-track-index="3"><span id="lbl-in"></span></div>
+      <div id="cap" class="line capw clip" data-start="4.4" data-duration="65.60" data-track-index="4"><span id="cap-in"></span></div>
+      <div id="hookdim" class="hookdim clip" data-start="0" data-duration="4.4" data-track-index="8"><span id="hookdim-in"></span></div>
+      <div id="hookbig" class="line hookbig clip" data-start="0" data-duration="4.4" data-track-index="7"><span id="hookbig-in">Rettet<br /><span class="y">HUBBLE!</span></span></div>
+      <div id="share" class="share clip" data-start="4.6" data-duration="3.5" data-track-index="5"><span id="share-in">+ Folgen</span></div>
+      <div id="follow" class="line follow clip" data-start="67.4" data-duration="2.60" data-track-index="6"><span id="follow-in" class="box"><span class="t">Folg uns für mehr! 👆</span><span class="pill">+ Folgen</span></span></div>
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="67.12" data-track-index="9" data-volume="1"></audio>
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="70" data-track-index="10" data-volume="0.3"></audio>
+    </div>
+    <img id="tex-day" src="assets/earth-blue-marble.jpg" style="display:none" alt="" />
+    <img id="tex-night" src="assets/earth-night.jpg" style="display:none" alt="" />
+    <img id="tex-topo" src="assets/earth-topology.png" style="display:none" alt="" />
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.from("#hookbig-in", { opacity: 0, scale: 1.35, duration: 0.35, ease: "power3.out" }, 0);
+      tl.to("#hookbig-in", { scale: 0.6, opacity: 0, filter: "blur(12px)", duration: 0.3, ease: "power2.in" }, 4.4 - 0.32);
+      tl.to("#hookdim", { opacity: 0, duration: 0.3 }, 4.4 - 0.32);
+      tl.from("#share-in", { opacity: 0, x: 80, scale: 0.6, duration: 0.3, ease: "back.out(2.5)" }, 4.6);
+      tl.to("#share-in", { x: 18, duration: 0.25, yoyo: true, repeat: 7, ease: "sine.inOut" }, 4.6 + 0.4);
+      tl.to("#share-in", { opacity: 0, duration: 0.2 }, 4.6 + 3.5 - 0.25);
+      tl.from("#follow-in", { opacity: 0, scale: 0.6, duration: 0.3, ease: "back.out(2.5)" }, 67.4);
+      tl.to("#follow-in .pill", { scale: 1.1, duration: 0.3, yoyo: true, repeat: 3 }, 67.4 + 0.4);
+      tl.to("#bar-in", { width: "100%", duration: 70, ease: "none" }, 0);
+      tl.to({}, { duration: 0.01 }, 70 - 0.01);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+    <script type="module">
+      import * as K from "./assets/kino.js";
+      const { THREE, V, lerp, eio, eout, prog, cl, rnd, de } = K;
+      const WORDS = [{"w": "Das", "s": 0.0, "e": 0.16}, {"w": "berühmteste", "s": 0.24, "e": 0.96}, {"w": "Teleskop", "s": 1.0, "e": 1.52}, {"w": "der", "s": 1.6, "e": 1.68}, {"w": "Welt", "s": 1.76, "e": 2.0}, {"w": "stürzt", "s": 2.08, "e": 2.48}, {"w": "ab,", "s": 2.6, "e": 2.88}, {"w": "wenn", "s": 2.933, "e": 3.04}, {"w": "niemand", "s": 3.12, "e": 3.52}, {"w": "es", "s": 3.6, "e": 3.68}, {"w": "rettet!", "s": 3.76, "e": 4.4}, {"w": "Folg", "s": 4.64, "e": 4.96}, {"w": "uns,", "s": 5.08, "e": 5.28}, {"w": "damit", "s": 5.36, "e": 5.52}, {"w": "du", "s": 5.6, "e": 5.76}, {"w": "erfährst,", "s": 5.84, "e": 6.373}, {"w": "ob", "s": 6.427, "e": 6.48}, {"w": "Hubble", "s": 6.56, "e": 6.88}, {"w": "gerettet", "s": 7.0, "e": 7.36}, {"w": "wird!", "s": 7.44, "e": 8.08}, {"w": "Das", "s": 8.4, "e": 8.56}, {"w": "Hubble-Teleskop", "s": 8.64, "e": 9.52}, {"w": "kreist", "s": 9.6, "e": 9.84}, {"w": "seit", "s": 9.92, "e": 10.08}, {"w": "neunzehnhundertneunzig", "s": 10.16, "e": 11.28}, {"w": "um", "s": 11.44, "e": 11.52}, {"w": "die", "s": 11.6, "e": 11.68}, {"w": "Erde.", "s": 11.76, "e": 12.16}, {"w": "Es", "s": 12.48, "e": 12.64}, {"w": "ist", "s": 12.72, "e": 12.88}, {"w": "so", "s": 12.96, "e": 13.12}, {"w": "groß", "s": 13.2, "e": 13.44}, {"w": "wie", "s": 13.52, "e": 13.6}, {"w": "ein", "s": 13.64, "e": 13.68}, {"w": "Schulbus", "s": 13.84, "e": 14.4}, {"w": "und", "s": 14.48, "e": 14.56}, {"w": "wiegt", "s": 14.64, "e": 14.8}, {"w": "rund", "s": 14.84, "e": 15.04}, {"w": "elf", "s": 15.2, "e": 15.36}, {"w": "Tonnen.", "s": 15.52, "e": 15.92}, {"w": "In", "s": 16.4, "e": 16.56}, {"w": "über", "s": 16.68, "e": 16.8}, {"w": "dreißig", "s": 16.88, "e": 17.36}, {"w": "Jahren", "s": 17.52, "e": 17.84}, {"w": "hat", "s": 17.92, "e": 18.0}, {"w": "es", "s": 18.08, "e": 18.16}, {"w": "mehr", "s": 18.24, "e": 18.32}, {"w": "als", "s": 18.4, "e": 18.56}, {"w": "eine", "s": 18.72, "e": 18.96}, {"w": "Million", "s": 19.04, "e": 19.44}, {"w": "Beobachtungen", "s": 19.52, "e": 20.24}, {"w": "gemacht.", "s": 20.36, "e": 20.8}, {"w": "Es", "s": 21.2, "e": 21.28}, {"w": "hat", "s": 21.36, "e": 21.44}, {"w": "uns", "s": 21.52, "e": 21.6}, {"w": "gezeigt,", "s": 21.68, "e": 22.24}, {"w": "wie", "s": 22.32, "e": 22.4}, {"w": "alt", "s": 22.48, "e": 22.64}, {"w": "das", "s": 22.72, "e": 22.8}, {"w": "Universum", "s": 22.88, "e": 23.44}, {"w": "ist,", "s": 23.6, "e": 24.0}, {"w": "und", "s": 24.08, "e": 24.16}, {"w": "Bilder", "s": 24.24, "e": 24.56}, {"w": "wie", "s": 24.64, "e": 24.72}, {"w": "die", "s": 24.8, "e": 24.88}, {"w": "berühmten", "s": 25.0, "e": 25.52}, {"w": "Säulen", "s": 25.6, "e": 25.92}, {"w": "der", "s": 26.0, "e": 26.08}, {"w": "Schöpfung", "s": 26.16, "e": 26.56}, {"w": "gemacht.", "s": 26.64, "e": 27.36}, {"w": "Fünfmal", "s": 27.68, "e": 28.32}, {"w": "sind", "s": 28.36, "e": 28.48}, {"w": "Astronauten", "s": 28.56, "e": 29.2}, {"w": "schon", "s": 29.24, "e": 29.36}, {"w": "hingeflogen", "s": 29.44, "e": 30.08}, {"w": "und", "s": 30.16, "e": 30.24}, {"w": "haben", "s": 30.32, "e": 30.44}, {"w": "es", "s": 30.48, "e": 30.56}, {"w": "repariert,", "s": 30.64, "e": 31.44}, {"w": "zuletzt", "s": 31.48, "e": 31.92}, {"w": "zweitausendneun.", "s": 32.0, "e": 33.36}, {"w": "Doch", "s": 33.44, "e": 33.6}, {"w": "Hubble", "s": 33.68, "e": 34.0}, {"w": "sinkt", "s": 34.08, "e": 34.4}, {"w": "jedes", "s": 34.44, "e": 34.8}, {"w": "Jahr", "s": 34.88, "e": 35.12}, {"w": "ein", "s": 35.2, "e": 35.28}, {"w": "Stückchen", "s": 35.36, "e": 35.76}, {"w": "tiefer.", "s": 35.92, "e": 36.4}, {"w": "Die", "s": 36.88, "e": 36.96}, {"w": "Luft", "s": 37.04, "e": 37.28}, {"w": "ganz", "s": 37.36, "e": 37.6}, {"w": "oben", "s": 37.68, "e": 38.0}, {"w": "bremst", "s": 38.04, "e": 38.32}, {"w": "es", "s": 38.4, "e": 38.48}, {"w": "langsam", "s": 38.56, "e": 38.96}, {"w": "ab,", "s": 39.04, "e": 39.6}, {"w": "genau", "s": 39.68, "e": 40.0}, {"w": "wie", "s": 40.04, "e": 40.08}, {"w": "beim", "s": 40.16, "e": 40.32}, {"w": "Teleskop", "s": 40.36, "e": 40.88}, {"w": "Swift,", "s": 40.96, "e": 41.44}, {"w": "das", "s": 41.52, "e": 41.6}, {"w": "gerade", "s": 41.68, "e": 42.0}, {"w": "abgestürzt", "s": 42.08, "e": 42.72}, {"w": "ist.", "s": 42.8, "e": 43.12}, {"w": "Ohne", "s": 43.68, "e": 43.92}, {"w": "Hilfe", "s": 44.0, "e": 44.4}, {"w": "fällt", "s": 44.48, "e": 44.64}, {"w": "Hubble", "s": 44.72, "e": 44.96}, {"w": "wohl", "s": 45.04, "e": 45.2}, {"w": "um", "s": 45.28, "e": 45.44}, {"w": "zweitausenddreiunddreißig", "s": 45.52, "e": 47.0}, {"w": "in", "s": 47.12, "e": 47.16}, {"w": "die", "s": 47.2, "e": 47.28}, {"w": "Erdatmosphäre.", "s": 47.36, "e": 48.4}, {"w": "Jetzt", "s": 48.88, "e": 49.2}, {"w": "sucht", "s": 49.28, "e": 49.48}, {"w": "die", "s": 49.52, "e": 49.6}, {"w": "NASA", "s": 49.8, "e": 50.0}, {"w": "Firmen,", "s": 50.08, "e": 50.52}, {"w": "die", "s": 50.56, "e": 50.64}, {"w": "eine", "s": 50.68, "e": 50.88}, {"w": "Rettung", "s": 50.92, "e": 51.2}, {"w": "wagen.", "s": 51.28, "e": 51.76}, {"w": "Ein", "s": 52.08, "e": 52.24}, {"w": "Raumschiff", "s": 52.32, "e": 52.8}, {"w": "soll", "s": 52.88, "e": 52.96}, {"w": "an", "s": 53.04, "e": 53.12}, {"w": "Hubble", "s": 53.2, "e": 53.52}, {"w": "andocken", "s": 53.64, "e": 54.08}, {"w": "und", "s": 54.16, "e": 54.24}, {"w": "es", "s": 54.32, "e": 54.4}, {"w": "auf", "s": 54.52, "e": 54.64}, {"w": "sechshundert", "s": 54.72, "e": 55.2}, {"w": "Kilometer", "s": 55.28, "e": 55.76}, {"w": "Höhe", "s": 55.84, "e": 56.08}, {"w": "schieben.", "s": 56.16, "e": 56.8}, {"w": "Bis", "s": 57.04, "e": 57.12}, {"w": "zum", "s": 57.2, "e": 57.36}, {"w": "dreißigsten", "s": 57.44, "e": 58.0}, {"w": "November", "s": 58.08, "e": 58.56}, {"w": "können", "s": 58.64, "e": 58.8}, {"w": "Firmen", "s": 58.96, "e": 59.28}, {"w": "ihre", "s": 59.32, "e": 59.44}, {"w": "Ideen", "s": 59.52, "e": 59.92}, {"w": "einreichen.", "s": 60.04, "e": 60.64}, {"w": "Geld", "s": 61.04, "e": 61.28}, {"w": "für", "s": 61.32, "e": 61.36}, {"w": "die", "s": 61.44, "e": 61.52}, {"w": "Rettung", "s": 61.56, "e": 61.92}, {"w": "gibt", "s": 62.08, "e": 62.24}, {"w": "es", "s": 62.32, "e": 62.4}, {"w": "aber", "s": 62.48, "e": 62.56}, {"w": "noch", "s": 62.68, "e": 62.8}, {"w": "keins.", "s": 62.88, "e": 63.52}, {"w": "Sollte", "s": 63.76, "e": 64.08}, {"w": "die", "s": 64.16, "e": 64.24}, {"w": "NASA", "s": 64.32, "e": 64.64}, {"w": "Hubble", "s": 64.72, "e": 64.96}, {"w": "retten?", "s": 65.04, "e": 65.76}, {"w": "Folg", "s": 65.8, "e": 66.0}, {"w": "uns", "s": 66.08, "e": 66.32}, {"w": "für", "s": 66.4, "e": 66.56}, {"w": "mehr!", "s": 66.6, "e": 67.12}];
+      const CHUNKS = [[0.0, 4.4], [4.64, 8.08], [8.4, 12.16], [12.48, 15.92], [16.4, 20.8], [21.2, 27.36], [27.68, 33.36], [33.44, 36.4], [36.88, 43.12], [43.68, 48.4], [48.88, 51.76], [52.08, 56.8], [57.04, 60.64], [61.04, 63.52], [63.76, 67.12]];
+      const cap = K.captions(WORDS, CHUNKS, document.getElementById("cap-in"), 4.4, {"neunzehnhundertneunzig": "1990", "elf": "11", "dreißig": "30", "zweitausendneun": "2009", "zweitausenddreiunddreißig": "2033", "sechshundert": "600", "dreißigsten": "30."});
+      const label = K.labeler(document.getElementById("lbl-in"));
+      const img = (id) => document.getElementById(id);
+      const imgsReady = Promise.all(["tex-day", "tex-night", "tex-topo"].map((id) => { const im = img(id); return im.complete ? Promise.resolve(im) : new Promise((r) => (im.onload = () => r(im))); }));
+      const E = K.setup(document.getElementById("stage"));
+      const cam = E.cam;
+      let renderAt = () => {};
+      const ready = imgsReady.then(async ([day, night, topo]) => {
+        const { Ebene, wortZeit, ORANGE, GELB, ROT, GRUEN, BLAU } = await import("./assets/analyse.js");
+        K.reseed(6);
+        const sc = new THREE.Scene(); K.stars(sc, 6000, -1, 3500, 2.2);
+        const EA = K.earth(sc, { day, night, topo }, 40); EA.group.position.set(0, -58, -20); EA.U.sun.value.set(-0.6, 0.6, 0.5).normalize();
+        const sunL = new THREE.DirectionalLight(0xfff4e6, 3); sunL.position.set(-30, 30, 25); sc.add(sunL); sc.add(new THREE.AmbientLight(0x445577, 0.7));
+        // Hubble
+        function makeHubble() { const g = new THREE.Group();
+          const silver = new THREE.MeshStandardMaterial({ color: 0xdfe3e8, metalness: 0.75, roughness: 0.3 }), foil = new THREE.MeshStandardMaterial({ color: 0xc8ccd2, metalness: 0.9, roughness: 0.45 }), dark = new THREE.MeshStandardMaterial({ color: 0x23262c, roughness: 0.6 });
+          const tube = new THREE.Mesh(new THREE.CylinderGeometry(1.2, 1.2, 6, 48), silver); tube.rotation.z = Math.PI / 2; g.add(tube);
+          const aft = new THREE.Mesh(new THREE.CylinderGeometry(1.3, 1.3, 2.4, 12), foil); aft.rotation.z = Math.PI / 2; aft.position.x = -3.9; g.add(aft);
+          const door = new THREE.Mesh(new THREE.CylinderGeometry(1.25, 1.25, 0.12, 48), dark); door.rotation.z = Math.PI / 2; door.position.set(3.1, 0, 0); g.add(door);
+          const lid = new THREE.Mesh(new THREE.BoxGeometry(0.08, 2.4, 2.4), silver); lid.position.set(3.3, 1.2, 0); lid.rotation.z = -0.9; g.add(lid);
+          const pc = document.createElement("canvas"); pc.width = 256; pc.height = 128; const q = pc.getContext("2d"); q.fillStyle = "#1a2a5a"; q.fillRect(0, 0, 256, 128); q.strokeStyle = "#c9a24a"; q.lineWidth = 2; for (let x = 0; x <= 256; x += 21) { q.beginPath(); q.moveTo(x, 0); q.lineTo(x, 128); q.stroke(); }
+          const pt = new THREE.CanvasTexture(pc); pt.colorSpace = THREE.SRGBColorSpace; const pm = new THREE.MeshStandardMaterial({ map: pt, metalness: 0.5, roughness: 0.35, emissive: 0x0a1430, side: THREE.DoubleSide });
+          [-1, 1].forEach((s) => { const p = new THREE.Mesh(new THREE.BoxGeometry(5, 0.05, 1.8), pm); p.position.set(-1.5, 0, s * 3.2); g.add(p); const a = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.05, 1.8, 8), dark); a.rotation.x = Math.PI / 2; a.position.set(-1.5, 0, s * 1.9); g.add(a); });
+          const ant = new THREE.Mesh(new THREE.SphereGeometry(0.5, 24, 12, 0, Math.PI * 2, 0, 1.2), silver); ant.position.set(-1, 1.6, 0); g.add(ant);
+          return g; }
+        const hub = makeHubble(); sc.add(hub);
+        // Rettungs-Raumschiff
+        const tug = new THREE.Group(); const tb = new THREE.Mesh(new THREE.CylinderGeometry(1.0, 1.1, 3, 32), new THREE.MeshStandardMaterial({ color: 0xf2f2f2, metalness: 0.3, roughness: 0.4 })); tb.rotation.z = Math.PI / 2; tug.add(tb);
+        const tn = new THREE.Mesh(new THREE.ConeGeometry(1.0, 1.4, 32), tb.material); tn.rotation.z = -Math.PI / 2; tn.position.x = 2.2; tug.add(tn);
+        [-1, 1].forEach((s) => { const p = new THREE.Mesh(new THREE.BoxGeometry(1.6, 0.05, 2.4), new THREE.MeshStandardMaterial({ color: 0x1a2a5a, metalness: 0.5, roughness: 0.4 })); p.position.set(0, 0, s * 2); tug.add(p); });
+        sc.add(tug); const thr = K.sprite(sc, K.glowTex("rgba(150,200,255,1)"), 2.4, V(0, 0, 0), 0);
+        // Säulen der Schöpfung (Nebel aus Sprites)
+        const neb = new THREE.Group(); sc.add(neb); neb.position.set(0, 0, -400);
+        const nT = K.glowTex("rgba(255,170,90,.55)"), nT2 = K.glowTex("rgba(90,200,190,.35)"), nT3 = K.glowTex("rgba(40,20,10,.9)");
+        for (let i = 0; i < 220; i++) { K.reseed(900 + i); const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: K.rnd() < 0.5 ? nT : nT2, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, opacity: 0.3 })); s.position.set((K.rnd() - 0.5) * 300, (K.rnd() - 0.5) * 500, (K.rnd() - 0.5) * 60); s.scale.setScalar(60 + K.rnd() * 120); neb.add(s); }
+        [[-60, 0.9], [20, 1.3], [90, 0.7]].forEach(([x, hgt]) => { for (let i = 0; i < 40; i++) { K.reseed(1500 + i + x); const k = i / 40; const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: nT3, transparent: true, depthWrite: false, opacity: 0.85 })); s.position.set(x + Math.sin(k * 6) * 8 + (K.rnd() - 0.5) * 10, -220 + k * 300 * hgt, 10); s.scale.setScalar(70 - k * 40); neb.add(s); }
+          const tip = new THREE.Sprite(new THREE.SpriteMaterial({ map: K.glowTex("rgba(255,220,170,.9)"), transparent: true, depthWrite: false, blending: THREE.AdditiveBlending })); tip.position.set(x, -220 + 300 * hgt, 12); tip.scale.setScalar(40); neb.add(tip); });
+        neb.visible = false;
+        // Absturz-Feuer
+        const fire = []; for (let i = 0; i < 30; i++) fire.push(K.sprite(sc, K.glowTex("rgba(255,230,180,1)"), 2, V(0, 0, 0), 0));
+        
+        const A = new Ebene(document.getElementById("root"));
+        const W = (w, ab = 0) => wortZeit(WORDS, w, ab);
+        const t90 = W("neunzehnhundert"), tBus = W("schulbus"), tElf = W("elf"), tMio = W("million"), tAlt = W("alt"), tSaeul = W("säulen"), tFuenf = W("fünfmal"), t09 = W("zweitausendneun"), tSinkt = W("sinkt"), tLuft = W("luft"), tSwift = W("swift"), t33 = W("zweitausenddrei"), tFirm = W("firmen", 49), tDock = W("andocken"), t600 = W("sechshundert"), tNov = W("november"), tGeld = W("geld"), tSoll = W("sollte");
+        A.logo("assets/logos/nasa.svg", 90, 560, 300, 240, { t0: t90 - 0.6, t1: 12.4, rot: -4 });
+        A.karte("Hubble", 450, 560, 540, 300, { t0: t90 - 0.5, t1: 12.4, unter: "IM ALL SEIT" });
+        A.zahl(720, 770, { von: 1970, bis: 1990, t0: t90, t1: 12.4, dauer: 1.0, fmt: (v) => String(Math.round(v)), farbe: GELB });
+        A.karte("Größe & Gewicht", 120, 560, 840, 420, { t0: tBus - 0.6, t1: 16.3 });
+        A.hand("🚌 so groß wie ein Schulbus", 540, 720, { t0: tBus, t1: 16.3, size: 64, farbe: "#fff" });
+        A.zahl(540, 860, { von: 0, bis: 11, t0: tElf - 0.3, t1: 16.3, dauer: 0.9, fmt: (v) => "≈ " + Math.round(v) + " Tonnen", farbe: GELB });
+        A.zahl(540, 700, { von: 0, bis: 1000000, t0: tMio - 1.2, t1: 20.8, dauer: 1.8, fmt: (v) => (Math.round(v / 1000) * 1000).toLocaleString("de-DE") + "+", farbe: GELB, unter: "Beobachtungen in über 30 Jahren" });
+        A.zettel("Alter des Universums:<br>≈ 13,8 Mrd. Jahre", 540, 640, { t0: tAlt - 0.4, t1: 24.1, rot: -4, size: 56 });
+        A.stempel("SÄULEN DER SCHÖPFUNG", 540, 600, { t0: tSaeul, t1: 27.4, rot: -5, farbe: GELB });
+        A.karte("Reparaturen im All", 110, 540, 860, 520, { t0: tFuenf - 0.2, t1: 33.4, unter: "MIT DEM SPACE SHUTTLE" });
+        ["1993", "1997", "1999", "2002", "2009"].forEach((y, i) => { A.hand("👨‍🚀", 220 + i * 160, 760, { t0: tFuenf + 0.2 + i * 0.3, t1: 33.4, size: 80 }); A.hand(y, 220 + i * 160, 870, { t0: tFuenf + 0.3 + i * 0.3, t1: 33.4, size: 46, farbe: i === 4 ? GELB : "#fff" }); });
+        A.kreis(860, 820, 90, 110, { t0: t09, t1: 33.4, farbe: GELB });
+        A.karte("Höhe von Hubble", 100, 520, 880, 700, { t0: tSinkt - 0.4, t1: 43.6, unter: "KILOMETER ÜBER DER ERDE" });
+        A.balken(170, 640, 740, 460, [{ name: "1990", wert: 615, text: "≈ 615", farbe: GRUEN }, { name: "2002", wert: 575, text: "≈ 575", farbe: GELB }, { name: "heute", wert: 510, text: "≈ 510", farbe: ORANGE }, { name: "Ziel", wert: 600, text: "600", farbe: BLAU }], { t0: tSinkt, t1: 43.6, versatz: 0.35, max: 640 });
+        A.pfeil(860, 760, 640, 980, { t0: tLuft, t1: 43.6, bogen: 0.25, farbe: ROT }); A.hand("Luft bremst ↓", 820, 700, { t0: tLuft + 0.2, t1: 43.6, size: 56, farbe: ROT });
+        A.zettel("wie Swift 🔥", 760, 1290, { t0: tSwift - 0.3, t1: 43.6, rot: -5, size: 58 });
+        A.stempel("ABSTURZ ≈ 2033", 540, 700, { t0: t33 - 0.2, t1: 48.8, rot: -7, farbe: ROT });
+        A.logo("assets/logos/nasa.svg", 390, 540, 300, 240, { t0: tFirm - 0.6, t1: 51.9 }); A.zettel("Gesucht:<br>Retter! 🛟", 540, 950, { t0: tFirm, t1: 51.9, rot: -4, size: 64 });
+        A.hand("andocken 🔗", 330, 640, { t0: tDock - 0.2, t1: 56.9, size: 66, farbe: "#fff" }); A.zahl(760, 700, { von: 510, bis: 600, t0: t600 - 0.3, t1: 56.9, dauer: 1.2, fmt: (v) => Math.round(v) + " km", farbe: BLAU, unter: "Ziel-Höhe" });
+        A.pfeil(760, 1180, 760, 900, { t0: t600 + 0.4, t1: 56.9, bogen: 0, farbe: BLAU });
+        A.karte("Frist", 210, 560, 660, 420, { t0: tNov - 1.0, t1: 60.9, unter: "IDEEN EINREICHEN BIS" }); A.hand("30. Nov.", 540, 780, { t0: tNov - 0.6, t1: 60.9, size: 120, farbe: GELB }); A.kreis(540, 790, 230, 90, { t0: tNov, t1: 60.9 });
+        A.stempel("GELD: 0 €", 540, 760, { t0: tGeld, t1: 63.7, rot: -8, farbe: ROT }); A.hand("noch kein Budget", 540, 900, { t0: tGeld + 0.6, t1: 63.7, size: 60, farbe: "#fff" });
+        A.zettel("Retten? 👍 / 👎", 540, 760, { t0: tSoll, t1: 67.3, rot: -4, size: 70 });
+        
+        renderAt = (t) => {
+          label(""); E.look([1.0, 0.99, 1.04], [0.002, 0.002, 0.01], 0.22, 0.93); E.grade.uniforms.flash.value = 0;
+          hub.visible = true; EA.group.visible = true; tug.visible = false; thr.material.opacity = 0; neb.visible = false; fire.forEach((f) => (f.material.opacity = 0));
+          EA.mesh.rotation.y = t * 0.01; EA.clouds.rotation.y = t * 0.012;
+          hub.position.set(0, 0, 0); hub.rotation.set(0.2, 0.6 + t * 0.03, 0.05);
+          if (t < 8.4) { const f = K.eout(prog(t, 0, 8.4)); cam.position.set(lerp(-30, -10, f), lerp(6, 3, f), lerp(40, 16, f)); cam.lookAt(0, -1, 0); }
+          else if (t < 21.2) { const a = 0.8 + t * 0.05; cam.position.set(Math.sin(a) * 18, 4, Math.cos(a) * 18); cam.lookAt(0, -1.5, 0); }
+          else if (t < 24.1) { cam.position.set(-14, 3, 10); cam.lookAt(0, -1, 0); }
+          else if (t < 27.7) { neb.visible = true; hub.visible = false; EA.group.visible = false; const f = prog(t, 24.1, 3.6); cam.position.set(0, -40, lerp(340, 240, f)); cam.lookAt(0, -40, -400); }
+          else if (t < 33.4) { const a = 2 + t * 0.04; cam.position.set(Math.sin(a) * 12, 2, Math.cos(a) * 12); cam.lookAt(0, 0, 0); }
+          else if (t < 43.7) { const f = prog(t, 33.4, 10.3); hub.position.y = -f * 2; cam.position.set(30, 10, 34); cam.lookAt(0, -5, 0); }
+          else if (t < 48.9) { const f = prog(t, 43.7, 5.2); hub.position.set(lerp(0, 10, f), lerp(-2, -6.5, K.eio(f)), 0); hub.rotation.set(t * 0.8, t * 0.5, t * 0.3);
+            if (f > 0.4) fire.forEach((s, i) => { const k = i / fire.length; s.position.copy(hub.position).add(V(-k * 6, k * 2.5, 0)); s.scale.setScalar((2.6 - k * 2) * (f - 0.3)); s.material.opacity = (1 - k) * Math.min(1, (f - 0.4) * 3); });
+            cam.position.set(10, 4, 26); cam.lookAt(4, -4, 0); E.grade.uniforms.flash.value = t > 47.8 && t < 48.2 ? 0.2 : 0; }
+          else if (t < 57) { tug.visible = true; const d = K.eio(prog(t, 50, 3.6)); tug.position.set(lerp(-26, -7.6, d), 0, 0); tug.rotation.set(0, 0, 0); hub.rotation.set(0, 0, 0); hub.position.set(0, 0, 0);
+            if (t > 54.7) { const up = K.eio(prog(t, 54.7, 2.3)); hub.position.y = up * 4; tug.position.y = up * 4; } thr.position.copy(tug.position).add(V(-2.2, 0, 0)); thr.material.opacity = t > 54.7 ? 1 : 0.5 * (1 - d);
+            cam.position.set(-6, 5, 22); cam.lookAt(-4, hub.position.y, 0); }
+          else { const a = 1 + t * 0.05; cam.position.set(Math.sin(a) * 24, 5, Math.cos(a) * 24); cam.lookAt(0, -1, 0); }
+          E.render(sc, t); A.update(t); cap(t);
+        };
+        renderAt(lastT);
+      });
+      window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady || {}; window.__hf.buildReady.scene = ready;
+      let lastT = 0;
+      window.addEventListener("hf-seek", (e) => { lastT = e.detail.time; renderAt(lastT); });
+    </script>
+  </body>
+</html>

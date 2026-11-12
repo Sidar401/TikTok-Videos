@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <script type="importmap">{"imports":{"three":"./assets/three/build/three.module.js","three/addons/":"./assets/three/jsm/"}}</script>
+    <style>
+      @font-face { font-family: "Inter Display"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.otf"); }
+      @font-face { font-family: "Inter Display"; font-weight: 800; src: url("assets/fonts/InterDisplay-ExtraBold.otf"); }
+      @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/Inter-SemiBold.otf"); }
+      html, body { background: #000; }
+      #root { font-family: "Inter Display", "Inter", sans-serif; }
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .tag { top: 140px; font-family: "Inter", sans-serif; font-weight: 600; font-size: 34px; letter-spacing: 8px; color: rgba(255,255,255,0.78); text-shadow: 0 2px 12px rgba(0,0,0,0.8); }
+      .bar { position: absolute; left: 90px; right: 90px; top: 200px; height: 6px; border-radius: 3px; background: rgba(255,255,255,0.15); }
+      .bar i { display: block; width: 0; height: 100%; border-radius: 3px; background: #ffd23f; box-shadow: 0 0 14px rgba(255,210,63,0.7); }
+      .lbl { top: 330px; font-size: 62px; font-weight: 800; letter-spacing: 1px; text-shadow: 0 4px 24px rgba(0,0,0,0.9); }
+      .lbl small { display: block; font-family: "Inter", sans-serif; font-weight: 600; font-size: 36px; color: rgba(255,255,255,0.82); margin-top: 10px; letter-spacing: 0; }
+      .lbl .big { display: block; font-size: 120px; font-weight: 900; color: #ffd23f; text-shadow: 0 0 40px rgba(255,210,63,0.5), 0 4px 24px rgba(0,0,0,0.9); white-space: nowrap; }
+      .lbl .red { color: #ff4d5e; text-shadow: 0 0 40px rgba(255,77,94,0.5), 0 4px 24px rgba(0,0,0,0.9); }
+      .lbl .blue { color: #7fd0ff; text-shadow: 0 0 40px rgba(127,208,255,0.5), 0 4px 24px rgba(0,0,0,0.9); }
+      .capw { top: 1400px; font-size: 92px; font-weight: 900; line-height: 1.12; letter-spacing: -1px; color: #fff; text-shadow: 0 6px 30px rgba(0,0,0,0.85), 0 0 3px #000; }
+      .capw .w { display: inline-block; margin: 0 10px; padding: 0 4px 6px; }
+      .capw .on { background: #ffd23f; color: #111; padding: 0 20px 6px; border-radius: 18px; transform: rotate(-2deg) scale(1.06); text-shadow: none; box-shadow: 0 10px 40px rgba(255,210,63,0.45); }
+      .hookbig { top: 560px; font-size: 136px; }
+      .hookbig .y { color: #ffd23f; text-shadow: 0 0 46px rgba(255,210,63,0.8); }
+      .hookdim { background: radial-gradient(circle at 50% 42%, rgba(0,0,10,0.15), rgba(0,0,6,0.7)); }
+      .share { position: absolute; right: 40px; top: 1050px; }
+      .share span { display: inline-block; background: #fe2c55; color: #fff; font-weight: 900; font-size: 54px; padding: 16px 34px; border-radius: 60px; box-shadow: 0 0 40px rgba(254,44,85,0.7); }
+      .follow { top: 1080px; }
+      .hookbig { font-size: 150px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="68" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="tag" class="line tag clip" data-start="0" data-duration="68" data-track-index="1"><span>12. NOVEMBER 2026</span></div>
+      <div id="bar" class="bar clip" data-start="0" data-duration="68" data-track-index="2"><i id="bar-in"></i></div>
+      <div id="lbl" class="line lbl clip" data-start="0" data-duration="68" data-track-index="3"><span id="lbl-in"></span></div>
+      <div id="cap" class="line capw clip" data-start="4.5" data-duration="63.50" data-track-index="4"><span id="cap-in"></span></div>
+      <div id="hookdim" class="hookdim clip" data-start="0" data-duration="4.5" data-track-index="8"><span id="hookdim-in"></span></div>
+      <div id="hookbig" class="line hookbig clip" data-start="0" data-duration="4.5" data-track-index="7"><span id="hookbig-in"><span class="y">LEBEN</span><br />auf dem Mars?</span></div>
+      <div id="share" class="share clip" data-start="4.7" data-duration="3.3" data-track-index="5"><span id="share-in">+ Folgen</span></div>
+      <div id="follow" class="line follow clip" data-start="65.4" data-duration="2.60" data-track-index="6"><span id="follow-in" class="box"><span class="t">Folg uns für mehr! 👆</span><span class="pill">+ Folgen</span></span></div>
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="64.95" data-track-index="9" data-volume="1"></audio>
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="68" data-track-index="10" data-volume="0.3"></audio>
+    </div>
+    <img id="tex-day" src="assets/earth-blue-marble.jpg" style="display:none" alt="" />
+    <img id="tex-night" src="assets/earth-night.jpg" style="display:none" alt="" />
+    <img id="tex-topo" src="assets/earth-topology.png" style="display:none" alt="" />
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.from("#hookbig-in", { opacity: 0, scale: 1.35, duration: 0.35, ease: "power3.out" }, 0);
+      tl.to("#hookbig-in", { scale: 0.6, opacity: 0, filter: "blur(12px)", duration: 0.3, ease: "power2.in" }, 4.5 - 0.32);
+      tl.to("#hookdim", { opacity: 0, duration: 0.3 }, 4.5 - 0.32);
+      tl.from("#share-in", { opacity: 0, x: 80, scale: 0.6, duration: 0.3, ease: "back.out(2.5)" }, 4.7);
+      tl.to("#share-in", { x: 18, duration: 0.25, yoyo: true, repeat: 7, ease: "sine.inOut" }, 4.7 + 0.4);
+      tl.to("#share-in", { opacity: 0, duration: 0.2 }, 4.7 + 3.3 - 0.25);
+      tl.from("#follow-in", { opacity: 0, scale: 0.6, duration: 0.3, ease: "back.out(2.5)" }, 65.4);
+      tl.to("#follow-in .pill", { scale: 1.1, duration: 0.3, yoyo: true, repeat: 3 }, 65.4 + 0.4);
+      tl.to("#bar-in", { width: "100%", duration: 68, ease: "none" }, 0);
+      tl.to({}, { duration: 0.01 }, 68 - 0.01);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+    <script type="module">
+      import * as K from "./assets/kino.js";
+      const { THREE, V, lerp, eio, eout, prog, cl, rnd, de } = K;
+      const WORDS = [{"w": "Auf", "s": 0.0, "e": 0.16}, {"w": "dem", "s": 0.24, "e": 0.32}, {"w": "Mars", "s": 0.4, "e": 0.72}, {"w": "liegen", "s": 0.8, "e": 0.96}, {"w": "gerade", "s": 1.08, "e": 1.36}, {"w": "Röhrchen,", "s": 1.44, "e": 1.96}, {"w": "in", "s": 2.0, "e": 2.08}, {"w": "denen", "s": 2.16, "e": 2.32}, {"w": "vielleicht", "s": 2.36, "e": 2.72}, {"w": "Spuren", "s": 2.8, "e": 3.12}, {"w": "von", "s": 3.2, "e": 3.36}, {"w": "Leben", "s": 3.44, "e": 3.76}, {"w": "stecken!", "s": 3.84, "e": 4.48}, {"w": "Folg", "s": 4.72, "e": 4.96}, {"w": "uns,", "s": 5.04, "e": 5.333}, {"w": "damit", "s": 5.387, "e": 5.52}, {"w": "du", "s": 5.6, "e": 5.68}, {"w": "erfährst,", "s": 5.76, "e": 6.24}, {"w": "was", "s": 6.32, "e": 6.48}, {"w": "in", "s": 6.56, "e": 6.64}, {"w": "den", "s": 6.72, "e": 6.8}, {"w": "Röhrchen", "s": 6.88, "e": 7.2}, {"w": "steckt!", "s": 7.28, "e": 8.0}, {"w": "Seit", "s": 8.32, "e": 8.56}, {"w": "zweitausendeinundzwanzig", "s": 8.64, "e": 10.0}, {"w": "fährt", "s": 10.16, "e": 10.32}, {"w": "der", "s": 10.4, "e": 10.48}, {"w": "NASA-Rover", "s": 10.56, "e": 11.28}, {"w": "Perseverance", "s": 11.36, "e": 12.24}, {"w": "über", "s": 12.32, "e": 12.48}, {"w": "den", "s": 12.56, "e": 12.64}, {"w": "Mars.", "s": 12.72, "e": 13.36}, {"w": "Er", "s": 13.6, "e": 13.76}, {"w": "bohrt", "s": 13.84, "e": 14.08}, {"w": "in", "s": 14.16, "e": 14.24}, {"w": "Felsen", "s": 14.32, "e": 14.8}, {"w": "und", "s": 14.88, "e": 15.04}, {"w": "füllt", "s": 15.08, "e": 15.28}, {"w": "Gesteinsproben", "s": 15.32, "e": 16.24}, {"w": "in", "s": 16.32, "e": 16.48}, {"w": "kleine", "s": 16.6, "e": 16.88}, {"w": "Röhrchen,", "s": 16.96, "e": 17.52}, {"w": "so", "s": 17.6, "e": 17.68}, {"w": "groß", "s": 17.76, "e": 18.0}, {"w": "wie", "s": 18.08, "e": 18.16}, {"w": "ein", "s": 18.24, "e": 18.32}, {"w": "Stift.", "s": 18.4, "e": 19.28}, {"w": "Zweitausendfünfundzwanzig", "s": 19.32, "e": 20.72}, {"w": "fand", "s": 20.88, "e": 21.04}, {"w": "er", "s": 21.08, "e": 21.12}, {"w": "einen", "s": 21.2, "e": 21.44}, {"w": "ganz", "s": 21.52, "e": 21.76}, {"w": "besonderen", "s": 21.84, "e": 22.48}, {"w": "Stein.", "s": 22.56, "e": 22.96}, {"w": "Er", "s": 23.36, "e": 23.44}, {"w": "hat", "s": 23.56, "e": 23.68}, {"w": "seltsame", "s": 23.76, "e": 24.16}, {"w": "Flecken,", "s": 24.32, "e": 24.8}, {"w": "die", "s": 24.88, "e": 24.96}, {"w": "aussehen", "s": 25.04, "e": 25.52}, {"w": "wie", "s": 25.56, "e": 25.6}, {"w": "ein", "s": 25.68, "e": 25.76}, {"w": "Leopardenfell.", "s": 25.84, "e": 27.0}, {"w": "Auf", "s": 27.2, "e": 27.36}, {"w": "der", "s": 27.44, "e": 27.52}, {"w": "Erde", "s": 27.6, "e": 27.92}, {"w": "entstehen", "s": 28.0, "e": 28.4}, {"w": "solche", "s": 28.48, "e": 28.8}, {"w": "Muster", "s": 28.84, "e": 29.2}, {"w": "oft", "s": 29.28, "e": 29.52}, {"w": "durch", "s": 29.6, "e": 29.76}, {"w": "winzige", "s": 29.84, "e": 30.32}, {"w": "Lebewesen.", "s": 30.4, "e": 31.2}, {"w": "Die", "s": 31.6, "e": 31.76}, {"w": "NASA", "s": 31.84, "e": 32.24}, {"w": "nennt", "s": 32.32, "e": 32.48}, {"w": "es", "s": 32.56, "e": 32.64}, {"w": "den", "s": 32.72, "e": 32.8}, {"w": "bisher", "s": 32.84, "e": 33.2}, {"w": "deutlichsten", "s": 33.28, "e": 33.92}, {"w": "möglichen", "s": 34.08, "e": 34.56}, {"w": "Hinweis", "s": 34.6, "e": 35.12}, {"w": "auf", "s": 35.2, "e": 35.36}, {"w": "früheres", "s": 35.44, "e": 35.92}, {"w": "Leben", "s": 36.0, "e": 36.32}, {"w": "auf", "s": 36.4, "e": 36.48}, {"w": "dem", "s": 36.56, "e": 36.64}, {"w": "Mars.", "s": 36.72, "e": 37.32}, {"w": "Das", "s": 37.52, "e": 37.68}, {"w": "Problem:", "s": 37.76, "e": 38.4}, {"w": "Um", "s": 38.56, "e": 38.64}, {"w": "das", "s": 38.72, "e": 38.88}, {"w": "sicher", "s": 38.92, "e": 39.2}, {"w": "zu", "s": 39.28, "e": 39.36}, {"w": "wissen,", "s": 39.44, "e": 39.84}, {"w": "müssen", "s": 39.92, "e": 40.16}, {"w": "die", "s": 40.24, "e": 40.32}, {"w": "Proben", "s": 40.4, "e": 40.72}, {"w": "in", "s": 40.8, "e": 40.88}, {"w": "ein", "s": 40.96, "e": 41.04}, {"w": "Labor", "s": 41.12, "e": 41.52}, {"w": "auf", "s": 41.6, "e": 41.68}, {"w": "der", "s": 41.76, "e": 41.84}, {"w": "Erde.", "s": 41.92, "e": 42.52}, {"w": "Doch", "s": 42.72, "e": 42.88}, {"w": "der", "s": 42.96, "e": 43.04}, {"w": "alte", "s": 43.12, "e": 43.36}, {"w": "Plan", "s": 43.44, "e": 43.68}, {"w": "war", "s": 43.76, "e": 43.84}, {"w": "zu", "s": 43.92, "e": 44.08}, {"w": "teuer", "s": 44.16, "e": 44.48}, {"w": "und", "s": 44.56, "e": 44.72}, {"w": "wurde", "s": 44.76, "e": 44.96}, {"w": "gestoppt.", "s": 45.08, "e": 45.72}, {"w": "Jetzt", "s": 45.92, "e": 46.24}, {"w": "sucht", "s": 46.32, "e": 46.52}, {"w": "die", "s": 46.56, "e": 46.64}, {"w": "NASA", "s": 46.84, "e": 47.04}, {"w": "nach", "s": 47.093, "e": 47.2}, {"w": "einem", "s": 47.24, "e": 47.52}, {"w": "neuen,", "s": 47.6, "e": 48.0}, {"w": "günstigeren", "s": 48.107, "e": 48.64}, {"w": "Weg,", "s": 48.72, "e": 49.0}, {"w": "die", "s": 49.04, "e": 49.12}, {"w": "Röhrchen", "s": 49.2, "e": 49.52}, {"w": "abzuholen.", "s": 49.6, "e": 50.48}, {"w": "Und", "s": 50.64, "e": 50.88}, {"w": "es", "s": 51.04, "e": 51.2}, {"w": "gibt", "s": 51.24, "e": 51.36}, {"w": "Konkurrenz:", "s": 51.44, "e": 52.16}, {"w": "China", "s": 52.56, "e": 52.96}, {"w": "will", "s": 53.04, "e": 53.12}, {"w": "schon", "s": 53.2, "e": 53.36}, {"w": "zweitausendachtundzwanzig", "s": 53.44, "e": 54.88}, {"w": "eine", "s": 55.04, "e": 55.28}, {"w": "eigene", "s": 55.36, "e": 55.68}, {"w": "Mission", "s": 55.88, "e": 56.08}, {"w": "starten.", "s": 56.16, "e": 56.8}, {"w": "Wer", "s": 56.96, "e": 57.12}, {"w": "zuerst", "s": 57.2, "e": 57.76}, {"w": "Mars-Gestein", "s": 57.8, "e": 58.48}, {"w": "nach", "s": 58.533, "e": 58.64}, {"w": "Hause", "s": 58.72, "e": 58.88}, {"w": "bringt,", "s": 58.96, "e": 59.36}, {"w": "schreibt", "s": 59.44, "e": 59.76}, {"w": "Geschichte.", "s": 59.8, "e": 60.48}, {"w": "Glaubst", "s": 60.88, "e": 61.2}, {"w": "du,", "s": 61.28, "e": 61.48}, {"w": "dass", "s": 61.52, "e": 61.6}, {"w": "es", "s": 61.68, "e": 61.76}, {"w": "auf", "s": 61.84, "e": 61.92}, {"w": "dem", "s": 62.0, "e": 62.08}, {"w": "Mars", "s": 62.12, "e": 62.4}, {"w": "einmal", "s": 62.48, "e": 62.72}, {"w": "Leben", "s": 62.8, "e": 63.04}, {"w": "gab?", "s": 63.08, "e": 63.68}, {"w": "Folg", "s": 63.76, "e": 64.0}, {"w": "uns", "s": 64.12, "e": 64.24}, {"w": "für", "s": 64.32, "e": 64.4}, {"w": "mehr!", "s": 64.48, "e": 64.96}];
+      const CHUNKS = [[0.0, 4.48], [4.72, 8.0], [8.32, 13.36], [13.6, 19.28], [19.32, 22.96], [23.36, 27.0], [27.2, 31.2], [31.6, 37.32], [37.52, 42.52], [42.72, 45.72], [45.92, 50.48], [50.64, 56.8], [56.96, 60.48], [60.88, 64.96]];
+      const cap = K.captions(WORDS, CHUNKS, document.getElementById("cap-in"), 4.5, {"zweitausendeinundzwanzig": "2021", "zweitausendfünfundzwanzig": "2025", "zweitausendachtundzwanzig": "2028"});
+      const label = K.labeler(document.getElementById("lbl-in"));
+      const img = (id) => document.getElementById(id);
+      const imgsReady = Promise.all(["tex-day", "tex-night", "tex-topo"].map((id) => { const im = img(id); return im.complete ? Promise.resolve(im) : new Promise((r) => (im.onload = () => r(im))); }));
+      const E = K.setup(document.getElementById("stage"));
+      const cam = E.cam;
+      let renderAt = () => {};
+      const ready = imgsReady.then(async ([day, night, topo]) => {
+        const { Ebene, wortZeit, ORANGE, GELB, ROT, GRUEN, BLAU } = await import("./assets/analyse.js");
+        const WT = (w, ab = 0) => wortZeit(WORDS, w, ab);
+        function tex(base, w, h, seed, sc2, cover, dark = 0.55) { K.reseed(seed); const c = document.createElement("canvas"); c.width = w; c.height = h; const g = c.getContext("2d"); g.fillStyle = base; g.fillRect(0, 0, w, h);
+          g.globalCompositeOperation = "multiply"; g.globalAlpha = 0.65; g.filter = `brightness(${dark})`; g.drawImage(K.noiseCanvas(w / 2, h / 2, sc2, 6, cover, 0.3), 0, 0, w, h); g.filter = "none"; g.globalAlpha = 0.4; g.globalCompositeOperation = "screen"; g.drawImage(K.noiseCanvas(w / 2, h / 2, sc2 * 3, 5, 0.55, 0.2), 0, 0, w, h);
+          const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.wrapS = t.wrapT = THREE.RepeatWrapping; return t; }
+        // ===== Welt A: Mars aus dem All =====
+        const sp = new THREE.Scene(); K.reseed(2); K.stars(sp, 5000, -1, 3500, 2.2);
+        const mars = new THREE.Mesh(new THREE.SphereGeometry(10, 160, 160), new THREE.MeshStandardMaterial({ map: tex("#c1643a", 2048, 1024, 7, 1.6, 0.45, 0.5), roughness: 1 })); sp.add(mars);
+        const matm = new THREE.Mesh(new THREE.SphereGeometry(10.5, 96, 96), new THREE.ShaderMaterial({ transparent: true, blending: THREE.AdditiveBlending, side: THREE.BackSide, depthWrite: false,
+          vertexShader: `varying vec3 vN;varying vec3 vW;void main(){vN=normalize(mat3(modelMatrix)*normal);vec4 w=modelMatrix*vec4(position,1.);vW=w.xyz;gl_Position=projectionMatrix*viewMatrix*w;}`,
+          fragmentShader: `varying vec3 vN;varying vec3 vW;void main(){vec3 v=normalize(cameraPosition-vW);float i=pow(max(.7-dot(vN,v),0.),4.);gl_FragColor=vec4(vec3(1.,.55,.35)*i*1.4,1.);}` })); sp.add(matm);
+        const spS = new THREE.DirectionalLight(0xfff0e0, 3); spS.position.set(-30, 10, 20); sp.add(spS); sp.add(new THREE.AmbientLight(0x442a20, 0.4));
+        const EA = K.earth(sp, { day, night, topo }, 3); EA.group.position.set(60, 18, -90); EA.group.visible = false;
+        const trav = []; for (let i = 0; i < 24; i++) trav.push(K.sprite(sp, K.glowTex("rgba(255,220,150,1)"), 1.2, V(0, 0, 0), 0));
+        // ===== Welt B: Marsoberfläche =====
+        const gr = new THREE.Scene(); gr.fog = new THREE.FogExp2(0xc8906a, 0.006);
+        K.sky(gr, 0xb87a55, 0xd8a07a, 0xe8b894, 3000);
+        const gt = tex("#a85a34", 1024, 1024, 11, 6, 0.45, 0.6); gt.repeat.set(30, 30);
+        const gg = new THREE.PlaneGeometry(1200, 1200, 200, 200); const gp = gg.attributes.position; K.reseed(13);
+        for (let i = 0; i < gp.count; i++) { const x = gp.getX(i), y = gp.getY(i); gp.setZ(i, Math.sin(x * 0.03) * Math.cos(y * 0.025) * 3 + Math.sin(x * 0.11 + y * 0.07) * 0.6 + Math.max(0, Math.hypot(x + 200, y + 400) < 250 ? 0 : 0)); }
+        gg.computeVertexNormals(); const ground = new THREE.Mesh(gg, new THREE.MeshStandardMaterial({ map: gt, roughness: 1 })); ground.rotation.x = -Math.PI / 2; gr.add(ground);
+        const rockM = new THREE.MeshStandardMaterial({ map: tex("#8a4a2c", 512, 256, 17, 3, 0.45), roughness: 1 });
+        for (let i = 0; i < 160; i++) { K.reseed(200 + i); const s = 0.3 + Math.pow(K.rnd(), 3) * 3; const r = new THREE.Mesh(new THREE.DodecahedronGeometry(s, 1), rockM); r.position.set((K.rnd() - 0.5) * 160, s * 0.3, -K.rnd() * 160 + 20); r.rotation.set(K.rnd() * 3, K.rnd() * 3, 0); r.scale.y = 0.6; gr.add(r); }
+        const hills = new THREE.Mesh(new THREE.ConeGeometry(160, 40, 48), new THREE.MeshStandardMaterial({ color: 0x8a4e30, roughness: 1 })); hills.position.set(-120, 0, -320); gr.add(hills);
+        const hill2 = hills.clone(); hill2.position.set(200, -5, -380); hill2.scale.set(1.4, 0.8, 1); gr.add(hill2);
+        const gS = new THREE.DirectionalLight(0xffe2c8, 2.6); gS.position.set(-40, 50, 30); gr.add(gS); gr.add(new THREE.HemisphereLight(0xe8b894, 0x4a2a1a, 0.8));
+        // Rover
+        const rover = new THREE.Group(); gr.add(rover);
+        const wM = new THREE.MeshStandardMaterial({ color: 0xd8d8d4, roughness: 0.5, metalness: 0.4 }), dM = new THREE.MeshStandardMaterial({ color: 0x2a2a2e, roughness: 0.7 });
+        const body = new THREE.Mesh(new THREE.BoxGeometry(3, 1, 2.2), wM); body.position.y = 1.6; rover.add(body);
+        const rtg = new THREE.Mesh(new THREE.CylinderGeometry(0.35, 0.35, 1.4, 16), dM); rtg.rotation.x = 0.8; rtg.position.set(-1.7, 2.0, 0); rover.add(rtg);
+        const mast = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.08, 2, 8), wM); mast.position.set(1.1, 3, 0.6); rover.add(mast);
+        const head = new THREE.Mesh(new THREE.BoxGeometry(0.6, 0.35, 0.4), wM); head.position.set(1.1, 4, 0.6); rover.add(head);
+        const eye = new THREE.Mesh(new THREE.SphereGeometry(0.08, 8, 8), new THREE.MeshBasicMaterial({ color: 0x66ccff })); eye.position.set(1.42, 4, 0.6); rover.add(eye);
+        const wheels = []; [[-1.2, -1.25], [0, -1.25], [1.2, -1.25], [-1.2, 1.25], [0, 1.25], [1.2, 1.25]].forEach(([x, z]) => { const w = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.5, 0.4, 24), dM); w.rotation.x = Math.PI / 2; w.position.set(x, 0.5, z); rover.add(w); wheels.push(w); });
+        const arm = new THREE.Group(); arm.position.set(1.5, 1.6, 0); rover.add(arm); const a1 = new THREE.Mesh(new THREE.BoxGeometry(1.8, 0.12, 0.12), wM); a1.position.x = 0.9; arm.add(a1);
+        const drill = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.03, 0.6, 12), dM); drill.position.set(1.8, -0.3, 0); arm.add(drill);
+        // Leoparden-Stein
+        const lc = document.createElement("canvas"); lc.width = lc.height = 512; const lq = lc.getContext("2d"); lq.fillStyle = "#b05a3a"; lq.fillRect(0, 0, 512, 512); K.reseed(55);
+        for (let i = 0; i < 70; i++) { const x = K.rnd() * 512, y = K.rnd() * 512, r = 8 + K.rnd() * 20; lq.fillStyle = "#e8c8a0"; lq.beginPath(); lq.ellipse(x, y, r, r * 0.8, K.rnd() * 3, 0, 7); lq.fill(); lq.strokeStyle = "#2a1610"; lq.lineWidth = 5 + K.rnd() * 3; lq.stroke(); }
+        const lt = new THREE.CanvasTexture(lc); lt.colorSpace = THREE.SRGBColorSpace;
+        const leo = new THREE.Mesh(new THREE.DodecahedronGeometry(2.2, 2), new THREE.MeshStandardMaterial({ map: lt, roughness: 0.9 })); leo.scale.set(1.3, 0.7, 1); leo.position.set(8, 0.8, -6); gr.add(leo);
+        // Röhrchen
+        const H = (x, z) => Math.sin(x * 0.03) * Math.cos(-z * 0.025) * 3 + Math.sin(x * 0.11 - z * 0.07) * 0.6;
+        const tubes = new THREE.Group(); gr.add(tubes);
+        for (let i = 0; i < 10; i++) { const t = new THREE.Group(); const g1 = new THREE.Mesh(new THREE.CylinderGeometry(0.14, 0.14, 1.4, 24), new THREE.MeshStandardMaterial({ color: 0xe6e8ec, metalness: 0.9, roughness: 0.25 })); t.add(g1); const c1 = new THREE.Mesh(new THREE.CylinderGeometry(0.15, 0.15, 0.22, 24), new THREE.MeshStandardMaterial({ color: 0xc9a24a, metalness: 0.9, roughness: 0.3 })); c1.position.y = 0.78; t.add(c1);
+          K.reseed(300 + i); { const x = -6 + (K.rnd() - 0.5) * 4, z = -4.5 - K.rnd() * 3; t.position.set(x, H(x, z) + 0.35, z); } t.rotation.set(Math.PI / 2, 0, K.rnd() * 3); t.scale.setScalar(1.8); tubes.add(t); }
+        // Rakete für Abholung
+        const rocket = new THREE.Group(); const rb = new THREE.Mesh(new THREE.CylinderGeometry(0.8, 0.9, 7, 24), wM); rb.position.y = 3.5; rocket.add(rb); const rn = new THREE.Mesh(new THREE.ConeGeometry(0.8, 2, 24), wM); rn.position.y = 8; rocket.add(rn);
+        rocket.position.set(-14, 0, -18); gr.add(rocket); const flame = K.sprite(gr, K.glowTex("rgba(255,220,160,1)"), 4, V(-14, 0, -18), 0);
+        
+        // ===== Analyse =====
+        const A = new Ebene(document.getElementById("root"));
+        const t21 = WT("zweitausendein"), tBohr = WT("bohrt"), tStift = WT("stift"), t25 = WT("zweitausendfünf"), tLeo = WT("leopardenfell"), tErde = WT("erde", 27), tNasa = WT("nasa", 31), tProb = WT("problem"), tLab = WT("labor"), tAlt = WT("alte"), tStopp = WT("gestoppt"), tNeu = WT("jetzt", 45), tChina = WT("china"), t28 = WT("zweitausendacht"), tGesch = WT("geschichte"), tGlaub = WT("glaubst");
+        A.logo("assets/logos/nasa.svg", 90, 560, 300, 240, { t0: t21 - 0.3, t1: 13.4, rot: -4 });
+        A.karte("Perseverance", 450, 560, 540, 300, { t0: t21 - 0.2, t1: 13.4, unter: "AUF DEM MARS SEIT" });
+        A.zahl(720, 770, { von: 2000, bis: 2021, t0: t21 + 0.4, t1: 13.4, dauer: 1.2, fmt: (v) => String(Math.round(v)), farbe: GELB });
+        A.hand("so groß wie ein Auto", 540, 1250, { t0: t21 + 2.0, t1: 13.4, size: 56, farbe: "#fff" });
+        A.hand("bohrt ↓", 330, 760, { t0: tBohr, t1: tStift - 2.5, size: 70, farbe: GELB });
+        const tubeHtml = Array.from({ length: 6 }, (_, i) => `<div style="position:absolute;left:${70 + i * 115}px;top:120px;width:46px;height:250px;border-radius:23px 23px 10px 10px;background:linear-gradient(90deg,#9aa0a8,#f4f6f8 45%,#b8bec6);box-shadow:0 0 18px rgba(255,255,255,.25)"><div style="position:absolute;left:-4px;top:-8px;width:54px;height:40px;border-radius:10px;background:linear-gradient(90deg,#a07a2a,#f2d27a,#a07a2a)"></div><div style="position:absolute;left:8px;bottom:12px;width:30px;height:${80 + (i * 37) % 90}px;border-radius:6px;background:${["#a85a34", "#8a4a2c", "#c07048"][i % 3]}"></div></div>`).join("");
+        A.karte("Proben-Röhrchen", 120, 560, 840, 480, { t0: tStift - 2.4, t1: 19.3, unter: "JE ETWA SO GROSS WIE EIN STIFT", html: tubeHtml });
+        A.hand("✏️ ≈ gleich groß", 540, 1110, { t0: tStift, t1: 19.3, size: 60, farbe: GELB });
+        A.stempel("2025", 300, 600, { t0: t25, t1: 23.0, rot: -8, farbe: GELB }); A.hand("„Sapphire Canyon“", 650, 620, { t0: t25 + 0.6, t1: 23.0, size: 60, farbe: "#fff" });
+        A.kreis(540, 980, 300, 170, { t0: tLeo - 0.6, t1: 27.0 }); A.hand("Leopardenflecken 🐆", 540, 760, { t0: tLeo - 0.2, t1: 27.0, size: 72, farbe: GELB });
+        A.karte("Auf der Erde", 120, 540, 840, 420, { t0: tErde - 0.2, t1: 31.2, unter: "SOLCHE MUSTER ENTSTEHEN OFT DURCH" });
+        A.hand("🦠 winzige Lebewesen", 540, 770, { t0: tErde + 0.4, t1: 31.2, size: 76, farbe: GRUEN }); A.hand("(Mikroben)", 540, 870, { t0: tErde + 0.9, t1: 31.2, size: 52, farbe: "#fff" });
+        A.logo("assets/logos/nasa.svg", 390, 540, 300, 240, { t0: tNasa - 0.2, t1: 37.3 });
+        A.stempel("DEUTLICHSTER HINWEIS", 540, 880, { t0: tNasa + 1.2, t1: 37.3, rot: -6, farbe: GRUEN }); A.hand("…auf früheres Leben?", 540, 1010, { t0: tNasa + 2.4, t1: 37.3, size: 60, farbe: GELB });
+        A.karte("Der Weg ins Labor", 90, 520, 900, 660, { t0: tProb - 0.2, t1: 42.5, unter: "MARS → ERDE" });
+        A.hand("🔴 Mars", 270, 760, { t0: tProb + 0.4, t1: 42.5, size: 72, farbe: "#ff8a5a" }); A.hand("🌍 Erde", 810, 760, { t0: tProb + 0.6, t1: 42.5, size: 72, farbe: BLAU });
+        A.pfeil(380, 760, 690, 760, { t0: tLab - 0.6, t1: 42.5, bogen: 0.15, farbe: GELB }); A.hand("🔬 Labor", 810, 920, { t0: tLab, t1: 42.5, size: 64, farbe: "#fff" });
+        A.hand("über 300 Mio. km", 540, 1080, { t0: tLab + 0.6, t1: 42.5, size: 52, farbe: GELB });
+        A.karte("Alter Plan", 160, 560, 760, 420, { t0: tAlt - 0.2, t1: 45.7, unter: "MARS SAMPLE RETURN" }); A.hand("💸 zu teuer", 540, 790, { t0: tAlt + 0.5, t1: 45.7, size: 80, farbe: ROT });
+        A.stempel("GESTOPPT", 540, 900, { t0: tStopp, t1: 45.7, rot: -10, farbe: ROT });
+        A.zettel("Neuer Plan<br>gesucht! 🔎", 540, 760, { t0: tNeu + 0.3, t1: 50.5, rot: -4, size: 66 }); A.hand("günstiger", 540, 950, { t0: tNeu + 2.2, t1: 50.5, size: 60, farbe: GRUEN });
+        A.karte("Das Rennen zum Mars", 100, 520, 880, 640, { t0: tChina - 0.3, t1: 56.8, unter: "WER BRINGT ZUERST GESTEIN?" });
+        A.hand("🇺🇸 NASA", 300, 720, { t0: tChina, t1: 56.8, size: 64, farbe: "#fff" }); A.hand("neuer Plan offen", 300, 810, { t0: tChina + 0.2, t1: 56.8, size: 44, farbe: GELB });
+        A.hand("🇨🇳 China", 780, 720, { t0: tChina + 0.5, t1: 56.8, size: 64, farbe: "#fff" }); A.hand("Start 2028", 780, 810, { t0: t28, t1: 56.8, size: 52, farbe: ROT });
+        A.stempel("VS.", 540, 760, { t0: tChina + 0.8, t1: 56.8, rot: 0, farbe: GELB });
+        A.stempel("GESCHICHTE!", 540, 760, { t0: tGesch - 0.4, t1: 60.5, rot: -6, farbe: GELB });
+        A.zettel("Gab es Leben? 👽<br>Ja / Nein 👇", 540, 760, { t0: tGlaub, t1: 65.3, rot: -4, size: 62 });
+        
+        renderAt = (t) => {
+          label(""); E.look([1.06, 0.98, 0.92], [0.01, 0.006, 0.004], 0.45, 0.86); E.grade.uniforms.flash.value = 0;
+          let scene = gr; flame.material.opacity = 0; rocket.visible = t >= 45.9 && t < 50.6;
+          mars.rotation.y = t * 0.03; rover.position.set(0, 0, 0); rover.rotation.y = 0.4; arm.rotation.z = 0;
+          wheels.forEach((w) => (w.rotation.y = 0));
+          if (t < 8.3 || (t >= 42.7 && t < 45.9) || (t >= 50.6 && t < 57)) {
+            scene = sp; EA.group.visible = t >= 50.6; trav.forEach((s) => (s.material.opacity = 0));
+            if (t < 8.3) { const f = K.eout(prog(t, 0, 8.3)); cam.position.set(lerp(-10, 4, f), 4, lerp(60, 30, f)); cam.lookAt(0, 0, 0); }
+            else if (t < 45.9) { cam.position.set(-6, 10, 34); cam.lookAt(0, 0, 0); }
+            else { cam.position.set(20, 14, 60); cam.lookAt(28, 8, -40); trav.forEach((s, i) => { const k = ((t * 0.25 + i / 24) % 1); s.position.copy(V(0, 0, 0).lerp(V(60, 18, -90), k)); s.material.opacity = 0.8 * Math.sin(k * Math.PI); }); }
+          } else if (t < 19.3) {
+            const f = prog(t, 8.3, 11); rover.position.set(lerp(-6, 0, prog(t, 8.3, 5)), 0, 0); wheels.forEach((w) => (w.rotation.y = -t * 2));
+            arm.rotation.z = t > 13.6 ? -0.35 + Math.sin(t * 2) * 0.05 : 0;
+            cam.position.set(lerp(12, 8, f), lerp(5, 3.6, f), lerp(14, 9, f)); cam.lookAt(0.5, 1.6, 0);
+            
+          } else if (t < 31.2) {
+            const f = prog(t, 19.3, 12); cam.position.set(lerp(18, 15, f), lerp(7, 5.5, f), lerp(4, 1, f)); cam.lookAt(8, 0.6, -6); rover.position.set(3, 0, -3); rover.rotation.y = -0.6;
+          } else if (t < 42.7) { cam.position.set(-2, 5, 10); cam.lookAt(-6, 0.3, -6); rover.position.set(6, 0, -10); }
+          else if (t < 50.6) { const k = prog(t, 47, 3.6); rocket.position.y = k * k * 60; flame.position.set(-14, rocket.position.y - 0.5, -18); flame.material.opacity = k > 0 ? 1 : 0; flame.scale.setScalar(4 + Math.sin(t * 30) * 0.4); cam.position.set(6, 6, 22); cam.lookAt(-14, 6 + rocket.position.y * 0.6, -18); }
+          else { const f = prog(t, 57, 11); cam.position.set(lerp(10, 14, f), lerp(5, 7, f), lerp(14, 20, f)); cam.lookAt(0, 2, 0); }
+          E.render(scene, t); A.update(t); cap(t);
+        };
+        renderAt(lastT);
+      });
+      window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady || {}; window.__hf.buildReady.scene = ready;
+      let lastT = 0;
+      window.addEventListener("hf-seek", (e) => { lastT = e.detail.time; renderAt(lastT); });
+    </script>
+  </body>
+</html>
