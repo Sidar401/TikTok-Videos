@@ -166,3 +166,8 @@ Referenz = `videos/anthropic-boersengang/` (Render `renders/anthropic-boersengan
 - USA → „Amerika“ / „amerikanisch“ (NICHT „U-Es-A“, das klingt wie „You SA“)
 - Dezimalzahlen mit eins: „eins Komma sieben“ (NICHT „ein Komma sieben“)
 - Fotos echter Personen: nur Personen des öffentlichen Lebens mit freiem Foto (Wikimedia Commons, Lizenz + Quelle klein einblenden); Privatpersonen/Verdächtige nie, nur Silhouette.
+
+## 📈 Börsen-Laufband IMMER (Nutzer 12.11.: Anthropic-Video 8.509 Aufrufe + Bitcoin-Video – beide hatten das Laufband)
+Jedes Finanz-Video (Short + Longform) bekommt ein dauerhaftes Börsen-Laufband über die ganze Länge:
+`SZENEN.append(laufband_szene([("NVDA ▼ −13 %", ROT), ("DAX ▲ 27.000", GRUEN), ...], DAUER))` (scripts/analyse_kit.py).
+Nur echte, geprüfte Werte zum Thema des Videos (Kürzel + Pfeil + Zahl), grün/rot. Bei Themen ohne Börsenbezug: passende Kennzahlen (z. B. „Inflation 2,8 %“, „Leitzins 2,5 %“).
