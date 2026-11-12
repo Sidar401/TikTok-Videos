@@ -181,6 +181,6 @@ Nur echte, geprüfte Werte zum Thema des Videos (Kürzel + Pfeil + Zahl), grün/
 
 ## Aussprache-Wörterbuch AKTIV (12.11.)
 ElevenLabs-Wörterbuch „HundeFinanzTv-Aussprache“ (brand/aussprache.json) wird von scripts/stimme.py automatisch mitgeschickt:
-ETF → Eh-Teh-Eff, ETFs → Eh-Teh-Effs, MSCI → Em-Es-Si-Ai, USA → Amerika, AMD → Ah-Em-De.
+ETF → E-T-F, ETFs → E-T-Fs (Nutzer-Hörprobe 12.11.: „E-T-F“ und „Eh Teh Eff“ gut, „Eh-Teh-Eff“ schrecklich), MSCI → Em-Es-Si-Ai, USA → Amerika, AMD → Ah-Em-De.
 Im sprechtext diese Abkürzungen deshalb NORMAL schreiben (ETF, MSCI World, AMD) – keine Lautschrift mehr dafür.
 Neue Wörter: Regel per API ergänzen (pronunciation-dictionaries/{id}/add-rules), dann kurze Hörprobe an den Nutzer.
