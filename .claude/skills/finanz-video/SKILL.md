@@ -184,3 +184,7 @@ ElevenLabs-Wörterbuch „HundeFinanzTv-Aussprache“ (brand/aussprache.json) wi
 ETF → E-T-F, ETFs → E-T-Fs (Nutzer-Hörprobe 12.11.: „E-T-F“ und „Eh Teh Eff“ gut, „Eh-Teh-Eff“ schrecklich), MSCI → Em-Es-Si-Ai, USA → Amerika, AMD → Ah-Em-De.
 Im sprechtext diese Abkürzungen deshalb NORMAL schreiben (ETF, MSCI World, AMD) – keine Lautschrift mehr dafür.
 Neue Wörter: Regel per API ergänzen (pronunciation-dictionaries/{id}/add-rules), dann kurze Hörprobe an den Nutzer.
+
+### 10 neue Börsen-/Nachrichten-Sounds (12.11.)
+`boersenglocke` (Handelsstart), `eilmeldung` (Breaking News, Hook), `kamera-blitz` (Pressefoto/Person), `ticker-rauschen` (leise unter Laufband/Chart),
+`handschlag` (Deal/Nachfolger), `tuer-zu` (Rücktritt/Aus), `koffer-klick` (Job/Manager), `zeitung` (Bericht/Meldung), `hammer` (Gericht/Urteil/Ermittlung), `crash-bass` (Kurssturz).

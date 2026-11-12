@@ -46,6 +46,16 @@ SOUNDS = {
     "tippen": ("Fast typing on a modern keyboard, short burst of keystrokes, close-up", 1.2),
     "blase-platzt": ("Bubble bursting with a loud pop, cartoon balloon explosion sound effect, punchy and loud", 1.0),
     "glitch": ("Short digital glitch stutter sound, electronic distortion burst, modern", 0.6),
+    "boersenglocke": ("Stock exchange opening bell ringing, loud brass bell ring, trading floor start, short", 1.5),
+    "eilmeldung": ("Breaking news TV sting, short dramatic news alert jingle, synth hit, no voice", 1.5),
+    "kamera-blitz": ("Press camera shutter with flash pop, several quick paparazzi photos, close-up", 1.0),
+    "ticker-rauschen": ("Soft electronic stock ticker data stream, quiet digital beeps and blips scrolling", 2.0),
+    "handschlag": ("Loud firm handshake, palms slapping together hard, then grip and leather glove squeeze, close microphone, punchy", 1.0),
+    "tuer-zu": ("Heavy office door slamming shut, solid thud, dramatic", 0.8),
+    "koffer-klick": ("Briefcase latches clicking open, two metallic clicks, close-up", 0.6),
+    "zeitung": ("Newspaper pages turning and rustling quickly, close-up", 1.0),
+    "hammer": ("Judge gavel hitting the sound block twice, wooden knock, courtroom", 0.8),
+    "crash-bass": ("Deep sub bass drop for a market crash, falling low boom, cinematic, short", 1.5),
 }
 
 

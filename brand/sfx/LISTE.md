@@ -70,3 +70,15 @@ Hörprobe: `renders/sfx-hoerprobe.mp3` (Zeit = Stelle in der Hörprobe).
 - `nv-tippen` – fast keyboard typing, short burst
 - `nv-sog` – reverse cymbal swell sucking in, builds tension then stops
 - `nv-publikum-lachen` – small audience laughing briefly, friendly
+
+## Neu 12.11. (Börse/Nachrichten)
+- `boersenglocke`
+- `eilmeldung`
+- `kamera-blitz`
+- `ticker-rauschen`
+- `handschlag`
+- `tuer-zu`
+- `koffer-klick`
+- `zeitung`
+- `hammer`
+- `crash-bass`
