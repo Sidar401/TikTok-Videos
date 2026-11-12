@@ -10,6 +10,7 @@ Aktien-Raster, Server-Racks, Ablauf-Kästen, Stempel.
   JS: draw("#id-p", t, dauer) zeichnet Pfeile/Kreise; pop/slam wie gewohnt; kit-eigene JS-Helfer stehen bei der Funktion.
 Koordinaten: 1080×1920. Freie Bildfläche (9:16) ca. y 420–1300 (darüber Logo/Name, darunter Untertitel).
 """
+import json
 import math
 import shutil
 from pathlib import Path
@@ -368,3 +369,23 @@ def wechsel_js(sid, a, art=0):
 
 def zoom_js(sel, a, dauer=2.0, bis=1.08):
     return f' tl.fromTo("{sel}", {{ scale: 1 }}, {{ scale: {bis}, duration: {dauer}, ease: "sine.inOut", immediateRender: false }}, {a});'
+
+
+HG_GRADING = None  # wird aus brand/hintergruende/grading.json gelesen (von `hyperframes media-treatment` erzeugt)
+
+
+def hintergrund_foto(id_, key):
+    """Echtes Foto (freie Lizenz, brand/hintergruende/<key>.jpg) als Szenen-Hintergrund: ganzes Bild, abgedunkelt per Media-Treatment
+    (data-color-grading), langsamer Zoom. Quelle klein oben rechts. kit_hg(HERE, [keys]) vorher aufrufen."""
+    q = json.loads((WURZEL / "brand/hintergruende/quellen.json").read_text()).get(f"{key}.jpg", {})
+    g = (WURZEL / "brand/hintergruende/grading.json")
+    attr = f" data-color-grading='{g.read_text().strip()}'" if g.exists() else ""
+    return (f'<img id="{id_}" class="hgfoto" src="assets/hg/{key}.jpg" alt=""{attr} style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/>'
+            f'<div class="mono" style="position:absolute;right:70px;top:466px;font-size:18px;color:#ffffffaa;text-shadow:0 2px 6px #000;z-index:7">{q.get("einblenden", "")[:60]}</div>')
+
+
+def kit_hg(here, keys):
+    d = Path(here) / "assets/hg"
+    d.mkdir(parents=True, exist_ok=True)
+    for k in keys:
+        shutil.copy(WURZEL / "brand/hintergruende" / f"{k}.jpg", d / f"{k}.jpg")
