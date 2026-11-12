@@ -171,3 +171,10 @@ Referenz = `videos/anthropic-boersengang/` (Render `renders/anthropic-boersengan
 NICHT bei jedem Video (Nutzer 12.11.: „sonst nicht professionell“) – NUR bei Börsen-/Aktien-/Krypto-Themen mit echten Kursbewegungen (z. B. Nvidia, Bitcoin, DAX, Börsengang). Dann ein dauerhaftes Börsen-Laufband über die ganze Länge – GROSS wie im Bitcoin-Video (Nutzer-Screenshot 12.11.): direkt über den Untertiteln (top 1200, 90 px hoch, Schrift 48 px, Mono). Szenen-Inhalte deshalb nur bis y ≈ 1180 planen:
 `SZENEN.append(laufband_szene([("NVDA ▼ −13 %", ROT), ("DAX ▲ 27.000", GRUEN), ...], DAUER))` (scripts/analyse_kit.py).
 Nur echte, geprüfte Werte zum Thema des Videos (Kürzel + Pfeil + Zahl), grün/rot. Bei Verbraucher-Themen (Schufa, Weihnachtsgeld, Krankenkasse …) KEIN Laufband.
+
+## Logos + Fotos wie Eulen-Kanal (Nutzer 12.11.: „Logos immer noch falsch“, „Bilder der Personen sollen da sein“)
+- Logos IMMER komplett mit Symbol (z. B. Nvidia = grünes Auge + Schriftzug, Broadcom = rotes Symbol), GROSS, frei auf dem Hintergrund
+  (bei dunklen Logos heller Glow statt weißer Karte), daneben ein Kurs-Schild (z. B. „−13 %“ rot / „+5 %“ grün). Nur Schriftzug = falsch.
+- Fotos echter Personen GROSS und rechteckig wie Nachrichtenbild, mit kleiner Quellenzeile. Nur freie Lizenzen (Wikimedia Commons CC/PD,
+  offizielle Regierungsporträts); keine Pressefotos (Reuters/Getty/AP). Commons-API sparsam (Rate-Limit) – Fotos früh im Ablauf holen.
+- ETF/MSCI: ElevenLabs-Aussprache-Wörterbuch nutzen (Schreibweise allein reicht nicht, v4 variiert); ETF-Sätze vom Nutzer gegenhören lassen.
