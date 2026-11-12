@@ -199,3 +199,9 @@ Vorbild: videos/demo-news-nvidia + demo-news-dax (renders/*-v2.mp4). Bausteine i
 - `quelle()` Quellen-/Zeitzeile unter Zahlen; `vergleich()` zwei Karten nebeneinander.
 - Börsen-Laufband nur bei Börsen-Themen. Achtung: Element-IDs nie „z<Zahl>“ (kollidiert mit Szenen-IDs).
 Nutzer: „irgendwas fehlt noch“ – weiter testen und nachfragen.
+
+## 🖼️ Echte Hintergrundfotos = Standard bis Higgsfield (Nutzer 12.11.)
+Vorbild: videos/demo-news-nvidia-foto + demo-news-dax-foto. Pro Szene `hintergrund_foto(f"bg{i}", key)` + `zoom_js("#bg{i}", a, d, 1.12)`,
+Fotos aus brand/hintergruende/ (freie Lizenz, quellen.json, Abdunkeln über grading.json = Media-Treatment). Fehlt ein Motiv:
+ähnliches Foto oder `hintergrund()`-Strichzeichnung. Foto-Sammlung nach und nach erweitern (/tmp/claude-0/tt/hgsuche/suche.py-Muster, langsam wegen Rate-Limit).
+Später (Higgsfield wieder da): einmalig ~20 dunkle KI-Hintergründe wie beim Eulen-Kanal, nur Dark Glow.
