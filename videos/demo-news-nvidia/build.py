@@ -8,7 +8,7 @@ from pathlib import Path
 HERE = Path(__file__).parent
 W = HERE.parent.parent
 sys.path.insert(0, str(W / "scripts"))
-from analyse_kit import (GELB, GRAU, GRUEN, KIT_CSS, KIT_JS, NEWS_JS, OR, ROT, foto_gross, hand, icon_gross, kalender, kit_assets, kreis,  # noqa: E402
+from analyse_kit import (hintergrund, quelle, vergleich, wechsel_js, zoom_js, GELB, GRAU, GRUEN, KIT_CSS, KIT_JS, NEWS_JS, OR, ROT, foto_gross, hand, icon_gross, kalender, kit_assets, kreis,  # noqa: E402
                          laufband_szene, linie, marke, news_kopf, person, stempel, titel_zeile, zettel)
 from glow_short import build, chip, t  # noqa: E402
 from musik import beat  # noqa: E402
@@ -26,15 +26,18 @@ def text(id_, s):
     return t(id_, s, 1330, 72).replace('style="top:', 'style="z-index:6;top:', 1)
 
 
+HG = ['skyline', 'skyline', 'buero', 'saal', 'saal', 'boerse', 'boerse', 'buero', 'skyline', 'buero', 'boerse', 'skyline']
+
+
 def szene(i, html, js, sfx=()):
     a = round(i * D, 2)
-    SZ.append((a, round(a + D, 2), html, js))
+    SZ.append((a, round(a + D, 2), hintergrund(HG[i]) + html, (lambda j, k: lambda a, d: j(a, d) + (wechsel_js(f"z{k}", a, k) if k else ""))(js, i)))
     SFX.extend((a + dt, s) for dt, s in sfx)
 
 
 szene(0, KIT_CSS + titel_zeile("t0", "⚡ Eilmeldung", farbe=ROT) + foto_gross("f0", "assets/fotos/jensen-huang.jpg", 290, 590, 500, 560, "Foto: Peter Dasilva · CC BY 4.0", NV)
       + stempel("s0", "RAUS!", 420, 960, ROT, 110, -10) + text("x0", "Jensen Huang ist raus"),
-      lambda a, d: KIT_JS + " " + NEWS_JS + f' pop("#t0", {a}); pop("#f0", {a} + 0.15); flash({a} + 0.15, 0.6); stempeln("#s0", {a} + 0.9); pop("#x0", {a} + 0.3);',
+      lambda a, d: KIT_JS + " " + NEWS_JS + f' pop("#t0", {a}); pop("#f0", {a} + 0.15); flash({a} + 0.15, 0.6); stempeln("#s0", {a} + 0.9); pop("#x0", {a} + 0.3);' + zoom_js("#f0", a + 0.4, 2.0, 1.05),
       [(0, "eilmeldung"), (0.15, "kamera-blitz"), (0.9, "stempel")])
 szene(1, titel_zeile("t1", "33 Jahre Chef") + marke("m1", "nvidia", 0, 610, 130, wortmarke="nvidia", mitte=True)
       + kalender("k1a", "START", "1993", 150, 830, 240, NV) + kalender("k1b", "ENDE", "2026", 690, 830, 240, ROT) + text("x1", "seit der Gründung 1993"),
@@ -46,22 +49,23 @@ szene(2, titel_zeile("t2", "Rücktritt – sofort") + icon_gross("i2", "🚪", 0
 szene(3, titel_zeile("t3", "Neue Chefin (Interim)") + icon_gross("i3", "🤝", 120, 640, 170) + foto_gross("f3", "assets/fotos/colette-kress.jpg", 420, 600, 460, 520, "Foto: SiliconANGLE theCUBE · CC BY 3.0", "#4d8ff0")
       + text("x3", "Colette Kress übernimmt"),
       lambda a, d: f'pop("#t3", {a}); pop("#i3", {a} + 0.2); pop("#f3", {a} + 0.4); pop("#x3", {a} + 0.3);', [(0, "swipe"), (0.2, "handschlag"), (0.4, "kamera-blitz")])
-szene(4, titel_zeile("t4", "Zum 1. Mal: Vorsitzender", gr=52) + person("p4", "Harvey Jones", "Ex-Chef Synopsys", 330, 610, 420, GELB) + text("x4", "Jones leitet den Rat"),
-      lambda a, d: f'pop("#t4", {a}); pop("#p4", {a} + 0.3); pop("#x4", {a} + 0.3);', [(0, "whoosh-schnell"), (0.3, "koffer-klick")])
+szene(4, titel_zeile("t4", "Wie er geht") + vergleich("v4", "OFFIZIELL", "Rücktritt", "LAUT BERICHTEN", "gedrängt") + quelle("q4", "Nvidia-Mitteilung · Medienberichte · 12.11.", 970)
+      + text("x4", "freiwillig – oder nicht?"),
+      lambda a, d: f'pop("#t4", {a}); pop("#v4-l", {a} + 0.2); pop("#v4-r", {a} + 0.7); pop("#q4", {a} + 1.0); pop("#x4", {a} + 0.3);', [(0, "zeitung"), (0.7, "nv-falsch-buzzer")])
 szene(5, titel_zeile("t5", "Aktie vorbörslich") + marke("m5", "nvidia", 0, 700, 150, wortmarke="nvidia", mitte=True) + t("n5", "−13 %", 900, 220, "glow-r")
-      + text("x5", "Absturz vor Börsenstart"),
-      lambda a, d: f'pop("#t5", {a}); pop("#m5", {a} + 0.2); slam("#n5", {a} + 0.7); shake("#m5", {a} + 0.7); pop("#x5", {a} + 0.3);', [(0, "whoosh-weich"), (0.7, "crash-bass")])
+      + quelle("q5", "vorbörslich · 12.11.2026", 1150) + text("x5", "Absturz vor Börsenstart"),
+      lambda a, d: f'pop("#t5", {a}); pop("#m5", {a} + 0.2); slam("#n5", {a} + 0.7); shake("#m5", {a} + 0.7); pop("#q5", {a} + 1.0);' + zoom_js("#n5", a + 1.0, 1.4) + f' pop("#x5", {a} + 0.3);', [(0, "whoosh-weich"), (0.7, "crash-bass")])
 KURS = linie("ku", [0.6, 0.8, 0.97, 0.88, 0.74, 0.6, 0.42, 0.2, 0.06], 150, 700, 780, 400, ROT, punkte=[(2, "239 $"), (8, "< 155 $")]).replace("", "")
-szene(6, titel_zeile("t6", "Seit Oktober: −37 %") + KURS + kreis("ku-k", 880, 1080, 120, 80, GELB, 6) + text("x6", "über 1/3 weniger wert"),
-      lambda a, d: f'pop("#t6", {a}); draw("#ku-p", {a} + 0.2, 1.2); pop("#ku-w0", {a} + 0.6); pop("#ku-w1", {a} + 1.4); draw("#ku-k-p", {a} + 1.6, 0.4); pop("#x6", {a} + 0.3);',
+szene(6, titel_zeile("t6", "Seit Oktober: −37 %") + KURS + kreis("ku-k", 880, 1080, 120, 80, GELB, 6) + quelle("q6", "Rekord-Schluss 6.10. · vorbörslich 12.11.", 600) + text("x6", "über 1/3 weniger wert"),
+      lambda a, d: f'pop("#t6", {a}); draw("#ku-p", {a} + 0.2, 1.2); pop("#ku-w0", {a} + 0.6); pop("#ku-w1", {a} + 1.4); draw("#ku-k-p", {a} + 1.6, 0.4); pop("#q6", {a} + 0.4); pop("#x6", {a} + 0.3);',
       [(0, "ticker-rauschen"), (0.2, "kurve-runter")])
 BAL = (f'<div id="b7a" style="position:absolute;left:220px;top:{1150 - 480}px;width:240px;height:480px;border-radius:16px 16px 4px 4px;background:linear-gradient(180deg,{NV},{NV}88);transform-origin:50% 100%;z-index:3"></div>'
        f'<div id="b7b" style="position:absolute;left:620px;top:{1150 - 240}px;width:240px;height:240px;border-radius:16px 16px 4px 4px;background:linear-gradient(180deg,{ROT},{ROT}88);transform-origin:50% 100%;z-index:3"></div>'
        f'<div class="mono" style="position:absolute;left:140px;width:400px;top:610px;text-align:center;font-size:56px;color:{NV};z-index:5">400 $</div>'
        f'<div class="mono" style="position:absolute;left:540px;width:400px;top:850px;text-align:center;font-size:56px;color:{ROT};z-index:5">200 $</div>')
-szene(7, titel_zeile("t7", "Kursziel halbiert") + BAL + stempel("s7", "BERNSTEIN", 560, 640, OR, 50, 8) + text("x7", "Analysten werden skeptisch"),
+szene(7, titel_zeile("t7", "Kursziel halbiert") + BAL + stempel("s7", "BERNSTEIN", 560, 640, OR, 50, 8) + quelle("q7", "Kursziel · Bernstein · 12.11.", 1165) + text("x7", "Analysten werden skeptisch"),
       lambda a, d: (f'pop("#t7", {a}); tl.fromTo("#b7a", {{ scaleY: 0 }}, {{ scaleY: 1, duration: 0.4 }}, {a} + 0.2); tl.fromTo("#b7b", {{ scaleY: 0 }}, {{ scaleY: 1, duration: 0.4 }}, {a} + 0.7);'
-                    f' stempeln("#s7", {a} + 1.2); pop("#x7", {a} + 0.3);'), [(0, "zeitung"), (1.2, "hammer")])
+                    f' stempeln("#s7", {a} + 1.2); pop("#q7", {a} + 1.3); pop("#x7", {a} + 0.3);'), [(0, "zeitung"), (1.2, "hammer")])
 szene(8, titel_zeile("t8", "Die Gewinner") + marke("m8a", "-", 0, 640, 120, wortmarke="amd", schild="▲", mitte=True) + marke("m8b", "broadcom", 0, 860, 120, text="BROADCOM", schild="▲", mitte=True)
       + text("x8", "Konkurrenz legt zu"),
       lambda a, d: f'pop("#t8", {a}); pop("#m8a", {a} + 0.2); pop("#m8b", {a} + 0.6); pop("#x8", {a} + 0.3);', [(0, "swipe"), (0.2, "kurve-hoch"), (0.6, "pop")])

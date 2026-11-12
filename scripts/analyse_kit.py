@@ -298,16 +298,14 @@ def marke(id_, name, x, y, hoehe=130, wortmarke=None, text=None, schild=None, sc
 
 
 def news_kopf(datum, top=392):
-    """Fester Nachrichten-Kopf „● LIVE  HundeFinanzTv NEWS · Datum“ (als Szene über die ganze Länge)."""
-    return (f'<div id="nk" style="position:absolute;left:60px;top:{top}px;width:960px;height:58px;display:flex;align-items:center;gap:18px;z-index:8">'
-            f'<span id="nk-l" style="display:inline-flex;align-items:center;gap:10px;padding:6px 16px;border-radius:10px;background:{ROT};color:#fff;font-weight:900;font-size:28px">'
-            f'<span style="width:14px;height:14px;border-radius:50%;background:#fff"></span>LIVE</span>'
-            f'<span style="font-weight:900;font-size:32px;color:#fff;letter-spacing:2px">HundeFinanzTv <span style="color:{OR}">NEWS</span></span>'
-            f'<span class="mono" style="margin-left:auto;font-size:28px;color:#ffffffaa">{datum}</span></div>'
+    """Nachrichten-Kopf: links „NEWS“, rechts Datum (Nutzer 12.11.: ohne LIVE, ohne Kanalname)."""
+    return (f'<div id="nk" style="position:absolute;left:60px;top:{top}px;width:960px;height:58px;display:flex;align-items:center;z-index:8">'
+            f'<span id="nk-l" style="display:inline-block;padding:4px 20px;border-radius:10px;background:{OR};color:#111;font-weight:900;font-size:32px;letter-spacing:4px">NEWS</span>'
+            f'<span class="mono" style="margin-left:auto;font-size:30px;color:#ffffffcc">{datum}</span></div>'
             f'<div style="position:absolute;left:60px;top:{top + 64}px;width:960px;height:3px;background:linear-gradient(90deg,{OR},transparent);z-index:8"></div>')
 
 
-NEWS_JS = 'tl.fromTo("#nk-l", { opacity: 1 }, { opacity: 0.35, duration: 0.6, yoyo: true, repeat: -1, ease: "sine.inOut" }, 0);'
+NEWS_JS = ""
 
 
 def titel_zeile(id_, text, top=490, farbe="#fff", gr=62):
@@ -327,3 +325,46 @@ def foto_gross(id_, datei, x, y, w, h, credit="", farbe=OR):
 def icon_gross(id_, emoji, x, y, gr=260, glow=OR, mitte=False):
     pos = f"left:0;width:1080px;text-align:center" if mitte else f"left:{x}px"
     return f'<div id="{id_}" style="position:absolute;{pos};top:{y}px;font-size:{gr}px;line-height:1;z-index:4;filter:drop-shadow(0 0 40px {glow}aa)">{emoji}</div>'
+
+
+
+def quelle(id_, text, y, x=None):
+    """Kleine Quellen-/Zeitzeile unter Zahlen, z. B. „vorbörslich · 15:15 Uhr“."""
+    pos = f"left:{x}px" if x is not None else "left:0;width:1080px;text-align:center"
+    return f'<div id="{id_}" class="mono" style="position:absolute;{pos};top:{y}px;font-size:28px;color:#ffffff99;letter-spacing:1px;z-index:5">{text}</div>'
+
+
+def vergleich(id_, kopf_l, text_l, kopf_r, text_r, farbe_l=GRUEN, farbe_r=ROT, y=600, h=330):
+    """Zwei Vergleichs-Karten nebeneinander (wie „Offiziell“ vs. „Laut Bloomberg“)."""
+    def k(s, kopf, txt, x, f):
+        return (f'<div id="{id_}-{s}" style="position:absolute;left:{x}px;top:{y}px;width:440px;height:{h}px;border-radius:28px;background:#14181bee;border:5px solid {f};'
+                f'box-shadow:0 0 50px {f}55;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;z-index:4">'
+                f'<div class="mono" style="font-size:30px;color:{f};letter-spacing:2px">{kopf}</div><div style="font-weight:900;font-size:58px;color:#fff;line-height:1.05">{txt}</div></div>')
+    return k("l", kopf_l, text_l, 70, farbe_l) + k("r", kopf_r, text_r, 570, farbe_r)
+
+
+def hintergrund(art, farbe="#ffffff"):
+    """Dezenter, selbst gezeichneter Szenen-Hintergrund (Bereich y 450–1180): boerse | skyline | saal | buero."""
+    st = f'fill="none" stroke="{farbe}" stroke-width="5" stroke-linejoin="round"'
+    if art == "boerse":
+        sv = (f'<path d="M140 640 L540 470 L940 640 Z" {st}/><rect x="160" y="650" width="760" height="40" {st}/>'
+              + "".join(f'<rect x="{200 + i * 140}" y="700" width="60" height="380" rx="8" {st}/>' for i in range(6)) + f'<rect x="120" y="1090" width="840" height="50" {st}/>')
+    elif art == "skyline":
+        hs = [380, 520, 300, 600, 420, 480, 340, 560]
+        sv = "".join(f'<rect x="{90 + i * 115}" y="{1140 - h}" width="95" height="{h}" {st}/>' + "".join(f'<rect x="{110 + i * 115}" y="{1160 - h + k * 60}" width="20" height="26" fill="{farbe}" opacity="0.6"/><rect x="{145 + i * 115}" y="{1160 - h + k * 60}" width="20" height="26" fill="{farbe}" opacity="0.6"/>' for k in range(h // 60 - 1)) for i, h in enumerate(hs))
+    elif art == "saal":
+        sv = (f'<ellipse cx="540" cy="880" rx="380" ry="120" {st}/>' + "".join(f'<rect x="{540 + 470 * __import__("math").cos(a) - 30:.0f}" y="{880 + 170 * __import__("math").sin(a) - 30:.0f}" width="60" height="60" rx="14" {st}/>'
+                                                                    for a in [i * 0.628 for i in range(10)]))
+    else:  # buero
+        sv = (f'<rect x="150" y="560" width="780" height="420" rx="20" {st}/><path d="M150 980 L930 980" {st}/>' + "".join(f'<path d="M{200 + i * 140} 560 L{200 + i * 140} 980" {st} opacity="0.5"/>' for i in range(6)))
+    return f'<svg class="hg" viewBox="0 0 1080 1920" style="position:absolute;left:0;top:0;width:1080px;height:1920px;opacity:0.10;z-index:1;pointer-events:none">{sv}</svg>'
+
+
+def wechsel_js(sid, a, art=0):
+    """Übergang beim Szenenstart: Wischen (0), von unten (1), Zoom (2)."""
+    von = ["{ x: 140, opacity: 0 }", "{ y: 120, opacity: 0 }", "{ scale: 1.25, opacity: 0 }"][art % 2]
+    return f' tl.fromTo("#{sid}-i", {von}, {{ x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }}, {a});'
+
+
+def zoom_js(sel, a, dauer=2.0, bis=1.08):
+    return f' tl.fromTo("{sel}", {{ scale: 1 }}, {{ scale: {bis}, duration: {dauer}, ease: "sine.inOut", immediateRender: false }}, {a});'
