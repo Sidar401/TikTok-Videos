@@ -178,3 +178,9 @@ Nur echte, geprüfte Werte zum Thema des Videos (Kürzel + Pfeil + Zahl), grün/
 - Fotos echter Personen GROSS und rechteckig wie Nachrichtenbild, mit kleiner Quellenzeile. Nur freie Lizenzen (Wikimedia Commons CC/PD,
   offizielle Regierungsporträts); keine Pressefotos (Reuters/Getty/AP). Commons-API sparsam (Rate-Limit) – Fotos früh im Ablauf holen.
 - ETF/MSCI: ElevenLabs-Aussprache-Wörterbuch nutzen (Schreibweise allein reicht nicht, v4 variiert); ETF-Sätze vom Nutzer gegenhören lassen.
+
+## Aussprache-Wörterbuch AKTIV (12.11.)
+ElevenLabs-Wörterbuch „HundeFinanzTv-Aussprache“ (brand/aussprache.json) wird von scripts/stimme.py automatisch mitgeschickt:
+ETF → Eh-Teh-Eff, ETFs → Eh-Teh-Effs, MSCI → Em-Es-Si-Ai, USA → Amerika, AMD → Ah-Em-De.
+Im sprechtext diese Abkürzungen deshalb NORMAL schreiben (ETF, MSCI World, AMD) – keine Lautschrift mehr dafür.
+Neue Wörter: Regel per API ergänzen (pronunciation-dictionaries/{id}/add-rules), dann kurze Hörprobe an den Nutzer.

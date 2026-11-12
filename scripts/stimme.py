@@ -17,6 +17,8 @@ from pathlib import Path
 VOICE = "BwioUoriWcYELLG6prCr"  # HundeTV
 MODELL = "eleven_v4"
 API = "https://api.elevenlabs.io/v1"
+_ap = Path(__file__).resolve().parent.parent / "brand/aussprache.json"
+AUSSPRACHE = json.loads(_ap.read_text()) if _ap.exists() else None
 H = {"xi-api-key": "proxy-injected", "Content-Type": "application/json"}
 
 
@@ -54,6 +56,8 @@ if __name__ == "__main__":
     roh = []
     for i, teil in enumerate(teile):
         daten = {"text": teil, "model_id": MODELL}
+        if AUSSPRACHE:  # Aussprache-Wörterbuch (ETF, MSCI, USA, AMD – Nutzer 12.11.)
+            daten["pronunciation_dictionary_locators"] = [AUSSPRACHE]
         if i:
             daten["previous_text"] = teile[i - 1][-300:]
         if i < len(teile) - 1:
