@@ -268,3 +268,62 @@ def laufband_szene(eintraege, dauer, top=1200, farbe=None):
             f'border-bottom:4px solid {farbe}77;overflow:hidden;z-index:8"><div id="lb-s" class="mono" style="position:absolute;left:0;top:14px;white-space:nowrap;font-size:48px">'
             f'{teil * 12}</div></div>')
     return (0.0, dauer, html, lambda a, d: f'tl.fromTo("#lb-s", {{ x: 0 }}, {{ x: {-int(d * 90)}, duration: {d}, ease: "none" }}, 0);', 9)
+
+
+# ---------------- News-Format (Nutzer 12.11.: wie Eulen-Kanal, aber Dark Glow) ----------------
+SYMBOL_FARBE = {"nvidia": "#76B900", "amd": "#ffffff", "broadcom": "#CC092F", "bitcoin": "#F7931A", "apple": "#ffffff", "siemens": "#00b3b3", "intel": "#3d9bff"}
+
+
+def symbol(name, gr, farbe=None):
+    """Original-Markensymbol (simple-icons, CC0) aus brand/symbole/<name>.svg, eingefärbt."""
+    s = (WURZEL / "brand/symbole" / f"{name}.svg").read_text()
+    f = farbe or SYMBOL_FARBE.get(name, "#fff")
+    return s.replace("<svg ", f'<svg fill="{f}" style="width:{gr}px;height:{gr}px;filter:drop-shadow(0 0 18px {f}99)" ', 1)
+
+
+def marke(id_, name, x, y, hoehe=130, wortmarke=None, text=None, schild=None, schild_farbe=None, mitte=False):
+    """Freistehendes Original-Logo: Symbol + Wortmarke (weiß), optional Kurs-Schild daneben (z. B. "−13 %").
+    wortmarke = Datei in assets/logos (dunkles Logo → wird weiß gefärbt); text = Wortmarke als Schrift, falls keine Datei."""
+    teile = [symbol(name, hoehe)] if (WURZEL / "brand/symbole" / f"{name}.svg").exists() else []
+    if wortmarke:
+        teile.append(f'<img src="assets/logos/{wortmarke}.svg" alt="" style="height:{hoehe * 0.62:.0f}px;filter:brightness(0) invert(1) drop-shadow(0 0 14px #ffffff66)"/>')
+    elif text:
+        teile.append(f'<span style="font-weight:900;font-size:{hoehe * 0.62:.0f}px;color:#fff;letter-spacing:1px;text-shadow:0 0 20px #ffffff44">{text}</span>')
+    if schild:
+        f = schild_farbe or (ROT if schild.strip().startswith(("−", "-", "▼")) else GRUEN)
+        teile.append(f'<span id="{id_}-s" class="mono" style="display:inline-block;padding:8px 20px;border-radius:14px;background:{f};color:#111;font-size:{hoehe * 0.4:.0f}px;'
+                     f'box-shadow:0 0 30px {f}aa">{schild}</span>')
+    pos = f"left:0;width:1080px;justify-content:center" if mitte else f"left:{x}px"
+    return (f'<div id="{id_}" style="position:absolute;{pos};top:{y}px;display:flex;align-items:center;gap:{hoehe * 0.22:.0f}px;z-index:4">{"".join(teile)}</div>')
+
+
+def news_kopf(datum, top=392):
+    """Fester Nachrichten-Kopf „● LIVE  HundeFinanzTv NEWS · Datum“ (als Szene über die ganze Länge)."""
+    return (f'<div id="nk" style="position:absolute;left:60px;top:{top}px;width:960px;height:58px;display:flex;align-items:center;gap:18px;z-index:8">'
+            f'<span id="nk-l" style="display:inline-flex;align-items:center;gap:10px;padding:6px 16px;border-radius:10px;background:{ROT};color:#fff;font-weight:900;font-size:28px">'
+            f'<span style="width:14px;height:14px;border-radius:50%;background:#fff"></span>LIVE</span>'
+            f'<span style="font-weight:900;font-size:32px;color:#fff;letter-spacing:2px">HundeFinanzTv <span style="color:{OR}">NEWS</span></span>'
+            f'<span class="mono" style="margin-left:auto;font-size:28px;color:#ffffffaa">{datum}</span></div>'
+            f'<div style="position:absolute;left:60px;top:{top + 64}px;width:960px;height:3px;background:linear-gradient(90deg,{OR},transparent);z-index:8"></div>')
+
+
+NEWS_JS = 'tl.fromTo("#nk-l", { opacity: 1 }, { opacity: 0.35, duration: 0.6, yoyo: true, repeat: -1, ease: "sine.inOut" }, 0);'
+
+
+def titel_zeile(id_, text, top=490, farbe="#fff", gr=62):
+    """Überschrift pro Szene in Großbuchstaben (wie Nachrichten-Bauchbinde)."""
+    return (f'<div id="{id_}" style="position:absolute;left:0;width:1080px;top:{top}px;text-align:center;z-index:6">'
+            f'<span style="display:inline-block;font-weight:900;font-size:{gr}px;color:{farbe};letter-spacing:2px;text-transform:uppercase;'
+            f'text-shadow:0 0 30px {farbe}55;border-bottom:6px solid {OR};padding:0 10px 6px">{text}</span></div>')
+
+
+def foto_gross(id_, datei, x, y, w, h, credit="", farbe=OR):
+    """Großes rechteckiges Nachrichten-Foto mit Quellenzeile (nur freie Lizenzen!)."""
+    cr = f'<div class="mono" style="position:absolute;left:0;bottom:-34px;width:100%;text-align:right;font-size:20px;color:#ffffff88">{credit}</div>' if credit else ""
+    return (f'<div id="{id_}" style="position:absolute;left:{x}px;top:{y}px;width:{w}px;height:{h}px;border-radius:18px;border:6px solid {farbe};'
+            f'box-shadow:0 0 60px {farbe}66, 0 30px 60px #000;z-index:3"><img src="{datei}" alt="" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;border-radius:12px"/>{cr}</div>')
+
+
+def icon_gross(id_, emoji, x, y, gr=260, glow=OR, mitte=False):
+    pos = f"left:0;width:1080px;text-align:center" if mitte else f"left:{x}px"
+    return f'<div id="{id_}" style="position:absolute;{pos};top:{y}px;font-size:{gr}px;line-height:1;z-index:4;filter:drop-shadow(0 0 40px {glow}aa)">{emoji}</div>'
