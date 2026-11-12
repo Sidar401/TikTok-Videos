@@ -258,13 +258,13 @@ __all__ = ["GELB", "GRAU", "KIT_CSS", "KIT_JS", "kit_assets", "logo_karte", "pfe
            "balken", "donut", "linie", "person", "flagge", "kalender", "rahmen", "QUER_CSS", "spanne", "ticker", "raster", "racks", "kasten", "stempel", "GOLD", "GRUEN", "OR", "ROT"]
 
 
-def laufband_szene(eintraege, dauer, top=388, farbe=None):
+def laufband_szene(eintraege, dauer, top=1200, farbe=None):
     """Dauerhaftes Börsen-Laufband über das GANZE Video (Nutzer 12.11.: Videos mit Laufband gingen viral).
     eintraege = [(text, farbe|None)], echte, geprüfte Werte (z. B. ("NVDA ▼ −13 %", ROT)). In SZENEN als letzten Eintrag anhängen:
     SZENEN.append(laufband_szene([...], DAUER))"""
     farbe = farbe or GRUEN
     teil = "".join(f'<span style="margin:0 30px;color:{f or "#fff"}">{tx}</span><span style="color:{OR}">●</span>' for tx, f in eintraege)
-    html = (f'<div id="lb" style="position:absolute;left:0;top:{top}px;width:1080px;height:64px;background:#0b0d0ef2;border-top:3px solid {farbe}55;'
-            f'border-bottom:3px solid {farbe}55;overflow:hidden;z-index:8"><div id="lb-s" class="mono" style="position:absolute;left:0;top:9px;white-space:nowrap;font-size:36px">'
+    html = (f'<div id="lb" style="position:absolute;left:0;top:{top}px;width:1080px;height:90px;background:#0b0d0ef2;border-top:4px solid {farbe}77;'
+            f'border-bottom:4px solid {farbe}77;overflow:hidden;z-index:8"><div id="lb-s" class="mono" style="position:absolute;left:0;top:14px;white-space:nowrap;font-size:48px">'
             f'{teil * 12}</div></div>')
     return (0.0, dauer, html, lambda a, d: f'tl.fromTo("#lb-s", {{ x: 0 }}, {{ x: {-int(d * 90)}, duration: {d}, ease: "none" }}, 0);', 9)

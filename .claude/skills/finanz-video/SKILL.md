@@ -168,6 +168,6 @@ Referenz = `videos/anthropic-boersengang/` (Render `renders/anthropic-boersengan
 - Fotos echter Personen: nur Personen des öffentlichen Lebens mit freiem Foto (Wikimedia Commons, Lizenz + Quelle klein einblenden); Privatpersonen/Verdächtige nie, nur Silhouette.
 
 ## 📈 Börsen-Laufband IMMER (Nutzer 12.11.: Anthropic-Video 8.509 Aufrufe + Bitcoin-Video – beide hatten das Laufband)
-Jedes Finanz-Video (Short + Longform) bekommt ein dauerhaftes Börsen-Laufband über die ganze Länge:
+Jedes Finanz-Video (Short + Longform) bekommt ein dauerhaftes Börsen-Laufband über die ganze Länge – GROSS wie im Bitcoin-Video (Nutzer-Screenshot 12.11.): direkt über den Untertiteln (top 1200, 90 px hoch, Schrift 48 px, Mono). Szenen-Inhalte deshalb nur bis y ≈ 1180 planen:
 `SZENEN.append(laufband_szene([("NVDA ▼ −13 %", ROT), ("DAX ▲ 27.000", GRUEN), ...], DAUER))` (scripts/analyse_kit.py).
 Nur echte, geprüfte Werte zum Thema des Videos (Kürzel + Pfeil + Zahl), grün/rot. Bei Themen ohne Börsenbezug: passende Kennzahlen (z. B. „Inflation 2,8 %“, „Leitzins 2,5 %“).
