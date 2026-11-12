@@ -205,3 +205,7 @@ Vorbild: videos/demo-news-nvidia-foto + demo-news-dax-foto. Pro Szene `hintergru
 Fotos aus brand/hintergruende/ (freie Lizenz, quellen.json, Abdunkeln über grading.json = Media-Treatment). Fehlt ein Motiv:
 ähnliches Foto oder `hintergrund()`-Strichzeichnung. Foto-Sammlung nach und nach erweitern (/tmp/claude-0/tt/hgsuche/suche.py-Muster, langsam wegen Rate-Limit).
 Später (Higgsfield wieder da): einmalig ~20 dunkle KI-Hintergründe wie beim Eulen-Kanal, nur Dark Glow.
+
+## 📈 Laufband – genauer (Nutzer 12.11., gilt VOR den älteren Laufband-Regeln)
+NUR bei Eilmeldungs-Börsenthemen mit echten, großen Kursbewegungen AM SELBEN TAG (Absturz, Rekord, Crash, Börsengang).
+KEIN Laufband bei zeitlosen Börsenthemen (ETF erklärt, Sparplan, „Steckt Nvidia in deinem ETF?“) und bei Verbraucherthemen.
