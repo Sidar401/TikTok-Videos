@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "FR"; font-weight: 700; src: url("assets/fonts/fraunces-latin-700-normal.woff2"); }
+      @font-face { font-family: "FR"; font-weight: 900; src: url("assets/fonts/fraunces-latin-900-normal.woff2"); }
+      @font-face { font-family: "FR"; font-weight: 700; font-style: italic; src: url("assets/fonts/fraunces-latin-700-italic.woff2"); }
+      @font-face { font-family: "FR"; font-weight: 900; font-style: italic; src: url("assets/fonts/fraunces-latin-900-italic.woff2"); }
+      @font-face { font-family: "IN"; font-weight: 600; src: url("assets/fonts/Inter-SemiBold.otf"); }
+      @font-face { font-family: "IN"; font-weight: 800; src: url("assets/fonts/InterDisplay-ExtraBold.otf"); }
+      :root { --paper: #f3ede3; --ink: #1d1b19; --or: #d9791a; --soft: #e6dccb; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--paper); }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; color: var(--ink); font-family: "IN", sans-serif;
+        background: radial-gradient(ellipse at 50% 35%, #f9f5ee 0%, var(--paper) 55%, #e9e1d3 100%); }
+      #head { position: absolute; left: 80px; right: 80px; top: 110px; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 30px; letter-spacing: 1px; z-index: 10; }
+      #head img { width: 64px; height: 64px; border-radius: 50%; vertical-align: middle; margin-right: 16px; }
+      #rule { position: absolute; left: 80px; right: 80px; top: 196px; height: 3px; background: var(--ink); z-index: 10; }
+      #num { font-family: "FR"; font-style: italic; font-weight: 700; letter-spacing: 0; text-transform: none; font-size: 40px; }
+      .scene { position: absolute; inset: 0; opacity: 0; }
+      .h { position: absolute; left: 80px; right: 80px; font-family: "FR"; font-weight: 900; line-height: 0.98; letter-spacing: -2px; }
+      .h i { font-style: italic; color: var(--or); }
+      .kick { position: absolute; left: 80px; font-weight: 800; font-size: 30px; letter-spacing: 5px; text-transform: uppercase; color: var(--or); }
+      .dog { position: absolute; filter: drop-shadow(0 24px 30px #0003); }
+      .cap { position: absolute; left: 80px; right: 80px; top: 1460px; text-align: center; opacity: 0; z-index: 9; font-weight: 800; font-size: 62px; line-height: 1.2; }
+      .cap b { background: linear-gradient(transparent 58%, #f2b06a 58%); }
+      .row { position: absolute; left: 80px; right: 80px; }
+      .lab { font-weight: 800; font-size: 34px; letter-spacing: 3px; text-transform: uppercase; }
+      .val { font-family: "FR"; font-weight: 900; font-size: 120px; line-height: 1; letter-spacing: -3px; }
+      .barbg { height: 34px; background: var(--soft); border-radius: 4px; margin-top: 14px; overflow: hidden; }
+      .barbg i { display: block; height: 100%; width: 0; }
+      .note { position: absolute; font-family: "FR"; font-style: italic; font-weight: 700; font-size: 44px; color: var(--or); }
+      .item { font-family: "FR"; font-weight: 700; font-size: 50px; padding: 22px 0; border-bottom: 2px solid #1d1b1933; opacity: 0; }
+      .item small { font-family: "IN"; font-weight: 600; font-size: 30px; color: #1d1b1999; margin-left: 12px; }
+      #follow { position: absolute; left: 0; width: 1080px; top: 1470px; text-align: center; opacity: 0; z-index: 11; }
+      #follow span { display: inline-block; background: var(--ink); color: var(--paper); font-weight: 800; font-size: 46px; padding: 18px 46px 22px; border-radius: 60px; }
+      #follow span b { color: #f2b06a; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="15" data-width="1080" data-height="1920">
+      <div id="head"><span><img src="assets/logo.jpg" alt="" />HundeWissenTv</span><span id="num">Nr. 01 – Die Nase</span></div>
+      <div id="rule"></div>
+
+      <!-- 1 Hook -->
+      <div id="s1" class="scene">
+        <div id="s1k" class="kick" style="top: 300px">Wusstest du?</div>
+        <div id="s1h" class="h" style="top: 360px; font-size: 128px">Dein Hund<br />riecht bis zu<br /><i>100.000-mal</i><br />besser als du.</div>
+        <img id="s1d" class="dog" src="assets/aussie/neugierig.png" style="left: 580px; top: 870px; width: 400px" alt="" />
+        <div id="s1n" class="note" style="left: 170px; top: 1040px; transform: rotate(-6deg)">*schnüffel*</div>
+      </div>
+
+      <!-- 2 Balken -->
+      <div id="s2" class="scene">
+        <div id="s2k" class="kick" style="top: 300px">Riechzellen im Vergleich</div>
+        <div id="s2h" class="h" style="top: 350px; font-size: 96px">Eine Nase wie<br /><i>ein Labor.</i></div>
+        <div id="r1" class="row" style="top: 650px">
+          <div class="lab">Hund</div>
+          <div class="val" style="color: var(--or)"><span id="n1">0</span> Mio.</div>
+          <div class="barbg"><i id="b1" style="background: var(--or)"></i></div>
+        </div>
+        <div id="r2" class="row" style="top: 960px">
+          <div class="lab">Mensch</div>
+          <div class="val"><span id="n2">0</span> Mio.</div>
+          <div class="barbg"><i id="b2" style="background: var(--ink)"></i></div>
+        </div>
+        <img id="s2d" class="dog" src="assets/aussie/sitzend.png" style="left: 790px; top: 560px; height: 300px" alt="" />
+        <div id="s2n" class="note" style="left: 420px; top: 1240px; transform: rotate(-3deg)">≈ 60-mal so viele</div>
+      </div>
+
+      <!-- 3 Nasenloch-Diagramm -->
+      <div id="s3" class="scene">
+        <div id="s3k" class="kick" style="top: 300px">Fig. 1 — Die Hundenase</div>
+        <div id="s3h" class="h" style="top: 350px; font-size: 96px">Links und rechts<br /><i>riechen getrennt.</i></div>
+        <svg id="s3s" style="position: absolute; left: 0; top: 650px" width="1080" height="700" viewBox="0 0 1080 700">
+          <g fill="none" stroke="#1d1b19" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+            <path class="ln" pathLength="1" d="M330 230 Q540 120 750 230 Q860 290 810 420 Q770 520 640 560 Q540 590 440 560 Q310 520 270 420 Q220 290 330 230 Z" />
+            <path class="ln" pathLength="1" d="M540 430 L540 560" />
+            <path class="ln" pathLength="1" id="hl" d="M500 360 Q490 310 430 310 Q360 315 350 365 Q350 405 400 405 Q430 405 450 435 Q500 425 500 360 Z" />
+            <path class="ln" pathLength="1" id="hr" d="M580 360 Q590 310 650 310 Q720 315 730 365 Q730 405 680 405 Q650 405 630 435 Q580 425 580 360 Z" />
+          </g>
+          <g id="al" stroke="#d9791a" stroke-width="6" fill="none" stroke-linecap="round">
+            <path class="ar" d="M90 300 Q220 260 330 340" /><path d="M310 318 L334 342 L302 352" />
+          </g>
+          <g id="ar" stroke="#1d1b19" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="14 14">
+            <path class="ar" d="M990 300 Q860 260 750 340" />
+          </g>
+          <text id="tl" x="70" y="250" font-family="FR" font-style="italic" font-weight="700" font-size="48" fill="#d9791a">Duft A</text>
+          <text id="tr" x="1000" y="250" text-anchor="end" font-family="FR" font-style="italic" font-weight="700" font-size="48" fill="#1d1b19">Duft B</text>
+          <text id="tq" x="540" y="680" text-anchor="middle" font-family="IN" font-weight="800" font-size="34" letter-spacing="3" fill="#1d1b19">→ ER WEISS, WOHER ES KOMMT</text>
+        </svg>
+      </div>
+
+      <!-- 4 Gassi-Zeitung -->
+      <div id="s4" class="scene">
+        <div id="s4k" class="kick" style="top: 300px">Heute in der Gassi-Zeitung</div>
+        <div id="s4h" class="h" style="top: 350px; font-size: 104px">Gassi ist sein<br /><i>Nachrichtenblatt.</i></div>
+        <div class="row" style="top: 640px">
+          <div class="item" id="i1">Bello war hier <small>vor 10 Min.</small></div>
+          <div class="item" id="i2">Neue Katze im Viertel <small>Eilmeldung</small></div>
+          <div class="item" id="i3">Jemand hatte Pizza <small>Lokales</small></div>
+        </div>
+        <img id="s4d" class="dog" src="assets/aussie/liegend.png" style="left: 470px; top: 1020px; width: 540px" alt="" />
+      </div>
+
+      <div id="k1" class="cap">dein hund riecht bis zu <b>100.000-mal</b> besser als du</div>
+      <div id="k2" class="cap">seine nase hat rund <b>300 millionen</b> riechzellen</div>
+      <div id="k3" class="cap">deine nur etwa <b>5 millionen</b></div>
+      <div id="k4" class="cap">jedes nasenloch riecht <b>für sich</b></div>
+      <div id="k5" class="cap">so weiß er, <b>woher</b> ein duft kommt</div>
+      <div id="k6" class="cap">gassi ist für ihn wie <b>zeitung lesen</b></div>
+      <div id="follow"><span>Folgen für mehr <b>Hundewissen</b></span></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const show = (s, a, b) => { tl.set(s, { opacity: 1 }, a); if (b !== undefined) tl.set(s, { opacity: 0 }, b); };
+      const up = (s, a, d = 0.5) => tl.fromTo(s, { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: d, ease: "power3.out" }, a);
+      const peek = (s, a) => tl.fromTo(s, { y: 520 }, { y: 0, duration: 0.7, ease: "back.out(1.3)" }, a);
+
+      show("#s1", 0, 3.4); show("#s2", 3.4, 7.6); show("#s3", 7.6, 11.6); show("#s4", 11.6);
+      tl.fromTo("#rule", { scaleX: 0, transformOrigin: "left center" }, { scaleX: 1, duration: 0.6, ease: "power2.inOut" }, 0);
+      up("#head", 0.05);
+
+      // 1
+      up("#s1k", 0.15); up("#s1h", 0.3, 0.6);
+      tl.fromTo("#s1h i", { backgroundSize: "0% 100%" }, { backgroundSize: "100% 100%", duration: 0.01 }, 0);
+      peek("#s1d", 1.1);
+      tl.to("#s1d", { rotation: 6, duration: 0.35, yoyo: true, repeat: 3, ease: "sine.inOut", transformOrigin: "50% 100%" }, 1.9);
+      tl.fromTo("#s1n", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, 2.0);
+
+      // 2
+      up("#s2k", 3.45); up("#s2h", 3.55);
+      up("#r1", 3.9);
+      tl.to("#b1", { width: "100%", duration: 1.3, ease: "power2.out" }, 4.1);
+      const c1 = { v: 0 }; tl.to(c1, { v: 300, duration: 1.3, ease: "power2.out", onUpdate: () => (document.getElementById("n1").textContent = Math.round(c1.v)) }, 4.1);
+      peek("#s2d", 4.4);
+      up("#r2", 5.4);
+      tl.to("#b2", { width: "1.7%", duration: 0.5, ease: "power2.out" }, 5.6);
+      const c2 = { v: 0 }; tl.to(c2, { v: 5, duration: 0.5, ease: "power2.out", onUpdate: () => (document.getElementById("n2").textContent = Math.round(c2.v)) }, 5.6);
+      tl.fromTo("#s2n", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, 6.3);
+      tl.to("#s2d", { y: -30, duration: 0.2, yoyo: true, repeat: 3 }, 6.4);
+
+      // 3
+      up("#s3k", 7.65); up("#s3h", 7.75);
+      tl.fromTo("#s3s .ln", { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 1.0, stagger: 0.12, ease: "power2.inOut" }, 7.9);
+      tl.fromTo("#al", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.5, ease: "power2.out" }, 8.9);
+      tl.fromTo("#tl", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 8.9);
+      tl.fromTo("#hl", { fill: "rgba(217,121,26,0)" }, { fill: "rgba(217,121,26,1)", duration: 0.3 }, 9.3);
+      tl.fromTo("#ar", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.5, ease: "power2.out" }, 9.7);
+      tl.fromTo("#tr", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 9.7);
+      tl.fromTo("#hr", { fill: "rgba(29,27,25,0)" }, { fill: "rgba(29,27,25,1)", duration: 0.3 }, 10.1);
+      tl.fromTo("#tq", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 10.4);
+
+      // 4
+      up("#s4k", 11.65); up("#s4h", 11.75);
+      up("#i1", 12.2); up("#i2", 12.5); up("#i3", 12.8);
+      peek("#s4d", 12.3);
+      tl.to("#s4d", { rotation: -3, duration: 0.4, yoyo: true, repeat: 3, ease: "sine.inOut", transformOrigin: "50% 100%" }, 13.0);
+      tl.fromTo("#follow", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 13.4);
+
+      show("#k1", 0, 3.4); show("#k2", 3.4, 5.4); show("#k3", 5.4, 7.6); show("#k4", 7.6, 9.6); show("#k5", 9.6, 11.6); show("#k6", 11.6, 13.4);
+      tl.to({}, { duration: 0.01 }, 14.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

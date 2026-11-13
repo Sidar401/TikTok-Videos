@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script type="importmap">{"imports":{"three":"./assets/three/build/three.module.js","three/addons/":"./assets/three/jsm/"}}</script>
+    <style>
+      @font-face { font-family: "ID"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.otf"); }
+      @font-face { font-family: "ID"; font-weight: 800; src: url("assets/fonts/InterDisplay-ExtraBold.otf"); }
+      @font-face { font-family: "IN"; font-weight: 600; src: url("assets/fonts/Inter-SemiBold.otf"); }
+      :root { --or: #ffa043; --blue: #7fd0ff; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: "ID", sans-serif; color: #fff; }
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .ov { position: absolute; left: 0; width: 1080px; text-align: center; opacity: 0; z-index: 5; }
+      .tag { top: 120px; font-family: "IN"; font-weight: 600; font-size: 32px; letter-spacing: 8px; color: #ffffffc8; opacity: 1; text-shadow: 0 2px 12px #000c; }
+      .bar { position: absolute; left: 90px; right: 90px; top: 180px; height: 6px; border-radius: 3px; background: #ffffff26; z-index: 5; }
+      .bar i { display: block; width: 0; height: 100%; border-radius: 3px; background: var(--or); box-shadow: 0 0 14px #ffa043bb; }
+      .big { font-weight: 900; line-height: 1.02; letter-spacing: -1px; text-shadow: 0 6px 30px #000e; }
+      .o { color: var(--or); text-shadow: 0 0 46px #ffa043cc, 0 6px 30px #000e; }
+      .b { color: var(--blue); text-shadow: 0 0 46px #7fd0ffaa, 0 6px 30px #000e; }
+      .small { display: block; font-family: "IN"; font-weight: 600; font-size: 40px; color: #ffffffd0; margin-top: 12px; letter-spacing: 0; }
+      .cap { top: 1430px; font-size: 76px; font-weight: 900; line-height: 1.12; text-shadow: 0 6px 30px #000e, 0 0 3px #000; padding: 0 70px; }
+      .cap b { background: var(--or); color: #111; padding: 0 18px 6px; border-radius: 16px; display: inline-block; transform: rotate(-2deg); text-shadow: none; }
+      #follow { top: 1150px; }
+      #follow span { display: inline-block; padding: 26px 46px 30px; border-radius: 34px; background: #0c0918ee; border: 4px solid #ffffff26; }
+      #follow em { display: block; font-style: normal; font-size: 62px; font-weight: 900; }
+      #follow i { display: inline-block; font-style: normal; margin-top: 16px; font-size: 52px; font-weight: 900; background: #fe2c55; padding: 12px 44px; border-radius: 60px; box-shadow: 0 0 40px #fe2c55aa; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="15" data-width="1080" data-height="1920">
+      <canvas id="stage" width="1080" height="1920"></canvas>
+      <div class="ov tag">HUNDEWISSENTV · DIE NASE</div>
+      <div class="bar"><i id="bar-in"></i></div>
+
+      <div id="h1" class="ov big" style="top: 560px; font-size: 104px">Dein Hund riecht<br /><span class="o" style="font-size: 210px">100.000×</span><br />besser als du.</div>
+      <div id="l2a" class="ov big" style="top: 300px; font-size: 64px">Riechzellen</div>
+      <div id="l2b" class="ov" style="top: 1230px; left: -264px"><span class="big o" style="font-size: 110px">300 Mio.</span><span class="small">Hund</span></div>
+      <div id="l2c" class="ov" style="top: 1230px; left: 264px"><span class="big b" style="font-size: 70px">5 Mio.</span><span class="small">Mensch</span></div>
+      <div id="l3" class="ov big" style="top: 300px; font-size: 76px">Jedes Nasenloch<br /><span class="o">riecht für sich</span></div>
+      <div id="l3b" class="ov" style="top: 1200px"><span class="big" style="font-size: 54px">← <span class="o">links</span> &nbsp;·&nbsp; <span class="b">rechts</span> →</span></div>
+      <div id="l4" class="ov big" style="top: 300px; font-size: 84px">Gassi gehen =<br /><span class="o">Zeitung lesen</span></div>
+
+      <div id="k1" class="ov cap">riecht bis zu <b>100.000-mal</b> besser</div>
+      <div id="k2" class="ov cap">rund <b>300 millionen</b> riechzellen</div>
+      <div id="k3" class="ov cap">du hast nur <b>5 millionen</b></div>
+      <div id="k4" class="ov cap">jedes nasenloch <b>für sich</b></div>
+      <div id="k5" class="ov cap">so weiß er, <b>woher</b> ein duft kommt</div>
+      <div id="k6" class="ov cap">jeder fleck ist eine <b>nachricht</b></div>
+      <div id="follow" class="ov"><span><em>Folg uns für mehr! 👆</em><i>+ Folgen</i></span></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const show = (s, a, b) => { tl.set(s, { opacity: 1 }, a); if (b !== undefined) tl.set(s, { opacity: 0 }, b); };
+      const pop = (s, a, b) => { tl.fromTo(s, { opacity: 0, scale: 1.3, filter: "blur(10px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.4, ease: "power3.out" }, a);
+        if (b !== undefined) tl.to(s, { opacity: 0, duration: 0.25 }, b - 0.25); };
+      pop("#h1", 0.15, 3.4);
+      pop("#l2a", 3.5, 7.6); pop("#l2b", 4.3, 7.6); pop("#l2c", 5.5, 7.6);
+      pop("#l3", 7.7, 11.6); pop("#l3b", 9.6, 11.6);
+      pop("#l4", 11.8);
+      show("#k2", 3.4, 5.4); show("#k3", 5.4, 7.6); show("#k4", 7.6, 9.6); show("#k5", 9.6, 11.6); show("#k6", 11.6, 13.4);
+      tl.fromTo("#follow", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.5)" }, 13.4);
+      tl.to("#follow i", { scale: 1.1, duration: 0.3, yoyo: true, repeat: 3 }, 13.8);
+      tl.to("#bar-in", { width: "100%", duration: 15, ease: "none" }, 0);
+      tl.to({}, { duration: 0.01 }, 14.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+    <script type="module">
+      import * as K from "./assets/kino.js";
+      const { THREE, V, lerp, eio, eout, prog, cl, rnd } = K;
+      K.reseed(7);
+      const E = K.setup(document.getElementById("stage"));
+      const cam = E.cam;
+      const dot = K.glowTex("rgba(255,255,255,1)");
+      const pmat = (size, op = 1) => new THREE.PointsMaterial({ size, map: dot, transparent: true, opacity: op, depthWrite: false, blending: THREE.AdditiveBlending, vertexColors: true, sizeAttenuation: true });
+      const cols = (n, f) => { const a = new Float32Array(n * 3); const c = new THREE.Color(); for (let i = 0; i < n; i++) { f(c, i); a.set([c.r, c.g, c.b], i * 3); } return a; };
+      const mkPoints = (n, size, f, op) => { const g = new THREE.BufferGeometry(); g.setAttribute("position", new THREE.BufferAttribute(new Float32Array(n * 3), 3)); g.setAttribute("color", new THREE.BufferAttribute(cols(n, f), 3)); return new THREE.Points(g, pmat(size, op)); };
+      const warm = (c) => c.setHSL(0.07 + rnd() * 0.05, 1, 0.5 + rnd() * 0.25);
+      const cool = (c) => c.setHSL(0.55 + rnd() * 0.04, 0.9, 0.6 + rnd() * 0.2);
+
+      // ---------- Szene 1: Flug durch eine Duftwolke ----------
+      const s1 = new THREE.Scene(); s1.fog = new THREE.FogExp2(0x05030a, 0.012); s1.background = new THREE.Color(0x05030a);
+      const N1 = 7000, P1 = []; for (let i = 0; i < N1; i++) P1.push([(rnd() - 0.5) * 70, (rnd() - 0.5) * 120, -rnd() * 260 + 30, rnd() * 6.28]);
+      const pts1 = mkPoints(N1, 0.9, warm); s1.add(pts1);
+      const dust1 = mkPoints(2000, 0.35, (c) => c.setHSL(0.6, 0.3, 0.8), 0.5); s1.add(dust1); const D1 = []; for (let i = 0; i < 2000; i++) D1.push([(rnd() - 0.5) * 90, (rnd() - 0.5) * 150, -rnd() * 260 + 30]);
+
+      // ---------- Szene 2: Riechzellen als Kugeln ----------
+      const s2 = new THREE.Scene(); s2.background = new THREE.Color(0x04030a);
+      const fib = (n, r) => { const out = []; for (let i = 0; i < n; i++) { const y = 1 - (i / (n - 1)) * 2, rr = Math.sqrt(1 - y * y), th = i * 2.39996; const k = r * (0.75 + 0.25 * Math.cbrt(rnd())); out.push([Math.cos(th) * rr * k, y * k, Math.sin(th) * rr * k]); } return out; };
+      const A2 = fib(5000, 3.8), B2 = fib(90, 0.85);
+      const pa = mkPoints(5000, 0.24, warm); const pb = mkPoints(90, 0.32, cool); s2.add(pa, pb);
+      const bg2 = mkPoints(1500, 0.25, (c) => c.setHSL(0.65, 0.4, 0.5), 0.35); s2.add(bg2); { const a = bg2.geometry.attributes.position.array; for (let i = 0; i < 1500; i++) a.set([(rnd() - 0.5) * 80, (rnd() - 0.5) * 120, -20 - rnd() * 60], i * 3); }
+
+      // ---------- Szene 3: 3D-Hundenase + Duftströme ----------
+      const s3 = new THREE.Scene(); s3.background = new THREE.Color(0x060409);
+      const nose = new THREE.Group(); s3.add(nose);
+      const nm = new THREE.MeshPhysicalMaterial({ color: 0x2c2729, roughness: 0.5, clearcoat: 0.35, clearcoatRoughness: 0.45 });
+      const body = new THREE.Mesh(new THREE.SphereGeometry(1, 96, 64), nm); body.scale.set(3.2, 2.0, 2.0); nose.add(body);
+      const top = new THREE.Mesh(new THREE.SphereGeometry(1, 64, 48), nm); top.scale.set(2.4, 1.1, 1.6); top.position.set(0, 1.0, -0.2); nose.add(top);
+      const holeM = new THREE.MeshBasicMaterial({ color: 0x000000 });
+      const NL = V(-1.15, -0.25, 1.78), NR = V(1.15, -0.25, 1.78);
+      for (const [p, r] of [[NL, 0.35], [NR, -0.35]]) { const h = new THREE.Mesh(new THREE.SphereGeometry(1, 48, 32), holeM); h.scale.set(0.8, 0.46, 0.3); h.position.copy(p); h.rotation.z = r; nose.add(h); }
+      const glowL = new THREE.PointLight(0xff8a1f, 0, 6); glowL.position.copy(NL).add(V(0, 0, 0.6)); nose.add(glowL);
+      const glowR = new THREE.PointLight(0x7fd0ff, 0, 6); glowR.position.copy(NR).add(V(0, 0, 0.6)); nose.add(glowR);
+      s3.add(new THREE.AmbientLight(0x605860, 1.2));
+      const key = new THREE.DirectionalLight(0xffe2c4, 1.6); key.position.set(-4, 6, 8); s3.add(key);
+      const rim = new THREE.DirectionalLight(0xff8a1f, 3.0); rim.position.set(6, 2, -6); s3.add(rim);
+      const rim2 = new THREE.DirectionalLight(0x6fb8ff, 2.0); rim2.position.set(-6, -1, -5); s3.add(rim2);
+      const NS = 700; const SL = mkPoints(NS, 0.32, warm), SR = mkPoints(NS, 0.32, cool); s3.add(SL, SR);
+      const ph = []; for (let i = 0; i < NS; i++) ph.push([rnd(), (rnd() - 0.5) * 6, (rnd() - 0.5) * 4, rnd() * 6.28]);
+
+      // ---------- Szene 4: Gassi-Weg mit Duftnachrichten ----------
+      const s4 = new THREE.Scene(); s4.background = new THREE.Color(0x07060c); s4.fog = new THREE.Fog(0x07060c, 8, 70);
+      const ground = new THREE.Mesh(new THREE.PlaneGeometry(400, 400, 1, 1), new THREE.MeshStandardMaterial({ color: 0x12160f, roughness: 1 })); ground.rotation.x = -Math.PI / 2; s4.add(ground);
+      s4.add(new THREE.HemisphereLight(0x8090c0, 0x101008, 0.7));
+      const pathX = (z) => Math.sin(z * 0.08) * 4;
+      const path = new THREE.Mesh(new THREE.PlaneGeometry(2.6, 300, 1, 300), new THREE.MeshStandardMaterial({ color: 0x2a241c, roughness: 1 }));
+      { const a = path.geometry.attributes.position.array; for (let i = 0; i < a.length; i += 3) { const z = -a[i + 1]; a[i] += pathX(z); } path.rotation.x = -Math.PI / 2; path.position.y = 0.01; s4.add(path); }
+      const grass = mkPoints(6000, 0.18, (c) => c.setHSL(0.28, 0.5, 0.25 + rnd() * 0.15), 0.8); s4.add(grass); { const a = grass.geometry.attributes.position.array; for (let i = 0; i < 6000; i++) { const z = -rnd() * 150 + 10; let x = (rnd() - 0.5) * 40; if (Math.abs(x - pathX(z)) < 1.8) x += 3.5; a.set([x, rnd() * 0.5, z], i * 3); } }
+      const spotCols = [0xff8a1f, 0x7fd0ff, 0xff5f8f, 0x5ef2c2, 0xffc94d];
+      const spots = []; for (let i = 0; i < 16; i++) { const z = -6 - i * 7; const x = pathX(z) + (i % 2 ? 2.2 : -2.2); const col = spotCols[i % 5];
+        const sp = K.sprite(s4, K.glowTex(`#${col.toString(16).padStart(6, "0")}`), 2.6, V(x, 0.4, z)); sp.material.blending = THREE.AdditiveBlending;
+        const rings = new THREE.Mesh(new THREE.RingGeometry(0.5, 0.6, 48), new THREE.MeshBasicMaterial({ color: col, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, depthWrite: false })); rings.rotation.x = -Math.PI / 2; rings.position.set(x, 0.05, z); s4.add(rings);
+        spots.push({ sp, rings, i }); }
+
+      const renderAt = (t) => {
+        if (t < 3.4) {
+          const p = t / 3.4; E.look([1.05, 0.95, 0.9], [0.02, 0.0, 0.03], 1.1, 0.15);
+          cam.fov = 40; cam.updateProjectionMatrix();
+          cam.position.set(Math.sin(t * 0.6) * 2, Math.cos(t * 0.5) * 2, 30 - eio(p) * 140); cam.lookAt(cam.position.x * 0.5, 0, cam.position.z - 50); cam.rotation.z = t * 0.05;
+          const a = pts1.geometry.attributes.position.array;
+          for (let i = 0; i < N1; i++) { const q = P1[i]; a[i * 3] = q[0] + Math.sin(t * 0.8 + q[3]) * 1.5; a[i * 3 + 1] = q[1] + Math.cos(t * 0.6 + q[3]) * 1.5; a[i * 3 + 2] = q[2]; }
+          pts1.geometry.attributes.position.needsUpdate = true;
+          const d = dust1.geometry.attributes.position.array; for (let i = 0; i < 2000; i++) d.set(D1[i], i * 3); dust1.geometry.attributes.position.needsUpdate = true;
+          E.grade.uniforms.flash.value = Math.max(0, 1 - t * 4) * 0.6;
+          E.render(s1, t);
+        } else if (t < 7.6) {
+          const u = t - 3.4; E.look([1, 0.97, 1], [0.01, 0, 0.03], 0.7, 0.25); E.grade.uniforms.flash.value = 0;
+          cam.position.set(1 + u * 0.05, 0.6, 34 - eio(prog(u, 0, 4.2)) * 2); cam.lookAt(1, 0.6, 0); cam.rotation.z = 0;
+          const ga = eout(prog(u, 0.6, 1.4)), gb = eout(prog(u, 2.0, 0.8));
+          const a = pa.geometry.attributes.position.array, rot = u * 0.25;
+          for (let i = 0; i < 5000; i++) { const [x, y, z] = A2[i]; const c = Math.cos(rot), s = Math.sin(rot); a.set([-2.2 + (x * c - z * s) * ga, 1.4 + y * ga, (x * s + z * c) * ga], i * 3); }
+          pa.geometry.attributes.position.needsUpdate = true;
+          const b = pb.geometry.attributes.position.array;
+          for (let i = 0; i < 90; i++) { const [x, y, z] = B2[i]; b.set([4.2 + x * gb, -1.2 + y * gb, z * gb], i * 3); }
+          pb.geometry.attributes.position.needsUpdate = true;
+          E.render(s2, t);
+        } else if (t < 11.6) {
+          const u = t - 7.6; E.look([1.02, 0.98, 1], [0.01, 0.0, 0.02], 0.6, 0.6); E.grade.uniforms.flash.value = 0;
+          const ang = -0.25 + eio(prog(u, 0, 4)) * 0.5;
+          cam.position.set(Math.sin(ang) * 21, 1.5 + u * 0.1, Math.cos(ang) * 21); cam.lookAt(0, 0.6, 0); cam.rotation.z += 0;
+          nose.rotation.y = Math.sin(u * 1.3) * 0.05; nose.scale.setScalar(1 + Math.max(0, Math.sin(u * 9)) * 0.012);
+          const wl = prog(u, 0.6, 0.6), wr = prog(u, 2.0, 0.6);
+          glowL.intensity = 4 * wl * (0.7 + 0.3 * Math.sin(u * 8)); glowR.intensity = 4 * wr * (0.7 + 0.3 * Math.sin(u * 8 + 1));
+          for (const [pts, side, w] of [[SL, -1, wl], [SR, 1, wr]]) {
+            const a = pts.geometry.attributes.position.array; const tgt = side < 0 ? NL : NR;
+            for (let i = 0; i < NS; i++) { const [f0, oy, oz, ps] = ph[i]; const f = (f0 + u * 0.45) % 1; const sx = side * 11, k = eio(f);
+              const x = lerp(sx, tgt.x, k), y = lerp(oy, tgt.y, k) + Math.sin(f * 9 + ps) * (1 - k) * 0.8, z = lerp(oz + 1.5, tgt.z, k);
+              const vis = w > 0 && f < (w * 1.2) ? 1 : 0; a.set([x, vis ? y : -999, z], i * 3); }
+            pts.geometry.attributes.position.needsUpdate = true; }
+          E.render(s3, t);
+        } else {
+          const u = t - 11.6; E.look([1.02, 0.98, 1.0], [0.0, 0.0, 0.02], 1.2, 0.2); E.grade.uniforms.flash.value = 0;
+          const z = 6 - u * 5.5; cam.position.set(pathX(z), 1.4 + Math.sin(u * 7) * 0.05, z); cam.lookAt(pathX(z - 10), 0.2, z - 10);
+          for (const s of spots) { const k = 0.6 + 0.4 * Math.sin(u * 4 + s.i); s.sp.material.opacity = k; const r = ((u * 0.9 + s.i * 0.17) % 1); s.rings.scale.setScalar(1 + r * 3); s.rings.material.opacity = (1 - r) * 0.8; }
+          E.render(s4, t);
+        }
+      };
+      let lastT = 0;
+      window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady || {}; window.__hf.buildReady.scene = Promise.resolve();
+      window.addEventListener("hf-seek", (e) => { lastT = e.detail.time; renderAt(lastT); });
+      renderAt(0);
+    </script>
+  </body>
+</html>

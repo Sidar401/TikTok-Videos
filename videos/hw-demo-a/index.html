@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "ID"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.otf"); }
+      @font-face { font-family: "ID"; font-weight: 800; src: url("assets/fonts/InterDisplay-ExtraBold.otf"); }
+      @font-face { font-family: "ID"; font-weight: 700; src: url("assets/fonts/InterDisplay-Bold.otf"); }
+      :root { --or: #ff8a1f; --brand: #db8622; --bg: #0e1012; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--bg); }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: "ID", sans-serif; color: #fff;
+        background: radial-gradient(ellipse at 50% 40%, #ff8a1f30 0%, #ff8a1f0a 40%, transparent 65%), radial-gradient(ellipse at 50% 50%, #1b1f22 0%, var(--bg) 75%); }
+      #raster { position: absolute; inset: 0; background-image: linear-gradient(#ffffff0b 2px, transparent 2px), linear-gradient(90deg, #ffffff0b 2px, transparent 2px); background-size: 90px 90px; }
+      #frame { position: absolute; inset: 0; border: 26px solid var(--brand); z-index: 20; }
+      #brand { position: absolute; top: 110px; left: 0; width: 1080px; display: flex; align-items: center; justify-content: center; gap: 22px; z-index: 15; }
+      #brand img { width: 96px; height: 96px; border-radius: 50%; border: 4px solid var(--brand); box-shadow: 0 0 26px #ff8a1f77; }
+      #brand span { font-weight: 800; font-size: 40px; color: #ffffffdd; }
+      .scene { position: absolute; inset: 0; opacity: 0; }
+      .t { position: absolute; left: 0; width: 1080px; text-align: center; font-weight: 900; line-height: 1.02; letter-spacing: -1px; }
+      .o { color: var(--or); text-shadow: 0 0 50px #ff8a1faa; }
+      .dog { position: absolute; filter: drop-shadow(0 30px 40px #000a); }
+      .cap { position: absolute; left: 60px; top: 1470px; width: 960px; text-align: center; z-index: 12; opacity: 0;
+        font-weight: 900; font-size: 70px; line-height: 1.15; text-shadow: 0 6px 0 #000, 0 0 30px #000; }
+      .cap b { color: var(--or); }
+      .ring { position: absolute; border-radius: 50%; background: #16191b; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+      .chip { position: absolute; padding: 14px 30px 18px; border-radius: 22px; background: #1a1e21; border: 4px solid var(--or); font-weight: 800; font-size: 44px; white-space: nowrap; box-shadow: 0 0 40px #ff8a1f55, 0 20px 40px #000; }
+      .p { position: absolute; width: 18px; height: 18px; border-radius: 50%; background: var(--or); box-shadow: 0 0 22px var(--or); }
+      #follow { position: absolute; left: 0; width: 1080px; top: 1300px; text-align: center; z-index: 13; opacity: 0; }
+      #follow span { display: inline-block; background: #fe2c55; padding: 16px 48px 20px; border-radius: 60px; font-weight: 900; font-size: 56px; box-shadow: 0 0 40px #fe2c55aa; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="15" data-width="1080" data-height="1920">
+      <div id="raster"></div>
+      <div id="brand"><img src="assets/logo.jpg" alt="" /><span>HundeWissenTv</span></div>
+
+      <!-- Szene 1: Hook -->
+      <div id="s1" class="scene">
+        <div id="s1a" class="t" style="top: 330px; font-size: 92px">Dein Hund riecht</div>
+        <div id="s1b" class="t o" style="top: 470px; font-size: 196px">100.000×</div>
+        <div id="s1c" class="t" style="top: 700px; font-size: 92px">besser als du.</div>
+        <svg id="s1w" style="position: absolute; left: 0; top: 820px" width="1080" height="560" viewBox="0 0 1080 560">
+          <path class="wave" d="M60 300 C 200 220, 300 380, 470 300" fill="none" stroke="#ff8a1f" stroke-width="10" stroke-linecap="round" />
+          <path class="wave" d="M40 400 C 180 330, 320 470, 480 380" fill="none" stroke="#ff8a1f" stroke-width="8" stroke-linecap="round" opacity="0.7" />
+          <path class="wave" d="M70 200 C 200 140, 330 260, 470 220" fill="none" stroke="#ff8a1f" stroke-width="6" stroke-linecap="round" opacity="0.5" />
+        </svg>
+        <img id="s1d" class="dog" src="assets/aussie/neugierig.png" style="left: 470px; top: 860px; width: 470px" alt="" />
+      </div>
+
+      <!-- Szene 2: Riechzellen-Vergleich -->
+      <div id="s2" class="scene">
+        <div id="s2h" class="t" style="top: 300px; font-size: 76px">Riechzellen in der Nase</div>
+        <div id="s2r1" class="ring" style="left: 90px; top: 470px; width: 560px; height: 560px; border: 12px solid var(--or); box-shadow: 0 0 90px #ff8a1f88, inset 0 0 50px #000">
+          <img src="assets/aussie/sitzend.png" style="height: 250px; margin-top: -10px" alt="" />
+          <div style="font-weight: 900; font-size: 86px; line-height: 1" class="o"><span id="n1">0</span> Mio.</div>
+          <div style="font-weight: 800; font-size: 40px; color: #fffc; margin-top: 6px">Hund</div>
+        </div>
+        <div id="s2r2" class="ring" style="left: 700px; top: 760px; width: 280px; height: 280px; border: 8px solid #fff8; box-shadow: 0 0 40px #fff3, inset 0 0 30px #000">
+          <svg width="80" height="90" viewBox="0 0 80 90"><circle cx="40" cy="22" r="18" fill="#fff" /><path d="M8 88 Q8 48 40 48 Q72 48 72 88 Z" fill="#fff" /></svg>
+          <div style="font-weight: 900; font-size: 52px; line-height: 1"><span id="n2">0</span> Mio.</div>
+          <div style="font-weight: 800; font-size: 30px; color: #fffc">Mensch</div>
+        </div>
+        <div id="s2x" class="t o" style="top: 1110px; font-size: 120px">60× mehr</div>
+      </div>
+
+      <!-- Szene 3: Nasenlöcher -->
+      <div id="s3" class="scene">
+        <div id="s3h" class="t" style="top: 300px; font-size: 80px">Links und rechts<br /><span class="o">getrennt</span></div>
+        <svg id="s3n" style="position: absolute; left: 190px; top: 600px" width="700" height="520" viewBox="0 0 700 520">
+          <defs>
+            <radialGradient id="ng" cx="45%" cy="35%" r="70%"><stop offset="0" stop-color="#4a4a4f" /><stop offset="0.6" stop-color="#232326" /><stop offset="1" stop-color="#121214" /></radialGradient>
+          </defs>
+          <path d="M120 120 Q350 20 580 120 Q690 170 640 300 Q600 420 450 470 Q350 500 250 470 Q100 420 60 300 Q10 170 120 120 Z" fill="url(#ng)" stroke="#000" stroke-width="6" />
+          <path d="M350 320 L350 400" stroke="#0a0a0b" stroke-width="10" stroke-linecap="round" />
+          <path id="nl" d="M300 250 Q290 205 230 205 Q160 210 150 260 Q150 300 200 300 Q230 300 250 330 Q300 320 300 250 Z" fill="#050506" />
+          <path id="nr" d="M400 250 Q410 205 470 205 Q540 210 550 260 Q550 300 500 300 Q470 300 450 330 Q400 320 400 250 Z" fill="#050506" />
+          <ellipse cx="300" cy="140" rx="110" ry="30" fill="#ffffff22" />
+        </svg>
+        <div id="pl"></div>
+        <div id="s3l" class="chip" style="left: 70px; top: 1180px">⬅ Duft von links</div>
+        <div id="s3r" class="t o" style="top: 1260px; font-size: 64px; opacity: 0"></div>
+      </div>
+
+      <!-- Szene 4: Zeitung -->
+      <div id="s4" class="scene">
+        <div id="s4h" class="t" style="top: 300px; font-size: 84px">Gassi gehen =<br /><span class="o">Zeitung lesen</span></div>
+        <div id="s4p" style="position: absolute; left: 80px; top: 560px; width: 460px; height: 600px; background: #f4efe6; border-radius: 12px; transform: rotate(-5deg); box-shadow: 0 40px 70px #000c; padding: 34px; color: #111">
+          <div style="font-family: Georgia, serif; font-weight: 700; font-size: 50px; text-align: center; border-bottom: 5px solid #111; padding-bottom: 12px">Die Gassi-Zeitung</div>
+          <div style="height: 22px; background: #111; margin: 26px 0 16px; width: 80%"></div>
+          <div style="height: 14px; background: #bbb; margin: 12px 0"></div><div style="height: 14px; background: #bbb; margin: 12px 0"></div>
+          <div style="height: 14px; background: #bbb; margin: 12px 0; width: 70%"></div>
+          <div style="height: 160px; background: #ddd5c6; margin: 22px 0; border-radius: 6px"></div>
+          <div style="height: 14px; background: #bbb; margin: 12px 0"></div><div style="height: 14px; background: #bbb; margin: 12px 0; width: 60%"></div>
+        </div>
+        <div id="c1" class="chip" style="left: 470px; top: 610px">🐕 Bello war hier</div>
+        <div id="c2" class="chip" style="left: 500px; top: 750px">🐈 Katze, vor 2 Std.</div>
+        <div id="c3" class="chip" style="left: 480px; top: 890px">🍕 Pizza-Rest!</div>
+        <img id="s4d" class="dog" src="assets/aussie/springend.png" style="left: 680px; top: 1010px; width: 300px" alt="" />
+      </div>
+
+      <div id="k1" class="cap">dein hund riecht bis zu <b>100.000-mal</b> besser als du</div>
+      <div id="k2" class="cap">seine nase hat rund <b>300 millionen</b> riechzellen</div>
+      <div id="k3" class="cap">deine nur etwa <b>5 millionen</b></div>
+      <div id="k4" class="cap">jedes nasenloch riecht <b>für sich</b></div>
+      <div id="k5" class="cap">so weiß er, <b>woher</b> ein duft kommt</div>
+      <div id="k6" class="cap">gassi ist für ihn wie <b>zeitung lesen</b></div>
+      <div id="follow"><span>+ Folgen für mehr</span></div>
+      <div id="frame"></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const show = (sel, a, b) => { tl.set(sel, { opacity: 1 }, a); if (b !== undefined) tl.set(sel, { opacity: 0 }, b); };
+      const pop = (sel, a, s = 0.6) => tl.fromTo(sel, { scale: s, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.2)" }, a);
+      const drift = (sel, a, d) => tl.fromTo(sel, { scale: 1 }, { scale: 1.05, duration: d, ease: "none" }, a);
+
+      // Szenen
+      show("#s1", 0, 3.4); show("#s2", 3.4, 7.6); show("#s3", 7.6, 11.6); show("#s4", 11.6);
+      drift("#s1", 0, 3.4); drift("#s2", 3.4, 4.2); drift("#s3", 7.6, 4); drift("#s4", 11.6, 3.4);
+
+      // 1 Hook
+      pop("#s1a", 0.05); tl.fromTo("#s1b", { scale: 2.2, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "power4.out" }, 0.35);
+      tl.fromTo("#s1b", { x: -8 }, { x: 8, duration: 0.05, repeat: 5, yoyo: true }, 0.75);
+      pop("#s1c", 0.8);
+      tl.fromTo("#s1d", { y: 500 }, { y: 0, duration: 0.6, ease: "back.out(1.4)" }, 1.0);
+      tl.fromTo("#s1d", { rotation: 0 }, { rotation: -4, duration: 0.18, yoyo: true, repeat: 7, ease: "sine.inOut" }, 1.7);
+      tl.fromTo("#s1w .wave", { strokeDasharray: 600, strokeDashoffset: 600 }, { strokeDashoffset: 0, duration: 0.8, stagger: 0.15, ease: "power2.out" }, 1.4);
+      tl.to("#s1w .wave", { x: 30, duration: 0.6, yoyo: true, repeat: 2, ease: "sine.inOut" }, 2.2);
+
+      // 2 Vergleich
+      pop("#s2h", 3.45);
+      pop("#s2r1", 3.6, 0.3);
+      const c1 = { v: 0 }; tl.to(c1, { v: 300, duration: 1.3, ease: "power2.out", onUpdate: () => (document.getElementById("n1").textContent = Math.round(c1.v)) }, 3.8);
+      pop("#s2r2", 5.4, 0.3);
+      const c2 = { v: 0 }; tl.to(c2, { v: 5, duration: 0.6, ease: "power2.out", onUpdate: () => (document.getElementById("n2").textContent = Math.round(c2.v)) }, 5.6);
+      tl.fromTo("#s2x", { scale: 1.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "power4.out" }, 6.4);
+
+      // 3 Nasenlöcher: Duftteilchen von links in das linke Nasenloch
+      pop("#s3h", 7.65); pop("#s3n", 7.8, 0.85);
+      const pl = document.getElementById("pl");
+      for (let i = 0; i < 14; i++) {
+        const d = document.createElement("div"); d.className = "p"; pl.appendChild(d);
+        const y0 = 780 + Math.sin(i * 2.3) * 160;
+        tl.fromTo(d, { x: -40, y: y0, opacity: 0, scale: 0.6 + (i % 3) * 0.25 },
+          { x: 380, y: 860, opacity: 1, duration: 1.1, ease: "power1.in" }, 8.6 + i * 0.12);
+        tl.to(d, { opacity: 0, duration: 0.15 }, 9.7 + i * 0.12);
+      }
+      tl.fromTo("#nl", { fill: "#050506" }, { fill: "#ff8a1f", duration: 0.25, yoyo: true, repeat: 5 }, 9.4);
+      pop("#s3l", 8.6);
+      tl.fromTo("#s3n", { rotation: 0 }, { rotation: -6, duration: 0.5, ease: "power2.out" }, 10.0);
+
+      // 4 Zeitung
+      pop("#s4h", 11.65); tl.fromTo("#s4p", { y: 400, rotation: 10, opacity: 0 }, { y: 0, rotation: -5, opacity: 1, duration: 0.5, ease: "back.out(1.6)" }, 11.8);
+      pop("#c1", 12.3); pop("#c2", 12.6); pop("#c3", 12.9);
+      tl.fromTo("#s4d", { y: 700 }, { y: 0, duration: 0.5, ease: "back.out(1.5)" }, 12.4);
+      tl.to("#s4d", { y: -40, duration: 0.25, yoyo: true, repeat: 5, ease: "sine.inOut" }, 13.0);
+      tl.fromTo("#follow", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.5)" }, 13.4);
+      tl.to("#follow span", { scale: 1.08, duration: 0.25, yoyo: true, repeat: 5 }, 13.8);
+
+      // Untertitel
+      show("#k1", 0, 3.4); show("#k2", 3.4, 5.4); show("#k3", 5.4, 7.6); show("#k4", 7.6, 9.6); show("#k5", 9.6, 11.6); show("#k6", 11.6, 13.4);
+      tl.to({}, { duration: 0.01 }, 14.99);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
