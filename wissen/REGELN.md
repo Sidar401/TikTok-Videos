@@ -24,3 +24,11 @@ Vorlage/Baukasten: `wissen/kit/` (neu.sh, kit.js, kit.css, mix.py, fertig.sh, sn
 - **Ab 11.11.: Videos 60–70 s** (YouTube Shorts bis 3 Min. möglich, TikTok Creator-Programm ab 1 Min.).
 - **⭐ Immer echte Original-Logos** (Nutzer-Wunsch 12.11., wie HundeFinanzTV): Jede genannte Firma/Behörde/Organisation (NASA, SpaceX, ESA, FAA, Rubin, …) bekommt ihr Original-Logo als weiße Logo-Karte. Logos liegen in `wissen/kit/logos/` (Quelle: Wikimedia Commons `Special:FilePath/<Datei>`, in `quellen.json` eintragen). Nur wenn es auf Commons nicht existiert: Wortmarke nachbauen und dem Nutzer sagen. Logos nur redaktionell zeigen (nie so, als wären die Firmen Partner).
 - **⭐ Immer so gut wie möglich produzieren** (Nutzer 12.11.): Wo es erlaubt ist, echte Originale einbauen (Original-Logos, gemeinfreie NASA/ESA-Bilder, echte Daten/Grafiken mit Quelle). Wenn etwas fehlt, später nachholen und ggf. neu rendern.
+
+## ⭐ Neuer Ziel-Look ab 14.11.2026 (Nutzer-Vorbild: YouTube-Short @erklärwürdig „Reihenfolge der Planeten nach Größe“)
+- Nutzer: „Siehst du, wie gut diese Bilder aussehen?“ → so sollen die nächsten Videos aussehen. Alte Videos NICHT neu machen.
+- **Fotorealistische Himmelskörper:** Kugeln immer mit echten Karten/Texturen (NASA, gemeinfrei/freie Lizenz, Quelle notieren) – keine selbst gebastelten Geräte/Formen mehr.
+- **Sauberer schwarzer Hintergrund**, Objekte groß und mittig, viel freier Raum, ruhige, weiche Kamerafahrten.
+- **Ganz wenig Text:** ein großes, klares Wort / Name in weißer, schlichter Schrift (z. B. „Mars“, „Planet“). Keine Zettel, Stempel, Karopapier-Karten, Handschrift-Pfeile mehr (Analyse-Ebene nur noch sparsam: eine Zahl oder ein Wort).
+- Edle Effekte erlaubt: glühende Sonne, leuchtendes Raumzeit-Gitter, Ringe, Umlaufbahnen.
+- Thumbnails ohne „NOVARO“.
