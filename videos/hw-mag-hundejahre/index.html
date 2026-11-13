@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/magazin.css" />
+    <style>
+      #stamp { position: absolute; left: 110px; top: 1020px; padding: 10px 40px 18px; border: 8px solid var(--or); border-radius: 16px; color: var(--or); font-family: "FR"; font-weight: 900; font-style: italic; font-size: 120px; transform: rotate(-9deg); background: #f3ede3cc; }
+      .stat { position: absolute; left: 80px; right: 80px; height: 200px; display: flex; align-items: center; gap: 40px; padding: 0 44px; }
+      .stat .v { font-family: "FR"; font-weight: 900; font-size: 116px; letter-spacing: -3px; color: var(--or); min-width: 250px; }
+      .stat .t { font-weight: 800; font-size: 42px; line-height: 1.15; }
+      .stat .t small { display: block; font-weight: 600; font-size: 30px; color: var(--mute); }
+      .ax { font-family: "IN"; font-weight: 600; font-size: 24px; fill: #1d1b1999; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="15" data-width="1080" data-height="1920">
+      <div id="s1" class="scene">
+        <div id="s1k" class="kick" style="top: 440px">Mythos-Check</div>
+        <div id="s1h" class="h" style="top: 492px; font-size: 112px">1 Hundejahr = <i>7 Menschen&shy;jahre?</i></div>
+        <img id="s1d" class="dog" src="assets/aussie/sitzend.png" style="left: 700px; top: 900px; height: 470px" alt="" />
+        <div id="stamp">Falsch.</div>
+      </div>
+
+      <div id="s2" class="scene">
+        <div id="s2k" class="kick" style="top: 440px">Hundealter in Menschenjahren</div>
+        <div id="s2h" class="h" style="top: 492px; font-size: 96px">Das erste Jahr <i>zählt 15-fach.</i></div>
+        <div id="chart" class="card" style="left: 80px; top: 740px; width: 920px; height: 600px">
+          <svg width="920" height="600" viewBox="0 0 920 600">
+            <g stroke="#1d1b1915" stroke-width="2"><path d="M80 410 H880 M80 290 H880 M80 170 H880 M80 50 H880" /></g>
+            <path d="M80 530 H880" stroke="#1d1b19" stroke-width="3" />
+            <g class="ax"><text x="60" y="418" text-anchor="end">20</text><text x="60" y="298" text-anchor="end">40</text><text x="60" y="178" text-anchor="end">60</text><text x="60" y="58" text-anchor="end">80</text>
+              <text x="80" y="566" text-anchor="middle">1</text><text x="436" y="566" text-anchor="middle">5</text><text x="880" y="566" text-anchor="end">10 Jahre</text></g>
+            <!-- y = 530 - v*6 ; x = 80 + (a-1)*88.9 -->
+            <path id="p7" pathLength="1" d="M80 488 L169 446 L258 404 L347 362 L436 320 L524 278 L613 236 L702 194 L791 152 L880 110" fill="none" stroke="#1d1b19" stroke-width="5" stroke-dasharray="0.012 0.012" />
+            <path id="pd" pathLength="1" d="M80 440 L169 386 L258 362 L347 338 L436 314 L524 278 L613 248 L702 224 L791 194 L880 170" fill="none" stroke="#d9791a" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+            <g id="d1"><circle cx="80" cy="440" r="14" fill="#d9791a" stroke="#fbf8f2" stroke-width="5" /><text x="110" y="372" font-family="FR" font-weight="900" font-size="54" fill="#d9791a">15</text></g>
+            <g id="lg" font-family="IN" font-weight="800" font-size="28"><text x="640" y="110" fill="#1d1b19">- - ×7-Regel</text><text x="700" y="268" fill="#d9791a">echt*</text></g>
+          </svg>
+        </div>
+        <div class="src">* Richtwerte für mittelgroße Hunde · Quelle: AVMA</div>
+      </div>
+
+      <div id="s3" class="scene">
+        <div id="s3k" class="kick" style="top: 440px">Die Faustregel</div>
+        <div id="s3h" class="h" style="top: 492px; font-size: 96px">So rechnest du <i>richtig.</i></div>
+        <div id="c1" class="card stat" style="top: 740px"><div class="v">15</div><div class="t">das 1. Jahr<small>schon fast erwachsen</small></div></div>
+        <div id="c2" class="card stat" style="top: 970px"><div class="v">+9</div><div class="t">das 2. Jahr<small>also rund 24 mit zwei</small></div></div>
+        <div id="c3" class="card stat" style="top: 1200px"><div class="v">+4–5</div><div class="t">jedes weitere Jahr<small>je nach Größe</small></div></div>
+      </div>
+
+      <div id="s4" class="scene">
+        <div id="s4k" class="kick" style="top: 440px">Gut zu wissen</div>
+        <div id="s4h" class="h" style="top: 492px; font-size: 108px">Große Hunde altern <i>schneller.</i></div>
+        <img id="s4d" class="dog" src="assets/aussie/liegend.png" style="left: 300px; top: 1000px; width: 620px" alt="" />
+        <div id="s4n" class="note" style="left: 110px; top: 930px; transform: rotate(-4deg)">Kleine leben oft länger</div>
+      </div>
+
+      <div id="k1" class="cap">ein hundejahr gleich <b>sieben menschenjahre</b>?</div>
+      <div id="k2" class="cap">so einfach ist es <b>nicht</b></div>
+      <div id="k3" class="cap">das erste jahr zählt <b>etwa 15</b></div>
+      <div id="k4" class="cap">das zweite noch mal <b>rund 9</b></div>
+      <div id="k5" class="cap">danach nur <b>4 bis 5</b> pro jahr</div>
+      <div id="k6" class="cap">und große hunde altern <b>schneller</b></div>
+      <div id="follow"><span>Folgen für mehr <b>Hundewissen</b></span></div>
+      <div id="logo"><img src="assets/beagle.png" alt="" /></div>
+      <div id="name">HundeWissenTv</div>
+      <div id="rule"><i id="rule-in"></i></div>
+      <div id="grain"></div>
+    </div>
+    <script>
+      const DUR = 15;
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+    <script src="assets/magazin.js"></script>
+    <script>
+      kopf();
+      scenes([["#s1", 0, 3.4], ["#s2", 3.4, 8], ["#s3", 8, 11.6], ["#s4", 11.6]]);
+      up("#s1k", 0.2); up("#s1h", 0.35, 0.6); peek("#s1d", 0.9, 600);
+      tl.fromTo("#stamp", { scale: 2.4, opacity: 0, rotation: -20 }, { scale: 1, opacity: 1, rotation: -9, duration: 0.3, ease: "power4.in" }, 2.0);
+      tl.fromTo("#s1", { x: 0 }, { x: 10, duration: 0.05, yoyo: true, repeat: 3 }, 2.3);
+      tl.to("#s1d", { rotation: -5, duration: 0.3, yoyo: true, repeat: 1, ease: "sine.inOut", transformOrigin: "50% 100%" }, 2.4);
+
+      up("#s2k", 3.5); up("#s2h", 3.6); tl.fromTo("#chart", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 3.9);
+      tl.fromTo("#p7", { opacity: 0 }, { opacity: 1, duration: 0.6 }, 4.4);
+      tl.fromTo("#pd", { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 1.4, ease: "power2.inOut" }, 5.4);
+      tl.fromTo("#d1", { scale: 0, transformOrigin: "80px 440px" }, { scale: 1, duration: 0.4, ease: "back.out(2.5)" }, 5.7);
+      tl.fromTo("#lg", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 6.6);
+
+      up("#s3k", 8.1); up("#s3h", 8.2);
+      tl.fromTo("#c1", { x: -80, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45, ease: "power3.out" }, 8.4);
+      tl.fromTo("#c2", { x: -80, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45, ease: "power3.out" }, 9.8);
+      tl.fromTo("#c3", { x: -80, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45, ease: "power3.out" }, 10.3);
+
+      up("#s4k", 11.7); up("#s4h", 11.8); peek("#s4d", 12.1, 600); note("#s4n", 12.6);
+      tl.to("#s4d", { scaleY: 1.03, duration: 0.6, yoyo: true, repeat: 3, ease: "sine.inOut", transformOrigin: "50% 100%" }, 12.8);
+
+      caps([["#k1", 0, 3.4], ["#k2", 3.4, 5.7], ["#k3", 5.7, 8], ["#k4", 8, 9.8], ["#k5", 9.8, 11.6], ["#k6", 11.6, 13.4]]);
+      folgen(13.4);
+      tl.to({}, { duration: 0.01 }, DUR - 0.01);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/magazin.css" />
+    <style>
+      #grid { position: absolute; left: 140px; top: 760px; width: 800px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 34px 0; justify-items: center; }
+      .pt { width: 92px; height: 92px; border-radius: 50%; border: 5px solid #1d1b1933; background: transparent; }
+      .big { font-family: "FR"; font-weight: 900; font-size: 64px; letter-spacing: -1px; }
+      .vs { position: absolute; top: 760px; width: 430px; height: 440px; padding: 40px 34px; text-align: center; }
+      .vs .ic { font-size: 120px; line-height: 1; margin: 10px 0 20px; }
+      .vs .l { font-weight: 800; font-size: 40px; }
+      .vs .m { font-family: "FR"; font-style: italic; font-weight: 900; font-size: 64px; margin-top: 28px; }
+      .meter { height: 26px; border-radius: 13px; background: var(--soft); margin-top: 26px; overflow: hidden; }
+      .meter i { display: block; height: 100%; width: 0; }
+      .chip { position: absolute; left: 80px; padding: 16px 34px 20px; border-radius: 40px; background: #fbf8f2; border: 2px solid #1d1b1922; box-shadow: 0 14px 30px #0000001a; font-weight: 800; font-size: 44px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="15" data-width="1080" data-height="1920">
+      <div id="s1" class="scene">
+        <div id="s1k" class="kick" style="top: 440px">Ansteckend</div>
+        <div id="s1h" class="h" style="top: 492px; font-size: 112px">Gähnen steckt <i>auch Hunde an.</i></div>
+        <img id="s1d" class="dog" src="assets/aussie/liegend.png" style="left: 330px; top: 1010px; width: 640px" alt="" />
+        <div id="s1n" class="note" style="left: 120px; top: 960px; transform: rotate(-6deg)">*gääähn*</div>
+      </div>
+
+      <div id="s2" class="scene">
+        <div id="s2k" class="kick" style="top: 440px">Die Studie</div>
+        <div id="s2h" class="h" style="top: 492px; font-size: 100px"><span id="cnt">0</span> von 29 Hunden <i>gähnten mit.</i></div>
+        <div id="grid"></div>
+        <div class="src">Studie: Birkbeck, University of London (2008)</div>
+      </div>
+
+      <div id="s3" class="scene">
+        <div id="s3k" class="kick" style="top: 440px">Noch spannender</div>
+        <div id="s3h" class="h" style="top: 492px; font-size: 92px">Bei dir gähnt er <i>eher mit.</i></div>
+        <div id="v1" class="card vs" style="left: 80px">
+          <div class="ic">🧡</div><div class="l">Sein Mensch</div><div class="m" style="color: var(--or)">öfter</div>
+          <div class="meter"><i id="m1" style="background: var(--or)"></i></div>
+        </div>
+        <div id="v2" class="card vs" style="left: 570px">
+          <div class="ic" style="filter: grayscale(1)">👤</div><div class="l">Fremde Person</div><div class="m">seltener</div>
+          <div class="meter"><i id="m2" style="background: var(--ink)"></i></div>
+        </div>
+        <div class="src">Studie: Universität Tokio (2013) · Balken schematisch</div>
+      </div>
+
+      <div id="s4" class="scene">
+        <div id="s4k" class="kick" style="top: 440px">Aber Achtung</div>
+        <div id="s4h" class="h" style="top: 492px; font-size: 92px">Gähnen kann auch <i>Stress</i> zeigen.</div>
+        <div id="q1" class="chip" style="top: 880px">🩺 beim Tierarzt</div>
+        <div id="q2" class="chip" style="top: 1010px">🔊 bei Lärm</div>
+        <div id="q3" class="chip" style="top: 1140px">😬 bei Streit</div>
+        <img id="s4d" class="dog" src="assets/aussie/aengstlich.png" style="left: 600px; top: 900px; width: 400px" alt="" />
+      </div>
+
+      <div id="k1" class="cap">gähnen ist <b>ansteckend</b> – auch für hunde</div>
+      <div id="k2" class="cap">in einer studie gähnten <b>21 von 29</b> hunden</div>
+      <div id="k3" class="cap">nur weil ein <b>mensch</b> gähnte</div>
+      <div id="k4" class="cap">bei <b>ihrem menschen</b> öfter</div>
+      <div id="k5" class="cap">als bei <b>fremden</b></div>
+      <div id="k6" class="cap">gähnen kann aber auch <b>stress</b> bedeuten</div>
+      <div id="follow"><span>Folgen für mehr <b>Hundewissen</b></span></div>
+      <div id="logo"><img src="assets/beagle.png" alt="" /></div>
+      <div id="name">HundeWissenTv</div>
+      <div id="rule"><i id="rule-in"></i></div>
+      <div id="grain"></div>
+    </div>
+    <script>
+      const DUR = 15;
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+    <script src="assets/magazin.js"></script>
+    <script>
+      const grid = document.getElementById("grid");
+      for (let i = 0; i < 29; i++) { const d = document.createElement("div"); d.className = "pt"; d.id = "pt" + i; grid.appendChild(d); }
+      kopf();
+      scenes([["#s1", 0, 3.4], ["#s2", 3.4, 7.6], ["#s3", 7.6, 11.6], ["#s4", 11.6]]);
+      up("#s1k", 0.2); up("#s1h", 0.35, 0.6); peek("#s1d", 1.0, 600); note("#s1n", 1.9);
+      tl.to("#s1d", { scaleY: 1.04, scaleX: 0.98, duration: 0.5, yoyo: true, repeat: 1, ease: "sine.inOut", transformOrigin: "50% 100%" }, 2.0);
+
+      up("#s2k", 3.5); up("#s2h", 3.6);
+      tl.fromTo(".pt", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, stagger: 0.02, ease: "back.out(2)" }, 3.9);
+      for (let i = 0; i < 21; i++) tl.to("#pt" + i, { backgroundColor: "#d9791a", borderColor: "#d9791a", duration: 0.12 }, 4.8 + i * 0.07);
+      count("cnt", 21, 4.8, 21 * 0.07);
+      tl.to("#pt21, #pt22, #pt23, #pt24, #pt25, #pt26, #pt27, #pt28", { opacity: 0.45, duration: 0.3 }, 6.4);
+
+      up("#s3k", 7.7); up("#s3h", 7.8);
+      tl.fromTo("#v1", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 8.1);
+      tl.to("#m1", { width: "85%", duration: 0.9, ease: "power2.out" }, 8.6);
+      tl.fromTo("#v2", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 9.7);
+      tl.to("#m2", { width: "35%", duration: 0.7, ease: "power2.out" }, 10.1);
+
+      up("#s4k", 11.7); up("#s4h", 11.8);
+      tl.fromTo(["#q1", "#q2", "#q3"], { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.4, stagger: 0.25, ease: "power3.out" }, 12.2);
+      peek("#s4d", 12.3, 700); tl.fromTo("#s4d", { x: 0 }, { x: 5, duration: 0.06, yoyo: true, repeat: 15 }, 13.0);
+
+      caps([["#k1", 0, 3.4], ["#k2", 3.4, 5.6], ["#k3", 5.6, 7.6], ["#k4", 7.6, 9.6], ["#k5", 9.6, 11.6], ["#k6", 11.6, 13.4]]);
+      folgen(13.4);
+      tl.to({}, { duration: 0.01 }, DUR - 0.01);
+    </script>
+  </body>
+</html>

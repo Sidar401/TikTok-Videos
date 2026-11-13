@@ -22,6 +22,12 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
      (für TikTok/Instagram).
    - **Thumbnails:** für **jedes** erstellte Video immer passende Thumbnails mitliefern (16:9-Video → 16:9-Thumbnail,
      9:16-Video → 9:16-Thumbnail).
+   - **Stil: „Magazin“** (vom Nutzer gewählt 13.11.): cremefarbenes Papier, Fraunces-Serif-Überschriften (Kursiv-Akzent orange),
+     Aussie-Posen als sympathische Figur, saubere Schaubilder, kleine Quellenzeile. Kit: `hundewissen/magazin/`
+     (CSS/JS, in `videos/<name>/assets/` kopieren). Beispiele: `videos/hw-mag-farben`, `hw-mag-hundejahre`, `hw-mag-gaehnen`.
+   - **Kopf immer:** Beagle-Logo `beagle.png` (Kreis, oranger Rand) + darunter „HundeWissenTv“ – wie bei HundeFinanzTv.
+     **Keine** „Nr. 01 – Thema“-Zeile oben rechts.
+   - Demos ohne Stimme (spart ElevenLabs-Credits).
 2. **HundeWissenTv 2.0**: ab Nov. 2026 **reiner TikTok-Shop-Kanal** (nur Hundesachen) → Skill `/shop-video`.
 3. **HundeFinanzTV**: Geld & Finanzen (faceless, animierte Grafiken) → Skill `/finanz-video`, `kanal.json`, `STIL.md`.
 

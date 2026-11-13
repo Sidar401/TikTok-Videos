@@ -1,0 +1,34 @@
+/* HundeWissenTv – Magazin-Stil (vom Nutzer gewählt 13.11.2026) */
+@font-face { font-family: "FR"; font-weight: 700; src: url("fonts/fraunces-latin-700-normal.woff2"); }
+@font-face { font-family: "FR"; font-weight: 900; src: url("fonts/fraunces-latin-900-normal.woff2"); }
+@font-face { font-family: "FR"; font-weight: 700; font-style: italic; src: url("fonts/fraunces-latin-700-italic.woff2"); }
+@font-face { font-family: "FR"; font-weight: 900; font-style: italic; src: url("fonts/fraunces-latin-900-italic.woff2"); }
+@font-face { font-family: "IN"; font-weight: 600; src: url("fonts/Inter-SemiBold.otf"); }
+@font-face { font-family: "IN"; font-weight: 800; src: url("fonts/InterDisplay-ExtraBold.otf"); }
+@font-face { font-family: "IN"; font-weight: 900; src: url("fonts/InterDisplay-Black.otf"); }
+:root { --paper: #f3ede3; --ink: #1d1b19; --or: #d9791a; --or2: #f2b06a; --soft: #e4d9c7; --mute: #1d1b1999; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--paper); }
+#root { position: relative; width: 1080px; height: 1920px; overflow: hidden; color: var(--ink); font-family: "IN", sans-serif;
+  background: radial-gradient(ellipse at 50% 38%, #faf6ef 0%, var(--paper) 55%, #e8dfcf 100%); }
+#grain { position: absolute; inset: 0; opacity: 0.35; mix-blend-mode: multiply; pointer-events: none; z-index: 30;
+  background-image: radial-gradient(#0000000d 1px, transparent 1.2px); background-size: 6px 6px; }
+/* Kopf: Logo + Name (wie HundeFinanzTv) */
+#logo { position: absolute; left: 450px; top: 96px; width: 180px; height: 180px; border-radius: 50%; overflow: hidden; border: 6px solid #db8622; box-shadow: 0 0 34px #db862266, 0 14px 30px #0002; z-index: 20; background: #353a3d; }
+#logo img { width: 100%; height: 100%; object-fit: cover; }
+#name { position: absolute; left: 0; top: 292px; width: 1080px; text-align: center; font-weight: 900; font-size: 46px; letter-spacing: 0.5px; z-index: 20; }
+#rule { position: absolute; left: 80px; right: 80px; top: 372px; height: 3px; background: #1d1b1926; z-index: 20; }
+#rule i { display: block; height: 100%; width: 0; background: var(--or); }
+.scene { position: absolute; inset: 0; opacity: 0; }
+.kick { position: absolute; left: 80px; font-weight: 800; font-size: 30px; letter-spacing: 5px; text-transform: uppercase; color: var(--or); }
+.h { position: absolute; left: 80px; right: 80px; font-family: "FR"; font-weight: 900; line-height: 0.98; letter-spacing: -2px; }
+.h i { font-style: italic; color: var(--or); }
+.note { position: absolute; font-family: "FR"; font-style: italic; font-weight: 700; font-size: 44px; color: var(--or); white-space: nowrap; }
+.src { position: absolute; left: 80px; right: 80px; top: 1390px; font-weight: 600; font-size: 24px; color: var(--mute); letter-spacing: 0.5px; }
+.dog { position: absolute; filter: drop-shadow(0 24px 30px #0003); }
+.card { position: absolute; background: #fbf8f2; border: 2px solid #1d1b1922; border-radius: 18px; box-shadow: 0 24px 50px #0000001a; }
+.cap { position: absolute; left: 80px; right: 80px; top: 1470px; text-align: center; opacity: 0; z-index: 9; font-weight: 800; font-size: 60px; line-height: 1.2; }
+.cap b { background: linear-gradient(transparent 58%, var(--or2) 58%); }
+#follow { position: absolute; left: 0; width: 1080px; top: 1470px; text-align: center; opacity: 0; z-index: 11; }
+#follow span { display: inline-block; background: var(--ink); color: var(--paper); font-weight: 800; font-size: 46px; padding: 18px 46px 22px; border-radius: 60px; box-shadow: 0 18px 40px #0003; }
+#follow span b { color: var(--or2); }
