@@ -222,3 +222,8 @@ KEIN Laufband bei zeitlosen Börsenthemen (ETF erklärt, Sparplan, „Steckt Nvi
 - Personenfotos (CC BY/BY-SA) ohne Quellenzeile im Bild; am Ende von build.py `print(bildquellen(HERE))` → `bildquellen.txt`. Den Text dem Nutzer bei der Lieferung zum Kopieren in die Beschreibung geben.
 - Neue freie Hintergründe: frei-frankfurt-nacht, frei-frankfurt-staedel, frei-commerzbank-turm, frei-mailand-porta-nuova, frei-euro, frei-50euro, frei-sitzung (+ bitcoin-* sind CC BY → bei Bedarf ersetzen).
 - Videos > 100 MB vor dem Commit mit ffmpeg (crf 21, maxrate 5000k) verkleinern – GitHub-Limit.
+
+## TAGESPLAN AB 14.11. (Nutzer 13.11.) – ersetzt „1 Longform + 2 Shorts“
+- Täglich **2 Longforms** (9:16, je 2–3 Min.) + **1 Motor-Short** (61–75 s, verweist auf ein Longform).
+- YouTube-Tage (14.11., 17.11., 20.11., …): Longform 1 zusätzlich 16:9 + Thumbnail 16:9.
+- Ca. 3.000 Credits/Tag (Longform ≈ 1.200, Short ≈ 600). Nutzer kauft bei Bedarf Credits nach.

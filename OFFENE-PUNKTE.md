@@ -31,6 +31,6 @@
 - 74 Sounds in brand/sfx (LISTE.md). Antworten an Nutzer: kurz, Deutsch, iPad-tauglich.
 
 ## Neu (13.11.)
-- **Ab Pro-Abo (nächster Monat): 2 Longforms (2–3 Min.) + 1 Motor-Short (61–75 s) pro Tag** – Longforms laufen besser (Nutzer). Bis dahin weiter 2 Shorts + 1 Longform (Credits).
+- **AB 14.11.: 2 Longforms (2–3 Min.) + 1 Motor-Short (61–75 s) pro Tag** (Nutzer 13.11.: Longforms laufen besser; kauft bei Bedarf Credits nach).
 - **Keine Fotografen-Namen mehr im Bild** (Nutzer: „sieht schrecklich aus“): Hintergründe nur CC0/gemeinfrei (`frei-…` in brand/hintergruende), Personenfoto-Quellen in `bildquellen.txt` → Text für die Beschreibung. Freigegeben mit `renders/demo-ohne-quellen.mp4` („so stelle ich mir das vor“).
 - Sammlung freier Hintergründe ausbauen (Börse, Banken, Chips, Krypto, Öl …).
