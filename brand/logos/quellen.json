@@ -19,11 +19,11 @@
  "amazon": "Amazon_logo.svg",
  "schufa": "Schufa logo.svg",
  "commerzbank.png": {
-  "datei": "File:Commerzbank-Logo.svg",
+  "datei": "File:Commerzbank (2009).svg",
   "lizenz": "Public domain"
  },
  "commerzbank-symbol.png": {
-  "datei": "File:Commerzbank-Logo.svg (Ausschnitt Symbol)",
+  "datei": "File:Commerzbank (2009).svg (Ausschnitt Band-Symbol)",
   "lizenz": "Public domain"
  },
  "hvb.png": {
@@ -37,5 +37,10 @@
  "comdirect.svg": {
   "datei": "File:Comdirect Logo 10.2019.svg",
   "lizenz": "Public domain"
+ },
+ "commerzbank-alt-1972.png": {
+  "datei": "File:Commerzbank-Logo.svg",
+  "lizenz": "Public domain",
+  "hinweis": "ALTES Logo bis 2009 – nicht verwenden"
  }
 }

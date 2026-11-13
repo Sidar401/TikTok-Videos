@@ -214,4 +214,5 @@ KEIN Laufband bei zeitlosen Börsenthemen (ETF erklärt, Sparplan, „Steckt Nvi
 - **Cover IMMER mitliefern – auch für Shorts** (9:16, `videos/thumbs-<name>/`, Export nach `renders/thumbnails/<name>-tiktok.jpg`), direkt zusammen mit dem Video. Nutzer musste daran erinnern.
 - **Jedes heruntergeladene Personen-Foto selbst ansehen (Read), bevor es ins Video kommt.** Bug am 13.11.: API-Fehler → altes Ergebnis wiederverwendet → „Scholz“-Datei war Orcel. Beim Download den Dateinamen in der URL prüfen.
 - Wikimedia-SVG-Originale werden oft mit 429 geblockt → PNG-Thumbnail (iiurlwidth=1280) nehmen.
-- Neue Logos: commerzbank(.png, -symbol), hvb.png, unicredit-symbol.png (aus HVB-Logo), comdirect.svg, Flaggen italien/deutschland/eu.
+- **Logos immer auf AKTUELLE Version prüfen** (Nutzer 13.11.: Commerzbank-Strahlen-Logo war das alte bis 2009 → richtig ist das gelbe Band, File:Commerzbank (2009).svg). Bei Wikimedia nach Jahreszahl im Dateinamen schauen.
+- Neue Logos: commerzbank(.png = Band-Logo, -symbol), hvb.png, unicredit-symbol.png (aus HVB-Logo), comdirect.svg, Flaggen italien/deutschland/eu.
