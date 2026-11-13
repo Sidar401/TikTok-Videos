@@ -216,3 +216,9 @@ KEIN Laufband bei zeitlosen Börsenthemen (ETF erklärt, Sparplan, „Steckt Nvi
 - Wikimedia-SVG-Originale werden oft mit 429 geblockt → PNG-Thumbnail (iiurlwidth=1280) nehmen.
 - **Logos immer auf AKTUELLE Version prüfen** (Nutzer 13.11.: Commerzbank-Strahlen-Logo war das alte bis 2009 → richtig ist das gelbe Band, File:Commerzbank (2009).svg). Bei Wikimedia nach Jahreszahl im Dateinamen schauen.
 - Neue Logos: commerzbank(.png = Band-Logo, -symbol), hvb.png, unicredit-symbol.png (aus HVB-Logo), comdirect.svg, Flaggen italien/deutschland/eu.
+
+## Keine Quellen im Bild (Nutzer 13.11., Demo freigegeben)
+- `QUELLE_IM_BILD = False` in analyse_kit: Hintergründe NUR CC0/gemeinfrei (`frei-…`, handelssaal, wallstreet) – keine Namensnennung nötig.
+- Personenfotos (CC BY/BY-SA) ohne Quellenzeile im Bild; am Ende von build.py `print(bildquellen(HERE))` → `bildquellen.txt`. Den Text dem Nutzer bei der Lieferung zum Kopieren in die Beschreibung geben.
+- Neue freie Hintergründe: frei-frankfurt-nacht, frei-frankfurt-staedel, frei-commerzbank-turm, frei-mailand-porta-nuova, frei-euro, frei-50euro, frei-sitzung (+ bitcoin-* sind CC BY → bei Bedarf ersetzen).
+- Videos > 100 MB vor dem Commit mit ffmpeg (crf 21, maxrate 5000k) verkleinern – GitHub-Limit.
