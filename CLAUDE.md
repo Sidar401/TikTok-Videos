@@ -16,7 +16,8 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
    Ab ca. Ende Nov. 2026 zusätzlich **animierte Videos wie HundeFinanzTV**. Stimme = gleiche wie Kanal Novaro:
    ElevenLabs **„Dan“** (`BHr135B5EUBtaWheVj8S`, Modell `eleven_v4`), automatisch per `hundewissen/stimme.py`
    (mit Sprache-zu-Text-Kontrolle). Probe: `renders/hundewissen-stimmprobe.m4a`.
-   - **Formate:** normale Videos immer **9:16** (TikTok/Instagram).
+   - **Formate:** normale Videos (Shorts) immer **9:16**, Länge **60–80 s** (wird vom Algorithmus gepusht);
+     gepostet auf TikTok, Instagram **und YouTube** (als Shorts).
    - **Ca. 1× pro Woche Longform:** in **16:9** (für YouTube) **und am selben Tag dasselbe Video zusätzlich in 9:16**
      (für TikTok/Instagram).
    - **Thumbnails:** für **jedes** erstellte Video immer passende Thumbnails mitliefern (16:9-Video → 16:9-Thumbnail,
