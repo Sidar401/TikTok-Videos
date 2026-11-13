@@ -16,6 +16,11 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
    Ab ca. Ende Nov. 2026 zusätzlich **animierte Videos wie HundeFinanzTV**. Stimme = gleiche wie Kanal Novaro:
    ElevenLabs **„Dan“** (`BHr135B5EUBtaWheVj8S`, Modell `eleven_v4`), automatisch per `hundewissen/stimme.py`
    (mit Sprache-zu-Text-Kontrolle). Probe: `renders/hundewissen-stimmprobe.m4a`.
+   - **Formate:** normale Videos immer **9:16** (TikTok/Instagram).
+   - **Ca. 1× pro Woche Longform:** in **16:9** (für YouTube) **und am selben Tag dasselbe Video zusätzlich in 9:16**
+     (für TikTok/Instagram).
+   - **Thumbnails:** für **jedes** erstellte Video immer passende Thumbnails mitliefern (16:9-Video → 16:9-Thumbnail,
+     9:16-Video → 9:16-Thumbnail).
 2. **HundeWissenTv 2.0**: ab Nov. 2026 **reiner TikTok-Shop-Kanal** (nur Hundesachen) → Skill `/shop-video`.
 3. **HundeFinanzTV**: Geld & Finanzen (faceless, animierte Grafiken) → Skill `/finanz-video`, `kanal.json`, `STIL.md`.
 
