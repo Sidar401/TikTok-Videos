@@ -5,280 +5,496 @@
     <meta name="viewport" content="width=1080, height=1920" />
     <script src="assets/gsap.min.js"></script>
     <style>
-      /* Kanal-Stil (siehe STIL.md) */
-      @font-face {
-        font-family: "Abril Fatface";
-        src: url("assets/fonts/abril-fatface.woff2") format("woff2");
-      }
-      :root {
-        --bg: #ffffff;
-        --ink: #111111;
-        --brand: #DB8622; /* Kanalfarbe aus kanal.json */
-        --green: #1f7a4d;
-        --gold: #f2c418;
-        --red: #e24b4b;
-        --blue: #3d7be0;
-        --font-caption: "Montserrat", sans-serif;
-        --font-display: "Abril Fatface", serif;
-      }
       * { margin: 0; padding: 0; box-sizing: border-box; }
-      html, body {
-        width: 1080px;
-        height: 1920px;
-        overflow: hidden;
-        background: var(--bg);
-      }
-      #root {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        background: var(--bg);
-      }
-
-      /* Szene: eine Illustration, zentriert im oberen Bereich */
-      .scene {
-        position: absolute;
-        left: 0;
-        top: 230px;
-        width: 1080px;
-        height: 1080px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .art { width: 820px; height: 820px; }
-      .art svg { width: 100%; height: 100%; display: block; }
-
-      /* Oranger Rahmen wie bei HundeWissenTv */
-      #frame {
-        position: absolute;
-        inset: 0;
-        border: 26px solid var(--brand);
-        z-index: 10;
-        pointer-events: none;
-      }
-
-      /* Untertitel-Box (TikTok-Look) */
-      .cap {
-        position: absolute;
-        left: 0;
-        top: 1360px;
-        width: 1080px;
-        display: flex;
-        justify-content: center;
-      }
-      .cap span {
-        display: block;
-        max-width: 880px;
-        padding: 20px 44px 22px;
-        border-radius: 28px;
-        background: var(--brand);
-        color: #ffffff;
-        font-family: var(--font-caption);
-        font-weight: 600;
-        font-size: 54px;
-        line-height: 1.15;
-        text-align: center;
-      }
-
-      /* Zahlen-Vergleich in Serifen-Schrift */
-      .cmp {
-        width: 940px;
-        display: grid;
-        grid-template-columns: 1fr 6px 1fr;
-        column-gap: 40px;
-        font-family: var(--font-display);
-        color: var(--ink);
-        text-align: center;
-      }
-      .cmp .head { font-size: 104px; line-height: 1.1; }
-      .cmp .sub { font-size: 76px; line-height: 1.1; }
-      .cmp .divider { background: var(--ink); grid-row: 1 / span 3; grid-column: 2; }
-      .cmp .arrow { height: 260px; display: flex; justify-content: center; align-items: center; }
-      .cmp .arrow svg { width: 140px; height: 220px; }
-      .cmp .num { font-size: 96px; line-height: 1.2; }
-      .green { color: var(--green); }
-      .gold { color: var(--gold); }
-      .chart-label { font-family: var(--font-display); }
-      .serif { font-family: var(--font-display); }
-      #brand {
-        position: absolute;
-        top: 190px;
-        left: 0;
-        width: 1080px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 14px;
-        font-family: var(--font-caption);
-        font-weight: 800;
-        font-size: 42px;
-        color: #353a3d;
-        z-index: 5;
-      }
-      #brand-dog { width: 84px; height: 84px; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0e1012; }
+      #root { position: relative; width: 100%; height: 100%; font-family: Montserrat, sans-serif; overflow: hidden;
+        background: radial-gradient(ellipse at 50% 42%, #ff8a1f33 0%, #ff8a1f0d 38%, transparent 62%), radial-gradient(ellipse at 50% 50%, #1b1f22 0%, #0e1012 75%); }
+      #raster { position: absolute; inset: 0; background-image: linear-gradient(#ffffff0c 2px, transparent 2px), linear-gradient(90deg, #ffffff0c 2px, transparent 2px); background-size: 90px 90px; }
+      .scene { position: absolute; inset: 0; }
+      .inner { position: absolute; inset: 0; }
+      .t { position: absolute; left: 0; width: 1080px; text-align: center; font-weight: 900; line-height: 1.02; letter-spacing: -1px; color: #fff; }
+      .glow-o { color: #ff8a1f; text-shadow: 0 0 50px #ff8a1faa; }
+      .glow-g { color: #2fd27a; text-shadow: 0 0 50px #2fd27aaa; }
+      .glow-r { color: #ff4d4d; text-shadow: 0 0 50px #ff4d4daa; }
+      .box { display: inline-block; padding: 6px 34px 14px; border-radius: 24px; background: #ff8a1f; color: #111; box-shadow: 0 0 60px #ff8a1f88; }
+      #logo { position: absolute; left: 445px; top: 135px; width: 190px; height: 190px; border-radius: 50%; overflow: hidden; border: 5px solid #DB8622; box-shadow: 0 0 30px #ff8a1f88; z-index: 5; }
+      #logo img { width: 100%; height: 100%; object-fit: cover; }
+      #brand { position: absolute; left: 0; top: 335px; width: 1080px; text-align: center; font-size: 38px; font-weight: 800; color: #ffffffdd; letter-spacing: 1px; z-index: 5; }
+      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; z-index: 9; pointer-events: none; }
+      .p { position: absolute; border-radius: 50%; }
+      .l { display: inline-block; }
+      #frame { position: absolute; inset: 0; border: 26px solid #DB8622; z-index: 10; }
+      .ew { position: absolute; left: 0; width: 1080px; text-align: center; z-index: 6; font-weight: 900; font-size: 104px; line-height: 1; color: #fff; text-transform: uppercase;
+        letter-spacing: -1px; text-shadow: 0 6px 0 #000, 0 0 30px #000; white-space: nowrap; }
+      .cap { position: absolute; left: 60px; top: 1330px; width: 960px; text-align: center; z-index: 6; }
+      .cap span { display: inline-block; margin: 0 16px; font-weight: 900; font-size: 74px; line-height: 1.15; color: #fff; text-shadow: 0 6px 0 #000, 0 0 30px #000; }
     </style>
   </head>
   <body>
-    <div
-      id="root"
-      data-composition-id="main"
-      data-start="0"
-      data-duration="15"
-      data-width="1080"
-      data-height="1920"
-    >
-      <!-- ============ SZENEN ============ -->
-
-      <!-- 1: Geldsack -->
-      <div id="s1" class="scene clip" data-start="0" data-duration="3" data-track-index="1">
-        <div id="s1-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <g id="s1-coins">
-              <g fill="#f2c418" stroke="#c99a06" stroke-width="3">
-                <rect x="250" y="300" width="110" height="22" rx="8" />
-                <rect x="250" y="276" width="110" height="22" rx="8" />
-                <rect x="250" y="252" width="110" height="22" rx="8" />
-                <rect x="250" y="228" width="110" height="22" rx="8" />
-                <rect x="250" y="204" width="110" height="22" rx="8" />
-                <rect x="265" y="180" width="110" height="22" rx="8" />
-                <rect x="258" y="156" width="110" height="22" rx="8" />
-              </g>
-            </g>
-            <g id="s1-bag">
-              <path d="M150 110 C120 70 140 50 160 70 C175 50 205 50 220 70 C240 50 260 70 230 110 Z" fill="#1f7a4d" />
-              <rect x="145" y="104" width="90" height="18" rx="9" fill="#f2c418" />
-              <path d="M150 120 C60 170 40 330 120 340 L260 340 C340 330 320 170 230 120 Z" fill="#1f7a4d" />
-              <path d="M155 135 C90 180 75 300 125 325" fill="none" stroke="#2c9a63" stroke-width="10" stroke-linecap="round" />
-              <circle cx="190" cy="245" r="62" fill="#f2c418" />
-              <text x="190" y="272" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="80" fill="#1f7a4d">€</text>
-            </g>
-            <g fill="#f2c418" stroke="#c99a06" stroke-width="3">
-              <ellipse cx="80" cy="345" rx="34" ry="12" />
-              <ellipse cx="110" cy="360" rx="34" ry="12" />
-            </g>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 2: Zielscheibe -->
-      <div id="s2" class="scene clip" data-start="3" data-duration="3" data-track-index="1">
-        <div id="s2-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <circle cx="190" cy="210" r="160" fill="#e24b4b" />
-            <circle cx="190" cy="210" r="125" fill="#f6efe1" />
-            <circle cx="190" cy="210" r="92" fill="#e24b4b" />
-            <circle cx="190" cy="210" r="58" fill="#f6efe1" />
-            <circle cx="190" cy="210" r="26" fill="#e24b4b" />
-            <g id="s2-arrow">
-              <line x1="196" y1="204" x2="340" y2="60" stroke="#555" stroke-width="10" stroke-linecap="round" />
-              <path d="M320 50 L370 30 L350 80 L340 60 Z" fill="#e8742c" />
-              <path d="M335 35 L375 15 L365 45 Z" fill="#e8742c" />
-            </g>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 3: Zahlen-Vergleich -->
-      <div id="s3" class="scene clip" data-start="6" data-duration="3.5" data-track-index="1">
-        <div class="cmp">
-          <div id="s3-h1" style="grid-column:1"><div class="head">Konto</div><div class="sub">0 %</div></div>
-          <div class="divider"></div>
-          <div id="s3-h2" style="grid-column:3"><div class="head">ETF</div><div class="sub">~7 %</div></div>
-          <div class="arrow" style="grid-column:1">
-            <svg viewBox="0 0 70 110"><path id="s3-a1" d="M40 6 C10 30 8 70 40 98" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" /><path d="M24 92 L42 100 L44 80" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></svg>
-          </div>
-          <div class="arrow" style="grid-column:3">
-            <svg viewBox="0 0 70 110"><path id="s3-a2" d="M30 6 C60 30 62 70 30 98" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" /><path d="M46 92 L28 100 L26 80" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /></svg>
-          </div>
-          <div id="s3-n1" class="num green" style="grid-column:1">36.000€</div>
-          <div style="grid-column:3">
-            <div id="s3-n2" class="num green">36.000€</div>
-            <div id="s3-n3" class="num gold">77.000€</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4: Rendite-Chart -->
-      <div id="s4" class="scene clip" data-start="9.5" data-duration="3" data-track-index="1">
-        <div class="art">
-          <svg viewBox="0 0 400 400">
-            <path d="M40 40 L40 340 L370 340" fill="none" stroke="#111" stroke-width="8" stroke-linecap="square" />
-            <path id="s4-solid" d="M60 300 C140 285 220 280 290 255" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" />
-            <path id="s4-dots" d="M60 285 C150 250 230 190 300 95" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 16" />
-            <text id="s4-label" class="chart-label" x="70" y="100" font-size="70" fill="#1f7a4d">~7%</text>
-            <g id="s4-check">
-              <circle cx="320" cy="80" r="42" fill="#111" />
-              <path d="M300 82 L315 97 L342 66" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-            </g>
-          </svg>
-        </div>
-      </div>
-
-      <!-- 5: Outro -->
-      <div id="s5" class="scene clip" data-start="12.5" data-duration="2.5" data-track-index="1">
-        <div id="s5-art" class="art">
-          <svg viewBox="0 0 400 400">
-            <circle cx="200" cy="200" r="150" fill="#DB8622" />
-            <path d="M120 260 L180 200 L220 235 L290 150" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M250 145 L295 145 L295 190" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </div>
-      </div>
-
+    <div id="root" data-composition-id="main" data-start="0" data-duration="74.6" data-width="1080" data-height="1920">
+      <div id="raster"></div>
+      <div id="z0" class="scene clip" data-start="0.0" data-duration="2.955" data-track-index="1"><div id="z0-i" class="inner"><img id="bg0" class="hgfoto" src="assets/hg/bitcoin-muenzen.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div class="mono" style="position:absolute;right:70px;top:466px;font-size:18px;color:#ffffffaa;text-shadow:0 2px 6px #000;z-index:7">Foto: Satheesh Sankaran · CC BY-SA 2.0</div><style>@font-face { font-family: Caveat; src: url(assets/caveat.woff2); font-weight: 700; } .hand { font-family: Caveat, cursive; font-weight: 700; line-height: 1; white-space: nowrap; } .mono { font-family: "JetBrains Mono", monospace; font-weight: 800; }</style><div id="t1" style="position:absolute;left:0;width:1080px;top:490px;text-align:center;z-index:6"><span style="display:inline-block;font-weight:900;font-size:62px;color:#ff4d4d;letter-spacing:2px;text-transform:uppercase;text-shadow:0 0 30px #ff4d4d55;border-bottom:6px solid #ff8a1f;padding:0 10px 6px">⚡ Freitag, der 13.</span></div><div id="m1" style="position:absolute;left:0;width:1080px;justify-content:center;top:640px;display:flex;align-items:center;gap:33px;z-index:4"><svg fill="#F7931A" style="width:150px;height:150px;filter:drop-shadow(0 0 18px #F7931A99)" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Bitcoin</title><path d="M23.638 14.904c-1.602 6.43-8.113 10.34-14.542 8.736C2.67 22.05-1.244 15.525.362 9.105 1.962 2.67 8.475-1.243 14.9.358c6.43 1.605 10.342 8.115 8.738 14.548v-.002zm-6.35-4.613c.24-1.59-.974-2.45-2.64-3.03l.54-2.153-1.315-.33-.525 2.107c-.345-.087-.705-.167-1.064-.25l.526-2.127-1.32-.33-.54 2.165c-.285-.067-.565-.132-.84-.2l-1.815-.45-.35 1.407s.975.225.955.236c.535.136.63.486.615.766l-1.477 5.92c-.075.166-.24.406-.614.314.015.02-.96-.24-.96-.24l-.66 1.51 1.71.426.93.242-.54 2.19 1.32.327.54-2.17c.36.1.705.19 1.05.273l-.51 2.154 1.32.33.545-2.19c2.24.427 3.93.257 4.64-1.774.57-1.637-.03-2.58-1.217-3.196.854-.193 1.5-.76 1.68-1.93h.01zm-3.01 4.22c-.404 1.64-3.157.75-4.05.53l.72-2.9c.896.23 3.757.67 3.33 2.37zm.41-4.24c-.37 1.49-2.662.735-3.405.55l.654-2.64c.744.18 3.137.524 2.75 2.084v.006z"/></svg><span style="font-weight:900;font-size:93px;color:#fff;letter-spacing:1px;text-shadow:0 0 20px #ffffff44">BITCOIN</span><span id="m1-s" class="mono" style="display:inline-block;padding:8px 20px;border-radius:14px;background:#ff4d4d;color:#111;font-size:60px;box-shadow:0 0 30px #ff4d4daa">▼ CRASH</span></div><div id="k1" style="position:absolute;left:170px;top:850px;width:250px;border-radius:26px;overflow:hidden;background:#fff;box-shadow:0 0 60px #ff4d4d66, 0 30px 50px #000;z-index:3;text-align:center"><div style="background:#ff4d4d;color:#fff;font-weight:900;font-size:42px;padding:12px 0">FREITAG</div><div style="font-weight:900;font-size:125px;color:#111;line-height:1.1;padding:0px 0 14px">13</div></div><div id="i1" style="position:absolute;left:630px;top:860px;font-size:230px;line-height:1;z-index:4;filter:drop-shadow(0 0 40px #ff4d4daa)">📉</div></div></div>
+      <div id="z1" class="scene clip" data-start="2.955" data-duration="3.709" data-track-index="1"><div id="z1-i" class="inner"><img id="bg1" class="hgfoto" src="assets/hg/bitcoin-laptop.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div class="mono" style="position:absolute;right:70px;top:466px;font-size:18px;color:#ffffffaa;text-shadow:0 2px 6px #000;z-index:7">Foto: Satheesh Sankaran · CC BY 2.0</div><div id="t2" style="position:absolute;left:0;width:1080px;top:490px;text-align:center;z-index:6"><span style="display:inline-block;font-weight:900;font-size:62px;color:#fff;letter-spacing:2px;text-transform:uppercase;text-shadow:0 0 30px #fff55;border-bottom:6px solid #ff8a1f;padding:0 10px 6px">Folg uns</span></div><div id="i2" style="position:absolute;left:0;width:1080px;text-align:center;top:630px;font-size:260px;line-height:1;z-index:4;filter:drop-shadow(0 0 40px #ff8a1faa)">🔔</div><div id="c2" style="position:absolute;left:0;width:1080px;display:flex;justify-content:center;top:940px;z-index:3"><span style="display:inline-block;padding:12px 34px 16px;border-radius:22px;background:#ff8a1f;color:#111;font-weight:900;font-size:70px;box-shadow:0 0 50px #ff8a1f88">+ Folgen</span></div><div id="q2" class="mono" style="position:absolute;left:0;width:1080px;text-align:center;top:1080px;font-size:28px;color:#ffffff99;letter-spacing:1px;z-index:5">jeden Tag neue Videos</div></div></div>
+      <div id="z2" class="scene clip" data-start="6.664" data-duration="4.09" data-track-index="1"><div id="z2-i" class="inner"><img id="bg2" class="hgfoto" src="assets/hg/handelssaal.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div class="mono" style="position:absolute;right:70px;top:466px;font-size:18px;color:#ffffffaa;text-shadow:0 2px 6px #000;z-index:7">Foto: Carol M. Highsmith · Public domain</div><div id="t3" style="position:absolute;left:0;width:1080px;top:490px;text-align:center;z-index:6"><span style="display:inline-block;font-weight:900;font-size:62px;color:#fff;letter-spacing:2px;text-transform:uppercase;text-shadow:0 0 30px #fff55;border-bottom:6px solid #ff8a1f;padding:0 10px 6px">Unter 69.000 $</span></div><svg id="ku" viewBox="0 0 1080 1920" style="position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:visible;z-index:3;pointer-events:none"><path id="ku-f" d="M150 850 L248 762 L345 786 L442 730 L540 802 L638 830 L735 898 L832 962 L930 1026 L930 1050 L150 1050 Z" fill="#ff4d4d" opacity="0.14"/><path id="ku-p" d="M150 850 L248 762 L345 786 L442 730 L540 802 L638 830 L735 898 L832 962 L930 1026" fill="none" stroke="#ff4d4d" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" style="filter:drop-shadow(0 0 14px #ff4d4d)"/></svg><div id="ku-w0" class="mono" style="position:absolute;left:312px;width:260px;top:650px;text-align:center;z-index:5"><span style="display:inline-block;padding:6px 16px;border-radius:12px;background:#ff4d4d;color:#111;font-size:34px">75.000 $</span></div><div id="ku-w1" class="mono" style="position:absolute;left:800px;width:260px;top:946px;text-align:center;z-index:5"><span style="display:inline-block;padding:6px 16px;border-radius:12px;background:#ff4d4d;color:#111;font-size:34px">68.600 $</span></div><div id="q3" class="mono" style="position:absolute;left:0;width:1080px;text-align:center;top:1120px;font-size:28px;color:#ffffff99;letter-spacing:1px;z-index:5">tiefster Stand seit 3 Monaten · 13.11.2026</div></div></div>
+      <div id="z3" class="scene clip" data-start="10.754" data-duration="3.148" data-track-index="1"><div id="z3-i" class="inner"><img id="bg3" class="hgfoto" src="assets/hg/bitcoin-muenzen.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div class="mono" style="position:absolute;right:70px;top:466px;font-size:18px;color:#ffffffaa;text-shadow:0 2px 6px #000;z-index:7">Foto: Satheesh Sankaran · CC BY-SA 2.0</div><div id="t4" style="position:absolute;left:0;width:1080px;top:490px;text-align:center;z-index:6"><span style="display:inline-block;font-weight:900;font-size:62px;color:#fff;letter-spacing:2px;text-transform:uppercase;text-shadow:0 0 30px #fff55;border-bottom:6px solid #ff8a1f;padding:0 10px 6px">In 24 Stunden</span></div><div id="m4" style="position:absolute;left:0;width:1080px;justify-content:center;top:650px;display:flex;align-items:center;gap:31px;z-index:4"><svg fill="#F7931A" style="width:140px;height:140px;filter:drop-shadow(0 0 18px #F7931A99)" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Bitcoin</title><path d="M23.638 14.904c-1.602 6.43-8.113 10.34-14.542 8.736C2.67 22.05-1.244 15.525.362 9.105 1.962 2.67 8.475-1.243 14.9.358c6.43 1.605 10.342 8.115 8.738 14.548v-.002zm-6.35-4.613c.24-1.59-.974-2.45-2.64-3.03l.54-2.153-1.315-.33-.525 2.107c-.345-.087-.705-.167-1.064-.25l.526-2.127-1.32-.33-.54 2.165c-.285-.067-.565-.132-.84-.2l-1.815-.45-.35 1.407s.975.225.955.236c.535.136.63.486.615.766l-1.477 5.92c-.075.166-.24.406-.614.314.015.02-.96-.24-.96-.24l-.66 1.51 1.71.426.93.242-.54 2.19 1.32.327.54-2.17c.36.1.705.19 1.05.273l-.51 2.154 1.32.33.545-2.19c2.24.427 3.93.257 4.64-1.774.57-1.637-.03-2.58-1.217-3.196.854-.193 1.5-.76 1.68-1.93h.01zm-3.01 4.22c-.404 1.64-3.157.75-4.05.53l.72-2.9c.896.23 3.757.67 3.33 2.37zm.41-4.24c-.37 1.49-2.662.735-3.405.55l.654-2.64c.744.18 3.137.524 2.75 2.084v.006z"/></svg><span style="font-weight:900;font-size:87px;color:#fff;letter-spacing:1px;text-shadow:0 0 20px #ffffff44">BTC</span><span id="m4-s" class="mono" style="display:inline-block;padding:8px 20px;border-radius:14px;background:#2fd27a;color:#111;font-size:56px;box-shadow:0 0 30px #2fd27aaa">≈ −7 %</span></div><div id="i4" style="position:absolute;left:0;width:1080px;text-align:center;top:850px;font-size:210px;line-height:1;z-index:4;filter:drop-shadow(0 0 40px #ff8a1faa)">⏱️</div><div id="q4" class="mono" style="position:absolute;left:0;width:1080px;text-align:center;top:1110px;font-size:28px;color:#ffffff99;letter-spacing:1px;z-index:5">CoinGecko · 13.11.2026, morgens</div></div></div>
+      <div id="z4" class="scene clip" data-start="13.902" data-duration="3.645" data-track-index="1"><div id="z4-i" class="inner"><img id="bg4" class="hgfoto" src="assets/hg/wallstreet.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div class="mono" style="position:absolute;right:70px;top:466px;font-size:18px;color:#ffffffaa;text-shadow:0 2px 6px #000;z-index:7">Foto: gemeinfrei (Public domain)</div><div id="t5" style="position:absolute;left:0;width:1080px;top:490px;text-align:center;z-index:6"><span style="display:inline-block;font-weight:900;font-size:62px;color:#fff;letter-spacing:2px;text-transform:uppercase;text-shadow:0 0 30px #fff55;border-bottom:6px solid #ff8a1f;padding:0 10px 6px">Kurzer Hinweis</span></div><div id="hw" class="hand" style="position:absolute;left:200px;top:650px;width:680px;padding:34px 30px 40px;background:#ffd54a;color:#1a1a1a;font-size:74px;line-height:1.05;white-space:normal;text-align:center;transform:rotate(-3deg);box-shadow:0 24px 40px #000b, 0 0 60px #ffd54a44;border-radius:6px 6px 26px 6px;z-index:4"><div style="position:absolute;left:50%;top:-18px;width:140px;height:38px;margin-left:-70px;background:#ffffff55;transform:rotate(2deg)"></div>Keine Anlage&shy;beratung –<br/>nur Nachrichten erklärt</div></div></div>
+      <div id="z5" class="scene clip" data-start="17.547" data-duration="7.652" data-track-index="1"><div id="z5-i" class="inner"><img id="bg5" class="hgfoto" src="assets/hg/nyse.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div class="mono" style="position:absolute;right:70px;top:466px;font-size:18px;color:#ffffffaa;text-shadow:0 2px 6px #000;z-index:7">Foto: Jakub Hałun · CC BY 4.0</div><div id="t6" style="position:absolute;left:0;width:1080px;top:490px;text-align:center;z-index:6"><span style="display:inline-block;font-weight:900;font-size:62px;color:#fff;letter-spacing:2px;text-transform:uppercase;text-shadow:0 0 30px #fff55;border-bottom:6px solid #ff8a1f;padding:0 10px 6px">Seit dem Rekord</span></div><div id="b6a" style="position:absolute;left:220px;top:670px;width:240px;height:440px;border-radius:16px 16px 4px 4px;background:linear-gradient(180deg,#f7931a,#f7931a88);box-shadow:0 0 40px #f7931a77;transform-origin:50% 100%;z-index:3"></div><div id="b6b" style="position:absolute;left:620px;top:870px;width:240px;height:240px;border-radius:16px 16px 4px 4px;background:linear-gradient(180deg,#ff4d4d,#ff4d4d88);box-shadow:0 0 40px #ff4d4d77;transform-origin:50% 100%;z-index:3"></div><div id="b6ta" class="mono" style="position:absolute;left:140px;width:400px;top:600px;text-align:center;font-size:52px;color:#f7931a;z-index:5">126.000 $</div><div id="b6tb" class="mono" style="position:absolute;left:540px;width:400px;top:800px;text-align:center;font-size:52px;color:#ff4d4d;z-index:5">68.600 $</div><div id="s6x" style="position:absolute;left:600px;top:640px;padding:12px 34px;border:9px solid #ff4d4d;border-radius:18px;color:#ff4d4d;font-weight:900;font-size:80px;letter-spacing:4px;white-space:nowrap;transform:rotate(8deg);text-shadow:0 0 20px #ff4d4d88;box-shadow:0 0 30px #ff4d4d55, inset 0 0 30px #ff4d4d33;background:#0e1012cc;z-index:6">−45 %</div><div id="q6" class="mono" style="position:absolute;left:0;width:1080px;text-align:center;top:1130px;font-size:28px;color:#ffffff99;letter-spacing:1px;z-index:5">Rekord Okt. 2025 · heute 13.11.2026</div></div></div>
+      <div id="z6" class="scene clip" data-start="25.199" data-duration="2.996" data-track-index="1"><div id="z6-i" class="inner"><img id="bg6" class="hgfoto" src="assets/hg/nvidia-zentrale.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div class="mono" style="position:absolute;right:70px;top:466px;font-size:18px;color:#ffffffaa;text-shadow:0 2px 6px #000;z-index:7">Foto: Will Buckner · CC BY 2.0</div><div id="t7" style="position:absolute;left:0;width:1080px;top:490px;text-align:center;z-index:6"><span style="display:inline-block;font-weight:900;font-size:62px;color:#ff8a1f;letter-spacing:2px;text-transform:uppercase;text-shadow:0 0 30px #ff8a1f55;border-bottom:6px solid #ff8a1f;padding:0 10px 6px">Auslöser Nr. 1</span></div><div id="m7" style="position:absolute;left:0;width:1080px;justify-content:center;top:720px;display:flex;align-items:center;gap:37px;z-index:4"><svg fill="#76B900" style="width:170px;height:170px;filter:drop-shadow(0 0 18px #76B90099)" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>NVIDIA</title><path d="M8.948 8.798v-1.43a6.7 6.7 0 0 1 .424-.018c3.922-.124 6.493 3.374 6.493 3.374s-2.774 3.851-5.75 3.851c-.398 0-.787-.062-1.158-.185v-4.346c1.528.185 1.837.857 2.747 2.385l2.04-1.714s-1.492-1.952-4-1.952a6.016 6.016 0 0 0-.796.035m0-4.735v2.138l.424-.027c5.45-.185 9.01 4.47 9.01 4.47s-4.08 4.964-8.33 4.964c-.37 0-.733-.035-1.095-.097v1.325c.3.035.61.062.91.062 3.957 0 6.82-2.023 9.593-4.408.459.371 2.34 1.263 2.73 1.652-2.633 2.208-8.772 3.984-12.253 3.984-.335 0-.653-.018-.971-.053v1.864H24V4.063zm0 10.326v1.131c-3.657-.654-4.673-4.46-4.673-4.46s1.758-1.944 4.673-2.262v1.237H8.94c-1.528-.186-2.73 1.245-2.73 1.245s.68 2.412 2.739 3.11M2.456 10.9s2.164-3.197 6.5-3.533V6.201C4.153 6.59 0 10.653 0 10.653s2.35 6.802 8.948 7.42v-1.237c-4.84-.6-6.492-5.936-6.492-5.936z"/></svg><img src="assets/logos/nvidia.svg" alt="" style="height:105px;filter:brightness(0) invert(1) drop-shadow(0 0 14px #ffffff66)"/></div><div id="q7" class="mono" style="position:absolute;left:0;width:1080px;text-align:center;top:960px;font-size:28px;color:#ffffff99;letter-spacing:1px;z-index:5">ausgerechnet …</div></div></div>
+      <div id="z7" class="scene clip" data-start="28.195" data-duration="5.385" data-track-index="1"><div id="z7-i" class="inner"><img id="bg7" class="hgfoto" src="assets/hg/nvidia-zentrale.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div class="mono" style="position:absolute;right:70px;top:466px;font-size:18px;color:#ffffffaa;text-shadow:0 2px 6px #000;z-index:7">Foto: Will Buckner · CC BY 2.0</div><div id="t8" style="position:absolute;left:0;width:1080px;top:490px;text-align:center;z-index:6"><span style="display:inline-block;font-weight:900;font-size:62px;color:#fff;letter-spacing:2px;text-transform:uppercase;text-shadow:0 0 30px #fff55;border-bottom:6px solid #ff8a1f;padding:0 10px 6px">Chef tritt zurück</span></div><div id="f8" style="position:absolute;left:300px;top:600px;width:480px;height:400px;border-radius:18px;border:6px solid #76b900;box-shadow:0 0 60px #76b90066, 0 30px 60px #000;z-index:3"><img src="assets/fotos/jensen-huang.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;border-radius:12px"/><div class="mono" style="position:absolute;left:0;bottom:-34px;width:100%;text-align:right;font-size:20px;color:#ffffff88">Foto: Peter Dasilva · CC BY 4.0</div></div><div id="m8" style="position:absolute;left:0;width:1080px;justify-content:center;top:1060px;display:flex;align-items:center;gap:20px;z-index:4"><svg fill="#76B900" style="width:90px;height:90px;filter:drop-shadow(0 0 18px #76B90099)" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>NVIDIA</title><path d="M8.948 8.798v-1.43a6.7 6.7 0 0 1 .424-.018c3.922-.124 6.493 3.374 6.493 3.374s-2.774 3.851-5.75 3.851c-.398 0-.787-.062-1.158-.185v-4.346c1.528.185 1.837.857 2.747 2.385l2.04-1.714s-1.492-1.952-4-1.952a6.016 6.016 0 0 0-.796.035m0-4.735v2.138l.424-.027c5.45-.185 9.01 4.47 9.01 4.47s-4.08 4.964-8.33 4.964c-.37 0-.733-.035-1.095-.097v1.325c.3.035.61.062.91.062 3.957 0 6.82-2.023 9.593-4.408.459.371 2.34 1.263 2.73 1.652-2.633 2.208-8.772 3.984-12.253 3.984-.335 0-.653-.018-.971-.053v1.864H24V4.063zm0 10.326v1.131c-3.657-.654-4.673-4.46-4.673-4.46s1.758-1.944 4.673-2.262v1.237H8.94c-1.528-.186-2.73 1.245-2.73 1.245s.68 2.412 2.739 3.11M2.456 10.9s2.164-3.197 6.5-3.533V6.201C4.153 6.59 0 10.653 0 10.653s2.35 6.802 8.948 7.42v-1.237c-4.84-.6-6.492-5.936-6.492-5.936z"/></svg><img src="assets/logos/nvidia.svg" alt="" style="height:56px;filter:brightness(0) invert(1) drop-shadow(0 0 14px #ffffff66)"/><span id="m8-s" class="mono" style="display:inline-block;padding:8px 20px;border-radius:14px;background:#ff4d4d;color:#111;font-size:36px;box-shadow:0 0 30px #ff4d4daa">−14 % zum Start</span></div></div></div>
+      <div id="z8" class="scene clip" data-start="33.58" data-duration="4.562" data-track-index="1"><div id="z8-i" class="inner"><img id="bg8" class="hgfoto" src="assets/hg/nyse.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div class="mono" style="position:absolute;right:70px;top:466px;font-size:18px;color:#ffffffaa;text-shadow:0 2px 6px #000;z-index:7">Foto: Jakub Hałun · CC BY 4.0</div><div id="t9" style="position:absolute;left:0;width:1080px;top:490px;text-align:center;z-index:6"><span style="display:inline-block;font-weight:900;font-size:62px;color:#fff;letter-spacing:2px;text-transform:uppercase;text-shadow:0 0 30px #fff55;border-bottom:6px solid #ff8a1f;padding:0 10px 6px">Angst an der Börse</span></div><div id="i9" style="position:absolute;left:0;width:1080px;text-align:center;top:610px;font-size:250px;line-height:1;z-index:4;filter:drop-shadow(0 0 40px #ff4d4daa)">😱</div><div id="m9" style="position:absolute;left:0;width:1080px;justify-content:center;top:920px;display:flex;align-items:center;gap:24px;z-index:4"><svg fill="#F7931A" style="width:110px;height:110px;filter:drop-shadow(0 0 18px #F7931A99)" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Bitcoin</title><path d="M23.638 14.904c-1.602 6.43-8.113 10.34-14.542 8.736C2.67 22.05-1.244 15.525.362 9.105 1.962 2.67 8.475-1.243 14.9.358c6.43 1.605 10.342 8.115 8.738 14.548v-.002zm-6.35-4.613c.24-1.59-.974-2.45-2.64-3.03l.54-2.153-1.315-.33-.525 2.107c-.345-.087-.705-.167-1.064-.25l.526-2.127-1.32-.33-.54 2.165c-.285-.067-.565-.132-.84-.2l-1.815-.45-.35 1.407s.975.225.955.236c.535.136.63.486.615.766l-1.477 5.92c-.075.166-.24.406-.614.314.015.02-.96-.24-.96-.24l-.66 1.51 1.71.426.93.242-.54 2.19 1.32.327.54-2.17c.36.1.705.19 1.05.273l-.51 2.154 1.32.33.545-2.19c2.24.427 3.93.257 4.64-1.774.57-1.637-.03-2.58-1.217-3.196.854-.193 1.5-.76 1.68-1.93h.01zm-3.01 4.22c-.404 1.64-3.157.75-4.05.53l.72-2.9c.896.23 3.757.67 3.33 2.37zm.41-4.24c-.37 1.49-2.662.735-3.405.55l.654-2.64c.744.18 3.137.524 2.75 2.084v.006z"/></svg><span style="font-weight:900;font-size:68px;color:#fff;letter-spacing:1px;text-shadow:0 0 20px #ffffff44">BITCOIN</span></div><div id="c9" style="position:absolute;left:0;width:1080px;display:flex;justify-content:center;top:1070px;z-index:3"><span style="display:inline-block;padding:12px 34px 16px;border-radius:22px;background:#ff4d4d;color:#111;font-weight:900;font-size:46px;box-shadow:0 0 50px #ff4d4d88">gilt als besonders riskant</span></div></div></div>
+      <div id="z9" class="scene clip" data-start="38.142" data-duration="3.415" data-track-index="1"><div id="z9-i" class="inner"><img id="bg9" class="hgfoto" src="assets/hg/wallstreet.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div class="mono" style="position:absolute;right:70px;top:466px;font-size:18px;color:#ffffffaa;text-shadow:0 2px 6px #000;z-index:7">Foto: gemeinfrei (Public domain)</div><div id="t10" style="position:absolute;left:0;width:1080px;top:490px;text-align:center;z-index:6"><span style="display:inline-block;font-weight:900;font-size:62px;color:#ff8a1f;letter-spacing:2px;text-transform:uppercase;text-shadow:0 0 30px #ff8a1f55;border-bottom:6px solid #ff8a1f;padding:0 10px 6px">Auslöser Nr. 2</span></div><div id="i10a" style="position:absolute;left:150px;top:660px;font-size:230px;line-height:1;z-index:4;filter:drop-shadow(0 0 40px #ff8a1faa)">🏦</div><svg id="p10" viewBox="0 0 1080 1920" style="position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:visible;z-index:4;pointer-events:none"><path id="p10-p" d="M430 780 Q535 780 640 780" fill="none" stroke="#ff4d4d" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" style="filter:drop-shadow(0 0 10px #ff4d4d)"/><path id="p10-k" d="M610 796 L640 780 L610 764" fill="none" stroke="#ff4d4d" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" style="filter:drop-shadow(0 0 10px #ff4d4d)"/></svg><div id="i10b" style="position:absolute;left:680px;top:660px;font-size:230px;line-height:1;z-index:4;filter:drop-shadow(0 0 40px #ff4d4daa)">💸</div><div id="q10" class="mono" style="position:absolute;left:0;width:1080px;text-align:center;top:990px;font-size:28px;color:#ffffff99;letter-spacing:1px;z-index:5">große Anleger ziehen Geld ab</div></div></div>
+      <div id="z10" class="scene clip" data-start="41.557" data-duration="7.819" data-track-index="1"><div id="z10-i" class="inner"><img id="bg10" class="hgfoto" src="assets/hg/nyse.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div class="mono" style="position:absolute;right:70px;top:466px;font-size:18px;color:#ffffffaa;text-shadow:0 2px 6px #000;z-index:7">Foto: Jakub Hałun · CC BY 4.0</div><div id="t11" style="position:absolute;left:0;width:1080px;top:490px;text-align:center;z-index:6"><span style="display:inline-block;font-weight:900;font-size:62px;color:#fff;letter-spacing:2px;text-transform:uppercase;text-shadow:0 0 30px #fff55;border-bottom:6px solid #ff8a1f;padding:0 10px 6px">Bitcoin-ETFs (USA)</span></div><img id="fl11" src="assets/logos/flagge-usa.svg" alt="" style="position:absolute;left:150px;top:610px;width:170px;border-radius:10px;outline:4px solid #ffffff55;box-shadow:0 20px 40px #000c;transform:rotate(-4deg);z-index:3"/><div id="k11" style="position:absolute;left:700px;top:580px;width:220px;border-radius:26px;overflow:hidden;background:#fff;box-shadow:0 0 60px #ff4d4d66, 0 30px 50px #000;z-index:3;text-align:center"><div style="background:#ff4d4d;color:#fff;font-weight:900;font-size:37px;padding:12px 0">TAGE</div><div style="font-weight:900;font-size:110px;color:#111;line-height:1.1;padding:0px 0 14px">8</div></div><div id="r11" style="position:absolute;left:160px;top:880px;width:760px;height:100px;border-radius:50px;background:#1b1f22;border:5px solid #f7931a;z-index:2"></div><div class="dl" style="position:absolute;left:200px;top:905px;width:50px;height:50px;border-radius:50%;background:#f7931a;box-shadow:0 0 16px #f7931a;z-index:3"></div><div class="dl" style="position:absolute;left:290px;top:905px;width:50px;height:50px;border-radius:50%;background:#f7931a;box-shadow:0 0 16px #f7931a;z-index:3"></div><div class="dl" style="position:absolute;left:380px;top:905px;width:50px;height:50px;border-radius:50%;background:#f7931a;box-shadow:0 0 16px #f7931a;z-index:3"></div><div class="dl" style="position:absolute;left:470px;top:905px;width:50px;height:50px;border-radius:50%;background:#f7931a;box-shadow:0 0 16px #f7931a;z-index:3"></div><div class="dl" style="position:absolute;left:560px;top:905px;width:50px;height:50px;border-radius:50%;background:#f7931a;box-shadow:0 0 16px #f7931a;z-index:3"></div><div class="dl" style="position:absolute;left:650px;top:905px;width:50px;height:50px;border-radius:50%;background:#f7931a;box-shadow:0 0 16px #f7931a;z-index:3"></div><div class="dl" style="position:absolute;left:740px;top:905px;width:50px;height:50px;border-radius:50%;background:#f7931a;box-shadow:0 0 16px #f7931a;z-index:3"></div><div class="dl" style="position:absolute;left:830px;top:905px;width:50px;height:50px;border-radius:50%;background:#f7931a;box-shadow:0 0 16px #f7931a;z-index:3"></div><div id="n11" class="t glow-r" style="z-index:5;top:995px;font-size:96px">−1,4 Mrd. $</div><div id="q11" class="mono" style="position:absolute;left:0;width:1080px;text-align:center;top:1130px;font-size:28px;color:#ffffff99;letter-spacing:1px;z-index:5">Abflüsse in 5 Handelstagen · Spot-ETFs</div></div></div>
+      <div id="z11" class="scene clip" data-start="49.376" data-duration="2.4" data-track-index="1"><div id="z11-i" class="inner"><img id="bg11" class="hgfoto" src="assets/hg/handelssaal.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div class="mono" style="position:absolute;right:70px;top:466px;font-size:18px;color:#ffffffaa;text-shadow:0 2px 6px #000;z-index:7">Foto: Carol M. Highsmith · Public domain</div><div id="t12" style="position:absolute;left:0;width:1080px;top:490px;text-align:center;z-index:6"><span style="display:inline-block;font-weight:900;font-size:62px;color:#ff8a1f;letter-spacing:2px;text-transform:uppercase;text-shadow:0 0 30px #ff8a1f55;border-bottom:6px solid #ff8a1f;padding:0 10px 6px">Auslöser Nr. 3</span></div><div id="i12" style="position:absolute;left:0;width:1080px;text-align:center;top:640px;font-size:260px;line-height:1;z-index:4;filter:drop-shadow(0 0 40px #ff8a1faa)">🎰</div><div id="c12" style="position:absolute;left:0;width:1080px;display:flex;justify-content:center;top:960px;z-index:3"><span style="display:inline-block;padding:12px 34px 16px;border-radius:22px;background:#ff4d4d;color:#111;font-weight:900;font-size:64px;box-shadow:0 0 50px #ff4d4d88">Wetten auf Kredit</span></div></div></div>
+      <div id="z12" class="scene clip" data-start="51.776" data-duration="4.792" data-track-index="1"><div id="z12-i" class="inner"><img id="bg12" class="hgfoto" src="assets/hg/bitcoin-laptop.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div class="mono" style="position:absolute;right:70px;top:466px;font-size:18px;color:#ffffffaa;text-shadow:0 2px 6px #000;z-index:7">Foto: Satheesh Sankaran · CC BY 2.0</div><div id="t13" style="position:absolute;left:0;width:1080px;top:490px;text-align:center;z-index:6"><span style="display:inline-block;font-weight:900;font-size:62px;color:#fff;letter-spacing:2px;text-transform:uppercase;text-shadow:0 0 30px #fff55;border-bottom:6px solid #ff8a1f;padding:0 10px 6px">Geliehenes Geld</span></div><div id="k13a" style="position:absolute;left:80px;top:610px;width:400px;height:130px;border-radius:26px;border:6px solid #2fd27a;background:#14181b;box-shadow:0 0 50px #2fd27a55;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:3"><div style="font-weight:900;font-size:48px;color:#fff;line-height:1.05">eigenes Geld</div></div><div id="pl13" class="t " style="z-index:5;top:610px;font-size:100px">+</div><div id="k13b" style="position:absolute;left:600px;top:610px;width:400px;height:130px;border-radius:26px;border:6px solid #ff4d4d;background:#14181b;box-shadow:0 0 50px #ff4d4d55;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:3"><div style="font-weight:900;font-size:48px;color:#fff;line-height:1.05">geliehenes Geld</div></div><div class="do" style="position:absolute;left:170px;top:820px;width:60px;height:220px;border-radius:10px;background:linear-gradient(180deg,#f7931a,#a85e00);box-shadow:0 0 20px #f7931a77;transform-origin:100% 100%;z-index:3"></div><div class="do" style="position:absolute;left:290px;top:820px;width:60px;height:220px;border-radius:10px;background:linear-gradient(180deg,#f7931a,#a85e00);box-shadow:0 0 20px #f7931a77;transform-origin:100% 100%;z-index:3"></div><div class="do" style="position:absolute;left:410px;top:820px;width:60px;height:220px;border-radius:10px;background:linear-gradient(180deg,#f7931a,#a85e00);box-shadow:0 0 20px #f7931a77;transform-origin:100% 100%;z-index:3"></div><div class="do" style="position:absolute;left:530px;top:820px;width:60px;height:220px;border-radius:10px;background:linear-gradient(180deg,#f7931a,#a85e00);box-shadow:0 0 20px #f7931a77;transform-origin:100% 100%;z-index:3"></div><div class="do" style="position:absolute;left:650px;top:820px;width:60px;height:220px;border-radius:10px;background:linear-gradient(180deg,#f7931a,#a85e00);box-shadow:0 0 20px #f7931a77;transform-origin:100% 100%;z-index:3"></div><div class="do" style="position:absolute;left:770px;top:820px;width:60px;height:220px;border-radius:10px;background:linear-gradient(180deg,#f7931a,#a85e00);box-shadow:0 0 20px #f7931a77;transform-origin:100% 100%;z-index:3"></div><div class="do" style="position:absolute;left:890px;top:820px;width:60px;height:220px;border-radius:10px;background:linear-gradient(180deg,#f7931a,#a85e00);box-shadow:0 0 20px #f7931a77;transform-origin:100% 100%;z-index:3"></div><div id="s13x" style="position:absolute;left:230px;top:1060px;padding:12px 34px;border:9px solid #ff4d4d;border-radius:18px;color:#ff4d4d;font-weight:900;font-size:60px;letter-spacing:4px;white-space:nowrap;transform:rotate(-5deg);text-shadow:0 0 20px #ff4d4d88;box-shadow:0 0 30px #ff4d4d55, inset 0 0 30px #ff4d4d33;background:#0e1012cc;z-index:6">RAUSGEWORFEN</div></div></div>
+      <div id="z13" class="scene clip" data-start="56.568" data-duration="5.418" data-track-index="1"><div id="z13-i" class="inner"><img id="bg13" class="hgfoto" src="assets/hg/handelssaal.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div class="mono" style="position:absolute;right:70px;top:466px;font-size:18px;color:#ffffffaa;text-shadow:0 2px 6px #000;z-index:7">Foto: Carol M. Highsmith · Public domain</div><div id="t14" style="position:absolute;left:0;width:1080px;top:490px;text-align:center;z-index:6"><span style="display:inline-block;font-weight:900;font-size:62px;color:#fff;letter-spacing:2px;text-transform:uppercase;text-shadow:0 0 30px #fff55;border-bottom:6px solid #ff8a1f;padding:0 10px 6px">In 24 Stunden</span></div><div id="n14" class="t glow-r" style="z-index:5;top:680px;font-size:140px">> 1,4 Mrd. $</div><svg id="kr14" viewBox="0 0 1080 1920" style="position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:visible;z-index:5;pointer-events:none"><path id="kr14-p" d="M262 648 L308 638 L356 631 L406 625 L457 620 L510 617 L563 617 L616 619 L666 623 L713 630 L757 639 L795 650 L831 661 L864 673 L896 686 L928 698 L959 712 L987 727 L1009 744 L1022 762 L1025 780 L1017 798 L999 816 L974 831 L943 846 L909 859 L873 871 L835 882 L795 892 L752 901 L707 908 L659 913 L609 916 L558 917 L507 916 L456 914 L405 911 L354 907 L304 901 L255 893 L210 883 L171 870 L140 856 L119 840 L107 823 L102 806 L101 790 L104 774 L107 758 L112 743 L119 727 L129 711 L146 695 L169 680 L200 666 L238 654 L281 644 L328 635 L377 628 L427 623 L480 619" fill="none" stroke="#ffd54a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" style="filter:drop-shadow(0 0 10px #ffd54a)"/></svg><div id="pa14" style="position:absolute;inset:0;z-index:4;pointer-events:none"><div class="p" data-dx="330" data-dy="0" style="left:527px;top:757px;width:26px;height:26px;background:#ff4d4d;box-shadow:0 0 26px #ff4d4d;opacity:0"></div><div class="p" data-dx="487" data-dy="282" style="left:534px;top:764px;width:12px;height:12px;background:#f7931a;box-shadow:0 0 12px #f7931a;opacity:0"></div><div class="p" data-dx="414" data-dy="385" style="left:527px;top:757px;width:25px;height:25px;background:#fff;box-shadow:0 0 25px #fff;opacity:0"></div><div class="p" data-dx="264" data-dy="206" style="left:532px;top:762px;width:16px;height:16px;background:#ff4d4d;box-shadow:0 0 16px #ff4d4d;opacity:0"></div><div class="p" data-dx="480" data-dy="289" style="left:528px;top:758px;width:24px;height:24px;background:#f7931a;box-shadow:0 0 24px #f7931a;opacity:0"></div><div class="p" data-dx="433" data-dy="367" style="left:530px;top:760px;width:20px;height:20px;background:#fff;box-shadow:0 0 20px #fff;opacity:0"></div><div class="p" data-dx="126" data-dy="315" style="left:529px;top:759px;width:21px;height:21px;background:#ff4d4d;box-shadow:0 0 21px #ff4d4d;opacity:0"></div><div class="p" data-dx="-94" data-dy="550" style="left:529px;top:759px;width:23px;height:23px;background:#f7931a;box-shadow:0 0 23px #f7931a;opacity:0"></div><div class="p" data-dx="-253" data-dy="510" style="left:531px;top:761px;width:18px;height:18px;background:#fff;box-shadow:0 0 18px #fff;opacity:0"></div><div class="p" data-dx="-138" data-dy="315" style="left:528px;top:758px;width:25px;height:25px;background:#ff4d4d;box-shadow:0 0 25px #ff4d4d;opacity:0"></div><div class="p" data-dx="-150" data-dy="535" style="left:533px;top:763px;width:14px;height:14px;background:#f7931a;box-shadow:0 0 14px #f7931a;opacity:0"></div><div class="p" data-dx="-207" data-dy="533" style="left:527px;top:757px;width:26px;height:26px;background:#fff;box-shadow:0 0 26px #fff;opacity:0"></div><div class="p" data-dx="-252" data-dy="240" style="left:535px;top:765px;width:10px;height:10px;background:#ff4d4d;box-shadow:0 0 10px #ff4d4d;opacity:0"></div><div class="p" data-dx="-543" data-dy="107" style="left:527px;top:757px;width:26px;height:26px;background:#f7931a;box-shadow:0 0 26px #f7931a;opacity:0"></div><div class="p" data-dx="-566" data-dy="-91" style="left:533px;top:763px;width:14px;height:14px;background:#fff;box-shadow:0 0 14px #fff;opacity:0"></div><div class="p" data-dx="-348" data-dy="-57" style="left:528px;top:758px;width:25px;height:25px;background:#ff4d4d;box-shadow:0 0 25px #ff4d4d;opacity:0"></div><div class="p" data-dx="-551" data-dy="-7" style="left:531px;top:761px;width:18px;height:18px;background:#f7931a;box-shadow:0 0 18px #f7931a;opacity:0"></div><div class="p" data-dx="-575" data-dy="-28" style="left:529px;top:759px;width:23px;height:23px;background:#fff;box-shadow:0 0 23px #fff;opacity:0"></div><div class="p" data-dx="-324" data-dy="-151" style="left:530px;top:760px;width:21px;height:21px;background:#ff4d4d;box-shadow:0 0 21px #ff4d4d;opacity:0"></div><div class="p" data-dx="-294" data-dy="-463" style="left:530px;top:760px;width:20px;height:20px;background:#f7931a;box-shadow:0 0 20px #f7931a;opacity:0"></div><div class="p" data-dx="-89" data-dy="-571" style="left:528px;top:758px;width:24px;height:24px;background:#fff;box-shadow:0 0 24px #fff;opacity:0"></div><div class="p" data-dx="-34" data-dy="-360" style="left:532px;top:762px;width:17px;height:17px;background:#ff4d4d;box-shadow:0 0 17px #ff4d4d;opacity:0"></div><div class="p" data-dx="-130" data-dy="-530" style="left:527px;top:757px;width:25px;height:25px;background:#f7931a;box-shadow:0 0 25px #f7931a;opacity:0"></div><div class="p" data-dx="-149" data-dy="-560" style="left:534px;top:764px;width:13px;height:13px;background:#fff;box-shadow:0 0 13px #fff;opacity:0"></div><div class="p" data-dx="25" data-dy="-365" style="left:527px;top:757px;width:26px;height:26px;background:#ff4d4d;box-shadow:0 0 26px #ff4d4d;opacity:0"></div><div class="p" data-dx="319" data-dy="-439" style="left:534px;top:764px;width:11px;height:11px;background:#f7931a;box-shadow:0 0 11px #f7931a;opacity:0"></div><div class="p" data-dx="515" data-dy="-269" style="left:527px;top:757px;width:26px;height:26px;background:#fff;box-shadow:0 0 26px #fff;opacity:0"></div><div class="p" data-dx="347" data-dy="-130" style="left:532px;top:762px;width:15px;height:15px;background:#ff4d4d;box-shadow:0 0 15px #ff4d4d;opacity:0"></div><div class="p" data-dx="476" data-dy="-255" style="left:528px;top:758px;width:24px;height:24px;background:#f7931a;box-shadow:0 0 24px #f7931a;opacity:0"></div><div class="p" data-dx="495" data-dy="-308" style="left:530px;top:760px;width:19px;height:19px;background:#fff;box-shadow:0 0 19px #fff;opacity:0"></div></div><div id="s14x" style="position:absolute;left:170px;top:980px;padding:12px 34px;border:9px solid #ff4d4d;border-radius:18px;color:#ff4d4d;font-weight:900;font-size:44px;letter-spacing:4px;white-space:nowrap;transform:rotate(-4deg);text-shadow:0 0 20px #ff4d4d88;box-shadow:0 0 30px #ff4d4d55, inset 0 0 30px #ff4d4d33;background:#0e1012cc;z-index:6">ZWANGSWEISE AUFGELÖST</div><div id="q14" class="mono" style="position:absolute;left:0;width:1080px;text-align:center;top:1120px;font-size:28px;color:#ffffff99;letter-spacing:1px;z-index:5">Krypto-Liquidationen · 13.11.2026</div></div></div>
+      <div id="z14" class="scene clip" data-start="61.986" data-duration="5.691" data-track-index="1"><div id="z14-i" class="inner"><img id="bg14" class="hgfoto" src="assets/hg/bitcoin-muenzen.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div class="mono" style="position:absolute;right:70px;top:466px;font-size:18px;color:#ffffffaa;text-shadow:0 2px 6px #000;z-index:7">Foto: Satheesh Sankaran · CC BY-SA 2.0</div><div id="t15" style="position:absolute;left:0;width:1080px;top:490px;text-align:center;z-index:6"><span style="display:inline-block;font-weight:900;font-size:62px;color:#fff;letter-spacing:2px;text-transform:uppercase;text-shadow:0 0 30px #fff55;border-bottom:6px solid #ff8a1f;padding:0 10px 6px">Angst-Barometer</span></div><svg id="g15" viewBox="0 0 1080 1920" style="position:absolute;left:0;top:0;width:1080px;height:1920px;z-index:3"><defs><linearGradient id="g15g" x1="0" x2="1"><stop offset="0" stop-color="#e5484d"/><stop offset="0.5" stop-color="#f5c542"/><stop offset="1" stop-color="#2fbf71"/></linearGradient></defs><path d="M280 1040 A260 260 0 0 1 800 1040" fill="none" stroke="url(#g15g)" stroke-width="56" stroke-linecap="round"/><circle cx="540" cy="1040" r="28" fill="#fff"/></svg><div id="g15n" style="position:absolute;left:532px;top:820px;width:16px;height:220px;border-radius:8px;background:#fff;box-shadow:0 0 20px #fff;transform-origin:50% 100%;z-index:4"></div><div id="n15" class="t glow-r" style="z-index:5;top:610px;font-size:110px">20</div><div id="s15x" style="position:absolute;left:260px;top:1090px;padding:12px 34px;border:9px solid #ff4d4d;border-radius:18px;color:#ff4d4d;font-weight:900;font-size:56px;letter-spacing:4px;white-space:nowrap;transform:rotate(-4deg);text-shadow:0 0 20px #ff4d4d88;box-shadow:0 0 30px #ff4d4d55, inset 0 0 30px #ff4d4d33;background:#0e1012cc;z-index:6">EXTREME ANGST</div></div></div>
+      <div id="z15" class="scene clip" data-start="67.677" data-duration="6.923" data-track-index="1"><div id="z15-i" class="inner"><img id="bg15" class="hgfoto" src="assets/hg/wallstreet.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div class="mono" style="position:absolute;right:70px;top:466px;font-size:18px;color:#ffffffaa;text-shadow:0 2px 6px #000;z-index:7">Foto: gemeinfrei (Public domain)</div><div id="t16" style="position:absolute;left:0;width:1080px;top:490px;text-align:center;z-index:6"><span style="display:inline-block;font-weight:900;font-size:62px;color:#ffd54a;letter-spacing:2px;text-transform:uppercase;text-shadow:0 0 30px #ffd54a55;border-bottom:6px solid #ff8a1f;padding:0 10px 6px">Merk dir</span></div><div id="c16a" style="position:absolute;left:120px;width:840px;padding:34px 40px;border-radius:26px;background:#14181bee;z-index:3;font-weight:900;font-size:50px;color:#fff;top:640px;border:5px solid #ff4d4d;box-shadow:0 0 40px #ff4d4d55">😱 Panik-Verkauf<div style="font-size:38px;color:#ffffffbb;margin-top:8px">macht den Verlust endgültig</div></div><div id="c16b" style="position:absolute;left:120px;width:840px;padding:34px 40px;border-radius:26px;background:#14181bee;z-index:3;font-weight:900;font-size:50px;color:#fff;top:880px;border:5px solid #ff4d4d;box-shadow:0 0 40px #ff4d4d55">💳 Kauf auf Kredit<div style="font-size:38px;color:#ffffffbb;margin-top:8px">kann dich alles kosten</div></div></div></div>
+      <div id="z16" class="scene clip" data-start="0.0" data-duration="74.6" data-track-index="8"><div id="z16-i" class="inner"><div id="nk" style="position:absolute;left:60px;top:392px;width:960px;height:58px;display:flex;align-items:center;z-index:8"><span id="nk-l" style="display:inline-block;padding:4px 20px;border-radius:10px;background:#ff8a1f;color:#111;font-weight:900;font-size:32px;letter-spacing:4px">NEWS</span><span class="mono" style="margin-left:auto;font-size:30px;color:#ffffffcc">13.11.2026</span></div><div style="position:absolute;left:60px;top:456px;width:960px;height:3px;background:linear-gradient(90deg,#ff8a1f,transparent);z-index:8"></div></div></div>
+      <div id="z17" class="scene clip" data-start="0.0" data-duration="74.6" data-track-index="9"><div id="z17-i" class="inner"><div id="lb" style="position:absolute;left:0;top:1200px;width:1080px;height:90px;background:#0b0d0ef2;border-top:4px solid #2fd27a77;border-bottom:4px solid #2fd27a77;overflow:hidden;z-index:8"><div id="lb-s" class="mono" style="position:absolute;left:0;top:14px;white-space:nowrap;font-size:48px"><span style="margin:0 30px;color:#ff4d4d">BTC ▼ −6,8 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">UNTER 69.000 $</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">NVIDIA ▼ −4,3 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">1,4 MRD. $ LIQUIDIERT</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ffd54a">ANGST-INDEX 20</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">ETF-ABFLÜSSE 8 TAGE</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">BTC ▼ −6,8 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">UNTER 69.000 $</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">NVIDIA ▼ −4,3 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">1,4 MRD. $ LIQUIDIERT</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ffd54a">ANGST-INDEX 20</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">ETF-ABFLÜSSE 8 TAGE</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">BTC ▼ −6,8 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">UNTER 69.000 $</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">NVIDIA ▼ −4,3 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">1,4 MRD. $ LIQUIDIERT</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ffd54a">ANGST-INDEX 20</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">ETF-ABFLÜSSE 8 TAGE</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">BTC ▼ −6,8 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">UNTER 69.000 $</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">NVIDIA ▼ −4,3 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">1,4 MRD. $ LIQUIDIERT</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ffd54a">ANGST-INDEX 20</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">ETF-ABFLÜSSE 8 TAGE</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">BTC ▼ −6,8 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">UNTER 69.000 $</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">NVIDIA ▼ −4,3 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">1,4 MRD. $ LIQUIDIERT</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ffd54a">ANGST-INDEX 20</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">ETF-ABFLÜSSE 8 TAGE</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">BTC ▼ −6,8 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">UNTER 69.000 $</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">NVIDIA ▼ −4,3 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">1,4 MRD. $ LIQUIDIERT</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ffd54a">ANGST-INDEX 20</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">ETF-ABFLÜSSE 8 TAGE</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">BTC ▼ −6,8 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">UNTER 69.000 $</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">NVIDIA ▼ −4,3 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">1,4 MRD. $ LIQUIDIERT</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ffd54a">ANGST-INDEX 20</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">ETF-ABFLÜSSE 8 TAGE</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">BTC ▼ −6,8 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">UNTER 69.000 $</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">NVIDIA ▼ −4,3 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">1,4 MRD. $ LIQUIDIERT</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ffd54a">ANGST-INDEX 20</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">ETF-ABFLÜSSE 8 TAGE</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">BTC ▼ −6,8 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">UNTER 69.000 $</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">NVIDIA ▼ −4,3 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">1,4 MRD. $ LIQUIDIERT</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ffd54a">ANGST-INDEX 20</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">ETF-ABFLÜSSE 8 TAGE</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">BTC ▼ −6,8 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">UNTER 69.000 $</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">NVIDIA ▼ −4,3 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">1,4 MRD. $ LIQUIDIERT</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ffd54a">ANGST-INDEX 20</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">ETF-ABFLÜSSE 8 TAGE</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">BTC ▼ −6,8 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">UNTER 69.000 $</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">NVIDIA ▼ −4,3 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">1,4 MRD. $ LIQUIDIERT</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ffd54a">ANGST-INDEX 20</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">ETF-ABFLÜSSE 8 TAGE</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">BTC ▼ −6,8 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">UNTER 69.000 $</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">NVIDIA ▼ −4,3 %</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">1,4 MRD. $ LIQUIDIERT</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ffd54a">ANGST-INDEX 20</span><span style="color:#ff8a1f">●</span><span style="margin:0 30px;color:#ff4d4d">ETF-ABFLÜSSE 8 TAGE</span><span style="color:#ff8a1f">●</span></div></div></div></div>
+      <div id="logo"><img src="assets/beagle.png" alt="" /></div>
+      <div id="brand">HundeFinanzTv</div>
+      <div id="flash"></div>
       <div id="frame"></div>
-
-      <!-- ============ UNTERTITEL ============ -->
       <div id="captions" data-track-kind="captions">
-        <div id="c1" class="cap clip" data-start="0" data-duration="1.6" data-track-index="2"><span>du hast 100 € im Monat übrig</span></div>
-        <div id="c2" class="cap clip" data-start="1.6" data-duration="1.4" data-track-index="2"><span>und fragst dich, was du damit machst</span></div>
-        <div id="c3" class="cap clip" data-start="3" data-duration="3" data-track-index="2"><span>die Frage aller Fragen</span></div>
-        <div id="c4" class="cap clip" data-start="6" data-duration="1.7" data-track-index="2"><span>100 € im Monat, 30 Jahre lang</span></div>
-        <div id="c5" class="cap clip" data-start="7.7" data-duration="1.8" data-track-index="2"><span>auf dem Konto bleiben es 36.000 €</span></div>
-        <div id="c6" class="cap clip" data-start="9.5" data-duration="3" data-track-index="2"><span>im ETF kommen ~77.000 € Rendite dazu</span></div>
-        <div id="c7" class="cap clip" data-start="12.5" data-duration="2.5" data-track-index="2"><span>folg mir für mehr Geld-Tipps</span></div>
+        <div id="c1" class="cap clip" data-start="0.0" data-duration="1.554" data-track-index="2"><span id="w1-0">Freitag,</span> <span id="w1-1">der</span> <span id="w1-2">dreizehnte,</span> </div>
+        <div id="c2" class="cap clip" data-start="1.554" data-duration="1.401" data-track-index="2"><span id="w2-0">und</span> <span id="w2-1">Bitcoin</span> <span id="w2-2">stürzt</span> <span id="w2-3">ab</span> </div>
+        <div id="c3" class="cap clip" data-start="2.955" data-duration="1.707" data-track-index="2"><span id="w3-0">Folg</span> <span id="w3-1">uns</span> <span id="w3-2">für</span> <span id="w3-3">mehr</span> <span id="w3-4">Börsen‑News,</span> </div>
+        <div id="c4" class="cap clip" data-start="4.662" data-duration="0.729" data-track-index="2"><span id="w4-0">wir</span> <span id="w4-1">bringen</span> </div>
+        <div id="c5" class="cap clip" data-start="5.391" data-duration="1.273" data-track-index="2"><span id="w5-0">jeden</span> <span id="w5-1">Tag</span> <span id="w5-2">neue</span> <span id="w5-3">Videos</span> </div>
+        <div id="c6" class="cap clip" data-start="6.664" data-duration="1.343" data-track-index="2"><span id="w6-0">Unter</span> <span id="w6-1">69.000</span> <span id="w6-2">Dollar,</span> </div>
+        <div id="c7" class="cap clip" data-start="8.007" data-duration="1.531" data-track-index="2"><span id="w7-0">so</span> <span id="w7-1">tief</span> <span id="w7-2">wie</span> <span id="w7-3">seit</span> <span id="w7-4">drei</span> </div>
+        <div id="c8" class="cap clip" data-start="9.538" data-duration="1.216" data-track-index="2"><span id="w8-0">Monaten</span> <span id="w8-1">nicht</span> <span id="w8-2">mehr</span> </div>
+        <div id="c9" class="cap clip" data-start="10.754" data-duration="1.779" data-track-index="2"><span id="w9-0">In</span> <span id="w9-1">nur</span> <span id="w9-2">24</span> <span id="w9-3">Stunden</span> </div>
+        <div id="c10" class="cap clip" data-start="12.533" data-duration="1.369" data-track-index="2"><span id="w10-0">fast</span> <span id="w10-1">7 %</span> <span id="w10-2">minus</span> </div>
+        <div id="c11" class="cap clip" data-start="13.902" data-duration="1.279" data-track-index="2"><span id="w11-0">Kurzer</span> <span id="w11-1">Hinweis:</span> <span id="w11-2">Das</span> <span id="w11-3">ist</span> </div>
+        <div id="c12" class="cap clip" data-start="15.181" data-duration="1.37" data-track-index="2"><span id="w12-0">keine</span> <span id="w12-1">Anlageberatung,</span> </div>
+        <div id="c13" class="cap clip" data-start="16.551" data-duration="0.996" data-track-index="2"><span id="w13-0">nur</span> <span id="w13-1">eine</span> <span id="w13-2">Erklärung</span> </div>
+        <div id="c14" class="cap clip" data-start="17.547" data-duration="1.348" data-track-index="2"><span id="w14-0">Seit</span> <span id="w14-1">dem</span> <span id="w14-2">Rekord</span> </div>
+        <div id="c15" class="cap clip" data-start="18.895" data-duration="2.203" data-track-index="2"><span id="w15-0">von</span> <span id="w15-1">über</span> <span id="w15-2">126.000</span> <span id="w15-3">Dollar</span> </div>
+        <div id="c16" class="cap clip" data-start="21.098" data-duration="2.203" data-track-index="2"><span id="w16-0">im</span> <span id="w16-1">Oktober</span> <span id="w16-2">2025</span> <span id="w16-3">sind</span> <span id="w16-4">es</span> </div>
+        <div id="c17" class="cap clip" data-start="23.301" data-duration="1.898" data-track-index="2"><span id="w17-0">jetzt</span> <span id="w17-1">über</span> <span id="w17-2">45 %</span> <span id="w17-3">minus</span> </div>
+        <div id="c18" class="cap clip" data-start="25.199" data-duration="1.568" data-track-index="2"><span id="w18-0">Auslöser</span> <span id="w18-1">Nummer</span> <span id="w18-2">eins</span> <span id="w18-3">kommt</span> </div>
+        <div id="c19" class="cap clip" data-start="26.767" data-duration="1.428" data-track-index="2"><span id="w19-0">ausgerechnet</span> <span id="w19-1">von</span> <span id="w19-2">Nvidia</span> </div>
+        <div id="c20" class="cap clip" data-start="28.195" data-duration="0.997" data-track-index="2"><span id="w20-0">Chef</span> <span id="w20-1">Jensen</span> <span id="w20-2">Huang</span> </div>
+        <div id="c21" class="cap clip" data-start="29.192" data-duration="1.18" data-track-index="2"><span id="w21-0">ist</span> <span id="w21-1">zurückgetreten,</span> </div>
+        <div id="c22" class="cap clip" data-start="30.372" data-duration="1.055" data-track-index="2"><span id="w22-0">und</span> <span id="w22-1">die</span> <span id="w22-2">Aktie</span> <span id="w22-3">ist</span> </div>
+        <div id="c23" class="cap clip" data-start="31.427" data-duration="1.18" data-track-index="2"><span id="w23-0">zum</span> <span id="w23-1">Handelsstart</span> <span id="w23-2">um</span> </div>
+        <div id="c24" class="cap clip" data-start="32.607" data-duration="0.973" data-track-index="2"><span id="w24-0">14 %</span> <span id="w24-1">eingebrochen</span> </div>
+        <div id="c25" class="cap clip" data-start="33.58" data-duration="1.543" data-track-index="2"><span id="w25-0">Das</span> <span id="w25-1">hat</span> <span id="w25-2">Angst</span> <span id="w25-3">an</span> <span id="w25-4">der</span> <span id="w25-5">ganzen</span> </div>
+        <div id="c26" class="cap clip" data-start="35.123" data-duration="0.963" data-track-index="2"><span id="w26-0">Börse</span> <span id="w26-1">ausgelöst,</span> </div>
+        <div id="c27" class="cap clip" data-start="36.086" data-duration="0.963" data-track-index="2"><span id="w27-0">und</span> <span id="w27-1">Bitcoin</span> <span id="w27-2">gilt</span> </div>
+        <div id="c28" class="cap clip" data-start="37.049" data-duration="1.093" data-track-index="2"><span id="w28-0">als</span> <span id="w28-1">besonders</span> <span id="w28-2">riskant</span> </div>
+        <div id="c29" class="cap clip" data-start="38.142" data-duration="1.578" data-track-index="2"><span id="w29-0">Auslöser</span> <span id="w29-1">Nummer</span> <span id="w29-2">zwei:</span> <span id="w29-3">Große</span> </div>
+        <div id="c30" class="cap clip" data-start="39.72" data-duration="1.837" data-track-index="2"><span id="w30-0">Anleger</span> <span id="w30-1">ziehen</span> <span id="w30-2">ihr</span> <span id="w30-3">Geld</span> <span id="w30-4">ab</span> </div>
+        <div id="c31" class="cap clip" data-start="41.557" data-duration="1.728" data-track-index="2"><span id="w31-0">Aus</span> <span id="w31-1">den</span> <span id="w31-2">ETFs</span> <span id="w31-3">für</span> <span id="w31-4">Bitcoin</span> </div>
+        <div id="c32" class="cap clip" data-start="43.285" data-duration="1.943" data-track-index="2"><span id="w32-0">in</span> <span id="w32-1">Amerika</span> <span id="w32-2">fließt</span> <span id="w32-3">seit</span> <span id="w32-4">acht</span> </div>
+        <div id="c33" class="cap clip" data-start="45.228" data-duration="1.521" data-track-index="2"><span id="w33-0">Tagen</span> <span id="w33-1">am</span> <span id="w33-2">Stück</span> <span id="w33-3">Geld</span> <span id="w33-4">ab,</span> </div>
+        <div id="c34" class="cap clip" data-start="46.749" data-duration="1.296" data-track-index="2"><span id="w34-0">in</span> <span id="w34-1">fünf</span> <span id="w34-2">Tagen</span> <span id="w34-3">rund</span> </div>
+        <div id="c35" class="cap clip" data-start="48.045" data-duration="1.331" data-track-index="2"><span id="w35-0">1,4</span> <span id="w35-1">Milliarden</span> <span id="w35-2">Dollar</span> </div>
+        <div id="c36" class="cap clip" data-start="49.376" data-duration="1.309" data-track-index="2"><span id="w36-0">Auslöser</span> <span id="w36-1">Nummer</span> <span id="w36-2">drei:</span> </div>
+        <div id="c37" class="cap clip" data-start="50.685" data-duration="1.091" data-track-index="2"><span id="w37-0">Wetten</span> <span id="w37-1">auf</span> <span id="w37-2">Kredit</span> </div>
+        <div id="c38" class="cap clip" data-start="51.776" data-duration="0.873" data-track-index="2"><span id="w38-0">Wer</span> <span id="w38-1">mit</span> <span id="w38-2">geliehenem</span> </div>
+        <div id="c39" class="cap clip" data-start="52.649" data-duration="1.089" data-track-index="2"><span id="w39-0">Geld</span> <span id="w39-1">auf</span> <span id="w39-2">steigende</span> </div>
+        <div id="c40" class="cap clip" data-start="53.738" data-duration="1.09" data-track-index="2"><span id="w40-0">Kurse</span> <span id="w40-1">gesetzt</span> <span id="w40-2">hat,</span> </div>
+        <div id="c41" class="cap clip" data-start="54.828" data-duration="1.74" data-track-index="2"><span id="w41-0">wurde</span> <span id="w41-1">automatisch</span> <span id="w41-2">rausgeworfen</span> </div>
+        <div id="c42" class="cap clip" data-start="56.568" data-duration="1.515" data-track-index="2"><span id="w42-0">In</span> <span id="w42-1">24</span> <span id="w42-2">Stunden</span> <span id="w42-3">wurden</span> </div>
+        <div id="c43" class="cap clip" data-start="58.083" data-duration="1.751" data-track-index="2"><span id="w43-0">so</span> <span id="w43-1">über</span> <span id="w43-2">1,4</span> <span id="w43-3">Milliarden</span> </div>
+        <div id="c44" class="cap clip" data-start="59.834" data-duration="2.152" data-track-index="2"><span id="w44-0">Dollar</span> <span id="w44-1">zwangsweise</span> <span id="w44-2">aufgelöst</span> </div>
+        <div id="c45" class="cap clip" data-start="61.986" data-duration="2.121" data-track-index="2"><span id="w45-0">Das</span> <span id="w45-1">Angst‑Barometer</span> <span id="w45-2">für</span> <span id="w45-3">Krypto</span> </div>
+        <div id="c46" class="cap clip" data-start="64.107" data-duration="1.961" data-track-index="2"><span id="w46-0">steht</span> <span id="w46-1">jetzt</span> <span id="w46-2">bei</span> <span id="w46-3">20</span> <span id="w46-4">von</span> <span id="w46-5">100,</span> </div>
+        <div id="c47" class="cap clip" data-start="66.068" data-duration="1.609" data-track-index="2"><span id="w47-0">das</span> <span id="w47-1">heißt:</span> <span id="w47-2">extreme</span> <span id="w47-3">Angst</span> </div>
+        <div id="c48" class="cap clip" data-start="67.677" data-duration="0.9" data-track-index="2"><span id="w48-0">Und</span> <span id="w48-1">merk</span> <span id="w48-2">dir:</span> <span id="w48-3">Wer</span> </div>
+        <div id="c49" class="cap clip" data-start="68.577" data-duration="1.142" data-track-index="2"><span id="w49-0">in</span> <span id="w49-1">Panik</span> <span id="w49-2">verkauft,</span> </div>
+        <div id="c50" class="cap clip" data-start="69.719" data-duration="1.079" data-track-index="2"><span id="w50-0">macht</span> <span id="w50-1">den</span> <span id="w50-2">Verlust</span> </div>
+        <div id="c51" class="cap clip" data-start="70.798" data-duration="0.922" data-track-index="2"><span id="w51-0">erst</span> <span id="w51-1">endgültig,</span> </div>
+        <div id="c52" class="cap clip" data-start="71.72" data-duration="1.58" data-track-index="2"><span id="w52-0">und</span> <span id="w52-1">wer</span> <span id="w52-2">auf</span> <span id="w52-3">Kredit</span> <span id="w52-4">kauft,</span> </div>
+        <div id="c53" class="cap clip" data-start="73.3" data-duration="1.145" data-track-index="2"><span id="w53-0">kann</span> <span id="w53-1">alles</span> <span id="w53-2">verlieren</span> </div>
       </div>
+      <audio id="voice" src="assets/mix.wav" data-start="0" data-duration="74.6" data-track-index="3"></audio>
     </div>
-
     <script>
       const tl = gsap.timeline({ paused: true });
-      const pop = (sel, at) =>
-        tl.fromTo(sel, { scale: 0.82, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.8)" }, at);
-      const drift = (sel, at, dur) =>
-        tl.fromTo(sel, { scale: 1 }, { scale: 1.05, duration: dur, ease: "sine.inOut" }, at);
+      const pop = (sel, at) => tl.fromTo(sel, { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.2)" }, at);
+      const slam = (sel, at) => tl.fromTo(sel, { scale: 2.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.28, ease: "power4.in" }, at);
+      const shake = (sel, at) => tl.fromTo(sel, { x: -14 }, { x: 14, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }, at);
       const draw = (sel, at, dur) => {
         const len = document.querySelector(sel).getTotalLength();
         tl.fromTo(sel, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: dur, ease: "power2.out" }, at);
       };
-
-      // 1: Geldsack
-      pop("#s1-art", 0);
-      drift("#s1-bag", 0.35, 2.5);
-      tl.fromTo("#s1-coins", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 0.25);
-
-      // 2: Zielscheibe, Pfeil schlägt ein
-      pop("#s2-art", 3);
-      tl.fromTo("#s2-arrow", { x: 160, y: -160, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 0.3, ease: "power4.in" }, 3.3);
-      tl.fromTo("#s2-art", { rotation: 0 }, { rotation: 2, duration: 0.06, yoyo: true, repeat: 3, ease: "none" }, 3.6);
-
-      // 3: Zahlen-Vergleich
-      pop("#s3-h1", 6);
-      pop("#s3-h2", 6.15);
-      tl.fromTo(["#s3-a1", "#s3-a2"], { opacity: 0 }, { opacity: 1, duration: 0.2 }, 6.5);
-      pop("#s3-n1", 7.7);
-      pop("#s3-n2", 7.85);
-      pop("#s3-n3", 9.0);
-
-      // 4: Chart zeichnet sich
-      draw("#s4-solid", 9.6, 0.7);
-      tl.fromTo("#s4-dots", { opacity: 0 }, { opacity: 1, duration: 0.6 }, 10.1);
-      pop("#s4-label", 10.6);
-      pop("#s4-check", 10.9);
-
-      // 5: Outro
-      pop("#s5-art", 12.5);
-      drift("#s5-art", 12.85, 2.0);
-
+      const zaehl = (sel, von, bis, at, dur, nach) => {
+        const o = { v: von };
+        tl.fromTo(o, { v: von }, { v: bis, duration: dur, ease: "power2.out", onUpdate: () => {
+          document.querySelector(sel).textContent = Math.round(o.v).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (nach || ""); }, immediateRender: false }, at);
+      };
+      const flash = (at, st) => tl.fromTo("#flash", { opacity: st || 0.85 }, { opacity: 0, duration: 0.35, ease: "power2.out", immediateRender: false }, at);
+      const burst = (sel, at, dur) => tl.fromTo(sel + " .p", { x: 0, y: 0, scale: 1.4, opacity: 1 },
+        { x: (i, el) => +el.dataset.dx, y: (i, el) => +el.dataset.dy, scale: 0.2, opacity: 0, duration: dur || 1.0, ease: "power3.out", immediateRender: false }, at);
+      const letters = (sel, at) => tl.fromTo(sel + " .l", { y: 140, opacity: 0, rotation: 12, scale: 0.6 },
+        { y: 0, opacity: 1, rotation: 0, scale: 1, duration: 0.45, stagger: 0.035, ease: "back.out(2.2)" }, at);
+      const glitch = (sel, at) => tl.fromTo(sel, { x: -22, skewX: 18 }, { x: 0, skewX: 0, duration: 0.24, ease: "steps(6)" }, at);
+      tl.fromTo("#z0-i", { scale: 1.0 }, { scale: 1.06, duration: 2.955, ease: "none" }, 0.0);
+      const wachs = (sel, at, dur) => tl.fromTo(sel, { scaleY: 0 }, { scaleY: 1, duration: dur || 0.6, ease: "power3.out" }, at); const spann = (sel, at) => { tl.fromTo(sel + "-f", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, at); tl.fromTo(sel + "-a", { scale: 0 }, { scale: 1, duration: 0.25, ease: "back.out(2)" }, at); tl.fromTo(sel + "-b", { x: -200, scale: 0 }, { x: 0, scale: 1, duration: 0.6, ease: "power3.out" }, at); }; const lauf = (sel, at, dur) => tl.fromTo(sel + "-s", { x: 0 }, { x: -1400, duration: dur, ease: "none" }, at); const blink = (sel, at) => { tl.fromTo(sel + " .rk", { y: 120, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, stagger: 0.08, ease: "back.out(1.6)" }, at); tl.fromTo(sel + " .led", { opacity: 0.2 }, { opacity: 1, duration: 0.18, stagger: { each: 0.02, repeat: 7, yoyo: true }, ease: "none" }, at + 0.4); }; const stempeln = (sel, at) => tl.fromTo(sel, { scale: 3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "power4.in" }, at); pop("#t1", 0.0); pop("#m1", 0.0); pop("#k1", 0.0 + 0.2); slam("#i1", 1.554); shake("#m1", 1.554); flash(1.554, 0.5); tl.fromTo("#bg0", { scale: 1 }, { scale: 1.12, duration: 2.955, ease: "sine.inOut", immediateRender: false }, 0.0);
+      tl.fromTo("#z1-i", { scale: 1.0 }, { scale: 1.06, duration: 3.709, ease: "none" }, 2.955);
+      pop("#t2", 2.955); pop("#i2", 2.955 + 0.1); tl.fromTo("#i2", { rotation: -18 }, { rotation: 18, duration: 0.14, yoyo: true, repeat: 5 }, 2.955 + 0.3); slam("#c2", 2.955 + 0.4); pop("#q2", 4.662); tl.fromTo("#z1-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 2.955); tl.fromTo("#bg1", { scale: 1 }, { scale: 1.12, duration: 3.709, ease: "sine.inOut", immediateRender: false }, 2.955);
+      tl.fromTo("#z2-i", { scale: 1.0 }, { scale: 1.06, duration: 4.09, ease: "none" }, 6.664);
+      pop("#t3", 6.664); draw("#ku-p", 6.664 + 0.1, 1.4); pop("#ku-w0", 6.664 + 0.6); pop("#ku-w1", 6.664 + 1.0); tl.fromTo("#ku-f", { opacity: 0 }, { opacity: 0.14, duration: 0.5 }, 6.664 + 1.0); pop("#q3", 8.007); tl.fromTo("#z2-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 6.664); tl.fromTo("#bg2", { scale: 1 }, { scale: 1.12, duration: 4.09, ease: "sine.inOut", immediateRender: false }, 6.664);
+      tl.fromTo("#z3-i", { scale: 1.0 }, { scale: 1.06, duration: 3.148, ease: "none" }, 10.754);
+      pop("#t4", 10.754); pop("#i4", 10.754); pop("#m4", 10.754 + 0.2); slam("#m4-s", 12.533); pop("#q4", 12.533 + 0.3); tl.fromTo("#z3-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 10.754); tl.fromTo("#bg3", { scale: 1 }, { scale: 1.12, duration: 3.148, ease: "sine.inOut", immediateRender: false }, 10.754);
+      tl.fromTo("#z4-i", { scale: 1.0 }, { scale: 1.06, duration: 3.645, ease: "none" }, 13.902);
+      pop("#t5", 13.902); tl.fromTo("#hw", { y: -400, rotation: -20, opacity: 0 }, { y: 0, rotation: -3, opacity: 1, duration: 0.5, ease: "back.out(1.4)" }, 13.902); tl.fromTo("#z4-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 13.902); tl.fromTo("#bg4", { scale: 1 }, { scale: 1.12, duration: 3.645, ease: "sine.inOut", immediateRender: false }, 13.902);
+      tl.fromTo("#z5-i", { scale: 1.0 }, { scale: 1.06, duration: 7.652, ease: "none" }, 17.547);
+      pop("#t6", 17.547); tl.fromTo("#b6a", { scaleY: 0 }, { scaleY: 1, duration: 0.5 }, 17.547); pop("#b6ta", 18.895); tl.fromTo("#b6b", { scaleY: 0 }, { scaleY: 1, duration: 0.5 }, 21.098); pop("#b6tb", 21.098 + 0.4); stempeln("#s6x", 23.301); pop("#q6", 23.301 + 0.3); tl.fromTo("#z5-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 17.547); tl.fromTo("#bg5", { scale: 1 }, { scale: 1.12, duration: 7.652, ease: "sine.inOut", immediateRender: false }, 17.547);
+      tl.fromTo("#z6-i", { scale: 1.0 }, { scale: 1.06, duration: 2.996, ease: "none" }, 25.199);
+      slam("#t7", 25.199); pop("#q7", 25.199 + 0.3); pop("#m7", 26.767); flash(26.767, 0.4); tl.fromTo("#z6-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 25.199); tl.fromTo("#bg6", { scale: 1 }, { scale: 1.12, duration: 2.996, ease: "sine.inOut", immediateRender: false }, 25.199);
+      tl.fromTo("#z7-i", { scale: 1.0 }, { scale: 1.06, duration: 5.385, ease: "none" }, 28.195);
+      pop("#t8", 28.195); pop("#f8", 28.195); flash(28.195, 0.4); pop("#m8", 29.192); slam("#m8-s", 30.372); shake("#m8", 30.372); tl.fromTo("#z7-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 28.195); tl.fromTo("#bg7", { scale: 1 }, { scale: 1.12, duration: 5.385, ease: "sine.inOut", immediateRender: false }, 28.195);
+      tl.fromTo("#z8-i", { scale: 1.0 }, { scale: 1.06, duration: 4.562, ease: "none" }, 33.58);
+      pop("#t9", 33.58); slam("#i9", 33.58); pop("#m9", 35.123); pop("#c9", 36.086); tl.fromTo("#z8-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 33.58); tl.fromTo("#bg8", { scale: 1 }, { scale: 1.12, duration: 4.562, ease: "sine.inOut", immediateRender: false }, 33.58);
+      tl.fromTo("#z9-i", { scale: 1.0 }, { scale: 1.06, duration: 3.415, ease: "none" }, 38.142);
+      slam("#t10", 38.142); pop("#i10a", 39.72); draw("#p10-p", 39.72, 0.3); pop("#p10-k", 39.72 + 0.25); tl.fromTo("#i10b", { x: -200, opacity: 0 }, { x: 0, opacity: 1, duration: 0.4 }, 39.72 + 0.2); pop("#q10", 39.72); tl.fromTo("#z9-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 38.142); tl.fromTo("#bg9", { scale: 1 }, { scale: 1.12, duration: 3.415, ease: "sine.inOut", immediateRender: false }, 38.142);
+      tl.fromTo("#z10-i", { scale: 1.0 }, { scale: 1.06, duration: 7.819, ease: "none" }, 41.557);
+      pop("#t11", 41.557); pop("#fl11", 41.557 + 0.2); pop("#k11", 43.285); pop("#r11", 43.285 + 0.3); tl.fromTo(".dl", { x: 0, opacity: 1 }, { x: 140, opacity: 0, duration: 0.6, stagger: 0.08, repeat: 3, ease: "power1.in" }, 45.228); slam("#n11", 46.749); pop("#q11", 46.749 + 0.3); tl.fromTo("#z10-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 41.557); tl.fromTo("#bg10", { scale: 1 }, { scale: 1.12, duration: 7.819, ease: "sine.inOut", immediateRender: false }, 41.557);
+      tl.fromTo("#z11-i", { scale: 1.0 }, { scale: 1.06, duration: 2.4, ease: "none" }, 49.376);
+      slam("#t12", 49.376); pop("#i12", 49.376 + 0.2); slam("#c12", 50.685); tl.fromTo("#z11-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 49.376); tl.fromTo("#bg11", { scale: 1 }, { scale: 1.12, duration: 2.4, ease: "sine.inOut", immediateRender: false }, 49.376);
+      tl.fromTo("#z12-i", { scale: 1.0 }, { scale: 1.06, duration: 4.792, ease: "none" }, 51.776);
+      pop("#t13", 51.776); pop("#k13a", 51.776 + 0.1); pop("#pl13", 51.776 + 0.3); pop("#k13b", 51.776 + 0.3); tl.fromTo(".do", { y: 300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, stagger: 0.05 }, 52.649); tl.to(".do", { rotation: 72, duration: 0.25, stagger: 0.1, ease: "power2.in" }, 53.738); stempeln("#s13x", 53.738 + 0.6); tl.fromTo("#z12-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 51.776); tl.fromTo("#bg12", { scale: 1 }, { scale: 1.12, duration: 4.792, ease: "sine.inOut", immediateRender: false }, 51.776);
+      tl.fromTo("#z13-i", { scale: 1.0 }, { scale: 1.06, duration: 5.418, ease: "none" }, 56.568);
+      pop("#t14", 56.568); slam("#n14", 58.083); burst("#pa14", 58.083 + 0.2); draw("#kr14-p", 58.083 + 0.4, 0.5); stempeln("#s14x", 59.834); pop("#q14", 59.834 + 0.3); tl.fromTo("#z13-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 56.568); tl.fromTo("#bg13", { scale: 1 }, { scale: 1.12, duration: 5.418, ease: "sine.inOut", immediateRender: false }, 56.568);
+      tl.fromTo("#z14-i", { scale: 1.0 }, { scale: 1.06, duration: 5.691, ease: "none" }, 61.986);
+      pop("#t15", 61.986); pop("#g15", 61.986 + 0.1); tl.fromTo("#g15n", { rotation: 60 }, { rotation: -54, duration: 1.0, ease: "back.out(1.4)" }, 64.107); slam("#n15", 64.107 + 0.8); stempeln("#s15x", 66.068); tl.fromTo("#z14-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 61.986); tl.fromTo("#bg14", { scale: 1 }, { scale: 1.12, duration: 5.691, ease: "sine.inOut", immediateRender: false }, 61.986);
+      tl.fromTo("#z15-i", { scale: 1.0 }, { scale: 1.06, duration: 6.923, ease: "none" }, 67.677);
+      pop("#t16", 67.677); slam("#c16a", 68.577); slam("#c16b", 70.798); tl.fromTo("#z15-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 67.677); tl.fromTo("#bg15", { scale: 1 }, { scale: 1.12, duration: 6.923, ease: "sine.inOut", immediateRender: false }, 67.677);
+      tl.fromTo("#z16-i", { scale: 1.0 }, { scale: 1.06, duration: 74.6, ease: "none" }, 0.0);
+      
+      tl.fromTo("#z17-i", { scale: 1.0 }, { scale: 1.06, duration: 74.6, ease: "none" }, 0.0);
+      tl.fromTo("#lb-s", { x: 0 }, { x: -6713, duration: 74.6, ease: "none" }, 0);
+      tl.fromTo("#w1-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 0.0);
+      tl.to("#w1-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 0.559);
+      tl.fromTo("#w1-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 0.559);
+      tl.to("#w1-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 0.808);
+      tl.fromTo("#w1-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 0.808);
+      tl.fromTo("#w2-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 1.554);
+      tl.to("#w2-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 1.809);
+      tl.fromTo("#w2-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 1.809);
+      tl.to("#w2-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 2.318);
+      tl.fromTo("#w2-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 2.318);
+      tl.to("#w2-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 2.764);
+      tl.fromTo("#w2-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 2.764);
+      tl.fromTo("#w3-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 2.955);
+      tl.to("#w3-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 3.23);
+      tl.fromTo("#w3-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 3.23);
+      tl.to("#w3-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 3.451);
+      tl.fromTo("#w3-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 3.451);
+      tl.to("#w3-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 3.671);
+      tl.fromTo("#w3-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 3.671);
+      tl.to("#w3-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 3.946);
+      tl.fromTo("#w3-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 3.946);
+      tl.fromTo("#w4-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 4.662);
+      tl.to("#w4-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 4.905);
+      tl.fromTo("#w4-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 4.905);
+      tl.fromTo("#w5-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 5.391);
+      tl.to("#w5-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 5.738);
+      tl.fromTo("#w5-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 5.738);
+      tl.to("#w5-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 5.97);
+      tl.fromTo("#w5-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 5.97);
+      tl.to("#w5-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 6.259);
+      tl.fromTo("#w5-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 6.259);
+      tl.fromTo("#w6-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 6.664);
+      tl.to("#w6-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 7.048);
+      tl.fromTo("#w6-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 7.048);
+      tl.to("#w6-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 7.495);
+      tl.fromTo("#w6-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 7.495);
+      tl.fromTo("#w7-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 8.007);
+      tl.to("#w7-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 8.216);
+      tl.fromTo("#w7-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 8.216);
+      tl.to("#w7-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 8.564);
+      tl.fromTo("#w7-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 8.564);
+      tl.to("#w7-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 8.842);
+      tl.fromTo("#w7-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 8.842);
+      tl.to("#w7-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 9.19);
+      tl.fromTo("#w7-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 9.19);
+      tl.fromTo("#w8-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 9.538);
+      tl.to("#w8-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 10.05);
+      tl.fromTo("#w8-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 10.05);
+      tl.to("#w8-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 10.434);
+      tl.fromTo("#w8-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 10.434);
+      tl.fromTo("#w9-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 10.754);
+      tl.to("#w9-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 11.05);
+      tl.fromTo("#w9-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 11.05);
+      tl.to("#w9-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 11.446);
+      tl.fromTo("#w9-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 11.446);
+      tl.to("#w9-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 11.742);
+      tl.fromTo("#w9-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 11.742);
+      tl.fromTo("#w10-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 12.533);
+      tl.to("#w10-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 12.989);
+      tl.fromTo("#w10-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 12.989);
+      tl.to("#w10-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 13.354);
+      tl.fromTo("#w10-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 13.354);
+      tl.fromTo("#w11-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 13.902);
+      tl.to("#w11-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 14.275);
+      tl.fromTo("#w11-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 14.275);
+      tl.to("#w11-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 14.755);
+      tl.fromTo("#w11-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 14.755);
+      tl.to("#w11-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 14.968);
+      tl.fromTo("#w11-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 14.968);
+      tl.fromTo("#w12-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 15.181);
+      tl.to("#w12-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 15.555);
+      tl.fromTo("#w12-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 15.555);
+      tl.fromTo("#w13-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 16.551);
+      tl.to("#w13-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 16.761);
+      tl.fromTo("#w13-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 16.761);
+      tl.to("#w13-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 17.023);
+      tl.fromTo("#w13-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 17.023);
+      tl.fromTo("#w14-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 17.547);
+      tl.to("#w14-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 17.968);
+      tl.fromTo("#w14-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 17.968);
+      tl.to("#w14-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 18.305);
+      tl.fromTo("#w14-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 18.305);
+      tl.fromTo("#w15-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 18.895);
+      tl.to("#w15-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 19.262);
+      tl.fromTo("#w15-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 19.262);
+      tl.to("#w15-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 19.721);
+      tl.fromTo("#w15-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 19.721);
+      tl.to("#w15-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 20.455);
+      tl.fromTo("#w15-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 20.455);
+      tl.fromTo("#w16-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 21.098);
+      tl.to("#w16-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 21.373);
+      tl.fromTo("#w16-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 21.373);
+      tl.to("#w16-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 22.108);
+      tl.fromTo("#w16-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 22.108);
+      tl.to("#w16-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 22.567);
+      tl.fromTo("#w16-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 22.567);
+      tl.to("#w16-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 23.026);
+      tl.fromTo("#w16-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 23.026);
+      tl.fromTo("#w17-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 23.301);
+      tl.to("#w17-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 23.819);
+      tl.fromTo("#w17-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 23.819);
+      tl.to("#w17-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 24.25);
+      tl.fromTo("#w17-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 24.25);
+      tl.to("#w17-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 24.681);
+      tl.fromTo("#w17-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 24.681);
+      tl.fromTo("#w18-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 25.199);
+      tl.to("#w18-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 25.722);
+      tl.fromTo("#w18-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 25.722);
+      tl.to("#w18-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 26.128);
+      tl.fromTo("#w18-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 26.128);
+      tl.to("#w18-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 26.419);
+      tl.fromTo("#w18-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 26.419);
+      tl.fromTo("#w19-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 26.767);
+      tl.to("#w19-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 27.541);
+      tl.fromTo("#w19-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 27.541);
+      tl.to("#w19-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 27.779);
+      tl.fromTo("#w19-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 27.779);
+      tl.fromTo("#w20-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 28.195);
+      tl.to("#w20-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 28.472);
+      tl.fromTo("#w20-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 28.472);
+      tl.to("#w20-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 28.86);
+      tl.fromTo("#w20-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 28.86);
+      tl.fromTo("#w21-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 29.192);
+      tl.to("#w21-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 29.428);
+      tl.fromTo("#w21-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 29.428);
+      tl.fromTo("#w22-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 30.372);
+      tl.to("#w22-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 30.606);
+      tl.fromTo("#w22-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 30.606);
+      tl.to("#w22-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 30.841);
+      tl.fromTo("#w22-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 30.841);
+      tl.to("#w22-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 31.193);
+      tl.fromTo("#w22-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 31.193);
+      tl.fromTo("#w23-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 31.427);
+      tl.to("#w23-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 31.663);
+      tl.fromTo("#w23-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 31.663);
+      tl.to("#w23-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 32.43);
+      tl.fromTo("#w23-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 32.43);
+      tl.fromTo("#w24-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 32.607);
+      tl.to("#w24-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 32.877);
+      tl.fromTo("#w24-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 32.877);
+      tl.fromTo("#w25-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 33.58);
+      tl.to("#w25-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 33.8);
+      tl.fromTo("#w25-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 33.8);
+      tl.to("#w25-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 34.021);
+      tl.fromTo("#w25-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 34.021);
+      tl.to("#w25-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 34.351);
+      tl.fromTo("#w25-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 34.351);
+      tl.to("#w25-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 34.517);
+      tl.fromTo("#w25-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 34.517);
+      tl.to("#w25-4", { color: "#ffffff", scale: 1, duration: 0.08 }, 34.737);
+      tl.fromTo("#w25-5", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 34.737);
+      tl.fromTo("#w26-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 35.123);
+      tl.to("#w26-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 35.463);
+      tl.fromTo("#w26-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 35.463);
+      tl.fromTo("#w27-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 36.086);
+      tl.to("#w27-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 36.313);
+      tl.fromTo("#w27-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 36.313);
+      tl.to("#w27-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 36.766);
+      tl.fromTo("#w27-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 36.766);
+      tl.fromTo("#w28-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 37.049);
+      tl.to("#w28-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 37.248);
+      tl.fromTo("#w28-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 37.248);
+      tl.to("#w28-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 37.745);
+      tl.fromTo("#w28-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 37.745);
+      tl.fromTo("#w29-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 38.142);
+      tl.to("#w29-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 38.649);
+      tl.fromTo("#w29-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 38.649);
+      tl.to("#w29-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 39.044);
+      tl.fromTo("#w29-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 39.044);
+      tl.to("#w29-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 39.382);
+      tl.fromTo("#w29-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 39.382);
+      tl.fromTo("#w30-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 39.72);
+      tl.to("#w30-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 40.264);
+      tl.fromTo("#w30-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 40.264);
+      tl.to("#w30-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 40.741);
+      tl.fromTo("#w30-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 40.741);
+      tl.to("#w30-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 41.013);
+      tl.fromTo("#w30-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 41.013);
+      tl.to("#w30-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 41.353);
+      tl.fromTo("#w30-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 41.353);
+      tl.fromTo("#w31-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 41.557);
+      tl.to("#w31-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 41.833);
+      tl.fromTo("#w31-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 41.833);
+      tl.to("#w31-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 42.11);
+      tl.fromTo("#w31-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 42.11);
+      tl.to("#w31-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 42.456);
+      tl.fromTo("#w31-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 42.456);
+      tl.to("#w31-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 42.732);
+      tl.fromTo("#w31-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 42.732);
+      tl.fromTo("#w32-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 43.285);
+      tl.to("#w32-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 43.493);
+      tl.fromTo("#w32-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 43.493);
+      tl.to("#w32-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 44.048);
+      tl.fromTo("#w32-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 44.048);
+      tl.to("#w32-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 44.534);
+      tl.fromTo("#w32-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 44.534);
+      tl.to("#w32-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 44.881);
+      tl.fromTo("#w32-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 44.881);
+      tl.fromTo("#w33-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 45.228);
+      tl.to("#w33-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 45.608);
+      tl.fromTo("#w33-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 45.608);
+      tl.to("#w33-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 45.798);
+      tl.fromTo("#w33-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 45.798);
+      tl.to("#w33-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 46.179);
+      tl.fromTo("#w33-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 46.179);
+      tl.to("#w33-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 46.495);
+      tl.fromTo("#w33-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 46.495);
+      tl.fromTo("#w34-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 46.749);
+      tl.to("#w34-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 46.954);
+      tl.fromTo("#w34-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 46.954);
+      tl.to("#w34-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 47.295);
+      tl.fromTo("#w34-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 47.295);
+      tl.to("#w34-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 47.704);
+      tl.fromTo("#w34-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 47.704);
+      tl.fromTo("#w35-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 48.045);
+      tl.to("#w35-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 48.287);
+      tl.fromTo("#w35-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 48.287);
+      tl.to("#w35-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 48.953);
+      tl.fromTo("#w35-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 48.953);
+      tl.fromTo("#w36-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 49.376);
+      tl.to("#w36-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 49.911);
+      tl.fromTo("#w36-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 49.911);
+      tl.to("#w36-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 50.328);
+      tl.fromTo("#w36-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 50.328);
+      tl.fromTo("#w37-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 50.685);
+      tl.to("#w37-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 51.109);
+      tl.fromTo("#w37-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 51.109);
+      tl.to("#w37-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 51.352);
+      tl.fromTo("#w37-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 51.352);
+      tl.fromTo("#w38-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 51.776);
+      tl.to("#w38-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 51.96);
+      tl.fromTo("#w38-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 51.96);
+      tl.to("#w38-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 52.144);
+      tl.fromTo("#w38-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 52.144);
+      tl.fromTo("#w39-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 52.649);
+      tl.to("#w39-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 52.936);
+      tl.fromTo("#w39-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 52.936);
+      tl.to("#w39-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 53.165);
+      tl.fromTo("#w39-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 53.165);
+      tl.fromTo("#w40-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 53.738);
+      tl.to("#w40-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 54.082);
+      tl.fromTo("#w40-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 54.082);
+      tl.to("#w40-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 54.541);
+      tl.fromTo("#w40-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 54.541);
+      tl.fromTo("#w41-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 54.828);
+      tl.to("#w41-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 55.165);
+      tl.fromTo("#w41-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 55.165);
+      tl.to("#w41-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 55.838);
+      tl.fromTo("#w41-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 55.838);
+      tl.fromTo("#w42-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 56.568);
+      tl.to("#w42-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 56.784);
+      tl.fromTo("#w42-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 56.784);
+      tl.to("#w42-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 57.001);
+      tl.fromTo("#w42-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 57.001);
+      tl.to("#w42-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 57.578);
+      tl.fromTo("#w42-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 57.578);
+      tl.fromTo("#w43-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 58.083);
+      tl.to("#w43-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 58.311);
+      tl.fromTo("#w43-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 58.311);
+      tl.to("#w43-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 58.692);
+      tl.fromTo("#w43-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 58.692);
+      tl.to("#w43-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 58.997);
+      tl.fromTo("#w43-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 58.997);
+      tl.fromTo("#w44-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 59.834);
+      tl.to("#w44-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 60.353);
+      tl.fromTo("#w44-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 60.353);
+      tl.to("#w44-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 61.244);
+      tl.fromTo("#w44-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 61.244);
+      tl.fromTo("#w45-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 61.986);
+      tl.to("#w45-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 62.26);
+      tl.fromTo("#w45-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 62.26);
+      tl.to("#w45-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 63.354);
+      tl.fromTo("#w45-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 63.354);
+      tl.to("#w45-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 63.628);
+      tl.fromTo("#w45-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 63.628);
+      tl.fromTo("#w46-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 64.107);
+      tl.to("#w46-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 64.527);
+      tl.fromTo("#w46-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 64.527);
+      tl.to("#w46-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 64.947);
+      tl.fromTo("#w46-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 64.947);
+      tl.to("#w46-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 65.228);
+      tl.fromTo("#w46-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 65.228);
+      tl.to("#w46-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 65.438);
+      tl.fromTo("#w46-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 65.438);
+      tl.to("#w46-4", { color: "#ffffff", scale: 1, duration: 0.08 }, 65.718);
+      tl.fromTo("#w46-5", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 65.718);
+      tl.fromTo("#w47-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 66.068);
+      tl.to("#w47-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 66.325);
+      tl.fromTo("#w47-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 66.325);
+      tl.to("#w47-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 66.776);
+      tl.fromTo("#w47-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 66.776);
+      tl.to("#w47-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 67.291);
+      tl.fromTo("#w47-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 67.291);
+      tl.fromTo("#w48-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 67.677);
+      tl.to("#w48-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 67.877);
+      tl.fromTo("#w48-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 67.877);
+      tl.to("#w48-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 68.127);
+      tl.fromTo("#w48-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 68.127);
+      tl.to("#w48-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 68.377);
+      tl.fromTo("#w48-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 68.377);
+      tl.fromTo("#w49-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 68.577);
+      tl.to("#w49-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 68.757);
+      tl.fromTo("#w49-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 68.757);
+      tl.to("#w49-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 69.118);
+      tl.fromTo("#w49-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 69.118);
+      tl.fromTo("#w50-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 69.719);
+      tl.to("#w50-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 70.079);
+      tl.fromTo("#w50-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 70.079);
+      tl.to("#w50-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 70.318);
+      tl.fromTo("#w50-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 70.318);
+      tl.fromTo("#w51-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 70.798);
+      tl.to("#w51-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 71.086);
+      tl.fromTo("#w51-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 71.086);
+      tl.fromTo("#w52-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 71.72);
+      tl.to("#w52-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 71.963);
+      tl.fromTo("#w52-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 71.963);
+      tl.to("#w52-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 72.206);
+      tl.fromTo("#w52-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 72.206);
+      tl.to("#w52-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 72.449);
+      tl.fromTo("#w52-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 72.449);
+      tl.to("#w52-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 72.875);
+      tl.fromTo("#w52-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 72.875);
+      tl.fromTo("#w53-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 73.3);
+      tl.to("#w53-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 73.573);
+      tl.fromTo("#w53-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 73.573);
+      tl.to("#w53-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 73.9);
+      tl.fromTo("#w53-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 73.9);
       window.__timelines["main"] = tl;
     </script>
   </body>

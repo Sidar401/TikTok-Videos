@@ -1,0 +1,389 @@
+{
+  "dauer": 70.18,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 2.919,
+      "captions": [
+        {
+          "text": "Der Chef ist weg,",
+          "start": 0.0,
+          "end": 1.112
+        },
+        {
+          "text": "und so hat die Börse reagiert",
+          "start": 1.112,
+          "end": 2.919
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 2.919,
+      "end": 6.862,
+      "captions": [
+        {
+          "text": "Nvidia‑Gründer Jensen",
+          "start": 2.919,
+          "end": 4.334
+        },
+        {
+          "text": "Huang ist nach 33 Jahren",
+          "start": 4.334,
+          "end": 6.044
+        },
+        {
+          "text": "zurückgetreten",
+          "start": 6.044,
+          "end": 6.862
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 6.862,
+      "end": 11.158,
+      "captions": [
+        {
+          "text": "Teil das Video mit jemandem,",
+          "start": 6.862,
+          "end": 8.653
+        },
+        {
+          "text": "der Nvidia oder einen ETF",
+          "start": 8.653,
+          "end": 10.412
+        },
+        {
+          "text": "im Depot hat",
+          "start": 10.412,
+          "end": 11.158
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 11.158,
+      "end": 14.942,
+      "captions": [
+        {
+          "text": "Kurzer Hinweis: Das ist",
+          "start": 11.158,
+          "end": 12.518
+        },
+        {
+          "text": "keine Anlageberatung,",
+          "start": 12.518,
+          "end": 13.902
+        },
+        {
+          "text": "nur eine Erklärung",
+          "start": 13.902,
+          "end": 14.942
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 14.942,
+      "end": 18.334,
+      "captions": [
+        {
+          "text": "Direkt zum Handelsstart",
+          "start": 14.942,
+          "end": 16.423
+        },
+        {
+          "text": "stürzte",
+          "start": 16.423,
+          "end": 16.919
+        },
+        {
+          "text": "die Aktie um 14 % ab",
+          "start": 16.919,
+          "end": 18.334
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 18.334,
+      "end": 21.851,
+      "captions": [
+        {
+          "text": "Doch dann passierte",
+          "start": 18.334,
+          "end": 19.455
+        },
+        {
+          "text": "etwas Überraschendes:",
+          "start": 19.455,
+          "end": 20.764
+        },
+        {
+          "text": "Käufer griffen zu",
+          "start": 20.764,
+          "end": 21.851
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 21.851,
+      "end": 27.142,
+      "captions": [
+        {
+          "text": "Am Ende des Tages",
+          "start": 21.851,
+          "end": 23.167
+        },
+        {
+          "text": "lag Nvidia nur noch",
+          "start": 23.167,
+          "end": 24.721
+        },
+        {
+          "text": "gut 4 % im Minus,",
+          "start": 24.721,
+          "end": 26.07
+        },
+        {
+          "text": "bei 166 Dollar",
+          "start": 26.07,
+          "end": 27.142
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 27.142,
+      "end": 30.276,
+      "captions": [
+        {
+          "text": "Nach Börsenschluss",
+          "start": 27.142,
+          "end": 28.168
+        },
+        {
+          "text": "ging es sogar wieder",
+          "start": 28.168,
+          "end": 29.388
+        },
+        {
+          "text": "um 1 % nach oben",
+          "start": 29.388,
+          "end": 30.276
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 30.276,
+      "end": 34.371,
+      "captions": [
+        {
+          "text": "Trotzdem: Allein in dieser",
+          "start": 30.276,
+          "end": 31.882
+        },
+        {
+          "text": "Woche hat die Aktie",
+          "start": 31.882,
+          "end": 33.198
+        },
+        {
+          "text": "rund 11 % verloren",
+          "start": 33.198,
+          "end": 34.371
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 34.371,
+      "end": 39.719,
+      "captions": [
+        {
+          "text": "Und ein Analysehaus",
+          "start": 34.371,
+          "end": 35.876
+        },
+        {
+          "text": "hat sein Kursziel",
+          "start": 35.876,
+          "end": 37.287
+        },
+        {
+          "text": "von 315 auf 185 Dollar gesenkt",
+          "start": 37.287,
+          "end": 39.719
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 39.719,
+      "end": 42.015,
+      "captions": [
+        {
+          "text": "Übergangschefin ist",
+          "start": 39.719,
+          "end": 40.853
+        },
+        {
+          "text": "jetzt Colette Kress",
+          "start": 40.853,
+          "end": 42.015
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 42.015,
+      "end": 46.038,
+      "captions": [
+        {
+          "text": "Sie ist seit über zehn",
+          "start": 42.015,
+          "end": 43.22
+        },
+        {
+          "text": "Jahren bei Nvidia und bleibt",
+          "start": 43.22,
+          "end": 44.793
+        },
+        {
+          "text": "gleichzeitig Finanzchefin",
+          "start": 44.793,
+          "end": 46.038
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 46.038,
+      "end": 48.244,
+      "captions": [
+        {
+          "text": "Warum hat sich die Aktie",
+          "start": 46.038,
+          "end": 47.179
+        },
+        {
+          "text": "so schnell gefangen?",
+          "start": 47.179,
+          "end": 48.244
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "start": 48.244,
+      "end": 53.194,
+      "captions": [
+        {
+          "text": "Viele Anleger setzen darauf,",
+          "start": 48.244,
+          "end": 49.923
+        },
+        {
+          "text": "dass die Nachfrage",
+          "start": 49.923,
+          "end": 51.015
+        },
+        {
+          "text": "nach Nvidia‑Chips",
+          "start": 51.015,
+          "end": 52.047
+        },
+        {
+          "text": "nicht vom Chef abhängt",
+          "start": 52.047,
+          "end": 53.194
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "start": 53.194,
+      "end": 58.182,
+      "captions": [
+        {
+          "text": "Der echte Test kommt",
+          "start": 53.194,
+          "end": 54.286
+        },
+        {
+          "text": "am siebzehnten November,",
+          "start": 54.286,
+          "end": 55.741
+        },
+        {
+          "text": "dann legt Nvidia seine",
+          "start": 55.741,
+          "end": 57.149
+        },
+        {
+          "text": "Quartalszahlen vor",
+          "start": 57.149,
+          "end": 58.182
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "start": 58.182,
+      "end": 64.583,
+      "captions": [
+        {
+          "text": "Und weil Nvidia rund 6 %",
+          "start": 58.182,
+          "end": 59.793
+        },
+        {
+          "text": "im MSCI World ausmacht,",
+          "start": 59.793,
+          "end": 61.449
+        },
+        {
+          "text": "spürst du das wahrscheinlich",
+          "start": 61.449,
+          "end": 63.465
+        },
+        {
+          "text": "auch in deinem ETF",
+          "start": 63.465,
+          "end": 64.583
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "start": 64.583,
+      "end": 69.574,
+      "captions": [
+        {
+          "text": "Die ganze Geschichte,",
+          "start": 64.583,
+          "end": 65.501
+        },
+        {
+          "text": "wie es zum Rücktritt kam,",
+          "start": 65.501,
+          "end": 66.807
+        },
+        {
+          "text": "findest du in einem ganzen",
+          "start": 66.807,
+          "end": 68.164
+        },
+        {
+          "text": "Video bei uns auf dem Kanal",
+          "start": 68.164,
+          "end": 69.574
+        }
+      ]
+    }
+  ]
+}

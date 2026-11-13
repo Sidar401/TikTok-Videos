@@ -15,7 +15,7 @@
   "datei": "File:Manhattan 1931.jpg",
   "lizenz": "Public domain",
   "urheber": "Unknown authorUnknown author",
-  "einblenden": "Foto: Unknown authorUnknown author · Public domain"
+  "einblenden": "Foto: gemeinfrei (Public domain)"
  },
  "sitzungssaal.jpg": {
   "datei": "File:Meeting room, table and paper board.jpg",
@@ -46,5 +46,17 @@
   "lizenz": "CC BY 4.0",
   "urheber": "Quintin Soloviev",
   "einblenden": "Foto: Quintin Soloviev · CC BY 4.0"
+ },
+ "bitcoin-muenzen.jpg": {
+  "datei": "File:Bitcoin BTC golden coin with the symbol.jpg",
+  "lizenz": "CC BY-SA 2.0",
+  "urheber": "Satheesh Sankaran",
+  "einblenden": "Foto: Satheesh Sankaran · CC BY-SA 2.0"
+ },
+ "bitcoin-laptop.jpg": {
+  "datei": "File:Bitcoin on Laptop Keyboard.jpg",
+  "lizenz": "CC BY 2.0",
+  "urheber": "Satheesh Sankaran",
+  "einblenden": "Foto: Satheesh Sankaran · CC BY 2.0"
  }
 }
