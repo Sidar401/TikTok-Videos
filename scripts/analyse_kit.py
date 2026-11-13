@@ -226,7 +226,8 @@ def person(id_, name, rolle, x, y, w=300, farbe=OR, foto=None, credit=""):
             f'<img src="{foto}" alt="" style="width:100%;height:100%;object-fit:cover;object-position:50% 18%"/></div>') if foto else (
             f'<svg viewBox="0 0 100 100" style="width:{w * 0.5:.0f}px;height:{w * 0.5:.0f}px"><circle cx="50" cy="36" r="20" fill="{farbe}"/>'
             f'<path d="M14 96 Q16 62 50 62 Q84 62 86 96 Z" fill="{farbe}"/></svg>')
-    cr = f'<div class="mono" style="font-size:{max(14, w * 0.045):.0f}px;color:#ffffff88;margin-top:10px">{credit}</div>' if credit else ""
+    _nachweis(credit.replace("Foto: ", f"{name}: ") if credit else "")
+    cr = f'<div class="mono" style="font-size:{max(14, w * 0.045):.0f}px;color:#ffffff88;margin-top:10px">{credit}</div>' if credit and QUELLE_IM_BILD else ""
     return (f'<div id="{id_}" style="position:absolute;left:{x}px;top:{y}px;width:{w}px;padding:26px 16px 22px;border-radius:28px;background:#14181b;border:5px solid {farbe};'
             f'box-shadow:0 0 50px {farbe}55;text-align:center;z-index:3">' + bild +
             f'<div style="font-weight:900;font-size:{w * 0.13:.0f}px;color:#fff;margin-top:8px;line-height:1.05">{name}</div>'
@@ -318,7 +319,8 @@ def titel_zeile(id_, text, top=490, farbe="#fff", gr=62):
 
 def foto_gross(id_, datei, x, y, w, h, credit="", farbe=OR):
     """Großes rechteckiges Nachrichten-Foto mit Quellenzeile (nur freie Lizenzen!)."""
-    cr = f'<div class="mono" style="position:absolute;left:0;bottom:-34px;width:100%;text-align:right;font-size:20px;color:#ffffff88">{credit}</div>' if credit else ""
+    _nachweis(credit.replace("Foto: ", f"{Path(datei).stem}: ") if credit else "")
+    cr = f'<div class="mono" style="position:absolute;left:0;bottom:-34px;width:100%;text-align:right;font-size:20px;color:#ffffff88">{credit}</div>' if credit and QUELLE_IM_BILD else ""
     return (f'<div id="{id_}" style="position:absolute;left:{x}px;top:{y}px;width:{w}px;height:{h}px;border-radius:18px;border:6px solid {farbe};'
             f'box-shadow:0 0 60px {farbe}66, 0 30px 60px #000;z-index:3"><img src="{datei}" alt="" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;border-radius:12px"/>{cr}</div>')
 
@@ -374,14 +376,33 @@ def zoom_js(sel, a, dauer=2.0, bis=1.08):
 HG_GRADING = None  # wird aus brand/hintergruende/grading.json gelesen (von `hyperframes media-treatment` erzeugt)
 
 
+QUELLE_IM_BILD = False  # Nutzer 13.11.: keine Fotografen-Namen im Bild – Quellen kommen in die Beschreibung (bildquellen.txt)
+BILDNACHWEIS = {}
+
+
+def _nachweis(text):
+    if text and "gemeinfrei" not in text and "Public domain" not in text and "CC0" not in text:
+        BILDNACHWEIS[text] = True
+
+
 def hintergrund_foto(id_, key):
-    """Echtes Foto (freie Lizenz, brand/hintergruende/<key>.jpg) als Szenen-Hintergrund: ganzes Bild, abgedunkelt per Media-Treatment
-    (data-color-grading), langsamer Zoom. Quelle klein oben rechts. kit_hg(HERE, [keys]) vorher aufrufen."""
+    """Echtes Foto (brand/hintergruende/<key>.jpg) als Szenen-Hintergrund, abgedunkelt per Media-Treatment (data-color-grading).
+    Bevorzugt freie Fotos (CC0/gemeinfrei, Schlüssel „frei-…“). Quellen NICHT im Bild (QUELLE_IM_BILD), sondern bildquellen(HERE)."""
     q = json.loads((WURZEL / "brand/hintergruende/quellen.json").read_text()).get(f"{key}.jpg", {})
     g = (WURZEL / "brand/hintergruende/grading.json")
     attr = f" data-color-grading='{g.read_text().strip()}'" if g.exists() else ""
-    return (f'<img id="{id_}" class="hgfoto" src="assets/hg/{key}.jpg" alt=""{attr} style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/>'
-            f'<div class="mono" style="position:absolute;right:70px;top:466px;font-size:18px;color:#ffffffaa;text-shadow:0 2px 6px #000;z-index:7">{q.get("einblenden", "")[:60]}</div>')
+    _nachweis(q.get("einblenden", "").replace("Foto: ", f"Hintergrund ({key}): "))
+    cr = (f'<div class="mono" style="position:absolute;right:70px;top:466px;font-size:18px;color:#ffffffaa;text-shadow:0 2px 6px #000;z-index:7">{q.get("einblenden", "")[:60]}</div>'
+          if QUELLE_IM_BILD else "")
+    return (f'<img id="{id_}" class="hgfoto" src="assets/hg/{key}.jpg" alt=""{attr} style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/>' + cr)
+
+
+def bildquellen(here):
+    """Schreibt <video>/bildquellen.txt (zum Kopieren in die Video-Beschreibung)."""
+    zeilen = list(BILDNACHWEIS)
+    text = ("Bildquellen: " + " | ".join(zeilen)) if zeilen else ""
+    (Path(here) / "bildquellen.txt").write_text(text + "\n")
+    return text
 
 
 def kit_hg(here, keys):

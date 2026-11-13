@@ -15,7 +15,8 @@
   "datei": "File:Manhattan 1931.jpg",
   "lizenz": "Public domain",
   "urheber": "Unknown authorUnknown author",
-  "einblenden": "Foto: gemeinfrei (Public domain)"
+  "einblenden": "Foto: gemeinfrei (Public domain)",
+  "frei": true
  },
  "sitzungssaal.jpg": {
   "datei": "File:Meeting room, table and paper board.jpg",
@@ -33,7 +34,8 @@
   "datei": "File:Trading floor, New York Stock Exchange, New York, New York LCCN2011630168.tif",
   "lizenz": "Public domain",
   "urheber": "Carol M. Highsmith",
-  "einblenden": "Foto: Carol M. Highsmith · Public domain"
+  "einblenden": "Foto: Carol M. Highsmith · Public domain",
+  "frei": true
  },
  "chips.jpg": {
   "datei": "File:A semiconductor wafer being removed from processing equipment.jpg",
@@ -82,5 +84,33 @@
   "lizenz": "CC BY-SA 4.0",
   "urheber": "Norbert Nagel",
   "einblenden": "Foto: Norbert Nagel · CC BY-SA 4.0"
+ },
+ "frei-frankfurt-nacht.jpg": {
+  "datei": "File:Frankfurt Skyline at night (Unsplash).jpg",
+  "lizenz": "CC0",
+  "urheber": "",
+  "einblenden": "",
+  "frei": true
+ },
+ "frei-frankfurt-staedel.jpg": {
+  "datei": "File:Skyline of Frankfurt from Städel.jpg",
+  "lizenz": "CC0",
+  "urheber": "",
+  "einblenden": "",
+  "frei": true
+ },
+ "frei-euro.jpg": {
+  "datei": "File:Euro coins and banknotes.jpg",
+  "lizenz": "Public domain",
+  "urheber": "",
+  "einblenden": "",
+  "frei": true
+ },
+ "frei-50euro.jpg": {
+  "datei": "File:Uncut Strip of 50 Euro Banknotes.jpg",
+  "lizenz": "CC0",
+  "urheber": "",
+  "einblenden": "",
+  "frei": true
  }
 }
