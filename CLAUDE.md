@@ -13,6 +13,9 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
 
 ## Kanäle des Nutzers (TikTok)
 1. **HundeWissenTv** (@hundewissentv): Hunde-Wissen als Slideshow-Bilder (macht der Nutzer selbst).
+   Ab ca. Ende Nov. 2026 zusätzlich **animierte Videos wie HundeFinanzTV**. Stimme = gleiche wie Kanal Novaro:
+   ElevenLabs **„Dan“** (`BHr135B5EUBtaWheVj8S`, Modell `eleven_v4`), automatisch per `hundewissen/stimme.py`
+   (mit Sprache-zu-Text-Kontrolle). Probe: `renders/hundewissen-stimmprobe.m4a`.
 2. **HundeWissenTv 2.0**: ab Nov. 2026 **reiner TikTok-Shop-Kanal** (nur Hundesachen) → Skill `/shop-video`.
 3. **HundeFinanzTV**: Geld & Finanzen (faceless, animierte Grafiken) → Skill `/finanz-video`, `kanal.json`, `STIL.md`.
 

@@ -1,0 +1,10 @@
+{
+ "gehoert": "Wusstest du, dass dein Hund bis zu hunderttausendmal besser riechen kann als du? Deshalb ist Schnüffeln für ihn wie Zeitung lesen. Folg uns für mehr Hundewissen.",
+ "abweichungen": [
+  [
+   "replace",
+   "hunderttausend mal",
+   "hunderttausendmal"
+  ]
+ ]
+}
