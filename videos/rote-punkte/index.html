@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <script type="importmap">{"imports":{"three":"./assets/three/build/three.module.js","three/addons/":"./assets/three/jsm/"}}</script>
+    <style>
+      @font-face { font-family: "Inter Display"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.otf"); }
+      @font-face { font-family: "Inter Display"; font-weight: 800; src: url("assets/fonts/InterDisplay-ExtraBold.otf"); }
+      @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/Inter-SemiBold.otf"); }
+      html, body { background: #000; }
+      #root { font-family: "Inter Display", "Inter", sans-serif; }
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .tag { top: 140px; font-family: "Inter", sans-serif; font-weight: 600; font-size: 34px; letter-spacing: 8px; color: rgba(255,255,255,0.78); text-shadow: 0 2px 12px rgba(0,0,0,0.8); }
+      .bar { position: absolute; left: 90px; right: 90px; top: 200px; height: 6px; border-radius: 3px; background: rgba(255,255,255,0.15); }
+      .bar i { display: block; width: 0; height: 100%; border-radius: 3px; background: #ffd23f; box-shadow: 0 0 14px rgba(255,210,63,0.7); }
+      .lbl { top: 330px; font-size: 62px; font-weight: 800; letter-spacing: 1px; text-shadow: 0 4px 24px rgba(0,0,0,0.9); }
+      .lbl small { display: block; font-family: "Inter", sans-serif; font-weight: 600; font-size: 36px; color: rgba(255,255,255,0.82); margin-top: 10px; letter-spacing: 0; }
+      .lbl .big { display: block; font-size: 120px; font-weight: 900; color: #ffd23f; text-shadow: 0 0 40px rgba(255,210,63,0.5), 0 4px 24px rgba(0,0,0,0.9); white-space: nowrap; }
+      .lbl .red { color: #ff4d5e; text-shadow: 0 0 40px rgba(255,77,94,0.5), 0 4px 24px rgba(0,0,0,0.9); }
+      .lbl .blue { color: #7fd0ff; text-shadow: 0 0 40px rgba(127,208,255,0.5), 0 4px 24px rgba(0,0,0,0.9); }
+      .capw { top: 1400px; font-size: 92px; font-weight: 900; line-height: 1.12; letter-spacing: -1px; color: #fff; text-shadow: 0 6px 30px rgba(0,0,0,0.85), 0 0 3px #000; }
+      .capw .w { display: inline-block; margin: 0 10px; padding: 0 4px 6px; }
+      .capw .on { background: #ffd23f; color: #111; padding: 0 20px 6px; border-radius: 18px; transform: rotate(-2deg) scale(1.06); text-shadow: none; box-shadow: 0 10px 40px rgba(255,210,63,0.45); }
+      .hookbig { top: 560px; font-size: 136px; }
+      .hookbig .y { color: #ffd23f; text-shadow: 0 0 46px rgba(255,210,63,0.8); }
+      .hookdim { background: radial-gradient(circle at 50% 42%, rgba(0,0,10,0.15), rgba(0,0,6,0.7)); }
+      .share { position: absolute; right: 40px; top: 1050px; }
+      .share span { display: inline-block; background: #fe2c55; color: #fff; font-weight: 900; font-size: 54px; padding: 16px 34px; border-radius: 60px; box-shadow: 0 0 40px rgba(254,44,85,0.7); }
+      .follow { top: 1080px; }
+      .hookbig { font-size: 130px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="67" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="tag" class="line tag clip" data-start="0" data-duration="67" data-track-index="1"><span>14. NOVEMBER 2026</span></div>
+      <div id="bar" class="bar clip" data-start="0" data-duration="67" data-track-index="2"><i id="bar-in"></i></div>
+      <div id="lbl" class="line lbl clip" data-start="0" data-duration="67" data-track-index="3"><span id="lbl-in"></span></div>
+      <div id="cap" class="line capw clip" data-start="5.2" data-duration="61.80" data-track-index="4"><span id="cap-in"></span></div>
+      <div id="hookdim" class="hookdim clip" data-start="0" data-duration="5.2" data-track-index="8"><span id="hookdim-in"></span></div>
+      <div id="hookbig" class="line hookbig clip" data-start="0" data-duration="5.2" data-track-index="7"><span id="hookbig-in">Rätselhafte<br /><span class="y">ROTE PUNKTE</span></span></div>
+      <div id="share" class="share clip" data-start="5.5" data-duration="3.6" data-track-index="5"><span id="share-in">+ Folgen</span></div>
+      <div id="follow" class="line follow clip" data-start="63.9" data-duration="3.10" data-track-index="6"><span id="follow-in" class="box"><span class="t">Folg uns für mehr! 👆</span><span class="pill">+ Folgen</span></span></div>
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="64.95" data-track-index="9" data-volume="1"></audio>
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="67" data-track-index="10" data-volume="0.3"></audio>
+    </div>
+    <img id="tex-day" src="assets/earth-blue-marble.jpg" style="display:none" alt="" />
+    <img id="tex-night" src="assets/earth-night.jpg" style="display:none" alt="" />
+    <img id="tex-topo" src="assets/earth-topology.png" style="display:none" alt="" />
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.from("#hookbig-in", { opacity: 0, scale: 1.35, duration: 0.35, ease: "power3.out" }, 0);
+      tl.to("#hookbig-in", { scale: 0.6, opacity: 0, filter: "blur(12px)", duration: 0.3, ease: "power2.in" }, 5.2 - 0.32);
+      tl.to("#hookdim", { opacity: 0, duration: 0.3 }, 5.2 - 0.32);
+      tl.from("#share-in", { opacity: 0, x: 80, scale: 0.6, duration: 0.3, ease: "back.out(2.5)" }, 5.5);
+      tl.to("#share-in", { x: 18, duration: 0.25, yoyo: true, repeat: 7, ease: "sine.inOut" }, 5.5 + 0.4);
+      tl.to("#share-in", { opacity: 0, duration: 0.2 }, 5.5 + 3.6 - 0.25);
+      tl.from("#follow-in", { opacity: 0, scale: 0.6, duration: 0.3, ease: "back.out(2.5)" }, 63.9);
+      tl.to("#follow-in .pill", { scale: 1.1, duration: 0.3, yoyo: true, repeat: 3 }, 63.9 + 0.4);
+      tl.to("#bar-in", { width: "100%", duration: 67, ease: "none" }, 0);
+      tl.to({}, { duration: 0.01 }, 67 - 0.01);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+    <script type="module">
+      import * as K from "./assets/kino.js";
+      const { THREE, V, lerp, eio, eout, prog, cl, rnd, de } = K;
+      const WORDS = [{"w": "Das", "s": 0.0, "e": 0.133}, {"w": "stärkste", "s": 0.16, "e": 0.667}, {"w": "Teleskop", "s": 0.72, "e": 1.28}, {"w": "der", "s": 1.36, "e": 1.44}, {"w": "Welt", "s": 1.52, "e": 1.76}, {"w": "hat", "s": 1.84, "e": 2.0}, {"w": "Punkte", "s": 2.08, "e": 2.4}, {"w": "entdeckt,", "s": 2.52, "e": 2.96}, {"w": "die", "s": 3.04, "e": 3.12}, {"w": "es", "s": 3.24, "e": 3.36}, {"w": "eigentlich", "s": 3.4, "e": 3.84}, {"w": "gar", "s": 3.92, "e": 4.0}, {"w": "nicht", "s": 4.08, "e": 4.24}, {"w": "geben", "s": 4.4, "e": 4.56}, {"w": "dürfte!", "s": 4.64, "e": 5.28}, {"w": "Folg", "s": 5.52, "e": 5.84}, {"w": "uns,", "s": 5.96, "e": 6.12}, {"w": "damit", "s": 6.16, "e": 6.4}, {"w": "du", "s": 6.48, "e": 6.56}, {"w": "erfährst,", "s": 6.68, "e": 7.2}, {"w": "was", "s": 7.28, "e": 7.36}, {"w": "hinter", "s": 7.4, "e": 7.68}, {"w": "den", "s": 7.76, "e": 7.84}, {"w": "roten", "s": 7.92, "e": 8.16}, {"w": "Punkten", "s": 8.24, "e": 8.56}, {"w": "steckt!", "s": 8.64, "e": 9.32}, {"w": "Das", "s": 9.6, "e": 9.76}, {"w": "James-Webb-Teleskop", "s": 9.92, "e": 11.12}, {"w": "schaut", "s": 11.16, "e": 11.44}, {"w": "so", "s": 11.52, "e": 11.68}, {"w": "weit", "s": 11.76, "e": 12.0}, {"w": "ins", "s": 12.12, "e": 12.24}, {"w": "All,", "s": 12.32, "e": 12.64}, {"w": "dass", "s": 12.693, "e": 12.8}, {"w": "es", "s": 12.84, "e": 12.88}, {"w": "in", "s": 12.96, "e": 13.04}, {"w": "die", "s": 13.08, "e": 13.12}, {"w": "Vergangenheit", "s": 13.2, "e": 13.84}, {"w": "blickt.", "s": 13.92, "e": 14.32}, {"w": "Dabei", "s": 14.8, "e": 15.12}, {"w": "fand", "s": 15.2, "e": 15.36}, {"w": "es", "s": 15.44, "e": 15.52}, {"w": "Hunderte", "s": 15.6, "e": 16.16}, {"w": "winzige,", "s": 16.32, "e": 16.96}, {"w": "rote", "s": 17.12, "e": 17.28}, {"w": "Lichtpunkte.", "s": 17.36, "e": 18.36}, {"w": "Ihr", "s": 18.64, "e": 18.8}, {"w": "Licht", "s": 18.88, "e": 19.12}, {"w": "war", "s": 19.2, "e": 19.28}, {"w": "über", "s": 19.4, "e": 19.52}, {"w": "zwölf", "s": 19.68, "e": 20.0}, {"w": "Milliarden", "s": 20.16, "e": 20.64}, {"w": "Jahre", "s": 20.72, "e": 21.04}, {"w": "zu", "s": 21.12, "e": 21.2}, {"w": "uns", "s": 21.28, "e": 21.36}, {"w": "unterwegs.", "s": 21.44, "e": 22.08}, {"w": "Sie", "s": 22.4, "e": 22.48}, {"w": "stammen", "s": 22.56, "e": 22.88}, {"w": "also", "s": 23.0, "e": 23.12}, {"w": "aus", "s": 23.2, "e": 23.28}, {"w": "der", "s": 23.36, "e": 23.44}, {"w": "Zeit", "s": 23.52, "e": 23.84}, {"w": "kurz", "s": 23.92, "e": 24.24}, {"w": "nach", "s": 24.32, "e": 24.48}, {"w": "dem", "s": 24.56, "e": 24.64}, {"w": "Urknall.", "s": 24.72, "e": 25.52}, {"w": "Das", "s": 25.76, "e": 25.92}, {"w": "Seltsame:", "s": 26.0, "e": 26.56}, {"w": "Sie", "s": 26.96, "e": 27.04}, {"w": "leuchten", "s": 27.08, "e": 27.52}, {"w": "viel", "s": 27.6, "e": 27.76}, {"w": "zu", "s": 27.92, "e": 28.0}, {"w": "hell", "s": 28.16, "e": 28.4}, {"w": "für", "s": 28.44, "e": 28.48}, {"w": "ihre", "s": 28.56, "e": 28.72}, {"w": "Größe.", "s": 28.8, "e": 29.56}, {"w": "Wären", "s": 29.84, "e": 30.08}, {"w": "es", "s": 30.16, "e": 30.24}, {"w": "Galaxien,", "s": 30.32, "e": 31.04}, {"w": "hätten", "s": 31.08, "e": 31.28}, {"w": "sie", "s": 31.36, "e": 31.44}, {"w": "mehr", "s": 31.52, "e": 31.76}, {"w": "Sterne,", "s": 31.84, "e": 32.32}, {"w": "als", "s": 32.4, "e": 32.48}, {"w": "damals", "s": 32.56, "e": 32.88}, {"w": "eigentlich", "s": 32.92, "e": 33.28}, {"w": "möglich", "s": 33.36, "e": 33.68}, {"w": "war.", "s": 33.76, "e": 34.32}, {"w": "Forscher", "s": 34.64, "e": 35.04}, {"w": "sagten", "s": 35.08, "e": 35.44}, {"w": "schon,", "s": 35.48, "e": 35.72}, {"w": "sie", "s": 35.76, "e": 35.92}, {"w": "könnten", "s": 35.947, "e": 36.24}, {"w": "unser", "s": 36.32, "e": 36.56}, {"w": "Bild", "s": 36.64, "e": 36.88}, {"w": "vom", "s": 36.933, "e": 37.04}, {"w": "Universum", "s": 37.12, "e": 37.76}, {"w": "zerbrechen.", "s": 37.84, "e": 38.8}, {"w": "Jetzt", "s": 39.12, "e": 39.44}, {"w": "glauben", "s": 39.52, "e": 39.92}, {"w": "immer", "s": 40.04, "e": 40.16}, {"w": "mehr", "s": 40.24, "e": 40.4}, {"w": "Forscher", "s": 40.48, "e": 40.88}, {"w": "an", "s": 40.96, "e": 41.04}, {"w": "eine", "s": 41.12, "e": 41.28}, {"w": "neue", "s": 41.36, "e": 41.6}, {"w": "Erklärung:", "s": 41.68, "e": 42.64}, {"w": "Schwarze-Loch-Sterne.", "s": 42.72, "e": 44.4}, {"w": "Innen", "s": 44.72, "e": 45.04}, {"w": "sitzt", "s": 45.08, "e": 45.32}, {"w": "ein", "s": 45.36, "e": 45.52}, {"w": "riesiges", "s": 45.6, "e": 46.08}, {"w": "Schwarzes", "s": 46.16, "e": 46.56}, {"w": "Loch,", "s": 46.64, "e": 47.04}, {"w": "eingehüllt", "s": 47.2, "e": 47.68}, {"w": "in", "s": 47.72, "e": 47.76}, {"w": "eine", "s": 47.84, "e": 48.0}, {"w": "dichte", "s": 48.16, "e": 48.48}, {"w": "Gaswolke.", "s": 48.56, "e": 49.56}, {"w": "Das", "s": 49.84, "e": 50.0}, {"w": "Gas", "s": 50.08, "e": 50.32}, {"w": "wird", "s": 50.36, "e": 50.56}, {"w": "so", "s": 50.64, "e": 50.8}, {"w": "heiß,", "s": 50.88, "e": 51.32}, {"w": "dass", "s": 51.36, "e": 51.44}, {"w": "es", "s": 51.52, "e": 51.68}, {"w": "leuchtet", "s": 51.76, "e": 52.16}, {"w": "wie", "s": 52.24, "e": 52.32}, {"w": "ein", "s": 52.4, "e": 52.48}, {"w": "gigantischer", "s": 52.52, "e": 53.28}, {"w": "Stern.", "s": 53.36, "e": 54.08}, {"w": "Vielleicht", "s": 54.4, "e": 54.8}, {"w": "sehen", "s": 54.88, "e": 55.04}, {"w": "wir", "s": 55.12, "e": 55.28}, {"w": "hier,", "s": 55.32, "e": 55.6}, {"w": "wie", "s": 55.64, "e": 55.68}, {"w": "die", "s": 55.8, "e": 55.92}, {"w": "allerersten", "s": 56.0, "e": 56.72}, {"w": "Riesen-Schwarzen-Löcher", "s": 56.8, "e": 57.92}, {"w": "entstanden", "s": 58.04, "e": 58.48}, {"w": "sind.", "s": 58.56, "e": 59.04}, {"w": "Ganz", "s": 59.28, "e": 59.52}, {"w": "sicher", "s": 59.627, "e": 59.84}, {"w": "ist", "s": 59.92, "e": 60.08}, {"w": "das", "s": 60.16, "e": 60.24}, {"w": "aber", "s": 60.32, "e": 60.4}, {"w": "noch", "s": 60.48, "e": 60.64}, {"w": "nicht.", "s": 60.747, "e": 61.24}, {"w": "Was", "s": 61.52, "e": 61.68}, {"w": "glaubst", "s": 61.76, "e": 62.0}, {"w": "du,", "s": 62.08, "e": 62.293}, {"w": "was", "s": 62.347, "e": 62.4}, {"w": "die", "s": 62.48, "e": 62.56}, {"w": "roten", "s": 62.6, "e": 62.88}, {"w": "Punkte", "s": 62.933, "e": 63.2}, {"w": "sind?", "s": 63.24, "e": 63.84}, {"w": "Folg", "s": 63.88, "e": 64.08}, {"w": "uns", "s": 64.16, "e": 64.32}, {"w": "für", "s": 64.4, "e": 64.48}, {"w": "mehr!", "s": 64.52, "e": 64.96}];
+      const CHUNKS = [[0.0, 5.28], [5.52, 9.32], [9.6, 14.32], [14.8, 18.36], [18.64, 22.08], [22.4, 25.52], [25.76, 29.56], [29.84, 34.32], [34.64, 38.8], [39.12, 44.4], [44.72, 49.56], [49.84, 54.08], [54.4, 59.04], [59.28, 61.24], [61.52, 64.96]];
+      const cap = K.captions(WORDS, CHUNKS, document.getElementById("cap-in"), 5.2, {"zwölf": "12", "James-Webb-Teleskop": "James-Webb-<br>Teleskop", "Schwarze-Loch-Sterne.": "Schwarze-Loch-<br>Sterne", "Riesen-Schwarzen-Löcher": "Riesen-<br>Schwarzen-Löcher"});
+      const label = K.labeler(document.getElementById("lbl-in"));
+      const img = (id) => document.getElementById(id);
+      const imgsReady = Promise.all(["tex-day", "tex-night", "tex-topo"].map((id) => { const im = img(id); return im.complete ? Promise.resolve(im) : new Promise((r) => (im.onload = () => r(im))); }));
+      const E = K.setup(document.getElementById("stage"));
+      const cam = E.cam;
+      let renderAt = () => {};
+      const ready = imgsReady.then(async ([day, night, topo]) => {
+        const { Ebene, wortZeit, ORANGE, GELB, ROT, GRUEN, BLAU } = await import("./assets/analyse.js");
+        const W = (w, ab = 0) => wortZeit(WORDS, w, ab);
+        K.reseed(21);
+        const sc = new THREE.Scene();
+        K.stars(sc, 7000, -1, 9000, 2.0);
+        sc.add(new THREE.AmbientLight(0x404a70, 0.8));
+        const key = new THREE.DirectionalLight(0xfff2dd, 3.2); key.position.set(20, 30, 40); sc.add(key);
+        const rim = new THREE.DirectionalLight(0x8fb0ff, 1.6); rim.position.set(-30, -10, -20); sc.add(rim);
+        
+        // ===== A: James-Webb-Teleskop (Ursprung) =====
+        const jw = new THREE.Group(); sc.add(jw);
+        const gold = new THREE.MeshStandardMaterial({ color: 0xffc04a, metalness: 0.85, roughness: 0.22, emissive: 0xc88a1a, emissiveIntensity: 0.75 });
+        const mir = new THREE.Group(); jw.add(mir);
+        const hexes = [];
+        for (let q = -2; q <= 2; q++) for (let r = -2; r <= 2; r++) { const s = -q - r; if (Math.abs(s) > 2 || (q === 0 && r === 0)) continue;
+          const h = new THREE.Mesh(new THREE.CylinderGeometry(0.95, 0.95, 0.12, 6), gold); h.rotation.x = Math.PI / 2; h.rotation.y = Math.PI / 6;
+          h.position.set(1.5 * q, Math.sqrt(3) * (r + q / 2), -0.08 * (q * q + r * r)); mir.add(h); hexes.push(h); }
+        const dark = new THREE.MeshStandardMaterial({ color: 0x1b1d24, roughness: 0.6, metalness: 0.4 });
+        const sec = new THREE.Mesh(new THREE.CylinderGeometry(0.4, 0.4, 0.1, 16), gold); sec.rotation.x = Math.PI / 2; sec.position.z = 5; mir.add(sec);
+        [[0, 4.6], [-4, -2.3], [4, -2.3]].forEach(([x, y]) => { const a = V(x, y, 0), b = V(0, 0, 5); const L = a.distanceTo(b);
+          const s = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.05, L, 6), dark); s.position.copy(a.clone().add(b).multiplyScalar(0.5)); s.lookAt(b); s.rotateX(Math.PI / 2); mir.add(s); });
+        mir.rotation.x = -0.35; mir.position.set(0, 2.2, 0);
+        const shieldM = new THREE.MeshStandardMaterial({ color: 0xb8aed0, metalness: 0.8, roughness: 0.35, emissive: 0x1c1430, emissiveIntensity: 0.4, side: THREE.DoubleSide });
+        for (let i = 0; i < 5; i++) { const sh = new THREE.Shape([new THREE.Vector2(-10, 0), new THREE.Vector2(-4, 4), new THREE.Vector2(4, 4), new THREE.Vector2(10, 0), new THREE.Vector2(4, -4), new THREE.Vector2(-4, -4)]);
+          const m = new THREE.Mesh(new THREE.ShapeGeometry(sh), shieldM); m.rotation.x = -Math.PI / 2; m.position.y = -1.6 - i * 0.22; m.scale.setScalar(1 - i * 0.03); jw.add(m); }
+        const bus = new THREE.Mesh(new THREE.BoxGeometry(2.2, 1.2, 2.2), dark); bus.position.y = -3.2; jw.add(bus);
+        const tower = new THREE.Mesh(new THREE.CylinderGeometry(0.25, 0.25, 2, 8), dark); tower.position.y = -0.6; jw.add(tower);
+        const sunGlow = K.sprite(sc, K.glowTex("rgba(255,220,170,1)"), 60, V(60, -40, -140), 0.9);
+        
+        // ===== B: echtes Webb-Bild (NASA, gemeinfrei) mit roten Punkten =====
+        const B = V(0, 0, -4000);
+        const deepTex = await new THREE.TextureLoader().loadAsync("assets/webb-deep-field.jpg"); deepTex.colorSpace = THREE.SRGBColorSpace;
+        const deep = new THREE.Mesh(new THREE.PlaneGeometry(300, 306), new THREE.MeshBasicMaterial({ map: deepTex, toneMapped: false, fog: false, transparent: true }));
+        deep.position.copy(B); sc.add(deep);
+        const redTex = K.glowTex("rgba(255,45,30,1)"), redCore = K.glowTex("rgba(255,200,180,1)");
+        const dotPos = [[-38, 22], [52, 70], [-90, -40], [18, -96], [96, -8], [-60, 108], [70, -70], [-14, 58], [120, 110], [-118, 30], [36, 12], [-40, -120], [6, 128], [-100, -100]];
+        const dots = dotPos.map(([x, y], i) => { const p = B.clone().add(V(x, y, 1.5)); return { glow: K.sprite(sc, redTex, 9, p, 0), core: K.sprite(sc, redCore, 2.2, p.clone().add(V(0, 0, 0.2)), 0), i }; });
+        const DOT0 = B.clone().add(V(dotPos[0][0], dotPos[0][1], 0));
+        
+        // ===== C: Schwarzes-Loch-Stern =====
+        const C = V(4000, 0, 0); const bhs = new THREE.Group(); bhs.position.copy(C); sc.add(bhs);
+        const bh = new THREE.Mesh(new THREE.SphereGeometry(3, 48, 32), new THREE.MeshBasicMaterial({ color: 0x000000 })); bhs.add(bh);
+        const diskU = { time: { value: 0 }, bright: { value: 1 } };
+        const disk = new THREE.Mesh(new THREE.RingGeometry(3.6, 13, 160, 4), new THREE.ShaderMaterial({ uniforms: diskU, transparent: true, depthWrite: false, side: THREE.DoubleSide, blending: THREE.AdditiveBlending,
+          vertexShader: `varying vec2 vP;void main(){vP=position.xy;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+          fragmentShader: `uniform float time,bright;varying vec2 vP;void main(){float r=length(vP);float a=atan(vP.y,vP.x);float k=(r-3.6)/9.4;
+            float sw=.55+.45*sin(a*7.-r*1.7+time*2.2)*sin(a*3.+r*.9-time*1.3);vec3 c=mix(vec3(1.,.95,.85),vec3(1.,.42,.12),smoothstep(0.,.45,k));c=mix(c,vec3(.6,.08,.04),smoothstep(.45,1.,k));
+            float al=(1.-smoothstep(.0,1.,k))*(.55+.45*sw)*smoothstep(0.,.04,k);gl_FragColor=vec4(c*al*bright*1.6,al);}` }));
+        disk.rotation.x = -1.25; bhs.add(disk);
+        const ringGlow = K.sprite(bhs, K.glowTex("rgba(255,210,150,.9)"), 10, V(0, 0, 0), 0.8);
+        const gasU = { time: { value: 0 }, heat: { value: 0 }, op: { value: 0.3 } };
+        const gas = new THREE.Mesh(new THREE.SphereGeometry(30, 96, 64), new THREE.ShaderMaterial({ uniforms: gasU, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
+          vertexShader: `varying vec3 vN,vV,vP;void main(){vP=position;vec4 mv=modelViewMatrix*vec4(position,1.);vN=normalize(normalMatrix*normal);vV=normalize(-mv.xyz);gl_Position=projectionMatrix*mv;}`,
+          fragmentShader: `uniform float time,heat,op;varying vec3 vN,vV,vP;
+            float n3(vec3 p){return sin(p.x*.21+time*.3)*sin(p.y*.17-time*.25)*sin(p.z*.19+time*.2)+.5*sin(p.x*.5+p.y*.4-time*.5)*sin(p.z*.45+time*.35);}
+            void main(){float mu=max(dot(normalize(vN),normalize(vV)),0.);float n=.65+.35*n3(vP);
+            vec3 cold=vec3(.75,.08,.05),hot=vec3(1.,.55,.2);vec3 c=mix(cold,hot,heat)*n;
+            float edge=pow(1.-mu,2.);float body=mix(.25+.75*edge,.55+.45*mu,heat);
+            gl_FragColor=vec4(c*body*(op*1.3+heat*0.45),1.);}` }));
+        bhs.add(gas);
+        const puffs = []; for (let i = 0; i < 70; i++) { K.reseed(300 + i); const a = K.rnd() * 6.283, b = Math.acos(2 * K.rnd() - 1), r = 18 + K.rnd() * 18;
+          puffs.push({ s: K.sprite(bhs, K.glowTex("rgba(255,70,40,.35)"), 18 + K.rnd() * 22, V(Math.sin(b) * Math.cos(a) * r, Math.cos(b) * r, Math.sin(b) * Math.sin(a) * r), 0.5), a, b, r, w: 0.05 + K.rnd() * 0.08 }); }
+        const farDot = K.sprite(sc, redTex, 140, C.clone(), 0);
+        
+        // ===== Analyse-Ebene =====
+        const A = new Ebene(document.getElementById("root"));
+        const P = (v) => { cam.updateMatrixWorld(true); const q = v.clone().project(cam); return [(q.x + 1) / 2 * 1080, (1 - q.y) / 2 * 1920]; };
+        const tJW = W("james"), tVerg = W("vergangenheit"), tDabei = W("dabei"), tHund = W("hunderte"), tIhr = W("ihr", 18), t12 = W("zwölf"), tStamm = W("stammen"), tUrk = W("urknall"), tSelt = W("seltsame"), tHell = W("hell", 27), tGr = W("größe"), tWaer = W("wären"), tSter = W("sterne", 31), tMoegl = W("möglich"), tFor = W("forscher", 34), tZerb = W("zerbrechen"), tJetzt = W("jetzt"), tErkl = W("erklärung"), tBHS = W("schwarzelochsterne"), tInnen = W("innen"), tSL = W("schwarzes", 45), tEin = W("eingehüllt"), tGas = W("gas", 49.5), tHeiss = W("heiß"), tLeucht = W("leuchtet"), tViel = W("vielleicht"), tErst = W("allerersten"), tGanz = W("ganz", 59), tWas = W("was", 61), tFolg = W("folg", 63);
+        // Webb
+        A.logo("assets/logos/nasa.svg", 90, 540, 260, 210, { t0: tJW - 0.3, t1: tDabei - 0.2, rot: -4 });
+        A.karte("James Webb", 400, 540, 590, 330, { t0: tJW - 0.2, t1: tDabei - 0.2, unter: "STÄRKSTES WELTRAUM-TELESKOP" });
+        A.hand("seit 2021 im All 🚀", 695, 680, { t0: tJW + 0.4, t1: tDabei - 0.2, size: 54, farbe: "#fff" });
+        A.hand("Spiegel: 6,5 m", 695, 780, { t0: tJW + 0.9, t1: tDabei - 0.2, size: 54, farbe: GELB });
+        A.zettel("weiter weg =<br>früher ⏳", 540, 1110, { t0: tVerg - 0.1, t1: tDabei - 0.2, rot: -4, size: 62 });
+        // Hunderte rote Punkte
+        A.zettel("Hunderte! 🔴", 300, 600, { t0: tHund, t1: tIhr - 0.2, rot: -5, size: 70 });
+        A.hand("echtes Webb-Bild (NASA)", 700, 1300, { t0: tDabei, t1: tIhr - 0.2, size: 40, farbe: "rgba(255,255,255,.8)" });
+        // Zeitstrahl
+        const tlHtml = `<div style="position:absolute;left:40px;right:40px;top:150px;height:10px;border-radius:5px;background:linear-gradient(90deg,#fff,#7fd0ff)"></div>
+          <div style="position:absolute;left:62px;top:136px;width:58px;height:38px;border-radius:10px;background:#ff3b2f;box-shadow:0 0 30px #ff3b2f"></div>
+          <div style="position:absolute;left:24px;top:190px;font:800 30px Inter,sans-serif;color:#fff">Urknall 💥</div>
+          <div style="position:absolute;right:30px;top:190px;font:800 30px Inter,sans-serif;color:#7fd0ff">heute 🌍</div>
+          <div style="position:absolute;left:150px;top:96px;font:700 30px Caveat,cursive;font-size:40px;color:#ff6a5e">← rote Punkte</div>`;
+        A.karte("Zeitreise", 110, 520, 860, 270, { t0: tIhr - 0.2, t1: tSelt - 0.2, unter: "13,8 MILLIARDEN JAHRE", html: tlHtml });
+        A.zahl(540, 1000, { von: 0, bis: 12, t0: t12 - 0.2, t1: tSelt - 0.2, dauer: 1.1, fmt: (v) => "> " + Math.round(v) + " Mrd.", farbe: ROT, unter: "Jahre war das Licht unterwegs" });
+        A.stempel("KURZ NACH DEM URKNALL", 540, 1230, { t0: tUrk - 0.1, t1: tSelt - 0.2, rot: -4, farbe: GELB });
+        // zu hell
+        A.hand("winzig 🔍", 300, 640, { t0: tSelt + 0.4, t1: tWaer - 0.2, size: 80, farbe: "#fff" });
+        A.hand("aber viel zu hell 💡", 600, 1220, { t0: tHell - 0.2, t1: tWaer - 0.2, size: 74, farbe: GELB });
+        A.kreis(540, 960, 150, 150, { t0: tSelt + 0.2, t1: tWaer - 0.2, farbe: GELB });
+        // zu viele Sterne
+        A.karte("Wenn es Galaxien wären …", 110, 520, 860, 700, { t0: tWaer - 0.1, t1: tFor - 0.2, unter: "ANZAHL STERNE" });
+        A.balken(220, 660, 640, 440, [{ name: "damals möglich", wert: 1, text: "✓", farbe: GRUEN }, { name: "nötig", wert: 3.2, text: "?!", farbe: ROT }], { t0: tSter - 0.4, t1: tFor - 0.2, versatz: 0.6 });
+        A.stempel("UNMÖGLICH?", 540, 1270, { t0: tMoegl, t1: tFor - 0.2, rot: -6, farbe: ROT });
+        // Universum zerbricht
+        A.zettel("„Universums-Brecher“", 540, 620, { t0: tFor + 0.4, t1: tJetzt - 0.2, rot: -4, size: 62 });
+        const crack = ["M540,960 L470,880 L500,800 L430,720", "M540,960 L640,900 L700,940 L790,860", "M540,960 L560,1060 L500,1140 L520,1250", "M540,960 L420,1010 L340,980 L250,1050", "M540,960 L650,1040 L700,1150 L820,1180"];
+        crack.forEach((d, i) => A._path(d, { t0: tZerb + i * 0.05, t1: tJetzt - 0.2, farbe: "#ffffff", breite: 6, dauer: 0.25 }));
+        A.stempel("UNIVERSUM KAPUTT?", 540, 1250, { t0: tZerb + 0.2, t1: tJetzt - 0.2, rot: 5, farbe: ROT });
+        // Neue Erklärung
+        A.zettel("Neue Idee 💡", 290, 610, { t0: tJetzt, t1: tInnen - 0.2, rot: -5, size: 64 });
+        A.hand("Schwarzes-Loch-Stern", 540, 1260, { t0: tBHS, t1: tInnen - 0.2, size: 80, farbe: GELB });
+        // Innen
+        const lBH = A.hand("Schwarzes Loch ⚫", 300, 620, { t0: tSL - 0.2, t1: tGas - 0.2, size: 62, farbe: "#fff" });
+        const aBH = A.pfeil(320, 670, 520, 900, { t0: tSL, t1: tGas - 0.2, bogen: -0.25, farbe: "#fff", breite: 7 });
+        A.hand("dichte Gaswolke ☁️", 720, 1250, { t0: tEin, t1: tGas - 0.2, size: 62, farbe: "#ff7a5e" });
+        A.pfeil(780, 1200, 800, 1060, { t0: tEin + 0.2, t1: tGas - 0.2, bogen: 0.25, farbe: "#ff7a5e", breite: 7 });
+        // heiß
+        A.stempel("🌡️ SUPERHEISS", 540, 640, { t0: tHeiss, t1: tViel - 0.2, rot: -6, farbe: ORANGE });
+        A.hand("leuchtet wie ein Riesen-Stern ⭐", 540, 1260, { t0: tLeucht, t1: tViel - 0.2, size: 60, farbe: GELB });
+        // erste Schwarze Löcher
+        A.zettel("Babyfotos der ersten<br>Riesen-Schwarzen Löcher? 👶", 540, 700, { t0: tViel, t1: tGanz - 0.2, rot: -3, size: 54 });
+        A.hand("…von weitem: ein roter Punkt 🔴", 540, 1260, { t0: tErst + 0.4, t1: tGanz - 0.2, size: 52, farbe: "#ff7a5e" });
+        A.stempel("NOCH NICHT SICHER", 540, 760, { t0: tGanz, t1: tWas - 0.2, rot: -7, farbe: GELB });
+        A.zettel("Was glaubst du? 👇<br>⚫ Schwarzes Loch<br>🌌 Galaxie", 540, 780, { t0: tWas, t1: tFolg - 0.1, rot: -3, size: 58 });
+        
+        // ===== Ablauf =====
+        renderAt = (t) => {
+          label(""); E.grade.uniforms.flash.value = 0;
+          diskU.time.value = t; gasU.time.value = t;
+          dots.forEach((d) => { const on = cl((t - 0.2 - d.i * 0.12) / 0.4); const tl = t >= 14.6 ? cl((t - tHund + 0.3 - d.i * 0.09) / 0.3) : on; const pu = 0.75 + 0.25 * Math.sin(t * 3 + d.i * 1.7);
+            d.glow.material.opacity = tl * pu; d.core.material.opacity = tl * 0.9; });
+          farDot.material.opacity = 0;
+          let pos, look; cam.fov = 40;
+          E.look([1.0, 0.98, 1.0], [0.0, 0.0, 0.004], 0.45, 0.82);
+          if (t < tJW - 0.05) { // Hook + Folgen: rote Punkte im echten Webb-Bild
+            const f = K.eout(prog(t, 0, 5.2)); const g = prog(t, 5.2, 4.4);
+            pos = DOT0.clone().add(V(lerp(0, 30, f) + g * 20, lerp(0, -20, f), lerp(14, 300, f) + g * 60)); look = DOT0.clone().add(V(lerp(0, 30, f) + g * 20, lerp(0, -20, f), 0));
+          } else if (t < tDabei - 0.05) { // Webb im All
+            E.look([1.02, 0.99, 0.98], [0.002, 0.002, 0.012], 0.55, 0.7);
+            const a = 0.6 + (t - tJW) * 0.12; const d = lerp(42, 34, prog(t, tJW, 5));
+            pos = V(Math.sin(a) * d, 7 + Math.sin(t * 0.3), Math.cos(a) * d); look = V(0, 3.6, 0);
+            mir.rotation.y = 0.05 * Math.sin(t * 0.4);
+          } else if (t < tSelt - 0.05) { // Webb-Bild, Hunderte Punkte, Zeitreise
+            const f = K.eio(prog(t, tDabei, 3)); const g = prog(t, tIhr, 7);
+            pos = B.clone().add(V(lerp(0, -20, g), lerp(0, -30, g), lerp(620, 400, f) - g * 60)); look = B.clone().add(V(lerp(0, -20, g), lerp(0, -30, g), 0));
+          } else if (t < tWaer - 0.05) { // Zoom auf einen Punkt
+            const f = K.eio(prog(t, tSelt, 1.6));
+            pos = DOT0.clone().add(V(0, 0, lerp(360, 24, f))); look = DOT0.clone();
+            E.look([1.0, 0.97, 0.98], [0, 0, 0], lerp(0.45, 1.1, f), 0.6);
+          } else if (t < tJetzt - 0.05) { // Galaxien? Universum zerbricht
+            const f = prog(t, tWaer, 9); pos = B.clone().add(V(lerp(-40, 30, f), lerp(20, -10, f), lerp(500, 300, f))); look = B.clone().add(V(lerp(-40, 30, f), lerp(20, -10, f), 0));
+            if (t > tZerb && t < tZerb + 0.15) E.grade.uniforms.flash.value = 0.25 * (1 - (t - tZerb) / 0.15);
+            const sh = t > tZerb && t < tZerb + 0.6 ? (1 - (t - tZerb) / 0.6) * 4 : 0; pos.x += Math.sin(t * 90) * sh; pos.y += Math.cos(t * 77) * sh;
+          } else { // Schwarzes-Loch-Stern
+            bhs.rotation.y = t * 0.05; disk.rotation.z = t * 0.1;
+            puffs.forEach((p) => { const a = p.a + t * p.w; p.s.position.set(Math.sin(p.b) * Math.cos(a) * p.r, Math.cos(p.b) * p.r, Math.sin(p.b) * Math.sin(a) * p.r); });
+            let heat = 0, op = 0.32, puffOp = 0.45, dist, el = 0.25;
+            if (t < tInnen - 0.05) { const f = K.eio(prog(t, tJetzt, tInnen - tJetzt)); dist = lerp(900, 120, f); op = lerp(0.6, 0.45, f); farDot.material.opacity = 0; }
+            else if (t < tGas - 0.05) { const f = K.eio(prog(t, tInnen, 1.5)); dist = lerp(120, 62, f); op = lerp(0.45, 0.22, f); puffOp = lerp(0.45, 0.22, f); }
+            else if (t < tViel - 0.05) { const f = K.eio(prog(t, tGas, 2.4)); heat = f; dist = lerp(62, 115, f); op = lerp(0.22, 0.5, f); puffOp = lerp(0.22, 0.6, f); el = 0.2; }
+            else { const f = K.eio(prog(t, tViel, 3.6)); heat = 1 - 0.5 * f; dist = lerp(115, 2600, f); op = 0.5; puffOp = 0.6; farDot.material.opacity = cl(f * 1.5 - 0.3) * (0.8 + 0.2 * Math.sin(t * 3)); }
+            gasU.heat.value = heat; gasU.op.value = op; puffs.forEach((p) => (p.s.material.opacity = puffOp * (1 - 0.75 * heat)));
+            diskU.bright.value = 1 - 0.55 * heat; ringGlow.material.opacity = 0.8 * (1 - 0.6 * heat);
+            const a = 0.4 + t * 0.06; pos = C.clone().add(V(Math.sin(a) * dist, dist * el, Math.cos(a) * dist)); look = C.clone();
+            E.look([1.02, 0.97, 0.95], [0.004, 0.0, 0.0], lerp(0.7, 0.5, heat), 0.7);
+            if (t >= tGanz - 0.05) { // zurück zum Webb-Bild mit allen Punkten
+              const f = prog(t, tGanz, 6); pos = B.clone().add(V(0, 0, lerp(520, 420, f))); look = B.clone();
+            }
+          }
+          cam.updateProjectionMatrix(); cam.position.copy(pos); cam.lookAt(look);
+          E.render(sc, t); A.update(t); cap(t);
+        };
+        renderAt(lastT);
+      });
+      window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady || {}; window.__hf.buildReady.scene = ready;
+      let lastT = 0;
+      window.addEventListener("hf-seek", (e) => { lastT = e.detail.time; renderAt(lastT); });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+{"tag": "14. NOVEMBER 2026", "dauer": 66,
+ "hook": "<span class=\"y\">MORGEN</span><br />früh!",
+ "hook_end": 5.1, "share": [5.4, 3.4], "share_text": "+ Folgen", "follow": 62.9,
+ "fix": {"fünfzehnten": "15.", "sechzehnten": "16.", "hundertfünfundneunzig": "195", "achthundert": "800", "sechshundert": "600", "vierundvierzig": "44", "Zwanzig": "20", "sechs": "6"},
+ "css": ".hookbig { font-size: 170px; }"}

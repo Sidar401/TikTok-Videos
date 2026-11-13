@@ -1,0 +1,20 @@
+{
+ "gehoert": "Das stärkste Teleskop der Welt hat Punkte entdeckt, die es eigentlich gar nicht geben dürfte. Folk uns, damit Du erfährst, was hinter den roten Punkten steckt. Das James Webb Teleskop schaut so weit ins All, dass es in die Vergangenheit blickt. Dabei fand es hunderte winzige rote Lichtpunkte. Ihr Licht war über zwölf Milliarden Jahre zu uns unterwegs. Sie stammen also aus der Zeit kurz nach dem Urknall. Das Seltsame: Sie leuchten viel zu hell für ihre Größe. Wären es Galaxien, hätten sie mehr Sterne, als damals eigentlich möglich war. Forscher sagten schon, sie könnten unser Bild vom Universum zerbrechen. Jetzt glauben immer mehr Forscher an eine neue Erklärung: Schwarze Lochsterne. Innen sitzt ein riesiges schwarzes Loch, eingehüllt in eine dichte Gaswolke. Das Gas wird so heiß, dass es leuchtet wie ein gigantischer Stern. Vielleicht sehen wir hier, wie die allerersten riesen schwarzen Löcher entstanden sind. Ganz sicher ist das aber noch nicht. Was glaubst Du, was die roten Punkte sind? Folk uns für mehr.",
+ "abweichungen": [
+  [
+   "replace",
+   "folg",
+   "folk"
+  ],
+  [
+   "replace",
+   "loch sterne",
+   "lochsterne"
+  ],
+  [
+   "replace",
+   "folg",
+   "folk"
+  ]
+ ]
+}
