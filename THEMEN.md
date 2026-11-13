@@ -102,6 +102,8 @@ Nutzer: „nicht immer die gleichen/ähnlichen Thumbnails“ – z. B. **Geldbeu
 | longform-lotto | Lottokugeln „1 Million gewonnen … und PLEITE!“, Kontostand 1.000.000 € → 0 €, Titel-Typo + Kugeln |
 | longform-freiheit | Berg mit Flagge „So viel Geld, um NIE wieder zu arbeiten“, Formel „Ausgaben × 25 = FREI“, 3 Gipfel-Kacheln |
 
+| bitcoin-freitag13 (Cover) | „Freitag, der 13. BITCOIN CRASHT“ rote Box, Kalenderblatt FREITAG 13, Bitcoin-Münze, Angst-Barometer Nadel auf 20 |
+| nvidia-tag-danach (Cover) | „Tag 1 ohne JENSEN HUANG“, Nvidia-Logo, grüne V-Kurve −14 % → nur −4 %, Pille „Die Börse überrascht“ |
 **Gesperrt / ausgereizt:** Geldbeutel, Kassenzettel als Thumbnail (3×), „große Zahl + Icon links“-Layout (4×), Strichmännchen-Figuren, Leiter, Farbskala, Podest, Einkaufswagen, Regal/Auge, Preisschild, Tresor, Stempel, Lottokugeln, Kontostand-Display, Berg, Formel-Kacheln (je 1× – nicht direkt wieder).
 **Noch frisch:** Pfeil/Diagramm, Thermometer, Lupe, Ampel, Waage, Fragezeichen-Typo, Vorher/Nachher, Daumen-Bewertung, Handy-Screen-Mockup.
 Auch in Videos: Geldbeutel-Icon sparsam, nicht in jedem Video.
