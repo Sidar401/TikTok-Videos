@@ -17,5 +17,25 @@
  "flagge-china": "Flag_of_the_People's_Republic_of_China.svg",
  "flagge-singapur": "Flag_of_Singapore.svg",
  "amazon": "Amazon_logo.svg",
- "schufa": "Schufa logo.svg"
+ "schufa": "Schufa logo.svg",
+ "commerzbank.png": {
+  "datei": "File:Commerzbank-Logo.svg",
+  "lizenz": "Public domain"
+ },
+ "commerzbank-symbol.png": {
+  "datei": "File:Commerzbank-Logo.svg (Ausschnitt Symbol)",
+  "lizenz": "Public domain"
+ },
+ "hvb.png": {
+  "datei": "File:HypoVereinsbank logo.svg",
+  "lizenz": "Public domain"
+ },
+ "unicredit-symbol.png": {
+  "datei": "File:HypoVereinsbank logo.svg (Ausschnitt UniCredit-Symbol)",
+  "lizenz": "Public domain"
+ },
+ "comdirect.svg": {
+  "datei": "File:Comdirect Logo 10.2019.svg",
+  "lizenz": "Public domain"
+ }
 }

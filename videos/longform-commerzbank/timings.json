@@ -1,0 +1,801 @@
+{
+  "dauer": 147.75,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 2.944,
+      "captions": [
+        {
+          "text": "Deutschlands bekannteste Bank",
+          "start": 0.0,
+          "end": 1.619
+        },
+        {
+          "text": "gehört bald den Italienern",
+          "start": 1.619,
+          "end": 2.944
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 2.944,
+      "end": 7.75,
+      "captions": [
+        {
+          "text": "Die Commerzbank,",
+          "start": 2.944,
+          "end": 3.728
+        },
+        {
+          "text": "mit knapp elf Millionen",
+          "start": 3.728,
+          "end": 5.037
+        },
+        {
+          "text": "Kunden in Deutschland,",
+          "start": 5.037,
+          "end": 6.289
+        },
+        {
+          "text": "steht kurz vor der Übernahme",
+          "start": 6.289,
+          "end": 7.75
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 7.75,
+      "end": 12.22,
+      "captions": [
+        {
+          "text": "Folge HundeFinanzTv,",
+          "start": 7.75,
+          "end": 8.981
+        },
+        {
+          "text": "wir erklären dir jeden Tag",
+          "start": 8.981,
+          "end": 10.646
+        },
+        {
+          "text": "die wichtigsten Geld‑News",
+          "start": 10.646,
+          "end": 12.22
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "start": 12.22,
+      "end": 16.019,
+      "captions": [
+        {
+          "text": "Kurzer Hinweis: Das ist",
+          "start": 12.22,
+          "end": 13.546
+        },
+        {
+          "text": "keine Anlageberatung,",
+          "start": 13.546,
+          "end": 14.957
+        },
+        {
+          "text": "nur eine Erklärung",
+          "start": 14.957,
+          "end": 16.019
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "start": 16.019,
+      "end": 21.716,
+      "captions": [
+        {
+          "text": "In diesem Video:",
+          "start": 16.019,
+          "end": 17.005
+        },
+        {
+          "text": "wie es dazu kam,",
+          "start": 17.005,
+          "end": 18.04
+        },
+        {
+          "text": "wer jetzt entscheidet,",
+          "start": 18.04,
+          "end": 19.49
+        },
+        {
+          "text": "und was das für dein Konto",
+          "start": 19.49,
+          "end": 21.391
+        },
+        {
+          "text": "bedeutet",
+          "start": 21.391,
+          "end": 21.716
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "start": 21.716,
+      "end": 23.713,
+      "captions": [
+        {
+          "text": "Teil eins: Wie kam es dazu?",
+          "start": 21.716,
+          "end": 23.713
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "start": 23.713,
+      "end": 28.658,
+      "captions": [
+        {
+          "text": "In der Finanzkrise",
+          "start": 23.713,
+          "end": 24.659
+        },
+        {
+          "text": "musste der Staat",
+          "start": 24.659,
+          "end": 25.677
+        },
+        {
+          "text": "die Commerzbank retten,",
+          "start": 25.677,
+          "end": 27.046
+        },
+        {
+          "text": "mit über 18 Milliarden Euro",
+          "start": 27.046,
+          "end": 28.658
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "start": 28.658,
+      "end": 31.12,
+      "captions": [
+        {
+          "text": "Seitdem war der Bund",
+          "start": 28.658,
+          "end": 29.92
+        },
+        {
+          "text": "der größte Aktionär",
+          "start": 29.92,
+          "end": 31.12
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "start": 31.12,
+      "end": 38.629,
+      "captions": [
+        {
+          "text": "Im September 2024 verkaufte",
+          "start": 31.12,
+          "end": 32.949
+        },
+        {
+          "text": "er ein kleines Aktienpaket,",
+          "start": 32.949,
+          "end": 34.88
+        },
+        {
+          "text": "und genau da schlug",
+          "start": 34.88,
+          "end": 36.096
+        },
+        {
+          "text": "die italienische",
+          "start": 36.096,
+          "end": 37.239
+        },
+        {
+          "text": "Großbank UniCredit zu",
+          "start": 37.239,
+          "end": 38.629
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "start": 38.629,
+      "end": 41.977,
+      "captions": [
+        {
+          "text": "Sie kaufte das Paket",
+          "start": 38.629,
+          "end": 39.891
+        },
+        {
+          "text": "und danach immer",
+          "start": 39.891,
+          "end": 40.988
+        },
+        {
+          "text": "mehr Aktien dazu",
+          "start": 40.988,
+          "end": 41.977
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "start": 41.977,
+      "end": 46.492,
+      "captions": [
+        {
+          "text": "Der damalige Bundeskanzler",
+          "start": 41.977,
+          "end": 43.598
+        },
+        {
+          "text": "Olaf Scholz nannte",
+          "start": 43.598,
+          "end": 44.796
+        },
+        {
+          "text": "das eine unfreundliche Attacke",
+          "start": 44.796,
+          "end": 46.492
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "start": 46.492,
+      "end": 49.175,
+      "captions": [
+        {
+          "text": "Teil zwei: Wie viel gehört",
+          "start": 46.492,
+          "end": 47.775
+        },
+        {
+          "text": "den Italienern schon?",
+          "start": 47.775,
+          "end": 49.175
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "start": 49.175,
+      "end": 52.661,
+      "captions": [
+        {
+          "text": "Heute hält UniCredit",
+          "start": 49.175,
+          "end": 51.002
+        },
+        {
+          "text": "rund 47 % der Aktien",
+          "start": 51.002,
+          "end": 52.661
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "start": 52.661,
+      "end": 57.958,
+      "captions": [
+        {
+          "text": "Weil die Commerzbank eigene",
+          "start": 52.661,
+          "end": 54.285
+        },
+        {
+          "text": "Aktien ohne Stimmrecht hält,",
+          "start": 54.285,
+          "end": 56.168
+        },
+        {
+          "text": "sind das fast",
+          "start": 56.168,
+          "end": 57.042
+        },
+        {
+          "text": "50 % der Stimmen",
+          "start": 57.042,
+          "end": 57.958
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "start": 57.958,
+      "end": 60.38,
+      "captions": [
+        {
+          "text": "Der Bund hat nur",
+          "start": 57.958,
+          "end": 59.274
+        },
+        {
+          "text": "noch rund 13 %",
+          "start": 59.274,
+          "end": 60.38
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "start": 60.38,
+      "end": 63.37,
+      "captions": [
+        {
+          "text": "Im Oktober hat die Europäische",
+          "start": 60.38,
+          "end": 62.101
+        },
+        {
+          "text": "Zentralbank zugestimmt",
+          "start": 62.101,
+          "end": 63.37
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "start": 63.37,
+      "end": 66.917,
+      "captions": [
+        {
+          "text": "Am sechzehnten",
+          "start": 63.37,
+          "end": 64.059
+        },
+        {
+          "text": "November entscheidet jetzt",
+          "start": 64.059,
+          "end": 65.578
+        },
+        {
+          "text": "die Europäische Kommission",
+          "start": 65.578,
+          "end": 66.917
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "start": 66.917,
+      "end": 72.246,
+      "captions": [
+        {
+          "text": "Gibt sie grünes Licht,",
+          "start": 66.917,
+          "end": 68.47
+        },
+        {
+          "text": "will UniCredit Anfang",
+          "start": 68.47,
+          "end": 70.125
+        },
+        {
+          "text": "2027 die Kontrolle übernehmen",
+          "start": 70.125,
+          "end": 72.246
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "start": 72.246,
+      "end": 78.249,
+      "captions": [
+        {
+          "text": "Die Bundesregierung",
+          "start": 72.246,
+          "end": 73.284
+        },
+        {
+          "text": "ist dagegen und nennt",
+          "start": 73.284,
+          "end": 74.613
+        },
+        {
+          "text": "das Vorgehen feindlich,",
+          "start": 74.613,
+          "end": 75.918
+        },
+        {
+          "text": "aber aufhalten kann",
+          "start": 75.918,
+          "end": 77.121
+        },
+        {
+          "text": "sie es wohl kaum noch",
+          "start": 77.121,
+          "end": 78.249
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "start": 78.249,
+      "end": 80.449,
+      "captions": [
+        {
+          "text": "Teil drei: Was",
+          "start": 78.249,
+          "end": 79.121
+        },
+        {
+          "text": "heißt das für dich?",
+          "start": 79.121,
+          "end": 80.449
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "start": 80.449,
+      "end": 87.896,
+      "captions": [
+        {
+          "text": "Wenn du Kunde",
+          "start": 80.449,
+          "end": 81.128
+        },
+        {
+          "text": "bei der Commerzbank",
+          "start": 81.128,
+          "end": 82.391
+        },
+        {
+          "text": "oder bei Comdirect",
+          "start": 82.391,
+          "end": 83.588
+        },
+        {
+          "text": "bist: Dein Konto,",
+          "start": 83.588,
+          "end": 84.469
+        },
+        {
+          "text": "deine IBAN und deine Karte",
+          "start": 84.469,
+          "end": 86.197
+        },
+        {
+          "text": "bleiben erst einmal genau so",
+          "start": 86.197,
+          "end": 87.896
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "start": 87.896,
+      "end": 94.062,
+      "captions": [
+        {
+          "text": "Und dein Erspartes",
+          "start": 87.896,
+          "end": 88.913
+        },
+        {
+          "text": "ist wie bei jeder Bank",
+          "start": 88.913,
+          "end": 90.354
+        },
+        {
+          "text": "in der Europäischen Union bis",
+          "start": 90.354,
+          "end": 92.254
+        },
+        {
+          "text": "100.000 € gesetzlich geschützt",
+          "start": 92.254,
+          "end": 94.062
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "start": 94.062,
+      "end": 96.518,
+      "captions": [
+        {
+          "text": "Langfristig kann sich",
+          "start": 94.062,
+          "end": 95.377
+        },
+        {
+          "text": "aber einiges ändern",
+          "start": 95.377,
+          "end": 96.518
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "start": 96.518,
+      "end": 103.0,
+      "captions": [
+        {
+          "text": "UniCredit besitzt",
+          "start": 96.518,
+          "end": 97.358
+        },
+        {
+          "text": "in Deutschland schon",
+          "start": 97.358,
+          "end": 98.571
+        },
+        {
+          "text": "die HypoVereinsbank,",
+          "start": 98.571,
+          "end": 99.725
+        },
+        {
+          "text": "und Experten",
+          "start": 99.725,
+          "end": 100.453
+        },
+        {
+          "text": "halten eine spätere",
+          "start": 100.453,
+          "end": 101.606
+        },
+        {
+          "text": "Zusammenlegung für möglich",
+          "start": 101.606,
+          "end": 103.0
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "start": 103.0,
+      "end": 106.703,
+      "captions": [
+        {
+          "text": "Dann könnten",
+          "start": 103.0,
+          "end": 103.559
+        },
+        {
+          "text": "Filialen schließen,",
+          "start": 103.559,
+          "end": 104.734
+        },
+        {
+          "text": "und auch Arbeitsplätze",
+          "start": 104.734,
+          "end": 106.041
+        },
+        {
+          "text": "sind in Gefahr",
+          "start": 106.041,
+          "end": 106.703
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "start": 106.703,
+      "end": 112.297,
+      "captions": [
+        {
+          "text": "Laut Berichten geht es um",
+          "start": 106.703,
+          "end": 108.16
+        },
+        {
+          "text": "mehrere tausend Stellen,",
+          "start": 108.16,
+          "end": 109.608
+        },
+        {
+          "text": "Gewerkschaften befürchten",
+          "start": 109.608,
+          "end": 111.268
+        },
+        {
+          "text": "sogar bis zu 15.000",
+          "start": 111.268,
+          "end": 112.297
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "start": 112.297,
+      "end": 116.968,
+      "captions": [
+        {
+          "text": "Schreib uns",
+          "start": 112.297,
+          "end": 112.683
+        },
+        {
+          "text": "in die Kommentare: Bist du",
+          "start": 112.683,
+          "end": 113.837
+        },
+        {
+          "text": "Kunde bei der Commerzbank,",
+          "start": 113.837,
+          "end": 115.3
+        },
+        {
+          "text": "und würdest du jetzt wechseln?",
+          "start": 115.3,
+          "end": 116.968
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "start": 116.968,
+      "end": 119.163,
+      "captions": [
+        {
+          "text": "Teil vier: Und die Aktie?",
+          "start": 116.968,
+          "end": 119.163
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "start": 119.163,
+      "end": 126.138,
+      "captions": [
+        {
+          "text": "Die Commerzbank verdient",
+          "start": 119.163,
+          "end": 120.654
+        },
+        {
+          "text": "gerade so viel wie nie:",
+          "start": 120.654,
+          "end": 122.155
+        },
+        {
+          "text": "In neun Monaten rund",
+          "start": 122.155,
+          "end": 123.687
+        },
+        {
+          "text": "2,7 Milliarden Euro Gewinn,",
+          "start": 123.687,
+          "end": 125.577
+        },
+        {
+          "text": "ein Rekord",
+          "start": 125.577,
+          "end": 126.138
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "start": 126.138,
+      "end": 129.568,
+      "captions": [
+        {
+          "text": "Fürs ganze Jahr peilt sie",
+          "start": 126.138,
+          "end": 127.764
+        },
+        {
+          "text": "mindestens 3,4 Milliarden an",
+          "start": 127.764,
+          "end": 129.568
+        }
+      ]
+    },
+    {
+      "id": "s31",
+      "start": 129.568,
+      "end": 136.616,
+      "captions": [
+        {
+          "text": "Trotzdem fiel die Aktie",
+          "start": 129.568,
+          "end": 130.823
+        },
+        {
+          "text": "nach den Zahlen,",
+          "start": 130.823,
+          "end": 131.771
+        },
+        {
+          "text": "denn an der Börse schaut",
+          "start": 131.771,
+          "end": 133.298
+        },
+        {
+          "text": "gerade fast jeder nur",
+          "start": 133.298,
+          "end": 134.67
+        },
+        {
+          "text": "auf eine Frage: Was",
+          "start": 134.67,
+          "end": 135.566
+        },
+        {
+          "text": "machen die Italiener?",
+          "start": 135.566,
+          "end": 136.616
+        }
+      ]
+    },
+    {
+      "id": "s32",
+      "start": 136.616,
+      "end": 142.347,
+      "captions": [
+        {
+          "text": "Fazit: Die Bank,",
+          "start": 136.616,
+          "end": 137.319
+        },
+        {
+          "text": "die der Staat",
+          "start": 137.319,
+          "end": 137.658
+        },
+        {
+          "text": "einst gerettet hat,",
+          "start": 137.658,
+          "end": 138.879
+        },
+        {
+          "text": "wird sehr wahrscheinlich bald",
+          "start": 138.879,
+          "end": 140.741
+        },
+        {
+          "text": "von Mailand aus gesteuert",
+          "start": 140.741,
+          "end": 142.347
+        }
+      ]
+    },
+    {
+      "id": "s33",
+      "start": 142.347,
+      "end": 147.154,
+      "captions": [
+        {
+          "text": "Für dein Konto ändert",
+          "start": 142.347,
+          "end": 143.51
+        },
+        {
+          "text": "sich erst einmal nichts,",
+          "start": 143.51,
+          "end": 144.772
+        },
+        {
+          "text": "aber am sechzehnten",
+          "start": 144.772,
+          "end": 145.825
+        },
+        {
+          "text": "November wissen wir mehr",
+          "start": 145.825,
+          "end": 147.154
+        }
+      ]
+    }
+  ]
+}

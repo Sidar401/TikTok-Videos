@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0e1012; }
+      #root { position: relative; width: 100%; height: 100%; font-family: Montserrat, sans-serif; overflow: hidden;
+        background: radial-gradient(ellipse at 50% 50%, #ff8a1f40 0%, #ff8a1f10 35%, transparent 60%),
+                    radial-gradient(ellipse at 50% 50%, #1b1f22 0%, #0e1012 75%); }
+      #raster { position: absolute; inset: 0; background-image: linear-gradient(#ffffff0d 2px, transparent 2px), linear-gradient(90deg, #ffffff0d 2px, transparent 2px);
+        background-size: 96px 96px; }
+      .scene { position: absolute; inset: 0; }
+      #frame { position: absolute; inset: 0; border: 26px solid #DB8622; z-index: 10; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="1" data-width="1080" data-height="1920">
+      <div id="raster"></div>
+<div id="v0" class="scene clip" data-start="0" data-duration="1" data-track-index="1"><div style="position:absolute;left:0px;top:230px;width:1080px;font-weight:900;font-size:96px;line-height:1.02;letter-spacing:-2px;text-align:center;display:flex;flex-direction:column;gap:14px;z-index:3"><div style="color:#fff;text-shadow:0 6px 0 #000">Die Commerzbank</div><div><span style="display:inline-block;padding:4px 30px 10px;border-radius:22px;background:#ff8a1f;color:#111;box-shadow:0 0 60px #ff8a1f88">wird ITALIENISCH</span></div></div><div style="position:absolute;left:110px;top:640px;width:860px;padding:36px;border-radius:30px;background:#fff;box-shadow:0 0 90px #FFCC0088, 0 40px 60px #000;transform:rotate(-4deg);z-index:2"><img src="assets/commerzbank.png" style="width:100%;display:block"/></div><div style="position:absolute;left:290px;top:930px;width:500px;height:333px;display:flex;border-radius:18px;overflow:hidden;box-shadow:0 0 80px #ce2b3788, 0 40px 60px #000;transform:rotate(5deg);z-index:2"><div style="flex:1;background:#009246"></div><div style="flex:1;background:#fff"></div><div style="flex:1;background:#ce2b37"></div></div><div style="position:absolute;left:110px;top:1420px;width:860px;height:120px;border-radius:60px;background:#1b1f22;border:5px solid #ffffff44;overflow:hidden;z-index:2"><div style="width:49.65%;height:100%;background:linear-gradient(90deg,#E2001Aaa,#E2001A);box-shadow:0 0 40px #E2001A"></div></div><img src="assets/unicredit-symbol.png" style="position:absolute;left:130px;top:1430px;height:100px;z-index:3"/><div style="position:absolute;left:560px;top:1440px;font-weight:900;font-size:70px;color:#fff;z-index:3">49,65 %</div><div style="position:absolute;left:230px;top:1600px;padding:8px 30px 12px;border-radius:20px;background:#ff4d4d;color:#fff;font-weight:900;font-size:60px;white-space:nowrap;box-shadow:0 0 40px #ff4d4d99;transform:rotate(-2deg);z-index:3">Stimmen für UniCredit</div></div>
+      <div id="frame"></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#root", { opacity: 1 }, 0);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

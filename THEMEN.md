@@ -71,6 +71,7 @@ Wenn ein Thema anknüpft: neuer Blickwinkel, andere Beispiele/Namen/Zahlen, kurz
 | longform-huang-raus | (12.11., 9:16, 2:50, Laufband, Teil 2 vom Krimi; nach Vorbild Eulen-Kanal) Huang tritt zurück nach 33 J., 2. Affäre, Kress Übergangschefin (bleibt CFO), Harvey Jones 1. Vorsitzender (Ex-Synopsys), Aktie −13 % vorbörslich, 239 → <155 $, ≈2 Bio. $, Bernstein 400→200, AMD/Broadcom ▲, Trump: Tim Cook („Legende ersetzt Legende“), ETF −0,8 %, Zahlen 17.11., Steve Jobs 1985/1997 | Cover: Foto Huang + RAUS!-Stempel |
 | bitcoin-freitag13 | (Short 75 s, 13.11., News v2, Laufband) Freitag der 13.: BTC < 69.000 $ (Tief ~68.600), −6,8 % in 24 h, −45 % vom Rekord 126.000 $, 3 Auslöser: Nvidia-Chefrücktritt (−14 % zum Start), ETF-Abflüsse 8 Tage am Stück (1,4 Mrd. $ in 5 Tagen), Kredit-Wetten 1,4 Mrd. $ aufgelöst, Angst-Index 20, Merk dir: Panik/Kredit |
 | nvidia-tag-danach | (Motor-Short 70 s → longform-huang-raus, 13.11., News v2, Laufband) Tag 1 ohne Huang: zum Start −14 %, Schluss −4,34 % bei 166,19 $, nachbörslich +1 %, Woche −11 %, Kursziel 315→185 $, Kress Übergangschefin (seit 2013, bleibt CFO), Nachfrage ≠ Chef, Zahlen 17.11., ≈ 6 % im MSCI World |
+| longform-commerzbank | (13.11., 9:16, 2:28, News v2, kein Laufband, 4 Teile) UniCredit übernimmt Commerzbank: ≈11 Mio. Kunden, Rettung 2008/09 18,2 Mrd. €, Bund verkauft 4,5 %-Paket 11.9.2024 → UniCredit steigt ein, Scholz „unfreundliche Attacke“, 47,6 % Aktien / 49,65 % Stimmen, Bund ≈13 %, EZB ja (Okt.), EU-Kommission 16.11., Kontrolle Anfang 2027, Bundesregierung „feindlich“, Konto/IBAN/Karte bleiben, Einlagensicherung 100.000 €, HVB-Zusammenlegung möglich, Jobs (mehrere tausend / bis 15.000), Rekord 2,7 Mrd. € in 9 Mon., Ziel ≥3,4 Mrd., Orcel/Mailand | Cover: Commerzbank-Logo + Italien-Flagge + Stimmen-Balken 49,65 % |
 | longform-lotto | Lottogewinner Marco: 1 Mio., Absturz in 4 Jahren, Gründe, 5 Regeln, Lotto-Ausschüttung ~50 % | Kontostand-Countdown / Lottokugeln |
 | longform-freiheit | Nie wieder arbeiten: 4-%-Regel, ×25, 3 Gipfel (450k/750k/1,2 Mio.), Zwischenstationen, 3 Hebel, Sophie | Freiheits-Berg mit Hütten |
 
@@ -104,6 +105,7 @@ Nutzer: „nicht immer die gleichen/ähnlichen Thumbnails“ – z. B. **Geldbeu
 
 | bitcoin-freitag13 (Cover) | „Freitag, der 13. BITCOIN CRASHT“ rote Box, Kalenderblatt FREITAG 13, Bitcoin-Münze, Angst-Barometer Nadel auf 20 |
 | nvidia-tag-danach (Cover) | „Tag 1 ohne JENSEN HUANG“, Nvidia-Logo, grüne V-Kurve −14 % → nur −4 %, Pille „Die Börse überrascht“ |
+| longform-commerzbank (Cover 9:16) | „Die Commerzbank wird ITALIENISCH“, Commerzbank-Logo-Karte, Italien-Flagge schräg, roter Balken 49,65 % mit UniCredit-Symbol |
 **Gesperrt / ausgereizt:** Geldbeutel, Kassenzettel als Thumbnail (3×), „große Zahl + Icon links“-Layout (4×), Strichmännchen-Figuren, Leiter, Farbskala, Podest, Einkaufswagen, Regal/Auge, Preisschild, Tresor, Stempel, Lottokugeln, Kontostand-Display, Berg, Formel-Kacheln (je 1× – nicht direkt wieder).
 **Noch frisch:** Pfeil/Diagramm, Thermometer, Lupe, Ampel, Waage, Fragezeichen-Typo, Vorher/Nachher, Daumen-Bewertung, Handy-Screen-Mockup.
 Auch in Videos: Geldbeutel-Icon sparsam, nicht in jedem Video.

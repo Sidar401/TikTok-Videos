@@ -209,3 +209,9 @@ Später (Higgsfield wieder da): einmalig ~20 dunkle KI-Hintergründe wie beim Eu
 ## 📈 Laufband – genauer (Nutzer 12.11., gilt VOR den älteren Laufband-Regeln)
 NUR bei Eilmeldungs-Börsenthemen mit echten, großen Kursbewegungen AM SELBEN TAG (Absturz, Rekord, Crash, Börsengang).
 KEIN Laufband bei zeitlosen Börsenthemen (ETF erklärt, Sparplan, „Steckt Nvidia in deinem ETF?“) und bei Verbraucherthemen.
+
+## Regeln vom 13.11.
+- **Cover IMMER mitliefern – auch für Shorts** (9:16, `videos/thumbs-<name>/`, Export nach `renders/thumbnails/<name>-tiktok.jpg`), direkt zusammen mit dem Video. Nutzer musste daran erinnern.
+- **Jedes heruntergeladene Personen-Foto selbst ansehen (Read), bevor es ins Video kommt.** Bug am 13.11.: API-Fehler → altes Ergebnis wiederverwendet → „Scholz“-Datei war Orcel. Beim Download den Dateinamen in der URL prüfen.
+- Wikimedia-SVG-Originale werden oft mit 429 geblockt → PNG-Thumbnail (iiurlwidth=1280) nehmen.
+- Neue Logos: commerzbank(.png, -symbol), hvb.png, unicredit-symbol.png (aus HVB-Logo), comdirect.svg, Flaggen italien/deutschland/eu.
