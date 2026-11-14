@@ -232,3 +232,8 @@ KEIN Laufband bei zeitlosen Börsenthemen (ETF erklärt, Sparplan, „Steckt Nvi
 
 ## Anlage-Hinweis ans ENDE (Nutzer 14.11.)
 - „Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung.“ immer als LETZTEN Satz, nie am Anfang (Wegwischen). KEINE Hinweis-Zeile im Bild (zu viel Bild).
+
+## KEINE Kapitel mehr (Nutzer 14.11.)
+- Im Skript KEINE Sätze „Teil eins: …“, „Teil zwei: …“ usw. und keine Kapitel-Szenen (TEIL 1 + Box).
+- In 16:9 KEINE Kapitel-Leiste oben links („KAPITEL / Intro / 1 · …“). Fakten-Karte rechts darf bleiben.
+- Themenwechsel stattdessen mit normaler Überschrift (titel_zeile) der nächsten Szene.
