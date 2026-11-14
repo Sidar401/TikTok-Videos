@@ -229,3 +229,6 @@ KEIN Laufband bei zeitlosen Börsenthemen (ETF erklärt, Sparplan, „Steckt Nvi
 - Ca. 3.000 Credits/Tag (Longform ≈ 1.200, Short ≈ 600). Nutzer kauft bei Bedarf Credits nach.
 
 - **GTA** im Wörterbuch: GTA → „Geh-Teh-Ah“ (Hörprobe 14.11., Nr. 1). Im sprechtext normal „GTA“ schreiben.
+
+## Anlage-Hinweis ans ENDE (Nutzer 14.11.)
+- „Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung.“ immer als LETZTEN Satz, nie am Anfang (Wegwischen). KEINE Hinweis-Zeile im Bild (zu viel Bild).

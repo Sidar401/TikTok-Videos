@@ -1,0 +1,155 @@
+{
+ "titel": "Der größte Krypto-Raub der Geschichte",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Sechs Komma drei Milliarden Dollar, gestohlen in nur zwanzig Minuten.",
+   "text": "Sechs Komma drei Milliarden Dollar, gestohlen in nur 20 Minuten"
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Es ist der größte Krypto-Raub der Geschichte, und er begann mit einem harmlosen Jobangebot.",
+   "text": "Es ist der größte Krypto-Raub der Geschichte, und er begann mit einem harmlosen Jobangebot"
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Schick das Video jemandem, der gerade einen neuen Job sucht, es könnte ihn schützen.",
+   "text": "Schick das Video jemandem, der gerade einen neuen Job sucht, es könnte ihn schützen"
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Teil eins: Die Falle.",
+   "text": "Teil eins: Die Falle"
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Im Juni bekommt ein Programmierer der Kryptobörse Binance eine Nachricht von einem angeblichen Personalvermittler.",
+   "text": "Im Juni bekommt ein Programmierer der Kryptobörse Binance eine Nachricht von einem angeblichen Personalvermittler"
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Er sucht gerade einen neuen Job, also macht er mit.",
+   "text": "Er sucht gerade einen neuen Job, also macht er mit"
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Es folgt ein zweites Gespräch, diesmal mit dem angeblichen Chef einer Firma, die es gar nicht gibt.",
+   "text": "Es folgt ein zweites Gespräch, diesmal mit dem angeblichen Chef einer Firma, die es gar nicht gibt"
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Am Ende soll er eine Probeaufgabe herunterladen.",
+   "text": "Am Ende soll er eine Probeaufgabe herunterladen"
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Doch in dieser Datei steckt eine Schadsoftware, und der Virenschutz von Binance bemerkt sie nicht.",
+   "text": "Doch in dieser Datei steckt eine Schadsoftware, und der Virenschutz von Binance bemerkt sie nicht"
+  },
+  {
+   "id": "s10",
+   "sprechtext": "Teil zwei: Der Raub.",
+   "text": "Teil zwei: Der Raub"
+  },
+  {
+   "id": "s11",
+   "sprechtext": "Monatelang bewegen sich die Hacker unbemerkt durch die Firma.",
+   "text": "Monatelang bewegen sich die Hacker unbemerkt durch die Firma"
+  },
+  {
+   "id": "s12",
+   "sprechtext": "Am neunundzwanzigsten Oktober schlagen sie zu.",
+   "text": "Am neunundzwanzigsten Oktober schlagen sie zu"
+  },
+  {
+   "id": "s13",
+   "sprechtext": "In nur zwanzig Minuten fließen über sechs Milliarden Dollar ab, verteilt über zehn verschiedene Blockchains.",
+   "text": "In nur 20 Minuten fließen über sechs Milliarden Dollar ab, verteilt über zehn verschiedene Blockchains"
+  },
+  {
+   "id": "s14",
+   "sprechtext": "Zum Vergleich: Der bisherige Rekord lag bei eins Komma fünf Milliarden Dollar, bei der Börse Bybit im Jahr zweitausendfünfundzwanzig.",
+   "text": "Zum Vergleich: Der bisherige Rekord lag bei 1,5 Milliarden Dollar, bei der Börse Bybit im Jahr 2025"
+  },
+  {
+   "id": "s15",
+   "sprechtext": "Dieser Raub ist also rund viermal so groß.",
+   "text": "Dieser Raub ist also rund viermal so groß"
+  },
+  {
+   "id": "s16",
+   "sprechtext": "Teil drei: Die Spur führt nach Nordkorea.",
+   "text": "Teil drei: Die Spur führt nach Nordkorea"
+  },
+  {
+   "id": "s17",
+   "sprechtext": "Die amerikanische Bundespolizei macht eine nordkoreanische Hackergruppe verantwortlich, die auch hinter dem Bybit-Raub stecken soll.",
+   "text": "Die amerikanische Bundespolizei macht eine nordkoreanische Hackergruppe verantwortlich, die auch hinter dem Bybit-Raub stecken soll"
+  },
+  {
+   "id": "s18",
+   "sprechtext": "Nordkorea bestreitet das.",
+   "text": "Nordkorea bestreitet das"
+  },
+  {
+   "id": "s19",
+   "sprechtext": "Die amerikanische Justiz hat inzwischen über eins Komma zwei Milliarden Dollar beschlagnahmen lassen, insgesamt sind rund drei Milliarden eingefroren.",
+   "text": "Die amerikanische Justiz hat inzwischen über 1,2 Milliarden Dollar beschlagnahmen lassen, insgesamt sind rund drei Milliarden eingefroren"
+  },
+  {
+   "id": "s20",
+   "sprechtext": "Schreib uns in die Kommentare: Hättest du die Probeaufgabe heruntergeladen?",
+   "text": "Schreib uns in die Kommentare: Hättest du die Probeaufgabe heruntergeladen?"
+  },
+  {
+   "id": "s21",
+   "sprechtext": "Teil vier: Was ist mit den Kunden?",
+   "text": "Teil vier: Was ist mit den Kunden?"
+  },
+  {
+   "id": "s22",
+   "sprechtext": "Binance hat alle sechs Komma drei Milliarden Dollar aus eigenen Reserven ersetzt.",
+   "text": "Binance hat alle 6,3 Milliarden Dollar aus eigenen Reserven ersetzt"
+  },
+  {
+   "id": "s23",
+   "sprechtext": "Kein Kunde hat also Geld verloren.",
+   "text": "Kein Kunde hat also Geld verloren"
+  },
+  {
+   "id": "s24",
+   "sprechtext": "Aber jetzt kommt die zweite Welle: Betrüger verschicken gefälschte Entschädigungs-Formulare.",
+   "text": "Aber jetzt kommt die zweite Welle: Betrüger verschicken gefälschte Entschädigungs-Formulare"
+  },
+  {
+   "id": "s25",
+   "sprechtext": "Teil fünf: So schützt du dich.",
+   "text": "Teil fünf: So schützt du dich"
+  },
+  {
+   "id": "s26",
+   "sprechtext": "Erstens: Öffne die App oder Webseite immer selbst, und klick nie auf Links in Nachrichten, die Druck machen.",
+   "text": "Erstens: Öffne die App oder Webseite immer selbst, und klick nie auf Links in Nachrichten, die Druck machen"
+  },
+  {
+   "id": "s27",
+   "sprechtext": "Zweitens: Gib niemals deine Wiederherstellungs-Wörter oder Passwörter heraus, egal wer fragt.",
+   "text": "Zweitens: Gib niemals deine Wiederherstellungs-Wörter oder Passwörter heraus, egal wer fragt"
+  },
+  {
+   "id": "s28",
+   "sprechtext": "Und drittens: Lade nie Dateien von Fremden herunter, auch nicht für ein Bewerbungsgespräch.",
+   "text": "Und drittens: Lade nie Dateien von Fremden herunter, auch nicht für ein Bewerbungsgespräch"
+  },
+  {
+   "id": "s29",
+   "sprechtext": "Denn der größte Krypto-Raub der Geschichte begann nicht mit Technik, sondern mit einem Menschen, der einem Jobangebot vertraut hat.",
+   "text": "Denn der größte Krypto-Raub der Geschichte begann nicht mit Technik, sondern mit einem Menschen, der einem Jobangebot vertraut hat"
+  },
+  {
+   "id": "s30",
+   "sprechtext": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung.",
+   "text": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung"
+  }
+ ]
+}
