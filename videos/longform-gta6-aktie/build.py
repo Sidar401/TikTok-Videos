@@ -64,11 +64,11 @@ szene("s2", "frei-miami-omni", titel_zeile("t2", "GTA 6 + Take-Two") + logo("l2a
       lambda a, d: f'pop("#t2", {a}); pop("#l2a", {cap("s2", 0)}); pop("#pl2", {cap("s2", 1)}); pop("#l2b", {cap("s2", 1)} + 0.2);',
       [(st("s2"), "whoosh-weich"), (cap("s2", 1) + 0.2, "pop")])
 
-szene("s3", "frei-frankfurt-nacht", titel_zeile("t3", "Folg uns") + icon_gross("i3", "🔔", 0, 620, 260, OR, True) + chip("c3", "+ Folgen", OR, 940, 70)
-      + quelle("q3", "jeden Tag die wichtigsten Geld-News", 1080),
-      lambda a, d: (f'pop("#t3", {a}); pop("#i3", {a}); tl.fromTo("#i3", {{ rotation: -18 }}, {{ rotation: 18, duration: 0.14, yoyo: true, repeat: 5 }}, {a} + 0.3);'
-                    f' slam("#c3", {cap("s3", 0)} + 0.4); pop("#q3", {cap("s3", 1)});'),
-      [(st("s3"), "swipe"), (st("s3") + 0.3, "handy-benachrichtigung")])
+szene("s3", "frei-ocean-drive", titel_zeile("t3", "Markier jemanden …") + icon_gross("i3", "🤒", 0, 600, 240, OR, True)
+      + kalender("k3", "NOV", "19", 120, 900, 220, GTA) + chip("c3", "„Bin leider krank“ 😏", OR, 960, 50, 380),
+      lambda a, d: (f'pop("#t3", {a}); pop("#i3", {a} + 0.1); tl.fromTo("#i3", {{ rotation: -10 }}, {{ rotation: 10, duration: 0.2, yoyo: true, repeat: 5 }}, {a} + 0.4);'
+                    f' pop("#k3", {cap("s3", 1)}); slam("#c3", {cap("s3", 1)} + 0.4);'),
+      [(st("s3"), "handy-benachrichtigung"), (cap("s3", 1) + 0.4, "nv-staunen-wow")])
 
 szene("s4", "wallstreet", titel_zeile("t4", "Kurzer Hinweis") + zettel("hw", "Keine Anlage&shy;beratung –<br/>nur Nachrichten erklärt", 200, 650, 680, 74, GELB, -3),
       lambda a, d: f'pop("#t4", {a}); tl.fromTo("#hw", {{ y: -400, rotation: -20, opacity: 0 }}, {{ y: 0, rotation: -3, opacity: 1, duration: 0.5, ease: "back.out(1.4)" }}, {a});',
