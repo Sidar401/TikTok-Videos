@@ -237,3 +237,6 @@ KEIN Laufband bei zeitlosen Börsenthemen (ETF erklärt, Sparplan, „Steckt Nvi
 - Im Skript KEINE Sätze „Teil eins: …“, „Teil zwei: …“ usw. und keine Kapitel-Szenen (TEIL 1 + Box).
 - In 16:9 KEINE Kapitel-Leiste oben links („KAPITEL / Intro / 1 · …“). Fakten-Karte rechts darf bleiben.
 - Themenwechsel stattdessen mit normaler Überschrift (titel_zeile) der nächsten Szene.
+
+## Kommentar-Aufruf als Aussage, nicht als Frage (Nutzer 14.11.)
+- RICHTIG: „Schreib uns in die Kommentare, ob du jetzt kaufst oder wartest.“ FALSCH: „Schreib uns in die Kommentare: Kaufst du jetzt …?“
