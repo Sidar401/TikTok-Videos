@@ -34,7 +34,7 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
 - Stil wie die viralen Mathe/Physik-Videos: Frage → Zahl zählt hoch → Überraschung → Frage an Zuschauer.
 - **Regeln in `wissen/REGELN.md` IMMER einhalten** (große Hook am Anfang, „Folg uns für mehr!“-Aufruf am Ende, 30 s, ohne Musik).
 - Baukasten: `wissen/kit/` · Ideen & Post-Pläne: `wissen/`.
-- Neuer Stil **3D-Kino** + Stimme automatisch per `wissen/kit/stimme.py` (ElevenLabs, Ablauf in `wissen/REGELN.md`).
+- **Ab 14.11.: sauberer Foto-Look (freigegeben) – `wissen/kit/sauber_vorlage.html`, Muster `videos/demo-groesse/`, Regeln in `wissen/REGELN.md`.**
 
 ## Regeln vom Nutzer
 - Alles auf Deutsch, Antworten sehr kurz und iPad-tauglich, ohne Fachwörter

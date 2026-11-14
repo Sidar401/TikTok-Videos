@@ -32,3 +32,10 @@ Vorlage/Baukasten: `wissen/kit/` (neu.sh, kit.js, kit.css, mix.py, fertig.sh, sn
 - **Ganz wenig Text:** ein großes, klares Wort / Name in weißer, schlichter Schrift (z. B. „Mars“, „Planet“). Keine Zettel, Stempel, Karopapier-Karten, Handschrift-Pfeile mehr (Analyse-Ebene nur noch sparsam: eine Zahl oder ein Wort).
 - Edle Effekte erlaubt: glühende Sonne, leuchtendes Raumzeit-Gitter, Ringe, Umlaufbahnen.
 - Thumbnails ohne „NOVARO“.
+
+## ✅ FREIGEGEBEN (Nutzer 14.11.2026): „Genau das will ich – ab sofort IMMER so“
+- Muster: `videos/demo-groesse/` (Größenvergleich) und `videos/demo-raumzeit/` (Sonne im Raumzeit-Gitter), Renders in `renders/demo-*.mp4`.
+- Bauen mit `wissen/kit/sauber_vorlage.html` + `python3 wissen/kit/sauber_bau.py videos/<name>` (Hilfen im Szenen-Code: `tex("mars.jpg")`, `label(name, obj, radius, {t0,t1,size})`, `word(html, sichtbarkeit)`).
+- Echte Planeten-Texturen in `assets/tex/` (Solar System Scope, CC BY 4.0 → in JEDE Beschreibung: „Planeten-Texturen: Solar System Scope (CC BY 4.0)“), Erde über `K.earth` (Leuchtrand mit `scale 0.93` dünner).
+- Schwarzer Hintergrund, große echte Kugeln, weiße schlichte Namen über den Objekten, unten höchstens ein großes Wort/eine Zahl. Bloom niedrig halten (Planeten nicht überstrahlen), Füll-Licht, damit keine schwarzen Scheiben entstehen.
+- Für lange Videos mit Stimme: diesen Look mit Untertiteln/Stimme kombinieren (Vorlage noch erweitern).
