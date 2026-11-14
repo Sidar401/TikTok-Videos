@@ -227,3 +227,5 @@ KEIN Laufband bei zeitlosen Börsenthemen (ETF erklärt, Sparplan, „Steckt Nvi
 - Täglich **2 Longforms** (9:16, je 2–3 Min.) + **1 Motor-Short** (61–75 s, verweist auf ein Longform).
 - YouTube-Tage (14.11., 17.11., 20.11., …): Longform 1 zusätzlich 16:9 + Thumbnail 16:9.
 - Ca. 3.000 Credits/Tag (Longform ≈ 1.200, Short ≈ 600). Nutzer kauft bei Bedarf Credits nach.
+
+- **GTA** im Wörterbuch: GTA → „Geh-Teh-Ah“ (Hörprobe 14.11., Nr. 1). Im sprechtext normal „GTA“ schreiben.
