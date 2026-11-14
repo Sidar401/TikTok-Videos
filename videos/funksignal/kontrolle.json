@@ -1,0 +1,15 @@
+{
+ "gehoert": "Ein Stern ganz in unserer Nähe sendet ein rätselhaftes Funksignal. Folg uns, damit du erfährst, woher das Signal kommt. Der Stern heißt GJ 725 A. Er ist ein roter Zwerg, kleiner und kühler als unsere Sonne. Mit bloßem Auge kannst du ihn nicht sehen. Er ist nur elfeinhalb Lichtjahre entfernt. Für das All ist das direkt um die Ecke. Forscher haben mit Radioantennen ein Signal von ihm aufgefangen. Es dauerte etwa eine Stunde, dann war es wieder weg. Um den Stern kreist ein Gesteinsplanet. Ein Jahr dauert dort nur elf Tage. Die Forscher haben drei Erklärungen. Erstens: Polarlichter auf einem riesigen Planeten, den noch niemand gefunden hat. Zweitens: Der Gesteinsplanet stört das Magnetfeld des Sterns. Drittens: Der Stern selbst hatte einen Ausbruch. Und Aliens? Dafür gibt es keinen Hinweis. Das Signal ist noch schwach, deshalb wollen die Forscher jetzt genauer hinhören. Was glaubst du, woher das Signal kommt? Folg uns für mehr.",
+ "abweichungen": [
+  [
+   "replace",
+   "siebenhundertfünfundzwanzig",
+   "725"
+  ],
+  [
+   "replace",
+   "radio antennen",
+   "radioantennen"
+  ]
+ ]
+}

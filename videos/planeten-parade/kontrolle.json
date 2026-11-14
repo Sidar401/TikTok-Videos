@@ -1,0 +1,20 @@
+{
+ "gehoert": "Gerade stehen vier Planeten gleichzeitig am Morgenhimme und du kannst sie mit bloßem Auge sehen. Folge uns, damit du keinen Moment am Himmel verpasst. Es sind Merkur, Venus, Mars und Jupiter. Sie stehen wie an einer Schnur schräg vom Horizont nach oben. Ganz unten, knapp über dem Horizont, steht Merkur. Er ist am schwersten zu finden. Etwas höher leuchtet Venus. Sie ist gerade unser nächster Planet, nur fünfzig Millionen Kilometer entfernt. Hoch im Süden stehen Mars und Jupiter dicht beieinander. Und jetzt wird es verrückt. Was so nah aussieht, liegt riesig weit auseinander. Das Licht von Venus braucht knapp drei Minuten bis zu dir. Das Licht von Jupiter fast vierundvierzig Minuten. Du siehst also gleichzeitig Licht aus ganz verschiedenen Zeiten. So klappt's. Geh etwa eine Stunde vor Sonnenaufgang raus und schau Richtung Südosten. Am besten bis zum 22. November. Welchen Planeten findest du zuerst? Folg uns für mehr.",
+ "abweichungen": [
+  [
+   "replace",
+   "morgenhimmel",
+   "morgenhimme"
+  ],
+  [
+   "replace",
+   "folg",
+   "folge"
+  ],
+  [
+   "replace",
+   "zweiundzwanzigsten",
+   "22"
+  ]
+ ]
+}
