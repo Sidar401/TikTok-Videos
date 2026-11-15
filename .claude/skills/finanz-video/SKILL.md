@@ -240,3 +240,5 @@ KEIN Laufband bei zeitlosen Börsenthemen (ETF erklärt, Sparplan, „Steckt Nvi
 
 ## Kommentar-Aufruf als Aussage, nicht als Frage (Nutzer 14.11.)
 - RICHTIG: „Schreib uns in die Kommentare, ob du jetzt kaufst oder wartest.“ FALSCH: „Schreib uns in die Kommentare: Kaufst du jetzt …?“
+
+## Longform-Länge ab 15.11.: 2:30–3:00 Min. (Nutzer) – ca. 400–470 Wörter bei Tempo 1.12.
