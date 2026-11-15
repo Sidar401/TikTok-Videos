@@ -1,0 +1,56 @@
+{
+ "teile": [
+  {
+   "gehoert": "Du denkst, die Erde ist groß? Dann warte ab, bis du siehst, was da draußen wirklich ist. Wir starten klein bei unserem Mond und fliegen bis an den Rand des sichtbaren Universums. Und ich verspreche dir, am Ende wirst du dich ziemlich klein fühlen. Das ist unser Mond. Er ist etwa dreitausendfünfhundert Kilometer breit. Fast vier Monde passen nebeneinander quer über die Erde. Sein Licht braucht nur gut eine Sekunde bis zu uns. Merkur, der kleinste Planet, ist nur etwas größer als der Mond. Mars ist etwa halb so breit wie die Erde",
+   "abweichungen": []
+  },
+  {
+   "gehoert": "Venus ist fast genauso groß wie unsere Erde, wie eine Zwillingsschwester. Und hier ist sie, unsere Erde, knapp dreizehntausend Kilometer breit. Würdest du ohne Pause mit hundert Kilometern pro Stunde einmal um sie herumfahren, wärst du über sechzehn Tage unterwegs. Übrigens, wenn dir das Video gefällt, abonnier uns und like das Video. Uranus und Neptun sind Eisriesen, etwa viermal so breit wie die Erde. Saturn ist neunmal so breit und seine Ringe sind fast dreihunderttausend Kilometer breit. Und Saturn ist so leicht, dass er in einer riesigen Badewanne schwimmen würde. Und dann Jupiter, elfmal so breit wie die Erde. Über tausenddreihundert Erden würden in ihn hineinpassen. Sein großer roter Fleck ist ein Sturm, in den die ganze Erde passen würde",
+   "abweichungen": []
+  },
+  {
+   "gehoert": "Aber Jupiter ist nichts gegen unsere Sonne. Sie ist hundertneun Mal so breit wie die Erde. Rund eine Million dreihunderttausend Erden passen hinein. Ihr Licht braucht acht Minuten bis zu uns und sie allein macht über neunundneunzig Prozent der Masse unseres Sonnensystems aus. Und unsere Sonne ist nur ein ganz normaler Stern. Sirius, der hellste Stern am Nachthimmel, ist fast doppelt so breit. Arktur ist schon fünfundzwanzig Mal so breit wie die Sonne. Rigel im Sternbild Orion rund achtzig Mal. Und dann Beteigeuze, die rote Schulter des Orion, rund siebenhundertfünfzig Mal so breit wie die Sonne. Setzt man sie an die Stelle der Sonne, reicht sie weit über die Marsbahn hinaus. Irgendwann wird sie als Supernova explodieren, vermutlich in den nächsten hunderttausend Jahren. Einer der größten bekannten Sterne ist Stephenson zweitausendachtzehn. Nach manchen Schätzungen würde er bis über die Saturnbahn reichen. Licht bräuchte fast neun Stunden, um einmal um ihn herumzufliegen",
+   "abweichungen": [
+    [
+     "replace",
+     "hundertneunmal",
+     "hundertneun mal"
+    ],
+    [
+     "replace",
+     "fünfundzwanzigmal",
+     "fünfundzwanzig mal"
+    ],
+    [
+     "replace",
+     "achtzigmal",
+     "achtzig mal"
+    ],
+    [
+     "replace",
+     "siebenhundertfünfzigmal",
+     "siebenhundertfünfzig mal"
+    ],
+    [
+     "replace",
+     "zwei achtzehn",
+     "zweitausendachtzehn"
+    ]
+   ]
+  },
+  {
+   "gehoert": "Aber es gibt Dinge, die noch größer sind und sie sind komplett schwarz. Im Herzen unserer Milchstraße sitzt ein schwarzes Loch. Sagittarius A Stern. Es ist so schwer wie über vier Millionen Sonnen. Sein dunkler Rand ist etwa siebzehnmal so breit wie unsere Sonne und das ist noch klein. TON 618 ist eines der größten bekannten schwarzen Löcher, nach Schätzungen so schwer wie vierzig Milliarden Sonnen. Sein dunkler Rand ist so riesig, dass zwanzig Sonnensysteme bis zum Pluto nebeneinander hineinpassen würden. Unsere Sonne ist einer von über hundert Milliarden Sternen in der Milchstraße. Die Milchstraße ist etwa hunderttausend Lichtjahre breit. Selbst Licht braucht hunderttausend Jahre, um sie zu durchqueren. Und unsere Sonne braucht für eine Runde um das Zentrum etwa zweihundertdreißig Millionen Jahre",
+   "abweichungen": [
+    [
+     "replace",
+     "sechshundertachtzehn",
+     "618"
+    ]
+   ]
+  },
+  {
+   "gehoert": "Unsere Nachbarin, die Andromeda-Galaxie, ist sogar noch größer und sie kommt auf uns zu. Vielleicht stoßen beide in einigen Milliarden Jahren zusammen. Galaxien bilden Gruppen und Gruppen bilden riesige Haufen. Unser Superhaufen heißt Laniakea, das bedeutet unermesslicher Himmel. Er ist über fünfhundert Millionen Lichtjahre breit. Und das sichtbare Universum? Es ist etwa dreiundneunzig Milliarden Lichtjahre breit mit hunderten Milliarden Galaxien, vielleicht sogar Billionen. Und das ist nur der Teil, den wir sehen können. Wie groß das ganze Universum ist, weiß niemand. Und irgendwo darin, auf einem kleinen blauen Punkt, sitzt du und schaust dieses Video. Was hat dich am meisten überrascht? Schreib es in die Kommentare und vergiss nicht, abonnier uns und like das Video",
+   "abweichungen": []
+  }
+ ]
+}

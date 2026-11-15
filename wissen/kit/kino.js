@@ -32,11 +32,11 @@ const Grade = {
 };
 export function setup(canvas) {
   const R = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDrawingBuffer: true });
-  R.setSize(1080, 1920, false); R.toneMapping = THREE.ACESFilmicToneMapping; R.outputColorSpace = THREE.SRGBColorSpace;
-  const cam = new THREE.PerspectiveCamera(40, 1080 / 1920, 0.1, 60000);
+  const CW = canvas.width || 1080, CH = canvas.height || 1920; R.setSize(CW, CH, false); R.toneMapping = THREE.ACESFilmicToneMapping; R.outputColorSpace = THREE.SRGBColorSpace;
+  const cam = new THREE.PerspectiveCamera(40, CW / CH, 0.1, 60000);
   const comp = new EffectComposer(R);
   const pass = new RenderPass(new THREE.Scene(), cam); comp.addPass(pass);
-  const bloom = new UnrealBloomPass(new THREE.Vector2(540, 960), 0.8, 0.55, 0.8); comp.addPass(bloom);
+  const bloom = new UnrealBloomPass(new THREE.Vector2(CW / 2, CH / 2), 0.8, 0.55, 0.8); comp.addPass(bloom);
   const grade = new ShaderPass(Grade); comp.addPass(grade); comp.addPass(new OutputPass());
   return { R, cam, comp, pass, bloom, grade,
     render(scene, t) { pass.scene = scene; grade.uniforms.seed.value = Math.floor(t * 30) * 1.37; comp.render(); },
