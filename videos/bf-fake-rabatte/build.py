@@ -91,7 +91,7 @@ S("s17", "frei-euro", titel_zeile("t17", "Merk dir") + stempel("s17x", "BESTES S
   + chip("c17", "= nicht kaufen 😉", GRUEN, 960, 64),
   lambda a, d: f'pop("#t17", {a}); stempeln("#s17x", {cap("s17", 1)}); slam("#c17", {cap("s17", 2)});', [(cap("s17", 1), "stempel"), (cap("s17", 2), "nv-tusch")])
 
-K.SZ.append((0.0, K.dauer, news_kopf("16.11.2026"), lambda a, d: "", 8))
+K.SZ.append((0.0, K.dauer, news_kopf(""), lambda a, d: "", 8))
 
 if __name__ == "__main__":
     build(HERE, K.SZ, K.SFX)

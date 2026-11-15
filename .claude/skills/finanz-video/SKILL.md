@@ -246,3 +246,4 @@ KEIN Laufband bei zeitlosen Börsenthemen (ETF erklärt, Sparplan, „Steckt Nvi
 ## Folgen-Szene mit unserem Logo (Nutzer 15.11.)
 - Bei „Folge HundeFinanzTv …“ im Bild KEINE Glocke 🔔 mehr, sondern unser Beagle-Logo groß: `folg_logo("fl4", 600, 360)` + `folg_js("fl4", a)` aus `scripts/lf_kit.py`, dazu Chip „+ Folgen“.
 - Motor-Endkarte bei 9:16-Longform-Cover: Bild hochkant (338×600) statt 16:9-Kasten (Muster: `videos/klarna-ab-freitag/build.py`).
+- **Puffer-Videos ohne Datum (Nutzer 15.11.):** Videos, die nicht am nächsten Tag gepostet werden, mit `news_kopf("")` bauen (nur „NEWS“). Tagesaktuelle Kurs-News behalten das Datum. Beim Abliefern sagen, bis wann ein Puffer-Video gepostet sein muss.

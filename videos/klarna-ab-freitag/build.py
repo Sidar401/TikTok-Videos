@@ -84,7 +84,7 @@ S("s16", None, MK,
                 f' pop("#mk-c", {a} + 0.6); tl.fromTo("#mk-c", {{ scale: 1 }}, {{ scale: 1.08, duration: 0.3, yoyo: true, repeat: 7, ease: "sine.inOut" }}, {a} + 1.0);'),
   [(st("s16"), "whoosh-weich"), (st("s16") + 0.6, "pop")])
 
-K.SZ.append((0.0, st("s16"), news_kopf("16.11.2026"), lambda a, d: "", 8))
+K.SZ.append((0.0, st("s16"), news_kopf(""), lambda a, d: "", 8))
 
 if __name__ == "__main__":
     build(HERE, K.SZ, K.SFX)
