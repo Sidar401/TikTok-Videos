@@ -242,3 +242,7 @@ KEIN Laufband bei zeitlosen Börsenthemen (ETF erklärt, Sparplan, „Steckt Nvi
 - RICHTIG: „Schreib uns in die Kommentare, ob du jetzt kaufst oder wartest.“ FALSCH: „Schreib uns in die Kommentare: Kaufst du jetzt …?“
 
 ## Longform-Länge ab 15.11.: 2:30–3:00 Min. (Nutzer) – ca. 400–470 Wörter bei Tempo 1.12.
+
+## Folgen-Szene mit unserem Logo (Nutzer 15.11.)
+- Bei „Folge HundeFinanzTv …“ im Bild KEINE Glocke 🔔 mehr, sondern unser Beagle-Logo groß: `folg_logo("fl4", 600, 360)` + `folg_js("fl4", a)` aus `scripts/lf_kit.py`, dazu Chip „+ Folgen“.
+- Motor-Endkarte bei 9:16-Longform-Cover: Bild hochkant (338×600) statt 16:9-Kasten (Muster: `videos/klarna-ab-freitag/build.py`).

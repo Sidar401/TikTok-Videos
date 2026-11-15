@@ -116,3 +116,6 @@ Nutzer: „nicht immer die gleichen/ähnlichen Thumbnails“ – z. B. **Geldbeu
 Auch in Videos: Geldbeutel-Icon sparsam, nicht in jedem Video.
 - 15.11.: Longform „Musk-Megadeal“ (Tesla + SpaceX, 3,5 Billionen $) – Cover: Musk-Foto, Tesla/SpaceX-Logos
 - 15.11.: Longform „Anthropic-Börsengang“ (Do 19.11., bis 1,4 Billionen $) – Cover: Anthropic/Claude/Nasdaq-Logos
+- 16.11.: Short „bf-fake-rabatte“ (Black Friday 27.11., 3 Tricks: UVP 450→299 € = −34 % vs. Ladenpreis 320 € = 7 %, Countdown, Preise vorher hoch / 30-Tage-Regel, BCG 37 %) – Cover: Preisschild + Stempel FAKE?
+- 16.11.: Short „gold-bitcoin-absturz“ (Gold ≈ 3.890 $ / −31 % seit Jan.-Rekord 5.600 $, BTC kurz 62.000 $ ≈ halb vom Rekord, Fed 9.12., ETF-Abflüsse 1,3 Mrd. $, Anthropic-IPO) – Cover: Goldbarren + BTC + Crash-Linie
+- 16.11.: Motor-Short „klarna-ab-freitag“ (→ longform-klarna; 20.11. Bonitätsprüfung auch < 200 €/zinslos, EU-Regel, 14 Tage Widerruf, Begründungspflicht, Black Friday) – Cover: Klarna/PayPal + Knopf „Später bezahlen“ ABGELEHNT

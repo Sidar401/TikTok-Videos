@@ -69,3 +69,14 @@ def balken2(id_, links, rechts, wl, wr, fl, fr, basis=1150, hmax=460, unten=("",
 def balken2_js(id_, ta, tb):
     return (f' tl.fromTo("#{id_}a", {{ scaleY: 0 }}, {{ scaleY: 1, duration: 0.5 }}, {ta}); pop("#{id_}ta", {ta} + 0.3);'
             f' tl.fromTo("#{id_}b", {{ scaleY: 0 }}, {{ scaleY: 1, duration: 0.6 }}, {tb}); pop("#{id_}tb", {tb} + 0.4);')
+
+
+def folg_logo(id_, y=600, gr=380):
+    """Folgen-Szene: unser Beagle-Logo groß statt Glocke (Nutzer 15.11.)."""
+    return (f'<div id="{id_}" style="position:absolute;left:{(1080 - gr) // 2}px;top:{y}px;width:{gr}px;height:{gr}px;border-radius:50%;overflow:hidden;'
+            f'background:#1b1f22;border:10px solid #ff8a1f;box-shadow:0 0 90px #ff8a1fbb, 0 30px 50px #000;z-index:4">'
+            f'<img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block"/></div>')
+
+
+def folg_js(id_, a):
+    return (f'pop("#{id_}", {a}); tl.fromTo("#{id_}", {{ scale: 1 }}, {{ scale: 1.07, duration: 0.35, yoyo: true, repeat: 5, ease: "sine.inOut" }}, {a} + 0.5);')

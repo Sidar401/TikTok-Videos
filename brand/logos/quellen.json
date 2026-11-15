@@ -118,5 +118,17 @@
  "meta.png": {
   "datei": "File:Meta Platforms Inc. logo.svg",
   "lizenz": "Public domain"
+ },
+ "klarna.png": {
+  "datei": "Klarna_Payment_Badge.svg",
+  "quelle": "https://commons.wikimedia.org/wiki/File:Klarna_Payment_Badge.svg"
+ },
+ "paypal.png": {
+  "datei": "PayPal.svg",
+  "quelle": "https://commons.wikimedia.org/wiki/File:PayPal.svg"
+ },
+ "fed.png": {
+  "datei": "Seal_of_the_United_States_Federal_Reserve_System.svg",
+  "quelle": "https://commons.wikimedia.org/wiki/File:Seal_of_the_United_States_Federal_Reserve_System.svg"
  }
 }
