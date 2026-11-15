@@ -63,101 +63,121 @@
   },
   {
    "id": "s13",
+   "sprechtext": "Zu den großen Geldgebern gehören unter anderem Google und Amazon.",
+   "text": "Zu den großen Geldgebern gehören unter anderem Google und Amazon"
+  },
+  {
+   "id": "s14",
    "sprechtext": "Allein im dritten Quartal hat Anthropic rund siebzehn Milliarden Dollar umgesetzt.",
    "text": "Allein im dritten Quartal hat Anthropic rund 17 Milliarden Dollar umgesetzt"
   },
   {
-   "id": "s14",
+   "id": "s15",
    "sprechtext": "Hochgerechnet aufs Jahr sind das laut Börsenprospekt rund einundachtzig Milliarden Dollar.",
    "text": "Hochgerechnet aufs Jahr sind das laut Börsenprospekt rund 81 Milliarden Dollar"
   },
   {
-   "id": "s15",
+   "id": "s16",
    "sprechtext": "Vor allem Firmen nutzen Claude, zum Beispiel zum Programmieren.",
    "text": "Vor allem Firmen nutzen Claude, zum Beispiel zum Programmieren"
   },
   {
-   "id": "s16",
+   "id": "s17",
+   "sprechtext": "Claude ist damit einer der größten Konkurrenten von ChatGPT.",
+   "text": "Claude ist damit einer der größten Konkurrenten von ChatGPT"
+  },
+  {
+   "id": "s18",
    "sprechtext": "Aber: Unterm Strich schreibt Anthropic noch Verluste, weil Rechenzentren und Chips Milliarden kosten.",
    "text": "Aber: Unterm Strich schreibt Anthropic noch Verluste, weil Rechenzentren und Chips Milliarden kosten"
   },
   {
-   "id": "s17",
+   "id": "s19",
    "sprechtext": "Und der Preis ist schon gesunken.",
    "text": "Und der Preis ist schon gesunken"
   },
   {
-   "id": "s18",
+   "id": "s20",
    "sprechtext": "Anfang Oktober hatten Analysten noch von zwei Billionen Dollar gesprochen, jetzt sind es höchstens eins Komma vier.",
    "text": "Anfang Oktober hatten Analysten noch von zwei Billionen Dollar gesprochen, jetzt sind es höchstens 1,4"
   },
   {
-   "id": "s19",
+   "id": "s21",
    "sprechtext": "Die große Frage: Lohnt es sich, am ersten Tag zu kaufen?",
    "text": "Die große Frage: Lohnt es sich, am ersten Tag zu kaufen?"
   },
   {
-   "id": "s20",
+   "id": "s22",
    "sprechtext": "Die Geschichte zeigt: Es kann in beide Richtungen gehen.",
    "text": "Die Geschichte zeigt: Es kann in beide Richtungen gehen"
   },
   {
-   "id": "s21",
+   "id": "s23",
    "sprechtext": "SpaceX stieg im Juni am ersten Tag um neunzehn Prozent.",
    "text": "SpaceX stieg im Juni am ersten Tag um 19 %"
   },
   {
-   "id": "s22",
+   "id": "s24",
    "sprechtext": "Facebook dagegen ging zweitausendzwölf für achtunddreißig Dollar an die Börse, und wenige Monate später war die Aktie nur noch rund die Hälfte wert.",
    "text": "Facebook dagegen ging 2012 für 38 Dollar an die Börse, und wenige Monate später war die Aktie nur noch rund die Hälfte wert"
   },
   {
-   "id": "s23",
+   "id": "s25",
    "sprechtext": "Wer damals durchgehalten hat, wurde später aber reich belohnt.",
    "text": "Wer damals durchgehalten hat, wurde später aber reich belohnt"
   },
   {
-   "id": "s24",
+   "id": "s26",
+   "sprechtext": "Heute gehört Meta, wie Facebook inzwischen heißt, zu den wertvollsten Firmen der Welt.",
+   "text": "Heute gehört Meta, wie Facebook inzwischen heißt, zu den wertvollsten Firmen der Welt"
+  },
+  {
+   "id": "s27",
    "sprechtext": "Für dich als Privatanleger in Deutschland gilt meistens: Du kannst erst kaufen, wenn die Aktie an der Börse gehandelt wird.",
    "text": "Für dich als Privatanleger in Deutschland gilt meistens: Du kannst erst kaufen, wenn die Aktie an der Börse gehandelt wird"
   },
   {
-   "id": "s25",
+   "id": "s28",
    "sprechtext": "Und gerade die ersten Stunden sind oft extrem wild, mit großen Sprüngen nach oben und unten.",
    "text": "Und gerade die ersten Stunden sind oft extrem wild, mit großen Sprüngen nach oben und unten"
   },
   {
-   "id": "s26",
+   "id": "s29",
    "sprechtext": "Drei Dinge, auf die viele Anleger achten:",
    "text": "Drei Dinge, auf die viele Anleger achten:"
   },
   {
-   "id": "s27",
+   "id": "s30",
    "sprechtext": "Erstens: nicht in der ersten Minute kaufen, sondern warten, bis sich der Kurs beruhigt hat.",
    "text": "Erstens: nicht in der ersten Minute kaufen, sondern warten, bis sich der Kurs beruhigt hat"
   },
   {
-   "id": "s28",
+   "id": "s31",
    "sprechtext": "Zweitens: ein Limit setzen, damit man nicht viel teurer kauft als geplant.",
    "text": "Zweitens: ein Limit setzen, damit man nicht viel teurer kauft als geplant"
   },
   {
-   "id": "s29",
+   "id": "s32",
    "sprechtext": "Und drittens: nur Geld einsetzen, das man einige Jahre nicht braucht.",
    "text": "Und drittens: nur Geld einsetzen, das man einige Jahre nicht braucht"
   },
   {
-   "id": "s30",
+   "id": "s33",
+   "sprechtext": "Denn ein bekannter Name allein ist noch kein Grund zu kaufen.",
+   "text": "Denn ein bekannter Name allein ist noch kein Grund zu kaufen"
+  },
+  {
+   "id": "s34",
    "sprechtext": "Übrigens: In große Welt-ETFs kommt Anthropic ohnehin erst nach einiger Zeit hinein.",
    "text": "Übrigens: In große Welt-ETFs kommt Anthropic ohnehin erst nach einiger Zeit hinein"
   },
   {
-   "id": "s31",
+   "id": "s35",
    "sprechtext": "Am Donnerstag wissen wir mehr, und wir halten dich auf dem Laufenden.",
    "text": "Am Donnerstag wissen wir mehr, und wir halten dich auf dem Laufenden"
   },
   {
-   "id": "s32",
+   "id": "s36",
    "sprechtext": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung.",
    "text": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung"
   }
