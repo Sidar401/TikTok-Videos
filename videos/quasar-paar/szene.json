@@ -1,0 +1,5 @@
+{"tag": "16. NOVEMBER 2026", "dauer": 68,
+ "hook": "<span class=\"y\">2 MONSTER</span><br />am Anfang der Zeit",
+ "hook_end": 5.9, "share": [6.2, 3.0], "follow": 64.9,
+ "fix": {"neunhundert": "900", "dreizehn": "13", "anderthalb": "1,5", "vierhundert": "400", "achtzehntausend": "18.000", "James-Webb-Teleskop": "James-Webb-<br>Teleskop"},
+ "css": ".hookbig { font-size: 112px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"}

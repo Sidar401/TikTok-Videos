@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <script type="importmap">{"imports":{"three":"./assets/three/build/three.module.js","three/addons/":"./assets/three/jsm/"}}</script>
+    <style>
+      @font-face { font-family: "Inter Display"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.otf"); }
+      @font-face { font-family: "Inter Display"; font-weight: 800; src: url("assets/fonts/InterDisplay-ExtraBold.otf"); }
+      @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/Inter-SemiBold.otf"); }
+      html, body { background: #000; }
+      #root { font-family: "Inter Display", "Inter", sans-serif; background: #000; }
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .tag { top: 140px; font-family: "Inter", sans-serif; font-weight: 600; font-size: 32px; letter-spacing: 8px; color: rgba(255,255,255,0.6); }
+      #labels { position: absolute; inset: 0; pointer-events: none; }
+      .pl { position: absolute; transform: translate(-50%, -100%); font: 800 76px "Inter Display", sans-serif; color: #fff; white-space: nowrap; text-shadow: 0 4px 30px rgba(0,0,0,.9); letter-spacing: 0.5px; }
+      .pl small { display: block; text-align: center; font: 600 34px "Inter", sans-serif; color: rgba(255,255,255,.7); margin-top: 4px; }
+      #word { position: absolute; left: 0; right: 0; top: 1420px; text-align: center; font: 800 132px "Inter Display", sans-serif; color: #fff; text-shadow: 0 6px 40px rgba(0,0,0,.9); }
+      .hookbig { top: 620px; font-size: 128px; font-weight: 900; line-height: 1.04; text-shadow: 0 8px 50px rgba(0,0,0,.95); }
+      .hookbig .y { color: #ffd23f; }
+      .hookdim { background: radial-gradient(circle at 50% 40%, rgba(0,0,0,.2), rgba(0,0,0,.75)); }
+      .capw { top: 1500px; font-size: 80px; font-weight: 800; line-height: 1.12; color: #fff; text-shadow: 0 6px 30px rgba(0,0,0,.95), 0 0 3px #000; }
+      .capw .w { display: inline-block; margin: 0 10px; }
+      .capw .on { color: #ffd23f; }
+      .share { position: absolute; right: 40px; top: 1150px; }
+      .share span { display: inline-block; background: #fe2c55; color: #fff; font-weight: 900; font-size: 50px; padding: 14px 32px; border-radius: 60px; box-shadow: 0 0 34px rgba(254,44,85,.6); }
+      .follow { top: 1150px; }
+      .hookbig { font-size: 150px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="68" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="labels" class="clip" data-start="0" data-duration="68" data-track-index="2"></div>
+      <div id="word" class="clip" data-start="0" data-duration="68" data-track-index="3"></div>
+      <div id="tag" class="line tag clip" data-start="0" data-duration="68" data-track-index="1"><span>16. NOVEMBER 2026</span></div>
+      <div id="cap" class="line capw clip" data-start="3.1" data-duration="64.90" data-track-index="4"><span id="cap-in"></span></div>
+      <div id="hookdim" class="hookdim clip" data-start="0" data-duration="3.1" data-track-index="8"><span></span></div>
+      <div id="hookbig" class="line hookbig clip" data-start="0" data-duration="3.1" data-track-index="7"><span id="hookbig-in"><span class="y">FREMDER</span><br />Besucher</span></div>
+      <div id="share" class="share clip" data-start="3.3" data-duration="2.9" data-track-index="5"><span id="share-in">+ Folgen</span></div>
+      <div id="follow" class="line follow clip" data-start="65.2" data-duration="2.80" data-track-index="6"><span id="follow-in" class="box"><span class="t">Folg uns für mehr! 👆</span><span class="pill">+ Folgen</span></span></div>
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="66.40" data-track-index="9" data-volume="1"></audio>
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="68" data-track-index="10" data-volume="0.3"></audio>
+    </div>
+    <img id="tex-day" src="assets/earth-blue-marble.jpg" style="display:none" alt="" />
+    <img id="tex-night" src="assets/earth-night.jpg" style="display:none" alt="" />
+    <img id="tex-topo" src="assets/earth-topology.png" style="display:none" alt="" />
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.from("#hookbig-in", { opacity: 0, scale: 1.3, duration: 0.35, ease: "power3.out" }, 0);
+      tl.to("#hookbig-in", { scale: 0.7, opacity: 0, filter: "blur(10px)", duration: 0.3, ease: "power2.in" }, 3.1 - 0.32);
+      tl.to("#hookdim", { opacity: 0, duration: 0.3 }, 3.1 - 0.32);
+      tl.from("#share-in", { opacity: 0, x: 80, scale: 0.6, duration: 0.3, ease: "back.out(2.5)" }, 3.3);
+      tl.to("#share-in", { scale: 1.08, duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut" }, 3.3 + 0.4);
+      tl.to("#share-in", { opacity: 0, duration: 0.2 }, 3.3 + 2.9 - 0.25);
+      tl.from("#follow-in", { opacity: 0, scale: 0.6, duration: 0.3, ease: "back.out(2.5)" }, 65.2);
+      tl.to("#follow-in .pill", { scale: 1.1, duration: 0.3, yoyo: true, repeat: 3 }, 65.2 + 0.4);
+      tl.to({}, { duration: 0.01 }, 68 - 0.01);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+    <script type="module">
+      import * as K from "./assets/kino.js";
+      const { THREE, V, lerp, eio, eout, prog, cl, rnd } = K;
+      const WORDS = [{"w": "Dieses", "s": 0.0, "e": 0.48}, {"w": "Ding", "s": 0.52, "e": 0.72}, {"w": "kommt", "s": 0.8, "e": 1.04}, {"w": "nicht", "s": 1.12, "e": 1.36}, {"w": "aus", "s": 1.44, "e": 1.52}, {"w": "unserem", "s": 1.6, "e": 1.84}, {"w": "Sonnensystem!", "s": 2.0, "e": 2.88}, {"w": "Folg", "s": 3.28, "e": 3.52}, {"w": "uns,", "s": 3.6, "e": 3.893}, {"w": "damit", "s": 3.947, "e": 4.08}, {"w": "du", "s": 4.12, "e": 4.16}, {"w": "erfährst,", "s": 4.28, "e": 4.72}, {"w": "woher", "s": 4.8, "e": 4.96}, {"w": "es", "s": 5.04, "e": 5.12}, {"w": "wirklich", "s": 5.28, "e": 5.68}, {"w": "kommt!", "s": 5.76, "e": 6.28}, {"w": "Es", "s": 6.48, "e": 6.64}, {"w": "heißt", "s": 6.68, "e": 6.96}, {"w": "drei", "s": 7.04, "e": 7.28}, {"w": "I", "s": 7.44, "e": 7.68}, {"w": "Atlas", "s": 7.76, "e": 8.24}, {"w": "und", "s": 8.32, "e": 8.48}, {"w": "ist", "s": 8.56, "e": 8.64}, {"w": "ein", "s": 8.68, "e": 8.72}, {"w": "Komet", "s": 8.8, "e": 9.2}, {"w": "von", "s": 9.28, "e": 9.36}, {"w": "einem", "s": 9.44, "e": 9.6}, {"w": "fremden", "s": 9.76, "e": 10.16}, {"w": "Stern.", "s": 10.24, "e": 10.88}, {"w": "Entdeckt", "s": 11.12, "e": 11.6}, {"w": "wurde", "s": 11.64, "e": 11.84}, {"w": "er", "s": 11.92, "e": 12.0}, {"w": "im", "s": 12.08, "e": 12.16}, {"w": "Juli", "s": 12.32, "e": 12.56}, {"w": "zweitausendfünfundzwanzig.", "s": 12.72, "e": 14.56}, {"w": "Er", "s": 14.64, "e": 14.72}, {"w": "ist", "s": 14.8, "e": 14.88}, {"w": "erst", "s": 14.96, "e": 15.12}, {"w": "das", "s": 15.2, "e": 15.28}, {"w": "dritte", "s": 15.36, "e": 15.68}, {"w": "Objekt", "s": 15.84, "e": 16.24}, {"w": "aus", "s": 16.32, "e": 16.4}, {"w": "einem", "s": 16.48, "e": 16.64}, {"w": "anderen", "s": 16.8, "e": 17.04}, {"w": "Sternsystem,", "s": 17.12, "e": 17.8}, {"w": "das", "s": 17.84, "e": 17.92}, {"w": "wir", "s": 18.0, "e": 18.16}, {"w": "je", "s": 18.24, "e": 18.48}, {"w": "gesehen", "s": 18.52, "e": 18.96}, {"w": "haben.", "s": 19.08, "e": 19.36}, {"w": "Die", "s": 19.84, "e": 20.0}, {"w": "ersten", "s": 20.08, "e": 20.4}, {"w": "beiden", "s": 20.48, "e": 20.72}, {"w": "waren", "s": 20.8, "e": 21.12}, {"w": "Oumuamua", "s": 21.2, "e": 22.08}, {"w": "im", "s": 22.16, "e": 22.24}, {"w": "Jahr", "s": 22.32, "e": 22.4}, {"w": "zweitausendsiebzehn", "s": 22.48, "e": 23.56}, {"w": "und", "s": 23.76, "e": 23.92}, {"w": "Borisov", "s": 24.0, "e": 24.64}, {"w": "zweitausendneunzehn.", "s": 24.72, "e": 26.32}, {"w": "Er", "s": 26.4, "e": 26.48}, {"w": "rast", "s": 26.52, "e": 26.8}, {"w": "mit", "s": 26.88, "e": 26.96}, {"w": "fast", "s": 27.04, "e": 27.28}, {"w": "sechzig", "s": 27.36, "e": 27.76}, {"w": "Kilometern", "s": 27.84, "e": 28.4}, {"w": "pro", "s": 28.48, "e": 28.56}, {"w": "Sekunde", "s": 28.64, "e": 29.12}, {"w": "durchs", "s": 29.2, "e": 29.44}, {"w": "All.", "s": 29.52, "e": 29.84}, {"w": "Das", "s": 30.08, "e": 30.24}, {"w": "sind", "s": 30.293, "e": 30.4}, {"w": "über", "s": 30.48, "e": 30.64}, {"w": "zweihunderttausend", "s": 30.8, "e": 31.84}, {"w": "Kilometer", "s": 31.92, "e": 32.48}, {"w": "pro", "s": 32.56, "e": 32.72}, {"w": "Stunde.", "s": 32.8, "e": 33.36}, {"w": "Eine", "s": 33.76, "e": 33.92}, {"w": "Gewehrkugel", "s": 34.0, "e": 34.8}, {"w": "schafft", "s": 34.88, "e": 35.12}, {"w": "nur", "s": 35.147, "e": 35.2}, {"w": "etwa", "s": 35.28, "e": 35.6}, {"w": "einen", "s": 35.68, "e": 35.92}, {"w": "Kilometer", "s": 36.0, "e": 36.48}, {"w": "pro", "s": 36.56, "e": 36.64}, {"w": "Sekunde.", "s": 36.72, "e": 37.28}, {"w": "Und", "s": 37.76, "e": 37.92}, {"w": "er", "s": 38.0, "e": 38.08}, {"w": "ist", "s": 38.16, "e": 38.24}, {"w": "wahrscheinlich", "s": 38.28, "e": 38.72}, {"w": "älter", "s": 38.88, "e": 39.2}, {"w": "als", "s": 39.28, "e": 39.44}, {"w": "unsere", "s": 39.52, "e": 39.76}, {"w": "Sonne.", "s": 39.84, "e": 40.24}, {"w": "Forscher", "s": 40.64, "e": 41.04}, {"w": "schätzen", "s": 41.12, "e": 41.44}, {"w": "über", "s": 41.6, "e": 41.84}, {"w": "sieben", "s": 42.0, "e": 42.24}, {"w": "Milliarden", "s": 42.4, "e": 43.04}, {"w": "Jahre.", "s": 43.12, "e": 43.68}, {"w": "Jetzt", "s": 44.16, "e": 44.4}, {"w": "hat", "s": 44.48, "e": 44.56}, {"w": "das", "s": 44.64, "e": 44.72}, {"w": "James-Webb-Teleskop", "s": 44.88, "e": 46.0}, {"w": "sein", "s": 46.12, "e": 46.24}, {"w": "Eis", "s": 46.32, "e": 46.56}, {"w": "untersucht.", "s": 46.64, "e": 47.44}, {"w": "Das", "s": 47.6, "e": 47.68}, {"w": "Ergebnis:", "s": 47.76, "e": 48.4}, {"w": "Es", "s": 48.8, "e": 48.96}, {"w": "ähnelt", "s": 49.04, "e": 49.36}, {"w": "dem", "s": 49.44, "e": 49.52}, {"w": "Eis", "s": 49.6, "e": 49.84}, {"w": "der", "s": 49.92, "e": 50.08}, {"w": "kleinen", "s": 50.2, "e": 50.56}, {"w": "Welten", "s": 50.64, "e": 51.04}, {"w": "weit", "s": 51.12, "e": 51.44}, {"w": "hinter", "s": 51.52, "e": 51.68}, {"w": "dem", "s": 51.76, "e": 51.84}, {"w": "Neptun.", "s": 51.92, "e": 52.48}, {"w": "Vielleicht", "s": 52.96, "e": 53.36}, {"w": "entstehen", "s": 53.44, "e": 53.76}, {"w": "also", "s": 53.88, "e": 54.0}, {"w": "auch", "s": 54.04, "e": 54.16}, {"w": "bei", "s": 54.28, "e": 54.4}, {"w": "anderen", "s": 54.56, "e": 54.8}, {"w": "Sternen", "s": 54.88, "e": 55.36}, {"w": "ganz", "s": 55.44, "e": 55.76}, {"w": "ähnliche", "s": 55.84, "e": 56.24}, {"w": "Eiswelten", "s": 56.28, "e": 56.8}, {"w": "wie", "s": 56.88, "e": 56.96}, {"w": "bei", "s": 57.04, "e": 57.12}, {"w": "uns.", "s": 57.2, "e": 57.72}, {"w": "Und", "s": 57.92, "e": 58.16}, {"w": "er", "s": 58.4, "e": 58.48}, {"w": "kommt", "s": 58.56, "e": 58.88}, {"w": "nie", "s": 58.96, "e": 59.2}, {"w": "wieder.", "s": 59.28, "e": 59.8}, {"w": "Er", "s": 59.92, "e": 60.08}, {"w": "verlässt", "s": 60.16, "e": 60.56}, {"w": "unser", "s": 60.64, "e": 60.88}, {"w": "Sonnensystem", "s": 60.96, "e": 61.68}, {"w": "für", "s": 61.76, "e": 62.0}, {"w": "immer.", "s": 62.08, "e": 62.64}, {"w": "Würdest", "s": 62.88, "e": 63.2}, {"w": "du", "s": 63.28, "e": 63.36}, {"w": "gern", "s": 63.4, "e": 63.6}, {"w": "eine", "s": 63.653, "e": 63.76}, {"w": "Sonde", "s": 63.84, "e": 64.08}, {"w": "hinterherschicken?", "s": 64.16, "e": 65.2}, {"w": "Folg", "s": 65.24, "e": 65.44}, {"w": "uns", "s": 65.52, "e": 65.68}, {"w": "für", "s": 65.76, "e": 65.84}, {"w": "mehr!", "s": 65.92, "e": 66.4}]; const CHUNKS = [[0.0, 2.88], [3.28, 6.28], [6.48, 10.88], [11.12, 14.56], [14.64, 19.36], [19.84, 26.32], [26.4, 37.28], [37.76, 43.68], [44.16, 47.44], [47.6, 52.48], [52.96, 57.72], [57.92, 62.64], [62.88, 66.4]];
+      const cap = K.captions(WORDS, CHUNKS, document.getElementById("cap-in"), 3.1, {"drei": "3I/ATLAS", "zweitausendfünfundzwanzig": "2025", "zweitausendsiebzehn": "2017", "zweitausendneunzehn.": "2019", "sechzig": "60", "zweihunderttausend": "200.000", "einen": "1", "sieben": "7", "James-Webb-Teleskop": "James-Webb-<br>Teleskop", "I": "", "Atlas": ""});
+      const img = (id) => document.getElementById(id);
+      const imgsReady = Promise.all(["tex-day", "tex-night", "tex-topo"].map((id) => { const im = img(id); return im.complete ? Promise.resolve(im) : new Promise((r) => (im.onload = () => r(im))); }));
+      const E = K.setup(document.getElementById("stage"));
+      const cam = E.cam;
+      const TL = new THREE.TextureLoader();
+      const tex = async (f) => { const t = await TL.loadAsync("assets/tex/" + f); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t; };
+      // Beschriftungen, die an 3D-Objekten hängen
+      const LB = document.getElementById("labels"), WORD = document.getElementById("word");
+      const labels = [];
+      const label = (html, obj, r, o = {}) => { const d = document.createElement("div"); d.className = "pl"; d.innerHTML = html; LB.appendChild(d); const L = { d, obj, r, t0: o.t0 ?? 0, t1: o.t1 ?? 999, gap: o.gap ?? 40, size: o.size }; if (o.size) d.style.fontSize = o.size + "px"; labels.push(L); return L; };
+      const P = (v) => { const q = v.clone().project(cam); return [(q.x + 1) / 2 * 1080, (1 - q.y) / 2 * 1920]; };
+      const updLabels = (t) => { cam.updateMatrixWorld(true); labels.forEach((L) => { const p = L.obj.getWorldPosition(new THREE.Vector3()); const top = p.clone().add(cam.up.clone().multiplyScalar(L.r)); const [x] = P(p), [, y] = P(top);
+        const a = cl((t - L.t0) / 0.4) * (1 - cl((t - L.t1) / 0.4)); L.d.style.opacity = a; L.d.style.left = x + "px"; L.d.style.top = y - L.gap + "px"; L.d.style.transform = `translate(-50%,-100%) translateY(${(1 - a) * 20}px)`; }); };
+      let lastWord = ""; const word = (h, a) => { if (h !== lastWord) { WORD.innerHTML = h; lastWord = h; } WORD.style.opacity = a; WORD.style.transform = `translateY(${(1 - a) * 30}px)`; };
+      let renderAt = () => {};
+      const ready = imgsReady.then(async ([day, night, topo]) => {
+        const W = (w, ab = 0) => { const x = WORDS.find((q) => q.s >= ab - 0.01 && q.w.toLowerCase().replace(/[^a-zäöüß0-9]/g, "").startsWith(w)); return x ? x.s : ab; };
+        K.reseed(5);
+        const sc = new THREE.Scene(); K.stars(sc, 8000, -1, 30000, 1.7).material.opacity = 0.6;
+        sc.add(new THREE.AmbientLight(0x30303a, 0.5)); const sunL = new THREE.PointLight(0xfff2e0, 4, 0, 0); sc.add(sunL); const fill = new THREE.DirectionalLight(0xdfe6ff, 1.6); sc.add(fill);
+        // Sonnensystem (Draufsicht-Maßstab, nicht maßstabsgetreu)
+        const sun = new THREE.Mesh(new THREE.SphereGeometry(7, 96, 64), new THREE.MeshBasicMaterial({ map: await tex("sun.jpg"), color: new THREE.Color(1.3, 1.0, 0.7), toneMapped: false })); sc.add(sun);
+        K.sprite(sc, K.glowTex("rgba(255,170,70,.5)"), 40, V(0, 0, 0), 0.7);
+        const dayT = new THREE.Texture(day); dayT.colorSpace = THREE.SRGBColorSpace; dayT.needsUpdate = true;
+        const PL = [["mercury.jpg", 1.0, 16, 0.9], ["venus_atmosphere.jpg", 1.6, 24, 0.6], [dayT, 1.7, 33, 0.45], ["mars.jpg", 1.3, 44, 0.33], ["jupiter.jpg", 4.5, 78, 0.12]];
+        const planets = []; for (const [f, r, R, w] of PL) { const m = new THREE.Mesh(new THREE.SphereGeometry(r, 64, 48), new THREE.MeshStandardMaterial({ map: typeof f === "string" ? await tex(f) : f, roughness: 1 })); sc.add(m);
+          const o = new THREE.Mesh(new THREE.RingGeometry(R - 0.08, R + 0.08, 256), new THREE.MeshBasicMaterial({ color: 0xaab4d0, transparent: true, opacity: 0.22, side: THREE.DoubleSide, depthWrite: false })); o.rotation.x = -Math.PI / 2; sc.add(o); planets.push({ m, R, w }); }
+        // Bahn von 3I/ATLAS (Hyperbel, kommt von weit draußen, fliegt einmal vorbei und verschwindet)
+        const hyp = (u) => V(Math.sinh(u) * 60, Math.sinh(u) * 4, 38 - (Math.cosh(u) - 1) * 26);
+        const path = []; for (let u = -3.2; u <= 3.2; u += 0.02) path.push(hyp(u));
+        const pathL = new THREE.Line(new THREE.BufferGeometry().setFromPoints(path), new THREE.LineDashedMaterial({ color: 0x7fd0ff, dashSize: 3, gapSize: 2.2, transparent: true, opacity: 0 })); pathL.computeLineDistances(); sc.add(pathL);
+        // Komet: unregelmäßiger Kern + Koma + Schweif
+        const kg = new THREE.IcosahedronGeometry(1, 5); const pp = kg.attributes.position; for (let i = 0; i < pp.count; i++) { const v = V(pp.getX(i), pp.getY(i), pp.getZ(i)); const n = 1 + 0.18 * Math.sin(v.x * 3.1 + 1) * Math.cos(v.y * 2.7) + 0.08 * Math.sin(v.z * 7.3) + 0.12 * v.x; v.multiplyScalar(n); pp.setXYZ(i, v.x, v.y * 0.8, v.z); } kg.computeVertexNormals();
+        const nucleus = new THREE.Mesh(kg, new THREE.MeshStandardMaterial({ map: await tex("moon.jpg"), color: 0x8a8580, roughness: 1 }));
+        const comet = new THREE.Group(); comet.add(nucleus); sc.add(comet);
+        const coma = K.sprite(comet, K.glowTex("rgba(170,220,255,.6)"), 4.5, V(0, 0, 0), 0.5), coma2 = K.sprite(comet, K.glowTex("rgba(120,200,255,.3)"), 9, V(0, 0, 0), 0.35);
+        const NT = 900, tailPos = new Float32Array(NT * 3), tailSeed = []; for (let i = 0; i < NT; i++) { K.reseed(1000 + i); tailSeed.push([K.rnd(), K.rnd() - 0.5, K.rnd() - 0.5]); }
+        const tg = new THREE.BufferGeometry(); tg.setAttribute("position", new THREE.BufferAttribute(tailPos, 3));
+        const tail = new THREE.Points(tg, new THREE.PointsMaterial({ color: 0xa8dcff, size: 2.2, sizeAttenuation: false, transparent: true, opacity: 0.55, blending: THREE.AdditiveBlending, depthWrite: false })); sc.add(tail);
+        // Eis-Glitzer (Webb)
+        const sparks = []; for (let i = 0; i < 40; i++) { K.reseed(2000 + i); const d = V(K.rnd() - 0.5, K.rnd() - 0.5, K.rnd() - 0.5).normalize(); sparks.push({ s: K.sprite(comet, K.glowTex("rgba(220,240,255,1)"), 0.14, d.multiplyScalar(1.02), 0), ph: K.rnd() * 6 }); }
+        
+        const tEs = W("es", 6), tEnt = W("entdeckt"), tEr = W("er", 14), tDie = W("die", 19.5), tRast = W("rast"), tDas = W("das", 30), tGew = W("gewehrkugel"), tUnd = W("und", 37.5), tFor = W("forscher", 40), tJetzt = W("jetzt", 44), tErg = W("ergebnis"), tViel = W("vielleicht"), tNie = W("und", 57.7), tWue = W("würdest"), tFolg = W("folg", 65);
+        label("3I/ATLAS", comet, 1.3, { t0: tEs + 0.6, t1: tEnt - 0.1, size: 80, gap: 30 });
+        label("Sonne", sun, 7, { t0: tRast - 0.2, t1: tUnd - 0.1, size: 54, gap: 20 });
+        
+        const at = (t) => { // Position auf der Bahn je nach Zeit (Vorbeiflug um tRast..tUnd)
+          const u = t < tRast ? -1.25 + (t / tRast) * 0.3 : t < tUnd ? lerp(-0.95, 0.9, prog(t, tRast, tUnd - tRast)) : t < tNie ? 0.9 + (t - tUnd) * 0.01 : lerp(1.05, 3.0, K.eio(prog(t, tNie, 6))); return u; };
+        renderAt = (t) => {
+          E.grade.uniforms.flash.value = 0; E.look([1, 1, 1], [0, 0, 0], 0.35, 0.85); pathL.material.opacity = 0;
+          planets.forEach((p, i) => { const a = 1 + i * 1.3 + t * p.w * 0.12; p.m.position.set(Math.cos(a) * p.R, 0, Math.sin(a) * p.R); p.m.rotation.y = t * 0.3; });
+          const u = at(t); const cp = hyp(u); comet.position.copy(cp); nucleus.rotation.set(t * 0.2, t * 0.35, 0);
+          const anti = cp.clone().normalize(); const act = cl(1.4 - cp.length() / 80); coma.material.opacity = 0.2 + 0.4 * act; coma2.material.opacity = 0.12 + 0.3 * act;
+          for (let i = 0; i < NT; i++) { const [k, a, b] = tailSeed[i]; const L = (4 + 30 * act) * Math.pow(k, 1.4); const sp = 0.15 + L * 0.12; tailPos[i * 3] = cp.x + anti.x * L + a * sp; tailPos[i * 3 + 1] = cp.y + anti.y * L + b * sp; tailPos[i * 3 + 2] = cp.z + anti.z * L + (a - b) * sp * 0.5; }
+          tg.attributes.position.needsUpdate = true; tail.material.opacity = 0.25 + 0.45 * act;
+          sparks.forEach((s) => (s.s.material.opacity = 0));
+          let pos, look;
+          if (t < tEs - 0.05) { const f = K.eio(prog(t, 0, tEs)); pos = cp.clone().add(V(lerp(-2, 6, f), lerp(1, 3, f), lerp(5, 16, f))); look = cp.clone(); }
+          else if (t < tEnt - 0.05) { const b = 0.4 + (t - tEs) * 0.12; pos = cp.clone().add(V(Math.sin(b) * 9, 2, Math.cos(b) * 9)); look = cp.clone(); }
+          else if (t < tRast - 0.05) { pathL.material.opacity = 0.6 * cl((t - tEr) / 1); const f = K.eio(prog(t, tEnt, 3)); pos = V(lerp(cp.x + 10, 20, f), lerp(5, 170, f), lerp(cp.z + 20, 140, f)); look = V(lerp(cp.x, 0, f), 0, lerp(cp.z, 0, f)); }
+          else if (t < tUnd - 0.05) { pathL.material.opacity = 0.6; pos = V(10, 150, 120); look = V(0, 0, 10); }
+          else if (t < tJetzt - 0.05) { const b = 1.0 + (t - tUnd) * 0.08; pos = cp.clone().add(V(Math.sin(b) * 14, 4, Math.cos(b) * 14)); look = cp.clone(); }
+          else if (t < tNie - 0.05) { const f = K.eio(prog(t, tJetzt, 2)); const b = 0.2 + (t - tJetzt) * 0.1; const d = lerp(12, 7, f); pos = cp.clone().add(V(Math.sin(b) * d, 1, Math.cos(b) * d)); look = cp.clone();
+            sparks.forEach((s) => (s.s.material.opacity = (t > tJetzt + 1.5 ? 1 : 0) * (0.5 + 0.5 * Math.sin(t * 5 + s.ph)))); }
+          else { pathL.material.opacity = 0.4; const f = prog(t, tNie, 8); pos = V(lerp(40, 60, f), lerp(120, 200, f), lerp(120, 220, f)); look = V(30, 0, 0); }
+          fill.position.copy(cam.position); cam.fov = 40; cam.updateProjectionMatrix(); cam.position.copy(pos); cam.lookAt(look);
+          E.render(sc, t); updLabels(t);
+          let wh = "", wa = 0; const seg = (a, b, h) => { if (t >= a && t < b) { wh = h; wa = cl((t - a) / 0.3) * (1 - cl((t - b + 0.4) / 0.3)); } };
+          seg(tEnt, tEr - 0.1, "entdeckt: Juli 2025");
+          seg(tEr, tDie - 0.1, "Nr. 3<div class='sub'>aus einem anderen Sternsystem</div>");
+          seg(tDie, tRast - 0.1, "<div style='font-size:62px;line-height:1.35'>1 · ʻOumuamua 2017<br>2 · Borisov 2019<br>3 · ATLAS 2025</div>");
+          seg(W("sechzig") - 0.2, tDas - 0.1, "≈ 58 km/s"); seg(tDas, tGew - 0.1, "> 200.000 km/h"); seg(tGew, tUnd - 0.1, "Gewehrkugel: ≈ 1 km/s");
+          seg(tUnd, tJetzt - 0.1, "> 7 Mrd. Jahre alt?<div class='sub'>unsere Sonne: 4,6 Mrd.</div>");
+          seg(tErg, tViel - 0.1, "Eis wie weit<br>hinter dem Neptun"); seg(tViel, tNie - 0.1, "Eiswelten auch<br>bei anderen Sternen?");
+          seg(tNie + 0.5, tWue - 0.1, "kommt nie wieder 👋");
+          word(wh, wa); cap(t);
+        };
+        renderAt(lastT);
+      });
+      window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady || {}; window.__hf.buildReady.scene = ready;
+      let lastT = 0;
+      window.addEventListener("hf-seek", (e) => { lastT = e.detail.time; renderAt(lastT); });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+{
+ "gehoert": "Dieses Ding kommt nicht aus unserem Sonnensystem. [schmunzelt] Folg uns, damit du erfährst, woher es wirklich kommt. Es heißt Drei I Atlas und ist ein Komet von einem fremden Stern. Entdeckt wurde er im Juli 2025. Er ist erst das dritte Objekt aus einem anderen Sternensystem, das wir je gesehen haben. Die ersten beiden waren Oumuamua im Jahr 2017 und Borisov 2019. Er rast mit fast sechzig Kilometern pro Sekunde durchs All. Das sind über zweihunderttausend Kilometer pro Stunde. Eine Gewehrkugel schafft nur etwa einen Kilometer pro Sekunde und er ist wahrscheinlich älter als unsere Sonne. Forscher schätzen über sieben Milliarden Jahre. Jetzt hat das James-Webb-Teleskop sein Eis untersucht. Das Ergebnis: Es ähnelt dem Eis der kleinen Welten weit hinter dem Neptun. Vielleicht entstehen also auch bei anderen Sternen ganz ähnliche Eiswelten wie bei uns. Und er kommt nie wieder. Er verlässt unser Sonnensystem für immer. Würdest du gern eine Sonde hinterherschicken? Folg uns für mehr.",
+ "abweichungen": [
+  [
+   "insert",
+   "",
+   "schmunzelt"
+  ],
+  [
+   "replace",
+   "zweitausendfünfundzwanzig",
+   "2025"
+  ],
+  [
+   "replace",
+   "sternsystem",
+   "sternensystem"
+  ],
+  [
+   "replace",
+   "zweitausendsiebzehn",
+   "2017"
+  ],
+  [
+   "replace",
+   "zweitausendneunzehn",
+   "2019"
+  ]
+ ]
+}
