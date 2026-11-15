@@ -11,7 +11,7 @@ const srv = http.createServer((q, r) => { const f = path.join(root, decodeURICom
 srv.listen(0, async () => {
   const port = srv.address().port;
   const b = await chromium.launch({ args: ["--use-gl=angle", "--use-angle=swiftshader", "--enable-unsafe-swiftshader"] });
-  const p = await b.newPage({ viewport: { width: 1080, height: 1920 } });
+  const p = await b.newPage({ viewport: { width: parseInt(process.env.VW || "1080"), height: parseInt(process.env.VH || "1920") } });
   p.on("pageerror", (e) => console.log("ERR", e.message));
   await p.goto(`http://localhost:${port}/index.html`);
   await p.waitForFunction(() => window.__hf && window.__hf.buildReady && window.__hf.buildReady.scene);
@@ -20,12 +20,14 @@ srv.listen(0, async () => {
   await p.evaluate((t) => { window.dispatchEvent(new CustomEvent("hf-seek", { detail: { time: t, waitUntil() {} } })); }, t);
   await p.evaluate((s) => (window.__TS = s), parseInt(process.env.SIZE || "150"));
   await p.evaluate((l) => (window.__LOGO = l), process.env.LOGO || "");
+  await p.evaluate((v) => (window.__TT = v), parseInt(process.env.TOP || "330"));
+  await p.evaluate((h) => (window.__HIDE = h), process.env.HIDE || "");
   await p.evaluate((title) => {
-    document.querySelectorAll(".line, .bar, .hookdim, .share, #flash, .pin, .an, .an-svg, #labels, #word").forEach((e) => (e.style.display = "none"));
+    document.querySelectorAll(".line, .bar, .hookdim, .share, #flash, .pin, .an, .an-svg, #labels, #word" + (window.__HIDE ? ", " + window.__HIDE : "")).forEach((e) => (e.style.display = "none"));
     const s = document.createElement("style");
     s.textContent = `#th{position:absolute;inset:0;z-index:99;font-family:"Inter Display","Inter",sans-serif}
       #th .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.15) 30%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)}
-      #th .t{position:absolute;left:50px;right:50px;top:330px;text-align:center;color:#fff;font-weight:900;font-size:${window.__TS||150}px;line-height:1.02;letter-spacing:-2px;text-shadow:0 8px 40px rgba(0,0,0,.9),0 0 4px #000}
+      #th .t{position:absolute;left:50px;right:50px;top:${window.__TT||330}px;text-align:center;color:#fff;font-weight:900;font-size:${window.__TS||150}px;line-height:1.02;letter-spacing:-2px;text-shadow:0 8px 40px rgba(0,0,0,.9),0 0 4px #000}
       #th .t y{display:inline-block;background:#ffd23f;color:#111;padding:0 26px 10px;border-radius:24px;transform:rotate(-2deg);text-shadow:none;box-shadow:0 14px 50px rgba(255,210,63,.5)}
       #th .brand{position:absolute;left:0;right:0;bottom:120px;text-align:center;color:rgba(255,255,255,.9);font-weight:900;font-size:56px;letter-spacing:14px;text-shadow:0 4px 20px rgba(0,0,0,.9)}`;
     document.head.appendChild(s);
