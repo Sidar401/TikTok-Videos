@@ -114,3 +114,5 @@ Nutzer: „nicht immer die gleichen/ähnlichen Thumbnails“ – z. B. **Geldbeu
 **Gesperrt / ausgereizt:** Geldbeutel, Kassenzettel als Thumbnail (3×), „große Zahl + Icon links“-Layout (4×), Strichmännchen-Figuren, Leiter, Farbskala, Podest, Einkaufswagen, Regal/Auge, Preisschild, Tresor, Stempel, Lottokugeln, Kontostand-Display, Berg, Formel-Kacheln (je 1× – nicht direkt wieder).
 **Noch frisch:** Pfeil/Diagramm, Thermometer, Lupe, Ampel, Waage, Fragezeichen-Typo, Vorher/Nachher, Daumen-Bewertung, Handy-Screen-Mockup (1× benutzt, Binance).
 Auch in Videos: Geldbeutel-Icon sparsam, nicht in jedem Video.
+- 15.11.: Longform „Musk-Megadeal“ (Tesla + SpaceX, 3,5 Billionen $) – Cover: Musk-Foto, Tesla/SpaceX-Logos
+- 15.11.: Longform „Anthropic-Börsengang“ (Do 19.11., bis 1,4 Billionen $) – Cover: Anthropic/Claude/Nasdaq-Logos
