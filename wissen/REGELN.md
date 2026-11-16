@@ -44,3 +44,9 @@ Vorlage/Baukasten: `wissen/kit/` (neu.sh, kit.js, kit.css, mix.py, fertig.sh, sn
 - Formate nacheinander rendern (je ein Hintergrund-Job, < 2 h), nie parallel.
 - Vorher alte `*-roh.mp4` im Scratchpad löschen (Roh-Datei ~4 GB, sonst Speicher voll).
 - Thumbnail 16:9: `VW=1920 VH=1080 TOP=730 SIZE=125 HIDE=".tag,.capw" node wissen/kit/thumb.js ...`
+
+## Thumbnails: sichtbarer Bereich (Nutzer, 16.11.) – AB SOFORT IMMER
+- Instagram/TikTok-Raster zeigt nur die Mitte (3:4): y = 240 … 1680 von 1920.
+- Titel komplett zwischen **y ≈ 400 und 1500** – nicht zu hoch, nicht zu tief.
+- Standard in thumb.js jetzt TOP=420. Titel unten nur, wenn er vor 1500 endet.
+- Vor dem Abschicken prüfen: 3:4-Ausschnitt ansehen, Text darf nicht angeschnitten oder an den Rand gedrückt sein.
