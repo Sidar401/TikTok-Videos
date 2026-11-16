@@ -1,6 +1,6 @@
 # Neue Aussie-Posen (HundeWissenTv)
 
-Vorhanden: sitzend, bellend, liegend, aengstlich, neugierig, springend.
+Vorhanden: sitzend, bellend, liegend, aengstlich, neugierig, springend + Bild 1–3 (18 Posen, gespeichert 16.11.). Offen: Bild 4–6.
 Vorgehen: In ChatGPT das Bild `brand/aussie-referenz.png` hochladen + einen Text unten kopieren.
 Bilder an Claude schicken → werden freigestellt und in `brand/aussie/` gespeichert.
 
