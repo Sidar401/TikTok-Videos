@@ -55,6 +55,19 @@ SOUNDS = {
     "koffer-klick": ("Briefcase latches clicking open, two metallic clicks, close-up", 0.6),
     "zeitung": ("Newspaper pages turning and rustling quickly, close-up", 1.0),
     "hammer": ("Judge gavel hitting the sound block twice, wooden knock, courtroom", 0.8),
+    # --- Nachrichten-Paket „nx-“ (Nutzer 16.11.: professioneller, dezenter) ---
+    "nx-uebergang": ("Subtle cinematic news transition, soft low airy swoosh with gentle sub tail, broadcast TV, minimal, no music", 0.8),
+    "nx-uebergang-kurz": ("Very short subtle broadcast whoosh, soft and clean, news graphics transition, minimal", 0.5),
+    "nx-akzent": ("Deep subtle cinematic hit, soft low boom with short reverb tail, news headline accent, not loud, no music", 1.0),
+    "nx-akzent-hell": ("Clean bright news headline sting, short glassy tonal hit, broadcast graphics, elegant, no melody", 0.8),
+    "nx-daten": ("Soft digital data blips, short subtle computer UI beeps, financial news graphics, minimal, clean", 0.7),
+    "nx-ticker": ("Subtle soft digital ticking of numbers counting up, quiet stock ticker data sound, clean", 1.0),
+    "nx-klick": ("Very soft modern UI tap, subtle click, premium app interface, dry, quiet", 0.5),
+    "nx-auf": ("Soft rising tonal swell, subtle positive, financial news graphic rising, clean, short, no melody", 0.9),
+    "nx-ab": ("Soft falling tonal swell, subtle negative, financial news graphic falling, clean, short, no melody", 0.9),
+    "nx-spannung": ("Short subtle tension riser, low soft pulse building, documentary style, no melody", 1.2),
+    "nx-warnung": ("Subtle low two-tone news alert, soft and serious, broadcast breaking news accent, not harsh", 0.8),
+    "nx-intro": ("Short premium breaking news opener sting, deep soft impact with airy shimmer, broadcast, no melody", 1.2),
     "crash-bass": ("Deep sub bass drop for a market crash, falling low boom, cinematic, short", 1.5),
 }
 

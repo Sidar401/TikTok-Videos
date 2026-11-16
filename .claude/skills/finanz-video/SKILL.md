@@ -247,3 +247,12 @@ KEIN Laufband bei zeitlosen Börsenthemen (ETF erklärt, Sparplan, „Steckt Nvi
 - Bei „Folge HundeFinanzTv …“ im Bild KEINE Glocke 🔔 mehr, sondern unser Beagle-Logo groß: `folg_logo("fl4", 600, 360)` + `folg_js("fl4", a)` aus `scripts/lf_kit.py`, dazu Chip „+ Folgen“.
 - Motor-Endkarte bei 9:16-Longform-Cover: Bild hochkant (338×600) statt 16:9-Kasten (Muster: `videos/klarna-ab-freitag/build.py`).
 - **Puffer-Videos ohne Datum (Nutzer 15.11.):** Videos, die nicht am nächsten Tag gepostet werden, mit `news_kopf("")` bauen (nur „NEWS“). Tagesaktuelle Kurs-News behalten das Datum. Beim Abliefern sagen, bis wann ein Puffer-Video gepostet sein muss.
+
+## CTA-Reihenfolge NEU (Nutzer 16.11.) – ersetzt „Kommentar + Folgen direkt hintereinander“
+- Am Anfang (Satz 2 oder 3) **nur EIN Aufruf**: Kommentar- ODER Teilen-Aufruf.
+- „Folge HundeFinanzTv …“ erst **in der Mitte** (ca. 40–50 % der Länge), direkt nach einer überraschenden Zahl/Aha-Moment. Szene mit Beagle-Logo (`folg_logo`).
+- Shorts (61–75 s): gleich – 1 Aufruf vorne, Folgen-Aufruf in der Mitte (oder weglassen, wenn es ein Motor-Short ist).
+
+## Sounds NEU (Nutzer 16.11.: „nicht so professionell“)
+- Nachrichten-Paket `nx-*` in brand/sfx (Hörprobe renders/sfx-nachrichten-hoerprobe.mp3). Höchstens 1 Sound pro Szene, dezent.
+- Keine Spielshow-Sounds mehr (nv-falsch-buzzer, nv-tusch, nv-staunen-wow, level-up, pop, nv-platte-kratzer).
