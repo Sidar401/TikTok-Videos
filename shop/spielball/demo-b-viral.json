@@ -1,0 +1,7 @@
+{"name": "demo-ball-b-viral", "produkt": {"bild": "shop/spielball/produkt.png", "preis": "nur 15,17 €", "sterne": "4,1", "verkauft": "12.500× verkauft"}, "ende": 3,
+ "szenen": [
+  {"dur": 3.0, "bg": "orange", "rein": "pop", "text": "Dieser Ball ist|gerade *überall* 🔥", "emojis": ["🔥", "🔥", "📈"]},
+  {"dur": 3.0, "bg": "hell", "rein": "links", "text": "Ein Stupser –|und er *startet*", "emojis": ["🐾", "⚡"]},
+  {"dur": 3.0, "bg": "dunkel", "rein": "dreh", "text": "Rollt &|*zwitschert* 🐦", "chips": ["Rollt", "Zwitschert", "Seile"]},
+  {"dur": 3.0, "bg": "hell", "rein": "rechts", "text": "Einfach per|*USB* aufladen 🔌", "emojis": ["🔌", "🔋"]}
+ ]}

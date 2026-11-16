@@ -1,0 +1,55 @@
+{
+ "name": "demo-ball-c-geld",
+ "produkt": {
+  "bild": "shop/spielball/produkt.png",
+  "preis": "nur 15,17 €",
+  "sterne": "4,1",
+  "verkauft": "12.500× verkauft"
+ },
+ "ende": 3,
+ "szenen": [
+  {
+   "dur": 3.0,
+   "bg": "dunkel",
+   "rein": "weg",
+   "text": "Wenn dein Hund|sich *langweilt*…",
+   "emojis": [
+    "🥱",
+    "🛋️",
+    "🐶"
+   ],
+   "haupt": "🥱"
+  },
+  {
+   "dur": 3.0,
+   "bg": "dunkel",
+   "rein": "weg",
+   "text": "…wird's *teuer* 💸",
+   "durch": "Neues Sofa: 600 €",
+   "emojis": [
+    "💸",
+    "💸",
+    "😬"
+   ],
+   "haupt": "🛋️"
+  },
+  {
+   "dur": 3.0,
+   "bg": "orange",
+   "rein": "unten",
+   "text": "Die Lösung|für *15 €*",
+   "gross": "15 €"
+  },
+  {
+   "dur": 3.0,
+   "bg": "hell",
+   "rein": "pop",
+   "text": "Und dein Sofa|bleibt *heil* 😅",
+   "emojis": [
+    "🛋️",
+    "✅",
+    "❤️"
+   ]
+  }
+ ]
+}
