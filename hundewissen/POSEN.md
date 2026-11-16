@@ -36,3 +36,36 @@ Zeichne genau diesen Hund (Australian Shepherd, blue merle, gleicher Cartoon-Sti
 5. liegt auf dem Rücken und will gekrault werden
 6. sitzt und hebt eine Pfote zum Winken
 ```
+
+## Bild 4 – Pflege & Gesundheit
+```
+Zeichne genau diesen Hund (Australian Shepherd, blue merle, gleicher Cartoon-Stil, gleiche Farben, gleiche Linien) in 6 neuen Posen nebeneinander auf reinweißem Hintergrund, ohne Schatten, ohne Text, jede Pose mit Abstand:
+1. wird gebürstet und genießt es mit geschlossenen Augen
+2. sitzt nass in einer Badewanne mit Schaum
+3. hat einen Verband an der Vorderpfote und schaut tapfer
+4. hält eine Zahnbürste im Maul
+5. liegt krank mit Wärmflasche und Thermometer
+6. kaut zufrieden auf einem Knochen
+```
+
+## Bild 5 – Draußen & Jahreszeiten
+```
+Zeichne genau diesen Hund (Australian Shepherd, blue merle, gleicher Cartoon-Stil, gleiche Farben, gleiche Linien) in 6 neuen Posen nebeneinander auf reinweißem Hintergrund, ohne Schatten, ohne Text, jede Pose mit Abstand:
+1. läuft fröhlich an der Leine (Leine geht nach oben aus dem Bild)
+2. springt durch Schnee mit Schneeflocken
+3. hechelt in der Sommerhitze mit heraushängender Zunge
+4. schüttelt sich nass, Wassertropfen fliegen
+5. buddelt ein Loch, Erde fliegt
+6. sitzt im Herbstlaub mit ein paar Blättern auf dem Kopf
+```
+
+## Bild 6 – Teile zum Bewegen (für Animation)
+```
+Zeichne genau diesen Hund (Australian Shepherd, blue merle, gleicher Cartoon-Stil, gleiche Farben, gleiche Linien) 6-mal nebeneinander, immer exakt dieselbe sitzende Pose von vorne, gleiche Größe und gleiche Position, nur das Gesicht ändert sich, reinweißer Hintergrund, ohne Schatten, ohne Text:
+1. Augen offen, Maul zu
+2. Augen geschlossen (blinzeln), Maul zu
+3. Augen offen, Maul halb offen
+4. Augen offen, Maul weit offen (spricht)
+5. Augen offen, Zunge raus, glücklich
+6. Augen offen, ein Ohr hochgestellt
+```
