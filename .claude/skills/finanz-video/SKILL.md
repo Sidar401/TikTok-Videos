@@ -256,3 +256,6 @@ KEIN Laufband bei zeitlosen Börsenthemen (ETF erklärt, Sparplan, „Steckt Nvi
 ## Sounds NEU (Nutzer 16.11.: „nicht so professionell“)
 - Nachrichten-Paket `nx-*` in brand/sfx (Hörprobe renders/sfx-nachrichten-hoerprobe.mp3). Höchstens 1 Sound pro Szene, dezent.
 - Keine Spielshow-Sounds mehr (nv-falsch-buzzer, nv-tusch, nv-staunen-wow, level-up, pop, nv-platte-kratzer).
+- **Hörprobe 16.11.:** Nachrichten-Paket `nx-*` → Nutzer: „alle Scheiße“ – NICHT benutzen. Meme-Stil: erlaubt (sparsam, „mal zwischendurch“) nur
+  `mm-tippen` (Überschrift), `mm-wusch` (Übergang), `mm-bumm` (krasser Moment), `mm-kamera`, `mm-scratch`. „Faaah“, „Ooh“, „Ding“ = „ekelhaft“, gelöscht.
+- Grundsatz ab 16.11.: WENIGER Sounds. Pro Video ca. 5–8 Sounds insgesamt statt 2–3 pro Szene; Rest nur Stimme.
