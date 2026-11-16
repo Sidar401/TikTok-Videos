@@ -34,3 +34,7 @@ wiederverwenden (z. B. „Hund langweilt sich“, „Besitzer geht“, „Hund s
 - Schalter **„KI-generiert“** an (KI-Clips!)
 - Trend-Sound drunter, Produkt im Warenkorb verlinken
 - Preis im Video vor dem Posten prüfen (Deals ändern sich)
+
+## Demo-Videos ohne KI und ohne Stimme (kostenlos, ab 16.11.)
+`python3 scripts/shop_demo.py shop/<produkt>/demo-<x>.json` – nur Produktfoto + Grafik (Emojis, Preis-Stempel, Merkmale).
+Muster: `shop/spielball/demo-*.json` → `renders/demo-ball-*.mp4` (je 15 s).
