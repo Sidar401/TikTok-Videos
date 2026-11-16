@@ -38,3 +38,4 @@ wiederverwenden (z. B. „Hund langweilt sich“, „Besitzer geht“, „Hund s
 ## Demo-Videos ohne KI und ohne Stimme (kostenlos, ab 16.11.)
 `python3 scripts/shop_demo.py shop/<produkt>/demo-<x>.json` – nur Produktfoto + Grafik (Emojis, Preis-Stempel, Merkmale).
 Muster: `shop/spielball/demo-*.json` → `renders/demo-ball-*.mp4` (je 15 s).
+Nutzer-Feedback 16.11.: **C (Problem/Geld) und D (3 Gründe) gut**, A (POV) und B (gerade überall) gefallen nicht → bei Demo-Videos A/B nicht mehr nutzen.
