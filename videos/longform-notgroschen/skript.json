@@ -1,0 +1,175 @@
+{
+ "titel": "Dein Notgroschen reicht nur 3 Monate",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Bei jedem Zweiten in Deutschland ist das Geld nach drei Monaten weg, wenn plötzlich kein Gehalt mehr kommt.",
+   "text": "Bei jedem Zweiten in Deutschland ist das Geld nach drei Monaten weg, wenn plötzlich kein Gehalt mehr kommt"
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Und bei mehr als jedem Fünften reicht es nicht mal vier Wochen.",
+   "text": "Und bei mehr als jedem Fünften reicht es nicht mal vier Wochen"
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Schick das Video jemandem, der noch keinen Notgroschen hat.",
+   "text": "Schick das Video jemandem, der noch keinen Notgroschen hat"
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Folge HundeFinanzTv, wir bringen dir jeden Tag die wichtigsten Geld-News.",
+   "text": "Folge HundeFinanzTv, wir bringen dir jeden Tag die wichtigsten Geld-News"
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Die Zahlen kommen aus einer neuen Umfrage von Sivi für die Versicherung Debeka.",
+   "text": "Die Zahlen kommen aus einer neuen Umfrage von Sivi für die Versicherung Debeka"
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Befragt wurden im September tausend Erwachsene, Rentner nicht mitgezählt.",
+   "text": "Befragt wurden im September 1.000 Erwachsene, Rentner nicht mitgezählt"
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Einundfünfzig Prozent könnten ihre Ausgaben höchstens drei Monate aus eigenem Geld zahlen.",
+   "text": "51 % könnten ihre Ausgaben höchstens drei Monate aus eigenem Geld zahlen"
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Nur dreiundzwanzig Prozent würden länger als ein halbes Jahr durchhalten.",
+   "text": "Nur 23 % würden länger als ein halbes Jahr durchhalten"
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Und bei Frauen ist der Anteil, bei dem das Geld keinen Monat reicht, fast doppelt so hoch wie bei Männern.",
+   "text": "Und bei Frauen ist der Anteil, bei dem das Geld keinen Monat reicht, fast doppelt so hoch wie bei Männern"
+  },
+  {
+   "id": "s10",
+   "sprechtext": "Warum ist das so gefährlich?",
+   "text": "Warum ist das so gefährlich?"
+  },
+  {
+   "id": "s11",
+   "sprechtext": "Weil das Leben nicht fragt, ob es gerade passt.",
+   "text": "Weil das Leben nicht fragt, ob es gerade passt"
+  },
+  {
+   "id": "s12",
+   "sprechtext": "Die Waschmaschine geht kaputt, das Auto muss in die Werkstatt, oder der Job ist plötzlich weg.",
+   "text": "Die Waschmaschine geht kaputt, das Auto muss in die Werkstatt, oder der Job ist plötzlich weg"
+  },
+  {
+   "id": "s13",
+   "sprechtext": "Ohne Notgroschen landen viele dann im Dispo.",
+   "text": "Ohne Notgroschen landen viele dann im Dispo"
+  },
+  {
+   "id": "s14",
+   "sprechtext": "Und der kostet oft mehr als zehn Prozent Zinsen im Jahr.",
+   "text": "Und der kostet oft mehr als 10 % Zinsen im Jahr"
+  },
+  {
+   "id": "s15",
+   "sprechtext": "Aus einer kaputten Waschmaschine wird so schnell ein Schuldenberg.",
+   "text": "Aus einer kaputten Waschmaschine wird so schnell ein Schuldenberg"
+  },
+  {
+   "id": "s16",
+   "sprechtext": "Wie viel Notgroschen brauchst du also?",
+   "text": "Wie viel Notgroschen brauchst du also?"
+  },
+  {
+   "id": "s17",
+   "sprechtext": "Die Verbraucherzentrale rät: zwei bis drei Netto-Monatsgehälter.",
+   "text": "Die Verbraucherzentrale rät: zwei bis drei Netto-Monatsgehälter"
+  },
+  {
+   "id": "s18",
+   "sprechtext": "Ein Beispiel: Leonie verdient zweitausend Euro netto im Monat.",
+   "text": "Ein Beispiel: Leonie verdient 2000 € netto im Monat"
+  },
+  {
+   "id": "s19",
+   "sprechtext": "Ihr Notgroschen sollte also bei viertausend bis sechstausend Euro liegen.",
+   "text": "Ihr Notgroschen sollte also bei 4.000 bis 6.000 € liegen"
+  },
+  {
+   "id": "s20",
+   "sprechtext": "Klingt viel, oder?",
+   "text": "Klingt viel, oder?"
+  },
+  {
+   "id": "s21",
+   "sprechtext": "Deshalb hier drei Schritte, wie du ihn aufbaust.",
+   "text": "Deshalb hier drei Schritte, wie du ihn aufbaust"
+  },
+  {
+   "id": "s22",
+   "sprechtext": "Schritt eins: Rechne aus, was du jeden Monat wirklich zum Leben brauchst.",
+   "text": "Schritt eins: Rechne aus, was du jeden Monat wirklich zum Leben brauchst"
+  },
+  {
+   "id": "s23",
+   "sprechtext": "Miete, Essen, Versicherungen, Handy. Das ist deine Grundlage, nicht dein Wunsch-Budget.",
+   "text": "Miete, Essen, Versicherungen, Handy. Das ist deine Grundlage, nicht dein Wunsch-Budget"
+  },
+  {
+   "id": "s24",
+   "sprechtext": "Schritt zwei: Spar automatisch, direkt an dem Tag, an dem das Gehalt kommt.",
+   "text": "Schritt zwei: Spar automatisch, direkt an dem Tag, an dem das Gehalt kommt"
+  },
+  {
+   "id": "s25",
+   "sprechtext": "Schon hundert Euro im Monat machen in drei Jahren dreitausendsechshundert Euro.",
+   "text": "Schon 100 € im Monat machen in drei Jahren 3.600 €"
+  },
+  {
+   "id": "s26",
+   "sprechtext": "Schritt drei: Leg den Notgroschen getrennt vom Girokonto an, zum Beispiel auf ein Tagesgeldkonto.",
+   "text": "Schritt drei: Leg den Notgroschen getrennt vom Girokonto an, zum Beispiel auf ein Tagesgeldkonto"
+  },
+  {
+   "id": "s27",
+   "sprechtext": "Dort kommst du jederzeit ran, bekommst Zinsen und gibst ihn nicht aus Versehen aus.",
+   "text": "Dort kommst du jederzeit ran, bekommst Zinsen und gibst ihn nicht aus Versehen aus"
+  },
+  {
+   "id": "s28",
+   "sprechtext": "Ganz wichtig: Der Notgroschen gehört nicht in Aktien oder Bitcoin.",
+   "text": "Ganz wichtig: Der Notgroschen gehört nicht in Aktien oder Bitcoin"
+  },
+  {
+   "id": "s29",
+   "sprechtext": "Denn genau dann, wenn du das Geld brauchst, kann der Kurs gerade unten sein.",
+   "text": "Denn genau dann, wenn du das Geld brauchst, kann der Kurs gerade unten sein"
+  },
+  {
+   "id": "s30",
+   "sprechtext": "Das haben wir am Wochenende gesehen, als Gold und Bitcoin gleichzeitig abgestürzt sind.",
+   "text": "Das haben wir am Wochenende gesehen, als Gold und Bitcoin gleichzeitig abgestürzt sind"
+  },
+  {
+   "id": "s31",
+   "sprechtext": "Wer selbstständig ist oder Kinder hat, plant besser eher sechs Monatsgehälter ein.",
+   "text": "Wer selbstständig ist oder Kinder hat, plant besser eher sechs Monatsgehälter ein"
+  },
+  {
+   "id": "s32",
+   "sprechtext": "Erst wenn der Notgroschen steht, lohnt sich der nächste Schritt, zum Beispiel ein Sparplan.",
+   "text": "Erst wenn der Notgroschen steht, lohnt sich der nächste Schritt, zum Beispiel ein Sparplan"
+  },
+  {
+   "id": "s33",
+   "sprechtext": "Merk dir: Der Notgroschen macht dich nicht reich, aber er schützt dich davor, arm zu werden.",
+   "text": "Merk dir: Der Notgroschen macht dich nicht reich, aber er schützt dich davor, arm zu werden"
+  },
+  {
+   "id": "s34",
+   "sprechtext": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung.",
+   "text": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung"
+  }
+ ]
+}
