@@ -30,9 +30,12 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
    - Demos ohne Stimme (spart ElevenLabs-Credits).
    - **Aktueller Stand (Nutzer 16.11.):** nur **ruhige Bilder** der Posen (kein Wackeln/Verformen – „sieht schrecklich aus“;
      Bewegung erst später mit Higgsfield, ca. ab Dez.). **Kein Fortschrittsbalken** oben. **Ruhiges Tempo** (3 Szenen à ~4 s
-     pro 15 s). **Schluss immer mit großem Logo** + „Folg uns für mehr Hundewissen!“ + „+ Folgen“.
+     pro 15 s). **Schluss immer mit großem Logo** + oranger „+ Folgen“-Knopf.
      Bauen: `python3 hundewissen/bau_einfach.py <name>` (Inhalte dort in `VIDEOS`). Beispiele: `videos/hw-e-*`.
      (Altes Bewegungs-Werkzeug `hundewissen/rig/` nur zur Info, nicht benutzen.)
+   - **Nutzer 16.11. (2):** **keine Lautwörter** („*kratz*“, „Zzz“ o. ä.), **keine kleine Überschrift (Kicker)** über dem
+     großen Text. Schluss: nur Logo + „HundeWissenTv“ + **oranger „+ Folgen“-Knopf** (kein „Folg uns…“-Satz).
+     Info-Kärtchen (z. B. „Flöhe?“) und Quellenzeile sind ok. Beispiele: `videos/hw-f-*`.
 2. **HundeWissenTv 2.0**: ab Nov. 2026 **reiner TikTok-Shop-Kanal** (nur Hundesachen) → Skill `/shop-video`.
 3. **HundeFinanzTV**: Geld & Finanzen (faceless, animierte Grafiken) → Skill `/finanz-video`, `kanal.json`, `STIL.md`.
 

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/magazin.css" />
+    <style>
+      .pose { position: absolute; filter: drop-shadow(0 26px 30px #00000030); }
+      .shadow { position: absolute; height: 40px; border-radius: 50%; background: radial-gradient(#0000002a, transparent 70%); }
+      .chip { position: absolute; left: 80px; padding: 16px 34px 20px; border-radius: 40px; background: #fbf8f2; border: 2px solid #1d1b1922; box-shadow: 0 14px 30px #0000001a; font-weight: 800; font-size: 44px; }
+      .call { position: absolute; padding: 14px 30px 18px; border-radius: 40px; background: #fbf8f2; border: 2px solid #1d1b1922; box-shadow: 0 14px 30px #0000001a; font-weight: 800; font-size: 40px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="15" data-width="1080" data-height="1920">
+      <div id="s1" class="scene">
+        <div id="h1" class="h" style="top: 470px; font-size: 112px">Dein Hund schläft <i>ständig?</i></div>
+        <div class="shadow" style="left:358px;top:1378px;width:365px"></div>
+        <img id="p1" class="pose" src="assets/aussie/gaehnend.png" style="left:323px;top:820px;width:434px" alt="" />
+        <div id="x1"></div>
+      </div>
+      <div id="s2" class="scene">
+        <div id="h2" class="h" style="top: 470px; font-size: 100px">Erwachsene Hunde: <i>12 bis 14 Stunden.</i></div>
+        <div class="shadow" style="left:226px;top:1378px;width:628px"></div>
+        <img id="p2" class="pose" src="assets/aussie/schlafend.png" style="left:166px;top:960px;width:748px" alt="" />
+        <div id="x2"></div>
+      </div>
+      <div id="s3" class="scene">
+        <div id="h3" class="h" style="top: 470px; font-size: 112px">Welpen sogar <i>bis zu 20.</i></div>
+        <div class="shadow" style="left:199px;top:1378px;width:683px"></div>
+        <img id="p3" class="pose" src="assets/aussie/rueckenlage.png" style="left:134px;top:1020px;width:813px" alt="" />
+        <div id="x3"></div>
+      </div>
+      <div id="k10" class="cap">schläft dein hund <b>den ganzen tag</b>?</div>
+      <div id="k11" class="cap">das ist <b>völlig normal</b></div>
+      <div id="k20" class="cap">erwachsene hunde schlafen</div>
+      <div id="k21" class="cap"><b>12 bis 14 stunden</b> am tag</div>
+      <div id="k30" class="cap">welpen schlafen</div>
+      <div id="k31" class="cap">sogar <b>noch viel mehr</b></div>
+      <div id="logo"><img src="assets/beagle.png" alt="" /></div>
+      <div id="name">HundeWissenTv</div>
+      <div id="cta"><div class="ring"><img src="assets/beagle.png" alt="" /></div><div class="n">HundeWissenTv</div><div class="pill"><span>+ Folgen</span></div></div>
+      <div id="grain"></div>
+    </div>
+    <script>
+      const DUR = 15;
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+    <script src="assets/magazin.js"></script>
+    <script>
+      kopf2();
+      scenes([["#s1", 0, 4.2], ["#s2", 4.2, 8.4], ["#s3", 8.4, 12.6]]);
+      show("#k10", 0.0, 2.1);
+      show("#k11", 2.1, 4.2);
+      up("#h1", 0.25, 0.6);
+      tl.fromTo("#p1", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, 0.5);
+      tl.fromTo("#x1 .x", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }, 1.4);
+      show("#k20", 4.2, 6.300000000000001);
+      show("#k21", 6.300000000000001, 8.4);
+      up("#h2", 4.45, 0.6);
+      tl.fromTo("#p2", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, 4.7);
+      tl.fromTo("#x2 .x", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }, 5.6);
+      show("#k30", 8.4, 10.4);
+      show("#k31", 10.4, 12.4);
+      up("#h3", 8.65, 0.6);
+      tl.fromTo("#p3", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, 8.9);
+      tl.fromTo("#x3 .x", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }, 9.8);
+      schluss(12.4);
+      tl.to({}, { duration: 0.01 }, DUR - 0.01);
+    </script>
+  </body>
+</html>

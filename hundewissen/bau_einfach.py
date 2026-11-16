@@ -17,44 +17,38 @@ SCHLUSS = 12.4
 DUR = 15
 
 VIDEOS = {
-    "hw-e-kratzen": [
-        dict(kick="Juckreiz", h="Warum kratzt sich dein Hund <i>so oft?</i>", size=104, pose="kratzend", ph=560,
-             caps=["kratzt sich dein hund <b>ständig</b>?", "das kann viele <b>gründe</b> haben"]),
-        dict(kick="Meistens harmlos", h="Ab und zu ist das <i>ganz normal.</i>", size=100, pose="verwirrt", ph=540,
-             extra='<div class="note x" style="left:90px;top:1150px;transform:rotate(-6deg)">*kratz, kratz*</div>',
-             caps=["ab und zu kratzen ist <b>normal</b>", "genau wie <b>bei uns</b>"]),
-        dict(kick="Aber Achtung", h="Kratzt er dauernd? <i>Ab zum Tierarzt.</i>", size=92, pose="brille", ph=540, px=600,
-             extra='<div class="chip x" style="top:880px">🐜 Flöhe?</div><div class="chip x" style="top:1010px">🌾 Allergie?</div><div class="chip x" style="top:1140px">🏜️ Trockene Haut?</div>',
-             caps=["kratzt er sich aber <b>dauernd</b>", "dann lieber zum <b>tierarzt</b>"]),
+    "hw-f-schokolade": [
+        dict(h="Schokolade ist <i>giftig</i> für Hunde.", size=104, pose="bettelnd", ph=580,
+             caps=["dein hund bettelt um <b>schokolade</b>?", "bitte <b>niemals</b> geben"]),
+        dict(h="Schuld ist der Stoff <i>Theobromin.</i>", size=100, pose="ueberrascht", ph=560, px=690,
+             extra='<div class="chip x" style="top:1000px">🍫 je dunkler,</div><div class="chip x" style="top:1130px">desto gefährlicher</div>',
+             caps=["schuld ist <b>theobromin</b>", "dunkle schokolade ist <b>am schlimmsten</b>"]),
+        dict(h="Hat er genascht? <i>Sofort zum Tierarzt.</i>", size=96, pose="zeigend", ph=560,
+             caps=["hat er doch genascht?", "dann <b>sofort zum tierarzt</b>"]),
     ],
-    "hw-e-schnueffeln": [
-        dict(kick="Gassi-Tipp", h="Lass ihn ruhig <i>schnüffeln!</i>", size=110, pose="schnueffelnd", ph=520,
-             caps=["zieh nicht ständig an der <b>leine</b>", "lass ihn ruhig <b>schnüffeln</b>"]),
-        dict(kick="Kopfarbeit", h="Schnüffeln ist <i>Training fürs Gehirn.</i>", size=100, pose="brille", ph=540,
-             extra='<div class="note x" style="left:80px;top:1180px;transform:rotate(-5deg)">Nase = Superkraft</div>',
-             caps=["schnüffeln ist <b>kopfarbeit</b>", "das macht ihn <b>zufrieden</b>"]),
-        dict(kick="Der Effekt", h="Danach ist er <i>schön müde.</i>", size=110, pose="schlafend", ph=420,
-             extra='<div class="note x" style="left:700px;top:900px;font-size:70px">Zzz</div>',
-             caps=["und danach schläft er", "<b>wie ein baby</b>"]),
+    "hw-f-schlaf": [
+        dict(h="Dein Hund schläft <i>ständig?</i>", size=112, pose="gaehnend", ph=580,
+             caps=["schläft dein hund <b>den ganzen tag</b>?", "das ist <b>völlig normal</b>"]),
+        dict(h="Erwachsene Hunde: <i>12 bis 14 Stunden.</i>", size=100, pose="schlafend", ph=440,
+             caps=["erwachsene hunde schlafen", "<b>12 bis 14 stunden</b> am tag"]),
+        dict(h="Welpen sogar <i>bis zu 20.</i>", size=112, pose="rueckenlage", ph=380,
+             caps=["welpen schlafen", "sogar <b>noch viel mehr</b>"]),
     ],
-    "hw-e-hundeblick": [
-        dict(kick="Der Hundeblick", h="Diesem Blick <i>kann keiner</i> widerstehen.", size=96, pose="bettelnd", ph=580,
-             caps=["kennst du diesen <b>hundeblick</b>?", "da wird jeder <b>schwach</b>"]),
-        dict(kick="Die Forschung", h="Dafür hat er <i>einen extra Muskel.</i>", size=100, pose="ueberrascht", ph=560, px=600,
-             extra='<div class="call x" style="left:60px;top:1180px">hebt die Augenbraue ↗</div>',
-             src="Studie: University of Portsmouth (2019)",
-             caps=["hunde haben einen <b>extra muskel</b>", "für die innere <b>augenbraue</b>"]),
-        dict(kick="Clever", h="Wölfe haben ihn <i>fast nie.</i>", size=110, pose="stolz", ph=540,
-             caps=["wölfe haben ihn <b>fast nie</b>", "den blick gibt's <b>nur für uns</b>"]),
+    "hw-f-kopfschief": [
+        dict(h="Warum legt er den Kopf <i>schief?</i>", size=104, pose="verwirrt", ph=580,
+             caps=["dein hund legt den kopf <b>schief</b>?", "das hat einen <b>grund</b>"]),
+        dict(h="Er hört <i>ganz genau hin.</i>", size=112, pose="brille", ph=580, src="Studie: Universität Budapest (2022)",
+             caps=["er will dich <b>besser verstehen</b>", "vor allem bei wörtern, die er <b>kennt</b>"]),
+        dict(h="Sag mal <i>„Gassi“</i> – und schau hin!", size=104, pose="freudig", ph=560,
+             caps=["probier's aus: sag mal <b>gassi</b>", "und achte auf <b>seinen kopf</b>"]),
     ],
-    "hw-e-hecheln": [
-        dict(kick="Sommer-Wissen", h="Hunde schwitzen <i>kaum.</i>", size=112, pose="freudig", ph=560,
-             caps=["hunde können <b>kaum schwitzen</b>", "nur ein bisschen über die <b>pfoten</b>"]),
-        dict(kick="Die Kühlung", h="Sie kühlen sich <i>durch Hecheln.</i>", size=104, pose="rennend", ph=440,
-             extra='<div class="note x" style="left:560px;top:880px;transform:rotate(-5deg)">Zunge = Klimaanlage</div>',
-             caps=["sie kühlen sich durch <b>hecheln</b>", "die zunge wirkt wie eine <b>klimaanlage</b>"]),
-        dict(kick="Tipp", h="Immer <i>frisches Wasser</i> dabei.", size=108, pose="trinkend", ph=520,
-             caps=["darum im sommer <b>immer</b>", "<b>frisches wasser</b> mitnehmen"]),
+    "hw-f-dunkel": [
+        dict(h="Im Dunkeln sieht er <i>besser als du.</i>", size=104, pose="stolz", ph=560,
+             caps=["im dunkeln sieht dein hund", "<b>viel besser</b> als du"]),
+        dict(h="Sein Auge hat einen <i>Licht-Spiegel.</i>", size=104, pose="ueberrascht", ph=580,
+             caps=["hinter der netzhaut sitzt ein <b>spiegel</b>", "der das restlicht <b>verstärkt</b>"]),
+        dict(h="Dafür sieht er <i>weniger Farben.</i>", size=104, pose="rennend", ph=440,
+             caps=["dafür sieht er <b>weniger farben</b>", "aber <b>bewegung</b> erkennt er super"]),
     ],
 }
 
@@ -78,7 +72,7 @@ HTML = """<!doctype html>
 {CAPS}
       <div id="logo"><img src="assets/beagle.png" alt="" /></div>
       <div id="name">HundeWissenTv</div>
-      <div id="cta"><div class="ring"><img src="assets/beagle.png" alt="" /></div><div class="n">HundeWissenTv</div><div class="t">Folg uns für mehr Hundewissen!</div><div class="pill"><span>+ Folgen</span></div></div>
+      <div id="cta"><div class="ring"><img src="assets/beagle.png" alt="" /></div><div class="n">HundeWissenTv</div><div class="pill"><span>+ Folgen</span></div></div>
       <div id="grain"></div>
     </div>
     <script>
@@ -113,8 +107,7 @@ def bau(name):
         cx = sz.get("px", 540); top = 1400 - ph
         src = f'<div class="src" style="top:1418px">{sz["src"]}</div>' if sz.get("src") else ""
         scenes.append(f'''      <div id="s{i}" class="scene">
-        <div class="kick" style="top: 440px">{sz["kick"]}</div>
-        <div id="h{i}" class="h" style="top: 492px; font-size: {sz["size"]}px">{sz["h"]}</div>
+        <div id="h{i}" class="h" style="top: 470px; font-size: {sz["size"]}px">{sz["h"]}</div>
         <div class="shadow" style="left:{cx - pw * 0.42:.0f}px;top:1378px;width:{pw * 0.84:.0f}px"></div>
         <img id="p{i}" class="pose" src="assets/aussie/{sz["pose"]}.png" style="left:{cx - pw / 2:.0f}px;top:{top}px;width:{pw}px" alt="" />
         <div id="x{i}">{sz.get("extra", "")}</div>{src}

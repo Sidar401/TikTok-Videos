@@ -28,7 +28,6 @@ const schluss = (a) => {
   tl.fromTo("#cta", { opacity: 0 }, { opacity: 1, duration: 0.35 }, a);
   tl.fromTo("#cta .ring", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: "back.out(1.7)" }, a + 0.1);
   tl.fromTo("#cta .n", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, a + 0.45);
-  tl.fromTo("#cta .t", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, a + 0.7);
   tl.fromTo("#cta .pill span", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2.5)" }, a + 1.0);
   tl.to("#cta .pill span", { scale: 1.07, duration: 0.4, yoyo: true, repeat: 3, ease: "sine.inOut" }, a + 1.5);
 };
