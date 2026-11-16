@@ -1,6 +1,6 @@
 ---
 name: shop-video
-description: Erstellt TikTok-Shop-Verkaufsvideos (9:16, max. 20 s, ohne Stimme) für den Kanal HundeWissenTv 2.0 aus Produkt-Screenshots – KI-Startbilder und KI-Clips von Higgsfield, Schnitt, Untertitel und Endkarte per HyperFrames. Nutzen, sobald der Nutzer ein Produkt (Screenshot, Link, Name) für den Shop-Kanal schickt oder Shop-Videos will.
+description: Erstellt TikTok-Shop-Verkaufsvideos (9:16, max. 20 s, mit Novaro-Stimme via scripts/shop_stimme.py) für den Kanal HundeWissenTv 2.0 aus Produkt-Screenshots – KI-Startbilder und KI-Clips von Higgsfield, Schnitt, Untertitel und Endkarte per HyperFrames. Nutzen, sobald der Nutzer ein Produkt (Screenshot, Link, Name) für den Shop-Kanal schickt oder Shop-Videos will.
 ---
 
 # Shop-Video (HundeWissenTv 2.0)
