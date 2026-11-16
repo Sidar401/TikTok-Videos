@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/rig.js"></script>
+    <link rel="stylesheet" href="assets/magazin.css" />
+    <style>
+      #card { position: absolute; left: 80px; top: 760px; width: 920px; height: 640px; border-radius: 22px; overflow: hidden; box-shadow: 0 24px 50px #0000002a; background: linear-gradient(#252c4a, #3b4470 70%, #4a5280); }
+      .star { position: absolute; width: 5px; height: 5px; border-radius: 50%; background: #fff; }
+      #moon { position: absolute; left: 70px; top: 50px; width: 90px; height: 90px; border-radius: 50%; background: #f5e9c8; box-shadow: 0 0 50px #f5e9c888; }
+      #moon::after { content: ""; position: absolute; left: 26px; top: -8px; width: 90px; height: 90px; border-radius: 50%; background: #2a3150; }
+      #floor { position: absolute; left: 0; right: 0; bottom: 0; height: 120px; background: #2c3354; }
+      #cushion { position: absolute; left: 40px; top: 470px; width: 600px; height: 120px; border-radius: 50%; background: radial-gradient(ellipse at 50% 35%, #d98a64, #a8583d); box-shadow: 0 20px 30px #0005; }
+      #dog { position: absolute; left: 30px; top: 200px; width: 640px; }
+      .bub { position: absolute; border-radius: 50%; background: #fbf8f2; opacity: 0; }
+      #dream { position: absolute; left: 470px; top: 40px; width: 420px; height: 270px; border-radius: 140px; background: #fbf8f2; overflow: hidden; opacity: 0; box-shadow: 0 0 40px #fff5; }
+      #dground { position: absolute; left: 0; right: 0; bottom: 0; height: 70px; background-repeat: repeat-x; }
+      #dsky { position: absolute; inset: 0; background: linear-gradient(#fdf2dc, #f6e3c0); }
+      #mini { position: absolute; left: 95px; top: 62px; width: 230px; }
+      .z { position: absolute; font-family: "FR"; font-style: italic; font-weight: 900; color: #f2b06a; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="15" data-width="1080" data-height="1920">
+      <div id="s1" class="scene"><div class="kick" style="top: 440px">Schlafforschung</div><div id="h1" class="h" style="top: 492px; font-size: 104px">Träumt dein Hund <i>auch?</i></div></div>
+      <div id="s2" class="scene"><div class="kick" style="top: 440px">Die Antwort</div><div id="h2" class="h" style="top: 492px; font-size: 86px">Ja! Er hat <i>Traumphasen</i> wie wir.</div></div>
+      <div id="s3" class="scene"><div class="kick" style="top: 440px">Woran du es merkst</div><div id="h3" class="h" style="top: 492px; font-size: 86px">Zuckende Pfoten: <i>Er rennt im Traum.</i></div></div>
+      <div id="s4" class="scene"><div class="kick" style="top: 440px">Tipp</div><div id="h4" class="h" style="top: 492px; font-size: 104px">Lass ihn <i>ausschlafen.</i></div></div>
+
+      <div id="card">
+        <div id="moon"></div><div id="stars"></div><div id="floor"></div><div id="cushion"></div>
+        <canvas id="dog"></canvas>
+        <div id="b1" class="bub" style="left: 330px; top: 300px; width: 22px; height: 22px"></div>
+        <div id="b2" class="bub" style="left: 375px; top: 255px; width: 34px; height: 34px"></div>
+        <div id="b3" class="bub" style="left: 425px; top: 200px; width: 50px; height: 50px"></div>
+        <div id="dream"><div id="dsky"></div><div id="dground"></div><canvas id="mini"></canvas></div>
+        <div id="z1" class="z" style="left: 360px; top: 330px; font-size: 44px">z</div>
+        <div id="z2" class="z" style="left: 395px; top: 290px; font-size: 58px">z</div>
+      </div>
+      <div class="src" style="top: 1420px">Schlafforschung: Traum-(REM-)Phasen auch bei Hunden</div>
+
+      <div id="k1" class="cap">träumt dein hund eigentlich <b>auch</b>?</div>
+      <div id="k2" class="cap">ja: hunde haben <b>traumphasen</b> wie wir</div>
+      <div id="k3" class="cap">zucken die pfoten, <b>rennt er im traum</b></div>
+      <div id="k4" class="cap">tipp: lass ihn <b>ausschlafen</b></div>
+      <div id="follow"><span>Folgen für mehr <b>Hundewissen</b></span></div>
+      <div id="logo"><img src="assets/beagle.png" alt="" /></div>
+      <div id="name">HundeWissenTv</div>
+      <div id="rule"><i id="rule-in"></i></div>
+      <div id="grain"></div>
+      <img id="img" src="assets/aussie/schlafend.png" style="display: none" alt="" />
+      <img id="img2" src="assets/aussie/rennend.png" style="display: none" alt="" />
+    </div>
+    <script>
+      const DUR = 15;
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+    <script src="assets/magazin.js"></script>
+    <script>
+      kopf();
+      scenes([["#s1", 0, 3], ["#s2", 3, 6], ["#s3", 6, 9.6], ["#s4", 9.6]]);
+      up("#h1", 0.3, 0.6); up("#h2", 3.1); up("#h3", 6.1); up("#h4", 9.7);
+      tl.fromTo("#card", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 0.2);
+      ["#b1", "#b2", "#b3"].forEach((b, i) => { tl.fromTo(b, { opacity: 0, scale: 0 }, { opacity: 0.9, scale: 1, duration: 0.25, ease: "back.out(3)" }, 3.2 + i * 0.2); tl.to(b, { opacity: 0, duration: 0.3 }, 9.6); });
+      tl.fromTo("#dream", { opacity: 0, scale: 0.3, transformOrigin: "10% 90%" }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.8)" }, 3.8);
+      tl.to("#dream", { opacity: 0, scale: 0.6, duration: 0.35, ease: "power2.in" }, 9.4);
+      [["#z1", 0.8], ["#z2", 1.2], ["#z1", 10.2], ["#z2", 10.6]].forEach(([z, a]) => { tl.fromTo(z, { opacity: 0, y: 20 }, { opacity: 1, y: -30, duration: 0.9, ease: "power1.out", immediateRender: false }, a); tl.to(z, { opacity: 0, duration: 0.4 }, a + 1.4); });
+      caps([["#k1", 0, 3], ["#k2", 3, 6], ["#k3", 6, 9.6], ["#k4", 9.6, 13.4]]);
+      folgen(13.4);
+      tl.to({}, { duration: 0.01 }, DUR - 0.01);
+      const st = document.getElementById("stars");
+      for (let i = 0; i < 26; i++) { const s = document.createElement("div"); s.className = "star"; s.style.left = ((i * 211) % 900) + "px"; s.style.top = (20 + ((i * 97) % 300)) + "px"; s.style.opacity = 0.3 + ((i * 37) % 7) / 10; st.appendChild(s); }
+      const svg = (w, h, body) => `url("data:image/svg+xml;utf8,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='${w}' height='${h}'>${body}</svg>`)}")`;
+      document.getElementById("dground").style.backgroundImage = svg(200, 70, "<rect width='200' height='70' fill='#a9bf7c'/><rect width='200' height='8' fill='#8aa45f'/><path d='M30 30 h30 M120 50 h40' stroke='#8aa45f' stroke-width='5' stroke-linecap='round'/>");
+
+      const R = Rig(document.getElementById("dog"), document.getElementById("img"), {
+        pad: 80, scale: 2, uniforms: ["aBreath", "aPaw", "aEye", "aNose", "aEar", "aTail"],
+        glsl: `
+          q.y = mix(q.y, 330.0 + (q.y-330.0)/(1.0+aBreath), blob(p, vec2(380.0,160.0), vec2(240.0,150.0)));
+          q = rot(q, vec2(175.0,245.0), -aPaw*box(p, vec4(-40.0,190.0,232.0,320.0), 14.0));
+          q.y -= aEye*(blob(p, vec2(138.0,214.0), vec2(26.0,13.0)) + blob(p, vec2(213.0,188.0), vec2(26.0,13.0)));
+          q -= vec2(aNose*0.6, aNose)*blob(p, vec2(226.0,265.0), vec2(30.0,22.0));
+          q = rot(q, vec2(520.0,300.0), -aTail*box(p, vec4(260.0,540.0,250.0,340.0), 20.0));
+        `,
+      });
+      const M = Rig(document.getElementById("mini"), document.getElementById("img2"), {
+        pad: 80, scale: 1, uniforms: ["aF", "aB", "aEar"],
+        glsl: `
+          q = rot(q, vec2(470.0,285.0), -aF*box(p, vec4(440.0,700.0,270.0,520.0), 14.0));
+          q = rot(q, vec2(215.0,290.0), -aB*box(p, vec4(80.0,300.0,282.0,520.0), 14.0));
+          q = rot(q, vec2(455.0,60.0), -aEar*blob(p, vec2(430.0,110.0), vec2(40.0,62.0)));
+        `,
+      });
+      const S = RZ.S, TAU = RZ.TAU;
+      function render(t) {
+        const dream = S(3.8, 4.3, t) * (1 - S(9.3, 9.6, t));
+        const twitch = S(6.0, 6.4, t) * (1 - S(9.4, 9.8, t));
+        const jerk = (f, s) => Math.sin(t * TAU * f) * (0.5 + 0.5 * Math.sin(t * TAU * s + 1.3));
+        R.draw({
+          aBreath: 0.018 * Math.sin(t * TAU * 0.55) + dream * 0.01 * Math.sin(t * TAU * 1.6),
+          aPaw: twitch * 0.09 * jerk(5.2, 0.9) + dream * 0.02 * Math.sin(t * TAU * 3),
+          aEye: (dream * 1.5 + twitch * 2) * Math.max(0, jerk(4.3, 0.7)),
+          aNose: (0.6 + dream * 1.2) * Math.max(0, Math.sin(t * TAU * 2.6)) * (0.5 + 0.5 * Math.sin(t * TAU * 0.4)),
+          aEar: twitch * 0.08 * Math.max(0, jerk(3.1, 1.1)) + 0.02 * Math.sin(t * TAU * 0.5),
+          aTail: 0.03 * Math.sin(t * TAU * 0.6) + twitch * 0.05 * jerk(2.2, 0.8),
+        });
+        const w = TAU * t * 2.6;
+        M.draw({ aF: 0.38 * Math.sin(w), aB: 0.34 * Math.sin(w + 2.2), aEar: 0.18 * Math.sin(w + 1) });
+        document.getElementById("mini").style.transform = `translateY(${(-6 * Math.abs(Math.sin(w))).toFixed(1)}px)`;
+        document.getElementById("dground").style.backgroundPositionX = `${(-t * 260).toFixed(0)}px`;
+      }
+      let lastT = 0;
+      window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady || {};
+      window.__hf.buildReady.dog = Promise.all([R.ready, M.ready]).then(() => render(lastT));
+      window.addEventListener("hf-seek", (e) => { lastT = e.detail.time; render(lastT); });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/rig.js"></script>
+    <link rel="stylesheet" href="assets/magazin.css" />
+    <style>
+      #dog { position: absolute; left: 220px; top: 820px; width: 640px; z-index: 5; }
+      #shadow { position: absolute; left: 300px; top: 1380px; width: 500px; height: 44px; border-radius: 50%; background: radial-gradient(#0000002e, transparent 70%); z-index: 4; }
+      #ball { position: absolute; left: 0; top: 0; width: 90px; height: 90px; border-radius: 50%; z-index: 6;
+        background: radial-gradient(circle at 35% 30%, #f4ff9a, #cfe33a 45%, #9bb21e 100%); box-shadow: 0 10px 18px #0003; overflow: hidden; }
+      #ball::before, #ball::after { content: ""; position: absolute; width: 90px; height: 90px; border: 5px solid #fffde6; border-radius: 50%; }
+      #ball::before { left: -55px; top: 0; } #ball::after { left: 55px; top: 0; }
+      .heart { position: absolute; font-size: 54px; opacity: 0; z-index: 7; }
+      #snap { position: absolute; left: 640px; top: 820px; font-family: "FR"; font-style: italic; font-weight: 900; font-size: 72px; color: var(--or); opacity: 0; z-index: 8; transform: rotate(-8deg); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="15" data-width="1080" data-height="1920">
+      <div id="s1" class="scene"><div class="kick" style="top: 440px">Spielzeit</div><div id="h1" class="h" style="top: 492px; font-size: 100px">Warum Hunde Bälle <i>so lieben.</i></div></div>
+      <div id="s2" class="scene"><div class="kick" style="top: 440px">Grund 1</div><div id="h2" class="h" style="top: 492px; font-size: 100px">Hetzen, fangen, bringen: <i>Jagdtrieb.</i></div></div>
+      <div id="s3" class="scene"><div class="kick" style="top: 440px">Grund 2</div><div id="h3" class="h" style="top: 492px; font-size: 100px">Spielen baut Stress ab – <i>und verbindet.</i></div></div>
+      <div id="s4" class="scene"><div class="kick" style="top: 440px">Sicherheits-Tipp</div><div id="h4" class="h" style="top: 492px; font-size: 100px">Ball nie <i>zu klein</i> wählen.</div></div>
+      <div id="shadow"></div>
+      <canvas id="dog"></canvas>
+      <div id="ball"></div>
+      <div id="snap">Mein Ball!</div>
+      <div id="hearts"></div>
+
+      <div id="k1" class="cap">warum sind hunde so verrückt nach <b>bällen</b>?</div>
+      <div id="k2" class="cap">hetzen, fangen, bringen: <b>jagdinstinkt</b></div>
+      <div id="k3" class="cap">spielen baut <b>stress</b> ab</div>
+      <div id="k4" class="cap">und stärkt eure <b>bindung</b></div>
+      <div id="k5" class="cap">tipp: nie <b>zu klein</b> – sonst verschluckt er ihn</div>
+      <div id="follow"><span>Folgen für mehr <b>Hundewissen</b></span></div>
+      <div id="logo"><img src="assets/beagle.png" alt="" /></div>
+      <div id="name">HundeWissenTv</div>
+      <div id="rule"><i id="rule-in"></i></div>
+      <div id="grain"></div>
+      <img id="img" src="assets/aussie/ball.png" style="display: none" alt="" />
+    </div>
+    <script>
+      const DUR = 15;
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+    <script src="assets/magazin.js"></script>
+    <script>
+      kopf();
+      scenes([["#s1", 0, 3], ["#s2", 3, 6], ["#s3", 6, 9.6], ["#s4", 9.6]]);
+      up("#h1", 0.3, 0.6); up("#h2", 3.1); up("#h3", 6.1); up("#h4", 9.7);
+      caps([["#k1", 0, 3], ["#k2", 3, 6], ["#k3", 6, 7.8], ["#k4", 7.8, 9.6], ["#k5", 9.6, 13.4]]);
+      folgen(13.4);
+      tl.fromTo("#snap", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(3)" }, 1.5);
+      tl.to("#snap", { opacity: 0, duration: 0.3 }, 2.9);
+      const hearts = document.getElementById("hearts");
+      for (let i = 0; i < 9; i++) { const h = document.createElement("div"); h.className = "heart"; h.textContent = "🧡"; hearts.appendChild(h);
+        const x = 300 + ((i * 137) % 480), a = 6.2 + i * 0.32;
+        tl.fromTo(h, { x, y: 1150, opacity: 0, scale: 0.5 }, { y: 760, opacity: 1, scale: 1.1, duration: 1.2, ease: "power1.out" }, a);
+        tl.to(h, { opacity: 0, duration: 0.3 }, a + 0.9); }
+      tl.to({}, { duration: 0.01 }, DUR - 0.01);
+
+      const R = Rig(document.getElementById("dog"), document.getElementById("img"), {
+        pad: 80, scale: 2, uniforms: ["aTail", "aHead", "aEarL", "aEarR", "aLF", "aRF", "aBreath", "aBack"],
+        glsl: `
+          q = rot(q, vec2(325.0,205.0), -aTail*box(p, vec4(300.0,560.0,-40.0,245.0), 22.0));
+          q.y += aLF*box(p, vec4(45.0,128.0,330.0,520.0), 10.0);
+          q.y += aRF*box(p, vec4(128.0,205.0,330.0,520.0), 10.0);
+          q.y += aBack*box(p, vec4(220.0,460.0,350.0,520.0), 12.0);
+          q.x = mix(q.x, 200.0+(q.x-200.0)/(1.0+aBreath), blob(p, vec2(220.0,260.0), vec2(160.0,80.0)));
+          q = rot(q, vec2(130.0,235.0), -aHead*box(p, vec4(-60.0,225.0,-60.0,205.0), 26.0));
+          q = rot(q, vec2(55.0,40.0), -aEarL*blob(p, vec2(35.0,100.0), vec2(30.0,55.0)));
+          q = rot(q, vec2(195.0,40.0), -aEarR*blob(p, vec2(215.0,80.0), vec2(28.0,45.0)));
+        `,
+      });
+      const S = RZ.S, TAU = RZ.TAU;
+      const ball = document.getElementById("ball"), dog = document.getElementById("dog"), sh = document.getElementById("shadow");
+      function render(t) {
+        // Ball hüpft von rechts herein (vor dem Fang)
+        ball.style.opacity = 0;
+        // Hund springt bei 2.4 s herein und fängt
+        const jin = S(0.3, 1.5, t), arc = 0;
+        const excited = Math.max(1 - S(1.4, 1.8, t), S(3.0, 3.4, t)) * 0.4 + 0.6 * S(1.4, 1.8, t) * 0 + S(0.3, 0.5, t) * 0.6;
+        const hop = excited * Math.max(0, Math.sin(t * TAU * 1.6)) ** 3 * 40 * (1 - S(12.8, 13.3, t));
+        const dy = -arc * 160 - hop, dx = (1 - jin) * -800;
+        dog.style.transform = `translate(${dx.toFixed(0)}px, ${dy.toFixed(0)}px) rotate(${(-arc * 6).toFixed(1)}deg)`;
+        dog.style.opacity = 1;
+        sh.style.opacity = 1; sh.style.transform = `translateX(${dx.toFixed(0)}px) scaleX(${(1 - (arc * 160 + hop) / 300).toFixed(2)})`;
+        const step = Math.sin(t * TAU * 3.2);
+        R.draw({
+          aTail: (0.12 + 0.2 * excited) * Math.sin(t * TAU * (2 + 2.2 * excited)),
+          aHead: 0.04 * Math.sin(t * TAU * 0.6) + excited * 0.05 * Math.sin(t * TAU * 1.6) + 0.1 * S(9.6, 10.0, t) * (1 - S(12.4, 12.8, t)),
+          aEarL: 0.1 * Math.sin(t * TAU * 1.6 + 1), aEarR: -0.1 * Math.sin(t * TAU * 1.6 + 1.5),
+          aLF: excited * Math.max(0, step) * 22, aRF: excited * Math.max(0, -step) * 22,
+          aBack: excited * Math.max(0, Math.sin(t * TAU * 1.6)) * 6,
+          aBreath: 0.015 * Math.sin(t * TAU * 2.2),
+        });
+      }
+      let lastT = 0;
+      window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady || {};
+      window.__hf.buildReady.dog = R.ready.then(() => render(lastT));
+      window.addEventListener("hf-seek", (e) => { lastT = e.detail.time; render(lastT); });
+    </script>
+  </body>
+</html>

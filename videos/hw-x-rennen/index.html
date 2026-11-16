@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/rig.js"></script>
+    <link rel="stylesheet" href="assets/magazin.css" />
+    <style>
+      #card { position: absolute; left: 80px; top: 760px; width: 920px; height: 620px; border-radius: 22px; overflow: hidden; box-shadow: 0 24px 50px #0000002a; border: 2px solid #1d1b1922; background: linear-gradient(#f9e9cf, #fbf3e6 60%); }
+      .lay { position: absolute; left: 0; right: 0; background-repeat: repeat-x; }
+      #sun { position: absolute; left: 640px; top: 70px; width: 130px; height: 130px; border-radius: 50%; background: #f6c27a; box-shadow: 0 0 60px #f6c27a; }
+      #dog { position: absolute; left: 100px; top: 160px; width: 650px; }
+      .puff { position: absolute; width: 60px; height: 60px; border-radius: 50%; background: radial-gradient(#d8c3a0, #d8c3a000 70%); }
+      .sl { position: absolute; height: 5px; border-radius: 3px; background: #1d1b1940; }
+      #gauge { position: absolute; right: 26px; top: 22px; width: 230px; height: 150px; background: #fbf8f2ee; border-radius: 18px; border: 2px solid #1d1b1922; box-shadow: 0 12px 26px #0000001a; }
+      #gnum { position: absolute; left: 0; right: 0; top: 70px; text-align: center; font-family: "FR"; font-weight: 900; font-size: 52px; }
+      #gnum small { font-family: "IN"; font-weight: 800; font-size: 22px; margin-left: 4px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="15" data-width="1080" data-height="1920">
+      <div id="s1" class="scene"><div class="kick" style="top: 440px">Tempo-Check</div><div id="h1" class="h" style="top: 492px; font-size: 104px">Wie schnell rennt <i>dein Hund?</i></div></div>
+      <div id="s2" class="scene"><div class="kick" style="top: 440px">Normaler Hund</div><div id="h2" class="h" style="top: 492px; font-size: 104px">Viele schaffen <i>rund 30 km/h.</i></div></div>
+      <div id="s3" class="scene"><div class="kick" style="top: 440px">Rekordhalter</div><div id="h3" class="h" style="top: 492px; font-size: 104px">Windhunde: <i>bis 70 km/h.</i></div></div>
+      <div id="s4" class="scene"><div class="kick" style="top: 440px">Zum Vergleich</div><div id="h4" class="h" style="top: 492px; font-size: 104px">Usain Bolt: <i>etwa 44 km/h.</i></div></div>
+
+      <div id="card">
+        <div id="sun"></div>
+        <div id="clouds" class="lay" style="top: 40px; height: 140px"></div>
+        <div id="hills" class="lay" style="top: 250px; height: 220px"></div>
+        <div id="trees" class="lay" style="top: 250px; height: 270px"></div>
+        <div id="ground" class="lay" style="top: 500px; height: 120px"></div>
+        <div id="fx"></div>
+        <canvas id="dog"></canvas>
+        <div id="gauge">
+          <svg width="230" height="150" viewBox="0 0 230 150"><path d="M35 120 A80 80 0 0 1 195 120" fill="none" stroke="#e4d9c7" stroke-width="14" stroke-linecap="round" /><path id="garc" d="M35 120 A80 80 0 0 1 195 120" fill="none" stroke="#d9791a" stroke-width="14" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" /></svg>
+          <div id="gnum"><span id="kmh">0</span><small>km/h</small></div>
+        </div>
+      </div>
+      <div class="src" style="top: 1400px">Richtwerte · Bolt: Weltrekordlauf 2009</div>
+
+      <div id="k1" class="cap">wie schnell rennt eigentlich <b>dein hund</b>?</div>
+      <div id="k2" class="cap">viele hunde schaffen <b>rund 30 km/h</b></div>
+      <div id="k3" class="cap">windhunde sogar <b>bis zu 70</b></div>
+      <div id="k4" class="cap">usain bolt kam auf <b>etwa 44</b></div>
+      <div id="k5" class="cap">dein hund ist also <b>schneller als du</b></div>
+      <div id="follow"><span>Folgen für mehr <b>Hundewissen</b></span></div>
+      <div id="logo"><img src="assets/beagle.png" alt="" /></div>
+      <div id="name">HundeWissenTv</div>
+      <div id="rule"><i id="rule-in"></i></div>
+      <div id="grain"></div>
+      <img id="img" src="assets/aussie/rennend.png" style="display: none" alt="" />
+    </div>
+    <script>
+      const DUR = 15;
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+    <script src="assets/magazin.js"></script>
+    <script>
+      kopf();
+      scenes([["#s1", 0, 3], ["#s2", 3, 6], ["#s3", 6, 9], ["#s4", 9]]);
+      up("#h1", 0.3, 0.6); up("#h2", 3.1); up("#h3", 6.1); up("#h4", 9.1);
+      tl.fromTo("#card", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 0.2);
+      caps([["#k1", 0, 3], ["#k2", 3, 6], ["#k3", 6, 9], ["#k4", 9, 12], ["#k5", 12, 13.4]]);
+      folgen(13.4);
+      tl.to({}, { duration: 0.01 }, DUR - 0.01);
+
+      // ---------- Landschaft (Kacheln als SVG) ----------
+      const svg = (w, h, body) => `url("data:image/svg+xml;utf8,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='${w}' height='${h}'>${body}</svg>`)}")`;
+      document.getElementById("clouds").style.backgroundImage = svg(700, 140, "<g fill='#ffffff' opacity='0.9'><ellipse cx='120' cy='70' rx='70' ry='26'/><ellipse cx='165' cy='55' rx='50' ry='30'/><ellipse cx='470' cy='95' rx='60' ry='20'/><ellipse cx='505' cy='82' rx='40' ry='24'/></g>");
+      document.getElementById("hills").style.backgroundImage = svg(800, 220, "<path d='M0 150 Q100 60 220 120 T450 100 T650 130 T800 150 V220 H0Z' fill='#e2cfa8'/><path d='M0 190 Q150 120 300 170 T600 160 T800 190 V220 H0Z' fill='#d4bf92'/>");
+      document.getElementById("trees").style.backgroundImage = svg(560, 270, "<g><rect x='92' y='170' width='16' height='80' fill='#7a5b3a'/><circle cx='100' cy='150' r='58' fill='#9cb46f'/><circle cx='70' cy='175' r='34' fill='#8aa45f'/><rect x='392' y='190' width='12' height='60' fill='#7a5b3a'/><circle cx='398' cy='175' r='42' fill='#a9bf7c'/><path d='M250 250 q10 -30 20 0 q10 -26 20 0z' fill='#8aa45f'/></g>");
+      document.getElementById("ground").style.backgroundImage = svg(300, 120, "<rect width='300' height='120' fill='#cdb68b'/><rect y='0' width='300' height='10' fill='#b9a074'/><g stroke='#b39a6c' stroke-width='5' stroke-linecap='round'><path d='M30 50 h40 M160 85 h60 M250 40 h25'/></g><g fill='#8aa45f'><path d='M110 10 l4 -14 l4 14z M200 10 l4 -12 l4 12z'/></g>");
+      const fx = document.getElementById("fx");
+      const puffs = [], lines = [];
+      for (let i = 0; i < 6; i++) { const d = document.createElement("div"); d.className = "puff"; fx.appendChild(d); puffs.push(d); }
+      for (let i = 0; i < 5; i++) { const d = document.createElement("div"); d.className = "sl"; fx.appendChild(d); lines.push(d); }
+
+      // ---------- Hund: Galopp per Rig ----------
+      const R = Rig(document.getElementById("dog"), document.getElementById("img"), {
+        pad: 80, scale: 2, uniforms: ["aF", "aB", "aHead", "aEar", "aTail", "aTong", "aBody"],
+        glsl: `
+          q = rot(q, vec2(470.0,285.0), -aF*box(p, vec4(440.0,700.0,270.0,520.0), 14.0));
+          q = rot(q, vec2(215.0,290.0), -aB*box(p, vec4(80.0,300.0,282.0,520.0), 14.0));
+          q = rot(q, vec2(430.0,230.0), -aHead*box(p, vec4(400.0,720.0,-80.0,250.0), 30.0));
+          q = rot(q, vec2(455.0,60.0), -aEar*blob(p, vec2(430.0,110.0), vec2(40.0,62.0)));
+          q = rot(q, vec2(175.0,170.0), -aTail*box(p, vec4(-80.0,175.0,60.0,260.0), 22.0));
+          q.y -= aTong*blob(p, vec2(578.0,168.0), vec2(26.0,22.0));
+          q.y += aBody*box(p, vec4(80.0,640.0,40.0,300.0), 40.0);
+        `,
+      });
+
+      // Geschwindigkeit über die Zeit (km/h) → Hintergrund-Tempo + Schrittfrequenz
+      const S = RZ.S;
+      const speed = (t) => 30 * S(0.3, 2.2, t) + 40 * S(6.0, 7.0, t) - 26 * S(9.0, 9.8, t);
+      function state(t) { let off = 0, ph = 0; const dt = 1 / 60; for (let x = 0; x < t; x += dt) { const s = speed(x); off += s * 9 * dt; ph += (1.4 + s / 28) * dt; } return { off, ph, s: speed(t) }; }
+      const kmh = document.getElementById("kmh"), garc = document.getElementById("garc");
+      function render(t) {
+        const { off, ph, s } = state(t);
+        const w = RZ.TAU * ph;
+        R.draw({ aF: 0.38 * Math.sin(w), aB: 0.34 * Math.sin(w + 2.2), aHead: 0.05 * Math.sin(w * 2), aEar: 0.18 * Math.sin(w + 1), aTail: 0.16 * Math.sin(w + 0.6), aTong: 5 * Math.sin(w * 2), aBody: 4 * Math.sin(w * 2) });
+        document.getElementById("dog").style.transform = `translateY(${(-10 * Math.abs(Math.sin(w))).toFixed(1)}px)`;
+        document.getElementById("clouds").style.backgroundPositionX = `${-off * 0.08}px`;
+        document.getElementById("hills").style.backgroundPositionX = `${-off * 0.25}px`;
+        document.getElementById("trees").style.backgroundPositionX = `${-off * 0.6}px`;
+        document.getElementById("ground").style.backgroundPositionX = `${-off}px`;
+        puffs.forEach((d, i) => { const a = ((ph * 2 + i / 6) % 1); d.style.transform = `translate(${(170 - a * 260).toFixed(0)}px, ${(470 - a * 40).toFixed(0)}px) scale(${(0.6 + a * 1.4).toFixed(2)})`; d.style.opacity = ((1 - a) * Math.min(1, s / 20)).toFixed(2); });
+        lines.forEach((d, i) => { const a = ((ph * 1.3 + i / 5) % 1); const k = Math.max(0, (s - 35) / 35); d.style.width = `${(60 + 80 * k).toFixed(0)}px`; d.style.transform = `translate(${(700 - a * 900).toFixed(0)}px, ${(150 + i * 55).toFixed(0)}px)`; d.style.opacity = (k * (1 - Math.abs(a - 0.5) * 2)).toFixed(2); });
+        const shown = t < 9 ? s : 44 + 0 * s;
+        kmh.textContent = Math.round(t < 9 ? s : 44 * S(9, 9.6, t) + speed(t) * 0);
+        garc.setAttribute("stroke-dashoffset", (1 - Math.min(1, (t < 9 ? s : 44) / 80)).toFixed(3));
+      }
+      let lastT = 0;
+      window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady || {};
+      window.__hf.buildReady.dog = R.ready.then(() => render(lastT));
+      window.addEventListener("hf-seek", (e) => { lastT = e.detail.time; render(lastT); });
+    </script>
+  </body>
+</html>

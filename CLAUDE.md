@@ -28,6 +28,9 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
    - **Kopf immer:** Beagle-Logo `beagle.png` (Kreis, oranger Rand) + darunter „HundeWissenTv“ – wie bei HundeFinanzTv.
      **Keine** „Nr. 01 – Thema“-Zeile oben rechts.
    - Demos ohne Stimme (spart ElevenLabs-Credits).
+   - **Hund bewegen (kostenlos):** `hundewissen/rig/rig.js` verformt Körperteile einer Pose (Schwanz, Beine, Kopf, Ohren,
+     Maul/Sprechen, Blinzeln, Atmen). Neues Video: `hundewissen/neu.sh <name>`. Beispiele: `videos/hw-x-rennen` (Galopp),
+     `hw-x-sprechen` (spricht + winkt), `hw-x-ball` (zappelt + wedelt), `hw-x-traum` (träumt). Nutzer: Bild-Wackeln allein reicht nicht.
 2. **HundeWissenTv 2.0**: ab Nov. 2026 **reiner TikTok-Shop-Kanal** (nur Hundesachen) → Skill `/shop-video`.
 3. **HundeFinanzTV**: Geld & Finanzen (faceless, animierte Grafiken) → Skill `/finanz-video`, `kanal.json`, `STIL.md`.
 
