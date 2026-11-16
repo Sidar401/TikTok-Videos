@@ -39,3 +39,8 @@ Vorlage/Baukasten: `wissen/kit/` (neu.sh, kit.js, kit.css, mix.py, fertig.sh, sn
 - Echte Planeten-Texturen in `assets/tex/` (Solar System Scope, CC BY 4.0 → in JEDE Beschreibung: „Planeten-Texturen: Solar System Scope (CC BY 4.0)“), Erde über `K.earth` (Leuchtrand mit `scale 0.93` dünner).
 - Schwarzer Hintergrund, große echte Kugeln, weiße schlichte Namen über den Objekten, unten höchstens ein großes Wort/eine Zahl. Bloom niedrig halten (Planeten nicht überstrahlen), Füll-Licht, damit keine schwarzen Scheiben entstehen.
 - Für lange Videos mit Stimme: diesen Look mit Untertiteln/Stimme kombinieren (Vorlage noch erweitern).
+
+## Longform rendern (gelernt 15.11.)
+- Formate nacheinander rendern (je ein Hintergrund-Job, < 2 h), nie parallel.
+- Vorher alte `*-roh.mp4` im Scratchpad löschen (Roh-Datei ~4 GB, sonst Speicher voll).
+- Thumbnail 16:9: `VW=1920 VH=1080 TOP=730 SIZE=125 HIDE=".tag,.capw" node wissen/kit/thumb.js ...`
