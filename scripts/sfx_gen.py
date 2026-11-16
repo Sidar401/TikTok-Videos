@@ -68,6 +68,15 @@ SOUNDS = {
     "nx-spannung": ("Short subtle tension riser, low soft pulse building, documentary style, no melody", 1.2),
     "nx-warnung": ("Subtle low two-tone news alert, soft and serious, broadcast breaking news accent, not harsh", 0.8),
     "nx-intro": ("Short premium breaking news opener sting, deep soft impact with airy shimmer, broadcast, no melody", 1.2),
+    # --- Meme-Stil „mm-“ (Nutzer 16.11., Vorbild TikTok-Sound-Tutorial; eigene Aufnahmen, keine Originale) ---
+    "mm-tippen": ("Fast typing on a mechanical keyboard, crisp clicky keys, about ten quick keystrokes, close-up, dry", 1.2),
+    "mm-wusch": ("Clean modern whoosh transition used in TikTok edits, airy swoosh, smooth, punchy, no music", 0.6),
+    "mm-bumm": ("Meme style deep boom bass drop with reverb tail, dramatic reaction impact used in viral videos", 1.2),
+    "mm-faah": ("A man exclaiming a long dramatic disappointed 'faaah' with echo, funny meme reaction voice", 1.3),
+    "mm-ooh": ("Small crowd going 'ooooh' in surprise, short funny reaction, viral video style", 1.2),
+    "mm-ding": ("Bright clean correct answer ding, single satisfying bell, TikTok edit style", 0.8),
+    "mm-kamera": ("Camera shutter click with quick flash whine, snappy, close-up", 0.6),
+    "mm-scratch": ("Short vinyl record scratch stop, funny freeze moment, meme style", 0.7),
     "crash-bass": ("Deep sub bass drop for a market crash, falling low boom, cinematic, short", 1.5),
 }
 
