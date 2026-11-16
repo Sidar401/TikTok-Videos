@@ -1,6 +1,8 @@
 # TikTok-Shop-Videos (HundeWissenTv 2.0)
 
-Ziel: ca. 5 Videos pro Tag, 9:16, max. 20 s, ohne Stimme (Trend-Sound in TikTok drunterlegen).
+Ziel: ca. 5 Videos pro Tag, 9:16, max. 20 s.
+**Stimme (ab 16.11.): immer Novaro-Stimme** (ElevenLabs „Dan – Engaging Science Instructor“, `BHr135B5EUBtaWheVj8S`, `eleven_v4`):
+`python3 scripts/shop_stimme.py videos/<name> sprechtext.txt` (ein Satz pro Zeile, Zahlen ausgeschrieben).
 
 ## Ablauf pro Produkt (1 Produkt → 4 Videos)
 1. Nutzer schickt Screenshots der Shop-Seite (Bild, Preis, Sterne, „verkauft“).
