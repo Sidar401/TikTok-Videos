@@ -1,0 +1,87 @@
+{
+ "name": "studio-ball-f-fehler",
+ "produkt": {
+  "bild": "shop/spielball/produkt.png",
+  "preis": "nur 15,17 €",
+  "sterne": "4,1",
+  "verkauft": "12.500× verkauft"
+ },
+ "ende": 3,
+ "szenen": [
+  {
+   "typ": "titel",
+   "dur": 3,
+   "bg": "dunkel",
+   "kicker": "FEHLER",
+   "titel": "Diesen Fehler|machen *viele*",
+   "icon": "warn",
+   "unter": "Vor allem, wenn du arbeitest"
+  },
+  {
+   "typ": "liste",
+   "dur": 3,
+   "bg": "dunkel",
+   "titel": "Hund *allein* ohne|Beschäftigung",
+   "punkte": [
+    [
+     "warn",
+     "Langeweile"
+    ],
+    [
+     "warn",
+     "Kaut an Möbeln"
+    ],
+    [
+     "warn",
+     "Bellt und ist unruhig"
+    ]
+   ]
+  },
+  {
+   "typ": "produkt",
+   "dur": 3,
+   "bg": "hell",
+   "titel": "Die *einfache*|Lösung",
+   "punkte": [
+    {
+     "t": "Seile zum Zerren",
+     "x": 330,
+     "y": 820,
+     "ly": 620
+    },
+    {
+     "t": "Rollt von allein",
+     "x": 700,
+     "y": 1050,
+     "ly": 1250
+    },
+    {
+     "t": "Lädt per USB",
+     "x": 500,
+     "y": 1120,
+     "ly": 1430
+    }
+   ]
+  },
+  {
+   "typ": "liste",
+   "dur": 3,
+   "bg": "hell",
+   "titel": "Darum *wirkt* er",
+   "punkte": [
+    [
+     "check",
+     "Rollt von allein"
+    ],
+    [
+     "check",
+     "Zwitschert wie ein Vogel"
+    ],
+    [
+     "check",
+     "Lädt per USB"
+    ]
+   ]
+  }
+ ]
+}
