@@ -1,0 +1,5 @@
+{"tag": "17. NOVEMBER 2026", "dauer": 72.5,
+ "hook": "<span class=\"y\">TOTER STERN</span><br />funkt alle 8 Minuten",
+ "hook_end": 4.9, "share": [5.3, 2.5], "follow": 70.5,
+ "fix": {"acht": "8", "fünftausend": "5.000", "hundert": "100"},
+ "css": ".hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"}

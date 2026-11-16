@@ -1,0 +1,5 @@
+{"tag": "17. NOVEMBER 2026", "dauer": 75,
+ "hook": "Heute Nacht:<br /><span class=\"y\">STERNSCHNUPPEN</span>",
+ "hook_end": 4.7, "share": [5.0, 2.2], "follow": 73.1,
+ "fix": {"siebzehnten": "17.", "achtzehnten": "18.", "dreiunddreißig": "33", "einundsiebzig": "71", "hundert": "100", "zehn": "10", "fünfzehn": "15", "neunzehnhundertsechsundsechzig": "1966", "vierzig": "40", "zwanzig": "20"},
+ "css": ".hookbig { font-size: 112px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"}
