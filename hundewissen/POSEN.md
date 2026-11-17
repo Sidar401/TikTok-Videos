@@ -1,7 +1,7 @@
 # Neue Aussie-Posen (HundeWissenTv)
 
 Vorhanden: sitzend, bellend, liegend, aengstlich, neugierig, springend + Bild 1–3 (18 Posen, gespeichert 16.11.). Offen: Bild 4–6.
-Vorgehen: In ChatGPT das Bild `brand/aussie-referenz.png` hochladen + einen Text unten kopieren.
+Vorgehen (ab 17.11.): In ChatGPT das Bild `renders/aussie-stil-neu.png` (neuer Zeichenstil) hochladen + einen Text unten kopieren.
 Bilder an Claude schicken → werden freigestellt und in `brand/aussie/` gespeichert.
 
 ## Bild 1 – Alltag
@@ -59,13 +59,13 @@ Zeichne genau diesen Hund (Australian Shepherd, blue merle, gleicher Cartoon-Sti
 6. sitzt im Herbstlaub mit ein paar Blättern auf dem Kopf
 ```
 
-## Bild 6 – Teile zum Bewegen (für Animation)
+## Bild 6 – Mehr Gefühle & Alltag (ersetzt die Bewegungs-Gesichter, Nutzer 17.11.)
 ```
-Zeichne genau diesen Hund (Australian Shepherd, blue merle, gleicher Cartoon-Stil, gleiche Farben, gleiche Linien) 6-mal nebeneinander, immer exakt dieselbe sitzende Pose von vorne, gleiche Größe und gleiche Position, nur das Gesicht ändert sich, reinweißer Hintergrund, ohne Schatten, ohne Text:
-1. Augen offen, Maul zu
-2. Augen geschlossen (blinzeln), Maul zu
-3. Augen offen, Maul halb offen
-4. Augen offen, Maul weit offen (spricht)
-5. Augen offen, Zunge raus, glücklich
-6. Augen offen, ein Ohr hochgestellt
+Zeichne genau diesen Hund (Australian Shepherd, blue merle, gleicher Zeichenstil, gleiche Farben, gleiche Linien) in 6 neuen Posen nebeneinander auf reinweißem Hintergrund, ohne Schatten, ohne Text, jede Pose mit Abstand:
+1. schaut schuldbewusst zur Seite, Kopf leicht gesenkt
+2. sitzt aufmerksam und hört mit gespitzten Ohren zu
+3. liegt mit dem Kopf auf den Pfoten und schaut gelangweilt
+4. bellt fröhlich, Maul offen
+5. schnüffelt neugierig an einer Blume
+6. sitzt brav und gibt Pfötchen
 ```
