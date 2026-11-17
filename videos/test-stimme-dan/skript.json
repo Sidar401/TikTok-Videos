@@ -1,0 +1,20 @@
+{
+ "titel": "Stimmtest",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Ab Freitag können Klarna und PayPal beim Später-Bezahlen plötzlich Nein sagen.",
+   "text": "Ab Freitag können Klarna und PayPal beim Später-Bezahlen plötzlich Nein sagen"
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Am zwanzigsten November gelten in Deutschland neue Regeln für Ratenkauf und Kauf auf Rechnung.",
+   "text": "Am zwanzigsten November gelten in Deutschland neue Regeln für Ratenkauf und Kauf auf Rechnung"
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Folge HundeFinanzTv, wir bringen dir jeden Tag die wichtigsten Geld-News.",
+   "text": "Folge HundeFinanzTv, wir bringen dir jeden Tag die wichtigsten Geld-News"
+  }
+ ]
+}

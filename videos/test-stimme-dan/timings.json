@@ -1,0 +1,81 @@
+{
+  "dauer": 14.4,
+  "saetze": [
+    {
+      "id": "s1",
+      "start": 0.0,
+      "end": 4.356,
+      "captions": [
+        {
+          "text": "Ab Freitag können",
+          "start": 0.0,
+          "end": 1.008
+        },
+        {
+          "text": "Klarna und PayPal",
+          "start": 1.008,
+          "end": 2.015
+        },
+        {
+          "text": "beim Später‑Bezahlen",
+          "start": 2.015,
+          "end": 3.201
+        },
+        {
+          "text": "plötzlich Nein sagen",
+          "start": 3.201,
+          "end": 4.356
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "start": 4.356,
+      "end": 9.417,
+      "captions": [
+        {
+          "text": "Am zwanzigsten November",
+          "start": 4.356,
+          "end": 5.645
+        },
+        {
+          "text": "gelten in Deutschland",
+          "start": 5.645,
+          "end": 6.851
+        },
+        {
+          "text": "neue Regeln für Ratenkauf",
+          "start": 6.851,
+          "end": 8.286
+        },
+        {
+          "text": "und Kauf auf Rechnung",
+          "start": 8.286,
+          "end": 9.417
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "start": 9.417,
+      "end": 13.787,
+      "captions": [
+        {
+          "text": "Folge HundeFinanzTv,",
+          "start": 9.417,
+          "end": 10.611
+        },
+        {
+          "text": "wir bringen dir jeden Tag",
+          "start": 10.611,
+          "end": 12.199
+        },
+        {
+          "text": "die wichtigsten Geld‑News",
+          "start": 12.199,
+          "end": 13.787
+        }
+      ]
+    }
+  ]
+}
