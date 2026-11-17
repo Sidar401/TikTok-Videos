@@ -101,3 +101,65 @@ Zeichne genau diesen Hund (Australian Shepherd, blue merle, gleicher Zeichenstil
 5. bringt einen Stock im Maul
 6. sitzt stolz mit einer Medaille um den Hals
 ```
+
+## Weitere Vorlagen (17.11.) – Plan: täglich 3 Bilder (18.11.: 7–9, 19.11.: 10–12, 20.11.: 13–15)
+## Bild 10 – Sport & Spiel
+```
+Zeichne genau diesen Hund (Australian Shepherd, blue merle, gleicher Zeichenstil, gleiche Farben, gleiche Linien) in 6 neuen Posen nebeneinander auf reinweißem Hintergrund, ohne Schatten, ohne Text, jede Pose mit Abstand:
+1. zieht beim Tauziehen an einem Seil
+2. schwimmt im Wasser, nur Kopf und Rücken zu sehen
+3. jagt fröhlich einem Schmetterling hinterher
+4. läuft durch Slalomstangen
+5. wälzt sich glücklich auf dem Rücken im Gras
+6. springt hoch nach einem Leckerli
+```
+## Bild 11 – Mehr Gefühle
+```
+Zeichne genau diesen Hund (Australian Shepherd, blue merle, gleicher Zeichenstil, gleiche Farben, gleiche Linien) in 6 neuen Posen nebeneinander auf reinweißem Hintergrund, ohne Schatten, ohne Text, jede Pose mit Abstand:
+1. knurrt und zeigt die Zähne
+2. zittert ängstlich mit eingezogenem Schwanz
+3. schaut eifersüchtig zur Seite
+4. genießt es, von einer Hand gekrault zu werden
+5. ist erschöpft und hechelt nach dem Spaziergang
+6. schaut verliebt, kleine Herzchen über dem Kopf
+```
+## Bild 12 – Welpe & Senior
+```
+Zeichne genau diesen Hund (Australian Shepherd, blue merle, gleicher Zeichenstil, gleiche Farben, gleiche Linien) in 6 neuen Posen nebeneinander auf reinweißem Hintergrund, ohne Schatten, ohne Text, jede Pose mit Abstand:
+1. derselbe Hund als süßer Welpe, sitzend
+2. als Welpe eingerollt schlafend
+3. als Welpe auf einem Spielzeug kauend
+4. als Senior mit grauer Schnauze, liegend
+5. als Senior, langsam gehend
+6. als Senior auf einem weichen Kissen, zufrieden
+```
+## Bild 13 – Erklären 2
+```
+Zeichne genau diesen Hund (Australian Shepherd, blue merle, gleicher Zeichenstil, gleiche Farben, gleiche Linien) in 6 neuen Posen nebeneinander auf reinweißem Hintergrund, ohne Schatten, ohne Text, jede Pose mit Abstand:
+1. hält mit beiden Pfoten eine leere weiße Tafel
+2. zeigt mit der Pfote nach oben
+3. denkt nach, Pfote am Kinn
+4. hebt eine Pfote wie ein Stoppschild
+5. schaut durch eine Lupe
+6. sitzt und nickt zustimmend, freundlich
+```
+## Bild 14 – Körpersprache
+```
+Zeichne genau diesen Hund (Australian Shepherd, blue merle, gleicher Zeichenstil, gleiche Farben, gleiche Linien) in 6 neuen Posen nebeneinander auf reinweißem Hintergrund, ohne Schatten, ohne Text, jede Pose mit Abstand:
+1. Spielaufforderung: vorne tief, Po hoch, Schwanz wedelt
+2. steht steif mit gesträubtem Nackenfell
+3. Schwanz zwischen den Beinen, geduckt
+4. leckt sich über die Nase (Lefzen lecken)
+5. dreht den Kopf weg und schaut zur Seite
+6. liegt entspannt auf der Seite
+```
+## Bild 15 – Pflege 2
+```
+Zeichne genau diesen Hund (Australian Shepherd, blue merle, gleicher Zeichenstil, gleiche Farben, gleiche Linien) in 6 neuen Posen nebeneinander auf reinweißem Hintergrund, ohne Schatten, ohne Text, jede Pose mit Abstand:
+1. bekommt die Ohren mit einem Tuch sauber gemacht
+2. bekommt die Krallen geschnitten, eine Hand hält die Pfote
+3. eine Zeckenzange entfernt eine Zecke am Fell
+4. frisst eine Tablette versteckt in einem Leckerli
+5. trägt einen gelben Regenmantel im Regen
+6. bekommt Pfotenbalsam eingecremt
+```

@@ -29,7 +29,7 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
      **Keine** „Nr. 01 – Thema“-Zeile oben rechts.
    - Demos ohne Stimme (spart ElevenLabs-Credits).
    - **Aktueller Stand (Nutzer 16.11.):** nur **ruhige Bilder** der Posen (kein Wackeln/Verformen – „sieht schrecklich aus“;
-     Bewegung erst später mit Higgsfield, ca. ab Dez.). **Kein Fortschrittsbalken** oben. **Ruhiges Tempo** (3 Szenen à ~4 s
+     vorerst keine Bewegung). **Kein Fortschrittsbalken** oben. **Ruhiges Tempo** (3 Szenen à ~4 s
      pro 15 s). **Schluss immer mit großem Logo** + oranger „+ Folgen“-Knopf.
      Bauen: `python3 hundewissen/bau_einfach.py <name>` (Inhalte dort in `VIDEOS`). Beispiele: `videos/hw-e-*`.
      (Altes Bewegungs-Werkzeug `hundewissen/rig/` nur zur Info, nicht benutzen.)
@@ -39,7 +39,8 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
    - **Nutzer 17.11.:** **oranger Rahmen** (26 px, `#DB8622`) in **allen Videos und Thumbnails**. Demo-Stil `videos/hw-g-*`
      ist freigegeben („damit können wir anfangen“).
    - **Themen-Bilder:** Vor jedem Video passende Bilder zum Thema erzeugen (z. B. Lachsöl, Banane) – im gleichen
-     Zeichenstil. Bis Higgsfield da ist: ChatGPT-Texte für den Nutzer schreiben (Vorlage `renders/aussie-stil-neu.png`).
+     Zeichenstil. **Kein Higgsfield** für diesen Kanal (Nutzer 17.11.: zu teuer) – immer ChatGPT-Texte für den Nutzer schreiben
+     (Vorlage `renders/aussie-stil-neu.png`, Nutzer schafft ca. 3 Bilder pro Tag kostenlos).
    - **Reihenfolge:** zuerst restliche Posen (Bild 7–9 in `hundewissen/POSEN.md`), dann Themen-Bilder.
 2. **HundeWissenTv 2.0**: ab Nov. 2026 **reiner TikTok-Shop-Kanal** (nur Hundesachen) → Skill `/shop-video`.
 3. **HundeFinanzTV**: Geld & Finanzen (faceless, animierte Grafiken) → Skill `/finanz-video`, `kanal.json`, `STIL.md`.
