@@ -69,3 +69,35 @@ Zeichne genau diesen Hund (Australian Shepherd, blue merle, gleicher Zeichenstil
 5. schnüffelt neugierig an einer Blume
 6. sitzt brav und gibt Pfötchen
 ```
+
+## Für 18.11. (Bild 7–9) – mit `renders/aussie-stil-neu.png` hochladen
+## Bild 7 – Essen & Gesundheit
+```
+Zeichne genau diesen Hund (Australian Shepherd, blue merle, gleicher Zeichenstil, gleiche Farben, gleiche Linien) in 6 neuen Posen nebeneinander auf reinweißem Hintergrund, ohne Schatten, ohne Text, jede Pose mit Abstand:
+1. schaut sehnsüchtig auf einen Teller mit Essen auf dem Tisch
+2. frisst gierig, Futter fliegt aus dem Napf
+3. hat einen dicken Bauch und liegt satt auf der Seite
+4. bekommt beim Tierarzt eine Spritze und schaut tapfer
+5. trägt einen Halskragen (Trichter) und schaut genervt
+6. steht auf einer Waage und schaut überrascht
+```
+## Bild 8 – Zuhause
+```
+Zeichne genau diesen Hund (Australian Shepherd, blue merle, gleicher Zeichenstil, gleiche Farben, gleiche Linien) in 6 neuen Posen nebeneinander auf reinweißem Hintergrund, ohne Schatten, ohne Text, jede Pose mit Abstand:
+1. liegt gemütlich auf einem Sofa
+2. schaut aus dem Fenster und wartet
+3. hat einen Schuh zerkaut, Fetzen liegen herum
+4. versteckt sich ängstlich unter einer Decke (Gewitter)
+5. sitzt vor der Haustür mit Leine im Maul
+6. liegt in einem Hundekorb mit Kuscheltier
+```
+## Bild 9 – Lernen & Tricks
+```
+Zeichne genau diesen Hund (Australian Shepherd, blue merle, gleicher Zeichenstil, gleiche Farben, gleiche Linien) in 6 neuen Posen nebeneinander auf reinweißem Hintergrund, ohne Schatten, ohne Text, jede Pose mit Abstand:
+1. macht brav Sitz und schaut zu einem Leckerli hoch
+2. macht Platz, liegt flach mit Blick nach vorne
+3. springt über eine kleine Hürde
+4. fängt eine Frisbee-Scheibe im Sprung
+5. bringt einen Stock im Maul
+6. sitzt stolz mit einer Medaille um den Hals
+```

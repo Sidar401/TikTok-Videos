@@ -50,6 +50,40 @@ VIDEOS = {
         dict(h="Dafür sieht er <i>weniger Farben.</i>", size=104, pose="rennend", ph=440,
              caps=["dafür sieht er <b>weniger farben</b>", "aber <b>bewegung</b> erkennt er super"]),
     ],
+    "hw-g-zaehne": [
+        dict(h="Putzt du deinem Hund <i>die Zähne?</i>", size=104, pose="zahnbuerste", ph=560,
+             caps=["putzt du deinem hund <b>die zähne</b>?", "das solltest du <b>unbedingt</b>"]),
+        dict(h="Die meisten haben mit 3 Jahren <i>Zahnprobleme.</i>", size=92, pose="krank", ph=400, src="Tierärzte-Verband AVMA",
+             caps=["die meisten hunde haben mit 3 jahren", "schon <b>probleme mit den zähnen</b>"]),
+        dict(h="Nur <i>Hunde-Zahnpasta</i> nehmen!", size=104, pose="aufmerksam", ph=580, px=700,
+             extra='<div class="chip x" style="top:1000px">❌ Menschen-Zahnpasta</div><div class="chip x" style="top:1130px">✅ Hunde-Zahnpasta</div>',
+             caps=["nimm nie <b>deine eigene</b> zahnpasta", "sondern <b>spezielle für hunde</b>"]),
+    ],
+    "hw-g-schuldblick": [
+        dict(h="Fühlt er sich <i>wirklich schuldig?</i>", size=104, pose="schuldig", ph=580,
+             caps=["kennst du diesen <b>blick</b>?", "als hätte er ein <b>schlechtes gewissen</b>"]),
+        dict(h="Er reagiert auf <i>deine Stimme.</i>", size=104, pose="aufmerksam", ph=580, src="Studie: Barnard College, New York (2009)",
+             caps=["forscher sagen: er reagiert", "auf <b>deinen ärger</b>, nicht auf schuld"]),
+        dict(h="Schimpfen danach <i>bringt nichts.</i>", size=104, pose="traurig", ph=540,
+             caps=["schimpfen im nachhinein", "<b>versteht er nicht</b>"]),
+    ],
+    "hw-g-winterpfoten": [
+        dict(h="Schnee macht Spaß – <i>aber Vorsicht!</i>", size=100, pose="schnee", ph=520,
+             caps=["schnee macht <b>riesig spaß</b>", "aber pass auf <b>seine pfoten</b> auf"]),
+        dict(h="Streusalz <i>reizt die Pfoten.</i>", size=110, pose="pfoetchen", ph=580,
+             caps=["streusalz kann die pfoten", "<b>wund und rissig</b> machen"]),
+        dict(h="Nach dem Gassi: <i>Pfoten abspülen.</i>", size=100, pose="badewanne", ph=480,
+             caps=["darum nach dem gassi", "die pfoten mit <b>warmem wasser</b> abspülen"]),
+    ],
+    "hw-g-buddeln": [
+        dict(h="Warum buddelt er <i>ständig Löcher?</i>", size=100, pose="buddeln", ph=540,
+             caps=["buddelt dein hund <b>ständig löcher</b>?", "dafür gibt es <b>gründe</b>"]),
+        dict(h="Oft steckt <i>Langeweile</i> dahinter.", size=104, pose="gelangweilt", ph=380,
+             extra='<div class="chip x" style="top:860px">🦴 Etwas verstecken</div><div class="chip x" style="top:990px">😎 Kühler Liegeplatz</div>',
+             caps=["er versteckt etwas, sucht kühle", "oder ihm ist <b>einfach langweilig</b>"]),
+        dict(h="Mehr Spielen hilft <i>am besten.</i>", size=104, pose="ball", ph=560,
+             caps=["mehr <b>spielen und schnüffeln</b>", "dann buddelt er <b>weniger</b>"]),
+    ],
 }
 
 HTML = """<!doctype html>
