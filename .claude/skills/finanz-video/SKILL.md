@@ -270,3 +270,10 @@ Jeden Tag 3 Videos, immer in dieser Reihenfolge:
 2. **Longform 1 (2:30–3:00):** trendiges Nachrichten-Thema des Tages.
 3. **Longform 2 (2:30–3:00, abends, WICHTIGSTES Video):** Börsen-Tagesrückblick – alles Wichtige, was an DIESEM Tag an der Börse passiert ist (DAX, Wall Street, große Einzelwerte, Krypto, Gold). Mit Datum + Laufband. Erst bauen, wenn die Tagesdaten da sind (nach Börsenschluss Europa, ggf. US-Eröffnung).
 YouTube-Tage (20.11., 23.11., …): ein Longform zusätzlich 16:9.
+
+## Hintergründe abwechseln (Nutzer 17.11.: „immer die gleichen Bilder“)
+- Pro Video Hintergründe passend zum Thema wählen (`Kit(here, n, hgs=[…])`, Bahn → Bahnhof/Zug, Preise → Supermarkt usw.).
+- Vorher in den build.py der letzten 3 Videos nachsehen, welche `hgs` dort liefen – diese NICHT wieder nehmen.
+- Bibliothek laufend erweitern: nur CC0/gemeinfrei von Wikimedia Commons (andere Bildseiten sind gesperrt),
+  Skript `scripts/hg_frei.py key="englischer suchbegriff" …` – Commons drosselt stark, also langsam und wenige auf einmal.
+  Jedes neue Bild ansehen, Unpassendes löschen (auch aus quellen.json).
