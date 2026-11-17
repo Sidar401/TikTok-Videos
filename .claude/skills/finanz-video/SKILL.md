@@ -263,3 +263,10 @@ KEIN Laufband bei zeitlosen Börsenthemen (ETF erklärt, Sparplan, „Steckt Nvi
 
 ## Stimme ab 17.11. (Nutzer)
 - **Ab sofort immer „Dan“** (voice_id `BHr135B5EUBtaWheVj8S`) – Standard in `stimme.py`, kein `--stimme` nötig. Alte Stimme „HundeTV“ (`BwioUoriWcYELLG6prCr`) nicht mehr nutzen.
+
+## TAGESPLAN AB 18.11. (Nutzer 17.11.) – ersetzt alle älteren Tagespläne
+Jeden Tag 3 Videos, immer in dieser Reihenfolge:
+1. **Short (61–75 s, mittags):** allgemeines Verbraucher-/Aufmerksamkeits-Thema, das Leute betrifft und zum Kommentieren/Teilen bringt (Muster: `videos/dticket-zustimmung`, Frist/Falle/„Achtung“). Motor-Short mit Verweis auf ein passendes Longform.
+2. **Longform 1 (2:30–3:00):** trendiges Nachrichten-Thema des Tages.
+3. **Longform 2 (2:30–3:00, abends, WICHTIGSTES Video):** Börsen-Tagesrückblick – alles Wichtige, was an DIESEM Tag an der Börse passiert ist (DAX, Wall Street, große Einzelwerte, Krypto, Gold). Mit Datum + Laufband. Erst bauen, wenn die Tagesdaten da sind (nach Börsenschluss Europa, ggf. US-Eröffnung).
+YouTube-Tage (20.11., 23.11., …): ein Longform zusätzlich 16:9.
