@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script><style>
+@font-face { font-family: "Inter Display"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.otf"); }
+@font-face { font-family: "Inter Display"; font-weight: 800; src: url("assets/fonts/InterDisplay-ExtraBold.otf"); }
+@font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/Inter-SemiBold.otf"); }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+#root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #000; font-family: "Inter Display", "Inter", sans-serif; color: #fff; }
+#bg { position: absolute; inset: 0; width: 1080px; height: 1920px; object-fit: cover; }
+#card { position: absolute; opacity: 0; overflow: hidden; }
+.glass { background: linear-gradient(180deg, rgba(30,34,48,.72), rgba(10,12,20,.78)); border: 1.5px solid rgba(255,255,255,.16); backdrop-filter: blur(26px) saturate(1.2); -webkit-backdrop-filter: blur(26px) saturate(1.2);
+  box-shadow: 0 40px 100px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.18); }
+.av { position: relative; border-radius: 50%; background: url(assets/avatar.png) center/cover; }
+.ring { position: absolute; inset: -9px; border-radius: 50%; background: conic-gradient(from 0deg, #ffe7a8, rgba(255,231,168,.1), #ffd06a, rgba(255,231,168,.1), #ffe7a8);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 4px)); mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 4px)); }
+.n { font-weight: 900; letter-spacing: -1.5px; }
+.d { font-family: Inter, sans-serif; font-weight: 600; color: rgba(255,255,255,.66); letter-spacing: .2px; }
+.btn { position: relative; font-weight: 800; letter-spacing: -.3px; }
+.btn .a, .btn .b { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 14px; border-radius: inherit; }
+.btn .b { opacity: 0; }
+#shine { position: absolute; top: -20%; bottom: -20%; width: 220px; left: -300px; background: linear-gradient(100deg, transparent, rgba(255,255,255,.22), transparent); transform: skewX(-18deg); pointer-events: none; }
+#touch { position: absolute; width: 92px; height: 92px; margin: -46px 0 0 -46px; border-radius: 50%; background: rgba(255,255,255,.32); border: 3px solid rgba(255,255,255,.9); box-shadow: 0 8px 30px rgba(0,0,0,.45); opacity: 0; z-index: 20; }
+#ripple { position: absolute; width: 92px; height: 92px; margin: -46px 0 0 -46px; border-radius: 50%; border: 3px solid rgba(255,255,255,.8); opacity: 0; z-index: 19; }
+
+#card { left: 160px; top: 1060px; width: 760px; padding: 64px 60px 58px; border-radius: 52px; text-align: center; }
+#card .av { width: 180px; height: 180px; margin: 0 auto 30px; }
+#card .n { font-size: 70px; } #card .d { font-size: 36px; margin: 10px 0 40px; }
+#card .btn { height: 116px; border-radius: 58px; font-size: 50px; }
+#card .btn .a { background: #fff; color: #0b0d14; }
+#card .btn .b { background: rgba(255,255,255,.1); border: 2px solid rgba(255,255,255,.3); color: #fff; }
+</style></head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="10" data-width="1080" data-height="1920">
+      <img id="bg" class="clip" src="assets/bg.png" data-start="0" data-duration="10" data-track-index="0" alt="" />
+      <div id="ui" class="clip" data-start="0" data-duration="10" data-track-index="1"><div id="card" class="glass"><div class="av"><div class="ring"></div></div><div class="n">Novaro</div><div class="d">Weltraum, einfach erklärt</div>
+<div class="btn" id="btn"><span class="a">Folgen</span><span class="b"><svg class="ck" width="44" height="44" viewBox="0 0 44 44"><path d="M8 23l9 9 19-20" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="48" stroke-dashoffset="48"/></svg>Gefolgt</span></div><div id="shine"></div></div>
+        <div id="ripple" style="left:540px;top:1566px"></div><div id="touch" style="left:540px;top:1566px"></div></div>
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="10" data-track-index="2" data-volume="0.6"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#bg", { scale: 1.0 }, { scale: 1.07, duration: 10, ease: "none" }, 0);
+      tl.fromTo("#card", { opacity: 0, y: 120, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: "expo.out" }, 1.1);
+      tl.fromTo(".ring", { rotation: 0 }, { rotation: 360, duration: 10, ease: "none" }, 0);
+      tl.fromTo("#card .n, #card .d, #btn", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.08, ease: "power3.out" }, 1.35);
+      tl.fromTo("#touch", { opacity: 0, x: 240, y: 260, scale: 1.3 }, { opacity: 1, x: 0, y: 0, scale: 1, duration: 0.9, ease: "power3.out" }, 2.5);
+      tl.to("#touch", { scale: 0.72, duration: 0.14 }, 3.56); tl.to("#touch", { scale: 1, duration: 0.25 }, 3.7);
+      tl.to("#btn", { scale: 0.95, duration: 0.14 }, 3.56); tl.to("#btn", { scale: 1, duration: 0.45, ease: "back.out(3)" }, 3.7);
+      tl.fromTo("#ripple", { opacity: 0.9, scale: 0.6 }, { opacity: 0, scale: 3.2, duration: 0.7, ease: "power2.out", immediateRender: false }, 3.7);
+      tl.to("#btn .a", { opacity: 0, duration: 0.18 }, 3.7); tl.to("#btn .b", { opacity: 1, duration: 0.22 }, 3.75);
+      tl.to("#btn .ck path", { attr: { "stroke-dashoffset": 0 }, duration: 0.45, ease: "power2.out" }, 3.85);
+      tl.fromTo("#shine", { x: 0 }, { x: 1400, duration: 0.9, ease: "power2.inOut", immediateRender: false }, 4.05);
+      tl.to("#touch", { opacity: 0, scale: 0.6, duration: 0.4, ease: "power2.in" }, 4.4);
+      tl.to("#card", { opacity: 0, y: 40, scale: 0.96, duration: 0.55, ease: "power2.in" }, 9.0);
+      window.__timelines = window.__timelines || {}; window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
