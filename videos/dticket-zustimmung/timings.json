@@ -1,0 +1,347 @@
+{
+ "dauer": 64.05,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 4.283,
+   "captions": [
+    {
+     "text": "Wer sein Deutschlandticket",
+     "start": 0.0,
+     "end": 1.282
+    },
+    {
+     "text": "schon länger bei der Bahn hat,",
+     "start": 1.282,
+     "end": 2.76
+    },
+    {
+     "text": "kann es Ende",
+     "start": 2.76,
+     "end": 3.352
+    },
+    {
+     "text": "des Jahres verlieren",
+     "start": 3.352,
+     "end": 4.283
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 4.283,
+   "end": 7.947,
+   "captions": [
+    {
+     "text": "Und zwar,",
+     "start": 4.283,
+     "end": 4.794
+    },
+    {
+     "text": "wenn du bis zum 30.",
+     "start": 4.794,
+     "end": 6.492
+    },
+    {
+     "text": "November nicht zustimmst",
+     "start": 6.492,
+     "end": 7.947
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 7.947,
+   "end": 9.804,
+   "captions": [
+    {
+     "text": "Teile das Video",
+     "start": 7.947,
+     "end": 8.795
+    },
+    {
+     "text": "mit deinen Freunden",
+     "start": 8.795,
+     "end": 9.804
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 9.804,
+   "end": 15.04,
+   "captions": [
+    {
+     "text": "Ab Januar kostet das Ticket",
+     "start": 9.804,
+     "end": 12.918
+    },
+    {
+     "text": "66,80 € statt 63 €",
+     "start": 12.918,
+     "end": 15.04
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 15.04,
+   "end": 18.796,
+   "captions": [
+    {
+     "text": "Die Bahn will dafür",
+     "start": 15.04,
+     "end": 16.084
+    },
+    {
+     "text": "von ihren Abo‑Kunden ein Ja",
+     "start": 16.084,
+     "end": 17.567
+    },
+    {
+     "text": "zu den neuen Bedingungen",
+     "start": 17.567,
+     "end": 18.796
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 18.796,
+   "end": 21.68,
+   "captions": [
+    {
+     "text": "Sagst du nichts,",
+     "start": 18.796,
+     "end": 19.745
+    },
+    {
+     "text": "endet dein Abo",
+     "start": 19.745,
+     "end": 20.655
+    },
+    {
+     "text": "zum Jahreswechsel",
+     "start": 20.655,
+     "end": 21.68
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 21.68,
+   "end": 27.171,
+   "captions": [
+    {
+     "text": "Die Zustimmung geht in wenigen",
+     "start": 21.68,
+     "end": 23.738
+    },
+    {
+     "text": "Klicks: im DB Navigator",
+     "start": 23.738,
+     "end": 25.376
+    },
+    {
+     "text": "oder im Abo‑Portal der Bahn",
+     "start": 25.376,
+     "end": 27.171
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 27.171,
+   "end": 31.776,
+   "captions": [
+    {
+     "text": "Achtung: Hast du das Ticket",
+     "start": 27.171,
+     "end": 28.604
+    },
+    {
+     "text": "bei einem anderen Anbieter,",
+     "start": 28.604,
+     "end": 30.165
+    },
+    {
+     "text": "gilt dessen Nachricht an dich",
+     "start": 30.165,
+     "end": 31.776
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 31.776,
+   "end": 36.556,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTv,",
+     "start": 31.776,
+     "end": 33.117
+    },
+    {
+     "text": "wir bringen dir jeden Tag",
+     "start": 33.117,
+     "end": 34.875
+    },
+    {
+     "text": "die wichtigsten Geld‑News",
+     "start": 34.875,
+     "end": 36.556
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 36.556,
+   "end": 39.323,
+   "captions": [
+    {
+     "text": "Und jetzt kommt der Haken,",
+     "start": 36.556,
+     "end": 38.078
+    },
+    {
+     "text": "den kaum jemand kennt",
+     "start": 38.078,
+     "end": 39.323
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 39.323,
+   "end": 43.868,
+   "captions": [
+    {
+     "text": "Ab 2027 richtet sich der Preis",
+     "start": 39.323,
+     "end": 41.876
+    },
+    {
+     "text": "nach einem festen Index",
+     "start": 41.876,
+     "end": 43.868
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 43.868,
+   "end": 47.212,
+   "captions": [
+    {
+     "text": "Darin stecken vor allem Löhne,",
+     "start": 43.868,
+     "end": 45.729
+    },
+    {
+     "text": "Energie und andere Kosten",
+     "start": 45.729,
+     "end": 47.212
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 47.212,
+   "end": 50.908,
+   "captions": [
+    {
+     "text": "Steigen die,",
+     "start": 47.212,
+     "end": 47.966
+    },
+    {
+     "text": "steigt das Ticket",
+     "start": 47.966,
+     "end": 49.129
+    },
+    {
+     "text": "jedes Jahr automatisch mit",
+     "start": 49.129,
+     "end": 50.908
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 50.908,
+   "end": 54.377,
+   "captions": [
+    {
+     "text": "Und du musst künftigen",
+     "start": 50.908,
+     "end": 52.147
+    },
+    {
+     "text": "Preiserhöhungen nicht",
+     "start": 52.147,
+     "end": 53.33
+    },
+    {
+     "text": "mehr extra zustimmen",
+     "start": 53.33,
+     "end": 54.377
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "start": 54.377,
+   "end": 57.557,
+   "captions": [
+    {
+     "text": "Willst du raus,",
+     "start": 54.377,
+     "end": 55.198
+    },
+    {
+     "text": "musst du bis zum 10.",
+     "start": 55.198,
+     "end": 56.641
+    },
+    {
+     "text": "Dezember kündigen",
+     "start": 56.641,
+     "end": 57.557
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "start": 57.557,
+   "end": 63.444,
+   "captions": [
+    {
+     "text": "Ein ganzes Video,",
+     "start": 57.557,
+     "end": 58.76
+    },
+    {
+     "text": "was sich 2027 noch",
+     "start": 58.76,
+     "end": 60.146
+    },
+    {
+     "text": "alles ändert,",
+     "start": 60.146,
+     "end": 61.146
+    },
+    {
+     "text": "findest du bei uns",
+     "start": 61.146,
+     "end": 62.532
+    },
+    {
+     "text": "auf dem Kanal",
+     "start": 62.532,
+     "end": 63.444
+    }
+   ]
+  }
+ ]
+}
