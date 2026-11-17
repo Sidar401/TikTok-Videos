@@ -279,9 +279,22 @@ YouTube-Tage (20.11., 23.11., …): ein Longform zusätzlich 16:9.
   Jedes neue Bild ansehen, Unpassendes löschen (auch aus quellen.json).
 
 ## Logo-Intro (Nutzer 18.11., Vorbild Kanal „Finanzbär“) – ab sofort in JEDEM Video
-Nach ca. 30 s Einstieg kommt ein 3-s-Logo-Intro: Beagle knallt in die Mitte, rutscht nach links, „HundeFinanzTv“ fährt
+Logo-Intro (3 s) immer am Satzende: **Longform nach ca. 30 s** (`ls.einfuegen(HERE, 28)`), **Short nach ca. 15 s** (`ls.einfuegen(HERE, 13)`).
+Ablauf: Beagle knallt in die Mitte, rutscht nach links, „HundeFinanzTv“ fährt
 von rechts rein, darunter „AKTIEN | FINANZEN | VERMÖGEN“ (Sounds mm-bumm + mm-wusch). Die Stimme pausiert dabei.
 Baustein `scripts/logo_sting.py` (Probe: `videos/logo-intro`, `renders/logo-intro-probe*.mp4`):
   t0 = ls.einfuegen(HERE, 30)  # nach sync.py, vor dem Szenenbau: Pause in Voice + Zeiten schieben
   html, code = ls.szene(querformat=…); SZENEN.append((t0, t0 + ls.DAUER, html, code)); SFX += ls.sounds(t0)
 Szenen davor enden bei t0, danach beginnen sie bei t0 + DAUER (Zeiten aus timings.json stimmen automatisch).
+
+## Skript-Einstieg PROFESSIONELL (Nutzer 18.11.) – Teil VOR dem Logo-Intro
+Longform (≈ 30 s, 5–6 Sätze):
+1. **Hook (0–3 s):** stärkste Zahl/Aussage, direkt an „du“, kein „Hallo“, kein „In diesem Video“.
+2. **Worum geht's:** ein klarer Satz – was ist passiert / was ändert sich (mit Datum oder Zahl).
+3. **Warum es dich betrifft:** konkret Geld, Frist oder Risiko für den Zuschauer („Das kostet dich bis zu … im Jahr“).
+4. **Offene Schleife (Grund zum Dranbleiben):** etwas versprechen, das erst später kommt
+   („Und der dritte Punkt ist der, den fast alle übersehen.“ / „Am Ende zeigen wir dir, was du jetzt tun kannst.“) – muss im Video eingelöst werden.
+5. **CTA** (Kommentar-Aussage ODER Teilen, kurz).
+6. **Überleitung zum Logo:** kurzer Schlag-Satz („Schauen wir uns das genau an.“) → Logo-Intro.
+Short (≈ 15 s, 3 Sätze): Hook → worum + warum es dich betrifft → offene Schleife; danach Logo, der CTA kommt direkt nach dem Logo.
+Im Chat beim Skript kurz markieren, wo das Logo-Intro sitzt.
