@@ -40,3 +40,5 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
 #cta .t { position: absolute; left: 0; width: 1080px; top: 1100px; text-align: center; font-family: "FR"; font-style: italic; font-weight: 900; font-size: 56px; color: var(--or); }
 #cta .pill { position: absolute; left: 0; width: 1080px; top: 1130px; text-align: center; }
 #cta .pill span { display: inline-block; background: #db8622; color: #fff; font-weight: 900; font-size: 64px; padding: 20px 64px 24px; border-radius: 60px; box-shadow: 0 0 44px #db862288, 0 16px 30px #0002; }
+/* Oranger Rahmen ums ganze Video (Nutzer 17.11., wie HundeFinanzTv) */
+#frame { position: absolute; inset: 0; border: 26px solid #db8622; z-index: 40; pointer-events: none; }

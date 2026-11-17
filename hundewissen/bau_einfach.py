@@ -108,6 +108,7 @@ HTML = """<!doctype html>
       <div id="name">HundeWissenTv</div>
       <div id="cta"><div class="ring"><img src="assets/beagle.png" alt="" /></div><div class="n">HundeWissenTv</div><div class="pill"><span>+ Folgen</span></div></div>
       <div id="grain"></div>
+      <div id="frame"></div>
     </div>
     <script>
       const DUR = {DUR};

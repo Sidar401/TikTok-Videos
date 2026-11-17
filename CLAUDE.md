@@ -36,6 +36,11 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
    - **Nutzer 16.11. (2):** **keine Lautwörter** („*kratz*“, „Zzz“ o. ä.), **keine kleine Überschrift (Kicker)** über dem
      großen Text. Schluss: nur Logo + „HundeWissenTv“ + **oranger „+ Folgen“-Knopf** (kein „Folg uns…“-Satz).
      Info-Kärtchen (z. B. „Flöhe?“) und Quellenzeile sind ok. Beispiele: `videos/hw-f-*`.
+   - **Nutzer 17.11.:** **oranger Rahmen** (26 px, `#DB8622`) in **allen Videos und Thumbnails**. Demo-Stil `videos/hw-g-*`
+     ist freigegeben („damit können wir anfangen“).
+   - **Themen-Bilder:** Vor jedem Video passende Bilder zum Thema erzeugen (z. B. Lachsöl, Banane) – im gleichen
+     Zeichenstil. Bis Higgsfield da ist: ChatGPT-Texte für den Nutzer schreiben (Vorlage `renders/aussie-stil-neu.png`).
+   - **Reihenfolge:** zuerst restliche Posen (Bild 7–9 in `hundewissen/POSEN.md`), dann Themen-Bilder.
 2. **HundeWissenTv 2.0**: ab Nov. 2026 **reiner TikTok-Shop-Kanal** (nur Hundesachen) → Skill `/shop-video`.
 3. **HundeFinanzTV**: Geld & Finanzen (faceless, animierte Grafiken) → Skill `/finanz-video`, `kanal.json`, `STIL.md`.
 
