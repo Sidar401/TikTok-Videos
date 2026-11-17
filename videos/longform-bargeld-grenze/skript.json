@@ -1,0 +1,215 @@
+{
+ "titel": "Bargeld-Grenze 2027",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Ab Juli zweitausendsiebenundzwanzig darfst du in Deutschland nicht mehr alles bar bezahlen.",
+   "text": "Ab Juli 2027 darfst du in Deutschland nicht mehr alles bar bezahlen"
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Eine neue E-U-Regel setzt eine Grenze von zehntausend Euro.",
+   "text": "Eine neue E-U-Regel setzt eine Grenze von 10.000 €"
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Schreib uns in die Kommentare, ob du selbst noch oft mit Bargeld bezahlst, oder kommentier einfach mit Bargeld.",
+   "text": "Schreib uns in die Kommentare, ob du selbst noch oft mit Bargeld bezahlst, oder kommentier einfach mit Bargeld"
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Viele lesen jetzt: Das Bargeld wird abgeschafft. Das stimmt nicht.",
+   "text": "Viele lesen jetzt: Das Bargeld wird abgeschafft. Das stimmt nicht"
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Aber es ändert sich trotzdem einiges, und das schauen wir uns jetzt genau an.",
+   "text": "Aber es ändert sich trotzdem einiges, und das schauen wir uns jetzt genau an"
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Die Regel steht in einer neuen E-U-Verordnung gegen Geldwäsche.",
+   "text": "Die Regel steht in einer neuen E-U-Verordnung gegen Geldwäsche"
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Sie gilt ab dem zehnten Juli zweitausendsiebenundzwanzig, und zwar direkt in allen siebenundzwanzig E-U-Ländern.",
+   "text": "Sie gilt ab dem zehnten Juli 2027, und zwar direkt in allen 27 E-U-Ländern"
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Deutschland muss dafür kein eigenes Gesetz mehr machen.",
+   "text": "Deutschland muss dafür kein eigenes Gesetz mehr machen"
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Was genau wird verboten?",
+   "text": "Was genau wird verboten?"
+  },
+  {
+   "id": "s10",
+   "sprechtext": "Barzahlungen über zehntausend Euro an Händler und Firmen, also wenn du Waren kaufst oder Dienstleistungen bezahlst.",
+   "text": "Barzahlungen über 10.000 € an Händler und Firmen, also wenn du Waren kaufst oder Dienstleistungen bezahlst"
+  },
+  {
+   "id": "s11",
+   "sprechtext": "Ein Beispiel: Du willst beim Autohändler einen Gebrauchtwagen für fünfzehntausend Euro bar bezahlen. Das geht dann nicht mehr.",
+   "text": "Ein Beispiel: Du willst beim Autohändler einen Gebrauchtwagen für 15.000 € bar bezahlen. Das geht dann nicht mehr"
+  },
+  {
+   "id": "s12",
+   "sprechtext": "Und schon ab dreitausend Euro müssen bestimmte Händler deinen Ausweis prüfen, zum Beispiel Autohäuser.",
+   "text": "Und schon ab 3.000 € müssen bestimmte Händler deinen Ausweis prüfen, zum Beispiel Autohäuser"
+  },
+  {
+   "id": "s13",
+   "sprechtext": "Was bleibt erlaubt?",
+   "text": "Was bleibt erlaubt?"
+  },
+  {
+   "id": "s14",
+   "sprechtext": "Bargeld zu Hause haben bleibt erlaubt, egal wie viel.",
+   "text": "Bargeld zu Hause haben bleibt erlaubt, egal wie viel"
+  },
+  {
+   "id": "s15",
+   "sprechtext": "Bargeld sparen bleibt erlaubt.",
+   "text": "Bargeld sparen bleibt erlaubt"
+  },
+  {
+   "id": "s16",
+   "sprechtext": "Und Geschäfte von privat zu privat sind nicht betroffen.",
+   "text": "Und Geschäfte von privat zu privat sind nicht betroffen"
+  },
+  {
+   "id": "s17",
+   "sprechtext": "Kaufst du also das Auto vom Nachbarn, darfst du weiterhin bar bezahlen.",
+   "text": "Kaufst du also das Auto vom Nachbarn, darfst du weiterhin bar bezahlen"
+  },
+  {
+   "id": "s18",
+   "sprechtext": "Folge HundeFinanzTv, wir bringen dir jeden Tag die wichtigsten Geld-News.",
+   "text": "Folge HundeFinanzTv, wir bringen dir jeden Tag die wichtigsten Geld-News"
+  },
+  {
+   "id": "s19",
+   "sprechtext": "Warum macht die E-U das überhaupt?",
+   "text": "Warum macht die E-U das überhaupt?"
+  },
+  {
+   "id": "s20",
+   "sprechtext": "Große Summen in bar sind schwer nachzuverfolgen.",
+   "text": "Große Summen in bar sind schwer nachzuverfolgen"
+  },
+  {
+   "id": "s21",
+   "sprechtext": "Genau das nutzen Kriminelle, um Geld aus Drogenhandel oder Betrug sauber zu waschen.",
+   "text": "Genau das nutzen Kriminelle, um Geld aus Drogenhandel oder Betrug sauber zu waschen"
+  },
+  {
+   "id": "s22",
+   "sprechtext": "Und Deutschland gilt dafür seit Jahren als besonders beliebt, weil es hier bisher keine Grenze gab.",
+   "text": "Und Deutschland gilt dafür seit Jahren als besonders beliebt, weil es hier bisher keine Grenze gab"
+  },
+  {
+   "id": "s23",
+   "sprechtext": "In anderen Ländern ist es längst viel strenger.",
+   "text": "In anderen Ländern ist es längst viel strenger"
+  },
+  {
+   "id": "s24",
+   "sprechtext": "In Frankreich und Spanien liegt die Grenze bei tausend Euro, in Griechenland sogar bei fünfhundert Euro.",
+   "text": "In Frankreich und Spanien liegt die Grenze bei 1.000 €, in Griechenland sogar bei 500 €"
+  },
+  {
+   "id": "s25",
+   "sprechtext": "Im Vergleich dazu sind zehntausend Euro also eher großzügig.",
+   "text": "Im Vergleich dazu sind 10.000 € also eher großzügig"
+  },
+  {
+   "id": "s26",
+   "sprechtext": "Und manches gibt es bei uns schon heute.",
+   "text": "Und manches gibt es bei uns schon heute"
+  },
+  {
+   "id": "s27",
+   "sprechtext": "Immobilien darfst du in Deutschland seit zweitausenddreiundzwanzig nicht mehr bar bezahlen.",
+   "text": "Immobilien darfst du in Deutschland seit 2023 nicht mehr bar bezahlen"
+  },
+  {
+   "id": "s28",
+   "sprechtext": "Gold kannst du ohne Ausweis nur bis knapp zweitausend Euro kaufen.",
+   "text": "Gold kannst du ohne Ausweis nur bis knapp 2000 € kaufen"
+  },
+  {
+   "id": "s29",
+   "sprechtext": "Und wer mit zehntausend Euro oder mehr in bar die E-U verlässt oder einreist, muss das beim Zoll anmelden.",
+   "text": "Und wer mit 10.000 € oder mehr in bar die E-U verlässt oder einreist, muss das beim Zoll anmelden"
+  },
+  {
+   "id": "s30",
+   "sprechtext": "Wie wichtig ist Bargeld überhaupt noch?",
+   "text": "Wie wichtig ist Bargeld überhaupt noch?"
+  },
+  {
+   "id": "s31",
+   "sprechtext": "Laut Bundesbank wurden zweitausendfünfundzwanzig nur noch fünfundvierzig Prozent aller Einkäufe bar bezahlt.",
+   "text": "Laut Bundesbank wurden 2025 nur noch 45 % aller Einkäufe bar bezahlt"
+  },
+  {
+   "id": "s32",
+   "sprechtext": "Das ist das erste Mal weniger als die Hälfte.",
+   "text": "Das ist das erste Mal weniger als die Hälfte"
+  },
+  {
+   "id": "s33",
+   "sprechtext": "Gleichzeitig sagen achtzig Prozent: Es ist ihnen wichtig, weiter bar zahlen zu können.",
+   "text": "Gleichzeitig sagen 80 %: Es ist ihnen wichtig, weiter bar zahlen zu können"
+  },
+  {
+   "id": "s34",
+   "sprechtext": "Und es gibt immer weniger Geldautomaten, von siebenundfünfzigtausend auf rund fünfzigtausend in nur vier Jahren.",
+   "text": "Und es gibt immer weniger Geldautomaten, von 57.000 auf rund 50.000 in nur vier Jahren"
+  },
+  {
+   "id": "s35",
+   "sprechtext": "Was heißt das für dich?",
+   "text": "Was heißt das für dich?"
+  },
+  {
+   "id": "s36",
+   "sprechtext": "Für fast alle ändert sich im Alltag nichts. Wer zahlt schon im Supermarkt zehntausend Euro bar?",
+   "text": "Für fast alle ändert sich im Alltag nichts. Wer zahlt schon im Supermarkt 10.000 € bar?"
+  },
+  {
+   "id": "s37",
+   "sprechtext": "Aber drei Dinge solltest du wissen.",
+   "text": "Aber drei Dinge solltest du wissen"
+  },
+  {
+   "id": "s38",
+   "sprechtext": "Erstens: Planst du einen großen Kauf beim Händler, zum Beispiel ein Auto, plane eine Überweisung ein.",
+   "text": "Erstens: Planst du einen großen Kauf beim Händler, zum Beispiel ein Auto, plane eine Überweisung ein"
+  },
+  {
+   "id": "s39",
+   "sprechtext": "Zweitens: Zahlst du viel Bargeld bei der Bank ein, kann die Bank nach der Herkunft fragen. Heb also Belege auf, zum Beispiel einen Kaufvertrag.",
+   "text": "Zweitens: Zahlst du viel Bargeld bei der Bank ein, kann die Bank nach der Herkunft fragen. Heb also Belege auf, zum Beispiel einen Kaufvertrag"
+  },
+  {
+   "id": "s40",
+   "sprechtext": "Drittens: Ein kleiner Notvorrat in bar zu Hause ist weiterhin völlig okay.",
+   "text": "Drittens: Ein kleiner Notvorrat in bar zu Hause ist weiterhin völlig okay"
+  },
+  {
+   "id": "s41",
+   "sprechtext": "Merk dir: Bargeld wird nicht abgeschafft, nur große Barzahlungen an Händler bekommen eine Grenze.",
+   "text": "Merk dir: Bargeld wird nicht abgeschafft, nur große Barzahlungen an Händler bekommen eine Grenze"
+  },
+  {
+   "id": "s42",
+   "sprechtext": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung.",
+   "text": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung"
+  }
+ ]
+}

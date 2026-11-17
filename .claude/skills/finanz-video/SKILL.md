@@ -259,3 +259,4 @@ KEIN Laufband bei zeitlosen Börsenthemen (ETF erklärt, Sparplan, „Steckt Nvi
 - **Hörprobe 16.11.:** Nachrichten-Paket `nx-*` → Nutzer: „alle Scheiße“ – NICHT benutzen. Meme-Stil: erlaubt (sparsam, „mal zwischendurch“) nur
   `mm-tippen` (Überschrift), `mm-wusch` (Übergang), `mm-bumm` (krasser Moment), `mm-kamera`, `mm-scratch`. „Faaah“, „Ooh“, „Ding“ = „ekelhaft“, gelöscht.
 - Grundsatz ab 16.11.: WENIGER Sounds. Pro Video ca. 5–8 Sounds insgesamt statt 2–3 pro Szene; Rest nur Stimme.
+- **CTA-Wortlaut (Nutzer 17.11.):** Aufrufe allgemein und einfach halten, nicht jedes Mal speziell. Teilen: „Teile das Video mit deinen Freunden.“ Kommentar: gern mit Mitmach-Wort, z. B. „… oder kommentier einfach mit ‚Bargeld‘.“
