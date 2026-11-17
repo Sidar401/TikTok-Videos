@@ -55,4 +55,5 @@ Vorlage/Baukasten: `wissen/kit/` (neu.sh, kit.js, kit.css, mix.py, fertig.sh, sn
 - Der alte rote „+ Folgen“-Pill und die alte Folg-Box werden NICHT mehr benutzt (Farbe rot gefällt nicht).
 - Stattdessen ein Profil-Button wie bei Creatorn: Profilbild (wissen/kit/avatar.png), Novaro, @novaro040, Folgen-Button, Finger tippt → „Gefolgt ✓“.
 - 3 Muster: videos/cta-demo-1 (Karte), cta-demo-2 (Profilbild mit Plus), cta-demo-3 (Leiste unten). Baukasten: wissen/kit/cta_demos.py.
-- Nutzer (17.11.): Variante 1 (Karte) gewählt, OHNE @novaro040, professioneller. Neue Proben: videos/cta-pro-1..3 (wissen/kit/cta_pro.py) – Tipp-Punkt statt Emoji-Finger, Haken wird gezeichnet, Lichtschimmer. Endgültige Wahl hier eintragen.
+- Nutzer (17.11.): Variante 1 (Karte) gewählt, OHNE @novaro040, professioneller. Neue Proben: videos/cta-pro-1..3 (wissen/kit/cta_pro.py) – Tipp-Punkt statt Emoji-Finger, Haken wird gezeichnet, Lichtschimmer. 
+- ✅ ENTSCHIEDEN (17.11.): **cta-pro-3 IMMER** (Profilbild ragt oben aus der Karte, Novaro + „Weltraum, einfach erklärt“, weißer Folgen-Knopf → goldenes „✓ Gefolgt“). Ersetzt den alten roten Pill UND die alte Folg-Box am Ende.
