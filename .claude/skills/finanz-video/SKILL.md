@@ -102,7 +102,7 @@ Das Einkommen-Video (`videos/longform-einkommen`) ist der Qualitäts-Maßstab: �
 - Geplante Aufgabe „HundeFinanzTv Tagesideen“ jeden Tag 11:40 Uhr (Berlin): aktuelle Trends recherchieren, `THEMEN.md` prüfen, je 3 Ideen für Longform, Short 1, Short 2 + Empfehlung. Skripte erst nach Auswahl des Nutzers.
 
 ## Stimme per API (Nutzer 8.11.)
-- Ablauf: Skript schreiben → Nutzer gibt frei („passt“) → `python3 scripts/stimme.py videos/<name>` (Stimme „HundeTV“, eleven_v4) → `sync.py … --tempo 1.12` → bauen/rendern. Kein MP3-Upload mehr nötig.
+- Ablauf: Skript schreiben → Nutzer gibt frei („passt“) → `python3 scripts/stimme.py videos/<name>` (Stimme „Dan“ ab 17.11., eleven_v4) → `sync.py … --tempo 1.12` → bauen/rendern. Kein MP3-Upload mehr nötig.
 - Credits: Schlüssel-Limit 100.000/Monat, **geteilt mit Kanal Novaro**; Abo ~121.000. Vor jeder Erzeugung `python3 scripts/stimme.py --stand`; bei < 15.000 frei den Nutzer warnen.
 - **Motor-Short (Nutzer 8.11.):** Täglich bei **einem der 2 Shorts** auf ein YouTube-Longform hinweisen – Thema passend zum letzten YouTube-Longform. Letzter Satz NUR Hinweis, dass es das Video bei uns auf dem Kanal gibt (Nutzer 10.11.), z. B. „Ein ganzes Video dazu findest du bei uns auf dem Kanal.“ – NIE „unten verlinkt“/„unter dem Video“, kein Pfeil nach unten. Endkarte: Longform-Thumbnail + „Auf unserem Kanal“. Ausnahme von der Regel „kein Schluss-CTA“. Nutzer verlinkt NICHTS (kein „Verwandtes Video“ mehr nennen).
 - **Longform-Länge ab 9.11.: 2–3 Minuten** (≈ 300–450 Wörter, ≈ 2.500–3.500 Credits) – Nutzer: „erstmal“ so.
@@ -260,3 +260,6 @@ KEIN Laufband bei zeitlosen Börsenthemen (ETF erklärt, Sparplan, „Steckt Nvi
   `mm-tippen` (Überschrift), `mm-wusch` (Übergang), `mm-bumm` (krasser Moment), `mm-kamera`, `mm-scratch`. „Faaah“, „Ooh“, „Ding“ = „ekelhaft“, gelöscht.
 - Grundsatz ab 16.11.: WENIGER Sounds. Pro Video ca. 5–8 Sounds insgesamt statt 2–3 pro Szene; Rest nur Stimme.
 - **CTA-Wortlaut (Nutzer 17.11.):** Aufrufe allgemein und einfach halten, nicht jedes Mal speziell. Teilen: „Teile das Video mit deinen Freunden.“ Kommentar: gern mit Mitmach-Wort, z. B. „… oder kommentier einfach mit ‚Bargeld‘.“
+
+## Stimme ab 17.11. (Nutzer)
+- **Ab sofort immer „Dan“** (voice_id `BHr135B5EUBtaWheVj8S`) – Standard in `stimme.py`, kein `--stimme` nötig. Alte Stimme „HundeTV“ (`BwioUoriWcYELLG6prCr`) nicht mehr nutzen.

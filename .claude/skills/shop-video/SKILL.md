@@ -23,4 +23,4 @@ Beim Posten erinnern: Schalter „KI-generiert“ an, Trend-Sound drunter, Preis
 ## Stimme (vorbereitet 9.11., ab ca. 19.11. geplant)
 - ElevenLabs ist über die Umgebung „Standard“ freigeschaltet (Schlüssel setzt der Proxy ein, nie selbst eintragen).
 - Sprechtext pro Video in `skript.json` (`saetze[].sprechtext`, max. ~20 s ≈ 50 Wörter), dann `python3 scripts/stimme.py <ordner>` → `assets/voice-original.mp3`, danach `python3 scripts/sync.py <ordner> <ordner>/assets/voice-original.mp3 --tempo 1.12` für Untertitel-Zeiten.
-- Shop-Stimme = **„HundeTV“** (gleiche Stimme wie HundeFinanzTv, Nutzer 9.11.) – Standard in `stimme.py`, kein `--stimme` nötig. Credits geteilt mit HundeFinanzTv, Novaro, HundeWissenTv – Stand mit `--stand` prüfen.
+- Shop-Stimme = gleiche Stimme wie HundeFinanzTv: ab 17.11. **„Dan“** (Standard in `stimme.py`, kein `--stimme` nötig). Credits geteilt mit HundeFinanzTv, Novaro, HundeWissenTv – Stand mit `--stand` prüfen.

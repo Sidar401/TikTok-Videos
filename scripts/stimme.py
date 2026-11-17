@@ -6,7 +6,7 @@
   python3 scripts/stimme.py --stimmen                            (alle Stimmen im Konto auflisten)
   danach wie immer: python3 scripts/sync.py videos/<name> videos/<name>/assets/voice-original.mp3 --tempo 1.12
 
-Stimme „HundeTV“, Modell eleven_v4. Der Schlüssel wird vom Proxy eingesetzt (Header-Wert ist nur ein Platzhalter).
+Stimme „Dan“ (ab 17.11.), Modell eleven_v4. Der Schlüssel wird vom Proxy eingesetzt (Header-Wert ist nur ein Platzhalter).
 Kosten ≈ 1 Credit pro Zeichen – vorher Kontostand zeigen (`--stand`), Limit 100.000 geteilt mit Kanal Novaro.
 """
 import json
@@ -14,7 +14,7 @@ import sys
 import urllib.request
 from pathlib import Path
 
-VOICE = "BwioUoriWcYELLG6prCr"  # HundeTV
+VOICE = "BHr135B5EUBtaWheVj8S"  # Dan (ab 17.11., vorher HundeTV = BwioUoriWcYELLG6prCr)
 MODELL = "eleven_v4"
 API = "https://api.elevenlabs.io/v1"
 _ap = Path(__file__).resolve().parent.parent / "brand/aussprache.json"
