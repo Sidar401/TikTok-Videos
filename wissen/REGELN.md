@@ -1,8 +1,8 @@
 # Regeln für den Wissens-Kanal (vom Nutzer, 01.11.2026) – IMMER einhalten
 1. **Riesige Hook am Anfang (0–2,5 s):** Die Frage/Hook steht GROSS mitten im Bild (ca. 110–130 px, 2–3 Zeilen, Glow),
    nicht nur als kleine Titelzeile. Der normale Titel oben ist in dieser Zeit ausgeblendet.
-2. **Call to Action zum Folgen:** In jedem Video am Ende ein großer „Folg uns für mehr!“-Hinweis mit Folgen-Knopf
-   (rote Pille „+ Folgen“). Zusätzlich gern die Kommentar-Frage.
+2. **Call to Action zum Folgen:** ⚠️ NEU ab 17.11. → siehe „Folgen-Aufruf NEU“ unten (nach dem 3. Satz, nur „Folg uns“,
+   KEINE Kommentar-Frage, cta-pro-3-Karte).
 3. 30 Sekunden, Hochformat 1080×1920, keine Hintergrund-Musik (nur Effekte), Deutsch.
 4. Fakten vorher prüfen; Annahmen im Video nennen.
 Vorlage/Baukasten: `wissen/kit/` (neu.sh, kit.js, kit.css, mix.py, fertig.sh, snap.sh).
@@ -57,3 +57,6 @@ Vorlage/Baukasten: `wissen/kit/` (neu.sh, kit.js, kit.css, mix.py, fertig.sh, sn
 - 3 Muster: videos/cta-demo-1 (Karte), cta-demo-2 (Profilbild mit Plus), cta-demo-3 (Leiste unten). Baukasten: wissen/kit/cta_demos.py.
 - Nutzer (17.11.): Variante 1 (Karte) gewählt, OHNE @novaro040, professioneller. Neue Proben: videos/cta-pro-1..3 (wissen/kit/cta_pro.py) – Tipp-Punkt statt Emoji-Finger, Haken wird gezeichnet, Lichtschimmer. 
 - ✅ ENTSCHIEDEN (17.11.): **cta-pro-3 IMMER** (Profilbild ragt oben aus der Karte, Novaro + „Weltraum, einfach erklärt“, weißer Folgen-Knopf → goldenes „✓ Gefolgt“). Ersetzt den alten roten Pill UND die alte Folg-Box am Ende.
+- ✅ ENTSCHIEDEN (17.11., Nutzer: „ab sofort immer bei jedem“): **Aufruf NACH DEM DRITTEN SATZ**, nicht am Ende.
+  Im Sprechtext NUR „Folg uns für mehr!“ (o. ä.) – **KEINE Kommentar-Frage** („Schreib's in die Kommentare“, „Was denkst du?“) – erstmal nicht.
+  Karte (szene.json "karte": [start, dauer]) genau dann einblenden, wenn „Folg uns“ gesprochen wird. Am Ende kein Aufruf mehr.
