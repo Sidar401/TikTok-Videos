@@ -1,0 +1,5 @@
+{"tag": "18. NOVEMBER 2026", "dauer": 70.5,
+ "hook": "Aus dem All<br /><span class=\"y\">GEFANGEN!</span>",
+ "hook_end": 4.4, "karte": [19.9, 5.4],
+ "fix": {"vierzehnten": "14.", "hundertzwanzig": "120", "zweiundzwanzig": "22", "vierzehn": "14", "sechsundzwanzig": "26", "siebenundzwanzigtausend": "27.000", "tausend": "1.000", "dreiunddreißig": "33"},
+ "css": ".hookbig { font-size: 140px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"}

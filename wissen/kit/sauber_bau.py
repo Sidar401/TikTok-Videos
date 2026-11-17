@@ -2,7 +2,7 @@
 """Sauberer Look (freigegeben 14.11.). Baut videos/<name>/index.html.
 Ohne words.json: sauber_vorlage.html (Demo ohne Stimme).
 Mit words.json: sauber_stimme_vorlage.html (Stimme, Untertitel, Hook, "+ Folgen", Folg-Box).
-szene.json: {"tag": "...", "dauer": 65, "hook": "...", "hook_end": 4.0, "share": [4.3, 3.4], "follow": 61.8, "fix": {}, "css": ""}
+szene.json (ab 17.11. mit "karte": [start, dauer] statt share/follow): {"tag": "...", "dauer": 65, "hook": "...", "hook_end": 4.0, "share": [4.3, 3.4], "follow": 61.8, "fix": {}, "css": ""}
 In szene.js: renderAt = (t) => {...}; dort am Ende cap(t) aufrufen (nur mit Stimme)."""
 import json, subprocess, sys
 from pathlib import Path
@@ -17,9 +17,15 @@ voice = (proj / "words.json").exists()
 if voice:
     w = json.load(open(proj / "words.json"))
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(proj / "assets/voice.wav")], capture_output=True, text=True).stdout)
-    rep.update({"{{SHARE_TEXT}}": c.get("share_text", "+ Folgen"), "{{FOLLOW_TEXT}}": c.get("follow_text", "Folg uns für mehr! 👆"), "{{FOLLOW_PILL}}": c.get("follow_pill", "+ Folgen"), "{{HOOK}}": c["hook"], "{{HOOK_END}}": str(c["hook_end"]), "{{CAP_DUR}}": f"{total - c['hook_end']:.2f}", "{{SHARE_START}}": str(c["share"][0]), "{{SHARE_DUR}}": str(c["share"][1]),
-                "{{FOLLOW}}": str(c["follow"]), "{{FOLLOW_DUR}}": f"{total - c['follow']:.2f}", "{{VOICE_DUR}}": f"{dur:.2f}", "{{WORDS}}": json.dumps(w["words"], ensure_ascii=False),
+    rep.update({"{{SHARE_TEXT}}": c.get("share_text", "+ Folgen"), "{{FOLLOW_TEXT}}": c.get("follow_text", "Folg uns für mehr! 👆"), "{{FOLLOW_PILL}}": c.get("follow_pill", "+ Folgen"), "{{HOOK}}": c["hook"], "{{HOOK_END}}": str(c["hook_end"]), "{{CAP_DUR}}": f"{total - c['hook_end']:.2f}", "{{SHARE_START}}": str(c.get("share", [0, 0])[0]), "{{SHARE_DUR}}": str(c.get("share", [0, 0])[1]),
+                "{{FOLLOW}}": str(c.get("follow", total)), "{{FOLLOW_DUR}}": f"{total - c.get('follow', total):.2f}", "{{VOICE_DUR}}": f"{dur:.2f}", "{{WORDS}}": json.dumps(w["words"], ensure_ascii=False),
                 "{{CHUNKS}}": json.dumps(w["chunks"]), "{{FIX}}": json.dumps(c.get("fix", {}), ensure_ascii=False)})
 h = (kit / ("sauber_stimme_vorlage.html" if voice else "sauber_vorlage.html")).read_text()
+if voice and "karte" in c:  # neue Folgen-Karte (ab 17.11. Standard)
+    c.setdefault("share", [0, 0]); c.setdefault("follow", total)
+    import shutil; sys.path.insert(0, str(kit)); import karte
+    shutil.copy(kit / "avatar.png", proj / "assets/avatar.png")
+    h = karte.apply(h, c["karte"][0], c["karte"][1])
+    rep.update({"{{SHARE_TEXT}}": "", "{{FOLLOW_TEXT}}": "", "{{FOLLOW_PILL}}": "", "{{SHARE_START}}": "0", "{{SHARE_DUR}}": "0", "{{FOLLOW}}": str(total), "{{FOLLOW_DUR}}": "0"})
 for k, v in rep.items(): h = h.replace(k, v)
 (proj / "index.html").write_text(h); print("index.html gebaut ·", proj.name, "· mit Stimme" if voice else "· ohne Stimme")

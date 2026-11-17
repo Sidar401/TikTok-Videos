@@ -1,0 +1,5 @@
+{"tag": "18. NOVEMBER 2026", "dauer": 69,
+ "hook": "Sonnenlicht<br /><span class=\"y\">IN DER NACHT?</span>",
+ "hook_end": 4.6, "karte": [14.2, 6.6],
+ "fix": {"achtzehn": "18", "Earendil": "Eärendil-1", "eins.": "", "zweitausendfünfunddreißig": "2035", "fünfzigtausend": "50.000", "zweitausend": "2.000", "viermal": "4×"},
+ "css": ".hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"}
