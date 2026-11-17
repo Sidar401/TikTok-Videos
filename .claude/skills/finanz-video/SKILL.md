@@ -277,3 +277,11 @@ YouTube-Tage (20.11., 23.11., …): ein Longform zusätzlich 16:9.
 - Bibliothek laufend erweitern: nur CC0/gemeinfrei von Wikimedia Commons (andere Bildseiten sind gesperrt),
   Skript `scripts/hg_frei.py key="englischer suchbegriff" …` – Commons drosselt stark, also langsam und wenige auf einmal.
   Jedes neue Bild ansehen, Unpassendes löschen (auch aus quellen.json).
+
+## Logo-Intro (Nutzer 18.11., Vorbild Kanal „Finanzbär“) – ab sofort in JEDEM Video
+Nach ca. 30 s Einstieg kommt ein 3-s-Logo-Intro: Beagle knallt in die Mitte, rutscht nach links, „HundeFinanzTv“ fährt
+von rechts rein, darunter „GELD | BÖRSE | NEWS“ (Sounds mm-bumm + mm-wusch). Die Stimme pausiert dabei.
+Baustein `scripts/logo_sting.py` (Probe: `videos/logo-intro`, `renders/logo-intro-probe*.mp4`):
+  t0 = ls.einfuegen(HERE, 30)  # nach sync.py, vor dem Szenenbau: Pause in Voice + Zeiten schieben
+  html, code = ls.szene(querformat=…); SZENEN.append((t0, t0 + ls.DAUER, html, code)); SFX += ls.sounds(t0)
+Szenen davor enden bei t0, danach beginnen sie bei t0 + DAUER (Zeiten aus timings.json stimmen automatisch).
