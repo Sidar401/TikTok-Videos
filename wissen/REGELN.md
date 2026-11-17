@@ -50,3 +50,9 @@ Vorlage/Baukasten: `wissen/kit/` (neu.sh, kit.js, kit.css, mix.py, fertig.sh, sn
 - Titel komplett zwischen **y ≈ 400 und 1500** – nicht zu hoch, nicht zu tief.
 - Standard in thumb.js jetzt TOP=420. Titel unten nur, wenn er vor 1500 endet.
 - Vor dem Abschicken prüfen: 3:4-Ausschnitt ansehen, Text darf nicht angeschnitten oder an den Rand gedrückt sein.
+
+## Folgen-Aufruf NEU (Nutzer, 17.11.) – AB SOFORT
+- Der alte rote „+ Folgen“-Pill und die alte Folg-Box werden NICHT mehr benutzt (Farbe rot gefällt nicht).
+- Stattdessen ein Profil-Button wie bei Creatorn: Profilbild (wissen/kit/avatar.png), Novaro, @novaro040, Folgen-Button, Finger tippt → „Gefolgt ✓“.
+- 3 Muster: videos/cta-demo-1 (Karte), cta-demo-2 (Profilbild mit Plus), cta-demo-3 (Leiste unten). Baukasten: wissen/kit/cta_demos.py.
+- Welche Variante: Nutzer wählt noch (hier eintragen, sobald entschieden).

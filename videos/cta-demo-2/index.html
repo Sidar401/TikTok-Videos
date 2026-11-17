@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+@font-face { font-family: "Inter Display"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.otf"); }
+@font-face { font-family: "Inter Display"; font-weight: 800; src: url("assets/fonts/InterDisplay-ExtraBold.otf"); }
+@font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/Inter-SemiBold.otf"); }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+#root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #000; font-family: "Inter Display", "Inter", sans-serif; color: #fff; }
+#bg { position: absolute; inset: 0; width: 1080px; height: 1920px; object-fit: cover; }
+.glass { background: rgba(14,17,26,.62); border: 2px solid rgba(255,255,255,.14); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); box-shadow: 0 30px 80px rgba(0,0,0,.55); }
+.av { border-radius: 50%; background: url(assets/avatar.png) center/cover; box-shadow: 0 0 0 5px rgba(255,255,255,.9), 0 0 40px rgba(255,214,140,.35); }
+.btn { position: relative; display: flex; align-items: center; justify-content: center; font-weight: 800; overflow: hidden; }
+.btn .a, .btn .b { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; border-radius: inherit; }
+.btn .b { opacity: 0; }
+#finger { position: absolute; font-size: 130px; line-height: 1; opacity: 0; filter: drop-shadow(0 10px 20px rgba(0,0,0,.6)); z-index: 20; transform-origin: 30% 10%; }
+#ripple { position: absolute; width: 60px; height: 60px; margin: -30px 0 0 -30px; border-radius: 50%; border: 6px solid rgba(255,255,255,.9); opacity: 0; z-index: 19; }
+.spark { position: absolute; width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: #ffd23f; opacity: 0; z-index: 18; box-shadow: 0 0 16px #ffd23f; }
+
+#box { position: absolute; left: 0; right: 0; top: 760px; text-align: center; opacity: 0; }
+#box .t { font-size: 96px; font-weight: 900; letter-spacing: -2px; text-shadow: 0 6px 40px rgba(0,0,0,.9); margin-bottom: 50px; }
+#box .av { width: 280px; height: 280px; margin: 0 auto; position: relative; box-shadow: 0 0 0 7px #fff, 0 0 60px rgba(255,214,140,.4); }
+#plus { position: absolute; left: 50%; top: 100%; width: 104px; height: 104px; margin: -52px 0 0 -52px; border-radius: 50%; background: #ffd23f; color: #111; font: 900 76px "Inter Display"; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 7px #000, 0 10px 30px rgba(0,0,0,.6); }
+#plus .a, #plus .b { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; line-height: 1; }
+#plus .b { opacity: 0; }
+#box .h { font: 600 44px Inter, sans-serif; color: rgba(255,255,255,.85); margin-top: 90px; text-shadow: 0 4px 20px rgba(0,0,0,.9); }
+</style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="10" data-width="1080" data-height="1920">
+      <img id="bg" class="clip" src="assets/bg.png" data-start="0" data-duration="10" data-track-index="0" alt="" />
+      <div id="ui" class="clip" data-start="0" data-duration="10" data-track-index="1"><div id="box"><div class="t">Folg uns! 🚀</div><div class="av"><div id="plus"><span class="a"><svg width="54" height="54" viewBox="0 0 54 54"><path d="M27 6v42M6 27h42" stroke="#111" stroke-width="9" stroke-linecap="round"/></svg></span><span class="b"><svg width="54" height="54" viewBox="0 0 54 54"><path d="M9 28l12 12 24-26" fill="none" stroke="#111" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div></div><div class="h">@novaro040</div></div>
+        <div id="ripple" style="left:540px;top:1205px"></div><div class="spark" id="sp0" style="left:540px;top:1205px"></div><div class="spark" id="sp1" style="left:540px;top:1205px"></div><div class="spark" id="sp2" style="left:540px;top:1205px"></div><div class="spark" id="sp3" style="left:540px;top:1205px"></div><div class="spark" id="sp4" style="left:540px;top:1205px"></div><div class="spark" id="sp5" style="left:540px;top:1205px"></div><div class="spark" id="sp6" style="left:540px;top:1205px"></div><div class="spark" id="sp7" style="left:540px;top:1205px"></div><div class="spark" id="sp8" style="left:540px;top:1205px"></div><div class="spark" id="sp9" style="left:540px;top:1205px"></div>
+        <div id="finger" style="left:502px;top:1193px">👆</div>
+      </div>
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="10" data-track-index="2" data-volume="0.6"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#bg", { scale: 1.0 }, { scale: 1.08, duration: 10, ease: "none" }, 0);
+      tl.fromTo("#box", { opacity: 0, y: 90, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.65, ease: "back.out(1.6)" }, 1.2);
+      tl.fromTo("#finger", { opacity: 0, x: 260, y: 320 }, { opacity: 1, x: 0, y: 0, duration: 0.9, ease: "power3.out" }, 2.4);
+      tl.to("#finger", { scale: 0.86, duration: 0.12 }, 3.48); tl.to("#finger", { scale: 1, duration: 0.2 }, 3.6);
+      tl.fromTo("#ripple", { opacity: 0.9, scale: 0.4 }, { opacity: 0, scale: 4, duration: 0.6, ease: "power2.out", immediateRender: false }, 3.6);
+      tl.to("#plus", { rotation: 360, backgroundColor: "#ffffff", duration: 0.45, ease: "back.out(2)" }, 3.6);tl.to("#plus .a", { opacity: 0, duration: 0.15 }, 3.6); tl.to("#plus .b", { opacity: 1, duration: 0.2 }, 3.75);tl.fromTo("#box .av", { boxShadow: "0 0 0 7px #fff, 0 0 60px rgba(255,214,140,.4)" }, { boxShadow: "0 0 0 7px #ffd23f, 0 0 110px rgba(255,210,63,.8)", duration: 0.4, yoyo: true, repeat: 1, immediateRender: false }, 3.6);tl.to("#plus", { scale: 0.88, duration: 0.12 }, 3.48); tl.to("#plus", { scale: 1, duration: 0.3 }, 3.6);tl.fromTo("#sp0", { x: 0, y: 0, opacity: 1, scale: 1 }, { x: 150, y: 0, opacity: 0, scale: 0.3, duration: 0.7, ease: "power2.out", immediateRender: false }, 3.6);tl.fromTo("#sp1", { x: 0, y: 0, opacity: 1, scale: 1 }, { x: 121, y: 88, opacity: 0, scale: 0.3, duration: 0.7, ease: "power2.out", immediateRender: false }, 3.6);tl.fromTo("#sp2", { x: 0, y: 0, opacity: 1, scale: 1 }, { x: 46, y: 142, opacity: 0, scale: 0.3, duration: 0.7, ease: "power2.out", immediateRender: false }, 3.6);tl.fromTo("#sp3", { x: 0, y: 0, opacity: 1, scale: 1 }, { x: -46, y: 142, opacity: 0, scale: 0.3, duration: 0.7, ease: "power2.out", immediateRender: false }, 3.6);tl.fromTo("#sp4", { x: 0, y: 0, opacity: 1, scale: 1 }, { x: -121, y: 88, opacity: 0, scale: 0.3, duration: 0.7, ease: "power2.out", immediateRender: false }, 3.6);tl.fromTo("#sp5", { x: 0, y: 0, opacity: 1, scale: 1 }, { x: -149, y: 0, opacity: 0, scale: 0.3, duration: 0.7, ease: "power2.out", immediateRender: false }, 3.6);tl.fromTo("#sp6", { x: 0, y: 0, opacity: 1, scale: 1 }, { x: -121, y: -87, opacity: 0, scale: 0.3, duration: 0.7, ease: "power2.out", immediateRender: false }, 3.6);tl.fromTo("#sp7", { x: 0, y: 0, opacity: 1, scale: 1 }, { x: -46, y: -142, opacity: 0, scale: 0.3, duration: 0.7, ease: "power2.out", immediateRender: false }, 3.6);tl.fromTo("#sp8", { x: 0, y: 0, opacity: 1, scale: 1 }, { x: 45, y: -142, opacity: 0, scale: 0.3, duration: 0.7, ease: "power2.out", immediateRender: false }, 3.6);tl.fromTo("#sp9", { x: 0, y: 0, opacity: 1, scale: 1 }, { x: 121, y: -88, opacity: 0, scale: 0.3, duration: 0.7, ease: "power2.out", immediateRender: false }, 3.6);
+      tl.to("#finger", { opacity: 0, x: 200, y: 300, duration: 0.7, ease: "power2.in" }, 4.4);
+      tl.to("#box", { opacity: 0, y: 60, duration: 0.5, ease: "power2.in" }, 9.0);
+      window.__timelines = window.__timelines || {}; window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
