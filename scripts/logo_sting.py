@@ -1,5 +1,5 @@
 """Logo-Intro nach dem Einstieg (Nutzer 18.11., Vorbild Finanzbär): Beagle-Logo knallt in die Mitte,
-rutscht nach links, „HundeFinanzTv“ fährt von rechts rein, darunter „GELD | BÖRSE | NEWS“.
+rutscht nach links, „HundeFinanzTv“ fährt von rechts rein, darunter „AKTIEN | FINANZEN | VERMÖGEN“.
 
   import logo_sting as ls
   html, code = ls.szene(querformat=False)          # Szene für SZENEN: (t0, t0+ls.DAUER, html, code)
@@ -7,14 +7,14 @@ rutscht nach links, „HundeFinanzTv“ fährt von rechts rein, darunter „GELD
 Das Dauer-Logo oben wird während der Szene automatisch ausgeblendet.
 """
 DAUER = 3.0
-TAG = "GELD <i>|</i> BÖRSE <i>|</i> NEWS"
+TAG = "AKTIEN <i>|</i> FINANZEN <i>|</i> VERMÖGEN"
 
 
 def szene(querformat=False):
     if querformat:  # 1920×1080
         L, cy, lg, fn, ft, nx, w = 380, 540, 300, 112, 50, 720, 1920
     else:           # 1080×1920
-        L, cy, lg, fn, ft, nx, w = 50, 880, 250, 80, 42, 320, 1080
+        L, cy, lg, fn, ft, nx, w = 50, 880, 250, 80, 33, 320, 1080
     mitte = (w - lg) / 2
     html = f"""<style>
 #ls-bg {{ position:absolute; inset:0; background: radial-gradient(ellipse at 50% {cy / (1080 if querformat else 1920) * 100:.0f}%, #ff8a1f55 0%, #ff8a1f14 30%, transparent 60%), #0e1012; z-index:7; }}
@@ -25,7 +25,7 @@ def szene(querformat=False):
 #ls-txt {{ position:absolute; left:{nx}px; top:{cy - fn * 0.78}px; z-index:9; clip-path: inset(0 0 0 0); }}
 #ls-name {{ font-weight:900; font-size:{fn}px; line-height:1; color:#fff; letter-spacing:-1px; white-space:nowrap; text-shadow:0 0 40px #0008; }}
 #ls-name b {{ color:#ff8a1f; text-shadow:0 0 40px #ff8a1faa; }}
-#ls-tag {{ margin-top:{fn * 0.22:.0f}px; font-weight:900; font-size:{ft}px; color:#ff8a1f; letter-spacing:2px; white-space:nowrap; }}
+#ls-tag {{ margin-top:{fn * 0.22:.0f}px; font-weight:900; font-size:{ft}px; color:#ff8a1f; letter-spacing:1px; white-space:nowrap; }}
 #ls-tag i {{ font-style:normal; color:#ffffffcc; padding:0 6px; }}
 </style>
 <div id="ls-bg"></div><div id="ls-ring"></div>
