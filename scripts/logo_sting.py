@@ -17,12 +17,12 @@ def szene(querformat=False):
         L, cy, lg, fn, ft, nx, w = 50, 880, 250, 80, 33, 320, 1080
     mitte = (w - lg) / 2
     html = f"""<style>
-#ls-bg {{ position:absolute; inset:0; background: radial-gradient(ellipse at 50% {cy / (1080 if querformat else 1920) * 100:.0f}%, #ff8a1f55 0%, #ff8a1f14 30%, transparent 60%), #0e1012; z-index:7; }}
-#ls-ring {{ position:absolute; left:{mitte - 40}px; top:{cy - lg / 2 - 40}px; width:{lg + 80}px; height:{lg + 80}px; border-radius:50%; border:6px solid #ff8a1f; z-index:8; }}
+#ls-bg {{ position:absolute; inset:0; background: radial-gradient(ellipse at 50% {cy / (1080 if querformat else 1920) * 100:.0f}%, #ff8a1f55 0%, #ff8a1f14 30%, transparent 60%), #0e1012; border:{22 if querformat else 26}px solid #DB8622; box-sizing:border-box; z-index:11; }}
+#ls-ring {{ position:absolute; left:{mitte - 40}px; top:{cy - lg / 2 - 40}px; width:{lg + 80}px; height:{lg + 80}px; border-radius:50%; border:6px solid #ff8a1f; z-index:12; }}
 #ls-logo {{ position:absolute; left:{mitte}px; top:{cy - lg / 2}px; width:{lg}px; height:{lg}px; border-radius:50%; overflow:hidden;
-  border:8px solid #DB8622; box-shadow:0 0 70px #ff8a1fbb, 0 20px 40px #000; z-index:9; }}
+  border:8px solid #DB8622; box-shadow:0 0 70px #ff8a1fbb, 0 20px 40px #000; z-index:13; }}
 #ls-logo img {{ width:100%; height:100%; object-fit:cover; }}
-#ls-txt {{ position:absolute; left:{nx}px; top:{cy - fn * 0.78}px; z-index:9; clip-path: inset(0 0 0 0); }}
+#ls-txt {{ position:absolute; left:{nx}px; top:{cy - fn * 0.78}px; z-index:13; clip-path: inset(0 0 0 0); }}
 #ls-name {{ font-weight:900; font-size:{fn}px; line-height:1; color:#fff; letter-spacing:-1px; white-space:nowrap; text-shadow:0 0 40px #0008; }}
 #ls-name b {{ color:#ff8a1f; text-shadow:0 0 40px #ff8a1faa; }}
 #ls-tag {{ margin-top:{fn * 0.22:.0f}px; font-weight:900; font-size:{ft}px; color:#ff8a1f; letter-spacing:1px; white-space:nowrap; }}

@@ -24,7 +24,14 @@ H = {"xi-api-key": "proxy-injected", "Content-Type": "application/json"}
 
 def stand():
     r = urllib.request.Request(f"{API}/user/subscription", headers=H)
-    d = json.load(urllib.request.urlopen(r))
+    import time
+    for versuch in range(5):  # Abfrage gibt manchmal 502 zurück
+        try:
+            d = json.load(urllib.request.urlopen(r, timeout=60)); break
+        except Exception:  # noqa: BLE001
+            if versuch == 4:
+                raise
+            time.sleep(5)
     return d["character_count"], d["character_limit"]
 
 
@@ -48,7 +55,7 @@ if __name__ == "__main__":
     # In Abschnitte (≤ ~900 Zeichen) teilen – lange Texte brechen sonst mit 502 ab; mit previous_text für gleichmäßigen Klang
     teile, cur = [], []
     for satz in (s["sprechtext"] for s in saetze):
-        if cur and sum(len(x) + 1 for x in cur) + len(satz) > 900:
+        if cur and sum(len(x) + 1 for x in cur) + len(satz) > 450:
             teile.append("\n".join(cur)); cur = []
         cur.append(satz)
     teile.append("\n".join(cur))
