@@ -1,0 +1,95 @@
+{
+ "titel": "Geldautomaten verschwinden – so kommst du gratis an Bargeld",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Geldautomaten verschwinden – und fremde kosten dich bis zu sechs Euro.",
+   "bild": "Automat verschwindet, 6 €",
+   "text": "Geldautomaten verschwinden – und fremde kosten dich bis zu 6 €"
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Ende zweitausendfünfundzwanzig gab es in Deutschland nur noch rund achtundvierzigtausend Geldautomaten.",
+   "bild": "Zahl 48.000",
+   "text": "Ende 2025 gab es in Deutschland nur noch rund 48.000 Geldautomaten"
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Heißt für dich: Dein Automat ist weg – und am nächsten fremden zahlst du drauf.",
+   "bild": "Weg zum Automaten",
+   "text": "Heißt für dich: Dein Automat ist weg – und am nächsten fremden zahlst du drauf"
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Wir zeigen dir drei Wege, wie du trotzdem gratis an dein Bargeld kommst – und der dritte überrascht die meisten.",
+   "bild": "3 Wege, 3. mit ?",
+   "text": "Wir zeigen dir 3 Wege, wie du trotzdem gratis an dein Bargeld kommst – und der dritte überrascht die meisten"
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Fremde Automaten kosten oft vier bis sechs Euro pro Abhebung.",
+   "bild": "Gebühr 4–6 €",
+   "text": "Fremde Automaten kosten oft 4 bis 6 € pro Abhebung"
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Hebst du zweimal im Monat so ab, sind das bis zu hundertvierundvierzig Euro im Jahr.",
+   "bild": "Rechnung 144 €",
+   "text": "Hebst du zweimal im Monat so ab, sind das bis zu 144 € im Jahr"
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Weg eins: die Supermarktkasse.",
+   "bild": "Kasse",
+   "text": "Weg 1: die Supermarktkasse"
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Bei Rewe, Penny und Netto geht das schon ab einem Cent Einkauf, bei Lidl ab neunundneunzig Cent.",
+   "bild": "Logos + Mindesteinkauf",
+   "text": "Bei Rewe, Penny und Netto geht das schon ab 1 Cent Einkauf, bei Lidl ab 99 Cent"
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Bis zu zweihundert Euro auf einmal, mit deiner Girocard, ohne Gebühr.",
+   "bild": "Karte, 200 €",
+   "text": "Bis zu 200 € auf einmal, mit deiner Girocard, ohne Gebühr"
+  },
+  {
+   "id": "s10",
+   "sprechtext": "Weg zwei: der Automaten-Verbund deiner Bank.",
+   "bild": "Verbund-Netz",
+   "text": "Weg 2: der Automaten-Verbund deiner Bank"
+  },
+  {
+   "id": "s11",
+   "sprechtext": "Sparkasse, Volksbank, Cash Group oder Cashpool – im eigenen Verbund hebst du gratis ab, und deine Bank-App zeigt dir den nächsten Automaten.",
+   "bild": "Handy-Karte mit Automaten",
+   "text": "Sparkasse, Volksbank, Cash Group oder Cashpool – im eigenen Verbund hebst du gratis ab, und deine Bank-App zeigt dir den nächsten Automaten"
+  },
+  {
+   "id": "s12",
+   "sprechtext": "Und Weg drei: Musst du doch mal an einen fremden Automaten, dann lieber einmal viel statt viermal wenig.",
+   "bild": "1× groß vs 4× klein",
+   "text": "Und Weg 3: Musst du doch mal an einen fremden Automaten, dann lieber einmal viel statt viermal wenig"
+  },
+  {
+   "id": "s13",
+   "sprechtext": "Denn die Gebühr ist meist gleich – egal ob du zwanzig oder zweihundert Euro holst.",
+   "bild": "Vergleich 20 € vs 200 €, Gebühr gleich",
+   "text": "Denn die Gebühr ist meist gleich – egal ob du 20 oder 200 € holst"
+  },
+  {
+   "id": "s14",
+   "sprechtext": "Ein ganzes Video zur neuen Bargeld-Grenze findest du bei uns auf dem Kanal.",
+   "bild": "Endkarte Longform",
+   "text": "Ein ganzes Video zur neuen Bargeld-Grenze findest du bei uns auf dem Kanal"
+  },
+  {
+   "id": "s15",
+   "sprechtext": "Folge HundeFinanzTv, wir bringen dir jeden Tag Geld-Tipps, die wirklich was bringen.",
+   "bild": "Folgen",
+   "text": "Folge HundeFinanzTv, wir bringen dir jeden Tag Geld-Tipps, die wirklich was bringen"
+  }
+ ]
+}

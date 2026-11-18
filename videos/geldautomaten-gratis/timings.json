@@ -1,0 +1,366 @@
+{
+ "dauer": 73.515,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 4.098,
+   "captions": [
+    {
+     "text": "Geldautomaten",
+     "start": 0.0,
+     "end": 0.937
+    },
+    {
+     "text": "verschwinden – und fremde",
+     "start": 0.937,
+     "end": 2.625
+    },
+    {
+     "text": "kosten dich bis zu 6 €",
+     "start": 2.625,
+     "end": 4.098
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 4.098,
+   "end": 9.146,
+   "captions": [
+    {
+     "text": "Ende 2025 gab es",
+     "start": 4.098,
+     "end": 5.278
+    },
+    {
+     "text": "in Deutschland nur noch",
+     "start": 5.278,
+     "end": 7.137
+    },
+    {
+     "text": "rund 48.000 Geldautomaten",
+     "start": 7.137,
+     "end": 9.146
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 9.146,
+   "end": 13.514,
+   "captions": [
+    {
+     "text": "Heißt für dich: Dein Automat",
+     "start": 9.146,
+     "end": 10.724
+    },
+    {
+     "text": "ist weg – und am nächsten",
+     "start": 10.724,
+     "end": 12.185
+    },
+    {
+     "text": "fremden zahlst du drauf",
+     "start": 12.185,
+     "end": 13.514
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 13.514,
+   "end": 19.264,
+   "captions": [
+    {
+     "text": "Wir zeigen dir 3 Wege,",
+     "start": 13.514,
+     "end": 14.712
+    },
+    {
+     "text": "wie du trotzdem gratis",
+     "start": 14.712,
+     "end": 15.943
+    },
+    {
+     "text": "an dein Bargeld kommst",
+     "start": 15.943,
+     "end": 17.175
+    },
+    {
+     "text": "– und der dritte",
+     "start": 17.175,
+     "end": 18.07
+    },
+    {
+     "text": "überrascht die meisten",
+     "start": 18.07,
+     "end": 19.264
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 22.264,
+   "end": 26.019,
+   "captions": [
+    {
+     "text": "Fremde Automaten kosten oft",
+     "start": 22.264,
+     "end": 24.356
+    },
+    {
+     "text": "4 bis 6 € pro Abhebung",
+     "start": 24.356,
+     "end": 26.019
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 26.019,
+   "end": 30.734,
+   "captions": [
+    {
+     "text": "Hebst du zweimal",
+     "start": 26.019,
+     "end": 27.295
+    },
+    {
+     "text": "im Monat so ab,",
+     "start": 27.295,
+     "end": 28.557
+    },
+    {
+     "text": "sind das bis",
+     "start": 28.557,
+     "end": 29.568
+    },
+    {
+     "text": "zu 144 € im Jahr",
+     "start": 29.568,
+     "end": 30.734
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 30.734,
+   "end": 32.82,
+   "captions": [
+    {
+     "text": "Weg 1: die Supermarktkasse",
+     "start": 30.734,
+     "end": 32.82
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 32.82,
+   "end": 38.386,
+   "captions": [
+    {
+     "text": "Bei Rewe,",
+     "start": 32.82,
+     "end": 33.422
+    },
+    {
+     "text": "Penny und Netto geht",
+     "start": 33.422,
+     "end": 34.904
+    },
+    {
+     "text": "das schon ab 1 Cent Einkauf,",
+     "start": 34.904,
+     "end": 36.979
+    },
+    {
+     "text": "bei Lidl ab 99 Cent",
+     "start": 36.979,
+     "end": 38.386
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 38.386,
+   "end": 42.68,
+   "captions": [
+    {
+     "text": "Bis zu 200 € auf einmal,",
+     "start": 38.386,
+     "end": 40.32
+    },
+    {
+     "text": "mit deiner Girocard,",
+     "start": 40.32,
+     "end": 41.931
+    },
+    {
+     "text": "ohne Gebühr",
+     "start": 41.931,
+     "end": 42.68
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 42.68,
+   "end": 45.484,
+   "captions": [
+    {
+     "text": "Weg 2: der Automaten‑Verbund",
+     "start": 42.68,
+     "end": 44.669
+    },
+    {
+     "text": "deiner Bank",
+     "start": 44.669,
+     "end": 45.484
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 45.484,
+   "end": 53.676,
+   "captions": [
+    {
+     "text": "Sparkasse, Volksbank,",
+     "start": 45.484,
+     "end": 46.746
+    },
+    {
+     "text": "Cash Group oder Cashpool",
+     "start": 46.746,
+     "end": 48.246
+    },
+    {
+     "text": "– im eigenen Verbund",
+     "start": 48.246,
+     "end": 49.473
+    },
+    {
+     "text": "hebst du gratis ab,",
+     "start": 49.473,
+     "end": 50.66
+    },
+    {
+     "text": "und deine Bank‑App zeigt",
+     "start": 50.66,
+     "end": 52.094
+    },
+    {
+     "text": "dir den nächsten Automaten",
+     "start": 52.094,
+     "end": 53.676
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 53.676,
+   "end": 59.463,
+   "captions": [
+    {
+     "text": "Und Weg 3: Musst du doch",
+     "start": 53.676,
+     "end": 55.01
+    },
+    {
+     "text": "mal an einen fremden",
+     "start": 55.01,
+     "end": 56.265
+    },
+    {
+     "text": "Automaten,",
+     "start": 56.265,
+     "end": 56.893
+    },
+    {
+     "text": "dann lieber einmal viel",
+     "start": 56.893,
+     "end": 58.336
+    },
+    {
+     "text": "statt viermal wenig",
+     "start": 58.336,
+     "end": 59.463
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 59.463,
+   "end": 64.247,
+   "captions": [
+    {
+     "text": "Denn die Gebühr ist",
+     "start": 59.463,
+     "end": 60.874
+    },
+    {
+     "text": "meist gleich – egal ob",
+     "start": 60.874,
+     "end": 62.583
+    },
+    {
+     "text": "du 20 oder 200 € holst",
+     "start": 62.583,
+     "end": 64.247
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 64.247,
+   "end": 68.124,
+   "captions": [
+    {
+     "text": "Ein ganzes Video zur neuen",
+     "start": 64.247,
+     "end": 65.654
+    },
+    {
+     "text": "Bargeld‑Grenze findest",
+     "start": 65.654,
+     "end": 66.883
+    },
+    {
+     "text": "du bei uns auf dem Kanal",
+     "start": 66.883,
+     "end": 68.124
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "start": 68.124,
+   "end": 72.913,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTv,",
+     "start": 68.124,
+     "end": 69.283
+    },
+    {
+     "text": "wir bringen dir",
+     "start": 69.283,
+     "end": 70.229
+    },
+    {
+     "text": "jeden Tag Geld‑Tipps,",
+     "start": 70.229,
+     "end": 71.552
+    },
+    {
+     "text": "die wirklich was bringen",
+     "start": 71.552,
+     "end": 72.913
+    }
+   ]
+  }
+ ],
+ "logo_intro": 19.264
+}
