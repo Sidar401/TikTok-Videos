@@ -1,0 +1,797 @@
+{
+ "dauer": 155.36,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 6.643,
+   "captions": [
+    {
+     "text": "Morgen um 15 Uhr 30 öffnet",
+     "start": 0.0,
+     "end": 1.725
+    },
+    {
+     "text": "in New York die Börse,",
+     "start": 1.725,
+     "end": 3.16
+    },
+    {
+     "text": "und dann startet der größte",
+     "start": 3.16,
+     "end": 4.918
+    },
+    {
+     "text": "KI‑Börsengang aller Zeiten",
+     "start": 4.918,
+     "end": 6.643
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 6.643,
+   "end": 12.225,
+   "captions": [
+    {
+     "text": "Anthropic,",
+     "start": 6.643,
+     "end": 7.14
+    },
+    {
+     "text": "die Firma hinter Claude,",
+     "start": 7.14,
+     "end": 8.511
+    },
+    {
+     "text": "geht an die Nasdaq,",
+     "start": 8.511,
+     "end": 9.597
+    },
+    {
+     "text": "und schon heute Nacht",
+     "start": 9.597,
+     "end": 10.797
+    },
+    {
+     "text": "wird der Preis festgelegt",
+     "start": 10.797,
+     "end": 12.225
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 12.225,
+   "end": 17.887,
+   "captions": [
+    {
+     "text": "Das betrifft nicht nur Leute,",
+     "start": 12.225,
+     "end": 13.964
+    },
+    {
+     "text": "die die Aktie kaufen wollen,",
+     "start": 13.964,
+     "end": 15.664
+    },
+    {
+     "text": "sondern vielleicht",
+     "start": 15.664,
+     "end": 16.757
+    },
+    {
+     "text": "sogar dein ETF‑Depot",
+     "start": 16.757,
+     "end": 17.887
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 17.887,
+   "end": 21.765,
+   "captions": [
+    {
+     "text": "Denn es gibt einen Punkt,",
+     "start": 17.887,
+     "end": 19.137
+    },
+    {
+     "text": "den fast alle übersehen,",
+     "start": 19.137,
+     "end": 20.315
+    },
+    {
+     "text": "und den zeigen wir dir gleich",
+     "start": 20.315,
+     "end": 21.765
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 21.765,
+   "end": 24.706,
+   "captions": [
+    {
+     "text": "Schreib uns in die Kommentare:",
+     "start": 21.765,
+     "end": 23.54
+    },
+    {
+     "text": "kaufen oder abwarten",
+     "start": 23.54,
+     "end": 24.706
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 24.706,
+   "end": 26.567,
+   "captions": [
+    {
+     "text": "Gehen wir das Schritt",
+     "start": 24.706,
+     "end": 25.748
+    },
+    {
+     "text": "für Schritt durch",
+     "start": 25.748,
+     "end": 26.567
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 29.567,
+   "end": 34.928,
+   "captions": [
+    {
+     "text": "Heute Abend,",
+     "start": 29.567,
+     "end": 30.18
+    },
+    {
+     "text": "nach Börsenschluss",
+     "start": 30.18,
+     "end": 31.235
+    },
+    {
+     "text": "in New York,",
+     "start": 31.235,
+     "end": 31.939
+    },
+    {
+     "text": "legen Anthropic und die Banken",
+     "start": 31.939,
+     "end": 33.697
+    },
+    {
+     "text": "den Ausgabepreis fest",
+     "start": 33.697,
+     "end": 34.928
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 34.928,
+   "end": 38.306,
+   "captions": [
+    {
+     "text": "Geplant waren 70 bis",
+     "start": 34.928,
+     "end": 36.675
+    },
+    {
+     "text": "78 Dollar pro Aktie",
+     "start": 36.675,
+     "end": 38.306
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 38.306,
+   "end": 45.628,
+   "captions": [
+    {
+     "text": "Doch die Nachfrage ist riesig:",
+     "start": 38.306,
+     "end": 40.13
+    },
+    {
+     "text": "Laut Berichten wollten Anleger",
+     "start": 40.13,
+     "end": 41.983
+    },
+    {
+     "text": "etwa sechs‑ bis siebenmal",
+     "start": 41.983,
+     "end": 43.528
+    },
+    {
+     "text": "so viele Aktien kaufen,",
+     "start": 43.528,
+     "end": 44.949
+    },
+    {
+     "text": "wie es gibt",
+     "start": 44.949,
+     "end": 45.628
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 45.628,
+   "end": 49.889,
+   "captions": [
+    {
+     "text": "Deshalb rechnen viele damit,",
+     "start": 45.628,
+     "end": 47.537
+    },
+    {
+     "text": "dass der Preis über",
+     "start": 47.537,
+     "end": 48.832
+    },
+    {
+     "text": "78 Dollar landet",
+     "start": 48.832,
+     "end": 49.889
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 49.889,
+   "end": 59.048,
+   "captions": [
+    {
+     "text": "Aber Achtung: Auch",
+     "start": 49.889,
+     "end": 50.999
+    },
+    {
+     "text": "wenn die Börse um",
+     "start": 50.999,
+     "end": 52.085
+    },
+    {
+     "text": "15 Uhr 30 öffnet,",
+     "start": 52.085,
+     "end": 53.171
+    },
+    {
+     "text": "kommt der erste Kurs",
+     "start": 53.171,
+     "end": 54.448
+    },
+    {
+     "text": "bei großen Börsengängen",
+     "start": 54.448,
+     "end": 55.917
+    },
+    {
+     "text": "oft erst Stunden später,",
+     "start": 55.917,
+     "end": 57.442
+    },
+    {
+     "text": "bei uns also eher am Abend",
+     "start": 57.442,
+     "end": 59.048
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 59.048,
+   "end": 61.24,
+   "captions": [
+    {
+     "text": "Und hier liegt die erste Falle",
+     "start": 59.048,
+     "end": 61.24
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 61.24,
+   "end": 66.375,
+   "captions": [
+    {
+     "text": "Wer nicht gezeichnet hat,",
+     "start": 61.24,
+     "end": 62.7
+    },
+    {
+     "text": "bekommt die Aktie",
+     "start": 62.7,
+     "end": 63.708
+    },
+    {
+     "text": "nicht zum Ausgabepreis,",
+     "start": 63.708,
+     "end": 65.071
+    },
+    {
+     "text": "sondern zum Börsenkurs",
+     "start": 65.071,
+     "end": 66.375
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 66.375,
+   "end": 69.557,
+   "captions": [
+    {
+     "text": "Und der kann am ersten",
+     "start": 66.375,
+     "end": 68.005
+    },
+    {
+     "text": "Tag weit darüber liegen",
+     "start": 68.005,
+     "end": 69.557
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "start": 69.557,
+   "end": 73.9,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTv,",
+     "start": 69.557,
+     "end": 70.662
+    },
+    {
+     "text": "wir bringen dir jeden Tag",
+     "start": 70.662,
+     "end": 72.202
+    },
+    {
+     "text": "die wichtigsten Börsen‑News",
+     "start": 72.202,
+     "end": 73.9
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "start": 73.9,
+   "end": 77.388,
+   "captions": [
+    {
+     "text": "Wie wild so ein erster",
+     "start": 73.9,
+     "end": 75.142
+    },
+    {
+     "text": "Tag sein kann,",
+     "start": 75.142,
+     "end": 76.016
+    },
+    {
+     "text": "zeigt ein Blick zurück",
+     "start": 76.016,
+     "end": 77.388
+    }
+   ]
+  },
+  {
+   "id": "s17",
+   "start": 77.388,
+   "end": 83.808,
+   "captions": [
+    {
+     "text": "Der Chip‑Entwickler Arm",
+     "start": 77.388,
+     "end": 79.89
+    },
+    {
+     "text": "stieg 2023 am ersten",
+     "start": 79.89,
+     "end": 82.067
+    },
+    {
+     "text": "Tag um rund 25 %",
+     "start": 82.067,
+     "end": 83.808
+    }
+   ]
+  },
+  {
+   "id": "s18",
+   "start": 83.808,
+   "end": 87.849,
+   "captions": [
+    {
+     "text": "Alibaba legte",
+     "start": 83.808,
+     "end": 85.558
+    },
+    {
+     "text": "2014 sogar 38 % zu",
+     "start": 85.558,
+     "end": 87.849
+    }
+   ]
+  },
+  {
+   "id": "s19",
+   "start": 87.849,
+   "end": 92.52,
+   "captions": [
+    {
+     "text": "Uber dagegen fiel",
+     "start": 87.849,
+     "end": 89.347
+    },
+    {
+     "text": "2019 gleich am ersten",
+     "start": 89.347,
+     "end": 91.198
+    },
+    {
+     "text": "Tag um fast 8 %",
+     "start": 91.198,
+     "end": 92.52
+    }
+   ]
+  },
+  {
+   "id": "s20",
+   "start": 92.52,
+   "end": 95.235,
+   "captions": [
+    {
+     "text": "Ein großer Name ist",
+     "start": 92.52,
+     "end": 93.931
+    },
+    {
+     "text": "also keine Garantie",
+     "start": 93.931,
+     "end": 95.235
+    }
+   ]
+  },
+  {
+   "id": "s21",
+   "start": 95.235,
+   "end": 97.552,
+   "captions": [
+    {
+     "text": "Dazu kommt etwas,",
+     "start": 95.235,
+     "end": 96.208
+    },
+    {
+     "text": "das viele nicht wissen",
+     "start": 96.208,
+     "end": 97.552
+    }
+   ]
+  },
+  {
+   "id": "s22",
+   "start": 97.552,
+   "end": 103.273,
+   "captions": [
+    {
+     "text": "Mitarbeiter und Manager dürfen",
+     "start": 97.552,
+     "end": 99.44
+    },
+    {
+     "text": "ihre Aktien normalerweise",
+     "start": 99.44,
+     "end": 101.059
+    },
+    {
+     "text": "erst nach einer Sperrfrist",
+     "start": 101.059,
+     "end": 102.743
+    },
+    {
+     "text": "verkaufen",
+     "start": 102.743,
+     "end": 103.273
+    }
+   ]
+  },
+  {
+   "id": "s23",
+   "start": 103.273,
+   "end": 111.048,
+   "captions": [
+    {
+     "text": "Bei Anthropic dürfen",
+     "start": 103.273,
+     "end": 104.696
+    },
+    {
+     "text": "einige aber schon am ersten",
+     "start": 104.696,
+     "end": 106.618
+    },
+    {
+     "text": "Tag bis zu 10 % verkaufen,",
+     "start": 106.618,
+     "end": 108.381
+    },
+    {
+     "text": "und ab Tag 27 werden",
+     "start": 108.381,
+     "end": 109.805
+    },
+    {
+     "text": "weitere Aktien frei",
+     "start": 109.805,
+     "end": 111.048
+    }
+   ]
+  },
+  {
+   "id": "s24",
+   "start": 111.048,
+   "end": 113.991,
+   "captions": [
+    {
+     "text": "Das kann den Kurs",
+     "start": 111.048,
+     "end": 112.005
+    },
+    {
+     "text": "in den ersten Wochen",
+     "start": 112.005,
+     "end": 113.131
+    },
+    {
+     "text": "unter Druck setzen",
+     "start": 113.131,
+     "end": 113.991
+    }
+   ]
+  },
+  {
+   "id": "s25",
+   "start": 113.991,
+   "end": 116.405,
+   "captions": [
+    {
+     "text": "Und jetzt der Punkt,",
+     "start": 113.991,
+     "end": 115.107
+    },
+    {
+     "text": "den fast alle übersehen",
+     "start": 115.107,
+     "end": 116.405
+    }
+   ]
+  },
+  {
+   "id": "s26",
+   "start": 116.405,
+   "end": 120.849,
+   "captions": [
+    {
+     "text": "Seit Mai",
+     "start": 116.405,
+     "end": 116.777
+    },
+    {
+     "text": "gibt es an der Nasdaq",
+     "start": 116.777,
+     "end": 118.189
+    },
+    {
+     "text": "eine Schnellregel",
+     "start": 118.189,
+     "end": 119.332
+    },
+    {
+     "text": "für riesige Börsengänge",
+     "start": 119.332,
+     "end": 120.849
+    }
+   ]
+  },
+  {
+   "id": "s27",
+   "start": 120.849,
+   "end": 127.14,
+   "captions": [
+    {
+     "text": "Ist eine neue",
+     "start": 120.849,
+     "end": 121.55
+    },
+    {
+     "text": "Firma groß genug,",
+     "start": 121.55,
+     "end": 122.504
+    },
+    {
+     "text": "kommt sie schon nach wenigen",
+     "start": 122.504,
+     "end": 124.076
+    },
+    {
+     "text": "Wochen in den Nasdaq 100,",
+     "start": 124.076,
+     "end": 125.48
+    },
+    {
+     "text": "voraussichtlich",
+     "start": 125.48,
+     "end": 126.322
+    },
+    {
+     "text": "noch im Dezember",
+     "start": 126.322,
+     "end": 127.14
+    }
+   ]
+  },
+  {
+   "id": "s28",
+   "start": 127.14,
+   "end": 133.296,
+   "captions": [
+    {
+     "text": "Wer einen Nasdaq‑100‑ETF hat,",
+     "start": 127.14,
+     "end": 129.116
+    },
+    {
+     "text": "besitzt Anthropic",
+     "start": 129.116,
+     "end": 130.32
+    },
+    {
+     "text": "dann automatisch mit,",
+     "start": 130.32,
+     "end": 131.808
+    },
+    {
+     "text": "ob er will oder nicht",
+     "start": 131.808,
+     "end": 133.296
+    }
+   ]
+  },
+  {
+   "id": "s29",
+   "start": 133.296,
+   "end": 137.974,
+   "captions": [
+    {
+     "text": "Und weil diese Fonds dafür",
+     "start": 133.296,
+     "end": 134.759
+    },
+    {
+     "text": "Aktien kaufen müssen,",
+     "start": 134.759,
+     "end": 135.998
+    },
+    {
+     "text": "kann das den Kurs",
+     "start": 135.998,
+     "end": 137.001
+    },
+    {
+     "text": "zusätzlich bewegen",
+     "start": 137.001,
+     "end": 137.974
+    }
+   ]
+  },
+  {
+   "id": "s30",
+   "start": 137.974,
+   "end": 139.247,
+   "captions": [
+    {
+     "text": "Was heißt das jetzt für dich?",
+     "start": 137.974,
+     "end": 139.247
+    }
+   ]
+  },
+  {
+   "id": "s31",
+   "start": 139.247,
+   "end": 145.421,
+   "captions": [
+    {
+     "text": "Wenn du kaufen willst,",
+     "start": 139.247,
+     "end": 140.453
+    },
+    {
+     "text": "leg vorher fest,",
+     "start": 140.453,
+     "end": 141.408
+    },
+    {
+     "text": "wie viel, und setz ein Limit,",
+     "start": 141.408,
+     "end": 143.138
+    },
+    {
+     "text": "damit du nicht teurer",
+     "start": 143.138,
+     "end": 144.392
+    },
+    {
+     "text": "kaufst als geplant",
+     "start": 144.392,
+     "end": 145.421
+    }
+   ]
+  },
+  {
+   "id": "s32",
+   "start": 145.421,
+   "end": 150.782,
+   "captions": [
+    {
+     "text": "Und wenn du unsicher bist,",
+     "start": 145.421,
+     "end": 146.761
+    },
+    {
+     "text": "kannst du einfach abwarten,",
+     "start": 146.761,
+     "end": 148.2
+    },
+    {
+     "text": "denn über ETFs kommst du",
+     "start": 148.2,
+     "end": 149.479
+    },
+    {
+     "text": "später sowieso an die Aktie",
+     "start": 149.479,
+     "end": 150.782
+    }
+   ]
+  },
+  {
+   "id": "s33",
+   "start": 150.782,
+   "end": 154.757,
+   "captions": [
+    {
+     "text": "Kurzer Hinweis: Das ist",
+     "start": 150.782,
+     "end": 152.214
+    },
+    {
+     "text": "keine Anlageberatung,",
+     "start": 152.214,
+     "end": 153.645
+    },
+    {
+     "text": "nur eine Erklärung",
+     "start": 153.645,
+     "end": 154.757
+    }
+   ]
+  }
+ ],
+ "logo_intro": 26.567
+}

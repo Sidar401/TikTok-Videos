@@ -47,7 +47,7 @@ S("s2", "frei-laptop", titel_zeile("t2", "Wer geht an die Börse?") + logo("l2",
 S("s3", "frei-smartphone", titel_zeile("t3", "Betrifft auch dich") + icon_gross("i3", "🧺", 0, 600, 280, OR, True) + hand("h3", "dein ETF-Depot?", 540, 940, 84, GELB, -4, True),
   lambda a, d: f'pop("#t3", {a}); pop("#i3", {cap("s3", 1)}); pop("#h3", {cap("s3", 2)});', [])
 
-S("s4", "chips", wz("w4", "nasdaq.svg", 700, 900, 0.10) + titel_zeile("t4", "Den übersehen fast alle", farbe=GELB) + tz("n4", "?", 580, 340, "glow-o")
+S("s4", "chips", wz("w4", "nasdaq.svg", 700, 900, 0.10) + titel_zeile("t4", "Den übersehen fast alle", farbe=GELB, gr=50) + tz("n4", "?", 580, 340, "glow-o")
   + kreis("k4", 540, 760, 230, 230, GELB) + chip("c4", "kommt gleich", GELB, 1060, 56),
   lambda a, d: f'pop("#t4", {a}); slam("#n4", {cap("s4", 0)}); draw("#k4-p", {cap("s4", 1)}, 0.6); pop("#c4", {cap("s4", 2)});', [])
 
@@ -71,7 +71,7 @@ S("s9", "chips", titel_zeile("t9", "Riesige Nachfrage", farbe=GRUEN) + balken2("
   lambda a, d: f'pop("#t9", {a});' + balken2_js("b9", cap("s9", 1), cap("s9", 3)), [])
 
 S("s10", "frei-smartphone", titel_zeile("t10", "Preis höher?", farbe=GELB) + spanne("sp10", 140, 800, 800, 0.2, 0.8, "70 $", "78 $", GRAU)
-  + pfeil("p10", 780, 760, 960, 600, 0.3, GELB) + hand("h10", "über 78 $?", 760, 520, 80, GELB, -6),
+  + pfeil("p10", 760, 790, 860, 690, 0.3, GELB) + hand("h10", "über 78 $?", 560, 600, 66, GELB, -6),
   lambda a, d: f'pop("#t10", {a}); spann("#sp10", {a}); draw("#p10-p", {cap("s10", 1)}, 0.5); pop("#p10-k", {cap("s10", 1)} + 0.45); pop("#h10", {cap("s10", 1)} + 0.3);', [])
 
 S("s11", "frankfurt-skyline", titel_zeile("t11", "Achtung", farbe=ROT) + uhr("u11", "15:30", 600, GRAU, 130) + pfeil("p11", 540, 800, 540, 940, 0.0, GELB)
@@ -107,7 +107,7 @@ tag1("s17", "arm.svg", "#0091bd", 2023, "+25 %", "glow-g", "frei-laptop")
 tag1("s18", "alibaba.svg", "#ff6a00", 2014, "+38 %", "glow-g", "nyse")
 tag1("s19", "uber.svg", "#ffffff", 2019, "−8 %", "glow-r", "frei-smartphone", [(cap("s19", 2), "mm-bumm")])
 
-S("s20", "sitzungssaal", titel_zeile("t20", "Merk dir") + stempel("s20x", "KEINE GARANTIE", 170, 760, GELB, 84, -6),
+S("s20", "sitzungssaal", titel_zeile("t20", "Merk dir") + stempel("s20x", "KEINE GARANTIE", 120, 760, GELB, 64, -6),
   lambda a, d: f'pop("#t20", {a}); stempeln("#s20x", {cap("s20", 1)});', [])
 
 # ---------- Teil 3: Sperrfrist ----------
@@ -153,7 +153,7 @@ S("s31", "frei-laptop", titel_zeile("t31", "Wenn du kaufst", farbe=GRUEN) + kast
   + kasten("k31b", "Limit setzen", 570, 640, 420, 230, GRUEN, 52, "nicht teurer kaufen") + foto_gross("f31", "assets/fotos/dario-amodei.jpg", 390, 920, 300, 240, farbe=AN),
   lambda a, d: f'pop("#t31", {a}); pop("#k31a", {cap("s31", 1)}); pop("#k31b", {cap("s31", 2)}); pop("#f31", {a} + 0.3);', [])
 
-S("s32", "nyse", titel_zeile("t32", "Wenn du unsicher bist") + icon_gross("i32", "🧘", 0, 600, 260, GRUEN, True) + chip("c32", "abwarten – über ETFs kommst du später ran", GRUEN, 960, 42),
+S("s32", "nyse", titel_zeile("t32", "Wenn du unsicher bist") + icon_gross("i32", "🧘", 0, 600, 260, GRUEN, True) + chip("c32", "abwarten – später per ETF", GRUEN, 960, 46),
   lambda a, d: f'pop("#t32", {a}); pop("#i32", {a} + 0.1); pop("#c32", {cap("s32", 2)});', [])
 
 S("s33", "sitzungssaal", titel_zeile("t33", "Kurzer Hinweis") + zettel("hw", "Keine Anlage&shy;beratung –<br/>nur erklärt", 200, 650, 680, 74, GELB, -3),
