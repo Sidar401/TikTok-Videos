@@ -298,3 +298,8 @@ Longform (≈ 30 s, 5–6 Sätze):
 6. **Überleitung zum Logo:** kurzer Schlag-Satz („Schauen wir uns das genau an.“) → Logo-Intro.
 Short (≈ 15 s, 3 Sätze): Hook → worum + warum es dich betrifft → offene Schleife; danach Logo, der CTA kommt direkt nach dem Logo.
 Im Chat beim Skript kurz markieren, wo das Logo-Intro sitzt.
+
+## Folgen-CTA IMMER AM ENDE (Nutzer 18.11., ersetzt „Folgen-CTA früh“)
+- Ab sofort steht „Folge HundeFinanzTv …“ in JEDEM Video (Short + Longform) als **letzter Satz**.
+- Beim Motor-Short: vorletzter Satz = Hinweis aufs Kanal-Video, letzter Satz = Folgen-CTA.
+- Teilen-/Kommentar-CTA bleibt in der Mitte bzw. im Einstieg. Nach dem Logo-Intro direkt mit Inhalt weiter.

@@ -31,5 +31,6 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
 - Freigegebenes Muster (Nutzer: „super“, 31.10.): `shop/spielball/` – 4 Videos, Links in `shop/spielball/videos.md`.
 
 ## Regeln vom Nutzer
+- Folgen-CTA („Folge HundeFinanzTv …“) ab 18.11. immer als letzter Satz im Video
 - Alles auf Deutsch, Antworten sehr kurz und iPad-tauglich, ohne Fachwörter
 - Higgsfield nur für Kanal 2 (siehe oben), sonst nicht (kostet Credits)
