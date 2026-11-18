@@ -1,0 +1,35 @@
+{
+ "gehoert": "Gerade explodiert ein Stern und genau diese Woche ist er am hellsten. Die Explosion steckt in der Galaxie NGC 1433, rund fünfzig Millionen Lichtjahre von uns entfernt. Das heißt, ihr Licht war fünfzig Millionen Jahre unterwegs. Die Dinosaurier waren da schon ausgestorben. Menschen gab es noch lange nicht. Folg uns für mehr. Entdeckt wurde die Supernova am 2. November von einem Suchsystem aus Teleskopen namens Atlas. In nur wenigen Tagen wurde sie rund fünfundzwanzig Mal heller. Explodiert ist ein weißer Zwerg, der ausgebrannte Rest eines Sterns, so groß wie die Erde, aber so schwer wie die Sonne. Er hat einem Nachbarstern so lange Gas geklaut, bis er zu schwer wurde. Dann flog er komplett auseinander. Auf dem Höhepunkt leuchtet so eine Explosion so hell wie Milliarden Sonnen. Und dieser Höhepunkt ist jetzt zwischen dem 18. und dem 23. November. Mit einem guten Hobbyteleskop kann man sie sehen, aber nur weit im Süden. Von Deutschland aus steht sie zu tief. Für Forscher ist sie ein Schatz. Solche Explosionen sind wie kosmische Maßbänder. Damit messen sie, wie weit Galaxien weg sind und wie schnell das Weltall wächst.",
+ "abweichungen": [
+  [
+   "replace",
+   "n g c vierzehn dreiunddreißig",
+   "ngc 1433"
+  ],
+  [
+   "replace",
+   "zweiten",
+   "2"
+  ],
+  [
+   "replace",
+   "fünfundzwanzigmal",
+   "fünfundzwanzig mal"
+  ],
+  [
+   "replace",
+   "achtzehnten",
+   "18"
+  ],
+  [
+   "replace",
+   "dreiundzwanzigsten",
+   "23"
+  ],
+  [
+   "replace",
+   "hobby teleskop",
+   "hobbyteleskop"
+  ]
+ ]
+}

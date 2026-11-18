@@ -1,0 +1,5 @@
+{"tag": "19. NOVEMBER 2026", "dauer": 69.5,
+ "hook": "1 Million $<br /><span class=\"y\">FÜR DEN MOND!</span>",
+ "hook_end": 5.2, "karte": [13.7, 5.4],
+ "fix": {"achten": "8.", "zwei": "2", "fünf": "5", "sechs": "6", "zweihundertdreißig": "230", "zwanzig": "20", "fünfundzwanzigsten": "25."},
+ "css": ".hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"}

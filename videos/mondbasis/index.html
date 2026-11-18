@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <script type="importmap">{"imports":{"three":"./assets/three/build/three.module.js","three/addons/":"./assets/three/jsm/"}}</script>
+    <style>
+      @font-face { font-family: "Inter Display"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.otf"); }
+      @font-face { font-family: "Inter Display"; font-weight: 800; src: url("assets/fonts/InterDisplay-ExtraBold.otf"); }
+      @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/Inter-SemiBold.otf"); }
+      html, body { background: #000; }
+      #root { font-family: "Inter Display", "Inter", sans-serif; background: #000; }
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .tag { top: 140px; font-family: "Inter", sans-serif; font-weight: 600; font-size: 32px; letter-spacing: 8px; color: rgba(255,255,255,0.6); }
+      #labels { position: absolute; inset: 0; pointer-events: none; }
+      .pl { position: absolute; transform: translate(-50%, -100%); font: 800 76px "Inter Display", sans-serif; color: #fff; white-space: nowrap; text-shadow: 0 4px 30px rgba(0,0,0,.9); letter-spacing: 0.5px; }
+      .pl small { display: block; text-align: center; font: 600 34px "Inter", sans-serif; color: rgba(255,255,255,.7); margin-top: 4px; }
+      #word { position: absolute; left: 0; right: 0; top: 1420px; text-align: center; font: 800 132px "Inter Display", sans-serif; color: #fff; text-shadow: 0 6px 40px rgba(0,0,0,.9); }
+      .hookbig { top: 620px; font-size: 128px; font-weight: 900; line-height: 1.04; text-shadow: 0 8px 50px rgba(0,0,0,.95); }
+      .hookbig .y { color: #ffd23f; }
+      .hookdim { background: radial-gradient(circle at 50% 40%, rgba(0,0,0,.2), rgba(0,0,0,.75)); }
+      .capw { top: 1500px; font-size: 80px; font-weight: 800; line-height: 1.12; color: #fff; text-shadow: 0 6px 30px rgba(0,0,0,.95), 0 0 3px #000; }
+      .capw .w { display: inline-block; margin: 0 10px; }
+      .capw .on { color: #ffd23f; }
+      .share { position: absolute; right: 40px; top: 1150px; }
+      .share span { display: inline-block; background: #fe2c55; color: #fff; font-weight: 900; font-size: 50px; padding: 14px 32px; border-radius: 60px; box-shadow: 0 0 34px rgba(254,44,85,.6); }
+      .follow { top: 1150px; }
+      .hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }
+    
+#fk-wrap { position: absolute; left: 170px; top: 760px; width: 740px; z-index: 30; }
+#fk { position: relative; width: 740px; padding: 130px 56px 54px; border-radius: 52px; text-align: center; overflow: hidden; font-family: "Inter Display", Inter, sans-serif; color: #fff;
+  background: linear-gradient(180deg, rgba(30,34,48,.74), rgba(10,12,20,.82)); border: 1.5px solid rgba(255,255,255,.16); backdrop-filter: blur(26px) saturate(1.2); -webkit-backdrop-filter: blur(26px) saturate(1.2);
+  box-shadow: 0 40px 100px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.18); }
+#fk-wrap > .fk-av { position: absolute; left: 50%; top: -105px; width: 210px; height: 210px; margin-left: -105px; z-index: 3; border-radius: 50%; background: url(assets/avatar.png) center/cover; box-shadow: 0 0 0 8px rgba(12,14,22,.9), 0 20px 50px rgba(0,0,0,.6); }
+.fk-ring { position: absolute; inset: -9px; border-radius: 50%; background: conic-gradient(from 0deg, #ffe7a8, rgba(255,231,168,.1), #ffd06a, rgba(255,231,168,.1), #ffe7a8);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 4px)); mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 4px)); }
+#fk .n { font-size: 70px; font-weight: 900; letter-spacing: -1.5px; } #fk .d { font: 600 36px Inter, sans-serif; color: rgba(255,255,255,.66); margin: 10px 0 40px; }
+#fk .btn { position: relative; height: 116px; border-radius: 58px; font-size: 50px; font-weight: 800; }
+#fk .btn .a, #fk .btn .b { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 14px; border-radius: inherit; }
+#fk .btn .a { background: #fff; color: #0b0d14; } #fk .btn .b { opacity: 0; background: linear-gradient(180deg, #ffe39a, #f6c04a); color: #1a1406; }
+#fk-shine { position: absolute; top: -20%; bottom: -20%; width: 220px; left: -300px; background: linear-gradient(100deg, transparent, rgba(255,255,255,.22), transparent); transform: skewX(-18deg); }
+#fk-touch, #fk-rip { position: absolute; left: 540px; top: 1127px; width: 92px; height: 92px; margin: -46px 0 0 -46px; border-radius: 50%; z-index: 31; opacity: 0; }
+#fk-touch { background: rgba(255,255,255,.32); border: 3px solid rgba(255,255,255,.9); box-shadow: 0 8px 30px rgba(0,0,0,.45); } #fk-rip { border: 3px solid rgba(255,255,255,.8); }
+</style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="69.5" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="labels" class="clip" data-start="0" data-duration="69.5" data-track-index="2"></div>
+      <div id="word" class="clip" data-start="0" data-duration="69.5" data-track-index="3"></div>
+      <div id="tag" class="line tag clip" data-start="0" data-duration="69.5" data-track-index="1"><span>19. NOVEMBER 2026</span></div>
+      <div id="cap" class="line capw clip" data-start="5.2" data-duration="64.30" data-track-index="4"><span id="cap-in"></span></div>
+      <div id="hookdim" class="hookdim clip" data-start="0" data-duration="5.2" data-track-index="8"><span></span></div>
+      <div id="hookbig" class="line hookbig clip" data-start="0" data-duration="5.2" data-track-index="7"><span id="hookbig-in">1 Million $<br /><span class="y">FÜR DEN MOND!</span></span></div>
+      <div id="fk-box" class="clip" data-start="13.7" data-duration="5.4" data-track-index="5"><div id="fk-wrap"><div class="fk-av"><div class="fk-ring"></div></div><div id="fk"><div class="n">Novaro</div><div class="d">Weltraum, einfach erklärt</div><div class="btn" id="fk-btn"><span class="a">Folgen</span><span class="b"><svg class="ck" width="44" height="44" viewBox="0 0 44 44"><path d="M8 23l9 9 19-20" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="48" stroke-dashoffset="48"/></svg>Gefolgt</span></div><div id="fk-shine"></div></div></div><div id="fk-rip"></div><div id="fk-touch"></div></div>
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="68.96" data-track-index="9" data-volume="1"></audio>
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="69.5" data-track-index="10" data-volume="0.3"></audio>
+    </div>
+    <img id="tex-day" src="assets/earth-blue-marble.jpg" style="display:none" alt="" />
+    <img id="tex-night" src="assets/earth-night.jpg" style="display:none" alt="" />
+    <img id="tex-topo" src="assets/earth-topology.png" style="display:none" alt="" />
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.from("#hookbig-in", { opacity: 0, scale: 1.3, duration: 0.35, ease: "power3.out" }, 0);
+      tl.to("#hookbig-in", { scale: 0.7, opacity: 0, filter: "blur(10px)", duration: 0.3, ease: "power2.in" }, 5.2 - 0.32);
+      tl.to("#hookdim", { opacity: 0, duration: 0.3 }, 5.2 - 0.32);
+
+      tl.fromTo("#fk-wrap", { opacity: 0, y: 120, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: "expo.out" }, 13.7);
+      tl.fromTo(".fk-ring", { rotation: 0 }, { rotation: 200, duration: 5.4, ease: "none" }, 13.7);
+      tl.fromTo("#fk .n, #fk .d, #fk-btn", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, stagger: 0.07, ease: "power3.out" }, 13.899999999999999);
+      tl.fromTo("#fk-touch", { opacity: 0, x: 240, y: 260, scale: 1.3 }, { opacity: 1, x: 0, y: 0, scale: 1, duration: 0.8, ease: "power3.out" }, 14.6);
+      tl.to("#fk-touch", { scale: 0.72, duration: 0.14 }, 15.459999999999999); tl.to("#fk-touch", { scale: 1, duration: 0.25 }, 15.6);
+      tl.to("#fk-btn", { scale: 0.95, duration: 0.14 }, 15.459999999999999); tl.to("#fk-btn", { scale: 1, duration: 0.45, ease: "back.out(3)" }, 15.6);
+      tl.fromTo("#fk-rip", { opacity: 0.9, scale: 0.6 }, { opacity: 0, scale: 3.2, duration: 0.7, ease: "power2.out", immediateRender: false }, 15.6);
+      tl.to("#fk-btn .a", { opacity: 0, duration: 0.18 }, 15.6); tl.to("#fk-btn .b", { opacity: 1, duration: 0.22 }, 15.65);
+      tl.to("#fk-btn .ck path", { attr: { "stroke-dashoffset": 0 }, duration: 0.45, ease: "power2.out" }, 15.75);
+      tl.fromTo("#fk-shine", { x: 0 }, { x: 1400, duration: 0.9, ease: "power2.inOut", immediateRender: false }, 15.95);
+      tl.to("#fk-touch", { opacity: 0, scale: 0.6, duration: 0.4, ease: "power2.in" }, 16.3);
+      tl.to("#fk-wrap", { opacity: 0, y: 40, scale: 0.96, duration: 0.45, ease: "power2.in" }, 18.6);
+      tl.to({}, { duration: 0.01 }, 69.5 - 0.01);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+    <script type="module">
+      import * as K from "./assets/kino.js";
+      const { THREE, V, lerp, eio, eout, prog, cl, rnd } = K;
+      window.FMT = { W: 1080, H: 1920 };
+      const WORDS = [{"w": "Die", "s": 0.0, "e": 0.16}, {"w": "NASA", "s": 0.24, "e": 0.64}, {"w": "zahlt", "s": 0.72, "e": 1.12}, {"w": "eine", "s": 1.16, "e": 1.44}, {"w": "Million", "s": 1.52, "e": 1.92}, {"w": "Dollar", "s": 2.08, "e": 2.4}, {"w": "–", "s": 2.64, "e": 2.68}, {"w": "für", "s": 2.72, "e": 2.8}, {"w": "Ideen,", "s": 2.88, "e": 3.4}, {"w": "wie", "s": 3.44, "e": 3.52}, {"w": "man", "s": 3.6, "e": 3.68}, {"w": "auf", "s": 3.76, "e": 3.84}, {"w": "dem", "s": 3.92, "e": 4.0}, {"w": "Mond", "s": 4.08, "e": 4.4}, {"w": "leben", "s": 4.48, "e": 4.72}, {"w": "kann!", "s": 4.76, "e": 5.28}, {"w": "Am", "s": 5.52, "e": 5.76}, {"w": "achten", "s": 5.92, "e": 6.08}, {"w": "November", "s": 6.16, "e": 6.64}, {"w": "hat", "s": 6.72, "e": 6.8}, {"w": "sie", "s": 6.88, "e": 6.96}, {"w": "dafür", "s": 7.067, "e": 7.28}, {"w": "einen", "s": 7.36, "e": 7.52}, {"w": "großen", "s": 7.64, "e": 8.0}, {"w": "Wettbewerb", "s": 8.08, "e": 8.56}, {"w": "gestartet.", "s": 8.68, "e": 9.52}, {"w": "Mitmachen", "s": 9.64, "e": 10.08}, {"w": "können", "s": 10.16, "e": 10.4}, {"w": "Schüler", "s": 10.48, "e": 10.8}, {"w": "und", "s": 10.88, "e": 10.96}, {"w": "Studenten", "s": 11.2, "e": 11.52}, {"w": "–", "s": 11.76, "e": 11.84}, {"w": "allerdings", "s": 11.92, "e": 12.24}, {"w": "nur", "s": 12.32, "e": 12.56}, {"w": "aus", "s": 12.64, "e": 12.72}, {"w": "den", "s": 12.8, "e": 12.88}, {"w": "USA.", "s": 12.96, "e": 13.52}, {"w": "Folg", "s": 13.84, "e": 14.08}, {"w": "uns", "s": 14.16, "e": 14.24}, {"w": "für", "s": 14.32, "e": 14.4}, {"w": "mehr!", "s": 14.44, "e": 14.72}, {"w": "Teams", "s": 15.2, "e": 15.52}, {"w": "aus", "s": 15.6, "e": 15.76}, {"w": "zwei", "s": 15.92, "e": 16.08}, {"w": "bis", "s": 16.16, "e": 16.32}, {"w": "fünf", "s": 16.4, "e": 16.64}, {"w": "Leuten", "s": 16.72, "e": 17.04}, {"w": "suchen", "s": 17.12, "e": 17.44}, {"w": "Lösungen", "s": 17.48, "e": 17.92}, {"w": "für", "s": 18.0, "e": 18.24}, {"w": "sechs", "s": 18.32, "e": 18.56}, {"w": "Probleme:", "s": 18.64, "e": 19.52}, {"w": "Strom,", "s": 19.6, "e": 20.24}, {"w": "Bauen,", "s": 20.32, "e": 20.96}, {"w": "Luft", "s": 21.04, "e": 21.28}, {"w": "und", "s": 21.36, "e": 21.44}, {"w": "Wasser,", "s": 21.52, "e": 22.16}, {"w": "Fahrzeuge,", "s": 22.24, "e": 23.12}, {"w": "Funk", "s": 23.16, "e": 23.44}, {"w": "und", "s": 23.68, "e": 23.84}, {"w": "die", "s": 23.92, "e": 24.0}, {"w": "Sicherheit", "s": 24.08, "e": 24.56}, {"w": "der", "s": 24.6, "e": 24.64}, {"w": "Astronauten.", "s": 24.72, "e": 25.64}, {"w": "Denn", "s": 25.84, "e": 25.92}, {"w": "die", "s": 26.0, "e": 26.08}, {"w": "NASA", "s": 26.16, "e": 26.48}, {"w": "meint", "s": 26.56, "e": 26.72}, {"w": "es", "s": 26.8, "e": 26.96}, {"w": "ernst:", "s": 27.08, "e": 27.68}, {"w": "Sie", "s": 27.76, "e": 27.84}, {"w": "plant", "s": 27.92, "e": 28.16}, {"w": "eine", "s": 28.24, "e": 28.56}, {"w": "echte", "s": 28.64, "e": 28.88}, {"w": "Basis", "s": 29.04, "e": 29.52}, {"w": "am", "s": 29.64, "e": 29.76}, {"w": "Südpol", "s": 29.84, "e": 30.24}, {"w": "des", "s": 30.32, "e": 30.48}, {"w": "Mondes.", "s": 30.52, "e": 31.44}, {"w": "Dort", "s": 31.48, "e": 31.76}, {"w": "liegt", "s": 31.8, "e": 32.0}, {"w": "in", "s": 32.08, "e": 32.16}, {"w": "dunklen", "s": 32.24, "e": 32.64}, {"w": "Kratern", "s": 32.72, "e": 33.12}, {"w": "Eis.", "s": 33.2, "e": 34.0}, {"w": "Daraus", "s": 34.04, "e": 34.48}, {"w": "könnte", "s": 34.56, "e": 34.72}, {"w": "man", "s": 34.8, "e": 34.96}, {"w": "Wasser,", "s": 35.04, "e": 35.6}, {"w": "Atemluft", "s": 35.68, "e": 36.32}, {"w": "und", "s": 36.4, "e": 36.64}, {"w": "sogar", "s": 36.68, "e": 36.96}, {"w": "Raketentreibstoff", "s": 37.0, "e": 38.08}, {"w": "machen.", "s": 38.12, "e": 38.8}, {"w": "Aber", "s": 38.88, "e": 39.2}, {"w": "es", "s": 39.28, "e": 39.36}, {"w": "ist", "s": 39.44, "e": 39.52}, {"w": "extrem:", "s": 39.68, "e": 40.56}, {"w": "In", "s": 40.64, "e": 40.72}, {"w": "manchen", "s": 40.8, "e": 41.12}, {"w": "Kratern", "s": 41.2, "e": 41.6}, {"w": "wird", "s": 41.68, "e": 41.84}, {"w": "es", "s": 41.96, "e": 42.08}, {"w": "kälter", "s": 42.12, "e": 42.48}, {"w": "als", "s": 42.56, "e": 42.8}, {"w": "minus", "s": 42.96, "e": 43.28}, {"w": "zweihundertdreißig", "s": 43.44, "e": 44.48}, {"w": "Grad.", "s": 44.56, "e": 45.36}, {"w": "Den", "s": 45.44, "e": 45.52}, {"w": "Strom", "s": 45.6, "e": 46.0}, {"w": "soll", "s": 46.08, "e": 46.16}, {"w": "ein", "s": 46.24, "e": 46.4}, {"w": "kleines", "s": 46.48, "e": 46.88}, {"w": "Atomkraftwerk", "s": 47.12, "e": 47.84}, {"w": "liefern.", "s": 47.92, "e": 48.72}, {"w": "Erst", "s": 48.84, "e": 49.04}, {"w": "diese", "s": 49.08, "e": 49.28}, {"w": "Woche", "s": 49.36, "e": 49.68}, {"w": "hat", "s": 49.8, "e": 49.92}, {"w": "NASA-Chef", "s": 50.0, "e": 50.64}, {"w": "Jared", "s": 50.72, "e": 51.04}, {"w": "Isaacman", "s": 51.12, "e": 51.68}, {"w": "es", "s": 51.76, "e": 51.92}, {"w": "noch", "s": 52.04, "e": 52.16}, {"w": "einmal", "s": 52.28, "e": 52.48}, {"w": "vorgestellt.", "s": 52.56, "e": 53.6}, {"w": "Bis", "s": 53.68, "e": 53.84}, {"w": "Ende", "s": 53.92, "e": 54.16}, {"w": "des", "s": 54.24, "e": 54.32}, {"w": "Jahrzehnts", "s": 54.36, "e": 54.96}, {"w": "soll", "s": 55.013, "e": 55.12}, {"w": "es", "s": 55.16, "e": 55.2}, {"w": "auf", "s": 55.28, "e": 55.36}, {"w": "dem", "s": 55.44, "e": 55.52}, {"w": "Mond", "s": 55.6, "e": 55.84}, {"w": "stehen.", "s": 55.92, "e": 56.64}, {"w": "Insgesamt", "s": 56.72, "e": 57.28}, {"w": "will", "s": 57.36, "e": 57.44}, {"w": "die", "s": 57.52, "e": 57.6}, {"w": "NASA", "s": 57.76, "e": 57.92}, {"w": "dafür", "s": 57.96, "e": 58.32}, {"w": "rund", "s": 58.4, "e": 58.56}, {"w": "zwanzig", "s": 58.64, "e": 59.12}, {"w": "Milliarden", "s": 59.28, "e": 59.84}, {"w": "Dollar", "s": 60.0, "e": 60.24}, {"w": "ausgeben.", "s": 60.32, "e": 61.36}, {"w": "Anmelden", "s": 61.48, "e": 61.92}, {"w": "kann", "s": 62.0, "e": 62.08}, {"w": "man", "s": 62.16, "e": 62.24}, {"w": "sich", "s": 62.293, "e": 62.4}, {"w": "noch", "s": 62.48, "e": 62.56}, {"w": "bis", "s": 62.64, "e": 62.72}, {"w": "zum", "s": 62.8, "e": 62.96}, {"w": "fünfundzwanzigsten", "s": 63.04, "e": 63.84}, {"w": "Januar.", "s": 63.92, "e": 64.8}, {"w": "Vielleicht", "s": 64.88, "e": 65.28}, {"w": "kommt", "s": 65.36, "e": 65.52}, {"w": "die", "s": 65.56, "e": 65.6}, {"w": "Idee", "s": 65.68, "e": 65.92}, {"w": "für", "s": 66.0, "e": 66.08}, {"w": "die", "s": 66.16, "e": 66.32}, {"w": "erste", "s": 66.4, "e": 66.64}, {"w": "Mondbasis", "s": 66.8, "e": 67.52}, {"w": "also", "s": 67.6, "e": 67.84}, {"w": "von", "s": 67.92, "e": 68.08}, {"w": "einem", "s": 68.133, "e": 68.24}, {"w": "Schüler.", "s": 68.4, "e": 68.96}]; const CHUNKS = [[0.0, 5.28], [5.52, 9.52], [9.64, 13.52], [13.84, 14.72], [15.2, 25.64], [25.84, 31.44], [31.48, 38.8], [38.88, 45.36], [45.44, 56.64], [56.72, 61.36], [61.48, 68.96]];
+      const cap = K.captions(WORDS, CHUNKS, document.getElementById("cap-in"), 5.2, {"achten": "8.", "zwei": "2", "fünf": "5", "sechs": "6", "zweihundertdreißig": "230", "zwanzig": "20", "fünfundzwanzigsten": "25."});
+      const img = (id) => document.getElementById(id);
+      const imgsReady = Promise.all(["tex-day", "tex-night", "tex-topo"].map((id) => { const im = img(id); return im.complete ? Promise.resolve(im) : new Promise((r) => (im.onload = () => r(im))); }));
+      const E = K.setup(document.getElementById("stage"));
+      const cam = E.cam;
+      const TL = new THREE.TextureLoader();
+      const tex = async (f) => { const t = await TL.loadAsync("assets/tex/" + f); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t; };
+      // Beschriftungen, die an 3D-Objekten hängen
+      const LB = document.getElementById("labels"), WORD = document.getElementById("word");
+      const labels = [];
+      const label = (html, obj, r, o = {}) => { const d = document.createElement("div"); d.className = "pl"; d.innerHTML = html; LB.appendChild(d); const L = { d, obj, r, t0: o.t0 ?? 0, t1: o.t1 ?? 999, gap: o.gap ?? 40, size: o.size }; if (o.size) d.style.fontSize = o.size + "px"; labels.push(L); return L; };
+      const P = (v) => { const q = v.clone().project(cam); return [(q.x + 1) / 2 * 1080, (1 - q.y) / 2 * 1920]; };
+      const updLabels = (t) => { cam.updateMatrixWorld(true); labels.forEach((L) => { const p = L.obj.getWorldPosition(new THREE.Vector3()); const top = p.clone().add(cam.up.clone().multiplyScalar(L.r)); const [x] = P(p), [, y] = P(top);
+        const a = cl((t - L.t0) / 0.4) * (1 - cl((t - L.t1) / 0.4)); L.d.style.opacity = a; L.d.style.left = x + "px"; L.d.style.top = y - L.gap + "px"; L.d.style.transform = `translate(-50%,-100%) translateY(${(1 - a) * 20}px)`; }); };
+      let lastWord = ""; const word = (h, a) => { if (h !== lastWord) { WORD.innerHTML = h; lastWord = h; } WORD.style.opacity = a; WORD.style.transform = `translateY(${(1 - a) * 30}px)`; };
+      let renderAt = () => {};
+      const ready = imgsReady.then(async ([day, night, topo]) => {
+        const W = (w, ab = 0) => { const x = WORDS.find((q) => q.s >= ab - 0.01 && q.w.toLowerCase().replace(/[^a-zäöüß0-9]/g, "").startsWith(w)); return x ? x.s : ab; };
+        K.reseed(21);
+        E.R.shadowMap.enabled = true; E.R.shadowMap.type = THREE.PCFSoftShadowMap;
+        const moonTex = await tex("moon.jpg");
+        const { RoomEnvironment } = await import("three/addons/environments/RoomEnvironment.js");
+        const pm = new THREE.PMREMGenerator(E.R); const env = pm.fromScene(new RoomEnvironment(), 0.04).texture;
+        // ================= Mond als Kugel =================
+        const scM = new THREE.Scene(); K.stars(scM, 9000, -1, 30000, 1.7).material.opacity = 0.65; scM.add(new THREE.AmbientLight(0x3a3a44, 0.35));
+        const sunM = new THREE.DirectionalLight(0xfff4e6, 3.0); sunM.position.set(-260, 40, 500); scM.add(sunM);
+        const RM = 100; const moon = new THREE.Mesh(new THREE.SphereGeometry(RM, 192, 128), new THREE.MeshStandardMaterial({ map: moonTex, roughness: 1, metalness: 0 })); scM.add(moon);
+        const poleO = new THREE.Object3D(); poleO.position.set(0, -RM * 1.0, 0); moon.add(poleO);
+        K.reseed(3); const mIP = [], mIceG = []; for (let k = 0; k < 900; k++) { const la = (-84 - Math.pow(K.rnd(), 0.7) * 5.8) * Math.PI / 180, lo = K.rnd() * 6.283; const r = RM * 1.002; mIP.push(Math.cos(la) * Math.cos(lo) * r, Math.sin(la) * r, Math.cos(la) * Math.sin(lo) * r); }
+        const mIGeo = new THREE.BufferGeometry(); mIGeo.setAttribute("position", new THREE.Float32BufferAttribute(mIP, 3)); const mIce = new THREE.Points(mIGeo, new THREE.PointsMaterial({ color: 0xa8ddff, size: 2.4, sizeAttenuation: false, transparent: true, opacity: 0, blending: THREE.AdditiveBlending, depthWrite: false })); moon.add(mIce);
+        for (let k = 0; k < 6; k++) { const la = (-86 - K.rnd() * 3) * Math.PI / 180, lo = K.rnd() * 6.283; mIceG.push(K.sprite(moon, K.glowTex("rgba(120,190,255,.6)"), 2.5 + K.rnd() * 2, V(Math.cos(la) * Math.cos(lo) * RM, Math.sin(la) * RM, Math.cos(la) * Math.sin(lo) * RM), 0)); }
+        mIceG.forEach((g) => { g.material.depthTest = false; g.material.depthWrite = false; }); const iceM = new THREE.Object3D(); iceM.position.set(0, -RM, 0); moon.add(iceM);
+        const poleDot = K.sprite(moon, K.glowTex("rgba(255,215,110,1)"), 8, V(0, -RM * 1.01, 0), 0);
+        const EAF = K.earth(scM, { day, night, topo }, 36); EAF.group.children[EAF.group.children.length - 1].scale.setScalar(0.93); EAF.group.position.set(700, 200, -1800); EAF.U.sun.value = V(-1, 0.1, 0.6).normalize();
+        // ================= Erde (USA) =================
+        const scE = new THREE.Scene(); K.stars(scE, 9000, -1, 30000, 1.7).material.opacity = 0.6; scE.add(new THREE.AmbientLight(0x30303a, 0.5));
+        const RE = 100; const EA = K.earth(scE, { day, night, topo }, RE); EA.group.children[EA.group.children.length - 1].scale.setScalar(0.93); EA.U.sun.value = V(0.3, 0.3, 1).normalize();
+        const usaDot = K.sprite(scE, K.glowTex("rgba(255,215,110,1)"), 7, V(0, 0, 0), 0);
+        // ================= Mondoberfläche am Südpol =================
+        const scS = new THREE.Scene(); K.reseed(4); K.stars(scS, 9000, 0.0, 30000, 1.6).material.opacity = 0.8;
+        scS.add(new THREE.AmbientLight(0x4a5060, 0.22)); scS.add(new THREE.HemisphereLight(0x8090b0, 0x202020, 0.12));
+        const sun = new THREE.DirectionalLight(0xfff2e0, 3.2); sun.position.set(-1600, 120, -700); sun.castShadow = true; sun.shadow.mapSize.set(4096, 4096);
+        Object.assign(sun.shadow.camera, { left: -1100, right: 1100, top: 1100, bottom: -1100, near: 10, far: 4500 }); sun.shadow.bias = -0.0008; scS.add(sun); scS.add(sun.target);
+        const CR = { x: 520, z: -620, r: 330, d: 70 }; // großer dunkler Krater
+        const craters = [[CR.x, CR.z, CR.r, CR.d]]; for (let i = 0; i < 90; i++) craters.push([(K.rnd() - 0.5) * 3000, (K.rnd() - 0.5) * 3000, 8 + Math.pow(K.rnd(), 3) * 140, 0]);
+        const hN = (x, z) => 6 * Math.sin(x * 0.004 + 1) * Math.cos(z * 0.0035) + 3 * Math.sin(x * 0.013 + z * 0.011) + 1.2 * Math.sin(x * 0.05 - z * 0.04);
+        const height = (x, z) => { let h = hN(x, z); for (const [cx, cz, r, dd] of craters) { const d = Math.hypot(x - cx, z - cz) / r; const depth = dd || r * 0.28; if (d < 1) h -= depth * (1 - d * d) * 0.9; else if (d < 1.5) h += depth * 0.22 * Math.pow(1 - (d - 1) / 0.5, 2); } return h; };
+        { const N = 420, S = 9000; const g = new THREE.PlaneGeometry(S, S, N, N); g.rotateX(-Math.PI / 2); const pa = g.attributes.position; const col = []; const nC = K.noiseCanvas(512, 512, 8, 6, 0.5, 0.7); const nd = nC.getContext("2d").getImageData(0, 0, 512, 512).data;
+          for (let i = 0; i < pa.count; i++) { const x = pa.getX(i), z = pa.getZ(i); const edge = 1 - cl((Math.max(Math.abs(x), Math.abs(z)) - 2600) / 1500); pa.setY(i, height(x, z) * edge); const u = Math.floor(((x / S + 0.5) * 2048) % 512), v = Math.floor(((z / S + 0.5) * 2048) % 512); const n = nd[(v * 512 + u) * 4] / 255; const c = 0.42 + n * 0.22; col.push(c, c, c * 1.02); }
+          g.setAttribute("color", new THREE.Float32BufferAttribute(col, 3)); g.computeVertexNormals();
+          const ground = new THREE.Mesh(g, new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 1, metalness: 0 })); ground.receiveShadow = true; ground.castShadow = true; scS.add(ground); }
+        // Eis im Krater (glitzernde Punkte)
+        const NI = 1600; const ip = []; for (let i = 0; i < NI; i++) { const a = K.rnd() * 6.283, r = Math.sqrt(K.rnd()) * CR.r * 0.62; const x = CR.x + Math.cos(a) * r, z = CR.z + Math.sin(a) * r; ip.push(x, height(x, z) + 0.6, z); }
+        const iGeo = new THREE.BufferGeometry(); iGeo.setAttribute("position", new THREE.Float32BufferAttribute(ip, 3));
+        const ice = new THREE.Points(iGeo, new THREE.PointsMaterial({ color: 0x9fd8ff, size: 2.6, sizeAttenuation: false, transparent: true, opacity: 0, blending: THREE.AdditiveBlending, depthWrite: false })); scS.add(ice);
+        const iceGlow = K.sprite(scS, K.glowTex("rgba(120,190,255,.35)"), CR.r * 1.3, V(CR.x, height(CR.x, CR.z) + 4, CR.z), 0);
+        const iceO = new THREE.Object3D(); iceO.position.set(CR.x, height(CR.x, CR.z) + 5, CR.z); scS.add(iceO);
+        // Basis
+        const white = new THREE.MeshStandardMaterial({ color: 0xe9ebee, metalness: 0.1, roughness: 0.55, envMap: env, envMapIntensity: 0.4 });
+        const gold = new THREE.MeshStandardMaterial({ color: 0xc89b3c, metalness: 0.9, roughness: 0.35, envMap: env, envMapIntensity: 0.7 });
+        const dark = new THREE.MeshStandardMaterial({ color: 0x2a2d33, metalness: 0.5, roughness: 0.5, envMap: env, envMapIntensity: 0.4 });
+        const panelM = new THREE.MeshStandardMaterial({ color: 0x14244a, metalness: 0.6, roughness: 0.25, envMap: env, envMapIntensity: 0.8, side: THREE.DoubleSide });
+        const base = new THREE.Group(); scS.add(base); const BX = -60, BZ = 40; base.position.set(BX, height(BX, BZ), BZ);
+        const cast = (m) => { m.castShadow = true; m.receiveShadow = true; return m; };
+        const hab = (x, z, ry, L = 22) => { const g = new THREE.Group(); const c = cast(new THREE.Mesh(new THREE.CylinderGeometry(4.2, 4.2, L, 40), white)); c.rotation.z = Math.PI / 2; g.add(c);
+          for (const s of [-1, 1]) { const e = cast(new THREE.Mesh(new THREE.SphereGeometry(4.2, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2), white)); e.rotation.z = (s * -Math.PI) / 2; e.position.x = (s * L) / 2; g.add(e); }
+          const band = new THREE.Mesh(new THREE.CylinderGeometry(4.3, 4.3, 1.2, 40), gold); band.rotation.z = Math.PI / 2; g.add(band); for (const s of [-1, 1]) { const leg = cast(new THREE.Mesh(new THREE.BoxGeometry(1, 3, 6), dark)); leg.position.set(s * L * 0.3, -4.4, 0); g.add(leg); }
+          g.position.set(x, 5.6, z); g.rotation.y = ry; base.add(g); return g; };
+        hab(0, 0, 0); hab(10, 18, Math.PI / 2, 16); hab(-26, 6, 0.3, 18);
+        { const dome = cast(new THREE.Mesh(new THREE.SphereGeometry(10, 48, 24, 0, Math.PI * 2, 0, Math.PI / 2), white)); dome.position.set(24, 0, -10); base.add(dome); const r = new THREE.Mesh(new THREE.TorusGeometry(10, 0.5, 12, 48), gold); r.rotation.x = Math.PI / 2; r.position.copy(dome.position); base.add(r); }
+        const panels = []; for (let i = 0; i < 4; i++) { const g = new THREE.Group(); const mast = cast(new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.7, 34, 12), dark)); mast.position.y = 17; g.add(mast);
+          const p = cast(new THREE.Mesh(new THREE.BoxGeometry(10, 22, 0.4), panelM)); p.position.y = 24; g.add(p); g.position.set(-100 + i * 14, 0, 22); g.lookAt(V(-1600, 0, -700).add(g.position)); base.add(g); panels.push(g); }
+        const lights = []; [[0, 10, 0], [10, 10, 18], [-26, 10, 6], [24, 11, -10]].forEach((p) => lights.push(K.sprite(base, K.glowTex("rgba(255,220,160,1)"), 2.4, V(...p), 0.9)));
+        // Atomkraftwerk (klein, etwas abseits)
+        const reactor = new THREE.Group(); scS.add(reactor); const RX = -190, RZ = 150; reactor.position.set(RX, height(RX, RZ), RZ);
+        { const core = cast(new THREE.Mesh(new THREE.CylinderGeometry(3.2, 3.6, 10, 32), white)); core.position.y = 5; reactor.add(core); const top = cast(new THREE.Mesh(new THREE.ConeGeometry(3.2, 4, 32), gold)); top.position.y = 12; reactor.add(top);
+          for (let i = 0; i < 4; i++) { const f = cast(new THREE.Mesh(new THREE.BoxGeometry(0.3, 9, 12), new THREE.MeshStandardMaterial({ color: 0x9aa0aa, metalness: 0.6, roughness: 0.4, envMap: env, envMapIntensity: 0.5 }))); const a = (i / 4) * Math.PI * 2 + 0.4; f.position.set(Math.cos(a) * 9, 7, Math.sin(a) * 9); f.rotation.y = -a; reactor.add(f); } }
+        const rGlow = K.sprite(reactor, K.glowTex("rgba(120,200,255,.8)"), 10, V(0, 6, 0), 0);
+        const cable = new THREE.Line(new THREE.BufferGeometry().setFromPoints(Array.from({ length: 40 }, (_, i) => { const f = i / 39; const x = lerp(RX, BX - 20, f), z = lerp(RZ, BZ + 6, f); return V(x, height(x, z) + 0.6, z); })), new THREE.LineBasicMaterial({ color: 0x7fd0ff, transparent: true, opacity: 0, toneMapped: false })); scS.add(cable);
+        // Erde knapp über dem Horizont
+        const EAH = K.earth(scS, { day, night, topo }, 60); EAH.group.children[EAH.group.children.length - 1].scale.setScalar(0.93); EAH.group.position.set(500, 90, 2600); EAH.U.sun.value = V(-1, 0.05, -0.4).normalize();
+        
+        // ===== Zeiten =====
+        const tAm = W("am", 5.3), tMit = W("mitmachen"), tFolg = W("folg"), tTeams = W("teams"), tDenn = W("denn"), tDort = W("dort"), tAber = W("aber", 38.7), tDen = W("den", 45.2), tErst = W("erst"), tBis = W("bis", 53.5), tIns = W("insgesamt"), tAnm = W("anmelden"), tViel = W("vielleicht");
+        label("Südpol", poleO, 6, { t0: tDenn + 0.6, t1: tDort - 0.1, size: 56, gap: 24 });
+        label("Eis", iceM, 3, { t0: W("eis") - 0.1, t1: tAber - 0.1, size: 56, gap: 10 });
+        label("Atomkraftwerk", reactor, 16, { t0: W("atomkraftwerk") - 0.2, t1: tIns - 0.1, size: 50, gap: 16 });
+        label("Basis", base, 22, { t0: W("basis", 28.8) - 0.1, t1: tDenn + 0.3, size: 52, gap: 16 });
+        const usaO = new THREE.Object3D(); scE.add(usaO); label("USA", usaO, 3, { t0: W("nur", 12.2) - 0.1, t1: tFolg + 0.4, size: 56, gap: 16 });
+        const items = [["strom", "⚡ Strom"], ["bauen", "🏗️ Bauen"], ["luft", "💧 Luft & Wasser"], ["fahrzeuge", "🚙 Fahrzeuge"], ["funk", "📡 Funk"], ["sicherheit", "🧑‍🚀 Sicherheit"]].map(([k, h]) => [W(k, 19), h]);
+        
+        renderAt = (t) => {
+          sun.position.set(-1600, 120, -700);
+          E.grade.uniforms.flash.value = 0; E.look([1, 1, 1], [0, 0, 0], 0.35, 0.85);
+          mIce && (mIce.material.opacity = 0); mIceG.forEach((g) => (g.material.opacity = 0));
+          let scene = scM, pos = V(0, 0, 300), look = V(0, 0, 0), fov = 40; poleDot.material.opacity = 0; usaDot.material.opacity = 0; ice.material.opacity = 0; iceGlow.material.opacity = 0; rGlow.material.opacity = 0; cable.material.opacity = 0;
+          moon.rotation.y = t * 0.01; EAH.group.rotation.y = 2.0 + t * 0.01;
+          if (t < tAm - 0.05) { const f = K.eio(prog(t, 0, tAm)); pos = V(lerp(90, 120, f), lerp(-60, -20, f), lerp(170, 300, f)); look = V(lerp(-10, 0, f), lerp(-50, 0, f), 0); fov = 40; }
+          else if (t < tMit - 0.05) { const f = K.eio(prog(t, tAm, tMit - tAm)); pos = V(lerp(120, 40, f), lerp(-20, 30, f), lerp(300, 340, f)); look = V(0, lerp(0, 40, f), 0); }
+          else if (t < tFolg - 0.05) { scene = scE; const us = EA.ll(39, -98, RE * 1.01); usaO.position.copy(us); usaDot.position.copy(us); usaDot.material.opacity = cl((t - W("nur", 12.2)) / 0.4); const c = EA.ll(30, -95, RE).normalize(); const f = K.eio(prog(t, tMit, tFolg - tMit)); pos = c.multiplyScalar(lerp(420, 360, f)); look = V(0, 0, 0); }
+          else if (t < tTeams - 0.05 + 1.2) { const a = (t - tFolg) * 0.05; pos = V(Math.sin(a) * 330, 40, Math.cos(a) * 330); look = V(0, 20, 0); }
+          else if (t < tDenn - 0.05) { scene = scS; const f = prog(t, tTeams + 1.2, tDenn - tTeams - 1.2); const a = -0.9 + f * 1.1; const c = base.position.clone(); pos = c.clone().add(V(Math.sin(a) * lerp(150, 110, f), lerp(60, 34, f), Math.cos(a) * lerp(150, 110, f))); look = c.clone().add(V(0, 6, 0)); fov = 42;
+            const hot = items.findIndex((it, i) => t >= it[0] - 0.1 && (i === 5 || t < items[i + 1][0] - 0.1)); if (hot === 0) rGlow.material.opacity = 0.7; }
+          else if (t < tDort - 0.05) { const f = K.eio(prog(t, tDenn, tDort - tDenn)); poleDot.material.opacity = cl((t - tDenn - 0.5) / 0.5) * (0.8 + 0.2 * Math.sin(t * 6)); pos = V(lerp(40, 60, f), lerp(-160, -250, f), lerp(300, 150, f)); look = V(0, lerp(-30, -80, f), 0); fov = 40; }
+          else if (t < tDen - 0.05) { const iOn = cl((t - W("eis") + 0.2) / 0.8); mIce.material.opacity = 0.95 * iOn * (0.85 + 0.15 * Math.sin(t * 7)); mIceG.forEach((g) => (g.material.opacity = 0.5 * iOn)); moon.rotation.y = tDort * 0.01; const f = K.eio(prog(t, tDort, tDen - tDort));
+            pos = V(lerp(70, 30, f), lerp(-200, -150, f), lerp(140, 70, f)); look = V(0, -RM * 0.92, 0); fov = 36; if (t > tAber) E.look([0.86, 0.95, 1.12], [0, 0, 0], 0.35, 0.85); }
+          else if (t < tIns - 0.05) { scene = scS; const on = cl((t - W("atomkraftwerk") + 0.2) / 0.8); rGlow.material.opacity = on * (0.7 + 0.3 * Math.sin(t * 4)); cable.material.opacity = on * 0.8; const f = prog(t, tDen, tIns - tDen); const c = reactor.position.clone().lerp(base.position, 0.35);
+            const rp = reactor.position.clone(); const a = 0.5 + f * 0.5; pos = rp.clone().add(V(Math.sin(a) * lerp(55, 80, f), lerp(16, 26, f), Math.cos(a) * lerp(55, 80, f))); look = rp.clone().add(V(0, 7, 0)); fov = 42; }
+          else if (t < tAnm - 0.05) { poleDot.material.opacity = 0.9; const f = K.eio(prog(t, tIns, tAnm - tIns)); pos = V(lerp(60, 200, f), lerp(-250, -120, f), lerp(150, 260, f)); look = V(0, lerp(-80, -20, f), 0); }
+          else { scene = scS; const f = K.eio(prog(t, tAnm, 69 - tAnm)); const c = base.position.clone(); const dir = c.clone().sub(EAH.group.position).setY(0).normalize(); pos = c.clone().add(dir.multiplyScalar(lerp(110, 150, f))).add(V(0, lerp(30, 24, f), 0)); look = c.clone().add(V(0, 10, 0)).lerp(EAH.group.position, lerp(0.03, 0.06, f)); fov = 44; }
+          if (scene === scS) pos.y = Math.max(pos.y, height(pos.x, pos.z) + 10);
+          cam.fov = fov; cam.near = 0.5; cam.far = 60000; cam.updateProjectionMatrix(); cam.position.copy(pos); cam.lookAt(look);
+          E.render(scene, t); updLabels(t);
+          let wh = "", wa = 0; const seg = (a, b, h) => { if (t >= a && t < b) { wh = h; wa = cl((t - a) / 0.3) * (1 - cl((t - b + 0.4) / 0.3)); } };
+          seg(tAm, tMit - 0.1, "<img src='assets/logos/nasa.svg' style='height:150px;display:block;margin:0 auto 14px'>Wettbewerb<div class='sub'>seit 8. November</div>");
+          seg(tMit, W("nur", 12.2) - 0.1, "🎓 Schüler & Studenten"); seg(W("nur", 12.2) - 0.1, tFolg - 0.1, "nur aus den USA");
+          seg(tTeams, items[0][0] - 0.1, "Teams: 2–5 Leute<div class='sub'>6 Probleme</div>");
+          items.forEach((it, i) => seg(it[0] - 0.1, i < 5 ? items[i + 1][0] - 0.1 : tDenn - 0.1, `${it[1]}<div class='sub'>${i + 1} / 6</div>`));
+          seg(W("echte") - 0.1, tDort - 0.1, "Basis am Südpol");
+          seg(W("wasser", 34.5) - 0.1, W("atemluft") - 0.1, "💧 Wasser"); seg(W("atemluft") - 0.1, W("raketentreibstoff") - 0.1, "🫁 Atemluft"); seg(W("raketentreibstoff") - 0.1, tAber - 0.1, "🚀 Treibstoff");
+          seg(W("minus") - 0.4, tDen - 0.1, `<span style="color:#9fd8ff">${Math.round(lerp(-20, -230, K.eio(cl((t - W("minus") + 0.4) / 1.6))))} °C</span>`);
+          seg(W("isaacman") - 0.6, tBis - 0.1, "NASA-Chef<div class='sub'>Jared Isaacman</div>"); seg(tBis, tIns - 0.1, "⚛️ bis Ende des Jahrzehnts");
+          seg(W("zwanzig", 58) - 0.2, tAnm - 0.1, "≈ 20 Mrd. $");
+          seg(tAnm, tViel - 0.1, "Anmeldung bis<div class='sub'>25. Januar 2027</div>"); seg(tViel, 69, "💡 Idee von einem Schüler?");
+          word(wh, wa); cap(t);
+        };
+        renderAt(lastT);
+      });
+      window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady || {}; window.__hf.buildReady.scene = ready;
+      let lastT = 0;
+      window.addEventListener("hf-seek", (e) => { lastT = e.detail.time; renderAt(lastT); });
+    </script>
+  </body>
+</html>

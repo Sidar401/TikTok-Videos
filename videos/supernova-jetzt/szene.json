@@ -1,0 +1,5 @@
+{"tag": "19. NOVEMBER 2026", "dauer": 72.5,
+ "hook": "Ein Stern<br /><span class=\"y\">EXPLODIERT JETZT!</span>",
+ "hook_end": 4.3, "karte": [20.3, 5.4],
+ "fix": {"N": "NGC", "G": "", "C": "", "vierzehn": "1433", "dreiunddreißig,": "", "fünfzig": "50", "zweiten": "2.", "Atlas.": "ATLAS.", "fünfundzwanzigmal": "25-mal", "achtzehnten": "18.", "dreiundzwanzigsten": "23."},
+ "css": ".hookbig { font-size: 116px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"}
