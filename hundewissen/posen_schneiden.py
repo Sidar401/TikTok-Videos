@@ -15,10 +15,11 @@ rand = set(np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]]))) 
 bg = np.isin(lab, list(rand))
 fg = nd.binary_closing(~bg, iterations=2)
 fg = nd.binary_fill_holes(fg) & ~bg | (~bg)
-H = a.shape[0] // 2
+h_ = a.shape[0]; zeil = fg.sum(axis=1); lo, hi = int(h_ * 0.3), int(h_ * 0.7)
+H = lo + int(np.argmin(zeil[lo:hi]))  # Trennlinie dort, wo am wenigsten Bild ist
 boxen = []
 for r in range(2):  # zwei Zeilen à 3 Posen
-    zeile = np.zeros_like(fg); zeile[r * H:(r + 1) * H] = fg[r * H:(r + 1) * H]
+    zeile = np.zeros_like(fg); sl = slice(0, H) if r == 0 else slice(H, h_); zeile[sl] = fg[sl]
     grp, n = nd.label(nd.binary_dilation(zeile, iterations=6))
     groesse = nd.sum(zeile, grp, range(1, n + 1))
     beste = np.argsort(groesse)[::-1][:3] + 1
