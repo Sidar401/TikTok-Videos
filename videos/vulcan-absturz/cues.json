@@ -1,5 +1,1 @@
-[{"s":"whoosh-schnell","t":0.0,"v":0.3},{"s":"boom-kurz","t":1.4,"v":0.2},{"s":"rakete","t":3.5,"v":0.22,"cut":7},{"s":"pling-idee","t":8.3,"v":0.18},
-{"s":"whoosh-tief","t":10.96,"v":0.22},{"s":"pling-idee","t":11.41,"v":0.16},
-{"s":"explosion-fern","t":16.2,"v":0.3},{"s":"whoosh-schnell","t":19.2,"v":0.3},{"s":"kamera-klick","t":21.1,"v":0.4},{"s":"spannung","t":27.5,"v":0.16,"cut":4},
-{"s":"boom-kurz","t":34.6,"v":0.2},{"s":"falsch-buzzer","t":38.4,"v":0.14},{"s":"whoosh-tief","t":40.5,"v":0.2},{"s":"pling-idee","t":46.1,"v":0.18},{"s":"pop-blase","t":50.6,"v":0.15},
-{"s":"ding","t":54.1,"v":0.2},{"s":"pop-blase","t":56.3,"v":0.15},{"s":"whoosh-tief","t":61.4,"v":0.2},{"s":"rakete","t":65.4,"v":0.2,"cut":8},{"s":"ding","t":70.3,"v":0.18}]
+[{"s":"whoosh-schnell","t":0.0,"v":0.1},{"s":"boom-kurz","t":15.95,"v":0.08},{"s":"ding","t":71.45,"v":0.1}]

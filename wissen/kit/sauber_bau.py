@@ -8,7 +8,7 @@ import json, subprocess, sys
 from pathlib import Path
 proj = Path(sys.argv[1]); kit = Path(__file__).resolve().parent
 c = json.load(open(proj / "szene.json")); total = c["dauer"]
-scene = "\n".join("        " + l for l in (proj / "szene.js").read_text().splitlines())
+scene = "\n".join("        " + l for l in (proj / "szene.js").read_text().replace("// @fotos", (kit / "fotos.js").read_text()).splitlines())
 W, H = (1920, 1080) if c.get("format") == "16:9" else (1080, 1920)
 LAND = "html, body, #root { width: 1920px !important; height: 1080px !important; } .line { width: 1920px !important; } .tag { top: 48px !important; } .capw { top: 900px !important; font-size: 66px !important; } .hookbig { top: 300px !important; } .share { top: 560px !important; } .follow { top: 520px !important; } #word { top: 650px !important; font-size: 78px !important; } .hookdim { width: 1920px !important; height: 1080px !important; }"
 if W > H: c["css"] = LAND + " " + c.get("css_land", "")
@@ -27,7 +27,7 @@ if voice and "karte" in c:  # neue Folgen-Karte (ab 17.11. Standard)
     shutil.copy(kit / "avatar.png", proj / "assets/avatar.png")
     h = karte.apply(h, c["karte"][0], c["karte"][1])
     rep.update({"{{SHARE_TEXT}}": "", "{{FOLLOW_TEXT}}": "", "{{FOLLOW_PILL}}": "", "{{SHARE_START}}": "0", "{{SHARE_DUR}}": "0", "{{FOLLOW}}": str(total), "{{FOLLOW_DUR}}": "0"})
-if voice and "intro" in c:  # Novaro-Intro „Umlaufbahn“ (ab 19.11. Standard, nach dem 2. Satz)
+if voice and "intro" in c:  # Intro „Umlaufbahn“ – seit 19.11. abends NICHT mehr verwenden (Nutzer: schrecklich)
     sys.path.insert(0, str(kit)); import intro
     h = intro.apply(h, c["intro"])
 for k, v in rep.items(): h = h.replace(k, v)

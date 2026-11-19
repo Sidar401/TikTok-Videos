@@ -61,9 +61,7 @@ Vorlage/Baukasten: `wissen/kit/` (neu.sh, kit.js, kit.css, mix.py, fertig.sh, sn
   Im Sprechtext NUR „Folg uns für mehr!“ (o. ä.) – **KEINE Kommentar-Frage** („Schreib's in die Kommentare“, „Was denkst du?“) – erstmal nicht.
   Karte (szene.json "karte": [start, dauer]) genau dann einblenden, wenn „Folg uns“ gesprochen wird. Am Ende kein Aufruf mehr.
 
-## Intro „Umlaufbahn“ (Nutzer 19.11.: „das dritte nehmen wir ab sofort“) – IN JEDEM VIDEO
-- 3 s Intro NACH DEM 2. SATZ: Logo ploppt in die Mitte, goldene Umlaufbahn, kleiner Mond kreist, „Novaro“ + „WELTALL | PLANETEN | WISSEN“.
-- Baustein `wissen/kit/intro.py`: nach schnitt.py `python3 wissen/kit/intro.py videos/<name>` (Pause in der Stimme), dann in szene.json `"intro": t0`.
-- Sounds in cues.json: whoosh-tief bei t0 (0.22), pling-idee bei t0+0.45 (0.16). Keine Musik.
-- Länge mit Intro weiter 61–75 s (notfalls schnitt.py mit Ziel ≈ 71 s).
-- „Folg uns für mehr!“ bleibt nach dem 3. Satz.
+## KEIN Intro (Nutzer 19.11. abends: „schrecklich“, ab sofort rauslassen)
+- Das Intro „Umlaufbahn“ (`wissen/kit/intro.py`) NICHT mehr verwenden. Kein `"intro"` in szene.json, keine Pause in der Stimme.
+- Ton (Nutzer 19.11.): Soundeffekte haben die Stimme übertönt → ab jetzt nur 2–3 Effekte pro Video, sehr leise (0.1), NUR in Sprechpausen, nie über der Stimme.
+- Bilder (Nutzer 19.11.): selbstgebaute 3D-Raketen/Roboter sahen „billig“ aus → echte Fotos (NASA u. a., frei nutzbar) bevorzugen, keine Spielzeug-Modelle.

@@ -1,5 +1,20 @@
-{"tag": "20. NOVEMBER 2026", "dauer": 74.9,
+{
+ "tag": "20. NOVEMBER 2026",
+ "dauer": 72.0,
  "hook": "Roboter baut<br /><span class=\"y\">IM WELTALL!</span>",
- "hook_end": 3.1, "karte": [15.3, 5.4], "intro": 8.68,
- "fix": {"eins": "1,4", "Komma": "", "vier": "", "elf": "11", "Zwei": "2", "Drei": "3", "fünfzehn": "15"},
- "css": ".hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"}
+ "hook_end": 3.1,
+ "karte": [
+  12.3,
+  5.4
+ ],
+ "fix": {
+  "eins": "1,4",
+  "Komma": "",
+  "vier": "",
+  "elf": "11",
+  "Zwei": "2",
+  "Drei": "3",
+  "fünfzehn": "15"
+ },
+ "css": ".hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"
+}
