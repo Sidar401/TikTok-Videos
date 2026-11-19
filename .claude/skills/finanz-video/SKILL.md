@@ -328,3 +328,5 @@ Heller Nachrichten-Look nach Vorbild Eulen-Kanal (finanzlehre). Probe: `renders/
 - Logo-Intro mit Jingle (`logo-jingle`), Folgen-CTA am Ende.
 - Neuer Look (19.11.): erster Satz zeigt unser Beagle-Logo groß; Logo-Intro hell: `ls.szene(hell=True)` (gleicher Hintergrund wie das Video).
 - Einstieg neuer Look (19.11.): Logo groß mittig, beim ersten Satz KEINE Untertitel (`nl.ohne_untertitel(HERE, st("s2") - 0.05)`), „in 60 Sekunden“ bleibt; zweites Bild „Heute 👇“.
+- Einstieg Börsen-Rückblick (19.11., Vorlage `renders/einstieg-idee-kombi.jpg`): orange Kurve hinter dem Logo, „HundeFinanzTv“ unter dem Logo, Satz + „in 60 Sekunden“,
+  darunter 3 Zahlen-Kacheln = jeden Tag die 3 größten Bewegungen des Tages (echte Logos + Zahlen), die auch im Video vorkommen.
