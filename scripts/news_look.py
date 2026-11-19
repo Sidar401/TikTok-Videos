@@ -85,3 +85,17 @@ def hell(here):
         s = s.replace(a, b)
     s = s.replace('{ color: "#ffffff", scale: 1, duration: 0.08 }', f'{{ color: "{ORANGE}", scale: 1, duration: 0.08 }}')
     p.write_text(s)
+
+
+def ohne_untertitel(here, bis):
+    """Untertitel-Boxen, die vor `bis` Sekunden starten, entfernen (z. B. erster Satz mit großem Logo, Nutzer 19.11.)."""
+    import re
+    p = Path(here) / "index.html"
+    s = p.read_text()
+    weg = [m.group(1) for m in re.finditer(r'<div id="c(\d+)" class="cap clip" data-start="([\d.]+)"', s) if float(m.group(2)) < bis]
+    zeilen = []
+    for z in s.split("\n"):
+        if any(f'id="c{n}" class="cap clip"' in z or f'"#w{n}-' in z for n in weg):
+            continue
+        zeilen.append(z)
+    p.write_text("\n".join(zeilen))

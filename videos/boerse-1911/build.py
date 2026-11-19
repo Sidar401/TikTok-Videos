@@ -28,14 +28,14 @@ def pops(ids_zeiten):
 
 # s1 Einstieg: unser Logo groß (Nutzer 19.11.)
 S("s1", None, nl.CSS
-  + f'<div id="lg1" style="position:absolute;left:350px;top:340px;width:380px;height:380px;border-radius:50%;overflow:hidden;border:10px solid {nl.ORANGE};'
+  + f'<div id="lg1" style="position:absolute;left:340px;top:520px;width:400px;height:400px;border-radius:50%;overflow:hidden;border:10px solid {nl.ORANGE};'
     f'box-shadow:0 20px 50px #0003;background:#1b1f22;z-index:4"><img src="assets/beagle.png" style="width:100%;height:100%;object-fit:cover"/></div>'
-  + f'<div id="t1" class="nk-gross" style="top:770px;font-size:66px;line-height:1.15">Alles, was heute<br/>an der Börse passiert ist</div>'
-  + f'<div id="b1" style="position:absolute;left:0;width:1080px;top:970px;display:flex;justify-content:center;z-index:4"><span style="padding:14px 40px;border-radius:50px;background:{nl.ORANGE};color:#fff;font-weight:800;font-size:46px">in 60 Sekunden</span></div>',
+  + f'<div id="t1" class="nk-gross" style="top:990px;font-size:66px;line-height:1.15">Alles, was heute<br/>an der Börse passiert ist</div>'
+  + f'<div id="b1" style="position:absolute;left:0;width:1080px;top:1190px;display:flex;justify-content:center;z-index:4"><span style="padding:14px 40px;border-radius:50px;background:{nl.ORANGE};color:#fff;font-weight:800;font-size:46px">in 60 Sekunden</span></div>',
   lambda a, d: KIT_JS + f' tl.fromTo("#lg1", {{ scale: 0.92 }}, {{ scale: 1, duration: 0.35, ease: "back.out(2)" }}, {a}); pop("#t1", {a} + 0.15); pop("#b1", {cap("s1", 2)});')
 
 # s2 Schlagzeile
-S("s2", None, f'<div id="t2" class="nk-gross" style="top:380px;font-size:70px">Und heute:</div>'
+S("s2", None, f'<div id="t2" class="nk-gross" style="top:340px;font-size:84px">Heute <span style="display:inline-block">👇</span></div>'
   + f'<div id="k2a" class="nk-karte" style="left:110px;top:540px;width:400px;text-align:center"><img src="assets/logos/anthropic.svg" style="width:300px"/>'
     f'<div style="font-weight:800;font-size:78px;color:{G};margin-top:24px">+34 %</div></div>'
   + f'<div id="k2b" class="nk-karte" style="left:570px;top:540px;width:400px;text-align:center"><div style="font-weight:800;font-size:58px;color:{D}">DAX</div>'
@@ -126,3 +126,4 @@ K.SZ.append((0.0, K.dauer, nl.kopf("BÖRSENNEWS", "19.11.2026"), lambda a, d: ""
 if __name__ == "__main__":
     build(HERE, K.SZ, K.SFX)
     nl.hell(HERE)
+    nl.ohne_untertitel(HERE, st("s2") - 0.05)
