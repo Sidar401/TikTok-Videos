@@ -49,7 +49,7 @@ def szene(querformat=False):
 
 
 def sounds(t0):
-    return [(t0 + 0.05, "mm-bumm"), (t0 + 0.8, "mm-wusch")]
+    return [(t0 + 0.05, "logo-jingle")]  # Nutzer 19.11.: Jingle Nr. 7 immer
 
 
 def einfuegen(here, ab=30.0):
