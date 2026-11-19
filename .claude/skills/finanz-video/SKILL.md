@@ -303,3 +303,7 @@ Im Chat beim Skript kurz markieren, wo das Logo-Intro sitzt.
 - Ab sofort steht „Folge HundeFinanzTv …“ in JEDEM Video (Short + Longform) als **letzter Satz**.
 - Beim Motor-Short: vorletzter Satz = Hinweis aufs Kanal-Video, letzter Satz = Folgen-CTA.
 - Teilen-/Kommentar-CTA bleibt in der Mitte bzw. im Einstieg. Nach dem Logo-Intro direkt mit Inhalt weiter.
+
+## Länge ab 19.11. (Nutzer): ALLE Videos 61–75 s
+- Auch „Longform“-Themen jetzt nur 61–75 s (≈ 15–17 Sätze), bis der Nutzer Bescheid gibt. 2–3 Min. liefen schlecht.
+- Logo-Intro wie beim Short nach dem Open Loop (`ls.einfuegen(HERE, 13–18)`), Folgen-CTA als letzter Satz.
