@@ -307,3 +307,8 @@ Im Chat beim Skript kurz markieren, wo das Logo-Intro sitzt.
 ## Länge ab 19.11. (Nutzer): ALLE Videos 61–75 s
 - Auch „Longform“-Themen jetzt nur 61–75 s (≈ 15–17 Sätze), bis der Nutzer Bescheid gibt. 2–3 Min. liefen schlecht.
 - Logo-Intro wie beim Short nach dem Open Loop (`ls.einfuegen(HERE, 13–18)`), Folgen-CTA als letzter Satz.
+
+## Themen-Abwechslung (Nutzer 19.11.: „immer die gleichen Themen → schlechte Klicks“)
+- Kein Thema/Firma innerhalb von 30 Tagen wiederholen – auch NICHT mit „neuem Blickwinkel“ (Nvidia, Bitcoin, Anthropic, Klarna, Bargeld, Schufa waren viel zu oft).
+- Vor Ideen Häufigkeit zählen: `grep -o -i "<stichwort>" THEMEN.md | wc -l`.
+- Bereiche rotieren: Wohnen/Miete, Erben/Familie, Promi-Geld, Firmen-Skandale & Geld-Geschichten, Alltag/Sparen, Jobs/Gehalt, Kurioses – Börse/KI nur selten.
