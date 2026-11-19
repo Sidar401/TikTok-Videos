@@ -1,0 +1,149 @@
+{
+ "titel": "Wie bewertet man eine Aktie?",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Eine Aktie für fünf Euro kann teurer sein als eine für fünfhundert Euro.",
+   "bild": "",
+   "text": "Eine Aktie für 5 € kann teurer sein als eine für 500 €"
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Klingt verrückt – aber genau hier machen die meisten Anfänger ihren teuersten Fehler.",
+   "bild": "",
+   "text": "Klingt verrückt – aber genau hier machen die meisten Anfänger ihren teuersten Fehler"
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Profis machen das nie. Sie prüfen vier Dinge – und die zeigen wir dir jetzt.",
+   "bild": "",
+   "text": "Profis machen das nie. Sie prüfen 4 Dinge – und die zeigen wir dir jetzt"
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Die vierte Zahl vergessen fast alle – und genau sie trennt gute Firmen von gefährlichen.",
+   "bild": "",
+   "text": "Die vierte Zahl vergessen fast alle – und genau sie trennt gute Firmen von gefährlichen"
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Nummer eins: der Börsenwert.",
+   "bild": "",
+   "text": "Nummer 1: der Börsenwert"
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Der Preis einer Aktie hängt nur davon ab, in wie viele Stücke die Firma aufgeteilt ist.",
+   "bild": "",
+   "text": "Der Preis einer Aktie hängt nur davon ab, in wie viele Stücke die Firma aufgeteilt ist"
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Entscheidend ist: Was kostet die ganze Firma? Also Aktienkurs mal Anzahl der Aktien.",
+   "bild": "",
+   "text": "Entscheidend ist: Was kostet die ganze Firma? Also Aktienkurs mal Anzahl der Aktien"
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Eine Million Aktien zu fünfhundert Euro sind genauso viel wert wie hundert Millionen Aktien zu fünf Euro: fünfhundert Millionen Euro.",
+   "bild": "",
+   "text": "1 Million Aktien zu 500 € sind genauso viel wert wie 100 Millionen Aktien zu 5 €: 500 Millionen Euro"
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Nummer zwei: das Kurs-Gewinn-Verhältnis, kurz Ka-Ge-Vau.",
+   "bild": "",
+   "text": "Nummer 2: das Kurs-Gewinn-Verhältnis, kurz KGV"
+  },
+  {
+   "id": "s10",
+   "sprechtext": "Stell dir vor, du kaufst eine Pizzeria für hundertfünfzigtausend Euro, und sie macht zehntausend Euro Gewinn im Jahr.",
+   "bild": "",
+   "text": "Stell dir vor, du kaufst eine Pizzeria für 150.000 €, und sie macht 10.000 € Gewinn im Jahr"
+  },
+  {
+   "id": "s11",
+   "sprechtext": "Dann zahlst du das Fünfzehnfache des Jahresgewinns – das Ka-Ge-Vau ist fünfzehn.",
+   "bild": "",
+   "text": "Dann zahlst du das 15-Fache des Jahresgewinns – das KGV ist 15"
+  },
+  {
+   "id": "s12",
+   "sprechtext": "Aktie A kostet fünf Euro, verdient aber nur zehn Cent pro Aktie – Ka-Ge-Vau fünfzig.",
+   "bild": "",
+   "text": "Aktie A kostet 5 €, verdient aber nur 10 Cent pro Aktie – KGV 50"
+  },
+  {
+   "id": "s13",
+   "sprechtext": "Aktie B kostet fünfhundert Euro und verdient fünfzig Euro – Ka-Ge-Vau zehn. Die teure Aktie ist also eigentlich die günstige.",
+   "bild": "",
+   "text": "Aktie B kostet 500 € und verdient 50 € – KGV 10. Die teure Aktie ist also eigentlich die günstige"
+  },
+  {
+   "id": "s14",
+   "sprechtext": "Nummer drei: das Wachstum.",
+   "bild": "",
+   "text": "Nummer 3: das Wachstum"
+  },
+  {
+   "id": "s15",
+   "sprechtext": "Ein hohes Ka-Ge-Vau ist nicht automatisch schlecht – wenn der Gewinn jedes Jahr stark steigt.",
+   "bild": "",
+   "text": "Ein hohes KGV ist nicht automatisch schlecht – wenn der Gewinn jedes Jahr stark steigt"
+  },
+  {
+   "id": "s16",
+   "sprechtext": "Profis teilen dafür das Ka-Ge-Vau durch das Gewinnwachstum in Prozent.",
+   "bild": "",
+   "text": "Profis teilen dafür das KGV durch das Gewinnwachstum in Prozent"
+  },
+  {
+   "id": "s17",
+   "sprechtext": "Ka-Ge-Vau dreißig bei dreißig Prozent Wachstum ergibt eins – das gilt oft als fair. Über zwei wird es teuer.",
+   "bild": "",
+   "text": "KGV 30 bei 30 % Wachstum ergibt 1 – das gilt oft als fair. Über 2 wird es teuer"
+  },
+  {
+   "id": "s18",
+   "sprechtext": "Schreib uns in die Kommentare: Welche Aktie sollen wir als Nächstes durchrechnen?",
+   "bild": "",
+   "text": "Schreib uns in die Kommentare: Welche Aktie sollen wir als Nächstes durchrechnen?"
+  },
+  {
+   "id": "s19",
+   "sprechtext": "Und Nummer vier, die fast alle vergessen: die Schulden.",
+   "bild": "",
+   "text": "Und Nummer 4, die fast alle vergessen: die Schulden"
+  },
+  {
+   "id": "s20",
+   "sprechtext": "Eine Firma kann tolle Gewinne zeigen – aber hohe Schulden und steigende Zinsen fressen den Gewinn auf.",
+   "bild": "",
+   "text": "Eine Firma kann tolle Gewinne zeigen – aber hohe Schulden und steigende Zinsen fressen den Gewinn auf"
+  },
+  {
+   "id": "s21",
+   "sprechtext": "Ein Ka-Ge-Vau von fünf sieht dann billig aus, ist aber oft eine Falle.",
+   "bild": "",
+   "text": "Ein KGV von 5 sieht dann billig aus, ist aber oft eine Falle"
+  },
+  {
+   "id": "s22",
+   "sprechtext": "Fazit: Nicht der Preis zählt, sondern was du für jeden Euro Gewinn bekommst – und wie sicher dieser Gewinn ist.",
+   "bild": "",
+   "text": "Fazit: Nicht der Preis zählt, sondern was du für jeden Euro Gewinn bekommst – und wie sicher dieser Gewinn ist"
+  },
+  {
+   "id": "s23",
+   "sprechtext": "Keine Anlageberatung, nur erklärt.",
+   "bild": "",
+   "text": "Keine Anlageberatung, nur erklärt"
+  },
+  {
+   "id": "s24",
+   "sprechtext": "Folge HundeFinanzTv, wir erklären dir jeden Tag Geld verständlich.",
+   "bild": "",
+   "text": "Folge HundeFinanzTv, wir erklären dir jeden Tag Geld verständlich"
+  }
+ ]
+}
