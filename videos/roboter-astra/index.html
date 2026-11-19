@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <script type="importmap">{"imports":{"three":"./assets/three/build/three.module.js","three/addons/":"./assets/three/jsm/"}}</script>
+    <style>
+      @font-face { font-family: "Inter Display"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.otf"); }
+      @font-face { font-family: "Inter Display"; font-weight: 800; src: url("assets/fonts/InterDisplay-ExtraBold.otf"); }
+      @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/Inter-SemiBold.otf"); }
+      html, body { background: #000; }
+      #root { font-family: "Inter Display", "Inter", sans-serif; background: #000; }
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .tag { top: 140px; font-family: "Inter", sans-serif; font-weight: 600; font-size: 32px; letter-spacing: 8px; color: rgba(255,255,255,0.6); }
+      #labels { position: absolute; inset: 0; pointer-events: none; }
+      .pl { position: absolute; transform: translate(-50%, -100%); font: 800 76px "Inter Display", sans-serif; color: #fff; white-space: nowrap; text-shadow: 0 4px 30px rgba(0,0,0,.9); letter-spacing: 0.5px; }
+      .pl small { display: block; text-align: center; font: 600 34px "Inter", sans-serif; color: rgba(255,255,255,.7); margin-top: 4px; }
+      #word { position: absolute; left: 0; right: 0; top: 1420px; text-align: center; font: 800 132px "Inter Display", sans-serif; color: #fff; text-shadow: 0 6px 40px rgba(0,0,0,.9); }
+      .hookbig { top: 620px; font-size: 128px; font-weight: 900; line-height: 1.04; text-shadow: 0 8px 50px rgba(0,0,0,.95); }
+      .hookbig .y { color: #ffd23f; }
+      .hookdim { background: radial-gradient(circle at 50% 40%, rgba(0,0,0,.2), rgba(0,0,0,.75)); }
+      .capw { top: 1500px; font-size: 80px; font-weight: 800; line-height: 1.12; color: #fff; text-shadow: 0 6px 30px rgba(0,0,0,.95), 0 0 3px #000; }
+      .capw .w { display: inline-block; margin: 0 10px; }
+      .capw .on { color: #ffd23f; }
+      .share { position: absolute; right: 40px; top: 1150px; }
+      .share span { display: inline-block; background: #fe2c55; color: #fff; font-weight: 900; font-size: 50px; padding: 14px 32px; border-radius: 60px; box-shadow: 0 0 34px rgba(254,44,85,.6); }
+      .follow { top: 1150px; }
+      .hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }
+    
+#fk-wrap { position: absolute; left: 170px; top: 760px; width: 740px; z-index: 30; }
+#fk { position: relative; width: 740px; padding: 130px 56px 54px; border-radius: 52px; text-align: center; overflow: hidden; font-family: "Inter Display", Inter, sans-serif; color: #fff;
+  background: linear-gradient(180deg, rgba(30,34,48,.74), rgba(10,12,20,.82)); border: 1.5px solid rgba(255,255,255,.16); backdrop-filter: blur(26px) saturate(1.2); -webkit-backdrop-filter: blur(26px) saturate(1.2);
+  box-shadow: 0 40px 100px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.18); }
+#fk-wrap > .fk-av { position: absolute; left: 50%; top: -105px; width: 210px; height: 210px; margin-left: -105px; z-index: 3; border-radius: 50%; background: url(assets/avatar.png) center/cover; box-shadow: 0 0 0 8px rgba(12,14,22,.9), 0 20px 50px rgba(0,0,0,.6); }
+.fk-ring { position: absolute; inset: -9px; border-radius: 50%; background: conic-gradient(from 0deg, #ffe7a8, rgba(255,231,168,.1), #ffd06a, rgba(255,231,168,.1), #ffe7a8);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 4px)); mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 4px)); }
+#fk .n { font-size: 70px; font-weight: 900; letter-spacing: -1.5px; } #fk .d { font: 600 36px Inter, sans-serif; color: rgba(255,255,255,.66); margin: 10px 0 40px; }
+#fk .btn { position: relative; height: 116px; border-radius: 58px; font-size: 50px; font-weight: 800; }
+#fk .btn .a, #fk .btn .b { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 14px; border-radius: inherit; }
+#fk .btn .a { background: #fff; color: #0b0d14; } #fk .btn .b { opacity: 0; background: linear-gradient(180deg, #ffe39a, #f6c04a); color: #1a1406; }
+#fk-shine { position: absolute; top: -20%; bottom: -20%; width: 220px; left: -300px; background: linear-gradient(100deg, transparent, rgba(255,255,255,.22), transparent); transform: skewX(-18deg); }
+#fk-touch, #fk-rip { position: absolute; left: 540px; top: 1127px; width: 92px; height: 92px; margin: -46px 0 0 -46px; border-radius: 50%; z-index: 31; opacity: 0; }
+#fk-touch { background: rgba(255,255,255,.32); border: 3px solid rgba(255,255,255,.9); box-shadow: 0 8px 30px rgba(0,0,0,.45); } #fk-rip { border: 3px solid rgba(255,255,255,.8); }
+
+#in-bg { position:absolute; inset:0; z-index:60; opacity:0; background:#000 url(assets/tex/stars_milky_way.jpg) center/cover; overflow:hidden; }
+#in-bg::before { content:""; position:absolute; inset:0; background:rgba(0,0,0,.62); }
+#in-st { position:absolute; inset:0; z-index:61; }
+.in-orb { position:absolute; left:110px; top:700px; width:860px; height:300px; transform:rotate(-14deg); }
+.in-orb .e { position:absolute; inset:0; border:3px solid rgba(255,210,63,.67); border-radius:50%; }
+#in-o1 { z-index:1; } #in-o1 .e { clip-path: inset(0 0 50% 0); } #in-o2 { z-index:3; } #in-o2 .e { clip-path: inset(50% 0 0 0); }
+#in-av { position:absolute; left:365px; top:575px; width:350px; height:350px; border-radius:50%; background:url(assets/avatar.png) center/cover; box-shadow:0 0 90px rgba(255,210,63,.55); z-index:2; }
+.in-moon { position:absolute; left:0; top:0; width:56px; height:56px; margin:-28px 0 0 -28px; border-radius:50%; background:url(assets/tex/moon.jpg) center/200% 100%; box-shadow:inset -14px -8px 18px rgba(0,0,0,.8), 0 0 20px rgba(255,255,255,.27); }
+#in-nm { position:absolute; left:0; right:0; top:1080px; text-align:center; font:900 128px "Inter Display", Inter, sans-serif; color:#fff; letter-spacing:2px; text-shadow:0 0 40px rgba(0,0,0,.6); }
+#in-tg { position:absolute; left:0; right:0; top:1235px; text-align:center; font:600 36px Inter, sans-serif; color:#ffd23f; letter-spacing:3px; white-space:nowrap; }
+#in-tg i { font-style:normal; color:rgba(255,255,255,.67); padding:0 10px; }
+</style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="74.9" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="labels" class="clip" data-start="0" data-duration="74.9" data-track-index="2"></div>
+      <div id="word" class="clip" data-start="0" data-duration="74.9" data-track-index="3"></div>
+      <div id="tag" class="line tag clip" data-start="0" data-duration="74.9" data-track-index="1"><span>20. NOVEMBER 2026</span></div>
+      <div id="cap" class="line capw clip" data-start="3.1" data-duration="71.80" data-track-index="4"><span id="cap-in"></span></div>
+      <div id="hookdim" class="hookdim clip" data-start="0" data-duration="3.1" data-track-index="8"><span></span></div>
+      <div id="hookbig" class="line hookbig clip" data-start="0" data-duration="3.1" data-track-index="7"><span id="hookbig-in">Roboter baut<br /><span class="y">IM WELTALL!</span></span></div>
+      <div id="fk-box" class="clip" data-start="15.3" data-duration="5.4" data-track-index="5"><div id="fk-wrap"><div class="fk-av"><div class="fk-ring"></div></div><div id="fk"><div class="n">Novaro</div><div class="d">Weltraum, einfach erklärt</div><div class="btn" id="fk-btn"><span class="a">Folgen</span><span class="b"><svg class="ck" width="44" height="44" viewBox="0 0 44 44"><path d="M8 23l9 9 19-20" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="48" stroke-dashoffset="48"/></svg>Gefolgt</span></div><div id="fk-shine"></div></div></div><div id="fk-rip"></div><div id="fk-touch"></div></div>
+      <div id="in-box" class="clip" data-start="8.68" data-duration="3.0" data-track-index="9"><div id="in-bg"></div><div id="in-st"><div id="in-o1" class="in-orb"><div class="e"></div><div id="in-m1" class="in-moon"></div></div><div id="in-av"></div><div id="in-o2" class="in-orb"><div class="e"></div><div id="in-m2" class="in-moon"></div></div><div id="in-nm">Novaro</div><div id="in-tg">WELTALL<i>|</i>PLANETEN<i>|</i>WISSEN</div></div></div>
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="74.42" data-track-index="9" data-volume="1"></audio>
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="74.9" data-track-index="10" data-volume="0.3"></audio>
+    </div>
+    <img id="tex-day" src="assets/earth-blue-marble.jpg" style="display:none" alt="" />
+    <img id="tex-night" src="assets/earth-night.jpg" style="display:none" alt="" />
+    <img id="tex-topo" src="assets/earth-topology.png" style="display:none" alt="" />
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.from("#hookbig-in", { opacity: 0, scale: 1.3, duration: 0.35, ease: "power3.out" }, 0);
+      tl.to("#hookbig-in", { scale: 0.7, opacity: 0, filter: "blur(10px)", duration: 0.3, ease: "power2.in" }, 3.1 - 0.32);
+      tl.to("#hookdim", { opacity: 0, duration: 0.3 }, 3.1 - 0.32);
+
+      tl.fromTo("#fk-wrap", { opacity: 0, y: 120, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: "expo.out" }, 15.3);
+      tl.fromTo(".fk-ring", { rotation: 0 }, { rotation: 200, duration: 5.4, ease: "none" }, 15.3);
+      tl.fromTo("#fk .n, #fk .d, #fk-btn", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, stagger: 0.07, ease: "power3.out" }, 15.5);
+      tl.fromTo("#fk-touch", { opacity: 0, x: 240, y: 260, scale: 1.3 }, { opacity: 1, x: 0, y: 0, scale: 1, duration: 0.8, ease: "power3.out" }, 16.2);
+      tl.to("#fk-touch", { scale: 0.72, duration: 0.14 }, 17.06); tl.to("#fk-touch", { scale: 1, duration: 0.25 }, 17.2);
+      tl.to("#fk-btn", { scale: 0.95, duration: 0.14 }, 17.06); tl.to("#fk-btn", { scale: 1, duration: 0.45, ease: "back.out(3)" }, 17.2);
+      tl.fromTo("#fk-rip", { opacity: 0.9, scale: 0.6 }, { opacity: 0, scale: 3.2, duration: 0.7, ease: "power2.out", immediateRender: false }, 17.2);
+      tl.to("#fk-btn .a", { opacity: 0, duration: 0.18 }, 17.2); tl.to("#fk-btn .b", { opacity: 1, duration: 0.22 }, 17.25);
+      tl.to("#fk-btn .ck path", { attr: { "stroke-dashoffset": 0 }, duration: 0.45, ease: "power2.out" }, 17.349999999999998);
+      tl.fromTo("#fk-shine", { x: 0 }, { x: 1400, duration: 0.9, ease: "power2.inOut", immediateRender: false }, 17.55);
+      tl.to("#fk-touch", { opacity: 0, scale: 0.6, duration: 0.4, ease: "power2.in" }, 17.9);
+      tl.to("#fk-wrap", { opacity: 0, y: 40, scale: 0.96, duration: 0.45, ease: "power2.in" }, 20.200000000000003);
+
+      tl.fromTo("#in-bg", { opacity: 0 }, { opacity: 1, duration: 0.18 }, 8.68);
+      tl.fromTo("#in-av", { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.55, ease: "back.out(2.2)" }, 8.73);
+      tl.fromTo(".in-orb", { opacity: 0, scale: 0.4, rotation: -14 }, { opacity: 1, scale: 1, rotation: -14, duration: 0.6, ease: "expo.out" }, 8.98);
+      tl.set("#in-m1", { left: 860, top: 150, opacity: 0 }, 8.68); tl.set("#in-m2", { left: 860, top: 150, opacity: 1 }, 8.68);
+      tl.to("#in-m1", { keyframes: [{ left: 855.2, top: 127.6, opacity: 1 }, { left: 841.0, top: 105.9, opacity: 1 }, { left: 817.8, top: 85.2, opacity: 1 }, { left: 786.1, top: 65.9, opacity: 1 }, { left: 746.6, top: 48.5, opacity: 1 }, { left: 700.1, top: 33.3, opacity: 1 }, { left: 647.6, top: 20.6, opacity: 1 }, { left: 590.4, top: 10.8, opacity: 1 }, { left: 529.7, top: 4.1, opacity: 1 }, { left: 466.8, top: 0.5, opacity: 1 }, { left: 403.0, top: 0.3, opacity: 1 }, { left: 339.9, top: 3.3, opacity: 1 }, { left: 278.7, top: 9.6, opacity: 1 }, { left: 220.9, top: 18.9, opacity: 1 }, { left: 167.7, top: 31.1, opacity: 1 }, { left: 120.2, top: 46.0, opacity: 1 }, { left: 79.5, top: 63.1, opacity: 1 }, { left: 46.5, top: 82.1, opacity: 1 }, { left: 22.0, top: 102.6, opacity: 1 }, { left: 6.4, top: 124.2, opacity: 1 }, { left: 0.1, top: 146.3, opacity: 1 }, { left: 3.3, top: 168.5, opacity: 0 }, { left: 15.8, top: 190.3, opacity: 0 }, { left: 37.5, top: 211.2, opacity: 0 }, { left: 67.7, top: 230.8, opacity: 0 }, { left: 105.9, top: 248.6, opacity: 0 }, { left: 151.3, top: 264.2, opacity: 0 }, { left: 202.7, top: 277.3, opacity: 0 }, { left: 259.2, top: 287.7, opacity: 0 }, { left: 319.4, top: 295.0, opacity: 0 }, { left: 382.0, top: 299.1, opacity: 0 }, { left: 445.7, top: 299.9, opacity: 0 }, { left: 509.1, top: 297.4, opacity: 0 }, { left: 570.7, top: 291.7, opacity: 0 }, { left: 629.2, top: 282.9, opacity: 0 }, { left: 683.3, top: 271.2, opacity: 0 }, { left: 731.9, top: 256.8, opacity: 0 }], duration: 2.6, ease: "none" }, 8.98);
+      tl.to("#in-m2", { keyframes: [{ left: 855.2, top: 127.6, opacity: 0 }, { left: 841.0, top: 105.9, opacity: 0 }, { left: 817.8, top: 85.2, opacity: 0 }, { left: 786.1, top: 65.9, opacity: 0 }, { left: 746.6, top: 48.5, opacity: 0 }, { left: 700.1, top: 33.3, opacity: 0 }, { left: 647.6, top: 20.6, opacity: 0 }, { left: 590.4, top: 10.8, opacity: 0 }, { left: 529.7, top: 4.1, opacity: 0 }, { left: 466.8, top: 0.5, opacity: 0 }, { left: 403.0, top: 0.3, opacity: 0 }, { left: 339.9, top: 3.3, opacity: 0 }, { left: 278.7, top: 9.6, opacity: 0 }, { left: 220.9, top: 18.9, opacity: 0 }, { left: 167.7, top: 31.1, opacity: 0 }, { left: 120.2, top: 46.0, opacity: 0 }, { left: 79.5, top: 63.1, opacity: 0 }, { left: 46.5, top: 82.1, opacity: 0 }, { left: 22.0, top: 102.6, opacity: 0 }, { left: 6.4, top: 124.2, opacity: 0 }, { left: 0.1, top: 146.3, opacity: 0 }, { left: 3.3, top: 168.5, opacity: 1 }, { left: 15.8, top: 190.3, opacity: 1 }, { left: 37.5, top: 211.2, opacity: 1 }, { left: 67.7, top: 230.8, opacity: 1 }, { left: 105.9, top: 248.6, opacity: 1 }, { left: 151.3, top: 264.2, opacity: 1 }, { left: 202.7, top: 277.3, opacity: 1 }, { left: 259.2, top: 287.7, opacity: 1 }, { left: 319.4, top: 295.0, opacity: 1 }, { left: 382.0, top: 299.1, opacity: 1 }, { left: 445.7, top: 299.9, opacity: 1 }, { left: 509.1, top: 297.4, opacity: 1 }, { left: 570.7, top: 291.7, opacity: 1 }, { left: 629.2, top: 282.9, opacity: 1 }, { left: 683.3, top: 271.2, opacity: 1 }, { left: 731.9, top: 256.8, opacity: 1 }], duration: 2.6, ease: "none" }, 8.98);
+      tl.fromTo("#in-nm", { opacity: 0, y: 60, clipPath: "inset(0 0 100% 0)" }, { opacity: 1, y: 0, clipPath: "inset(0 0 0% 0)", duration: 0.55, ease: "power3.out" }, 9.28);
+      tl.fromTo("#in-tg", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 9.629999999999999);
+      tl.fromTo("#in-st", { scale: 1 }, { scale: 1.04, duration: 3.0, ease: "none" }, 8.68);
+      tl.to(["#in-bg", "#in-st"], { opacity: 0, duration: 0.25 }, 11.43);
+      tl.to({}, { duration: 0.01 }, 74.9 - 0.01);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+    <script type="module">
+      import * as K from "./assets/kino.js";
+      const { THREE, V, lerp, eio, eout, prog, cl, rnd } = K;
+      window.FMT = { W: 1080, H: 1920 };
+      const WORDS = [{"w": "Ein", "s": 0.0, "e": 0.229}, {"w": "Roboter", "s": 0.344, "e": 0.688}, {"w": "baut", "s": 0.765, "e": 0.994}, {"w": "im", "s": 1.07, "e": 1.147}, {"w": "Weltall", "s": 1.223, "e": 1.759}, {"w": "–", "s": 1.988, "e": 2.026}, {"w": "ganz", "s": 2.065, "e": 2.37}, {"w": "allein!", "s": 2.447, "e": 3.098}, {"w": "Zum", "s": 3.365, "e": 3.595}, {"w": "ersten", "s": 3.671, "e": 4.053}, {"w": "Mal", "s": 4.13, "e": 4.283}, {"w": "hat", "s": 4.359, "e": 4.512}, {"w": "eine", "s": 4.563, "e": 4.665}, {"w": "Maschine", "s": 4.78, "e": 5.124}, {"w": "im", "s": 5.2, "e": 5.353}, {"w": "All", "s": 5.43, "e": 5.659}, {"w": "selbst", "s": 5.736, "e": 6.042}, {"w": "etwas", "s": 6.118, "e": 6.347}, {"w": "zusammengebaut,", "s": 6.386, "e": 7.341}, {"w": "ohne", "s": 7.418, "e": 7.647}, {"w": "Astronauten.", "s": 7.686, "e": 8.565}, {"w": "Und", "s": 11.794, "e": 11.947}, {"w": "das", "s": 12.024, "e": 12.253}, {"w": "könnte", "s": 12.329, "e": 12.559}, {"w": "verändern,", "s": 12.674, "e": 13.171}, {"w": "wie", "s": 13.209, "e": 13.247}, {"w": "wir", "s": 13.323, "e": 13.4}, {"w": "in", "s": 13.476, "e": 13.553}, {"w": "Zukunft", "s": 13.706, "e": 14.165}, {"w": "im", "s": 14.241, "e": 14.318}, {"w": "Weltall", "s": 14.394, "e": 14.776}, {"w": "bauen.", "s": 14.853, "e": 15.212}, {"w": "Folg", "s": 15.403, "e": 15.633}, {"w": "uns", "s": 15.709, "e": 15.786}, {"w": "für", "s": 15.862, "e": 15.939}, {"w": "mehr!", "s": 15.977, "e": 16.245}, {"w": "Der", "s": 16.561, "e": 16.714}, {"w": "Roboter", "s": 16.829, "e": 17.173}, {"w": "heißt", "s": 17.249, "e": 17.517}, {"w": "Astra.", "s": 17.555, "e": 18.09}, {"w": "Gebaut", "s": 18.32, "e": 18.779}, {"w": "hat", "s": 18.855, "e": 18.932}, {"w": "ihn", "s": 19.008, "e": 19.084}, {"w": "die", "s": 19.161, "e": 19.237}, {"w": "Uni", "s": 19.352, "e": 19.467}, {"w": "Caltech", "s": 19.543, "e": 20.078}, {"w": "in", "s": 20.117, "e": 20.155}, {"w": "Kalifornien,", "s": 20.231, "e": 21.149}, {"w": "bezahlt", "s": 21.225, "e": 21.684}, {"w": "hat", "s": 21.761, "e": 21.837}, {"w": "ihn", "s": 21.914, "e": 21.99}, {"w": "die", "s": 22.067, "e": 22.143}, {"w": "Forschungsbehörde", "s": 22.219, "e": 22.984}, {"w": "DARPA", "s": 23.137, "e": 23.596}, {"w": "des", "s": 23.672, "e": 23.749}, {"w": "US-Militärs.", "s": 23.825, "e": 25.087}, {"w": "Im", "s": 25.354, "e": 25.507}, {"w": "März", "s": 25.546, "e": 25.813}, {"w": "flog", "s": 25.89, "e": 26.043}, {"w": "er", "s": 26.081, "e": 26.119}, {"w": "mit", "s": 26.196, "e": 26.272}, {"w": "einer", "s": 26.31, "e": 26.501}, {"w": "SpaceX-Rakete", "s": 26.578, "e": 27.572}, {"w": "ins", "s": 27.687, "e": 27.801}, {"w": "All.", "s": 27.878, "e": 28.178}, {"w": "Astra", "s": 28.366, "e": 28.749}, {"w": "ist", "s": 28.825, "e": 28.901}, {"w": "eine", "s": 28.978, "e": 29.131}, {"w": "Kiste,", "s": 29.207, "e": 29.743}, {"w": "etwa", "s": 29.819, "e": 30.048}, {"w": "einen", "s": 30.201, "e": 30.354}, {"w": "Meter", "s": 30.431, "e": 30.66}, {"w": "breit,", "s": 30.737, "e": 31.272}, {"w": "hoch", "s": 31.31, "e": 31.578}, {"w": "und", "s": 31.654, "e": 31.731}, {"w": "tief.", "s": 31.807, "e": 32.342}, {"w": "Darin:", "s": 32.495, "e": 33.069}, {"w": "ein", "s": 33.26, "e": 33.413}, {"w": "Greifarm", "s": 33.489, "e": 34.177}, {"w": "und", "s": 34.254, "e": 34.407}, {"w": "Fächer", "s": 34.483, "e": 34.789}, {"w": "voller", "s": 34.942, "e": 35.248}, {"w": "Stangen", "s": 35.324, "e": 35.707}, {"w": "und", "s": 35.783, "e": 35.86}, {"w": "Gelenke.", "s": 35.936, "e": 36.544}, {"w": "Der", "s": 36.735, "e": 36.888}, {"w": "Arm", "s": 36.964, "e": 37.194}, {"w": "nimmt", "s": 37.27, "e": 37.5}, {"w": "leichte", "s": 37.538, "e": 37.882}, {"w": "Stangen", "s": 37.958, "e": 38.264}, {"w": "und", "s": 38.303, "e": 38.341}, {"w": "Gelenke", "s": 38.417, "e": 38.8}, {"w": "aus", "s": 38.876, "e": 38.953}, {"w": "Aluminium", "s": 39.029, "e": 39.717}, {"w": "und", "s": 39.794, "e": 39.87}, {"w": "steckt", "s": 39.947, "e": 40.099}, {"w": "sie", "s": 40.176, "e": 40.329}, {"w": "Stück", "s": 40.405, "e": 40.635}, {"w": "für", "s": 40.711, "e": 40.864}, {"w": "Stück", "s": 40.941, "e": 41.17}, {"w": "zusammen.", "s": 41.246, "e": 41.936}, {"w": "Das", "s": 42.012, "e": 42.088}, {"w": "Ziel", "s": 42.241, "e": 42.547}, {"w": "ist", "s": 42.624, "e": 42.7}, {"w": "der", "s": 42.777, "e": 42.853}, {"w": "Rahmen", "s": 42.93, "e": 43.235}, {"w": "einer", "s": 43.312, "e": 43.465}, {"w": "Antenne:", "s": 43.541, "e": 44.306}, {"w": "eins", "s": 44.382, "e": 44.535}, {"w": "Komma", "s": 44.612, "e": 44.765}, {"w": "vier", "s": 44.918, "e": 44.994}, {"w": "Meter", "s": 45.071, "e": 45.3}, {"w": "breit,", "s": 45.376, "e": 45.912}, {"w": "aus", "s": 46.065, "e": 46.217}, {"w": "elf", "s": 46.332, "e": 46.447}, {"w": "Teilstücken.", "s": 46.523, "e": 47.441}, {"w": "Zwei", "s": 47.479, "e": 47.67}, {"w": "Stücke", "s": 47.747, "e": 48.053}, {"w": "wurden", "s": 48.206, "e": 48.435}, {"w": "schon", "s": 48.473, "e": 48.588}, {"w": "auf", "s": 48.664, "e": 48.741}, {"w": "der", "s": 48.779, "e": 48.817}, {"w": "Erde", "s": 48.97, "e": 49.123}, {"w": "gebaut.", "s": 49.2, "e": 49.888}, {"w": "Das", "s": 49.964, "e": 50.041}, {"w": "dritte", "s": 50.117, "e": 50.423}, {"w": "hat", "s": 50.576, "e": 50.729}, {"w": "Astra", "s": 50.805, "e": 51.111}, {"w": "im", "s": 51.188, "e": 51.341}, {"w": "All", "s": 51.417, "e": 51.646}, {"w": "selbst", "s": 51.723, "e": 51.952}, {"w": "gebaut.", "s": 52.029, "e": 52.717}, {"w": "Ganz", "s": 52.755, "e": 53.023}, {"w": "allein", "s": 53.137, "e": 53.329}, {"w": "war", "s": 53.405, "e": 53.481}, {"w": "er", "s": 53.558, "e": 53.634}, {"w": "aber", "s": 53.749, "e": 53.864}, {"w": "nicht:", "s": 53.902, "e": 54.476}, {"w": "Drei", "s": 54.552, "e": 54.705}, {"w": "Forscher", "s": 54.781, "e": 55.164}, {"w": "schickten", "s": 55.24, "e": 55.546}, {"w": "Befehle", "s": 55.584, "e": 56.158}, {"w": "und", "s": 56.234, "e": 56.311}, {"w": "prüften", "s": 56.387, "e": 56.693}, {"w": "Fotos.", "s": 56.769, "e": 57.534}, {"w": "Kontakt", "s": 57.636, "e": 57.993}, {"w": "gab", "s": 58.069, "e": 58.222}, {"w": "es", "s": 58.26, "e": 58.299}, {"w": "nur", "s": 58.375, "e": 58.452}, {"w": "ein", "s": 58.566, "e": 58.681}, {"w": "paar", "s": 58.719, "e": 58.91}, {"w": "Mal", "s": 59.025, "e": 59.14}, {"w": "am", "s": 59.216, "e": 59.293}, {"w": "Tag,", "s": 59.369, "e": 59.751}, {"w": "jeweils", "s": 59.79, "e": 60.134}, {"w": "rund", "s": 60.172, "e": 60.363}, {"w": "fünfzehn", "s": 60.44, "e": 60.784}, {"w": "Minuten.", "s": 60.822, "e": 61.587}, {"w": "Fertig", "s": 61.625, "e": 62.045}, {"w": "wird", "s": 62.084, "e": 62.198}, {"w": "die", "s": 62.237, "e": 62.275}, {"w": "Antenne", "s": 62.389, "e": 62.657}, {"w": "nicht", "s": 62.734, "e": 62.963}, {"w": "mehr", "s": 63.039, "e": 63.192}, {"w": "–", "s": 63.345, "e": 63.396}, {"w": "im", "s": 63.448, "e": 63.498}, {"w": "Dezember", "s": 63.613, "e": 64.11}, {"w": "endet", "s": 64.186, "e": 64.416}, {"w": "die", "s": 64.492, "e": 64.569}, {"w": "Mission.", "s": 64.798, "e": 65.301}, {"w": "Warum", "s": 65.377, "e": 65.53}, {"w": "das", "s": 65.607, "e": 65.76}, {"w": "wichtig", "s": 65.887, "e": 66.142}, {"w": "ist:", "s": 66.218, "e": 66.83}, {"w": "Riesige", "s": 66.868, "e": 67.289}, {"w": "Antennen", "s": 67.442, "e": 67.824}, {"w": "und", "s": 67.901, "e": 67.977}, {"w": "Teleskope", "s": 68.015, "e": 68.665}, {"w": "passen", "s": 68.742, "e": 68.971}, {"w": "in", "s": 69.048, "e": 69.2}, {"w": "keine", "s": 69.277, "e": 69.506}, {"w": "Rakete.", "s": 69.583, "e": 70.347}, {"w": "In", "s": 70.424, "e": 70.5}, {"w": "Zukunft", "s": 70.577, "e": 71.036}, {"w": "könnten", "s": 71.112, "e": 71.418}, {"w": "Roboter", "s": 71.533, "e": 71.877}, {"w": "sie", "s": 71.953, "e": 72.183}, {"w": "einfach", "s": 72.221, "e": 72.718}, {"w": "oben", "s": 72.794, "e": 73.024}, {"w": "im", "s": 73.138, "e": 73.253}, {"w": "All", "s": 73.368, "e": 73.482}, {"w": "zusammenbauen.", "s": 73.521, "e": 74.4}]; const CHUNKS = [[0.0, 3.098], [3.365, 8.565], [11.794, 15.212], [15.403, 16.244999999999997], [16.561, 25.087], [25.354, 28.178], [28.366, 36.544], [36.735, 41.936], [42.012, 47.441], [47.479, 52.717], [52.755, 61.587], [61.625, 65.301], [65.37700000000001, 74.4]];
+      const cap = K.captions(WORDS, CHUNKS, document.getElementById("cap-in"), 3.1, {"eins": "1,4", "Komma": "", "vier": "", "elf": "11", "Zwei": "2", "Drei": "3", "fünfzehn": "15"});
+      const img = (id) => document.getElementById(id);
+      const imgsReady = Promise.all(["tex-day", "tex-night", "tex-topo"].map((id) => { const im = img(id); return im.complete ? Promise.resolve(im) : new Promise((r) => (im.onload = () => r(im))); }));
+      const E = K.setup(document.getElementById("stage"));
+      const cam = E.cam;
+      const TL = new THREE.TextureLoader();
+      const tex = async (f) => { const t = await TL.loadAsync("assets/tex/" + f); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t; };
+      // Beschriftungen, die an 3D-Objekten hängen
+      const LB = document.getElementById("labels"), WORD = document.getElementById("word");
+      const labels = [];
+      const label = (html, obj, r, o = {}) => { const d = document.createElement("div"); d.className = "pl"; d.innerHTML = html; LB.appendChild(d); const L = { d, obj, r, t0: o.t0 ?? 0, t1: o.t1 ?? 999, gap: o.gap ?? 40, size: o.size }; if (o.size) d.style.fontSize = o.size + "px"; labels.push(L); return L; };
+      const P = (v) => { const q = v.clone().project(cam); return [(q.x + 1) / 2 * 1080, (1 - q.y) / 2 * 1920]; };
+      const updLabels = (t) => { cam.updateMatrixWorld(true); labels.forEach((L) => { const p = L.obj.getWorldPosition(new THREE.Vector3()); const top = p.clone().add(cam.up.clone().multiplyScalar(L.r)); const [x] = P(p), [, y] = P(top);
+        const a = cl((t - L.t0) / 0.4) * (1 - cl((t - L.t1) / 0.4)); L.d.style.opacity = a; L.d.style.left = x + "px"; L.d.style.top = y - L.gap + "px"; L.d.style.transform = `translate(-50%,-100%) translateY(${(1 - a) * 20}px)`; }); };
+      let lastWord = ""; const word = (h, a) => { if (h !== lastWord) { WORD.innerHTML = h; lastWord = h; } WORD.style.opacity = a; WORD.style.transform = `translateY(${(1 - a) * 30}px)`; };
+      let renderAt = () => {};
+      const ready = imgsReady.then(async ([day, night, topo]) => {
+        const W = (w, ab = 0) => { const x = WORDS.find((q) => q.s >= ab - 0.01 && q.w.toLowerCase().replace(/[^a-zäöüß0-9]/g, "").startsWith(w)); return x ? x.s : ab; };
+        K.reseed(11);
+        const { RoomEnvironment } = await import("three/addons/environments/RoomEnvironment.js");
+        const pm = new THREE.PMREMGenerator(E.R); const env = pm.fromScene(new RoomEnvironment(), 0.04).texture;
+        const M = (color, metal = 0.2, rough = 0.5, ei = 0.5, o = {}) => { const c = new THREE.Color(color); if (c.r + c.g + c.b > 2.4) c.multiplyScalar(0.75); return new THREE.MeshStandardMaterial({ color: c, metalness: metal, roughness: rough, envMap: env, envMapIntensity: ei * 0.5, ...o }); };
+        const alu = M(0xc9ccd2, 0.85, 0.3, 1), strutM = M(0xe6e6e6, 0.1, 0.35, 0.8), darkM = M(0x2a2d33, 0.5, 0.45), goldM = M(0xd9a441, 0.95, 0.3, 1.2);
+        const glowStrut = new THREE.MeshBasicMaterial({ color: 0xffd23f, toneMapped: false }), ghostM = new THREE.MeshBasicMaterial({ color: 0x9fb4d0, transparent: true, opacity: 0.22, depthWrite: false });
+        const strut = (a, b, r, mat) => { const d = b.clone().sub(a); const m = new THREE.Mesh(new THREE.CylinderGeometry(r, r, d.length(), 10), mat); m.position.copy(a).add(b).multiplyScalar(0.5); m.quaternion.setFromUnitVectors(V(0, 1, 0), d.normalize()); return m; };
+        // Ring aus N Teilstücken (Fachwerk)
+        function ringBays(N, R, h, r, y = 0) { const bays = []; for (let i = 0; i < N; i++) { const g = new THREE.Group(); const a0 = (i / N) * Math.PI * 2, a1 = ((i + 1) / N) * Math.PI * 2;
+            const p0 = V(Math.cos(a0) * R, y, Math.sin(a0) * R), p1 = V(Math.cos(a1) * R, y, Math.sin(a1) * R), q0 = p0.clone().setY(y + h), q1 = p1.clone().setY(y + h);
+            const parts = [[p0, q0], [p0, p1], [q0, q1], [p0, q1], [p1, q1]].map(([a, b]) => strut(a, b, r, strutM)); parts.forEach((m) => g.add(m));
+            [p0, p1, q0, q1].forEach((p) => { const j = new THREE.Mesh(new THREE.SphereGeometry(r * 2.2, 12, 8), alu); j.position.copy(p); g.add(j); });
+            g.userData.parts = parts; bays.push(g); } return bays; }
+        const setMat = (bay, mat) => bay.userData.parts.forEach((m) => (m.material = mat));
+        // ================= Weltraum mit Erde (Bahn) =================
+        const scO = new THREE.Scene(); K.stars(scO, 9000, -1, 30000, 1.7).material.opacity = 0.65; scO.add(new THREE.AmbientLight(0x30303a, 0.6)); const sunO = new THREE.DirectionalLight(0xfff2e0, 2.2); sunO.position.set(-300, 200, 500); scO.add(sunO);
+        const RE = 100; const EA = K.earth(scO, { day, night, topo }, RE); EA.group.children[EA.group.children.length - 1].scale.setScalar(0.93); EA.U.sun.value = V(-0.5, 0.35, 0.8).normalize();
+        function mkSat(s = 1) { const g = new THREE.Group(); const b = new THREE.Mesh(new THREE.BoxGeometry(2, 2, 2), goldM); g.add(b); const top = new THREE.Mesh(new THREE.BoxGeometry(2.05, 0.15, 2.05), alu); top.position.y = 1.05; g.add(top);
+          for (const sx of [-1, 1]) { const p = new THREE.Mesh(new THREE.BoxGeometry(4, 0.08, 1.6), M(0x16264d, 0.6, 0.25, 1)); p.position.set(sx * 3.2, 0, 0); g.add(p); }
+          const rg = ringBays(11, 1.8, 0.5, 0.04, 1.1); rg.slice(0, 3).forEach((x) => g.add(x)); g.scale.setScalar(s); return g; }
+        const sat = mkSat(1.4); scO.add(sat);
+        const link = new THREE.Line(new THREE.BufferGeometry().setFromPoints([V(0, 0, 0), V(0, 0, 1)]), new THREE.LineDashedMaterial({ color: 0x7fd0ff, dashSize: 3, gapSize: 2, transparent: true, opacity: 0, toneMapped: false })); scO.add(link);
+        const gsDot = K.sprite(scO, K.glowTex("rgba(255,215,110,1)"), 7, V(0, 0, 0), 0); const gsO = new THREE.Object3D(); scO.add(gsO);
+        const pulse = K.sprite(scO, K.glowTex("rgba(127,208,255,1)"), 4, V(0, 0, 0), 0);
+        // ================= Astra-Kiste (Meter) =================
+        const scB = new THREE.Scene(); K.reseed(4); K.stars(scB, 7000, -1, 20000, 1.6).material.opacity = 0.75; scB.add(new THREE.AmbientLight(0x50586a, 0.6)); scB.add(new THREE.HemisphereLight(0x8090b0, 0x202020, 0.3));
+        const sunB = new THREE.DirectionalLight(0xfff2e0, 2.4); sunB.position.set(-4, 5, 6); scB.add(sunB);
+        const EB = K.earth(scB, { day, night, topo }, 60); EB.group.children[EB.group.children.length - 1].scale.setScalar(0.93); EB.group.position.set(0, -95, -70); EB.U.sun.value = V(-0.4, 0.6, 0.7).normalize();
+        const box = new THREE.Group(); scB.add(box);
+        { const c = [-0.5, 0.5]; for (const x of c) for (const z of c) box.add(strut(V(x, -0.5, z), V(x, 0.5, z), 0.02, darkM)); for (const y of c) for (const z of c) box.add(strut(V(-0.5, y, z), V(0.5, y, z), 0.02, darkM)); for (const y of c) for (const x of c) box.add(strut(V(x, y, -0.5), V(x, y, 0.5), 0.02, darkM));
+          const back = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), M(0xd9a441, 0.95, 0.35, 1.2, { side: THREE.DoubleSide })); back.position.z = -0.5; box.add(back);
+          const floor = new THREE.Mesh(new THREE.BoxGeometry(1, 0.03, 1), alu); floor.position.y = -0.5; box.add(floor);
+          const plate = new THREE.Mesh(new THREE.CylinderGeometry(0.32, 0.32, 0.03, 40), M(0x3b4250, 0.6, 0.4)); plate.position.set(0.15, -0.3, 0); box.add(plate); }
+        // Fächer mit Stangen + Gelenken (links)
+        const rack = new THREE.Group(); rack.position.set(-0.36, -0.48, 0); box.add(rack);
+        for (let i = 0; i < 7; i++) rack.add(strut(V(-0.06 + (i % 2) * 0.05, 0.02 + i * 0.045, -0.3), V(-0.06 + (i % 2) * 0.05, 0.02 + i * 0.045, 0.3), 0.012, strutM));
+        for (let i = 0; i < 10; i++) { const j = new THREE.Mesh(new THREE.SphereGeometry(0.022, 12, 8), alu); j.position.set(0.06, 0.03 + (i % 5) * 0.05, -0.2 + Math.floor(i / 5) * 0.4); rack.add(j); }
+        // Portal-Arm (fährt in x/z, Stange in y)
+        const railM = alu; box.add(strut(V(-0.48, 0.45, -0.4), V(0.48, 0.45, -0.4), 0.018, railM)); box.add(strut(V(-0.48, 0.45, 0.4), V(0.48, 0.45, 0.4), 0.018, railM));
+        const bridge = new THREE.Group(); box.add(bridge); bridge.add(strut(V(0, 0.45, -0.42), V(0, 0.45, 0.42), 0.022, M(0x8a8f99, 0.7, 0.35)));
+        const carr = new THREE.Group(); bridge.add(carr); carr.add(new THREE.Mesh(new THREE.BoxGeometry(0.09, 0.07, 0.09), darkM)); carr.children[0].position.y = 0.45;
+        const rod = new THREE.Group(); carr.add(rod); const rodM = new THREE.Mesh(new THREE.CylinderGeometry(0.014, 0.014, 0.6, 10), alu); rodM.position.y = 0.15; rod.add(rodM);
+        const grip = new THREE.Group(); grip.position.y = -0.15; rod.add(grip); for (const s of [-1, 1]) { const f = new THREE.Mesh(new THREE.BoxGeometry(0.012, 0.06, 0.03), darkM); f.position.set(s * 0.025, -0.03, 0); grip.add(f); }
+        const held = strut(V(-0.12, 0, 0), V(0.12, 0, 0), 0.012, strutM); grip.add(held); held.position.y = -0.07;
+        const armO = new THREE.Object3D(); grip.add(armO); const rackO = new THREE.Object3D(); rackO.position.set(0, 0.25, 0); rack.add(rackO);
+        const setArm = (x, y, z) => { bridge.position.x = x; carr.position.z = z; rod.position.y = y; };
+        // Antenne: Ring 11 Teile, Ø 1,4 m, oben um die Kiste
+        const RB = ringBays(11, 0.7, 0.22, 0.017, 0.52); RB.forEach((b) => box.add(b));
+        const ghost = ringBays(11, 0.7, 0.22, 0.009, 0.52); ghost.forEach((b) => { setMat(b, ghostM); b.children.forEach((m) => (m.material = ghostM)); box.add(b); });
+        const ringO = new THREE.Object3D(); ringO.position.set(0, 0.85, 0); box.add(ringO);
+        const dimA = new THREE.Object3D(); dimA.position.set(0, -0.5, 0.55); box.add(dimA); const dimB = new THREE.Object3D(); dimB.position.set(0.55, 0, 0.55); box.add(dimB); const dimC = new THREE.Object3D(); dimC.position.set(0.55, -0.5, 0); box.add(dimC);
+        // Zukunft: riesiges Teleskop/Antenne (eigene Szene-Gruppe im gleichen Raum, weit weg)
+        const big = new THREE.Group(); big.position.set(0, 0, -400); scB.add(big);
+        ringBays(48, 60, 6, 0.35).forEach((b) => big.add(b));
+        const dish = new THREE.Mesh(new THREE.SphereGeometry(140, 64, 16, 0, Math.PI * 2, 0, 0.45), M(0xd9b061, 0.95, 0.25, 1.3, { side: THREE.DoubleSide, transparent: true, opacity: 0.85 })); dish.position.y = -125; big.add(dish);
+        const bots = []; for (let i = 0; i < 6; i++) { const b = mkSat(1.3); big.add(b); bots.push(b); }
+        const sparks = []; for (let i = 0; i < 6; i++) sparks.push(K.sprite(big, K.glowTex("rgba(255,215,110,1)"), 10, V(0, 0, 0), 0));
+        // Falcon-9-artige Rakete
+        const scR = new THREE.Scene(); K.reseed(6); const stR = K.stars(scR, 7000, -1, 20000, 1.6); const skyR = K.sky(scR, 0x02040a, 0x0a1a3a, 0x24406e, 15000);
+        scR.add(new THREE.AmbientLight(0x404858, 0.5)); const sunR = new THREE.DirectionalLight(0xfff2e0, 1.6); sunR.position.set(300, 200, 400); scR.add(sunR);
+        const F9 = new THREE.Group(); scR.add(F9); { const c = new THREE.Mesh(new THREE.CylinderGeometry(1.85, 1.85, 42, 40), M(0xf2f2f2, 0.05, 0.45)); c.position.y = 21; F9.add(c); const is = new THREE.Mesh(new THREE.CylinderGeometry(1.86, 1.86, 4, 40), M(0x15161a, 0.3, 0.5)); is.position.y = 44; F9.add(is);
+          const s2 = new THREE.Mesh(new THREE.CylinderGeometry(1.85, 1.85, 10, 40), M(0xf2f2f2, 0.05, 0.45)); s2.position.y = 51; F9.add(s2); const fa = new THREE.Mesh(new THREE.CylinderGeometry(2.6, 1.85, 3, 40), M(0xf7f7f7, 0.05, 0.4)); fa.position.y = 57.5; F9.add(fa);
+          const fb = new THREE.Mesh(new THREE.CylinderGeometry(2.6, 2.6, 7, 40), M(0xf7f7f7, 0.05, 0.4)); fb.position.y = 62.5; F9.add(fb); const ft = new THREE.Mesh(new THREE.SphereGeometry(2.6, 40, 20, 0, Math.PI * 2, 0, Math.PI / 2), M(0xf7f7f7, 0.05, 0.4)); ft.scale.y = 2.1; ft.position.y = 66; F9.add(ft); }
+        const fireTex = K.glowTex("rgba(255,190,110,1)"), smokeTex = K.glowTex("rgba(200,200,210,.55)");
+        const flames = []; for (let i = 0; i < 22; i++) flames.push(K.sprite(scR, fireTex, 10, V(0, 0, 0), 0));
+        const smoke = []; for (let i = 0; i < 40; i++) smoke.push(K.sprite(scR, smokeTex, 20, V(0, 0, 0), 0)); smoke.forEach((s) => (s.material.blending = THREE.NormalBlending));
+        const fl = new THREE.PointLight(0xffaa55, 0, 300); scR.add(fl);
+        function fire(t) { flames.forEach((s, i) => { const k = i / flames.length; s.position.set(Math.sin(t * 40 + i) * 0.4, -1.5 - k * 26, Math.cos(t * 33 + i) * 0.4); s.scale.setScalar(11 - k * 6); s.material.opacity = (1 - k) * 0.95; }); fl.position.set(0, -5, 6); fl.intensity = 350;
+          smoke.forEach((s, i) => { const k = ((i / smoke.length) + t * 0.35) % 1; s.position.set(Math.sin(i * 7.3) * (2 + k * 14), -20 - k * 160, Math.cos(i * 3.1) * (2 + k * 14)); s.scale.setScalar(10 + k * 45); s.material.opacity = 0.35 * (1 - k); }); }
+        
+        // ===== Zeiten =====
+        const tZum = W("zum"), tOhne = W("ohne"), tUnd = W("und", 11), tFolg = W("folg"), tDer = W("der", 16.4), tGeb = W("gebaut"), tBez = W("bezahlt"), tIm = W("im", 25), tAstra = W("astra", 28), tDarin = W("darin"), tFach = W("fächer"), tArm = W("der", 36.5), tStueck = W("stück"), tDas = W("das", 41.8), tEins = W("eins"), tElf = W("elf"), tZwei = W("zwei", 47), tDritte = W("das", 49.8), tGanz = W("ganz", 52.5), tDrei = W("drei", 54.3), tKontakt = W("kontakt"), tFertig = W("fertig"), tDez = W("im", 63.2), tWarum = W("warum"), tRiesig = W("riesige"), tIn = W("in", 70.2), END = 74.9;
+        label("1 m", dimA, 0.02, { t0: tAstra + 0.8, t1: tDarin - 0.1, size: 46, gap: 14 }); label("1 m", dimB, 0.02, { t0: tAstra + 1.6, t1: tDarin - 0.1, size: 46, gap: 14 }); label("1 m", dimC, 0.02, { t0: W("tief") - 0.2, t1: tDarin - 0.1, size: 46, gap: 14 });
+        label("Greifarm", armO, 0.05, { t0: W("greifarm") - 0.1, t1: tFach - 0.1, size: 48, gap: 20 }); label("Stangen & Gelenke", rackO, 0.05, { t0: tFach - 0.1, t1: tArm - 0.1, size: 44, gap: 20 });
+        const satO = new THREE.Object3D(); sat.add(satO); label("Astra", satO, 3, { t0: tDer + 0.4, t1: tGeb - 0.1, size: 54, gap: 22 });
+        label("Bodenstation", gsO, 3, { t0: tDrei, t1: tFertig - 0.1, size: 44, gap: 18 });
+        const logo = (f, h = 110, bg = false) => bg ? `<div style="display:inline-block;background:#fff;border-radius:22px;padding:14px 28px;margin-bottom:16px"><img src='assets/logos/${f}' style='height:${h}px;display:block'></div><br>` : `<img src='assets/logos/${f}' style='height:${h}px;display:block;margin:0 auto 18px;filter:drop-shadow(0 6px 24px rgba(0,0,0,.8))'>`;
+        const WORDEL = document.getElementById("word");
+        // Bauablauf: Stange vom Fach zum Ring (Teil Nr. 3)
+        const target = V(Math.cos(2.5 / 11 * Math.PI * 2) * 0.7, 0.62, Math.sin(2.5 / 11 * Math.PI * 2) * 0.7);
+        function build(f) { // f 0..1
+          const p0 = V(-0.36, -0.2, 0), up = V(-0.1, 0.2, 0.1), p1 = V(Math.max(-0.45, Math.min(0.45, target.x)), 0.1, Math.max(-0.4, Math.min(0.4, target.z)));
+          let p; if (f < 0.35) p = p0.clone().lerp(up, K.eio(f / 0.35)); else p = up.clone().lerp(p1, K.eio((f - 0.35) / 0.65)); setArm(p.x, p.y, p.z); held.visible = true; }
+        
+        renderAt = (t) => {
+          E.grade.uniforms.flash.value = 0; E.look([1, 1, 1], [0, 0, 0], 0.35, 0.85);
+          let scene = scB, pos = V(2, 1, 3), look = V(0, 0, 0), fov = 40;
+          EA.group.rotation.y = 1.9 + t * 0.012; EA.clouds.rotation.y = t * 0.004; EB.group.rotation.y = t * 0.01; EB.group.visible = !(t >= tDas - 0.05 && t < tWarum - 0.05); box.rotation.y = 0; big.visible = false;
+          link.material.opacity = 0; gsDot.material.opacity = 0; pulse.material.opacity = 0; sparks.forEach((s) => (s.material.opacity = 0)); flames.forEach((s) => (s.material.opacity = 0)); smoke.forEach((s) => (s.material.opacity = 0));
+          // Ring-Zustand: 2 Teile (Erde) + Teil 3 im All
+          RB.forEach((b, i) => { b.visible = i < 3; setMat(b, strutM); }); ghost.forEach((b) => (b.visible = false)); held.visible = false; setArm(Math.sin(t * 0.9) * 0.25, 0.1 + Math.sin(t * 1.3) * 0.08, Math.cos(t * 0.7) * 0.2);
+          // Satellit auf der Bahn
+          const oa = 0.9 + t * 0.02; sat.position.set(Math.cos(oa) * 116, 30, Math.sin(oa) * 116); sat.rotation.set(0.3, -oa, 0.1);
+          if (t < tZum - 0.05) { const f = prog(t, 0, tZum); const a = 0.7 - f * 0.4; pos = V(Math.sin(a) * lerp(5.2, 4.4, f), lerp(2.2, 1.7, f), Math.cos(a) * lerp(5.2, 4.4, f)); look = V(0, 0.2, 0); }
+          else if (t < tUnd - 0.05) { const f = prog(t, tZum, 8.6 - tZum); build(f); if (f > 0.97) { RB[2].visible = true; held.visible = false; } else RB[2].visible = false; const a = 0.2 + f * 0.5; pos = V(Math.sin(a) * 2.9, 1.5, Math.cos(a) * 2.9); look = V(0, 0.2, 0); fov = 42; }
+          else if (t < tFolg - 0.05) { big.visible = true; const f = prog(t, tUnd, tFolg - tUnd);
+            bots.forEach((b, i) => { const a = (i / 6) * 6.283 + t * 0.12; b.position.set(Math.cos(a) * 64, 12 + Math.sin(t + i) * 3, Math.sin(a) * 64); b.rotation.y = -a; sparks[i].position.copy(b.position).add(V(0, -5, 0)); sparks[i].material.opacity = 0.5 + 0.5 * Math.sin(t * 9 + i * 2); });
+            pos = V(lerp(-60, 40, f), lerp(130, 90, f), -400 + lerp(260, 230, f)); look = V(0, -10, -400); fov = 50; }
+          else if (t < tIm - 0.05) { scene = scO; const f = prog(t, tFolg, tIm - tFolg); const sp = sat.position.clone(); const out = sp.clone().normalize(); const tg = V(-Math.sin(oa), 0, Math.cos(oa)); pos = sp.clone().add(tg.clone().multiplyScalar(lerp(-34, -28, f))).add(out.clone().multiplyScalar(lerp(10, 7, f))).add(V(0, 4, 0)); look = sp.clone().add(tg.multiplyScalar(6)).add(out.multiplyScalar(-4)); fov = 42; }
+          else if (t < tAstra - 0.05) { scene = scR; const f = prog(t, tIm, tAstra - tIm); fire(t); const k = cl(f); skyR.material.uniforms.m.value.setRGB(lerp(0.04, 0.01, k), lerp(0.1, 0.02, k), lerp(0.23, 0.06, k)); const a = 0.4 + f * 0.4; pos = V(Math.sin(a) * 105, lerp(-10, 15, f), Math.cos(a) * 105); look = V(0, 30, 0); fov = 44; }
+          else if (t < tArm - 0.05) { const f = prog(t, tAstra, tArm - tAstra); RB.forEach((b) => (b.visible = false)); const a = 0.55 - f * 0.3; pos = V(Math.sin(a) * lerp(3.4, 2.9, f), lerp(1.2, 0.9, f), Math.cos(a) * lerp(3.4, 2.9, f)); look = V(0, -0.05, 0); fov = 40; if (t > tFach) look = V(-0.15, -0.15, 0); }
+          else if (t < tDas - 0.05) { RB[2].visible = false; const f = prog(t, tArm, tDas - tArm - 0.6); build(f); if (f >= 1) { RB[2].visible = true; setMat(RB[2], glowStrut); held.visible = false; } const a = 0.3 + f * 0.25; pos = V(Math.sin(a) * 2.6, 1.3, Math.cos(a) * 2.6); look = V(0, 0.2, 0); fov = 42; }
+          else if (t < tZwei - 0.05) { ghost.forEach((b) => (b.visible = true)); RB.forEach((b) => (b.visible = false)); const n = t >= tElf ? 11 : 0; ghost.forEach((b, i) => { if (t >= tElf && t > tElf + i * 0.08) { setMat(b, glowStrut); b.children.forEach((m) => { if (!b.userData.parts.includes(m)) m.material = alu; }); } else { b.children.forEach((m) => (m.material = ghostM)); } });
+            box.rotation.y = t * 0.15; const f = prog(t, tDas, tZwei - tDas); pos = V(0, lerp(3.6, 3.2, f), lerp(2.6, 2.3, f)); look = V(0, 0.2, 0); fov = 44; }
+          else if (t < tGanz - 0.05) { ghost.forEach((b, i) => { b.visible = i >= 3; b.children.forEach((m) => (m.material = ghostM)); }); RB.forEach((b, i) => (b.visible = i < 2 || (i === 2 && t > tDritte + 0.5)));
+            if (t > tDritte + 0.5) setMat(RB[2], glowStrut); box.rotation.y = 0.4 + (t - tZwei) * 0.06; const f = prog(t, tZwei, tGanz - tZwei); pos = V(lerp(0.9, 0.3, f), lerp(2.8, 2.5, f), lerp(2.6, 2.3, f)); look = V(0, 0.35, 0); fov = 42; }
+          else if (t < tFertig - 0.05) { scene = scO; EA.group.rotation.y = 1.9 + tGanz * 0.012; const gs = EA.ll(34.1, -118.1, RE * 1.005); { const n0 = gs.clone().normalize(); const sd = V(0, 1, 0).cross(n0).normalize(); sat.position.copy(n0.clone().multiplyScalar(122).add(sd.multiplyScalar(30))); } gsDot.position.copy(gs); gsO.position.copy(gs); gsDot.material.opacity = cl((t - tGanz) / 0.5); const sp = sat.position;
+            link.geometry.setFromPoints([gs, sp.clone()]); link.computeLineDistances(); const on = t > tKontakt ? (Math.sin(t * 2.2) > -0.2 ? 1 : 0) : 1; link.material.opacity = 0.85 * cl((t - tGanz - 0.6) / 0.5) * on;
+            const k = ((t * 0.7) % 1); pulse.position.copy(gs.clone().lerp(sp, t > tDrei + 1.5 && Math.floor(t * 0.7) % 2 ? 1 - k : k)); pulse.material.opacity = link.material.opacity;
+            const f = prog(t, tGanz, tFertig - tGanz); const mid = gs.clone().lerp(sp, 0.5); const n = mid.clone().normalize(); pos = n.clone().multiplyScalar(lerp(430, 400, f)).add(V(0, lerp(30, 50, f), 0)); look = mid.clone().multiplyScalar(0.55); fov = 40; }
+          else if (t < tWarum - 0.05) { ghost.forEach((b, i) => { b.visible = i >= 3; b.children.forEach((m) => (m.material = ghostM)); }); RB.forEach((b, i) => (b.visible = i < 3)); box.rotation.y = 0.8 + (t - tFertig) * 0.1; if (t > tDez) E.look([0.9, 0.92, 1.05], [0, 0, 0], 0.35, 0.85);
+            const f = prog(t, tFertig, tWarum - tFertig); pos = V(0, lerp(3.2, 3.6, f), lerp(2.4, 2.8, f)); look = V(0, 0.2, 0); fov = 42; }
+          else { big.visible = true; bots.forEach((b, i) => { const a = (i / 6) * 6.283 + t * 0.12; b.position.set(Math.cos(a) * 64, 12 + Math.sin(t + i) * 3, Math.sin(a) * 64); b.rotation.y = -a; sparks[i].position.copy(b.position).add(V(0, -5, 0)); sparks[i].material.opacity = t > tIn ? 0.5 + 0.5 * Math.sin(t * 9 + i * 2) : 0; });
+            const f = prog(t, tWarum, END - tWarum); const a = -0.5 + f * 0.8; pos = V(Math.sin(a) * lerp(300, 240, f), lerp(160, 110, f), -400 + Math.cos(a) * lerp(300, 240, f)); look = V(0, -20, -400); fov = 48; }
+          cam.fov = fov; cam.near = 0.05; cam.far = 60000; cam.updateProjectionMatrix(); cam.position.copy(pos); cam.lookAt(look);
+          E.render(scene, t); updLabels(t);
+          let wh = "", wa = 0; const seg = (a, b, h) => { if (t >= a && t < b) { wh = h; wa = cl((t - a) / 0.3) * (1 - cl((t - b + 0.4) / 0.3)); } };
+          seg(tZum + 0.2, tOhne - 0.1, "Zum ersten Mal"); seg(tOhne - 0.1, 8.6, "🧑‍🚀 ohne Astronauten");
+          seg(tUnd + 0.2, tFolg - 0.1, "🏗️ Bauen im All");
+          seg(tDer, tGeb - 0.1, "🤖 Astra"); seg(tGeb, tBez - 0.1, logo("caltech.svg", 70, true) + "<div class='sub'>Uni in Kalifornien</div>"); seg(tBez, tIm - 0.1, "<span style='font-size:120px;letter-spacing:8px'>DARPA</span><div class='sub'>Forschung des US-Militärs</div>");
+          seg(tIm, tAstra - 0.1, logo("spacex.svg", 50, true) + "März 2026");
+          seg(tAstra + 0.5, tDarin - 0.1, "📦 etwa 1 × 1 × 1 m"); seg(tArm, tDas - 0.1, "Stück für Stück");
+          seg(tDas, tElf - 0.1, "📡 Antenne<div class='sub'>Ø 1,4 m</div>"); seg(tElf, tZwei - 0.1, "11 Teilstücke");
+          seg(tZwei, tDritte - 0.1, "2 auf der Erde gebaut"); seg(tDritte, tGanz - 0.1, "<span class='y'>Nr. 3 im All ✓</span>");
+          seg(tDrei, tKontakt - 0.1, "👨‍🔬 3 Forscher<div class='sub'>Befehle & Fotos</div>"); seg(tKontakt, tFertig - 0.1, "📡 ein paar Mal am Tag<div class='sub'>je ≈ 15 Minuten</div>");
+          seg(tFertig, tWarum - 0.1, "nicht fertig<div class='sub'>Mission endet im Dezember</div>");
+          seg(tRiesig, tIn - 0.1, "zu groß für jede Rakete"); seg(tIn, END, "🤖 Roboter bauen oben");
+          WORDEL.style.top = t >= 15.3 && t < 20.8 ? "300px" : "";
+          word(wh, wa); cap(t);
+        };
+        renderAt(lastT);
+      });
+      window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady || {}; window.__hf.buildReady.scene = ready;
+      let lastT = 0;
+      window.addEventListener("hf-seek", (e) => { lastT = e.detail.time; renderAt(lastT); });
+    </script>
+  </body>
+</html>

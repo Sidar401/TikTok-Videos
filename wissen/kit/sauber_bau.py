@@ -27,5 +27,8 @@ if voice and "karte" in c:  # neue Folgen-Karte (ab 17.11. Standard)
     shutil.copy(kit / "avatar.png", proj / "assets/avatar.png")
     h = karte.apply(h, c["karte"][0], c["karte"][1])
     rep.update({"{{SHARE_TEXT}}": "", "{{FOLLOW_TEXT}}": "", "{{FOLLOW_PILL}}": "", "{{SHARE_START}}": "0", "{{SHARE_DUR}}": "0", "{{FOLLOW}}": str(total), "{{FOLLOW_DUR}}": "0"})
+if voice and "intro" in c:  # Novaro-Intro „Umlaufbahn“ (ab 19.11. Standard, nach dem 2. Satz)
+    sys.path.insert(0, str(kit)); import intro
+    h = intro.apply(h, c["intro"])
 for k, v in rep.items(): h = h.replace(k, v)
 (proj / "index.html").write_text(h); print("index.html gebaut ·", proj.name, "· mit Stimme" if voice else "· ohne Stimme")

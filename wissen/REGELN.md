@@ -60,3 +60,10 @@ Vorlage/Baukasten: `wissen/kit/` (neu.sh, kit.js, kit.css, mix.py, fertig.sh, sn
 - ✅ ENTSCHIEDEN (17.11., Nutzer: „ab sofort immer bei jedem“): **Aufruf NACH DEM DRITTEN SATZ**, nicht am Ende.
   Im Sprechtext NUR „Folg uns für mehr!“ (o. ä.) – **KEINE Kommentar-Frage** („Schreib's in die Kommentare“, „Was denkst du?“) – erstmal nicht.
   Karte (szene.json "karte": [start, dauer]) genau dann einblenden, wenn „Folg uns“ gesprochen wird. Am Ende kein Aufruf mehr.
+
+## Intro „Umlaufbahn“ (Nutzer 19.11.: „das dritte nehmen wir ab sofort“) – IN JEDEM VIDEO
+- 3 s Intro NACH DEM 2. SATZ: Logo ploppt in die Mitte, goldene Umlaufbahn, kleiner Mond kreist, „Novaro“ + „WELTALL | PLANETEN | WISSEN“.
+- Baustein `wissen/kit/intro.py`: nach schnitt.py `python3 wissen/kit/intro.py videos/<name>` (Pause in der Stimme), dann in szene.json `"intro": t0`.
+- Sounds in cues.json: whoosh-tief bei t0 (0.22), pling-idee bei t0+0.45 (0.16). Keine Musik.
+- Länge mit Intro weiter 61–75 s (notfalls schnitt.py mit Ziel ≈ 71 s).
+- „Folg uns für mehr!“ bleibt nach dem 3. Satz.

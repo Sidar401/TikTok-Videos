@@ -1,0 +1,5 @@
+{"tag": "20. NOVEMBER 2026", "dauer": 74.9,
+ "hook": "40 Satelliten<br /><span class=\"y\">EINFACH WEG!</span>",
+ "hook_end": 3.3, "karte": [19.2, 5.4], "intro": 10.96,
+ "fix": {"Vierzig": "40", "vierzig": "40", "zehn": "10", "fünfzehnten": "15.", "U": "ULA", "L": "", "A.": "", "dreitausendzweihundert": "3.200", "vierhundert.": "400.", "achtunddreißig": "38", "sechs": "6", "dreiundzwanzigsten": "23.", "sechsunddreißig": "36"},
+ "css": ".hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"}

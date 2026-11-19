@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <script type="importmap">{"imports":{"three":"./assets/three/build/three.module.js","three/addons/":"./assets/three/jsm/"}}</script>
+    <style>
+      @font-face { font-family: "Inter Display"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.otf"); }
+      @font-face { font-family: "Inter Display"; font-weight: 800; src: url("assets/fonts/InterDisplay-ExtraBold.otf"); }
+      @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/Inter-SemiBold.otf"); }
+      html, body { background: #000; }
+      #root { font-family: "Inter Display", "Inter", sans-serif; background: #000; }
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .tag { top: 140px; font-family: "Inter", sans-serif; font-weight: 600; font-size: 32px; letter-spacing: 8px; color: rgba(255,255,255,0.6); }
+      #labels { position: absolute; inset: 0; pointer-events: none; }
+      .pl { position: absolute; transform: translate(-50%, -100%); font: 800 76px "Inter Display", sans-serif; color: #fff; white-space: nowrap; text-shadow: 0 4px 30px rgba(0,0,0,.9); letter-spacing: 0.5px; }
+      .pl small { display: block; text-align: center; font: 600 34px "Inter", sans-serif; color: rgba(255,255,255,.7); margin-top: 4px; }
+      #word { position: absolute; left: 0; right: 0; top: 1420px; text-align: center; font: 800 132px "Inter Display", sans-serif; color: #fff; text-shadow: 0 6px 40px rgba(0,0,0,.9); }
+      .hookbig { top: 620px; font-size: 128px; font-weight: 900; line-height: 1.04; text-shadow: 0 8px 50px rgba(0,0,0,.95); }
+      .hookbig .y { color: #ffd23f; }
+      .hookdim { background: radial-gradient(circle at 50% 40%, rgba(0,0,0,.2), rgba(0,0,0,.75)); }
+      .capw { top: 1500px; font-size: 80px; font-weight: 800; line-height: 1.12; color: #fff; text-shadow: 0 6px 30px rgba(0,0,0,.95), 0 0 3px #000; }
+      .capw .w { display: inline-block; margin: 0 10px; }
+      .capw .on { color: #ffd23f; }
+      .share { position: absolute; right: 40px; top: 1150px; }
+      .share span { display: inline-block; background: #fe2c55; color: #fff; font-weight: 900; font-size: 50px; padding: 14px 32px; border-radius: 60px; box-shadow: 0 0 34px rgba(254,44,85,.6); }
+      .follow { top: 1150px; }
+      .hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }
+    
+#fk-wrap { position: absolute; left: 170px; top: 760px; width: 740px; z-index: 30; }
+#fk { position: relative; width: 740px; padding: 130px 56px 54px; border-radius: 52px; text-align: center; overflow: hidden; font-family: "Inter Display", Inter, sans-serif; color: #fff;
+  background: linear-gradient(180deg, rgba(30,34,48,.74), rgba(10,12,20,.82)); border: 1.5px solid rgba(255,255,255,.16); backdrop-filter: blur(26px) saturate(1.2); -webkit-backdrop-filter: blur(26px) saturate(1.2);
+  box-shadow: 0 40px 100px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.18); }
+#fk-wrap > .fk-av { position: absolute; left: 50%; top: -105px; width: 210px; height: 210px; margin-left: -105px; z-index: 3; border-radius: 50%; background: url(assets/avatar.png) center/cover; box-shadow: 0 0 0 8px rgba(12,14,22,.9), 0 20px 50px rgba(0,0,0,.6); }
+.fk-ring { position: absolute; inset: -9px; border-radius: 50%; background: conic-gradient(from 0deg, #ffe7a8, rgba(255,231,168,.1), #ffd06a, rgba(255,231,168,.1), #ffe7a8);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 4px)); mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 4px)); }
+#fk .n { font-size: 70px; font-weight: 900; letter-spacing: -1.5px; } #fk .d { font: 600 36px Inter, sans-serif; color: rgba(255,255,255,.66); margin: 10px 0 40px; }
+#fk .btn { position: relative; height: 116px; border-radius: 58px; font-size: 50px; font-weight: 800; }
+#fk .btn .a, #fk .btn .b { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 14px; border-radius: inherit; }
+#fk .btn .a { background: #fff; color: #0b0d14; } #fk .btn .b { opacity: 0; background: linear-gradient(180deg, #ffe39a, #f6c04a); color: #1a1406; }
+#fk-shine { position: absolute; top: -20%; bottom: -20%; width: 220px; left: -300px; background: linear-gradient(100deg, transparent, rgba(255,255,255,.22), transparent); transform: skewX(-18deg); }
+#fk-touch, #fk-rip { position: absolute; left: 540px; top: 1127px; width: 92px; height: 92px; margin: -46px 0 0 -46px; border-radius: 50%; z-index: 31; opacity: 0; }
+#fk-touch { background: rgba(255,255,255,.32); border: 3px solid rgba(255,255,255,.9); box-shadow: 0 8px 30px rgba(0,0,0,.45); } #fk-rip { border: 3px solid rgba(255,255,255,.8); }
+
+#in-bg { position:absolute; inset:0; z-index:60; opacity:0; background:#000 url(assets/tex/stars_milky_way.jpg) center/cover; overflow:hidden; }
+#in-bg::before { content:""; position:absolute; inset:0; background:rgba(0,0,0,.62); }
+#in-st { position:absolute; inset:0; z-index:61; }
+.in-orb { position:absolute; left:110px; top:700px; width:860px; height:300px; transform:rotate(-14deg); }
+.in-orb .e { position:absolute; inset:0; border:3px solid rgba(255,210,63,.67); border-radius:50%; }
+#in-o1 { z-index:1; } #in-o1 .e { clip-path: inset(0 0 50% 0); } #in-o2 { z-index:3; } #in-o2 .e { clip-path: inset(50% 0 0 0); }
+#in-av { position:absolute; left:365px; top:575px; width:350px; height:350px; border-radius:50%; background:url(assets/avatar.png) center/cover; box-shadow:0 0 90px rgba(255,210,63,.55); z-index:2; }
+.in-moon { position:absolute; left:0; top:0; width:56px; height:56px; margin:-28px 0 0 -28px; border-radius:50%; background:url(assets/tex/moon.jpg) center/200% 100%; box-shadow:inset -14px -8px 18px rgba(0,0,0,.8), 0 0 20px rgba(255,255,255,.27); }
+#in-nm { position:absolute; left:0; right:0; top:1080px; text-align:center; font:900 128px "Inter Display", Inter, sans-serif; color:#fff; letter-spacing:2px; text-shadow:0 0 40px rgba(0,0,0,.6); }
+#in-tg { position:absolute; left:0; right:0; top:1235px; text-align:center; font:600 36px Inter, sans-serif; color:#ffd23f; letter-spacing:3px; white-space:nowrap; }
+#in-tg i { font-style:normal; color:rgba(255,255,255,.67); padding:0 10px; }
+</style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="74.9" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="labels" class="clip" data-start="0" data-duration="74.9" data-track-index="2"></div>
+      <div id="word" class="clip" data-start="0" data-duration="74.9" data-track-index="3"></div>
+      <div id="tag" class="line tag clip" data-start="0" data-duration="74.9" data-track-index="1"><span>20. NOVEMBER 2026</span></div>
+      <div id="cap" class="line capw clip" data-start="3.3" data-duration="71.60" data-track-index="4"><span id="cap-in"></span></div>
+      <div id="hookdim" class="hookdim clip" data-start="0" data-duration="3.3" data-track-index="8"><span></span></div>
+      <div id="hookbig" class="line hookbig clip" data-start="0" data-duration="3.3" data-track-index="7"><span id="hookbig-in">40 Satelliten<br /><span class="y">EINFACH WEG!</span></span></div>
+      <div id="fk-box" class="clip" data-start="19.2" data-duration="5.4" data-track-index="5"><div id="fk-wrap"><div class="fk-av"><div class="fk-ring"></div></div><div id="fk"><div class="n">Novaro</div><div class="d">Weltraum, einfach erklärt</div><div class="btn" id="fk-btn"><span class="a">Folgen</span><span class="b"><svg class="ck" width="44" height="44" viewBox="0 0 44 44"><path d="M8 23l9 9 19-20" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="48" stroke-dashoffset="48"/></svg>Gefolgt</span></div><div id="fk-shine"></div></div></div><div id="fk-rip"></div><div id="fk-touch"></div></div>
+      <div id="in-box" class="clip" data-start="10.96" data-duration="3.0" data-track-index="9"><div id="in-bg"></div><div id="in-st"><div id="in-o1" class="in-orb"><div class="e"></div><div id="in-m1" class="in-moon"></div></div><div id="in-av"></div><div id="in-o2" class="in-orb"><div class="e"></div><div id="in-m2" class="in-moon"></div></div><div id="in-nm">Novaro</div><div id="in-tg">WELTALL<i>|</i>PLANETEN<i>|</i>WISSEN</div></div></div>
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="74.40" data-track-index="9" data-volume="1"></audio>
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="74.9" data-track-index="10" data-volume="0.3"></audio>
+    </div>
+    <img id="tex-day" src="assets/earth-blue-marble.jpg" style="display:none" alt="" />
+    <img id="tex-night" src="assets/earth-night.jpg" style="display:none" alt="" />
+    <img id="tex-topo" src="assets/earth-topology.png" style="display:none" alt="" />
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.from("#hookbig-in", { opacity: 0, scale: 1.3, duration: 0.35, ease: "power3.out" }, 0);
+      tl.to("#hookbig-in", { scale: 0.7, opacity: 0, filter: "blur(10px)", duration: 0.3, ease: "power2.in" }, 3.3 - 0.32);
+      tl.to("#hookdim", { opacity: 0, duration: 0.3 }, 3.3 - 0.32);
+
+      tl.fromTo("#fk-wrap", { opacity: 0, y: 120, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: "expo.out" }, 19.2);
+      tl.fromTo(".fk-ring", { rotation: 0 }, { rotation: 200, duration: 5.4, ease: "none" }, 19.2);
+      tl.fromTo("#fk .n, #fk .d, #fk-btn", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, stagger: 0.07, ease: "power3.out" }, 19.4);
+      tl.fromTo("#fk-touch", { opacity: 0, x: 240, y: 260, scale: 1.3 }, { opacity: 1, x: 0, y: 0, scale: 1, duration: 0.8, ease: "power3.out" }, 20.099999999999998);
+      tl.to("#fk-touch", { scale: 0.72, duration: 0.14 }, 20.959999999999997); tl.to("#fk-touch", { scale: 1, duration: 0.25 }, 21.099999999999998);
+      tl.to("#fk-btn", { scale: 0.95, duration: 0.14 }, 20.959999999999997); tl.to("#fk-btn", { scale: 1, duration: 0.45, ease: "back.out(3)" }, 21.099999999999998);
+      tl.fromTo("#fk-rip", { opacity: 0.9, scale: 0.6 }, { opacity: 0, scale: 3.2, duration: 0.7, ease: "power2.out", immediateRender: false }, 21.099999999999998);
+      tl.to("#fk-btn .a", { opacity: 0, duration: 0.18 }, 21.099999999999998); tl.to("#fk-btn .b", { opacity: 1, duration: 0.22 }, 21.15);
+      tl.to("#fk-btn .ck path", { attr: { "stroke-dashoffset": 0 }, duration: 0.45, ease: "power2.out" }, 21.249999999999996);
+      tl.fromTo("#fk-shine", { x: 0 }, { x: 1400, duration: 0.9, ease: "power2.inOut", immediateRender: false }, 21.45);
+      tl.to("#fk-touch", { opacity: 0, scale: 0.6, duration: 0.4, ease: "power2.in" }, 21.799999999999997);
+      tl.to("#fk-wrap", { opacity: 0, y: 40, scale: 0.96, duration: 0.45, ease: "power2.in" }, 24.1);
+
+      tl.fromTo("#in-bg", { opacity: 0 }, { opacity: 1, duration: 0.18 }, 10.96);
+      tl.fromTo("#in-av", { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.55, ease: "back.out(2.2)" }, 11.010000000000002);
+      tl.fromTo(".in-orb", { opacity: 0, scale: 0.4, rotation: -14 }, { opacity: 1, scale: 1, rotation: -14, duration: 0.6, ease: "expo.out" }, 11.260000000000002);
+      tl.set("#in-m1", { left: 860, top: 150, opacity: 0 }, 10.96); tl.set("#in-m2", { left: 860, top: 150, opacity: 1 }, 10.96);
+      tl.to("#in-m1", { keyframes: [{ left: 855.2, top: 127.6, opacity: 1 }, { left: 841.0, top: 105.9, opacity: 1 }, { left: 817.8, top: 85.2, opacity: 1 }, { left: 786.1, top: 65.9, opacity: 1 }, { left: 746.6, top: 48.5, opacity: 1 }, { left: 700.1, top: 33.3, opacity: 1 }, { left: 647.6, top: 20.6, opacity: 1 }, { left: 590.4, top: 10.8, opacity: 1 }, { left: 529.7, top: 4.1, opacity: 1 }, { left: 466.8, top: 0.5, opacity: 1 }, { left: 403.0, top: 0.3, opacity: 1 }, { left: 339.9, top: 3.3, opacity: 1 }, { left: 278.7, top: 9.6, opacity: 1 }, { left: 220.9, top: 18.9, opacity: 1 }, { left: 167.7, top: 31.1, opacity: 1 }, { left: 120.2, top: 46.0, opacity: 1 }, { left: 79.5, top: 63.1, opacity: 1 }, { left: 46.5, top: 82.1, opacity: 1 }, { left: 22.0, top: 102.6, opacity: 1 }, { left: 6.4, top: 124.2, opacity: 1 }, { left: 0.1, top: 146.3, opacity: 1 }, { left: 3.3, top: 168.5, opacity: 0 }, { left: 15.8, top: 190.3, opacity: 0 }, { left: 37.5, top: 211.2, opacity: 0 }, { left: 67.7, top: 230.8, opacity: 0 }, { left: 105.9, top: 248.6, opacity: 0 }, { left: 151.3, top: 264.2, opacity: 0 }, { left: 202.7, top: 277.3, opacity: 0 }, { left: 259.2, top: 287.7, opacity: 0 }, { left: 319.4, top: 295.0, opacity: 0 }, { left: 382.0, top: 299.1, opacity: 0 }, { left: 445.7, top: 299.9, opacity: 0 }, { left: 509.1, top: 297.4, opacity: 0 }, { left: 570.7, top: 291.7, opacity: 0 }, { left: 629.2, top: 282.9, opacity: 0 }, { left: 683.3, top: 271.2, opacity: 0 }, { left: 731.9, top: 256.8, opacity: 0 }], duration: 2.6, ease: "none" }, 11.260000000000002);
+      tl.to("#in-m2", { keyframes: [{ left: 855.2, top: 127.6, opacity: 0 }, { left: 841.0, top: 105.9, opacity: 0 }, { left: 817.8, top: 85.2, opacity: 0 }, { left: 786.1, top: 65.9, opacity: 0 }, { left: 746.6, top: 48.5, opacity: 0 }, { left: 700.1, top: 33.3, opacity: 0 }, { left: 647.6, top: 20.6, opacity: 0 }, { left: 590.4, top: 10.8, opacity: 0 }, { left: 529.7, top: 4.1, opacity: 0 }, { left: 466.8, top: 0.5, opacity: 0 }, { left: 403.0, top: 0.3, opacity: 0 }, { left: 339.9, top: 3.3, opacity: 0 }, { left: 278.7, top: 9.6, opacity: 0 }, { left: 220.9, top: 18.9, opacity: 0 }, { left: 167.7, top: 31.1, opacity: 0 }, { left: 120.2, top: 46.0, opacity: 0 }, { left: 79.5, top: 63.1, opacity: 0 }, { left: 46.5, top: 82.1, opacity: 0 }, { left: 22.0, top: 102.6, opacity: 0 }, { left: 6.4, top: 124.2, opacity: 0 }, { left: 0.1, top: 146.3, opacity: 0 }, { left: 3.3, top: 168.5, opacity: 1 }, { left: 15.8, top: 190.3, opacity: 1 }, { left: 37.5, top: 211.2, opacity: 1 }, { left: 67.7, top: 230.8, opacity: 1 }, { left: 105.9, top: 248.6, opacity: 1 }, { left: 151.3, top: 264.2, opacity: 1 }, { left: 202.7, top: 277.3, opacity: 1 }, { left: 259.2, top: 287.7, opacity: 1 }, { left: 319.4, top: 295.0, opacity: 1 }, { left: 382.0, top: 299.1, opacity: 1 }, { left: 445.7, top: 299.9, opacity: 1 }, { left: 509.1, top: 297.4, opacity: 1 }, { left: 570.7, top: 291.7, opacity: 1 }, { left: 629.2, top: 282.9, opacity: 1 }, { left: 683.3, top: 271.2, opacity: 1 }, { left: 731.9, top: 256.8, opacity: 1 }], duration: 2.6, ease: "none" }, 11.260000000000002);
+      tl.fromTo("#in-nm", { opacity: 0, y: 60, clipPath: "inset(0 0 100% 0)" }, { opacity: 1, y: 0, clipPath: "inset(0 0 0% 0)", duration: 0.55, ease: "power3.out" }, 11.56);
+      tl.fromTo("#in-tg", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 11.91);
+      tl.fromTo("#in-st", { scale: 1 }, { scale: 1.04, duration: 3.0, ease: "none" }, 10.96);
+      tl.to(["#in-bg", "#in-st"], { opacity: 0, duration: 0.25 }, 13.71);
+      tl.to({}, { duration: 0.01 }, 74.9 - 0.01);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+    <script type="module">
+      import * as K from "./assets/kino.js";
+      const { THREE, V, lerp, eio, eout, prog, cl, rnd } = K;
+      window.FMT = { W: 1080, H: 1920 };
+      const WORDS = [{"w": "Vierzig", "s": 0.0, "e": 0.409}, {"w": "Satelliten", "s": 0.459, "e": 1.072}, {"w": "–", "s": 1.149, "e": 1.302}, {"w": "in", "s": 1.353, "e": 1.429}, {"w": "zehn", "s": 1.455, "e": 1.723}, {"w": "Minuten", "s": 1.761, "e": 2.221}, {"w": "einfach", "s": 2.451, "e": 2.833}, {"w": "weg!", "s": 2.91, "e": 3.216}, {"w": "Am", "s": 3.495, "e": 3.648}, {"w": "fünfzehnten", "s": 3.725, "e": 4.184}, {"w": "November", "s": 4.261, "e": 4.72}, {"w": "startete", "s": 4.797, "e": 5.256}, {"w": "in", "s": 5.333, "e": 5.41}, {"w": "Florida", "s": 5.486, "e": 5.869}, {"w": "eine", "s": 5.946, "e": 6.175}, {"w": "Vulcan-Rakete.", "s": 6.252, "e": 7.401}, {"w": "An", "s": 7.477, "e": 7.554}, {"w": "Bord:", "s": 7.63, "e": 8.243}, {"w": "vierzig", "s": 8.32, "e": 8.779}, {"w": "Internet-Satelliten", "s": 8.97, "e": 9.698}, {"w": "von", "s": 9.775, "e": 9.928}, {"w": "Amazon.", "s": 10.004, "e": 10.923}, {"w": "Doch", "s": 14.0, "e": 14.23}, {"w": "zehn", "s": 14.306, "e": 14.459}, {"w": "Minuten", "s": 14.536, "e": 14.842}, {"w": "nach", "s": 14.919, "e": 15.072}, {"w": "dem", "s": 15.149, "e": 15.225}, {"w": "Start", "s": 15.302, "e": 15.608}, {"w": "ging", "s": 15.685, "e": 15.838}, {"w": "etwas", "s": 15.914, "e": 16.144}, {"w": "schief", "s": 16.182, "e": 16.527}, {"w": "–", "s": 16.833, "e": 16.872}, {"w": "und", "s": 16.91, "e": 16.987}, {"w": "die", "s": 17.025, "e": 17.063}, {"w": "Satelliten", "s": 17.14, "e": 17.752}, {"w": "kamen", "s": 17.88, "e": 18.135}, {"w": "nie", "s": 18.288, "e": 18.442}, {"w": "oben", "s": 18.518, "e": 18.748}, {"w": "an.", "s": 18.824, "e": 19.261}, {"w": "Folg", "s": 19.299, "e": 19.491}, {"w": "uns", "s": 19.567, "e": 19.644}, {"w": "für", "s": 19.72, "e": 19.797}, {"w": "mehr!", "s": 19.874, "e": 20.353}, {"w": "Die", "s": 20.43, "e": 20.506}, {"w": "Rakete", "s": 20.545, "e": 20.966}, {"w": "gehört", "s": 21.043, "e": 21.272}, {"w": "der", "s": 21.349, "e": 21.425}, {"w": "Firma", "s": 21.464, "e": 21.808}, {"w": "U", "s": 21.885, "e": 22.115}, {"w": "L", "s": 22.23, "e": 22.344}, {"w": "A.", "s": 22.421, "e": 22.88}, {"w": "Dahinter", "s": 22.931, "e": 23.34}, {"w": "stecken", "s": 23.417, "e": 23.646}, {"w": "Boeing", "s": 23.799, "e": 24.182}, {"w": "und", "s": 24.259, "e": 24.336}, {"w": "Lockheed", "s": 24.412, "e": 24.795}, {"w": "Martin.", "s": 24.986, "e": 25.49}, {"w": "Am", "s": 25.567, "e": 25.643}, {"w": "Anfang", "s": 25.758, "e": 26.026}, {"w": "sah", "s": 26.103, "e": 26.332}, {"w": "alles", "s": 26.409, "e": 26.639}, {"w": "gut", "s": 26.715, "e": 26.868}, {"w": "aus.", "s": 26.945, "e": 27.481}, {"w": "Aber", "s": 27.519, "e": 27.634}, {"w": "die", "s": 27.711, "e": 27.787}, {"w": "erste", "s": 27.864, "e": 28.094}, {"w": "Stufe,", "s": 28.17, "e": 28.706}, {"w": "der", "s": 28.783, "e": 28.859}, {"w": "große", "s": 28.974, "e": 29.319}, {"w": "untere", "s": 29.396, "e": 29.778}, {"w": "Teil,", "s": 29.855, "e": 30.085}, {"w": "brachte", "s": 30.161, "e": 30.468}, {"w": "nicht", "s": 30.621, "e": 30.774}, {"w": "genug", "s": 30.851, "e": 31.08}, {"w": "Kraft.", "s": 31.119, "e": 31.923}, {"w": "Sie", "s": 31.999, "e": 32.076}, {"w": "brannte", "s": 32.152, "e": 32.459}, {"w": "länger", "s": 32.535, "e": 32.765}, {"w": "als", "s": 32.842, "e": 32.995}, {"w": "geplant", "s": 33.071, "e": 33.531}, {"w": "und", "s": 33.646, "e": 33.761}, {"w": "trennte", "s": 33.811, "e": 34.067}, {"w": "sich", "s": 34.144, "e": 34.373}, {"w": "zu", "s": 34.45, "e": 34.526}, {"w": "spät.", "s": 34.603, "e": 35.331}, {"w": "Die", "s": 35.408, "e": 35.485}, {"w": "obere", "s": 35.561, "e": 35.867}, {"w": "Stufe", "s": 35.944, "e": 36.25}, {"w": "gab", "s": 36.327, "e": 36.557}, {"w": "danach", "s": 36.633, "e": 36.94}, {"w": "alles", "s": 37.016, "e": 37.399}, {"w": "–", "s": 37.629, "e": 37.68}, {"w": "aber", "s": 37.731, "e": 37.782}, {"w": "die", "s": 37.859, "e": 37.935}, {"w": "fehlende", "s": 38.012, "e": 38.318}, {"w": "Kraft", "s": 38.395, "e": 38.778}, {"w": "konnte", "s": 38.854, "e": 39.007}, {"w": "sie", "s": 39.084, "e": 39.237}, {"w": "nicht", "s": 39.314, "e": 39.467}, {"w": "mehr", "s": 39.517, "e": 39.62}, {"w": "aufholen.", "s": 39.696, "e": 40.406}, {"w": "Für", "s": 40.482, "e": 40.559}, {"w": "Amazon", "s": 40.636, "e": 41.095}, {"w": "ist", "s": 41.172, "e": 41.248}, {"w": "das", "s": 41.325, "e": 41.555}, {"w": "bitter:", "s": 41.657, "e": 42.167}, {"w": "Es", "s": 42.244, "e": 42.32}, {"w": "war", "s": 42.359, "e": 42.397}, {"w": "die", "s": 42.474, "e": 42.627}, {"w": "größte", "s": 42.703, "e": 43.086}, {"w": "Ladung,", "s": 43.163, "e": 43.546}, {"w": "die", "s": 43.584, "e": 43.622}, {"w": "sie", "s": 43.699, "e": 43.852}, {"w": "je", "s": 43.929, "e": 44.158}, {"w": "auf", "s": 44.273, "e": 44.388}, {"w": "einmal", "s": 44.503, "e": 44.694}, {"w": "hochschicken", "s": 44.771, "e": 45.23}, {"w": "wollten.", "s": 45.269, "e": 45.92}, {"w": "Amazon", "s": 46.149, "e": 46.379}, {"w": "baut", "s": 46.456, "e": 46.609}, {"w": "ein", "s": 46.724, "e": 46.839}, {"w": "Internet", "s": 46.915, "e": 47.298}, {"w": "aus", "s": 47.375, "e": 47.451}, {"w": "dem", "s": 47.528, "e": 47.681}, {"w": "Weltall,", "s": 47.758, "e": 48.37}, {"w": "so", "s": 48.447, "e": 48.523}, {"w": "wie", "s": 48.6, "e": 48.677}, {"w": "Starlink", "s": 48.753, "e": 49.213}, {"w": "von", "s": 49.289, "e": 49.366}, {"w": "Elon", "s": 49.442, "e": 49.672}, {"w": "Musk.", "s": 49.749, "e": 50.438}, {"w": "Dafür", "s": 50.565, "e": 50.821}, {"w": "braucht", "s": 50.897, "e": 51.127}, {"w": "es", "s": 51.204, "e": 51.28}, {"w": "mehr", "s": 51.331, "e": 51.434}, {"w": "als", "s": 51.548, "e": 51.663}, {"w": "dreitausendzweihundert", "s": 51.74, "e": 52.965}, {"w": "Satelliten.", "s": 53.042, "e": 53.961}, {"w": "Oben", "s": 54.076, "e": 54.344}, {"w": "sind", "s": 54.42, "e": 54.573}, {"w": "erst", "s": 54.65, "e": 54.803}, {"w": "rund", "s": 54.841, "e": 55.033}, {"w": "vierhundert.", "s": 55.109, "e": 56.028}, {"w": "Und", "s": 56.105, "e": 56.182}, {"w": "Amazon", "s": 56.258, "e": 56.718}, {"w": "hat", "s": 56.871, "e": 57.024}, {"w": "achtunddreißig", "s": 57.139, "e": 57.713}, {"w": "Flüge", "s": 57.79, "e": 58.096}, {"w": "mit", "s": 58.173, "e": 58.249}, {"w": "dieser", "s": 58.326, "e": 58.479}, {"w": "Rakete", "s": 58.556, "e": 58.862}, {"w": "gebucht.", "s": 58.938, "e": 59.628}, {"w": "Das", "s": 59.781, "e": 59.934}, {"w": "war", "s": 60.011, "e": 60.087}, {"w": "der", "s": 60.202, "e": 60.317}, {"w": "allererste.", "s": 60.393, "e": 61.218}, {"w": "Jetzt", "s": 61.409, "e": 61.639}, {"w": "wird", "s": 61.677, "e": 61.792}, {"w": "untersucht,", "s": 61.869, "e": 62.481}, {"w": "was", "s": 62.596, "e": 62.711}, {"w": "genau", "s": 62.826, "e": 63.017}, {"w": "kaputt", "s": 63.094, "e": 63.4}, {"w": "war.", "s": 63.515, "e": 63.86}, {"w": "Das", "s": 63.936, "e": 64.013}, {"w": "kann", "s": 64.089, "e": 64.243}, {"w": "Monate", "s": 64.319, "e": 64.779}, {"w": "dauern.", "s": 64.817, "e": 65.363}, {"w": "Der", "s": 65.402, "e": 65.44}, {"w": "nächste", "s": 65.517, "e": 65.823}, {"w": "Versuch", "s": 65.9, "e": 66.282}, {"w": "läuft", "s": 66.359, "e": 66.589}, {"w": "mit", "s": 66.627, "e": 66.665}, {"w": "einer", "s": 66.742, "e": 66.895}, {"w": "europäischen", "s": 67.125, "e": 67.508}, {"w": "Rakete:", "s": 67.584, "e": 68.35}, {"w": "Die", "s": 68.388, "e": 68.427}, {"w": "Ariane", "s": 68.58, "e": 69.039}, {"w": "sechs", "s": 69.116, "e": 69.422}, {"w": "soll", "s": 69.499, "e": 69.652}, {"w": "frühestens", "s": 69.729, "e": 70.265}, {"w": "am", "s": 70.341, "e": 70.418}, {"w": "dreiundzwanzigsten", "s": 70.494, "e": 71.26}, {"w": "November", "s": 71.337, "e": 71.796}, {"w": "sechsunddreißig", "s": 71.949, "e": 72.639}, {"w": "weitere", "s": 72.792, "e": 73.175}, {"w": "Satelliten", "s": 73.251, "e": 73.634}, {"w": "hochbringen.", "s": 73.711, "e": 74.4}]; const CHUNKS = [[0.0, 3.216], [3.495, 10.923], [14.0, 19.261], [19.299, 20.353], [20.43, 25.49], [25.567, 31.923], [31.999, 35.331], [35.408, 40.406], [40.482, 45.92], [46.149, 56.028], [56.105, 61.218], [61.409, 65.363], [65.402, 74.4]];
+      const cap = K.captions(WORDS, CHUNKS, document.getElementById("cap-in"), 3.3, {"Vierzig": "40", "vierzig": "40", "zehn": "10", "fünfzehnten": "15.", "U": "ULA", "L": "", "A.": "", "dreitausendzweihundert": "3.200", "vierhundert.": "400.", "achtunddreißig": "38", "sechs": "6", "dreiundzwanzigsten": "23.", "sechsunddreißig": "36"});
+      const img = (id) => document.getElementById(id);
+      const imgsReady = Promise.all(["tex-day", "tex-night", "tex-topo"].map((id) => { const im = img(id); return im.complete ? Promise.resolve(im) : new Promise((r) => (im.onload = () => r(im))); }));
+      const E = K.setup(document.getElementById("stage"));
+      const cam = E.cam;
+      const TL = new THREE.TextureLoader();
+      const tex = async (f) => { const t = await TL.loadAsync("assets/tex/" + f); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t; };
+      // Beschriftungen, die an 3D-Objekten hängen
+      const LB = document.getElementById("labels"), WORD = document.getElementById("word");
+      const labels = [];
+      const label = (html, obj, r, o = {}) => { const d = document.createElement("div"); d.className = "pl"; d.innerHTML = html; LB.appendChild(d); const L = { d, obj, r, t0: o.t0 ?? 0, t1: o.t1 ?? 999, gap: o.gap ?? 40, size: o.size }; if (o.size) d.style.fontSize = o.size + "px"; labels.push(L); return L; };
+      const P = (v) => { const q = v.clone().project(cam); return [(q.x + 1) / 2 * 1080, (1 - q.y) / 2 * 1920]; };
+      const updLabels = (t) => { cam.updateMatrixWorld(true); labels.forEach((L) => { const p = L.obj.getWorldPosition(new THREE.Vector3()); const top = p.clone().add(cam.up.clone().multiplyScalar(L.r)); const [x] = P(p), [, y] = P(top);
+        const a = cl((t - L.t0) / 0.4) * (1 - cl((t - L.t1) / 0.4)); L.d.style.opacity = a; L.d.style.left = x + "px"; L.d.style.top = y - L.gap + "px"; L.d.style.transform = `translate(-50%,-100%) translateY(${(1 - a) * 20}px)`; }); };
+      let lastWord = ""; const word = (h, a) => { if (h !== lastWord) { WORD.innerHTML = h; lastWord = h; } WORD.style.opacity = a; WORD.style.transform = `translateY(${(1 - a) * 30}px)`; };
+      let renderAt = () => {};
+      const ready = imgsReady.then(async ([day, night, topo]) => {
+        const W = (w, ab = 0) => { const x = WORDS.find((q) => q.s >= ab - 0.01 && q.w.toLowerCase().replace(/[^a-zäöüß0-9]/g, "").startsWith(w)); return x ? x.s : ab; };
+        K.reseed(15);
+        const { RoomEnvironment } = await import("three/addons/environments/RoomEnvironment.js");
+        const pm = new THREE.PMREMGenerator(E.R); const env = pm.fromScene(new RoomEnvironment(), 0.04).texture;
+        const M = (color, metal = 0.2, rough = 0.5, ei = 0.5) => { const c = new THREE.Color(color); const l = c.r + c.g + c.b; if (l > 2.4) c.multiplyScalar(0.72); return new THREE.MeshStandardMaterial({ color: c, metalness: metal, roughness: rough, envMap: env, envMapIntensity: ei * 0.45 }); };
+        const fireTex = K.glowTex("rgba(255,190,110,1)"), smokeTex = K.glowTex("rgba(200,200,210,.55)");
+        // ================= Weltraum mit Erde =================
+        const scS = new THREE.Scene(); K.stars(scS, 9000, -1, 30000, 1.7).material.opacity = 0.65; scS.add(new THREE.AmbientLight(0x30303a, 0.5));
+        const RE = 100; const EA = K.earth(scS, { day, night, topo }, RE); EA.group.children[EA.group.children.length - 1].scale.setScalar(0.93); EA.U.sun.value = V(-0.5, 0.35, 0.8).normalize();
+        // 40 Satelliten als Zug (Hook)
+        const train = []; for (let i = 0; i < 40; i++) train.push(K.sprite(scS, K.glowTex("rgba(255,215,110,1)"), 2.2, V(0, 0, 0), 0));
+        // Schwarm: 400 gold (oben) + 2800 grau (fehlen noch)
+        const shell = (n, col, size) => { const p = []; for (let i = 0; i < n; i++) { const u = K.rnd() * 2 - 1, a = K.rnd() * 6.283, r = RE * (1.08 + K.rnd() * 0.03), s = Math.sqrt(1 - u * u); p.push(Math.cos(a) * s * r, u * r * 0.9, Math.sin(a) * s * r); }
+          const g = new THREE.BufferGeometry(); g.setAttribute("position", new THREE.Float32BufferAttribute(p, 3)); const pts = new THREE.Points(g, new THREE.PointsMaterial({ color: col, size, sizeAttenuation: false, transparent: true, opacity: 0, depthWrite: false })); scS.add(pts); return pts; };
+        const gold400 = shell(400, 0xffd23f, 3.2), grey = shell(2800, 0x8890a0, 2.0);
+        // Ziel-Bahn (gold) + echte Bahn (rot)
+        const tilt = new THREE.Group(); tilt.rotation.set(0.35, 0, -0.25); scS.add(tilt);
+        const ring = new THREE.Line(new THREE.BufferGeometry().setFromPoints(Array.from({ length: 200 }, (_, i) => { const a = (i / 199) * Math.PI * 2; return V(Math.cos(a) * 118, 0, Math.sin(a) * 118); })), new THREE.LineBasicMaterial({ color: 0xffd23f, transparent: true, opacity: 0, toneMapped: false })); tilt.add(ring);
+        const pathPts = Array.from({ length: 120 }, (_, i) => { const f = i / 119; const a = 2.2 - f * 1.9; const r = RE + 1 + 15 * Math.sin(Math.PI * Math.min(1, f * 1.05)) * (f < 0.55 ? 1 : 1 - (f - 0.55) * 0.9); return V(Math.cos(a) * r, 0, Math.sin(a) * r); });
+        const redGeo = new THREE.BufferGeometry().setFromPoints(pathPts); const red = new THREE.Line(redGeo, new THREE.LineBasicMaterial({ color: 0xff4d5e, transparent: true, opacity: 0, toneMapped: false })); tilt.add(red);
+        const upDot = K.sprite(tilt, K.glowTex("rgba(255,120,100,1)"), 5, V(0, 0, 0), 0);
+        const ringO = new THREE.Object3D(); ringO.position.set(Math.cos(1.3) * 118, 0, Math.sin(1.3) * 118); tilt.add(ringO);
+        const crash = K.sprite(tilt, K.glowTex("rgba(255,90,70,1)"), 10, pathPts[119], 0);
+        // ================= Raketen-Szene =================
+        const scR = new THREE.Scene(); K.reseed(5); const st = K.stars(scR, 7000, -1, 20000, 1.6); const skyM = K.sky(scR, 0x02040a, 0x0a1a3a, 0x24406e, 15000);
+        scR.add(new THREE.AmbientLight(0x404858, 0.5)); const sunR = new THREE.DirectionalLight(0xfff2e0, 1.7); sunR.position.set(300, 200, 400); scR.add(sunR);
+        const flameLight = new THREE.PointLight(0xffaa55, 0, 300); scR.add(flameLight);
+        function mkVulcan() {
+          const g = new THREE.Group(); const boost = new THREE.Group(), up = new THREE.Group(); g.add(boost); g.add(up);
+          const b = new THREE.Mesh(new THREE.CylinderGeometry(2.7, 2.7, 33, 48), M(0xc77a3e, 0.1, 0.75, 0.3)); b.position.y = 16.5; boost.add(b);
+          const ist = new THREE.Mesh(new THREE.CylinderGeometry(2.7, 2.7, 3, 48), M(0x1d1f24, 0.4, 0.5)); ist.position.y = 34.5; boost.add(ist);
+          for (let i = 0; i < 6; i++) { const a = (i / 6) * Math.PI * 2; const s = new THREE.Mesh(new THREE.CylinderGeometry(0.8, 0.8, 20, 24), M(0xeef0f2, 0.1, 0.5)); s.position.set(Math.cos(a) * 3.5, 10, Math.sin(a) * 3.5); boost.add(s);
+            const c = new THREE.Mesh(new THREE.ConeGeometry(0.8, 2.2, 24), M(0xeef0f2, 0.1, 0.5)); c.position.set(Math.cos(a) * 3.5, 21.1, Math.sin(a) * 3.5); boost.add(c); }
+          for (const s of [-1, 1]) { const n = new THREE.Mesh(new THREE.CylinderGeometry(0.6, 1.2, 2.4, 24, 1, true), M(0x2a2a2e, 0.7, 0.4)); n.position.set(s * 1.2, -1.1, 0); boost.add(n); }
+          const cen = new THREE.Mesh(new THREE.CylinderGeometry(2.7, 2.7, 12, 48), M(0xf1f2f4, 0.1, 0.45)); cen.position.y = 42; up.add(cen);
+          const fair = new THREE.Group(); fair.position.y = 48; up.add(fair);
+          const halves = [0, 1].map((k) => { const h = new THREE.Group(); const cyl = new THREE.Mesh(new THREE.CylinderGeometry(2.7, 2.7, 10, 48, 1, true, k * Math.PI, Math.PI), M(0xf7f7f8, 0.05, 0.4)); cyl.position.y = 5; h.add(cyl);
+            const top = new THREE.Mesh(new THREE.SphereGeometry(2.7, 48, 24, k * Math.PI, Math.PI, 0, Math.PI / 2), M(0xf7f7f8, 0.05, 0.4)); top.scale.y = 2.0; top.position.y = 10; h.add(top); fair.add(h); return h; });
+          const sats = new THREE.Group(); fair.add(sats); for (let lv = 0; lv < 10; lv++) for (let s = 0; s < 4; s++) { const a = (s / 4) * Math.PI * 2 + 0.785; const m = new THREE.Mesh(new THREE.BoxGeometry(1.25, 1.05, 0.45), M(lv % 2 ? 0x2b3140 : 0x343a4a, 0.6, 0.35, 0.8)); m.position.set(Math.cos(a) * 1.75, 0.6 + lv * 1.2, Math.sin(a) * 1.75); m.rotation.y = -a; sats.add(m);
+            const gp = new THREE.Mesh(new THREE.BoxGeometry(1.27, 0.12, 0.47), M(0xc89b3c, 0.9, 0.35, 0.8)); gp.position.copy(m.position).add(V(0, 0.45, 0)); gp.rotation.y = -a; sats.add(gp); }
+          sats.visible = false; return { g, boost, up, halves, sats };
+        }
+        function mkAriane() {
+          const g = new THREE.Group(); const c = new THREE.Mesh(new THREE.CylinderGeometry(2.7, 2.7, 30, 48), M(0xf3f4f6, 0.05, 0.5)); c.position.y = 15; g.add(c);
+          const band = new THREE.Mesh(new THREE.CylinderGeometry(2.72, 2.72, 1.2, 48), M(0x1f2430, 0.3, 0.5)); band.position.y = 30.5; g.add(band);
+          const u = new THREE.Mesh(new THREE.CylinderGeometry(2.7, 2.7, 6, 48), M(0xf3f4f6, 0.05, 0.5)); u.position.y = 34; g.add(u);
+          const f = new THREE.Mesh(new THREE.CylinderGeometry(2.7, 2.7, 10, 48), M(0xfafafa, 0.05, 0.4)); f.position.y = 42; g.add(f); const ft = new THREE.Mesh(new THREE.SphereGeometry(2.7, 48, 24, 0, Math.PI * 2, 0, Math.PI / 2), M(0xfafafa, 0.05, 0.4)); ft.scale.y = 2; ft.position.y = 47; g.add(ft);
+          for (let i = 0; i < 4; i++) { const a = (i / 4) * Math.PI * 2 + 0.78; const s = new THREE.Mesh(new THREE.CylinderGeometry(1.5, 1.5, 15, 32), M(0xd8dbe0, 0.1, 0.5)); s.position.set(Math.cos(a) * 4.2, 7.5, Math.sin(a) * 4.2); g.add(s); const k = new THREE.Mesh(new THREE.ConeGeometry(1.5, 4, 32), M(0xd8dbe0, 0.1, 0.5)); k.position.set(Math.cos(a) * 4.2, 17, Math.sin(a) * 4.2); g.add(k); }
+          return { g };
+        }
+        const VU = mkVulcan(); scR.add(VU.g); const AR = mkAriane(); scR.add(AR.g); AR.g.visible = false;
+        const flames = []; for (let i = 0; i < 22; i++) flames.push(K.sprite(scR, fireTex, 10, V(0, 0, 0), 0));
+        const smoke = []; for (let i = 0; i < 40; i++) smoke.push(K.sprite(scR, smokeTex, 20, V(0, 0, 0), 0)); smoke.forEach((s) => (s.material.blending = THREE.NormalBlending));
+        function fire(base, power, t, len = 1) { flames.forEach((s, i) => { const k = i / flames.length; s.position.set(base.x + Math.sin(t * 40 + i) * 0.4, base.y - 1.5 - k * 28 * len * (0.5 + power * 0.5), base.z + Math.cos(t * 33 + i) * 0.4); s.scale.setScalar((13 - k * 8) * (0.5 + power * 0.6)); s.material.opacity = power * (1 - k) * 0.95; });
+          flameLight.position.copy(base).add(V(0, -5, 6)); flameLight.intensity = power * 350; }
+        function trail(base, a, t) { smoke.forEach((s, i) => { const k = ((i / smoke.length) + t * 0.35) % 1; s.position.set(base.x + Math.sin(i * 7.3) * (2 + k * 14), base.y - 20 - k * 160, base.z + Math.cos(i * 3.1) * (2 + k * 14)); s.scale.setScalar(10 + k * 45); s.material.opacity = a * 0.35 * (1 - k); }); }
+        const boostO = new THREE.Object3D(); boostO.position.set(0, 16, 0); VU.boost.add(boostO);
+        const upO = new THREE.Object3D(); upO.position.set(0, 44, 0); VU.up.add(upO);
+        
+        // ===== Zeiten =====
+        const tAm = W("am", 3.4), tAn = W("an", 7.4), tVier = W("vierzig", 8), tDoch = W("doch"), tSchief = W("schief"), tKamen = W("kamen"), tFolg = W("folg"), tDie = W("die", 20.3), tDah = W("dahinter"), tAnf = W("am", 25.5), tAber = W("aber", 27.4), tSie = W("sie", 31.9), tTrenn = W("trennte"), tObere = W("die", 35.3), tFehl = W("fehlende"), tFur = W("für", 40.4), tBaut = W("amazon", 46), tDafur = W("dafür"), tOben = W("oben", 53.8), tUnd = W("und", 56), tJetzt = W("jetzt"), tDer = W("der", 65.3), tAri = W("ariane"), tFrueh = W("frühestens"), tSechs = W("sechsunddreißig"), END = 74.9;
+        label("Ziel-Bahn", ringO, 2, { t0: tObere + 0.4, t1: tFur - 0.1, size: 48, gap: 18 });
+        label("1. Stufe", boostO, 4, { t0: tAber + 0.2, t1: tObere - 0.1, size: 52, gap: 30 });
+        label("obere Stufe", upO, 4, { t0: tTrenn + 0.6, t1: tObere - 0.1, size: 46, gap: 30 });
+        const logo = (f, h = 120) => `<img src='assets/logos/${f}' style='height:${h}px;display:block;margin:0 auto 18px;filter:drop-shadow(0 6px 24px rgba(0,0,0,.8))'>`;
+        const grid38 = `<div style="display:grid;grid-template-columns:repeat(8,1fr);gap:8px 12px;width:640px;margin:0 auto 18px;font-size:52px;line-height:1">${Array.from({ length: 38 }, (_, i) => `<span style="position:relative;${i ? "" : "filter:grayscale(1) brightness(.6)"}">🚀${i ? "" : "<b style='position:absolute;left:0;right:0;top:-6px;color:#ff4d5e;font-size:64px'>✕</b>"}</span>`).join("")}</div>`;
+        
+        const WORDEL = document.getElementById("word");
+        renderAt = (t) => {
+          E.grade.uniforms.flash.value = 0; E.look([1, 1, 1], [0, 0, 0], 0.35, 0.85);
+          let scene = scS, pos = V(0, 0, 300), look = V(0, 0, 0), fov = 40;
+          train.forEach((s) => (s.material.opacity = 0)); gold400.material.opacity = 0; grey.material.opacity = 0; ring.material.opacity = 0; red.material.opacity = 0; upDot.material.opacity = 0; crash.material.opacity = 0;
+          flames.forEach((s) => (s.material.opacity = 0)); smoke.forEach((s) => (s.material.opacity = 0)); flameLight.intensity = 0;
+          VU.g.visible = true; AR.g.visible = false; VU.g.position.set(0, 0, 0); VU.g.rotation.set(0, 0, 0); VU.boost.position.set(0, 0, 0); VU.boost.rotation.set(0, 0, 0); VU.halves.forEach((h) => h.position.set(0, 0, 0)); VU.sats.visible = false;
+          skyM.material.uniforms.t.value.set(0x02040a); skyM.material.uniforms.m.value.set(0x0a1a3a); skyM.material.uniforms.h.value.set(0x24406e); skyM.visible = true; st.material.opacity = 0.8;
+          EA.group.rotation.y = 1.2 + t * 0.012; EA.clouds.rotation.y = t * 0.004;
+          const space = () => { skyM.visible = false; st.material.opacity = 0.85; };
+          if (t < tAm - 0.05) { // 40 Satelliten verschwinden
+            const f = prog(t, 0, tAm); for (let i = 0; i < 40; i++) { const a = -0.55 + i * 0.022; train[i].position.set(Math.sin(a) * 112, 38 - i * 0.3, Math.cos(a) * 112 - 10); train[i].material.opacity = 1 - cl((t - 1.3 - i * 0.035) / 0.15); }
+            pos = V(lerp(-40, -10, f), 70, 190); look = V(-20, 30, 70); fov = 42; }
+          else if (t < tDoch - 0.05) { scene = scR; const f = prog(t, tAm, tDoch - tAm); const k = cl((t - tAm) / 7);
+            skyM.material.uniforms.m.value.setRGB(lerp(0.04, 0.01, k), lerp(0.1, 0.02, k), lerp(0.23, 0.06, k)); skyM.material.uniforms.h.value.setRGB(lerp(0.14, 0.03, k), lerp(0.25, 0.06, k), lerp(0.43, 0.15, k));
+            fire(V(0, -1, 0), 1, t); trail(V(0, -1, 0), 1, t); const a = 0.6 + f * 0.5; pos = V(Math.sin(a) * lerp(95, 120, f), lerp(-25, 10, f), Math.cos(a) * lerp(95, 120, f)); look = V(0, 25, 0); fov = 44; }
+          else if (t < tFolg - 0.05) { scene = scR; space(); const bad = cl((t - tSchief) / 0.3), fall = cl((t - tSchief - 0.5) / 3);
+            if (t < tSchief) { fire(V(0, 34, 0), 0.75, t, 0.6); VU.boost.visible = false; } else { fire(V(0, 34, 0), 0.75 * (1 - bad) * (Math.sin(t * 50) > 0 ? 1 : 0.3), t, 0.6); VU.boost.visible = false; }
+            VU.g.rotation.z = fall * 1.6; VU.g.position.y = -fall * fall * 40; if (t > tSchief && t < tSchief + 0.35) E.grade.uniforms.flash.value = 0.25 * (1 - (t - tSchief) / 0.35);
+            if (t > tSchief) E.look([1.12, 0.86, 0.84], [0.02, 0, 0], 0.35, 0.85);
+            const f = prog(t, tDoch, tFolg - tDoch); pos = V(lerp(70, 85, f), lerp(50, 30, f), lerp(40, 60, f)); look = V(0, lerp(42, 30, f), 0); fov = 40; }
+          else if (t < tAnf - 0.05) { scene = scR; space(); VU.boost.visible = true; const a = (t - tFolg) * 0.12 + 0.3; pos = V(Math.sin(a) * 90, 22, Math.cos(a) * 90); look = V(0, 26, 0); fov = 44; }
+          else if (t < tObere - 0.05) { scene = scR; VU.boost.visible = true; const k = cl((t - tAnf) / 6); skyM.material.uniforms.m.value.setRGB(0.01, 0.02 * (1 - k), 0.07 * (1 - k * 0.6)); skyM.material.uniforms.h.value.setRGB(0.03, 0.07 * (1 - k * 0.5), 0.18 * (1 - k * 0.5));
+            const weak = t > tAber ? 0.55 + 0.25 * Math.sin(t * 9) : 1; const sep = cl((t - tTrenn - 0.4) / 2.5);
+            if (sep <= 0) { fire(V(0, -1, 0), weak, t); trail(V(0, -1, 0), weak, t); } else { VU.boost.position.y = -sep * sep * 50; VU.boost.rotation.z = sep * 0.5; fire(V(0, 34, 0), 0.8 * cl((sep - 0.15) * 4), t, 0.6); }
+            if (t > tAber && t < tTrenn) E.look([1.08, 0.94, 0.86], [0, 0, 0], 0.35, 0.85);
+            const f = prog(t, tAnf, tObere - tAnf); const a = -0.4 + f * 0.7; pos = V(Math.sin(a) * lerp(110, 130, f), lerp(5, 30, f), Math.cos(a) * lerp(110, 130, f)); look = V(0, lerp(18, 25, f), 0); fov = 44; }
+          else if (t < tFur - 0.05) { // Bahn zu niedrig
+            ring.material.opacity = cl((t - tObere) / 0.6) * 0.9; const f = prog(t, tObere + 0.4, tFur - tObere - 1.4); const n = Math.max(2, Math.floor(f * 119)); redGeo.setDrawRange(0, n); red.material.opacity = 0.95;
+            upDot.position.copy(pathPts[n - 1]); upDot.material.opacity = f < 1 ? 1 : 0; crash.material.opacity = f >= 1 ? 0.9 * (0.6 + 0.4 * Math.sin(t * 8)) : 0;
+            const g = prog(t, tObere, tFur - tObere); tilt.updateMatrixWorld(true); const nrm = V(0, 1, 0).applyQuaternion(tilt.quaternion); const side = V(Math.cos(1.25), 0, Math.sin(1.25)).applyQuaternion(tilt.quaternion); pos = nrm.multiplyScalar(lerp(560, 520, g)).add(side.multiplyScalar(lerp(220, 180, g))); look = side.clone().multiplyScalar(0.3); fov = 40; }
+          else if (t < tBaut - 0.05) { scene = scR; space(); VU.sats.visible = true; const o = K.eio(cl((t - tFur - 0.3) / 1.5)); VU.halves[0].position.set(0, 0, -o * 9); VU.halves[1].position.set(0, 0, o * 9); VU.halves[0].rotation.x = -o * 0.3; VU.halves[1].rotation.x = o * 0.3;
+            const f = prog(t, tFur, tBaut - tFur); const a = 1.3 + f * 0.5; pos = V(Math.sin(a) * lerp(34, 26, f), lerp(60, 55, f), Math.cos(a) * lerp(34, 26, f)); look = V(0, 54, 0); fov = 44; }
+          else if (t < tUnd - 0.05) { gold400.material.opacity = cl((t - tBaut) / 0.8); grey.material.opacity = 0.55 * cl((t - tDafur) / 1.2); if (t > tOben) { grey.material.opacity *= 0.7; gold400.material.opacity = 0.75 + 0.25 * Math.sin(t * 6); }
+            gold400.rotation.y = t * 0.03; grey.rotation.y = t * 0.03; const f = prog(t, tBaut, tUnd - tBaut); pos = V(Math.sin(f * 0.6) * lerp(360, 330, f), 80, Math.cos(f * 0.6) * lerp(360, 330, f)); look = V(0, 0, 0); fov = 40; }
+          else if (t < tJetzt - 0.05) { scene = scR; space(); const a = (t - tUnd) * 0.1 - 0.4; pos = V(Math.sin(a) * 70, -30, Math.cos(a) * 70); look = V(0, 30, 0); fov = 46; }
+          else if (t < tDer - 0.05) { scene = scR; space(); VU.up.visible = true; E.look([0.82, 0.88, 1.0], [0, 0, 0], 0.35, 0.85); const f = prog(t, tJetzt, tDer - tJetzt); VU.g.rotation.z = 0.25; pos = V(lerp(40, 30, f), lerp(5, 12, f), lerp(45, 35, f)); look = V(0, 8, 0); fov = 42; }
+          else { scene = scR; VU.g.visible = false; AR.g.visible = true; const k = cl((t - tDer) / 9); skyM.material.uniforms.m.value.setRGB(lerp(0.05, 0.01, k), lerp(0.13, 0.03, k), lerp(0.3, 0.08, k)); skyM.material.uniforms.h.value.setRGB(lerp(0.2, 0.04, k), lerp(0.35, 0.08, k), lerp(0.55, 0.2, k));
+            fire(V(0, -1, 0), 1, t, 1.1); trail(V(0, -1, 0), 1, t); const f = prog(t, tDer, END - tDer); const a = -0.6 + f * 0.6; pos = V(Math.sin(a) * lerp(100, 125, f), lerp(-15, 10, f), Math.cos(a) * lerp(100, 125, f)); look = V(0, 24, 0); fov = 44; }
+          if (!(t >= tDoch - 0.05 && t < tFolg - 0.05)) VU.boost.visible = true;
+          cam.fov = fov; cam.near = 0.5; cam.far = 60000; cam.updateProjectionMatrix(); cam.position.copy(pos); cam.lookAt(look);
+          E.render(scene, t); updLabels(t);
+          let wh = "", wa = 0; const seg = (a, b, h) => { if (t >= a && t < b) { wh = h; wa = cl((t - a) / 0.3) * (1 - cl((t - b + 0.4) / 0.3)); } };
+          seg(tAm, tAn - 0.1, "🚀 15. November<div class='sub'>Start in Florida 🇺🇸</div>");
+          seg(tVier - 0.2, 10.9, "<div style='display:inline-block;background:#fff;border-radius:22px;padding:18px 30px 6px;margin-bottom:16px'><img src='assets/logos/amazon.svg' style='height:72px;display:block'></div><br>40 Satelliten");
+          const T = Math.min(600, 596 + (t - tDoch) * 1.6); const mm = Math.floor(T / 60), ss = Math.floor(T % 60);
+          seg(tDoch, tKamen - 0.1, `<span style="font-variant-numeric:tabular-nums">⏱ T+ ${String(mm).padStart(2, "0")}:${String(ss).padStart(2, "0")}</span>`);
+          seg(tKamen - 0.1, tFolg - 0.1, "<span style='color:#ff6b78'>❌ nie im All angekommen</span>");
+          seg(tDie, tDah - 0.1, "<span style='font-size:130px;letter-spacing:6px'>ULA</span><div class='sub'>United Launch Alliance</div>"); seg(tDah, tAnf - 0.1, "Boeing + Lockheed Martin");
+          seg(tAber, tSie - 0.1, "⚠️ zu wenig Kraft"); seg(tSie, tObere - 0.1, "⏱ zu lange gebrannt<div class='sub'>zu spät getrennt</div>");
+          seg(tObere, tFehl - 0.1, "Obere Stufe gibt alles"); seg(tFehl, tFur - 0.1, "<span style='color:#ff6b78'>Kraft fehlt → zu niedrig</span>");
+          seg(tFur + 0.3, tBaut - 0.1, "40 auf einmal<div class='sub'>größte Ladung für Amazon</div>");
+          seg(tBaut, tDafur - 0.1, "🛰️ Internet aus dem All<div class='sub'>wie Starlink</div>"); seg(tDafur, tOben - 0.1, "3.200+ nötig");
+          seg(tOben, tUnd - 0.1, "<span class='y'>erst ≈ 400 oben</span><div class='sub'>≈ 12 %</div>");
+          seg(tUnd, tJetzt - 0.1, grid38 + "38 Flüge gebucht<div class='sub'>das war der erste</div>");
+          seg(tJetzt, tDer - 0.1, "🔍 Untersuchung<div class='sub'>kann Monate dauern</div>");
+          seg(tAri - 0.2, tFrueh - 0.1, "🇪🇺 Ariane 6"); seg(tFrueh, tSechs - 0.1, "frühestens 23. November"); seg(tSechs, END, "+36 Satelliten");
+          WORDEL.style.top = (t >= 19.1 && t < 24.7) || (t >= tUnd && t < tJetzt) ? "300px" : "";
+          word(wh, wa); cap(t);
+        };
+        renderAt(lastT);
+      });
+      window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady || {}; window.__hf.buildReady.scene = ready;
+      let lastT = 0;
+      window.addEventListener("hf-seek", (e) => { lastT = e.detail.time; renderAt(lastT); });
+    </script>
+  </body>
+</html>
