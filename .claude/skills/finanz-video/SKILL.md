@@ -316,3 +316,13 @@ Im Chat beim Skript kurz markieren, wo das Logo-Intro sitzt.
 ## Abend-Börsenrückblick: fester Einstieg (Nutzer 19.11.)
 - Erster Satz IMMER: „Alles, was heute an der Börse passiert ist – in 60 Sekunden.“
 - Zweiter Satz: „Und heute: <größte Nachricht des Tages>.“ Dann Open Loop → Logo-Intro.
+
+## ⭐ NEUES FORMAT ab 19.11. (Nutzer: „als Format neu wählen, das alte beiseite legen“)
+Heller Nachrichten-Look nach Vorbild Eulen-Kanal (finanzlehre). Probe: `renders/boerse-1911-probe-1..6.jpg`.
+- Heller Hintergrund (#f7f8fa → #eceef2) mit feinem grauen Netz, KEIN Neon/Glow, KEIN oranger Rahmen, keine Emojis/Handschrift/Stempel.
+- Kopfzeile oben: Beagle-Logo rund + „HundeFinanzTv“ links, „BÖRSENNEWS <Datum>“ rechts (heller Verlauf rosa→creme).
+- Original-Logos in Farbe, frei auf hellem Grund (ohne Karte/Glow). Daten auf weißen Karten (dünner Rand, leichter Schatten),
+  Tabellen „Ist / Erwartet ✓“, Logo-Kacheln mit % (grün #22a35a / rot #d23c3c, helle Tönung), schlichte Kurven-Karten.
+- KEIN Beagle unten (Nutzer 19.11.) – Beagle nur oben in der Kopfzeile + im Logo-Intro.
+- Untertitel unten: kurze Wortgruppen, fett dunkel, aktives Wort gelb hinterlegt (statt Beagle-Moderator).
+- Logo-Intro mit Jingle (`logo-jingle`), Folgen-CTA am Ende.
