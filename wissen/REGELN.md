@@ -64,4 +64,4 @@ Vorlage/Baukasten: `wissen/kit/` (neu.sh, kit.js, kit.css, mix.py, fertig.sh, sn
 ## KEIN Intro (Nutzer 19.11. abends: „schrecklich“, ab sofort rauslassen)
 - Das Intro „Umlaufbahn“ (`wissen/kit/intro.py`) NICHT mehr verwenden. Kein `"intro"` in szene.json, keine Pause in der Stimme.
 - Ton (Nutzer 19.11.): Soundeffekte haben die Stimme übertönt → ab jetzt nur 2–3 Effekte pro Video, sehr leise (0.1), NUR in Sprechpausen, nie über der Stimme.
-- Bilder (Nutzer 19.11.): selbstgebaute 3D-Raketen/Roboter sahen „billig“ aus → echte Fotos (NASA u. a., frei nutzbar) bevorzugen, keine Spielzeug-Modelle.
+- Bilder (Nutzer 19.11.): selbstgebaute 3D-Raketen/Roboter sahen „billig“ aus. KEINE echten Fotos verwenden (Nutzer: „du sollst keine echten Bilder nehmen“).
