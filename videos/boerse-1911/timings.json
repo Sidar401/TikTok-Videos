@@ -1,0 +1,346 @@
+{
+ "dauer": 73.918,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 3.502,
+   "captions": [
+    {
+     "text": "Alles,",
+     "start": 0.0,
+     "end": 0.377
+    },
+    {
+     "text": "was heute an der Börse",
+     "start": 0.377,
+     "end": 1.761
+    },
+    {
+     "text": "passiert ist – in 60 Sekunden",
+     "start": 1.761,
+     "end": 3.502
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 3.502,
+   "end": 8.943,
+   "captions": [
+    {
+     "text": "Und heute: Anthropic startet",
+     "start": 3.502,
+     "end": 5.389
+    },
+    {
+     "text": "mit plus 34 % – und trotzdem",
+     "start": 5.389,
+     "end": 7.482
+    },
+    {
+     "text": "rutscht die Börse ab",
+     "start": 7.482,
+     "end": 8.943
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 8.943,
+   "end": 13.119,
+   "captions": [
+    {
+     "text": "Denn dahinter",
+     "start": 8.943,
+     "end": 9.61
+    },
+    {
+     "text": "steckt eine Angst,",
+     "start": 9.61,
+     "end": 10.597
+    },
+    {
+     "text": "die auch dein Depot treffen",
+     "start": 10.597,
+     "end": 12.078
+    },
+    {
+     "text": "kann – gleich mehr dazu",
+     "start": 12.078,
+     "end": 13.119
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 16.119,
+   "end": 20.424,
+   "captions": [
+    {
+     "text": "Zuerst der Star",
+     "start": 16.119,
+     "end": 17.136
+    },
+    {
+     "text": "des Tages: Anthropic,",
+     "start": 17.136,
+     "end": 18.706
+    },
+    {
+     "text": "die Firma hinter Claude",
+     "start": 18.706,
+     "end": 20.424
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 20.424,
+   "end": 24.726,
+   "captions": [
+    {
+     "text": "Ausgabepreis 83 Dollar –",
+     "start": 20.424,
+     "end": 22.521
+    },
+    {
+     "text": "erster Kurs 111,50 Dollar",
+     "start": 22.521,
+     "end": 24.726
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 24.726,
+   "end": 29.273,
+   "captions": [
+    {
+     "text": "Mit 81 Milliarden Dollar",
+     "start": 24.726,
+     "end": 26.438
+    },
+    {
+     "text": "ist das der größte",
+     "start": 26.438,
+     "end": 27.722
+    },
+    {
+     "text": "Börsengang aller Zeiten",
+     "start": 27.722,
+     "end": 29.273
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 29.273,
+   "end": 35.017,
+   "captions": [
+    {
+     "text": "Aber der DAX? Minus",
+     "start": 29.273,
+     "end": 31.807
+    },
+    {
+     "text": "1,1 % auf 25.464 Punkte",
+     "start": 31.807,
+     "end": 35.017
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 35.017,
+   "end": 40.704,
+   "captions": [
+    {
+     "text": "Und jetzt die Angst: Laut",
+     "start": 35.017,
+     "end": 36.516
+    },
+    {
+     "text": "Protokoll der US‑Notenbank",
+     "start": 36.516,
+     "end": 38.21
+    },
+    {
+     "text": "könnten weitere",
+     "start": 38.21,
+     "end": 39.187
+    },
+    {
+     "text": "Zinserhöhungen nötig sein",
+     "start": 39.187,
+     "end": 40.704
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 40.704,
+   "end": 44.822,
+   "captions": [
+    {
+     "text": "Höhere Zinsen machen",
+     "start": 40.704,
+     "end": 41.921
+    },
+    {
+     "text": "Kredite teurer – und Aktien",
+     "start": 41.921,
+     "end": 43.705
+    },
+    {
+     "text": "weniger attraktiv",
+     "start": 43.705,
+     "end": 44.822
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 44.822,
+   "end": 52.002,
+   "captions": [
+    {
+     "text": "Das trifft auch Bitcoin:",
+     "start": 44.822,
+     "end": 46.948
+    },
+    {
+     "text": "rund 63.800 Dollar,",
+     "start": 46.948,
+     "end": 48.703
+    },
+    {
+     "text": "über 20 % weniger",
+     "start": 48.703,
+     "end": 50.246
+    },
+    {
+     "text": "als vor einem Monat",
+     "start": 50.246,
+     "end": 52.002
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 52.002,
+   "end": 55.754,
+   "captions": [
+    {
+     "text": "Und selbst Gold fällt –",
+     "start": 52.002,
+     "end": 53.385
+    },
+    {
+     "text": "auf den tiefsten Stand",
+     "start": 53.385,
+     "end": 54.707
+    },
+    {
+     "text": "seit über einem Jahr",
+     "start": 54.707,
+     "end": 55.754
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 55.754,
+   "end": 60.692,
+   "captions": [
+    {
+     "text": "Walmart lieferte bessere",
+     "start": 55.754,
+     "end": 57.146
+    },
+    {
+     "text": "Zahlen als erwartet",
+     "start": 57.146,
+     "end": 58.371
+    },
+    {
+     "text": "– die Aktie fiel",
+     "start": 58.371,
+     "end": 59.403
+    },
+    {
+     "text": "trotzdem um rund 2 %",
+     "start": 59.403,
+     "end": 60.692
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 60.692,
+   "end": 65.563,
+   "captions": [
+    {
+     "text": "Unser Fazit:",
+     "start": 60.692,
+     "end": 61.412
+    },
+    {
+     "text": "Ein Rekord‑Börsengang",
+     "start": 61.412,
+     "end": 62.745
+    },
+    {
+     "text": "reicht nicht,",
+     "start": 62.745,
+     "end": 63.654
+    },
+    {
+     "text": "wenn die Zinsangst zurück ist",
+     "start": 63.654,
+     "end": 65.563
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 65.563,
+   "end": 68.049,
+   "captions": [
+    {
+     "text": "Keine Anlageberatung,",
+     "start": 65.563,
+     "end": 67.153
+    },
+    {
+     "text": "nur erklärt",
+     "start": 67.153,
+     "end": 68.049
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "start": 68.049,
+   "end": 73.306,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTv,",
+     "start": 68.049,
+     "end": 69.451
+    },
+    {
+     "text": "wir bringen dir jeden Abend",
+     "start": 69.451,
+     "end": 71.342
+    },
+    {
+     "text": "den Börsentag in 60 Sekunden",
+     "start": 71.342,
+     "end": 73.306
+    }
+   ]
+  }
+ ],
+ "logo_intro": 13.119
+}

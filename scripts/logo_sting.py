@@ -34,7 +34,7 @@ def szene(querformat=False):
     dx = L - mitte
 
     def code(a, d):
-        return f"""var lsHide = ["#logo", "#brand"].concat(Array.from(document.querySelectorAll("#lb, #nk, #nk + div")));
+        return f"""var lsHide = ["#logo", "#brand"].concat(Array.from(document.querySelectorAll("#lb, #nk, #nk + div, #kopf")));
       tl.set(lsHide, {{ opacity: 0 }}, {a}); tl.set(lsHide, {{ opacity: 1 }}, {a + d});
       tl.fromTo("#ls-logo", {{ scale: 0, rotation: -25 }}, {{ scale: 1, rotation: 0, duration: 0.5, ease: "back.out(2.4)" }}, {a});
       flash({a + 0.12}, 0.35);
