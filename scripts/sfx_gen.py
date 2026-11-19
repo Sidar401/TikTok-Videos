@@ -14,6 +14,10 @@ ZIEL = Path(__file__).resolve().parent.parent / "brand" / "sfx"
 
 # name: (prompt, sekunden)
 SOUNDS = {
+    "logo-tech": ("Modern tech logo reveal sting: short rising digital riser into a punchy bright impact with a sparkling shimmer tail, clean, no voice, no music bed", 2.5),
+    "logo-muenzen": ("Logo reveal made of money sounds: quick swirl of coins cascading, ending in a bright cash register ding with a soft bass hit, playful, clean", 2.5),
+    "logo-jingle": ("Short upbeat three-note synth jingle logo sting, warm modern pop sound, confident and friendly, ends on a bright major chord, no vocals", 2.5),
+    "logo-beagle": ("Friendly brand logo sting: one short happy dog bark, then a bright magical sparkle chime and a soft whoosh, playful, clean, no music bed", 2.5),
     "muenzen-glas": ("A handful of coins dropping into a glass jar, crisp metallic clinks, close-up, no music", 1.5),
     "muenzen-klimpern": ("Short jingle of a few coins in a hand, bright metallic, close-up, no music", 0.8),
     "kasse": ("Classic cash register cha-ching with drawer opening, clean, satisfying, no music", 1.2),
