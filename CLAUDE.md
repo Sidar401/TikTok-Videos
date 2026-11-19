@@ -33,6 +33,7 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
 ## Regeln vom Nutzer
 - Folgen-CTA („Folge HundeFinanzTv …“) ab 18.11. immer als letzter Satz im Video
 - Ab 19.11. ALLE Videos (auch Longform) nur 61–75 s, bis der Nutzer etwas anderes sagt (2–3 Min. liefen schlecht). Logo-Intro wie beim Short nach ca. 15 s
+- Oranger Rahmen immer bei Video und Thumbnail
 - Kein Thema/keine Firma innerhalb von 30 Tagen wiederholen (auch nicht mit „neuem Blickwinkel“); Bereiche abwechseln, Börse/KI selten
 - Abend-Börsenrückblick startet immer mit „Alles, was heute an der Börse passiert ist – in 60 Sekunden.“
 - Alles auf Deutsch, Antworten sehr kurz und iPad-tauglich, ohne Fachwörter

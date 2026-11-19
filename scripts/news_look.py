@@ -72,7 +72,6 @@ def hell(here):
          "background: linear-gradient(180deg,#f7f8fa,#eceef2);"),
         ("background: #0e1012; }", "background: #eef0f3; }"),
         ('<div id="raster"></div>', f'<div id="raster">{_netz()}</div>'),
-        ("#frame {", "#frame { display:none; "),
         ("#logo {", "#logo { display:none; "),
         ("#brand {", "#brand { display:none; "),
         ("color: #fff; text-shadow: 0 6px 0 #000, 0 0 30px #000; }\n",
