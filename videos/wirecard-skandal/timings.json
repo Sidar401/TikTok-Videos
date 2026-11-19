@@ -1,0 +1,352 @@
+{
+ "dauer": 73.012,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 5.876,
+   "captions": [
+    {
+     "text": "Ein DAX‑Konzern,",
+     "start": 0.0,
+     "end": 1.133
+    },
+    {
+     "text": "24 Milliarden Euro wert",
+     "start": 1.133,
+     "end": 2.881
+    },
+    {
+     "text": "– und plötzlich fehlen",
+     "start": 2.881,
+     "end": 4.505
+    },
+    {
+     "text": "1,9 Milliarden Euro",
+     "start": 4.505,
+     "end": 5.876
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 5.876,
+   "end": 9.995,
+   "captions": [
+    {
+     "text": "Das ist Wirecard,",
+     "start": 5.876,
+     "end": 7.15
+    },
+    {
+     "text": "der größte Bilanzskandal",
+     "start": 7.15,
+     "end": 9.052
+    },
+    {
+     "text": "Deutschlands",
+     "start": 9.052,
+     "end": 9.995
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 9.995,
+   "end": 14.003,
+   "captions": [
+    {
+     "text": "Nach fast vier Jahren",
+     "start": 9.995,
+     "end": 11.07
+    },
+    {
+     "text": "Prozess könnte jetzt noch vor",
+     "start": 11.07,
+     "end": 12.555
+    },
+    {
+     "text": "Weihnachten das Urteil fallen",
+     "start": 12.555,
+     "end": 14.003
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 14.003,
+   "end": 19.949,
+   "captions": [
+    {
+     "text": "Doch der Mann,",
+     "start": 14.003,
+     "end": 14.757
+    },
+    {
+     "text": "der am meisten weiß,",
+     "start": 14.757,
+     "end": 15.885
+    },
+    {
+     "text": "sitzt nicht",
+     "start": 15.885,
+     "end": 16.506
+    },
+    {
+     "text": "auf der Anklagebank –",
+     "start": 16.506,
+     "end": 17.69
+    },
+    {
+     "text": "und wo er heute ist,",
+     "start": 17.69,
+     "end": 18.818
+    },
+    {
+     "text": "verraten wir dir gleich",
+     "start": 18.818,
+     "end": 19.949
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 22.949,
+   "end": 28.373,
+   "captions": [
+    {
+     "text": "2018 kam die Firma",
+     "start": 22.949,
+     "end": 24.336
+    },
+    {
+     "text": "in den DAX –",
+     "start": 24.336,
+     "end": 25.267
+    },
+    {
+     "text": "und warf dafür sogar",
+     "start": 25.267,
+     "end": 26.82
+    },
+    {
+     "text": "die Commerzbank raus",
+     "start": 26.82,
+     "end": 28.373
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 28.373,
+   "end": 32.553,
+   "captions": [
+    {
+     "text": "Doch die Financial Times",
+     "start": 28.373,
+     "end": 29.814
+    },
+    {
+     "text": "warnte schon Jahre vorher:",
+     "start": 29.814,
+     "end": 31.286
+    },
+    {
+     "text": "Hier stimmt was nicht",
+     "start": 31.286,
+     "end": 32.553
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 32.553,
+   "end": 36.729,
+   "captions": [
+    {
+     "text": "Und die Finanzaufsicht?",
+     "start": 32.553,
+     "end": 33.8
+    },
+    {
+     "text": "Die zeigte nicht Wirecard an,",
+     "start": 33.8,
+     "end": 35.435
+    },
+    {
+     "text": "sondern die Journalisten",
+     "start": 35.435,
+     "end": 36.729
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 36.729,
+   "end": 42.474,
+   "captions": [
+    {
+     "text": "Im Juni 2020 dann der Knall:",
+     "start": 36.729,
+     "end": 39.191
+    },
+    {
+     "text": "Die 1,9 Milliarden",
+     "start": 39.191,
+     "end": 40.724
+    },
+    {
+     "text": "Euro gab es wohl nie",
+     "start": 40.724,
+     "end": 42.474
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 42.474,
+   "end": 48.077,
+   "captions": [
+    {
+     "text": "Die Aktie verlor",
+     "start": 42.474,
+     "end": 43.918
+    },
+    {
+     "text": "in wenigen Tagen über",
+     "start": 43.918,
+     "end": 45.88
+    },
+    {
+     "text": "95 % – Wirecard war pleite",
+     "start": 45.88,
+     "end": 48.077
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 48.077,
+   "end": 54.881,
+   "captions": [
+    {
+     "text": "Chef Markus",
+     "start": 48.077,
+     "end": 48.611
+    },
+    {
+     "text": "Braun sitzt seit Sommer",
+     "start": 48.611,
+     "end": 50.079
+    },
+    {
+     "text": "2020 in Untersuchungshaft.",
+     "start": 50.079,
+     "end": 51.738
+    },
+    {
+     "text": "Er bestreitet alles,",
+     "start": 51.738,
+     "end": 53.014
+    },
+    {
+     "text": "es gilt die Unschuldsvermutung",
+     "start": 53.014,
+     "end": 54.881
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 54.881,
+   "end": 62.281,
+   "captions": [
+    {
+     "text": "Und Vorstand Jan Marsalek",
+     "start": 54.881,
+     "end": 56.339
+    },
+    {
+     "text": "floh im Privatjet – laut",
+     "start": 56.339,
+     "end": 57.784
+    },
+    {
+     "text": "Ermittlern lebt er heute",
+     "start": 57.784,
+     "end": 59.23
+    },
+    {
+     "text": "in Moskau und arbeitet",
+     "start": 59.23,
+     "end": 60.555
+    },
+    {
+     "text": "für den russischen",
+     "start": 60.555,
+     "end": 61.639
+    },
+    {
+     "text": "Geheimdienst",
+     "start": 61.639,
+     "end": 62.281
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 62.281,
+   "end": 67.698,
+   "captions": [
+    {
+     "text": "Unsere Lehre:",
+     "start": 62.281,
+     "end": 63.036
+    },
+    {
+     "text": "Steck nie zu viel Geld",
+     "start": 63.036,
+     "end": 64.387
+    },
+    {
+     "text": "in eine einzige Aktie – auch",
+     "start": 64.387,
+     "end": 66.102
+    },
+    {
+     "text": "nicht in einen DAX‑Konzern",
+     "start": 66.102,
+     "end": 67.698
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 67.698,
+   "end": 72.406,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTv,",
+     "start": 67.698,
+     "end": 68.868
+    },
+    {
+     "text": "wir bringen dir jeden Tag",
+     "start": 68.868,
+     "end": 70.427
+    },
+    {
+     "text": "die spannendsten",
+     "start": 70.427,
+     "end": 71.425
+    },
+    {
+     "text": "Geld‑Geschichten",
+     "start": 71.425,
+     "end": 72.406
+    }
+   ]
+  }
+ ],
+ "logo_intro": 19.949
+}

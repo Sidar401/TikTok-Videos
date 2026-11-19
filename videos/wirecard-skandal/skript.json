@@ -1,0 +1,83 @@
+{
+ "titel": "Wirecard – wie 1,9 Milliarden Euro verschwanden",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Ein DAX-Konzern, vierundzwanzig Milliarden Euro wert – und plötzlich fehlen eins Komma neun Milliarden Euro.",
+   "bild": "Wirecard-Logo, 24 Mrd, 1,9 Mrd fehlen",
+   "text": "Ein DAX-Konzern, 24 Milliarden Euro wert – und plötzlich fehlen 1,9 Milliarden Euro"
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Das ist Wirecard, der größte Bilanzskandal Deutschlands.",
+   "bild": "Stempel Skandal",
+   "text": "Das ist Wirecard, der größte Bilanzskandal Deutschlands"
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Nach fast vier Jahren Prozess könnte jetzt noch vor Weihnachten das Urteil fallen.",
+   "bild": "Gericht, Kalender Dezember",
+   "text": "Nach fast vier Jahren Prozess könnte jetzt noch vor Weihnachten das Urteil fallen"
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Doch der Mann, der am meisten weiß, sitzt nicht auf der Anklagebank – und wo er heute ist, verraten wir dir gleich.",
+   "bild": "leerer Stuhl, Silhouette ?",
+   "text": "Doch der Mann, der am meisten weiß, sitzt nicht auf der Anklagebank – und wo er heute ist, verraten wir dir gleich"
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Zweitausendachtzehn kam die Firma in den DAX – und warf dafür sogar die Commerzbank raus.",
+   "bild": "Commerzbank raus, Wirecard rein",
+   "text": "2018 kam die Firma in den DAX – und warf dafür sogar die Commerzbank raus"
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Doch die Financial Times warnte schon Jahre vorher: Hier stimmt was nicht.",
+   "bild": "Zeitung FT",
+   "text": "Doch die Financial Times warnte schon Jahre vorher: Hier stimmt was nicht"
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Und die Finanzaufsicht? Die zeigte nicht Wirecard an, sondern die Journalisten.",
+   "bild": "BaFin, Anzeige gegen Journalisten",
+   "text": "Und die Finanzaufsicht? Die zeigte nicht Wirecard an, sondern die Journalisten"
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Im Juni zweitausendzwanzig dann der Knall: Die eins Komma neun Milliarden Euro gab es wohl nie.",
+   "bild": "Tresor leer",
+   "text": "Im Juni 2020 dann der Knall: Die 1,9 Milliarden Euro gab es wohl nie"
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Die Aktie verlor in wenigen Tagen über fünfundneunzig Prozent – Wirecard war pleite.",
+   "bild": "Kurve Absturz, Stempel Insolvenz",
+   "text": "Die Aktie verlor in wenigen Tagen über 95 % – Wirecard war pleite"
+  },
+  {
+   "id": "s10",
+   "sprechtext": "Chef Markus Braun sitzt seit Sommer zweitausendzwanzig in Untersuchungshaft. Er bestreitet alles, es gilt die Unschuldsvermutung.",
+   "bild": "Braun Silhouette, Gitter",
+   "text": "Chef Markus Braun sitzt seit Sommer 2020 in Untersuchungshaft. Er bestreitet alles, es gilt die Unschuldsvermutung"
+  },
+  {
+   "id": "s11",
+   "sprechtext": "Und Vorstand Jan Marsalek floh im Privatjet – laut Ermittlern lebt er heute in Moskau und arbeitet für den russischen Geheimdienst.",
+   "bild": "Flugroute nach Moskau",
+   "text": "Und Vorstand Jan Marsalek floh im Privatjet – laut Ermittlern lebt er heute in Moskau und arbeitet für den russischen Geheimdienst"
+  },
+  {
+   "id": "s12",
+   "sprechtext": "Unsere Lehre: Steck nie zu viel Geld in eine einzige Aktie – auch nicht in einen DAX-Konzern.",
+   "bild": "Eier im Korb",
+   "text": "Unsere Lehre: Steck nie zu viel Geld in eine einzige Aktie – auch nicht in einen DAX-Konzern"
+  },
+  {
+   "id": "s13",
+   "sprechtext": "Folge HundeFinanzTv, wir bringen dir jeden Tag die spannendsten Geld-Geschichten.",
+   "bild": "Folgen",
+   "text": "Folge HundeFinanzTv, wir bringen dir jeden Tag die spannendsten Geld-Geschichten"
+  }
+ ]
+}
