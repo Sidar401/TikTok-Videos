@@ -10,25 +10,33 @@ DAUER = 3.0
 TAG = "AKTIEN <i>|</i> FINANZEN <i>|</i> VERMÖGEN"
 
 
-def szene(querformat=False):
+def szene(querformat=False, hell=False):
+    """hell=True: gleicher heller Hintergrund wie der neue News-Look (Nutzer 19.11.)."""
     if querformat:  # 1920×1080
         L, cy, lg, fn, ft, nx, w = 380, 540, 300, 112, 50, 720, 1920
     else:           # 1080×1920
         L, cy, lg, fn, ft, nx, w = 50, 880, 250, 80, 33, 320, 1080
     mitte = (w - lg) / 2
+    if hell:
+        import news_look as nl
+        bg = "linear-gradient(180deg,#f7f8fa,#eceef2)"
+        rand, name_f, name_sh, netz = "border:none;", "#1d2330", "none", nl._netz()
+    else:
+        bg = f"radial-gradient(ellipse at 50% {cy / (1080 if querformat else 1920) * 100:.0f}%, #ff8a1f55 0%, #ff8a1f14 30%, transparent 60%), #0e1012"
+        rand, name_f, name_sh, netz = f"border:{22 if querformat else 26}px solid #DB8622;", "#fff", "0 0 40px #0008", ""
     html = f"""<style>
-#ls-bg {{ position:absolute; inset:0; background: radial-gradient(ellipse at 50% {cy / (1080 if querformat else 1920) * 100:.0f}%, #ff8a1f55 0%, #ff8a1f14 30%, transparent 60%), #0e1012; border:{22 if querformat else 26}px solid #DB8622; box-sizing:border-box; z-index:11; }}
+#ls-bg {{ position:absolute; inset:0; background: {bg}; {rand} box-sizing:border-box; z-index:11; overflow:hidden; }}
 #ls-ring {{ position:absolute; left:{mitte - 40}px; top:{cy - lg / 2 - 40}px; width:{lg + 80}px; height:{lg + 80}px; border-radius:50%; border:6px solid #ff8a1f; z-index:12; }}
 #ls-logo {{ position:absolute; left:{mitte}px; top:{cy - lg / 2}px; width:{lg}px; height:{lg}px; border-radius:50%; overflow:hidden;
   border:8px solid #DB8622; box-shadow:0 0 70px #ff8a1fbb, 0 20px 40px #000; z-index:13; }}
 #ls-logo img {{ width:100%; height:100%; object-fit:cover; }}
 #ls-txt {{ position:absolute; left:{nx}px; top:{cy - fn * 0.78}px; z-index:13; clip-path: inset(0 0 0 0); }}
-#ls-name {{ font-weight:900; font-size:{fn}px; line-height:1; color:#fff; letter-spacing:-1px; white-space:nowrap; text-shadow:0 0 40px #0008; }}
+#ls-name {{ font-weight:900; font-size:{fn}px; line-height:1; color:{name_f}; letter-spacing:-1px; white-space:nowrap; text-shadow:{name_sh}; }}
 #ls-name b {{ color:#ff8a1f; text-shadow:0 0 40px #ff8a1faa; }}
 #ls-tag {{ margin-top:{fn * 0.22:.0f}px; font-weight:900; font-size:{ft}px; color:#ff8a1f; letter-spacing:1px; white-space:nowrap; }}
-#ls-tag i {{ font-style:normal; color:#ffffffcc; padding:0 6px; }}
+#ls-tag i {{ font-style:normal; color:{"#1d2330aa" if hell else "#ffffffcc"}; padding:0 6px; }}
 </style>
-<div id="ls-bg"></div><div id="ls-ring"></div>
+<div id="ls-bg">{netz}</div><div id="ls-ring"></div>
 <div id="ls-logo"><img src="assets/beagle.png" alt="" /></div>
 <div id="ls-txt"><div id="ls-name">HundeFinanz<b>Tv</b></div><div id="ls-tag">{TAG}</div></div>"""
     dx = L - mitte

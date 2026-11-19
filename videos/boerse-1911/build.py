@@ -26,16 +26,21 @@ def pops(ids_zeiten):
     return " ".join(f'pop("#{i}", {t});' for i, t in ids_zeiten)
 
 
-# s1–s2 Einstieg
+# s1 Einstieg: unser Logo groß (Nutzer 19.11.)
 S("s1", None, nl.CSS
-  + f'<div id="t1" class="nk-gross" style="top:360px;font-size:66px;line-height:1.15">Alles, was heute<br/>an der Börse passiert ist</div>'
-  + f'<div id="b1" style="position:absolute;left:390px;top:570px;padding:14px 40px;border-radius:50px;background:{D};color:#fff;font-weight:800;font-size:46px;z-index:4">in 60 Sekunden</div>'
-  + f'<div id="k1a" class="nk-karte" style="left:110px;top:760px;width:400px;text-align:center"><img src="assets/logos/anthropic.svg" style="width:300px"/>'
+  + f'<div id="lg1" style="position:absolute;left:350px;top:340px;width:380px;height:380px;border-radius:50%;overflow:hidden;border:10px solid {nl.ORANGE};'
+    f'box-shadow:0 20px 50px #0003;background:#1b1f22;z-index:4"><img src="assets/beagle.png" style="width:100%;height:100%;object-fit:cover"/></div>'
+  + f'<div id="t1" class="nk-gross" style="top:770px;font-size:66px;line-height:1.15">Alles, was heute<br/>an der Börse passiert ist</div>'
+  + f'<div id="b1" style="position:absolute;left:0;width:1080px;top:970px;display:flex;justify-content:center;z-index:4"><span style="padding:14px 40px;border-radius:50px;background:{nl.ORANGE};color:#fff;font-weight:800;font-size:46px">in 60 Sekunden</span></div>',
+  lambda a, d: KIT_JS + f' tl.fromTo("#lg1", {{ scale: 0.92 }}, {{ scale: 1, duration: 0.35, ease: "back.out(2)" }}, {a}); pop("#t1", {a} + 0.15); pop("#b1", {cap("s1", 2)});')
+
+# s2 Schlagzeile
+S("s2", None, f'<div id="t2" class="nk-gross" style="top:380px;font-size:70px">Und heute:</div>'
+  + f'<div id="k2a" class="nk-karte" style="left:110px;top:540px;width:400px;text-align:center"><img src="assets/logos/anthropic.svg" style="width:300px"/>'
     f'<div style="font-weight:800;font-size:78px;color:{G};margin-top:24px">+34 %</div></div>'
-  + f'<div id="k1b" class="nk-karte" style="left:570px;top:760px;width:400px;text-align:center"><div style="font-weight:800;font-size:58px;color:{D}">DAX</div>'
+  + f'<div id="k2b" class="nk-karte" style="left:570px;top:540px;width:400px;text-align:center"><div style="font-weight:800;font-size:58px;color:{D}">DAX</div>'
     f'<div style="font-weight:800;font-size:78px;color:{R};margin-top:14px">−1,1 %</div></div>',
-  lambda a, d: KIT_JS + f' pop("#t1", {a}); pop("#b1", {cap("s1", 2)}); pop("#k1a", {cap("s2", 0)} + 0.6); pop("#k1b", {cap("s2", 2)});',
-  [], bis="s3")
+  lambda a, d: f'pop("#t2", {a}); pop("#k2a", {cap("s2", 0)} + 0.6); pop("#k2b", {cap("s2", 2)});')
 
 # s3 Open Loop: die Angst
 S("s3", None, nl.logo_frei("l3", "fed.png", 400, 380, 280)
@@ -113,7 +118,7 @@ S("s15", None, f'<div id="fl15" style="position:absolute;left:340px;top:520px;wi
   lambda a, d: (f'pop("#fl15", {a}); pop("#n15", {a} + 0.2); pop("#c15", {cap("s15", 0)} + 0.4);'
                 f' tl.fromTo("#c15", {{ scale: 1 }}, {{ scale: 1.08, duration: 0.35, yoyo: true, repeat: 5, ease: "sine.inOut" }}, {cap("s15", 0)} + 0.8);'))
 
-html, code = ls.szene()
+html, code = ls.szene(hell=True)
 K.SZ.append((T0, T0 + ls.DAUER, html, code, 7))
 K.SFX.extend(ls.sounds(T0))
 K.SZ.append((0.0, K.dauer, nl.kopf("BÖRSENNEWS", "19.11.2026"), lambda a, d: "", 8))

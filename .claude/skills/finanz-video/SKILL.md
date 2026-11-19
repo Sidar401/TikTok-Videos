@@ -326,3 +326,4 @@ Heller Nachrichten-Look nach Vorbild Eulen-Kanal (finanzlehre). Probe: `renders/
 - KEIN Beagle unten (Nutzer 19.11.) – Beagle nur oben in der Kopfzeile + im Logo-Intro.
 - Untertitel unten: kurze Wortgruppen, fett dunkel, aktives Wort gelb hinterlegt (statt Beagle-Moderator).
 - Logo-Intro mit Jingle (`logo-jingle`), Folgen-CTA am Ende.
+- Neuer Look (19.11.): erster Satz zeigt unser Beagle-Logo groß; Logo-Intro hell: `ls.szene(hell=True)` (gleicher Hintergrund wie das Video).
