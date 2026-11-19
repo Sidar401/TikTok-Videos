@@ -17,7 +17,7 @@ from glow_short import build  # noqa: E402
 from lf_kit import Kit  # noqa: E402
 
 G, R, D = nl.G, nl.R, nl.DUNKEL
-K = Kit(HERE, 15, [], logos=["anthropic.svg", "claude.svg", "fed.png", "bitcoin.svg", "walmart.svg", "nasdaq.svg", "flagge-deutschland.svg"])
+K = Kit(HERE, 15, ["chips", "frankfurt-skyline", "neu-fed-gebaeude", "bitcoin-muenzen"], logos=["anthropic.svg", "claude.svg", "fed.png", "bitcoin.svg", "walmart.svg", "nasdaq.svg", "flagge-deutschland.svg"])
 cap, st = K.cap, K.st
 S = K.szene
 
@@ -26,13 +26,18 @@ def pops(ids_zeiten):
     return " ".join(f'pop("#{i}", {t});' for i, t in ids_zeiten)
 
 
-# s1 Einstieg: unser Logo groß (Nutzer 19.11.)
-S("s1", None, nl.CSS
+# s1 Einstieg (Vorlage renders/einstieg-idee-kombi.jpg): Kurve hinter Logo, Name, Satz, 3 Tages-Kacheln
+S("s1", None, nl.CSS + nl.kurve_hinten("kv1")
   + f'<div id="lg1" style="position:absolute;left:340px;top:520px;width:400px;height:400px;border-radius:50%;overflow:hidden;border:10px solid {nl.ORANGE};'
     f'box-shadow:0 20px 50px #0003;background:#1b1f22;z-index:4"><img src="assets/beagle.png" style="width:100%;height:100%;object-fit:cover"/></div>'
-  + f'<div id="t1" class="nk-gross" style="top:990px;font-size:66px;line-height:1.15">Alles, was heute<br/>an der Börse passiert ist</div>'
-  + f'<div id="b1" style="position:absolute;left:0;width:1080px;top:1190px;display:flex;justify-content:center;z-index:4"><span style="padding:14px 40px;border-radius:50px;background:{nl.ORANGE};color:#fff;font-weight:800;font-size:46px">in 60 Sekunden</span></div>',
-  lambda a, d: KIT_JS + f' tl.fromTo("#lg1", {{ scale: 0.92 }}, {{ scale: 1, duration: 0.35, ease: "back.out(2)" }}, {a}); pop("#t1", {a} + 0.15); pop("#b1", {cap("s1", 2)});')
+  + f'<div id="n1" class="nk-gross" style="top:935px;font-size:56px">HundeFinanz<span style="color:{nl.ORANGE}">Tv</span></div>'
+  + f'<div id="t1" class="nk-gross" style="top:1030px;font-size:62px;line-height:1.15">Alles, was heute<br/>an der Börse passiert ist</div>'
+  + f'<div id="b1" style="position:absolute;left:0;width:1080px;top:1215px;display:flex;justify-content:center;z-index:4"><span style="padding:14px 40px;border-radius:50px;background:{nl.ORANGE};color:#fff;font-weight:800;font-size:46px">in 60 Sekunden</span></div>'
+  + nl.mini_kachel("m1a", 60, 1370, "anthropic.svg", "+34 %", G, -3) + nl.mini_kachel("m1b", 400, 1395, "DAX", "−1,1 %", R, 2)
+  + nl.mini_kachel("m1c", 740, 1370, "bitcoin.svg", "▼ −0,8 %", R, -2),
+  lambda a, d: (KIT_JS + f' draw("#kv1-p", {a}, 1.2); tl.fromTo("#kv1-f", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.8 }}, {a} + 0.4);'
+                f' tl.fromTo("#lg1", {{ scale: 0.85 }}, {{ scale: 1, duration: 0.35, ease: "back.out(2)" }}, {a}); pop("#n1", {a} + 0.2); pop("#t1", {a} + 0.35);'
+                f' pop("#b1", {cap("s1", 2)}); pop("#m1a", {cap("s1", 2)} + 0.25); pop("#m1b", {cap("s1", 2)} + 0.45); pop("#m1c", {cap("s1", 2)} + 0.65);'))
 
 # s2 Schlagzeile
 S("s2", None, f'<div id="t2" class="nk-gross" style="top:340px;font-size:84px">Heute <span style="display:inline-block">👇</span></div>'
@@ -51,7 +56,7 @@ S("s3", None, nl.logo_frei("l3", "fed.png", 400, 380, 280)
 # s4–s6 Anthropic
 ANT = (nl.zeile("r4a", "Ausgabepreis", "83 $") + nl.zeile("r4b", "Erster Kurs", "111,50 $", G, "▲")
        + nl.zeile("r4c", "Plus", "+34 %", G, "✓") + nl.zeile("r4d", "Erlös", "81,3 Mrd. $", D, "🏆"))
-S("s4", None, nl.logo_frei("l4", "anthropic.svg", 210, 360, 660) + nl.logo_frei("l4b", "claude.svg", 390, 490, 300)
+S("s4", None, nl.foto("f4", "chips") + nl.logo_frei("l4", "anthropic.svg", 210, 360, 660) + nl.logo_frei("l4b", "claude.svg", 390, 490, 300)
   + nl.karte("k4", "Anthropic Börsengang", ANT, y=670),
   lambda a, d: (f'pop("#l4", {a}); pop("#l4b", {cap("s4", 2)}); pop("#k4", {cap("s5", 0)} - 0.3);'
                 + pops([("r4a", cap("s5", 0)), ("r4b", cap("s5", 1)), ("r4c", cap("s5", 1) + 0.6), ("r4d", cap("s6", 0))])),
@@ -64,14 +69,14 @@ KURVE = (f'<svg viewBox="0 0 800 380" style="width:780px;height:370px"><path id=
          f'<path id="dx-p" d="{PFAD}" fill="none" stroke="{R}" stroke-width="7"/><circle id="dx-k" cx="760" cy="304" r="12" fill="{R}"/>'
          f'<text x="600" y="350" font-size="40" font-weight="700" fill="{R}" style="font-family:Montserrat">25.464</text>'
          f'<text x="270" y="30" font-size="30" fill="#555" style="font-family:Montserrat">Rekord 27.001</text></svg>')
-S("s7", None, f'<img id="l7" src="assets/logos/flagge-deutschland.svg" style="position:absolute;left:470px;top:350px;width:140px;border-radius:6px;box-shadow:0 6px 14px #0002;z-index:4"/>'
+S("s7", None, nl.foto("f7", "frankfurt-skyline") + f'<img id="l7" src="assets/logos/flagge-deutschland.svg" style="position:absolute;left:470px;top:350px;width:140px;border-radius:6px;box-shadow:0 6px 14px #0002;z-index:4"/>'
   + nl.karte("k7", "DAX – letzte 8 Tage", KURVE + nl.zeile("r7a", "Heute", "−1,06 %", R) + nl.zeile("r7b", "Seit Rekord", "≈ −5 %", R), y=480),
   lambda a, d: f'pop("#l7", {a}); pop("#k7", {a} + 0.1); draw("#dx-p", {a} + 0.3, 1.4); pop("#r7a", {cap("s7", 1)}); pop("#r7b", {cap("s7", 1)} + 0.8);')
 
 # s8–s9 Notenbank
 FED = (f'<div id="q8" style="font-size:44px;color:{D};line-height:1.35;padding:10px 0 20px">„Weitere Zinserhöhungen<br/>könnten nötig sein.“</div>'
        + nl.zeile("r8a", "Zinsen", "▲ höher", R) + nl.zeile("r8b", "Kredite", "teurer", R) + nl.zeile("r8c", "Aktien", "weniger attraktiv", R))
-S("s8", None, nl.logo_frei("l8", "fed.png", 420, 340, 240) + nl.karte("k8", "Protokoll der US-Notenbank", FED, y=620),
+S("s8", None, nl.foto("f8", "neu-fed-gebaeude") + nl.logo_frei("l8", "fed.png", 420, 340, 240) + nl.karte("k8", "Protokoll der US-Notenbank", FED, y=620),
   lambda a, d: (f'pop("#l8", {a}); pop("#k8", {cap("s8", 1)}); pop("#q8", {cap("s8", 2)});'
                 + pops([("r8a", cap("s9", 0)), ("r8b", cap("s9", 1)), ("r8c", cap("s9", 2))])),
   [], bis="s10")
@@ -84,7 +89,7 @@ KG = (f'<div id="r10" style="display:flex;align-items:center;gap:30px;padding:26
       f'<div id="r11" style="display:flex;align-items:center;gap:30px;padding:26px 0">{GOLD}'
       f'<div><div style="font-weight:700;font-size:46px;color:{D}">Gold</div><div style="font-size:32px;color:#777">≈ 3.700 $</div></div>'
       f'<div style="margin-left:auto;font-weight:800;font-size:44px;color:{R};text-align:right">Tief<div style="font-size:26px;color:#888;font-weight:500">seit Sept. 2025</div></div></div>')
-S("s10", None, nl.karte("k10", "Krypto &amp; Gold", KG, y=420),
+S("s10", None, nl.foto("f10", "bitcoin-muenzen") + nl.karte("k10", "Krypto &amp; Gold", KG, y=420),
   lambda a, d: f'pop("#k10", {a}); pop("#r10", {cap("s10", 0)} + 0.4); pop("#r11", {cap("s11", 0)});', [], bis="s12")
 
 # s12 Walmart

@@ -99,3 +99,26 @@ def ohne_untertitel(here, bis):
             continue
         zeilen.append(z)
     p.write_text("\n".join(zeilen))
+
+
+def foto(id_, key, deckkraft=0.72):
+    """Echtes Foto hell und weich als Szenen-Hintergrund (wie Eulen-Kanal). Datei per Kit(hgs=[key]) nach assets/hg/ kopieren."""
+    return (f'<img id="{id_}" src="assets/hg/{key}.jpg" alt="" style="position:absolute;left:-30px;top:-30px;width:1140px;height:1980px;object-fit:cover;'
+            f'filter:blur(3px) grayscale(.25);z-index:0"/>'
+            f'<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(247,248,250,{deckkraft + 0.12:.2f}),rgba(236,238,242,{deckkraft:.2f}));z-index:1"></div>')
+
+
+def kurve_hinten(id_):
+    """Orange Börsen-Kurve hinter dem Logo im Einstieg. JS: draw("#<id>-p", t, 1.2)."""
+    pts = [(0, .5), (1, .62), (2, .55), (3, .8), (4, .72), (5, .92), (6, .6), (7, .45), (8, .3), (9, .35), (10, .2)]
+    d = "M" + " L".join(f"{i * 108} {560 + 360 * (1 - v)}" for i, v in pts)
+    return (f'<svg id="{id_}" viewBox="0 0 1080 1920" style="position:absolute;left:0;top:0;width:1080px;height:1920px;z-index:2"><defs><linearGradient id="{id_}-g" x1="0" y1="0" x2="0" y2="1">'
+            f'<stop offset="0" stop-color="{ORANGE}" stop-opacity=".22"/><stop offset="1" stop-color="{ORANGE}" stop-opacity="0"/></linearGradient></defs>'
+            f'<path id="{id_}-f" d="{d} L1080 1100 L0 1100 Z" fill="url(#{id_}-g)"/><path id="{id_}-p" d="{d}" fill="none" stroke="{ORANGE}" stroke-width="9" stroke-linejoin="round"/></svg>')
+
+
+def mini_kachel(id_, x, y, oben, wert, farbe, dreh):
+    """Kleine Zahlen-Kachel im Einstieg. oben = Logo-Datei (assets/logos) oder Text."""
+    o = f'<img src="assets/logos/{oben}" style="max-width:200px;max-height:54px"/>' if "." in oben else f'<div style="font-weight:900;font-size:44px;color:{DUNKEL}">{oben}</div>'
+    return (f'<div id="{id_}" style="position:absolute;left:{x}px;top:{y}px;width:280px;padding:22px 0;background:#fff;border:2px solid #e2e5ea;border-radius:12px;'
+            f'box-shadow:0 14px 30px #0002;text-align:center;transform:rotate({dreh}deg);z-index:5">{o}<div style="font-weight:800;font-size:50px;color:{farbe};margin-top:8px">{wert}</div></div>')
