@@ -312,3 +312,7 @@ Im Chat beim Skript kurz markieren, wo das Logo-Intro sitzt.
 - Kein Thema/Firma innerhalb von 30 Tagen wiederholen – auch NICHT mit „neuem Blickwinkel“ (Nvidia, Bitcoin, Anthropic, Klarna, Bargeld, Schufa waren viel zu oft).
 - Vor Ideen Häufigkeit zählen: `grep -o -i "<stichwort>" THEMEN.md | wc -l`.
 - Bereiche rotieren: Wohnen/Miete, Erben/Familie, Promi-Geld, Firmen-Skandale & Geld-Geschichten, Alltag/Sparen, Jobs/Gehalt, Kurioses – Börse/KI nur selten.
+
+## Abend-Börsenrückblick: fester Einstieg (Nutzer 19.11.)
+- Erster Satz IMMER: „Alles, was heute an der Börse passiert ist – in 60 Sekunden.“
+- Zweiter Satz: „Und heute: <größte Nachricht des Tages>.“ Dann Open Loop → Logo-Intro.
