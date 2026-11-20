@@ -37,10 +37,10 @@ CSS = f"""<style>
 
 def kopf(rechts="BÖRSENNEWS", datum=""):
     return (f'<div id="kopf" style="position:absolute;left:0;top:150px;width:1080px;height:120px;background:linear-gradient(90deg,#fbe9e9,#fdf6e3);'
-            f'border-bottom:2px solid #e4e6ea;display:flex;align-items:center;padding:0 50px;gap:18px;z-index:8">'
+            f'border-bottom:2px solid #e4e6ea;display:flex;align-items:center;padding:0 64px 0 50px;gap:18px;z-index:8">'
             f'<img src="assets/beagle.png" style="width:86px;height:86px;border-radius:50%;border:3px solid #fff;box-shadow:0 4px 10px #0002"/>'
             f'<div style="font-weight:700;font-size:40px;color:{DUNKEL}">HundeFinanzTv</div>'
-            f'<div style="margin-left:auto;font-size:34px;color:{DUNKEL};font-weight:800;letter-spacing:1px;white-space:nowrap">{rechts}'
+            f'<div style="margin-left:auto;font-size:31px;color:{DUNKEL};font-weight:800;letter-spacing:1px;white-space:nowrap">{rechts}'
             f'<span style="font-weight:500;color:#555c66;margin-left:12px">{datum}</span></div></div>')
 
 

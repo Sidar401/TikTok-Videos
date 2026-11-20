@@ -1,0 +1,95 @@
+{
+ "titel": "Börsentag 20.11.",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Alles, was heute an der Börse passiert ist – in sechzig Sekunden.",
+   "text": "Alles, was heute an der Börse passiert ist – in 60 Sekunden",
+   "bild": ""
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Und heute: Der DAX rutscht unter fünfundzwanzigtausend Punkte – zum sechsten Mal in Folge im Minus.",
+   "text": "Und heute: Der DAX rutscht unter 25.000 Punkte – zum sechsten Mal in Folge im Minus",
+   "bild": ""
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Und eine Zahl dieser Woche solltest du kennen, wenn du Aktien oder E-Te-Effs hast.",
+   "text": "Und eine Zahl dieser Woche solltest du kennen, wenn du Aktien oder ETFs hast",
+   "bild": ""
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Der DAX schließt bei vierundzwanzigtausendachthundertdrei Punkten – minus zwei Komma sechs Prozent.",
+   "text": "Der DAX schließt bei 24.803 Punkten – minus 2,6 %",
+   "bild": ""
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Der MDAX fällt genauso stark: ebenfalls minus zwei Komma sechs Prozent.",
+   "text": "Der MDAX fällt genauso stark: ebenfalls minus 2,6 %",
+   "bild": ""
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Besonders hart trifft es Technik-Werte: Infineon verliert fast acht Prozent, Siemens Energy über sechs Prozent.",
+   "text": "Besonders hart trifft es Technik‑Werte: Infineon verliert fast 8 %, Siemens Energy über 6 %",
+   "bild": ""
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Auch in New York geht es bergab: Die Tech-Börse Nasdaq liegt im Handel rund drei Prozent im Minus.",
+   "text": "Auch in New York geht es bergab: Die Tech‑Börse Nasdaq liegt im Handel rund 3 % im Minus",
+   "bild": ""
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Vor allem Chip-Firmen wie AMD und Micron werden verkauft.",
+   "text": "Vor allem Chip‑Firmen wie AMD und Micron werden verkauft",
+   "bild": ""
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Die Gründe: die Angst vor höheren Zinsen – und ein starker US-Dollar.",
+   "text": "Die Gründe: die Angst vor höheren Zinsen – und ein starker US‑Dollar",
+   "bild": ""
+  },
+  {
+   "id": "s10",
+   "sprechtext": "Und jetzt die Zahl der Woche: Der DAX hat in dieser Woche über sieben Prozent verloren.",
+   "text": "Und jetzt die Zahl der Woche: Der DAX hat in dieser Woche über 7 % verloren",
+   "bild": ""
+  },
+  {
+   "id": "s11",
+   "sprechtext": "Vor gut einer Woche stand er noch auf Rekord, bei rund siebenundzwanzigtausend Punkten.",
+   "text": "Vor gut einer Woche stand er noch auf Rekord, bei rund 27.000 Punkten",
+   "bild": ""
+  },
+  {
+   "id": "s12",
+   "sprechtext": "Heißt für dich: Dein E-Te-Eff-Depot ist gerade wahrscheinlich im Minus – das ist normal und kein Grund zur Panik.",
+   "text": "Heißt für dich: Dein ETF‑Depot ist gerade wahrscheinlich im Minus – das ist normal und kein Grund zur Panik",
+   "bild": ""
+  },
+  {
+   "id": "s13",
+   "sprechtext": "Wer langfristig spart, kauft mit seinem Sparplan jetzt einfach günstiger ein.",
+   "text": "Wer langfristig spart, kauft mit seinem Sparplan jetzt einfach günstiger ein",
+   "bild": ""
+  },
+  {
+   "id": "s14",
+   "sprechtext": "Keine Anlageberatung, nur erklärt.",
+   "text": "Keine Anlageberatung, nur erklärt",
+   "bild": ""
+  },
+  {
+   "id": "s15",
+   "sprechtext": "Folge HundeFinanzTv, wir bringen dir jeden Abend den Börsentag in sechzig Sekunden.",
+   "text": "Folge HundeFinanzTv, wir bringen dir jeden Abend den Börsentag in 60 Sekunden",
+   "bild": ""
+  }
+ ]
+}

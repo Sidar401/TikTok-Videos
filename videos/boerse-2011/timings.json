@@ -1,0 +1,341 @@
+{
+ "dauer": 74.67,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 3.517,
+   "captions": [
+    {
+     "text": "Alles,",
+     "start": 0.0,
+     "end": 0.378
+    },
+    {
+     "text": "was heute an der Börse",
+     "start": 0.378,
+     "end": 1.764
+    },
+    {
+     "text": "passiert ist – in 60 Sekunden",
+     "start": 1.764,
+     "end": 3.517
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 3.517,
+   "end": 8.95,
+   "captions": [
+    {
+     "text": "Und heute: Der DAX rutscht",
+     "start": 3.517,
+     "end": 5.166
+    },
+    {
+     "text": "unter 25.000 Punkte",
+     "start": 5.166,
+     "end": 6.513
+    },
+    {
+     "text": "– zum sechsten",
+     "start": 6.513,
+     "end": 7.46
+    },
+    {
+     "text": "Mal in Folge im Minus",
+     "start": 7.46,
+     "end": 8.95
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 8.95,
+   "end": 13.826,
+   "captions": [
+    {
+     "text": "Und eine Zahl dieser",
+     "start": 8.95,
+     "end": 10.206
+    },
+    {
+     "text": "Woche solltest du kennen,",
+     "start": 10.206,
+     "end": 11.91
+    },
+    {
+     "text": "wenn du Aktien oder ETFs hast",
+     "start": 11.91,
+     "end": 13.826
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 16.826,
+   "end": 21.882,
+   "captions": [
+    {
+     "text": "Der DAX schließt",
+     "start": 16.826,
+     "end": 18.508
+    },
+    {
+     "text": "bei 24.803 Punkten",
+     "start": 18.508,
+     "end": 20.468
+    },
+    {
+     "text": "– minus 2,6 %",
+     "start": 20.468,
+     "end": 21.882
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 21.882,
+   "end": 26.113,
+   "captions": [
+    {
+     "text": "Der MDAX fällt genauso",
+     "start": 21.882,
+     "end": 23.743
+    },
+    {
+     "text": "stark: ebenfalls minus 2,6 %",
+     "start": 23.743,
+     "end": 26.113
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 26.113,
+   "end": 32.806,
+   "captions": [
+    {
+     "text": "Besonders hart trifft es",
+     "start": 26.113,
+     "end": 28.019
+    },
+    {
+     "text": "Technik‑Werte: Infineon",
+     "start": 28.019,
+     "end": 29.734
+    },
+    {
+     "text": "verliert fast 8 %,",
+     "start": 29.734,
+     "end": 31.157
+    },
+    {
+     "text": "Siemens Energy über 6 %",
+     "start": 31.157,
+     "end": 32.806
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 32.806,
+   "end": 38.423,
+   "captions": [
+    {
+     "text": "Auch in New York geht es",
+     "start": 32.806,
+     "end": 34.276
+    },
+    {
+     "text": "bergab: Die Tech‑Börse",
+     "start": 34.276,
+     "end": 35.746
+    },
+    {
+     "text": "Nasdaq liegt im Handel",
+     "start": 35.746,
+     "end": 37.256
+    },
+    {
+     "text": "rund 3 % im Minus",
+     "start": 37.256,
+     "end": 38.423
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 38.423,
+   "end": 41.858,
+   "captions": [
+    {
+     "text": "Vor allem Chip‑Firmen wie AMD",
+     "start": 38.423,
+     "end": 40.256
+    },
+    {
+     "text": "und Micron werden verkauft",
+     "start": 40.256,
+     "end": 41.858
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 41.858,
+   "end": 46.205,
+   "captions": [
+    {
+     "text": "Die Gründe: die Angst",
+     "start": 41.858,
+     "end": 43.286
+    },
+    {
+     "text": "vor höheren Zinsen –",
+     "start": 43.286,
+     "end": 44.63
+    },
+    {
+     "text": "und ein starker US‑Dollar",
+     "start": 44.63,
+     "end": 46.205
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 46.205,
+   "end": 51.378,
+   "captions": [
+    {
+     "text": "Und jetzt die Zahl der Woche:",
+     "start": 46.205,
+     "end": 48.117
+    },
+    {
+     "text": "Der DAX hat in dieser",
+     "start": 48.117,
+     "end": 49.716
+    },
+    {
+     "text": "Woche über 7 % verloren",
+     "start": 49.716,
+     "end": 51.378
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 51.378,
+   "end": 55.826,
+   "captions": [
+    {
+     "text": "Vor gut einer Woche",
+     "start": 51.378,
+     "end": 52.661
+    },
+    {
+     "text": "stand er noch auf Rekord,",
+     "start": 52.661,
+     "end": 54.35
+    },
+    {
+     "text": "bei rund 27.000 Punkten",
+     "start": 54.35,
+     "end": 55.826
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 55.826,
+   "end": 62.654,
+   "captions": [
+    {
+     "text": "Heißt für dich: Dein ETF‑Depot",
+     "start": 55.826,
+     "end": 57.742
+    },
+    {
+     "text": "ist gerade wahrscheinlich",
+     "start": 57.742,
+     "end": 59.401
+    },
+    {
+     "text": "im Minus – das ist normal",
+     "start": 59.401,
+     "end": 61.061
+    },
+    {
+     "text": "und kein Grund zur Panik",
+     "start": 61.061,
+     "end": 62.654
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 62.654,
+   "end": 66.621,
+   "captions": [
+    {
+     "text": "Wer langfristig spart,",
+     "start": 62.654,
+     "end": 63.881
+    },
+    {
+     "text": "kauft mit seinem Sparplan",
+     "start": 63.881,
+     "end": 65.275
+    },
+    {
+     "text": "jetzt einfach günstiger ein",
+     "start": 65.275,
+     "end": 66.621
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 66.621,
+   "end": 68.945,
+   "captions": [
+    {
+     "text": "Keine Anlageberatung,",
+     "start": 66.621,
+     "end": 68.091
+    },
+    {
+     "text": "nur erklärt",
+     "start": 68.091,
+     "end": 68.945
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "start": 68.945,
+   "end": 74.056,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTv,",
+     "start": 68.945,
+     "end": 70.308
+    },
+    {
+     "text": "wir bringen dir jeden Abend",
+     "start": 70.308,
+     "end": 72.148
+    },
+    {
+     "text": "den Börsentag in 60 Sekunden",
+     "start": 72.148,
+     "end": 74.056
+    }
+   ]
+  }
+ ],
+ "logo_intro": 13.826
+}
