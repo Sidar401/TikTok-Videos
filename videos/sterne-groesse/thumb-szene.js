@@ -151,13 +151,17 @@ renderAt = (tt) => {
   seg(t.zu, t.punkt - 0.1, "Weißer Zwerg" + sub("≈ so groß wie die Erde")); seg(t.punkt + 0.3, t.abo - 0.1, "unsere Zukunft ✨");
   word(wh, wa); cap(tt);
 };
-// ===== Titelbild-Komposition (nur für thumb, t < 1) =====
-const _orig = renderAt; const tSun = starBall(SB, 16, 0, [1.3, 1.0, 0.72], "rgba(255,190,90,.9)", 7);
-renderAt = (tt) => { if (tt >= 1) return _orig(tt);
-  const st = B.st; OB.forEach((k) => { if (k !== 'st') { B[k].visible = false; B[k].userData.glow.visible = false; } }); tSun.position.set(XB.st - RB.st * (LAND ? 1.45 : 0.62), LAND ? -RB.st * 0.25 : -RB.st * 1.18, 0); tSun.userData.glow.position.copy(tSun.position); tSun.userData.glow.material.opacity = 1; tSun.material.color.setRGB(2, 1.6, 1.1);
-  const look = V(XB.st - RB.st * (LAND ? 0.55 : 0.1), LAND ? 0 : -RB.st * 0.45, 0); const pos = look.clone().add(V(0, 0, RB.st * (LAND ? 2.5 : 4.2)));
-  cam.fov = 40; cam.near = 10; cam.far = 1e8; cam.updateProjectionMatrix(); cam.position.copy(pos); cam.lookAt(look); E.look([1, 1, 1], [0, 0, 0], 0.4, 0.85); E.render(SB, tt);
-  const v = tSun.position.clone().project(cam); const x = (v.x * 0.5 + 0.5) * window.FMT.W, y = (-v.y * 0.5 + 0.5) * window.FMT.H;
+// ===== Titelbild: Sterne-Treppe (t < 1) =====
+const _o = renderAt; const ST2 = new THREE.Scene(); K.reseed(3); K.stars(ST2, 5000, -1, 4e6, 1.6).material.opacity = 0.5;
+const LINE = [["Sonne", "so", 26], ["Sirius", "si", 40], ["Arktur", "ar", 70], ["Rigel", "ri", 112], ["Beteigeuze", "be", 190], ["Stephenson 2-18", "st", 340]];
+const tb = LINE.map(([n, k, r]) => ({ n, r, m: starBall(ST2, r, 0, k === "si" || k === "ri" ? [0.7, 0.9, 1.7] : COL[k][0], k === "si" || k === "ri" ? "rgba(140,180,255,.7)" : COL[k][1], 2.6, k === "si" || k === "ri") }));
+renderAt = (tt) => { if (tt >= 1) return _o(tt);
+  const Wd = window.FMT.W, Hd = window.FMT.H; let x = LAND ? -Wd / 2 + 70 : -Wd / 2 + 40; const base = LAND ? -Hd / 2 + 150 : -Hd / 2 + 520; const sc = LAND ? 1 : 0.52;
+  const out = []; if (!LAND) { const PP = [[85, 1555, 16], [165, 1530, 26], [280, 1480, 46], [440, 1395, 76], [660, 1245, 128], [905, 985, 245]];
+    tb.forEach((b, i) => { const [cx, cy, r] = PP[i]; const x = cx - Wd / 2, y = Hd / 2 - cy; b.m.position.set(x, y, 0); b.m.scale.setScalar(r / b.r); b.m.userData.glow.position.set(x, y, -r * 0.2); b.m.userData.glow.scale.setScalar(r * 2.6); b.m.rotation.y = i; out.push([b.n, x, y - r]); }); }
+  else tb.forEach((b, i) => { const r = b.r * sc; x += r; const y = base + r + (LAND ? i * 6 : i * 4);  b.m.position.set(x, y, 0); b.m.scale.setScalar(sc); b.m.userData.glow.position.set(x, y, -r * 0.2); b.m.userData.glow.scale.setScalar(r * 2.6); b.m.rotation.y = i; out.push([b.n, x, y - r]); x += r + (LAND ? 46 : 14); });
+  const D = 20000; const fov = 2 * Math.atan(Hd / 2 / D) * 180 / Math.PI; cam.fov = fov; cam.near = 100; cam.far = 1e6; cam.updateProjectionMatrix(); cam.position.set(0, 0, D); cam.lookAt(0, 0, 0);
+  E.look([1, 1, 1], [0, 0, 0], 0.35, 0.85); E.render(ST2, tt);
   let o = document.getElementById("thx"); if (!o) { o = document.createElement("div"); o.id = "thx"; o.style.cssText = "position:absolute;inset:0;z-index:120;pointer-events:none"; document.getElementById("root").appendChild(o); }
-  const R = LAND ? 60 : 75; o.innerHTML = `<div style="position:absolute;left:${x - R}px;top:${y - R}px;width:${2 * R}px;height:${2 * R}px;border:7px solid #ffd23f;border-radius:50%;box-shadow:0 0 30px rgba(255,210,63,.8)"></div><div style="position:absolute;left:${x - 160}px;top:${y + R + 14}px;width:320px;text-align:center;font:900 ${LAND ? 52 : 62}px Inter,sans-serif;color:#ffd23f;text-shadow:0 4px 20px #000">☝️ hier!</div><div style="position:absolute;right:${LAND ? 60 : 0}px;left:${LAND ? "auto" : "0"};bottom:${LAND ? 50 : 560}px;display:${LAND ? "block" : "none"};text-align:center;font:800 ${LAND ? 40 : 50}px Inter,sans-serif;color:#fff;text-shadow:0 4px 20px #000">Stephenson 2-18</div>`;
+  o.innerHTML = out.map(([n, px, py]) => `<div style="position:absolute;left:${Wd / 2 + px - 200}px;top:${Hd / 2 - py + 14}px;width:400px;text-align:center;font:800 ${LAND ? 30 : 27}px Inter,sans-serif;color:rgba(255,255,255,.92);text-shadow:0 3px 14px #000">${n}</div>`).join("");
 };
