@@ -27,8 +27,23 @@
       .share { position: absolute; right: 40px; top: 1150px; }
       .share span { display: inline-block; background: #fe2c55; color: #fff; font-weight: 900; font-size: 50px; padding: 14px 32px; border-radius: 60px; box-shadow: 0 0 34px rgba(254,44,85,.6); }
       .follow { top: 1150px; }
-      html, body, #root { width: 1920px !important; height: 1080px !important; } .line { width: 1920px !important; } .tag { top: 48px !important; } .capw { top: 900px !important; font-size: 66px !important; } .hookbig { top: 300px !important; } .share { top: 560px !important; } .follow { top: 520px !important; } #word { top: 650px !important; font-size: 78px !important; } .hookdim { width: 1920px !important; height: 1080px !important; } .hookbig { font-size: 130px !important; } #word .sub { font: 600 36px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 8px; }
-    </style>
+      html, body, #root { width: 1920px !important; height: 1080px !important; } .line { width: 1920px !important; } .tag { top: 48px !important; } .capw { top: 900px !important; font-size: 66px !important; } .hookbig { top: 300px !important; } .share { top: 560px !important; } .follow { top: 520px !important; } #word { top: 650px !important; font-size: 78px !important; } .hookdim { width: 1920px !important; height: 1080px !important; } .hookbig { font-size: 130px !important; } #word .sub { font: 600 36px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 8px; } .capw, #cap-in { display: none !important; } #fk-wrap { left: 590px !important; top: 300px !important; } #fk-touch, #fk-rip { left: 960px !important; top: 668px !important; }
+    
+#fk-wrap { position: absolute; left: 170px; top: 760px; width: 740px; z-index: 30; }
+#fk { position: relative; width: 740px; padding: 130px 56px 54px; border-radius: 52px; text-align: center; overflow: hidden; font-family: "Inter Display", Inter, sans-serif; color: #fff;
+  background: linear-gradient(180deg, rgba(30,34,48,.74), rgba(10,12,20,.82)); border: 1.5px solid rgba(255,255,255,.16); backdrop-filter: blur(26px) saturate(1.2); -webkit-backdrop-filter: blur(26px) saturate(1.2);
+  box-shadow: 0 40px 100px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.18); }
+#fk-wrap > .fk-av { position: absolute; left: 50%; top: -105px; width: 210px; height: 210px; margin-left: -105px; z-index: 3; border-radius: 50%; background: url(assets/avatar.png) center/cover; box-shadow: 0 0 0 8px rgba(12,14,22,.9), 0 20px 50px rgba(0,0,0,.6); }
+.fk-ring { position: absolute; inset: -9px; border-radius: 50%; background: conic-gradient(from 0deg, #ffe7a8, rgba(255,231,168,.1), #ffd06a, rgba(255,231,168,.1), #ffe7a8);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 4px)); mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 4px)); }
+#fk .n { font-size: 70px; font-weight: 900; letter-spacing: -1.5px; } #fk .d { font: 600 36px Inter, sans-serif; color: rgba(255,255,255,.66); margin: 10px 0 40px; }
+#fk .btn { position: relative; height: 116px; border-radius: 58px; font-size: 50px; font-weight: 800; }
+#fk .btn .a, #fk .btn .b { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 14px; border-radius: inherit; }
+#fk .btn .a { background: #fff; color: #0b0d14; } #fk .btn .b { opacity: 0; background: linear-gradient(180deg, #ffe39a, #f6c04a); color: #1a1406; }
+#fk-shine { position: absolute; top: -20%; bottom: -20%; width: 220px; left: -300px; background: linear-gradient(100deg, transparent, rgba(255,255,255,.22), transparent); transform: skewX(-18deg); }
+#fk-touch, #fk-rip { position: absolute; left: 540px; top: 1127px; width: 92px; height: 92px; margin: -46px 0 0 -46px; border-radius: 50%; z-index: 31; opacity: 0; }
+#fk-touch { background: rgba(255,255,255,.32); border: 3px solid rgba(255,255,255,.9); box-shadow: 0 8px 30px rgba(0,0,0,.45); } #fk-rip { border: 3px solid rgba(255,255,255,.8); }
+</style>
   </head>
   <body>
     <div id="root" data-composition-id="main" data-start="0" data-duration="210" data-width="1920" data-height="1080">
@@ -39,8 +54,7 @@
       <div id="cap" class="line capw clip" data-start="6.0" data-duration="204.00" data-track-index="4"><span id="cap-in"></span></div>
       <div id="hookdim" class="hookdim clip" data-start="0" data-duration="6.0" data-track-index="8"><span></span></div>
       <div id="hookbig" class="line hookbig clip" data-start="0" data-duration="6.0" data-track-index="7"><span id="hookbig-in">Wie groß sind Sterne<br /><span class="y">WIRKLICH?</span></span></div>
-      <div id="share" class="share clip" data-start="77.5" data-duration="4.3" data-track-index="5"><span id="share-in">🔔 Abonnieren · 👍 Liken</span></div>
-      <div id="follow" class="line follow clip" data-start="204.7" data-duration="5.30" data-track-index="6"><span id="follow-in" class="box"><span class="t">Abonnier uns! 🔔</span><span class="pill">👍 Video liken</span></span></div>
+      <div id="fk-box" class="clip" data-start="77.5" data-duration="4.6" data-track-index="5"><div id="fk-wrap"><div class="fk-av"><div class="fk-ring"></div></div><div id="fk"><div class="n">Novaro</div><div class="d">Weltraum, einfach erklärt</div><div class="btn" id="fk-btn"><span class="a">Folgen</span><span class="b"><svg class="ck" width="44" height="44" viewBox="0 0 44 44"><path d="M8 23l9 9 19-20" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="48" stroke-dashoffset="48"/></svg>Gefolgt</span></div><div id="fk-shine"></div></div></div><div id="fk-rip"></div><div id="fk-touch"></div></div>
       <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="208.17" data-track-index="9" data-volume="1"></audio>
       <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="210" data-track-index="10" data-volume="0.3"></audio>
     </div>
@@ -52,11 +66,19 @@
       tl.from("#hookbig-in", { opacity: 0, scale: 1.3, duration: 0.35, ease: "power3.out" }, 0);
       tl.to("#hookbig-in", { scale: 0.7, opacity: 0, filter: "blur(10px)", duration: 0.3, ease: "power2.in" }, 6.0 - 0.32);
       tl.to("#hookdim", { opacity: 0, duration: 0.3 }, 6.0 - 0.32);
-      tl.from("#share-in", { opacity: 0, x: 80, scale: 0.6, duration: 0.3, ease: "back.out(2.5)" }, 77.5);
-      tl.to("#share-in", { scale: 1.08, duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut" }, 77.5 + 0.4);
-      tl.to("#share-in", { opacity: 0, duration: 0.2 }, 77.5 + 4.3 - 0.25);
-      tl.from("#follow-in", { opacity: 0, scale: 0.6, duration: 0.3, ease: "back.out(2.5)" }, 204.7);
-      tl.to("#follow-in .pill", { scale: 1.1, duration: 0.3, yoyo: true, repeat: 3 }, 204.7 + 0.4);
+
+      tl.fromTo("#fk-wrap", { opacity: 0, y: 120, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: "expo.out" }, 77.5);
+      tl.fromTo(".fk-ring", { rotation: 0 }, { rotation: 200, duration: 4.6, ease: "none" }, 77.5);
+      tl.fromTo("#fk .n, #fk .d, #fk-btn", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, stagger: 0.07, ease: "power3.out" }, 77.7);
+      tl.fromTo("#fk-touch", { opacity: 0, x: 240, y: 260, scale: 1.3 }, { opacity: 1, x: 0, y: 0, scale: 1, duration: 0.8, ease: "power3.out" }, 78.4);
+      tl.to("#fk-touch", { scale: 0.72, duration: 0.14 }, 79.26); tl.to("#fk-touch", { scale: 1, duration: 0.25 }, 79.4);
+      tl.to("#fk-btn", { scale: 0.95, duration: 0.14 }, 79.26); tl.to("#fk-btn", { scale: 1, duration: 0.45, ease: "back.out(3)" }, 79.4);
+      tl.fromTo("#fk-rip", { opacity: 0.9, scale: 0.6 }, { opacity: 0, scale: 3.2, duration: 0.7, ease: "power2.out", immediateRender: false }, 79.4);
+      tl.to("#fk-btn .a", { opacity: 0, duration: 0.18 }, 79.4); tl.to("#fk-btn .b", { opacity: 1, duration: 0.22 }, 79.45);
+      tl.to("#fk-btn .ck path", { attr: { "stroke-dashoffset": 0 }, duration: 0.45, ease: "power2.out" }, 79.55000000000001);
+      tl.fromTo("#fk-shine", { x: 0 }, { x: 1400, duration: 0.9, ease: "power2.inOut", immediateRender: false }, 79.75);
+      tl.to("#fk-touch", { opacity: 0, scale: 0.6, duration: 0.4, ease: "power2.in" }, 80.10000000000001);
+      tl.to("#fk-wrap", { opacity: 0, y: 40, scale: 0.96, duration: 0.45, ease: "power2.in" }, 81.6);
       tl.to({}, { duration: 0.01 }, 210 - 0.01);
       window.__timelines = window.__timelines || {};
       window.__timelines["main"] = tl;
