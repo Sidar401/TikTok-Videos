@@ -121,3 +121,13 @@ def mini_kachel(id_, x, y, oben, wert, farbe, dreh):
     o = f'<img src="assets/logos/{oben}" style="max-width:200px;max-height:54px"/>' if "." in oben else f'<div style="font-weight:900;font-size:44px;color:{DUNKEL}">{oben}</div>'
     return (f'<div id="{id_}" style="position:absolute;left:{x}px;top:{y}px;width:280px;padding:22px 0;background:#fff;border:2px solid #e2e5ea;border-radius:12px;'
             f'box-shadow:0 14px 30px #0002;text-align:center;transform:rotate({dreh}deg);z-index:5">{o}<div style="font-weight:800;font-size:50px;color:{farbe};margin-top:8px">{wert}</div></div>')
+
+
+def kopf_quer(rechts="BÖRSENNEWS", datum=""):
+    """Kopfzeile für 16:9 (1920×1080)."""
+    return (f'<div id="kopf" style="position:absolute;left:0;top:26px;width:1920px;height:110px;background:linear-gradient(90deg,#fbe9e9,#fdf6e3);'
+            f'border-bottom:2px solid #e4e6ea;display:flex;align-items:center;padding:0 70px;gap:22px;z-index:8">'
+            f'<img src="assets/beagle.png" style="width:80px;height:80px;border-radius:50%;border:3px solid #fff;box-shadow:0 4px 10px #0002"/>'
+            f'<div style="font-weight:700;font-size:42px;color:{DUNKEL}">HundeFinanzTv</div>'
+            f'<div style="margin-left:auto;font-size:38px;color:{DUNKEL};font-weight:800;letter-spacing:1px;white-space:nowrap">{rechts}'
+            f'<span style="font-weight:500;color:#555c66;margin-left:12px">{datum}</span></div></div>')

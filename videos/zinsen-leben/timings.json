@@ -1,0 +1,485 @@
+{
+ "dauer": 101.64,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 3.214,
+   "captions": [
+    {
+     "text": "Wie viel Geld brauchst du,",
+     "start": 0.0,
+     "end": 1.537
+    },
+    {
+     "text": "um nie wieder",
+     "start": 1.537,
+     "end": 2.305
+    },
+    {
+     "text": "arbeiten zu müssen?",
+     "start": 2.305,
+     "end": 3.214
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 3.214,
+   "end": 7.0,
+   "captions": [
+    {
+     "text": "Die Antwort überrascht",
+     "start": 3.214,
+     "end": 4.362
+    },
+    {
+     "text": "die meisten – und wir rechnen",
+     "start": 4.362,
+     "end": 5.872
+    },
+    {
+     "text": "sie dir jetzt live vor",
+     "start": 5.872,
+     "end": 7.0
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 7.0,
+   "end": 11.582,
+   "captions": [
+    {
+     "text": "Und am Ende zeigen",
+     "start": 7.0,
+     "end": 8.003
+    },
+    {
+     "text": "wir dir den Trick,",
+     "start": 8.003,
+     "end": 9.025
+    },
+    {
+     "text": "mit dem du dein Ziel",
+     "start": 9.025,
+     "end": 10.162
+    },
+    {
+     "text": "10 Jahre früher erreichst",
+     "start": 10.162,
+     "end": 11.582
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 14.582,
+   "end": 17.775,
+   "captions": [
+    {
+     "text": "Sagen wir,",
+     "start": 14.582,
+     "end": 15.144
+    },
+    {
+     "text": "du willst",
+     "start": 15.144,
+     "end": 15.827
+    },
+    {
+     "text": "2.000 € im Monat zum Leben",
+     "start": 15.827,
+     "end": 17.775
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 17.775,
+   "end": 20.023,
+   "captions": [
+    {
+     "text": "Das sind 24.000 € im Jahr",
+     "start": 17.775,
+     "end": 20.023
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 20.023,
+   "end": 22.723,
+   "captions": [
+    {
+     "text": "Profis nutzen",
+     "start": 20.023,
+     "end": 21.088
+    },
+    {
+     "text": "dafür die 4‑%‑Regel",
+     "start": 21.088,
+     "end": 22.723
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 22.723,
+   "end": 28.315,
+   "captions": [
+    {
+     "text": "Du nimmst jedes Jahr nur",
+     "start": 22.723,
+     "end": 24.285
+    },
+    {
+     "text": "4 % von deinem Geld –",
+     "start": 24.285,
+     "end": 25.652
+    },
+    {
+     "text": "der Rest bleibt angelegt",
+     "start": 25.652,
+     "end": 27.182
+    },
+    {
+     "text": "und arbeitet weiter",
+     "start": 27.182,
+     "end": 28.315
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 28.315,
+   "end": 35.131,
+   "captions": [
+    {
+     "text": "Eine bekannte US‑Studie",
+     "start": 28.315,
+     "end": 29.832
+    },
+    {
+     "text": "hat gezeigt: So hat das Geld",
+     "start": 29.832,
+     "end": 31.806
+    },
+    {
+     "text": "in fast allen Fällen",
+     "start": 31.806,
+     "end": 33.215
+    },
+    {
+     "text": "mindestens 30 Jahre gereicht",
+     "start": 33.215,
+     "end": 35.131
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 35.131,
+   "end": 39.764,
+   "captions": [
+    {
+     "text": "24.000 geteilt durch",
+     "start": 35.131,
+     "end": 37.258
+    },
+    {
+     "text": "4 % – das sind 600.000 €",
+     "start": 37.258,
+     "end": 39.764
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 39.764,
+   "end": 42.229,
+   "captions": [
+    {
+     "text": "Klingt viel? Jetzt",
+     "start": 39.764,
+     "end": 40.815
+    },
+    {
+     "text": "kommt der spannende Teil",
+     "start": 40.815,
+     "end": 42.229
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 42.229,
+   "end": 47.462,
+   "captions": [
+    {
+     "text": "Mit 200 € im Monat",
+     "start": 42.229,
+     "end": 43.8
+    },
+    {
+     "text": "und 7 % Rendite brauchst",
+     "start": 43.8,
+     "end": 46.038
+    },
+    {
+     "text": "du rund 42 Jahre",
+     "start": 46.038,
+     "end": 47.462
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 47.462,
+   "end": 50.652,
+   "captions": [
+    {
+     "text": "Mit 500 € sind es nur",
+     "start": 47.462,
+     "end": 49.191
+    },
+    {
+     "text": "noch etwa 30 Jahre",
+     "start": 49.191,
+     "end": 50.652
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 50.652,
+   "end": 54.926,
+   "captions": [
+    {
+     "text": "Und mit 1.000 € im Monat",
+     "start": 50.652,
+     "end": 52.242
+    },
+    {
+     "text": "bist du schon nach rund",
+     "start": 52.242,
+     "end": 53.843
+    },
+    {
+     "text": "22 Jahren am Ziel",
+     "start": 53.843,
+     "end": 54.926
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 54.926,
+   "end": 58.482,
+   "captions": [
+    {
+     "text": "Schreib uns",
+     "start": 54.926,
+     "end": 55.451
+    },
+    {
+     "text": "in die Kommentare: Wie viel",
+     "start": 55.451,
+     "end": 56.984
+    },
+    {
+     "text": "müsstest du im Monat sparen?",
+     "start": 56.984,
+     "end": 58.482
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "start": 58.482,
+   "end": 65.801,
+   "captions": [
+    {
+     "text": "Und jetzt der Aha‑Moment:",
+     "start": 58.482,
+     "end": 60.474
+    },
+    {
+     "text": "Bei 500 € im Monat",
+     "start": 60.474,
+     "end": 61.978
+    },
+    {
+     "text": "zahlst du in 30 Jahren",
+     "start": 61.978,
+     "end": 63.817
+    },
+    {
+     "text": "nur 180.000 € selbst ein",
+     "start": 63.817,
+     "end": 65.801
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "start": 65.801,
+   "end": 69.811,
+   "captions": [
+    {
+     "text": "Die restlichen 430.000 € sind",
+     "start": 65.801,
+     "end": 68.345
+    },
+    {
+     "text": "Zinsen auf Zinsen",
+     "start": 68.345,
+     "end": 69.811
+    }
+   ]
+  },
+  {
+   "id": "s17",
+   "start": 69.811,
+   "end": 77.795,
+   "captions": [
+    {
+     "text": "Deshalb ist der Startzeitpunkt",
+     "start": 69.811,
+     "end": 71.887
+    },
+    {
+     "text": "der größte Trick:",
+     "start": 71.887,
+     "end": 73.087
+    },
+    {
+     "text": "Wer 10 Jahre später anfängt,",
+     "start": 73.087,
+     "end": 75.062
+    },
+    {
+     "text": "hat mit derselben Rate",
+     "start": 75.062,
+     "end": 76.614
+    },
+    {
+     "text": "nur rund 260.000 €",
+     "start": 76.614,
+     "end": 77.795
+    }
+   ]
+  },
+  {
+   "id": "s18",
+   "start": 77.795,
+   "end": 82.076,
+   "captions": [
+    {
+     "text": "Aber Achtung: Steuern",
+     "start": 77.795,
+     "end": 78.979
+    },
+    {
+     "text": "und Inflation machen dein Ziel",
+     "start": 78.979,
+     "end": 80.814
+    },
+    {
+     "text": "in Wirklichkeit größer",
+     "start": 80.814,
+     "end": 82.076
+    }
+   ]
+  },
+  {
+   "id": "s19",
+   "start": 82.076,
+   "end": 88.398,
+   "captions": [
+    {
+     "text": "Bei 2 % Inflation sind",
+     "start": 82.076,
+     "end": 83.757
+    },
+    {
+     "text": "2.000 € in 30 Jahren nur noch",
+     "start": 83.757,
+     "end": 86.084
+    },
+    {
+     "text": "so viel wert wie heute 1.100 €",
+     "start": 86.084,
+     "end": 88.398
+    }
+   ]
+  },
+  {
+   "id": "s20",
+   "start": 88.398,
+   "end": 94.304,
+   "captions": [
+    {
+     "text": "Unser Tipp: Fang",
+     "start": 88.398,
+     "end": 89.267
+    },
+    {
+     "text": "mit einem Teilziel an –",
+     "start": 89.267,
+     "end": 90.867
+    },
+    {
+     "text": "schon 300.000 € bringen",
+     "start": 90.867,
+     "end": 92.501
+    },
+    {
+     "text": "dir 1.000 € extra im Monat",
+     "start": 92.501,
+     "end": 94.304
+    }
+   ]
+  },
+  {
+   "id": "s21",
+   "start": 94.304,
+   "end": 96.761,
+   "captions": [
+    {
+     "text": "Keine Anlageberatung,",
+     "start": 94.304,
+     "end": 95.799
+    },
+    {
+     "text": "nur gerechnet",
+     "start": 95.799,
+     "end": 96.761
+    }
+   ]
+  },
+  {
+   "id": "s22",
+   "start": 96.761,
+   "end": 101.025,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTv,",
+     "start": 96.761,
+     "end": 98.159
+    },
+    {
+     "text": "wir rechnen dir jeden Tag",
+     "start": 98.159,
+     "end": 99.907
+    },
+    {
+     "text": "Geld einfach vor",
+     "start": 99.907,
+     "end": 101.025
+    }
+   ]
+  }
+ ],
+ "logo_intro": 11.582
+}

@@ -1,0 +1,137 @@
+{
+ "titel": "Von Zinsen leben",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Wie viel Geld brauchst du, um nie wieder arbeiten zu müssen?",
+   "text": "Wie viel Geld brauchst du, um nie wieder arbeiten zu müssen?",
+   "bild": ""
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Die Antwort überrascht die meisten – und wir rechnen sie dir jetzt live vor.",
+   "text": "Die Antwort überrascht die meisten – und wir rechnen sie dir jetzt live vor",
+   "bild": ""
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Und am Ende zeigen wir dir den Trick, mit dem du dein Ziel zehn Jahre früher erreichst.",
+   "text": "Und am Ende zeigen wir dir den Trick, mit dem du dein Ziel 10 Jahre früher erreichst",
+   "bild": ""
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Sagen wir, du willst zweitausend Euro im Monat zum Leben.",
+   "text": "Sagen wir, du willst 2.000 € im Monat zum Leben",
+   "bild": ""
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Das sind vierundzwanzigtausend Euro im Jahr.",
+   "text": "Das sind 24.000 € im Jahr",
+   "bild": ""
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Profis nutzen dafür die Vier-Prozent-Regel.",
+   "text": "Profis nutzen dafür die 4‑%-Regel",
+   "bild": ""
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Du nimmst jedes Jahr nur vier Prozent von deinem Geld – der Rest bleibt angelegt und arbeitet weiter.",
+   "text": "Du nimmst jedes Jahr nur 4 % von deinem Geld – der Rest bleibt angelegt und arbeitet weiter",
+   "bild": ""
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Eine bekannte amerikanische Studie hat gezeigt: So hat das Geld in fast allen Fällen mindestens dreißig Jahre gereicht.",
+   "text": "Eine bekannte US-Studie hat gezeigt: So hat das Geld in fast allen Fällen mindestens 30 Jahre gereicht",
+   "bild": ""
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Vierundzwanzigtausend geteilt durch vier Prozent – das sind sechshunderttausend Euro.",
+   "text": "24.000 geteilt durch 4 % – das sind 600.000 €",
+   "bild": ""
+  },
+  {
+   "id": "s10",
+   "sprechtext": "Klingt viel? Jetzt kommt der spannende Teil.",
+   "text": "Klingt viel? Jetzt kommt der spannende Teil",
+   "bild": ""
+  },
+  {
+   "id": "s11",
+   "sprechtext": "Mit zweihundert Euro im Monat und sieben Prozent Rendite brauchst du rund zweiundvierzig Jahre.",
+   "text": "Mit 200 € im Monat und 7 % Rendite brauchst du rund 42 Jahre",
+   "bild": ""
+  },
+  {
+   "id": "s12",
+   "sprechtext": "Mit fünfhundert Euro sind es nur noch etwa dreißig Jahre.",
+   "text": "Mit 500 € sind es nur noch etwa 30 Jahre",
+   "bild": ""
+  },
+  {
+   "id": "s13",
+   "sprechtext": "Und mit tausend Euro im Monat bist du schon nach rund zweiundzwanzig Jahren am Ziel.",
+   "text": "Und mit 1.000 € im Monat bist du schon nach rund 22 Jahren am Ziel",
+   "bild": ""
+  },
+  {
+   "id": "s14",
+   "sprechtext": "Schreib uns in die Kommentare: Wie viel müsstest du im Monat sparen?",
+   "text": "Schreib uns in die Kommentare: Wie viel müsstest du im Monat sparen?",
+   "bild": ""
+  },
+  {
+   "id": "s15",
+   "sprechtext": "Und jetzt der Aha-Moment: Bei fünfhundert Euro im Monat zahlst du in dreißig Jahren nur hundertachtzigtausend Euro selbst ein.",
+   "text": "Und jetzt der Aha‑Moment: Bei 500 € im Monat zahlst du in 30 Jahren nur 180.000 € selbst ein",
+   "bild": ""
+  },
+  {
+   "id": "s16",
+   "sprechtext": "Die restlichen vierhundertdreißigtausend Euro sind Zinsen auf Zinsen.",
+   "text": "Die restlichen 430.000 € sind Zinsen auf Zinsen",
+   "bild": ""
+  },
+  {
+   "id": "s17",
+   "sprechtext": "Deshalb ist der Startzeitpunkt der größte Trick: Wer zehn Jahre später anfängt, hat mit derselben Rate nur rund zweihundertsechzigtausend Euro.",
+   "text": "Deshalb ist der Startzeitpunkt der größte Trick: Wer 10 Jahre später anfängt, hat mit derselben Rate nur rund 260.000 €",
+   "bild": ""
+  },
+  {
+   "id": "s18",
+   "sprechtext": "Aber Achtung: Steuern und Inflation machen dein Ziel in Wirklichkeit größer.",
+   "text": "Aber Achtung: Steuern und Inflation machen dein Ziel in Wirklichkeit größer",
+   "bild": ""
+  },
+  {
+   "id": "s19",
+   "sprechtext": "Bei zwei Prozent Inflation sind zweitausend Euro in dreißig Jahren nur noch so viel wert wie heute elfhundert Euro.",
+   "text": "Bei 2 % Inflation sind 2.000 € in 30 Jahren nur noch so viel wert wie heute 1.100 €",
+   "bild": ""
+  },
+  {
+   "id": "s20",
+   "sprechtext": "Unser Tipp: Fang mit einem Teilziel an – schon dreihunderttausend Euro bringen dir tausend Euro extra im Monat.",
+   "text": "Unser Tipp: Fang mit einem Teilziel an – schon 300.000 € bringen dir 1.000 € extra im Monat",
+   "bild": ""
+  },
+  {
+   "id": "s21",
+   "sprechtext": "Keine Anlageberatung, nur gerechnet.",
+   "text": "Keine Anlageberatung, nur gerechnet",
+   "bild": ""
+  },
+  {
+   "id": "s22",
+   "sprechtext": "Folge HundeFinanzTv, wir rechnen dir jeden Tag Geld einfach vor.",
+   "text": "Folge HundeFinanzTv, wir rechnen dir jeden Tag Geld einfach vor",
+   "bild": ""
+  }
+ ]
+}
