@@ -1,0 +1,78 @@
+{
+ "teile": [
+  {
+   "gehoert": "Unsere Sonne ist riesig, aber im Vergleich zu manchen Sternen ist sie ein Staubkorn. Heute fliegen wir vom kleinsten bis zum größten Stern, den wir kennen und am Ende siehst du, was mit unserer Sonne passieren wird. Wir starten ganz klein. Das hier ist ein Neutronenstern. Er ist nur etwa zwanzig Kilometer breit, so groß wie eine Stadt, aber er ist schwerer als unsere ganze Sonne. Ein Teelöffel von ihm würde rund eine Milliarde Tonnen wiegen und manche drehen sich mehrere hundert Mal pro Sekunde um sich selbst. Etwas größer: ein weißer Zwerg. Sirius B ist ungefähr so groß wie unsere Erde, aber fast so schwer wie die Sonne. Dann die roten Zwerge. Proxima Centauri ist der Stern, der uns am nächsten ist nach der Sonne. Er ist nur etwa anderthalb Mal so breit wie Jupiter. Und solche kleinen roten Sterne sind die häufigsten in der ganzen Milchstraße",
+   "abweichungen": [
+    [
+     "replace",
+     "anderthalbmal",
+     "anderthalb mal"
+    ]
+   ]
+  },
+  {
+   "gehoert": "Und jetzt unsere Sonne. Eins Komma vier Millionen Kilometer breit, hundertneun Mal so breit wie die Erde. Über eine Million Erden würden in sie hineinpassen. Würdest du mit einem Flugzeug ohne Pause einmal um die Erde fliegen, wärst du rund zwei Tage unterwegs. Um die Sonne bräuchtest du etwa sieben Monate. Übrigens, wenn dir das Video gefällt, abonnier uns und like das Video. Sirius, der hellste Stern am Nachthimmel, ist knapp doppelt so breit wie die Sonne. Pollux im Sternbild Zwillinge neun Mal so breit. Arktur rund fünfundzwanzig Mal. Aldebaran, das rote Auge des Stiers, etwa fünfundvierzig Mal so breit wie die Sonne",
+   "abweichungen": [
+    [
+     "replace",
+     "hundertneunmal",
+     "hundertneun mal"
+    ],
+    [
+     "replace",
+     "neunmal",
+     "neun mal"
+    ],
+    [
+     "replace",
+     "fünfundzwanzigmal",
+     "fünfundzwanzig mal"
+    ],
+    [
+     "replace",
+     "fünfundvierzigmal",
+     "fünfundvierzig mal"
+    ]
+   ]
+  },
+  {
+   "gehoert": "Rigel im Orion rund achtzig Mal und er leuchtet über hunderttausend Mal so hell wie unsere Sonne. Jetzt wird es verrückt. Antares, das Herz des Skorpions, ist rund siebenhundert Mal so breit wie die Sonne. Beteigeuze, die rote Schulter des Orion etwa siebenhundertfünfzig Mal. Stell sie an die Stelle der Sonne, dann wären Merkur, Venus, Erde und Mars einfach in ihr verschwunden. Mit dem Flugzeug bräuchtest du über vierhundert Jahre, um einmal um sie herumzufliegen. VY Canis Majoris im Sternbild Großer Hund ist nach Schätzungen rund vierzehnhundert Mal so breit wie die Sonne. Lange galt er als der größte Stern überhaupt und einer der größten bekannten Sterne, Stephenson zwei achtzehn. Nach manchen Schätzungen über zweitausend Mal so breit wie die Sonne. An der Stelle der Sonne würde er bis über die Saturnbahn reichen. Mit dem Flugzeug über tausend Jahre für eine einzige Runde. Sogar Licht bräuchte dafür fast neun Stunden. Aber hier kommt die Überraschung: Riesige Sterne leben nicht lange",
+   "abweichungen": [
+    [
+     "replace",
+     "achtzigmal",
+     "achtzig mal"
+    ],
+    [
+     "replace",
+     "hunderttausendmal",
+     "hunderttausend mal"
+    ],
+    [
+     "replace",
+     "siebenhundertmal",
+     "siebenhundert mal"
+    ],
+    [
+     "replace",
+     "siebenhundertfünfzigmal",
+     "siebenhundertfünfzig mal"
+    ],
+    [
+     "replace",
+     "vierzehnhundertmal",
+     "vierzehnhundert mal"
+    ],
+    [
+     "replace",
+     "zweitausendmal",
+     "zweitausend mal"
+    ]
+   ]
+  },
+  {
+   "gehoert": "Unsere Sonne leuchtet insgesamt rund zehn Milliarden Jahre. Ein Riese wie Beteigeuze verbrennt seinen Treibstoff viel schneller. Er wird nur rund zehn Millionen Jahre alt und dann explodiert er als Supernova. Übrig bleibt oft genau das, womit wir angefangen haben. Ein Neutronenstern, zwanzig Kilometer klein. Und unsere Sonne? In etwa fünf Milliarden Jahren bläht sie sich zu einem roten Riesen auf. Merkur und Venus wird sie verschlucken, vielleicht sogar die Erde. Danach fällt sie in sich zusammen zu einem weißen Zwerg, ungefähr so groß wie die Erde. Der kleine Punkt vom Anfang ist also unsere Zukunft. Wenn dir die Reise gefallen hat, abonnier uns für mehr.",
+   "abweichungen": []
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "tag": "21. NOVEMBER 2026",
+ "dauer": 67.6,
+ "hook": "Erster Gast auf<br /><span class=\"y\">CHINAS STATION!</span>",
+ "hook_end": 4.3,
+ "karte": [
+  13.5,
+  5.4
+ ],
+ "fix": {
+  "vierhundert": "400",
+  "zwei": "2",
+  "Zwei": "2",
+  "vierundzwanzigsten": "24.",
+  "fünfundzwanzigsten": "25.",
+  "zweitausenddreißig": "2030"
+ },
+ "css": ".hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"
+}

@@ -1,0 +1,42 @@
+{
+ "tag": "",
+ "dauer": 210,
+ "format": "9:16",
+ "hook": "Wie groß sind Sterne<br /><span class=\"y\">WIRKLICH?</span>",
+ "hook_end": 6.0,
+ "share": [
+  77.5,
+  4.3
+ ],
+ "share_text": "🔔 Abonnieren · 👍 Liken",
+ "follow": 204.7,
+ "follow_text": "Abonnier uns! 🔔",
+ "follow_pill": "👍 Video liken",
+ "fix": {
+  "zwanzig": "20",
+  "hundert": "100",
+  "anderthalbmal": "1,5-mal",
+  "Eins": "1,4",
+  "Komma": "",
+  "vier": "",
+  "Hundertneunmal": "109-mal",
+  "zwei": "2",
+  "sieben": "7",
+  "neunmal": "9-mal",
+  "fünfundzwanzigmal.": "25-mal.",
+  "fünfundvierzigmal": "45-mal",
+  "achtzigmal.": "80-mal.",
+  "hunderttausendmal": "100.000-mal",
+  "siebenhundertmal": "700-mal",
+  "siebenhundertfünfzigmal.": "750-mal.",
+  "vierhundert": "400",
+  "vierzehnhundertmal": "1.400-mal",
+  "zwei-achtzehn.": "2-18.",
+  "zweitausendmal": "2.000-mal",
+  "tausend": "1.000",
+  "neun": "9",
+  "zehn": "10",
+  "fünf": "5"
+ },
+ "css": ".hookbig { font-size: 120px; } #word { top: 1130px; font-size: 84px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"
+}

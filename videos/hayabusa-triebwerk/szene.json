@@ -1,0 +1,21 @@
+{
+ "tag": "21. NOVEMBER 2026",
+ "dauer": 73.2,
+ "hook": "Letztes Triebwerk<br /><span class=\"y\">KAPUTT!</span>",
+ "hook_end": 3.9,
+ "karte": [
+  12.1,
+  5.4
+ ],
+ "fix": {
+  "zwei": "2",
+  "zwölf": "12",
+  "zweitausendzwanzig": "2020",
+  "fünf": "5",
+  "vier": "4",
+  "Zwei": "2",
+  "zweitausendeinunddreißig": "2031",
+  "zweitausendachtundzwanzig": "2028"
+ },
+ "css": ".hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"
+}

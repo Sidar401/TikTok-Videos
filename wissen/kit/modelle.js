@@ -1,6 +1,6 @@
 // ===== Modelle (Nutzer 19.11.: „schönere 3D-Modelle“, keine echten Fotos) =====
 // In szene.js eine Zeile "// @modelle" -> sauber_bau.py setzt diesen Code ein. Braucht THREE, E (Renderer), K.
-// MO.vulcan(), MO.ariane6(), MO.falcon9(), MO.exhaust(len, rad, col), MO.smoke(scene, n), MO.kuiper(), MO.panelTex(...)
+// MO.vulcan(), MO.ariane6(), MO.falcon9(), MO.longMarch2F(), MO.pad(), MO.tiangong(), MO.shenzhou(), MO.iss(), MO.hayabusa2(), MO.asteroid({r,seed,top,stretch}), MO.flagTex('cn'|'pk'), MO.exhaust(len, rad, col), MO.smoke(scene, n), MO.kuiper(), MO.panelTex(...)
 const MO = {};
 {
   const { RoomEnvironment } = await import("three/addons/environments/RoomEnvironment.js");
@@ -145,4 +145,113 @@ const MO = {};
     for (let i = 0; i < 9; i++) { const a = (i / 8) * Math.PI * 2, r = i === 8 ? 0 : 1.2; const nz = MO.nozzle(0.22, 0.42, 1.1, nozM()); nz.position.set(Math.cos(a) * r, 0, Math.sin(a) * r); g.add(nz); }
     return { g };
   };
+  // ================= Flaggen-Textur (cn, pk) =================
+  MO.flagTex = (k) => { const c = document.createElement("canvas"); c.width = 600; c.height = 400; const g = c.getContext("2d");
+    const star = (x, y, r, rot = 0) => { g.beginPath(); for (let i = 0; i < 10; i++) { const a = rot - Math.PI / 2 + (i * Math.PI) / 5, rr2 = i % 2 ? r * 0.38 : r; g.lineTo(x + Math.cos(a) * rr2, y + Math.sin(a) * rr2); } g.closePath(); g.fill(); };
+    if (k === "cn") { g.fillStyle = "#de2910"; g.fillRect(0, 0, 600, 400); g.fillStyle = "#ffde00"; star(100, 100, 60); [[200, 40], [240, 80], [240, 140], [200, 180]].forEach(([x, y]) => star(x, y, 20, 0.5)); }
+    if (k === "pk") { g.fillStyle = "#fff"; g.fillRect(0, 0, 150, 400); g.fillStyle = "#01411c"; g.fillRect(150, 0, 450, 400); g.fillStyle = "#fff"; g.beginPath(); g.arc(375, 200, 120, 0, 7); g.fill(); g.fillStyle = "#01411c"; g.beginPath(); g.arc(405, 170, 105, 0, 7); g.fill(); g.fillStyle = "#fff"; star(430, 160, 40, 0.6); }
+    const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; };
+  const white = () => MO.plain(0xc9ccd1, 0.1, 0.5, 0.45);
+  const wing = (w, h, mat, frame = 0x8a8f99, back = null) => { const g = new THREE.Group(); const p = new THREE.Mesh(new THREE.BoxGeometry(w, 0.06, h), [MO.plain(frame, 0.6, 0.4), MO.plain(frame, 0.6, 0.4), mat, back ?? MO.plain(0x30343c, 0.5, 0.5), MO.plain(frame, 0.6, 0.4), MO.plain(frame, 0.6, 0.4)]); g.add(p); return g; };
+
+  // ================= LANGER MARSCH 2F (Einheit Meter) =================
+  MO.longMarch2F = () => {
+    const g = new THREE.Group(); const R = 1.675;
+    const s1 = MO.panelTex({ base: "#d6d8da", mottle: 0.035, rings: [0.12, 0.45, 0.8], soot: 0.12, text: [{ s: "中国航天", u: 0.25, v: 0.6, size: 170, col: "#c8102e", spacing: 30 }], flags: [] });
+    g.add(cyl(R, 28.5, MO.mat(s1, { rough: 0.5 }), 0));
+    const fl = new THREE.Mesh(new THREE.PlaneGeometry(1.6, 2.4), new THREE.MeshStandardMaterial({ map: MO.flagTex("cn"), roughness: 0.6 })); fl.position.set(0, 21, R + 0.01); g.add(fl);
+    g.add(cyl(R + 0.01, 1.2, MO.plain(0x3a3d44, 0.4, 0.5), 28.5));
+    g.add(cyl(R, 12, MO.mat(MO.panelTex({ base: "#d6d8da", mottle: 0.03, rings: [0.5] }), { rough: 0.5 }), 29.7));
+    const fa = new THREE.Mesh(new THREE.CylinderGeometry(1.9, R, 1.2, SEG), white()); fa.position.y = 42.3; g.add(fa);
+    g.add(cyl(1.9, 7.5, MO.mat(MO.panelTex({ base: "#dadcdf", mottle: 0.03, vseams: 2 }), { rough: 0.42 }), 42.9));
+    const tip = lathe(ogive(1.9, 4.2, 40, 0.15), white()); tip.position.y = 50.4; g.add(tip);
+    for (let i = 0; i < 4; i++) { const a = (i / 4) * Math.PI * 2 + 0.4; const gf = new THREE.Mesh(new THREE.BoxGeometry(1.3, 1.1, 0.12), MO.plain(0x8b9099, 0.7, 0.35)); gf.position.set(Math.cos(a) * 2.35, 45.5, Math.sin(a) * 2.35); gf.rotation.y = -a + Math.PI / 2; g.add(gf); }
+    const tower = new THREE.Group(); tower.position.y = 54.3; g.add(tower); tower.add(cyl(0.38, 6.5, white(), 0)); const tt = lathe(ogive(0.38, 1.3), white()); tt.position.y = 6.5; tower.add(tt);
+    for (let i = 0; i < 4; i++) { const a = (i / 4) * Math.PI * 2; const nz = MO.nozzle(0.1, 0.22, 0.5, nozM()); nz.position.set(Math.cos(a) * 0.38, 1.0, Math.sin(a) * 0.38); nz.rotation.z = Math.cos(a) * 0.9; nz.rotation.x = -Math.sin(a) * 0.9; tower.add(nz); }
+    const boosters = [];
+    for (let i = 0; i < 4; i++) { const a = (i / 4) * Math.PI * 2 + Math.PI / 4; const b = new THREE.Group(); b.position.set(Math.cos(a) * (R + 1.15), 0, Math.sin(a) * (R + 1.15)); g.add(b);
+      b.add(cyl(1.125, 13.5, MO.mat(MO.panelTex({ base: "#d4d6d9", mottle: 0.035, rings: [0.5], soot: 0.15 }), { rough: 0.5 }), 0));
+      const c = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 1.125, 2.6, SEG), white()); c.position.y = 14.8; b.add(c);
+      const fin = new THREE.Mesh(new THREE.BoxGeometry(0.1, 2.2, 1.5), MO.plain(0xbfc3c8, 0.3, 0.5)); fin.position.set(Math.cos(a) * 1.4, 1.2, Math.sin(a) * 1.4); fin.rotation.y = -a; b.add(fin);
+      const nz = MO.nozzle(0.35, 0.6, 1.3, nozM()); b.add(nz); boosters.push(b); }
+    for (let i = 0; i < 4; i++) { const a = (i / 4) * Math.PI * 2; const nz = MO.nozzle(0.35, 0.6, 1.3, nozM()); nz.position.set(Math.cos(a) * 0.8, 0, Math.sin(a) * 0.8); g.add(nz); }
+    return { g, tower, boosters };
+  };
+  // ================= Startturm =================
+  MO.pad = () => { const g = new THREE.Group(); const m = MO.plain(0x6e3b2a, 0.5, 0.6, 0.4), w = MO.plain(0x9aa0a8, 0.6, 0.5);
+    const base = new THREE.Mesh(new THREE.BoxGeometry(30, 4, 30), MO.plain(0x5a5c60, 0.1, 0.9, 0.2)); base.position.y = -2; g.add(base);
+    for (const [x, z] of [[-9, -4], [-9, 4], [-15, -4], [-15, 4]]) { const c = new THREE.Mesh(new THREE.BoxGeometry(0.6, 70, 0.6), m); c.position.set(x, 35, z); g.add(c); }
+    for (let y = 4; y < 70; y += 5) { const b = new THREE.Mesh(new THREE.BoxGeometry(7, 0.5, 9), m); b.position.set(-12, y, 0); g.add(b); }
+    for (const y of [20, 34, 46]) { const arm = new THREE.Mesh(new THREE.BoxGeometry(6, 0.8, 2), w); arm.position.set(-6, y, 0); g.add(arm); }
+    return g; };
+
+  // ================= TIANGONG (Einheit Meter) =================
+  MO.tiangong = () => { const g = new THREE.Group(); const hullT = MO.panelTex({ base: "#cfd2d6", mottle: 0.05, spots: 5000, vseams: 8, rings: [0.2, 0.4, 0.6, 0.8], w: 1024, h: 1024 });
+    const hull = MO.mat(hullT, { rough: 0.55, bumpScale: 1 }), dark = MO.plain(0x3a3e46, 0.6, 0.4), gold = MO.mliM(); const cell = MO.cellM();
+    const mod = (r, L, mat) => { const m = new THREE.Mesh(new THREE.CylinderGeometry(r, r, L, SEG), mat); m.rotation.z = Math.PI / 2; return m; };
+    const core = new THREE.Group(); g.add(core); const tc = mod(2.1, 13, hull); tc.position.x = -6.5; core.add(tc); const tn = mod(1.4, 3, hull); tn.position.x = 1.5; core.add(tn);
+    const node = new THREE.Mesh(new THREE.SphereGeometry(1.5, 48, 32), hull); node.position.x = 3.6; core.add(node);
+    const aft = mod(1.6, 1.5, gold); aft.position.x = -13.7; core.add(aft);
+    for (const s of [-1, 1]) { const arm = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 4, 12), dark); arm.position.set(-6, 0, s * 4); arm.rotation.x = Math.PI / 2; core.add(arm);
+      const w = wing(4, 12, cell); w.position.set(-6, 0, s * 12); core.add(w); }
+    const labs = [];
+    for (const s of [-1, 1]) { const lab = new THREE.Group(); lab.position.set(3.6, 0, s * 1.4); lab.rotation.y = s * Math.PI / 2; g.add(lab);
+      const lm = mod(2.1, 13, hull); lm.position.x = 8.5; lab.add(lm); const lc = mod(1.4, 2, hull); lc.position.x = 1; lab.add(lc); const back = mod(2.0, 3, gold); back.position.x = 16.5; lab.add(back);
+      const mast = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 8, 12), dark); mast.position.set(15.5, 4, 0); lab.add(mast);
+      for (const z of [-1, 1]) { const w = wing(3.6, 26, cell); w.position.set(15.5, 8, z * 14); lab.add(w); }
+      labs.push(lab); }
+    const port = new THREE.Object3D(); port.position.set(5.1, 0, 0); g.add(port);
+    return { g, port }; };
+
+  // ================= SHENZHOU (Einheit Meter, Nase +x) =================
+  MO.shenzhou = () => { const g = new THREE.Group(); const hull = MO.mat(MO.panelTex({ base: "#c4c7cc", mottle: 0.05, w: 512, h: 512 }), { rough: 0.55 });
+    const om = new THREE.Mesh(new THREE.SphereGeometry(1.1, 40, 28), hull); om.scale.set(1.3, 1, 1); om.position.x = 2.6; g.add(om);
+    const dock = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.6, 0.6, 32), MO.plain(0x8a8f99, 0.7, 0.35)); dock.rotation.z = Math.PI / 2; dock.position.x = 4.2; g.add(dock);
+    const dm = lathe([[0.5, 0], [1.25, 1.1], [1.25, 2.0]].map(([r, y]) => new THREE.Vector2(r, y)), MO.plain(0x6b5b48, 0.4, 0.6)); dm.rotation.z = -Math.PI / 2; dm.position.x = 1.1; g.add(dm);
+    const sm = new THREE.Mesh(new THREE.CylinderGeometry(1.4, 1.4, 2.9, SEG), MO.mliM()); sm.rotation.z = Math.PI / 2; sm.position.x = -2.4; g.add(sm);
+    for (const s of [-1, 1]) { const w = wing(1.8, 7.2, MO.cellM()); w.position.set(-2.4, 0, s * 5.2); g.add(w); }
+    const nz = MO.nozzle(0.3, 0.55, 0.8, nozM()); nz.rotation.z = Math.PI / 2; nz.position.x = -3.85; g.add(nz);
+    const fl = new THREE.Mesh(new THREE.PlaneGeometry(0.9, 0.6), new THREE.MeshStandardMaterial({ map: MO.flagTex("cn"), roughness: 0.6 })); fl.position.set(-2.4, 0.4, 1.42); g.add(fl);
+    return { g }; };
+
+  // ================= ISS (Einheit Meter) =================
+  MO.iss = () => { const g = new THREE.Group(); const hull = MO.mat(MO.panelTex({ base: "#cfd2d6", mottle: 0.05, vseams: 6, w: 512, h: 512 }), { rough: 0.55 }); const tr = MO.plain(0x9aa0a8, 0.7, 0.4);
+    const truss = new THREE.Mesh(new THREE.BoxGeometry(100, 2.5, 2.5), tr); g.add(truss);
+    const cellO = new THREE.MeshStandardMaterial({ color: 0x8a6a3a, metalness: 0.6, roughness: 0.35, envMap: MO.env, envMapIntensity: 0.6 });
+    for (const x of [-44, -32, 32, 44]) for (const s of [-1, 1]) { const w = wing(11, 34, cellO, 0x6a6e76); w.position.set(x, 0, s * 19); w.rotation.z = 0.2; g.add(w); }
+    for (const x of [-16, 16]) { const r = wing(4, 12, MO.plain(0xe8e8e8, 0.1, 0.6)); r.position.set(x, -3, 0); r.rotation.x = Math.PI / 2; g.add(r); }
+    const mods = [[0, -4, 0, 2.2, 30, "z"], [0, -4, -18, 2.2, 10, "x"], [6, -4, -12, 2.2, 10, "x"], [-6, -4, -12, 2.2, 8, "x"]];
+    for (const [x, y, z, r, L, ax] of mods) { const m = new THREE.Mesh(new THREE.CylinderGeometry(r, r, L, 48), hull); if (ax === "z") m.rotation.x = Math.PI / 2; else m.rotation.z = Math.PI / 2; m.position.set(x, y, z); g.add(m); }
+    return { g }; };
+
+  // ================= HAYABUSA2 (Einheit Meter) =================
+  MO.hayabusa2 = () => { const g = new THREE.Group(); const gold = MO.mliM(), dark = MO.plain(0x2c3038, 0.6, 0.4), alu = MO.plain(0xb9bdc4, 0.9, 0.28, 1.1);
+    const body = new THREE.Mesh(RoundedBoxGeometry(1.6, 1.25, 1.0, 2, 0.03), gold); g.add(body);
+    const top = new THREE.Mesh(new THREE.BoxGeometry(1.64, 0.04, 1.04), MO.plain(0xe0e2e6, 0.2, 0.5)); top.position.y = 0.64; g.add(top);
+    for (const s of [-1, 1]) { const arm = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, 0.4, 10), alu); arm.rotation.x = Math.PI / 2; arm.position.set(0, 0.2, s * 0.7); g.add(arm);
+      for (let i = 0; i < 3; i++) { const w = wing(1.15, 0.95, MO.cellM(), 0x50545c, MO.cellM()); w.rotation.x = Math.PI / 2; w.position.set(0, 0.2, s * (1.4 + i * 0.98)); g.add(w); } }
+    const hga = new THREE.Mesh(new THREE.CylinderGeometry(0.42, 0.42, 0.05, 48), MO.plain(0xd8dadd, 0.3, 0.4)); hga.position.set(0.25, 0.75, 0); g.add(hga);
+    const ka = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.05, 0.16, 32, 1, true), MO.plain(0xe8e8ea, 0.3, 0.4, 0.4, { side: THREE.DoubleSide })); ka.position.set(-0.45, 0.78, 0.2); g.add(ka);
+    const horn = new THREE.Mesh(new THREE.CylinderGeometry(0.1, 0.16, 1.0, 24), alu); horn.position.set(0.3, -1.1, 0); g.add(horn);
+    const ip = new THREE.Mesh(new THREE.BoxGeometry(0.08, 0.7, 0.7), dark); ip.position.set(-0.84, -0.05, 0); g.add(ip);
+    const engines = []; [[-0.18, -0.18], [-0.18, 0.18], [0.18, -0.18], [0.18, 0.18]].forEach(([y, z]) => { const e = new THREE.Group(); e.position.set(-0.9, y - 0.05, z); g.add(e);
+      const ring = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 0.06, 32), alu); ring.rotation.z = Math.PI / 2; e.add(ring);
+      const grid = new THREE.Mesh(new THREE.CircleGeometry(0.1, 32), new THREE.MeshBasicMaterial({ color: 0x1b2a55, toneMapped: false })); grid.rotation.y = -Math.PI / 2; grid.position.x = -0.035; e.add(grid);
+      const ex = MO.exhaust(3.5, 0.1, [0.75, 0.88, 1], [0.25, 0.4, 1]); ex.rotation.z = -Math.PI / 2; ex.position.x = -0.04; e.add(ex); e.userData = { grid, ex }; engines.push(e); });
+    return { g, engines }; };
+
+  // ================= ASTEROIDEN =================
+  MO.asteroid = (o = {}) => { const r = o.r ?? 1; let s = o.seed ?? 3; const rnd = () => ((s = (s * 16807) % 2147483647) / 2147483647);
+    const geo = new THREE.SphereGeometry(1, 220, 150); const p = geo.attributes.position; const v = new THREE.Vector3();
+    const craters = []; for (let i = 0; i < (o.craters ?? 40); i++) craters.push([new THREE.Vector3(rnd() - 0.5, rnd() - 0.5, rnd() - 0.5).normalize(), 0.05 + rnd() * 0.25, 0.02 + rnd() * 0.05]);
+    const boulders = []; for (let i = 0; i < 260; i++) boulders.push([new THREE.Vector3(rnd() - 0.5, rnd() - 0.5, rnd() - 0.5).normalize(), 0.015 + rnd() * 0.05, 0.01 + rnd() * 0.03]);
+    const waves = []; for (let i = 0; i < 14; i++) waves.push([new THREE.Vector3(rnd() - 0.5, rnd() - 0.5, rnd() - 0.5).normalize(), 2 + rnd() * 9, rnd() * 6.28, 0.035 / (1 + i * 0.35)]);
+    const col = []; for (let i = 0; i < p.count; i++) { v.fromBufferAttribute(p, i).normalize(); let d = 1;
+      if (o.top) d *= 0.78 + 0.32 * Math.pow(1 - Math.abs(v.y), 1.6) - 0.05 * Math.abs(v.y);
+      for (const [dx, f, ph, am] of waves) d += am * Math.sin(v.dot(dx) * f + ph);
+      for (const [c, cr, dp] of craters) { const a = v.angleTo(c); if (a < cr) d -= dp * (1 - (a / cr) ** 2); else if (a < cr * 1.3) d += dp * 0.3 * (1 - (a - cr) / (cr * 0.3)); }
+      for (const [c, br, h] of boulders) { const a = v.angleTo(c); if (a < br) d += h * Math.cos((a / br) * Math.PI / 2); }
+      v.multiplyScalar(d); if (o.stretch) v.multiply(o.stretch); p.setXYZ(i, v.x, v.y, v.z); const k = 0.88 + 0.12 * Math.sin(v.x * 9 + v.z * 5) * Math.cos(v.y * 7) + 0.04 * rnd(); col.push(0.32 * k, 0.3 * k, 0.28 * k); }
+    geo.setAttribute("color", new THREE.Float32BufferAttribute(col, 3)); geo.computeVertexNormals();
+    const m = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.95, metalness: 0, flatShading: false })); m.scale.setScalar(r); return m; };
 }

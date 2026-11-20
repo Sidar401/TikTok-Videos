@@ -1,0 +1,35 @@
+{
+ "gehoert": "Eine Raumsonde verliert mitten im All ihr letztes Triebwerk. Die japanische Sonde Hayabusa2 ist seit fast zwölf Jahren unterwegs. Jetzt mussten die Forscher ihr Ziel komplett ändern. Folg uns für mehr. Hayabusa2 ist berühmt. Sie landete auf dem Asteroiden Ryugu und brachte 2020 Gestein zur Erde, gut fünf Gramm. Danach durfte sie weiterfliegen. Im Juli raste sie ganz nah am Asteroiden Torifune vorbei. Die Sonde fliegt mit vier Ionentriebwerken. Sie schieben ganz sanft, aber dafür jahrelang. Doch im August fiel das letzte Triebwerk aus, das noch richtig lief. Die Stromversorgung war kaputt. Der Trick der Forscher? Sie kombinierten Teile von zwei kaputten Triebwerken zu einem. So hat es schon die erste Hayabusa nach Hause geschafft. Aber diesmal reicht es nicht. Immer wieder gab es Funken. Richtiger Schub war nicht mehr möglich. Das alte Ziel, ein winziger Asteroid im Jahr 2031, ist damit gestrichen. Neues Ziel: Im April 2028 rast die Sonde an einem anderen Asteroiden vorbei. Landen wird sie nie mehr. Ein Rentner im All, der einfach weiterarbeitet.",
+ "abweichungen": [
+  [
+   "replace",
+   "hayabusa zwei",
+   "hayabusa2"
+  ],
+  [
+   "replace",
+   "hayabusa zwei",
+   "hayabusa2"
+  ],
+  [
+   "replace",
+   "zweitausendzwanzig",
+   "2020"
+  ],
+  [
+   "replace",
+   "ionen triebwerken",
+   "ionentriebwerken"
+  ],
+  [
+   "replace",
+   "zweitausendeinunddreißig",
+   "2031"
+  ],
+  [
+   "replace",
+   "zweitausendachtundzwanzig",
+   "2028"
+  ]
+ ]
+}

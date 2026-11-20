@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <script type="importmap">{"imports":{"three":"./assets/three/build/three.module.js","three/addons/":"./assets/three/jsm/"}}</script>
+    <style>
+      @font-face { font-family: "Inter Display"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.otf"); }
+      @font-face { font-family: "Inter Display"; font-weight: 800; src: url("assets/fonts/InterDisplay-ExtraBold.otf"); }
+      @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/Inter-SemiBold.otf"); }
+      html, body { background: #000; }
+      #root { font-family: "Inter Display", "Inter", sans-serif; background: #000; }
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .tag { top: 140px; font-family: "Inter", sans-serif; font-weight: 600; font-size: 32px; letter-spacing: 8px; color: rgba(255,255,255,0.6); }
+      #labels { position: absolute; inset: 0; pointer-events: none; }
+      .pl { position: absolute; transform: translate(-50%, -100%); font: 800 76px "Inter Display", sans-serif; color: #fff; white-space: nowrap; text-shadow: 0 4px 30px rgba(0,0,0,.9); letter-spacing: 0.5px; }
+      .pl small { display: block; text-align: center; font: 600 34px "Inter", sans-serif; color: rgba(255,255,255,.7); margin-top: 4px; }
+      #word { position: absolute; left: 0; right: 0; top: 1420px; text-align: center; font: 800 132px "Inter Display", sans-serif; color: #fff; text-shadow: 0 6px 40px rgba(0,0,0,.9); }
+      .hookbig { top: 620px; font-size: 128px; font-weight: 900; line-height: 1.04; text-shadow: 0 8px 50px rgba(0,0,0,.95); }
+      .hookbig .y { color: #ffd23f; }
+      .hookdim { background: radial-gradient(circle at 50% 40%, rgba(0,0,0,.2), rgba(0,0,0,.75)); }
+      .capw { top: 1500px; font-size: 80px; font-weight: 800; line-height: 1.12; color: #fff; text-shadow: 0 6px 30px rgba(0,0,0,.95), 0 0 3px #000; }
+      .capw .w { display: inline-block; margin: 0 10px; }
+      .capw .on { color: #ffd23f; }
+      .share { position: absolute; right: 40px; top: 1150px; }
+      .share span { display: inline-block; background: #fe2c55; color: #fff; font-weight: 900; font-size: 50px; padding: 14px 32px; border-radius: 60px; box-shadow: 0 0 34px rgba(254,44,85,.6); }
+      .follow { top: 1150px; }
+      .hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }
+    
+#fk-wrap { position: absolute; left: 170px; top: 760px; width: 740px; z-index: 30; }
+#fk { position: relative; width: 740px; padding: 130px 56px 54px; border-radius: 52px; text-align: center; overflow: hidden; font-family: "Inter Display", Inter, sans-serif; color: #fff;
+  background: linear-gradient(180deg, rgba(30,34,48,.74), rgba(10,12,20,.82)); border: 1.5px solid rgba(255,255,255,.16); backdrop-filter: blur(26px) saturate(1.2); -webkit-backdrop-filter: blur(26px) saturate(1.2);
+  box-shadow: 0 40px 100px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.18); }
+#fk-wrap > .fk-av { position: absolute; left: 50%; top: -105px; width: 210px; height: 210px; margin-left: -105px; z-index: 3; border-radius: 50%; background: url(assets/avatar.png) center/cover; box-shadow: 0 0 0 8px rgba(12,14,22,.9), 0 20px 50px rgba(0,0,0,.6); }
+.fk-ring { position: absolute; inset: -9px; border-radius: 50%; background: conic-gradient(from 0deg, #ffe7a8, rgba(255,231,168,.1), #ffd06a, rgba(255,231,168,.1), #ffe7a8);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 4px)); mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 4px)); }
+#fk .n { font-size: 70px; font-weight: 900; letter-spacing: -1.5px; } #fk .d { font: 600 36px Inter, sans-serif; color: rgba(255,255,255,.66); margin: 10px 0 40px; }
+#fk .btn { position: relative; height: 116px; border-radius: 58px; font-size: 50px; font-weight: 800; }
+#fk .btn .a, #fk .btn .b { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 14px; border-radius: inherit; }
+#fk .btn .a { background: #fff; color: #0b0d14; } #fk .btn .b { opacity: 0; background: linear-gradient(180deg, #ffe39a, #f6c04a); color: #1a1406; }
+#fk-shine { position: absolute; top: -20%; bottom: -20%; width: 220px; left: -300px; background: linear-gradient(100deg, transparent, rgba(255,255,255,.22), transparent); transform: skewX(-18deg); }
+#fk-touch, #fk-rip { position: absolute; left: 540px; top: 1127px; width: 92px; height: 92px; margin: -46px 0 0 -46px; border-radius: 50%; z-index: 31; opacity: 0; }
+#fk-touch { background: rgba(255,255,255,.32); border: 3px solid rgba(255,255,255,.9); box-shadow: 0 8px 30px rgba(0,0,0,.45); } #fk-rip { border: 3px solid rgba(255,255,255,.8); }
+</style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="73.2" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="labels" class="clip" data-start="0" data-duration="73.2" data-track-index="2"></div>
+      <div id="word" class="clip" data-start="0" data-duration="73.2" data-track-index="3"></div>
+      <div id="tag" class="line tag clip" data-start="0" data-duration="73.2" data-track-index="1"><span>21. NOVEMBER 2026</span></div>
+      <div id="cap" class="line capw clip" data-start="3.9" data-duration="69.30" data-track-index="4"><span id="cap-in"></span></div>
+      <div id="hookdim" class="hookdim clip" data-start="0" data-duration="3.9" data-track-index="8"><span></span></div>
+      <div id="hookbig" class="line hookbig clip" data-start="0" data-duration="3.9" data-track-index="7"><span id="hookbig-in">Letztes Triebwerk<br /><span class="y">KAPUTT!</span></span></div>
+      <div id="fk-box" class="clip" data-start="12.1" data-duration="5.4" data-track-index="5"><div id="fk-wrap"><div class="fk-av"><div class="fk-ring"></div></div><div id="fk"><div class="n">Novaro</div><div class="d">Weltraum, einfach erklärt</div><div class="btn" id="fk-btn"><span class="a">Folgen</span><span class="b"><svg class="ck" width="44" height="44" viewBox="0 0 44 44"><path d="M8 23l9 9 19-20" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="48" stroke-dashoffset="48"/></svg>Gefolgt</span></div><div id="fk-shine"></div></div></div><div id="fk-rip"></div><div id="fk-touch"></div></div>
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="72.68" data-track-index="9" data-volume="1"></audio>
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="73.2" data-track-index="10" data-volume="0.3"></audio>
+    </div>
+    <img id="tex-day" src="assets/earth-blue-marble.jpg" style="display:none" alt="" />
+    <img id="tex-night" src="assets/earth-night.jpg" style="display:none" alt="" />
+    <img id="tex-topo" src="assets/earth-topology.png" style="display:none" alt="" />
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.from("#hookbig-in", { opacity: 0, scale: 1.3, duration: 0.35, ease: "power3.out" }, 0);
+      tl.to("#hookbig-in", { scale: 0.7, opacity: 0, filter: "blur(10px)", duration: 0.3, ease: "power2.in" }, 3.9 - 0.32);
+      tl.to("#hookdim", { opacity: 0, duration: 0.3 }, 3.9 - 0.32);
+
+      tl.fromTo("#fk-wrap", { opacity: 0, y: 120, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: "expo.out" }, 12.1);
+      tl.fromTo(".fk-ring", { rotation: 0 }, { rotation: 200, duration: 5.4, ease: "none" }, 12.1);
+      tl.fromTo("#fk .n, #fk .d, #fk-btn", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, stagger: 0.07, ease: "power3.out" }, 12.299999999999999);
+      tl.fromTo("#fk-touch", { opacity: 0, x: 240, y: 260, scale: 1.3 }, { opacity: 1, x: 0, y: 0, scale: 1, duration: 0.8, ease: "power3.out" }, 13.0);
+      tl.to("#fk-touch", { scale: 0.72, duration: 0.14 }, 13.86); tl.to("#fk-touch", { scale: 1, duration: 0.25 }, 14.0);
+      tl.to("#fk-btn", { scale: 0.95, duration: 0.14 }, 13.86); tl.to("#fk-btn", { scale: 1, duration: 0.45, ease: "back.out(3)" }, 14.0);
+      tl.fromTo("#fk-rip", { opacity: 0.9, scale: 0.6 }, { opacity: 0, scale: 3.2, duration: 0.7, ease: "power2.out", immediateRender: false }, 14.0);
+      tl.to("#fk-btn .a", { opacity: 0, duration: 0.18 }, 14.0); tl.to("#fk-btn .b", { opacity: 1, duration: 0.22 }, 14.05);
+      tl.to("#fk-btn .ck path", { attr: { "stroke-dashoffset": 0 }, duration: 0.45, ease: "power2.out" }, 14.15);
+      tl.fromTo("#fk-shine", { x: 0 }, { x: 1400, duration: 0.9, ease: "power2.inOut", immediateRender: false }, 14.35);
+      tl.to("#fk-touch", { opacity: 0, scale: 0.6, duration: 0.4, ease: "power2.in" }, 14.7);
+      tl.to("#fk-wrap", { opacity: 0, y: 40, scale: 0.96, duration: 0.45, ease: "power2.in" }, 17.0);
+      tl.to({}, { duration: 0.01 }, 73.2 - 0.01);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+    <script type="module">
+      import * as K from "./assets/kino.js";
+      const { THREE, V, lerp, eio, eout, prog, cl, rnd } = K;
+      window.FMT = { W: 1080, H: 1920 };
+      const WORDS = [{"w": "Eine", "s": 0.0, "e": 0.24}, {"w": "Raumsonde", "s": 0.32, "e": 0.96}, {"w": "verliert", "s": 1.04, "e": 1.44}, {"w": "mitten", "s": 1.52, "e": 1.76}, {"w": "im", "s": 1.84, "e": 2.0}, {"w": "All", "s": 2.08, "e": 2.24}, {"w": "ihr", "s": 2.28, "e": 2.48}, {"w": "letztes", "s": 2.56, "e": 2.96}, {"w": "Triebwerk!", "s": 3.04, "e": 4.0}, {"w": "Die", "s": 4.08, "e": 4.16}, {"w": "japanische", "s": 4.293, "e": 4.72}, {"w": "Sonde", "s": 4.8, "e": 5.12}, {"w": "Hayabusa", "s": 5.2, "e": 5.76}, {"w": "zwei", "s": 5.92, "e": 6.16}, {"w": "ist", "s": 6.32, "e": 6.48}, {"w": "seit", "s": 6.52, "e": 6.64}, {"w": "fast", "s": 6.72, "e": 7.04}, {"w": "zwölf", "s": 7.12, "e": 7.44}, {"w": "Jahren", "s": 7.52, "e": 7.84}, {"w": "unterwegs.", "s": 8.0, "e": 8.88}, {"w": "Jetzt", "s": 8.96, "e": 9.28}, {"w": "mussten", "s": 9.36, "e": 9.6}, {"w": "die", "s": 9.68, "e": 9.76}, {"w": "Forscher", "s": 9.84, "e": 10.16}, {"w": "ihr", "s": 10.213, "e": 10.32}, {"w": "Ziel", "s": 10.4, "e": 10.64}, {"w": "komplett", "s": 10.8, "e": 11.36}, {"w": "ändern.", "s": 11.52, "e": 12.026}, {"w": "Folg", "s": 12.106, "e": 12.266}, {"w": "uns", "s": 12.346, "e": 12.426}, {"w": "für", "s": 12.506, "e": 12.586}, {"w": "mehr!", "s": 12.626, "e": 12.906}, {"w": "Hayabusa", "s": 13.092, "e": 13.732}, {"w": "zwei", "s": 13.812, "e": 14.052}, {"w": "ist", "s": 14.132, "e": 14.292}, {"w": "berühmt:", "s": 14.372, "e": 15.092}, {"w": "Sie", "s": 15.172, "e": 15.252}, {"w": "landete", "s": 15.332, "e": 15.652}, {"w": "auf", "s": 15.732, "e": 15.812}, {"w": "dem", "s": 15.892, "e": 15.972}, {"w": "Asteroiden", "s": 16.012, "e": 16.692}, {"w": "Ryugu", "s": 16.772, "e": 17.332}, {"w": "und", "s": 17.412, "e": 17.572}, {"w": "brachte", "s": 17.612, "e": 17.892}, {"w": "zweitausendzwanzig", "s": 18.052, "e": 19.012}, {"w": "Gestein", "s": 19.092, "e": 19.572}, {"w": "zur", "s": 19.612, "e": 19.732}, {"w": "Erde,", "s": 19.812, "e": 20.292}, {"w": "gut", "s": 20.332, "e": 20.532}, {"w": "fünf", "s": 20.612, "e": 20.772}, {"w": "Gramm.", "s": 20.852, "e": 21.243}, {"w": "Danach", "s": 21.638, "e": 22.038}, {"w": "durfte", "s": 22.118, "e": 22.358}, {"w": "sie", "s": 22.438, "e": 22.518}, {"w": "weiterfliegen.", "s": 22.558, "e": 23.478}, {"w": "Im", "s": 23.718, "e": 23.878}, {"w": "Juli", "s": 24.038, "e": 24.358}, {"w": "raste", "s": 24.438, "e": 24.758}, {"w": "sie", "s": 24.878, "e": 24.998}, {"w": "ganz", "s": 25.038, "e": 25.398}, {"w": "nah", "s": 25.478, "e": 25.638}, {"w": "am", "s": 25.718, "e": 25.798}, {"w": "Asteroiden", "s": 25.838, "e": 26.438}, {"w": "Torifune", "s": 26.598, "e": 27.158}, {"w": "vorbei.", "s": 27.238, "e": 27.764}, {"w": "Die", "s": 28.084, "e": 28.164}, {"w": "Sonde", "s": 28.244, "e": 28.564}, {"w": "fliegt", "s": 28.644, "e": 28.884}, {"w": "mit", "s": 28.964, "e": 29.044}, {"w": "vier", "s": 29.124, "e": 29.364}, {"w": "Ionen-Triebwerken.", "s": 29.444, "e": 30.644}, {"w": "Sie", "s": 30.964, "e": 31.044}, {"w": "schieben", "s": 31.124, "e": 31.444}, {"w": "ganz", "s": 31.484, "e": 31.764}, {"w": "sanft,", "s": 31.844, "e": 32.324}, {"w": "aber", "s": 32.404, "e": 32.484}, {"w": "dafür", "s": 32.564, "e": 32.964}, {"w": "jahrelang.", "s": 33.124, "e": 33.876}, {"w": "Doch", "s": 34.21, "e": 34.37}, {"w": "im", "s": 34.41, "e": 34.45}, {"w": "August", "s": 34.53, "e": 35.01}, {"w": "fiel", "s": 35.09, "e": 35.25}, {"w": "das", "s": 35.33, "e": 35.41}, {"w": "letzte", "s": 35.49, "e": 35.81}, {"w": "Triebwerk", "s": 35.89, "e": 36.37}, {"w": "aus,", "s": 36.45, "e": 36.77}, {"w": "das", "s": 36.85, "e": 36.93}, {"w": "noch", "s": 37.01, "e": 37.09}, {"w": "richtig", "s": 37.17, "e": 37.41}, {"w": "lief.", "s": 37.49, "e": 37.89}, {"w": "Die", "s": 38.21, "e": 38.29}, {"w": "Stromversorgung", "s": 38.37, "e": 39.17}, {"w": "war", "s": 39.25, "e": 39.33}, {"w": "kaputt.", "s": 39.41, "e": 39.89}, {"w": "Der", "s": 40.107, "e": 40.187}, {"w": "Trick", "s": 40.267, "e": 40.427}, {"w": "der", "s": 40.507, "e": 40.587}, {"w": "Forscher:", "s": 40.667, "e": 41.307}, {"w": "Sie", "s": 41.547, "e": 41.627}, {"w": "kombinierten", "s": 41.707, "e": 42.347}, {"w": "Teile", "s": 42.427, "e": 42.667}, {"w": "von", "s": 42.747, "e": 42.907}, {"w": "zwei", "s": 43.067, "e": 43.227}, {"w": "kaputten", "s": 43.387, "e": 43.787}, {"w": "Triebwerken", "s": 43.867, "e": 44.427}, {"w": "zu", "s": 44.507, "e": 44.587}, {"w": "einem.", "s": 44.747, "e": 45.147}, {"w": "So", "s": 45.627, "e": 45.787}, {"w": "hat", "s": 45.867, "e": 45.947}, {"w": "es", "s": 46.027, "e": 46.107}, {"w": "schon", "s": 46.147, "e": 46.267}, {"w": "die", "s": 46.347, "e": 46.427}, {"w": "erste", "s": 46.507, "e": 46.827}, {"w": "Hayabusa", "s": 46.907, "e": 47.387}, {"w": "nach", "s": 47.427, "e": 47.547}, {"w": "Hause", "s": 47.587, "e": 47.787}, {"w": "geschafft.", "s": 47.867, "e": 48.384}, {"w": "Aber", "s": 48.493, "e": 48.733}, {"w": "diesmal", "s": 48.813, "e": 49.293}, {"w": "reicht", "s": 49.453, "e": 49.773}, {"w": "es", "s": 49.853, "e": 49.933}, {"w": "nicht.", "s": 50.013, "e": 50.733}, {"w": "Immer", "s": 50.813, "e": 51.053}, {"w": "wieder", "s": 51.133, "e": 51.373}, {"w": "gab", "s": 51.453, "e": 51.613}, {"w": "es", "s": 51.653, "e": 51.693}, {"w": "Funken,", "s": 51.773, "e": 52.493}, {"w": "richtiger", "s": 52.573, "e": 52.973}, {"w": "Schub", "s": 53.133, "e": 53.453}, {"w": "war", "s": 53.533, "e": 53.613}, {"w": "nicht", "s": 53.693, "e": 53.853}, {"w": "mehr", "s": 53.933, "e": 54.013}, {"w": "möglich.", "s": 54.293, "e": 54.604}, {"w": "Das", "s": 54.844, "e": 55.004}, {"w": "alte", "s": 55.084, "e": 55.404}, {"w": "Ziel,", "s": 55.484, "e": 55.964}, {"w": "ein", "s": 56.044, "e": 56.124}, {"w": "winziger", "s": 56.204, "e": 56.684}, {"w": "Asteroid", "s": 56.764, "e": 57.404}, {"w": "im", "s": 57.444, "e": 57.484}, {"w": "Jahr", "s": 57.564, "e": 57.724}, {"w": "zweitausendeinunddreißig,", "s": 57.804, "e": 59.244}, {"w": "ist", "s": 59.364, "e": 59.484}, {"w": "damit", "s": 59.604, "e": 59.804}, {"w": "gestrichen.", "s": 59.924, "e": 60.685}, {"w": "Neues", "s": 60.765, "e": 61.085}, {"w": "Ziel:", "s": 61.165, "e": 61.685}, {"w": "Im", "s": 61.965, "e": 62.045}, {"w": "April", "s": 62.125, "e": 62.525}, {"w": "zweitausendachtundzwanzig", "s": 62.605, "e": 64.085}, {"w": "rast", "s": 64.205, "e": 64.445}, {"w": "die", "s": 64.525, "e": 64.605}, {"w": "Sonde", "s": 64.685, "e": 64.925}, {"w": "an", "s": 65.005, "e": 65.085}, {"w": "einem", "s": 65.192, "e": 65.405}, {"w": "anderen", "s": 65.525, "e": 65.805}, {"w": "Asteroiden", "s": 65.845, "e": 66.445}, {"w": "vorbei.", "s": 66.525, "e": 67.405}, {"w": "Landen", "s": 67.485, "e": 68.125}, {"w": "wird", "s": 68.178, "e": 68.285}, {"w": "sie", "s": 68.405, "e": 68.525}, {"w": "nie", "s": 68.605, "e": 68.765}, {"w": "mehr.", "s": 68.845, "e": 69.485}, {"w": "Ein", "s": 69.565, "e": 69.725}, {"w": "Rentner", "s": 69.805, "e": 70.205}, {"w": "im", "s": 70.285, "e": 70.365}, {"w": "All,", "s": 70.445, "e": 70.765}, {"w": "der", "s": 70.925, "e": 71.085}, {"w": "einfach", "s": 71.125, "e": 71.565}, {"w": "weiterarbeitet.", "s": 71.605, "e": 72.685}]; const CHUNKS = [[0.0, 4.0], [4.08, 8.88], [8.96, 12.026], [12.106, 12.906], [13.092, 21.243], [21.638, 27.764], [28.084, 33.876], [34.21, 39.89], [40.107, 48.384], [48.493, 54.604], [54.844, 60.685], [60.765, 69.485], [69.565, 72.685]];
+      const cap = K.captions(WORDS, CHUNKS, document.getElementById("cap-in"), 3.9, {"zwei": "2", "zwölf": "12", "zweitausendzwanzig": "2020", "fünf": "5", "vier": "4", "Zwei": "2", "zweitausendeinunddreißig": "2031", "zweitausendachtundzwanzig": "2028"});
+      const img = (id) => document.getElementById(id);
+      const imgsReady = Promise.all(["tex-day", "tex-night", "tex-topo"].map((id) => { const im = img(id); return im.complete ? Promise.resolve(im) : new Promise((r) => (im.onload = () => r(im))); }));
+      const E = K.setup(document.getElementById("stage"));
+      const cam = E.cam;
+      const TL = new THREE.TextureLoader();
+      const tex = async (f) => { const t = await TL.loadAsync("assets/tex/" + f); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t; };
+      // Beschriftungen, die an 3D-Objekten hängen
+      const LB = document.getElementById("labels"), WORD = document.getElementById("word");
+      const labels = [];
+      const label = (html, obj, r, o = {}) => { const d = document.createElement("div"); d.className = "pl"; d.innerHTML = html; LB.appendChild(d); const L = { d, obj, r, t0: o.t0 ?? 0, t1: o.t1 ?? 999, gap: o.gap ?? 40, size: o.size }; if (o.size) d.style.fontSize = o.size + "px"; labels.push(L); return L; };
+      const P = (v) => { const q = v.clone().project(cam); return [(q.x + 1) / 2 * 1080, (1 - q.y) / 2 * 1920]; };
+      const updLabels = (t) => { cam.updateMatrixWorld(true); labels.forEach((L) => { const p = L.obj.getWorldPosition(new THREE.Vector3()); const top = p.clone().add(cam.up.clone().multiplyScalar(L.r)); const [x] = P(p), [, y] = P(top);
+        const a = cl((t - L.t0) / 0.4) * (1 - cl((t - L.t1) / 0.4)); L.d.style.opacity = a; L.d.style.left = x + "px"; L.d.style.top = y - L.gap + "px"; L.d.style.transform = `translate(-50%,-100%) translateY(${(1 - a) * 20}px)`; }); };
+      let lastWord = ""; const word = (h, a) => { if (h !== lastWord) { WORD.innerHTML = h; lastWord = h; } WORD.style.opacity = a; WORD.style.transform = `translateY(${(1 - a) * 30}px)`; };
+      let renderAt = () => {};
+      const ready = imgsReady.then(async ([day, night, topo]) => {
+        const W = (w, ab = 0) => { const x = WORDS.find((q) => q.s >= ab - 0.01 && q.w.toLowerCase().replace(/[^a-zäöüß0-9]/g, "").startsWith(w)); return x ? x.s : ab; };
+        K.reseed(31);
+        // ===== Modelle (Nutzer 19.11.: „schönere 3D-Modelle“, keine echten Fotos) =====
+        // In szene.js eine Zeile "// @modelle" -> sauber_bau.py setzt diesen Code ein. Braucht THREE, E (Renderer), K.
+        // MO.vulcan(), MO.ariane6(), MO.falcon9(), MO.longMarch2F(), MO.pad(), MO.tiangong(), MO.shenzhou(), MO.iss(), MO.hayabusa2(), MO.asteroid({r,seed,top,stretch}), MO.flagTex('cn'|'pk'), MO.exhaust(len, rad, col), MO.smoke(scene, n), MO.kuiper(), MO.panelTex(...)
+        const MO = {};
+        {
+          const { RoomEnvironment } = await import("three/addons/environments/RoomEnvironment.js");
+          const pmM = new THREE.PMREMGenerator(E.R); MO.env = pmM.fromScene(new RoomEnvironment(), 0.04).texture;
+          // Kiste mit abgerundeten Kanten (Extrude mit Fase)
+          const RoundedBoxGeometry = function (w, h, d, _s = 2, r = 0.02) { const sh = new THREE.Shape(), x = -w / 2 + r, y = -h / 2 + r, W2 = w - 2 * r, H2 = h - 2 * r; sh.moveTo(x, y); sh.lineTo(x + W2, y); sh.lineTo(x + W2, y + H2); sh.lineTo(x, y + H2); sh.lineTo(x, y);
+            const g = new THREE.ExtrudeGeometry(sh, { depth: Math.max(0.001, d - 2 * r), bevelEnabled: true, bevelThickness: r, bevelSize: r, bevelSegments: 3, curveSegments: 4 }); g.translate(0, 0, -(d - 2 * r) / 2); g.computeVertexNormals(); return g; };
+          MO.RBox = RoundedBoxGeometry;
+          let sd = 7; const rr = () => ((sd = (sd * 16807) % 2147483647) / 2147483647);
+          // Fläche mit Rauschen, Nähten, Schrift -> {map, bump}
+          MO.panelTex = (o = {}) => {
+            const w = o.w ?? 1024, h = o.h ?? 2048, cv = document.createElement("canvas"); cv.width = w; cv.height = h; const g = cv.getContext("2d");
+            const bv = document.createElement("canvas"); bv.width = w; bv.height = h; const b = bv.getContext("2d");
+            g.fillStyle = o.base ?? "#c9ccd1"; g.fillRect(0, 0, w, h); b.fillStyle = "#808080"; b.fillRect(0, 0, w, h);
+            // Fleckiges Rauschen (Schaum / Lack)
+            const n = o.mottle ?? 0.05; for (let i = 0; i < (o.spots ?? 3500); i++) { const x = rr() * w, y = rr() * h, r = 2 + rr() * (o.spotR ?? 14), v = rr() < 0.5 ? 0 : 255;
+              g.fillStyle = `rgba(${v},${v},${v},${n * rr()})`; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill(); b.fillStyle = `rgba(${v},${v},${v},${0.25 * rr()})`; b.beginPath(); b.arc(x, y, r * 0.6, 0, 7); b.fill(); }
+            // Nähte
+            g.strokeStyle = o.seam ?? "rgba(0,0,0,.22)"; b.strokeStyle = "#3a3a3a";
+            for (const y of o.rings ?? []) { const yy = h - y * h; g.lineWidth = 3; g.beginPath(); g.moveTo(0, yy); g.lineTo(w, yy); g.stroke(); b.lineWidth = 4; b.beginPath(); b.moveTo(0, yy); b.lineTo(w, yy); b.stroke(); }
+            for (let i = 0; i < (o.vseams ?? 0); i++) { const x = (i + 0.5) / o.vseams * w; g.lineWidth = 2; g.beginPath(); g.moveTo(x, 0); g.lineTo(x, h); g.stroke(); b.lineWidth = 3; b.beginPath(); b.moveTo(x, 0); b.lineTo(x, h); b.stroke(); }
+            // Rippen (Zwischenstufe)
+            if (o.ribs) for (let i = 0; i < o.ribs; i++) { const x = (i / o.ribs) * w; g.fillStyle = "rgba(255,255,255,.05)"; g.fillRect(x, 0, w / o.ribs * 0.35, h); b.fillStyle = "#b0b0b0"; b.fillRect(x, 0, w / o.ribs * 0.35, h); }
+            // Bänder
+            for (const [y0, y1, col] of o.bands ?? []) { g.fillStyle = col; g.fillRect(0, h - y1 * h, w, (y1 - y0) * h); }
+            // Senkrechte Schrift (u = Position um den Umfang 0..1, v = Höhe 0..1)
+            for (const L of o.text ?? []) { g.save(); g.translate(L.u * w, h - L.v * h); g.rotate(-Math.PI / 2); g.fillStyle = L.col ?? "#fff"; g.font = `900 ${L.size}px "Inter Display", Inter, sans-serif`; g.textAlign = "center"; g.textBaseline = "middle";
+              if (L.spacing) g.letterSpacing = L.spacing + "px"; g.fillText(L.s, 0, 0); g.restore(); }
+            // Flaggen
+            for (const F of o.flags ?? []) { const fw = F.w * w, fh = F.h * h, x0 = F.u * w - fw / 2, y0 = h - F.v * h - fh / 2; g.save(); g.translate(x0 + fw / 2, y0 + fh / 2); g.rotate(-Math.PI / 2); const W2 = fh, H2 = fw;
+              if (F.k === "us") { for (let i = 0; i < 13; i++) { g.fillStyle = i % 2 ? "#fff" : "#b22234"; g.fillRect(-W2 / 2, -H2 / 2 + (i * H2) / 13, W2, H2 / 13 + 1); } g.fillStyle = "#3c3b6e"; g.fillRect(-W2 / 2, -H2 / 2, W2 * 0.4, H2 * 7 / 13); }
+              if (F.k === "eu") { g.fillStyle = "#003399"; g.fillRect(-W2 / 2, -H2 / 2, W2, H2); g.fillStyle = "#ffcc00"; for (let i = 0; i < 12; i++) { const a = (i / 12) * 6.283; g.beginPath(); g.arc(Math.cos(a) * H2 * 0.33, Math.sin(a) * H2 * 0.33, H2 * 0.04, 0, 7); g.fill(); } }
+              g.restore(); }
+            // Schmutz unten (Ruß)
+            if (o.soot) { const gr = g.createLinearGradient(0, h, 0, h - o.soot * h); gr.addColorStop(0, "rgba(30,20,15,.55)"); gr.addColorStop(1, "rgba(30,20,15,0)"); g.fillStyle = gr; g.fillRect(0, h - o.soot * h, w, o.soot * h); }
+            const map = new THREE.CanvasTexture(cv); map.colorSpace = THREE.SRGBColorSpace; map.anisotropy = 8; const bump = new THREE.CanvasTexture(bv); return { map, bump };
+          };
+          MO.mat = (tex, o = {}) => new THREE.MeshStandardMaterial({ map: tex?.map, bumpMap: tex?.bump, bumpScale: o.bumpScale ?? 0.6, color: o.color ?? 0xffffff, metalness: o.metal ?? 0.05, roughness: o.rough ?? 0.55, envMap: MO.env, envMapIntensity: o.ei ?? 0.35, side: o.side ?? THREE.FrontSide, ...(o.extra ?? {}) });
+          MO.plain = (col, metal = 0.2, rough = 0.5, ei = 0.4, extra = {}) => new THREE.MeshStandardMaterial({ color: col, metalness: metal, roughness: rough, envMap: MO.env, envMapIntensity: ei, ...extra });
+          const SEG = 96;
+          const cyl = (r, h, mat, y, open = false) => { const m = new THREE.Mesh(new THREE.CylinderGeometry(r, r, h, SEG, 1, open), mat); m.position.y = y + h / 2; return m; };
+          // Ogive (Spitze): Profilpunkte von r bis 0 über Höhe h
+          const ogive = (r, h, n = 40, blunt = 0.06) => { const pts = []; for (let i = 0; i <= n; i++) { const f = i / n; const rad = r * Math.sqrt(Math.max(0, 1 - Math.pow(f, 1.9))) * (1 - blunt) + r * blunt * (1 - f); pts.push(new THREE.Vector2(Math.max(0.001, rad * (f < 1 ? 1 : 0)), f * h)); } return pts; };
+          const lathe = (pts, mat, phi0 = 0, phi = Math.PI * 2) => new THREE.Mesh(new THREE.LatheGeometry(pts, SEG, phi0, phi), mat);
+          // Düse (Glocke)
+          MO.nozzle = (r0, r1, h, mat) => { const pts = []; for (let i = 0; i <= 20; i++) { const f = i / 20; pts.push(new THREE.Vector2(r0 + (r1 - r0) * Math.pow(f, 0.6), -f * h)); } const m = lathe(pts, mat); m.material.side = THREE.DoubleSide; return m; };
+          const nozM = () => MO.plain(0x3a3330, 0.85, 0.38, 0.6, { side: THREE.DoubleSide });
+          // ---------- Abgasstrahl (Shader) ----------
+          MO.exhaust = (len, rad, hot = [1, 0.95, 0.85], warm = [1, 0.55, 0.18]) => {
+            const geo = new THREE.CylinderGeometry(rad * 0.55, rad * 1.6, len, 48, 24, true); geo.translate(0, -len / 2, 0);
+            const mat = new THREE.ShaderMaterial({ transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide, toneMapped: false,
+              uniforms: { t: { value: 0 }, power: { value: 1 }, len: { value: len }, hot: { value: new THREE.Vector3(...hot) }, warm: { value: new THREE.Vector3(...warm) } },
+              vertexShader: `varying vec2 vU; varying vec3 vN; varying vec3 vV; void main(){ vU = uv; vec4 mv = modelViewMatrix * vec4(position,1.); vN = normalize(normalMatrix*normal); vV = normalize(-mv.xyz); gl_Position = projectionMatrix*mv; }`,
+              fragmentShader: `uniform float t; uniform float power; uniform vec3 hot; uniform vec3 warm; varying vec2 vU; varying vec3 vN; varying vec3 vV;
+                float h(vec2 p){ return fract(sin(dot(p, vec2(12.9898,78.233)))*43758.5453); }
+                float n(vec2 p){ vec2 i=floor(p), f=fract(p); f=f*f*(3.-2.*f); return mix(mix(h(i),h(i+vec2(1,0)),f.x), mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x), f.y); }
+                void main(){ float y = 1.-vU.y; float rim = abs(dot(vN, vV)); float core = pow(rim, 1.1);
+                  float fl = n(vec2(vU.x*12., y*8. - t*22.)) * .5 + n(vec2(vU.x*30., y*20. - t*40.)) * .5;
+                  float diam = .75 + .25*sin(y*60. - t*3.);
+                  float fade = pow(1.-y, 1.4) * smoothstep(0., .04, y + .02);
+                  vec3 c = mix(warm, hot, pow(core, 4.) * pow(1.-y, 3.));
+                  float a = core * fade * (0.55 + .45*fl) * diam * power;
+                  gl_FragColor = vec4(c * a * 1.9, a); }` });
+            const m = new THREE.Mesh(geo, mat); m.renderOrder = 5; m.userData.mat = mat; return m;
+          };
+          // ---------- Rauch (weiche Wolken) ----------
+          const smokeTexC = (() => { const s = 256, c = document.createElement("canvas"); c.width = c.height = s; const g = c.getContext("2d"); for (let i = 0; i < 26; i++) { const x = s / 2 + (rr() - 0.5) * s * 0.45, y = s / 2 + (rr() - 0.5) * s * 0.45, r = s * (0.12 + rr() * 0.2); const gr = g.createRadialGradient(x, y, 0, x, y, r); gr.addColorStop(0, "rgba(255,255,255,.35)"); gr.addColorStop(1, "rgba(255,255,255,0)"); g.fillStyle = gr; g.fillRect(0, 0, s, s); } const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; })();
+          MO.smoke = (scene, n, col = 0xc9ccd4) => { const list = []; for (let i = 0; i < n; i++) { const m = new THREE.SpriteMaterial({ map: smokeTexC, color: col, transparent: true, depthWrite: false, opacity: 0 }); m.rotation = rr() * 6.28; const s = new THREE.Sprite(m); scene.add(s); list.push(s); } return list; };
+          MO.glow = (col) => K.glowTex(col);
+        
+          // ================= VULCAN =================
+          MO.vulcan = () => {
+            const g = new THREE.Group(), boost = new THREE.Group(), up = new THREE.Group(); g.add(boost); g.add(up);
+            const foam = MO.panelTex({ base: "#c8773e", mottle: 0.18, spots: 9000, spotR: 10, rings: [0.12, 0.33, 0.55, 0.78, 0.96], vseams: 4, seam: "rgba(90,40,10,.35)", soot: 0.1,
+              text: [{ s: "ULA", u: 0.25, v: 0.62, size: 210, col: "rgba(255,255,255,.92)", spacing: 30 }, { s: "VULCAN", u: 0.75, v: 0.5, size: 120, col: "rgba(255,255,255,.85)", spacing: 24 }],
+              flags: [{ k: "us", u: 0.25, v: 0.86, w: 0.07, h: 0.07 }] });
+            const bm = MO.mat(foam, { rough: 0.78, ei: 0.25, bumpScale: 1.2 });
+            boost.add(cyl(2.7, 33, bm, 0));
+            const aft = cyl(2.75, 2.2, MO.plain(0x2a2b2f, 0.5, 0.5, 0.4), -0.6); boost.add(aft);
+            const isTex = MO.panelTex({ base: "#1c1d21", mottle: 0.06, ribs: 64, rings: [0.1, 0.9] }); boost.add(cyl(2.72, 3, MO.mat(isTex, { metal: 0.45, rough: 0.45, ei: 0.5 }), 33));
+            // BE-4 Triebwerke
+            for (const s of [-1, 1]) { const nz = MO.nozzle(0.55, 1.15, 2.6, nozM()); nz.position.set(s * 1.2, -0.6, 0); boost.add(nz); }
+            // 6 Booster GEM 63XL
+            const srbT = MO.panelTex({ base: "#cfd2d6", mottle: 0.05, rings: [0.25, 0.5, 0.75], soot: 0.08, bands: [[0, 0.05, "#2a2b2f"]] });
+            const srbM = MO.mat(srbT, { rough: 0.5 });
+            const srbs = []; for (let i = 0; i < 6; i++) { const a = (i / 6) * Math.PI * 2 + Math.PI / 6; const sg = new THREE.Group(); sg.position.set(Math.cos(a) * 3.55, 0, Math.sin(a) * 3.55);
+              sg.add(cyl(0.82, 20, srbM, 0)); const nose = lathe(ogive(0.82, 2.6), MO.plain(0xcfd2d6, 0.05, 0.45, 0.35)); nose.position.y = 20; sg.add(nose);
+              const nz = MO.nozzle(0.4, 0.62, 1.1, nozM()); nz.position.y = 0; nz.rotation.z = 0; sg.add(nz);
+              for (const y of [3, 17]) { const st = new THREE.Mesh(new THREE.CylinderGeometry(0.09, 0.09, 1.0, 8), MO.plain(0x8a8d94, 0.8, 0.35)); st.position.set(-Math.cos(a) * 0.95, y, -Math.sin(a) * 0.95); st.rotation.z = Math.PI / 2; st.rotation.y = -a; sg.add(st); }
+              boost.add(sg); srbs.push(sg); }
+            // Oberstufe + Verkleidung
+            const cenT = MO.panelTex({ base: "#c6c9ce", mottle: 0.04, rings: [0.5] }); up.add(cyl(2.7, 12, MO.mat(cenT, { metal: 0.15, rough: 0.4 }), 36));
+            const fair = new THREE.Group(); fair.position.y = 48; up.add(fair);
+            const fT = MO.panelTex({ base: "#d3d6da", mottle: 0.035, rings: [0.35], text: [{ s: "ULA", u: 0.25, v: 0.45, size: 260, col: "#1f4aa8", spacing: 20 }], flags: [{ k: "us", u: 0.75, v: 0.45, w: 0.09, h: 0.12 }] });
+            const fM = MO.mat(fT, { rough: 0.38, ei: 0.4, side: THREE.DoubleSide });
+            const halves = [0, 1].map((k) => { const h = new THREE.Group(); const c = new THREE.Mesh(new THREE.CylinderGeometry(2.7, 2.7, 10, SEG / 2, 1, true, k * Math.PI, Math.PI), fM); c.position.y = 5; h.add(c);
+              const tip = lathe(ogive(2.7, 9), MO.plain(0xd3d6da, 0.05, 0.38, 0.4, { side: THREE.DoubleSide }), k * Math.PI, Math.PI); tip.position.y = 10; h.add(tip); fair.add(h); return h; });
+            const seamR = new THREE.Mesh(new THREE.TorusGeometry(2.71, 0.03, 6, SEG), MO.plain(0x9a9ca2, 0.6, 0.4)); seamR.rotation.x = Math.PI / 2; seamR.position.y = 48; up.add(seamR);
+            // 40 Satelliten (im Fairing)
+            const sats = new THREE.Group(); fair.add(sats);
+            const disp = cyl(0.7, 13, MO.plain(0x50545c, 0.7, 0.4), 0); sats.add(disp);
+            for (let lv = 0; lv < 10; lv++) for (let s = 0; s < 4; s++) { const a = (s / 4) * Math.PI * 2 + 0.785; const k = MO.kuiperFlat(); k.position.set(Math.cos(a) * 1.55, 0.7 + lv * 1.2, Math.sin(a) * 1.55); k.rotation.y = -a + Math.PI / 2; sats.add(k); }
+            sats.visible = false;
+            return { g, boost, up, halves, sats, srbs };
+          };
+          // Flacher Satellit (gestapelt)
+          const cellT = (() => { const c = document.createElement("canvas"); c.width = 512; c.height = 256; const g = c.getContext("2d"); g.fillStyle = "#0d1630"; g.fillRect(0, 0, 512, 256); for (let y = 0; y < 256; y += 32) for (let x = 0; x < 512; x += 32) { g.fillStyle = `rgb(${20 + rr() * 10},${35 + rr() * 15},${80 + rr() * 30})`; g.fillRect(x + 2, y + 2, 28, 28); } g.strokeStyle = "rgba(200,210,230,.35)"; g.lineWidth = 1; for (let x = 0; x < 512; x += 32) { g.beginPath(); g.moveTo(x, 0); g.lineTo(x, 256); g.stroke(); } const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; })();
+          MO.cellM = () => new THREE.MeshStandardMaterial({ map: cellT, metalness: 0.6, roughness: 0.22, envMap: MO.env, envMapIntensity: 1.0 });
+          const mliT = (() => { const c = document.createElement("canvas"); c.width = c.height = 512; const g = c.getContext("2d"); g.fillStyle = "#b58a34"; g.fillRect(0, 0, 512, 512); for (let i = 0; i < 900; i++) { const x = rr() * 512, y = rr() * 512; g.strokeStyle = `rgba(${rr() < 0.5 ? "255,240,190" : "90,60,10"},${0.15 + rr() * 0.3})`; g.lineWidth = 1 + rr() * 3; g.beginPath(); g.moveTo(x, y); g.lineTo(x + (rr() - 0.5) * 80, y + (rr() - 0.5) * 80); g.stroke(); } const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; })();
+          MO.mliM = () => new THREE.MeshStandardMaterial({ map: mliT, bumpMap: mliT, bumpScale: 2, metalness: 0.95, roughness: 0.28, envMap: MO.env, envMapIntensity: 1.3 });
+          MO.kuiperFlat = () => { const g = new THREE.Group(); const b = new THREE.Mesh(RoundedBoxGeometry(1.45, 1.0, 0.32, 2, 0.03), MO.plain(0x2c3038, 0.55, 0.45, 0.6)); g.add(b);
+            const p = new THREE.Mesh(new THREE.PlaneGeometry(1.35, 0.9), MO.cellM()); p.position.z = 0.165; g.add(p); const m = new THREE.Mesh(new THREE.PlaneGeometry(1.35, 0.9), MO.mliM()); m.position.z = -0.165; m.rotation.y = Math.PI; g.add(m); return g; };
+        
+          // ================= ARIANE 6 =================
+          MO.ariane6 = () => {
+            const g = new THREE.Group();
+            const coreT = MO.panelTex({ base: "#cfd2d6", mottle: 0.04, rings: [0.2, 0.45, 0.7, 0.92], soot: 0.06, text: [{ s: "ARIANE 6", u: 0.25, v: 0.55, size: 150, col: "#1b2a4a", spacing: 18 }], flags: [{ k: "eu", u: 0.25, v: 0.85, w: 0.08, h: 0.06 }] });
+            g.add(cyl(2.7, 30, MO.mat(coreT, { rough: 0.5 }), 0));
+            g.add(cyl(2.72, 1.4, MO.plain(0x1e2230, 0.4, 0.5), 30));
+            g.add(cyl(2.7, 6, MO.mat(MO.panelTex({ base: "#cbced2", mottle: 0.04 }), { rough: 0.45 }), 31.4));
+            const fT = MO.panelTex({ base: "#d4d7db", mottle: 0.03, rings: [0.4], text: [{ s: "esa", u: 0.25, v: 0.45, size: 240, col: "#003247" }] });
+            g.add(cyl(2.7, 10, MO.mat(fT, { rough: 0.38 }), 37.4)); const tip = lathe(ogive(2.7, 9), MO.plain(0xd4d7db, 0.05, 0.38, 0.4)); tip.position.y = 47.4; g.add(tip);
+            const nz = MO.nozzle(0.8, 1.35, 2.4, nozM()); nz.position.y = 0; g.add(nz);
+            const bT = MO.panelTex({ base: "#c8cbd0", mottle: 0.05, rings: [0.3, 0.6], soot: 0.08 });
+            const boosters = []; for (let i = 0; i < 4; i++) { const a = (i / 4) * Math.PI * 2 + 0.785; const sg = new THREE.Group(); sg.position.set(Math.cos(a) * 4.25, 0, Math.sin(a) * 4.25);
+              sg.add(cyl(1.5, 15, MO.mat(bT, { rough: 0.5 }), 0)); const n = lathe(ogive(1.5, 4.2), MO.plain(0xc8cbd0, 0.05, 0.45, 0.35)); n.position.y = 15; sg.add(n);
+              const z = MO.nozzle(0.6, 1.05, 1.8, nozM()); sg.add(z); g.add(sg); boosters.push(sg); }
+            return { g, boosters };
+          };
+        
+          // ================= FALCON 9 =================
+          MO.falcon9 = () => {
+            const g = new THREE.Group(); const R = 1.85;
+            const s1T = MO.panelTex({ base: "#d0d3d7", mottle: 0.04, rings: [0.15, 0.35, 0.55, 0.75, 0.93], soot: 0.22, text: [{ s: "SPACEX", u: 0.25, v: 0.55, size: 150, col: "#15171c", spacing: 26 }] });
+            g.add(cyl(R, 42, MO.mat(s1T, { rough: 0.5 }), 0));
+            for (let i = 0; i < 4; i++) { const a = (i / 4) * Math.PI * 2 + 0.785; const leg = new THREE.Mesh(new THREE.BoxGeometry(0.5, 9, 0.18), MO.plain(0x24262b, 0.4, 0.55)); leg.position.set(Math.cos(a) * (R + 0.08), 4.5, Math.sin(a) * (R + 0.08)); leg.rotation.y = -a + Math.PI / 2; g.add(leg); }
+            g.add(cyl(R + 0.01, 4.5, MO.plain(0x141518, 0.45, 0.4, 0.5), 42));
+            for (let i = 0; i < 4; i++) { const a = (i / 4) * Math.PI * 2; const fin = new THREE.Mesh(new THREE.BoxGeometry(0.9, 0.8, 0.12), MO.plain(0x3a3c42, 0.8, 0.35)); fin.position.set(Math.cos(a) * (R + 0.45), 45.5, Math.sin(a) * (R + 0.45)); fin.rotation.y = -a + Math.PI / 2; g.add(fin); }
+            g.add(cyl(R, 9, MO.mat(MO.panelTex({ base: "#cdd0d4", mottle: 0.04 }), { rough: 0.45 }), 46.5));
+            const fa = new THREE.Mesh(new THREE.CylinderGeometry(2.6, R, 2.5, SEG), MO.plain(0xd4d7db, 0.05, 0.4, 0.4)); fa.position.y = 56.75; g.add(fa);
+            g.add(cyl(2.6, 6.5, MO.mat(MO.panelTex({ base: "#d4d7db", mottle: 0.03 }), { rough: 0.38 }), 58)); const tip = lathe(ogive(2.6, 6.2), MO.plain(0xd4d7db, 0.05, 0.38, 0.4)); tip.position.y = 64.5; g.add(tip);
+            for (let i = 0; i < 9; i++) { const a = (i / 8) * Math.PI * 2, r = i === 8 ? 0 : 1.2; const nz = MO.nozzle(0.22, 0.42, 1.1, nozM()); nz.position.set(Math.cos(a) * r, 0, Math.sin(a) * r); g.add(nz); }
+            return { g };
+          };
+          // ================= Flaggen-Textur (cn, pk) =================
+          MO.flagTex = (k) => { const c = document.createElement("canvas"); c.width = 600; c.height = 400; const g = c.getContext("2d");
+            const star = (x, y, r, rot = 0) => { g.beginPath(); for (let i = 0; i < 10; i++) { const a = rot - Math.PI / 2 + (i * Math.PI) / 5, rr2 = i % 2 ? r * 0.38 : r; g.lineTo(x + Math.cos(a) * rr2, y + Math.sin(a) * rr2); } g.closePath(); g.fill(); };
+            if (k === "cn") { g.fillStyle = "#de2910"; g.fillRect(0, 0, 600, 400); g.fillStyle = "#ffde00"; star(100, 100, 60); [[200, 40], [240, 80], [240, 140], [200, 180]].forEach(([x, y]) => star(x, y, 20, 0.5)); }
+            if (k === "pk") { g.fillStyle = "#fff"; g.fillRect(0, 0, 150, 400); g.fillStyle = "#01411c"; g.fillRect(150, 0, 450, 400); g.fillStyle = "#fff"; g.beginPath(); g.arc(375, 200, 120, 0, 7); g.fill(); g.fillStyle = "#01411c"; g.beginPath(); g.arc(405, 170, 105, 0, 7); g.fill(); g.fillStyle = "#fff"; star(430, 160, 40, 0.6); }
+            const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; };
+          const white = () => MO.plain(0xc9ccd1, 0.1, 0.5, 0.45);
+          const wing = (w, h, mat, frame = 0x8a8f99, back = null) => { const g = new THREE.Group(); const p = new THREE.Mesh(new THREE.BoxGeometry(w, 0.06, h), [MO.plain(frame, 0.6, 0.4), MO.plain(frame, 0.6, 0.4), mat, back ?? MO.plain(0x30343c, 0.5, 0.5), MO.plain(frame, 0.6, 0.4), MO.plain(frame, 0.6, 0.4)]); g.add(p); return g; };
+        
+          // ================= LANGER MARSCH 2F (Einheit Meter) =================
+          MO.longMarch2F = () => {
+            const g = new THREE.Group(); const R = 1.675;
+            const s1 = MO.panelTex({ base: "#d6d8da", mottle: 0.035, rings: [0.12, 0.45, 0.8], soot: 0.12, text: [{ s: "中国航天", u: 0.25, v: 0.6, size: 170, col: "#c8102e", spacing: 30 }], flags: [] });
+            g.add(cyl(R, 28.5, MO.mat(s1, { rough: 0.5 }), 0));
+            const fl = new THREE.Mesh(new THREE.PlaneGeometry(1.6, 2.4), new THREE.MeshStandardMaterial({ map: MO.flagTex("cn"), roughness: 0.6 })); fl.position.set(0, 21, R + 0.01); g.add(fl);
+            g.add(cyl(R + 0.01, 1.2, MO.plain(0x3a3d44, 0.4, 0.5), 28.5));
+            g.add(cyl(R, 12, MO.mat(MO.panelTex({ base: "#d6d8da", mottle: 0.03, rings: [0.5] }), { rough: 0.5 }), 29.7));
+            const fa = new THREE.Mesh(new THREE.CylinderGeometry(1.9, R, 1.2, SEG), white()); fa.position.y = 42.3; g.add(fa);
+            g.add(cyl(1.9, 7.5, MO.mat(MO.panelTex({ base: "#dadcdf", mottle: 0.03, vseams: 2 }), { rough: 0.42 }), 42.9));
+            const tip = lathe(ogive(1.9, 4.2, 40, 0.15), white()); tip.position.y = 50.4; g.add(tip);
+            for (let i = 0; i < 4; i++) { const a = (i / 4) * Math.PI * 2 + 0.4; const gf = new THREE.Mesh(new THREE.BoxGeometry(1.3, 1.1, 0.12), MO.plain(0x8b9099, 0.7, 0.35)); gf.position.set(Math.cos(a) * 2.35, 45.5, Math.sin(a) * 2.35); gf.rotation.y = -a + Math.PI / 2; g.add(gf); }
+            const tower = new THREE.Group(); tower.position.y = 54.3; g.add(tower); tower.add(cyl(0.38, 6.5, white(), 0)); const tt = lathe(ogive(0.38, 1.3), white()); tt.position.y = 6.5; tower.add(tt);
+            for (let i = 0; i < 4; i++) { const a = (i / 4) * Math.PI * 2; const nz = MO.nozzle(0.1, 0.22, 0.5, nozM()); nz.position.set(Math.cos(a) * 0.38, 1.0, Math.sin(a) * 0.38); nz.rotation.z = Math.cos(a) * 0.9; nz.rotation.x = -Math.sin(a) * 0.9; tower.add(nz); }
+            const boosters = [];
+            for (let i = 0; i < 4; i++) { const a = (i / 4) * Math.PI * 2 + Math.PI / 4; const b = new THREE.Group(); b.position.set(Math.cos(a) * (R + 1.15), 0, Math.sin(a) * (R + 1.15)); g.add(b);
+              b.add(cyl(1.125, 13.5, MO.mat(MO.panelTex({ base: "#d4d6d9", mottle: 0.035, rings: [0.5], soot: 0.15 }), { rough: 0.5 }), 0));
+              const c = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 1.125, 2.6, SEG), white()); c.position.y = 14.8; b.add(c);
+              const fin = new THREE.Mesh(new THREE.BoxGeometry(0.1, 2.2, 1.5), MO.plain(0xbfc3c8, 0.3, 0.5)); fin.position.set(Math.cos(a) * 1.4, 1.2, Math.sin(a) * 1.4); fin.rotation.y = -a; b.add(fin);
+              const nz = MO.nozzle(0.35, 0.6, 1.3, nozM()); b.add(nz); boosters.push(b); }
+            for (let i = 0; i < 4; i++) { const a = (i / 4) * Math.PI * 2; const nz = MO.nozzle(0.35, 0.6, 1.3, nozM()); nz.position.set(Math.cos(a) * 0.8, 0, Math.sin(a) * 0.8); g.add(nz); }
+            return { g, tower, boosters };
+          };
+          // ================= Startturm =================
+          MO.pad = () => { const g = new THREE.Group(); const m = MO.plain(0x6e3b2a, 0.5, 0.6, 0.4), w = MO.plain(0x9aa0a8, 0.6, 0.5);
+            const base = new THREE.Mesh(new THREE.BoxGeometry(30, 4, 30), MO.plain(0x5a5c60, 0.1, 0.9, 0.2)); base.position.y = -2; g.add(base);
+            for (const [x, z] of [[-9, -4], [-9, 4], [-15, -4], [-15, 4]]) { const c = new THREE.Mesh(new THREE.BoxGeometry(0.6, 70, 0.6), m); c.position.set(x, 35, z); g.add(c); }
+            for (let y = 4; y < 70; y += 5) { const b = new THREE.Mesh(new THREE.BoxGeometry(7, 0.5, 9), m); b.position.set(-12, y, 0); g.add(b); }
+            for (const y of [20, 34, 46]) { const arm = new THREE.Mesh(new THREE.BoxGeometry(6, 0.8, 2), w); arm.position.set(-6, y, 0); g.add(arm); }
+            return g; };
+        
+          // ================= TIANGONG (Einheit Meter) =================
+          MO.tiangong = () => { const g = new THREE.Group(); const hullT = MO.panelTex({ base: "#cfd2d6", mottle: 0.05, spots: 5000, vseams: 8, rings: [0.2, 0.4, 0.6, 0.8], w: 1024, h: 1024 });
+            const hull = MO.mat(hullT, { rough: 0.55, bumpScale: 1 }), dark = MO.plain(0x3a3e46, 0.6, 0.4), gold = MO.mliM(); const cell = MO.cellM();
+            const mod = (r, L, mat) => { const m = new THREE.Mesh(new THREE.CylinderGeometry(r, r, L, SEG), mat); m.rotation.z = Math.PI / 2; return m; };
+            const core = new THREE.Group(); g.add(core); const tc = mod(2.1, 13, hull); tc.position.x = -6.5; core.add(tc); const tn = mod(1.4, 3, hull); tn.position.x = 1.5; core.add(tn);
+            const node = new THREE.Mesh(new THREE.SphereGeometry(1.5, 48, 32), hull); node.position.x = 3.6; core.add(node);
+            const aft = mod(1.6, 1.5, gold); aft.position.x = -13.7; core.add(aft);
+            for (const s of [-1, 1]) { const arm = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 4, 12), dark); arm.position.set(-6, 0, s * 4); arm.rotation.x = Math.PI / 2; core.add(arm);
+              const w = wing(4, 12, cell); w.position.set(-6, 0, s * 12); core.add(w); }
+            const labs = [];
+            for (const s of [-1, 1]) { const lab = new THREE.Group(); lab.position.set(3.6, 0, s * 1.4); lab.rotation.y = s * Math.PI / 2; g.add(lab);
+              const lm = mod(2.1, 13, hull); lm.position.x = 8.5; lab.add(lm); const lc = mod(1.4, 2, hull); lc.position.x = 1; lab.add(lc); const back = mod(2.0, 3, gold); back.position.x = 16.5; lab.add(back);
+              const mast = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 8, 12), dark); mast.position.set(15.5, 4, 0); lab.add(mast);
+              for (const z of [-1, 1]) { const w = wing(3.6, 26, cell); w.position.set(15.5, 8, z * 14); lab.add(w); }
+              labs.push(lab); }
+            const port = new THREE.Object3D(); port.position.set(5.1, 0, 0); g.add(port);
+            return { g, port }; };
+        
+          // ================= SHENZHOU (Einheit Meter, Nase +x) =================
+          MO.shenzhou = () => { const g = new THREE.Group(); const hull = MO.mat(MO.panelTex({ base: "#c4c7cc", mottle: 0.05, w: 512, h: 512 }), { rough: 0.55 });
+            const om = new THREE.Mesh(new THREE.SphereGeometry(1.1, 40, 28), hull); om.scale.set(1.3, 1, 1); om.position.x = 2.6; g.add(om);
+            const dock = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.6, 0.6, 32), MO.plain(0x8a8f99, 0.7, 0.35)); dock.rotation.z = Math.PI / 2; dock.position.x = 4.2; g.add(dock);
+            const dm = lathe([[0.5, 0], [1.25, 1.1], [1.25, 2.0]].map(([r, y]) => new THREE.Vector2(r, y)), MO.plain(0x6b5b48, 0.4, 0.6)); dm.rotation.z = -Math.PI / 2; dm.position.x = 1.1; g.add(dm);
+            const sm = new THREE.Mesh(new THREE.CylinderGeometry(1.4, 1.4, 2.9, SEG), MO.mliM()); sm.rotation.z = Math.PI / 2; sm.position.x = -2.4; g.add(sm);
+            for (const s of [-1, 1]) { const w = wing(1.8, 7.2, MO.cellM()); w.position.set(-2.4, 0, s * 5.2); g.add(w); }
+            const nz = MO.nozzle(0.3, 0.55, 0.8, nozM()); nz.rotation.z = Math.PI / 2; nz.position.x = -3.85; g.add(nz);
+            const fl = new THREE.Mesh(new THREE.PlaneGeometry(0.9, 0.6), new THREE.MeshStandardMaterial({ map: MO.flagTex("cn"), roughness: 0.6 })); fl.position.set(-2.4, 0.4, 1.42); g.add(fl);
+            return { g }; };
+        
+          // ================= ISS (Einheit Meter) =================
+          MO.iss = () => { const g = new THREE.Group(); const hull = MO.mat(MO.panelTex({ base: "#cfd2d6", mottle: 0.05, vseams: 6, w: 512, h: 512 }), { rough: 0.55 }); const tr = MO.plain(0x9aa0a8, 0.7, 0.4);
+            const truss = new THREE.Mesh(new THREE.BoxGeometry(100, 2.5, 2.5), tr); g.add(truss);
+            const cellO = new THREE.MeshStandardMaterial({ color: 0x8a6a3a, metalness: 0.6, roughness: 0.35, envMap: MO.env, envMapIntensity: 0.6 });
+            for (const x of [-44, -32, 32, 44]) for (const s of [-1, 1]) { const w = wing(11, 34, cellO, 0x6a6e76); w.position.set(x, 0, s * 19); w.rotation.z = 0.2; g.add(w); }
+            for (const x of [-16, 16]) { const r = wing(4, 12, MO.plain(0xe8e8e8, 0.1, 0.6)); r.position.set(x, -3, 0); r.rotation.x = Math.PI / 2; g.add(r); }
+            const mods = [[0, -4, 0, 2.2, 30, "z"], [0, -4, -18, 2.2, 10, "x"], [6, -4, -12, 2.2, 10, "x"], [-6, -4, -12, 2.2, 8, "x"]];
+            for (const [x, y, z, r, L, ax] of mods) { const m = new THREE.Mesh(new THREE.CylinderGeometry(r, r, L, 48), hull); if (ax === "z") m.rotation.x = Math.PI / 2; else m.rotation.z = Math.PI / 2; m.position.set(x, y, z); g.add(m); }
+            return { g }; };
+        
+          // ================= HAYABUSA2 (Einheit Meter) =================
+          MO.hayabusa2 = () => { const g = new THREE.Group(); const gold = MO.mliM(), dark = MO.plain(0x2c3038, 0.6, 0.4), alu = MO.plain(0xb9bdc4, 0.9, 0.28, 1.1);
+            const body = new THREE.Mesh(RoundedBoxGeometry(1.6, 1.25, 1.0, 2, 0.03), gold); g.add(body);
+            const top = new THREE.Mesh(new THREE.BoxGeometry(1.64, 0.04, 1.04), MO.plain(0xe0e2e6, 0.2, 0.5)); top.position.y = 0.64; g.add(top);
+            for (const s of [-1, 1]) { const arm = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, 0.4, 10), alu); arm.rotation.x = Math.PI / 2; arm.position.set(0, 0.2, s * 0.7); g.add(arm);
+              for (let i = 0; i < 3; i++) { const w = wing(1.15, 0.95, MO.cellM(), 0x50545c, MO.cellM()); w.rotation.x = Math.PI / 2; w.position.set(0, 0.2, s * (1.4 + i * 0.98)); g.add(w); } }
+            const hga = new THREE.Mesh(new THREE.CylinderGeometry(0.42, 0.42, 0.05, 48), MO.plain(0xd8dadd, 0.3, 0.4)); hga.position.set(0.25, 0.75, 0); g.add(hga);
+            const ka = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.05, 0.16, 32, 1, true), MO.plain(0xe8e8ea, 0.3, 0.4, 0.4, { side: THREE.DoubleSide })); ka.position.set(-0.45, 0.78, 0.2); g.add(ka);
+            const horn = new THREE.Mesh(new THREE.CylinderGeometry(0.1, 0.16, 1.0, 24), alu); horn.position.set(0.3, -1.1, 0); g.add(horn);
+            const ip = new THREE.Mesh(new THREE.BoxGeometry(0.08, 0.7, 0.7), dark); ip.position.set(-0.84, -0.05, 0); g.add(ip);
+            const engines = []; [[-0.18, -0.18], [-0.18, 0.18], [0.18, -0.18], [0.18, 0.18]].forEach(([y, z]) => { const e = new THREE.Group(); e.position.set(-0.9, y - 0.05, z); g.add(e);
+              const ring = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 0.06, 32), alu); ring.rotation.z = Math.PI / 2; e.add(ring);
+              const grid = new THREE.Mesh(new THREE.CircleGeometry(0.1, 32), new THREE.MeshBasicMaterial({ color: 0x1b2a55, toneMapped: false })); grid.rotation.y = -Math.PI / 2; grid.position.x = -0.035; e.add(grid);
+              const ex = MO.exhaust(3.5, 0.1, [0.75, 0.88, 1], [0.25, 0.4, 1]); ex.rotation.z = -Math.PI / 2; ex.position.x = -0.04; e.add(ex); e.userData = { grid, ex }; engines.push(e); });
+            return { g, engines }; };
+        
+          // ================= ASTEROIDEN =================
+          MO.asteroid = (o = {}) => { const r = o.r ?? 1; let s = o.seed ?? 3; const rnd = () => ((s = (s * 16807) % 2147483647) / 2147483647);
+            const geo = new THREE.SphereGeometry(1, 220, 150); const p = geo.attributes.position; const v = new THREE.Vector3();
+            const craters = []; for (let i = 0; i < (o.craters ?? 40); i++) craters.push([new THREE.Vector3(rnd() - 0.5, rnd() - 0.5, rnd() - 0.5).normalize(), 0.05 + rnd() * 0.25, 0.02 + rnd() * 0.05]);
+            const boulders = []; for (let i = 0; i < 260; i++) boulders.push([new THREE.Vector3(rnd() - 0.5, rnd() - 0.5, rnd() - 0.5).normalize(), 0.015 + rnd() * 0.05, 0.01 + rnd() * 0.03]);
+            const waves = []; for (let i = 0; i < 14; i++) waves.push([new THREE.Vector3(rnd() - 0.5, rnd() - 0.5, rnd() - 0.5).normalize(), 2 + rnd() * 9, rnd() * 6.28, 0.035 / (1 + i * 0.35)]);
+            const col = []; for (let i = 0; i < p.count; i++) { v.fromBufferAttribute(p, i).normalize(); let d = 1;
+              if (o.top) d *= 0.78 + 0.32 * Math.pow(1 - Math.abs(v.y), 1.6) - 0.05 * Math.abs(v.y);
+              for (const [dx, f, ph, am] of waves) d += am * Math.sin(v.dot(dx) * f + ph);
+              for (const [c, cr, dp] of craters) { const a = v.angleTo(c); if (a < cr) d -= dp * (1 - (a / cr) ** 2); else if (a < cr * 1.3) d += dp * 0.3 * (1 - (a - cr) / (cr * 0.3)); }
+              for (const [c, br, h] of boulders) { const a = v.angleTo(c); if (a < br) d += h * Math.cos((a / br) * Math.PI / 2); }
+              v.multiplyScalar(d); if (o.stretch) v.multiply(o.stretch); p.setXYZ(i, v.x, v.y, v.z); const k = 0.88 + 0.12 * Math.sin(v.x * 9 + v.z * 5) * Math.cos(v.y * 7) + 0.04 * rnd(); col.push(0.32 * k, 0.3 * k, 0.28 * k); }
+            geo.setAttribute("color", new THREE.Float32BufferAttribute(col, 3)); geo.computeVertexNormals();
+            const m = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.95, metalness: 0, flatShading: false })); m.scale.setScalar(r); return m; };
+        }
+        
+        // ================= Tiefer Raum: Sonde, Sonne, Asteroiden =================
+        const sc = new THREE.Scene(); K.stars(sc, 11000, -1, 40000, 1.7).material.opacity = 0.8; sc.add(new THREE.AmbientLight(0x2c3040, 0.8)); sc.add(new THREE.HemisphereLight(0x8090b0, 0x101010, 0.3));
+        const sun = new THREE.DirectionalLight(0xfff2e0, 2.0); sun.position.set(-600, 250, 400); sc.add(sun); const sunS = K.sprite(sc, K.glowTex("rgba(255,225,170,1)"), 900, V(-6000, 2500, 4000), 0.9);
+        const HB = MO.hayabusa2(); sc.add(HB.g); const hbO = new THREE.Object3D(); HB.g.add(hbO); hbO.position.set(0, 1.2, 0);
+        const sparks = []; for (let i = 0; i < 6; i++) sparks.push(K.sprite(HB.g, K.glowTex("rgba(190,220,255,1)"), 0.35, V(-1.0, 0, 0), 0));
+        const engGlow = HB.engines.map((e) => { const s = K.sprite(e, K.glowTex("rgba(120,170,255,1)"), 0.7, V(-0.08, 0, 0), 0); return s; });
+        const RY = MO.asteroid({ r: 40, seed: 11, top: true, craters: 30 }); sc.add(RY); RY.position.set(0, 0, -2000); const ryO = new THREE.Object3D(); RY.add(ryO); ryO.position.set(0, 1.25, 0);
+        const TF = new THREE.Group(); sc.add(TF); TF.position.set(0, 0, 2000); { const a = MO.asteroid({ r: 14, seed: 5, craters: 20 }); a.position.x = -9; const b = MO.asteroid({ r: 10, seed: 9, craters: 14 }); b.position.x = 8; TF.add(a, b); } const tfO = new THREE.Object3D(); TF.add(tfO); tfO.position.set(0, 20, 0);
+        const KY = MO.asteroid({ r: 4, seed: 41, craters: 8 }); sc.add(KY); KY.position.set(3000, 0, 0);
+        const NB = MO.asteroid({ r: 22, seed: 77, craters: 22, stretch: V(1.5, 0.8, 1) }); sc.add(NB); NB.position.set(-3000, 0, 0);
+        const cross = []; for (const s of [-1, 1]) { const m = new THREE.Mesh(new THREE.BoxGeometry(22, 1.6, 0.5), new THREE.MeshBasicMaterial({ color: 0xff3b30, transparent: true, opacity: 0, toneMapped: false })); m.rotation.z = s * 0.785; m.position.copy(KY.position).add(V(0, 0, 12)); sc.add(m); cross.push(m); }
+        // Erde + Kapsel (2020)
+        const scE = new THREE.Scene(); K.stars(scE, 8000, -1, 30000, 1.6).material.opacity = 0.7; scE.add(new THREE.AmbientLight(0x30343e, 0.6)); const sunE = new THREE.DirectionalLight(0xfff2e0, 1.4); sunE.position.set(-500, 300, 600); scE.add(sunE);
+        const RE = 100; const EA = K.earth(scE, { day, night, topo }, RE); EA.group.children[EA.group.children.length - 1].scale.setScalar(0.93); EA.U.sun.value = V(-0.5, 0.3, 0.8).normalize();
+        const capF = MO.exhaust(30, 1.6, [1, 0.95, 0.8], [1, 0.45, 0.12]); scE.add(capF); const capG = K.sprite(scE, K.glowTex("rgba(255,170,80,1)"), 10, V(0, 0, 0), 0);
+        const capM = new THREE.Mesh(new THREE.SphereGeometry(0.8, 24, 16), MO.plain(0x6b5b48, 0.4, 0.6)); scE.add(capM);
+        // Bahnlinie (gepunktet)
+        const path = new THREE.Line(new THREE.BufferGeometry().setFromPoints([V(0, 0, 0), V(1, 0, 0)]), new THREE.LineDashedMaterial({ color: 0x7fd0ff, dashSize: 2, gapSize: 1.5, transparent: true, opacity: 0, toneMapped: false })); sc.add(path);
+        // ===== Zeiten =====
+        const tDie = W("die", 4), tSeit = W("seit"), tJetzt = W("jetzt"), tFolg = W("folg"), tHB = W("hayabusa", 13), tSie = W("sie", 15), tBr = W("brachte"), tGut = W("gut"), tDanach = W("danach"), tJuli = W("im", 23.5), tVier = W("die", 28), tSchieb = W("sie", 30.8), tDoch = W("doch"), tStrom = W("die", 38), tTrick = W("der", 40), tTeile = W("teile"), tSo = W("so", 45.4), tAber = W("aber", 48.3), tFunk = W("immer"), tAlt = W("das", 54.6), tNeu = W("neues"), tApr = W("im", 61.8), tLand = W("landen"), tRent = W("ein", 69.4), END = 73.2;
+        label("Hayabusa2", hbO, 1, { t0: tDie + 0.3, t1: tJetzt - 0.1, size: 54, gap: 22 }); label("Ryugu", ryO, 40, { t0: tSie + 0.4, t1: tBr - 0.1, size: 56, gap: 24 }); label("Torifune", tfO, 4, { t0: tJuli + 0.8, t1: tVier - 0.1, size: 54, gap: 22 });
+        const WORDEL = document.getElementById("word");
+        const engines = (on, t, flick = 0) => HB.engines.forEach((e, i) => { const p = typeof on === "function" ? on(i) : on; const fl = flick ? (Math.sin(t * 37 + i * 3) > 0.2 ? 1 : 0.15) : 1; const k = p * fl;
+          e.userData.ex.visible = k > 0.02; e.userData.ex.userData.mat.uniforms.t.value = t; e.userData.ex.userData.mat.uniforms.power.value = k; engGlow[i].material.opacity = 0.9 * k; e.userData.grid.material.color.setRGB(0.1 + 0.4 * k, 0.16 + 0.55 * k, 0.33 + 0.67 * k); });
+        renderAt = (t) => {
+          E.grade.uniforms.flash.value = 0; E.look([1, 1, 1], [0, 0, 0], 0.32, 0.86);
+          let scene = sc, pos = V(6, 2, 8), look = V(0, 0, 0), fov = 40; HB.g.position.set(0, 0, 0); HB.g.rotation.set(0.15, 0.6 + t * 0.03, 0.05); HB.g.scale.setScalar(1);
+          sparks.forEach((s) => (s.material.opacity = 0)); cross.forEach((c) => (c.material.opacity = 0)); path.material.opacity = 0; engines(0, t);
+          RY.rotation.y = t * 0.05; TF.rotation.y = t * 0.03; KY.rotation.set(t * 0.4, t * 0.3, 0); NB.rotation.y = t * 0.08;
+          const spark = (n, amp) => sparks.slice(0, n).forEach((s, i) => { const on = Math.sin(t * 23 + i * 7.1) > 0.55; s.position.set(-0.95, -0.1 + Math.sin(i * 2.3) * 0.25, Math.cos(i * 3.7) * 0.25); s.material.opacity = on ? amp : 0; s.scale.setScalar(0.2 + 0.3 * Math.abs(Math.sin(t * 11 + i))); });
+          if (t < tDie - 0.05) { const f = prog(t, 0, tDie); engines(f < 0.45 ? 1 : 0, t, f > 0.25 ? 1 : 0); spark(6, f > 0.3 ? 1 : 0); HB.g.rotation.set(0, 0, 0); pos = V(-4.2, lerp(1.2, 0.6, f), lerp(1.4, 0.6, f)); look = V(-0.7, 0, 0); fov = 42; }
+          else if (t < tFolg - 0.05) { const f = prog(t, tDie, tFolg - tDie); engines(1, t); HB.g.rotation.y = 2.2 + t * 0.02; const a = 1.0 + f * 0.9; const d = lerp(9, 11, f); pos = V(Math.sin(a) * d, lerp(3, 1.5, f), Math.cos(a) * d); look = V(0, 0, 0); fov = 42; }
+          else if (t < tSie - 0.05) { engines(1, t); HB.g.rotation.y = 2.6 + t * 0.02; const f = prog(t, tFolg, tSie - tFolg); const a = 0.3 + f * 0.5; pos = V(Math.sin(a) * 8, 2, Math.cos(a) * 8); fov = 42; }
+          else if (t < tBr - 0.05) { const f = prog(t, tSie, tBr - tSie); HB.g.position.copy(RY.position).add(V(6, lerp(58, 41.8, K.eio(cl(f * 1.4))), 4)); HB.g.rotation.set(0, 0.5, 0); const a = 0.7 - f * 0.3; pos = RY.position.clone().add(V(Math.sin(a) * 120, 60, Math.cos(a) * 120)); look = RY.position.clone().add(V(0, 15, 0)); fov = 40; }
+          else if (t < tDanach - 0.05) { scene = scE; const f = prog(t, tBr, tDanach - tBr); EA.group.rotation.y = 2.4 + t * 0.01; const p0 = V(-40, 60, 130), p1 = V(-12, 20, 99); const cp = p0.clone().lerp(p1, K.eio(f)); capM.position.copy(cp);
+            capF.position.copy(cp); capF.lookAt(p0); capF.rotateX(Math.PI / 2); capF.userData.mat.uniforms.t.value = t; capF.userData.mat.uniforms.power.value = cl(f * 3) * (1 - cl((f - 0.9) * 10)); capG.position.copy(cp); capG.material.opacity = capF.userData.mat.uniforms.power.value;
+            pos = V(-10, 70, 300); look = V(-20, 30, 80); fov = 40; }
+          else if (t < tVier - 0.05) { const f = prog(t, tDanach, tVier - tDanach); engines(0.6, t); HB.g.position.copy(TF.position).add(V(lerp(-70, 70, f), 22, 18)); HB.g.rotation.set(0, Math.PI, 0); pos = TF.position.clone().add(V(lerp(-40, 40, f) * 0.5, 30, 110)); look = TF.position.clone().add(V(0, 8, 0)); fov = 42; }
+          else if (t < tDoch - 0.05) { engines(1, t); HB.g.rotation.set(0, 0, 0); const f = prog(t, tVier, tDoch - tVier); pos = V(-3.6, 0.7, lerp(-0.9, 0.9, f)); look = V(-0.9, -0.05, 0); fov = 40; }
+          else if (t < tTrick - 0.05) { HB.g.rotation.set(0, 0, 0); const f = prog(t, tDoch, tTrick - tDoch); engines((i) => (i === 3 ? (t < W("fiel") + 0.4 ? 1 : 0) : 0), t, t > W("fiel") - 0.3 ? 1 : 0); if (t > tStrom) spark(4, 1);
+            if (t > tStrom) E.look([1.05, 0.95, 0.95], [0, 0, 0], 0.32, 0.86); pos = V(-3.0, 0.5, lerp(0.8, -0.4, f)); look = V(-0.9, -0.05, 0); fov = 40; }
+          else if (t < tAber - 0.05) { HB.g.rotation.set(0, 0, 0); const f = prog(t, tTrick, tAber - tTrick); engines((i) => (t > tTeile + 0.6 ? (i === 0 || i === 3 ? 0.5 + 0.5 * cl((t - tTeile - 0.6) / 1.5) : 0) : 0), t);
+            if (t > tTeile && t < tSo) { path.material.opacity = 0.9; const a = HB.engines[0].getWorldPosition(V(0, 0, 0)), b = HB.engines[3].getWorldPosition(V(0, 0, 0)); path.geometry.setFromPoints([a, b]); path.computeLineDistances(); path.material.dashSize = 0.08; path.material.gapSize = 0.05; }
+            pos = V(-2.9, 0.4, lerp(-0.6, 0.6, f)); look = V(-0.9, -0.05, 0); fov = 40; }
+          else if (t < tAlt - 0.05) { HB.g.rotation.set(0, 0, 0); engines((i) => (i === 0 || i === 3 ? 0.8 : 0), t, 1); spark(6, 1); const f = prog(t, tAber, tAlt - tAber); pos = V(-3.3, 0.8, lerp(0.7, -0.7, f)); look = V(-0.9, -0.05, 0); fov = 40; }
+          else if (t < tNeu - 0.05) { const f = prog(t, tAlt, tNeu - tAlt); cross.forEach((c) => (c.material.opacity = 0.95 * cl((t - W("ist", 59.2) + 0.2) / 0.3))); const a = f * 0.6; pos = KY.position.clone().add(V(Math.sin(a) * 30, 6, Math.cos(a) * 30 + 10)); look = KY.position.clone(); fov = 42; }
+          else if (t < tRent - 0.05) { const f = prog(t, tNeu, tRent - tNeu); HB.g.position.copy(NB.position).add(V(lerp(-160, 160, cl((t - tApr) / (tRent - tApr))), 30, 30)); HB.g.rotation.set(0, Math.PI, 0); engines(0, t);
+            path.material.opacity = 0.6; path.geometry.setFromPoints([NB.position.clone().add(V(-200, 30, 30)), NB.position.clone().add(V(200, 30, 30))]); path.computeLineDistances(); path.material.dashSize = 4; path.material.gapSize = 3;
+            const a = -0.4 + f * 0.5; pos = NB.position.clone().add(V(Math.sin(a) * 170, 60, Math.cos(a) * 170)); look = NB.position.clone().add(V(0, 15, 0)); fov = 44; }
+          else { const f = prog(t, tRent, END - tRent); HB.g.rotation.y = 1.2 + t * 0.05; const d = lerp(7, 16, K.eio(f)); const a = 0.8 + f * 0.5; pos = V(Math.sin(a) * d, lerp(1.5, 4, f), Math.cos(a) * d); look = V(0, 0, 0); fov = 42; }
+          cam.fov = fov; cam.near = 0.05; cam.far = 80000; cam.updateProjectionMatrix(); cam.position.copy(pos); cam.lookAt(look);
+          E.render(scene, t); updLabels(t);
+          let wh = "", wa = 0; const seg = (a, b, h) => { if (t >= a && t < b) { wh = h; wa = cl((t - a) / 0.3) * (1 - cl((t - b + 0.4) / 0.3)); } };
+          const sub = (s) => `<div class='sub'>${s}</div>`;
+          seg(tSeit - 0.1, tJetzt - 0.1, "🇯🇵 seit fast 12 Jahren" + sub("Start: Dezember 2014")); seg(tJetzt, tFolg - 0.1, "🎯 Ziel geändert!");
+          seg(tBr, tGut - 0.1, "2020 → 🌍"); seg(tGut, tDanach - 0.1, "🪨 gut 5 Gramm");
+          seg(tVier + 0.2, tSchieb - 0.1, "4 Ionen-Triebwerke"); seg(tSchieb, tDoch - 0.1, "sanft – aber jahrelang");
+          seg(tDoch, tStrom - 0.1, "August: letztes fällt aus"); seg(tStrom, tTrick - 0.1, "⚡ Stromversorgung kaputt");
+          seg(tTeile - 0.2, tSo - 0.1, "2 kaputte → 1 neues"); seg(tSo, tAber - 0.1, "Trick der 1. Hayabusa" + sub("Heimkehr 2010"));
+          seg(tFunk - 0.1, tAlt - 0.1, "⚡ Funken – kein Schub");
+          seg(tAlt, tNeu - 0.1, "Ziel 2031 gestrichen ❌"); seg(tApr - 0.1, tLand - 0.1, "📅 April 2028" + sub("schneller Vorbeiflug")); seg(tLand, tRent - 0.1, "keine Landung mehr");
+          seg(tRent + 0.3, END, "👴 Rentner im All");
+          word(wh, wa); cap(t);
+        };
+        renderAt(lastT);
+      });
+      window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady || {}; window.__hf.buildReady.scene = ready;
+      let lastT = 0;
+      window.addEventListener("hf-seek", (e) => { lastT = e.detail.time; renderAt(lastT); });
+    </script>
+  </body>
+</html>
