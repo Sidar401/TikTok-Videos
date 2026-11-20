@@ -41,7 +41,10 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
    - **Themen-Bilder:** Vor jedem Video passende Bilder zum Thema erzeugen (z. B. Lachsöl, Banane) – im gleichen
      Zeichenstil. **Kein Higgsfield** für diesen Kanal (Nutzer 17.11.: zu teuer) – immer ChatGPT-Texte für den Nutzer schreiben
      (Vorlage `renders/aussie-stil-neu.png`, Nutzer schafft ca. 3 Bilder pro Tag kostenlos).
-   - **Reihenfolge:** zuerst restliche Posen (Bild 7–9 in `hundewissen/POSEN.md`), dann Themen-Bilder.
+   - **Posen fertig (20.11.):** 90 Posen in `brand/aussie/` (Liste in `STIL.md`). Keine weiteren Posen-Bögen nötig.
+   - **Ablauf pro Video (Nutzer 20.11.):** Nutzer nennt das Thema → ich schreibe sofort die passenden **ChatGPT-Texte
+     für Themen-Bilder** (Gegenstände/Futter/Szenen, gleicher Zeichenstil, weißer Hintergrund, ohne Text; max. 3 pro Tag)
+     → Nutzer schickt Bilder → ausschneiden (`hundewissen/posen_schneiden.py` o. ä.) → Video bauen.
 2. **HundeWissenTv 2.0**: ab Nov. 2026 **reiner TikTok-Shop-Kanal** (nur Hundesachen) → Skill `/shop-video`.
 3. **HundeFinanzTV**: Geld & Finanzen (faceless, animierte Grafiken) → Skill `/finanz-video`, `kanal.json`, `STIL.md`.
 
