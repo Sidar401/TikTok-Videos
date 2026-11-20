@@ -1,6 +1,6 @@
 # Neue Aussie-Posen (HundeWissenTv)
 
-Vorhanden: sitzend, bellend, liegend, aengstlich, neugierig, springend + Bild 1–3 (18 Posen, gespeichert 16.11.). Bild 4–6 gespeichert 17.11., Bild 7–9 am 18.11., Bild 10–12 am 19.11. → 72 neue Posen. Nächstes: Bild 13–15.
+Vorhanden: sitzend, bellend, liegend, aengstlich, neugierig, springend + Bild 1–3 (18 Posen, gespeichert 16.11.). Bild 4–6 gespeichert 17.11., Bild 7–9 am 18.11., Bild 10–12 am 19.11., Bild 13–15 am 20.11. → 90 Posen, ALLE Posen-Bögen fertig. Nächstes: Themen-Bilder (Gegenstände/Futter/Szenen).
 Vorgehen (ab 17.11.): In ChatGPT das Bild `renders/aussie-stil-neu.png` (neuer Zeichenstil) hochladen + einen Text unten kopieren.
 Bilder an Claude schicken → werden freigestellt und in `brand/aussie/` gespeichert.
 
