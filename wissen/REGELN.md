@@ -65,3 +65,7 @@ Vorlage/Baukasten: `wissen/kit/` (neu.sh, kit.js, kit.css, mix.py, fertig.sh, sn
 - Das Intro „Umlaufbahn“ (`wissen/kit/intro.py`) NICHT mehr verwenden. Kein `"intro"` in szene.json, keine Pause in der Stimme.
 - Ton (Nutzer 19.11.): Soundeffekte haben die Stimme übertönt → ab jetzt nur 2–3 Effekte pro Video, sehr leise (0.1), NUR in Sprechpausen, nie über der Stimme.
 - Bilder (Nutzer 19.11.): selbstgebaute 3D-Raketen/Roboter sahen „billig“ aus. KEINE echten Fotos verwenden (Nutzer: „du sollst keine echten Bilder nehmen“). Stattdessen detaillierte 3D-Modelle aus `wissen/kit/modelle.js` (in szene.js Zeile `// @modelle`: MO.vulcan, MO.ariane6, MO.falcon9, MO.exhaust, MO.smoke, MO.mliM, MO.cellM).
+
+## Longform-Titelbilder (Nutzer 20.11.): nicht wie das alte aussehen
+- Jedes Titelbild muss sich klar von den bisherigen unterscheiden (nicht wieder „Kugeln in einer Reihe + Titel“).
+- Clevere Idee mit Neugier, z. B. „Findest du die SONNE?“: riesiger Stern + winziger Punkt mit gelbem Kreis. Code: `videos/sterne-groesse/thumb-szene.js` (eigene Kamera bei t < 1).
