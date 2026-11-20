@@ -1,214 +1,97 @@
 #!/usr/bin/env python3
-"""HundeFinanzTV: Was kostet ein Hund wirklich? -> index.html (aus timings.json)."""
-import json
+"""HundeFinanzTv Short (~66 s, Stimme Dan) – Was kostet ein Hund im Leben? NEUES FORMAT (heller News-Look).
+Mittelgroßer Hund, 13 Jahre: Anschaffung 1.000 €, Futter 50 €/Monat = 7.800 €, Tierarzt 300 €/Jahr = 3.900 €, Steuer+Haftpflicht 180 €/Jahr = 2.340 €,
+Zubehör/Pflege 2.000 € → ≈ 17.000 € ≈ 110 €/Monat; Kreuzband-OP ≈ 2.500 €. Quellen: rechnercheck.de, Allianz, Sparkasse."""
+import sys
 from pathlib import Path
 
 HERE = Path(__file__).parent
-T = json.loads((HERE / "timings.json").read_text())
-S = {s["id"]: s for s in T["saetze"]}
-DAUER = T["dauer"]
+sys.path.insert(0, str(HERE.parent.parent / "scripts"))
+import logo_sting as ls  # noqa: E402
+
+T0 = ls.einfuegen(HERE, 11)  # Logo nach dem Open Loop (s3)
+
+import glow_short as gs  # noqa: E402
+import news_look as nl  # noqa: E402
+from analyse_kit import KIT_JS  # noqa: E402
+from lf_kit import Kit  # noqa: E402
+
+G, R, D, O = nl.G, nl.R, nl.DUNKEL, nl.ORANGE
+K = Kit(HERE, 14, [], fotos=["beagle-foto.jpg"])
+cap, st = K.cap, K.st
+S = K.szene
 
 
-def c(sid, i):
-    """Startzeit der i-ten Untertitel-Box eines Satzes."""
-    return S[sid]["captions"][min(i, len(S[sid]["captions"]) - 1)]["start"]
+def titel(id_, text, y=340, farbe=D, gr=70):
+    return f'<div id="{id_}" class="nk-gross" style="top:{y}px;font-size:{gr}px;color:{farbe};line-height:1.1">{text}</div>'
 
 
-BEAGLE = '<img src="assets/beagle.png" alt="" style="width:100%;height:100%;object-fit:contain" />'
-
-# Napf voller Münzen (Hund + Geld)
-BOWL = """<svg viewBox="0 0 400 300" style="width:100%;height:100%">
-  <g fill="#f2c418" stroke="#c99a06" stroke-width="4">
-    <ellipse cx="150" cy="120" rx="40" ry="16" /><ellipse cx="200" cy="105" rx="40" ry="16" /><ellipse cx="250" cy="120" rx="40" ry="16" />
-    <ellipse cx="175" cy="90" rx="40" ry="16" /><ellipse cx="225" cy="85" rx="40" ry="16" /><ellipse cx="200" cy="65" rx="40" ry="16" />
-  </g>
-  <path d="M60 130 L340 130 L310 250 Q200 275 90 250 Z" fill="#DB8622" />
-  <ellipse cx="200" cy="130" rx="140" ry="22" fill="#a8621a" />
-  <g fill="#fff" opacity="0.9"><ellipse cx="200" cy="205" rx="22" ry="18" /><circle cx="175" cy="180" r="8" /><circle cx="192" cy="170" r="8" /><circle cx="210" cy="170" r="8" /><circle cx="226" cy="180" r="8" /></g>
-</svg>"""
-
-TILE = '<div id="{id}" class="tile"><svg viewBox="0 0 100 100">{svg}</svg><span>{label}</span></div>'
-ICONS = [
-    ("kosten-t1", "Futter", '<path d="M15 50 L85 50 L78 82 Q50 90 22 82 Z" fill="#DB8622" /><ellipse cx="50" cy="50" rx="35" ry="8" fill="#8a4a12" />'),
-    ("kosten-t2", "Tierarzt", '<rect x="18" y="30" width="64" height="50" rx="8" fill="#e24b4b" /><rect x="38" y="20" width="24" height="14" rx="4" fill="none" stroke="#e24b4b" stroke-width="6" /><path d="M50 42 L50 70 M36 56 L64 56" stroke="#fff" stroke-width="9" stroke-linecap="round" />'),
-    ("kosten-t3", "Versicherung", '<path d="M50 12 L82 24 Q82 66 50 88 Q18 66 18 24 Z" fill="#3d7be0" /><path d="M36 50 L46 60 L66 38" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />'),
-    ("kosten-t4", "Hundesteuer", '<rect x="22" y="12" width="56" height="76" rx="6" fill="#f6efe1" stroke="#353a3d" stroke-width="5" /><text x="50" y="66" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="40" fill="#353a3d">§</text>'),
-]
-
-SCENES = [
-    ("intro", "s1", "s1", """
-        <div id="intro-title" style="position:absolute;top:290px;left:40px;width:1000px;text-align:center;font-family:Montserrat;font-weight:800;font-size:92px;line-height:1.05;color:#111">Was kostet dein<br /><span style="color:var(--brand)">Hund</span> wirklich?</div>
-        <div id="intro-bowl" style="position:absolute;left:110px;top:600px;width:760px;height:570px">""" + BOWL + """</div>
-        <div id="intro-q" class="serif" style="position:absolute;left:790px;top:520px;font-size:300px;line-height:1;color:#e24b4b">?</div>""",
-     lambda t0, d: f"""
-      tl.fromTo("#intro-title", {{ scale: 1.05 }}, {{ scale: 1, duration: 0.5, ease: "back.out(2)" }}, {t0});
-      tl.fromTo("#intro-bowl", {{ scale: 0.94 }}, {{ scale: 1, duration: 0.5, ease: "back.out(2)" }}, {t0});
-      tl.fromTo("#intro-q", {{ rotation: -15, scale: 0.6 }}, {{ rotation: 10, scale: 1, duration: 0.5, ease: "back.out(2.5)" }}, {t0} + 0.3);"""),
-
-    ("kosten", "s2", "s2", """
-        <div style="position:absolute;left:90px;top:330px;width:900px;display:grid;grid-template-columns:1fr 1fr;gap:40px">"""
-     + "".join(TILE.format(id=i, svg=s, label=l) for i, l, s in ICONS) + """
-        </div>""",
-     lambda t0, d: "".join(f'\n      pop("#{i}", {t0} + {k * 0.35:.2f});' for k, (i, _, _) in enumerate(ICONS))),
-
-    ("monat", "s3", "s3", """
-        <div class="art" style="position:absolute;left:130px;top:330px">
-          <svg viewBox="0 0 400 400">
-            <rect x="60" y="70" width="280" height="250" rx="22" fill="#fff" stroke="#353a3d" stroke-width="10" />
-            <rect x="60" y="70" width="280" height="70" rx="22" fill="#DB8622" />
-            <rect x="60" y="120" width="280" height="20" fill="#DB8622" />
-            <rect x="110" y="45" width="18" height="50" rx="9" fill="#353a3d" /><rect x="272" y="45" width="18" height="50" rx="9" fill="#353a3d" />
-            <text id="monat-num" x="200" y="265" text-anchor="middle" class="serif" font-size="96" fill="#111">100€</text>
-          </svg>
-        </div>
-        <div id="monat-sub" class="serif" style="position:absolute;left:0;top:1170px;width:1080px;text-align:center;font-size:84px;color:#111">pro Monat</div>""",
-     lambda t0, d: f"""
-      pop("#monat .art", {t0});
-      pop("#monat-num", {c('s3', 1)} - 0.4);
-      pop("#monat-sub", {c('s3', 1)});"""),
-
-    ("jahre", "s4", "s4", """
-        <div style="position:absolute;left:0;top:360px;width:1080px;text-align:center" class="serif">
-          <div id="jahre-a" style="font-size:120px;color:#111">13 Jahre</div>
-          <div id="jahre-arrow" style="height:230px;display:flex;justify-content:center;align-items:center">
-            <svg viewBox="0 0 70 110" style="width:120px;height:200px"><path d="M35 6 L35 96 M14 76 L35 100 L56 76" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /></svg>
-          </div>
-          <div id="jahre-b" style="font-size:150px;color:#e24b4b">≈ 16.000€</div>
-        </div>""",
-     lambda t0, d: f"""
-      pop("#jahre-a", {t0});
-      pop("#jahre-arrow", {t0} + 0.4);
-      pop("#jahre-b", {c('s4', 1)});
-      tl.fromTo("#jahre-b", {{ scale: 1 }}, {{ scale: 1.1, duration: 0.2, yoyo: true, repeat: 1, ease: "sine.inOut" }}, {c('s4', 1)} + 0.45);"""),
-
-    ("notfall", "s5", "s5", """
-        <div class="art" style="position:absolute;left:130px;top:330px">
-          <svg viewBox="0 0 400 400">
-            <rect id="notfall-kit" x="70" y="130" width="260" height="200" rx="26" fill="#e24b4b" />
-            <rect x="150" y="95" width="100" height="50" rx="14" fill="none" stroke="#e24b4b" stroke-width="16" />
-            <path d="M200 175 L200 285 M145 230 L255 230" stroke="#fff" stroke-width="30" stroke-linecap="round" />
-            <g id="notfall-bang"><circle cx="330" cy="110" r="48" fill="#f2c418" stroke="#111" stroke-width="5" /><rect x="321" y="76" width="18" height="44" rx="9" fill="#111" /><circle cx="330" cy="138" r="10" fill="#111" /></g>
-          </svg>
-        </div>
-        <div id="notfall-plus" class="serif" style="position:absolute;left:0;top:1150px;width:1080px;text-align:center;font-size:84px;color:#e24b4b">+ Notfälle</div>""",
-     lambda t0, d: f"""
-      pop("#notfall .art", {t0});
-      tl.fromTo("#notfall-bang", {{ rotation: -20, svgOrigin: "330 110" }}, {{ rotation: 20, duration: 0.1, yoyo: true, repeat: 5, ease: "none" }}, {t0} + 0.4);
-      pop("#notfall-plus", {c('s5', 1)});"""),
-
-    ("tipp", "s6", "s6", """
-        <div id="tipp-head" style="position:absolute;top:300px;left:0;width:1080px;text-align:center;font-family:Montserrat;font-weight:800;font-size:80px;color:var(--brand)">Mein Tipp</div>
-        <div id="tipp-dog" style="position:absolute;left:40px;top:470px;width:480px;height:480px">""" + BEAGLE + """</div>
-        <svg id="tipp-pig" viewBox="0 0 300 260" style="position:absolute;left:540px;top:560px;width:480px;height:416px">
-          <ellipse cx="150" cy="150" rx="120" ry="90" fill="#f4a6b5" />
-          <circle cx="250" cy="140" r="38" fill="#f4a6b5" /><ellipse cx="265" cy="140" rx="20" ry="16" fill="#e98a9c" />
-          <circle cx="258" cy="136" r="4" fill="#8a3a4a" /><circle cx="272" cy="136" r="4" fill="#8a3a4a" />
-          <circle cx="215" cy="110" r="7" fill="#111" /><path d="M200 70 L225 40 L235 80 Z" fill="#e98a9c" />
-          <rect x="85" y="225" width="30" height="34" rx="10" fill="#e98a9c" /><rect x="180" y="225" width="30" height="34" rx="10" fill="#e98a9c" />
-          <rect x="120" y="62" width="70" height="12" rx="6" fill="#8a3a4a" />
-        </svg>
-        <div id="tipp-coin" class="serif" style="position:absolute;left:740px;top:380px;width:150px;height:150px;border-radius:50%;background:#f2c418;border:8px solid #c99a06;display:flex;align-items:center;justify-content:center;font-size:56px;color:#7a5a00">100€</div>""",
-     lambda t0, d: f"""
-      pop("#tipp-head", {t0});
-      pop("#tipp-dog", {t0} + 0.15);
-      pop("#tipp-pig", {t0} + 0.4);
-      tl.fromTo("#tipp-coin", {{ y: -120, opacity: 0 }}, {{ y: 120, opacity: 1, duration: 0.7, ease: "power2.in" }}, {c('s6', 1)});
-      tl.fromTo("#tipp-coin", {{ opacity: 1 }}, {{ opacity: 0, duration: 0.15 }}, {c('s6', 1)} + 0.7);
-      tl.fromTo("#tipp-pig", {{ scale: 1 }}, {{ scale: 1.08, duration: 0.15, yoyo: true, repeat: 1 }}, {c('s6', 1)} + 0.7);"""),
-
-    ("rendite", "s7", "s7", """
-        <div class="art" style="position:absolute;left:130px;top:330px"><svg viewBox="0 0 400 400">
-          <line x1="30" y1="350" x2="370" y2="350" stroke="#111" stroke-width="6" />
-          <rect id="rendite-b1" x="70" y="200" width="110" height="150" fill="#1f7a4d" />
-          <rect id="rendite-b2" x="220" y="118" width="110" height="232" fill="#f2c418" />
-          <text id="rendite-l1" x="125" y="185" text-anchor="middle" class="serif" font-size="32" fill="#1f7a4d">15.600€</text>
-          <text id="rendite-l2" x="275" y="103" text-anchor="middle" class="serif" font-size="32" fill="#c99a06">24.200€</text>
-          <text x="125" y="385" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="22" fill="#353a3d">gespart</text>
-          <text x="275" y="385" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="22" fill="#353a3d">mit ~7 %</text>
-          <text id="rendite-plus" x="200" y="50" text-anchor="middle" class="serif" font-size="52" fill="var(--brand)">+8.600€</text>
-        </svg></div>""",
-     lambda t0, d: f"""
-      tl.fromTo("#rendite-b1", {{ attr: {{ y: 350, height: 0 }} }}, {{ attr: {{ y: 200, height: 150 }}, duration: 0.5, ease: "power2.out" }}, {t0});
-      pop("#rendite-l1", {t0} + 0.4);
-      tl.fromTo("#rendite-b2", {{ attr: {{ y: 350, height: 0 }} }}, {{ attr: {{ y: 118, height: 232 }}, duration: 0.8, ease: "power2.out" }}, {c('s7', 1)} - 0.3);
-      pop("#rendite-l2", {c('s7', 1)} + 0.5);
-      pop("#rendite-plus", {c('s7', 1)} + 0.9);"""),
-
-    ("selbst", "s8", "s8", """
-        <div id="selbst-bowl" style="position:absolute;left:190px;top:450px;width:700px;height:525px">""" + BOWL + """</div>
-        <svg id="selbst-check" viewBox="0 0 100 100" style="position:absolute;left:760px;top:360px;width:200px;height:200px"><circle cx="50" cy="50" r="46" fill="#1f7a4d" /><path d="M28 52 L44 68 L74 36" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" /></svg>""",
-     lambda t0, d: f"""
-      pop("#selbst-bowl", {t0});
-      pop("#selbst-check", {t0} + 0.5);"""),
-
-    ("outro", "s9", "s9", """
-        <div style="position:absolute;left:0;top:330px;width:1080px;display:flex;flex-direction:column;align-items:center;gap:30px">
-          <div id="outro-dog" style="width:520px;height:520px">""" + BEAGLE + """</div>
-          <div id="outro-name" style="font-family:Montserrat;font-weight:800;font-size:92px;color:#111">HundeFinanzTV</div>
-          <div id="outro-btn" style="padding:18px 64px;border-radius:60px;background:var(--brand);color:#fff;font-family:Montserrat;font-weight:700;font-size:56px">+ Folgen</div>
-        </div>""",
-     lambda t0, d: f"""
-      pop("#outro-dog", {t0});
-      pop("#outro-name", {t0} + 0.25);
-      pop("#outro-btn", {t0} + 0.5);
-      tl.fromTo("#outro-btn", {{ scale: 1 }}, {{ scale: 1.08, duration: 0.3, yoyo: true, repeat: 1, ease: "sine.inOut" }}, {t0} + 1.1);"""),
-]
-
-EXTRA_CSS = """
-      .scene { position: absolute; inset: 0; top: 0; height: 1920px; display: block; }
-      .tile { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 30px 10px; border-radius: 30px; background: #faf5ef; }
-      .tile svg { width: 230px; height: 230px; }
-      .tile span { font-family: Montserrat; font-weight: 800; font-size: 54px; color: #111; }
-    </style>"""
+def pille(id_, text, y, farbe, schrift="#fff", gr=54):
+    return (f'<div id="{id_}" style="position:absolute;left:0;width:1080px;top:{y}px;display:flex;justify-content:center;z-index:5">'
+            f'<span style="padding:16px 46px;border-radius:60px;background:{farbe};color:{schrift};font-weight:900;font-size:{gr}px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">{text}</span></div>')
 
 
-def build():
-    tpl = (HERE / "index.html").read_text()
-    head = tpl[: tpl.index("<body>")]
-    if ".tile {" not in head:
-        head = head.replace("    </style>", EXTRA_CSS, 1)
-    scenes, js, caps = [], [], []
-    last = T["saetze"][-1]["id"]
-    for sid, a, b, html, code in SCENES:
-        t0 = S[a]["start"]
-        t1 = DAUER if b == last else S[b]["end"]
-        d = round(t1 - t0, 3)
-        scenes.append(f'      <div id="{sid}" class="scene clip" data-start="{t0}" data-duration="{d}" data-track-index="1">{html}\n      </div>')
-        js.append(f"      // {sid}\n      (() => {{{code(t0, d)}\n      }})();")
-    n = 0
-    for s in T["saetze"]:
-        for cp in s["captions"]:
-            n += 1
-            caps.append(f'        <div id="c{n}" class="cap clip" data-start="{cp["start"]}" data-duration="{round(cp["end"] - cp["start"], 3)}" data-track-index="2"><span>{cp["text"]}</span></div>')
-    body = f"""<body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="{DAUER}" data-width="1080" data-height="1920">
-{chr(10).join(scenes)}
+def foto_karte(id_, x, y, w, h, dreh=-3):
+    return (f'<div id="{id_}" style="position:absolute;left:{x}px;top:{y}px;width:{w}px;height:{h}px;border-radius:18px;overflow:hidden;border:8px solid #fff;'
+            f'box-shadow:0 18px 36px #0003;transform:rotate({dreh}deg);z-index:4"><img src="assets/fotos/beagle-foto.jpg" style="width:100%;height:100%;object-fit:cover"/></div>')
 
-      <div id="brand"><span>HundeFinanzTV</span></div>
-      <div id="frame"></div>
 
-      <div id="captions" data-track-kind="captions">
-{chr(10).join(caps)}
-      </div>
+def wert_karte(id_, kopf, wert, x, y, w, farbe):
+    return (f'<div id="{id_}" class="nk-karte" style="left:{x}px;top:{y}px;width:{w}px;text-align:center">'
+            f'<div style="font-weight:700;font-size:38px;color:#3a414c">{kopf}</div>'
+            f'<div style="font-weight:900;font-size:62px;color:{farbe};margin-top:8px;white-space:nowrap">{wert}</div></div>')
 
-      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="{DAUER}" data-track-index="3"></audio>
-    </div>
 
-    <script>
-      const tl = gsap.timeline({{ paused: true }});
-      const pop = (sel, at) =>
-        tl.fromTo(sel, {{ scale: 0.82, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.8)" }}, at);
+# s1–s2 Hook
+S("s1", None, nl.CSS + titel("t1", "Hund = Kleinwagen?", 330, D, 78) + foto_karte("f1", 300, 470, 480, 384)
+  + wert_karte("w1a", "Hund (13 Jahre)", "≈ 17.000 €", 70, 900, 440, O) + wert_karte("w1b", "Kleinwagen", "≈ 17.000 €", 570, 900, 440, D)
+  + pille("p2", "Posten für Posten", 1170, D, "#fff", 46),
+  lambda a, d: (KIT_JS + f' pop("#t1", {a}); pop("#f1", {a}); pop("#w1a", {cap("s1", 0)} + 0.6); pop("#w1b", {cap("s1", 1)});'
+                f' pop("#p2", {cap("s2", 2)});'), [], bis="s3")
 
-{chr(10).join(js)}
+# s3 Open Loop
+S("s3", None, titel("t3", "Am Ende: der Posten,<br/>den keiner einplant", 360, R, 62)
+  + nl.karte("k3", "Kommt oft plötzlich", f'<div style="font-weight:900;font-size:180px;color:{R};text-align:center;line-height:1.1">?</div>', y=620),
+  lambda a, d: f'pop("#t3", {a}); pop("#k3", {cap("s3", 2)});')
 
-      window.__timelines["main"] = tl;
-    </script>
-  </body>
-</html>
-"""
-    (HERE / "index.html").write_text(head + body)
-    print("index.html gebaut,", DAUER, "s")
+# s4–s10 Die Rechnung (Leitmotiv: wachsende Rechnung)
+ZEILEN = [("r5", "Anschaffung", "1.000 €"), ("r6", "Futter (50 €/Monat)", "7.800 €"), ("r7", "Tierarzt (300 €/Jahr)", "3.900 €"),
+          ("r8", "Steuer + Haftpflicht", "2.340 €"), ("r9", "Zubehör & Pflege", "2.000 €")]
+RECH = "".join(nl.zeile(i, l, w, D) for i, l, w in ZEILEN) + (
+    f'<div id="r10" class="nk-row" style="border-top:3px solid {D};margin-top:10px;font-weight:800;color:{D}">Summe'
+    f'<span class="v" style="color:{O};font-size:56px">≈ 17.000 €</span></div>')
+S("s4", None, titel("t4", "Mittelgroßer Hund · 13 Jahre", 330, D, 52) + nl.karte("k4", "Die Rechnung", RECH, y=430)
+  + pille("p10", "≈ 110 € im Monat", 1215, O, "#fff", 54),
+  lambda a, d: (f'pop("#t4", {a}); pop("#k4", {cap("s5", 0)} - 0.2); pop("#r5", {cap("s5", 1)}); pop("#r6", {cap("s6", 1)}); pop("#r7", {cap("s7", 3)});'
+                f' pop("#r8", {cap("s8", 2)}); pop("#r9", {cap("s9", 2)}); pop("#r10", {cap("s10", 1)}); pop("#p10", {cap("s10", 1)} + 0.8);'),
+  [], bis="s11")
 
+# s11 OP
+S("s11", None, titel("t11", "Der Posten, der überrascht", 340, R, 60) + foto_karte("f11", 330, 470, 420, 336, 3)
+  + wert_karte("w11", "Kreuzband-OP – auf einmal", "≈ 2.500 €", 160, 880, 760, R),
+  lambda a, d: f'pop("#t11", {a}); pop("#f11", {cap("s11", 2)}); pop("#w11", {cap("s11", 4)});')
+
+# s12 Tipp
+S("s12", None, titel("t12", "Unser Tipp", 340, G) + nl.karte("k12", "So bist du vorbereitet",
+  nl.zeile("r12a", "Jeden Monat Tierarzt-Topf", "✓", G) + nl.zeile("r12b", "OP-Versicherung prüfen", "✓", G), y=520),
+  lambda a, d: f'pop("#t12", {a}); pop("#k12", {a} + 0.1); pop("#r12a", {cap("s12", 1)}); pop("#r12b", {cap("s12", 3)});')
+
+# s13 Kommentar
+S("s13", None, titel("t13", "Deine Meinung", 360) + nl.karte("k13", "Schreib’s in die Kommentare",
+  f'<div style="font-weight:900;font-size:62px;color:{O};text-align:center;padding:20px 0">Was kostet dein<br/>Hund im Monat?</div>', y=560),
+  lambda a, d: f'pop("#t13", {a}); pop("#k13", {a} + 0.2);')
+
+# s14 Folgen
+S("s14", None, f'<div id="fl14" style="position:absolute;left:340px;top:480px;width:400px;height:400px;border-radius:50%;overflow:hidden;border:10px solid {O};'
+  f'box-shadow:0 20px 50px #0003;background:#1b1f22;z-index:4"><img src="assets/beagle.png" style="width:100%;height:100%;object-fit:cover"/></div>'
+  + f'<div id="n14" class="nk-gross" style="top:920px;font-size:64px">HundeFinanz<span style="color:{O}">Tv</span></div>' + pille("c14", "+ Folgen", 1040, O, "#fff", 58),
+  lambda a, d: f'pop("#fl14", {a}); pop("#n14", {a} + 0.2); pop("#c14", {cap("s14", 0)} + 0.4);')
+
+html, code = ls.szene(hell=True)
+K.SZ.append((T0, T0 + ls.DAUER, html, code, 7))
+K.SFX.extend(ls.sounds(T0))
+K.SZ.append((0.0, K.dauer, nl.kopf("GELD-WISSEN", ""), lambda a, d: "", 8))
 
 if __name__ == "__main__":
-    build()
+    gs.build(HERE, K.SZ, K.SFX)
+    nl.hell(HERE)

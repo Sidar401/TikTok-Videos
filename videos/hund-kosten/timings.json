@@ -1,168 +1,314 @@
 {
-  "dauer": 32.65,
-  "saetze": [
+ "dauer": 65.81,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 2.746,
+   "captions": [
     {
-      "id": "s1",
-      "start": 0.0,
-      "end": 3.727,
-      "captions": [
-        {
-          "text": "weißt du,",
-          "start": 0.0,
-          "end": 0.572
-        },
-        {
-          "text": "was dich dein Hund in",
-          "start": 0.572,
-          "end": 1.906
-        },
-        {
-          "text": "seinem Leben wirklich kostet?",
-          "start": 1.906,
-          "end": 3.727
-        }
-      ]
+     "text": "Ein Hund kostet dich im Leben",
+     "start": 0.0,
+     "end": 1.52
     },
     {
-      "id": "s2",
-      "start": 3.727,
-      "end": 6.767,
-      "captions": [
-        {
-          "text": "Futter, Tierarzt,",
-          "start": 3.727,
-          "end": 4.875
-        },
-        {
-          "text": "Versicherung und Hundesteuer",
-          "start": 4.875,
-          "end": 6.767
-        }
-      ]
-    },
-    {
-      "id": "s3",
-      "start": 6.767,
-      "end": 9.844,
-      "captions": [
-        {
-          "text": "da kommen schnell 100 €",
-          "start": 6.767,
-          "end": 8.537
-        },
-        {
-          "text": "im Monat zusammen",
-          "start": 8.537,
-          "end": 9.844
-        }
-      ]
-    },
-    {
-      "id": "s4",
-      "start": 9.844,
-      "end": 13.007,
-      "captions": [
-        {
-          "text": "bei 13 Jahren sind",
-          "start": 9.844,
-          "end": 11.471
-        },
-        {
-          "text": "das rund 16.000 €",
-          "start": 11.471,
-          "end": 13.007
-        }
-      ]
-    },
-    {
-      "id": "s5",
-      "start": 13.007,
-      "end": 15.844,
-      "captions": [
-        {
-          "text": "und da sind Notfälle beim",
-          "start": 13.007,
-          "end": 14.482
-        },
-        {
-          "text": "Tierarzt noch nicht dabei",
-          "start": 14.482,
-          "end": 15.844
-        }
-      ]
-    },
-    {
-      "id": "s6",
-      "start": 15.844,
-      "end": 20.948,
-      "captions": [
-        {
-          "text": "mein Tipp: leg ab dem",
-          "start": 15.844,
-          "end": 17.167
-        },
-        {
-          "text": "ersten Tag 100 € im Monat",
-          "start": 17.167,
-          "end": 19.144
-        },
-        {
-          "text": "für deinen Hund zur Seite",
-          "start": 19.144,
-          "end": 20.948
-        }
-      ]
-    },
-    {
-      "id": "s7",
-      "start": 20.948,
-      "end": 26.493,
-      "captions": [
-        {
-          "text": "investiert mit 7 % hast du",
-          "start": 20.948,
-          "end": 23.579
-        },
-        {
-          "text": "nach 13 Jahren über 24.000 €",
-          "start": 23.579,
-          "end": 26.493
-        }
-      ]
-    },
-    {
-      "id": "s8",
-      "start": 26.493,
-      "end": 28.804,
-      "captions": [
-        {
-          "text": "so bezahlt sich dein",
-          "start": 26.493,
-          "end": 27.789
-        },
-        {
-          "text": "Hund quasi selbst",
-          "start": 27.789,
-          "end": 28.804
-        }
-      ]
-    },
-    {
-      "id": "s9",
-      "start": 28.804,
-      "end": 32.066,
-      "captions": [
-        {
-          "text": "folg HundeFinanzTV für",
-          "start": 28.804,
-          "end": 30.62
-        },
-        {
-          "text": "mehr Geld‑Tipps!",
-          "start": 30.62,
-          "end": 32.066
-        }
-      ]
+     "text": "so viel wie ein Kleinwagen",
+     "start": 1.52,
+     "end": 2.746
     }
-  ]
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 2.746,
+   "end": 6.491,
+   "captions": [
+    {
+     "text": "Klingt übertrieben? Wir",
+     "start": 2.746,
+     "end": 4.001
+    },
+    {
+     "text": "rechnen es dir jetzt",
+     "start": 4.001,
+     "end": 5.23
+    },
+    {
+     "text": "Posten für Posten vor",
+     "start": 5.23,
+     "end": 6.491
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 6.491,
+   "end": 11.679,
+   "captions": [
+    {
+     "text": "Und am Ende kommt",
+     "start": 6.491,
+     "end": 7.469
+    },
+    {
+     "text": "der eine Posten,",
+     "start": 7.469,
+     "end": 8.417
+    },
+    {
+     "text": "der die meisten Hundebesitzer",
+     "start": 8.417,
+     "end": 10.136
+    },
+    {
+     "text": "völlig unvorbereitet trifft",
+     "start": 10.136,
+     "end": 11.679
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 14.679,
+   "end": 18.2,
+   "captions": [
+    {
+     "text": "Unser Beispiel:",
+     "start": 14.679,
+     "end": 15.542
+    },
+    {
+     "text": "ein mittelgroßer Hund,",
+     "start": 15.542,
+     "end": 16.877
+    },
+    {
+     "text": "der 13 Jahre alt wird",
+     "start": 16.877,
+     "end": 18.2
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 18.2,
+   "end": 20.858,
+   "captions": [
+    {
+     "text": "Die Anschaffung",
+     "start": 18.2,
+     "end": 19.195
+    },
+    {
+     "text": "vom Züchter: rund 1.000 €",
+     "start": 19.195,
+     "end": 20.858
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 20.858,
+   "end": 25.708,
+   "captions": [
+    {
+     "text": "Futter: etwa 50 € im Monat",
+     "start": 20.858,
+     "end": 23.205
+    },
+    {
+     "text": "– in 13 Jahren fast 8.000 €",
+     "start": 23.205,
+     "end": 25.708
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 25.708,
+   "end": 31.304,
+   "captions": [
+    {
+     "text": "Tierarzt für Impfungen",
+     "start": 25.708,
+     "end": 27.379
+    },
+    {
+     "text": "und Kontrollen:",
+     "start": 27.379,
+     "end": 28.451
+    },
+    {
+     "text": "rund 300 € im Jahr",
+     "start": 28.451,
+     "end": 29.796
+    },
+    {
+     "text": "– also knapp 4.000 €",
+     "start": 29.796,
+     "end": 31.304
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 31.304,
+   "end": 36.338,
+   "captions": [
+    {
+     "text": "Dazu Hundesteuer",
+     "start": 31.304,
+     "end": 32.406
+    },
+    {
+     "text": "und Haftpflicht‑Versicherung:",
+     "start": 32.406,
+     "end": 34.46
+    },
+    {
+     "text": "zusammen rund 180 € im Jahr",
+     "start": 34.46,
+     "end": 36.338
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 36.338,
+   "end": 40.716,
+   "captions": [
+    {
+     "text": "Leine, Körbchen,",
+     "start": 36.338,
+     "end": 37.514
+    },
+    {
+     "text": "Spielzeug und Pflege:",
+     "start": 37.514,
+     "end": 39.127
+    },
+    {
+     "text": "noch mal rund 2.000 €",
+     "start": 39.127,
+     "end": 40.716
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 40.716,
+   "end": 45.172,
+   "captions": [
+    {
+     "text": "Zusammen sind das rund",
+     "start": 40.716,
+     "end": 42.581
+    },
+    {
+     "text": "17.000 € – etwa 110 € im Monat",
+     "start": 42.581,
+     "end": 45.172
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 45.172,
+   "end": 53.263,
+   "captions": [
+    {
+     "text": "Und jetzt der Posten,",
+     "start": 45.172,
+     "end": 46.708
+    },
+    {
+     "text": "der viele überrascht:",
+     "start": 46.708,
+     "end": 48.252
+    },
+    {
+     "text": "Eine einzige Operation,",
+     "start": 48.252,
+     "end": 49.964
+    },
+    {
+     "text": "zum Beispiel am Kreuzband,",
+     "start": 49.964,
+     "end": 51.898
+    },
+    {
+     "text": "kann 2.500 € kosten",
+     "start": 51.898,
+     "end": 53.263
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 53.263,
+   "end": 58.515,
+   "captions": [
+    {
+     "text": "Unser Tipp: Leg jeden Monat",
+     "start": 53.263,
+     "end": 54.805
+    },
+    {
+     "text": "etwas für den Tierarzt",
+     "start": 54.805,
+     "end": 56.111
+    },
+    {
+     "text": "zur Seite – oder prüfe",
+     "start": 56.111,
+     "end": 57.39
+    },
+    {
+     "text": "eine OP‑Versicherung",
+     "start": 57.39,
+     "end": 58.515
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 58.515,
+   "end": 60.901,
+   "captions": [
+    {
+     "text": "Schreib uns: Was kostet",
+     "start": 58.515,
+     "end": 59.794
+    },
+    {
+     "text": "dein Hund im Monat?",
+     "start": 59.794,
+     "end": 60.901
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 60.901,
+   "end": 65.203,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTv,",
+     "start": 60.901,
+     "end": 62.327
+    },
+    {
+     "text": "wir rechnen dir jeden Tag",
+     "start": 62.327,
+     "end": 64.111
+    },
+    {
+     "text": "Geld einfach vor",
+     "start": 64.111,
+     "end": 65.203
+    }
+   ]
+  }
+ ],
+ "logo_intro": 11.679
 }

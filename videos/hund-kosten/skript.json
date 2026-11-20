@@ -1,50 +1,89 @@
 {
- "titel": "Was kostet ein Hund wirklich?",
+ "titel": "Was kostet ein Hund?",
  "saetze": [
   {
    "id": "s1",
-   "text": "weißt du, was dich dein Hund in seinem Leben wirklich kostet?",
-   "sprechtext": "Weißt du, was dich dein Hund in seinem Leben wirklich kostet?"
+   "sprechtext": "Ein Hund kostet dich im Leben so viel wie ein Kleinwagen.",
+   "text": "Ein Hund kostet dich im Leben so viel wie ein Kleinwagen",
+   "bild": ""
   },
   {
    "id": "s2",
-   "text": "Futter, Tierarzt, Versicherung und Hundesteuer",
-   "sprechtext": "Futter, Tierarzt, Versicherung und Hundesteuer."
+   "sprechtext": "Klingt übertrieben? Wir rechnen es dir jetzt Posten für Posten vor.",
+   "text": "Klingt übertrieben? Wir rechnen es dir jetzt Posten für Posten vor",
+   "bild": ""
   },
   {
    "id": "s3",
-   "text": "da kommen schnell 100 € im Monat zusammen",
-   "sprechtext": "Da kommen schnell hundert Euro im Monat zusammen."
+   "sprechtext": "Und am Ende kommt der eine Posten, der die meisten Hundebesitzer völlig unvorbereitet trifft.",
+   "text": "Und am Ende kommt der eine Posten, der die meisten Hundebesitzer völlig unvorbereitet trifft",
+   "bild": ""
   },
   {
    "id": "s4",
-   "text": "bei 13 Jahren sind das rund 16.000 €",
-   "sprechtext": "Bei dreizehn Jahren sind das rund sechzehntausend Euro."
+   "sprechtext": "Unser Beispiel: ein mittelgroßer Hund, der dreizehn Jahre alt wird.",
+   "text": "Unser Beispiel: ein mittelgroßer Hund, der 13 Jahre alt wird",
+   "bild": ""
   },
   {
    "id": "s5",
-   "text": "und da sind Notfälle beim Tierarzt noch nicht dabei",
-   "sprechtext": "Und da sind Notfälle beim Tierarzt noch nicht dabei."
+   "sprechtext": "Die Anschaffung vom Züchter: rund tausend Euro.",
+   "text": "Die Anschaffung vom Züchter: rund 1.000 €",
+   "bild": ""
   },
   {
    "id": "s6",
-   "text": "mein Tipp: leg ab dem ersten Tag 100 € im Monat für deinen Hund zur Seite",
-   "sprechtext": "Mein Tipp: Leg ab dem ersten Tag hundert Euro im Monat für deinen Hund zur Seite."
+   "sprechtext": "Futter: etwa fünfzig Euro im Monat – in dreizehn Jahren fast achttausend Euro.",
+   "text": "Futter: etwa 50 € im Monat – in 13 Jahren fast 8.000 €",
+   "bild": ""
   },
   {
    "id": "s7",
-   "text": "investiert mit 7 % hast du nach 13 Jahren über 24.000 €",
-   "sprechtext": "Investiert mit sieben Prozent hast du nach dreizehn Jahren über vierundzwanzigtausend Euro."
+   "sprechtext": "Tierarzt für Impfungen und Kontrollen: rund dreihundert Euro im Jahr – also knapp viertausend Euro.",
+   "text": "Tierarzt für Impfungen und Kontrollen: rund 300 € im Jahr – also knapp 4.000 €",
+   "bild": ""
   },
   {
    "id": "s8",
-   "text": "so bezahlt sich dein Hund quasi selbst",
-   "sprechtext": "So bezahlt sich dein Hund quasi selbst."
+   "sprechtext": "Dazu Hundesteuer und Haftpflicht-Versicherung: zusammen rund hundertachtzig Euro im Jahr.",
+   "text": "Dazu Hundesteuer und Haftpflicht‑Versicherung: zusammen rund 180 € im Jahr",
+   "bild": ""
   },
   {
    "id": "s9",
-   "text": "folg HundeFinanzTV für mehr Geld-Tipps!",
-   "sprechtext": "Folg HundeFinanzTV für mehr Geld-Tipps!"
+   "sprechtext": "Leine, Körbchen, Spielzeug und Pflege: noch mal rund zweitausend Euro.",
+   "text": "Leine, Körbchen, Spielzeug und Pflege: noch mal rund 2.000 €",
+   "bild": ""
+  },
+  {
+   "id": "s10",
+   "sprechtext": "Zusammen sind das rund siebzehntausend Euro – etwa hundertzehn Euro im Monat.",
+   "text": "Zusammen sind das rund 17.000 € – etwa 110 € im Monat",
+   "bild": ""
+  },
+  {
+   "id": "s11",
+   "sprechtext": "Und jetzt der Posten, der viele überrascht: Eine einzige Operation, zum Beispiel am Kreuzband, kann zweitausendfünfhundert Euro kosten.",
+   "text": "Und jetzt der Posten, der viele überrascht: Eine einzige Operation, zum Beispiel am Kreuzband, kann 2.500 € kosten",
+   "bild": ""
+  },
+  {
+   "id": "s12",
+   "sprechtext": "Unser Tipp: Leg jeden Monat etwas für den Tierarzt zur Seite – oder prüfe eine OP-Versicherung.",
+   "text": "Unser Tipp: Leg jeden Monat etwas für den Tierarzt zur Seite – oder prüfe eine OP‑Versicherung",
+   "bild": ""
+  },
+  {
+   "id": "s13",
+   "sprechtext": "Schreib uns: Was kostet dein Hund im Monat?",
+   "text": "Schreib uns: Was kostet dein Hund im Monat?",
+   "bild": ""
+  },
+  {
+   "id": "s14",
+   "sprechtext": "Folge HundeFinanzTv, wir rechnen dir jeden Tag Geld einfach vor.",
+   "text": "Folge HundeFinanzTv, wir rechnen dir jeden Tag Geld einfach vor",
+   "bild": ""
   }
  ]
 }
