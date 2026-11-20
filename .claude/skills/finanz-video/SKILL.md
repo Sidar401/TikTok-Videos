@@ -332,3 +332,4 @@ Heller Nachrichten-Look nach Vorbild Eulen-Kanal (finanzlehre). Probe: `renders/
   darunter 3 Zahlen-Kacheln = jeden Tag die 3 größten Bewegungen des Tages (echte Logos + Zahlen), die auch im Video vorkommen.
 - Hintergründe neuer Look: pro Szene passendes echtes Foto hell/weich (`nl.foto(id, key)`, Kit(hgs=[…])); NEUE Fotos holen (`scripts/hg_neu.py`, Commons oft 429 → einzelne bekannte Dateinamen per Special:FilePath). Nutzer 19.11.: „bisher immer die gleichen Fotos“ → neue bevorzugen.
 - Oranger Rahmen (Nutzer 19.11.): IMMER bei Video UND Thumbnail (neuer Look behält #frame 26 px #DB8622).
+- Thumbnails neuer Look (Nutzer 20.11.): OHNE Kopfzeile (kein „HundeFinanzTv | GELD-WISSEN/BÖRSENNEWS“) – nur Inhalt + oranger Rahmen.
