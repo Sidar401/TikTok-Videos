@@ -69,3 +69,7 @@ Vorlage/Baukasten: `wissen/kit/` (neu.sh, kit.js, kit.css, mix.py, fertig.sh, sn
 ## Longform-Titelbilder (Nutzer 20.11.): nicht wie das alte aussehen
 - Jedes Titelbild muss sich klar von den bisherigen unterscheiden (nicht wieder „Kugeln in einer Reihe + Titel“).
 - Clevere Idee mit Neugier, z. B. „Findest du die SONNE?“: riesiger Stern + winziger Punkt mit gelbem Kreis. Code: `videos/sterne-groesse/thumb-szene.js` (eigene Kamera bei t < 1).
+
+## Longform (Nutzer 20.11.)
+- Lange Videos (16:9 und 9:16) KOMPLETT OHNE Untertitel: in szene.json `.capw, #cap-in { display: none !important; }` (bei 16:9 in `css_land`).
+- Auch im Longform NUR die neue Folgen-Karte (`"karte": [start, dauer]`), NIE mehr `share`/`follow` (roter Knopf). 16:9: Karte per css_land mittig setzen (siehe `videos/sterne-groesse/szene.json`).
