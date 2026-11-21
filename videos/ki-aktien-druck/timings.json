@@ -1,0 +1,332 @@
+{
+ "dauer": 70.966,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 7.534,
+   "captions": [
+    {
+     "text": "Der größte KI‑Chiphersteller",
+     "start": 0.0,
+     "end": 1.756
+    },
+    {
+     "text": "der Welt verliert",
+     "start": 1.756,
+     "end": 2.823
+    },
+    {
+     "text": "an einem Tag rund 14 % –",
+     "start": 2.823,
+     "end": 4.328
+    },
+    {
+     "text": "und die US‑Börsenaufsicht",
+     "start": 4.328,
+     "end": 5.897
+    },
+    {
+     "text": "schaut sich seine Bücher an",
+     "start": 5.897,
+     "end": 7.534
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 7.534,
+   "end": 12.001,
+   "captions": [
+    {
+     "text": "Gleichzeitig rutscht",
+     "start": 7.534,
+     "end": 8.77
+    },
+    {
+     "text": "die Anthropic‑Aktie fast",
+     "start": 8.77,
+     "end": 10.321
+    },
+    {
+     "text": "bis auf ihren Ausgabepreis",
+     "start": 10.321,
+     "end": 12.001
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 12.001,
+   "end": 16.389,
+   "captions": [
+    {
+     "text": "Was da los ist,",
+     "start": 12.001,
+     "end": 12.886
+    },
+    {
+     "text": "siehst du jetzt –",
+     "start": 12.886,
+     "end": 13.89
+    },
+    {
+     "text": "und am Ende den Fehler,",
+     "start": 13.89,
+     "end": 15.247
+    },
+    {
+     "text": "den gerade viele machen",
+     "start": 15.247,
+     "end": 16.389
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 19.389,
+   "end": 25.777,
+   "captions": [
+    {
+     "text": "Zuerst Nvidia: Laut Reuters",
+     "start": 19.389,
+     "end": 20.94
+    },
+    {
+     "text": "prüft die US‑Börsenaufsicht",
+     "start": 20.94,
+     "end": 22.926
+    },
+    {
+     "text": "SEC mögliche",
+     "start": 22.926,
+     "end": 23.808
+    },
+    {
+     "text": "Probleme in der Buchhaltung",
+     "start": 23.808,
+     "end": 25.777
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 25.777,
+   "end": 30.082,
+   "captions": [
+    {
+     "text": "Wichtig: Eine Prüfung",
+     "start": 25.777,
+     "end": 27.1
+    },
+    {
+     "text": "ist kein Urteil – es gilt",
+     "start": 27.1,
+     "end": 28.705
+    },
+    {
+     "text": "die Unschuldsvermutung",
+     "start": 28.705,
+     "end": 30.082
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 30.082,
+   "end": 36.567,
+   "captions": [
+    {
+     "text": "Trotzdem fiel die Aktie",
+     "start": 30.082,
+     "end": 31.871
+    },
+    {
+     "text": "am Freitag um rund",
+     "start": 31.871,
+     "end": 33.342
+    },
+    {
+     "text": "14 % – der schlimmste",
+     "start": 33.342,
+     "end": 35.058
+    },
+    {
+     "text": "Tag seit Januar 2025",
+     "start": 35.058,
+     "end": 36.567
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 36.567,
+   "end": 42.406,
+   "captions": [
+    {
+     "text": "Jetzt Anthropic:",
+     "start": 36.567,
+     "end": 37.869
+    },
+    {
+     "text": "Ausgabepreis 83 Dollar,",
+     "start": 37.869,
+     "end": 39.811
+    },
+    {
+     "text": "erster Tag Schluss",
+     "start": 39.811,
+     "end": 41.321
+    },
+    {
+     "text": "bei 97 Dollar",
+     "start": 41.321,
+     "end": 42.406
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 42.406,
+   "end": 46.447,
+   "captions": [
+    {
+     "text": "Am zweiten Tag minus",
+     "start": 42.406,
+     "end": 44.429
+    },
+    {
+     "text": "9 % auf 88,30 Dollar",
+     "start": 44.429,
+     "end": 46.447
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 46.447,
+   "end": 50.22,
+   "captions": [
+    {
+     "text": "Zwischendurch lag",
+     "start": 46.447,
+     "end": 47.51
+    },
+    {
+     "text": "die Aktie nur 5 Cent",
+     "start": 47.51,
+     "end": 48.852
+    },
+    {
+     "text": "über dem Ausgabepreis",
+     "start": 48.852,
+     "end": 50.22
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 50.22,
+   "end": 57.57,
+   "captions": [
+    {
+     "text": "Zum Vergleich:",
+     "start": 50.22,
+     "end": 51.098
+    },
+    {
+     "text": "Facebook schloss am zweiten",
+     "start": 51.098,
+     "end": 52.871
+    },
+    {
+     "text": "Tag sogar 10 % unter",
+     "start": 52.871,
+     "end": 54.184
+    },
+    {
+     "text": "dem Ausgabepreis – und wurde",
+     "start": 54.184,
+     "end": 56.023
+    },
+    {
+     "text": "später trotzdem ein Riese",
+     "start": 56.023,
+     "end": 57.57
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 57.57,
+   "end": 63.187,
+   "captions": [
+    {
+     "text": "Der Fehler,",
+     "start": 57.57,
+     "end": 58.172
+    },
+    {
+     "text": "den gerade viele machen:",
+     "start": 58.172,
+     "end": 59.659
+    },
+    {
+     "text": "aus Panik verkaufen,",
+     "start": 59.659,
+     "end": 60.871
+    },
+    {
+     "text": "nachdem sie zu teuer",
+     "start": 60.871,
+     "end": 62.136
+    },
+    {
+     "text": "eingestiegen sind",
+     "start": 62.136,
+     "end": 63.187
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 63.187,
+   "end": 65.629,
+   "captions": [
+    {
+     "text": "Keine Anlageberatung,",
+     "start": 63.187,
+     "end": 64.734
+    },
+    {
+     "text": "nur erklärt",
+     "start": 64.734,
+     "end": 65.629
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 65.629,
+   "end": 70.352,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTv,",
+     "start": 65.629,
+     "end": 66.971
+    },
+    {
+     "text": "wir bringen dir jeden Tag",
+     "start": 66.971,
+     "end": 68.662
+    },
+    {
+     "text": "die wichtigsten Geld‑News",
+     "start": 68.662,
+     "end": 70.352
+    }
+   ]
+  }
+ ],
+ "logo_intro": 16.389
+}
