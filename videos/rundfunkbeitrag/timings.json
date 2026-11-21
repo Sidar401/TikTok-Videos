@@ -1,0 +1,359 @@
+{
+ "dauer": 70.85,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 5.026,
+   "captions": [
+    {
+     "text": "220 € im Jahr",
+     "start": 0.0,
+     "end": 1.079
+    },
+    {
+     "text": "– und das zahlt fast",
+     "start": 1.079,
+     "end": 2.618
+    },
+    {
+     "text": "jeder Haushalt in Deutschland",
+     "start": 2.618,
+     "end": 5.026
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 5.026,
+   "end": 8.885,
+   "captions": [
+    {
+     "text": "Teile diesen Beitrag",
+     "start": 5.026,
+     "end": 6.009
+    },
+    {
+     "text": "mit jemandem,",
+     "start": 6.009,
+     "end": 6.648
+    },
+    {
+     "text": "der sich weigert,",
+     "start": 6.648,
+     "end": 7.483
+    },
+    {
+     "text": "den Rundfunkbeitrag",
+     "start": 7.483,
+     "end": 8.416
+    },
+    {
+     "text": "zu bezahlen",
+     "start": 8.416,
+     "end": 8.885
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 8.885,
+   "end": 11.402,
+   "captions": [
+    {
+     "text": "Der Rundfunkbeitrag soll",
+     "start": 8.885,
+     "end": 10.107
+    },
+    {
+     "text": "jetzt sogar wieder steigen",
+     "start": 10.107,
+     "end": 11.402
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 11.402,
+   "end": 16.004,
+   "captions": [
+    {
+     "text": "Wohin das Geld fließt",
+     "start": 11.402,
+     "end": 12.572
+    },
+    {
+     "text": "– und wie du ganz",
+     "start": 12.572,
+     "end": 13.605
+    },
+    {
+     "text": "legal weniger zahlst,",
+     "start": 13.605,
+     "end": 14.881
+    },
+    {
+     "text": "zeigen wir dir jetzt",
+     "start": 14.881,
+     "end": 16.004
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 19.004,
+   "end": 24.507,
+   "captions": [
+    {
+     "text": "Der Rundfunkbeitrag",
+     "start": 19.004,
+     "end": 20.401
+    },
+    {
+     "text": "kostet 18,36 € im Monat",
+     "start": 20.401,
+     "end": 22.203
+    },
+    {
+     "text": "– pro Wohnung,",
+     "start": 22.203,
+     "end": 23.266
+    },
+    {
+     "text": "nicht pro Person",
+     "start": 23.266,
+     "end": 24.507
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 24.507,
+   "end": 27.853,
+   "captions": [
+    {
+     "text": "Zusammen kommen",
+     "start": 24.507,
+     "end": 25.467
+    },
+    {
+     "text": "so rund 9 Milliarden",
+     "start": 25.467,
+     "end": 26.765
+    },
+    {
+     "text": "€ im Jahr zusammen",
+     "start": 26.765,
+     "end": 27.853
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 27.853,
+   "end": 34.114,
+   "captions": [
+    {
+     "text": "Das Geld geht an ARD,",
+     "start": 27.853,
+     "end": 29.538
+    },
+    {
+     "text": "ZDF und Deutschlandradio",
+     "start": 29.538,
+     "end": 31.529
+    },
+    {
+     "text": "– den größten",
+     "start": 31.529,
+     "end": 32.533
+    },
+    {
+     "text": "Teil bekommt die ARD",
+     "start": 32.533,
+     "end": 34.114
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 34.114,
+   "end": 41.061,
+   "captions": [
+    {
+     "text": "Und jetzt soll es mehr",
+     "start": 34.114,
+     "end": 36.115
+    },
+    {
+     "text": "werden: Die Kommission KEF",
+     "start": 36.115,
+     "end": 38.647
+    },
+    {
+     "text": "empfiehlt ab 2027 18,64 €",
+     "start": 38.647,
+     "end": 41.061
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 41.061,
+   "end": 45.941,
+   "captions": [
+    {
+     "text": "Das sind 28 Cent mehr",
+     "start": 41.061,
+     "end": 42.497
+    },
+    {
+     "text": "im Monat – aber alle",
+     "start": 42.497,
+     "end": 43.881
+    },
+    {
+     "text": "16 Bundesländer",
+     "start": 43.881,
+     "end": 44.92
+    },
+    {
+     "text": "müssen zustimmen",
+     "start": 44.92,
+     "end": 45.941
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 45.941,
+   "end": 51.68,
+   "captions": [
+    {
+     "text": "Gleichzeitig entscheidet bald",
+     "start": 45.941,
+     "end": 47.817
+    },
+    {
+     "text": "das Bundesverfassungsgericht",
+     "start": 47.817,
+     "end": 49.712
+    },
+    {
+     "text": "über",
+     "start": 49.712,
+     "end": 49.983
+    },
+    {
+     "text": "eine Klage von ARD und ZDF",
+     "start": 49.983,
+     "end": 51.68
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 51.68,
+   "end": 57.347,
+   "captions": [
+    {
+     "text": "Jetzt der Spar‑Tipp:",
+     "start": 51.68,
+     "end": 52.763
+    },
+    {
+     "text": "Weil der Beitrag",
+     "start": 52.763,
+     "end": 53.637
+    },
+    {
+     "text": "pro Wohnung gilt,",
+     "start": 53.637,
+     "end": 54.612
+    },
+    {
+     "text": "zahlt in einer WG nur",
+     "start": 54.612,
+     "end": 55.816
+    },
+    {
+     "text": "einer – ihr könnt ihn teilen",
+     "start": 55.816,
+     "end": 57.347
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 57.347,
+   "end": 62.865,
+   "captions": [
+    {
+     "text": "Und wer Bürgergeld,",
+     "start": 57.347,
+     "end": 58.37
+    },
+    {
+     "text": "BAföG oder Grundsicherung",
+     "start": 58.37,
+     "end": 59.814
+    },
+    {
+     "text": "bekommt,",
+     "start": 59.814,
+     "end": 60.276
+    },
+    {
+     "text": "kann sich befreien lassen",
+     "start": 60.276,
+     "end": 61.704
+    },
+    {
+     "text": "– aber nur auf Antrag",
+     "start": 61.704,
+     "end": 62.865
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 62.865,
+   "end": 65.693,
+   "captions": [
+    {
+     "text": "Schreib uns: Findest du",
+     "start": 62.865,
+     "end": 64.206
+    },
+    {
+     "text": "den Rundfunkbeitrag fair?",
+     "start": 64.206,
+     "end": 65.693
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 65.693,
+   "end": 70.251,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTv,",
+     "start": 65.693,
+     "end": 66.979
+    },
+    {
+     "text": "wir bringen dir jeden Tag",
+     "start": 66.979,
+     "end": 68.618
+    },
+    {
+     "text": "die wichtigsten Geld‑News",
+     "start": 68.618,
+     "end": 70.251
+    }
+   ]
+  }
+ ],
+ "logo_intro": 16.004
+}
