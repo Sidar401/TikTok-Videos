@@ -1,0 +1,19 @@
+{
+ "tag": "22. NOVEMBER 2026",
+ "dauer": 67.4,
+ "hook": "Stern frisst<br /><span class=\"y\">STERN!</span>",
+ "hook_end": 2.7,
+ "karte": [
+  13.0,
+  5.4
+ ],
+ "fix": {
+  "zweieinhalb": "2,5",
+  "siebenmal": "7-mal",
+  "dreihundertfünfzigmal": "350-mal",
+  "zweitausendachtzehn": "2018",
+  "zweitausendfünfundzwanzig": "2025",
+  "siebenundvierzig": "47"
+ },
+ "css": ".hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"
+}

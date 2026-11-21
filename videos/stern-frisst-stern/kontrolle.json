@@ -1,0 +1,20 @@
+{
+ "gehoert": "Ein Stern hat einen anderen Stern gefressen. Forscher haben zum ersten Mal genau zugeschaut, wie ein riesiger Stern seinen Partner verschluckt und das Weltraumteleskop James Webb hat die Spuren fotografiert. Passiert ist das in der Andromeda-Galaxie, zweieinhalb Millionen Lichtjahre entfernt. Die Forscher nennen die beiden Sterne Big Bao und Little Bao. Big Bao ist ein roter Riese, siebenmal so schwer wie unsere Sonne und über dreihundertfünfzig Mal so breit. Little Bao war viel kleiner, nicht mal so schwer wie unsere Sonne. Die beiden kreisten umeinander, immer enger. Schon seit etwa 2018 wurde das Paar langsam heller. Dann tauchte Little Bao in den Riesen ein und raste spiralförmig bis in seinen Kern. Im Oktober 2025 kam der große Ausbruch. Dabei flog Gas weg, so viel wie ein Zehntel unserer Sonne. Nur siebenundvierzig Tage später schaute James Webb hin. So etwas passiert nur ganz selten und fast nie sieht man es live. Übrig ist jetzt nur noch ein einziger Stern. Die Forscher nennen ihn einfach Bao.",
+ "abweichungen": [
+  [
+   "replace",
+   "dreihundertfünfzigmal",
+   "dreihundertfünfzig mal"
+  ],
+  [
+   "replace",
+   "zweitausendachtzehn",
+   "2018"
+  ],
+  [
+   "replace",
+   "zweitausendfünfundzwanzig",
+   "2025"
+  ]
+ ]
+}

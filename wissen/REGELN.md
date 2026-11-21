@@ -73,3 +73,7 @@ Vorlage/Baukasten: `wissen/kit/` (neu.sh, kit.js, kit.css, mix.py, fertig.sh, sn
 ## Longform (Nutzer 20.11.)
 - Lange Videos (16:9 und 9:16) KOMPLETT OHNE Untertitel: in szene.json `.capw, #cap-in { display: none !important; }` (bei 16:9 in `css_land`).
 - Auch im Longform NUR die neue Folgen-Karte (`"karte": [start, dauer]`), NIE mehr `share`/`follow` (roter Knopf). 16:9: Karte per css_land mittig setzen (siehe `videos/sterne-groesse/szene.json`).
+
+## Folgen-Aufruf NICHT aussprechen (Nutzer 21.11.) – AB SOFORT
+- „Folg uns für mehr!“ NICHT mehr in sprechtext.txt. Die Folgen-Karte (`"karte"`) kommt stumm nach dem 3. Satz.
+- Jedes Mal, wenn die Karte erscheint: Soundeffekt `stern-funkeln` (in cues.json, Zeit = Karten-Start, v ≈ 0.12).

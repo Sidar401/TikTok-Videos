@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/kit.css" />
+    <script type="importmap">{"imports":{"three":"./assets/three/build/three.module.js","three/addons/":"./assets/three/jsm/"}}</script>
+    <style>
+      @font-face { font-family: "Inter Display"; font-weight: 900; src: url("assets/fonts/InterDisplay-Black.otf"); }
+      @font-face { font-family: "Inter Display"; font-weight: 800; src: url("assets/fonts/InterDisplay-ExtraBold.otf"); }
+      @font-face { font-family: "Inter"; font-weight: 600; src: url("assets/fonts/Inter-SemiBold.otf"); }
+      html, body { background: #000; }
+      #root { font-family: "Inter Display", "Inter", sans-serif; background: #000; }
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .tag { top: 140px; font-family: "Inter", sans-serif; font-weight: 600; font-size: 32px; letter-spacing: 8px; color: rgba(255,255,255,0.6); }
+      #labels { position: absolute; inset: 0; pointer-events: none; }
+      .pl { position: absolute; transform: translate(-50%, -100%); font: 800 76px "Inter Display", sans-serif; color: #fff; white-space: nowrap; text-shadow: 0 4px 30px rgba(0,0,0,.9); letter-spacing: 0.5px; }
+      .pl small { display: block; text-align: center; font: 600 34px "Inter", sans-serif; color: rgba(255,255,255,.7); margin-top: 4px; }
+      #word { position: absolute; left: 0; right: 0; top: 1420px; text-align: center; font: 800 132px "Inter Display", sans-serif; color: #fff; text-shadow: 0 6px 40px rgba(0,0,0,.9); }
+      .hookbig { top: 620px; font-size: 128px; font-weight: 900; line-height: 1.04; text-shadow: 0 8px 50px rgba(0,0,0,.95); }
+      .hookbig .y { color: #ffd23f; }
+      .hookdim { background: radial-gradient(circle at 50% 40%, rgba(0,0,0,.2), rgba(0,0,0,.75)); }
+      .capw { top: 1500px; font-size: 80px; font-weight: 800; line-height: 1.12; color: #fff; text-shadow: 0 6px 30px rgba(0,0,0,.95), 0 0 3px #000; }
+      .capw .w { display: inline-block; margin: 0 10px; }
+      .capw .on { color: #ffd23f; }
+      .share { position: absolute; right: 40px; top: 1150px; }
+      .share span { display: inline-block; background: #fe2c55; color: #fff; font-weight: 900; font-size: 50px; padding: 14px 32px; border-radius: 60px; box-shadow: 0 0 34px rgba(254,44,85,.6); }
+      .follow { top: 1150px; }
+      .hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }
+    
+#fk-wrap { position: absolute; left: 170px; top: 760px; width: 740px; z-index: 30; }
+#fk { position: relative; width: 740px; padding: 130px 56px 54px; border-radius: 52px; text-align: center; overflow: hidden; font-family: "Inter Display", Inter, sans-serif; color: #fff;
+  background: linear-gradient(180deg, rgba(30,34,48,.74), rgba(10,12,20,.82)); border: 1.5px solid rgba(255,255,255,.16); backdrop-filter: blur(26px) saturate(1.2); -webkit-backdrop-filter: blur(26px) saturate(1.2);
+  box-shadow: 0 40px 100px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.18); }
+#fk-wrap > .fk-av { position: absolute; left: 50%; top: -105px; width: 210px; height: 210px; margin-left: -105px; z-index: 3; border-radius: 50%; background: url(assets/avatar.png) center/cover; box-shadow: 0 0 0 8px rgba(12,14,22,.9), 0 20px 50px rgba(0,0,0,.6); }
+.fk-ring { position: absolute; inset: -9px; border-radius: 50%; background: conic-gradient(from 0deg, #ffe7a8, rgba(255,231,168,.1), #ffd06a, rgba(255,231,168,.1), #ffe7a8);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 4px)); mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 4px)); }
+#fk .n { font-size: 70px; font-weight: 900; letter-spacing: -1.5px; } #fk .d { font: 600 36px Inter, sans-serif; color: rgba(255,255,255,.66); margin: 10px 0 40px; }
+#fk .btn { position: relative; height: 116px; border-radius: 58px; font-size: 50px; font-weight: 800; }
+#fk .btn .a, #fk .btn .b { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 14px; border-radius: inherit; }
+#fk .btn .a { background: #fff; color: #0b0d14; } #fk .btn .b { opacity: 0; background: linear-gradient(180deg, #ffe39a, #f6c04a); color: #1a1406; }
+#fk-shine { position: absolute; top: -20%; bottom: -20%; width: 220px; left: -300px; background: linear-gradient(100deg, transparent, rgba(255,255,255,.22), transparent); transform: skewX(-18deg); }
+#fk-touch, #fk-rip { position: absolute; left: 540px; top: 1127px; width: 92px; height: 92px; margin: -46px 0 0 -46px; border-radius: 50%; z-index: 31; opacity: 0; }
+#fk-touch { background: rgba(255,255,255,.32); border: 3px solid rgba(255,255,255,.9); box-shadow: 0 8px 30px rgba(0,0,0,.45); } #fk-rip { border: 3px solid rgba(255,255,255,.8); }
+</style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="67.4" data-width="1080" data-height="1920">
+      <canvas id="stage" data-layout-allow-overflow width="1080" height="1920"></canvas>
+      <div id="labels" class="clip" data-start="0" data-duration="67.4" data-track-index="2"></div>
+      <div id="word" class="clip" data-start="0" data-duration="67.4" data-track-index="3"></div>
+      <div id="tag" class="line tag clip" data-start="0" data-duration="67.4" data-track-index="1"><span>22. NOVEMBER 2026</span></div>
+      <div id="cap" class="line capw clip" data-start="2.7" data-duration="64.70" data-track-index="4"><span id="cap-in"></span></div>
+      <div id="hookdim" class="hookdim clip" data-start="0" data-duration="2.7" data-track-index="8"><span></span></div>
+      <div id="hookbig" class="line hookbig clip" data-start="0" data-duration="2.7" data-track-index="7"><span id="hookbig-in">Stern frisst<br /><span class="y">STERN!</span></span></div>
+      <div id="fk-box" class="clip" data-start="13.0" data-duration="5.4" data-track-index="5"><div id="fk-wrap"><div class="fk-av"><div class="fk-ring"></div></div><div id="fk"><div class="n">Novaro</div><div class="d">Weltraum, einfach erklärt</div><div class="btn" id="fk-btn"><span class="a">Folgen</span><span class="b"><svg class="ck" width="44" height="44" viewBox="0 0 44 44"><path d="M8 23l9 9 19-20" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="48" stroke-dashoffset="48"/></svg>Gefolgt</span></div><div id="fk-shine"></div></div></div><div id="fk-rip"></div><div id="fk-touch"></div></div>
+      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="67.00" data-track-index="9" data-volume="1"></audio>
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="67.4" data-track-index="10" data-volume="0.3"></audio>
+    </div>
+    <img id="tex-day" src="assets/earth-blue-marble.jpg" style="display:none" alt="" />
+    <img id="tex-night" src="assets/earth-night.jpg" style="display:none" alt="" />
+    <img id="tex-topo" src="assets/earth-topology.png" style="display:none" alt="" />
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.from("#hookbig-in", { opacity: 0, scale: 1.3, duration: 0.35, ease: "power3.out" }, 0);
+      tl.to("#hookbig-in", { scale: 0.7, opacity: 0, filter: "blur(10px)", duration: 0.3, ease: "power2.in" }, 2.7 - 0.32);
+      tl.to("#hookdim", { opacity: 0, duration: 0.3 }, 2.7 - 0.32);
+
+      tl.fromTo("#fk-wrap", { opacity: 0, y: 120, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: "expo.out" }, 13.0);
+      tl.fromTo(".fk-ring", { rotation: 0 }, { rotation: 200, duration: 5.4, ease: "none" }, 13.0);
+      tl.fromTo("#fk .n, #fk .d, #fk-btn", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, stagger: 0.07, ease: "power3.out" }, 13.2);
+      tl.fromTo("#fk-touch", { opacity: 0, x: 240, y: 260, scale: 1.3 }, { opacity: 1, x: 0, y: 0, scale: 1, duration: 0.8, ease: "power3.out" }, 13.9);
+      tl.to("#fk-touch", { scale: 0.72, duration: 0.14 }, 14.76); tl.to("#fk-touch", { scale: 1, duration: 0.25 }, 14.9);
+      tl.to("#fk-btn", { scale: 0.95, duration: 0.14 }, 14.76); tl.to("#fk-btn", { scale: 1, duration: 0.45, ease: "back.out(3)" }, 14.9);
+      tl.fromTo("#fk-rip", { opacity: 0.9, scale: 0.6 }, { opacity: 0, scale: 3.2, duration: 0.7, ease: "power2.out", immediateRender: false }, 14.9);
+      tl.to("#fk-btn .a", { opacity: 0, duration: 0.18 }, 14.9); tl.to("#fk-btn .b", { opacity: 1, duration: 0.22 }, 14.950000000000001);
+      tl.to("#fk-btn .ck path", { attr: { "stroke-dashoffset": 0 }, duration: 0.45, ease: "power2.out" }, 15.05);
+      tl.fromTo("#fk-shine", { x: 0 }, { x: 1400, duration: 0.9, ease: "power2.inOut", immediateRender: false }, 15.25);
+      tl.to("#fk-touch", { opacity: 0, scale: 0.6, duration: 0.4, ease: "power2.in" }, 15.6);
+      tl.to("#fk-wrap", { opacity: 0, y: 40, scale: 0.96, duration: 0.45, ease: "power2.in" }, 17.9);
+      tl.to({}, { duration: 0.01 }, 67.4 - 0.01);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+    <script type="module">
+      import * as K from "./assets/kino.js";
+      const { THREE, V, lerp, eio, eout, prog, cl, rnd } = K;
+      window.FMT = { W: 1080, H: 1920 };
+      const WORDS = [{"w": "Ein", "s": 0.0, "e": 0.2}, {"w": "Stern", "s": 0.24, "e": 0.56}, {"w": "hat", "s": 0.64, "e": 0.773}, {"w": "einen", "s": 0.8, "e": 1.093}, {"w": "anderen", "s": 1.12, "e": 1.52}, {"w": "Stern", "s": 1.6, "e": 1.92}, {"w": "gefressen!", "s": 2.0, "e": 2.76}, {"w": "Forscher", "s": 3.04, "e": 3.44}, {"w": "haben", "s": 3.52, "e": 3.76}, {"w": "zum", "s": 3.84, "e": 4.0}, {"w": "ersten", "s": 4.08, "e": 4.4}, {"w": "Mal", "s": 4.48, "e": 4.64}, {"w": "genau", "s": 4.72, "e": 5.2}, {"w": "zugeschaut,", "s": 5.28, "e": 5.88}, {"w": "wie", "s": 5.92, "e": 6.0}, {"w": "ein", "s": 6.12, "e": 6.24}, {"w": "riesiger", "s": 6.32, "e": 6.8}, {"w": "Stern", "s": 6.88, "e": 7.28}, {"w": "seinen", "s": 7.32, "e": 7.6}, {"w": "Partner", "s": 7.68, "e": 8.0}, {"w": "verschluckt.", "s": 8.08, "e": 9.04}, {"w": "Und", "s": 9.12, "e": 9.2}, {"w": "das", "s": 9.32, "e": 9.44}, {"w": "Weltraumteleskop", "s": 9.52, "e": 10.4}, {"w": "James", "s": 10.48, "e": 10.8}, {"w": "Webb", "s": 10.88, "e": 11.2}, {"w": "hat", "s": 11.28, "e": 11.36}, {"w": "die", "s": 11.44, "e": 11.52}, {"w": "Spuren", "s": 11.6, "e": 12.0}, {"w": "fotografiert.", "s": 12.08, "e": 13.061}, {"w": "Passiert", "s": 13.206, "e": 13.686}, {"w": "ist", "s": 13.766, "e": 13.846}, {"w": "das", "s": 13.926, "e": 14.086}, {"w": "in", "s": 14.166, "e": 14.246}, {"w": "der", "s": 14.286, "e": 14.326}, {"w": "Andromeda-Galaxie,", "s": 14.406, "e": 15.766}, {"w": "zweieinhalb", "s": 15.846, "e": 16.486}, {"w": "Millionen", "s": 16.606, "e": 17.046}, {"w": "Lichtjahre", "s": 17.126, "e": 17.606}, {"w": "entfernt.", "s": 17.726, "e": 18.486}, {"w": "Die", "s": 18.526, "e": 18.566}, {"w": "Forscher", "s": 18.726, "e": 19.046}, {"w": "nennen", "s": 19.126, "e": 19.286}, {"w": "die", "s": 19.366, "e": 19.446}, {"w": "beiden", "s": 19.486, "e": 19.686}, {"w": "Sterne", "s": 19.766, "e": 20.166}, {"w": "„Big", "s": 20.326, "e": 20.566}, {"w": "Bao“", "s": 20.646, "e": 21.046}, {"w": "und", "s": 21.126, "e": 21.206}, {"w": "„Little", "s": 21.286, "e": 21.606}, {"w": "Bao“.", "s": 21.686, "e": 22.406}, {"w": "Big", "s": 22.526, "e": 22.646}, {"w": "Bao", "s": 22.726, "e": 22.966}, {"w": "ist", "s": 23.046, "e": 23.206}, {"w": "ein", "s": 23.286, "e": 23.366}, {"w": "Roter", "s": 23.526, "e": 23.846}, {"w": "Riese:", "s": 23.926, "e": 24.566}, {"w": "siebenmal", "s": 24.646, "e": 25.206}, {"w": "so", "s": 25.246, "e": 25.286}, {"w": "schwer", "s": 25.366, "e": 25.606}, {"w": "wie", "s": 25.686, "e": 25.766}, {"w": "unsere", "s": 25.846, "e": 26.086}, {"w": "Sonne", "s": 26.166, "e": 26.486}, {"w": "und", "s": 26.566, "e": 26.726}, {"w": "über", "s": 26.846, "e": 26.966}, {"w": "dreihundertfünfzigmal", "s": 27.126, "e": 28.566}, {"w": "so", "s": 28.606, "e": 28.646}, {"w": "breit.", "s": 28.726, "e": 29.526}, {"w": "Little", "s": 29.606, "e": 29.846}, {"w": "Bao", "s": 29.926, "e": 30.166}, {"w": "war", "s": 30.246, "e": 30.406}, {"w": "viel", "s": 30.486, "e": 30.726}, {"w": "kleiner,", "s": 30.846, "e": 31.366}, {"w": "nicht", "s": 31.446, "e": 31.606}, {"w": "mal", "s": 31.686, "e": 31.766}, {"w": "so", "s": 31.846, "e": 31.886}, {"w": "schwer", "s": 31.926, "e": 32.166}, {"w": "wie", "s": 32.206, "e": 32.246}, {"w": "unsere", "s": 32.326, "e": 32.566}, {"w": "Sonne.", "s": 32.726, "e": 33.227}, {"w": "Die", "s": 33.267, "e": 33.307}, {"w": "beiden", "s": 33.387, "e": 33.707}, {"w": "kreisten", "s": 33.787, "e": 34.267}, {"w": "umeinander,", "s": 34.387, "e": 35.147}, {"w": "immer", "s": 35.307, "e": 35.467}, {"w": "enger.", "s": 35.547, "e": 36.187}, {"w": "Schon", "s": 36.227, "e": 36.347}, {"w": "seit", "s": 36.387, "e": 36.507}, {"w": "etwa", "s": 36.587, "e": 36.827}, {"w": "zweitausendachtzehn", "s": 36.907, "e": 38.107}, {"w": "wurde", "s": 38.187, "e": 38.347}, {"w": "das", "s": 38.427, "e": 38.507}, {"w": "Paar", "s": 38.667, "e": 38.827}, {"w": "langsam", "s": 38.907, "e": 39.307}, {"w": "heller.", "s": 39.387, "e": 40.027}, {"w": "Dann", "s": 40.067, "e": 40.347}, {"w": "tauchte", "s": 40.427, "e": 40.747}, {"w": "Little", "s": 40.827, "e": 41.067}, {"w": "Bao", "s": 41.147, "e": 41.387}, {"w": "in", "s": 41.467, "e": 41.547}, {"w": "den", "s": 41.627, "e": 41.707}, {"w": "Riesen", "s": 41.787, "e": 42.107}, {"w": "ein", "s": 42.187, "e": 42.507}, {"w": "und", "s": 42.587, "e": 42.747}, {"w": "raste", "s": 42.787, "e": 43.147}, {"w": "spiralförmig", "s": 43.347, "e": 44.267}, {"w": "bis", "s": 44.387, "e": 44.507}, {"w": "in", "s": 44.587, "e": 44.667}, {"w": "seinen", "s": 44.747, "e": 44.987}, {"w": "Kern.", "s": 45.147, "e": 45.623}, {"w": "Im", "s": 45.663, "e": 45.703}, {"w": "Oktober", "s": 45.783, "e": 46.263}, {"w": "zweitausendfünfundzwanzig", "s": 46.343, "e": 47.743}, {"w": "kam", "s": 47.863, "e": 48.023}, {"w": "der", "s": 48.103, "e": 48.183}, {"w": "große", "s": 48.263, "e": 48.663}, {"w": "Ausbruch.", "s": 48.823, "e": 49.623}, {"w": "Dabei", "s": 49.663, "e": 50.023}, {"w": "flog", "s": 50.103, "e": 50.343}, {"w": "Gas", "s": 50.423, "e": 50.743}, {"w": "weg,", "s": 50.863, "e": 51.143}, {"w": "so", "s": 51.223, "e": 51.383}, {"w": "viel", "s": 51.543, "e": 51.703}, {"w": "wie", "s": 51.783, "e": 51.943}, {"w": "ein", "s": 52.023, "e": 52.103}, {"w": "Zehntel", "s": 52.263, "e": 52.663}, {"w": "unserer", "s": 52.743, "e": 53.063}, {"w": "Sonne.", "s": 53.143, "e": 53.728}, {"w": "Nur", "s": 53.768, "e": 53.968}, {"w": "siebenundvierzig", "s": 54.048, "e": 54.768}, {"w": "Tage", "s": 54.928, "e": 55.168}, {"w": "später", "s": 55.248, "e": 55.648}, {"w": "schaute", "s": 55.728, "e": 56.048}, {"w": "James", "s": 56.128, "e": 56.448}, {"w": "Webb", "s": 56.528, "e": 56.768}, {"w": "hin.", "s": 56.888, "e": 57.248}, {"w": "So", "s": 57.328, "e": 57.488}, {"w": "etwas", "s": 57.568, "e": 57.968}, {"w": "passiert", "s": 58.048, "e": 58.368}, {"w": "nur", "s": 58.408, "e": 58.608}, {"w": "ganz", "s": 58.688, "e": 59.008}, {"w": "selten", "s": 59.088, "e": 59.408}, {"w": "–", "s": 59.568, "e": 59.621}, {"w": "und", "s": 59.675, "e": 59.728}, {"w": "fast", "s": 59.808, "e": 60.128}, {"w": "nie", "s": 60.208, "e": 60.448}, {"w": "sieht", "s": 60.528, "e": 60.688}, {"w": "man", "s": 60.768, "e": 60.848}, {"w": "es", "s": 60.928, "e": 61.008}, {"w": "live.", "s": 61.088, "e": 61.808}, {"w": "Übrig", "s": 61.848, "e": 62.208}, {"w": "ist", "s": 62.328, "e": 62.448}, {"w": "jetzt", "s": 62.528, "e": 62.688}, {"w": "nur", "s": 62.768, "e": 62.928}, {"w": "noch", "s": 63.048, "e": 63.168}, {"w": "ein", "s": 63.248, "e": 63.328}, {"w": "einziger", "s": 63.488, "e": 63.968}, {"w": "Stern.", "s": 64.048, "e": 64.688}, {"w": "Die", "s": 64.728, "e": 64.768}, {"w": "Forscher", "s": 64.928, "e": 65.248}, {"w": "nennen", "s": 65.288, "e": 65.488}, {"w": "ihn", "s": 65.568, "e": 65.648}, {"w": "einfach:", "s": 65.688, "e": 66.288}, {"w": "Bao.", "s": 66.448, "e": 67.008}]; const CHUNKS = [[0.0, 2.76], [3.04, 9.04], [9.12, 13.061], [13.206, 18.486], [18.526, 22.406], [22.526, 29.526], [29.606, 33.227], [33.267, 40.027], [40.067, 45.623], [45.663, 53.728], [53.768, 57.248], [57.328, 61.808], [61.848, 67.008]];
+      const cap = K.captions(WORDS, CHUNKS, document.getElementById("cap-in"), 2.7, {"zweieinhalb": "2,5", "siebenmal": "7-mal", "dreihundertfünfzigmal": "350-mal", "zweitausendachtzehn": "2018", "zweitausendfünfundzwanzig": "2025", "siebenundvierzig": "47"});
+      const img = (id) => document.getElementById(id);
+      const imgsReady = Promise.all(["tex-day", "tex-night", "tex-topo"].map((id) => { const im = img(id); return im.complete ? Promise.resolve(im) : new Promise((r) => (im.onload = () => r(im))); }));
+      const E = K.setup(document.getElementById("stage"));
+      const cam = E.cam;
+      const TL = new THREE.TextureLoader();
+      const tex = async (f) => { const t = await TL.loadAsync("assets/tex/" + f); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t; };
+      // Beschriftungen, die an 3D-Objekten hängen
+      const LB = document.getElementById("labels"), WORD = document.getElementById("word");
+      const labels = [];
+      const label = (html, obj, r, o = {}) => { const d = document.createElement("div"); d.className = "pl"; d.innerHTML = html; LB.appendChild(d); const L = { d, obj, r, t0: o.t0 ?? 0, t1: o.t1 ?? 999, gap: o.gap ?? 40, size: o.size }; if (o.size) d.style.fontSize = o.size + "px"; labels.push(L); return L; };
+      const P = (v) => { const q = v.clone().project(cam); return [(q.x + 1) / 2 * 1080, (1 - q.y) / 2 * 1920]; };
+      const updLabels = (t) => { cam.updateMatrixWorld(true); labels.forEach((L) => { const p = L.obj.getWorldPosition(new THREE.Vector3()); const top = p.clone().add(cam.up.clone().multiplyScalar(L.r)); const [x] = P(p), [, y] = P(top);
+        const a = cl((t - L.t0) / 0.4) * (1 - cl((t - L.t1) / 0.4)); L.d.style.opacity = a; L.d.style.left = x + "px"; L.d.style.top = y - L.gap + "px"; L.d.style.transform = `translate(-50%,-100%) translateY(${(1 - a) * 20}px)`; }); };
+      let lastWord = ""; const word = (h, a) => { if (h !== lastWord) { WORD.innerHTML = h; lastWord = h; } WORD.style.opacity = a; WORD.style.transform = `translateY(${(1 - a) * 30}px)`; };
+      let renderAt = () => {};
+      const ready = imgsReady.then(async ([day, night, topo]) => {
+        const W = (w, ab = 0) => { const x = WORDS.find((q) => q.s >= ab - 0.01 && q.w.toLowerCase().replace(/[^a-zäöüß0-9]/g, "").startsWith(w)); return x ? x.s : ab; };
+        const lerpLog = (a, b, f) => Math.exp(lerp(Math.log(a), Math.log(b), f));
+        K.reseed(51);
+        // ===== Modelle (Nutzer 19.11.: „schönere 3D-Modelle“, keine echten Fotos) =====
+        // In szene.js eine Zeile "// @modelle" -> sauber_bau.py setzt diesen Code ein. Braucht THREE, E (Renderer), K.
+        // MO.vulcan(), MO.ariane6(), MO.falcon9(), MO.longMarch2F(), MO.pad(), MO.tiangong(), MO.shenzhou(), MO.iss(), MO.hayabusa2(), MO.asteroid({r,seed,top,stretch}), MO.flagTex('cn'|'pk'), MO.bepi(), MO.jwst(), MO.exhaust(len, rad, col), MO.smoke(scene, n), MO.kuiper(), MO.panelTex(...)
+        const MO = {};
+        {
+          const { RoomEnvironment } = await import("three/addons/environments/RoomEnvironment.js");
+          const pmM = new THREE.PMREMGenerator(E.R); MO.env = pmM.fromScene(new RoomEnvironment(), 0.04).texture;
+          // Kiste mit abgerundeten Kanten (Extrude mit Fase)
+          const RoundedBoxGeometry = function (w, h, d, _s = 2, r = 0.02) { const sh = new THREE.Shape(), x = -w / 2 + r, y = -h / 2 + r, W2 = w - 2 * r, H2 = h - 2 * r; sh.moveTo(x, y); sh.lineTo(x + W2, y); sh.lineTo(x + W2, y + H2); sh.lineTo(x, y + H2); sh.lineTo(x, y);
+            const g = new THREE.ExtrudeGeometry(sh, { depth: Math.max(0.001, d - 2 * r), bevelEnabled: true, bevelThickness: r, bevelSize: r, bevelSegments: 3, curveSegments: 4 }); g.translate(0, 0, -(d - 2 * r) / 2); g.computeVertexNormals(); return g; };
+          MO.RBox = RoundedBoxGeometry;
+          let sd = 7; const rr = () => ((sd = (sd * 16807) % 2147483647) / 2147483647);
+          // Fläche mit Rauschen, Nähten, Schrift -> {map, bump}
+          MO.panelTex = (o = {}) => {
+            const w = o.w ?? 1024, h = o.h ?? 2048, cv = document.createElement("canvas"); cv.width = w; cv.height = h; const g = cv.getContext("2d");
+            const bv = document.createElement("canvas"); bv.width = w; bv.height = h; const b = bv.getContext("2d");
+            g.fillStyle = o.base ?? "#c9ccd1"; g.fillRect(0, 0, w, h); b.fillStyle = "#808080"; b.fillRect(0, 0, w, h);
+            // Fleckiges Rauschen (Schaum / Lack)
+            const n = o.mottle ?? 0.05; for (let i = 0; i < (o.spots ?? 3500); i++) { const x = rr() * w, y = rr() * h, r = 2 + rr() * (o.spotR ?? 14), v = rr() < 0.5 ? 0 : 255;
+              g.fillStyle = `rgba(${v},${v},${v},${n * rr()})`; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill(); b.fillStyle = `rgba(${v},${v},${v},${0.25 * rr()})`; b.beginPath(); b.arc(x, y, r * 0.6, 0, 7); b.fill(); }
+            // Nähte
+            g.strokeStyle = o.seam ?? "rgba(0,0,0,.22)"; b.strokeStyle = "#3a3a3a";
+            for (const y of o.rings ?? []) { const yy = h - y * h; g.lineWidth = 3; g.beginPath(); g.moveTo(0, yy); g.lineTo(w, yy); g.stroke(); b.lineWidth = 4; b.beginPath(); b.moveTo(0, yy); b.lineTo(w, yy); b.stroke(); }
+            for (let i = 0; i < (o.vseams ?? 0); i++) { const x = (i + 0.5) / o.vseams * w; g.lineWidth = 2; g.beginPath(); g.moveTo(x, 0); g.lineTo(x, h); g.stroke(); b.lineWidth = 3; b.beginPath(); b.moveTo(x, 0); b.lineTo(x, h); b.stroke(); }
+            // Rippen (Zwischenstufe)
+            if (o.ribs) for (let i = 0; i < o.ribs; i++) { const x = (i / o.ribs) * w; g.fillStyle = "rgba(255,255,255,.05)"; g.fillRect(x, 0, w / o.ribs * 0.35, h); b.fillStyle = "#b0b0b0"; b.fillRect(x, 0, w / o.ribs * 0.35, h); }
+            // Bänder
+            for (const [y0, y1, col] of o.bands ?? []) { g.fillStyle = col; g.fillRect(0, h - y1 * h, w, (y1 - y0) * h); }
+            // Senkrechte Schrift (u = Position um den Umfang 0..1, v = Höhe 0..1)
+            for (const L of o.text ?? []) { g.save(); g.translate(L.u * w, h - L.v * h); g.rotate(-Math.PI / 2); g.fillStyle = L.col ?? "#fff"; g.font = `900 ${L.size}px "Inter Display", Inter, sans-serif`; g.textAlign = "center"; g.textBaseline = "middle";
+              if (L.spacing) g.letterSpacing = L.spacing + "px"; g.fillText(L.s, 0, 0); g.restore(); }
+            // Flaggen
+            for (const F of o.flags ?? []) { const fw = F.w * w, fh = F.h * h, x0 = F.u * w - fw / 2, y0 = h - F.v * h - fh / 2; g.save(); g.translate(x0 + fw / 2, y0 + fh / 2); g.rotate(-Math.PI / 2); const W2 = fh, H2 = fw;
+              if (F.k === "us") { for (let i = 0; i < 13; i++) { g.fillStyle = i % 2 ? "#fff" : "#b22234"; g.fillRect(-W2 / 2, -H2 / 2 + (i * H2) / 13, W2, H2 / 13 + 1); } g.fillStyle = "#3c3b6e"; g.fillRect(-W2 / 2, -H2 / 2, W2 * 0.4, H2 * 7 / 13); }
+              if (F.k === "eu") { g.fillStyle = "#003399"; g.fillRect(-W2 / 2, -H2 / 2, W2, H2); g.fillStyle = "#ffcc00"; for (let i = 0; i < 12; i++) { const a = (i / 12) * 6.283; g.beginPath(); g.arc(Math.cos(a) * H2 * 0.33, Math.sin(a) * H2 * 0.33, H2 * 0.04, 0, 7); g.fill(); } }
+              g.restore(); }
+            // Schmutz unten (Ruß)
+            if (o.soot) { const gr = g.createLinearGradient(0, h, 0, h - o.soot * h); gr.addColorStop(0, "rgba(30,20,15,.55)"); gr.addColorStop(1, "rgba(30,20,15,0)"); g.fillStyle = gr; g.fillRect(0, h - o.soot * h, w, o.soot * h); }
+            const map = new THREE.CanvasTexture(cv); map.colorSpace = THREE.SRGBColorSpace; map.anisotropy = 8; const bump = new THREE.CanvasTexture(bv); return { map, bump };
+          };
+          MO.mat = (tex, o = {}) => new THREE.MeshStandardMaterial({ map: tex?.map, bumpMap: tex?.bump, bumpScale: o.bumpScale ?? 0.6, color: o.color ?? 0xffffff, metalness: o.metal ?? 0.05, roughness: o.rough ?? 0.55, envMap: MO.env, envMapIntensity: o.ei ?? 0.35, side: o.side ?? THREE.FrontSide, ...(o.extra ?? {}) });
+          MO.plain = (col, metal = 0.2, rough = 0.5, ei = 0.4, extra = {}) => new THREE.MeshStandardMaterial({ color: col, metalness: metal, roughness: rough, envMap: MO.env, envMapIntensity: ei, ...extra });
+          const SEG = 96;
+          const cyl = (r, h, mat, y, open = false) => { const m = new THREE.Mesh(new THREE.CylinderGeometry(r, r, h, SEG, 1, open), mat); m.position.y = y + h / 2; return m; };
+          // Ogive (Spitze): Profilpunkte von r bis 0 über Höhe h
+          const ogive = (r, h, n = 40, blunt = 0.06) => { const pts = []; for (let i = 0; i <= n; i++) { const f = i / n; const rad = r * Math.sqrt(Math.max(0, 1 - Math.pow(f, 1.9))) * (1 - blunt) + r * blunt * (1 - f); pts.push(new THREE.Vector2(Math.max(0.001, rad * (f < 1 ? 1 : 0)), f * h)); } return pts; };
+          const lathe = (pts, mat, phi0 = 0, phi = Math.PI * 2) => new THREE.Mesh(new THREE.LatheGeometry(pts, SEG, phi0, phi), mat);
+          // Düse (Glocke)
+          MO.nozzle = (r0, r1, h, mat) => { const pts = []; for (let i = 0; i <= 20; i++) { const f = i / 20; pts.push(new THREE.Vector2(r0 + (r1 - r0) * Math.pow(f, 0.6), -f * h)); } const m = lathe(pts, mat); m.material.side = THREE.DoubleSide; return m; };
+          const nozM = () => MO.plain(0x3a3330, 0.85, 0.38, 0.6, { side: THREE.DoubleSide });
+          // ---------- Abgasstrahl (Shader) ----------
+          MO.exhaust = (len, rad, hot = [1, 0.95, 0.85], warm = [1, 0.55, 0.18]) => {
+            const geo = new THREE.CylinderGeometry(rad * 0.55, rad * 1.6, len, 48, 24, true); geo.translate(0, -len / 2, 0);
+            const mat = new THREE.ShaderMaterial({ transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide, toneMapped: false,
+              uniforms: { t: { value: 0 }, power: { value: 1 }, len: { value: len }, hot: { value: new THREE.Vector3(...hot) }, warm: { value: new THREE.Vector3(...warm) } },
+              vertexShader: `varying vec2 vU; varying vec3 vN; varying vec3 vV; void main(){ vU = uv; vec4 mv = modelViewMatrix * vec4(position,1.); vN = normalize(normalMatrix*normal); vV = normalize(-mv.xyz); gl_Position = projectionMatrix*mv; }`,
+              fragmentShader: `uniform float t; uniform float power; uniform vec3 hot; uniform vec3 warm; varying vec2 vU; varying vec3 vN; varying vec3 vV;
+                float h(vec2 p){ return fract(sin(dot(p, vec2(12.9898,78.233)))*43758.5453); }
+                float n(vec2 p){ vec2 i=floor(p), f=fract(p); f=f*f*(3.-2.*f); return mix(mix(h(i),h(i+vec2(1,0)),f.x), mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x), f.y); }
+                void main(){ float y = 1.-vU.y; float rim = abs(dot(vN, vV)); float core = pow(rim, 1.1);
+                  float fl = n(vec2(vU.x*12., y*8. - t*22.)) * .5 + n(vec2(vU.x*30., y*20. - t*40.)) * .5;
+                  float diam = .75 + .25*sin(y*60. - t*3.);
+                  float fade = pow(1.-y, 1.4) * smoothstep(0., .04, y + .02);
+                  vec3 c = mix(warm, hot, pow(core, 4.) * pow(1.-y, 3.));
+                  float a = core * fade * (0.55 + .45*fl) * diam * power;
+                  gl_FragColor = vec4(c * a * 1.9, a); }` });
+            const m = new THREE.Mesh(geo, mat); m.renderOrder = 5; m.userData.mat = mat; return m;
+          };
+          // ---------- Rauch (weiche Wolken) ----------
+          const smokeTexC = (() => { const s = 256, c = document.createElement("canvas"); c.width = c.height = s; const g = c.getContext("2d"); for (let i = 0; i < 26; i++) { const x = s / 2 + (rr() - 0.5) * s * 0.45, y = s / 2 + (rr() - 0.5) * s * 0.45, r = s * (0.12 + rr() * 0.2); const gr = g.createRadialGradient(x, y, 0, x, y, r); gr.addColorStop(0, "rgba(255,255,255,.35)"); gr.addColorStop(1, "rgba(255,255,255,0)"); g.fillStyle = gr; g.fillRect(0, 0, s, s); } const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; })();
+          MO.smoke = (scene, n, col = 0xc9ccd4) => { const list = []; for (let i = 0; i < n; i++) { const m = new THREE.SpriteMaterial({ map: smokeTexC, color: col, transparent: true, depthWrite: false, opacity: 0 }); m.rotation = rr() * 6.28; const s = new THREE.Sprite(m); scene.add(s); list.push(s); } return list; };
+          MO.glow = (col) => K.glowTex(col);
+        
+          // ================= VULCAN =================
+          MO.vulcan = () => {
+            const g = new THREE.Group(), boost = new THREE.Group(), up = new THREE.Group(); g.add(boost); g.add(up);
+            const foam = MO.panelTex({ base: "#c8773e", mottle: 0.18, spots: 9000, spotR: 10, rings: [0.12, 0.33, 0.55, 0.78, 0.96], vseams: 4, seam: "rgba(90,40,10,.35)", soot: 0.1,
+              text: [{ s: "ULA", u: 0.25, v: 0.62, size: 210, col: "rgba(255,255,255,.92)", spacing: 30 }, { s: "VULCAN", u: 0.75, v: 0.5, size: 120, col: "rgba(255,255,255,.85)", spacing: 24 }],
+              flags: [{ k: "us", u: 0.25, v: 0.86, w: 0.07, h: 0.07 }] });
+            const bm = MO.mat(foam, { rough: 0.78, ei: 0.25, bumpScale: 1.2 });
+            boost.add(cyl(2.7, 33, bm, 0));
+            const aft = cyl(2.75, 2.2, MO.plain(0x2a2b2f, 0.5, 0.5, 0.4), -0.6); boost.add(aft);
+            const isTex = MO.panelTex({ base: "#1c1d21", mottle: 0.06, ribs: 64, rings: [0.1, 0.9] }); boost.add(cyl(2.72, 3, MO.mat(isTex, { metal: 0.45, rough: 0.45, ei: 0.5 }), 33));
+            // BE-4 Triebwerke
+            for (const s of [-1, 1]) { const nz = MO.nozzle(0.55, 1.15, 2.6, nozM()); nz.position.set(s * 1.2, -0.6, 0); boost.add(nz); }
+            // 6 Booster GEM 63XL
+            const srbT = MO.panelTex({ base: "#cfd2d6", mottle: 0.05, rings: [0.25, 0.5, 0.75], soot: 0.08, bands: [[0, 0.05, "#2a2b2f"]] });
+            const srbM = MO.mat(srbT, { rough: 0.5 });
+            const srbs = []; for (let i = 0; i < 6; i++) { const a = (i / 6) * Math.PI * 2 + Math.PI / 6; const sg = new THREE.Group(); sg.position.set(Math.cos(a) * 3.55, 0, Math.sin(a) * 3.55);
+              sg.add(cyl(0.82, 20, srbM, 0)); const nose = lathe(ogive(0.82, 2.6), MO.plain(0xcfd2d6, 0.05, 0.45, 0.35)); nose.position.y = 20; sg.add(nose);
+              const nz = MO.nozzle(0.4, 0.62, 1.1, nozM()); nz.position.y = 0; nz.rotation.z = 0; sg.add(nz);
+              for (const y of [3, 17]) { const st = new THREE.Mesh(new THREE.CylinderGeometry(0.09, 0.09, 1.0, 8), MO.plain(0x8a8d94, 0.8, 0.35)); st.position.set(-Math.cos(a) * 0.95, y, -Math.sin(a) * 0.95); st.rotation.z = Math.PI / 2; st.rotation.y = -a; sg.add(st); }
+              boost.add(sg); srbs.push(sg); }
+            // Oberstufe + Verkleidung
+            const cenT = MO.panelTex({ base: "#c6c9ce", mottle: 0.04, rings: [0.5] }); up.add(cyl(2.7, 12, MO.mat(cenT, { metal: 0.15, rough: 0.4 }), 36));
+            const fair = new THREE.Group(); fair.position.y = 48; up.add(fair);
+            const fT = MO.panelTex({ base: "#d3d6da", mottle: 0.035, rings: [0.35], text: [{ s: "ULA", u: 0.25, v: 0.45, size: 260, col: "#1f4aa8", spacing: 20 }], flags: [{ k: "us", u: 0.75, v: 0.45, w: 0.09, h: 0.12 }] });
+            const fM = MO.mat(fT, { rough: 0.38, ei: 0.4, side: THREE.DoubleSide });
+            const halves = [0, 1].map((k) => { const h = new THREE.Group(); const c = new THREE.Mesh(new THREE.CylinderGeometry(2.7, 2.7, 10, SEG / 2, 1, true, k * Math.PI, Math.PI), fM); c.position.y = 5; h.add(c);
+              const tip = lathe(ogive(2.7, 9), MO.plain(0xd3d6da, 0.05, 0.38, 0.4, { side: THREE.DoubleSide }), k * Math.PI, Math.PI); tip.position.y = 10; h.add(tip); fair.add(h); return h; });
+            const seamR = new THREE.Mesh(new THREE.TorusGeometry(2.71, 0.03, 6, SEG), MO.plain(0x9a9ca2, 0.6, 0.4)); seamR.rotation.x = Math.PI / 2; seamR.position.y = 48; up.add(seamR);
+            // 40 Satelliten (im Fairing)
+            const sats = new THREE.Group(); fair.add(sats);
+            const disp = cyl(0.7, 13, MO.plain(0x50545c, 0.7, 0.4), 0); sats.add(disp);
+            for (let lv = 0; lv < 10; lv++) for (let s = 0; s < 4; s++) { const a = (s / 4) * Math.PI * 2 + 0.785; const k = MO.kuiperFlat(); k.position.set(Math.cos(a) * 1.55, 0.7 + lv * 1.2, Math.sin(a) * 1.55); k.rotation.y = -a + Math.PI / 2; sats.add(k); }
+            sats.visible = false;
+            return { g, boost, up, halves, sats, srbs };
+          };
+          // Flacher Satellit (gestapelt)
+          const cellT = (() => { const c = document.createElement("canvas"); c.width = 512; c.height = 256; const g = c.getContext("2d"); g.fillStyle = "#0d1630"; g.fillRect(0, 0, 512, 256); for (let y = 0; y < 256; y += 32) for (let x = 0; x < 512; x += 32) { g.fillStyle = `rgb(${20 + rr() * 10},${35 + rr() * 15},${80 + rr() * 30})`; g.fillRect(x + 2, y + 2, 28, 28); } g.strokeStyle = "rgba(200,210,230,.35)"; g.lineWidth = 1; for (let x = 0; x < 512; x += 32) { g.beginPath(); g.moveTo(x, 0); g.lineTo(x, 256); g.stroke(); } const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; })();
+          MO.cellM = () => new THREE.MeshStandardMaterial({ map: cellT, metalness: 0.6, roughness: 0.22, envMap: MO.env, envMapIntensity: 1.0 });
+          const mliT = (() => { const c = document.createElement("canvas"); c.width = c.height = 512; const g = c.getContext("2d"); g.fillStyle = "#b58a34"; g.fillRect(0, 0, 512, 512); for (let i = 0; i < 900; i++) { const x = rr() * 512, y = rr() * 512; g.strokeStyle = `rgba(${rr() < 0.5 ? "255,240,190" : "90,60,10"},${0.15 + rr() * 0.3})`; g.lineWidth = 1 + rr() * 3; g.beginPath(); g.moveTo(x, y); g.lineTo(x + (rr() - 0.5) * 80, y + (rr() - 0.5) * 80); g.stroke(); } const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; })();
+          MO.mliM = () => new THREE.MeshStandardMaterial({ map: mliT, bumpMap: mliT, bumpScale: 2, metalness: 0.95, roughness: 0.28, envMap: MO.env, envMapIntensity: 1.3 });
+          MO.kuiperFlat = () => { const g = new THREE.Group(); const b = new THREE.Mesh(RoundedBoxGeometry(1.45, 1.0, 0.32, 2, 0.03), MO.plain(0x2c3038, 0.55, 0.45, 0.6)); g.add(b);
+            const p = new THREE.Mesh(new THREE.PlaneGeometry(1.35, 0.9), MO.cellM()); p.position.z = 0.165; g.add(p); const m = new THREE.Mesh(new THREE.PlaneGeometry(1.35, 0.9), MO.mliM()); m.position.z = -0.165; m.rotation.y = Math.PI; g.add(m); return g; };
+        
+          // ================= ARIANE 6 =================
+          MO.ariane6 = () => {
+            const g = new THREE.Group();
+            const coreT = MO.panelTex({ base: "#cfd2d6", mottle: 0.04, rings: [0.2, 0.45, 0.7, 0.92], soot: 0.06, text: [{ s: "ARIANE 6", u: 0.25, v: 0.55, size: 150, col: "#1b2a4a", spacing: 18 }], flags: [{ k: "eu", u: 0.25, v: 0.85, w: 0.08, h: 0.06 }] });
+            g.add(cyl(2.7, 30, MO.mat(coreT, { rough: 0.5 }), 0));
+            g.add(cyl(2.72, 1.4, MO.plain(0x1e2230, 0.4, 0.5), 30));
+            g.add(cyl(2.7, 6, MO.mat(MO.panelTex({ base: "#cbced2", mottle: 0.04 }), { rough: 0.45 }), 31.4));
+            const fT = MO.panelTex({ base: "#d4d7db", mottle: 0.03, rings: [0.4], text: [{ s: "esa", u: 0.25, v: 0.45, size: 240, col: "#003247" }] });
+            g.add(cyl(2.7, 10, MO.mat(fT, { rough: 0.38 }), 37.4)); const tip = lathe(ogive(2.7, 9), MO.plain(0xd4d7db, 0.05, 0.38, 0.4)); tip.position.y = 47.4; g.add(tip);
+            const nz = MO.nozzle(0.8, 1.35, 2.4, nozM()); nz.position.y = 0; g.add(nz);
+            const bT = MO.panelTex({ base: "#c8cbd0", mottle: 0.05, rings: [0.3, 0.6], soot: 0.08 });
+            const boosters = []; for (let i = 0; i < 4; i++) { const a = (i / 4) * Math.PI * 2 + 0.785; const sg = new THREE.Group(); sg.position.set(Math.cos(a) * 4.25, 0, Math.sin(a) * 4.25);
+              sg.add(cyl(1.5, 15, MO.mat(bT, { rough: 0.5 }), 0)); const n = lathe(ogive(1.5, 4.2), MO.plain(0xc8cbd0, 0.05, 0.45, 0.35)); n.position.y = 15; sg.add(n);
+              const z = MO.nozzle(0.6, 1.05, 1.8, nozM()); sg.add(z); g.add(sg); boosters.push(sg); }
+            return { g, boosters };
+          };
+        
+          // ================= FALCON 9 =================
+          MO.falcon9 = () => {
+            const g = new THREE.Group(); const R = 1.85;
+            const s1T = MO.panelTex({ base: "#d0d3d7", mottle: 0.04, rings: [0.15, 0.35, 0.55, 0.75, 0.93], soot: 0.22, text: [{ s: "SPACEX", u: 0.25, v: 0.55, size: 150, col: "#15171c", spacing: 26 }] });
+            g.add(cyl(R, 42, MO.mat(s1T, { rough: 0.5 }), 0));
+            for (let i = 0; i < 4; i++) { const a = (i / 4) * Math.PI * 2 + 0.785; const leg = new THREE.Mesh(new THREE.BoxGeometry(0.5, 9, 0.18), MO.plain(0x24262b, 0.4, 0.55)); leg.position.set(Math.cos(a) * (R + 0.08), 4.5, Math.sin(a) * (R + 0.08)); leg.rotation.y = -a + Math.PI / 2; g.add(leg); }
+            g.add(cyl(R + 0.01, 4.5, MO.plain(0x141518, 0.45, 0.4, 0.5), 42));
+            for (let i = 0; i < 4; i++) { const a = (i / 4) * Math.PI * 2; const fin = new THREE.Mesh(new THREE.BoxGeometry(0.9, 0.8, 0.12), MO.plain(0x3a3c42, 0.8, 0.35)); fin.position.set(Math.cos(a) * (R + 0.45), 45.5, Math.sin(a) * (R + 0.45)); fin.rotation.y = -a + Math.PI / 2; g.add(fin); }
+            g.add(cyl(R, 9, MO.mat(MO.panelTex({ base: "#cdd0d4", mottle: 0.04 }), { rough: 0.45 }), 46.5));
+            const fa = new THREE.Mesh(new THREE.CylinderGeometry(2.6, R, 2.5, SEG), MO.plain(0xd4d7db, 0.05, 0.4, 0.4)); fa.position.y = 56.75; g.add(fa);
+            g.add(cyl(2.6, 6.5, MO.mat(MO.panelTex({ base: "#d4d7db", mottle: 0.03 }), { rough: 0.38 }), 58)); const tip = lathe(ogive(2.6, 6.2), MO.plain(0xd4d7db, 0.05, 0.38, 0.4)); tip.position.y = 64.5; g.add(tip);
+            for (let i = 0; i < 9; i++) { const a = (i / 8) * Math.PI * 2, r = i === 8 ? 0 : 1.2; const nz = MO.nozzle(0.22, 0.42, 1.1, nozM()); nz.position.set(Math.cos(a) * r, 0, Math.sin(a) * r); g.add(nz); }
+            return { g };
+          };
+          // ================= Flaggen-Textur (cn, pk) =================
+          MO.flagTex = (k) => { const c = document.createElement("canvas"); c.width = 600; c.height = 400; const g = c.getContext("2d");
+            const star = (x, y, r, rot = 0) => { g.beginPath(); for (let i = 0; i < 10; i++) { const a = rot - Math.PI / 2 + (i * Math.PI) / 5, rr2 = i % 2 ? r * 0.38 : r; g.lineTo(x + Math.cos(a) * rr2, y + Math.sin(a) * rr2); } g.closePath(); g.fill(); };
+            if (k === "cn") { g.fillStyle = "#de2910"; g.fillRect(0, 0, 600, 400); g.fillStyle = "#ffde00"; star(100, 100, 60); [[200, 40], [240, 80], [240, 140], [200, 180]].forEach(([x, y]) => star(x, y, 20, 0.5)); }
+            if (k === "pk") { g.fillStyle = "#fff"; g.fillRect(0, 0, 150, 400); g.fillStyle = "#01411c"; g.fillRect(150, 0, 450, 400); g.fillStyle = "#fff"; g.beginPath(); g.arc(375, 200, 120, 0, 7); g.fill(); g.fillStyle = "#01411c"; g.beginPath(); g.arc(405, 170, 105, 0, 7); g.fill(); g.fillStyle = "#fff"; star(430, 160, 40, 0.6); }
+            const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; };
+          const white = () => MO.plain(0xc9ccd1, 0.1, 0.5, 0.45);
+          const wing = (w, h, mat, frame = 0x8a8f99, back = null) => { const g = new THREE.Group(); const p = new THREE.Mesh(new THREE.BoxGeometry(w, 0.06, h), [MO.plain(frame, 0.6, 0.4), MO.plain(frame, 0.6, 0.4), mat, back ?? MO.plain(0x30343c, 0.5, 0.5), MO.plain(frame, 0.6, 0.4), MO.plain(frame, 0.6, 0.4)]); g.add(p); return g; };
+        
+          // ================= LANGER MARSCH 2F (Einheit Meter) =================
+          MO.longMarch2F = () => {
+            const g = new THREE.Group(); const R = 1.675;
+            const s1 = MO.panelTex({ base: "#d6d8da", mottle: 0.035, rings: [0.12, 0.45, 0.8], soot: 0.12, text: [{ s: "中国航天", u: 0.25, v: 0.6, size: 170, col: "#c8102e", spacing: 30 }], flags: [] });
+            g.add(cyl(R, 28.5, MO.mat(s1, { rough: 0.5 }), 0));
+            const fl = new THREE.Mesh(new THREE.PlaneGeometry(1.6, 2.4), new THREE.MeshStandardMaterial({ map: MO.flagTex("cn"), roughness: 0.6 })); fl.position.set(0, 21, R + 0.01); g.add(fl);
+            g.add(cyl(R + 0.01, 1.2, MO.plain(0x3a3d44, 0.4, 0.5), 28.5));
+            g.add(cyl(R, 12, MO.mat(MO.panelTex({ base: "#d6d8da", mottle: 0.03, rings: [0.5] }), { rough: 0.5 }), 29.7));
+            const fa = new THREE.Mesh(new THREE.CylinderGeometry(1.9, R, 1.2, SEG), white()); fa.position.y = 42.3; g.add(fa);
+            g.add(cyl(1.9, 7.5, MO.mat(MO.panelTex({ base: "#dadcdf", mottle: 0.03, vseams: 2 }), { rough: 0.42 }), 42.9));
+            const tip = lathe(ogive(1.9, 4.2, 40, 0.15), white()); tip.position.y = 50.4; g.add(tip);
+            for (let i = 0; i < 4; i++) { const a = (i / 4) * Math.PI * 2 + 0.4; const gf = new THREE.Mesh(new THREE.BoxGeometry(1.3, 1.1, 0.12), MO.plain(0x8b9099, 0.7, 0.35)); gf.position.set(Math.cos(a) * 2.35, 45.5, Math.sin(a) * 2.35); gf.rotation.y = -a + Math.PI / 2; g.add(gf); }
+            const tower = new THREE.Group(); tower.position.y = 54.3; g.add(tower); tower.add(cyl(0.38, 6.5, white(), 0)); const tt = lathe(ogive(0.38, 1.3), white()); tt.position.y = 6.5; tower.add(tt);
+            for (let i = 0; i < 4; i++) { const a = (i / 4) * Math.PI * 2; const nz = MO.nozzle(0.1, 0.22, 0.5, nozM()); nz.position.set(Math.cos(a) * 0.38, 1.0, Math.sin(a) * 0.38); nz.rotation.z = Math.cos(a) * 0.9; nz.rotation.x = -Math.sin(a) * 0.9; tower.add(nz); }
+            const boosters = [];
+            for (let i = 0; i < 4; i++) { const a = (i / 4) * Math.PI * 2 + Math.PI / 4; const b = new THREE.Group(); b.position.set(Math.cos(a) * (R + 1.15), 0, Math.sin(a) * (R + 1.15)); g.add(b);
+              b.add(cyl(1.125, 13.5, MO.mat(MO.panelTex({ base: "#d4d6d9", mottle: 0.035, rings: [0.5], soot: 0.15 }), { rough: 0.5 }), 0));
+              const c = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 1.125, 2.6, SEG), white()); c.position.y = 14.8; b.add(c);
+              const fin = new THREE.Mesh(new THREE.BoxGeometry(0.1, 2.2, 1.5), MO.plain(0xbfc3c8, 0.3, 0.5)); fin.position.set(Math.cos(a) * 1.4, 1.2, Math.sin(a) * 1.4); fin.rotation.y = -a; b.add(fin);
+              const nz = MO.nozzle(0.35, 0.6, 1.3, nozM()); b.add(nz); boosters.push(b); }
+            for (let i = 0; i < 4; i++) { const a = (i / 4) * Math.PI * 2; const nz = MO.nozzle(0.35, 0.6, 1.3, nozM()); nz.position.set(Math.cos(a) * 0.8, 0, Math.sin(a) * 0.8); g.add(nz); }
+            return { g, tower, boosters };
+          };
+          // ================= Startturm =================
+          MO.pad = () => { const g = new THREE.Group(); const m = MO.plain(0x6e3b2a, 0.5, 0.6, 0.4), w = MO.plain(0x9aa0a8, 0.6, 0.5);
+            const base = new THREE.Mesh(new THREE.BoxGeometry(30, 4, 30), MO.plain(0x5a5c60, 0.1, 0.9, 0.2)); base.position.y = -2; g.add(base);
+            for (const [x, z] of [[-9, -4], [-9, 4], [-15, -4], [-15, 4]]) { const c = new THREE.Mesh(new THREE.BoxGeometry(0.6, 70, 0.6), m); c.position.set(x, 35, z); g.add(c); }
+            for (let y = 4; y < 70; y += 5) { const b = new THREE.Mesh(new THREE.BoxGeometry(7, 0.5, 9), m); b.position.set(-12, y, 0); g.add(b); }
+            for (const y of [20, 34, 46]) { const arm = new THREE.Mesh(new THREE.BoxGeometry(6, 0.8, 2), w); arm.position.set(-6, y, 0); g.add(arm); }
+            return g; };
+        
+          // ================= TIANGONG (Einheit Meter) =================
+          MO.tiangong = () => { const g = new THREE.Group(); const hullT = MO.panelTex({ base: "#cfd2d6", mottle: 0.05, spots: 5000, vseams: 8, rings: [0.2, 0.4, 0.6, 0.8], w: 1024, h: 1024 });
+            const hull = MO.mat(hullT, { rough: 0.55, bumpScale: 1 }), dark = MO.plain(0x3a3e46, 0.6, 0.4), gold = MO.mliM(); const cell = MO.cellM();
+            const mod = (r, L, mat) => { const m = new THREE.Mesh(new THREE.CylinderGeometry(r, r, L, SEG), mat); m.rotation.z = Math.PI / 2; return m; };
+            const core = new THREE.Group(); g.add(core); const tc = mod(2.1, 13, hull); tc.position.x = -6.5; core.add(tc); const tn = mod(1.4, 3, hull); tn.position.x = 1.5; core.add(tn);
+            const node = new THREE.Mesh(new THREE.SphereGeometry(1.5, 48, 32), hull); node.position.x = 3.6; core.add(node);
+            const aft = mod(1.6, 1.5, gold); aft.position.x = -13.7; core.add(aft);
+            for (const s of [-1, 1]) { const arm = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 4, 12), dark); arm.position.set(-6, 0, s * 4); arm.rotation.x = Math.PI / 2; core.add(arm);
+              const w = wing(4, 12, cell); w.position.set(-6, 0, s * 12); core.add(w); }
+            const labs = [];
+            for (const s of [-1, 1]) { const lab = new THREE.Group(); lab.position.set(3.6, 0, s * 1.4); lab.rotation.y = s * Math.PI / 2; g.add(lab);
+              const lm = mod(2.1, 13, hull); lm.position.x = 8.5; lab.add(lm); const lc = mod(1.4, 2, hull); lc.position.x = 1; lab.add(lc); const back = mod(2.0, 3, gold); back.position.x = 16.5; lab.add(back);
+              const mast = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 8, 12), dark); mast.position.set(15.5, 4, 0); lab.add(mast);
+              for (const z of [-1, 1]) { const w = wing(3.6, 26, cell); w.position.set(15.5, 8, z * 14); lab.add(w); }
+              labs.push(lab); }
+            const port = new THREE.Object3D(); port.position.set(5.1, 0, 0); g.add(port);
+            return { g, port }; };
+        
+          // ================= SHENZHOU (Einheit Meter, Nase +x) =================
+          MO.shenzhou = () => { const g = new THREE.Group(); const hull = MO.mat(MO.panelTex({ base: "#c4c7cc", mottle: 0.05, w: 512, h: 512 }), { rough: 0.55 });
+            const om = new THREE.Mesh(new THREE.SphereGeometry(1.1, 40, 28), hull); om.scale.set(1.3, 1, 1); om.position.x = 2.6; g.add(om);
+            const dock = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.6, 0.6, 32), MO.plain(0x8a8f99, 0.7, 0.35)); dock.rotation.z = Math.PI / 2; dock.position.x = 4.2; g.add(dock);
+            const dm = lathe([[0.5, 0], [1.25, 1.1], [1.25, 2.0]].map(([r, y]) => new THREE.Vector2(r, y)), MO.plain(0x6b5b48, 0.4, 0.6)); dm.rotation.z = -Math.PI / 2; dm.position.x = 1.1; g.add(dm);
+            const sm = new THREE.Mesh(new THREE.CylinderGeometry(1.4, 1.4, 2.9, SEG), MO.mliM()); sm.rotation.z = Math.PI / 2; sm.position.x = -2.4; g.add(sm);
+            for (const s of [-1, 1]) { const w = wing(1.8, 7.2, MO.cellM()); w.position.set(-2.4, 0, s * 5.2); g.add(w); }
+            const nz = MO.nozzle(0.3, 0.55, 0.8, nozM()); nz.rotation.z = Math.PI / 2; nz.position.x = -3.85; g.add(nz);
+            const fl = new THREE.Mesh(new THREE.PlaneGeometry(0.9, 0.6), new THREE.MeshStandardMaterial({ map: MO.flagTex("cn"), roughness: 0.6 })); fl.position.set(-2.4, 0.4, 1.42); g.add(fl);
+            return { g }; };
+        
+          // ================= ISS (Einheit Meter) =================
+          MO.iss = () => { const g = new THREE.Group(); const hull = MO.mat(MO.panelTex({ base: "#cfd2d6", mottle: 0.05, vseams: 6, w: 512, h: 512 }), { rough: 0.55 }); const tr = MO.plain(0x9aa0a8, 0.7, 0.4);
+            const truss = new THREE.Mesh(new THREE.BoxGeometry(100, 2.5, 2.5), tr); g.add(truss);
+            const cellO = new THREE.MeshStandardMaterial({ color: 0x8a6a3a, metalness: 0.6, roughness: 0.35, envMap: MO.env, envMapIntensity: 0.6 });
+            for (const x of [-44, -32, 32, 44]) for (const s of [-1, 1]) { const w = wing(11, 34, cellO, 0x6a6e76); w.position.set(x, 0, s * 19); w.rotation.z = 0.2; g.add(w); }
+            for (const x of [-16, 16]) { const r = wing(4, 12, MO.plain(0xe8e8e8, 0.1, 0.6)); r.position.set(x, -3, 0); r.rotation.x = Math.PI / 2; g.add(r); }
+            const mods = [[0, -4, 0, 2.2, 30, "z"], [0, -4, -18, 2.2, 10, "x"], [6, -4, -12, 2.2, 10, "x"], [-6, -4, -12, 2.2, 8, "x"]];
+            for (const [x, y, z, r, L, ax] of mods) { const m = new THREE.Mesh(new THREE.CylinderGeometry(r, r, L, 48), hull); if (ax === "z") m.rotation.x = Math.PI / 2; else m.rotation.z = Math.PI / 2; m.position.set(x, y, z); g.add(m); }
+            return { g }; };
+        
+          // ================= HAYABUSA2 (Einheit Meter) =================
+          MO.hayabusa2 = () => { const g = new THREE.Group(); const gold = MO.mliM(), dark = MO.plain(0x2c3038, 0.6, 0.4), alu = MO.plain(0xb9bdc4, 0.9, 0.28, 1.1);
+            const body = new THREE.Mesh(RoundedBoxGeometry(1.6, 1.25, 1.0, 2, 0.03), gold); g.add(body);
+            const top = new THREE.Mesh(new THREE.BoxGeometry(1.64, 0.04, 1.04), MO.plain(0xe0e2e6, 0.2, 0.5)); top.position.y = 0.64; g.add(top);
+            for (const s of [-1, 1]) { const arm = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, 0.4, 10), alu); arm.rotation.x = Math.PI / 2; arm.position.set(0, 0.2, s * 0.7); g.add(arm);
+              for (let i = 0; i < 3; i++) { const w = wing(1.15, 0.95, MO.cellM(), 0x50545c, MO.cellM()); w.rotation.x = Math.PI / 2; w.position.set(0, 0.2, s * (1.4 + i * 0.98)); g.add(w); } }
+            const hga = new THREE.Mesh(new THREE.CylinderGeometry(0.42, 0.42, 0.05, 48), MO.plain(0xd8dadd, 0.3, 0.4)); hga.position.set(0.25, 0.75, 0); g.add(hga);
+            const ka = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.05, 0.16, 32, 1, true), MO.plain(0xe8e8ea, 0.3, 0.4, 0.4, { side: THREE.DoubleSide })); ka.position.set(-0.45, 0.78, 0.2); g.add(ka);
+            const horn = new THREE.Mesh(new THREE.CylinderGeometry(0.1, 0.16, 1.0, 24), alu); horn.position.set(0.3, -1.1, 0); g.add(horn);
+            const ip = new THREE.Mesh(new THREE.BoxGeometry(0.08, 0.7, 0.7), dark); ip.position.set(-0.84, -0.05, 0); g.add(ip);
+            const engines = []; [[-0.18, -0.18], [-0.18, 0.18], [0.18, -0.18], [0.18, 0.18]].forEach(([y, z]) => { const e = new THREE.Group(); e.position.set(-0.9, y - 0.05, z); g.add(e);
+              const ring = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 0.06, 32), alu); ring.rotation.z = Math.PI / 2; e.add(ring);
+              const grid = new THREE.Mesh(new THREE.CircleGeometry(0.1, 32), new THREE.MeshBasicMaterial({ color: 0x1b2a55, toneMapped: false })); grid.rotation.y = -Math.PI / 2; grid.position.x = -0.035; e.add(grid);
+              const ex = MO.exhaust(3.5, 0.1, [0.75, 0.88, 1], [0.25, 0.4, 1]); ex.rotation.z = -Math.PI / 2; ex.position.x = -0.04; e.add(ex); e.userData = { grid, ex }; engines.push(e); });
+            return { g, engines }; };
+        
+          // ================= ASTEROIDEN =================
+          MO.asteroid = (o = {}) => { const r = o.r ?? 1; let s = o.seed ?? 3; const rnd = () => ((s = (s * 16807) % 2147483647) / 2147483647);
+            const geo = new THREE.SphereGeometry(1, 220, 150); const p = geo.attributes.position; const v = new THREE.Vector3();
+            const craters = []; for (let i = 0; i < (o.craters ?? 40); i++) craters.push([new THREE.Vector3(rnd() - 0.5, rnd() - 0.5, rnd() - 0.5).normalize(), 0.05 + rnd() * 0.25, 0.02 + rnd() * 0.05]);
+            const boulders = []; for (let i = 0; i < 260; i++) boulders.push([new THREE.Vector3(rnd() - 0.5, rnd() - 0.5, rnd() - 0.5).normalize(), 0.015 + rnd() * 0.05, 0.01 + rnd() * 0.03]);
+            const waves = []; for (let i = 0; i < 14; i++) waves.push([new THREE.Vector3(rnd() - 0.5, rnd() - 0.5, rnd() - 0.5).normalize(), 2 + rnd() * 9, rnd() * 6.28, 0.035 / (1 + i * 0.35)]);
+            const col = []; for (let i = 0; i < p.count; i++) { v.fromBufferAttribute(p, i).normalize(); let d = 1;
+              if (o.top) d *= 0.78 + 0.32 * Math.pow(1 - Math.abs(v.y), 1.6) - 0.05 * Math.abs(v.y);
+              for (const [dx, f, ph, am] of waves) d += am * Math.sin(v.dot(dx) * f + ph);
+              for (const [c, cr, dp] of craters) { const a = v.angleTo(c); if (a < cr) d -= dp * (1 - (a / cr) ** 2); else if (a < cr * 1.3) d += dp * 0.3 * (1 - (a - cr) / (cr * 0.3)); }
+              for (const [c, br, h] of boulders) { const a = v.angleTo(c); if (a < br) d += h * Math.cos((a / br) * Math.PI / 2); }
+              v.multiplyScalar(d); if (o.stretch) v.multiply(o.stretch); p.setXYZ(i, v.x, v.y, v.z); const k = 0.88 + 0.12 * Math.sin(v.x * 9 + v.z * 5) * Math.cos(v.y * 7) + 0.04 * rnd(); col.push(0.32 * k, 0.3 * k, 0.28 * k); }
+            geo.setAttribute("color", new THREE.Float32BufferAttribute(col, 3)); geo.computeVertexNormals();
+            const m = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.95, metalness: 0, flatShading: false })); m.scale.setScalar(r); return m; };
+          // ================= BEPICOLOMBO (MPO + Sonnenschild + Mio, Einheit Meter, Flugrichtung +y) =================
+          MO.bepi = () => { const g = new THREE.Group(); const mli = MO.mliM(), white = MO.plain(0xd9dbde, 0.1, 0.45, 0.5), dark = MO.plain(0x2c3038, 0.6, 0.4), alu = MO.plain(0xb9bdc4, 0.9, 0.28, 1.1);
+            const mliW = new THREE.MeshStandardMaterial({ color: 0xa8a497, metalness: 0.5, roughness: 0.4, envMap: MO.env, envMapIntensity: 0.45, bumpMap: MO.mliM().map, bumpScale: 1.2 });
+            const mpo = new THREE.Group(); g.add(mpo); const body = new THREE.Mesh(RoundedBoxGeometry(2.4, 1.7, 2.2, 2, 0.04), mliW); mpo.add(body);
+            const rad = new THREE.Mesh(new THREE.BoxGeometry(2.6, 0.05, 2.4), new THREE.MeshStandardMaterial({ color: 0xf2f2f0, metalness: 0.9, roughness: 0.15, envMap: MO.env, envMapIntensity: 1.4 })); rad.position.y = -0.9; mpo.add(rad);
+            const arm = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.05, 1.4, 12), alu); arm.rotation.z = Math.PI / 2; arm.position.set(1.9, 0.2, 0); mpo.add(arm);
+            const sw = new THREE.Group(); sw.position.set(2.6, 0.2, 0); mpo.add(sw); for (let i = 0; i < 3; i++) { const w = wing(2.4, 1.55, MO.cellM(), 0x50545c, MO.plain(0x30343c, 0.5, 0.5)); w.rotation.x = Math.PI / 2 - 0.3; w.position.x = 1.25 + i * 2.5; sw.add(w); }
+            const hga = new THREE.Mesh(new THREE.SphereGeometry(0.75, 32, 12, 0, Math.PI * 2, 0, 0.6), MO.plain(0xe8e8ea, 0.3, 0.4, 0.4, { side: THREE.DoubleSide })); hga.rotation.x = Math.PI; hga.position.set(-1.3, 0.4, 0.9); mpo.add(hga);
+            const mag = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.03, 2.8, 8), alu); mag.rotation.z = Math.PI / 2; mag.position.set(-2.6, -0.4, -0.6); mpo.add(mag);
+            const nz = []; for (const [x, z] of [[-0.8, -0.8], [0.8, -0.8], [-0.8, 0.8], [0.8, 0.8]]) { const n = MO.nozzle(0.08, 0.16, 0.3, nozM()); n.rotation.x = Math.PI; n.position.set(x, 0.85 + 0.3, z); mpo.add(n); const ex = MO.exhaust(3, 0.12); ex.rotation.x = Math.PI; ex.position.set(x, 1.15, z); ex.visible = false; mpo.add(ex); nz.push(ex); }
+            const shield = new THREE.Group(); shield.position.y = 1.4; g.add(shield); const sh = new THREE.Mesh(new THREE.CylinderGeometry(1.7, 1.25, 1.6, 8), mliW); sh.position.y = 0.8; shield.add(sh);
+            const mio = new THREE.Group(); mio.position.y = 3.3; g.add(mio); const mb = new THREE.Mesh(new THREE.CylinderGeometry(0.95, 0.95, 0.9, 8), [MO.cellM(), white, dark]); mio.add(mb);
+            const mt = new THREE.Mesh(new THREE.CylinderGeometry(0.95, 0.95, 0.06, 8), white); mt.position.y = 0.47; mio.add(mt); const mm = new THREE.Mesh(new THREE.CylinderGeometry(0.02, 0.02, 2.2, 6), alu); mm.position.set(0, 0, 0); mm.rotation.z = Math.PI / 2; mio.add(mm);
+            return { g, mpo, mio, shield, nz }; };
+          // ================= JAMES WEBB (Einheit Meter) =================
+          MO.jwst = () => { const g = new THREE.Group(); const goldM = new THREE.MeshStandardMaterial({ color: 0xd99a2b, metalness: 1, roughness: 0.18, envMap: MO.env, envMapIntensity: 1.0 });
+            const hex = new THREE.CylinderGeometry(0.66, 0.66, 0.08, 6); const mir = new THREE.Group(); mir.position.set(0, 3.2, 0.5); mir.rotation.x = -0.25; g.add(mir);
+            const s3 = Math.sqrt(3) * 0.66; const cells = [[0, 0]]; for (let i = 0; i < 6; i++) { const a = (i / 6) * 6.283 + Math.PI / 6; cells.push([Math.cos(a) * s3, Math.sin(a) * s3]); } for (let i = 0; i < 12; i++) { const a = (i / 12) * 6.283 + Math.PI / 6; const r = i % 2 ? 2 * s3 * Math.cos(Math.PI / 6) : 2 * s3; cells.push([Math.cos(a) * r, Math.sin(a) * r]); }
+            cells.slice(1).forEach(([x, y]) => { const h = new THREE.Mesh(hex, goldM); h.rotation.x = Math.PI / 2; h.rotation.y = Math.PI / 6; h.position.set(x, y, 0); mir.add(h); });
+            const strutM = MO.plain(0x2a2d33, 0.6, 0.4); for (const a of [0, 2.1, 4.2]) { const s = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, 3.4, 8), strutM); const p = V(Math.cos(a) * 2.2, Math.sin(a) * 2.2, 1.6); s.position.copy(p.clone().multiplyScalar(0.5)); s.lookAt(0, 0, 3.2); s.rotateX(Math.PI / 2); mir.add(s); }
+            const sec = new THREE.Mesh(new THREE.CylinderGeometry(0.37, 0.37, 0.08, 24), goldM); sec.rotation.x = Math.PI / 2; sec.position.z = 3.2; mir.add(sec);
+            const shield = new THREE.Group(); g.add(shield); const kite = new THREE.Shape(); kite.moveTo(-10.5, 0); kite.lineTo(-4, 3.6); kite.lineTo(4, 3.6); kite.lineTo(10.5, 0); kite.lineTo(4, -3.6); kite.lineTo(-4, -3.6); kite.closePath();
+            for (let i = 0; i < 5; i++) { const m = new THREE.Mesh(new THREE.ShapeGeometry(kite), new THREE.MeshStandardMaterial({ color: i === 0 ? 0x9a8cae : 0x8a7d9e, metalness: 0.8, roughness: 0.3, envMap: MO.env, envMapIntensity: 0.5, side: THREE.DoubleSide, transparent: true, opacity: 0.96 })); m.rotation.x = -Math.PI / 2; m.position.y = -0.3 - i * 0.28; m.scale.setScalar(1 - i * 0.03); shield.add(m); }
+            const bus = new THREE.Mesh(RoundedBoxGeometry(2, 1, 2, 2, 0.04), MO.plain(0x3a3e46, 0.6, 0.4)); bus.position.y = -2; g.add(bus); const sp = wing(2.4, 5, MO.cellM()); sp.position.set(0, -2.4, -3.2); sp.rotation.x = 0.4; g.add(sp);
+            return { g, mir }; };
+        }
+        
+        const sunT = await tex("sun.jpg");
+        const star = (sc, r, col, glow, gs = 3) => { const m = new THREE.Mesh(new THREE.SphereGeometry(r, 128, 96), new THREE.MeshBasicMaterial({ map: sunT, color: new THREE.Color(...col), toneMapped: false, transparent: true })); sc.add(m); m.userData.glow = K.sprite(sc, K.glowTex(glow), r * gs, V(0, 0, 0), 0.6); return m; };
+        // ================= Sternpaar (Einheit: 1 Sonnenradius / 10) =================
+        const sc = new THREE.Scene(); K.stars(sc, 9000, -1, 60000, 1.7).material.opacity = 0.7;
+        const BIG = star(sc, 60, [1.35, 0.5, 0.3], "rgba(255,90,40,.55)", 3.2); const LIT = star(sc, 4, [1.4, 1.15, 0.8], "rgba(255,220,150,1)", 6);
+        const SUN = star(sc, 3.5, [1.3, 1.0, 0.72], "rgba(255,170,70,.6)", 4); SUN.visible = false;
+        const trail = new THREE.Line(new THREE.BufferGeometry(), new THREE.LineBasicMaterial({ color: 0xffe2a0, transparent: true, opacity: 0, toneMapped: false })); sc.add(trail);
+        // Gas-Hülle beim Ausbruch
+        const gas = []; { K.reseed(9); for (let i = 0; i < 220; i++) { const m = new THREE.SpriteMaterial({ map: K.glowTex(i % 3 ? "rgba(255,140,70,1)" : "rgba(255,210,160,1)"), transparent: true, opacity: 0, depthWrite: false, blending: THREE.AdditiveBlending }); const s = new THREE.Sprite(m); const d = V(K.rnd() - 0.5, (K.rnd() - 0.5) * 0.6, K.rnd() - 0.5).normalize(); s.userData = { d, v: 0.6 + K.rnd() * 0.8, sz: 10 + K.rnd() * 30 }; sc.add(s); gas.push(s); } }
+        const flash = K.sprite(sc, K.glowTex("rgba(255,245,230,1)"), 600, V(0, 0, 20), 0);
+        const bigO = new THREE.Object3D(); sc.add(bigO); bigO.position.set(0, 60, 0); const litO = new THREE.Object3D(); sc.add(litO); const sunO = new THREE.Object3D(); sc.add(sunO);
+        // ================= Andromeda =================
+        const sg = new THREE.Scene(); { K.reseed(33); const p = [], c = []; for (let i = 0; i < 80000; i++) { const core = K.rnd() < 0.18; let r, a, y; if (core) { r = Math.pow(K.rnd(), 2) * 12; a = K.rnd() * 6.283; y = (K.rnd() - 0.5) * 4; } else { const arm = i % 2; r = Math.pow(K.rnd(), 0.7) * 76; a = arm * Math.PI + Math.log(r / 76 * 12 + 1) * 2.4 + (K.rnd() - 0.5) * 0.7; y = (K.rnd() - 0.5) * 1.5; }
+            p.push(Math.cos(a) * r, y, Math.sin(a) * r); const col = new THREE.Color(1, 0.9, 0.78).lerp(new THREE.Color(0.65, 0.75, 1), core ? 0 : Math.min(1, r / 76 + 0.2)); c.push(col.r, col.g, col.b); }
+          const g = new THREE.BufferGeometry(); g.setAttribute("position", new THREE.Float32BufferAttribute(p, 3)); g.setAttribute("color", new THREE.Float32BufferAttribute(c, 3));
+          const pts = new THREE.Points(g, new THREE.PointsMaterial({ size: 1.6, sizeAttenuation: false, vertexColors: true, transparent: true, opacity: 0.85, blending: THREE.AdditiveBlending, depthWrite: false })); const G = new THREE.Group(); G.add(pts); K.sprite(G, K.glowTex("rgba(255,225,180,.7)"), 30, V(0, 0, 0), 0.4); G.rotation.set(1.25, 0, 0.6); sg.add(G); K.stars(sg, 5000, -1, 60000, 1.5).material.opacity = 0.5; }
+        const mark = K.sprite(sg, K.glowTex("rgba(255,120,60,1)"), 5, V(28, 0, -10), 0); const markO = new THREE.Object3D(); markO.position.copy(mark.position); sg.add(markO);
+        const ringM = new THREE.Mesh(new THREE.TorusGeometry(5, 0.25, 8, 64), new THREE.MeshBasicMaterial({ color: 0xffd23f, transparent: true, opacity: 0, toneMapped: false })); ringM.position.copy(mark.position); sg.add(ringM);
+        // ================= James Webb =================
+        const sj = new THREE.Scene(); K.stars(sj, 9000, -1, 60000, 1.7).material.opacity = 0.8; sj.add(new THREE.AmbientLight(0x30343e, 0.7)); const lj = new THREE.DirectionalLight(0xfff2e0, 2.2); lj.position.set(-3, 5, 4); sj.add(lj);
+        const JW = MO.jwst(); sj.add(JW.g); const jwO = new THREE.Object3D(); JW.g.add(jwO); jwO.position.set(0, 7, 0);
+        // ===== Zeiten =====
+        const tFor = W("forscher"), tUnd = W("und", 9), tPass = W("passiert"), tNen = W("die", 18.3), tBig = W("big", 22.3), tLit = W("little", 29.4), tKr = W("die", 33.2), tDann = W("dann", 40), tIm = W("im", 45.5), tDab = W("dabei"), tNur = W("nur", 53.6), tSo = W("so", 57.2), tUebr = W("übrig", 61.6), END = 67.4, KARTE = 13.0;
+        label("Big Bao", bigO, 0, { t0: tNen + 1.6, t1: tKr - 0.1, size: 56, gap: 20 }); label("Little Bao", litO, 4, { t0: W("little", 21) - 0.1, t1: tKr - 0.1, size: 50, gap: 18 }); label("Sonne", sunO, 3.5, { t0: tBig + 1.5, t1: tKr - 0.1, size: 46, gap: 14 });
+        label("James Webb", jwO, 2, { t0: tUnd + 0.6, t1: tPass - 0.1, size: 52, gap: 18 }); label("Bao", bigO, 0, { t0: tUebr + 1.2, t1: END, size: 60, gap: 20 });
+        const logo = (f, h = 110) => `<div style="display:inline-block;background:#fff;border-radius:22px;padding:14px 28px;margin-bottom:16px"><img src='assets/logos/${f}' style='height:${h}px;display:block'></div><br>`;
+        const WORDEL = document.getElementById("word");
+        renderAt = (t) => {
+          E.grade.uniforms.flash.value = 0; E.look([1, 1, 1], [0, 0, 0], 0.32, 0.86);
+          let scene = sc, pos = V(0, 60, 420), look = V(0, 0, 0), fov = 40; BIG.rotation.y = t * 0.03; LIT.rotation.y = t * 0.2; BIG.material.opacity = 1; BIG.scale.setScalar(1); BIG.userData.glow.material.opacity = 0.6;
+          LIT.visible = true; LIT.userData.glow.visible = true; SUN.visible = false; SUN.userData.glow.visible = false; trail.material.opacity = 0; flash.material.opacity = 0; gas.forEach((s) => (s.material.opacity = 0)); BIG.position.set(0, 0, 0); BIG.userData.glow.position.set(0, 0, -10);
+          const orbitAt = (k, R) => { const a = k; const p = V(Math.cos(a) * R, Math.sin(a) * R * 0.18, Math.sin(a) * R); LIT.position.copy(p); LIT.userData.glow.position.copy(p); litO.position.copy(p); return p; };
+          const spiralTrail = (k0, k1, R0, R1) => { const pts = []; for (let i = 0; i <= 200; i++) { const f = i / 200; const k = lerp(k0, k1, f); const R = lerp(R0, R1, f); pts.push(V(Math.cos(k) * R, Math.sin(k) * R * 0.18, Math.sin(k) * R)); } trail.geometry.setFromPoints(pts); };
+          if (t < tFor - 0.05) { const f = prog(t, 0, tFor); const k = f * 9; const R = lerp(110, 50, f * f); orbitAt(k, R); spiralTrail(Math.max(0, k - 3), k, lerp(110, 50, Math.max(0, f - 0.3) ** 2), R); trail.material.opacity = 0.6; if (f > 0.85) { LIT.visible = false; LIT.userData.glow.visible = false; flash.material.opacity = (f - 0.85) * 4; } pos = V(0, 120, 300); look = V(0, 0, 0); fov = 44; }
+          else if (t < tUnd - 0.05) { const f = prog(t, tFor, tUnd - tFor); const k = 1 + f * 4; orbitAt(k, lerp(105, 80, f)); spiralTrail(k - 2.5, k, lerp(115, 105, f), lerp(105, 80, f)); trail.material.opacity = 0.5; const a = 0.4 + f * 0.4; pos = V(Math.sin(a) * 330, 70, Math.cos(a) * 330); look = V(10, 0, 0); fov = 42; }
+          else if (t < tPass - 0.05) { scene = sj; const f = prog(t, tUnd, tPass - tUnd); JW.g.rotation.set(0.2, 0.5 + f * 0.5, 0); const a = 0.6 + f * 0.6; pos = V(Math.sin(a) * 26, 8, Math.cos(a) * 26); look = V(0, 1.5, 0); fov = 42; }
+          else if (t < tNen - 0.05) { scene = sg; const f = prog(t, tPass, tNen - tPass); const d = lerpLog(420, 60, K.eio(cl(f * 1.2))); const tgt = mark.position.clone().multiplyScalar(K.eio(cl(f * 1.2))); pos = tgt.clone().add(V(0, d * 0.55, d)); look = tgt; fov = 44; mark.material.opacity = cl((t - tPass - 1.2) / 0.5); ringM.material.opacity = mark.material.opacity; ringM.lookAt(pos); }
+          else if (t < tBig - 0.05) { const f = prog(t, tNen, tBig - tNen); orbitAt(1.2 + f * 1.5, 105); pos = V(20, 40, 360); look = V(30, 0, 0); fov = 42; }
+          else if (t < tLit - 0.05) { const f = prog(t, tBig, tLit - tBig); orbitAt(2.5 + f * 0.6, 105); SUN.visible = true; SUN.userData.glow.visible = true; SUN.position.set(-90, -40, 40); SUN.userData.glow.position.copy(SUN.position); sunO.position.copy(SUN.position); pos = V(-10, 20, 330); look = V(-10, 0, 0); fov = 44; }
+          else if (t < tKr - 0.05) { const f = prog(t, tLit, tKr - tLit); const p = orbitAt(3.1 + f * 0.4, 105); SUN.visible = true; SUN.userData.glow.visible = true; SUN.position.copy(p).add(V(14, 0, 0)); SUN.userData.glow.position.copy(SUN.position); sunO.position.copy(SUN.position); pos = p.clone().add(V(4, 6, 60)); look = p.clone().add(V(6, 0, 0)); fov = 42; }
+          else if (t < tDann - 0.05) { const f = prog(t, tKr, tDann - tKr); const k = 3 + f * 9; const R = lerp(105, 66, f); orbitAt(k, R); spiralTrail(k - 4, k, lerp(110, 105, f), R); trail.material.opacity = 0.55; const glowUp = W("schon", 36) ; BIG.userData.glow.material.opacity = 0.6 + 0.4 * cl((t - glowUp) / 3); pos = V(0, 170, 300); look = V(0, 0, 0); fov = 44; }
+          else if (t < tIm - 0.05) { const f = prog(t, tDann, tIm - tDann); BIG.material.opacity = 0.55; const k = 12 + f * 10; const R = lerp(64, 4, Math.pow(f, 0.8)); orbitAt(k, R); spiralTrail(k - 6, k, lerp(66, 64, f), R); trail.material.opacity = 0.8; pos = V(0, 140, 230); look = V(0, 0, 0); fov = 44; }
+          else if (t < tNur - 0.05) { LIT.visible = false; LIT.userData.glow.visible = false; const f = prog(t, W("ausbruch") - 0.6, 6); const k = cl(f); flash.material.opacity = Math.max(0, 1 - k * 2.5) * (t > W("ausbruch") - 0.6 ? 1 : 0); E.grade.uniforms.flash.value = Math.max(0, 0.35 - k * 1.5) * (k > 0 ? 1 : 0);
+            gas.forEach((s) => { const r = 60 + k * 260 * s.userData.v; s.position.copy(s.userData.d).multiplyScalar(r); s.scale.setScalar(s.userData.sz * (1 + k * 2)); s.material.opacity = k > 0 ? 0.2 * (1 - k * 0.6) : 0; });
+            const a = 0.2 + prog(t, tIm, tNur - tIm) * 0.5; pos = V(Math.sin(a) * 560, 120, Math.cos(a) * 560); look = V(0, 0, 0); fov = 44; }
+          else if (t < tSo - 0.05) { scene = sj; const f = prog(t, tNur, tSo - tNur); JW.g.rotation.set(0.15, 2.6 + f * 0.4, 0); pos = V(-18, 6, 16); look = V(0, 2, 0); fov = 42; }
+          else { LIT.visible = false; LIT.userData.glow.visible = false; const k = 1; gas.forEach((s) => { const r = 60 + 260 * s.userData.v + (t - tSo) * 8; s.position.copy(s.userData.d).multiplyScalar(r); s.scale.setScalar(s.userData.sz * 3); s.material.opacity = 0.08; });
+            BIG.scale.setScalar(0.8); const f = prog(t, tSo, END - tSo); const a = 0.8 + f * 0.6; const d = lerp(700, 380, K.eio(f)); pos = V(Math.sin(a) * d, 90, Math.cos(a) * d); look = V(0, 0, 0); fov = 44; }
+          cam.fov = fov; cam.near = 0.1; cam.far = 200000; cam.updateProjectionMatrix(); cam.position.copy(pos); cam.lookAt(look);
+          E.render(scene, t); updLabels(t);
+          let wh = "", wa = 0; const seg = (a, b, h) => { if (t >= a && t < b) { wh = h; wa = cl((t - a) / 0.3) * (1 - cl((t - b + 0.4) / 0.3)); } };
+          const sub = (s) => `<div class='sub'>${s}</div>`;
+          seg(tFor, tUnd - 0.1, "👀 zum ersten Mal live"); seg(W("james", 10) - 0.1, KARTE - 0.1, logo("nasa.svg", 80) + "📸 James Webb");
+          seg(W("andromeda") - 0.1, W("zweieinhalb") - 0.1, "🌌 Andromeda-Galaxie"); seg(W("zweieinhalb") - 0.1, tNen - 0.1, "2,5 Mio. Lichtjahre");
+          seg(W("siebenmal") - 0.2, W("und", 26.4) - 0.1, "7× so schwer wie die Sonne"); seg(W("und", 26.4), tLit - 0.1, "> 350× so breit"); seg(W("nicht", 31.2) - 0.1, tKr - 0.1, "< 1 Sonne schwer");
+          seg(W("immer", 35) - 0.1, W("schon", 36) - 0.1, "🌀 immer enger"); seg(W("schon", 36), tDann - 0.1, "💡 seit ≈ 2018 heller"); seg(W("raste") - 0.1, tIm - 0.1, "bis in den Kern 🎯");
+          seg(tIm, tDab - 0.1, "💥 Oktober 2025"); seg(tDab, tNur - 0.1, "Gas: ≈ 1/10 Sonne"); seg(tNur, tSo - 0.1, "📸 47 Tage später"); seg(tSo, tUebr - 0.1, "🔭 extrem selten"); seg(tUebr, END, "1 Stern übrig ⭐");
+          WORDEL.style.top = t >= KARTE && t < KARTE + 5.4 ? "300px" : "";
+          word(wh, wa); cap(t);
+        };
+        renderAt(lastT);
+      });
+      window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady || {}; window.__hf.buildReady.scene = ready;
+      let lastT = 0;
+      window.addEventListener("hf-seek", (e) => { lastT = e.detail.time; renderAt(lastT); });
+    </script>
+  </body>
+</html>

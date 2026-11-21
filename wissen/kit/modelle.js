@@ -1,6 +1,6 @@
 // ===== Modelle (Nutzer 19.11.: „schönere 3D-Modelle“, keine echten Fotos) =====
 // In szene.js eine Zeile "// @modelle" -> sauber_bau.py setzt diesen Code ein. Braucht THREE, E (Renderer), K.
-// MO.vulcan(), MO.ariane6(), MO.falcon9(), MO.longMarch2F(), MO.pad(), MO.tiangong(), MO.shenzhou(), MO.iss(), MO.hayabusa2(), MO.asteroid({r,seed,top,stretch}), MO.flagTex('cn'|'pk'), MO.exhaust(len, rad, col), MO.smoke(scene, n), MO.kuiper(), MO.panelTex(...)
+// MO.vulcan(), MO.ariane6(), MO.falcon9(), MO.longMarch2F(), MO.pad(), MO.tiangong(), MO.shenzhou(), MO.iss(), MO.hayabusa2(), MO.asteroid({r,seed,top,stretch}), MO.flagTex('cn'|'pk'), MO.bepi(), MO.jwst(), MO.exhaust(len, rad, col), MO.smoke(scene, n), MO.kuiper(), MO.panelTex(...)
 const MO = {};
 {
   const { RoomEnvironment } = await import("three/addons/environments/RoomEnvironment.js");
@@ -254,4 +254,29 @@ const MO = {};
       v.multiplyScalar(d); if (o.stretch) v.multiply(o.stretch); p.setXYZ(i, v.x, v.y, v.z); const k = 0.88 + 0.12 * Math.sin(v.x * 9 + v.z * 5) * Math.cos(v.y * 7) + 0.04 * rnd(); col.push(0.32 * k, 0.3 * k, 0.28 * k); }
     geo.setAttribute("color", new THREE.Float32BufferAttribute(col, 3)); geo.computeVertexNormals();
     const m = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.95, metalness: 0, flatShading: false })); m.scale.setScalar(r); return m; };
+  // ================= BEPICOLOMBO (MPO + Sonnenschild + Mio, Einheit Meter, Flugrichtung +y) =================
+  MO.bepi = () => { const g = new THREE.Group(); const mli = MO.mliM(), white = MO.plain(0xd9dbde, 0.1, 0.45, 0.5), dark = MO.plain(0x2c3038, 0.6, 0.4), alu = MO.plain(0xb9bdc4, 0.9, 0.28, 1.1);
+    const mliW = new THREE.MeshStandardMaterial({ color: 0xa8a497, metalness: 0.5, roughness: 0.4, envMap: MO.env, envMapIntensity: 0.45, bumpMap: MO.mliM().map, bumpScale: 1.2 });
+    const mpo = new THREE.Group(); g.add(mpo); const body = new THREE.Mesh(RoundedBoxGeometry(2.4, 1.7, 2.2, 2, 0.04), mliW); mpo.add(body);
+    const rad = new THREE.Mesh(new THREE.BoxGeometry(2.6, 0.05, 2.4), new THREE.MeshStandardMaterial({ color: 0xf2f2f0, metalness: 0.9, roughness: 0.15, envMap: MO.env, envMapIntensity: 1.4 })); rad.position.y = -0.9; mpo.add(rad);
+    const arm = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.05, 1.4, 12), alu); arm.rotation.z = Math.PI / 2; arm.position.set(1.9, 0.2, 0); mpo.add(arm);
+    const sw = new THREE.Group(); sw.position.set(2.6, 0.2, 0); mpo.add(sw); for (let i = 0; i < 3; i++) { const w = wing(2.4, 1.55, MO.cellM(), 0x50545c, MO.plain(0x30343c, 0.5, 0.5)); w.rotation.x = Math.PI / 2 - 0.3; w.position.x = 1.25 + i * 2.5; sw.add(w); }
+    const hga = new THREE.Mesh(new THREE.SphereGeometry(0.75, 32, 12, 0, Math.PI * 2, 0, 0.6), MO.plain(0xe8e8ea, 0.3, 0.4, 0.4, { side: THREE.DoubleSide })); hga.rotation.x = Math.PI; hga.position.set(-1.3, 0.4, 0.9); mpo.add(hga);
+    const mag = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.03, 2.8, 8), alu); mag.rotation.z = Math.PI / 2; mag.position.set(-2.6, -0.4, -0.6); mpo.add(mag);
+    const nz = []; for (const [x, z] of [[-0.8, -0.8], [0.8, -0.8], [-0.8, 0.8], [0.8, 0.8]]) { const n = MO.nozzle(0.08, 0.16, 0.3, nozM()); n.rotation.x = Math.PI; n.position.set(x, 0.85 + 0.3, z); mpo.add(n); const ex = MO.exhaust(3, 0.12); ex.rotation.x = Math.PI; ex.position.set(x, 1.15, z); ex.visible = false; mpo.add(ex); nz.push(ex); }
+    const shield = new THREE.Group(); shield.position.y = 1.4; g.add(shield); const sh = new THREE.Mesh(new THREE.CylinderGeometry(1.7, 1.25, 1.6, 8), mliW); sh.position.y = 0.8; shield.add(sh);
+    const mio = new THREE.Group(); mio.position.y = 3.3; g.add(mio); const mb = new THREE.Mesh(new THREE.CylinderGeometry(0.95, 0.95, 0.9, 8), [MO.cellM(), white, dark]); mio.add(mb);
+    const mt = new THREE.Mesh(new THREE.CylinderGeometry(0.95, 0.95, 0.06, 8), white); mt.position.y = 0.47; mio.add(mt); const mm = new THREE.Mesh(new THREE.CylinderGeometry(0.02, 0.02, 2.2, 6), alu); mm.position.set(0, 0, 0); mm.rotation.z = Math.PI / 2; mio.add(mm);
+    return { g, mpo, mio, shield, nz }; };
+  // ================= JAMES WEBB (Einheit Meter) =================
+  MO.jwst = () => { const g = new THREE.Group(); const goldM = new THREE.MeshStandardMaterial({ color: 0xd99a2b, metalness: 1, roughness: 0.18, envMap: MO.env, envMapIntensity: 1.0 });
+    const hex = new THREE.CylinderGeometry(0.66, 0.66, 0.08, 6); const mir = new THREE.Group(); mir.position.set(0, 3.2, 0.5); mir.rotation.x = -0.25; g.add(mir);
+    const s3 = Math.sqrt(3) * 0.66; const cells = [[0, 0]]; for (let i = 0; i < 6; i++) { const a = (i / 6) * 6.283 + Math.PI / 6; cells.push([Math.cos(a) * s3, Math.sin(a) * s3]); } for (let i = 0; i < 12; i++) { const a = (i / 12) * 6.283 + Math.PI / 6; const r = i % 2 ? 2 * s3 * Math.cos(Math.PI / 6) : 2 * s3; cells.push([Math.cos(a) * r, Math.sin(a) * r]); }
+    cells.slice(1).forEach(([x, y]) => { const h = new THREE.Mesh(hex, goldM); h.rotation.x = Math.PI / 2; h.rotation.y = Math.PI / 6; h.position.set(x, y, 0); mir.add(h); });
+    const strutM = MO.plain(0x2a2d33, 0.6, 0.4); for (const a of [0, 2.1, 4.2]) { const s = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, 3.4, 8), strutM); const p = V(Math.cos(a) * 2.2, Math.sin(a) * 2.2, 1.6); s.position.copy(p.clone().multiplyScalar(0.5)); s.lookAt(0, 0, 3.2); s.rotateX(Math.PI / 2); mir.add(s); }
+    const sec = new THREE.Mesh(new THREE.CylinderGeometry(0.37, 0.37, 0.08, 24), goldM); sec.rotation.x = Math.PI / 2; sec.position.z = 3.2; mir.add(sec);
+    const shield = new THREE.Group(); g.add(shield); const kite = new THREE.Shape(); kite.moveTo(-10.5, 0); kite.lineTo(-4, 3.6); kite.lineTo(4, 3.6); kite.lineTo(10.5, 0); kite.lineTo(4, -3.6); kite.lineTo(-4, -3.6); kite.closePath();
+    for (let i = 0; i < 5; i++) { const m = new THREE.Mesh(new THREE.ShapeGeometry(kite), new THREE.MeshStandardMaterial({ color: i === 0 ? 0x9a8cae : 0x8a7d9e, metalness: 0.8, roughness: 0.3, envMap: MO.env, envMapIntensity: 0.5, side: THREE.DoubleSide, transparent: true, opacity: 0.96 })); m.rotation.x = -Math.PI / 2; m.position.y = -0.3 - i * 0.28; m.scale.setScalar(1 - i * 0.03); shield.add(m); }
+    const bus = new THREE.Mesh(RoundedBoxGeometry(2, 1, 2, 2, 0.04), MO.plain(0x3a3e46, 0.6, 0.4)); bus.position.y = -2; g.add(bus); const sp = wing(2.4, 5, MO.cellM()); sp.position.set(0, -2.4, -3.2); sp.rotation.x = 0.4; g.add(sp);
+    return { g, mir }; };
 }

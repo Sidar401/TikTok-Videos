@@ -1,0 +1,19 @@
+{
+ "tag": "22. NOVEMBER 2026",
+ "dauer": 66.8,
+ "hook": "Nach 8 Jahren<br /><span class=\"y\">AM MERKUR!</span>",
+ "hook_end": 3.4,
+ "karte": [
+  14.25,
+  5.4
+ ],
+ "fix": {
+  "zweitausendachtzehn.": "2018.",
+  "neunmal": "9-mal",
+  "vierhundert": "400",
+  "einhundertachtzig": "180",
+  "zwei": "2",
+  "zweitausendsiebenundzwanzig": "2027"
+ },
+ "css": ".hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"
+}
