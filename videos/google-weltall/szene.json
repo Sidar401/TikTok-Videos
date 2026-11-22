@@ -1,0 +1,12 @@
+{
+ "tag": "23. NOVEMBER 2026",
+ "dauer": 68.0,
+ "hook": "Google baut im<br /><span class=\"y\">WELTALL!</span>",
+ "hook_end": 2.6,
+ "karte": [
+  10.1,
+  5.4
+ ],
+ "fix": {},
+ "css": ".hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"
+}

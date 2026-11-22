@@ -1,0 +1,20 @@
+{
+ "gehoert": "Vor vier Jahren hat die NASA absichtlich eine Sonde in einen Asteroiden gerammt. Jetzt ist eine zweite Sonde dort angekommen und schaut sich den Schaden an. In zwei Tagen kommen die ersten scharfen Bilder. Die Sonde heißt Hera und kommt von der Europäischen Raumfahrtbehörde. Ihr Ziel sind zwei Asteroiden, die umeinander kreisen. Didymos, fast achthundert Meter groß und sein kleiner Mond Dimorphos nur etwa hundertfünfzig Meter. Im September 2022 krachte die NASA-Sonde Dart mit über zwanzigtausend Kilometern pro Stunde in Dimorphos. Der Plan: Testen, ob wir einen gefährlichen Asteroiden von der Erde wegschubsen können. Und es hat geklappt. Seitdem ist Dimorphos auf seiner Bahn rund dreiunddreißig Minuten schneller einmal herum. Aber wie sieht er jetzt aus? Gibt es einen Krater? Oder hat sich der ganze Asteroid verformt? Genau das soll Hera herausfinden. Sie bringt sogar zwei kleine Minisatelliten mit, die ganz nah heranfliegen. Die ersten Fotos aus sechzig Kilometern Entfernung zeigen Dimorphos noch fast ganz im Schatten. Am 25. November sollen die Detailbilder kommen.",
+ "abweichungen": [
+  [
+   "replace",
+   "zweitausendzweiundzwanzig",
+   "2022"
+  ],
+  [
+   "replace",
+   "mini satelliten",
+   "minisatelliten"
+  ],
+  [
+   "replace",
+   "fünfundzwanzigsten",
+   "25"
+  ]
+ ]
+}

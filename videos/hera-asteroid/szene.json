@@ -1,0 +1,12 @@
+{
+ "tag": "23. NOVEMBER 2026",
+ "dauer": 67.6,
+ "hook": "Asteroid<br /><span class=\"y\">GERAMMT!</span>",
+ "hook_end": 4.9,
+ "karte": [
+  12.2,
+  5.4
+ ],
+ "fix": {},
+ "css": ".hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"
+}

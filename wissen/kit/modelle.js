@@ -1,6 +1,6 @@
 // ===== Modelle (Nutzer 19.11.: „schönere 3D-Modelle“, keine echten Fotos) =====
 // In szene.js eine Zeile "// @modelle" -> sauber_bau.py setzt diesen Code ein. Braucht THREE, E (Renderer), K.
-// MO.vulcan(), MO.ariane6(), MO.falcon9(), MO.longMarch2F(), MO.pad(), MO.tiangong(), MO.shenzhou(), MO.iss(), MO.hayabusa2(), MO.asteroid({r,seed,top,stretch}), MO.flagTex('cn'|'pk'), MO.bepi(), MO.jwst(), MO.exhaust(len, rad, col), MO.smoke(scene, n), MO.kuiper(), MO.panelTex(...)
+// MO.vulcan(), MO.ariane6(), MO.falcon9(), MO.longMarch2F(), MO.pad(), MO.tiangong(), MO.shenzhou(), MO.iss(), MO.hayabusa2(), MO.asteroid({r,seed,top,stretch}), MO.flagTex('cn'|'pk'), MO.bepi(), MO.jwst(), MO.hera(), MO.dart(), MO.cubesat(), MO.suncatcher(), MO.rack(), MO.newGlenn(), MO.exhaust(len, rad, col), MO.smoke(scene, n), MO.kuiper(), MO.panelTex(...)
 const MO = {};
 {
   const { RoomEnvironment } = await import("three/addons/environments/RoomEnvironment.js");
@@ -279,4 +279,32 @@ const MO = {};
     for (let i = 0; i < 5; i++) { const m = new THREE.Mesh(new THREE.ShapeGeometry(kite), new THREE.MeshStandardMaterial({ color: i === 0 ? 0x9a8cae : 0x8a7d9e, metalness: 0.8, roughness: 0.3, envMap: MO.env, envMapIntensity: 0.5, side: THREE.DoubleSide, transparent: true, opacity: 0.96 })); m.rotation.x = -Math.PI / 2; m.position.y = -0.3 - i * 0.28; m.scale.setScalar(1 - i * 0.03); shield.add(m); }
     const bus = new THREE.Mesh(RoundedBoxGeometry(2, 1, 2, 2, 0.04), MO.plain(0x3a3e46, 0.6, 0.4)); bus.position.y = -2; g.add(bus); const sp = wing(2.4, 5, MO.cellM()); sp.position.set(0, -2.4, -3.2); sp.rotation.x = 0.4; g.add(sp);
     return { g, mir }; };
+  // ================= HERA (ESA, Einheit Meter) =================
+  MO.hera = () => { const g = new THREE.Group(); const body = new THREE.Mesh(RoundedBoxGeometry(1.6, 1.7, 1.6, 2, 0.03), new THREE.MeshStandardMaterial({ color: 0xb9b6ad, metalness: 0.6, roughness: 0.35, envMap: MO.env, envMapIntensity: 0.6, bumpMap: MO.mliM().map, bumpScale: 1 })); g.add(body);
+    const gold = new THREE.Mesh(new THREE.BoxGeometry(1.62, 0.5, 1.62), MO.mliM()); gold.position.y = -0.6; g.add(gold);
+    for (const s of [-1, 1]) { for (let i = 0; i < 2; i++) { const w = wing(1.2, 1.9, MO.cellM(), 0x50545c, MO.cellM()); w.rotation.z = Math.PI / 2; w.position.set(s * (1.6 + i * 1.25), 0.1, 0); g.add(w); } }
+    const dish = new THREE.Mesh(new THREE.SphereGeometry(0.75, 40, 12, 0, Math.PI * 2, 0, 0.75), MO.plain(0xe6e6e8, 0.3, 0.4, 0.4, { side: THREE.DoubleSide })); dish.rotation.x = Math.PI; dish.position.y = 1.45; g.add(dish);
+    const cam = new THREE.Mesh(new THREE.CylinderGeometry(0.1, 0.12, 0.35, 16), MO.plain(0x1c1e22, 0.6, 0.3)); cam.rotation.x = Math.PI / 2; cam.position.set(0.3, 0.2, 0.95); g.add(cam);
+    return { g }; };
+  MO.cubesat = () => { const g = new THREE.Group(); g.add(new THREE.Mesh(RoundedBoxGeometry(0.22, 0.34, 0.1, 2, 0.01), MO.plain(0x8f949c, 0.8, 0.3))); for (const s of [-1, 1]) { const w = wing(0.3, 0.34, MO.cellM()); w.rotation.z = Math.PI / 2; w.position.set(s * 0.27, 0, 0); g.add(w); } return { g }; };
+  // ================= DART (NASA) =================
+  MO.dart = () => { const g = new THREE.Group(); g.add(new THREE.Mesh(RoundedBoxGeometry(1.3, 1.3, 1.9, 2, 0.03), MO.mliM()));
+    for (const s of [-1, 1]) { const arm = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, 2.2, 8), MO.plain(0xb9bdc4, 0.9, 0.3)); arm.rotation.z = Math.PI / 2; arm.position.x = s * 1.6; g.add(arm); const roll = new THREE.Mesh(new THREE.BoxGeometry(8.5, 0.05, 2.3), [MO.plain(0x50545c), MO.plain(0x50545c), MO.cellM(), MO.plain(0x30343c), MO.plain(0x50545c), MO.plain(0x50545c)]); roll.position.x = s * 7; g.add(roll); }
+    const dish = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.5, 0.05, 32), MO.plain(0xe0e0e2, 0.3, 0.4)); dish.position.set(0, 0.75, 0.3); g.add(dish); return { g }; };
+  // ================= Google-Satellit (Suncatcher, Konzept) =================
+  MO.suncatcher = () => { const g = new THREE.Group(); g.add(new THREE.Mesh(RoundedBoxGeometry(1.2, 0.5, 1.2, 2, 0.03), MO.plain(0xd5d7da, 0.3, 0.45, 0.5)));
+    const chip = new THREE.Mesh(new THREE.BoxGeometry(0.5, 0.04, 0.5), new THREE.MeshBasicMaterial({ color: 0x4285f4, toneMapped: false })); chip.position.y = 0.27; g.add(chip);
+    const panel = wing(3.2, 3.2, MO.cellM(), 0x60646c); panel.position.y = 0.4; g.add(panel); const lz = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.08, 0.2, 12), MO.plain(0x1c1e22, 0.6, 0.3)); lz.position.set(0.6, -0.2, 0); lz.rotation.z = Math.PI / 2; g.add(lz); return { g, chip }; };
+  // ================= Server-Schrank =================
+  MO.rack = () => { const g = new THREE.Group(); g.add(new THREE.Mesh(RoundedBoxGeometry(0.7, 2.1, 1.1, 2, 0.02), MO.plain(0x1d2026, 0.6, 0.4))); const leds = [];
+    for (let i = 0; i < 18; i++) { const u = new THREE.Mesh(new THREE.BoxGeometry(0.62, 0.08, 0.02), MO.plain(0x2c3038, 0.7, 0.35)); u.position.set(0, -0.9 + i * 0.105, 0.56); g.add(u); const l = new THREE.Mesh(new THREE.BoxGeometry(0.03, 0.02, 0.01), new THREE.MeshBasicMaterial({ color: i % 3 ? 0x34d399 : 0x60a5fa, toneMapped: false })); l.position.set(0.24 - (i % 4) * 0.05, -0.9 + i * 0.105, 0.575); g.add(l); leds.push(l); } return { g, leds }; };
+  // ================= NEW GLENN (Blue Origin, Einheit Meter) =================
+  MO.newGlenn = () => { const g = new THREE.Group(); const R = 3.5;
+    const s1 = MO.panelTex({ base: "#d9dbde", mottle: 0.03, rings: [0.2, 0.5, 0.8], soot: 0.12, text: [{ s: "BLUE ORIGIN", u: 0.25, v: 0.55, size: 120, col: "#1b3a6b", spacing: 22 }] });
+    g.add(cyl(R, 57, MO.mat(s1, { rough: 0.5 }), 0)); g.add(cyl(R + 0.02, 2, MO.plain(0x2a2d33, 0.5, 0.45), 57));
+    g.add(cyl(R, 23, MO.mat(MO.panelTex({ base: "#d9dbde", mottle: 0.03, rings: [0.5] }), { rough: 0.5 }), 59)); const fa = new THREE.Mesh(new THREE.CylinderGeometry(R, R, 12, SEG), MO.mat(MO.panelTex({ base: "#e2e4e6", mottle: 0.02, vseams: 2 }), { rough: 0.4 })); fa.position.y = 88; g.add(fa);
+    const tip = lathe(ogive(R, 9, 40, 0.1), MO.plain(0xe2e4e6, 0.05, 0.4)); tip.position.y = 94; g.add(tip);
+    for (let i = 0; i < 4; i++) { const a = (i / 4) * Math.PI * 2 + 0.4; const fin = new THREE.Mesh(new THREE.BoxGeometry(0.2, 5, 3), MO.plain(0x2a2d33, 0.5, 0.45)); fin.position.set(Math.cos(a) * (R + 1.4), 52, Math.sin(a) * (R + 1.4)); fin.rotation.y = -a; g.add(fin);
+      const leg = new THREE.Mesh(new THREE.BoxGeometry(0.6, 9, 0.6), MO.plain(0x2a2d33, 0.5, 0.45)); leg.position.set(Math.cos(a + 0.4) * (R + 0.3), 4.5, Math.sin(a + 0.4) * (R + 0.3)); g.add(leg); }
+    for (let i = 0; i < 7; i++) { const a = (i / 6) * Math.PI * 2, r = i === 6 ? 0 : 2.2; const nz = MO.nozzle(0.45, 0.85, 1.8, nozM()); nz.position.set(Math.cos(a) * r, 0, Math.sin(a) * r); g.add(nz); } return { g }; };
 }
