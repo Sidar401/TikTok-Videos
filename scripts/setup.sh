@@ -10,3 +10,7 @@ for v in thorsten karlsson pavoque; do
   [ -f "/root/tts/de-$v-low.onnx" ] && continue
   curl -sSL "https://github.com/rhasspy/piper/releases/download/v0.0.2/voice-de-$v-low.tar.gz" | tar xz -C /root/tts
 done
+
+# Video-Analyse: Video laden (yt-dlp), Standbilder (ffmpeg), Ton in Text (whisper)
+command -v ffmpeg >/dev/null || apt-get install -y -q ffmpeg || true
+{ command -v yt-dlp >/dev/null && command -v whisper >/dev/null; } || pip install -q yt-dlp openai-whisper 2>/dev/null || pip install -q --break-system-packages yt-dlp openai-whisper || true
