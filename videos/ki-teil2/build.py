@@ -58,7 +58,7 @@ def raus(id_, t):
 
 
 # s1 Hook
-S("s1", None, nl.CSS + titel("t1", "Diese Firma baut keine KI", 330, D, 56) + logo("l1", "asml.svg", 450) + gross("n1", "11,66 Mrd. €", 680, O, 150)
+S("s1", None, nl.CSS + titel("t1", "Diese Firma baut keine KI", 330, D, 56) + logo("l1", "asml.svg", 450) + gross("n1", "11,66 Mrd. €", 690, O, 120)
   + pille("p1", "Umsatz in nur 3 Monaten", 900, D, "#fff", 46),
   lambda a, d: KIT_JS + f' pop("#t1", {a}); pop("#l1", {a} + 0.1); pop("#n1", {cap("s1", 0)} + 0.3); pop("#p1", {cap("s1", 1)});')
 
@@ -83,7 +83,7 @@ S("s5", None, titel("t5", "Schauen wir genau hin", 640, D, 78) + pille("p5", "3 
   lambda a, d: f'pop("#t5", {a}); pop("#p5", {a} + 0.3);')
 
 # ---- Bereich 1 Strom s6–s11 ----
-S("s6", None, titel("t6", "Bereich 1: Strom", 340, O, 58) + gross("n6", "23 Mrd. kWh", 520, D, 150) + pille("p6", "Rechenzentren in Deutschland · 2026", 800, O, "#fff", 40),
+S("s6", None, titel("t6", "Bereich 1: Strom", 340, O, 58) + gross("n6", "23 Mrd. kWh", 540, D, 118) + pille("p6", "Rechenzentren in Deutschland · 2026", 800, O, "#fff", 40),
   lambda a, d: f'pop("#t6", {a}); pop("#n6", {cap("s6", 1)}); pop("#p6", {cap("s6", 2)});')
 S("s7", None, titel("t7", "Das entspricht", 340, D, 60) + gross("n7", "6,5 Mio.", 480, G, 230) + pille("p7", "Haushalten im Jahr", 800, G, "#fff", 50),
   lambda a, d: f'pop("#t7", {a}); pop("#n7", {a} + 0.15); pop("#p7", {cap("s7", 1)});')
