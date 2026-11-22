@@ -1,0 +1,83 @@
+{
+ "titel": "Glühwein-Preise",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Fünf Euro für eine Tasse Glühwein – das ist auf vielen Weihnachtsmärkten jetzt normal.",
+   "text": "5 € für eine Tasse Glühwein – das ist auf vielen Weihnachtsmärkten jetzt normal",
+   "bild": ""
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Schreib uns in die Kommentare: Was zahlst du bei dir für den Glühwein?",
+   "text": "Schreib uns in die Kommentare: Was zahlst du bei dir für den Glühwein?",
+   "bild": ""
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Und gleich zeigen wir dir, wie viel davon eigentlich der Staat kassiert.",
+   "text": "Und gleich zeigen wir dir, wie viel davon eigentlich der Staat kassiert",
+   "bild": ""
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Im Schnitt kostet eine Tasse dieses Jahr zwischen vier Euro fünfzig und fünf Euro.",
+   "text": "Im Schnitt kostet eine Tasse dieses Jahr zwischen 4,50 und 5 €",
+   "bild": ""
+  },
+  {
+   "id": "s5",
+   "sprechtext": "In München zahlst du teilweise bis zu sieben Euro.",
+   "text": "In München zahlst du teilweise bis zu 7 €",
+   "bild": ""
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Am günstigsten wird es mit rund drei Euro fünfzig – vor allem in kleineren Städten.",
+   "text": "Am günstigsten wird es mit rund 3,50 € – vor allem in kleineren Städten",
+   "bild": ""
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Dazu kommt das Pfand: meist zwei bis drei Euro – manchmal mehr als der Glühwein selbst.",
+   "text": "Dazu kommt das Pfand: meist 2 bis 3 € – manchmal mehr als der Glühwein selbst",
+   "bild": ""
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Jetzt rechnen wir: Eine Tasse hat meist zweihundert Milliliter.",
+   "text": "Jetzt rechnen wir: Eine Tasse hat meist 200 Milliliter",
+   "bild": ""
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Bei fünf Euro sind das fünfundzwanzig Euro pro Liter.",
+   "text": "Bei 5 € sind das 25 € pro Liter",
+   "bild": ""
+  },
+  {
+   "id": "s10",
+   "sprechtext": "Im Supermarkt kostet ein Liter Glühwein oft unter drei Euro – also fast zehnmal weniger.",
+   "text": "Im Supermarkt kostet ein Liter Glühwein oft unter 3 € – also fast zehnmal weniger",
+   "bild": ""
+  },
+  {
+   "id": "s11",
+   "sprechtext": "Und der Staat? In jeder Tasse für fünf Euro stecken rund achtzig Cent Mehrwertsteuer.",
+   "text": "Und der Staat? In jeder Tasse für 5 € stecken rund 80 Cent Mehrwertsteuer",
+   "bild": ""
+  },
+  {
+   "id": "s12",
+   "sprechtext": "Unser Tipp: Setz dir ein Budget, bevor du losgehst – zwei Tassen und eine Wurst sind schnell fünfzehn Euro.",
+   "text": "Unser Tipp: Setz dir ein Budget, bevor du losgehst – zwei Tassen und eine Wurst sind schnell 15 €",
+   "bild": ""
+  },
+  {
+   "id": "s13",
+   "sprechtext": "Folge HundeFinanzTv, wir rechnen dir jeden Tag Geld einfach vor.",
+   "text": "Folge HundeFinanzTv, wir rechnen dir jeden Tag Geld einfach vor",
+   "bild": ""
+  }
+ ]
+}

@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #eef0f3; }
+      #root { position: relative; width: 100%; height: 100%; font-family: Montserrat, sans-serif; overflow: hidden;
+        background: linear-gradient(180deg,#f7f8fa,#eceef2); }
+      #raster { position: absolute; inset: 0; background-image: linear-gradient(#ffffff0c 2px, transparent 2px), linear-gradient(90deg, #ffffff0c 2px, transparent 2px); background-size: 90px 90px; }
+      .scene { position: absolute; inset: 0; }
+      .inner { position: absolute; inset: 0; }
+      .t { position: absolute; left: 0; width: 1080px; text-align: center; font-weight: 900; line-height: 1.02; letter-spacing: -1px; color: #fff; }
+      .glow-o { color: #ff8a1f; text-shadow: 0 0 50px #ff8a1faa; }
+      .glow-g { color: #2fd27a; text-shadow: 0 0 50px #2fd27aaa; }
+      .glow-r { color: #ff4d4d; text-shadow: 0 0 50px #ff4d4daa; }
+      .box { display: inline-block; padding: 6px 34px 14px; border-radius: 24px; background: #ff8a1f; color: #111; box-shadow: 0 0 60px #ff8a1f88; }
+      #logo { display:none;  position: absolute; left: 445px; top: 135px; width: 190px; height: 190px; border-radius: 50%; overflow: hidden; border: 5px solid #DB8622; box-shadow: 0 0 30px #ff8a1f88; z-index: 5; }
+      #logo img { width: 100%; height: 100%; object-fit: cover; }
+      #brand { display:none;  position: absolute; left: 0; top: 335px; width: 1080px; text-align: center; font-size: 38px; font-weight: 800; color: #ffffffdd; letter-spacing: 1px; z-index: 5; }
+      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; z-index: 9; pointer-events: none; }
+      .p { position: absolute; border-radius: 50%; }
+      .l { display: inline-block; }
+      #frame { position: absolute; inset: 0; border: 26px solid #DB8622; z-index: 10; }
+      .ew { position: absolute; left: 0; width: 1080px; text-align: center; z-index: 6; font-weight: 900; font-size: 104px; line-height: 1; color: #fff; text-transform: uppercase;
+        letter-spacing: -1px; text-shadow: 0 6px 0 #000, 0 0 30px #000; white-space: nowrap; }
+      .cap { position: absolute; left: 60px; top: 1330px; width: 960px; text-align: center; z-index: 6; }
+      .cap span { display: inline-block; margin: 0 16px; font-weight: 900; font-size: 74px; line-height: 1.15; color: #f28a1e; -webkit-text-stroke: 3px #ffffff; paint-order: stroke fill; text-shadow: 0 6px 14px #0000002e; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="63.54" data-width="1080" data-height="1920">
+      <div id="raster"><svg style="position:absolute;inset:0;width:1080px;height:1920px;opacity:.75" viewBox="0 0 1080 1920"><circle cx="487" cy="1413" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="267" cy="957" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="970" cy="1481" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="134" cy="1440" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="26" cy="1160" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="531" cy="1328" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="479" cy="592" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="963" cy="1307" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="975" cy="1013" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="308" cy="674" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="310" cy="1271" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="798" cy="1718" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="31" cy="1575" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="131" cy="526" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="87" cy="816" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="63" cy="1886" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="551" cy="1168" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="793" cy="1662" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="874" cy="1008" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="910" cy="474" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="748" cy="399" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="73" cy="478" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="1013" cy="644" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="528" cy="1576" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="893" cy="1795" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="616" cy="1062" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="1038" cy="990" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="718" cy="1293" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="834" cy="1396" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="475" cy="889" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="58" cy="772" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="334" cy="1630" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="668" cy="1309" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="213" cy="1661" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="432" cy="1496" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="546" cy="783" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="254" cy="329" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="987" cy="1508" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="990" cy="381" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="704" cy="1839" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="136" cy="1040" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="308" cy="241" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="601" cy="1074" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="850" cy="443" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="90" cy="1439" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="92" cy="973" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="677" cy="1328" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="571" cy="1235" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="483" cy="273" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="634" cy="214" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="157" cy="421" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="64" cy="604" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="835" cy="797" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="539" cy="519" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="86" cy="895" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="642" cy="937" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="283" cy="973" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="771" cy="1142" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="1065" cy="990" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="210" cy="1470" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="1038" cy="755" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="883" cy="1499" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="486" cy="816" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="895" cy="728" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="1067" cy="820" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="694" cy="223" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="850" cy="1387" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="644" cy="241" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="771" cy="1461" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="272" cy="323" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><line x1="487" y1="1413" x2="134" y2="1440" stroke="#c9ced5" stroke-width="1.5"/><line x1="134" y1="1440" x2="26" y2="1160" stroke="#c9ced5" stroke-width="1.5"/><line x1="479" y1="592" x2="308" y2="674" stroke="#c9ced5" stroke-width="1.5"/><line x1="963" y1="1307" x2="975" y2="1013" stroke="#c9ced5" stroke-width="1.5"/><line x1="31" y1="1575" x2="63" y2="1886" stroke="#c9ced5" stroke-width="1.5"/><line x1="131" y1="526" x2="87" y2="816" stroke="#c9ced5" stroke-width="1.5"/><line x1="910" y1="474" x2="748" y2="399" stroke="#c9ced5" stroke-width="1.5"/><line x1="910" y1="474" x2="1013" y2="644" stroke="#c9ced5" stroke-width="1.5"/><line x1="616" y1="1062" x2="718" y2="1293" stroke="#c9ced5" stroke-width="1.5"/><line x1="718" y1="1293" x2="834" y2="1396" stroke="#c9ced5" stroke-width="1.5"/><line x1="334" y1="1630" x2="213" y2="1661" stroke="#c9ced5" stroke-width="1.5"/><line x1="334" y1="1630" x2="432" y2="1496" stroke="#c9ced5" stroke-width="1.5"/><line x1="213" y1="1661" x2="432" y2="1496" stroke="#c9ced5" stroke-width="1.5"/><line x1="677" y1="1328" x2="571" y2="1235" stroke="#c9ced5" stroke-width="1.5"/><line x1="483" y1="273" x2="634" y2="214" stroke="#c9ced5" stroke-width="1.5"/><line x1="157" y1="421" x2="64" y2="604" stroke="#c9ced5" stroke-width="1.5"/><line x1="64" y1="604" x2="86" y2="895" stroke="#c9ced5" stroke-width="1.5"/><line x1="835" y1="797" x2="642" y2="937" stroke="#c9ced5" stroke-width="1.5"/><line x1="86" y1="895" x2="283" y2="973" stroke="#c9ced5" stroke-width="1.5"/><line x1="642" y1="937" x2="283" y2="973" stroke="#c9ced5" stroke-width="1.5"/><line x1="642" y1="937" x2="771" y2="1142" stroke="#c9ced5" stroke-width="1.5"/><line x1="1065" y1="990" x2="1038" y2="755" stroke="#c9ced5" stroke-width="1.5"/><line x1="1038" y1="755" x2="895" y2="728" stroke="#c9ced5" stroke-width="1.5"/><line x1="895" y1="728" x2="1067" y2="820" stroke="#c9ced5" stroke-width="1.5"/><line x1="694" y1="223" x2="644" y2="241" stroke="#c9ced5" stroke-width="1.5"/><line x1="850" y1="1387" x2="771" y2="1461" stroke="#c9ced5" stroke-width="1.5"/></svg></div>
+      <div id="z0" class="scene clip" data-start="0.0" data-duration="8.243" data-track-index="1"><div id="z0-i" class="inner"><style>
+.nk-karte { position:absolute; background:#ffffff; border:2px solid #e2e5ea; border-radius:12px; box-shadow:0 18px 40px #0000001a; padding:34px 40px; z-index:4; }
+.nk-kt { font-weight:700; font-size:42px; color:#1d2330; padding-bottom:20px; border-bottom:2px solid #e8eaee; margin-bottom:12px; }
+.nk-row { display:flex; align-items:center; font-size:40px; color:#3a414c; padding:20px 0; white-space:nowrap; }
+.nk-row .v { margin-left:auto; font-weight:800; }
+.nk-ok { color:#22a35a; font-size:46px; margin-left:26px; }
+.nk-kachel { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; border-radius:8px; height:200px; }
+.nk-kachel img { max-width:200px; max-height:84px; }
+.nk-kachel .nk-p { font-weight:800; font-size:44px; }
+.nk-gross { position:absolute; left:0; width:1080px; text-align:center; font-weight:900; color:#1d2330; z-index:4; }
+</style><div class="nk-karte" id="tk1" style="left:110px;top:360px;width:860px;text-align:center"><div class="nk-kt">Glühwein 2026</div><div style="font-weight:900;font-size:170px;color:#d23c3c;line-height:1.1">5 €</div><div style="font-size:46px;color:#3a414c">pro Tasse</div></div><div id="p1" style="position:absolute;left:0;width:1080px;top:780px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#1d2330;color:#fff;font-weight:900;font-size:44px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">auf vielen Weihnachtsmärkten</span></div><div id="co" style="position:absolute;left:90px;width:900px;top:840px;background:#101722e8;border:1px solid #ffffff22;border-radius:22px;padding:26px 34px 24px;box-shadow:0 18px 40px #0006;z-index:28;opacity:0;font-family:Montserrat,sans-serif"><div style="font-weight:700;font-size:34px;color:#fff">Kommentare</div><div style="display:flex;align-items:center;gap:18px;margin-top:20px"><div style="width:50px;height:50px;border-radius:50%;background:#3b82f6;flex:none;display:flex;align-items:flex-end;justify-content:center;overflow:hidden"><div style="width:22px;height:22px;border-radius:50%;background:#fff;margin-bottom:-2px;box-shadow:0 26px 0 6px #fff"></div></div><div style="flex:1;border-bottom:3px solid #ffffffcc;padding-bottom:8px;font-size:36px;color:#fff;white-space:nowrap"><span class="tz" style="opacity:0">M</span><span class="tz" style="opacity:0">e</span><span class="tz" style="opacity:0">i</span><span class="tz" style="opacity:0">n</span><span class="tz" style="opacity:0">e</span><span class="tz" style="opacity:0">&nbsp;</span><span class="tz" style="opacity:0">M</span><span class="tz" style="opacity:0">e</span><span class="tz" style="opacity:0">i</span><span class="tz" style="opacity:0">n</span><span class="tz" style="opacity:0">u</span><span class="tz" style="opacity:0">n</span><span class="tz" style="opacity:0">g</span><span class="tz" style="opacity:0">&nbsp;</span><span class="tz" style="opacity:0">d</span><span class="tz" style="opacity:0">a</span><span class="tz" style="opacity:0">z</span><span class="tz" style="opacity:0">u</span><span id="co-cur" style="display:inline-block;width:3px;height:38px;background:#fff;vertical-align:middle;margin-left:2px"></span></div></div><div style="display:flex;justify-content:flex-end;align-items:center;gap:30px;margin-top:20px"><span style="font-size:30px;color:#ffffffaa;font-weight:600">Abbrechen</span><span style="position:relative;display:inline-block"><span id="co-btn" style="display:inline-block;padding:12px 34px;border-radius:30px;background:#f28a1e;color:#111;font-weight:800;font-size:32px;white-space:nowrap">Kommentieren</span></span></div></div><div id="co-z" style="position:absolute;left:560px;top:1170px;width:58px;height:58px;z-index:30;opacity:0"><svg viewBox="0 0 24 24" style="width:100%;height:100%;filter:drop-shadow(0 4px 6px #0006)"><path d="M4 2 L4 20 L9 15.5 L12.5 23 L15.5 21.6 L12 14.3 L19 14 Z" fill="#fff" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/></svg></div><div id="co-bn" style="position:absolute;left:0;width:1080px;top:1140px;display:flex;justify-content:center;z-index:27;opacity:0"><span style="padding:18px 40px;border-radius:40px;background:#101722e8;border:1px solid #ffffff22;color:#fff;font-weight:900;font-size:40px;letter-spacing:3px;white-space:nowrap">DEINE MEINUNG <span style="color:#f28a1e">IN DIE KOMMENTARE</span></span></div></div></div>
+      <div id="z1" class="scene clip" data-start="8.243" data-duration="6.679" data-track-index="1"><div id="z1-i" class="inner"><div id="t3" class="nk-gross" style="top:360px;font-size:60px;color:#d23c3c;line-height:1.1">Wie viel kassiert der Staat?</div><div id="k3" class="nk-karte" style="left:110px;top:560px;width:860px"><div class="nk-kt">Gleich die Rechnung</div><div style="font-weight:900;font-size:180px;color:#d23c3c;text-align:center;line-height:1.1">?</div></div></div></div>
+      <div id="z2" class="scene clip" data-start="14.922" data-duration="12.779" data-track-index="1"><div id="z2-i" class="inner"><div id="t4" class="nk-gross" style="top:340px;font-size:70px;color:#1d2330;line-height:1.1">Preise 2026</div><div id="k4" class="nk-karte" style="left:110px;top:520px;width:860px"><div class="nk-kt">Glühwein pro Tasse</div><div id="r4" class="nk-row">Im Schnitt<span class="v" style="color:#f28a1e">4,50 – 5 €</span></div><div id="r5" class="nk-row">München<span class="v" style="color:#d23c3c">bis 7 €</span><span class="nk-ok">▲</span></div><div id="r6" class="nk-row">Günstigste Märkte<span class="v" style="color:#22a35a">≈ 3,50 €</span></div></div></div></div>
+      <div id="z3" class="scene clip" data-start="27.701" data-duration="5.635" data-track-index="1"><div id="z3-i" class="inner"><div id="t7" class="nk-gross" style="top:340px;font-size:70px;color:#1d2330;line-height:1.1">Dazu: Pfand</div><div id="k7" class="nk-karte" style="left:110px;top:520px;width:860px"><div class="nk-kt">Für die Tasse</div><div id="r7" class="nk-row">Pfand<span class="v" style="color:#f28a1e">2 – 3 €</span></div></div><div id="p7" style="position:absolute;left:0;width:1080px;top:860px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#d23c3c;color:#fff;font-weight:900;font-size:46px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">manchmal mehr als der Glühwein!</span></div></div></div>
+      <div id="z4" class="scene clip" data-start="33.336" data-duration="7.268" data-track-index="1"><div id="z4-i" class="inner"><div id="t8" class="nk-gross" style="top:340px;font-size:70px;color:#1d2330;line-height:1.1">Jetzt rechnen wir</div><div id="k8" class="nk-karte" style="left:110px;top:500px;width:860px"><div class="nk-kt">Pro Liter</div><div id="r8" class="nk-row">Eine Tasse<span class="v" style="color:#1d2330">200 ml</span></div><div id="r9a" class="nk-row">5 € ÷ 0,2 Liter<span class="v" style="color:#1d2330">=</span></div></div><div id="n9" class="nk-gross" style="top:900px;font-size:120px;color:#d23c3c">25 € / Liter</div></div></div>
+      <div id="z5" class="scene clip" data-start="40.604" data-duration="5.819" data-track-index="1"><div id="z5-i" class="inner"><div id="t10" class="nk-gross" style="top:340px;font-size:70px;color:#1d2330;line-height:1.1">Zum Vergleich</div><div id="k10" class="nk-karte" style="left:110px;top:500px;width:860px"><div class="nk-kt">Ein Liter Glühwein</div><div id="r10a" class="nk-row">Weihnachtsmarkt<span class="v" style="color:#d23c3c">25 €</span></div><div id="r10b" class="nk-row">Supermarkt<span class="v" style="color:#22a35a">unter 3 €</span></div></div><div id="p10" style="position:absolute;left:0;width:1080px;top:860px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#d23c3c;color:#fff;font-weight:900;font-size:56px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">fast 10× teurer</span></div></div></div>
+      <div id="z6" class="scene clip" data-start="46.423" data-duration="5.412" data-track-index="1"><div id="z6-i" class="inner"><div id="t11" class="nk-gross" style="top:340px;font-size:70px;color:#d23c3c;line-height:1.1">Und der Staat?</div><div id="n11" class="nk-gross" style="top:470px;font-size:90px;color:#1d2330">5 € Tasse</div><div id="b11" style="position:absolute;left:110px;top:640px;width:860px;height:120px;display:flex;border-radius:16px;overflow:hidden;box-shadow:0 12px 26px #0002;z-index:4"><div style="flex:420;background:#f28a1e;color:#fff;font-weight:900;font-size:48px;display:flex;align-items:center;justify-content:center">4,20 € Glühwein</div><div id="b11s" style="flex:110;background:#d23c3c;color:#fff;font-weight:900;font-size:36px;white-space:nowrap;display:flex;align-items:center;justify-content:center">0,80 €</div></div><div id="p11" style="position:absolute;left:0;width:1080px;top:820px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#d23c3c;color:#fff;font-weight:900;font-size:46px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">≈ 80 Cent Mehrwertsteuer (19 %)</span></div></div></div>
+      <div id="z7" class="scene clip" data-start="51.835" data-duration="6.579" data-track-index="1"><div id="z7-i" class="inner"><div id="t12" class="nk-gross" style="top:340px;font-size:70px;color:#22a35a;line-height:1.1">Unser Tipp: Budget</div><div id="k12" class="nk-karte" style="left:110px;top:500px;width:860px"><div class="nk-kt">Schnell zusammen</div><div id="r12a" class="nk-row">2 Tassen Glühwein<span class="v" style="color:#1d2330">10 €</span></div><div id="r12b" class="nk-row">1 Bratwurst<span class="v" style="color:#1d2330">≈ 5 €</span></div><div id="r12c" class="nk-row" style="border-top:3px solid #1d2330;margin-top:8px;font-weight:800;color:#1d2330">Summe<span class="v" style="color:#d23c3c;font-size:56px">≈ 15 €</span></div></div></div></div>
+      <div id="z8" class="scene clip" data-start="58.414" data-duration="5.126" data-track-index="1"><div id="z8-i" class="inner"><div id="fl13" style="position:absolute;left:340px;top:480px;width:400px;height:400px;border-radius:50%;overflow:hidden;border:10px solid #f28a1e;box-shadow:0 20px 50px #0003;background:#1b1f22;z-index:4"><img src="assets/beagle.png" style="width:100%;height:100%;object-fit:cover"/></div><div id="n13" class="nk-gross" style="top:920px;font-size:64px">HundeFinanz<span style="color:#f28a1e">Tv</span></div><div id="c13" style="position:absolute;left:0;width:1080px;top:1040px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#f28a1e;color:#fff;font-weight:900;font-size:58px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">+ Folgen</span></div></div></div>
+      <div id="z9" class="scene clip" data-start="11.922" data-duration="3.0" data-track-index="7"><div id="z9-i" class="inner"><style>
+#ls-bg { position:absolute; inset:0; background: linear-gradient(180deg,#f7f8fa,#eceef2); border:none; box-sizing:border-box; z-index:11; overflow:hidden; }
+#ls-ring { position:absolute; left:375.0px; top:715.0px; width:330px; height:330px; border-radius:50%; border:6px solid #ff8a1f; z-index:12; }
+#ls-logo { position:absolute; left:415.0px; top:755.0px; width:250px; height:250px; border-radius:50%; overflow:hidden;
+  border:8px solid #DB8622; box-shadow:0 0 70px #ff8a1fbb, 0 20px 40px #000; z-index:13; }
+#ls-logo img { width:100%; height:100%; object-fit:cover; }
+#ls-txt { position:absolute; left:320px; top:817.6px; z-index:13; clip-path: inset(0 0 0 0); }
+#ls-name { font-weight:900; font-size:80px; line-height:1; color:#1d2330; letter-spacing:-1px; white-space:nowrap; text-shadow:none; }
+#ls-name b { color:#ff8a1f; text-shadow:0 0 40px #ff8a1faa; }
+#ls-tag { margin-top:18px; font-weight:900; font-size:33px; color:#ff8a1f; letter-spacing:1px; white-space:nowrap; }
+#ls-tag i { font-style:normal; color:#1d2330aa; padding:0 6px; }
+</style>
+<div id="ls-bg"><svg style="position:absolute;inset:0;width:1080px;height:1920px;opacity:.75" viewBox="0 0 1080 1920"><circle cx="487" cy="1413" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="267" cy="957" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="970" cy="1481" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="134" cy="1440" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="26" cy="1160" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="531" cy="1328" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="479" cy="592" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="963" cy="1307" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="975" cy="1013" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="308" cy="674" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="310" cy="1271" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="798" cy="1718" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="31" cy="1575" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="131" cy="526" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="87" cy="816" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="63" cy="1886" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="551" cy="1168" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="793" cy="1662" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="874" cy="1008" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="910" cy="474" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="748" cy="399" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="73" cy="478" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="1013" cy="644" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="528" cy="1576" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="893" cy="1795" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="616" cy="1062" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="1038" cy="990" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="718" cy="1293" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="834" cy="1396" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="475" cy="889" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="58" cy="772" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="334" cy="1630" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="668" cy="1309" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="213" cy="1661" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="432" cy="1496" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="546" cy="783" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="254" cy="329" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="987" cy="1508" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="990" cy="381" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="704" cy="1839" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="136" cy="1040" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="308" cy="241" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="601" cy="1074" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="850" cy="443" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="90" cy="1439" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="92" cy="973" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="677" cy="1328" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="571" cy="1235" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="483" cy="273" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="634" cy="214" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="157" cy="421" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="64" cy="604" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="835" cy="797" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="539" cy="519" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="86" cy="895" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="642" cy="937" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="283" cy="973" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="771" cy="1142" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="1065" cy="990" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="210" cy="1470" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="1038" cy="755" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="883" cy="1499" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="486" cy="816" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="895" cy="728" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="1067" cy="820" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="694" cy="223" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="850" cy="1387" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="644" cy="241" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="771" cy="1461" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="272" cy="323" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><line x1="487" y1="1413" x2="134" y2="1440" stroke="#c9ced5" stroke-width="1.5"/><line x1="134" y1="1440" x2="26" y2="1160" stroke="#c9ced5" stroke-width="1.5"/><line x1="479" y1="592" x2="308" y2="674" stroke="#c9ced5" stroke-width="1.5"/><line x1="963" y1="1307" x2="975" y2="1013" stroke="#c9ced5" stroke-width="1.5"/><line x1="31" y1="1575" x2="63" y2="1886" stroke="#c9ced5" stroke-width="1.5"/><line x1="131" y1="526" x2="87" y2="816" stroke="#c9ced5" stroke-width="1.5"/><line x1="910" y1="474" x2="748" y2="399" stroke="#c9ced5" stroke-width="1.5"/><line x1="910" y1="474" x2="1013" y2="644" stroke="#c9ced5" stroke-width="1.5"/><line x1="616" y1="1062" x2="718" y2="1293" stroke="#c9ced5" stroke-width="1.5"/><line x1="718" y1="1293" x2="834" y2="1396" stroke="#c9ced5" stroke-width="1.5"/><line x1="334" y1="1630" x2="213" y2="1661" stroke="#c9ced5" stroke-width="1.5"/><line x1="334" y1="1630" x2="432" y2="1496" stroke="#c9ced5" stroke-width="1.5"/><line x1="213" y1="1661" x2="432" y2="1496" stroke="#c9ced5" stroke-width="1.5"/><line x1="677" y1="1328" x2="571" y2="1235" stroke="#c9ced5" stroke-width="1.5"/><line x1="483" y1="273" x2="634" y2="214" stroke="#c9ced5" stroke-width="1.5"/><line x1="157" y1="421" x2="64" y2="604" stroke="#c9ced5" stroke-width="1.5"/><line x1="64" y1="604" x2="86" y2="895" stroke="#c9ced5" stroke-width="1.5"/><line x1="835" y1="797" x2="642" y2="937" stroke="#c9ced5" stroke-width="1.5"/><line x1="86" y1="895" x2="283" y2="973" stroke="#c9ced5" stroke-width="1.5"/><line x1="642" y1="937" x2="283" y2="973" stroke="#c9ced5" stroke-width="1.5"/><line x1="642" y1="937" x2="771" y2="1142" stroke="#c9ced5" stroke-width="1.5"/><line x1="1065" y1="990" x2="1038" y2="755" stroke="#c9ced5" stroke-width="1.5"/><line x1="1038" y1="755" x2="895" y2="728" stroke="#c9ced5" stroke-width="1.5"/><line x1="895" y1="728" x2="1067" y2="820" stroke="#c9ced5" stroke-width="1.5"/><line x1="694" y1="223" x2="644" y2="241" stroke="#c9ced5" stroke-width="1.5"/><line x1="850" y1="1387" x2="771" y2="1461" stroke="#c9ced5" stroke-width="1.5"/></svg></div><div id="ls-ring"></div>
+<div id="ls-logo"><img src="assets/beagle.png" alt="" /></div>
+<div id="ls-txt"><div id="ls-name">HundeFinanz<b>Tv</b></div><div id="ls-tag">AKTIEN <i>|</i> FINANZEN <i>|</i> VERMÖGEN</div></div></div></div>
+      <div id="z10" class="scene clip" data-start="0.0" data-duration="63.54" data-track-index="8"><div id="z10-i" class="inner"><div id="kopf" style="position:absolute;left:0;top:150px;width:1080px;height:120px;background:linear-gradient(90deg,#fbe9e9,#fdf6e3);border-bottom:2px solid #e4e6ea;display:flex;align-items:center;padding:0 64px 0 50px;gap:18px;z-index:8"><img src="assets/beagle.png" style="width:86px;height:86px;border-radius:50%;border:3px solid #fff;box-shadow:0 4px 10px #0002"/><div style="font-weight:700;font-size:40px;color:#1d2330">HundeFinanzTv</div><div style="margin-left:auto;font-size:31px;color:#1d2330;font-weight:800;letter-spacing:1px;white-space:nowrap">NEWS<span style="font-weight:500;color:#555c66;margin-left:12px">22.11.2026</span></div></div></div></div>
+      <div id="logo"><img src="assets/beagle.png" alt="" /></div>
+      <div id="brand">HundeFinanzTv</div>
+      <div id="flash"></div>
+      <div id="frame"></div>
+      <div id="captions" data-track-kind="captions">
+        <div id="c1" class="cap clip" data-start="0.0" data-duration="1.158" data-track-index="2"><span id="w1-0">5 €</span> <span id="w1-1">für</span> <span id="w1-2">eine</span> <span id="w1-3">Tasse</span> </div>
+        <div id="c2" class="cap clip" data-start="1.158" data-duration="1.741" data-track-index="2"><span id="w2-0">Glühwein</span> <span id="w2-1">–</span> <span id="w2-2">das</span> <span id="w2-3">ist</span> <span id="w2-4">auf</span> <span id="w2-5">vielen</span> </div>
+        <div id="c3" class="cap clip" data-start="2.899" data-duration="1.865" data-track-index="2"><span id="w3-0">Weihnachtsmärkten</span> <span id="w3-1">jetzt</span> <span id="w3-2">normal</span> </div>
+        <div id="c4" class="cap clip" data-start="4.764" data-duration="0.528" data-track-index="2"><span id="w4-0">Schreib</span> <span id="w4-1">uns</span> </div>
+        <div id="c5" class="cap clip" data-start="5.292" data-duration="1.511" data-track-index="2"><span id="w5-0">in</span> <span id="w5-1">die</span> <span id="w5-2">Kommentare:</span> <span id="w5-3">Was</span> <span id="w5-4">zahlst</span> </div>
+        <div id="c6" class="cap clip" data-start="6.803" data-duration="1.44" data-track-index="2"><span id="w6-0">du</span> <span id="w6-1">bei</span> <span id="w6-2">dir</span> <span id="w6-3">für</span> <span id="w6-4">den</span> <span id="w6-5">Glühwein?</span> </div>
+        <div id="c7" class="cap clip" data-start="8.243" data-duration="1.343" data-track-index="2"><span id="w7-0">Und</span> <span id="w7-1">gleich</span> <span id="w7-2">zeigen</span> <span id="w7-3">wir</span> <span id="w7-4">dir,</span> </div>
+        <div id="c8" class="cap clip" data-start="9.586" data-duration="1.358" data-track-index="2"><span id="w8-0">wie</span> <span id="w8-1">viel</span> <span id="w8-2">davon</span> <span id="w8-3">eigentlich</span> </div>
+        <div id="c9" class="cap clip" data-start="10.944" data-duration="0.978" data-track-index="2"><span id="w9-0">der</span> <span id="w9-1">Staat</span> <span id="w9-2">kassiert</span> </div>
+        <div id="c10" class="cap clip" data-start="14.922" data-duration="1.211" data-track-index="2"><span id="w10-0">Im</span> <span id="w10-1">Schnitt</span> <span id="w10-2">kostet</span> </div>
+        <div id="c11" class="cap clip" data-start="16.133" data-duration="1.923" data-track-index="2"><span id="w11-0">eine</span> <span id="w11-1">Tasse</span> <span id="w11-2">dieses</span> <span id="w11-3">Jahr</span> </div>
+        <div id="c12" class="cap clip" data-start="18.056" data-duration="1.781" data-track-index="2"><span id="w12-0">zwischen</span> <span id="w12-1">4,50</span> <span id="w12-2">und</span> <span id="w12-3">5 €</span> </div>
+        <div id="c13" class="cap clip" data-start="19.837" data-duration="1.78" data-track-index="2"><span id="w13-0">In</span> <span id="w13-1">München</span> <span id="w13-2">zahlst</span> <span id="w13-3">du</span> </div>
+        <div id="c14" class="cap clip" data-start="21.617" data-duration="1.716" data-track-index="2"><span id="w14-0">teilweise</span> <span id="w14-1">bis</span> <span id="w14-2">zu</span> <span id="w14-3">7 €</span> </div>
+        <div id="c15" class="cap clip" data-start="23.333" data-duration="1.211" data-track-index="2"><span id="w15-0">Am</span> <span id="w15-1">günstigsten</span> <span id="w15-2">wird</span> </div>
+        <div id="c16" class="cap clip" data-start="24.544" data-duration="1.53" data-track-index="2"><span id="w16-0">es</span> <span id="w16-1">mit</span> <span id="w16-2">rund</span> <span id="w16-3">3,50 €</span> <span id="w16-4">–</span> <span id="w16-5">vor</span> </div>
+        <div id="c17" class="cap clip" data-start="26.074" data-duration="1.627" data-track-index="2"><span id="w17-0">allem</span> <span id="w17-1">in</span> <span id="w17-2">kleineren</span> <span id="w17-3">Städten</span> </div>
+        <div id="c18" class="cap clip" data-start="27.701" data-duration="2.056" data-track-index="2"><span id="w18-0">Dazu</span> <span id="w18-1">kommt</span> <span id="w18-2">das</span> <span id="w18-3">Pfand:</span> <span id="w18-4">meist</span> </div>
+        <div id="c19" class="cap clip" data-start="29.757" data-duration="1.874" data-track-index="2"><span id="w19-0">2</span> <span id="w19-1">bis</span> <span id="w19-2">3 €</span> <span id="w19-3">–</span> <span id="w19-4">manchmal</span> <span id="w19-5">mehr</span> </div>
+        <div id="c20" class="cap clip" data-start="31.631" data-duration="1.705" data-track-index="2"><span id="w20-0">als</span> <span id="w20-1">der</span> <span id="w20-2">Glühwein</span> <span id="w20-3">selbst</span> </div>
+        <div id="c21" class="cap clip" data-start="33.336" data-duration="1.941" data-track-index="2"><span id="w21-0">Jetzt</span> <span id="w21-1">rechnen</span> <span id="w21-2">wir:</span> <span id="w21-3">Eine</span> <span id="w21-4">Tasse</span> </div>
+        <div id="c22" class="cap clip" data-start="35.277" data-duration="1.793" data-track-index="2"><span id="w22-0">hat</span> <span id="w22-1">meist</span> <span id="w22-2">200</span> <span id="w22-3">Milliliter</span> </div>
+        <div id="c23" class="cap clip" data-start="37.07" data-duration="1.42" data-track-index="2"><span id="w23-0">Bei</span> <span id="w23-1">5 €</span> <span id="w23-2">sind</span> </div>
+        <div id="c24" class="cap clip" data-start="38.49" data-duration="2.114" data-track-index="2"><span id="w24-0">das</span> <span id="w24-1">25 €</span> <span id="w24-2">pro</span> <span id="w24-3">Liter</span> </div>
+        <div id="c25" class="cap clip" data-start="40.604" data-duration="2.251" data-track-index="2"><span id="w25-0">Im</span> <span id="w25-1">Supermarkt</span> <span id="w25-2">kostet</span> <span id="w25-3">ein</span> <span id="w25-4">Liter</span> </div>
+        <div id="c26" class="cap clip" data-start="42.855" data-duration="1.778" data-track-index="2"><span id="w26-0">Glühwein</span> <span id="w26-1">oft</span> <span id="w26-2">unter</span> <span id="w26-3">3 €</span> <span id="w26-4">–</span> </div>
+        <div id="c27" class="cap clip" data-start="44.633" data-duration="1.79" data-track-index="2"><span id="w27-0">also</span> <span id="w27-1">fast</span> <span id="w27-2">zehnmal</span> <span id="w27-3">weniger</span> </div>
+        <div id="c28" class="cap clip" data-start="46.423" data-duration="2.201" data-track-index="2"><span id="w28-0">Und</span> <span id="w28-1">der</span> <span id="w28-2">Staat?</span> <span id="w28-3">In</span> <span id="w28-4">jeder</span> <span id="w28-5">Tasse</span> </div>
+        <div id="c29" class="cap clip" data-start="48.624" data-duration="1.192" data-track-index="2"><span id="w29-0">für</span> <span id="w29-1">5 €</span> <span id="w29-2">stecken</span> </div>
+        <div id="c30" class="cap clip" data-start="49.816" data-duration="2.019" data-track-index="2"><span id="w30-0">rund</span> <span id="w30-1">80</span> <span id="w30-2">Cent</span> <span id="w30-3">Mehrwertsteuer</span> </div>
+        <div id="c31" class="cap clip" data-start="51.835" data-duration="1.021" data-track-index="2"><span id="w31-0">Unser</span> <span id="w31-1">Tipp:</span> <span id="w31-2">Setz</span> </div>
+        <div id="c32" class="cap clip" data-start="52.856" data-duration="1.09" data-track-index="2"><span id="w32-0">dir</span> <span id="w32-1">ein</span> <span id="w32-2">Budget,</span> </div>
+        <div id="c33" class="cap clip" data-start="53.946" data-duration="1.745" data-track-index="2"><span id="w33-0">bevor</span> <span id="w33-1">du</span> <span id="w33-2">losgehst</span> <span id="w33-3">–</span> <span id="w33-4">zwei</span> </div>
+        <div id="c34" class="cap clip" data-start="55.691" data-duration="1.527" data-track-index="2"><span id="w34-0">Tassen</span> <span id="w34-1">und</span> <span id="w34-2">eine</span> <span id="w34-3">Wurst</span> </div>
+        <div id="c35" class="cap clip" data-start="57.218" data-duration="1.196" data-track-index="2"><span id="w35-0">sind</span> <span id="w35-1">schnell</span> <span id="w35-2">15 €</span> </div>
+        <div id="c36" class="cap clip" data-start="58.414" data-duration="1.461" data-track-index="2"><span id="w36-0">Folge</span> <span id="w36-1">HundeFinanzTv,</span> </div>
+        <div id="c37" class="cap clip" data-start="59.875" data-duration="1.876" data-track-index="2"><span id="w37-0">wir</span> <span id="w37-1">rechnen</span> <span id="w37-2">dir</span> <span id="w37-3">jeden</span> <span id="w37-4">Tag</span> </div>
+        <div id="c38" class="cap clip" data-start="61.751" data-duration="1.186" data-track-index="2"><span id="w38-0">Geld</span> <span id="w38-1">einfach</span> <span id="w38-2">vor</span> </div>
+      </div>
+      <audio id="voice" src="assets/mix.wav" data-start="0" data-duration="63.54" data-track-index="3"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const pop = (sel, at) => tl.fromTo(sel, { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.2)" }, at);
+      const slam = (sel, at) => tl.fromTo(sel, { scale: 2.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.28, ease: "power4.in" }, at);
+      const shake = (sel, at) => tl.fromTo(sel, { x: -14 }, { x: 14, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }, at);
+      const draw = (sel, at, dur) => {
+        const len = document.querySelector(sel).getTotalLength();
+        tl.fromTo(sel, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: dur, ease: "power2.out" }, at);
+      };
+      const zaehl = (sel, von, bis, at, dur, nach) => {
+        const o = { v: von };
+        tl.fromTo(o, { v: von }, { v: bis, duration: dur, ease: "power2.out", onUpdate: () => {
+          document.querySelector(sel).textContent = Math.round(o.v).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (nach || ""); }, immediateRender: false }, at);
+      };
+      const flash = (at, st) => tl.fromTo("#flash", { opacity: st || 0.85 }, { opacity: 0, duration: 0.35, ease: "power2.out", immediateRender: false }, at);
+      const burst = (sel, at, dur) => tl.fromTo(sel + " .p", { x: 0, y: 0, scale: 1.4, opacity: 1 },
+        { x: (i, el) => +el.dataset.dx, y: (i, el) => +el.dataset.dy, scale: 0.2, opacity: 0, duration: dur || 1.0, ease: "power3.out", immediateRender: false }, at);
+      const letters = (sel, at) => tl.fromTo(sel + " .l", { y: 140, opacity: 0, rotation: 12, scale: 0.6 },
+        { y: 0, opacity: 1, rotation: 0, scale: 1, duration: 0.45, stagger: 0.035, ease: "back.out(2.2)" }, at);
+      const glitch = (sel, at) => tl.fromTo(sel, { x: -22, skewX: 18 }, { x: 0, skewX: 0, duration: 0.24, ease: "steps(6)" }, at);
+      tl.fromTo("#z0-i", { scale: 1.0 }, { scale: 1.06, duration: 8.243, ease: "none" }, 0.0);
+      const wachs = (sel, at, dur) => tl.fromTo(sel, { scaleY: 0 }, { scaleY: 1, duration: dur || 0.6, ease: "power3.out" }, at); const spann = (sel, at) => { tl.fromTo(sel + "-f", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, at); tl.fromTo(sel + "-a", { scale: 0 }, { scale: 1, duration: 0.25, ease: "back.out(2)" }, at); tl.fromTo(sel + "-b", { x: -200, scale: 0 }, { x: 0, scale: 1, duration: 0.6, ease: "power3.out" }, at); }; const lauf = (sel, at, dur) => tl.fromTo(sel + "-s", { x: 0 }, { x: -1400, duration: dur, ease: "none" }, at); const blink = (sel, at) => { tl.fromTo(sel + " .rk", { y: 120, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, stagger: 0.08, ease: "back.out(1.6)" }, at); tl.fromTo(sel + " .led", { opacity: 0.2 }, { opacity: 1, duration: 0.18, stagger: { each: 0.02, repeat: 7, yoyo: true }, ease: "none" }, at + 0.4); }; const stempeln = (sel, at) => tl.fromTo(sel, { scale: 3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "power4.in" }, at); pop("#tk1", 0.0); pop("#p1", 1.158); tl.to("#p1", { opacity: 0, duration: 0.2 }, 4.764 - 0.1); tl.fromTo("#co", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 4.764); tl.fromTo("#co-bn", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 4.764 + 0.15); tl.to("#co .tz", { opacity: 1, duration: 0.01, stagger: 0.067 }, 4.764 + 0.5); tl.fromTo("#co-cur", { opacity: 1 }, { opacity: 0, duration: 0.3, repeat: 13, yoyo: true, ease: "steps(1)" }, 4.764 + 0.3); tl.fromTo("#co-z", { x: -200, y: 120, opacity: 0 }, { x: 230, y: -160, opacity: 1, duration: 0.8, ease: "power2.inOut" }, 4.764 + 0.5 + 1.2); tl.to("#co-z", { scale: 0.82, duration: 0.08, yoyo: true, repeat: 1 }, 7.364000000000001); tl.to("#co-btn", { scale: 0.9, duration: 0.08, yoyo: true, repeat: 1 }, 7.364000000000001); tl.to("#co-k2", { opacity: 1, duration: 0.15 }, 7.364000000000001 + 0.15);
+      tl.fromTo("#z1-i", { scale: 1.0 }, { scale: 1.06, duration: 6.679, ease: "none" }, 8.243);
+      pop("#t3", 8.243); pop("#k3", 9.586); tl.fromTo("#z1-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 8.243);
+      tl.fromTo("#z2-i", { scale: 1.0 }, { scale: 1.06, duration: 12.779, ease: "none" }, 14.922);
+      pop("#t4", 14.922); pop("#k4", 14.922 + 0.1); pop("#r4", 16.133); pop("#r5", 21.617); pop("#r6", 24.544); tl.fromTo("#z2-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 14.922);
+      tl.fromTo("#z3-i", { scale: 1.0 }, { scale: 1.06, duration: 5.635, ease: "none" }, 27.701);
+      pop("#t7", 27.701); pop("#k7", 27.701 + 0.3); pop("#r7", 29.757); pop("#p7", 31.631); tl.fromTo("#z3-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 27.701);
+      tl.fromTo("#z4-i", { scale: 1.0 }, { scale: 1.06, duration: 7.268, ease: "none" }, 33.336);
+      pop("#t8", 33.336); pop("#k8", 33.336 + 0.1); pop("#r8", 35.277); pop("#r9a", 37.07); pop("#n9", 38.49); tl.fromTo("#z4-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 33.336);
+      tl.fromTo("#z5-i", { scale: 1.0 }, { scale: 1.06, duration: 5.819, ease: "none" }, 40.604);
+      pop("#t10", 40.604); pop("#k10", 40.604 + 0.1); pop("#r10a", 40.604 + 0.3); pop("#r10b", 42.855); pop("#p10", 44.633); tl.fromTo("#z5-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 40.604);
+      tl.fromTo("#z6-i", { scale: 1.0 }, { scale: 1.06, duration: 5.412, ease: "none" }, 46.423);
+      pop("#t11", 46.423); pop("#n11", 48.624); tl.fromTo("#b11", { scaleX: 0, transformOrigin: "0 50%" }, { scaleX: 1, duration: 0.7 }, 48.624 + 0.3); pop("#p11", 49.816); tl.fromTo("#b11s", { scale: 1 }, { scale: 1.08, duration: 0.25, yoyo: true, repeat: 3 }, 49.816); tl.fromTo("#z6-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 46.423);
+      tl.fromTo("#z7-i", { scale: 1.0 }, { scale: 1.06, duration: 6.579, ease: "none" }, 51.835);
+      pop("#t12", 51.835); pop("#k12", 51.835 + 0.1); pop("#r12a", 53.946); pop("#r12b", 55.691); pop("#r12c", 57.218); tl.fromTo("#z7-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 51.835);
+      tl.fromTo("#z8-i", { scale: 1.0 }, { scale: 1.06, duration: 5.126, ease: "none" }, 58.414);
+      pop("#fl13", 58.414); pop("#n13", 58.414 + 0.2); pop("#c13", 58.414 + 0.4); tl.fromTo("#z8-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 58.414);
+      tl.fromTo("#z9-i", { scale: 1.0 }, { scale: 1.06, duration: 3.0, ease: "none" }, 11.922);
+      var lsHide = ["#logo", "#brand"].concat(Array.from(document.querySelectorAll("#lb, #nk, #nk + div, #kopf")));
+      tl.set(lsHide, { opacity: 0 }, 11.922); tl.set(lsHide, { opacity: 1 }, 14.922);
+      tl.fromTo("#ls-logo", { scale: 0, rotation: -25 }, { scale: 1, rotation: 0, duration: 0.5, ease: "back.out(2.4)" }, 11.922);
+      flash(12.042, 0.35);
+      tl.fromTo("#ls-ring", { scale: 0.6, opacity: 1 }, { scale: 1.7, opacity: 0, duration: 0.7, ease: "power2.out" }, 12.072000000000001);
+      tl.fromTo(["#ls-logo", "#ls-ring"], { x: 0 }, { x: -365.0, duration: 0.5, ease: "power3.inOut" }, 12.672);
+      tl.fromTo("#ls-txt", { x: 260, opacity: 0, clipPath: "inset(0 0 0 100%)" }, { x: 0, opacity: 1, clipPath: "inset(0 0 0 0%)", duration: 0.55, ease: "power3.out" }, 12.822000000000001);
+      tl.fromTo("#ls-tag", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power2.out" }, 13.272);
+      tl.fromTo("#ls-bg", { scale: 1 }, { scale: 1.08, duration: 3.0, ease: "none" }, 11.922);
+      tl.to(["#ls-logo", "#ls-txt"], { scale: 1.02, duration: 1.2, ease: "none" }, 13.322000000000001);
+      tl.to(["#ls-logo", "#ls-txt"], { opacity: 0, duration: 0.2 }, 14.722000000000001);
+      tl.fromTo("#z10-i", { scale: 1.0 }, { scale: 1.06, duration: 63.54, ease: "none" }, 0.0);
+      
+      tl.fromTo("#w1-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 0.0);
+      tl.to("#w1-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 0.244);
+      tl.fromTo("#w1-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 0.244);
+      tl.to("#w1-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 0.488);
+      tl.fromTo("#w1-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 0.488);
+      tl.to("#w1-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 0.792);
+      tl.fromTo("#w1-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 0.792);
+      tl.fromTo("#w2-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 1.158);
+      tl.to("#w2-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 1.68);
+      tl.fromTo("#w2-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 1.68);
+      tl.to("#w2-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 1.796);
+      tl.fromTo("#w2-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 1.796);
+      tl.to("#w2-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 2.029);
+      tl.fromTo("#w2-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 2.029);
+      tl.to("#w2-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 2.261);
+      tl.fromTo("#w2-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 2.261);
+      tl.to("#w2-4", { color: "#f28a1e", scale: 1, duration: 0.08 }, 2.493);
+      tl.fromTo("#w2-5", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 2.493);
+      tl.fromTo("#w3-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 2.899);
+      tl.to("#w3-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 3.982);
+      tl.fromTo("#w3-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 3.982);
+      tl.to("#w3-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 4.343);
+      tl.fromTo("#w3-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 4.343);
+      tl.fromTo("#w4-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 4.764);
+      tl.to("#w4-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 5.116);
+      tl.fromTo("#w4-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 5.116);
+      tl.fromTo("#w5-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 5.292);
+      tl.to("#w5-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 5.443);
+      tl.fromTo("#w5-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 5.443);
+      tl.to("#w5-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 5.645);
+      tl.fromTo("#w5-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 5.645);
+      tl.to("#w5-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 6.249);
+      tl.fromTo("#w5-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 6.249);
+      tl.to("#w5-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 6.45);
+      tl.fromTo("#w5-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 6.45);
+      tl.fromTo("#w6-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 6.803);
+      tl.to("#w6-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 6.952);
+      tl.fromTo("#w6-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 6.952);
+      tl.to("#w6-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 7.151);
+      tl.fromTo("#w6-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 7.151);
+      tl.to("#w6-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 7.349);
+      tl.fromTo("#w6-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 7.349);
+      tl.to("#w6-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 7.548);
+      tl.fromTo("#w6-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 7.548);
+      tl.to("#w6-4", { color: "#f28a1e", scale: 1, duration: 0.08 }, 7.746);
+      tl.fromTo("#w6-5", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 7.746);
+      tl.fromTo("#w7-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 8.243);
+      tl.to("#w7-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 8.442);
+      tl.fromTo("#w7-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 8.442);
+      tl.to("#w7-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 8.79);
+      tl.fromTo("#w7-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 8.79);
+      tl.to("#w7-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 9.138);
+      tl.fromTo("#w7-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 9.138);
+      tl.to("#w7-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 9.337);
+      tl.fromTo("#w7-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 9.337);
+      tl.fromTo("#w8-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 9.586);
+      tl.to("#w8-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 9.795);
+      tl.fromTo("#w8-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 9.795);
+      tl.to("#w8-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 10.056);
+      tl.fromTo("#w8-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 10.056);
+      tl.to("#w8-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 10.369);
+      tl.fromTo("#w8-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 10.369);
+      tl.fromTo("#w9-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 10.944);
+      tl.to("#w9-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 11.15);
+      tl.fromTo("#w9-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 11.15);
+      tl.to("#w9-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 11.459);
+      tl.fromTo("#w9-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 11.459);
+      tl.fromTo("#w10-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 14.922);
+      tl.to("#w10-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 15.124);
+      tl.fromTo("#w10-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 15.124);
+      tl.to("#w10-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 15.662);
+      tl.fromTo("#w10-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 15.662);
+      tl.fromTo("#w11-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 16.133);
+      tl.to("#w11-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 16.551);
+      tl.fromTo("#w11-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 16.551);
+      tl.to("#w11-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 17.053);
+      tl.fromTo("#w11-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 17.053);
+      tl.to("#w11-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 17.638);
+      tl.fromTo("#w11-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 17.638);
+      tl.fromTo("#w12-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 18.056);
+      tl.to("#w12-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 18.785);
+      tl.fromTo("#w12-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 18.785);
+      tl.to("#w12-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 19.189);
+      tl.fromTo("#w12-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 19.189);
+      tl.to("#w12-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 19.513);
+      tl.fromTo("#w12-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 19.513);
+      tl.fromTo("#w13-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 19.837);
+      tl.to("#w13-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 20.091);
+      tl.fromTo("#w13-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 20.091);
+      tl.to("#w13-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 20.769);
+      tl.fromTo("#w13-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 20.769);
+      tl.to("#w13-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 21.363);
+      tl.fromTo("#w13-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 21.363);
+      tl.fromTo("#w14-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 21.617);
+      tl.to("#w14-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 22.434);
+      tl.fromTo("#w14-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 22.434);
+      tl.to("#w14-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 22.761);
+      tl.fromTo("#w14-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 22.761);
+      tl.to("#w14-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 23.006);
+      tl.fromTo("#w14-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 23.006);
+      tl.fromTo("#w15-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 23.333);
+      tl.to("#w15-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 23.515);
+      tl.fromTo("#w15-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 23.515);
+      tl.to("#w15-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 24.241);
+      tl.fromTo("#w15-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 24.241);
+      tl.fromTo("#w16-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 24.544);
+      tl.to("#w16-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 24.728);
+      tl.fromTo("#w16-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 24.728);
+      tl.to("#w16-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 24.972);
+      tl.fromTo("#w16-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 24.972);
+      tl.to("#w16-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 25.278);
+      tl.fromTo("#w16-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 25.278);
+      tl.to("#w16-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 25.707);
+      tl.fromTo("#w16-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 25.707);
+      tl.to("#w16-4", { color: "#f28a1e", scale: 1, duration: 0.08 }, 25.829);
+      tl.fromTo("#w16-5", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 25.829);
+      tl.fromTo("#w17-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 26.074);
+      tl.to("#w17-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 26.436);
+      tl.fromTo("#w17-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 26.436);
+      tl.to("#w17-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 26.616);
+      tl.fromTo("#w17-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 26.616);
+      tl.to("#w17-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 27.219);
+      tl.fromTo("#w17-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 27.219);
+      tl.fromTo("#w18-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 27.701);
+      tl.to("#w18-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 28.068);
+      tl.fromTo("#w18-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 28.068);
+      tl.to("#w18-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 28.509);
+      tl.fromTo("#w18-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 28.509);
+      tl.to("#w18-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 28.802);
+      tl.fromTo("#w18-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 28.802);
+      tl.to("#w18-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 29.316);
+      tl.fromTo("#w18-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 29.316);
+      tl.fromTo("#w19-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 29.757);
+      tl.to("#w19-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 29.901);
+      tl.fromTo("#w19-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 29.901);
+      tl.to("#w19-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 30.189);
+      tl.fromTo("#w19-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 30.189);
+      tl.to("#w19-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 30.478);
+      tl.fromTo("#w19-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 30.478);
+      tl.to("#w19-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 30.622);
+      tl.fromTo("#w19-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 30.622);
+      tl.to("#w19-4", { color: "#f28a1e", scale: 1, duration: 0.08 }, 31.271);
+      tl.fromTo("#w19-5", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 31.271);
+      tl.fromTo("#w20-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 31.631);
+      tl.to("#w20-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 31.915);
+      tl.fromTo("#w20-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 31.915);
+      tl.to("#w20-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 32.199);
+      tl.fromTo("#w20-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 32.199);
+      tl.to("#w20-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 32.839);
+      tl.fromTo("#w20-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 32.839);
+      tl.fromTo("#w21-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 33.336);
+      tl.to("#w21-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 33.724);
+      tl.fromTo("#w21-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 33.724);
+      tl.to("#w21-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 34.242);
+      tl.fromTo("#w21-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 34.242);
+      tl.to("#w21-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 34.565);
+      tl.fromTo("#w21-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 34.565);
+      tl.to("#w21-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 34.889);
+      tl.fromTo("#w21-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 34.889);
+      tl.fromTo("#w22-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 35.277);
+      tl.to("#w22-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 35.564);
+      tl.fromTo("#w22-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 35.564);
+      tl.to("#w22-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 35.994);
+      tl.fromTo("#w22-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 35.994);
+      tl.to("#w22-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 36.281);
+      tl.fromTo("#w22-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 36.281);
+      tl.fromTo("#w23-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 37.07);
+      tl.to("#w23-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 37.507);
+      tl.fromTo("#w23-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 37.507);
+      tl.to("#w23-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 37.944);
+      tl.fromTo("#w23-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 37.944);
+      tl.fromTo("#w24-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 38.49);
+      tl.to("#w24-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 38.935);
+      tl.fromTo("#w24-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 38.935);
+      tl.to("#w24-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 39.491);
+      tl.fromTo("#w24-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 39.491);
+      tl.to("#w24-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 39.936);
+      tl.fromTo("#w24-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 39.936);
+      tl.fromTo("#w25-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 40.604);
+      tl.to("#w25-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 40.822);
+      tl.fromTo("#w25-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 40.822);
+      tl.to("#w25-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 41.621);
+      tl.fromTo("#w25-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 41.621);
+      tl.to("#w25-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 42.129);
+      tl.fromTo("#w25-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 42.129);
+      tl.to("#w25-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 42.419);
+      tl.fromTo("#w25-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 42.419);
+      tl.fromTo("#w26-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 42.855);
+      tl.to("#w26-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 43.495);
+      tl.fromTo("#w26-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 43.495);
+      tl.to("#w26-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 43.78);
+      tl.fromTo("#w26-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 43.78);
+      tl.to("#w26-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 44.206);
+      tl.fromTo("#w26-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 44.206);
+      tl.to("#w26-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 44.491);
+      tl.fromTo("#w26-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 44.491);
+      tl.fromTo("#w27-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 44.633);
+      tl.to("#w27-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 44.977);
+      tl.fromTo("#w27-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 44.977);
+      tl.to("#w27-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 45.321);
+      tl.fromTo("#w27-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 45.321);
+      tl.to("#w27-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 45.872);
+      tl.fromTo("#w27-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 45.872);
+      tl.fromTo("#w28-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 46.423);
+      tl.to("#w28-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 46.716);
+      tl.fromTo("#w28-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 46.716);
+      tl.to("#w28-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 47.01);
+      tl.fromTo("#w28-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 47.01);
+      tl.to("#w28-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 47.524);
+      tl.fromTo("#w28-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 47.524);
+      tl.to("#w28-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 47.744);
+      tl.fromTo("#w28-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 47.744);
+      tl.to("#w28-4", { color: "#f28a1e", scale: 1, duration: 0.08 }, 48.184);
+      tl.fromTo("#w28-5", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 48.184);
+      tl.fromTo("#w29-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 48.624);
+      tl.to("#w29-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 48.922);
+      tl.fromTo("#w29-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 48.922);
+      tl.to("#w29-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 49.22);
+      tl.fromTo("#w29-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 49.22);
+      tl.fromTo("#w30-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 49.816);
+      tl.to("#w30-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 50.177);
+      tl.fromTo("#w30-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 50.177);
+      tl.to("#w30-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 50.393);
+      tl.fromTo("#w30-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 50.393);
+      tl.to("#w30-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 50.753);
+      tl.fromTo("#w30-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 50.753);
+      tl.fromTo("#w31-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 51.835);
+      tl.to("#w31-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 52.195);
+      tl.fromTo("#w31-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 52.195);
+      tl.to("#w31-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 52.556);
+      tl.fromTo("#w31-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 52.556);
+      tl.fromTo("#w32-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 52.856);
+      tl.to("#w32-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 53.129);
+      tl.fromTo("#w32-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 53.129);
+      tl.to("#w32-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 53.401);
+      tl.fromTo("#w32-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 53.401);
+      tl.fromTo("#w33-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 53.946);
+      tl.to("#w33-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 54.365);
+      tl.fromTo("#w33-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 54.365);
+      tl.to("#w33-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 54.574);
+      tl.fromTo("#w33-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 54.574);
+      tl.to("#w33-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 55.202);
+      tl.fromTo("#w33-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 55.202);
+      tl.to("#w33-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 55.342);
+      tl.fromTo("#w33-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 55.342);
+      tl.fromTo("#w34-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 55.691);
+      tl.to("#w34-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 56.177);
+      tl.fromTo("#w34-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 56.177);
+      tl.to("#w34-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 56.455);
+      tl.fromTo("#w34-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 56.455);
+      tl.to("#w34-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 56.802);
+      tl.fromTo("#w34-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 56.802);
+      tl.fromTo("#w35-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 57.218);
+      tl.to("#w35-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 57.55);
+      tl.fromTo("#w35-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 57.55);
+      tl.to("#w35-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 58.082);
+      tl.fromTo("#w35-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 58.082);
+      tl.fromTo("#w36-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 58.414);
+      tl.to("#w36-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 58.831);
+      tl.fromTo("#w36-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 58.831);
+      tl.fromTo("#w37-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 59.875);
+      tl.to("#w37-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 60.164);
+      tl.fromTo("#w37-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 60.164);
+      tl.to("#w37-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 60.741);
+      tl.fromTo("#w37-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 60.741);
+      tl.to("#w37-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 61.029);
+      tl.fromTo("#w37-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 61.029);
+      tl.to("#w37-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 61.462);
+      tl.fromTo("#w37-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 61.462);
+      tl.fromTo("#w38-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 61.751);
+      tl.to("#w38-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 62.1);
+      tl.fromTo("#w38-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 62.1);
+      tl.to("#w38-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 62.658);
+      tl.fromTo("#w38-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 62.658);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
