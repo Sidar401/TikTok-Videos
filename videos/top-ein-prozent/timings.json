@@ -1,0 +1,331 @@
+{
+ "dauer": 65.38,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 3.747,
+   "captions": [
+    {
+     "text": "Ab wie viel Geld gehörst",
+     "start": 0.0,
+     "end": 1.466
+    },
+    {
+     "text": "du in Deutschland",
+     "start": 1.466,
+     "end": 2.53
+    },
+    {
+     "text": "zu den reichsten 1 %?",
+     "start": 2.53,
+     "end": 3.747
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 3.747,
+   "end": 5.923,
+   "captions": [
+    {
+     "text": "Die Zahl ist kleiner,",
+     "start": 3.747,
+     "end": 4.78
+    },
+    {
+     "text": "als die meisten denken",
+     "start": 4.78,
+     "end": 5.923
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 5.923,
+   "end": 9.511,
+   "captions": [
+    {
+     "text": "Und am Ende zeigen wir dir,",
+     "start": 5.923,
+     "end": 7.543
+    },
+    {
+     "text": "wie lange du dafür",
+     "start": 7.543,
+     "end": 8.648
+    },
+    {
+     "text": "sparen müsstest",
+     "start": 8.648,
+     "end": 9.511
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 9.511,
+   "end": 10.928,
+   "captions": [
+    {
+     "text": "Schauen wir uns das genau an",
+     "start": 9.511,
+     "end": 10.928
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 13.928,
+   "end": 20.381,
+   "captions": [
+    {
+     "text": "Ein Haushalt in der Mitte",
+     "start": 13.928,
+     "end": 15.538
+    },
+    {
+     "text": "besitzt rund 100.000 € – Haus,",
+     "start": 15.538,
+     "end": 17.597
+    },
+    {
+     "text": "Auto, Konto und Aktien,",
+     "start": 17.597,
+     "end": 19.23
+    },
+    {
+     "text": "abzüglich Schulden",
+     "start": 19.23,
+     "end": 20.381
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 20.381,
+   "end": 26.216,
+   "captions": [
+    {
+     "text": "Das reichste Prozent",
+     "start": 20.381,
+     "end": 21.641
+    },
+    {
+     "text": "beginnt nach den neuesten",
+     "start": 21.641,
+     "end": 23.312
+    },
+    {
+     "text": "Bundesbank‑Zahlen bei etwa",
+     "start": 23.312,
+     "end": 25.05
+    },
+    {
+     "text": "2,3 Millionen Euro",
+     "start": 25.05,
+     "end": 26.216
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 26.216,
+   "end": 30.817,
+   "captions": [
+    {
+     "text": "Je nach Studie liegt",
+     "start": 26.216,
+     "end": 27.736
+    },
+    {
+     "text": "die Grenze zwischen",
+     "start": 27.736,
+     "end": 29.215
+    },
+    {
+     "text": "1,3 und 2,9 Millionen",
+     "start": 29.215,
+     "end": 30.817
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 30.817,
+   "end": 33.618,
+   "captions": [
+    {
+     "text": "Das ist mehr",
+     "start": 30.817,
+     "end": 31.623
+    },
+    {
+     "text": "als das Zwanzigfache der Mitte",
+     "start": 31.623,
+     "end": 33.618
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 33.618,
+   "end": 41.059,
+   "captions": [
+    {
+     "text": "Zwanzigfach? Ja – und dieses",
+     "start": 33.618,
+     "end": 35.426
+    },
+    {
+     "text": "eine Prozent besitzt ungefähr",
+     "start": 35.426,
+     "end": 37.531
+    },
+    {
+     "text": "ein Viertel bis ein Drittel",
+     "start": 37.531,
+     "end": 39.491
+    },
+    {
+     "text": "des gesamten Vermögens",
+     "start": 39.491,
+     "end": 41.059
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 41.059,
+   "end": 46.466,
+   "captions": [
+    {
+     "text": "Rechnen wir:",
+     "start": 41.059,
+     "end": 41.867
+    },
+    {
+     "text": "Mit 1.000 € im Monat",
+     "start": 41.867,
+     "end": 43.421
+    },
+    {
+     "text": "und 7 % im Jahr brauchst",
+     "start": 43.421,
+     "end": 45.287
+    },
+    {
+     "text": "du fast 40 Jahre",
+     "start": 45.287,
+     "end": 46.466
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 46.466,
+   "end": 49.218,
+   "captions": [
+    {
+     "text": "Mit 500 € im Monat",
+     "start": 46.466,
+     "end": 47.968
+    },
+    {
+     "text": "sind es fast 50",
+     "start": 47.968,
+     "end": 49.218
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 49.218,
+   "end": 53.394,
+   "captions": [
+    {
+     "text": "Bei den Reichsten steckt",
+     "start": 49.218,
+     "end": 50.702
+    },
+    {
+     "text": "viel Vermögen in Firmen,",
+     "start": 50.702,
+     "end": 52.242
+    },
+    {
+     "text": "Immobilien und Erbe",
+     "start": 52.242,
+     "end": 53.394
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 53.394,
+   "end": 57.717,
+   "captions": [
+    {
+     "text": "Merk dir: Reich ist nicht,",
+     "start": 53.394,
+     "end": 55.082
+    },
+    {
+     "text": "was du verdienst,",
+     "start": 55.082,
+     "end": 56.255
+    },
+    {
+     "text": "sondern was dir gehört",
+     "start": 56.255,
+     "end": 57.717
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 57.717,
+   "end": 61.343,
+   "captions": [
+    {
+     "text": "Kurzer Hinweis: Das sind",
+     "start": 57.717,
+     "end": 59.072
+    },
+    {
+     "text": "Durchschnittswerte,",
+     "start": 59.072,
+     "end": 60.189
+    },
+    {
+     "text": "keine Anlageberatung",
+     "start": 60.189,
+     "end": 61.343
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "start": 61.343,
+   "end": 64.784,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTv,",
+     "start": 61.343,
+     "end": 62.515
+    },
+    {
+     "text": "wir haben noch mehr",
+     "start": 62.515,
+     "end": 63.65
+    },
+    {
+     "text": "Geld‑Tipps für dich",
+     "start": 63.65,
+     "end": 64.784
+    }
+   ]
+  }
+ ],
+ "logo_intro": 10.928
+}
