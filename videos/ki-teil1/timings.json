@@ -1,0 +1,633 @@
+{
+ "dauer": 134.39,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 5.726,
+   "captions": [
+    {
+     "text": "Über 30 Millionen",
+     "start": 0.0,
+     "end": 1.08
+    },
+    {
+     "text": "KI‑Lizenzen hat allein",
+     "start": 1.08,
+     "end": 2.479
+    },
+    {
+     "text": "Microsoft schon verkauft –",
+     "start": 2.479,
+     "end": 4.131
+    },
+    {
+     "text": "und das ist erst der Anfang",
+     "start": 4.131,
+     "end": 5.726
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 5.726,
+   "end": 11.482,
+   "captions": [
+    {
+     "text": "Das ist Teil eins",
+     "start": 5.726,
+     "end": 6.606
+    },
+    {
+     "text": "unserer KI‑Serie. In Teil",
+     "start": 6.606,
+     "end": 7.993
+    },
+    {
+     "text": "zwei zeigen wir dir,",
+     "start": 7.993,
+     "end": 9.156
+    },
+    {
+     "text": "wer den Strom",
+     "start": 9.156,
+     "end": 9.912
+    },
+    {
+     "text": "und die Chips dafür liefert",
+     "start": 9.912,
+     "end": 11.482
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 11.482,
+   "end": 15.544,
+   "captions": [
+    {
+     "text": "Heute: fünf Bereiche,",
+     "start": 11.482,
+     "end": 12.824
+    },
+    {
+     "text": "in denen Firmen mit KI",
+     "start": 12.824,
+     "end": 14.264
+    },
+    {
+     "text": "schon Geld verdienen",
+     "start": 14.264,
+     "end": 15.544
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 15.544,
+   "end": 20.827,
+   "captions": [
+    {
+     "text": "Und am Ende erfährst du,",
+     "start": 15.544,
+     "end": 17.226
+    },
+    {
+     "text": "welche Firma an einem einzigen",
+     "start": 17.226,
+     "end": 19.363
+    },
+    {
+     "text": "Tag 16 % verloren hat",
+     "start": 19.363,
+     "end": 20.827
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 20.827,
+   "end": 22.224,
+   "captions": [
+    {
+     "text": "Schauen wir uns das genau an",
+     "start": 20.827,
+     "end": 22.224
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 25.224,
+   "end": 32.716,
+   "captions": [
+    {
+     "text": "Bereich eins: Büro‑Software.",
+     "start": 25.224,
+     "end": 27.186
+    },
+    {
+     "text": "Microsoft hat über",
+     "start": 27.186,
+     "end": 28.293
+    },
+    {
+     "text": "30 Millionen bezahlte Lizenzen",
+     "start": 28.293,
+     "end": 30.504
+    },
+    {
+     "text": "für den KI‑Assistenten Copilot",
+     "start": 30.504,
+     "end": 32.716
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 32.716,
+   "end": 36.448,
+   "captions": [
+    {
+     "text": "Allein in den letzten",
+     "start": 32.716,
+     "end": 34.1
+    },
+    {
+     "text": "drei Monaten kamen",
+     "start": 34.1,
+     "end": 35.287
+    },
+    {
+     "text": "zehn Millionen dazu",
+     "start": 35.287,
+     "end": 36.448
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 36.448,
+   "end": 43.05,
+   "captions": [
+    {
+     "text": "Viel? Microsoft hat rund",
+     "start": 36.448,
+     "end": 38.286
+    },
+    {
+     "text": "450 Millionen Büro‑Nutzer,",
+     "start": 38.286,
+     "end": 40.375
+    },
+    {
+     "text": "also hat erst etwa",
+     "start": 40.375,
+     "end": 41.723
+    },
+    {
+     "text": "jeder fünfzehnte KI",
+     "start": 41.723,
+     "end": 43.05
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 43.05,
+   "end": 49.742,
+   "captions": [
+    {
+     "text": "Bereich zwei: Werbung. Meta",
+     "start": 43.05,
+     "end": 44.695
+    },
+    {
+     "text": "hat mit Werbung in nur drei",
+     "start": 44.695,
+     "end": 46.612
+    },
+    {
+     "text": "Monaten über 63 Milliarden",
+     "start": 46.612,
+     "end": 48.597
+    },
+    {
+     "text": "Dollar verdient",
+     "start": 48.597,
+     "end": 49.742
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 49.742,
+   "end": 52.978,
+   "captions": [
+    {
+     "text": "Das sind 26 % mehr",
+     "start": 49.742,
+     "end": 51.397
+    },
+    {
+     "text": "als vor einem Jahr",
+     "start": 51.397,
+     "end": 52.978
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 52.978,
+   "end": 59.238,
+   "captions": [
+    {
+     "text": "Der Grund: KI wählt aus,",
+     "start": 52.978,
+     "end": 54.661
+    },
+    {
+     "text": "welche Anzeige du siehst,",
+     "start": 54.661,
+     "end": 56.491
+    },
+    {
+     "text": "und der Preis pro",
+     "start": 56.491,
+     "end": 57.736
+    },
+    {
+     "text": "Anzeige stieg um 14 %",
+     "start": 57.736,
+     "end": 59.238
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 59.238,
+   "end": 62.764,
+   "captions": [
+    {
+     "text": "14 % teurer? Ja,",
+     "start": 59.238,
+     "end": 60.499
+    },
+    {
+     "text": "denn die Werbung trifft besser",
+     "start": 60.499,
+     "end": 62.764
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 62.764,
+   "end": 69.23,
+   "captions": [
+    {
+     "text": "Bereich drei: Sicherheit.",
+     "start": 62.764,
+     "end": 64.26
+    },
+    {
+     "text": "Je mehr KI‑Programme",
+     "start": 64.26,
+     "end": 65.396
+    },
+    {
+     "text": "im Netz arbeiten,",
+     "start": 65.396,
+     "end": 66.5
+    },
+    {
+     "text": "desto mehr Angriffsfläche",
+     "start": 66.5,
+     "end": 68.124
+    },
+    {
+     "text": "gibt es für Hacker",
+     "start": 68.124,
+     "end": 69.23
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 69.23,
+   "end": 76.443,
+   "captions": [
+    {
+     "text": "Laut Gartner",
+     "start": 69.23,
+     "end": 69.974
+    },
+    {
+     "text": "steigen die Ausgaben",
+     "start": 69.974,
+     "end": 71.317
+    },
+    {
+     "text": "dafür von 51 Milliarden",
+     "start": 71.317,
+     "end": 72.862
+    },
+    {
+     "text": "Dollar dieses Jahr auf fast",
+     "start": 72.862,
+     "end": 74.676
+    },
+    {
+     "text": "86 Milliarden nächstes Jahr",
+     "start": 74.676,
+     "end": 76.443
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "start": 76.443,
+   "end": 81.316,
+   "captions": [
+    {
+     "text": "CrowdStrike,",
+     "start": 76.443,
+     "end": 77.321
+    },
+    {
+     "text": "eine der größten",
+     "start": 77.321,
+     "end": 78.555
+    },
+    {
+     "text": "Sicherheitsfirmen,",
+     "start": 78.555,
+     "end": 79.943
+    },
+    {
+     "text": "wächst um rund 26 %",
+     "start": 79.943,
+     "end": 81.316
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "start": 81.316,
+   "end": 88.368,
+   "captions": [
+    {
+     "text": "Bereich vier: Daten.",
+     "start": 81.316,
+     "end": 82.743
+    },
+    {
+     "text": "Palantir hat den Umsatz",
+     "start": 82.743,
+     "end": 84.38
+    },
+    {
+     "text": "im Vergleich zum Vorjahr",
+     "start": 84.38,
+     "end": 86.306
+    },
+    {
+     "text": "fast verdoppelt: plus 96 %",
+     "start": 86.306,
+     "end": 88.368
+    }
+   ]
+  },
+  {
+   "id": "s17",
+   "start": 88.368,
+   "end": 93.194,
+   "captions": [
+    {
+     "text": "Zum ersten Mal verdient",
+     "start": 88.368,
+     "end": 89.77
+    },
+    {
+     "text": "die Firma mit Unternehmen",
+     "start": 89.77,
+     "end": 91.295
+    },
+    {
+     "text": "in Amerika",
+     "start": 91.295,
+     "end": 91.904
+    },
+    {
+     "text": "mehr als mit dem Staat",
+     "start": 91.904,
+     "end": 93.194
+    }
+   ]
+  },
+  {
+   "id": "s18",
+   "start": 93.194,
+   "end": 94.828,
+   "captions": [
+    {
+     "text": "Und trotzdem fiel die Aktie",
+     "start": 93.194,
+     "end": 94.828
+    }
+   ]
+  },
+  {
+   "id": "s19",
+   "start": 94.828,
+   "end": 100.511,
+   "captions": [
+    {
+     "text": "Warum? Neue Aufträge",
+     "start": 94.828,
+     "end": 96.564
+    },
+    {
+     "text": "wachsen nur noch um 11 %,",
+     "start": 96.564,
+     "end": 98.886
+    },
+    {
+     "text": "vorher waren es 153",
+     "start": 98.886,
+     "end": 100.511
+    }
+   ]
+  },
+  {
+   "id": "s20",
+   "start": 100.511,
+   "end": 105.059,
+   "captions": [
+    {
+     "text": "Gute Zahlen reichen",
+     "start": 100.511,
+     "end": 101.613
+    },
+    {
+     "text": "also nicht? Genau,",
+     "start": 101.613,
+     "end": 102.629
+    },
+    {
+     "text": "die Anleger wollen",
+     "start": 102.629,
+     "end": 103.775
+    },
+    {
+     "text": "immer noch mehr Tempo",
+     "start": 103.775,
+     "end": 105.059
+    }
+   ]
+  },
+  {
+   "id": "s21",
+   "start": 105.059,
+   "end": 110.578,
+   "captions": [
+    {
+     "text": "Bereich fünf: die Verlierer.",
+     "start": 105.059,
+     "end": 106.857
+    },
+    {
+     "text": "Im Februar zeigte Anthropic",
+     "start": 106.857,
+     "end": 108.621
+    },
+    {
+     "text": "ein KI‑Werkzeug für Juristen",
+     "start": 108.621,
+     "end": 110.578
+    }
+   ]
+  },
+  {
+   "id": "s22",
+   "start": 110.578,
+   "end": 117.26,
+   "captions": [
+    {
+     "text": "An diesem einen Tag",
+     "start": 110.578,
+     "end": 111.997
+    },
+    {
+     "text": "fiel Thomson Reuters um",
+     "start": 111.997,
+     "end": 113.728
+    },
+    {
+     "text": "16 %. Die Firma verkauft",
+     "start": 113.728,
+     "end": 115.534
+    },
+    {
+     "text": "Informationen an Anwälte",
+     "start": 115.534,
+     "end": 117.26
+    }
+   ]
+  },
+  {
+   "id": "s23",
+   "start": 117.26,
+   "end": 121.21,
+   "captions": [
+    {
+     "text": "Autsch. Manche Fachleute",
+     "start": 117.26,
+     "end": 118.613
+    },
+    {
+     "text": "sagen allerdings,",
+     "start": 118.613,
+     "end": 119.706
+    },
+    {
+     "text": "die Angst sei übertrieben",
+     "start": 119.706,
+     "end": 121.21
+    }
+   ]
+  },
+  {
+   "id": "s24",
+   "start": 121.21,
+   "end": 126.72,
+   "captions": [
+    {
+     "text": "Merk dir: Nicht",
+     "start": 121.21,
+     "end": 122.019
+    },
+    {
+     "text": "jede Firma mit KI gewinnt,",
+     "start": 122.019,
+     "end": 123.836
+    },
+    {
+     "text": "und nicht jede Aktie",
+     "start": 123.836,
+     "end": 125.233
+    },
+    {
+     "text": "steigt bei guten Zahlen",
+     "start": 125.233,
+     "end": 126.72
+    }
+   ]
+  },
+  {
+   "id": "s25",
+   "start": 126.72,
+   "end": 130.456,
+   "captions": [
+    {
+     "text": "Kurzer Hinweis: Das ist",
+     "start": 126.72,
+     "end": 128.039
+    },
+    {
+     "text": "keine Anlageberatung,",
+     "start": 128.039,
+     "end": 129.355
+    },
+    {
+     "text": "nur eine Erklärung",
+     "start": 129.355,
+     "end": 130.456
+    }
+   ]
+  },
+  {
+   "id": "s26",
+   "start": 130.456,
+   "end": 133.775,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTv,",
+     "start": 130.456,
+     "end": 131.716
+    },
+    {
+     "text": "damit du Teil zwei",
+     "start": 131.716,
+     "end": 132.874
+    },
+    {
+     "text": "nicht verpasst",
+     "start": 132.874,
+     "end": 133.775
+    }
+   ]
+  }
+ ],
+ "logo_intro": 22.224
+}

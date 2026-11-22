@@ -165,5 +165,8 @@
  "infineon": "Infineon-Logo.svg",
  "siemens-energy": "Siemens Energy logo.svg",
  "sec": "Seal of the United States Securities and Exchange Commission.svg",
- "zdf": "ZDF logo.svg"
+ "zdf": "ZDF logo.svg",
+ "crowdstrike": "CrowdStrike_logo.svg",
+ "palantir": "Palantir_Technologies_logo.svg",
+ "thomsonreuters": "Thomson_Reuters_logo.svg"
 }

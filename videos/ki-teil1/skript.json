@@ -1,0 +1,161 @@
+{
+ "titel": "KI-Serie Teil 1: Wer verdient an KI",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Über dreißig Millionen Ka-I-Lizenzen hat allein Microsoft schon verkauft – und das ist erst der Anfang.",
+   "text": "Über 30 Millionen KI-Lizenzen hat allein Microsoft schon verkauft – und das ist erst der Anfang",
+   "bild": ""
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Das ist Teil eins unserer Ka-I-Serie. In Teil zwei zeigen wir dir, wer den Strom und die Chips dafür liefert.",
+   "text": "Das ist Teil eins unserer KI-Serie. In Teil zwei zeigen wir dir, wer den Strom und die Chips dafür liefert",
+   "bild": ""
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Heute: fünf Bereiche, in denen Firmen mit Ka-I schon Geld verdienen.",
+   "text": "Heute: fünf Bereiche, in denen Firmen mit KI schon Geld verdienen",
+   "bild": ""
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Und am Ende erfährst du, welche Firma an einem einzigen Tag sechzehn Prozent verloren hat.",
+   "text": "Und am Ende erfährst du, welche Firma an einem einzigen Tag 16 % verloren hat",
+   "bild": ""
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Schauen wir uns das genau an.",
+   "text": "Schauen wir uns das genau an",
+   "bild": ""
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Bereich eins: Büro-Software. Microsoft hat über dreißig Millionen bezahlte Lizenzen für den Ka-I-Assistenten Copilot.",
+   "text": "Bereich eins: Büro-Software. Microsoft hat über 30 Millionen bezahlte Lizenzen für den KI-Assistenten Copilot",
+   "bild": ""
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Allein in den letzten drei Monaten kamen zehn Millionen dazu.",
+   "text": "Allein in den letzten drei Monaten kamen zehn Millionen dazu",
+   "bild": ""
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Viel? Microsoft hat rund vierhundertfünfzig Millionen Büro-Nutzer, also hat erst etwa jeder fünfzehnte Ka-I.",
+   "text": "Viel? Microsoft hat rund 450 Millionen Büro-Nutzer, also hat erst etwa jeder fünfzehnte KI",
+   "bild": ""
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Bereich zwei: Werbung. Meta hat mit Werbung in nur drei Monaten über dreiundsechzig Milliarden Dollar verdient.",
+   "text": "Bereich zwei: Werbung. Meta hat mit Werbung in nur drei Monaten über 63 Milliarden Dollar verdient",
+   "bild": ""
+  },
+  {
+   "id": "s10",
+   "sprechtext": "Das sind sechsundzwanzig Prozent mehr als vor einem Jahr.",
+   "text": "Das sind 26 % mehr als vor einem Jahr",
+   "bild": ""
+  },
+  {
+   "id": "s11",
+   "sprechtext": "Der Grund: Ka-I wählt aus, welche Anzeige du siehst, und der Preis pro Anzeige stieg um vierzehn Prozent.",
+   "text": "Der Grund: KI wählt aus, welche Anzeige du siehst, und der Preis pro Anzeige stieg um 14 %",
+   "bild": ""
+  },
+  {
+   "id": "s12",
+   "sprechtext": "Vierzehn Prozent teurer? Ja, denn die Werbung trifft besser.",
+   "text": "14 % teurer? Ja, denn die Werbung trifft besser",
+   "bild": ""
+  },
+  {
+   "id": "s13",
+   "sprechtext": "Bereich drei: Sicherheit. Je mehr Ka-I-Programme im Netz arbeiten, desto mehr Angriffsfläche gibt es für Hacker.",
+   "text": "Bereich drei: Sicherheit. Je mehr KI-Programme im Netz arbeiten, desto mehr Angriffsfläche gibt es für Hacker",
+   "bild": ""
+  },
+  {
+   "id": "s14",
+   "sprechtext": "Laut Gartner steigen die Ausgaben dafür von einundfünfzig Milliarden Dollar dieses Jahr auf fast sechsundachtzig Milliarden nächstes Jahr.",
+   "text": "Laut Gartner steigen die Ausgaben dafür von 51 Milliarden Dollar dieses Jahr auf fast 86 Milliarden nächstes Jahr",
+   "bild": ""
+  },
+  {
+   "id": "s15",
+   "sprechtext": "CrowdStrike, eine der größten Sicherheitsfirmen, wächst um rund sechsundzwanzig Prozent.",
+   "text": "CrowdStrike, eine der größten Sicherheitsfirmen, wächst um rund 26 %",
+   "bild": ""
+  },
+  {
+   "id": "s16",
+   "sprechtext": "Bereich vier: Daten. Palantir hat den Umsatz im Vergleich zum Vorjahr fast verdoppelt: plus sechsundneunzig Prozent.",
+   "text": "Bereich vier: Daten. Palantir hat den Umsatz im Vergleich zum Vorjahr fast verdoppelt: plus 96 %",
+   "bild": ""
+  },
+  {
+   "id": "s17",
+   "sprechtext": "Zum ersten Mal verdient die Firma mit Unternehmen in Amerika mehr als mit dem Staat.",
+   "text": "Zum ersten Mal verdient die Firma mit Unternehmen in Amerika mehr als mit dem Staat",
+   "bild": ""
+  },
+  {
+   "id": "s18",
+   "sprechtext": "Und trotzdem fiel die Aktie.",
+   "text": "Und trotzdem fiel die Aktie",
+   "bild": ""
+  },
+  {
+   "id": "s19",
+   "sprechtext": "Warum? Neue Aufträge wachsen nur noch um elf Prozent, vorher waren es hundertdreiundfünfzig.",
+   "text": "Warum? Neue Aufträge wachsen nur noch um 11 %, vorher waren es 153",
+   "bild": ""
+  },
+  {
+   "id": "s20",
+   "sprechtext": "Gute Zahlen reichen also nicht? Genau, die Anleger wollen immer noch mehr Tempo.",
+   "text": "Gute Zahlen reichen also nicht? Genau, die Anleger wollen immer noch mehr Tempo",
+   "bild": ""
+  },
+  {
+   "id": "s21",
+   "sprechtext": "Bereich fünf: die Verlierer. Im Februar zeigte Anthropic ein Ka-I-Werkzeug für Juristen.",
+   "text": "Bereich fünf: die Verlierer. Im Februar zeigte Anthropic ein KI-Werkzeug für Juristen",
+   "bild": ""
+  },
+  {
+   "id": "s22",
+   "sprechtext": "An diesem einen Tag fiel Thomson Reuters um sechzehn Prozent. Die Firma verkauft Informationen an Anwälte.",
+   "text": "An diesem einen Tag fiel Thomson Reuters um 16 %. Die Firma verkauft Informationen an Anwälte",
+   "bild": ""
+  },
+  {
+   "id": "s23",
+   "sprechtext": "Autsch. Manche Fachleute sagen allerdings, die Angst sei übertrieben.",
+   "text": "Autsch. Manche Fachleute sagen allerdings, die Angst sei übertrieben",
+   "bild": ""
+  },
+  {
+   "id": "s24",
+   "sprechtext": "Merk dir: Nicht jede Firma mit Ka-I gewinnt, und nicht jede Aktie steigt bei guten Zahlen.",
+   "text": "Merk dir: Nicht jede Firma mit KI gewinnt, und nicht jede Aktie steigt bei guten Zahlen",
+   "bild": ""
+  },
+  {
+   "id": "s25",
+   "sprechtext": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung.",
+   "text": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung",
+   "bild": ""
+  },
+  {
+   "id": "s26",
+   "sprechtext": "Folge HundeFinanzTv, damit du Teil zwei nicht verpasst.",
+   "text": "Folge HundeFinanzTv, damit du Teil zwei nicht verpasst",
+   "bild": ""
+  }
+ ]
+}

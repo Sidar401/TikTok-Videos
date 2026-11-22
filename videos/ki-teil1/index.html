@@ -1,0 +1,838 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #eef0f3; }
+      #root { position: relative; width: 100%; height: 100%; font-family: Montserrat, sans-serif; overflow: hidden;
+        background: linear-gradient(180deg,#f7f8fa,#eceef2); }
+      #raster { position: absolute; inset: 0; background-image: linear-gradient(#ffffff0c 2px, transparent 2px), linear-gradient(90deg, #ffffff0c 2px, transparent 2px); background-size: 90px 90px; }
+      .scene { position: absolute; inset: 0; }
+      .inner { position: absolute; inset: 0; }
+      .t { position: absolute; left: 0; width: 1080px; text-align: center; font-weight: 900; line-height: 1.02; letter-spacing: -1px; color: #fff; }
+      .glow-o { color: #ff8a1f; text-shadow: 0 0 50px #ff8a1faa; }
+      .glow-g { color: #2fd27a; text-shadow: 0 0 50px #2fd27aaa; }
+      .glow-r { color: #ff4d4d; text-shadow: 0 0 50px #ff4d4daa; }
+      .box { display: inline-block; padding: 6px 34px 14px; border-radius: 24px; background: #ff8a1f; color: #111; box-shadow: 0 0 60px #ff8a1f88; }
+      #logo { display:none;  position: absolute; left: 445px; top: 135px; width: 190px; height: 190px; border-radius: 50%; overflow: hidden; border: 5px solid #DB8622; box-shadow: 0 0 30px #ff8a1f88; z-index: 5; }
+      #logo img { width: 100%; height: 100%; object-fit: cover; }
+      #brand { display:none;  position: absolute; left: 0; top: 335px; width: 1080px; text-align: center; font-size: 38px; font-weight: 800; color: #ffffffdd; letter-spacing: 1px; z-index: 5; }
+      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; z-index: 9; pointer-events: none; }
+      .p { position: absolute; border-radius: 50%; }
+      .l { display: inline-block; }
+      #frame { position: absolute; inset: 0; border: 26px solid #DB8622; z-index: 10; }
+      .ew { position: absolute; left: 0; width: 1080px; text-align: center; z-index: 6; font-weight: 900; font-size: 104px; line-height: 1; color: #fff; text-transform: uppercase;
+        letter-spacing: -1px; text-shadow: 0 6px 0 #000, 0 0 30px #000; white-space: nowrap; }
+      .cap { position: absolute; left: 60px; top: 1330px; width: 960px; text-align: center; z-index: 6; }
+      .cap span { display: inline-block; margin: 0 16px; font-weight: 900; font-size: 74px; line-height: 1.15; color: #f28a1e; -webkit-text-stroke: 3px #ffffff; paint-order: stroke fill; text-shadow: 0 6px 14px #0000002e; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="134.39" data-width="1080" data-height="1920">
+      <div id="raster"><svg style="position:absolute;inset:0;width:1080px;height:1920px;opacity:.75" viewBox="0 0 1080 1920"><circle cx="487" cy="1413" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="267" cy="957" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="970" cy="1481" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="134" cy="1440" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="26" cy="1160" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="531" cy="1328" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="479" cy="592" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="963" cy="1307" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="975" cy="1013" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="308" cy="674" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="310" cy="1271" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="798" cy="1718" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="31" cy="1575" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="131" cy="526" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="87" cy="816" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="63" cy="1886" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="551" cy="1168" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="793" cy="1662" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="874" cy="1008" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="910" cy="474" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="748" cy="399" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="73" cy="478" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="1013" cy="644" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="528" cy="1576" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="893" cy="1795" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="616" cy="1062" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="1038" cy="990" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="718" cy="1293" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="834" cy="1396" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="475" cy="889" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="58" cy="772" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="334" cy="1630" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="668" cy="1309" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="213" cy="1661" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="432" cy="1496" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="546" cy="783" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="254" cy="329" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="987" cy="1508" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="990" cy="381" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="704" cy="1839" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="136" cy="1040" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="308" cy="241" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="601" cy="1074" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="850" cy="443" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="90" cy="1439" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="92" cy="973" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="677" cy="1328" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="571" cy="1235" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="483" cy="273" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="634" cy="214" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="157" cy="421" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="64" cy="604" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="835" cy="797" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="539" cy="519" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="86" cy="895" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="642" cy="937" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="283" cy="973" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="771" cy="1142" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="1065" cy="990" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="210" cy="1470" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="1038" cy="755" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="883" cy="1499" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="486" cy="816" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="895" cy="728" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="1067" cy="820" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="694" cy="223" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="850" cy="1387" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="644" cy="241" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="771" cy="1461" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="272" cy="323" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><line x1="487" y1="1413" x2="134" y2="1440" stroke="#c9ced5" stroke-width="1.5"/><line x1="134" y1="1440" x2="26" y2="1160" stroke="#c9ced5" stroke-width="1.5"/><line x1="479" y1="592" x2="308" y2="674" stroke="#c9ced5" stroke-width="1.5"/><line x1="963" y1="1307" x2="975" y2="1013" stroke="#c9ced5" stroke-width="1.5"/><line x1="31" y1="1575" x2="63" y2="1886" stroke="#c9ced5" stroke-width="1.5"/><line x1="131" y1="526" x2="87" y2="816" stroke="#c9ced5" stroke-width="1.5"/><line x1="910" y1="474" x2="748" y2="399" stroke="#c9ced5" stroke-width="1.5"/><line x1="910" y1="474" x2="1013" y2="644" stroke="#c9ced5" stroke-width="1.5"/><line x1="616" y1="1062" x2="718" y2="1293" stroke="#c9ced5" stroke-width="1.5"/><line x1="718" y1="1293" x2="834" y2="1396" stroke="#c9ced5" stroke-width="1.5"/><line x1="334" y1="1630" x2="213" y2="1661" stroke="#c9ced5" stroke-width="1.5"/><line x1="334" y1="1630" x2="432" y2="1496" stroke="#c9ced5" stroke-width="1.5"/><line x1="213" y1="1661" x2="432" y2="1496" stroke="#c9ced5" stroke-width="1.5"/><line x1="677" y1="1328" x2="571" y2="1235" stroke="#c9ced5" stroke-width="1.5"/><line x1="483" y1="273" x2="634" y2="214" stroke="#c9ced5" stroke-width="1.5"/><line x1="157" y1="421" x2="64" y2="604" stroke="#c9ced5" stroke-width="1.5"/><line x1="64" y1="604" x2="86" y2="895" stroke="#c9ced5" stroke-width="1.5"/><line x1="835" y1="797" x2="642" y2="937" stroke="#c9ced5" stroke-width="1.5"/><line x1="86" y1="895" x2="283" y2="973" stroke="#c9ced5" stroke-width="1.5"/><line x1="642" y1="937" x2="283" y2="973" stroke="#c9ced5" stroke-width="1.5"/><line x1="642" y1="937" x2="771" y2="1142" stroke="#c9ced5" stroke-width="1.5"/><line x1="1065" y1="990" x2="1038" y2="755" stroke="#c9ced5" stroke-width="1.5"/><line x1="1038" y1="755" x2="895" y2="728" stroke="#c9ced5" stroke-width="1.5"/><line x1="895" y1="728" x2="1067" y2="820" stroke="#c9ced5" stroke-width="1.5"/><line x1="694" y1="223" x2="644" y2="241" stroke="#c9ced5" stroke-width="1.5"/><line x1="850" y1="1387" x2="771" y2="1461" stroke="#c9ced5" stroke-width="1.5"/></svg></div>
+      <div id="z0" class="scene clip" data-start="0.0" data-duration="5.726" data-track-index="1"><div id="z0-i" class="inner"><style>
+.nk-karte { position:absolute; background:#ffffff; border:2px solid #e2e5ea; border-radius:12px; box-shadow:0 18px 40px #0000001a; padding:34px 40px; z-index:4; }
+.nk-kt { font-weight:700; font-size:42px; color:#1d2330; padding-bottom:20px; border-bottom:2px solid #e8eaee; margin-bottom:12px; }
+.nk-row { display:flex; align-items:center; font-size:40px; color:#3a414c; padding:20px 0; white-space:nowrap; }
+.nk-row .v { margin-left:auto; font-weight:800; }
+.nk-ok { color:#22a35a; font-size:46px; margin-left:26px; }
+.nk-kachel { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; border-radius:8px; height:200px; }
+.nk-kachel img { max-width:200px; max-height:84px; }
+.nk-kachel .nk-p { font-weight:800; font-size:44px; }
+.nk-gross { position:absolute; left:0; width:1080px; text-align:center; font-weight:900; color:#1d2330; z-index:4; }
+</style><div id="t1" class="nk-gross" style="top:330px;font-size:56px;color:#1d2330;line-height:1.1">Microsoft verkauft KI-Lizenzen</div><div id="l1" class="nk-karte" style="left:330px;top:450px;width:420px;height:150px;display:flex;align-items:center;justify-content:center;padding:22px"><img src="assets/logos/microsoft.svg" style="width:100%;height:106px;object-fit:contain"/></div><div id="n1" class="nk-gross" style="top:660px;font-size:220px;color:#f28a1e;line-height:1.05">30 Mio.</div><div id="p1" style="position:absolute;left:0;width:1080px;top:960px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#1d2330;color:#fff;font-weight:900;font-size:46px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">bezahlt – und erst der Anfang</span></div></div></div>
+      <div id="z1" class="scene clip" data-start="5.726" data-duration="5.756" data-track-index="1"><div id="z1-i" class="inner"><div id="p2a" style="position:absolute;left:0;width:1080px;top:440px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#f28a1e;color:#fff;font-weight:900;font-size:54px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">KI-SERIE</span></div><div id="n2" class="nk-gross" style="top:560px;font-size:230px;color:#1d2330;line-height:1.05">TEIL 1</div><div id="k2" class="nk-karte" style="left:110px;top:950px;width:860px"><div class="nk-kt">Teil 2 (bald)</div><div style="font-weight:800;font-size:50px;color:#1d2330;text-align:center;padding:18px 0">Wer liefert<br/><span style="color:#f28a1e">Strom und Chips?</span></div></div></div></div>
+      <div id="z2" class="scene clip" data-start="11.482" data-duration="9.345" data-track-index="1"><div id="z2-i" class="inner"><div id="k3" class="nk-karte" style="left:110px;top:340px;width:860px"><div class="nk-kt">Heute: 5 Bereiche</div><div id="r3a" class="nk-row">1 · Büro-Software<span class="v" style="color:#1d2330"></span></div><div id="r3b" class="nk-row">2 · Werbung<span class="v" style="color:#1d2330"></span></div><div id="r3c" class="nk-row">3 · Sicherheit<span class="v" style="color:#1d2330"></span></div><div id="r3d" class="nk-row">4 · Daten<span class="v" style="color:#1d2330"></span></div><div id="r3e" class="nk-row">5 · Die Verlierer<span class="v" style="color:#d23c3c"></span></div></div><div id="q4" class="nk-gross" style="top:420px;font-size:200px;color:#d23c3c;line-height:1.05">−16 % ?</div><div id="pq" style="position:absolute;left:0;width:1080px;top:700px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#1d2330;color:#fff;font-weight:900;font-size:46px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">Wer verliert an einem Tag?</span></div><div id="co" style="position:absolute;left:90px;width:900px;top:930px;background:#101722e8;border:1px solid #ffffff22;border-radius:22px;padding:26px 34px 24px;box-shadow:0 18px 40px #0006;z-index:28;opacity:0;font-family:Montserrat,sans-serif"><div style="font-weight:700;font-size:34px;color:#fff">Kommentare</div><div style="display:flex;align-items:center;gap:18px;margin-top:20px"><div style="width:50px;height:50px;border-radius:50%;background:#3b82f6;flex:none;display:flex;align-items:flex-end;justify-content:center;overflow:hidden"><div style="width:22px;height:22px;border-radius:50%;background:#fff;margin-bottom:-2px;box-shadow:0 26px 0 6px #fff"></div></div><div style="flex:1;border-bottom:3px solid #ffffffcc;padding-bottom:8px;font-size:36px;color:#fff;white-space:nowrap"><span class="tz" style="opacity:0">W</span><span class="tz" style="opacity:0">e</span><span class="tz" style="opacity:0">l</span><span class="tz" style="opacity:0">c</span><span class="tz" style="opacity:0">h</span><span class="tz" style="opacity:0">e</span><span class="tz" style="opacity:0">&nbsp;</span><span class="tz" style="opacity:0">K</span><span class="tz" style="opacity:0">I</span><span class="tz" style="opacity:0">&nbsp;</span><span class="tz" style="opacity:0">n</span><span class="tz" style="opacity:0">u</span><span class="tz" style="opacity:0">t</span><span class="tz" style="opacity:0">z</span><span class="tz" style="opacity:0">t</span><span class="tz" style="opacity:0">&nbsp;</span><span class="tz" style="opacity:0">d</span><span class="tz" style="opacity:0">u</span><span class="tz" style="opacity:0">&nbsp;</span><span class="tz" style="opacity:0">a</span><span class="tz" style="opacity:0">m</span><span class="tz" style="opacity:0">&nbsp;</span><span class="tz" style="opacity:0">m</span><span class="tz" style="opacity:0">e</span><span class="tz" style="opacity:0">i</span><span class="tz" style="opacity:0">s</span><span class="tz" style="opacity:0">t</span><span class="tz" style="opacity:0">e</span><span class="tz" style="opacity:0">n</span><span class="tz" style="opacity:0">?</span><span id="co-cur" style="display:inline-block;width:3px;height:38px;background:#fff;vertical-align:middle;margin-left:2px"></span></div></div><div style="display:flex;justify-content:flex-end;align-items:center;gap:30px;margin-top:20px"><span style="font-size:30px;color:#ffffffaa;font-weight:600">Abbrechen</span><span style="position:relative;display:inline-block"><span id="co-btn" style="display:inline-block;padding:12px 34px;border-radius:30px;background:#f28a1e;color:#111;font-weight:800;font-size:32px;white-space:nowrap">Kommentieren</span></span></div></div><div id="co-z" style="position:absolute;left:560px;top:1260px;width:58px;height:58px;z-index:30;opacity:0"><svg viewBox="0 0 24 24" style="width:100%;height:100%;filter:drop-shadow(0 4px 6px #0006)"><path d="M4 2 L4 20 L9 15.5 L12.5 23 L15.5 21.6 L12 14.3 L19 14 Z" fill="#fff" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/></svg></div><div id="co-bn" style="position:absolute;left:0;width:1080px;top:1230px;display:flex;justify-content:center;z-index:27;opacity:0"><span style="padding:18px 40px;border-radius:40px;background:#101722e8;border:1px solid #ffffff22;color:#fff;font-weight:900;font-size:40px;letter-spacing:3px;white-space:nowrap">DEINE MEINUNG <span style="color:#f28a1e">IN DIE KOMMENTARE</span></span></div></div></div>
+      <div id="z3" class="scene clip" data-start="20.827" data-duration="4.397" data-track-index="1"><div id="z3-i" class="inner"><div id="t5" class="nk-gross" style="top:640px;font-size:78px;color:#1d2330;line-height:1.1">Schauen wir genau hin</div><div id="p5" style="position:absolute;left:0;width:1080px;top:900px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#f28a1e;color:#fff;font-weight:900;font-size:50px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">5 Bereiche · 5 Zahlen</span></div></div></div>
+      <div id="z4" class="scene clip" data-start="25.224" data-duration="7.492" data-track-index="1"><div id="z4-i" class="inner"><div id="t6" class="nk-gross" style="top:340px;font-size:58px;color:#f28a1e;line-height:1.1">Bereich 1: Büro-Software</div><div id="l6" class="nk-karte" style="left:330px;top:470px;width:420px;height:150px;display:flex;align-items:center;justify-content:center;padding:22px"><img src="assets/logos/microsoft.svg" style="width:100%;height:106px;object-fit:contain"/></div><div id="n6" class="nk-gross" style="top:680px;font-size:200px;color:#1d2330;line-height:1.05">30 Mio.+</div><div id="p6" style="position:absolute;left:0;width:1080px;top:960px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#f28a1e;color:#fff;font-weight:900;font-size:46px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">bezahlte Copilot-Lizenzen</span></div></div></div>
+      <div id="z5" class="scene clip" data-start="32.716" data-duration="3.732" data-track-index="1"><div id="z5-i" class="inner"><div id="t7" class="nk-gross" style="top:340px;font-size:64px;color:#1d2330;line-height:1.1">In nur 3 Monaten</div><div id="n7" class="nk-gross" style="top:520px;font-size:220px;color:#22a35a;line-height:1.05">+10 Mio.</div><div id="p7" style="position:absolute;left:0;width:1080px;top:820px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#22a35a;color:#fff;font-weight:900;font-size:48px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">neue bezahlte Lizenzen</span></div></div></div>
+      <div id="z6" class="scene clip" data-start="36.448" data-duration="6.602" data-track-index="1"><div id="z6-i" class="inner"><div id="t8" class="nk-gross" style="top:340px;font-size:60px;color:#1d2330;line-height:1.1">450 Mio. Büro-Nutzer</div><div id="b8" style="position:absolute;left:110px;top:620px;width:860px;height:110px;background:#e4e7ec;border-radius:14px;overflow:hidden;z-index:4;box-shadow:0 12px 26px #0002"><div id="b8g" style="position:absolute;left:0;top:0;height:110px;width:58px;background:#22a35a;transform-origin:0 50%"></div></div><div id="n8" class="nk-gross" style="top:800px;font-size:150px;color:#d23c3c;line-height:1.05">≈ 1 von 15</div><div id="p8" style="position:absolute;left:0;width:1080px;top:1010px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#1d2330;color:#fff;font-weight:900;font-size:44px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">hat erst KI dazugebucht</span></div></div></div>
+      <div id="z7" class="scene clip" data-start="43.05" data-duration="6.692" data-track-index="1"><div id="z7-i" class="inner"><div id="t9" class="nk-gross" style="top:340px;font-size:58px;color:#f28a1e;line-height:1.1">Bereich 2: Werbung</div><div id="l9" class="nk-karte" style="left:330px;top:470px;width:420px;height:150px;display:flex;align-items:center;justify-content:center;padding:22px"><img src="assets/logos/meta.png" style="width:100%;height:106px;object-fit:contain"/></div><div id="n9" class="nk-gross" style="top:690px;font-size:190px;color:#1d2330;line-height:1.05">63 Mrd. $</div><div id="p9" style="position:absolute;left:0;width:1080px;top:960px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#f28a1e;color:#fff;font-weight:900;font-size:46px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">Werbeumsatz in 3 Monaten</span></div></div></div>
+      <div id="z8" class="scene clip" data-start="49.742" data-duration="3.236" data-track-index="1"><div id="z8-i" class="inner"><div id="t10" class="nk-gross" style="top:340px;font-size:56px;color:#1d2330;line-height:1.1">Verglichen mit dem Vorjahr</div><div id="n10" class="nk-gross" style="top:480px;font-size:260px;color:#22a35a;line-height:1.05">+26 %</div><div id="p10" style="position:absolute;left:0;width:1080px;top:860px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#22a35a;color:#fff;font-weight:900;font-size:50px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">mehr Werbeumsatz</span></div></div></div>
+      <div id="z9" class="scene clip" data-start="52.978" data-duration="6.26" data-track-index="1"><div id="z9-i" class="inner"><div id="t11" class="nk-gross" style="top:340px;font-size:60px;color:#1d2330;line-height:1.1">KI wählt deine Anzeige</div><div id="k11" class="nk-karte" style="left:110px;top:520px;width:860px"><div class="nk-kt">Meta · Werbung</div><div id="r11a" class="nk-row">KI wählt aus, was du siehst<span class="v" style="color:#22a35a">✓</span></div><div id="r11b" class="nk-row">Preis pro Anzeige<span class="v" style="color:#d23c3c">+14 %</span><span class="nk-ok">▲</span></div></div></div></div>
+      <div id="z10" class="scene clip" data-start="59.238" data-duration="3.526" data-track-index="1"><div id="z10-i" class="inner"><div id="t12" class="nk-gross" style="top:340px;font-size:60px;color:#d23c3c;line-height:1.1">Vierzehn Prozent teurer?</div><div id="p12" style="position:absolute;left:0;width:1080px;top:640px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#22a35a;color:#fff;font-weight:900;font-size:52px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">Ja – weil sie besser trifft</span></div><div id="k12" class="nk-karte" style="left:110px;top:800px;width:860px"><div class="nk-kt">Mehr Geld pro Anzeige</div><div style="font-weight:900;font-size:110px;color:#d23c3c;text-align:center;line-height:1.1">+14 %</div></div></div></div>
+      <div id="z11" class="scene clip" data-start="62.764" data-duration="6.466" data-track-index="1"><div id="z11-i" class="inner"><div id="t13" class="nk-gross" style="top:340px;font-size:58px;color:#f28a1e;line-height:1.1">Bereich 3: Sicherheit</div><div id="k13" class="nk-karte" style="left:110px;top:520px;width:860px"><div class="nk-kt">Mehr KI im Netz</div><div id="r13a" class="nk-row">Mehr Programme<span class="v" style="color:#f28a1e">▲</span></div><div id="r13b" class="nk-row">Mehr Angriffsfläche<span class="v" style="color:#d23c3c">▲</span></div><div id="r13c" class="nk-row">Mehr Arbeit für Hacker<span class="v" style="color:#d23c3c">▲</span></div></div></div></div>
+      <div id="z12" class="scene clip" data-start="69.23" data-duration="7.213" data-track-index="1"><div id="z12-i" class="inner"><div id="t14" class="nk-gross" style="top:340px;font-size:56px;color:#1d2330;line-height:1.1">Ausgaben für KI-Sicherheit</div><div id="b14a" style="position:absolute;left:110px;top:560px;width:400px;height:96px;background:#8a93a1;border-radius:14px;color:#fff;font-weight:900;font-size:40px;display:flex;align-items:center;padding:0 26px;white-space:nowrap;box-shadow:0 12px 26px #0002;z-index:4;transform-origin:0 50%">2026 · 51 Mrd. $</div><div id="b14b" style="position:absolute;left:110px;top:700px;width:780px;height:96px;background:#22a35a;border-radius:14px;color:#fff;font-weight:900;font-size:40px;display:flex;align-items:center;padding:0 26px;white-space:nowrap;box-shadow:0 12px 26px #0002;z-index:4;transform-origin:0 50%">2027 · ≈ 86 Mrd. $</div><div id="p14" style="position:absolute;left:0;width:1080px;top:900px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#1d2330;color:#fff;font-weight:900;font-size:44px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">laut Gartner</span></div></div></div>
+      <div id="z13" class="scene clip" data-start="76.443" data-duration="4.873" data-track-index="1"><div id="z13-i" class="inner"><div id="t15" class="nk-gross" style="top:340px;font-size:44px;color:#1d2330;line-height:1.1">Eine der größten Sicherheitsfirmen</div><div id="l15" class="nk-karte" style="left:330px;top:470px;width:420px;height:150px;display:flex;align-items:center;justify-content:center;padding:22px"><img src="assets/logos/crowdstrike.svg" style="width:100%;height:106px;object-fit:contain"/></div><div id="n15" class="nk-gross" style="top:690px;font-size:240px;color:#22a35a;line-height:1.05">+26 %</div><div id="p15" style="position:absolute;left:0;width:1080px;top:1000px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#22a35a;color:#fff;font-weight:900;font-size:48px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">Umsatzwachstum</span></div></div></div>
+      <div id="z14" class="scene clip" data-start="81.316" data-duration="7.052" data-track-index="1"><div id="z14-i" class="inner"><div id="t16" class="nk-gross" style="top:340px;font-size:58px;color:#f28a1e;line-height:1.1">Bereich 4: Daten</div><div id="l16" class="nk-karte" style="left:220px;top:470px;width:640px;height:150px;display:flex;align-items:center;justify-content:center;padding:22px"><img src="assets/logos/palantir.svg" style="width:100%;height:106px;object-fit:contain"/></div><div id="n16" class="nk-gross" style="top:680px;font-size:260px;color:#22a35a;line-height:1.05">+96 %</div><div id="p16" style="position:absolute;left:0;width:1080px;top:1000px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#22a35a;color:#fff;font-weight:900;font-size:48px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">Umsatz fast verdoppelt</span></div></div></div>
+      <div id="z15" class="scene clip" data-start="88.368" data-duration="4.826" data-track-index="1"><div id="z15-i" class="inner"><div id="t17" class="nk-gross" style="top:340px;font-size:58px;color:#1d2330;line-height:1.1">Erstmals: Firmen vor Staat</div><div id="b17a" style="position:absolute;left:110px;top:520px;width:780px;height:96px;background:#22a35a;border-radius:14px;color:#fff;font-weight:900;font-size:40px;display:flex;align-items:center;padding:0 26px;white-space:nowrap;box-shadow:0 12px 26px #0002;z-index:4;transform-origin:0 50%">Unternehmen USA · 984 Mio. $</div><div id="b17b" style="position:absolute;left:110px;top:660px;width:750px;height:96px;background:#8a93a1;border-radius:14px;color:#fff;font-weight:900;font-size:40px;display:flex;align-items:center;padding:0 26px;white-space:nowrap;box-shadow:0 12px 26px #0002;z-index:4;transform-origin:0 50%">US-Staat · 953 Mio. $</div><div id="p17" style="position:absolute;left:0;width:1080px;top:830px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#1d2330;color:#fff;font-weight:900;font-size:44px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">pro Quartal</span></div></div></div>
+      <div id="z16" class="scene clip" data-start="93.194" data-duration="1.634" data-track-index="1"><div id="z16-i" class="inner"><div id="t18" class="nk-gross" style="top:400px;font-size:70px;color:#1d2330;line-height:1.1">Und trotzdem:</div><div id="n18" class="nk-gross" style="top:560px;font-size:220px;color:#d23c3c;line-height:1.05">Aktie ▼</div></div></div>
+      <div id="z17" class="scene clip" data-start="94.828" data-duration="5.683" data-track-index="1"><div id="z17-i" class="inner"><div id="t19" class="nk-gross" style="top:340px;font-size:58px;color:#1d2330;line-height:1.1">Warum? Neue Aufträge</div><div id="k19" class="nk-karte" style="left:110px;top:520px;width:860px"><div class="nk-kt">Palantir · US-Firmen</div><div id="r19a" class="nk-row">Vorher<span class="v" style="color:#22a35a">+153 %</span></div><div id="r19b" class="nk-row">Jetzt<span class="v" style="color:#d23c3c">+11 %</span><span class="nk-ok">▼</span></div></div></div></div>
+      <div id="z18" class="scene clip" data-start="100.511" data-duration="4.548" data-track-index="1"><div id="z18-i" class="inner"><div id="t20" class="nk-gross" style="top:380px;font-size:62px;color:#1d2330;line-height:1.1">Gute Zahlen reichen nicht</div><div id="p20" style="position:absolute;left:0;width:1080px;top:640px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#f28a1e;color:#fff;font-weight:900;font-size:50px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">Anleger wollen mehr Tempo</span></div><div id="k20" class="nk-karte" style="left:110px;top:820px;width:860px"><div class="nk-kt">Merke</div><div style="font-weight:900;font-size:64px;color:#1d2330;text-align:center;padding:14px 0">Tempo <span style="color:#f28a1e">&gt;</span> Zahl</div></div></div></div>
+      <div id="z19" class="scene clip" data-start="105.059" data-duration="5.519" data-track-index="1"><div id="z19-i" class="inner"><div id="t21" class="nk-gross" style="top:340px;font-size:58px;color:#d23c3c;line-height:1.1">Bereich 5: Die Verlierer</div><div id="l21" class="nk-karte" style="left:330px;top:470px;width:420px;height:150px;display:flex;align-items:center;justify-content:center;padding:22px"><img src="assets/logos/anthropic.svg" style="width:100%;height:106px;object-fit:contain"/></div><div id="p21" style="position:absolute;left:0;width:1080px;top:760px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#1d2330;color:#fff;font-weight:900;font-size:46px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">zeigt KI-Werkzeug für Juristen</span></div><div id="n21" class="nk-gross" style="top:900px;font-size:60px;color:#1d2330;line-height:1.1">Februar 2026</div></div></div>
+      <div id="z20" class="scene clip" data-start="110.578" data-duration="6.682" data-track-index="1"><div id="z20-i" class="inner"><div id="t22" class="nk-gross" style="top:340px;font-size:64px;color:#1d2330;line-height:1.1">An einem Tag</div><div id="l22" class="nk-karte" style="left:220px;top:450px;width:640px;height:150px;display:flex;align-items:center;justify-content:center;padding:22px"><img src="assets/logos/thomsonreuters.svg" style="width:100%;height:106px;object-fit:contain"/></div><div id="n22" class="nk-gross" style="top:660px;font-size:260px;color:#d23c3c;line-height:1.05">−16 %</div><div id="p22" style="position:absolute;left:0;width:1080px;top:980px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#1d2330;color:#fff;font-weight:900;font-size:46px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">Infos für Anwälte</span></div></div></div>
+      <div id="z21" class="scene clip" data-start="117.26" data-duration="3.95" data-track-index="1"><div id="z21-i" class="inner"><div id="n23" class="nk-gross" style="top:420px;font-size:150px;color:#d23c3c;line-height:1.05">Autsch.</div><div id="k23" class="nk-karte" style="left:110px;top:700px;width:860px"><div class="nk-kt">Aber:</div><div style="font-weight:800;font-size:50px;color:#1d2330;text-align:center;padding:14px 0">Manche Fachleute sagen:<br/><span style="color:#f28a1e">Angst übertrieben</span></div></div></div></div>
+      <div id="z22" class="scene clip" data-start="121.21" data-duration="5.51" data-track-index="1"><div id="z22-i" class="inner"><div id="t24" class="nk-gross" style="top:340px;font-size:70px;color:#f28a1e;line-height:1.1">Merk dir</div><div id="k24" class="nk-karte" style="left:110px;top:500px;width:860px"><div class="nk-kt">KI-Regeln</div><div id="r24a" class="nk-row">Nicht jede Firma mit KI gewinnt<span class="v" style="color:#1d2330"></span></div><div id="r24b" class="nk-row">Gute Zahlen ≠ steigender Kurs<span class="v" style="color:#1d2330"></span></div></div></div></div>
+      <div id="z23" class="scene clip" data-start="126.72" data-duration="3.736" data-track-index="1"><div id="z23-i" class="inner"><div id="p25" style="position:absolute;left:0;width:1080px;top:440px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#f28a1e;color:#fff;font-weight:900;font-size:54px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">TEIL 2</span></div><div id="k25" class="nk-karte" style="left:110px;top:600px;width:860px"><div class="nk-kt">Als Nächstes</div><div style="font-weight:900;font-size:60px;color:#1d2330;text-align:center;padding:18px 0;line-height:1.2">Wer liefert<br/><span style="color:#f28a1e">Strom und Chips?</span></div></div></div></div>
+      <div id="z24" class="scene clip" data-start="130.456" data-duration="3.934" data-track-index="1"><div id="z24-i" class="inner"><div id="fl26" style="position:absolute;left:340px;top:480px;width:400px;height:400px;border-radius:50%;overflow:hidden;border:10px solid #f28a1e;box-shadow:0 20px 50px #0003;background:#1b1f22;z-index:4"><img src="assets/beagle.png" style="width:100%;height:100%;object-fit:cover"/></div><div id="n26" class="nk-gross" style="top:920px;font-size:64px">HundeFinanz<span style="color:#f28a1e">Tv</span></div><div id="c26" style="position:absolute;left:0;width:1080px;top:1040px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#f28a1e;color:#fff;font-weight:900;font-size:58px;box-shadow:0 12px 26px #0000002a;white-space:nowrap">+ Folgen</span></div></div></div>
+      <div id="z25" class="scene clip" data-start="22.224" data-duration="3.0" data-track-index="7"><div id="z25-i" class="inner"><style>
+#ls-bg { position:absolute; inset:0; background: linear-gradient(180deg,#f7f8fa,#eceef2); border:none; box-sizing:border-box; z-index:11; overflow:hidden; }
+#ls-ring { position:absolute; left:375.0px; top:715.0px; width:330px; height:330px; border-radius:50%; border:6px solid #ff8a1f; z-index:12; }
+#ls-logo { position:absolute; left:415.0px; top:755.0px; width:250px; height:250px; border-radius:50%; overflow:hidden;
+  border:8px solid #DB8622; box-shadow:0 0 70px #ff8a1fbb, 0 20px 40px #000; z-index:13; }
+#ls-logo img { width:100%; height:100%; object-fit:cover; }
+#ls-txt { position:absolute; left:320px; top:817.6px; z-index:13; clip-path: inset(0 0 0 0); }
+#ls-name { font-weight:900; font-size:80px; line-height:1; color:#1d2330; letter-spacing:-1px; white-space:nowrap; text-shadow:none; }
+#ls-name b { color:#ff8a1f; text-shadow:0 0 40px #ff8a1faa; }
+#ls-tag { margin-top:18px; font-weight:900; font-size:33px; color:#ff8a1f; letter-spacing:1px; white-space:nowrap; }
+#ls-tag i { font-style:normal; color:#1d2330aa; padding:0 6px; }
+</style>
+<div id="ls-bg"><svg style="position:absolute;inset:0;width:1080px;height:1920px;opacity:.75" viewBox="0 0 1080 1920"><circle cx="487" cy="1413" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="267" cy="957" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="970" cy="1481" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="134" cy="1440" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="26" cy="1160" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="531" cy="1328" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="479" cy="592" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="963" cy="1307" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="975" cy="1013" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="308" cy="674" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="310" cy="1271" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="798" cy="1718" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="31" cy="1575" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="131" cy="526" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="87" cy="816" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="63" cy="1886" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="551" cy="1168" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="793" cy="1662" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="874" cy="1008" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="910" cy="474" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="748" cy="399" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="73" cy="478" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="1013" cy="644" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="528" cy="1576" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="893" cy="1795" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="616" cy="1062" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="1038" cy="990" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="718" cy="1293" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="834" cy="1396" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="475" cy="889" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="58" cy="772" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="334" cy="1630" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="668" cy="1309" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="213" cy="1661" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="432" cy="1496" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="546" cy="783" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="254" cy="329" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="987" cy="1508" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="990" cy="381" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="704" cy="1839" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="136" cy="1040" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="308" cy="241" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="601" cy="1074" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="850" cy="443" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="90" cy="1439" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="92" cy="973" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="677" cy="1328" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="571" cy="1235" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="483" cy="273" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="634" cy="214" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="157" cy="421" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="64" cy="604" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="835" cy="797" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="539" cy="519" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="86" cy="895" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="642" cy="937" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="283" cy="973" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="771" cy="1142" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="1065" cy="990" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="210" cy="1470" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="1038" cy="755" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="883" cy="1499" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="486" cy="816" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="895" cy="728" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="1067" cy="820" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="694" cy="223" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="850" cy="1387" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="644" cy="241" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="771" cy="1461" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><circle cx="272" cy="323" r="5" fill="none" stroke="#b9bec6" stroke-width="2"/><line x1="487" y1="1413" x2="134" y2="1440" stroke="#c9ced5" stroke-width="1.5"/><line x1="134" y1="1440" x2="26" y2="1160" stroke="#c9ced5" stroke-width="1.5"/><line x1="479" y1="592" x2="308" y2="674" stroke="#c9ced5" stroke-width="1.5"/><line x1="963" y1="1307" x2="975" y2="1013" stroke="#c9ced5" stroke-width="1.5"/><line x1="31" y1="1575" x2="63" y2="1886" stroke="#c9ced5" stroke-width="1.5"/><line x1="131" y1="526" x2="87" y2="816" stroke="#c9ced5" stroke-width="1.5"/><line x1="910" y1="474" x2="748" y2="399" stroke="#c9ced5" stroke-width="1.5"/><line x1="910" y1="474" x2="1013" y2="644" stroke="#c9ced5" stroke-width="1.5"/><line x1="616" y1="1062" x2="718" y2="1293" stroke="#c9ced5" stroke-width="1.5"/><line x1="718" y1="1293" x2="834" y2="1396" stroke="#c9ced5" stroke-width="1.5"/><line x1="334" y1="1630" x2="213" y2="1661" stroke="#c9ced5" stroke-width="1.5"/><line x1="334" y1="1630" x2="432" y2="1496" stroke="#c9ced5" stroke-width="1.5"/><line x1="213" y1="1661" x2="432" y2="1496" stroke="#c9ced5" stroke-width="1.5"/><line x1="677" y1="1328" x2="571" y2="1235" stroke="#c9ced5" stroke-width="1.5"/><line x1="483" y1="273" x2="634" y2="214" stroke="#c9ced5" stroke-width="1.5"/><line x1="157" y1="421" x2="64" y2="604" stroke="#c9ced5" stroke-width="1.5"/><line x1="64" y1="604" x2="86" y2="895" stroke="#c9ced5" stroke-width="1.5"/><line x1="835" y1="797" x2="642" y2="937" stroke="#c9ced5" stroke-width="1.5"/><line x1="86" y1="895" x2="283" y2="973" stroke="#c9ced5" stroke-width="1.5"/><line x1="642" y1="937" x2="283" y2="973" stroke="#c9ced5" stroke-width="1.5"/><line x1="642" y1="937" x2="771" y2="1142" stroke="#c9ced5" stroke-width="1.5"/><line x1="1065" y1="990" x2="1038" y2="755" stroke="#c9ced5" stroke-width="1.5"/><line x1="1038" y1="755" x2="895" y2="728" stroke="#c9ced5" stroke-width="1.5"/><line x1="895" y1="728" x2="1067" y2="820" stroke="#c9ced5" stroke-width="1.5"/><line x1="694" y1="223" x2="644" y2="241" stroke="#c9ced5" stroke-width="1.5"/><line x1="850" y1="1387" x2="771" y2="1461" stroke="#c9ced5" stroke-width="1.5"/></svg></div><div id="ls-ring"></div>
+<div id="ls-logo"><img src="assets/beagle.png" alt="" /></div>
+<div id="ls-txt"><div id="ls-name">HundeFinanz<b>Tv</b></div><div id="ls-tag">AKTIEN <i>|</i> FINANZEN <i>|</i> VERMÖGEN</div></div></div></div>
+      <div id="z26" class="scene clip" data-start="0.0" data-duration="134.39" data-track-index="8"><div id="z26-i" class="inner"><div id="kopf" style="position:absolute;left:0;top:150px;width:1080px;height:120px;background:linear-gradient(90deg,#fbe9e9,#fdf6e3);border-bottom:2px solid #e4e6ea;display:flex;align-items:center;padding:0 64px 0 50px;gap:18px;z-index:8"><img src="assets/beagle.png" style="width:86px;height:86px;border-radius:50%;border:3px solid #fff;box-shadow:0 4px 10px #0002"/><div style="font-weight:700;font-size:40px;color:#1d2330">HundeFinanzTv</div><div style="margin-left:auto;font-size:31px;color:#1d2330;font-weight:800;letter-spacing:1px;white-space:nowrap">KI-SERIE · TEIL 1<span style="font-weight:500;color:#555c66;margin-left:12px">22.11.2026</span></div></div></div></div>
+      <div id="logo"><img src="assets/beagle.png" alt="" /></div>
+      <div id="brand">HundeFinanzTv</div>
+      <div id="flash"></div>
+      <div id="frame"></div>
+      <div id="captions" data-track-kind="captions">
+        <div id="c1" class="cap clip" data-start="0.0" data-duration="1.08" data-track-index="2"><span id="w1-0">Über</span> <span id="w1-1">30</span> <span id="w1-2">Millionen</span> </div>
+        <div id="c2" class="cap clip" data-start="1.08" data-duration="1.399" data-track-index="2"><span id="w2-0">KI‑Lizenzen</span> <span id="w2-1">hat</span> <span id="w2-2">allein</span> </div>
+        <div id="c3" class="cap clip" data-start="2.479" data-duration="1.652" data-track-index="2"><span id="w3-0">Microsoft</span> <span id="w3-1">schon</span> <span id="w3-2">verkauft</span> <span id="w3-3">–</span> </div>
+        <div id="c4" class="cap clip" data-start="4.131" data-duration="1.595" data-track-index="2"><span id="w4-0">und</span> <span id="w4-1">das</span> <span id="w4-2">ist</span> <span id="w4-3">erst</span> <span id="w4-4">der</span> <span id="w4-5">Anfang</span> </div>
+        <div id="c5" class="cap clip" data-start="5.726" data-duration="0.88" data-track-index="2"><span id="w5-0">Das</span> <span id="w5-1">ist</span> <span id="w5-2">Teil</span> <span id="w5-3">eins</span> </div>
+        <div id="c6" class="cap clip" data-start="6.606" data-duration="1.387" data-track-index="2"><span id="w6-0">unserer</span> <span id="w6-1">KI‑Serie.</span> <span id="w6-2">In</span> <span id="w6-3">Teil</span> </div>
+        <div id="c7" class="cap clip" data-start="7.993" data-duration="1.163" data-track-index="2"><span id="w7-0">zwei</span> <span id="w7-1">zeigen</span> <span id="w7-2">wir</span> <span id="w7-3">dir,</span> </div>
+        <div id="c8" class="cap clip" data-start="9.156" data-duration="0.756" data-track-index="2"><span id="w8-0">wer</span> <span id="w8-1">den</span> <span id="w8-2">Strom</span> </div>
+        <div id="c9" class="cap clip" data-start="9.912" data-duration="1.57" data-track-index="2"><span id="w9-0">und</span> <span id="w9-1">die</span> <span id="w9-2">Chips</span> <span id="w9-3">dafür</span> <span id="w9-4">liefert</span> </div>
+        <div id="c10" class="cap clip" data-start="11.482" data-duration="1.342" data-track-index="2"><span id="w10-0">Heute:</span> <span id="w10-1">fünf</span> <span id="w10-2">Bereiche,</span> </div>
+        <div id="c11" class="cap clip" data-start="12.824" data-duration="1.44" data-track-index="2"><span id="w11-0">in</span> <span id="w11-1">denen</span> <span id="w11-2">Firmen</span> <span id="w11-3">mit</span> <span id="w11-4">KI</span> </div>
+        <div id="c12" class="cap clip" data-start="14.264" data-duration="1.28" data-track-index="2"><span id="w12-0">schon</span> <span id="w12-1">Geld</span> <span id="w12-2">verdienen</span> </div>
+        <div id="c13" class="cap clip" data-start="15.544" data-duration="1.682" data-track-index="2"><span id="w13-0">Und</span> <span id="w13-1">am</span> <span id="w13-2">Ende</span> <span id="w13-3">erfährst</span> <span id="w13-4">du,</span> </div>
+        <div id="c14" class="cap clip" data-start="17.226" data-duration="2.137" data-track-index="2"><span id="w14-0">welche</span> <span id="w14-1">Firma</span> <span id="w14-2">an</span> <span id="w14-3">einem</span> <span id="w14-4">einzigen</span> </div>
+        <div id="c15" class="cap clip" data-start="19.363" data-duration="1.464" data-track-index="2"><span id="w15-0">Tag</span> <span id="w15-1">16 %</span> <span id="w15-2">verloren</span> <span id="w15-3">hat</span> </div>
+        <div id="c16" class="cap clip" data-start="20.827" data-duration="1.397" data-track-index="2"><span id="w16-0">Schauen</span> <span id="w16-1">wir</span> <span id="w16-2">uns</span> <span id="w16-3">das</span> <span id="w16-4">genau</span> <span id="w16-5">an</span> </div>
+        <div id="c17" class="cap clip" data-start="25.224" data-duration="1.962" data-track-index="2"><span id="w17-0">Bereich</span> <span id="w17-1">eins:</span> <span id="w17-2">Büro‑Software.</span> </div>
+        <div id="c18" class="cap clip" data-start="27.186" data-duration="1.107" data-track-index="2"><span id="w18-0">Microsoft</span> <span id="w18-1">hat</span> <span id="w18-2">über</span> </div>
+        <div id="c19" class="cap clip" data-start="28.293" data-duration="2.211" data-track-index="2"><span id="w19-0">30</span> <span id="w19-1">Millionen</span> <span id="w19-2">bezahlte</span> <span id="w19-3">Lizenzen</span> </div>
+        <div id="c20" class="cap clip" data-start="30.504" data-duration="2.212" data-track-index="2"><span id="w20-0">für</span> <span id="w20-1">den</span> <span id="w20-2">KI‑Assistenten</span> <span id="w20-3">Copilot</span> </div>
+        <div id="c21" class="cap clip" data-start="32.716" data-duration="1.384" data-track-index="2"><span id="w21-0">Allein</span> <span id="w21-1">in</span> <span id="w21-2">den</span> <span id="w21-3">letzten</span> </div>
+        <div id="c22" class="cap clip" data-start="34.1" data-duration="1.187" data-track-index="2"><span id="w22-0">drei</span> <span id="w22-1">Monaten</span> <span id="w22-2">kamen</span> </div>
+        <div id="c23" class="cap clip" data-start="35.287" data-duration="1.161" data-track-index="2"><span id="w23-0">zehn</span> <span id="w23-1">Millionen</span> <span id="w23-2">dazu</span> </div>
+        <div id="c24" class="cap clip" data-start="36.448" data-duration="1.838" data-track-index="2"><span id="w24-0">Viel?</span> <span id="w24-1">Microsoft</span> <span id="w24-2">hat</span> <span id="w24-3">rund</span> </div>
+        <div id="c25" class="cap clip" data-start="38.286" data-duration="2.089" data-track-index="2"><span id="w25-0">450</span> <span id="w25-1">Millionen</span> <span id="w25-2">Büro‑Nutzer,</span> </div>
+        <div id="c26" class="cap clip" data-start="40.375" data-duration="1.348" data-track-index="2"><span id="w26-0">also</span> <span id="w26-1">hat</span> <span id="w26-2">erst</span> <span id="w26-3">etwa</span> </div>
+        <div id="c27" class="cap clip" data-start="41.723" data-duration="1.327" data-track-index="2"><span id="w27-0">jeder</span> <span id="w27-1">fünfzehnte</span> <span id="w27-2">KI</span> </div>
+        <div id="c28" class="cap clip" data-start="43.05" data-duration="1.645" data-track-index="2"><span id="w28-0">Bereich</span> <span id="w28-1">zwei:</span> <span id="w28-2">Werbung.</span> <span id="w28-3">Meta</span> </div>
+        <div id="c29" class="cap clip" data-start="44.695" data-duration="1.917" data-track-index="2"><span id="w29-0">hat</span> <span id="w29-1">mit</span> <span id="w29-2">Werbung</span> <span id="w29-3">in</span> <span id="w29-4">nur</span> <span id="w29-5">drei</span> </div>
+        <div id="c30" class="cap clip" data-start="46.612" data-duration="1.985" data-track-index="2"><span id="w30-0">Monaten</span> <span id="w30-1">über</span> <span id="w30-2">63</span> <span id="w30-3">Milliarden</span> </div>
+        <div id="c31" class="cap clip" data-start="48.597" data-duration="1.145" data-track-index="2"><span id="w31-0">Dollar</span> <span id="w31-1">verdient</span> </div>
+        <div id="c32" class="cap clip" data-start="49.742" data-duration="1.655" data-track-index="2"><span id="w32-0">Das</span> <span id="w32-1">sind</span> <span id="w32-2">26 %</span> <span id="w32-3">mehr</span> </div>
+        <div id="c33" class="cap clip" data-start="51.397" data-duration="1.581" data-track-index="2"><span id="w33-0">als</span> <span id="w33-1">vor</span> <span id="w33-2">einem</span> <span id="w33-3">Jahr</span> </div>
+        <div id="c34" class="cap clip" data-start="52.978" data-duration="1.683" data-track-index="2"><span id="w34-0">Der</span> <span id="w34-1">Grund:</span> <span id="w34-2">KI</span> <span id="w34-3">wählt</span> <span id="w34-4">aus,</span> </div>
+        <div id="c35" class="cap clip" data-start="54.661" data-duration="1.83" data-track-index="2"><span id="w35-0">welche</span> <span id="w35-1">Anzeige</span> <span id="w35-2">du</span> <span id="w35-3">siehst,</span> </div>
+        <div id="c36" class="cap clip" data-start="56.491" data-duration="1.245" data-track-index="2"><span id="w36-0">und</span> <span id="w36-1">der</span> <span id="w36-2">Preis</span> <span id="w36-3">pro</span> </div>
+        <div id="c37" class="cap clip" data-start="57.736" data-duration="1.502" data-track-index="2"><span id="w37-0">Anzeige</span> <span id="w37-1">stieg</span> <span id="w37-2">um</span> <span id="w37-3">14 %</span> </div>
+        <div id="c38" class="cap clip" data-start="59.238" data-duration="1.261" data-track-index="2"><span id="w38-0">14 %</span> <span id="w38-1">teurer?</span> <span id="w38-2">Ja,</span> </div>
+        <div id="c39" class="cap clip" data-start="60.499" data-duration="2.265" data-track-index="2"><span id="w39-0">denn</span> <span id="w39-1">die</span> <span id="w39-2">Werbung</span> <span id="w39-3">trifft</span> <span id="w39-4">besser</span> </div>
+        <div id="c40" class="cap clip" data-start="62.764" data-duration="1.496" data-track-index="2"><span id="w40-0">Bereich</span> <span id="w40-1">drei:</span> <span id="w40-2">Sicherheit.</span> </div>
+        <div id="c41" class="cap clip" data-start="64.26" data-duration="1.136" data-track-index="2"><span id="w41-0">Je</span> <span id="w41-1">mehr</span> <span id="w41-2">KI‑Programme</span> </div>
+        <div id="c42" class="cap clip" data-start="65.396" data-duration="1.104" data-track-index="2"><span id="w42-0">im</span> <span id="w42-1">Netz</span> <span id="w42-2">arbeiten,</span> </div>
+        <div id="c43" class="cap clip" data-start="66.5" data-duration="1.624" data-track-index="2"><span id="w43-0">desto</span> <span id="w43-1">mehr</span> <span id="w43-2">Angriffsfläche</span> </div>
+        <div id="c44" class="cap clip" data-start="68.124" data-duration="1.106" data-track-index="2"><span id="w44-0">gibt</span> <span id="w44-1">es</span> <span id="w44-2">für</span> <span id="w44-3">Hacker</span> </div>
+        <div id="c45" class="cap clip" data-start="69.23" data-duration="0.744" data-track-index="2"><span id="w45-0">Laut</span> <span id="w45-1">Gartner</span> </div>
+        <div id="c46" class="cap clip" data-start="69.974" data-duration="1.343" data-track-index="2"><span id="w46-0">steigen</span> <span id="w46-1">die</span> <span id="w46-2">Ausgaben</span> </div>
+        <div id="c47" class="cap clip" data-start="71.317" data-duration="1.545" data-track-index="2"><span id="w47-0">dafür</span> <span id="w47-1">von</span> <span id="w47-2">51</span> <span id="w47-3">Milliarden</span> </div>
+        <div id="c48" class="cap clip" data-start="72.862" data-duration="1.814" data-track-index="2"><span id="w48-0">Dollar</span> <span id="w48-1">dieses</span> <span id="w48-2">Jahr</span> <span id="w48-3">auf</span> <span id="w48-4">fast</span> </div>
+        <div id="c49" class="cap clip" data-start="74.676" data-duration="1.767" data-track-index="2"><span id="w49-0">86</span> <span id="w49-1">Milliarden</span> <span id="w49-2">nächstes</span> <span id="w49-3">Jahr</span> </div>
+        <div id="c50" class="cap clip" data-start="76.443" data-duration="0.878" data-track-index="2"><span id="w50-0">CrowdStrike,</span> </div>
+        <div id="c51" class="cap clip" data-start="77.321" data-duration="1.234" data-track-index="2"><span id="w51-0">eine</span> <span id="w51-1">der</span> <span id="w51-2">größten</span> </div>
+        <div id="c52" class="cap clip" data-start="78.555" data-duration="1.388" data-track-index="2"><span id="w52-0">Sicherheitsfirmen,</span> </div>
+        <div id="c53" class="cap clip" data-start="79.943" data-duration="1.373" data-track-index="2"><span id="w53-0">wächst</span> <span id="w53-1">um</span> <span id="w53-2">rund</span> <span id="w53-3">26 %</span> </div>
+        <div id="c54" class="cap clip" data-start="81.316" data-duration="1.427" data-track-index="2"><span id="w54-0">Bereich</span> <span id="w54-1">vier:</span> <span id="w54-2">Daten.</span> </div>
+        <div id="c55" class="cap clip" data-start="82.743" data-duration="1.637" data-track-index="2"><span id="w55-0">Palantir</span> <span id="w55-1">hat</span> <span id="w55-2">den</span> <span id="w55-3">Umsatz</span> </div>
+        <div id="c56" class="cap clip" data-start="84.38" data-duration="1.926" data-track-index="2"><span id="w56-0">im</span> <span id="w56-1">Vergleich</span> <span id="w56-2">zum</span> <span id="w56-3">Vorjahr</span> </div>
+        <div id="c57" class="cap clip" data-start="86.306" data-duration="2.062" data-track-index="2"><span id="w57-0">fast</span> <span id="w57-1">verdoppelt:</span> <span id="w57-2">plus</span> <span id="w57-3">96 %</span> </div>
+        <div id="c58" class="cap clip" data-start="88.368" data-duration="1.402" data-track-index="2"><span id="w58-0">Zum</span> <span id="w58-1">ersten</span> <span id="w58-2">Mal</span> <span id="w58-3">verdient</span> </div>
+        <div id="c59" class="cap clip" data-start="89.77" data-duration="1.525" data-track-index="2"><span id="w59-0">die</span> <span id="w59-1">Firma</span> <span id="w59-2">mit</span> <span id="w59-3">Unternehmen</span> </div>
+        <div id="c60" class="cap clip" data-start="91.295" data-duration="0.609" data-track-index="2"><span id="w60-0">in</span> <span id="w60-1">Amerika</span> </div>
+        <div id="c61" class="cap clip" data-start="91.904" data-duration="1.29" data-track-index="2"><span id="w61-0">mehr</span> <span id="w61-1">als</span> <span id="w61-2">mit</span> <span id="w61-3">dem</span> <span id="w61-4">Staat</span> </div>
+        <div id="c62" class="cap clip" data-start="93.194" data-duration="1.634" data-track-index="2"><span id="w62-0">Und</span> <span id="w62-1">trotzdem</span> <span id="w62-2">fiel</span> <span id="w62-3">die</span> <span id="w62-4">Aktie</span> </div>
+        <div id="c63" class="cap clip" data-start="94.828" data-duration="1.736" data-track-index="2"><span id="w63-0">Warum?</span> <span id="w63-1">Neue</span> <span id="w63-2">Aufträge</span> </div>
+        <div id="c64" class="cap clip" data-start="96.564" data-duration="2.322" data-track-index="2"><span id="w64-0">wachsen</span> <span id="w64-1">nur</span> <span id="w64-2">noch</span> <span id="w64-3">um</span> <span id="w64-4">11</span> <span id="w64-5">%,</span> </div>
+        <div id="c65" class="cap clip" data-start="98.886" data-duration="1.625" data-track-index="2"><span id="w65-0">vorher</span> <span id="w65-1">waren</span> <span id="w65-2">es</span> <span id="w65-3">153</span> </div>
+        <div id="c66" class="cap clip" data-start="100.511" data-duration="1.102" data-track-index="2"><span id="w66-0">Gute</span> <span id="w66-1">Zahlen</span> <span id="w66-2">reichen</span> </div>
+        <div id="c67" class="cap clip" data-start="101.613" data-duration="1.016" data-track-index="2"><span id="w67-0">also</span> <span id="w67-1">nicht?</span> <span id="w67-2">Genau,</span> </div>
+        <div id="c68" class="cap clip" data-start="102.629" data-duration="1.146" data-track-index="2"><span id="w68-0">die</span> <span id="w68-1">Anleger</span> <span id="w68-2">wollen</span> </div>
+        <div id="c69" class="cap clip" data-start="103.775" data-duration="1.284" data-track-index="2"><span id="w69-0">immer</span> <span id="w69-1">noch</span> <span id="w69-2">mehr</span> <span id="w69-3">Tempo</span> </div>
+        <div id="c70" class="cap clip" data-start="105.059" data-duration="1.798" data-track-index="2"><span id="w70-0">Bereich</span> <span id="w70-1">fünf:</span> <span id="w70-2">die</span> <span id="w70-3">Verlierer.</span> </div>
+        <div id="c71" class="cap clip" data-start="106.857" data-duration="1.764" data-track-index="2"><span id="w71-0">Im</span> <span id="w71-1">Februar</span> <span id="w71-2">zeigte</span> <span id="w71-3">Anthropic</span> </div>
+        <div id="c72" class="cap clip" data-start="108.621" data-duration="1.957" data-track-index="2"><span id="w72-0">ein</span> <span id="w72-1">KI‑Werkzeug</span> <span id="w72-2">für</span> <span id="w72-3">Juristen</span> </div>
+        <div id="c73" class="cap clip" data-start="110.578" data-duration="1.419" data-track-index="2"><span id="w73-0">An</span> <span id="w73-1">diesem</span> <span id="w73-2">einen</span> <span id="w73-3">Tag</span> </div>
+        <div id="c74" class="cap clip" data-start="111.997" data-duration="1.731" data-track-index="2"><span id="w74-0">fiel</span> <span id="w74-1">Thomson</span> <span id="w74-2">Reuters</span> <span id="w74-3">um</span> </div>
+        <div id="c75" class="cap clip" data-start="113.728" data-duration="1.806" data-track-index="2"><span id="w75-0">16</span> <span id="w75-1">%.</span> <span id="w75-2">Die</span> <span id="w75-3">Firma</span> <span id="w75-4">verkauft</span> </div>
+        <div id="c76" class="cap clip" data-start="115.534" data-duration="1.726" data-track-index="2"><span id="w76-0">Informationen</span> <span id="w76-1">an</span> <span id="w76-2">Anwälte</span> </div>
+        <div id="c77" class="cap clip" data-start="117.26" data-duration="1.353" data-track-index="2"><span id="w77-0">Autsch.</span> <span id="w77-1">Manche</span> <span id="w77-2">Fachleute</span> </div>
+        <div id="c78" class="cap clip" data-start="118.613" data-duration="1.093" data-track-index="2"><span id="w78-0">sagen</span> <span id="w78-1">allerdings,</span> </div>
+        <div id="c79" class="cap clip" data-start="119.706" data-duration="1.504" data-track-index="2"><span id="w79-0">die</span> <span id="w79-1">Angst</span> <span id="w79-2">sei</span> <span id="w79-3">übertrieben</span> </div>
+        <div id="c80" class="cap clip" data-start="121.21" data-duration="0.809" data-track-index="2"><span id="w80-0">Merk</span> <span id="w80-1">dir:</span> <span id="w80-2">Nicht</span> </div>
+        <div id="c81" class="cap clip" data-start="122.019" data-duration="1.817" data-track-index="2"><span id="w81-0">jede</span> <span id="w81-1">Firma</span> <span id="w81-2">mit</span> <span id="w81-3">KI</span> <span id="w81-4">gewinnt,</span> </div>
+        <div id="c82" class="cap clip" data-start="123.836" data-duration="1.397" data-track-index="2"><span id="w82-0">und</span> <span id="w82-1">nicht</span> <span id="w82-2">jede</span> <span id="w82-3">Aktie</span> </div>
+        <div id="c83" class="cap clip" data-start="125.233" data-duration="1.487" data-track-index="2"><span id="w83-0">steigt</span> <span id="w83-1">bei</span> <span id="w83-2">guten</span> <span id="w83-3">Zahlen</span> </div>
+        <div id="c84" class="cap clip" data-start="126.72" data-duration="1.319" data-track-index="2"><span id="w84-0">Kurzer</span> <span id="w84-1">Hinweis:</span> <span id="w84-2">Das</span> <span id="w84-3">ist</span> </div>
+        <div id="c85" class="cap clip" data-start="128.039" data-duration="1.316" data-track-index="2"><span id="w85-0">keine</span> <span id="w85-1">Anlageberatung,</span> </div>
+        <div id="c86" class="cap clip" data-start="129.355" data-duration="1.101" data-track-index="2"><span id="w86-0">nur</span> <span id="w86-1">eine</span> <span id="w86-2">Erklärung</span> </div>
+        <div id="c87" class="cap clip" data-start="130.456" data-duration="1.26" data-track-index="2"><span id="w87-0">Folge</span> <span id="w87-1">HundeFinanzTv,</span> </div>
+        <div id="c88" class="cap clip" data-start="131.716" data-duration="1.158" data-track-index="2"><span id="w88-0">damit</span> <span id="w88-1">du</span> <span id="w88-2">Teil</span> <span id="w88-3">zwei</span> </div>
+        <div id="c89" class="cap clip" data-start="132.874" data-duration="0.901" data-track-index="2"><span id="w89-0">nicht</span> <span id="w89-1">verpasst</span> </div>
+      </div>
+      <audio id="voice" src="assets/mix.wav" data-start="0" data-duration="134.39" data-track-index="3"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const pop = (sel, at) => tl.fromTo(sel, { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.2)" }, at);
+      const slam = (sel, at) => tl.fromTo(sel, { scale: 2.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.28, ease: "power4.in" }, at);
+      const shake = (sel, at) => tl.fromTo(sel, { x: -14 }, { x: 14, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }, at);
+      const draw = (sel, at, dur) => {
+        const len = document.querySelector(sel).getTotalLength();
+        tl.fromTo(sel, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: dur, ease: "power2.out" }, at);
+      };
+      const zaehl = (sel, von, bis, at, dur, nach) => {
+        const o = { v: von };
+        tl.fromTo(o, { v: von }, { v: bis, duration: dur, ease: "power2.out", onUpdate: () => {
+          document.querySelector(sel).textContent = Math.round(o.v).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (nach || ""); }, immediateRender: false }, at);
+      };
+      const flash = (at, st) => tl.fromTo("#flash", { opacity: st || 0.85 }, { opacity: 0, duration: 0.35, ease: "power2.out", immediateRender: false }, at);
+      const burst = (sel, at, dur) => tl.fromTo(sel + " .p", { x: 0, y: 0, scale: 1.4, opacity: 1 },
+        { x: (i, el) => +el.dataset.dx, y: (i, el) => +el.dataset.dy, scale: 0.2, opacity: 0, duration: dur || 1.0, ease: "power3.out", immediateRender: false }, at);
+      const letters = (sel, at) => tl.fromTo(sel + " .l", { y: 140, opacity: 0, rotation: 12, scale: 0.6 },
+        { y: 0, opacity: 1, rotation: 0, scale: 1, duration: 0.45, stagger: 0.035, ease: "back.out(2.2)" }, at);
+      const glitch = (sel, at) => tl.fromTo(sel, { x: -22, skewX: 18 }, { x: 0, skewX: 0, duration: 0.24, ease: "steps(6)" }, at);
+      tl.fromTo("#z0-i", { scale: 1.0 }, { scale: 1.06, duration: 5.726, ease: "none" }, 0.0);
+      const wachs = (sel, at, dur) => tl.fromTo(sel, { scaleY: 0 }, { scaleY: 1, duration: dur || 0.6, ease: "power3.out" }, at); const spann = (sel, at) => { tl.fromTo(sel + "-f", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, at); tl.fromTo(sel + "-a", { scale: 0 }, { scale: 1, duration: 0.25, ease: "back.out(2)" }, at); tl.fromTo(sel + "-b", { x: -200, scale: 0 }, { x: 0, scale: 1, duration: 0.6, ease: "power3.out" }, at); }; const lauf = (sel, at, dur) => tl.fromTo(sel + "-s", { x: 0 }, { x: -1400, duration: dur, ease: "none" }, at); const blink = (sel, at) => { tl.fromTo(sel + " .rk", { y: 120, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, stagger: 0.08, ease: "back.out(1.6)" }, at); tl.fromTo(sel + " .led", { opacity: 0.2 }, { opacity: 1, duration: 0.18, stagger: { each: 0.02, repeat: 7, yoyo: true }, ease: "none" }, at + 0.4); }; const stempeln = (sel, at) => tl.fromTo(sel, { scale: 3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "power4.in" }, at); pop("#t1", 0.0); pop("#l1", 0.0 + 0.1); pop("#n1", 0.0 + 0.3); pop("#p1", 4.131);
+      tl.fromTo("#z1-i", { scale: 1.0 }, { scale: 1.06, duration: 5.756, ease: "none" }, 5.726);
+      pop("#p2a", 5.726); pop("#n2", 5.726 + 0.15); pop("#k2", 7.993); tl.fromTo("#z1-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 5.726);
+      tl.fromTo("#z2-i", { scale: 1.0 }, { scale: 1.06, duration: 9.345, ease: "none" }, 11.482);
+      pop("#k3", 11.482); pop("#r3a", 11.482 + 0.4); pop("#r3b", 11.482 + 0.7); pop("#r3c", 11.482 + 1.0); pop("#r3d", 11.482 + 1.3); pop("#r3e", 11.482 + 1.6); tl.set("#q4", { opacity: 0 }, 0); tl.set("#pq", { opacity: 0 }, 0); tl.to("#k3", { opacity: 0, duration: 0.2 }, 15.494); pop("#q4", 15.544); pop("#pq", 17.226); tl.fromTo("#co", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 11.482); tl.fromTo("#co-bn", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 11.482 + 0.15); tl.to("#co .tz", { opacity: 1, duration: 0.01, stagger: 0.053 }, 11.482 + 0.5); tl.fromTo("#co-cur", { opacity: 1 }, { opacity: 0, duration: 0.3, repeat: 13, yoyo: true, ease: "steps(1)" }, 11.482 + 0.3); tl.fromTo("#co-z", { x: -200, y: 120, opacity: 0 }, { x: 230, y: -160, opacity: 1, duration: 0.8, ease: "power2.inOut" }, 11.482 + 0.5 + 1.6); tl.to("#co-z", { scale: 0.82, duration: 0.08, yoyo: true, repeat: 1 }, 14.482); tl.to("#co-btn", { scale: 0.9, duration: 0.08, yoyo: true, repeat: 1 }, 14.482); tl.to("#co-k2", { opacity: 1, duration: 0.15 }, 14.482 + 0.15); tl.fromTo("#z2-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 11.482);
+      tl.fromTo("#z3-i", { scale: 1.0 }, { scale: 1.06, duration: 4.397, ease: "none" }, 20.827);
+      pop("#t5", 20.827); pop("#p5", 20.827 + 0.3); tl.fromTo("#z3-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 20.827);
+      tl.fromTo("#z4-i", { scale: 1.0 }, { scale: 1.06, duration: 7.492, ease: "none" }, 25.224);
+      pop("#t6", 25.224); pop("#l6", 25.224 + 0.1); pop("#n6", 27.186); pop("#p6", 28.293); tl.fromTo("#z4-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 25.224);
+      tl.fromTo("#z5-i", { scale: 1.0 }, { scale: 1.06, duration: 3.732, ease: "none" }, 32.716);
+      pop("#t7", 32.716); pop("#n7", 32.716 + 0.15); pop("#p7", 34.1); tl.fromTo("#z5-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 32.716);
+      tl.fromTo("#z6-i", { scale: 1.0 }, { scale: 1.06, duration: 6.602, ease: "none" }, 36.448);
+      pop("#t8", 36.448); pop("#b8", 36.448 + 0.2); tl.fromTo("#b8g", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power2.out" }, 38.286); pop("#n8", 40.375); pop("#p8", 40.375 + 0.5); tl.fromTo("#z6-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 36.448);
+      tl.fromTo("#z7-i", { scale: 1.0 }, { scale: 1.06, duration: 6.692, ease: "none" }, 43.05);
+      pop("#t9", 43.05); pop("#l9", 43.05 + 0.1); pop("#n9", 44.695); pop("#p9", 48.597); tl.fromTo("#z7-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 43.05);
+      tl.fromTo("#z8-i", { scale: 1.0 }, { scale: 1.06, duration: 3.236, ease: "none" }, 49.742);
+      pop("#t10", 49.742); pop("#n10", 49.742 + 0.15); pop("#p10", 51.397); tl.fromTo("#z8-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 49.742);
+      tl.fromTo("#z9-i", { scale: 1.0 }, { scale: 1.06, duration: 6.26, ease: "none" }, 52.978);
+      pop("#t11", 52.978); pop("#k11", 52.978 + 0.1); pop("#r11a", 54.661); pop("#r11b", 56.491); tl.fromTo("#z9-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 52.978);
+      tl.fromTo("#z10-i", { scale: 1.0 }, { scale: 1.06, duration: 3.526, ease: "none" }, 59.238);
+      pop("#t12", 59.238); pop("#k12", 59.238 + 0.15); pop("#p12", 60.499); tl.fromTo("#z10-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 59.238);
+      tl.fromTo("#z11-i", { scale: 1.0 }, { scale: 1.06, duration: 6.466, ease: "none" }, 62.764);
+      pop("#t13", 62.764); pop("#k13", 62.764 + 0.1); pop("#r13a", 62.764 + 0.6); pop("#r13b", 64.26); pop("#r13c", 65.396); tl.fromTo("#z11-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 62.764);
+      tl.fromTo("#z12-i", { scale: 1.0 }, { scale: 1.06, duration: 7.213, ease: "none" }, 69.23);
+      pop("#t14", 69.23); tl.fromTo("#b14a", { scaleX: 0 }, { scaleX: 1, duration: 0.5 }, 69.974); tl.fromTo("#b14b", { scaleX: 0 }, { scaleX: 1, duration: 0.8 }, 71.317 + 0.3); pop("#p14", 69.23 + 0.4); tl.fromTo("#z12-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 69.23);
+      tl.fromTo("#z13-i", { scale: 1.0 }, { scale: 1.06, duration: 4.873, ease: "none" }, 76.443);
+      pop("#t15", 76.443); pop("#l15", 76.443 + 0.1); pop("#n15", 77.321); pop("#p15", 78.555); tl.fromTo("#z13-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 76.443);
+      tl.fromTo("#z14-i", { scale: 1.0 }, { scale: 1.06, duration: 7.052, ease: "none" }, 81.316);
+      pop("#t16", 81.316); pop("#l16", 81.316 + 0.1); pop("#n16", 82.743); pop("#p16", 84.38); tl.fromTo("#z14-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 81.316);
+      tl.fromTo("#z15-i", { scale: 1.0 }, { scale: 1.06, duration: 4.826, ease: "none" }, 88.368);
+      pop("#t17", 88.368); tl.fromTo("#b17a", { scaleX: 0 }, { scaleX: 1, duration: 0.7 }, 89.77); tl.fromTo("#b17b", { scaleX: 0 }, { scaleX: 1, duration: 0.7 }, 89.77 + 0.5); pop("#p17", 89.77 + 1.2); tl.fromTo("#z15-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 88.368);
+      tl.fromTo("#z16-i", { scale: 1.0 }, { scale: 1.06, duration: 1.634, ease: "none" }, 93.194);
+      pop("#t18", 93.194); pop("#n18", 93.194 + 0.3); tl.fromTo("#z16-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 93.194);
+      tl.fromTo("#z17-i", { scale: 1.0 }, { scale: 1.06, duration: 5.683, ease: "none" }, 94.828);
+      pop("#t19", 94.828); pop("#k19", 94.828 + 0.1); pop("#r19a", 96.564); pop("#r19b", 98.886); tl.fromTo("#z17-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 94.828);
+      tl.fromTo("#z18-i", { scale: 1.0 }, { scale: 1.06, duration: 4.548, ease: "none" }, 100.511);
+      pop("#t20", 100.511); pop("#p20", 101.613); pop("#k20", 102.629); tl.fromTo("#z18-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 100.511);
+      tl.fromTo("#z19-i", { scale: 1.0 }, { scale: 1.06, duration: 5.519, ease: "none" }, 105.059);
+      pop("#t21", 105.059); pop("#l21", 105.059 + 0.1); pop("#p21", 106.857); pop("#n21", 108.621); tl.fromTo("#z19-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 105.059);
+      tl.fromTo("#z20-i", { scale: 1.0 }, { scale: 1.06, duration: 6.682, ease: "none" }, 110.578);
+      pop("#t22", 110.578); pop("#l22", 110.578 + 0.1); pop("#n22", 110.578 + 0.4); pop("#p22", 113.728); tl.fromTo("#z20-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 110.578);
+      tl.fromTo("#z21-i", { scale: 1.0 }, { scale: 1.06, duration: 3.95, ease: "none" }, 117.26);
+      pop("#n23", 117.26); pop("#k23", 118.613); tl.fromTo("#z21-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 117.26);
+      tl.fromTo("#z22-i", { scale: 1.0 }, { scale: 1.06, duration: 5.51, ease: "none" }, 121.21);
+      pop("#t24", 121.21); pop("#k24", 121.21 + 0.1); pop("#r24a", 122.019); pop("#r24b", 123.836); tl.fromTo("#z22-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 121.21);
+      tl.fromTo("#z23-i", { scale: 1.0 }, { scale: 1.06, duration: 3.736, ease: "none" }, 126.72);
+      pop("#p25", 126.72); pop("#k25", 126.72 + 0.2); tl.fromTo("#z23-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 126.72);
+      tl.fromTo("#z24-i", { scale: 1.0 }, { scale: 1.06, duration: 3.934, ease: "none" }, 130.456);
+      pop("#fl26", 130.456); pop("#n26", 130.456 + 0.2); pop("#c26", 130.456 + 0.4); tl.fromTo("#z24-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 130.456);
+      tl.fromTo("#z25-i", { scale: 1.0 }, { scale: 1.06, duration: 3.0, ease: "none" }, 22.224);
+      var lsHide = ["#logo", "#brand"].concat(Array.from(document.querySelectorAll("#lb, #nk, #nk + div, #kopf")));
+      tl.set(lsHide, { opacity: 0 }, 22.224); tl.set(lsHide, { opacity: 1 }, 25.224);
+      tl.fromTo("#ls-logo", { scale: 0, rotation: -25 }, { scale: 1, rotation: 0, duration: 0.5, ease: "back.out(2.4)" }, 22.224);
+      flash(22.344, 0.35);
+      tl.fromTo("#ls-ring", { scale: 0.6, opacity: 1 }, { scale: 1.7, opacity: 0, duration: 0.7, ease: "power2.out" }, 22.374);
+      tl.fromTo(["#ls-logo", "#ls-ring"], { x: 0 }, { x: -365.0, duration: 0.5, ease: "power3.inOut" }, 22.974);
+      tl.fromTo("#ls-txt", { x: 260, opacity: 0, clipPath: "inset(0 0 0 100%)" }, { x: 0, opacity: 1, clipPath: "inset(0 0 0 0%)", duration: 0.55, ease: "power3.out" }, 23.124);
+      tl.fromTo("#ls-tag", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power2.out" }, 23.574);
+      tl.fromTo("#ls-bg", { scale: 1 }, { scale: 1.08, duration: 3.0, ease: "none" }, 22.224);
+      tl.to(["#ls-logo", "#ls-txt"], { scale: 1.02, duration: 1.2, ease: "none" }, 23.624);
+      tl.to(["#ls-logo", "#ls-txt"], { opacity: 0, duration: 0.2 }, 25.024);
+      tl.fromTo("#z26-i", { scale: 1.0 }, { scale: 1.06, duration: 134.39, ease: "none" }, 0.0);
+      
+      tl.fromTo("#w1-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 0.0);
+      tl.to("#w1-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 0.3);
+      tl.fromTo("#w1-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 0.3);
+      tl.to("#w1-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 0.48);
+      tl.fromTo("#w1-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 0.48);
+      tl.fromTo("#w2-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 1.08);
+      tl.to("#w2-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 1.81);
+      tl.fromTo("#w2-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 1.81);
+      tl.to("#w2-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 2.053);
+      tl.fromTo("#w2-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 2.053);
+      tl.fromTo("#w3-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 2.479);
+      tl.to("#w3-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 3.091);
+      tl.fromTo("#w3-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 3.091);
+      tl.to("#w3-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 3.458);
+      tl.fromTo("#w3-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 3.458);
+      tl.to("#w3-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 4.009);
+      tl.fromTo("#w3-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 4.009);
+      tl.fromTo("#w4-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 4.131);
+      tl.to("#w4-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 4.359);
+      tl.fromTo("#w4-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 4.359);
+      tl.to("#w4-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 4.587);
+      tl.fromTo("#w4-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 4.587);
+      tl.to("#w4-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 4.815);
+      tl.fromTo("#w4-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 4.815);
+      tl.to("#w4-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 5.099);
+      tl.fromTo("#w4-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 5.099);
+      tl.to("#w4-4", { color: "#f28a1e", scale: 1, duration: 0.08 }, 5.327);
+      tl.fromTo("#w4-5", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 5.327);
+      tl.fromTo("#w5-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 5.726);
+      tl.to("#w5-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 5.922);
+      tl.fromTo("#w5-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 5.922);
+      tl.to("#w5-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 6.117);
+      tl.fromTo("#w5-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 6.117);
+      tl.to("#w5-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 6.362);
+      tl.fromTo("#w5-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 6.362);
+      tl.fromTo("#w6-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 6.606);
+      tl.to("#w6-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 7.033);
+      tl.fromTo("#w6-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 7.033);
+      tl.to("#w6-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 7.566);
+      tl.fromTo("#w6-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 7.566);
+      tl.to("#w6-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 7.726);
+      tl.fromTo("#w6-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 7.726);
+      tl.fromTo("#w7-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 7.993);
+      tl.to("#w7-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 8.27);
+      tl.fromTo("#w7-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 8.27);
+      tl.to("#w7-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 8.658);
+      tl.fromTo("#w7-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 8.658);
+      tl.to("#w7-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 8.879);
+      tl.fromTo("#w7-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 8.879);
+      tl.fromTo("#w8-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 9.156);
+      tl.to("#w8-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 9.372);
+      tl.fromTo("#w8-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 9.372);
+      tl.to("#w8-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 9.588);
+      tl.fromTo("#w8-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 9.588);
+      tl.fromTo("#w9-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 9.912);
+      tl.to("#w9-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 10.136);
+      tl.fromTo("#w9-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 10.136);
+      tl.to("#w9-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 10.361);
+      tl.fromTo("#w9-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 10.361);
+      tl.to("#w9-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 10.697);
+      tl.fromTo("#w9-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 10.697);
+      tl.to("#w9-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 11.033);
+      tl.fromTo("#w9-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 11.033);
+      tl.fromTo("#w10-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 11.482);
+      tl.to("#w10-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 11.909);
+      tl.fromTo("#w10-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 11.909);
+      tl.to("#w10-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 12.214);
+      tl.fromTo("#w10-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 12.214);
+      tl.fromTo("#w11-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 12.824);
+      tl.to("#w11-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 13.012);
+      tl.fromTo("#w11-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 13.012);
+      tl.to("#w11-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 13.387);
+      tl.fromTo("#w11-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 13.387);
+      tl.to("#w11-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 13.826);
+      tl.fromTo("#w11-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 13.826);
+      tl.to("#w11-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 14.076);
+      tl.fromTo("#w11-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 14.076);
+      tl.fromTo("#w12-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 14.264);
+      tl.to("#w12-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 14.63);
+      tl.fromTo("#w12-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 14.63);
+      tl.to("#w12-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 14.934);
+      tl.fromTo("#w12-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 14.934);
+      tl.fromTo("#w13-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 15.544);
+      tl.to("#w13-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 15.813);
+      tl.fromTo("#w13-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 15.813);
+      tl.to("#w13-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 16.015);
+      tl.fromTo("#w13-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 16.015);
+      tl.to("#w13-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 16.351);
+      tl.fromTo("#w13-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 16.351);
+      tl.to("#w13-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 16.957);
+      tl.fromTo("#w13-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 16.957);
+      tl.fromTo("#w14-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 17.226);
+      tl.to("#w14-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 17.709);
+      tl.fromTo("#w14-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 17.709);
+      tl.to("#w14-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 18.122);
+      tl.fromTo("#w14-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 18.122);
+      tl.to("#w14-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 18.329);
+      tl.fromTo("#w14-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 18.329);
+      tl.to("#w14-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 18.743);
+      tl.fromTo("#w14-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 18.743);
+      tl.fromTo("#w15-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 19.363);
+      tl.to("#w15-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 19.629);
+      tl.fromTo("#w15-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 19.629);
+      tl.to("#w15-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 19.962);
+      tl.fromTo("#w15-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 19.962);
+      tl.to("#w15-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 20.561);
+      tl.fromTo("#w15-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 20.561);
+      tl.fromTo("#w16-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 20.827);
+      tl.to("#w16-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 21.212);
+      tl.fromTo("#w16-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 21.212);
+      tl.to("#w16-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 21.405);
+      tl.fromTo("#w16-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 21.405);
+      tl.to("#w16-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 21.598);
+      tl.fromTo("#w16-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 21.598);
+      tl.to("#w16-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 21.79);
+      tl.fromTo("#w16-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 21.79);
+      tl.to("#w16-4", { color: "#f28a1e", scale: 1, duration: 0.08 }, 22.079);
+      tl.fromTo("#w16-5", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 22.079);
+      tl.fromTo("#w17-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 25.224);
+      tl.to("#w17-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 25.765);
+      tl.fromTo("#w17-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 25.765);
+      tl.to("#w17-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 26.171);
+      tl.fromTo("#w17-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 26.171);
+      tl.fromTo("#w18-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 27.186);
+      tl.to("#w18-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 27.769);
+      tl.fromTo("#w18-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 27.769);
+      tl.to("#w18-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 28.002);
+      tl.fromTo("#w18-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 28.002);
+      tl.fromTo("#w19-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 28.293);
+      tl.to("#w19-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 28.507);
+      tl.fromTo("#w19-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 28.507);
+      tl.to("#w19-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 29.22);
+      tl.fromTo("#w19-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 29.22);
+      tl.to("#w19-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 29.862);
+      tl.fromTo("#w19-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 29.862);
+      tl.fromTo("#w20-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 30.504);
+      tl.to("#w20-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 30.789);
+      tl.fromTo("#w20-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 30.789);
+      tl.to("#w20-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 31.075);
+      tl.fromTo("#w20-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 31.075);
+      tl.to("#w20-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 32.145);
+      tl.fromTo("#w20-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 32.145);
+      tl.fromTo("#w21-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 32.716);
+      tl.to("#w21-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 33.156);
+      tl.fromTo("#w21-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 33.156);
+      tl.to("#w21-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 33.345);
+      tl.fromTo("#w21-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 33.345);
+      tl.to("#w21-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 33.597);
+      tl.fromTo("#w21-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 33.597);
+      tl.fromTo("#w22-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 34.1);
+      tl.to("#w22-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 34.412);
+      tl.fromTo("#w22-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 34.412);
+      tl.to("#w22-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 34.912);
+      tl.fromTo("#w22-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 34.912);
+      tl.fromTo("#w23-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 35.287);
+      tl.to("#w23-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 35.577);
+      tl.fromTo("#w23-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 35.577);
+      tl.to("#w23-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 36.158);
+      tl.fromTo("#w23-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 36.158);
+      tl.fromTo("#w24-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 36.448);
+      tl.to("#w24-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 36.889);
+      tl.fromTo("#w24-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 36.889);
+      tl.to("#w24-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 37.624);
+      tl.fromTo("#w24-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 37.624);
+      tl.to("#w24-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 37.918);
+      tl.fromTo("#w24-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 37.918);
+      tl.fromTo("#w25-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 38.286);
+      tl.to("#w25-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 38.595);
+      tl.fromTo("#w25-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 38.595);
+      tl.to("#w25-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 39.369);
+      tl.fromTo("#w25-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 39.369);
+      tl.fromTo("#w26-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 40.375);
+      tl.to("#w26-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 40.73);
+      tl.fromTo("#w26-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 40.73);
+      tl.to("#w26-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 41.014);
+      tl.fromTo("#w26-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 41.014);
+      tl.to("#w26-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 41.368);
+      tl.fromTo("#w26-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 41.368);
+      tl.fromTo("#w27-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 41.723);
+      tl.to("#w27-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 42.121);
+      tl.fromTo("#w27-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 42.121);
+      tl.to("#w27-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 42.851);
+      tl.fromTo("#w27-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 42.851);
+      tl.fromTo("#w28-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 43.05);
+      tl.to("#w28-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 43.52);
+      tl.fromTo("#w28-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 43.52);
+      tl.to("#w28-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 43.872);
+      tl.fromTo("#w28-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 43.872);
+      tl.to("#w28-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 44.401);
+      tl.fromTo("#w28-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 44.401);
+      tl.fromTo("#w29-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 44.695);
+      tl.to("#w29-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 44.969);
+      tl.fromTo("#w29-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 44.969);
+      tl.to("#w29-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 45.243);
+      tl.fromTo("#w29-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 45.243);
+      tl.to("#w29-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 45.79);
+      tl.fromTo("#w29-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 45.79);
+      tl.to("#w29-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 45.996);
+      tl.fromTo("#w29-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 45.996);
+      tl.to("#w29-4", { color: "#f28a1e", scale: 1, duration: 0.08 }, 46.27);
+      tl.fromTo("#w29-5", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 46.27);
+      tl.fromTo("#w30-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 46.612);
+      tl.to("#w30-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 47.2);
+      tl.fromTo("#w30-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 47.2);
+      tl.to("#w30-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 47.568);
+      tl.fromTo("#w30-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 47.568);
+      tl.to("#w30-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 47.788);
+      tl.fromTo("#w30-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 47.788);
+      tl.fromTo("#w31-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 48.597);
+      tl.to("#w31-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 49.098);
+      tl.fromTo("#w31-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 49.098);
+      tl.fromTo("#w32-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 49.742);
+      tl.to("#w32-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 50.09);
+      tl.fromTo("#w32-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 50.09);
+      tl.to("#w32-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 50.526);
+      tl.fromTo("#w32-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 50.526);
+      tl.to("#w32-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 50.961);
+      tl.fromTo("#w32-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 50.961);
+      tl.fromTo("#w33-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 51.397);
+      tl.to("#w33-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 51.73);
+      tl.fromTo("#w33-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 51.73);
+      tl.to("#w33-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 52.063);
+      tl.fromTo("#w33-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 52.063);
+      tl.to("#w33-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 52.562);
+      tl.fromTo("#w33-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 52.562);
+      tl.fromTo("#w34-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 52.978);
+      tl.to("#w34-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 53.247);
+      tl.fromTo("#w34-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 53.247);
+      tl.to("#w34-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 53.719);
+      tl.fromTo("#w34-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 53.719);
+      tl.to("#w34-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 53.92);
+      tl.fromTo("#w34-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 53.92);
+      tl.to("#w34-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 54.324);
+      tl.fromTo("#w34-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 54.324);
+      tl.fromTo("#w35-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 54.661);
+      tl.to("#w35-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 55.154);
+      tl.fromTo("#w35-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 55.154);
+      tl.to("#w35-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 55.717);
+      tl.fromTo("#w35-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 55.717);
+      tl.to("#w35-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 55.928);
+      tl.fromTo("#w35-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 55.928);
+      tl.fromTo("#w36-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 56.491);
+      tl.to("#w36-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 56.768);
+      tl.fromTo("#w36-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 56.768);
+      tl.to("#w36-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 57.044);
+      tl.fromTo("#w36-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 57.044);
+      tl.to("#w36-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 57.459);
+      tl.fromTo("#w36-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 57.459);
+      tl.fromTo("#w37-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 57.736);
+      tl.to("#w37-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 58.282);
+      tl.fromTo("#w37-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 58.282);
+      tl.to("#w37-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 58.692);
+      tl.fromTo("#w37-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 58.692);
+      tl.to("#w37-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 58.897);
+      tl.fromTo("#w37-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 58.897);
+      tl.fromTo("#w38-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 59.238);
+      tl.to("#w38-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 59.609);
+      tl.fromTo("#w38-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 59.609);
+      tl.to("#w38-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 60.202);
+      tl.fromTo("#w38-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 60.202);
+      tl.fromTo("#w39-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 60.499);
+      tl.to("#w39-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 60.864);
+      tl.fromTo("#w39-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 60.864);
+      tl.to("#w39-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 61.157);
+      tl.fromTo("#w39-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 61.157);
+      tl.to("#w39-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 61.741);
+      tl.fromTo("#w39-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 61.741);
+      tl.to("#w39-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 62.253);
+      tl.fromTo("#w39-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 62.253);
+      tl.fromTo("#w40-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 62.764);
+      tl.to("#w40-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 63.224);
+      tl.fromTo("#w40-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 63.224);
+      tl.to("#w40-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 63.57);
+      tl.fromTo("#w40-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 63.57);
+      tl.fromTo("#w41-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 64.26);
+      tl.to("#w41-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 64.422);
+      tl.fromTo("#w41-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 64.422);
+      tl.to("#w41-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 64.693);
+      tl.fromTo("#w41-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 64.693);
+      tl.fromTo("#w42-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 65.396);
+      tl.to("#w42-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 65.58);
+      tl.fromTo("#w42-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 65.58);
+      tl.to("#w42-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 65.887);
+      tl.fromTo("#w42-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 65.887);
+      tl.fromTo("#w43-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 66.5);
+      tl.to("#w43-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 66.875);
+      tl.fromTo("#w43-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 66.875);
+      tl.to("#w43-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 67.187);
+      tl.fromTo("#w43-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 67.187);
+      tl.fromTo("#w44-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 68.124);
+      tl.to("#w44-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 68.415);
+      tl.fromTo("#w44-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 68.415);
+      tl.to("#w44-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 68.59);
+      tl.fromTo("#w44-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 68.59);
+      tl.to("#w44-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 68.823);
+      tl.fromTo("#w44-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 68.823);
+      tl.fromTo("#w45-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 69.23);
+      tl.to("#w45-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 69.516);
+      tl.fromTo("#w45-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 69.516);
+      tl.fromTo("#w46-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 69.974);
+      tl.to("#w46-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 70.486);
+      tl.fromTo("#w46-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 70.486);
+      tl.to("#w46-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 70.741);
+      tl.fromTo("#w46-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 70.741);
+      tl.fromTo("#w47-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 71.317);
+      tl.to("#w47-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 71.703);
+      tl.fromTo("#w47-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 71.703);
+      tl.to("#w47-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 71.961);
+      tl.fromTo("#w47-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 71.961);
+      tl.to("#w47-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 72.154);
+      tl.fromTo("#w47-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 72.154);
+      tl.fromTo("#w48-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 72.862);
+      tl.to("#w48-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 73.316);
+      tl.fromTo("#w48-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 73.316);
+      tl.to("#w48-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 73.769);
+      tl.fromTo("#w48-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 73.769);
+      tl.to("#w48-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 74.093);
+      tl.fromTo("#w48-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 74.093);
+      tl.to("#w48-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 74.352);
+      tl.fromTo("#w48-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 74.352);
+      tl.fromTo("#w49-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 74.676);
+      tl.to("#w49-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 74.865);
+      tl.fromTo("#w49-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 74.865);
+      tl.to("#w49-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 75.559);
+      tl.fromTo("#w49-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 75.559);
+      tl.to("#w49-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 76.127);
+      tl.fromTo("#w49-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 76.127);
+      tl.fromTo("#w50-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 76.443);
+      tl.fromTo("#w51-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 77.321);
+      tl.to("#w51-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 77.684);
+      tl.fromTo("#w51-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 77.684);
+      tl.to("#w51-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 77.974);
+      tl.fromTo("#w51-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 77.974);
+      tl.fromTo("#w52-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 78.555);
+      tl.fromTo("#w53-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 79.943);
+      tl.to("#w53-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 80.424);
+      tl.fromTo("#w53-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 80.424);
+      tl.to("#w53-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 80.63);
+      tl.fromTo("#w53-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 80.63);
+      tl.to("#w53-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 80.973);
+      tl.fromTo("#w53-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 80.973);
+      tl.fromTo("#w54-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 81.316);
+      tl.to("#w54-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 81.86);
+      tl.fromTo("#w54-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 81.86);
+      tl.to("#w54-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 82.267);
+      tl.fromTo("#w54-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 82.267);
+      tl.fromTo("#w55-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 82.743);
+      tl.to("#w55-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 83.357);
+      tl.fromTo("#w55-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 83.357);
+      tl.to("#w55-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 83.63);
+      tl.fromTo("#w55-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 83.63);
+      tl.to("#w55-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 83.903);
+      tl.fromTo("#w55-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 83.903);
+      tl.fromTo("#w56-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 84.38);
+      tl.to("#w56-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 84.611);
+      tl.fromTo("#w56-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 84.611);
+      tl.to("#w56-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 85.382);
+      tl.fromTo("#w56-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 85.382);
+      tl.to("#w56-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 85.69);
+      tl.fromTo("#w56-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 85.69);
+      tl.fromTo("#w57-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 86.306);
+      tl.to("#w57-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 86.688);
+      tl.fromTo("#w57-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 86.688);
+      tl.to("#w57-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 87.604);
+      tl.fromTo("#w57-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 87.604);
+      tl.to("#w57-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 87.986);
+      tl.fromTo("#w57-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 87.986);
+      tl.fromTo("#w58-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 88.368);
+      tl.to("#w58-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 88.602);
+      tl.fromTo("#w58-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 88.602);
+      tl.to("#w58-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 89.011);
+      tl.fromTo("#w58-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 89.011);
+      tl.to("#w58-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 89.244);
+      tl.fromTo("#w58-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 89.244);
+      tl.fromTo("#w59-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 89.77);
+      tl.to("#w59-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 90.005);
+      tl.fromTo("#w59-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 90.005);
+      tl.to("#w59-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 90.357);
+      tl.fromTo("#w59-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 90.357);
+      tl.to("#w59-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 90.591);
+      tl.fromTo("#w59-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 90.591);
+      tl.fromTo("#w60-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 91.295);
+      tl.to("#w60-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 91.461);
+      tl.fromTo("#w60-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 91.461);
+      tl.fromTo("#w61-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 91.904);
+      tl.to("#w61-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 92.184);
+      tl.fromTo("#w61-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 92.184);
+      tl.to("#w61-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 92.409);
+      tl.fromTo("#w61-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 92.409);
+      tl.to("#w61-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 92.633);
+      tl.fromTo("#w61-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 92.633);
+      tl.to("#w61-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 92.857);
+      tl.fromTo("#w61-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 92.857);
+      tl.fromTo("#w62-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 93.194);
+      tl.to("#w62-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 93.427);
+      tl.fromTo("#w62-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 93.427);
+      tl.to("#w62-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 93.953);
+      tl.fromTo("#w62-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 93.953);
+      tl.to("#w62-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 94.244);
+      tl.fromTo("#w62-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 94.244);
+      tl.to("#w62-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 94.478);
+      tl.fromTo("#w62-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 94.478);
+      tl.fromTo("#w63-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 94.828);
+      tl.to("#w63-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 95.407);
+      tl.fromTo("#w63-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 95.407);
+      tl.to("#w63-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 95.82);
+      tl.fromTo("#w63-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 95.82);
+      tl.fromTo("#w64-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 96.564);
+      tl.to("#w64-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 97.278);
+      tl.fromTo("#w64-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 97.278);
+      tl.to("#w64-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 97.636);
+      tl.fromTo("#w64-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 97.636);
+      tl.to("#w64-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 98.082);
+      tl.fromTo("#w64-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 98.082);
+      tl.to("#w64-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 98.35);
+      tl.fromTo("#w64-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 98.35);
+      tl.to("#w64-4", { color: "#f28a1e", scale: 1, duration: 0.08 }, 98.618);
+      tl.fromTo("#w64-5", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 98.618);
+      tl.fromTo("#w65-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 98.886);
+      tl.to("#w65-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 99.455);
+      tl.fromTo("#w65-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 99.455);
+      tl.to("#w65-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 99.942);
+      tl.fromTo("#w65-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 99.942);
+      tl.to("#w65-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 100.186);
+      tl.fromTo("#w65-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 100.186);
+      tl.fromTo("#w66-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 100.511);
+      tl.to("#w66-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 100.786);
+      tl.fromTo("#w66-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 100.786);
+      tl.to("#w66-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 101.172);
+      tl.fromTo("#w66-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 101.172);
+      tl.fromTo("#w67-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 101.613);
+      tl.to("#w67-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 101.88);
+      tl.fromTo("#w67-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 101.88);
+      tl.to("#w67-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 102.255);
+      tl.fromTo("#w67-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 102.255);
+      tl.fromTo("#w68-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 102.629);
+      tl.to("#w68-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 102.87);
+      tl.fromTo("#w68-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 102.87);
+      tl.to("#w68-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 103.353);
+      tl.fromTo("#w68-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 103.353);
+      tl.fromTo("#w69-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 103.775);
+      tl.to("#w69-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 104.125);
+      tl.fromTo("#w69-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 104.125);
+      tl.to("#w69-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 104.417);
+      tl.fromTo("#w69-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 104.417);
+      tl.to("#w69-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 104.709);
+      tl.fromTo("#w69-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 104.709);
+      tl.fromTo("#w70-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 105.059);
+      tl.to("#w70-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 105.555);
+      tl.fromTo("#w70-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 105.555);
+      tl.to("#w70-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 105.927);
+      tl.fromTo("#w70-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 105.927);
+      tl.to("#w70-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 106.175);
+      tl.fromTo("#w70-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 106.175);
+      tl.fromTo("#w71-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 106.857);
+      tl.to("#w71-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 107.046);
+      tl.fromTo("#w71-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 107.046);
+      tl.to("#w71-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 107.55);
+      tl.fromTo("#w71-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 107.55);
+      tl.to("#w71-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 107.991);
+      tl.fromTo("#w71-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 107.991);
+      tl.fromTo("#w72-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 108.621);
+      tl.to("#w72-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 108.891);
+      tl.fromTo("#w72-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 108.891);
+      tl.to("#w72-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 109.701);
+      tl.fromTo("#w72-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 109.701);
+      tl.to("#w72-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 109.971);
+      tl.fromTo("#w72-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 109.971);
+      tl.fromTo("#w73-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 110.578);
+      tl.to("#w73-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 110.791);
+      tl.fromTo("#w73-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 110.791);
+      tl.to("#w73-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 111.288);
+      tl.fromTo("#w73-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 111.288);
+      tl.to("#w73-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 111.713);
+      tl.fromTo("#w73-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 111.713);
+      tl.fromTo("#w74-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 111.997);
+      tl.to("#w74-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 112.358);
+      tl.fromTo("#w74-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 112.358);
+      tl.to("#w74-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 112.935);
+      tl.fromTo("#w74-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 112.935);
+      tl.to("#w74-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 113.512);
+      tl.fromTo("#w74-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 113.512);
+      tl.fromTo("#w75-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 113.728);
+      tl.to("#w75-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 113.945);
+      tl.fromTo("#w75-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 113.945);
+      tl.to("#w75-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 114.161);
+      tl.fromTo("#w75-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 114.161);
+      tl.to("#w75-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 114.45);
+      tl.fromTo("#w75-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 114.45);
+      tl.to("#w75-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 114.884);
+      tl.fromTo("#w75-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 114.884);
+      tl.fromTo("#w76-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 115.534);
+      tl.to("#w76-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 116.501);
+      tl.fromTo("#w76-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 116.501);
+      tl.to("#w76-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 116.708);
+      tl.fromTo("#w76-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 116.708);
+      tl.fromTo("#w77-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 117.26);
+      tl.to("#w77-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 117.693);
+      tl.fromTo("#w77-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 117.693);
+      tl.to("#w77-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 118.072);
+      tl.fromTo("#w77-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 118.072);
+      tl.fromTo("#w78-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 118.613);
+      tl.to("#w78-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 118.977);
+      tl.fromTo("#w78-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 118.977);
+      tl.fromTo("#w79-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 119.706);
+      tl.to("#w79-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 119.937);
+      tl.fromTo("#w79-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 119.937);
+      tl.to("#w79-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 120.284);
+      tl.fromTo("#w79-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 120.284);
+      tl.to("#w79-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 120.516);
+      tl.fromTo("#w79-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 120.516);
+      tl.fromTo("#w80-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 121.21);
+      tl.to("#w80-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 121.463);
+      tl.fromTo("#w80-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 121.463);
+      tl.to("#w80-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 121.716);
+      tl.fromTo("#w80-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 121.716);
+      tl.fromTo("#w81-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 122.019);
+      tl.to("#w81-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 122.355);
+      tl.fromTo("#w81-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 122.355);
+      tl.to("#w81-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 122.759);
+      tl.fromTo("#w81-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 122.759);
+      tl.to("#w81-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 123.028);
+      tl.fromTo("#w81-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 123.028);
+      tl.to("#w81-3", { color: "#f28a1e", scale: 1, duration: 0.08 }, 123.23);
+      tl.fromTo("#w81-4", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 123.23);
+      tl.fromTo("#w82-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 123.836);
+      tl.to("#w82-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 124.102);
+      tl.fromTo("#w82-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 124.102);
+      tl.to("#w82-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 124.501);
+      tl.fromTo("#w82-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 124.501);
+      tl.to("#w82-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 124.834);
+      tl.fromTo("#w82-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 124.834);
+      tl.fromTo("#w83-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 125.233);
+      tl.to("#w83-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 125.667);
+      tl.fromTo("#w83-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 125.667);
+      tl.to("#w83-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 125.915);
+      tl.fromTo("#w83-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 125.915);
+      tl.to("#w83-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 126.286);
+      tl.fromTo("#w83-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 126.286);
+      tl.fromTo("#w84-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 126.72);
+      tl.to("#w84-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 127.105);
+      tl.fromTo("#w84-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 127.105);
+      tl.to("#w84-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 127.599);
+      tl.fromTo("#w84-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 127.599);
+      tl.to("#w84-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 127.819);
+      tl.fromTo("#w84-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 127.819);
+      tl.fromTo("#w85-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 128.039);
+      tl.to("#w85-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 128.398);
+      tl.fromTo("#w85-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 128.398);
+      tl.fromTo("#w86-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 129.355);
+      tl.to("#w86-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 129.587);
+      tl.fromTo("#w86-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 129.587);
+      tl.to("#w86-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 129.877);
+      tl.fromTo("#w86-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 129.877);
+      tl.fromTo("#w87-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 130.456);
+      tl.to("#w87-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 130.816);
+      tl.fromTo("#w87-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 130.816);
+      tl.fromTo("#w88-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 131.716);
+      tl.to("#w88-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 132.082);
+      tl.fromTo("#w88-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 132.082);
+      tl.to("#w88-1", { color: "#f28a1e", scale: 1, duration: 0.08 }, 132.265);
+      tl.fromTo("#w88-2", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 132.265);
+      tl.to("#w88-2", { color: "#f28a1e", scale: 1, duration: 0.08 }, 132.569);
+      tl.fromTo("#w88-3", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 132.569);
+      tl.fromTo("#w89-0", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 132.874);
+      tl.to("#w89-0", { color: "#f28a1e", scale: 1, duration: 0.08 }, 133.234);
+      tl.fromTo("#w89-1", { color: "#f28a1e", scale: 1 }, { color: "#1d2330", scale: 1.06, duration: 0.08 }, 133.234);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
