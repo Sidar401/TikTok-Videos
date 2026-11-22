@@ -1,0 +1,149 @@
+{
+ "titel": "KI-Serie Teil 2: Wer liefert",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Elf Komma sechs sechs Milliarden Euro Umsatz in nur drei Monaten – und diese Firma baut nicht mal selbst Ka-I.",
+   "text": "11,66 Milliarden Euro Umsatz in nur drei Monaten – und diese Firma baut nicht mal selbst KI",
+   "bild": ""
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Das ist Teil zwei unserer Ka-I-Serie. In Teil eins ging es um Firmen, die Ka-I nutzen. Heute geht es um die, die alles dafür liefern.",
+   "text": "Das ist Teil zwei unserer KI-Serie. In Teil eins ging es um Firmen, die KI nutzen. Heute geht es um die, die alles dafür liefern",
+   "bild": ""
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Heute: drei Bereiche – Strom, Maschinen und Speicher.",
+   "text": "Heute: drei Bereiche – Strom, Maschinen und Speicher",
+   "bild": ""
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Und am Ende erfährst du, warum selbst diese Gewinner an der Börse abstürzen können.",
+   "text": "Und am Ende erfährst du, warum selbst diese Gewinner an der Börse abstürzen können",
+   "bild": ""
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Schauen wir uns das genau an.",
+   "text": "Schauen wir uns das genau an",
+   "bild": ""
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Bereich eins: Strom. Rechenzentren in Deutschland brauchen dieses Jahr rund dreiundzwanzig Milliarden Kilowattstunden.",
+   "text": "Bereich eins: Strom. Rechenzentren in Deutschland brauchen dieses Jahr rund 23 Milliarden Kilowattstunden",
+   "bild": ""
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Das ist so viel, wie sechseinhalb Millionen Haushalte im Jahr verbrauchen.",
+   "text": "Das ist so viel, wie 6,5 Millionen Haushalte im Jahr verbrauchen",
+   "bild": ""
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Sechseinhalb Millionen Haushalte? Ja – und es wird mehr.",
+   "text": "Sechseinhalb Millionen Haushalte? Ja – und es wird mehr",
+   "bild": ""
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Bis zweitausenddreißig erwartet der Branchenverband Bitkom bis zu achtunddreißig Milliarden Kilowattstunden.",
+   "text": "Bis 2030 erwartet der Branchenverband Bitkom bis zu 38 Milliarden Kilowattstunden",
+   "bild": ""
+  },
+  {
+   "id": "s10",
+   "sprechtext": "Bis zweitausendfünfunddreißig sogar bis zu siebzig.",
+   "text": "Bis 2035 sogar bis zu 70",
+   "bild": ""
+  },
+  {
+   "id": "s11",
+   "sprechtext": "Der Anteil für Ka-I steigt in dieser Zeit von zwanzig auf fünfundfünfzig Prozent.",
+   "text": "Der Anteil für KI steigt in dieser Zeit von 20 auf 55 %",
+   "bild": ""
+  },
+  {
+   "id": "s12",
+   "sprechtext": "Bereich zwei: Chipmaschinen. Die Firma ASML aus den Niederlanden baut Maschinen, ohne die kaum ein moderner Ka-I-Chip entsteht.",
+   "text": "Bereich zwei: Chipmaschinen. Die Firma ASML aus den Niederlanden baut Maschinen, ohne die kaum ein moderner KI-Chip entsteht",
+   "bild": ""
+  },
+  {
+   "id": "s13",
+   "sprechtext": "Im dritten Quartal stieg ihr Umsatz auf elf Komma sechs sechs Milliarden Euro, vor einem Jahr waren es sieben Komma fünf.",
+   "text": "Im dritten Quartal stieg ihr Umsatz auf 11,66 Milliarden Euro, vor einem Jahr waren es 7,5",
+   "bild": ""
+  },
+  {
+   "id": "s14",
+   "sprechtext": "Das sind über fünfzig Prozent mehr in nur einem Jahr.",
+   "text": "Das sind über 50 % mehr in nur einem Jahr",
+   "bild": ""
+  },
+  {
+   "id": "s15",
+   "sprechtext": "Für das vierte Quartal erwartet ASML bis zu fünfzehn Komma zwei Milliarden, und für das ganze Jahr vierundvierzig bis fünfundvierzig.",
+   "text": "Für das vierte Quartal erwartet ASML bis zu 15,2 Milliarden, und für das ganze Jahr 44 bis 45",
+   "bild": ""
+  },
+  {
+   "id": "s16",
+   "sprechtext": "Bereich drei: Speicher. Micron liefert den Speicher, den Ka-I-Chips brauchen, und meldete zuletzt Rekordzahlen.",
+   "text": "Bereich drei: Speicher. Micron liefert den Speicher, den KI-Chips brauchen, und meldete zuletzt Rekordzahlen",
+   "bild": ""
+  },
+  {
+   "id": "s17",
+   "sprechtext": "Trotzdem liegt die Aktie fast die Hälfte unter dem Rekord vom Juni.",
+   "text": "Trotzdem liegt die Aktie fast die Hälfte unter dem Rekord vom Juni",
+   "bild": ""
+  },
+  {
+   "id": "s18",
+   "sprechtext": "Am fünften November fiel sie an einem einzigen Tag um mehr als zehn Prozent.",
+   "text": "Am fünften November fiel sie an einem einzigen Tag um mehr als 10 %",
+   "bild": ""
+  },
+  {
+   "id": "s19",
+   "sprechtext": "Warum? Anleger fragen sich, wie lange die Firmen noch so viel Geld für Ka-I ausgeben.",
+   "text": "Warum? Anleger fragen sich, wie lange die Firmen noch so viel Geld für KI ausgeben",
+   "bild": ""
+  },
+  {
+   "id": "s20",
+   "sprechtext": "Und dein Depot? Viele dieser Firmen stecken in globalen ETFs, also schwankt dein Depot mit.",
+   "text": "Und dein Depot? Viele dieser Firmen stecken in globalen ETFs, also schwankt dein Depot mit",
+   "bild": ""
+  },
+  {
+   "id": "s21",
+   "sprechtext": "Merk dir: Auch die Lieferanten schwanken stark, weil alles an den Ka-I-Ausgaben hängt.",
+   "text": "Merk dir: Auch die Lieferanten schwanken stark, weil alles an den KI-Ausgaben hängt",
+   "bild": ""
+  },
+  {
+   "id": "s22",
+   "sprechtext": "Im nächsten Teil geht es um Roboter.",
+   "text": "Im nächsten Teil geht es um Roboter",
+   "bild": ""
+  },
+  {
+   "id": "s23",
+   "sprechtext": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung.",
+   "text": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung",
+   "bild": ""
+  },
+  {
+   "id": "s24",
+   "sprechtext": "Folge HundeFinanzTv, damit du Teil drei nicht verpasst.",
+   "text": "Folge HundeFinanzTv, damit du Teil drei nicht verpasst",
+   "bild": ""
+  }
+ ]
+}

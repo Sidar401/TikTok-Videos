@@ -1,0 +1,579 @@
+{
+ "dauer": 122.27,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 6.396,
+   "captions": [
+    {
+     "text": "Elf Komma sechs sechs",
+     "start": 0.0,
+     "end": 1.312
+    },
+    {
+     "text": "Milliarden Euro Umsatz in nur",
+     "start": 1.312,
+     "end": 3.123
+    },
+    {
+     "text": "drei Monaten – und diese",
+     "start": 3.123,
+     "end": 4.601
+    },
+    {
+     "text": "Firma baut nicht mal selbst KI",
+     "start": 4.601,
+     "end": 6.396
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 6.396,
+   "end": 14.28,
+   "captions": [
+    {
+     "text": "Das ist Teil zwei",
+     "start": 6.396,
+     "end": 7.471
+    },
+    {
+     "text": "unserer KI‑Serie. In Teil",
+     "start": 7.471,
+     "end": 9.083
+    },
+    {
+     "text": "eins ging es um Firmen,",
+     "start": 9.083,
+     "end": 10.644
+    },
+    {
+     "text": "die KI nutzen. Heute",
+     "start": 10.644,
+     "end": 11.806
+    },
+    {
+     "text": "geht es um die,",
+     "start": 11.806,
+     "end": 12.824
+    },
+    {
+     "text": "die alles dafür liefern",
+     "start": 12.824,
+     "end": 14.28
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 14.28,
+   "end": 17.921,
+   "captions": [
+    {
+     "text": "Heute: drei Bereiche – Strom,",
+     "start": 14.28,
+     "end": 16.28
+    },
+    {
+     "text": "Maschinen und Speicher",
+     "start": 16.28,
+     "end": 17.921
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 17.921,
+   "end": 22.473,
+   "captions": [
+    {
+     "text": "Und am Ende erfährst du,",
+     "start": 17.921,
+     "end": 19.298
+    },
+    {
+     "text": "warum selbst diese Gewinner",
+     "start": 19.298,
+     "end": 20.898
+    },
+    {
+     "text": "an der Börse abstürzen können",
+     "start": 20.898,
+     "end": 22.473
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 22.473,
+   "end": 23.941,
+   "captions": [
+    {
+     "text": "Schauen wir uns das genau an",
+     "start": 22.473,
+     "end": 23.941
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 26.941,
+   "end": 33.929,
+   "captions": [
+    {
+     "text": "Bereich eins: Strom.",
+     "start": 26.941,
+     "end": 28.359
+    },
+    {
+     "text": "Rechenzentren in Deutschland",
+     "start": 28.359,
+     "end": 30.049
+    },
+    {
+     "text": "brauchen dieses Jahr rund",
+     "start": 30.049,
+     "end": 31.855
+    },
+    {
+     "text": "23 Milliarden Kilowattstunden",
+     "start": 31.855,
+     "end": 33.929
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 33.929,
+   "end": 38.146,
+   "captions": [
+    {
+     "text": "Das ist so viel,",
+     "start": 33.929,
+     "end": 35.023
+    },
+    {
+     "text": "wie 6,5 Millionen Haushalte",
+     "start": 35.023,
+     "end": 36.905
+    },
+    {
+     "text": "im Jahr verbrauchen",
+     "start": 36.905,
+     "end": 38.146
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 38.146,
+   "end": 42.073,
+   "captions": [
+    {
+     "text": "Sechseinhalb",
+     "start": 38.146,
+     "end": 39.039
+    },
+    {
+     "text": "Millionen Haushalte?",
+     "start": 39.039,
+     "end": 40.551
+    },
+    {
+     "text": "Ja – und es wird mehr",
+     "start": 40.551,
+     "end": 42.073
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 42.073,
+   "end": 48.478,
+   "captions": [
+    {
+     "text": "Bis 2030 erwartet",
+     "start": 42.073,
+     "end": 43.416
+    },
+    {
+     "text": "der Branchenverband Bitkom",
+     "start": 43.416,
+     "end": 45.573
+    },
+    {
+     "text": "bis zu 38 Milliarden",
+     "start": 45.573,
+     "end": 47.233
+    },
+    {
+     "text": "Kilowattstunden",
+     "start": 47.233,
+     "end": 48.478
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 48.478,
+   "end": 51.464,
+   "captions": [
+    {
+     "text": "Bis 2035 sogar bis zu 70",
+     "start": 48.478,
+     "end": 51.464
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 51.464,
+   "end": 56.497,
+   "captions": [
+    {
+     "text": "Der Anteil für KI",
+     "start": 51.464,
+     "end": 53.101
+    },
+    {
+     "text": "steigt in dieser",
+     "start": 53.101,
+     "end": 54.719
+    },
+    {
+     "text": "Zeit von 20 auf 55 %",
+     "start": 54.719,
+     "end": 56.497
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 56.497,
+   "end": 64.347,
+   "captions": [
+    {
+     "text": "Bereich zwei:",
+     "start": 56.497,
+     "end": 57.183
+    },
+    {
+     "text": "Chipmaschinen. Die Firma",
+     "start": 57.183,
+     "end": 58.534
+    },
+    {
+     "text": "ASML aus den Niederlanden",
+     "start": 58.534,
+     "end": 60.326
+    },
+    {
+     "text": "baut Maschinen,",
+     "start": 60.326,
+     "end": 61.401
+    },
+    {
+     "text": "ohne die kaum ein moderner",
+     "start": 61.401,
+     "end": 63.265
+    },
+    {
+     "text": "KI‑Chip entsteht",
+     "start": 63.265,
+     "end": 64.347
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 64.347,
+   "end": 71.005,
+   "captions": [
+    {
+     "text": "Im dritten Quartal stieg",
+     "start": 64.347,
+     "end": 66.039
+    },
+    {
+     "text": "ihr Umsatz auf 11,6 sechs",
+     "start": 66.039,
+     "end": 67.869
+    },
+    {
+     "text": "Milliarden Euro,",
+     "start": 67.869,
+     "end": 69.041
+    },
+    {
+     "text": "vor einem Jahr waren es 7,5",
+     "start": 69.041,
+     "end": 71.005
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 71.005,
+   "end": 74.21,
+   "captions": [
+    {
+     "text": "Das sind über 50 %",
+     "start": 71.005,
+     "end": 72.476
+    },
+    {
+     "text": "mehr in nur einem Jahr",
+     "start": 72.476,
+     "end": 74.21
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "start": 74.21,
+   "end": 82.064,
+   "captions": [
+    {
+     "text": "Für das vierte Quartal",
+     "start": 74.21,
+     "end": 76.142
+    },
+    {
+     "text": "erwartet ASML bis",
+     "start": 76.142,
+     "end": 77.695
+    },
+    {
+     "text": "zu 15,2 Milliarden,",
+     "start": 77.695,
+     "end": 79.43
+    },
+    {
+     "text": "und für das ganze",
+     "start": 79.43,
+     "end": 80.983
+    },
+    {
+     "text": "Jahr 44 bis 45",
+     "start": 80.983,
+     "end": 82.064
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "start": 82.064,
+   "end": 88.576,
+   "captions": [
+    {
+     "text": "Bereich drei: Speicher.",
+     "start": 82.064,
+     "end": 83.364
+    },
+    {
+     "text": "Micron liefert den Speicher,",
+     "start": 83.364,
+     "end": 84.981
+    },
+    {
+     "text": "den KI‑Chips brauchen,",
+     "start": 84.981,
+     "end": 86.497
+    },
+    {
+     "text": "und meldete zuletzt",
+     "start": 86.497,
+     "end": 87.806
+    },
+    {
+     "text": "Rekordzahlen",
+     "start": 87.806,
+     "end": 88.576
+    }
+   ]
+  },
+  {
+   "id": "s17",
+   "start": 88.576,
+   "end": 92.752,
+   "captions": [
+    {
+     "text": "Trotzdem liegt die Aktie",
+     "start": 88.576,
+     "end": 90.132
+    },
+    {
+     "text": "fast die Hälfte unter",
+     "start": 90.132,
+     "end": 91.544
+    },
+    {
+     "text": "dem Rekord vom Juni",
+     "start": 91.544,
+     "end": 92.752
+    }
+   ]
+  },
+  {
+   "id": "s18",
+   "start": 92.752,
+   "end": 96.64,
+   "captions": [
+    {
+     "text": "Am fünften November fiel",
+     "start": 92.752,
+     "end": 94.188
+    },
+    {
+     "text": "sie an einem einzigen",
+     "start": 94.188,
+     "end": 95.444
+    },
+    {
+     "text": "Tag um mehr als 10 %",
+     "start": 95.444,
+     "end": 96.64
+    }
+   ]
+  },
+  {
+   "id": "s19",
+   "start": 96.64,
+   "end": 102.174,
+   "captions": [
+    {
+     "text": "Warum? Anleger fragen sich,",
+     "start": 96.64,
+     "end": 98.439
+    },
+    {
+     "text": "wie lange die Firmen noch",
+     "start": 98.439,
+     "end": 100.265
+    },
+    {
+     "text": "so viel Geld für KI ausgeben",
+     "start": 100.265,
+     "end": 102.174
+    }
+   ]
+  },
+  {
+   "id": "s20",
+   "start": 102.174,
+   "end": 107.468,
+   "captions": [
+    {
+     "text": "Und dein Depot? Viele",
+     "start": 102.174,
+     "end": 103.316
+    },
+    {
+     "text": "dieser Firmen stecken",
+     "start": 103.316,
+     "end": 104.654
+    },
+    {
+     "text": "in globalen ETFs,",
+     "start": 104.654,
+     "end": 105.737
+    },
+    {
+     "text": "also schwankt dein Depot mit",
+     "start": 105.737,
+     "end": 107.468
+    }
+   ]
+  },
+  {
+   "id": "s21",
+   "start": 107.468,
+   "end": 112.458,
+   "captions": [
+    {
+     "text": "Merk dir: Auch die Lieferanten",
+     "start": 107.468,
+     "end": 109.317
+    },
+    {
+     "text": "schwanken stark,",
+     "start": 109.317,
+     "end": 110.332
+    },
+    {
+     "text": "weil alles",
+     "start": 110.332,
+     "end": 110.966
+    },
+    {
+     "text": "an den KI‑Ausgaben hängt",
+     "start": 110.966,
+     "end": 112.458
+    }
+   ]
+  },
+  {
+   "id": "s22",
+   "start": 112.458,
+   "end": 114.5,
+   "captions": [
+    {
+     "text": "Im nächsten Teil",
+     "start": 112.458,
+     "end": 113.431
+    },
+    {
+     "text": "geht es um Roboter",
+     "start": 113.431,
+     "end": 114.5
+    }
+   ]
+  },
+  {
+   "id": "s23",
+   "start": 114.5,
+   "end": 118.271,
+   "captions": [
+    {
+     "text": "Kurzer Hinweis: Das ist",
+     "start": 114.5,
+     "end": 115.853
+    },
+    {
+     "text": "keine Anlageberatung,",
+     "start": 115.853,
+     "end": 117.187
+    },
+    {
+     "text": "nur eine Erklärung",
+     "start": 117.187,
+     "end": 118.271
+    }
+   ]
+  },
+  {
+   "id": "s24",
+   "start": 118.271,
+   "end": 121.66,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTv,",
+     "start": 118.271,
+     "end": 119.539
+    },
+    {
+     "text": "damit du Teil drei",
+     "start": 119.539,
+     "end": 120.732
+    },
+    {
+     "text": "nicht verpasst",
+     "start": 120.732,
+     "end": 121.66
+    }
+   ]
+  }
+ ],
+ "logo_intro": 23.941
+}
