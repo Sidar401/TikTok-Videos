@@ -150,7 +150,7 @@ K.SFX.extend([(0.05, "bass-schlag"), (cap("s9", 2), "kurve-hoch"), (cap("s14", 1
 html, code = ls.szene(hell=True)
 K.SZ.append((T0, T0 + ls.DAUER, html, code, 7))
 K.SFX.extend(ls.sounds(T0))
-K.SZ.append((0.0, K.dauer, nl.kopf("KI-SERIE · TEIL 2", "22.11.2026"), lambda a, d: "", 8))
+K.SZ.append((0.0, K.dauer, nl.kopf("KI-SERIE · TEIL 2", "23.11.2026"), lambda a, d: "", 8))
 
 if __name__ == "__main__":
     gs.build(HERE, K.SZ, K.SFX)
