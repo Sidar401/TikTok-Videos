@@ -31,6 +31,10 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
 - Freigegebenes Muster (Nutzer: „super“, 31.10.): `shop/spielball/` – 4 Videos, Links in `shop/spielball/videos.md`.
 
 ## Regeln vom Nutzer
+- **Arbeitsweise (Nutzer 22.11., Limit-Ärger):** Nutzer nie dasselbe zweimal sagen lassen. Erst Regeln in CLAUDE.md/Skill lesen und anwenden. Bei unklarem Wunsch EINE kurze Frage stellen, statt etwas Falsches zu bauen. Nicht entschuldigen, sondern fixen und Regel speichern. Nichts bauen, was nicht gewünscht ist.
+- **Referenz-Link vom Nutzer (22.11.):** Video laden, Text/Aufbau auswerten, das GLEICHE Thema im eigenen Look mit eigenen Worten und geprüften Zahlen bauen (nicht anderes Thema vorschlagen). Länge darf 2–3 Min. sein, wenn der Nutzer es sagt.
+- **Immer drin (Nutzer 22.11.):** Logo-Intro, Kommentar-Overlay (Button, KEIN gesprochener Kommentar-Satz), bei Serien „Teil X“ am Anfang + Teaser auf nächsten Teil, Cover 9:16, Folgen-CTA als letzter Satz.
+- Setup-Skript enthält yt-dlp/ffmpeg/whisper; TikTok-Hosts sind freigegeben; Sprache→Text per ElevenLabs (Whisper-Modell gesperrt).
 - Folgen-CTA („Folge HundeFinanzTv …“) ab 18.11. immer als letzter Satz im Video
 - Ab 19.11. ALLE Videos (auch Longform) nur 61–75 s, bis der Nutzer etwas anderes sagt (2–3 Min. liefen schlecht). Logo-Intro wie beim Short nach ca. 15 s
 - Oranger Rahmen immer bei Video und Thumbnail
