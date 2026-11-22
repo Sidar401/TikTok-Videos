@@ -131,3 +131,105 @@ def kopf_quer(rechts="BÖRSENNEWS", datum=""):
             f'<div style="font-weight:700;font-size:42px;color:{DUNKEL}">HundeFinanzTv</div>'
             f'<div style="margin-left:auto;font-size:38px;color:{DUNKEL};font-weight:800;letter-spacing:1px;white-space:nowrap">{rechts}'
             f'<span style="font-weight:500;color:#555c66;margin-left:12px">{datum}</span></div></div>')
+
+
+# ---------------- Animierte CTAs (Nutzer 22.11., Vorbild: Kommentar-Feld mit Tipp-Text + Mauszeiger) ----------------
+ZEIGER = ('<svg viewBox="0 0 24 24" style="width:100%;height:100%;filter:drop-shadow(0 4px 6px #0006)">'
+          '<path d="M4 2 L4 20 L9 15.5 L12.5 23 L15.5 21.6 L12 14.3 L19 14 Z" fill="#fff" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/></svg>')
+
+
+def _zeiger(id_, x, y):
+    return f'<div id="{id_}" style="position:absolute;left:{x}px;top:{y}px;width:70px;height:70px;z-index:30;opacity:0">{ZEIGER}</div>'
+
+
+def _banner(id_, teil1, teil2, y):
+    return (f'<div id="{id_}" style="position:absolute;left:0;width:1080px;top:{y}px;display:flex;justify-content:center;z-index:29">'
+            f'<span style="padding:20px 44px;border-radius:60px;background:{DUNKEL};color:#fff;font-weight:900;font-size:46px;letter-spacing:2px;white-space:nowrap;'
+            f'box-shadow:0 14px 30px #0004">{teil1} <span style="color:{ORANGE}">{teil2}</span></span></div>')
+
+
+def cta_kommentar(id_, text="Meine Meinung dazu", antwort="", y=700):
+    """Kommentar-Feld: Text tippt sich ein, Zeiger klickt „Kommentieren“. JS: cta_kommentar_js(id_, t). Dauer ≈ 4,5 s."""
+    buchst = "".join(f'<span class="tz" style="opacity:0">{"&nbsp;" if c == " " else c}</span>' for c in text)
+    ant = (f'<div id="{id_}-ant" style="display:flex;gap:18px;align-items:flex-start;margin-top:26px;opacity:0">'
+           f'<div style="width:62px;height:62px;border-radius:50%;background:#3b82f6;flex:none"></div><div><div style="font-weight:800;font-size:32px;color:{DUNKEL}">Du · gerade eben</div>'
+           f'<div style="font-size:38px;color:#3a414c;margin-top:4px">{antwort}</div><div style="font-size:30px;color:#8a909a;margin-top:6px">♡ 1 · Antworten</div></div></div>') if antwort else ""
+    return (f'<div id="{id_}" style="position:absolute;left:70px;width:940px;top:{y}px;background:#fff;border:2px solid #e2e5ea;border-radius:26px;padding:34px 40px;'
+            f'box-shadow:0 26px 60px #0000002e;z-index:28;opacity:0">'
+            f'<div style="font-weight:800;font-size:40px;color:{DUNKEL}">Kommentare</div>'
+            f'<div style="display:flex;align-items:center;gap:20px;margin-top:26px"><div style="width:62px;height:62px;border-radius:50%;background:#3b82f6;flex:none;'
+            f'display:flex;align-items:center;justify-content:center;color:#fff;font-size:34px">●</div>'
+            f'<div style="flex:1;border-bottom:4px solid {DUNKEL};padding-bottom:10px;font-size:44px;color:{DUNKEL};white-space:nowrap">{buchst}'
+            f'<span id="{id_}-cur" style="display:inline-block;width:4px;height:46px;background:{DUNKEL};vertical-align:middle;margin-left:2px"></span></div></div>'
+            f'<div style="display:flex;justify-content:flex-end;gap:30px;margin-top:26px;align-items:center"><span style="font-size:36px;color:#8a909a;font-weight:700">Abbrechen</span>'
+            f'<span id="{id_}-btn" style="padding:16px 40px;border-radius:40px;background:{ORANGE};color:#fff;font-weight:900;font-size:38px">Kommentieren</span></div>{ant}</div>'
+            + _zeiger(f"{id_}-z", 520, y + 520) + _banner(f"{id_}-bn", "DEINE MEINUNG", "IN DIE KOMMENTARE", y - 140))
+
+
+def cta_kommentar_js(id_, t, n_zeichen=18, tipp=1.6, sfx=None):
+    """sfx: Liste, an die (zeit, sound) angehängt wird."""
+    s = (f' tl.fromTo("#{id_}", {{ y: 260, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.45, ease: "power3.out" }}, {t});'
+         f' tl.fromTo("#{id_}-bn", {{ y: -40, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.8)" }}, {t} + 0.2);'
+         f' tl.to("#{id_} .tz", {{ opacity: 1, duration: 0.01, stagger: {tipp / max(n_zeichen, 1):.3f} }}, {t} + 0.6);'
+         f' tl.fromTo("#{id_}-cur", {{ opacity: 1 }}, {{ opacity: 0, duration: 0.25, repeat: 9, yoyo: true, ease: "steps(1)" }}, {t} + 0.4);'
+         f' tl.fromTo("#{id_}-z", {{ x: 260, y: 320, opacity: 0 }}, {{ x: 150, y: -290, opacity: 1, duration: 0.7, ease: "power2.inOut" }}, {t} + 0.6 + {tipp});'
+         f' tl.to("#{id_}-z", {{ scale: 0.82, duration: 0.08, yoyo: true, repeat: 1 }}, {t} + 1.4 + {tipp});'
+         f' tl.to("#{id_}-btn", {{ scale: 0.9, duration: 0.08, yoyo: true, repeat: 1 }}, {t} + 1.4 + {tipp});'
+         f' tl.to("#{id_}-btn", {{ backgroundColor: "#22a35a", duration: 0.2 }}, {t} + 1.5 + {tipp});'
+         f' tl.fromTo("#{id_}-ant", {{ y: 30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.35 }}, {t} + 1.7 + {tipp});')
+    if sfx is not None:
+        sfx += [(t, "whoosh-weich"), (t + 0.6, "tippen"), (t + 1.4 + tipp, "klick"), (t + 1.75 + tipp, "pop")]
+    return s
+
+
+def cta_folgen(id_, y=620, follower="12.480"):
+    """Profil-Karte: Zeiger klickt „+ Folgen“ → „Gefolgt ✓“. JS: cta_folgen_js."""
+    return (f'<div id="{id_}" style="position:absolute;left:110px;width:860px;top:{y}px;background:#fff;border:2px solid #e2e5ea;border-radius:30px;padding:46px 40px;'
+            f'box-shadow:0 26px 60px #0000002e;z-index:28;opacity:0;text-align:center">'
+            f'<div style="width:220px;height:220px;margin:0 auto;border-radius:50%;overflow:hidden;border:8px solid {ORANGE};background:#1b1f22">'
+            f'<img src="assets/beagle.png" style="width:100%;height:100%;object-fit:cover"/></div>'
+            f'<div style="font-weight:900;font-size:60px;color:{DUNKEL};margin-top:20px">HundeFinanz<span style="color:{ORANGE}">Tv</span></div>'
+            f'<div style="font-size:34px;color:#8a909a">@hundefinanztv</div>'
+            f'<div style="font-size:36px;color:{DUNKEL};margin-top:16px"><b id="{id_}-zahl">{follower}</b> Follower</div>'
+            f'<div style="position:relative;height:110px;margin-top:30px">'
+            f'<span id="{id_}-btn" style="position:absolute;left:50%;top:0;transform:translateX(-50%);padding:22px 90px;border-radius:50px;background:{ORANGE};color:#fff;font-weight:900;font-size:50px;white-space:nowrap">+ Folgen</span>'
+            f'<span id="{id_}-ok" style="position:absolute;left:50%;top:0;transform:translateX(-50%);padding:22px 70px;border-radius:50px;background:#e8eaee;color:{DUNKEL};font-weight:900;font-size:50px;white-space:nowrap;opacity:0">Gefolgt ✓</span></div></div>'
+            + _zeiger(f"{id_}-z", 520, y + 760) + _banner(f"{id_}-bn", "FOLGE", "HUNDEFINANZTV", y - 140))
+
+
+def cta_folgen_js(id_, t, sfx=None, follower_neu="12.481"):
+    s = (f' tl.fromTo("#{id_}", {{ scale: 0.7, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }}, {t});'
+         f' tl.fromTo("#{id_}-bn", {{ y: -40, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.8)" }}, {t} + 0.25);'
+         f' tl.fromTo("#{id_}-z", {{ x: 280, y: 300, opacity: 0 }}, {{ x: 0, y: -235, opacity: 1, duration: 0.8, ease: "power2.inOut" }}, {t} + 0.9);'
+         f' tl.to("#{id_}-z", {{ scale: 0.82, duration: 0.08, yoyo: true, repeat: 1 }}, {t} + 1.75);'
+         f' tl.to("#{id_}-btn", {{ scale: 0.9, duration: 0.08, yoyo: true, repeat: 1 }}, {t} + 1.75);'
+         f' tl.to("#{id_}-btn", {{ opacity: 0, duration: 0.15 }}, {t} + 1.9); tl.fromTo("#{id_}-ok", {{ opacity: 0, scale: 0.8 }}, {{ opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }}, {t} + 1.9);'
+         f' tl.set("#{id_}-zahl", {{ textContent: "{follower_neu}" }}, {t} + 2.0); tl.fromTo("#{id_}-zahl", {{ scale: 1.4 }}, {{ scale: 1, duration: 0.3 }}, {t} + 2.0);')
+    if sfx is not None:
+        sfx += [(t, "whoosh-weich"), (t + 1.75, "klick"), (t + 1.95, "level-up")]
+    return s
+
+
+def cta_teilen(id_, text="mit jemandem, der das wissen muss", y=860):
+    """Teilen-Menü: Zeiger klickt „Senden“, Papierflieger fliegt weg. JS: cta_teilen_js."""
+    kreise = "".join(f'<div style="text-align:center"><div style="width:120px;height:120px;border-radius:50%;background:{f};margin:0 auto;display:flex;align-items:center;'
+                     f'justify-content:center;color:#fff;font-size:56px;font-weight:900">{i}</div><div style="font-size:28px;color:#3a414c;margin-top:10px">{n}</div></div>'
+                     for i, n, f in (("✉", "Nachricht", "#3b82f6"), ("🔗", "Link", "#8a909a"), ("➤", "Senden", ORANGE), ("★", "Story", "#a855f7")))
+    return (f'<div id="{id_}" style="position:absolute;left:40px;width:1000px;top:{y}px;background:#fff;border-radius:34px 34px 26px 26px;padding:30px 40px 40px;'
+            f'box-shadow:0 -10px 60px #0000003a;z-index:28;opacity:0">'
+            f'<div style="width:120px;height:10px;border-radius:6px;background:#d9dde3;margin:0 auto 26px"></div>'
+            f'<div style="font-weight:800;font-size:40px;color:{DUNKEL};text-align:center;margin-bottom:30px">Teilen</div>'
+            f'<div style="display:flex;justify-content:space-around">{kreise}</div></div>'
+            f'<div id="{id_}-fl" style="position:absolute;left:600px;top:{y + 140}px;font-size:90px;color:{ORANGE};z-index:31;opacity:0">➤</div>'
+            + _zeiger(f"{id_}-z", 640, y + 250) + _banner(f"{id_}-bn", "TEILE DAS", text.upper(), y - 140).replace("font-size:46px", "font-size:34px"))
+
+
+def cta_teilen_js(id_, t, sfx=None):
+    s = (f' tl.fromTo("#{id_}", {{ y: 500, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }}, {t});'
+         f' tl.fromTo("#{id_}-bn", {{ y: -40, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.8)" }}, {t} + 0.3);'
+         f' tl.fromTo("#{id_}-z", {{ x: 200, y: 300, opacity: 0 }}, {{ x: 0, y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" }}, {t} + 0.9);'
+         f' tl.to("#{id_}-z", {{ scale: 0.82, duration: 0.08, yoyo: true, repeat: 1 }}, {t} + 1.75);'
+         f' tl.fromTo("#{id_}-fl", {{ x: 0, y: 0, opacity: 1, rotation: 0 }}, {{ x: 380, y: -700, opacity: 0, rotation: -25, duration: 0.9, ease: "power2.in" }}, {t} + 1.85);')
+    if sfx is not None:
+        sfx += [(t, "swipe"), (t + 1.75, "klick"), (t + 1.85, "whoosh-schnell"), (t + 2.6, "handy-benachrichtigung")]
+    return s
