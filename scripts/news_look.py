@@ -233,3 +233,43 @@ def cta_teilen_js(id_, t, sfx=None):
     if sfx is not None:
         sfx += [(t, "swipe"), (t + 1.75, "klick"), (t + 1.85, "whoosh-schnell"), (t + 2.6, "handy-benachrichtigung")]
     return s
+
+
+# ---------- CTA-Overlay „wie im Vorbild“ (Nutzer 22.11.): dunkles Feld unten, Text tippt, Zeiger klickt orangen Button, Banner darunter ----------
+def cta_overlay(id_, titel, text, knopf, banner1, banner2, y=1430, knopf2=""):
+    """Dunkles, halbtransparentes Overlay-Feld (wie YouTube-Kommentarfeld) + Banner. knopf2 = Text nach dem Klick (optional).
+    JS: cta_overlay_js(id_, t, len(text), sfx)."""
+    buchst = "".join(f'<span class="tz" style="opacity:0">{"&nbsp;" if c == " " else c}</span>' for c in text)
+    k2 = (f'<span id="{id_}-k2" style="position:absolute;right:0;top:0;padding:12px 34px;border-radius:30px;background:#22a35a;color:#fff;font-weight:800;'
+          f'font-size:32px;white-space:nowrap;opacity:0">{knopf2}</span>') if knopf2 else ""
+    return (f'<div id="{id_}" style="position:absolute;left:90px;width:900px;top:{y}px;background:#101722e8;border:1px solid #ffffff22;border-radius:22px;'
+            f'padding:26px 34px 24px;box-shadow:0 18px 40px #0006;z-index:28;opacity:0;font-family:Montserrat,sans-serif">'
+            f'<div style="font-weight:700;font-size:34px;color:#fff">{titel}</div>'
+            f'<div style="display:flex;align-items:center;gap:18px;margin-top:20px"><div style="width:50px;height:50px;border-radius:50%;background:#3b82f6;flex:none;'
+            f'display:flex;align-items:flex-end;justify-content:center;overflow:hidden"><div style="width:22px;height:22px;border-radius:50%;background:#fff;margin-bottom:-2px;'
+            f'box-shadow:0 26px 0 6px #fff"></div></div>'
+            f'<div style="flex:1;border-bottom:3px solid #ffffffcc;padding-bottom:8px;font-size:36px;color:#fff;white-space:nowrap">{buchst}'
+            f'<span id="{id_}-cur" style="display:inline-block;width:3px;height:38px;background:#fff;vertical-align:middle;margin-left:2px"></span></div></div>'
+            f'<div style="display:flex;justify-content:flex-end;align-items:center;gap:30px;margin-top:20px"><span style="font-size:30px;color:#ffffffaa;font-weight:600">Abbrechen</span>'
+            f'<span style="position:relative;display:inline-block"><span id="{id_}-btn" style="display:inline-block;padding:12px 34px;border-radius:30px;background:{ORANGE};'
+            f'color:#111;font-weight:800;font-size:32px;white-space:nowrap">{knopf}</span>{k2}</span></div></div>'
+            + f'<div id="{id_}-z" style="position:absolute;left:560px;top:{y + 330}px;width:58px;height:58px;z-index:30;opacity:0">{ZEIGER}</div>'
+            + f'<div id="{id_}-bn" style="position:absolute;left:0;width:1080px;top:{y + 300}px;display:flex;justify-content:center;z-index:27;opacity:0">'
+              f'<span style="padding:18px 40px;border-radius:40px;background:#101722e8;border:1px solid #ffffff22;color:#fff;font-weight:900;font-size:40px;letter-spacing:3px;'
+              f'white-space:nowrap">{banner1} <span style="color:{ORANGE}">{banner2}</span></span></div>')
+
+
+def cta_overlay_js(id_, t, n_zeichen, sfx=None, tipp=1.5):
+    """Ablauf: Feld + Banner rein, Text tippt (Tastatur-Sound), Zeiger fährt zum Button, Klick (Sound), Button wird grün/zweiter Text."""
+    klick = t + 0.5 + tipp + 0.9
+    s = (f' tl.fromTo("#{id_}", {{ y: 60, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }}, {t});'
+         f' tl.fromTo("#{id_}-bn", {{ y: 40, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }}, {t} + 0.15);'
+         f' tl.to("#{id_} .tz", {{ opacity: 1, duration: 0.01, stagger: {tipp / max(n_zeichen, 1):.3f} }}, {t} + 0.5);'
+         f' tl.fromTo("#{id_}-cur", {{ opacity: 1 }}, {{ opacity: 0, duration: 0.3, repeat: 13, yoyo: true, ease: "steps(1)" }}, {t} + 0.3);'
+         f' tl.fromTo("#{id_}-z", {{ x: -200, y: 120, opacity: 0 }}, {{ x: 230, y: -160, opacity: 1, duration: 0.8, ease: "power2.inOut" }}, {t} + 0.5 + {tipp});'
+         f' tl.to("#{id_}-z", {{ scale: 0.82, duration: 0.08, yoyo: true, repeat: 1 }}, {klick});'
+         f' tl.to("#{id_}-btn", {{ scale: 0.9, duration: 0.08, yoyo: true, repeat: 1 }}, {klick});'
+         f' tl.to("#{id_}-k2", {{ opacity: 1, duration: 0.15 }}, {klick} + 0.15);')
+    if sfx is not None:
+        sfx += [(t, "whoosh-weich"), (t + 0.5, "tippen"), (klick, "klick")]
+    return s
