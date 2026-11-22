@@ -336,3 +336,15 @@ Heller Nachrichten-Look nach Vorbild Eulen-Kanal (finanzlehre). Probe: `renders/
 - Covers: scripts/cover_hell.py (ch.speichern(html, ziel, quer)) – heller Look ohne Kopfzeile, oranger Rahmen.
 - CTA-Animation (Nutzer 22.11.): IMMER wie `renders/cta-demo-1.mp4` – dunkles Kommentar-Overlay unten (`nl.cta_overlay` + `nl.cta_overlay_js`), Text tippt mit Tastatur-Sound,
   Zeiger klickt orangen Button mit Klick-Sound, Banner „DEINE MEINUNG IN DIE KOMMENTARE“. Nutzer sagt, an welcher Stelle im Skript.
+
+## 🔍 Struktur von Referenz-Videos lernen (Nutzer 22.11.)
+Schickt der Nutzer einen Video-Link: laden (`yt-dlp`), Text mit ElevenLabs `speech-to-text` (Whisper-Modell ist gesperrt), Standbilder mit ffmpeg ansehen.
+**NUR den Aufbau lernen, nie kopieren.** Look, Cover, Stimme, Format von uns bleiben unverändert (Ziel: mehr Views + Follower).
+Gelernt aus Eulen-Kanal „finanzlehre“ (KI-Boom Teil 2, 2:39 min):
+- Serie in Teilen („Folge für den nächsten Part“) → Bindung. Der Schluss verweist auf den nächsten Teil.
+- Start: Frage + kurzer Rückbezug auf den letzten Teil („Letztes Mal ging’s um …“).
+- Nummerierte Bereiche („Bereich eins …“), pro Bereich 1 Überschrift + 1 Firmenlogo + 1 fette Zahl (+26 %, −16 %).
+- Zwischenfragen als Zuschauer-Stimme („Tausendsiebenhundert?“, „Sogar Reddit?“, „Autsch.“) halten die Spannung.
+- Überraschende Zahl → direkt Reaktion → Erklärung.
+- Ein Bild pro Satz, Untertitel Wortgruppen, Logo/Zahl exakt beim gesprochenen Wort.
+- Ende: „Keine Anlageberatung“ + Teaser auf nächsten Teil.
