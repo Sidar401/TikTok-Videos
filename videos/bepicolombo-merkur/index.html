@@ -27,8 +27,9 @@
       .share { position: absolute; right: 40px; top: 1150px; }
       .share span { display: inline-block; background: #fe2c55; color: #fff; font-weight: 900; font-size: 50px; padding: 14px 32px; border-radius: 60px; box-shadow: 0 0 34px rgba(254,44,85,.6); }
       .follow { top: 1150px; }
-      .hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }
+      .hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; } .capw, #cap-in { display: none !important; }
     
+#fk-box { transform-origin: 540px 995px; transform: translateY(330px) scale(.68); }
 #fk-wrap { position: absolute; left: 170px; top: 760px; width: 740px; z-index: 30; }
 #fk { position: relative; width: 740px; padding: 130px 56px 54px; border-radius: 52px; text-align: center; overflow: hidden; font-family: "Inter Display", Inter, sans-serif; color: #fff;
   background: linear-gradient(180deg, rgba(30,34,48,.74), rgba(10,12,20,.82)); border: 1.5px solid rgba(255,255,255,.16); backdrop-filter: blur(26px) saturate(1.2); -webkit-backdrop-filter: blur(26px) saturate(1.2);
@@ -450,13 +451,9 @@
           E.render(scene, t); updLabels(t);
           let wh = "", wa = 0; const seg = (a, b, h) => { if (t >= a && t < b) { wh = h; wa = cl((t - a) / 0.3) * (1 - cl((t - b + 0.4) / 0.3)); } };
           const sub = (s) => `<div class='sub'>${s}</div>`;
-          seg(0.2, tDie - 0.1, "🛰️ 8 Jahre unterwegs"); seg(W("mehr", 11) - 0.1, KARTE - 0.1, "⚡ mehr Energie als zum Pluto");
-          seg(tGeb, tGest - 0.1, logo("esa.svg", 70) + "+ Japan 🇯🇵"); seg(tGest, tProb - 0.1, "🚀 Start: Oktober 2018");
-          seg(W("je", 22) - 0.1, tSonde - 0.1, "☀️ zieht immer stärker"); seg(tSonde, tDafuer - 0.1, "🛑 bremsen statt beschleunigen");
-          seg(W("einmal", 32.5) - 0.1, W("zweimal") - 0.1, "1× Erde 🌍"); seg(W("zweimal") - 0.1, W("und", 35) - 0.1, "2× Venus"); seg(W("und", 35), tEig - 0.1, "6× Merkur");
-          seg(tEig, tDoch - 0.1, "geplant: 2025"); seg(tDoch, tMer - 0.1, "⚡ zu wenig Strom → +1 Jahr");
+          seg(tGeb, tGest - 0.1, logo("esa.svg", 70) + "+ Japan 🇯🇵");
+          seg(W("einmal", 32.5) - 0.1, tEig - 0.1, "9 Vorbeiflüge" + sub("1× Erde · 2× Venus · 6× Merkur"));
           seg(W("tagsüber") - 0.1, tNacht - 0.1, "☀️ über 400 °C"); seg(tNacht, tDez - 0.1, "🌙 −180 °C");
-          seg(tDez, W("einen", 54.5) - 0.1, "📅 Dezember: Trennung"); seg(tApr, tZum - 0.1, "🔬 ab April 2027"); seg(tZum, END, "🧲 Warum ein Magnetfeld?");
           WORDEL.style.top = t >= KARTE && t < KARTE + 5.4 ? "300px" : "";
           word(wh, wa); cap(t);
         };

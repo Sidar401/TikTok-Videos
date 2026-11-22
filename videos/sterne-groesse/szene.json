@@ -31,7 +31,7 @@
   "fünf": "5"
  },
  "css": ".hookbig { font-size: 120px; }",
- "css_land": ".hookbig { font-size: 130px !important; } #word .sub { font: 600 36px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 8px; } .capw, #cap-in { display: none !important; } #fk-wrap { left: 590px !important; top: 300px !important; } #fk-touch, #fk-rip { left: 960px !important; top: 668px !important; }",
+ "css_land": ".hookbig { font-size: 130px !important; } #word .sub { font: 600 36px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 8px; } .capw, #cap-in { display: none !important; } #fk-wrap { left: 590px !important; top: 300px !important; } #fk-touch, #fk-rip { left: 960px !important; top: 668px !important; } #fk-box { transform: none !important; }",
  "karte": [
   77.5,
   4.6

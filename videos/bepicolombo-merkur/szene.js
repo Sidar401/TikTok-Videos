@@ -61,13 +61,9 @@ renderAt = (t) => {
   E.render(scene, t); updLabels(t);
   let wh = "", wa = 0; const seg = (a, b, h) => { if (t >= a && t < b) { wh = h; wa = cl((t - a) / 0.3) * (1 - cl((t - b + 0.4) / 0.3)); } };
   const sub = (s) => `<div class='sub'>${s}</div>`;
-  seg(0.2, tDie - 0.1, "🛰️ 8 Jahre unterwegs"); seg(W("mehr", 11) - 0.1, KARTE - 0.1, "⚡ mehr Energie als zum Pluto");
-  seg(tGeb, tGest - 0.1, logo("esa.svg", 70) + "+ Japan 🇯🇵"); seg(tGest, tProb - 0.1, "🚀 Start: Oktober 2018");
-  seg(W("je", 22) - 0.1, tSonde - 0.1, "☀️ zieht immer stärker"); seg(tSonde, tDafuer - 0.1, "🛑 bremsen statt beschleunigen");
-  seg(W("einmal", 32.5) - 0.1, W("zweimal") - 0.1, "1× Erde 🌍"); seg(W("zweimal") - 0.1, W("und", 35) - 0.1, "2× Venus"); seg(W("und", 35), tEig - 0.1, "6× Merkur");
-  seg(tEig, tDoch - 0.1, "geplant: 2025"); seg(tDoch, tMer - 0.1, "⚡ zu wenig Strom → +1 Jahr");
+  seg(tGeb, tGest - 0.1, logo("esa.svg", 70) + "+ Japan 🇯🇵");
+  seg(W("einmal", 32.5) - 0.1, tEig - 0.1, "9 Vorbeiflüge" + sub("1× Erde · 2× Venus · 6× Merkur"));
   seg(W("tagsüber") - 0.1, tNacht - 0.1, "☀️ über 400 °C"); seg(tNacht, tDez - 0.1, "🌙 −180 °C");
-  seg(tDez, W("einen", 54.5) - 0.1, "📅 Dezember: Trennung"); seg(tApr, tZum - 0.1, "🔬 ab April 2027"); seg(tZum, END, "🧲 Warum ein Magnetfeld?");
   WORDEL.style.top = t >= KARTE && t < KARTE + 5.4 ? "300px" : "";
   word(wh, wa); cap(t);
 };

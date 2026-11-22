@@ -12,6 +12,9 @@ scene = "\n".join("        " + l for l in (proj / "szene.js").read_text().replac
 W, H = (1920, 1080) if c.get("format") == "16:9" else (1080, 1920)
 LAND = "html, body, #root { width: 1920px !important; height: 1080px !important; } .line { width: 1920px !important; } .tag { top: 48px !important; } .capw { top: 900px !important; font-size: 66px !important; } .hookbig { top: 300px !important; } .share { top: 560px !important; } .follow { top: 520px !important; } #word { top: 650px !important; font-size: 78px !important; } .hookdim { width: 1920px !important; height: 1080px !important; }"
 if W > H: c["css"] = LAND + " " + c.get("css_land", "")
+NOCAP = " .capw, #cap-in { display: none !important; }"  # Nutzer 22.11.: Untertitel IMMER weglassen
+if W > H: c["css"] = c["css"] + NOCAP
+else: c["css"] = c.get("css", "") + NOCAP
 rep = {"{{W}}": str(W), "{{H}}": str(H), "{{RES}}": "landscape" if W > H else "portrait", "{{DUR}}": str(total), "{{TAG}}": c["tag"], "{{CSS}}": c.get("css", ""), "{{SCENE}}": scene}
 voice = (proj / "words.json").exists()
 if voice:

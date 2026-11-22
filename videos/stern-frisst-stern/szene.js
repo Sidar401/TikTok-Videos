@@ -54,11 +54,10 @@ renderAt = (t) => {
   E.render(scene, t); updLabels(t);
   let wh = "", wa = 0; const seg = (a, b, h) => { if (t >= a && t < b) { wh = h; wa = cl((t - a) / 0.3) * (1 - cl((t - b + 0.4) / 0.3)); } };
   const sub = (s) => `<div class='sub'>${s}</div>`;
-  seg(tFor, tUnd - 0.1, "👀 zum ersten Mal live"); seg(W("james", 10) - 0.1, KARTE - 0.1, logo("nasa.svg", 80) + "📸 James Webb");
-  seg(W("andromeda") - 0.1, W("zweieinhalb") - 0.1, "🌌 Andromeda-Galaxie"); seg(W("zweieinhalb") - 0.1, tNen - 0.1, "2,5 Mio. Lichtjahre");
-  seg(W("siebenmal") - 0.2, W("und", 26.4) - 0.1, "7× so schwer wie die Sonne"); seg(W("und", 26.4), tLit - 0.1, "> 350× so breit"); seg(W("nicht", 31.2) - 0.1, tKr - 0.1, "< 1 Sonne schwer");
-  seg(W("immer", 35) - 0.1, W("schon", 36) - 0.1, "🌀 immer enger"); seg(W("schon", 36), tDann - 0.1, "💡 seit ≈ 2018 heller"); seg(W("raste") - 0.1, tIm - 0.1, "bis in den Kern 🎯");
-  seg(tIm, tDab - 0.1, "💥 Oktober 2025"); seg(tDab, tNur - 0.1, "Gas: ≈ 1/10 Sonne"); seg(tNur, tSo - 0.1, "📸 47 Tage später"); seg(tSo, tUebr - 0.1, "🔭 extrem selten"); seg(tUebr, END, "1 Stern übrig ⭐");
+  seg(W("james", 10) - 0.1, KARTE - 0.1, logo("nasa.svg", 80) + "James Webb");
+  seg(W("zweieinhalb") - 0.1, tNen - 0.1, "2,5 Mio. Lichtjahre");
+  seg(W("und", 26.4), tLit - 0.1, "> 350× so breit wie die Sonne");
+  seg(tNur, tSo - 0.1, "📸 47 Tage später");
   WORDEL.style.top = t >= KARTE && t < KARTE + 5.4 ? "300px" : "";
   word(wh, wa); cap(t);
 };

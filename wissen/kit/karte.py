@@ -2,6 +2,7 @@
 szene.json: "karte": [start, dauer]  -> ersetzt roten "+ Folgen"-Pill und Folg-Box."""
 CHECK = '<svg class="ck" width="44" height="44" viewBox="0 0 44 44"><path d="M8 23l9 9 19-20" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="48" stroke-dashoffset="48"/></svg>'
 CSS = """
+#fk-box { transform-origin: 540px 995px; transform: translateY(330px) scale(.68); }
 #fk-wrap { position: absolute; left: 170px; top: 760px; width: 740px; z-index: 30; }
 #fk { position: relative; width: 740px; padding: 130px 56px 54px; border-radius: 52px; text-align: center; overflow: hidden; font-family: "Inter Display", Inter, sans-serif; color: #fff;
   background: linear-gradient(180deg, rgba(30,34,48,.74), rgba(10,12,20,.82)); border: 1.5px solid rgba(255,255,255,.16); backdrop-filter: blur(26px) saturate(1.2); -webkit-backdrop-filter: blur(26px) saturate(1.2);

@@ -77,3 +77,8 @@ Vorlage/Baukasten: `wissen/kit/` (neu.sh, kit.js, kit.css, mix.py, fertig.sh, sn
 ## Folgen-Aufruf NICHT aussprechen (Nutzer 21.11.) – AB SOFORT
 - „Folg uns für mehr!“ NICHT mehr in sprechtext.txt. Die Folgen-Karte (`"karte"`) kommt stumm nach dem 3. Satz.
 - Jedes Mal, wenn die Karte erscheint: Soundeffekt `stern-funkeln` (in cues.json, Zeit = Karten-Start, v ≈ 0.12).
+
+## Nutzer 22.11. – AB SOFORT
+- **KEINE Untertitel** mehr (sauber_bau.py blendet `.capw` immer aus).
+- **Einblendungen (word/seg) nur ab und zu** – nicht jeden gesprochenen Satz nochmal hinschreiben. Max. ca. 4–5 starke Zahlen/Fakten pro Video.
+- **Folgen-Karte kleiner und tiefer** (karte.py: `#fk-box` scale .68, nach unten verschoben), nicht mitten über dem Bild.
