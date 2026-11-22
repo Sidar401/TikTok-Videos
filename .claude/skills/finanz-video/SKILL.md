@@ -334,3 +334,5 @@ Heller Nachrichten-Look nach Vorbild Eulen-Kanal (finanzlehre). Probe: `renders/
 - Oranger Rahmen (Nutzer 19.11.): IMMER bei Video UND Thumbnail (neuer Look behält #frame 26 px #DB8622).
 - Thumbnails neuer Look (Nutzer 20.11.): OHNE Kopfzeile (kein „HundeFinanzTv | GELD-WISSEN/BÖRSENNEWS“) – nur Inhalt + oranger Rahmen.
 - Covers: scripts/cover_hell.py (ch.speichern(html, ziel, quer)) – heller Look ohne Kopfzeile, oranger Rahmen.
+- CTA-Animation (Nutzer 22.11.): IMMER wie `renders/cta-demo-1.mp4` – dunkles Kommentar-Overlay unten (`nl.cta_overlay` + `nl.cta_overlay_js`), Text tippt mit Tastatur-Sound,
+  Zeiger klickt orangen Button mit Klick-Sound, Banner „DEINE MEINUNG IN DIE KOMMENTARE“. Nutzer sagt, an welcher Stelle im Skript.
