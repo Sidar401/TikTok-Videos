@@ -31,3 +31,16 @@ const schluss = (a) => {
   tl.fromTo("#cta .pill span", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2.5)" }, a + 1.0);
   tl.to("#cta .pill span", { scale: 1.07, duration: 0.4, yoyo: true, repeat: 3, ease: "sine.inOut" }, a + 1.5);
 };
+// Kommentar-Aufruf: Fenster, Text tippt, Zeiger klickt „Kommentieren“. Gibt Tipp-/Klick-Zeiten zurück (für Sound).
+const kommentar = (a, n) => {
+  const step = 0.08;
+  tl.fromTo("#co", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, a);
+  tl.fromTo("#co-bn", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, a + 0.15);
+  tl.to("#co .tz", { opacity: 1, duration: 0.01, stagger: step }, a + 0.5);
+  tl.fromTo("#co-cur", { opacity: 1 }, { opacity: 0, duration: 0.3, repeat: 13, yoyo: true, ease: "steps(1)" }, a + 0.3);
+  const k = a + 0.5 + n * step + 0.9;
+  tl.fromTo("#co-z", { x: -200, y: 120, opacity: 0 }, { x: 260, y: -175, opacity: 1, duration: 0.8, ease: "power2.inOut" }, k - 0.85);
+  tl.to("#co-z", { scale: 0.82, duration: 0.08, yoyo: true, repeat: 1 }, k);
+  tl.to("#co-btn", { scale: 0.9, duration: 0.08, yoyo: true, repeat: 1 }, k);
+  tl.to(["#co", "#co-bn", "#co-z"], { opacity: 0, duration: 0.3 }, k + 0.9);
+};

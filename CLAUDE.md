@@ -48,6 +48,11 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
      Bögen mit Hund (2×3): `posen_schneiden.py` → `brand/aussie/`; Gegenstände in einer Reihe: `reihe_schneiden.py`
      → `brand/themen/` (im Builder als `pose="themen/<name>"`, Zusatzbilder über `bilder=[...]`).
      Mehr als 3 Szenen → automatisch 4,5 s je Szene + 3 s Schluss (6 Szenen = 30 s). Beispiel: `videos/hw-s*` (Schnellfresser).
+   - **3-Teile-Serie pro Thema (Nutzer 23.11.):** am Posting-Tag aus einem Thema 3 Videos: **Teil 1 Problem & Gefahr**,
+     **Teil 2 Tipps**, **Teil 3 Selbsttest** (Muster `videos/hw-s1-problem`, `hw-s2-tipps`, `hw-s3-test`).
+   - **Kommentar-Aufruf (wie HundeFinanzTv-CTA, Nutzer 23.11.):** am Ende der letzten Szene dunkles Kommentar-Fenster,
+     Text tippt mit Tasten-Klick, Zeiger klickt orangen „Kommentieren“-Knopf, Banner darunter. Im Builder `KOMMENTAR`
+     (getippter Text + Banner) – danach Logo-Schluss.
 2. **HundeWissenTv 2.0**: ab Nov. 2026 **reiner TikTok-Shop-Kanal** (nur Hundesachen) → Skill `/shop-video`.
 3. **HundeFinanzTV**: Geld & Finanzen (faceless, animierte Grafiken) → Skill `/finanz-video`, `kanal.json`, `STIL.md`.
 

@@ -13,7 +13,7 @@
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="30.0" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="34.2" data-width="1080" data-height="1920">
       <div id="s1" class="scene">
         <div id="h1" class="h" style="top: 470px; font-size: 116px">5 Tipps gegen <i>Schlingen.</i></div>
         <div class="shadow" style="left:332px;top:1378px;width:417px"></div>
@@ -65,11 +65,13 @@
       <div id="logo"><img src="assets/beagle.png" alt="" /></div>
       <div id="name">HundeWissenTv</div>
       <div id="cta"><div class="ring"><img src="assets/beagle.png" alt="" /></div><div class="n">HundeWissenTv</div><div class="pill"><span>+ Folgen</span></div></div>
+      <div id="co"><div class="t1">Kommentare</div><div class="row"><div class="av"><img src="assets/beagle.png" alt="" /></div><div class="in"><span class="tz">T</span><span class="tz">i</span><span class="tz">p</span><span class="tz">p</span><span class="tz">&nbsp;</span><span class="tz">3</span><span class="tz">&nbsp;</span><span class="tz">p</span><span class="tz">r</span><span class="tz">o</span><span class="tz">b</span><span class="tz">i</span><span class="tz">e</span><span class="tz">r</span><span class="tz">&nbsp;</span><span class="tz">i</span><span class="tz">c</span><span class="tz">h</span><span class="tz">&nbsp;</span><span class="tz">a</span><span class="tz">u</span><span class="tz">s</span><span class="tz">!</span><span id="co-cur"></span></div></div><div class="bt"><span class="ab">Abbrechen</span><span id="co-btn">Kommentieren</span></div></div><div id="co-z"><svg viewBox="0 0 24 24" style="width:100%;height:100%;filter:drop-shadow(0 4px 6px #0006)"><path d="M4 2 L4 20 L9 15.5 L12.5 23 L15.5 21.6 L12 14.3 L19 14 Z" fill="#fff" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/></svg></div><div id="co-bn"><span>WELCHER TIPP? <b>AB IN DIE KOMMENTARE</b></span></div>
+      <audio id="ctasnd" src="assets/cta.wav" data-start="0" data-duration="34.2" data-track-index="5" data-volume="0.7"></audio>
       <div id="grain"></div>
       <div id="frame"></div>
     </div>
     <script>
-      const DUR = 30.0;
+      const DUR = 34.2;
       const tl = gsap.timeline({ paused: true });
       window.__timelines = window.__timelines || {};
       window.__timelines["main"] = tl;
@@ -77,7 +79,7 @@
     <script src="assets/magazin.js"></script>
     <script>
       kopf2();
-      scenes([["#s1", 0.0, 4.5], ["#s2", 4.5, 9.0], ["#s3", 9.0, 13.5], ["#s4", 13.5, 18.0], ["#s5", 18.0, 22.5], ["#s6", 22.5, 27.2]]);
+      scenes([["#s1", 0.0, 4.5], ["#s2", 4.5, 9.0], ["#s3", 9.0, 13.5], ["#s4", 13.5, 18.0], ["#s5", 18.0, 22.5], ["#s6", 22.5, 31.4]]);
       show("#k10", 0.0, 2.25);
       show("#k11", 2.25, 4.5);
       up("#h1", 0.25, 0.6);
@@ -108,7 +110,8 @@
       up("#h6", 22.75, 0.6);
       tl.fromTo("#p6", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, 23.0);
       tl.fromTo("#x6 .x", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }, 23.9);
-      schluss(27.0);
+      kommentar(27.2, 23);
+      schluss(31.2);
       tl.to({}, { duration: 0.01 }, DUR - 0.01);
     </script>
   </body>

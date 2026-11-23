@@ -134,6 +134,32 @@ VIDEOS = {
 
 }
 
+# Kommentar-Aufruf am Ende der letzten Szene: (getippter Text, Banner)
+KOMMENTAR = {
+    "hw-s1-problem": ("Meiner schlingt auch!", "SCHREIB'S IN DIE <b>KOMMENTARE</b>"),
+    "hw-s2-tipps": ("Tipp 3 probier ich aus!", "WELCHER TIPP? <b>AB IN DIE KOMMENTARE</b>"),
+    "hw-s3-test": ("Meiner braucht 20 Sekunden", "WIE SCHNELL IST DEINER? <b>KOMMENTIER!</b>"),
+}
+KOM_DAUER = 4.2
+
+
+def kommentar_html(text):
+    z = "".join(f'<span class="tz">{"&nbsp;" if c == " " else c}</span>' for c in text)
+    return (f'<div id="co"><div class="t1">Kommentare</div><div class="row"><div class="av"><img src="assets/beagle.png" alt="" /></div>'
+            f'<div class="in">{z}<span id="co-cur"></span></div></div><div class="bt"><span class="ab">Abbrechen</span><span id="co-btn">Kommentieren</span></div></div>'
+            '<div id="co-z"><svg viewBox="0 0 24 24" style="width:100%;height:100%;filter:drop-shadow(0 4px 6px #0006)"><path d="M4 2 L4 20 L9 15.5 L12.5 23 L15.5 21.6 L12 14.3 L19 14 Z" fill="#fff" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/></svg></div>')
+
+
+def kommentar_sound(ziel, dur, a, n):
+    import numpy as np, soundfile as sf
+    sr = 44100; y = np.zeros(int(sr * dur)); rng = np.random.default_rng(3)
+    def tick(t, lv, f):
+        i = int(t * sr); L = int(0.03 * sr); e = np.exp(-np.arange(L) / (0.004 * sr))
+        y[i:i + L] += (lv * e * (0.6 * rng.standard_normal(L) + np.sin(2 * np.pi * f * np.arange(L) / sr)))[: len(y[i:i + L])]
+    for k in range(n): tick(a + 0.5 + k * 0.08, 0.25, 1800 + 300 * (k % 3))
+    tick(a + 0.5 + n * 0.08 + 0.9, 0.6, 900)
+    sf.write(ziel, (y / max(1e-6, np.abs(y).max()) * 0.5).astype("float32"), sr)
+
 HTML = """<!doctype html>
 <html lang="de" data-resolution="portrait">
   <head>
@@ -155,6 +181,7 @@ HTML = """<!doctype html>
       <div id="logo"><img src="assets/beagle.png" alt="" /></div>
       <div id="name">HundeWissenTv</div>
       <div id="cta"><div class="ring"><img src="assets/beagle.png" alt="" /></div><div class="n">HundeWissenTv</div><div class="pill"><span>+ Folgen</span></div></div>
+{KOM}
       <div id="grain"></div>
       <div id="frame"></div>
     </div>
@@ -168,6 +195,7 @@ HTML = """<!doctype html>
     <script>
       kopf2();
 {JS}
+{KOMJS}
       schluss({SCHLUSS});
       tl.to({{}}, {{ duration: 0.01 }}, DUR - 0.01);
     </script>
@@ -193,6 +221,9 @@ def bau(name):
     else:  # längere Videos: je Szene 4,5 s, Schluss 3 s
         seg = 4.5; zeiten = [(round(i * seg, 2), round((i + 1) * seg, 2)) for i in range(len(sz_list))]
         schluss = zeiten[-1][1]; dur = schluss + 3
+    kom = KOMMENTAR.get(name)
+    if kom:
+        schluss += KOM_DAUER; dur += KOM_DAUER
     def img(n):
         if "/" in n:
             (d / "assets" / f"{n}.png").write_bytes(bildpfad(n).read_bytes())
@@ -224,7 +255,14 @@ def bau(name):
         js.append(f'      tl.fromTo("#x{i} .x", {{ y: 30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }}, {a + 1.4});')
     sc = [f'["#s{i}", {a}, {b if i < len(zeiten) else schluss + 0.2}]' for i, (a, b) in enumerate(zeiten, 1)]
     js.insert(0, f'      scenes([{", ".join(sc)}]);')
-    (d / "index.html").write_text(HTML.format(DUR=dur, SCENES="\n".join(scenes), CAPS="\n".join(caps), JS="\n".join(js), SCHLUSS=schluss))
+    komhtml = komjs = ""
+    if kom:
+        ka = zeiten[-1][1] + 0.2; n = len(kom[0])
+        komhtml = "      " + kommentar_html(kom[0]) + f'<div id="co-bn"><span>{kom[1]}</span></div>'
+        kommentar_sound(d / "assets/cta.wav", dur, ka, n)
+        komhtml += f'\n      <audio id="ctasnd" src="assets/cta.wav" data-start="0" data-duration="{dur}" data-track-index="5" data-volume="0.7"></audio>'
+        komjs = f"      kommentar({ka}, {n});"
+    (d / "index.html").write_text(HTML.format(DUR=dur, SCENES="\n".join(scenes), CAPS="\n".join(caps), JS="\n".join(js), SCHLUSS=schluss, KOM=komhtml, KOMJS=komjs))
     print("gebaut:", d)
 
 if __name__ == "__main__":
