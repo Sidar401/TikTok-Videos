@@ -44,3 +44,15 @@ const kommentar = (a, n) => {
   tl.to("#co-btn", { scale: 0.9, duration: 0.08, yoyo: true, repeat: 1 }, k);
   tl.to(["#co", "#co-bn", "#co-z"], { opacity: 0, duration: 0.3 }, k + 0.9);
 };
+// Logo-Intro (3 s): Logo knallt in die Mitte, rutscht nach links, Name fährt rein, darunter 3 Begriffe.
+const logoIntro = (a, d = 3) => {
+  tl.set("#ls-bg", { opacity: 1 }, a); tl.set("#ls-bg", { opacity: 0 }, a + d);
+  tl.set(["#logo", "#name"], { opacity: 0 }, a); tl.set(["#logo", "#name"], { opacity: 1 }, a + d);
+  tl.fromTo("#ls-logo", { scale: 0, rotation: -25, opacity: 1 }, { scale: 1, rotation: 0, duration: 0.5, ease: "back.out(2.4)" }, a);
+  tl.fromTo("#ls-ring", { scale: 0.6, opacity: 1 }, { scale: 1.7, opacity: 0, duration: 0.7, ease: "power2.out" }, a + 0.15);
+  tl.fromTo(["#ls-logo", "#ls-ring"], { x: 0 }, { x: -278, duration: 0.5, ease: "power3.inOut" }, a + 0.75);
+  tl.fromTo("#ls-txt", { x: 260, opacity: 0, clipPath: "inset(0 0 0 100%)" }, { x: 0, opacity: 1, clipPath: "inset(0 0 0 0%)", duration: 0.55, ease: "power3.out" }, a + 0.9);
+  tl.fromTo("#ls-tag", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power2.out" }, a + 1.35);
+  tl.to(["#ls-logo", "#ls-txt"], { scale: 1.02, duration: 1.2, ease: "none" }, a + 1.4);
+  tl.to(["#ls-logo", "#ls-txt"], { opacity: 0, duration: 0.2 }, a + d - 0.2);
+};

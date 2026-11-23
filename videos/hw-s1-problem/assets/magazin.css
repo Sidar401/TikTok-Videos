@@ -58,3 +58,13 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
 #co-bn { position: absolute; left: 0; width: 1080px; top: 1750px; display: flex; justify-content: center; z-index: 27; opacity: 0; }
 #co-bn span { padding: 18px 40px; border-radius: 40px; background: #101722ee; color: #fff; font-weight: 900; font-size: 40px; letter-spacing: 2px; white-space: nowrap; }
 #co-bn b { color: #f2a14e; }
+/* Logo-Intro wie HundeFinanzTv (Nutzer 23.11.) */
+#ls-bg { position: absolute; inset: 0; z-index: 35; opacity: 0; background: radial-gradient(ellipse at 50% 46%, #faf6ef 0%, var(--paper) 55%, #e8dfcf 100%); }
+#ls-ring { position: absolute; left: 395px; top: 735px; width: 290px; height: 290px; border-radius: 50%; border: 6px solid #db8622; z-index: 36; opacity: 0; }
+#ls-logo { position: absolute; left: 430px; top: 770px; width: 220px; height: 220px; border-radius: 50%; overflow: hidden; border: 8px solid #db8622; box-shadow: 0 0 60px #db862299, 0 20px 40px #0003; z-index: 37; opacity: 0; background: #353a3d; }
+#ls-logo img { width: 100%; height: 100%; object-fit: cover; }
+#ls-txt { position: absolute; left: 402px; top: 822px; z-index: 37; opacity: 0; }
+#ls-name { font-family: "IN"; font-weight: 900; font-size: 72px; line-height: 1; color: var(--ink); letter-spacing: -1px; white-space: nowrap; }
+#ls-name b { color: #db8622; }
+#ls-tag { margin-top: 16px; font-family: "IN"; font-weight: 900; font-size: 26px; color: #db8622; letter-spacing: 1px; white-space: nowrap; }
+#ls-tag i { font-style: normal; color: #1d1b19aa; padding: 0 6px; }

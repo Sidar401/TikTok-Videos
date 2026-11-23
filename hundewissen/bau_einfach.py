@@ -141,6 +141,10 @@ KOMMENTAR = {
     "hw-s3-test": ("Meiner braucht 20 Sekunden", "WIE SCHNELL IST DEINER? <b>KOMMENTIER!</b>"),
 }
 KOM_DAUER = 4.2
+# Logo-Intro nach der ersten Szene (Hook), 3 s, mit Jingle wie HundeFinanzTv
+INTRO = {"hw-s1-problem", "hw-s2-tipps", "hw-s3-test"}
+INTRO_DAUER = 3.0
+INTRO_TAG = "GESUNDHEIT <i>|</i> VERHALTEN <i>|</i> PFLEGE"
 
 
 def kommentar_html(text):
@@ -221,6 +225,11 @@ def bau(name):
     else:  # längere Videos: je Szene 4,5 s, Schluss 3 s
         seg = 4.5; zeiten = [(round(i * seg, 2), round((i + 1) * seg, 2)) for i in range(len(sz_list))]
         schluss = zeiten[-1][1]; dur = schluss + 3
+    t_intro = None
+    if name in INTRO and len(zeiten) > 1:
+        t_intro = zeiten[0][1]
+        zeiten = [zeiten[0]] + [(round(a + INTRO_DAUER, 2), round(b + INTRO_DAUER, 2)) for a, b in zeiten[1:]]
+        schluss += INTRO_DAUER; dur += INTRO_DAUER
     kom = KOMMENTAR.get(name)
     if kom:
         schluss += KOM_DAUER; dur += KOM_DAUER
@@ -253,7 +262,7 @@ def bau(name):
         js.append(f'      up("#h{i}", {a + 0.25}, 0.6);')
         js.append(f'      tl.fromTo("#p{i}", {{ y: 50, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }}, {a + 0.5});')
         js.append(f'      tl.fromTo("#x{i} .x", {{ y: 30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }}, {a + 1.4});')
-    sc = [f'["#s{i}", {a}, {b if i < len(zeiten) else schluss + 0.2}]' for i, (a, b) in enumerate(zeiten, 1)]
+    sc = [f'["#s{i}", {a}, {(t_intro if (t_intro and i == 1) else b) if i < len(zeiten) else schluss + 0.2}]' for i, (a, b) in enumerate(zeiten, 1)]
     js.insert(0, f'      scenes([{", ".join(sc)}]);')
     komhtml = komjs = ""
     if kom:
@@ -262,6 +271,12 @@ def bau(name):
         kommentar_sound(d / "assets/cta.wav", dur, ka, n)
         komhtml += f'\n      <audio id="ctasnd" src="assets/cta.wav" data-start="0" data-duration="{dur}" data-track-index="5" data-volume="0.7"></audio>'
         komjs = f"      kommentar({ka}, {n});"
+    if t_intro is not None:
+        (d / "assets/logo-jingle.mp3").write_bytes((ROOT / "hundewissen/magazin/logo-jingle.mp3").read_bytes())
+        komhtml += (f'\n      <div id="ls-bg"></div><div id="ls-ring"></div><div id="ls-logo"><img src="assets/beagle.png" alt="" /></div>'
+                    f'<div id="ls-txt"><div id="ls-name">HundeWissen<b>Tv</b></div><div id="ls-tag">{INTRO_TAG}</div></div>'
+                    f'\n      <audio id="jingle" src="assets/logo-jingle.mp3" data-start="{t_intro + 0.05}" data-duration="2.5" data-track-index="6"></audio>')
+        komjs = f"      logoIntro({t_intro}, {INTRO_DAUER});\n" + komjs
     (d / "index.html").write_text(HTML.format(DUR=dur, SCENES="\n".join(scenes), CAPS="\n".join(caps), JS="\n".join(js), SCHLUSS=schluss, KOM=komhtml, KOMJS=komjs))
     print("gebaut:", d)
 

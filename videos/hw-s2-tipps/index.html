@@ -13,7 +13,7 @@
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="34.2" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="37.2" data-width="1080" data-height="1920">
       <div id="s1" class="scene">
         <div id="h1" class="h" style="top: 470px; font-size: 116px">5 Tipps gegen <i>Schlingen.</i></div>
         <div class="shadow" style="left:332px;top:1378px;width:417px"></div>
@@ -66,12 +66,14 @@
       <div id="name">HundeWissenTv</div>
       <div id="cta"><div class="ring"><img src="assets/beagle.png" alt="" /></div><div class="n">HundeWissenTv</div><div class="pill"><span>+ Folgen</span></div></div>
       <div id="co"><div class="t1">Kommentare</div><div class="row"><div class="av"><img src="assets/beagle.png" alt="" /></div><div class="in"><span class="tz">T</span><span class="tz">i</span><span class="tz">p</span><span class="tz">p</span><span class="tz">&nbsp;</span><span class="tz">3</span><span class="tz">&nbsp;</span><span class="tz">p</span><span class="tz">r</span><span class="tz">o</span><span class="tz">b</span><span class="tz">i</span><span class="tz">e</span><span class="tz">r</span><span class="tz">&nbsp;</span><span class="tz">i</span><span class="tz">c</span><span class="tz">h</span><span class="tz">&nbsp;</span><span class="tz">a</span><span class="tz">u</span><span class="tz">s</span><span class="tz">!</span><span id="co-cur"></span></div></div><div class="bt"><span class="ab">Abbrechen</span><span id="co-btn">Kommentieren</span></div></div><div id="co-z"><svg viewBox="0 0 24 24" style="width:100%;height:100%;filter:drop-shadow(0 4px 6px #0006)"><path d="M4 2 L4 20 L9 15.5 L12.5 23 L15.5 21.6 L12 14.3 L19 14 Z" fill="#fff" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/></svg></div><div id="co-bn"><span>WELCHER TIPP? <b>AB IN DIE KOMMENTARE</b></span></div>
-      <audio id="ctasnd" src="assets/cta.wav" data-start="0" data-duration="34.2" data-track-index="5" data-volume="0.7"></audio>
+      <audio id="ctasnd" src="assets/cta.wav" data-start="0" data-duration="37.2" data-track-index="5" data-volume="0.7"></audio>
+      <div id="ls-bg"></div><div id="ls-ring"></div><div id="ls-logo"><img src="assets/beagle.png" alt="" /></div><div id="ls-txt"><div id="ls-name">HundeWissen<b>Tv</b></div><div id="ls-tag">GESUNDHEIT <i>|</i> VERHALTEN <i>|</i> PFLEGE</div></div>
+      <audio id="jingle" src="assets/logo-jingle.mp3" data-start="4.55" data-duration="2.5" data-track-index="6"></audio>
       <div id="grain"></div>
       <div id="frame"></div>
     </div>
     <script>
-      const DUR = 34.2;
+      const DUR = 37.2;
       const tl = gsap.timeline({ paused: true });
       window.__timelines = window.__timelines || {};
       window.__timelines["main"] = tl;
@@ -79,39 +81,40 @@
     <script src="assets/magazin.js"></script>
     <script>
       kopf2();
-      scenes([["#s1", 0.0, 4.5], ["#s2", 4.5, 9.0], ["#s3", 9.0, 13.5], ["#s4", 13.5, 18.0], ["#s5", 18.0, 22.5], ["#s6", 22.5, 31.4]]);
+      scenes([["#s1", 0.0, 4.5], ["#s2", 7.5, 12.0], ["#s3", 12.0, 16.5], ["#s4", 16.5, 21.0], ["#s5", 21.0, 25.5], ["#s6", 25.5, 34.400000000000006]]);
       show("#k10", 0.0, 2.25);
       show("#k11", 2.25, 4.5);
       up("#h1", 0.25, 0.6);
       tl.fromTo("#p1", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, 0.5);
       tl.fromTo("#x1 .x", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }, 1.4);
-      show("#k20", 4.5, 6.75);
-      show("#k21", 6.75, 9.0);
-      up("#h2", 4.75, 0.6);
-      tl.fromTo("#p2", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, 5.0);
-      tl.fromTo("#x2 .x", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }, 5.9);
-      show("#k30", 9.0, 11.25);
-      show("#k31", 11.25, 13.5);
-      up("#h3", 9.25, 0.6);
-      tl.fromTo("#p3", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, 9.5);
-      tl.fromTo("#x3 .x", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }, 10.4);
-      show("#k40", 13.5, 15.75);
-      show("#k41", 15.75, 18.0);
-      up("#h4", 13.75, 0.6);
-      tl.fromTo("#p4", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, 14.0);
-      tl.fromTo("#x4 .x", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }, 14.9);
-      show("#k50", 18.0, 20.25);
-      show("#k51", 20.25, 22.5);
-      up("#h5", 18.25, 0.6);
-      tl.fromTo("#p5", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, 18.5);
-      tl.fromTo("#x5 .x", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }, 19.4);
-      show("#k60", 22.5, 24.75);
-      show("#k61", 24.75, 27.0);
-      up("#h6", 22.75, 0.6);
-      tl.fromTo("#p6", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, 23.0);
-      tl.fromTo("#x6 .x", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }, 23.9);
-      kommentar(27.2, 23);
-      schluss(31.2);
+      show("#k20", 7.5, 9.75);
+      show("#k21", 9.75, 12.0);
+      up("#h2", 7.75, 0.6);
+      tl.fromTo("#p2", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, 8.0);
+      tl.fromTo("#x2 .x", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }, 8.9);
+      show("#k30", 12.0, 14.25);
+      show("#k31", 14.25, 16.5);
+      up("#h3", 12.25, 0.6);
+      tl.fromTo("#p3", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, 12.5);
+      tl.fromTo("#x3 .x", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }, 13.4);
+      show("#k40", 16.5, 18.75);
+      show("#k41", 18.75, 21.0);
+      up("#h4", 16.75, 0.6);
+      tl.fromTo("#p4", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, 17.0);
+      tl.fromTo("#x4 .x", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }, 17.9);
+      show("#k50", 21.0, 23.25);
+      show("#k51", 23.25, 25.5);
+      up("#h5", 21.25, 0.6);
+      tl.fromTo("#p5", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, 21.5);
+      tl.fromTo("#x5 .x", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }, 22.4);
+      show("#k60", 25.5, 27.75);
+      show("#k61", 27.75, 30.0);
+      up("#h6", 25.75, 0.6);
+      tl.fromTo("#p6", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, 26.0);
+      tl.fromTo("#x6 .x", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }, 26.9);
+      logoIntro(4.5, 3.0);
+      kommentar(30.2, 23);
+      schluss(34.2);
       tl.to({}, { duration: 0.01 }, DUR - 0.01);
     </script>
   </body>
