@@ -84,6 +84,54 @@ VIDEOS = {
         dict(h="Mehr Spielen hilft <i>am besten.</i>", size=104, pose="ball", ph=560,
              caps=["mehr <b>spielen und schnüffeln</b>", "dann buddelt er <b>weniger</b>"]),
     ],
+    "hw-s1-problem": [
+        dict(h="Ist dein Hund ein <i>Schnellfresser?</i>", size=104, pose="schlingt", ph=560,
+             caps=["ist sein napf in sekunden <b>leer</b>?", "dann frisst er <b>zu schnell</b>"]),
+        dict(h="Er schluckt dabei <i>viel Luft.</i>", size=110, pose="themen/magen-luft", ph=560,
+             caps=["beim schlingen schluckt er <b>viel luft</b>", "der bauch <b>bläht sich auf</b>"]),
+        dict(h="Die Folge: <i>Bauchweh.</i>", size=110, pose="aufgeblaeht", ph=600,
+             caps=["das kann <b>bauchweh</b> machen", "oder er <b>würgt</b> alles wieder hoch"]),
+        dict(h="Im schlimmsten Fall: <i>Magendrehung.</i>", size=96, pose="themen/magen-verdreht", ph=540, px=480,
+             bilder=[("themen/warnung", 220, 850, 820)],
+             caps=["im schlimmsten fall dreht sich <b>der magen</b>", "vor allem bei <b>großen hunden</b>"]),
+        dict(h="Das ist ein <i>Notfall!</i>", size=116, pose="themen/tierarzt-koffer", ph=330, px=830,
+             extra='<div class="chip x" style="top:880px">🎈 Dicker Bauch</div><div class="chip x" style="top:1010px">🤢 Würgen ohne Erbrechen</div><div class="chip x" style="top:1140px">😰 Unruhe</div>',
+             caps=["bei diesen zeichen sofort", "<b>zum tierarzt</b> – jede minute zählt"]),
+        dict(h="Die Lösung: <i>langsamer fressen.</i>", size=104, pose="antischling-frisst", ph=560,
+             caps=["ein <b>anti-schling-napf</b> hilft", "so frisst er <b>ganz entspannt</b>"]),
+    ],
+    "hw-s2-tipps": [
+        dict(h="5 Tipps gegen <i>Schlingen.</i>", size=116, pose="schlingt", ph=560,
+             caps=["dein hund <b>schlingt</b> sein futter?", "diese <b>5 tipps</b> helfen"]),
+        dict(h="Tipp 1: <i>Anti-Schling-Napf.</i>", size=100, pose="themen/antischling-napf", ph=380,
+             caps=["die rillen im napf", "<b>bremsen</b> ihn beim fressen"]),
+        dict(h="Tipp 2: <i>Schnüffelteppich.</i>", size=100, pose="schnueffelteppich-frisst", ph=540,
+             caps=["im schnüffelteppich muss er", "jedes stück <b>erst suchen</b>"]),
+        dict(h="Tipp 3: <i>Muffinblech.</i>", size=110, pose="themen/muffinblech", ph=340,
+             caps=["futter ins <b>muffinblech</b> verteilen", "der <b>günstige trick</b> von zuhause"]),
+        dict(h="Tipp 4: <i>Kleinere Portionen.</i>", size=100, pose="themen/portionen", ph=520,
+             caps=["lieber <b>2 bis 3 kleine</b> mahlzeiten", "statt einer <b>großen</b>"]),
+        dict(h="Tipp 5: <i>Ruhe nach dem Fressen.</i>", size=96, pose="wartet-napf", ph=600,
+             caps=["nach dem fressen <b>kein toben</b>", "lieber <b>ausruhen</b> lassen"]),
+    ],
+    "hw-s3-test": [
+        dict(h="Mach den <i>Schnellfresser-Test!</i>", size=100, pose="themen/stoppuhr", ph=520,
+             caps=["mach mal einen <b>kleinen test</b>", "es dauert nur <b>eine minute</b>"]),
+        dict(h="Napf füllen, <i>Uhr starten.</i>", size=110, pose="themen/napf-voll", ph=360,
+             bilder=[("themen/stoppuhr", 260, 850, 780)],
+             caps=["füll seinen napf <b>wie immer</b>", "und starte <b>die uhr</b>"]),
+        dict(h="In Sekunden fertig? <i>Schnellfresser!</i>", size=96, pose="schlingt", ph=560,
+             caps=["ist er nach <b>wenigen sekunden</b> fertig?", "dann ist er ein <b>schnellfresser</b>"]),
+        dict(h="Achte auf <i>diese Zeichen.</i>", size=110, pose="wuergt", ph=520, px=790,
+             extra='<div class="chip x" style="top:900px">🤢 Würgt oft</div><div class="chip x" style="top:1030px">💨 Viele Pupse</div><div class="chip x" style="top:1160px">🎈 Bläht sich auf</div>',
+             caps=["würgt er oft oder <b>pupst</b> viel?", "auch das sind <b>hinweise</b>"]),
+        dict(h="Mach Fressen <i>zum Spiel.</i>", size=110, pose="themen/futterball", ph=440,
+             bilder=[("themen/schnueffelteppich", 240, 830, 860)], px=380,
+             caps=["mit <b>futterball</b> oder", "<b>schnüffelteppich</b> wird's ein spiel"]),
+        dict(h="So frisst er <i>gesund.</i>", size=116, pose="antischling-frisst", ph=560,
+             caps=["so frisst er <b>langsamer</b>", "und viel <b>gesünder</b>"]),
+    ],
+
 }
 
 HTML = """<!doctype html>
@@ -128,36 +176,56 @@ HTML = """<!doctype html>
 """
 
 
+def bildpfad(n):
+    return ROOT / "brand" / (f"{n}.png" if "/" in n else f"aussie/{n}.png")
+
+
 def bau(name):
     d = ROOT / "videos" / name
     if not d.exists():
         subprocess.run(["bash", str(ROOT / "hundewissen/neu.sh"), name], check=True)
     for f in ["magazin.css", "magazin.js"]:
         (d / "assets" / f).write_bytes((ROOT / "hundewissen/magazin" / f).read_bytes())
+    (d / "assets/themen").mkdir(exist_ok=True)
+    sz_list = VIDEOS[name]
+    if len(sz_list) == 3:
+        zeiten, schluss, dur = T, SCHLUSS, DUR
+    else:  # längere Videos: je Szene 4,5 s, Schluss 3 s
+        seg = 4.5; zeiten = [(round(i * seg, 2), round((i + 1) * seg, 2)) for i in range(len(sz_list))]
+        schluss = zeiten[-1][1]; dur = schluss + 3
+    def img(n):
+        if "/" in n:
+            (d / "assets" / f"{n}.png").write_bytes(bildpfad(n).read_bytes())
+            return f"assets/{n}.png"
+        return f"assets/aussie/{n}.png"
     scenes, caps, js = [], [], []
-    for i, (sz, (a, b)) in enumerate(zip(VIDEOS[name], T), 1):
-        w0, h0 = Image.open(ROOT / f"brand/aussie/{sz['pose']}.png").size
+    for i, (sz, (a, b)) in enumerate(zip(sz_list, zeiten), 1):
+        w0, h0 = Image.open(bildpfad(sz["pose"])).size
         ph = sz["ph"]; pw = round(w0 * ph / h0)
         if pw > 860: pw = 860; ph = round(h0 * pw / w0)
         cx = sz.get("px", 540); top = 1400 - ph
         src = f'<div class="src" style="top:1418px">{sz["src"]}</div>' if sz.get("src") else ""
+        mehr = ""
+        for (bn, bh, bx, by) in sz.get("bilder", []):
+            bw0, bh0 = Image.open(bildpfad(bn)).size; bw = round(bw0 * bh / bh0)
+            mehr += f'<img class="pose x" src="{img(bn)}" style="left:{bx - bw / 2:.0f}px;top:{by}px;width:{bw}px" alt="" />'
         scenes.append(f'''      <div id="s{i}" class="scene">
         <div id="h{i}" class="h" style="top: 470px; font-size: {sz["size"]}px">{sz["h"]}</div>
         <div class="shadow" style="left:{cx - pw * 0.42:.0f}px;top:1378px;width:{pw * 0.84:.0f}px"></div>
-        <img id="p{i}" class="pose" src="assets/aussie/{sz["pose"]}.png" style="left:{cx - pw / 2:.0f}px;top:{top}px;width:{pw}px" alt="" />
-        <div id="x{i}">{sz.get("extra", "")}</div>{src}
+        <img id="p{i}" class="pose" src="{img(sz["pose"])}" style="left:{cx - pw / 2:.0f}px;top:{top}px;width:{pw}px" alt="" />
+        <div id="x{i}">{sz.get("extra", "")}{mehr}</div>{src}
       </div>''')
-        m = (a + b) / 2
+        m = round((a + b) / 2, 2)
         for k, (c, ca, cb) in enumerate(zip(sz["caps"], [a, m], [m, b])):
             caps.append(f'      <div id="k{i}{k}" class="cap">{c}</div>')
             js.append(f'      show("#k{i}{k}", {ca}, {cb});')
         js.append(f'      up("#h{i}", {a + 0.25}, 0.6);')
         js.append(f'      tl.fromTo("#p{i}", {{ y: 50, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }}, {a + 0.5});')
         js.append(f'      tl.fromTo("#x{i} .x", {{ y: 30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }}, {a + 1.4});')
-    js.insert(0, f'      scenes([["#s1", 0, {T[0][1]}], ["#s2", {T[1][0]}, {T[1][1]}], ["#s3", {T[2][0]}, {SCHLUSS + 0.2}]]);')
-    (d / "index.html").write_text(HTML.format(DUR=DUR, SCENES="\n".join(scenes), CAPS="\n".join(caps), JS="\n".join(js), SCHLUSS=SCHLUSS))
+    sc = [f'["#s{i}", {a}, {b if i < len(zeiten) else schluss + 0.2}]' for i, (a, b) in enumerate(zeiten, 1)]
+    js.insert(0, f'      scenes([{", ".join(sc)}]);')
+    (d / "index.html").write_text(HTML.format(DUR=dur, SCENES="\n".join(scenes), CAPS="\n".join(caps), JS="\n".join(js), SCHLUSS=schluss))
     print("gebaut:", d)
-
 
 if __name__ == "__main__":
     for n in sys.argv[1:] or VIDEOS:

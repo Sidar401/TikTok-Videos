@@ -45,6 +45,9 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
    - **Ablauf pro Video (Nutzer 20.11.):** Nutzer nennt das Thema → ich schreibe sofort die passenden **ChatGPT-Texte
      für Themen-Bilder** (Gegenstände/Futter/Szenen, gleicher Zeichenstil, weißer Hintergrund, ohne Text; max. 3 pro Tag)
      → Nutzer schickt Bilder → ausschneiden (`hundewissen/posen_schneiden.py` o. ä.) → Video bauen.
+     Bögen mit Hund (2×3): `posen_schneiden.py` → `brand/aussie/`; Gegenstände in einer Reihe: `reihe_schneiden.py`
+     → `brand/themen/` (im Builder als `pose="themen/<name>"`, Zusatzbilder über `bilder=[...]`).
+     Mehr als 3 Szenen → automatisch 4,5 s je Szene + 3 s Schluss (6 Szenen = 30 s). Beispiel: `videos/hw-s*` (Schnellfresser).
 2. **HundeWissenTv 2.0**: ab Nov. 2026 **reiner TikTok-Shop-Kanal** (nur Hundesachen) → Skill `/shop-video`.
 3. **HundeFinanzTV**: Geld & Finanzen (faceless, animierte Grafiken) → Skill `/finanz-video`, `kanal.json`, `STIL.md`.
 
