@@ -1,0 +1,95 @@
+{
+ "titel": "Rente 2027 plus",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Die Rente steigt im Juli 2027 um vier Komma null neun Prozent.",
+   "text": "Die Rente steigt im Juli 2027 um vier Komma null 9 %",
+   "bild": ""
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Aber es gibt einen Haken, und der betrifft vor allem dich.",
+   "text": "Aber es gibt einen Haken, und der betrifft vor allem dich",
+   "bild": ""
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Am Ende zeigen wir dir, was dich das ab 2028 kostet.",
+   "text": "Am Ende zeigen wir dir, was dich das ab 2028 kostet",
+   "bild": ""
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Schauen wir uns das genau an.",
+   "text": "Schauen wir uns das genau an",
+   "bild": ""
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Über einundzwanzig Millionen Rentner bekommen mehr Geld.",
+   "text": "Über 21 Millionen Rentner bekommen mehr Geld",
+   "bild": ""
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Bei fünfzehnhundert Euro Rente sind das rund einundsechzig Euro mehr im Monat, vor Abzügen.",
+   "text": "Bei 1.500 € Rente sind das rund 61 € mehr im Monat, vor Abzügen",
+   "bild": ""
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Klingt gut? Vor einem Jahr hieß es noch vier Komma sieben fünf Prozent.",
+   "text": "Klingt gut? Vor einem Jahr hieß es noch 4,7 5 %",
+   "bild": ""
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Danach vier Komma vier, jetzt nur noch vier Komma eins: Die Prognose wurde dreimal gesenkt.",
+   "text": "Danach 4,4, jetzt nur noch 4,1: Die Prognose wurde dreimal gesenkt",
+   "bild": ""
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Sicher ist die Zahl erst im Frühjahr, dann legt die Regierung sie endgültig fest.",
+   "text": "Sicher ist die Zahl erst im Frühjahr, dann legt die Regierung sie endgültig fest",
+   "bild": ""
+  },
+  {
+   "id": "s10",
+   "sprechtext": "Jetzt der Haken: Der Rentenbeitrag liegt 2027 noch bei achtzehn Komma sechs Prozent.",
+   "text": "Jetzt der Haken: Der Rentenbeitrag liegt 2027 noch bei 18,6 %",
+   "bild": ""
+  },
+  {
+   "id": "s11",
+   "sprechtext": "Für 2028 rechnet der Bericht mit neunzehn Komma acht Prozent.",
+   "text": "Für 2028 rechnet der Bericht mit 19,8 %",
+   "bild": ""
+  },
+  {
+   "id": "s12",
+   "sprechtext": "Bei dreitausend Euro brutto sind das für dich etwa achtzehn Euro mehr im Monat.",
+   "text": "Bei 3.000 € brutto sind das für dich etwa 18 € mehr im Monat",
+   "bild": ""
+  },
+  {
+   "id": "s13",
+   "sprechtext": "Merk dir: Rentner bekommen mehr, Arbeitnehmer zahlen bald mehr.",
+   "text": "Merk dir: Rentner bekommen mehr, Arbeitnehmer zahlen bald mehr",
+   "bild": ""
+  },
+  {
+   "id": "s14",
+   "sprechtext": "Folge HundeFinanzTv, wir haben noch mehr Geld-Tipps für dich!",
+   "text": "Folge HundeFinanzTv, wir haben noch mehr Geld-Tipps für dich",
+   "bild": ""
+  },
+  {
+   "id": "s15",
+   "sprechtext": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung.",
+   "text": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung",
+   "bild": ""
+  }
+ ]
+}
