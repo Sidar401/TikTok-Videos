@@ -55,7 +55,7 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
      (getippter Text + Banner) – danach Logo-Schluss.
    - **Logo-Intro (wie HundeFinanzTv, Nutzer 23.11.):** 3 s nach dem Hook (erste Szene), gleicher Jingle
      (`hundewissen/magazin/logo-jingle.mp3` = HundeFinanzTv `logo-jingle`). Logo knallt rein, rutscht nach links,
-     „HundeWissen**Tv**“ + 3 Begriffe (`INTRO_TAG` im Builder, Probe: GESUNDHEIT | VERHALTEN | PFLEGE – Nutzer wählt noch).
+     „HundeWissen**Tv**“ + 3 Begriffe (`INTRO_TAG`: **GESUNDHEIT | VERHALTEN | ERZIEHUNG** – vom Nutzer festgelegt).
    - **Einstieg wie HundeFinanzTv:** Hook 0–3 s (stärkste Aussage, direkt an „du“, kein „Hallo“) → worum es geht →
      warum es dich betrifft → offene Schleife („am Ende …“) → Logo-Intro → Inhalt → Kommentar-CTA → Folgen-Schluss.
 2. **HundeWissenTv 2.0**: ab Nov. 2026 **reiner TikTok-Shop-Kanal** (nur Hundesachen) → Skill `/shop-video`.

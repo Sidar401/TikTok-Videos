@@ -144,7 +144,7 @@ KOM_DAUER = 4.2
 # Logo-Intro nach der ersten Szene (Hook), 3 s, mit Jingle wie HundeFinanzTv
 INTRO = {"hw-s1-problem", "hw-s2-tipps", "hw-s3-test"}
 INTRO_DAUER = 3.0
-INTRO_TAG = "GESUNDHEIT <i>|</i> VERHALTEN <i>|</i> PFLEGE"
+INTRO_TAG = "GESUNDHEIT <i>|</i> VERHALTEN <i>|</i> ERZIEHUNG"  # Nutzer 24.11.
 
 
 def kommentar_html(text):
