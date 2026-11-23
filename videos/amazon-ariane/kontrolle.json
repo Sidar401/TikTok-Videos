@@ -1,0 +1,15 @@
+{
+ "gehoert": "Neun Tage nach dem Absturz versucht Amazon es noch mal. Wieder sollen Internet-Satelliten ins All, diesmal mit einer europäischen Rakete. Doch schon der erste Versuch wurde gestoppt. Am 15. November ist die amerikanische Rakete Vulcan verunglückt. Mit ihr gingen vierzig Satelliten von Amazon verloren. Jetzt soll die Ariane sechs es richten. Sie startet aus Französisch-Guayana in Südamerika, ganz nah am Äquator. An Bord: sechsunddreißig Satelliten für Amazons Internet aus dem All. Früher hieß das Projekt Kuiper, heute Amazon Leo. Gestern sollte es losgehen. Doch kurz vorher stoppte der Countdown. Ein Problem am Boden, nicht an der Rakete. Die Satelliten sind sicher. Neuer Versuch: heute, kurz vor zwölf Uhr deutscher Zeit. Für diesen Flug bekommt die Ariane sechs vier seitliche Booster, die stärkste Version. Es ist schon ihr zehnter Flug und der vierte nur für Amazon. Amazon will über dreitausend Satelliten ins All bringen, als Konkurrenz zu Starlink von Elon Musk und jeder Fehlschlag kostet Zeit und viele Millionen.",
+ "abweichungen": [
+  [
+   "replace",
+   "nochmal",
+   "noch mal"
+  ],
+  [
+   "replace",
+   "fünfzehnten",
+   "15"
+  ]
+ ]
+}

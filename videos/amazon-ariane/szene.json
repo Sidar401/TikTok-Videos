@@ -1,0 +1,12 @@
+{
+ "tag": "24. NOVEMBER 2026",
+ "dauer": 66.6,
+ "hook": "Amazon wagt den<br /><span class=\"y\">NÄCHSTEN START!</span>",
+ "hook_end": 3.4,
+ "karte": [
+  11.2,
+  5.4
+ ],
+ "fix": {},
+ "css": ".hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"
+}
