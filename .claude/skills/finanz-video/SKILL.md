@@ -348,3 +348,6 @@ Gelernt aus Eulen-Kanal „finanzlehre“ (KI-Boom Teil 2, 2:39 min):
 - Überraschende Zahl → direkt Reaktion → Erklärung.
 - Ein Bild pro Satz, Untertitel Wortgruppen, Logo/Zahl exakt beim gesprochenen Wort.
 - Ende: „Keine Anlageberatung“ + Teaser auf nächsten Teil.
+
+## Ende-Reihenfolge (Nutzer 23.11., ersetzt alle älteren Regeln dazu)
+Vorletzter Satz = Folgen-CTA („Folge HundeFinanzTv …“), letzter Satz = „Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung.“ Immer, bei jedem Video.

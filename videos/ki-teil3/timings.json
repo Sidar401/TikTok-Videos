@@ -1,0 +1,521 @@
+{
+ "dauer": 109.32,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 7.409,
+   "captions": [
+    {
+     "text": "603.000 Roboter sind letztes",
+     "start": 0.0,
+     "end": 1.831
+    },
+    {
+     "text": "Jahr neu in Fabriken gekommen,",
+     "start": 1.831,
+     "end": 3.794
+    },
+    {
+     "text": "aber nur knapp 7.000 Roboter",
+     "start": 3.794,
+     "end": 5.513
+    },
+    {
+     "text": "in Menschenform",
+     "start": 5.513,
+     "end": 6.494
+    },
+    {
+     "text": "wurden verkauft",
+     "start": 6.494,
+     "end": 7.409
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 7.409,
+   "end": 16.229,
+   "captions": [
+    {
+     "text": "Das ist Teil drei",
+     "start": 7.409,
+     "end": 8.46
+    },
+    {
+     "text": "unserer KI‑Serie. In Teil",
+     "start": 8.46,
+     "end": 10.025
+    },
+    {
+     "text": "eins ging es um Firmen,",
+     "start": 10.025,
+     "end": 11.538
+    },
+    {
+     "text": "die KI nutzen,",
+     "start": 11.538,
+     "end": 12.433
+    },
+    {
+     "text": "in Teil zwei um die,",
+     "start": 12.433,
+     "end": 13.748
+    },
+    {
+     "text": "die alles liefern.",
+     "start": 13.748,
+     "end": 14.731
+    },
+    {
+     "text": "Heute geht es um Roboter",
+     "start": 14.731,
+     "end": 16.229
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 16.229,
+   "end": 21.087,
+   "captions": [
+    {
+     "text": "Wir zeigen dir drei",
+     "start": 16.229,
+     "end": 17.461
+    },
+    {
+     "text": "Bereiche: Fabrik‑Roboter,",
+     "start": 17.461,
+     "end": 19.089
+    },
+    {
+     "text": "Menschen‑Roboter und die Börse",
+     "start": 19.089,
+     "end": 21.087
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 21.087,
+   "end": 26.49,
+   "captions": [
+    {
+     "text": "Und am Ende erfährst du,",
+     "start": 21.087,
+     "end": 22.661
+    },
+    {
+     "text": "welche Firma",
+     "start": 22.661,
+     "end": 23.452
+    },
+    {
+     "text": "für 2,5 Milliarden Dollar",
+     "start": 23.452,
+     "end": 25.099
+    },
+    {
+     "text": "an die Börse gehen soll",
+     "start": 25.099,
+     "end": 26.49
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 26.49,
+   "end": 27.947,
+   "captions": [
+    {
+     "text": "Schauen wir uns das genau an",
+     "start": 26.49,
+     "end": 27.947
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 30.947,
+   "end": 36.381,
+   "captions": [
+    {
+     "text": "Bereich eins: Fabrik‑Roboter.",
+     "start": 30.947,
+     "end": 32.812
+    },
+    {
+     "text": "Weltweit arbeiten schon fünf",
+     "start": 32.812,
+     "end": 34.6
+    },
+    {
+     "text": "Millionen davon in Fabriken",
+     "start": 34.6,
+     "end": 36.381
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 36.381,
+   "end": 41.959,
+   "captions": [
+    {
+     "text": "Allein letztes Jahr",
+     "start": 36.381,
+     "end": 37.906
+    },
+    {
+     "text": "kamen 603.000 neue dazu,",
+     "start": 37.906,
+     "end": 39.901
+    },
+    {
+     "text": "11 % mehr",
+     "start": 39.901,
+     "end": 40.584
+    },
+    {
+     "text": "als im Jahr davor",
+     "start": 40.584,
+     "end": 41.959
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 41.959,
+   "end": 47.231,
+   "captions": [
+    {
+     "text": "Davon wurden",
+     "start": 41.959,
+     "end": 43.255
+    },
+    {
+     "text": "354.000 in China eingebaut,",
+     "start": 43.255,
+     "end": 46.255
+    },
+    {
+     "text": "fast 60 %",
+     "start": 46.255,
+     "end": 47.231
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 47.231,
+   "end": 53.26,
+   "captions": [
+    {
+     "text": "60 % in einem Land?",
+     "start": 47.231,
+     "end": 49.334
+    },
+    {
+     "text": "Ja. In Deutschland",
+     "start": 49.334,
+     "end": 51.133
+    },
+    {
+     "text": "waren es nur 24.800",
+     "start": 51.133,
+     "end": 53.26
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 53.26,
+   "end": 59.361,
+   "captions": [
+    {
+     "text": "Bereich zwei: Roboter",
+     "start": 53.26,
+     "end": 54.547
+    },
+    {
+     "text": "in Menschenform. Davon",
+     "start": 54.547,
+     "end": 56.051
+    },
+    {
+     "text": "wurden letztes Jahr nur",
+     "start": 56.051,
+     "end": 57.839
+    },
+    {
+     "text": "knapp 7.000 verkauft",
+     "start": 57.839,
+     "end": 59.361
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 59.361,
+   "end": 64.456,
+   "captions": [
+    {
+     "text": "Tesla plant mit seinem Roboter",
+     "start": 59.361,
+     "end": 61.157
+    },
+    {
+     "text": "Optimus Produktionslinien",
+     "start": 61.157,
+     "end": 62.679
+    },
+    {
+     "text": "für eine Million Stück im Jahr",
+     "start": 62.679,
+     "end": 64.456
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 64.456,
+   "end": 70.664,
+   "captions": [
+    {
+     "text": "Hyundai gehören",
+     "start": 64.456,
+     "end": 65.407
+    },
+    {
+     "text": "80 % von Boston Dynamics,",
+     "start": 65.407,
+     "end": 67.078
+    },
+    {
+     "text": "und der Roboter Atlas soll",
+     "start": 67.078,
+     "end": 68.816
+    },
+    {
+     "text": "in Hyundai‑Fabriken arbeiten",
+     "start": 68.816,
+     "end": 70.664
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 70.664,
+   "end": 75.745,
+   "captions": [
+    {
+     "text": "Aber Morgan Stanley",
+     "start": 70.664,
+     "end": 71.767
+    },
+    {
+     "text": "sagt: Es dauert länger,",
+     "start": 71.767,
+     "end": 73.129
+    },
+    {
+     "text": "bis diese Roboter in großen",
+     "start": 73.129,
+     "end": 74.729
+    },
+    {
+     "text": "Mengen gebaut werden",
+     "start": 74.729,
+     "end": 75.745
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 75.745,
+   "end": 81.464,
+   "captions": [
+    {
+     "text": "Bereich drei: die Börse.",
+     "start": 75.745,
+     "end": 76.985
+    },
+    {
+     "text": "Agility Robotics",
+     "start": 76.985,
+     "end": 77.773
+    },
+    {
+     "text": "soll im November",
+     "start": 77.773,
+     "end": 78.816
+    },
+    {
+     "text": "über einen Börsenmantel",
+     "start": 78.816,
+     "end": 80.315
+    },
+    {
+     "text": "an die Börse gehen",
+     "start": 80.315,
+     "end": 81.464
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "start": 81.464,
+   "end": 88.486,
+   "captions": [
+    {
+     "text": "Die Firma wird dabei",
+     "start": 81.464,
+     "end": 82.84
+    },
+    {
+     "text": "mit 2,5 Milliarden",
+     "start": 82.84,
+     "end": 84.101
+    },
+    {
+     "text": "Dollar bewertet,",
+     "start": 84.101,
+     "end": 85.221
+    },
+    {
+     "text": "und 620 Millionen Dollar",
+     "start": 85.221,
+     "end": 86.902
+    },
+    {
+     "text": "kommen neu in die Firma",
+     "start": 86.902,
+     "end": 88.486
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "start": 88.486,
+   "end": 92.2,
+   "captions": [
+    {
+     "text": "Viel Geld",
+     "start": 88.486,
+     "end": 88.954
+    },
+    {
+     "text": "für eine junge Firma,",
+     "start": 88.954,
+     "end": 90.108
+    },
+    {
+     "text": "bei der die Roboter",
+     "start": 90.108,
+     "end": 91.153
+    },
+    {
+     "text": "noch am Anfang stehen",
+     "start": 91.153,
+     "end": 92.2
+    }
+   ]
+  },
+  {
+   "id": "s17",
+   "start": 92.2,
+   "end": 95.906,
+   "captions": [
+    {
+     "text": "Chinesische Roboter‑Aktien",
+     "start": 92.2,
+     "end": 93.746
+    },
+    {
+     "text": "sind zuletzt",
+     "start": 93.746,
+     "end": 94.509
+    },
+    {
+     "text": "trotzdem stark gestiegen",
+     "start": 94.509,
+     "end": 95.906
+    }
+   ]
+  },
+  {
+   "id": "s18",
+   "start": 95.906,
+   "end": 101.08,
+   "captions": [
+    {
+     "text": "Merk dir: Heute verdient",
+     "start": 95.906,
+     "end": 97.046
+    },
+    {
+     "text": "man mit Fabrik‑Robotern,",
+     "start": 97.046,
+     "end": 98.601
+    },
+    {
+     "text": "Menschen‑Roboter sind",
+     "start": 98.601,
+     "end": 99.962
+    },
+    {
+     "text": "noch Zukunftsmusik",
+     "start": 99.962,
+     "end": 101.08
+    }
+   ]
+  },
+  {
+   "id": "s19",
+   "start": 101.08,
+   "end": 104.756,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTv,",
+     "start": 101.08,
+     "end": 102.283
+    },
+    {
+     "text": "damit du die nächste",
+     "start": 102.283,
+     "end": 103.536
+    },
+    {
+     "text": "Serie nicht verpasst",
+     "start": 103.536,
+     "end": 104.756
+    }
+   ]
+  },
+  {
+   "id": "s20",
+   "start": 104.756,
+   "end": 108.714,
+   "captions": [
+    {
+     "text": "Kurzer Hinweis: Das ist",
+     "start": 104.756,
+     "end": 106.233
+    },
+    {
+     "text": "keine Anlageberatung,",
+     "start": 106.233,
+     "end": 107.612
+    },
+    {
+     "text": "nur eine Erklärung",
+     "start": 107.612,
+     "end": 108.714
+    }
+   ]
+  }
+ ],
+ "logo_intro": 27.947
+}
