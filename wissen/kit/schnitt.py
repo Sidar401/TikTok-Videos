@@ -72,6 +72,12 @@ out, chunks = [], []
 for ln in lines:
     for wd in ln: out.append({"w": wd["w"], "s": mapt(wd["s"]), "e": mapt(wd["e"])})
     chunks.append([mapt(ln[0]["s"]), mapt(ln[-1]["e"])])
+# Nutzer 24.11.: erster Satz lauter (wie bei "Stern frisst Stern", ca. +5 dB), danach normal
+HOOK = chunks[0][1] + 0.05 if chunks else 0
+if HOOK:
+    vw = proj / "assets/voice.wav"; tmp = proj / "assets/voice-tmp.wav"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(vw), "-af", f"volume=1.75:enable='lt(t,{HOOK:.3f})',alimiter=limit=0.95", "-ar", "44100", "-ac", "1", str(tmp)], check=True)
+    tmp.replace(vw)
 json.dump({"words": out, "chunks": chunks, "tempo": tempo}, open(proj / "words.json", "w"), ensure_ascii=False)
 neu = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(proj / "assets/voice.wav")], capture_output=True, text=True).stdout)
 print(f"Tempo {tempo:.3f} · neue Länge {neu:.2f} s · {len(lines)} Zeilen · {len(out)} Wörter · {len(segs) - 1} Schnitte (nur in Stille)")

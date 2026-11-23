@@ -82,3 +82,7 @@ Vorlage/Baukasten: `wissen/kit/` (neu.sh, kit.js, kit.css, mix.py, fertig.sh, sn
 - **KEINE Untertitel** mehr (sauber_bau.py blendet `.capw` immer aus).
 - **Einblendungen (word/seg) nur ab und zu** – nicht jeden gesprochenen Satz nochmal hinschreiben. Max. ca. 4–5 starke Zahlen/Fakten pro Video.
 - **Folgen-Karte kleiner und tiefer** (karte.py: `#fk-box` scale .68, nach unten verschoben), nicht mitten über dem Bild.
+
+## Nutzer 24.11. – Lauter Einstieg (AB SOFORT, nur neue Videos)
+- Der **erste Satz** wird **lauter** gesprochen (ca. +5 dB, wie bei „Stern frisst Stern“ – kam gut an), danach normal.
+- Passiert automatisch in `wissen/kit/schnitt.py`. Erster Satz im Sprechtext immer mit „!“ und starker Aussage.
