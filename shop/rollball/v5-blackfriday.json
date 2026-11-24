@@ -17,7 +17,8 @@
    "bg": "dunkel",
    "kicker": "BLACK FRIDAY",
    "titel": "*12.000* Hundehalter|haben ihn schon!",
-   "icon": "pfote"
+   "icon": "pfote",
+   "hund": "freudig"
   },
   {
    "typ": "produkt",
@@ -50,7 +51,8 @@
    "dur": 3.5,
    "bg": "dunkel",
    "titel": "*4 Sterne* bei fast|900 Bewertungen",
-   "icon": "stern"
+   "icon": "stern",
+   "hund": "medaille"
   },
   {
    "typ": "preis",

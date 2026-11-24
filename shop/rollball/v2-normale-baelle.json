@@ -16,7 +16,8 @@
    "dur": 3,
    "bg": "dunkel",
    "titel": "Hör auf, normale|Bälle zu *kaufen*!",
-   "icon": "x"
+   "icon": "x",
+   "hund": "stopp"
   },
   {
    "typ": "vergleich",
@@ -80,7 +81,8 @@
    "bg": "dunkel",
    "titel": "Perfekt für|*kleine* Hunde",
    "icon": "pfote",
-   "unter": "Nur 6 × 7 cm groß"
+   "unter": "Nur 6 × 7 cm groß",
+   "hund": "welpe-sitzt"
   }
  ]
 }

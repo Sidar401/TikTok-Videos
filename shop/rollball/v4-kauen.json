@@ -15,8 +15,9 @@
    "typ": "titel",
    "dur": 3,
    "bg": "dunkel",
-   "titel": "Warum kaut dein Hund|an *allem* herum?",
-   "icon": "schuh"
+   "titel": "Warum kaut dein|Hund an *allem* herum?",
+   "icon": "schuh",
+   "hund": "schuh"
   },
   {
    "typ": "titel",
@@ -24,7 +25,8 @@
    "bg": "dunkel",
    "titel": "Oft ist es einfach|*Langeweile*",
    "icon": "uhr",
-   "unter": "Gib ihm etwas Besseres zu tun"
+   "unter": "Gib ihm etwas Besseres zu tun",
+   "hund": "gelangweilt"
   },
   {
    "typ": "liste",
@@ -60,7 +62,8 @@
      "check",
      "Schuhe bleiben heil"
     ]
-   ]
+   ],
+   "hund": "tauziehen"
   }
  ]
 }

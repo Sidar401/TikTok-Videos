@@ -92,10 +92,15 @@ def scene(i, s, t):
     if s.get("titel"):
         if i > 1:
             A(f'tl.fromTo("{sid} .lni", {{ yPercent: 110 }}, {{ yPercent: 0, duration: 0.45, ease: "power4.out", stagger: 0.08 }}, {t + 0.15:.2f});')
-        A(f'tl.fromTo("{sid} .title em", {{ backgroundSize: "0% 38%" }}, {{ backgroundSize: "100% 38%", duration: 0.4, ease: "power2.out" }}, {t + 0.5:.2f});')
+        A(f'tl.fromTo("{sid} .title em", {{ scale: 0.6, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.5)" }}, {t + (0.45 if i > 1 else 0.3):.2f});') if i > 1 else None
 
+    if s.get("hund"):
+        pos = "mitte" if typ == "titel" else "unten"
+        h.append(f'<img class="hund {pos}" src="assets/hund-{s["hund"]}.png" alt="" />')
+        A(f'tl.fromTo("{sid} .hund", {{ y: 120, opacity: 0, scale: 0.85 }}, {{ y: 0, opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.6)" }}, {t + (0.1 if i == 1 else 0.35):.2f});' if i > 1 else f'tl.fromTo("{sid} .hund", {{ scale: 1 }}, {{ scale: 1.04, duration: 0.3, yoyo: true, repeat: 1, ease: "sine.inOut" }}, 0.2);')
+        A(f'tl.to("{sid} .hund", {{ y: -12, duration: {max(d - 1, 0.4):.2f}, ease: "sine.inOut" }}, {t + 0.9:.2f});')
     if typ == "titel":
-        if s.get("icon"):
+        if s.get("icon") and not s.get("hund"):
             h.append(f'<div class="bigico">{icon(s["icon"])}</div>')
             A(f'tl.fromTo("{sid} .bigico", {{ scale: 0.3, opacity: 0, rotation: -15 }}, {{ scale: 1, opacity: 1, rotation: 0, duration: 0.5, ease: "back.out(1.8)" }}, {t + 0.3:.2f});')
             A(f'tl.to("{sid} .bigico", {{ scale: 1.05, duration: {max(d - 0.8, 0.3):.2f}, ease: "sine.inOut" }}, {t + 0.8:.2f});')
@@ -230,6 +235,11 @@ def build(cfg_path):
         pj.write_text(re.sub(r'"name":\s*"[^"]*"', f'"name": "{name}"', pj.read_text()))
     p = cfg["produkt"]
     shutil.copy(ROOT / p["bild"], vdir / "assets" / "produkt.png")
+    (vdir / "assets" / "fonts").mkdir(exist_ok=True)
+    shutil.copy(ROOT / "brand/fonts/fraunces-latin-900-italic.woff2", vdir / "assets/fonts")
+    for sz in cfg["szenen"]:
+        if sz.get("hund"):
+            shutil.copy(ROOT / "brand/aussie" / (sz["hund"] + ".png"), vdir / "assets" / ("hund-" + sz["hund"] + ".png"))
     for b in cfg.get("bilder", []):
         shutil.copy(ROOT / b, vdir / "assets" / Path(b).name)
 
@@ -291,9 +301,9 @@ STUDIO = """<!doctype html>
         font-size: 92px; line-height: 1.08; letter-spacing: -2px; }
       .ln { display: block; overflow: hidden; padding: 4px 0; }
       .lni { display: inline-block; }
-      .title em { font-style: normal; background-image: linear-gradient(var(--brand), var(--brand));
-        background-repeat: no-repeat; background-position: 0 88%; background-size: 100% 38%; padding: 0 6px; }
-      .bg-dunkel .title em { color: #fff; }
+      @font-face { font-family: "FR"; font-weight: 900; font-style: italic; src: url("assets/fonts/fraunces-latin-900-italic.woff2"); }
+      .title em { display: inline-block; font-family: "FR", serif; font-style: italic; font-weight: 900; color: var(--brand); font-size: 1.12em; letter-spacing: -1px; }
+      .bg-dunkel .title em { color: #F0912E; }
 
       .bigico { position: absolute; left: 340px; top: 760px; width: 400px; height: 400px; border-radius: 50%;
         background: #fff; box-shadow: 0 30px 80px rgba(0,0,0,0.12); color: var(--brand); display: flex;
@@ -373,6 +383,11 @@ STUDIO = """<!doctype html>
       .psub { font-weight: 700; font-size: 40px; opacity: 0.6; }
       .preisprod { top: 1130px; }
 
+      .hund { position: absolute; left: 50%; object-fit: contain;
+        filter: drop-shadow(0 30px 50px rgba(0,0,0,0.55)); }
+      .hund.mitte { top: 610px; width: 700px; height: 640px; margin-left: -350px; }
+      .hund.unten { top: 1070px; width: 600px; height: 430px; margin-left: -300px; }
+      .typ-titel .unter { top: 1330px; }
       /* Endkarte mit Pfeil zum Produkt-Knopf (unten links) */
       #end2 { position: absolute; inset: 0; z-index: 8; background: radial-gradient(circle at 50% 30%, #3a2a17 0%, #16181A 60%); color: #fff; }
       #n-badge { position: absolute; top: 210px; left: 0; width: 1080px; text-align: center; }

@@ -16,7 +16,8 @@
    "dur": 3,
    "bg": "dunkel",
    "titel": "Das beste *Geschenk*|unter 20 €!",
-   "icon": "geschenk"
+   "icon": "geschenk",
+   "hund": "freudig"
   },
   {
    "typ": "produkt",
@@ -74,7 +75,8 @@
    "bg": "dunkel",
    "titel": "Kommt *vor*|Weihnachten an",
    "icon": "paket",
-   "unter": "Laut Shop: Lieferung 1.–8. Dezember"
+   "unter": "Laut Shop: Lieferung 1.–8. Dezember",
+   "hund": "haustuer"
   }
  ]
 }

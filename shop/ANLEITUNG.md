@@ -50,3 +50,8 @@ Das Shop-Foto mit Hund (`shop/rollball/foto-hund.jpg`) wirkt zu sehr nach KI →
 - **Erster Satz (0–3 s) lauter und betont** – automatisch in `scripts/shop_stimme.py`. Immer mit „!“ enden, starke Aussage.
 - Aufbau: Einstieg (Problem/Überraschung) → Problem fühlen → Produkt als Lösung → Nutzen statt Technik → Zweifel ausräumen → Beweis (Verkäufe) → „Tippe unten links“.
 - Keine erfundenen Erfahrungen („Seit wir ihn haben …“).
+
+## Look-Regeln (Nutzer 24.11.)
+- **Kein orangenes Unterstreichen.** Schlüsselwort stattdessen **orange in Fraunces kursiv** (wie HundeWissenTv „Schnellfresser!“).
+- **Keine Computer-Icons** (Uhr, Stern …) als große Bilder. Stattdessen den **Kanal-Hund (Australian Shepherd)** aus `brand/aussie/` (104 Bilder, `hund` in der Konfig).
+- Braucht ein Video ein anderes Bild (Stern, Uhr, Paket …): **Nutzer fragen** – er erstellt es mit ChatGPT.
