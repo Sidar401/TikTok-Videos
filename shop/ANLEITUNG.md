@@ -45,3 +45,8 @@ Nutzer-Feedback 16.11.: **C (Problem/Geld) und D (3 Gründe) gut**, A (POV) und 
 Formate: Vergleich, Fehler, Frage, Geld (Muster: `shop/spielball/studio-*.json` → `renders/studio-ball-*.mp4`). **Keine Emojis mehr.**
 Nutzer-Feedback 24.11.: **Schwarzer Hintergrund + Orange gefällt** → Studio-Stil immer `bg: dunkel`.
 Das Shop-Foto mit Hund (`shop/rollball/foto-hund.jpg`) wirkt zu sehr nach KI → solche Verkäufer-Fotos nicht verwenden; nur freigestelltes Produkt.
+
+## Skript-Regeln (Nutzer 24.11.)
+- **Erster Satz (0–3 s) lauter und betont** – automatisch in `scripts/shop_stimme.py`. Immer mit „!“ enden, starke Aussage.
+- Aufbau: Einstieg (Problem/Überraschung) → Problem fühlen → Produkt als Lösung → Nutzen statt Technik → Zweifel ausräumen → Beweis (Verkäufe) → „Tippe unten links“.
+- Keine erfundenen Erfahrungen („Seit wir ihn haben …“).

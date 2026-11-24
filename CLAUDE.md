@@ -27,6 +27,8 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
 - **Stimme (ab 16.11.): immer die Novaro-Stimme** – ElevenLabs „Dan – Engaging Science Instructor“
   (`BHr135B5EUBtaWheVj8S`, Modell `eleven_v4`). Selbst erzeugen mit `python3 scripts/shop_stimme.py videos/<name> sprechtext.txt`
   (Schlüssel liegt in der Umgebung, Nutzer muss nichts tun).
+- **Erster Satz immer LAUTER** (ca. +5 dB, wie Novaro „Stern frisst Stern“), danach normal – macht `shop_stimme.py`
+  automatisch (→ `assets/voice.wav`). Erster Satz = starker Einstieg (max. 3 s) und endet mit „!“.
 - Name „HundeWissenTv 2.0“ und Beagle-Logo bleiben. Nur Hundeprodukte.
 - **Higgsfield ist hier erlaubt:** Bilder (`gpt_image_2_5`) und kurze Clips (`kling3_0`, 5 s). Vor größeren
   Ausgaben Kosten mit `get_cost` prüfen und dem Nutzer nennen. Schnitt/Text/Endkarte immer per HyperFrames.
