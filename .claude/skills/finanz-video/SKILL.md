@@ -360,3 +360,6 @@ MP4 + 3 Cover-Varianten (schwarz, `scripts/cover_dark.py`) + Beschreibung im @pr
 
 ## KORREKTUR erster Satz (Nutzer 24.11.)
 Kein Lauter-Machen, kein Pitch-/Tempo-Effekt (klingt nach Computer). Der erste Satz soll nur mehr BETONT klingen (natürliche Stimme, gleiche Lautstärke). `lauter_start.py` nicht benutzen.
+
+## Hook-Stil abwechseln (Nutzer 24.11.)
+A = normal; B = Kurzsatz in zwei Ausrufe-Sätzen („Dein Börsenverlust! Könnte Amerika Milliarden sparen!“). Nicht bei jedem Video B – abwechseln. Nie Effekte auf die Stimme.
