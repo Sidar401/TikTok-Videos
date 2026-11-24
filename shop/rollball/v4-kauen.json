@@ -1,0 +1,66 @@
+{
+ "name": "roll-v4-kauen",
+ "produkt": {
+  "bild": "shop/rollball/produkt.png",
+  "preis": "15,17 €",
+  "sterne": "4,0",
+  "verkauft": "12.800× verkauft",
+  "cta": "Hier tippen",
+  "badge": "Bestseller"
+ },
+ "ende": 4,
+ "endkarte": "pfeil",
+ "szenen": [
+  {
+   "typ": "titel",
+   "dur": 3,
+   "bg": "dunkel",
+   "titel": "Warum kaut dein Hund|an *allem* herum?",
+   "icon": "schuh"
+  },
+  {
+   "typ": "titel",
+   "dur": 3.5,
+   "bg": "dunkel",
+   "titel": "Oft ist es einfach|*Langeweile*",
+   "icon": "uhr",
+   "unter": "Gib ihm etwas Besseres zu tun"
+  },
+  {
+   "typ": "liste",
+   "dur": 4.5,
+   "bg": "dunkel",
+   "titel": "So *funktioniert* er",
+   "punkte": [
+    [
+     "blitz",
+     "Antippen – er startet"
+    ],
+    [
+     "musik",
+     "Rollt und zwitschert"
+    ],
+    [
+     "akku",
+     "Per USB aufladen"
+    ]
+   ]
+  },
+  {
+   "typ": "liste",
+   "dur": 5,
+   "bg": "dunkel",
+   "titel": "Dein Hund ist|*beschäftigt*",
+   "punkte": [
+    [
+     "check",
+     "Keine Langeweile"
+    ],
+    [
+     "check",
+     "Schuhe bleiben heil"
+    ]
+   ]
+  }
+ ]
+}

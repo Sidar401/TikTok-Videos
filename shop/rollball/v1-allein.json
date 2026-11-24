@@ -1,0 +1,73 @@
+{
+ "name": "roll-v1-allein",
+ "produkt": {
+  "bild": "shop/rollball/produkt.png",
+  "preis": "15,17 €",
+  "sterne": "4,0",
+  "verkauft": "12.800× verkauft",
+  "cta": "Hier tippen",
+  "badge": "Bestseller"
+ },
+ "ende": 4,
+ "endkarte": "pfeil",
+ "szenen": [
+  {
+   "typ": "titel",
+   "dur": 3,
+   "bg": "dunkel",
+   "titel": "Dein Hund ist|*8 Stunden* allein!",
+   "icon": "uhr"
+  },
+  {
+   "typ": "liste",
+   "dur": 3.5,
+   "bg": "dunkel",
+   "titel": "Langeweile macht|Hunde *unruhig*",
+   "punkte": [
+    [
+     "warn",
+     "Sie kauen"
+    ],
+    [
+     "warn",
+     "Sie bellen"
+    ]
+   ]
+  },
+  {
+   "typ": "produkt",
+   "dur": 4.5,
+   "bg": "dunkel",
+   "titel": "Dieser Ball|*spielt* mit ihm",
+   "punkte": [
+    {
+     "t": "Zwitschert wie ein Vogel",
+     "x": 330,
+     "y": 820,
+     "ly": 620
+    },
+    {
+     "t": "Rollt von allein",
+     "x": 700,
+     "y": 1050,
+     "ly": 1250
+    },
+    {
+     "t": "Lädt per USB",
+     "x": 500,
+     "y": 1120,
+     "ly": 1430
+    }
+   ]
+  },
+  {
+   "typ": "zahl",
+   "dur": 5,
+   "bg": "dunkel",
+   "titel": "So oft schon|*verkauft*",
+   "wert": 12800,
+   "nach": "×",
+   "unter": "4,0 Sterne · 888 Bewertungen"
+  }
+ ]
+}
