@@ -38,6 +38,7 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
 - Setup-Skript enthält yt-dlp/ffmpeg/whisper; TikTok-Hosts sind freigegeben; Sprache→Text per ElevenLabs (Whisper-Modell gesperrt).
 - **Satz-Reihenfolge am Ende (Nutzer 23.11.):** vorletzter Satz = Folgen-CTA („Folge HundeFinanzTv …“), LETZTER Satz = „Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung.“ (ersetzt die alte Regel „Folgen-CTA zuletzt“)
 - Ab 19.11. ALLE Videos (auch Longform) nur 61–75 s, bis der Nutzer etwas anderes sagt (2–3 Min. liefen schlecht). Logo-Intro wie beim Short nach ca. 15 s
+- **Covers (Nutzer 24.11.: „sehen schrecklich aus“):** Ursache war fehlende Schrift (Fallback Arial). `cover_hell.py` bindet jetzt Montserrat aus `brand/fonts/` ein. Neuer Stil: RIESIGE Überschrift (≈150 px, 2 Zeilen, Großbuchstaben), 2 große Kontrast-Karten (rot/grün) mit EINER fetten Zahl, dynamisches Element (Kurve/Pfeil), orange Pille unten, ganze Fläche nutzen (kein leeres Drittel). Vorbild: `videos/crash-usa-schulden/cover.py`.
 - Oranger Rahmen immer bei Video und Thumbnail
 - Kein Thema/keine Firma innerhalb von 30 Tagen wiederholen (auch nicht mit „neuem Blickwinkel“); Bereiche abwechseln, Börse/KI selten
 - Abend-Börsenrückblick startet immer mit „Alles, was heute an der Börse passiert ist – in 60 Sekunden.“

@@ -7,7 +7,7 @@ import subprocess
 import tempfile
 from pathlib import Path
 
-R = "/home/user/TikTok-Videos/"
+R = str(Path(__file__).resolve().parent.parent) + "/"
 L = R + "brand/logos/"
 G, ROT, O, D = "#22a35a", "#d23c3c", "#f28a1e", "#1d2330"
 
@@ -24,7 +24,7 @@ def netz(w=1080, h=1920):
 
 
 def css(w=1080, h=1920):
-    return (f"<style>*{{margin:0;box-sizing:border-box}}body{{width:{w}px;height:{h}px;position:relative;overflow:hidden;font-family:Montserrat,sans-serif;"
+    return (f"<style>@font-face{{font-family:Montserrat;font-weight:100 900;src:url(file://{R}brand/fonts/montserrat-900.woff2)}}*{{margin:0;box-sizing:border-box}}body{{width:{w}px;height:{h}px;position:relative;overflow:hidden;font-family:Montserrat,sans-serif;"
             "background:linear-gradient(180deg,#f7f8fa,#eceef2)}"
             ".karte{position:absolute;background:#fff;border:2px solid #e2e5ea;border-radius:12px;box-shadow:0 18px 40px #0000001a;padding:34px 40px}</style>")
 
