@@ -43,3 +43,5 @@ Nutzer-Feedback 16.11.: **C (Problem/Geld) und D (3 Gründe) gut**, A (POV) und 
 ## Studio-Stil (ab 16.11., Nutzer: Emojis wirken unprofessionell)
 `python3 scripts/shop_studio.py shop/<produkt>/studio-<x>.json` – Linien-Icons, Karten, Vergleichstabelle, Hinweise am Produkt, Zähler.
 Formate: Vergleich, Fehler, Frage, Geld (Muster: `shop/spielball/studio-*.json` → `renders/studio-ball-*.mp4`). **Keine Emojis mehr.**
+Nutzer-Feedback 24.11.: **Schwarzer Hintergrund + Orange gefällt** → Studio-Stil immer `bg: dunkel`.
+Das Shop-Foto mit Hund (`shop/rollball/foto-hund.jpg`) wirkt zu sehr nach KI → solche Verkäufer-Fotos nicht verwenden; nur freigestelltes Produkt.
