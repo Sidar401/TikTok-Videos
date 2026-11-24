@@ -357,3 +357,6 @@ Hook: ein Akteur tut etwas Starkes („Dein Börsenverlust könnte Amerika Milli
 
 ## Lieferung pro Video (Nutzer 24.11.)
 MP4 + 3 Cover-Varianten (schwarz, `scripts/cover_dark.py`) + Beschreibung im @professorfinanzen-Stil (Hook mit Emojis, kurze Absätze, Frage, 📚 Quellen nur echte, Hashtags) + 10 Tags. Details: CLAUDE.md.
+
+## KORREKTUR erster Satz (Nutzer 24.11.)
+Kein Lauter-Machen, kein Pitch-/Tempo-Effekt (klingt nach Computer). Der erste Satz soll nur mehr BETONT klingen (natürliche Stimme, gleiche Lautstärke). `lauter_start.py` nicht benutzen.
