@@ -1,0 +1,12 @@
+{
+ "tag": "25. NOVEMBER 2026",
+ "dauer": 64.3,
+ "hook": "Erste Nahbilder<br /><span class=\"y\">HEUTE ABEND!</span>",
+ "hook_end": 5.0,
+ "karte": [
+  17.9,
+  5.4
+ ],
+ "fix": {},
+ "css": ".hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"
+}
