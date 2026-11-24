@@ -1,0 +1,585 @@
+{
+ "dauer": 114.28,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 2.804,
+   "captions": [
+    {
+     "text": "Dein Börsenverlust könnte",
+     "start": 0.0,
+     "end": 1.402
+    },
+    {
+     "text": "Amerika Milliarden sparen",
+     "start": 1.402,
+     "end": 2.804
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 2.804,
+   "end": 8.202,
+   "captions": [
+    {
+     "text": "Vorab: Das ist",
+     "start": 2.804,
+     "end": 3.482
+    },
+    {
+     "text": "ein Gedankenspiel.",
+     "start": 3.482,
+     "end": 4.57
+    },
+    {
+     "text": "Dass eine Regierung",
+     "start": 4.57,
+     "end": 5.792
+    },
+    {
+     "text": "einen Crash will,",
+     "start": 5.792,
+     "end": 6.973
+    },
+    {
+     "text": "ist nicht bewiesen",
+     "start": 6.973,
+     "end": 8.202
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 8.202,
+   "end": 11.797,
+   "captions": [
+    {
+     "text": "Aber die Zahlen",
+     "start": 8.202,
+     "end": 8.987
+    },
+    {
+     "text": "dahinter sind so krass,",
+     "start": 8.987,
+     "end": 10.223
+    },
+    {
+     "text": "dass wir sie uns",
+     "start": 10.223,
+     "end": 11.083
+    },
+    {
+     "text": "ansehen müssen",
+     "start": 11.083,
+     "end": 11.797
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 11.797,
+   "end": 15.211,
+   "captions": [
+    {
+     "text": "Und am Ende zeigen wir dir,",
+     "start": 11.797,
+     "end": 13.486
+    },
+    {
+     "text": "was das für dein Depot heißt",
+     "start": 13.486,
+     "end": 15.211
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 15.211,
+   "end": 16.543,
+   "captions": [
+    {
+     "text": "Schauen wir uns das genau an",
+     "start": 15.211,
+     "end": 16.543
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 19.543,
+   "end": 26.13,
+   "captions": [
+    {
+     "text": "Die USA haben über",
+     "start": 19.543,
+     "end": 20.79
+    },
+    {
+     "text": "40 Billionen Dollar Schulden,",
+     "start": 20.79,
+     "end": 22.97
+    },
+    {
+     "text": "genau 40,71,",
+     "start": 22.97,
+     "end": 24.153
+    },
+    {
+     "text": "Stand zwanzigster November",
+     "start": 24.153,
+     "end": 26.13
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 26.13,
+   "end": 34.207,
+   "captions": [
+    {
+     "text": "Rund ein Drittel",
+     "start": 26.13,
+     "end": 27.171
+    },
+    {
+     "text": "der handelbaren Schulden",
+     "start": 27.171,
+     "end": 28.732
+    },
+    {
+     "text": "muss innerhalb von zwölf",
+     "start": 28.732,
+     "end": 30.294
+    },
+    {
+     "text": "Monaten ersetzt werden,",
+     "start": 30.294,
+     "end": 31.753
+    },
+    {
+     "text": "in diesem Jahr rund",
+     "start": 31.753,
+     "end": 32.989
+    },
+    {
+     "text": "9,7 Billionen Dollar",
+     "start": 32.989,
+     "end": 34.207
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 34.207,
+   "end": 37.54,
+   "captions": [
+    {
+     "text": "Der Staat zahlt alte Schulden",
+     "start": 34.207,
+     "end": 35.829
+    },
+    {
+     "text": "also mit neuen Schulden zurück",
+     "start": 35.829,
+     "end": 37.54
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 37.54,
+   "end": 39.996,
+   "captions": [
+    {
+     "text": "Und die Zinsen sind höher",
+     "start": 37.54,
+     "end": 38.82
+    },
+    {
+     "text": "als vor ein paar Jahren",
+     "start": 38.82,
+     "end": 39.996
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 39.996,
+   "end": 46.095,
+   "captions": [
+    {
+     "text": "Allein für Zinsen zahlen",
+     "start": 39.996,
+     "end": 41.626
+    },
+    {
+     "text": "die USA rund eine Billion",
+     "start": 41.626,
+     "end": 43.377
+    },
+    {
+     "text": "Dollar im Jahr,",
+     "start": 43.377,
+     "end": 44.414
+    },
+    {
+     "text": "je nach Quelle bis zu 1,4",
+     "start": 44.414,
+     "end": 46.095
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 46.095,
+   "end": 50.711,
+   "captions": [
+    {
+     "text": "Jetzt der Mechanismus:",
+     "start": 46.095,
+     "end": 47.519
+    },
+    {
+     "text": "Wenn Aktien fallen,",
+     "start": 47.519,
+     "end": 48.809
+    },
+    {
+     "text": "bekommen viele Anleger Angst",
+     "start": 48.809,
+     "end": 50.711
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 50.711,
+   "end": 54.412,
+   "captions": [
+    {
+     "text": "Sie kaufen dann",
+     "start": 50.711,
+     "end": 51.629
+    },
+    {
+     "text": "sichere Staatsanleihen,",
+     "start": 51.629,
+     "end": 53.036
+    },
+    {
+     "text": "zum Beispiel von den USA",
+     "start": 53.036,
+     "end": 54.412
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 54.412,
+   "end": 58.768,
+   "captions": [
+    {
+     "text": "Steigt die Nachfrage,",
+     "start": 54.412,
+     "end": 55.517
+    },
+    {
+     "text": "sinkt die Rendite,",
+     "start": 55.517,
+     "end": 56.544
+    },
+    {
+     "text": "also der Zins,",
+     "start": 56.544,
+     "end": 57.342
+    },
+    {
+     "text": "den der Staat zahlen muss",
+     "start": 57.342,
+     "end": 58.768
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 58.768,
+   "end": 65.653,
+   "captions": [
+    {
+     "text": "Sinkt der Zins nur um",
+     "start": 58.768,
+     "end": 60.076
+    },
+    {
+     "text": "einen Prozentpunkt,",
+     "start": 60.076,
+     "end": 61.337
+    },
+    {
+     "text": "spart der Staat",
+     "start": 61.337,
+     "end": 62.332
+    },
+    {
+     "text": "bei zehn Billionen rund",
+     "start": 62.332,
+     "end": 63.859
+    },
+    {
+     "text": "100 Milliarden Dollar im Jahr",
+     "start": 63.859,
+     "end": 65.653
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "start": 65.653,
+   "end": 69.976,
+   "captions": [
+    {
+     "text": "100 Milliarden? Ja,",
+     "start": 65.653,
+     "end": 67.051
+    },
+    {
+     "text": "jedes Jahr,",
+     "start": 67.051,
+     "end": 67.725
+    },
+    {
+     "text": "nur durch einen Prozentpunkt",
+     "start": 67.725,
+     "end": 69.976
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "start": 69.976,
+   "end": 77.262,
+   "captions": [
+    {
+     "text": "Zuletzt fiel die Rendite",
+     "start": 69.976,
+     "end": 71.619
+    },
+    {
+     "text": "zehnjähriger Anleihen von fast",
+     "start": 71.619,
+     "end": 73.809
+    },
+    {
+     "text": "5 % Ende Oktober auf rund",
+     "start": 73.809,
+     "end": 75.634
+    },
+    {
+     "text": "4,25 Mitte November",
+     "start": 75.634,
+     "end": 77.262
+    }
+   ]
+  },
+  {
+   "id": "s17",
+   "start": 77.262,
+   "end": 83.532,
+   "captions": [
+    {
+     "text": "Aber Vorsicht: Im September",
+     "start": 77.262,
+     "end": 79.129
+    },
+    {
+     "text": "stieg die Rendite",
+     "start": 79.129,
+     "end": 80.336
+    },
+    {
+     "text": "bei einem weltweiten",
+     "start": 80.336,
+     "end": 81.757
+    },
+    {
+     "text": "Ausverkauf sogar über 5 %",
+     "start": 81.757,
+     "end": 83.532
+    }
+   ]
+  },
+  {
+   "id": "s18",
+   "start": 83.532,
+   "end": 87.187,
+   "captions": [
+    {
+     "text": "Fallende Aktien bringen",
+     "start": 83.532,
+     "end": 84.89
+    },
+    {
+     "text": "also nicht automatisch",
+     "start": 84.89,
+     "end": 86.189
+    },
+    {
+     "text": "niedrigere Zinsen",
+     "start": 86.189,
+     "end": 87.187
+    }
+   ]
+  },
+  {
+   "id": "s19",
+   "start": 87.187,
+   "end": 92.108,
+   "captions": [
+    {
+     "text": "Ein Crash kann auch",
+     "start": 87.187,
+     "end": 88.367
+    },
+    {
+     "text": "die Wirtschaft schwächen,",
+     "start": 88.367,
+     "end": 89.928
+    },
+    {
+     "text": "und das kostet",
+     "start": 89.928,
+     "end": 90.802
+    },
+    {
+     "text": "den Staat selbst Geld",
+     "start": 90.802,
+     "end": 92.108
+    }
+   ]
+  },
+  {
+   "id": "s20",
+   "start": 92.108,
+   "end": 95.514,
+   "captions": [
+    {
+     "text": "Dass die Regierung",
+     "start": 92.108,
+     "end": 93.14
+    },
+    {
+     "text": "einen Crash will,",
+     "start": 93.14,
+     "end": 94.115
+    },
+    {
+     "text": "dafür gibt es keinen Beleg",
+     "start": 94.115,
+     "end": 95.514
+    }
+   ]
+  },
+  {
+   "id": "s21",
+   "start": 95.514,
+   "end": 100.805,
+   "captions": [
+    {
+     "text": "Und dein Depot? Ein Crash",
+     "start": 95.514,
+     "end": 96.838
+    },
+    {
+     "text": "trifft dich sofort,",
+     "start": 96.838,
+     "end": 98.001
+    },
+    {
+     "text": "ein Zinsvorteil für den Staat",
+     "start": 98.001,
+     "end": 99.777
+    },
+    {
+     "text": "bringt dir nichts",
+     "start": 99.777,
+     "end": 100.805
+    }
+   ]
+  },
+  {
+   "id": "s22",
+   "start": 100.805,
+   "end": 106.28,
+   "captions": [
+    {
+     "text": "Merk dir: An der Börse geht",
+     "start": 100.805,
+     "end": 102.401
+    },
+    {
+     "text": "es nicht nur um Aktienkurse,",
+     "start": 102.401,
+     "end": 104.162
+    },
+    {
+     "text": "sondern auch um",
+     "start": 104.162,
+     "end": 105.105
+    },
+    {
+     "text": "Zinsen und Schulden",
+     "start": 105.105,
+     "end": 106.28
+    }
+   ]
+  },
+  {
+   "id": "s23",
+   "start": 106.28,
+   "end": 109.678,
+   "captions": [
+    {
+     "text": "Folge HundeFinanzTv,",
+     "start": 106.28,
+     "end": 107.462
+    },
+    {
+     "text": "wir haben noch mehr",
+     "start": 107.462,
+     "end": 108.605
+    },
+    {
+     "text": "Geld‑Tipps für dich",
+     "start": 108.605,
+     "end": 109.678
+    }
+   ]
+  },
+  {
+   "id": "s24",
+   "start": 109.678,
+   "end": 113.672,
+   "captions": [
+    {
+     "text": "Kurzer Hinweis: Das ist",
+     "start": 109.678,
+     "end": 111.118
+    },
+    {
+     "text": "keine Anlageberatung,",
+     "start": 111.118,
+     "end": 112.498
+    },
+    {
+     "text": "nur eine Erklärung",
+     "start": 112.498,
+     "end": 113.672
+    }
+   ]
+  }
+ ],
+ "lauter_start": 4.5,
+ "logo_intro": 16.543
+}
