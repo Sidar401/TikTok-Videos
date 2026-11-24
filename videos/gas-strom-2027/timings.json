@@ -1,0 +1,326 @@
+{
+ "dauer": 63.86,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 3.012,
+   "captions": [
+    {
+     "text": "Dein Gas wird teurer!",
+     "start": 0.0,
+     "end": 1.414
+    },
+    {
+     "text": "Aber du darfst kündigen",
+     "start": 1.414,
+     "end": 3.012
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 3.012,
+   "end": 7.588,
+   "captions": [
+    {
+     "text": "Teile das Video",
+     "start": 3.012,
+     "end": 3.843
+    },
+    {
+     "text": "mit deinen Freunden",
+     "start": 3.843,
+     "end": 4.895
+    },
+    {
+     "text": "und folge uns,",
+     "start": 4.895,
+     "end": 5.67
+    },
+    {
+     "text": "wir bringen jeden Tag",
+     "start": 5.67,
+     "end": 6.833
+    },
+    {
+     "text": "neue Geld‑Tipps",
+     "start": 6.833,
+     "end": 7.588
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 7.588,
+   "end": 10.561,
+   "captions": [
+    {
+     "text": "Zum ersten Januar erhöhen",
+     "start": 7.588,
+     "end": 9.024
+    },
+    {
+     "text": "viele Versorger die Preise",
+     "start": 9.024,
+     "end": 10.561
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 10.561,
+   "end": 13.42,
+   "captions": [
+    {
+     "text": "Und am Ende zeigen wir dir,",
+     "start": 10.561,
+     "end": 12.051
+    },
+    {
+     "text": "bis wann du handeln musst",
+     "start": 12.051,
+     "end": 13.42
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 13.42,
+   "end": 14.748,
+   "captions": [
+    {
+     "text": "Schauen wir uns das genau an",
+     "start": 13.42,
+     "end": 14.748
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 17.748,
+   "end": 22.467,
+   "captions": [
+    {
+     "text": "58 Stromversorger haben",
+     "start": 17.748,
+     "end": 19.413
+    },
+    {
+     "text": "Erhöhungen angekündigt,",
+     "start": 19.413,
+     "end": 21.169
+    },
+    {
+     "text": "im Schnitt um 8 %",
+     "start": 21.169,
+     "end": 22.467
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 22.467,
+   "end": 26.376,
+   "captions": [
+    {
+     "text": "Beim Gas sind es 82 Versorger,",
+     "start": 22.467,
+     "end": 25.073
+    },
+    {
+     "text": "im Schnitt 14 %",
+     "start": 25.073,
+     "end": 26.376
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 26.376,
+   "end": 31.436,
+   "captions": [
+    {
+     "text": "Verivox rechnet beim",
+     "start": 26.376,
+     "end": 28.014
+    },
+    {
+     "text": "Gas je nach Tarif sogar",
+     "start": 28.014,
+     "end": 29.899
+    },
+    {
+     "text": "mit 10 bis 20 % mehr",
+     "start": 29.899,
+     "end": 31.436
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 31.436,
+   "end": 37.714,
+   "captions": [
+    {
+     "text": "Ein Beispiel: Bei 2.000 €",
+     "start": 31.436,
+     "end": 33.683
+    },
+    {
+     "text": "Gaskosten im Jahr sind",
+     "start": 33.683,
+     "end": 35.861
+    },
+    {
+     "text": "14 % rund 280 € mehr",
+     "start": 35.861,
+     "end": 37.714
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 37.714,
+   "end": 41.541,
+   "captions": [
+    {
+     "text": "Aber bei einer Preiserhöhung",
+     "start": 37.714,
+     "end": 39.11
+    },
+    {
+     "text": "hast du in der Regel",
+     "start": 39.11,
+     "end": 40.197
+    },
+    {
+     "text": "ein Sonderkündigungsrecht",
+     "start": 40.197,
+     "end": 41.541
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 41.541,
+   "end": 48.112,
+   "captions": [
+    {
+     "text": "Wichtig ist die Frist: Beim",
+     "start": 41.541,
+     "end": 43.091
+    },
+    {
+     "text": "Anbieter N‑ERGIE zum Beispiel",
+     "start": 43.091,
+     "end": 44.773
+    },
+    {
+     "text": "muss die Kündigung",
+     "start": 44.773,
+     "end": 45.818
+    },
+    {
+     "text": "bis zum 31.",
+     "start": 45.818,
+     "end": 47.269
+    },
+    {
+     "text": "Dezember da sein",
+     "start": 47.269,
+     "end": 48.112
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 48.112,
+   "end": 52.201,
+   "captions": [
+    {
+     "text": "Lies deshalb den Brief",
+     "start": 48.112,
+     "end": 49.25
+    },
+    {
+     "text": "deines Versorgers und schau",
+     "start": 49.25,
+     "end": 50.752
+    },
+    {
+     "text": "in deine Vertragsunterlagen",
+     "start": 50.752,
+     "end": 52.201
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 52.201,
+   "end": 56.362,
+   "captions": [
+    {
+     "text": "Je nach Anbieter können",
+     "start": 52.201,
+     "end": 53.453
+    },
+    {
+     "text": "Preise auch sinken,",
+     "start": 53.453,
+     "end": 54.53
+    },
+    {
+     "text": "ein Vergleich lohnt",
+     "start": 54.53,
+     "end": 55.605
+    },
+    {
+     "text": "sich also immer",
+     "start": 55.605,
+     "end": 56.362
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 56.362,
+   "end": 59.324,
+   "captions": [
+    {
+     "text": "Merk dir: Preiserhöhung",
+     "start": 56.362,
+     "end": 57.823
+    },
+    {
+     "text": "heißt Kündigungsrecht",
+     "start": 57.823,
+     "end": 59.324
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "start": 59.324,
+   "end": 63.249,
+   "captions": [
+    {
+     "text": "Kurzer Hinweis: Das ist",
+     "start": 59.324,
+     "end": 60.745
+    },
+    {
+     "text": "keine Anlageberatung,",
+     "start": 60.745,
+     "end": 62.128
+    },
+    {
+     "text": "nur eine Erklärung",
+     "start": 62.128,
+     "end": 63.249
+    }
+   ]
+  }
+ ],
+ "logo_intro": 14.748
+}
