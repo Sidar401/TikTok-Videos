@@ -351,3 +351,6 @@ Gelernt aus Eulen-Kanal „finanzlehre“ (KI-Boom Teil 2, 2:39 min):
 
 ## Ende-Reihenfolge (Nutzer 23.11., ersetzt alle älteren Regeln dazu)
 Vorletzter Satz = Folgen-CTA („Folge HundeFinanzTv …“), letzter Satz = „Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung.“ Immer, bei jedem Video.
+
+## Erster Satz = Hook + lauter (Nutzer 24.11.)
+Hook: ein Akteur tut etwas Starkes („Dein Börsenverlust könnte Amerika Milliarden sparen!“). Nach sync.py immer `python3 scripts/lauter_start.py videos/<name>` (erster Satz +4,5 dB), dann Logo-Intro einfügen.
