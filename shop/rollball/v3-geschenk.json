@@ -17,33 +17,15 @@
    "bg": "dunkel",
    "titel": "Das beste *Geschenk*|unter 20 €!",
    "icon": "geschenk",
-   "hund": "freudig"
+   "hund": "geschenk"
   },
   {
-   "typ": "produkt",
+   "typ": "titel",
    "dur": 4.5,
    "bg": "dunkel",
    "titel": "Rollt & zwitschert|*von allein*",
-   "punkte": [
-    {
-     "t": "Zwitschert wie ein Vogel",
-     "x": 330,
-     "y": 820,
-     "ly": 620
-    },
-    {
-     "t": "Rollt von allein",
-     "x": 700,
-     "y": 1050,
-     "ly": 1250
-    },
-    {
-     "t": "Lädt per USB",
-     "x": 500,
-     "y": 1120,
-     "ly": 1430
-    }
-   ]
+   "hund": "ball-maul",
+   "unter": "Ein Stupser genügt"
   },
   {
    "typ": "liste",
@@ -76,7 +58,7 @@
    "titel": "Kommt *vor*|Weihnachten an",
    "icon": "paket",
    "unter": "Laut Shop: Lieferung 1.–8. Dezember",
-   "hund": "haustuer"
+   "hund": "weihnachtsbaum"
   }
  ]
 }

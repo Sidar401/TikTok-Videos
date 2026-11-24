@@ -17,7 +17,7 @@
    "bg": "dunkel",
    "titel": "Hör auf, normale|Bälle zu *kaufen*!",
    "icon": "x",
-   "hund": "stopp"
+   "hund": "normaler-ball"
   },
   {
    "typ": "vergleich",
@@ -50,30 +50,12 @@
    ]
   },
   {
-   "typ": "produkt",
+   "typ": "titel",
    "dur": 4,
    "bg": "dunkel",
-   "titel": "Er rollt|*von allein*",
-   "punkte": [
-    {
-     "t": "Zwitschert wie ein Vogel",
-     "x": 330,
-     "y": 820,
-     "ly": 620
-    },
-    {
-     "t": "Rollt von allein",
-     "x": 700,
-     "y": 1050,
-     "ly": 1250
-    },
-    {
-     "t": "Lädt per USB",
-     "x": 500,
-     "y": 1120,
-     "ly": 1430
-    }
-   ]
+   "titel": "Mit Seilen|zum *Zerren*",
+   "hund": "ball-zerren",
+   "unter": "Rollt & zwitschert von allein"
   },
   {
    "typ": "titel",
@@ -82,7 +64,7 @@
    "titel": "Perfekt für|*kleine* Hunde",
    "icon": "pfote",
    "unter": "Nur 6 × 7 cm groß",
-   "hund": "welpe-sitzt"
+   "hund": "welpe-ball"
   }
  ]
 }

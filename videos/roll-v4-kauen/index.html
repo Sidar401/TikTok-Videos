@@ -174,15 +174,16 @@
           <img class="hund mitte" src="assets/hund-gelangweilt.png" alt="" />
           <div class="unter">Gib ihm etwas Besseres zu tun</div>
         </div>
-        <div id="s3" class="clip scene bg-dunkel typ-liste" data-start="6.50" data-duration="4.50" data-track-index="1">
+        <div id="s3" class="clip scene bg-dunkel typ-titel" data-start="6.50" data-duration="4.50" data-track-index="1">
           <div class="bgfill"></div><div class="grain"></div>
-          <div class="title"><span class="ln"><span class="lni">So <em>funktioniert</em> er</span></span></div>
-          <div class="list"><div class="li blitz"><div class="lic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2.5L5 13.5h6l-1 8 8-11h-6z"/></svg></div><div class="lit">Antippen – er startet</div></div><div class="li musik"><div class="lic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17.5V6l10-2v11.5"/><circle cx="6.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="15.5" r="2.5"/></svg></div><div class="lit">Rollt und zwitschert</div></div><div class="li akku"><div class="lic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="17" height="10" rx="2"/><path d="M22 10.5v3M6 10v4M9.5 10v4"/></svg></div><div class="lit">Per USB aufladen</div></div></div>
+          <div class="title"><span class="ln"><span class="lni">Ein Stupser –</span></span><span class="ln"><span class="lni">er <em>startet</em></span></span></div>
+          <img class="hund mitte" src="assets/hund-ball-stupsen.png" alt="" />
+          <div class="unter">Rollt und zwitschert wie ein Vogel</div>
         </div>
         <div id="s4" class="clip scene bg-dunkel typ-liste" data-start="11.00" data-duration="5.00" data-track-index="1">
           <div class="bgfill"></div><div class="grain"></div>
           <div class="title"><span class="ln"><span class="lni">Dein Hund ist</span></span><span class="ln"><span class="lni"><em>beschäftigt</em></span></span></div>
-          <img class="hund unten" src="assets/hund-tauziehen.png" alt="" />
+          <img class="hund unten" src="assets/hund-ball-maul.png" alt="" />
           <div class="list"><div class="li check"><div class="lic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><div class="lit">Keine Langeweile</div></div><div class="li check"><div class="lic"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><div class="lit">Schuhe bleiben heil</div></div></div>
         </div>
       </div>
@@ -209,13 +210,14 @@
       tl.to("#s2 .hund", { y: -12, duration: 2.50, ease: "sine.inOut" }, 3.90);
       tl.fromTo("#s2 .unter", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4 }, 3.70);
 
-      // Szene 3: liste
+      // Szene 3: titel
       tl.fromTo("#s3 .bgfill", { scale: 1.12 }, { scale: 1, duration: 0.6, ease: "power3.out" }, 6.50);
       tl.fromTo("#s3", { clipPath: "inset(0 0 0 100%)" }, { clipPath: "inset(0 0 0 0%)", duration: 0.35, ease: "power3.inOut" }, 6.50);
       tl.fromTo("#s3 .lni", { yPercent: 110 }, { yPercent: 0, duration: 0.45, ease: "power4.out", stagger: 0.08 }, 6.65);
       tl.fromTo("#s3 .title em", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.5)" }, 6.95);
-      tl.fromTo("#s3 .li", { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out", stagger: 0.45 }, 6.95);
-      tl.fromTo("#s3 .lic", { scale: 0, rotation: -40 }, { scale: 1, rotation: 0, duration: 0.3, ease: "back.out(2.5)", stagger: 0.45 }, 7.05);
+      tl.fromTo("#s3 .hund", { y: 120, opacity: 0, scale: 0.85 }, { y: 0, opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.6)" }, 6.85);
+      tl.to("#s3 .hund", { y: -12, duration: 3.50, ease: "sine.inOut" }, 7.40);
+      tl.fromTo("#s3 .unter", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4 }, 7.20);
 
       // Szene 4: liste
       tl.fromTo("#s4 .bgfill", { scale: 1.12 }, { scale: 1, duration: 0.6, ease: "power3.out" }, 11.00);

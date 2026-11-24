@@ -29,24 +29,12 @@
    "hund": "gelangweilt"
   },
   {
-   "typ": "liste",
+   "typ": "titel",
    "dur": 4.5,
    "bg": "dunkel",
-   "titel": "So *funktioniert* er",
-   "punkte": [
-    [
-     "blitz",
-     "Antippen – er startet"
-    ],
-    [
-     "musik",
-     "Rollt und zwitschert"
-    ],
-    [
-     "akku",
-     "Per USB aufladen"
-    ]
-   ]
+   "titel": "Ein Stupser –|er *startet*",
+   "hund": "ball-stupsen",
+   "unter": "Rollt und zwitschert wie ein Vogel"
   },
   {
    "typ": "liste",
@@ -63,7 +51,7 @@
      "Schuhe bleiben heil"
     ]
    ],
-   "hund": "tauziehen"
+   "hund": "ball-maul"
   }
  ]
 }
