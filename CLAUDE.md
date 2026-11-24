@@ -34,7 +34,7 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
      Bauen: `python3 hundewissen/bau_einfach.py <name>` (Inhalte dort in `VIDEOS`). Beispiele: `videos/hw-e-*`.
      (Altes Bewegungs-Werkzeug `hundewissen/rig/` nur zur Info, nicht benutzen.)
    - **Nutzer 16.11. (2):** **keine Lautwörter** („*kratz*“, „Zzz“ o. ä.), **keine kleine Überschrift (Kicker)** über dem
-     großen Text. Schluss: nur Logo + „HundeWissenTv“ + **oranger „+ Folgen“-Knopf** (kein „Folg uns…“-Satz).
+     großen Text (Überschrift **mittig**, Nutzer 24.11.). Schluss: nur Logo + „HundeWissenTv“ + **oranger „+ Folgen“-Knopf** (kein „Folg uns…“-Satz).
      Info-Kärtchen (z. B. „Flöhe?“) und Quellenzeile sind ok. Beispiele: `videos/hw-f-*`.
    - **Nutzer 17.11.:** **oranger Rahmen** (26 px, `#DB8622`) in **allen Videos und Thumbnails**. Demo-Stil `videos/hw-g-*`
      ist freigegeben („damit können wir anfangen“).

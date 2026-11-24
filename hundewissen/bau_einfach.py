@@ -132,17 +132,49 @@ VIDEOS = {
              caps=["so frisst er <b>langsamer</b>", "und viel <b>gesünder</b>"]),
     ],
 
+    "hw-p1-schnellfresser": [
+        dict(h='Dein Hund frisst in <i>10 Sekunden?</i>', size=104, pose='schlingt', ph=560, caps=['ist sein napf nach <b>10 sekunden</b> leer?', 'dann solltest du <b>jetzt aufpassen</b>']),
+        dict(h='Schlingen ist <i>gefährlicher,</i> als du denkst.', size=96, pose='themen/warnung', ph=420, caps=['schlingen ist <b>gefährlicher</b> als gedacht', 'am ende zeig ich dir <b>die lösung</b>']),
+        dict(h='Er schluckt dabei <i>viel Luft.</i>', size=110, pose='themen/magen-luft', ph=560, caps=['beim schlingen schluckt er <b>viel luft</b>', 'der bauch <b>bläht sich auf</b>']),
+        dict(h='Die Folge: <i>Bauchweh.</i>', size=116, pose='aufgeblaeht', ph=600, caps=['das kann richtig <b>bauchweh</b> machen', 'und er fühlt sich <b>unwohl</b>']),
+        dict(h='Oder er <i>würgt</i> alles wieder hoch.', size=100, pose='wuergt', ph=580, caps=['oft würgt er das futter', '<b>gleich wieder hoch</b>']),
+        dict(h='Im schlimmsten Fall: <i>Magendrehung.</i>', size=96, pose='themen/magen-verdreht', ph=540, caps=['im schlimmsten fall dreht sich <b>der magen</b>', 'das ist <b>lebensgefährlich</b>'], px=470, bilder=[('themen/warnung', 210, 850, 830)]),
+        dict(h='Das ist ein <i>Notfall!</i>', size=116, pose='themen/tierarzt-koffer', ph=330, caps=['bei diesen zeichen sofort', '<b>zum tierarzt</b> – jede minute zählt'], px=830, extra='<div class="chip x" style="top:880px">🎈 Dicker Bauch</div><div class="chip x" style="top:1010px">🤢 Würgen ohne Erbrechen</div><div class="chip x" style="top:1140px">😰 Unruhe</div>'),
+        dict(h='Besonders gefährdet: <i>große Hunde.</i>', size=100, pose='stolz', ph=580, caps=['große hunde mit <b>tiefer brust</b>', 'haben das <b>höchste risiko</b>']),
+        dict(h='Lösung 1: <i>Anti-Schling-Napf.</i>', size=96, pose='antischling-frisst', ph=560, caps=['die rillen im napf', '<b>bremsen</b> ihn beim fressen']),
+        dict(h='Lösung 2: <i>Schnüffelteppich.</i>', size=96, pose='schnueffelteppich-frisst', ph=540, caps=['im schnüffelteppich muss er', 'jedes stück <b>erst suchen</b>']),
+        dict(h='Lösung 3: <i>Kleinere Portionen.</i>', size=96, pose='themen/portionen', ph=520, caps=['lieber <b>2 bis 3 kleine</b> mahlzeiten', 'statt einer <b>großen</b>']),
+        dict(h='Nach dem Fressen: <i>Ruhe.</i>', size=110, pose='korb', ph=420, caps=['nach dem fressen <b>kein toben</b>', 'lieber <b>ausruhen</b> lassen']),
+        dict(h='So frisst er <i>gesund.</i>', size=116, pose='wartet-napf', ph=600, caps=['so frisst er <b>langsam</b>', 'und bleibt <b>gesund</b>']),
+    ],
+    "hw-p2-test": [
+        dict(h='Schlingt dein Hund? <i>Mach den Test!</i>', size=100, pose='themen/stoppuhr', ph=520, caps=['wie schnell frisst <b>dein hund</b>?', 'mach jetzt diesen <b>einfachen test</b>']),
+        dict(h="Viele Hunde schlingen – <i>keiner merkt's.</i>", size=96, pose='gierig', ph=540, caps=['viele hunde schlingen <b>unbemerkt</b>', 'am ende verrat ich dir, <b>was hilft</b>']),
+        dict(h='Napf füllen, <i>Uhr starten.</i>', size=110, pose='themen/napf-voll', ph=360, caps=['füll seinen napf <b>wie immer</b>', 'und starte <b>die uhr</b>'], bilder=[('themen/stoppuhr', 260, 850, 780)]),
+        dict(h='In Sekunden leer? <i>Schnellfresser!</i>', size=100, pose='schlingt', ph=560, caps=['ist er nach <b>wenigen sekunden</b> fertig?', 'dann ist er ein <b>schnellfresser</b>']),
+        dict(h='Zeichen 1: <i>Er würgt oft.</i>', size=110, pose='wuergt', ph=580, caps=['würgt er oft', '<b>nach dem fressen</b>?']),
+        dict(h='Zeichen 2: <i>Dicker Bauch.</i>', size=110, pose='aufgeblaeht', ph=600, caps=['ist sein bauch danach', '<b>dick und prall</b>?']),
+        dict(h='Zeichen 3: <i>Er bettelt sofort weiter.</i>', size=96, pose='bettelnd', ph=580, caps=['bettelt er direkt', '<b>um mehr futter</b>?']),
+        dict(h='Darum ist das <i>gefährlich.</i>', size=110, pose='themen/magen-luft', ph=560, caps=['er schluckt dabei <b>viel luft</b>', 'im schlimmsten fall <b>dreht sich der magen</b>']),
+        dict(h='Tipp 1: <i>Muffinblech.</i>', size=116, pose='themen/muffinblech', ph=340, caps=['futter ins <b>muffinblech</b> verteilen', 'der <b>günstige trick</b> von zuhause']),
+        dict(h='Tipp 2: <i>Futterball.</i>', size=116, pose='themen/futterball', ph=460, caps=['im futterball muss er', 'sich jedes stück <b>erarbeiten</b>']),
+        dict(h='Tipp 3: <i>Anti-Schling-Napf.</i>', size=100, pose='themen/antischling-napf', ph=380, caps=['die rillen im napf', '<b>bremsen</b> ihn beim fressen']),
+        dict(h='Tipp 4: <i>Futter suchen lassen.</i>', size=96, pose='schnueffelteppich-frisst', ph=540, caps=['futter im <b>schnüffelteppich</b> verstecken', 'das macht ihn <b>langsam und satt</b>']),
+        dict(h='Ruhig fressen = <i>gesund fressen.</i>', size=96, pose='antischling-frisst', ph=560, caps=['so frisst er <b>langsamer</b>', 'und viel <b>gesünder</b>']),
+    ],
 }
 
 # Kommentar-Aufruf am Ende der letzten Szene: (getippter Text, Banner)
 KOMMENTAR = {
+    "hw-p1-schnellfresser": ("Meiner schlingt auch!", "SCHREIB'S IN DIE <b>KOMMENTARE</b>"),
+    "hw-p2-test": ("Meiner braucht 20 Sekunden", "WIE SCHNELL IST DEINER? <b>KOMMENTIER!</b>"),
     "hw-s1-problem": ("Meiner schlingt auch!", "SCHREIB'S IN DIE <b>KOMMENTARE</b>"),
     "hw-s2-tipps": ("Tipp 3 probier ich aus!", "WELCHER TIPP? <b>AB IN DIE KOMMENTARE</b>"),
     "hw-s3-test": ("Meiner braucht 20 Sekunden", "WIE SCHNELL IST DEINER? <b>KOMMENTIER!</b>"),
 }
 KOM_DAUER = 4.2
 # Logo-Intro nach der ersten Szene (Hook), 3 s, mit Jingle wie HundeFinanzTv
-INTRO = {"hw-s1-problem", "hw-s2-tipps", "hw-s3-test"}
+INTRO = {"hw-s1-problem", "hw-s2-tipps", "hw-s3-test", "hw-p1-schnellfresser", "hw-p2-test"}
 INTRO_DAUER = 3.0
 INTRO_TAG = "GESUNDHEIT <i>|</i> VERHALTEN <i>|</i> ERZIEHUNG"  # Nutzer 24.11.
 
@@ -172,6 +204,7 @@ HTML = """<!doctype html>
     <script src="assets/gsap.min.js"></script>
     <link rel="stylesheet" href="assets/magazin.css" />
     <style>
+      .h {{ text-align: center; }}
       .pose {{ position: absolute; filter: drop-shadow(0 26px 30px #00000030); }}
       .shadow {{ position: absolute; height: 40px; border-radius: 50%; background: radial-gradient(#0000002a, transparent 70%); }}
       .chip {{ position: absolute; left: 80px; padding: 16px 34px 20px; border-radius: 40px; background: #fbf8f2; border: 2px solid #1d1b1922; box-shadow: 0 14px 30px #0000001a; font-weight: 800; font-size: 44px; }}
