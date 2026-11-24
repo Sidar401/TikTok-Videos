@@ -73,19 +73,19 @@
         <div id="h10" class="h" style="top: 470px; font-size: 116px">Tipp 2: <i>Futterball.</i></div>
         <div class="shadow" style="left:389px;top:1378px;width:302px"></div>
         <img id="p10" class="pose" src="assets/themen/futterball.png" style="left:360px;top:940px;width:359px" alt="" />
-        <div id="x10"></div>
+        <div id="x10"></div><div class="shop"><img src="assets/beagle.png" alt="" /><span>🛒 Gibt's bei uns!<small>HundeWissenTv 2.0</small></span></div>
       </div>
       <div id="s11" class="scene">
         <div id="h11" class="h" style="top: 470px; font-size: 100px">Tipp 3: <i>Anti-Schling-Napf.</i></div>
         <div class="shadow" style="left:305px;top:1378px;width:470px"></div>
         <img id="p11" class="pose" src="assets/themen/antischling-napf.png" style="left:260px;top:1020px;width:559px" alt="" />
-        <div id="x11"></div>
+        <div id="x11"></div><div class="shop"><img src="assets/beagle.png" alt="" /><span>🛒 Gibt's bei uns!<small>HundeWissenTv 2.0</small></span></div>
       </div>
       <div id="s12" class="scene">
         <div id="h12" class="h" style="top: 470px; font-size: 96px">Tipp 4: <i>Futter suchen lassen.</i></div>
         <div class="shadow" style="left:285px;top:1378px;width:510px"></div>
         <img id="p12" class="pose" src="assets/aussie/schnueffelteppich-frisst.png" style="left:236px;top:860px;width:607px" alt="" />
-        <div id="x12"></div>
+        <div id="x12"></div><div class="shop"><img src="assets/beagle.png" alt="" /><span>🛒 Gibt's bei uns!<small>HundeWissenTv 2.0</small></span></div>
       </div>
       <div id="s13" class="scene">
         <div id="h13" class="h" style="top: 470px; font-size: 96px">Ruhig fressen = <i>gesund fressen.</i></div>
@@ -188,16 +188,19 @@
       show("#k101", 45.75, 48.0);
       up("#h10", 43.75, 0.6);
       tl.fromTo("#p10", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, 44.0);
+      tl.fromTo("#s10 .shop", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2.5)" }, 45.1);
       tl.fromTo("#x10 .x", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }, 44.9);
       show("#k110", 48.0, 50.25);
       show("#k111", 50.25, 52.5);
       up("#h11", 48.25, 0.6);
       tl.fromTo("#p11", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, 48.5);
+      tl.fromTo("#s11 .shop", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2.5)" }, 49.6);
       tl.fromTo("#x11 .x", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }, 49.4);
       show("#k120", 52.5, 54.75);
       show("#k121", 54.75, 57.0);
       up("#h12", 52.75, 0.6);
       tl.fromTo("#p12", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, 53.0);
+      tl.fromTo("#s12 .shop", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2.5)" }, 54.1);
       tl.fromTo("#x12 .x", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }, 53.9);
       show("#k130", 57.0, 59.25);
       show("#k131", 59.25, 61.5);

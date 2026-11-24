@@ -58,6 +58,10 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
      „HundeWissen**Tv**“ + 3 Begriffe (`INTRO_TAG`: **GESUNDHEIT | VERHALTEN | ERZIEHUNG** – vom Nutzer festgelegt).
    - **Einstieg wie HundeFinanzTv:** Hook 0–3 s (stärkste Aussage, direkt an „du“, kein „Hallo“) → worum es geht →
      warum es dich betrifft → offene Schleife („am Ende …“) → Logo-Intro → Inhalt → Kommentar-CTA → Folgen-Schluss.
+   - **Shop-Hinweis (Nutzer 24.11.):** Kommt ein Produkt vor, das es im Shop-Kanal **HundeWissenTv 2.0** gibt
+     (z. B. Anti-Schling-Napf, Futterball, Schnüffelteppich), orange Plakette „🛒 Gibt's bei uns! HundeWissenTv 2.0“
+     (`shop=True` in der Szene). Nur bei Produkten, die wirklich im Shop sind – vorher beim Nutzer nachfragen.
+     Beim Posten in TikTok als Werbung kennzeichnen (eigener Shop).
 2. **HundeWissenTv 2.0**: ab Nov. 2026 **reiner TikTok-Shop-Kanal** (nur Hundesachen) → Skill `/shop-video`.
 3. **HundeFinanzTV**: Geld & Finanzen (faceless, animierte Grafiken) → Skill `/finanz-video`, `kanal.json`, `STIL.md`.
 
