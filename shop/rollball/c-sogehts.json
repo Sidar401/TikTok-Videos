@@ -1,0 +1,83 @@
+{
+ "name": "roll-c-sogehts",
+ "produkt": {
+  "bild": "shop/rollball/produkt.png",
+  "preis": "15,17 €",
+  "sterne": "4,0",
+  "verkauft": "12.800× verkauft",
+  "cta": "Hier tippen",
+  "badge": "Bestseller"
+ },
+ "bilder": [
+  "shop/rollball/foto-hund.jpg",
+  "shop/rollball/foto-groesse.jpg"
+ ],
+ "ende": 4,
+ "endkarte": "pfeil",
+ "szenen": [
+  {
+   "typ": "titel",
+   "dur": 4,
+   "bg": "hell",
+   "kicker": "SO GEHT'S",
+   "titel": "So *funktioniert*|dieser Ball",
+   "icon": "blitz",
+   "unter": "In 3 einfachen Schritten"
+  },
+  {
+   "typ": "liste",
+   "dur": 4,
+   "bg": "hell",
+   "titel": "In *3 Schritten*",
+   "punkte": [
+    [
+     "blitz",
+     "Antippen – er startet"
+    ],
+    [
+     "musik",
+     "Er rollt und zwitschert"
+    ],
+    [
+     "akku",
+     "Per USB aufladen"
+    ]
+   ]
+  },
+  {
+   "typ": "foto",
+   "dur": 4,
+   "bg": "hell",
+   "titel": "Nur *6 cm* groß",
+   "bild": "foto-groesse.jpg",
+   "ganz": true,
+   "unter": "Für kleine Hunde & Katzen"
+  },
+  {
+   "typ": "produkt",
+   "dur": 4,
+   "bg": "hell",
+   "titel": "Alles *dabei*",
+   "punkte": [
+    {
+     "t": "Seile zum Zerren",
+     "x": 330,
+     "y": 820,
+     "ly": 620
+    },
+    {
+     "t": "Rollt von allein",
+     "x": 700,
+     "y": 1050,
+     "ly": 1250
+    },
+    {
+     "t": "Lädt per USB",
+     "x": 500,
+     "y": 1120,
+     "ly": 1430
+    }
+   ]
+  }
+ ]
+}

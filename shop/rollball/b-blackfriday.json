@@ -1,0 +1,54 @@
+{
+ "name": "roll-b-blackfriday",
+ "produkt": {
+  "bild": "shop/rollball/produkt.png",
+  "preis": "15,17 €",
+  "sterne": "4,0",
+  "verkauft": "12.800× verkauft",
+  "cta": "Hier tippen",
+  "badge": "Bestseller"
+ },
+ "bilder": [
+  "shop/rollball/foto-hund.jpg",
+  "shop/rollball/foto-groesse.jpg"
+ ],
+ "ende": 4,
+ "endkarte": "pfeil",
+ "szenen": [
+  {
+   "typ": "titel",
+   "dur": 4,
+   "bg": "dunkel",
+   "kicker": "BLACK FRIDAY",
+   "titel": "Dieser Ball ist|gerade *im Angebot*",
+   "icon": "etikett",
+   "unter": "Nur solange der Deal läuft"
+  },
+  {
+   "typ": "foto",
+   "dur": 4,
+   "bg": "hell",
+   "titel": "Der Ball, der|*von allein* rollt",
+   "bild": "foto-hund.jpg",
+   "unter": "Für kleine Hunde & Katzen"
+  },
+  {
+   "typ": "zahl",
+   "dur": 4,
+   "bg": "dunkel",
+   "titel": "So oft schon|*verkauft*",
+   "wert": 12800,
+   "nach": "×",
+   "unter": "4,0 Sterne · 888 Bewertungen"
+  },
+  {
+   "typ": "preis",
+   "dur": 4,
+   "bg": "hell",
+   "titel": "Jetzt *nur*",
+   "preis": "15,17 €",
+   "band": "Black Friday",
+   "unter": "zzgl. 3,99 € Versand"
+  }
+ ]
+}

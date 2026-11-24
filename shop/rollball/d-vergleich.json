@@ -1,0 +1,75 @@
+{
+ "name": "roll-d-vergleich",
+ "produkt": {
+  "bild": "shop/rollball/produkt.png",
+  "preis": "15,17 €",
+  "sterne": "4,0",
+  "verkauft": "12.800× verkauft",
+  "cta": "Hier tippen",
+  "badge": "Bestseller"
+ },
+ "bilder": [
+  "shop/rollball/foto-hund.jpg",
+  "shop/rollball/foto-groesse.jpg"
+ ],
+ "ende": 4,
+ "endkarte": "pfeil",
+ "szenen": [
+  {
+   "typ": "titel",
+   "dur": 4,
+   "bg": "hell",
+   "kicker": "VERGLEICH",
+   "titel": "Normaler Ball|vs. *dieser* Ball",
+   "icon": "pfote",
+   "unter": "Der Unterschied ist riesig"
+  },
+  {
+   "typ": "vergleich",
+   "dur": 4,
+   "bg": "hell",
+   "titel": "Was kann *er*?",
+   "links": "Normaler Ball",
+   "rechts": "Dieser Ball",
+   "zeilen": [
+    [
+     "Rollt von allein",
+     false,
+     true
+    ],
+    [
+     "Macht Geräusche",
+     false,
+     true
+    ],
+    [
+     "Seile zum Zerren",
+     false,
+     true
+    ],
+    [
+     "Spielt ohne dich",
+     false,
+     true
+    ]
+   ]
+  },
+  {
+   "typ": "foto",
+   "dur": 4,
+   "bg": "hell",
+   "titel": "So *rollt* er",
+   "bild": "foto-hund.jpg",
+   "unter": "Startet bei Berührung"
+  },
+  {
+   "typ": "zahl",
+   "dur": 4,
+   "bg": "dunkel",
+   "titel": "Hundehalter|*lieben* ihn",
+   "wert": 12800,
+   "nach": "×",
+   "unter": "verkauft · 4,0 Sterne"
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "name": "roll-a-geschenk",
+ "produkt": {
+  "bild": "shop/rollball/produkt.png",
+  "preis": "15,17 €",
+  "sterne": "4,0",
+  "verkauft": "12.800× verkauft",
+  "cta": "Hier tippen",
+  "badge": "Bestseller"
+ },
+ "bilder": [
+  "shop/rollball/foto-hund.jpg",
+  "shop/rollball/foto-groesse.jpg"
+ ],
+ "ende": 4,
+ "endkarte": "pfeil",
+ "szenen": [
+  {
+   "typ": "titel",
+   "dur": 4,
+   "bg": "dunkel",
+   "kicker": "GESCHENK-IDEE",
+   "titel": "Das perfekte|Geschenk für|*kleine* Hunde",
+   "icon": "geschenk",
+   "unter": "Und das für unter 20 €"
+  },
+  {
+   "typ": "foto",
+   "dur": 4,
+   "bg": "hell",
+   "titel": "Rollt & zwitschert|*von allein*",
+   "bild": "foto-hund.jpg",
+   "unter": "Ein Stupser genügt"
+  },
+  {
+   "typ": "liste",
+   "dur": 4,
+   "bg": "hell",
+   "titel": "Darum *lieben*|Hunde ihn",
+   "punkte": [
+    [
+     "check",
+     "Rollt von allein"
+    ],
+    [
+     "check",
+     "Zwitschert wie ein Vogel"
+    ],
+    [
+     "check",
+     "Seile zum Zerren"
+    ],
+    [
+     "check",
+     "Lädt per USB"
+    ]
+   ]
+  },
+  {
+   "typ": "titel",
+   "dur": 4,
+   "bg": "dunkel",
+   "titel": "Kommt *vor*|Weihnachten an",
+   "icon": "paket",
+   "unter": "Laut Shop: Lieferung 1.–8. Dezember"
+  }
+ ]
+}

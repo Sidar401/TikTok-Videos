@@ -52,6 +52,9 @@ ICONS = {
     "stern": '<path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/>',
     "pfeil": '<path d="M12 4v15M6 13l6 6 6-6"/>',
     "wagen": '<circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3.5h3l2.4 11.5h11l2-8H6.6"/>',
+    "geschenk": '<rect x="3.5" y="9" width="17" height="11.5" rx="1.5"/><path d="M2.5 9h19M12 9v11.5"/><path d="M12 9C10.5 5 6.5 4.5 7 7.3 7.3 9 12 9 12 9zM12 9c1.5-4 5.5-4.5 5-1.7-.3 1.7-5 1.7-5 1.7z"/>',
+    "paket": '<path d="M3.5 7.5L12 3.5l8.5 4v9L12 20.5l-8.5-4z"/><path d="M3.5 7.5L12 11.5l8.5-4M12 11.5v9"/>',
+    "etikett": '<path d="M3.5 12.5V4.5a1 1 0 011-1h8l8 8-9 9z"/><circle cx="8.5" cy="8.5" r="1.6"/>',
     "euro": '<path d="M17.5 6.5A7 7 0 007 12a7 7 0 0010.5 5.5"/><path d="M4.5 10.5h8M4.5 13.5h8"/>',
 }
 
@@ -119,6 +122,23 @@ def scene(i, s, t):
             A(f'tl.fromTo("{sid} .cl{k} path", {{ strokeDasharray: 900, strokeDashoffset: 900 }}, {{ strokeDashoffset: 0, duration: 0.4, ease: "power2.out" }}, {tt + 0.05:.2f});')
             A(f'tl.fromTo("{sid} .co{k}", {{ opacity: 0, x: {30 if right else -30} }}, {{ opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }}, {tt + 0.3:.2f});')
 
+    elif typ == "foto":
+        h.append(f'<div class="fotobox"><img class="foto{' ganz' if s.get('ganz') else ''}" src="assets/{s["bild"]}" alt="" /></div>')
+        if s.get("unter"):
+            h.append(f'<div class="unter">{html.escape(s["unter"])}</div>')
+            A(f'tl.fromTo("{sid} .unter", {{ opacity: 0, y: 30 }}, {{ opacity: 1, y: 0, duration: 0.4 }}, {t + 0.8:.2f});')
+        A(f'tl.fromTo("{sid} .fotobox", {{ y: 160, opacity: 0, rotation: 3 }}, {{ y: 0, opacity: 1, rotation: 0, duration: 0.6, ease: "power3.out" }}, {t + 0.15:.2f});')
+        A(f'tl.fromTo("{sid} .foto", {{ scale: 1.0 }}, {{ scale: {1.03 if s.get("ganz") else 1.12}, duration: {d:.2f}, ease: "none" }}, {t:.2f});')
+
+    elif typ == "preis":
+        h.append(f'<div class="ptag"><div class="pband">{html.escape(s.get("band", "Angebot"))}</div>'
+                 f'<div class="pval">{html.escape(s["preis"])}</div><div class="psub">{html.escape(s.get("unter", ""))}</div></div>'
+                 '<img class="prod klein preisprod" src="assets/produkt.png" alt="" />')
+        A(f'tl.fromTo("{sid} .ptag", {{ scale: 0.6, opacity: 0, rotation: -8 }}, {{ scale: 1, opacity: 1, rotation: -3, duration: 0.5, ease: "back.out(1.8)" }}, {t + 0.3:.2f});')
+        A(f'tl.fromTo("{sid} .pband", {{ scaleX: 0 }}, {{ scaleX: 1, duration: 0.35, ease: "power3.out" }}, {t + 0.7:.2f});')
+        A(f'tl.to("{sid} .ptag", {{ scale: 1.04, duration: 0.45, yoyo: true, repeat: 3, ease: "sine.inOut" }}, {t + 1.2:.2f});')
+        A(f'tl.fromTo("{sid} .preisprod", {{ y: 200, opacity: 0, rotation: 12 }}, {{ y: 0, opacity: 1, rotation: -4, duration: 0.6, ease: "back.out(1.5)" }}, {t + 0.5:.2f});')
+
     elif typ == "vergleich":
         rows = "".join(
             f'<div class="vrow"><div class="vl">{html.escape(z[0])}</div>'
@@ -169,6 +189,36 @@ def scene(i, s, t):
             + "\n          ".join(h) + "\n        </div>", "\n      ".join([f"// Szene {i}: {typ}"] + js))
 
 
+def endkarte_pfeil(p, t, ende):
+    """Endkarte: Produkt, Preis, „Hier tippen“ + Pfeil auf den TikTok-Produkt-Knopf unten links."""
+    div = (f'<div id="end2" class="clip" data-start="{t:.2f}" data-duration="{ende:.2f}" data-track-index="1" data-track-kind="graphics">'
+           '<div id="n-glow"></div>'
+           f'<div id="n-badge"><span>{html.escape(p.get("badge", "Bestseller"))}</span></div>'
+           '<img id="n-prod" src="assets/produkt.png" alt="" />'
+           f'<div id="n-stars"><b>★★★★★</b> {html.escape(p["sterne"])} · {html.escape(p["verkauft"])}</div>'
+           f'<div id="n-price"><span>{html.escape(p["preis"])}</span></div>'
+           f'<div id="n-tap">{html.escape(p.get("cta", "Hier tippen"))}</div>'
+           '<div id="n-ring"></div>'
+           '<svg id="n-arrow" viewBox="0 0 1080 1920"><path class="sh" d="M600 1250 C 420 1270, 250 1300, 175 1400"/>'
+           '<path class="hd" d="M130 1330 L 168 1410 L 255 1395"/></svg></div>')
+    T = f"{t:.2f}"
+    js = f"""
+      tl.fromTo("#end2", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.25 }}, {T});
+      tl.fromTo("#n-glow", {{ scale: 0.6, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.6 }}, {T});
+      tl.fromTo("#n-badge", {{ y: -50, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.35, ease: "back.out(2)" }}, {t + 0.05:.2f});
+      tl.fromTo("#n-prod", {{ y: 300, rotation: -15, opacity: 0 }}, {{ y: 0, rotation: 0, opacity: 1, duration: 0.55, ease: "back.out(1.5)" }}, {t + 0.05:.2f});
+      tl.to("#n-prod", {{ rotation: 4, y: -10, duration: 0.4, yoyo: true, repeat: {max(int((ende - 0.7) / 0.4) // 2 * 2 - 1, 1)}, ease: "sine.inOut" }}, {t + 0.6:.2f});
+      tl.fromTo("#n-stars", {{ opacity: 0, y: 20 }}, {{ opacity: 1, y: 0, duration: 0.3 }}, {t + 0.3:.2f});
+      tl.fromTo("#n-price", {{ scale: 1.7, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.3, ease: "power4.out" }}, {t + 0.45:.2f});
+      tl.fromTo("#n-tap", {{ scale: 0.6, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }}, {t + 0.7:.2f});
+      tl.fromTo("#n-arrow .sh", {{ strokeDasharray: 700, strokeDashoffset: 700 }}, {{ strokeDashoffset: 0, duration: 0.5, ease: "power2.inOut" }}, {t + 0.9:.2f});
+      tl.fromTo("#n-arrow .hd", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.1 }}, {t + 1.35:.2f});
+      tl.to("#n-arrow", {{ x: -18, y: 18, duration: 0.35, yoyo: true, repeat: {max(int((ende - 1.5) / 0.35) // 2 * 2 - 1, 1)}, ease: "sine.inOut" }}, {t + 1.45:.2f});
+      tl.fromTo("#n-ring", {{ scale: 0.3, opacity: 1 }}, {{ scale: 1.3, opacity: 0, duration: 0.8, repeat: {max(int((ende - 1.5) / 0.8) - 1, 0)}, ease: "power2.out" }}, {t + 1.4:.2f});
+"""
+    return div, js
+
+
 def build(cfg_path):
     cfg = json.loads(Path(cfg_path).read_text())
     name = cfg["name"]
@@ -180,6 +230,8 @@ def build(cfg_path):
         pj.write_text(re.sub(r'"name":\s*"[^"]*"', f'"name": "{name}"', pj.read_text()))
     p = cfg["produkt"]
     shutil.copy(ROOT / p["bild"], vdir / "assets" / "produkt.png")
+    for b in cfg.get("bilder", []):
+        shutil.copy(ROOT / b, vdir / "assets" / Path(b).name)
 
     t, scenes, js = 0.0, [], []
     for i, s in enumerate(cfg["szenen"], 1):
@@ -197,12 +249,16 @@ def build(cfg_path):
         "{{BADGE}}": html.escape(p.get("badge", "Bestseller")),
     }.items():
         end_html = end_html.replace(k, v)
+    if cfg.get("endkarte") == "pfeil":
+        end_div, end_js = endkarte_pfeil(p, t, ende)
+    else:
+        end_div, end_js = '<div id="end"' + end_html, END_JS.replace("tEnd", f"{t:.2f}")
     doc = (STUDIO.replace("{{END_CSS}}", END_CSS)
            .replace("{{TOTAL}}", f"{total:.2f}")
            .replace("{{SCENES}}", "\n        ".join(scenes))
-           .replace("{{END}}", '<div id="end"' + end_html)
+           .replace("{{END}}", end_div)
            .replace("{{JS}}", "\n\n      ".join(js))
-           .replace("{{END_JS}}", END_JS.replace("tEnd", f"{t:.2f}")))
+           .replace("{{END_JS}}", end_js))
     (vdir / "index.html").write_text(doc)
     print(f"{vdir}/index.html · {total:.1f} s")
 
@@ -303,6 +359,38 @@ STUDIO = """<!doctype html>
         background: rgba(219,134,34,0.5); }
       .typ-frage .unter { top: 1260px; }
 
+      #e-cta .wg { width: 58px; height: 58px; vertical-align: -10px; stroke-width: 2.6; }
+      .fotobox { position: absolute; left: 70px; top: 620px; width: 940px; height: 720px; border-radius: 40px; overflow: hidden;
+        box-shadow: 0 30px 80px rgba(0,0,0,0.25); background: #fff; }
+      .foto { width: 100%; height: 100%; object-fit: cover; transform-origin: 60% 60%; }
+      .foto.ganz { object-fit: contain; }
+      .typ-foto .unter { top: 1380px; }
+      .ptag { position: absolute; left: 140px; top: 640px; width: 800px; background: #fff; border-radius: 40px; text-align: center;
+        padding: 0 0 40px; box-shadow: 0 30px 80px rgba(0,0,0,0.35); overflow: hidden; color: var(--ink); }
+      .pband { background: var(--brand); color: #fff; font-weight: 900; font-size: 52px; letter-spacing: 4px; padding: 22px 0;
+        text-transform: uppercase; transform-origin: left center; }
+      .pval { font-weight: 900; font-size: 190px; letter-spacing: -6px; line-height: 1.1; margin-top: 20px; }
+      .psub { font-weight: 700; font-size: 40px; opacity: 0.6; }
+      .preisprod { top: 1130px; }
+
+      /* Endkarte mit Pfeil zum Produkt-Knopf (unten links) */
+      #end2 { position: absolute; inset: 0; z-index: 8; background: radial-gradient(circle at 50% 30%, #3a2a17 0%, #16181A 60%); color: #fff; }
+      #n-badge { position: absolute; top: 210px; left: 0; width: 1080px; text-align: center; }
+      #n-badge span { display: inline-block; background: var(--brand); font-weight: 900; font-size: 40px; padding: 10px 30px; border-radius: 999px; letter-spacing: 1px; }
+      #n-glow { position: absolute; left: 240px; top: 260px; width: 600px; height: 600px; border-radius: 50%;
+        background: radial-gradient(circle, rgba(219,134,34,0.5) 0%, rgba(219,134,34,0) 65%); }
+      #n-prod { position: absolute; left: 290px; top: 330px; width: 500px; }
+      #n-stars { position: absolute; top: 760px; left: 0; width: 1080px; text-align: center; font-weight: 800; font-size: 42px; }
+      #n-stars b { color: #F2B418; }
+      #n-price { position: absolute; top: 830px; left: 0; width: 1080px; text-align: center; }
+      #n-price span { display: inline-block; background: #fff; color: var(--ink); font-weight: 900; font-size: 140px; line-height: 1;
+        padding: 16px 46px 24px; border-radius: 32px; letter-spacing: -3px; }
+      #n-tap { position: absolute; top: 1110px; left: 470px; width: 560px; text-align: center; font-weight: 900; font-size: 54px;
+        background: var(--brand); padding: 26px 10px; border-radius: 999px; box-shadow: 0 16px 50px rgba(219,134,34,0.45); }
+      #n-arrow { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: visible; }
+      #n-arrow path { fill: none; stroke: #fff; stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; }
+      #n-ring { position: absolute; left: 168px; top: 1410px; width: 220px; height: 220px; margin: -110px 0 0 -110px;
+        border: 8px solid var(--brand); border-radius: 50%; }
       #e-cta .wg { width: 58px; height: 58px; vertical-align: -10px; stroke-width: 2.6; }
       /* Endkarte */{{END_CSS}}
     </style>
