@@ -354,3 +354,6 @@ Vorletzter Satz = Folgen-CTA („Folge HundeFinanzTv …“), letzter Satz = „
 
 ## Erster Satz = Hook + lauter (Nutzer 24.11.)
 Hook: ein Akteur tut etwas Starkes („Dein Börsenverlust könnte Amerika Milliarden sparen!“). Nach sync.py immer `python3 scripts/lauter_start.py videos/<name>` (erster Satz +4,5 dB), dann Logo-Intro einfügen.
+
+## Lieferung pro Video (Nutzer 24.11.)
+MP4 + 3 Cover-Varianten (schwarz, `scripts/cover_dark.py`) + Beschreibung im @professorfinanzen-Stil (Hook mit Emojis, kurze Absätze, Frage, 📚 Quellen nur echte, Hashtags) + 10 Tags. Details: CLAUDE.md.
