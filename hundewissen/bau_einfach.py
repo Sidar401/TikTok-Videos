@@ -135,14 +135,14 @@ VIDEOS = {
     "hw-p1-schnellfresser": [
         dict(h='Dein Hund frisst in <i>10 Sekunden?</i>', size=104, pose='schlingt', ph=560, caps=['ist sein napf nach <b>10 sekunden</b> leer?', 'dann solltest du <b>jetzt aufpassen</b>']),
         dict(h='Schlingen ist <i>gefährlicher,</i> als du denkst.', size=96, pose='themen/warnung', ph=420, caps=['schlingen ist <b>gefährlicher</b> als gedacht', 'am ende zeig ich dir <b>die lösung</b>']),
-        dict(h='Er schluckt dabei <i>viel Luft.</i>', size=110, pose='themen/magen-luft', ph=560, caps=['beim schlingen schluckt er <b>viel luft</b>', 'der bauch <b>bläht sich auf</b>']),
+        dict(h='Er schluckt dabei <i>viel Luft.</i>', size=110, pose='themen/magen-luft', ph=560, caps=['beim schlingen schluckt er <b>viel luft</b>', 'der bauch <b>bläht sich auf</b>'], infos=[('Luft + Futter = <b>Blähbauch</b>', 70, 830), ('Magen dehnt sich <b>stark</b>', 560, 1050), ('Kann <b>Schmerzen</b> machen', 70, 1270)]),
         dict(h='Die Folge: <i>Bauchweh.</i>', size=116, pose='aufgeblaeht', ph=600, caps=['das kann richtig <b>bauchweh</b> machen', 'und er fühlt sich <b>unwohl</b>']),
         dict(h='Oder er <i>würgt</i> alles wieder hoch.', size=100, pose='wuergt', ph=580, caps=['oft würgt er das futter', '<b>gleich wieder hoch</b>']),
-        dict(h='Im schlimmsten Fall: <i>Magendrehung.</i>', size=96, pose='themen/magen-verdreht', ph=540, caps=['im schlimmsten fall dreht sich <b>der magen</b>', 'das ist <b>lebensgefährlich</b>'], px=470, bilder=[('themen/warnung', 210, 850, 830)]),
+        dict(h='Im schlimmsten Fall: <i>Magendrehung.</i>', size=96, pose='themen/magen-verdreht', ph=540, caps=['im schlimmsten fall dreht sich <b>der magen</b>', 'das ist <b>lebensgefährlich</b>'], px=470, bilder=[('themen/warnung', 210, 850, 830)], infos=[('Magen <b>dreht sich</b>', 60, 1190), ('Blut wird <b>abgeschnürt</b>', 560, 1130), ('Nur eine <b>OP</b> hilft', 600, 1290)]),
         dict(h='Das ist ein <i>Notfall!</i>', size=116, pose='themen/tierarzt-koffer', ph=330, caps=['bei diesen zeichen sofort', '<b>zum tierarzt</b> – jede minute zählt'], px=830, extra='<div class="chip x" style="top:880px">🎈 Dicker Bauch</div><div class="chip x" style="top:1010px">🤢 Würgen ohne Erbrechen</div><div class="chip x" style="top:1140px">😰 Unruhe</div>'),
         dict(h='Besonders gefährdet: <i>große Hunde.</i>', size=100, pose='stolz', ph=580, caps=['große hunde mit <b>tiefer brust</b>', 'haben das <b>höchste risiko</b>']),
-        dict(h='Lösung 1: <i>Anti-Schling-Napf.</i>', size=96, pose='antischling-frisst', ph=560, caps=['die rillen im napf', '<b>bremsen</b> ihn beim fressen'], shop=True),
-        dict(h='Lösung 2: <i>Schnüffelteppich.</i>', size=96, pose='schnueffelteppich-frisst', ph=540, caps=['im schnüffelteppich muss er', 'jedes stück <b>erst suchen</b>'], shop=True),
+        dict(h='Lösung 1: <i>Anti-Schling-Napf.</i>', size=96, pose='antischling-frisst', ph=560, caps=['die rillen im napf', '<b>bremsen</b> ihn beim fressen'], shop='Den Anti-Schling-Napf'),
+        dict(h='Lösung 2: <i>Schnüffelteppich.</i>', size=96, pose='schnueffelteppich-frisst', ph=540, caps=['im schnüffelteppich muss er', 'jedes stück <b>erst suchen</b>'], shop='Den Schnüffelteppich'),
         dict(h='Lösung 3: <i>Kleinere Portionen.</i>', size=96, pose='themen/portionen', ph=520, caps=['lieber <b>2 bis 3 kleine</b> mahlzeiten', 'statt einer <b>großen</b>']),
         dict(h='Nach dem Fressen: <i>Ruhe.</i>', size=110, pose='korb', ph=420, caps=['nach dem fressen <b>kein toben</b>', 'lieber <b>ausruhen</b> lassen']),
         dict(h='So frisst er <i>gesund.</i>', size=116, pose='wartet-napf', ph=600, caps=['so frisst er <b>langsam</b>', 'und bleibt <b>gesund</b>']),
@@ -155,11 +155,11 @@ VIDEOS = {
         dict(h='Zeichen 1: <i>Er würgt oft.</i>', size=110, pose='wuergt', ph=580, caps=['würgt er oft', '<b>nach dem fressen</b>?']),
         dict(h='Zeichen 2: <i>Dicker Bauch.</i>', size=110, pose='aufgeblaeht', ph=600, caps=['ist sein bauch danach', '<b>dick und prall</b>?']),
         dict(h='Zeichen 3: <i>Er bettelt sofort weiter.</i>', size=96, pose='bettelnd', ph=580, caps=['bettelt er direkt', '<b>um mehr futter</b>?']),
-        dict(h='Darum ist das <i>gefährlich.</i>', size=110, pose='themen/magen-luft', ph=560, caps=['er schluckt dabei <b>viel luft</b>', 'im schlimmsten fall <b>dreht sich der magen</b>']),
+        dict(h='Darum ist das <i>gefährlich.</i>', size=110, pose='themen/magen-luft', ph=560, caps=['er schluckt dabei <b>viel luft</b>', 'im schlimmsten fall <b>dreht sich der magen</b>'], infos=[('Luft + Futter = <b>Blähbauch</b>', 70, 830), ('Magen dehnt sich <b>stark</b>', 560, 1050), ('Im Notfall: <b>Magendrehung</b>', 70, 1270)]),
         dict(h='Tipp 1: <i>Muffinblech.</i>', size=116, pose='themen/muffinblech', ph=340, caps=['futter ins <b>muffinblech</b> verteilen', 'der <b>günstige trick</b> von zuhause']),
-        dict(h='Tipp 2: <i>Futterball.</i>', size=116, pose='themen/futterball', ph=460, caps=['im futterball muss er', 'sich jedes stück <b>erarbeiten</b>'], shop=True),
-        dict(h='Tipp 3: <i>Anti-Schling-Napf.</i>', size=100, pose='themen/antischling-napf', ph=380, caps=['die rillen im napf', '<b>bremsen</b> ihn beim fressen'], shop=True),
-        dict(h='Tipp 4: <i>Futter suchen lassen.</i>', size=96, pose='schnueffelteppich-frisst', ph=540, caps=['futter im <b>schnüffelteppich</b> verstecken', 'das macht ihn <b>langsam und satt</b>'], shop=True),
+        dict(h='Tipp 2: <i>Futterball.</i>', size=116, pose='themen/futterball', ph=460, caps=['im futterball muss er', 'sich jedes stück <b>erarbeiten</b>'], shop='Den Futterball'),
+        dict(h='Tipp 3: <i>Anti-Schling-Napf.</i>', size=100, pose='themen/antischling-napf', ph=380, caps=['die rillen im napf', '<b>bremsen</b> ihn beim fressen'], shop='Den Anti-Schling-Napf'),
+        dict(h='Tipp 4: <i>Futter suchen lassen.</i>', size=96, pose='schnueffelteppich-frisst', ph=540, caps=['futter im <b>schnüffelteppich</b> verstecken', 'das macht ihn <b>langsam und satt</b>'], shop='Den Schnüffelteppich'),
         dict(h='Ruhig fressen = <i>gesund fressen.</i>', size=96, pose='antischling-frisst', ph=560, caps=['so frisst er <b>langsamer</b>', 'und viel <b>gesünder</b>']),
     ],
 }
@@ -173,6 +173,7 @@ KOMMENTAR = {
     "hw-s3-test": ("Meiner braucht 20 Sekunden", "WIE SCHNELL IST DEINER? <b>KOMMENTIER!</b>"),
 }
 KOM_DAUER = 4.2
+UNTERTITEL = False  # Nutzer 24.11.: ab sofort keine Untertitel
 # Hinweis: Produkt gibt's im Shop-Kanal (nur bei Produkten, die dort wirklich verkauft werden)
 SHOP = ('<div class="shop"><img src="assets/beagle.png" alt="" /><span>🛒 Gibt\'s bei uns!<small>HundeWissenTv 2.0</small></span></div>')
 # Logo-Intro nach der ersten Szene (Hook), 3 s, mit Jingle wie HundeFinanzTv
@@ -186,6 +187,40 @@ def kommentar_html(text):
     return (f'<div id="co"><div class="t1">Kommentare</div><div class="row"><div class="av"><img src="assets/beagle.png" alt="" /></div>'
             f'<div class="in">{z}<span id="co-cur"></span></div></div><div class="bt"><span class="ab">Abbrechen</span><span id="co-btn">Kommentieren</span></div></div>'
             '<div id="co-z"><svg viewBox="0 0 24 24" style="width:100%;height:100%;filter:drop-shadow(0 4px 6px #0006)"><path d="M4 2 L4 20 L9 15.5 L12.5 23 L15.5 21.6 L12 14.3 L19 14 Z" fill="#fff" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/></svg></div>')
+
+
+def infos_html(sz):
+    out = ""
+    for k, (txt, x, y) in enumerate(sz.get("infos", [])):
+        out += f'<div class="info info{k}" style="left:{x}px;top:{y}px">{txt}</div>'
+    return out
+
+
+def shopk(sz):
+    if not sz.get("shop"):
+        return ""
+    ding = sz["shop"] if isinstance(sz["shop"], str) else "Das"
+    return (f'<div class="shopk"><img src="assets/beagle.png" alt="" /><div>🛒 {ding} gibt\'s in unserem Shop!'
+            f'<small>Schau auf unserem 2. Kanal: HundeWissenTv 2.0</small></div></div>')
+
+
+def sfx(ziel, dur, tick_at, pops):
+    import numpy as np, soundfile as sf
+    sr = 44100; y = np.zeros(int(sr * dur) + sr); rng = np.random.default_rng(3)
+    def tick(t, lv, f):
+        i = int(t * sr); L = int(0.03 * sr); e = np.exp(-np.arange(L) / (0.004 * sr))
+        y[i:i + L] += lv * e * (0.6 * rng.standard_normal(L) + np.sin(2 * np.pi * f * np.arange(L) / sr))
+    def plopp(t):  # kurzer, weicher Plopp (Ton fällt schnell ab)
+        i = int(t * sr); L = int(0.12 * sr); tt = np.arange(L) / sr
+        f = 900 * np.exp(-tt * 28) + 180
+        y[i:i + L] += 0.8 * np.sin(2 * np.pi * np.cumsum(f) / sr) * np.exp(-tt * 30)
+    if tick_at:
+        a, n = tick_at
+        for k in range(n): tick(a + 0.5 + k * 0.08, 0.25, 1800 + 300 * (k % 3))
+        tick(a + 0.5 + n * 0.08 + 0.9, 0.6, 900)
+    for t in pops: plopp(t)
+    y = y[: int(sr * dur)]
+    sf.write(ziel, (y / max(1e-6, np.abs(y).max()) * 0.5).astype("float32"), sr)
 
 
 def kommentar_sound(ziel, dur, a, n):
@@ -258,7 +293,10 @@ def bau(name):
     if len(sz_list) == 3:
         zeiten, schluss, dur = T, SCHLUSS, DUR
     else:  # längere Videos: je Szene 4,5 s, Schluss 3 s
-        seg = 4.5; zeiten = [(round(i * seg, 2), round((i + 1) * seg, 2)) for i in range(len(sz_list))]
+        zeiten, t = [], 0.0
+        for sz in sz_list:
+            l = 4.5 + sz.get("plus", 2.5 if sz.get("infos") else 0) + (1.5 if sz.get("shop") else 0)
+            zeiten.append((round(t, 2), round(t + l, 2))); t += l
         schluss = zeiten[-1][1]; dur = schluss + 3
     t_intro = None
     if name in INTRO and len(zeiten) > 1:
@@ -273,41 +311,50 @@ def bau(name):
             (d / "assets" / f"{n}.png").write_bytes(bildpfad(n).read_bytes())
             return f"assets/{n}.png"
         return f"assets/aussie/{n}.png"
-    scenes, caps, js = [], [], []
+    scenes, caps, js, pops = [], [], [], []
     for i, (sz, (a, b)) in enumerate(zip(sz_list, zeiten), 1):
         w0, h0 = Image.open(bildpfad(sz["pose"])).size
         ph = sz["ph"]; pw = round(w0 * ph / h0)
         if pw > 860: pw = 860; ph = round(h0 * pw / w0)
         cx = sz.get("px", 540); top = 1400 - ph
-        src = f'<div class="src" style="top:1418px">{sz["src"]}</div>' if sz.get("src") else ""
+        src = f'<div class="src" style="top:{1418 if UNTERTITEL else 1700}px">{sz["src"]}</div>' if sz.get("src") else ""
         mehr = ""
         for (bn, bh, bx, by) in sz.get("bilder", []):
             bw0, bh0 = Image.open(bildpfad(bn)).size; bw = round(bw0 * bh / bh0)
             mehr += f'<img class="pose x" src="{img(bn)}" style="left:{bx - bw / 2:.0f}px;top:{by}px;width:{bw}px" alt="" />'
         scenes.append(f'''      <div id="s{i}" class="scene">
         <div id="h{i}" class="h" style="top: 470px; font-size: {sz["size"]}px">{sz["h"]}</div>
+        <div style="position:absolute;inset:0;transform:translateY({0 if UNTERTITEL else 150}px) scale({1 if UNTERTITEL else 1.08});transform-origin:50% 75%">
         <div class="shadow" style="left:{cx - pw * 0.42:.0f}px;top:1378px;width:{pw * 0.84:.0f}px"></div>
         <img id="p{i}" class="pose" src="{img(sz["pose"])}" style="left:{cx - pw / 2:.0f}px;top:{top}px;width:{pw}px" alt="" />
-        <div id="x{i}">{sz.get("extra", "")}{mehr}</div>{src}{SHOP if sz.get("shop") else ""}
+        <div id="x{i}">{sz.get("extra", "")}{mehr}</div>{infos_html(sz)}</div>{src}{shopk(sz)}
       </div>''')
         m = round((a + b) / 2, 2)
-        for k, (c, ca, cb) in enumerate(zip(sz["caps"], [a, m], [m, b])):
+        for k, (c, ca, cb) in enumerate(zip(sz["caps"] if UNTERTITEL else [], [a, m], [m, b])):
             caps.append(f'      <div id="k{i}{k}" class="cap">{c}</div>')
             js.append(f'      show("#k{i}{k}", {ca}, {cb});')
         js.append(f'      up("#h{i}", {a + 0.25}, 0.6);')
         js.append(f'      tl.fromTo("#p{i}", {{ y: 50, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }}, {a + 0.5});')
         if sz.get("shop"):
-            js.append(f'      tl.fromTo("#s{i} .shop", {{ scale: 0.5, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2.5)" }}, {a + 1.6});')
+            ts = b - 2.6
+            js.append(f'      tl.fromTo("#s{i} .shopk", {{ y: 80, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.45, ease: "back.out(2)" }}, {ts});')
+            pops.append(ts)
+        for k, _ in enumerate(sz.get("infos", [])):
+            ti = a + 1.6 + k * 0.9
+            js.append(f'      tl.fromTo("#s{i} .info{k}", {{ scale: 0, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(3)" }}, {ti:.2f});')
+            pops.append(ti)
         js.append(f'      tl.fromTo("#x{i} .x", {{ y: 30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }}, {a + 1.4});')
     sc = [f'["#s{i}", {a}, {(t_intro if (t_intro and i == 1) else b) if i < len(zeiten) else schluss + 0.2}]' for i, (a, b) in enumerate(zeiten, 1)]
     js.insert(0, f'      scenes([{", ".join(sc)}]);')
-    komhtml = komjs = ""
+    komhtml = komjs = ""; tick_at = None
     if kom:
         ka = zeiten[-1][1] + 0.2; n = len(kom[0])
         komhtml = "      " + kommentar_html(kom[0]) + f'<div id="co-bn"><span>{kom[1]}</span></div>'
-        kommentar_sound(d / "assets/cta.wav", dur, ka, n)
-        komhtml += f'\n      <audio id="ctasnd" src="assets/cta.wav" data-start="0" data-duration="{dur}" data-track-index="5" data-volume="0.7"></audio>'
+        tick_at = (ka, n)
         komjs = f"      kommentar({ka}, {n});"
+    if tick_at or pops:
+        sfx(d / "assets/cta.wav", dur, tick_at, pops)
+        komhtml += f'\n      <audio id="ctasnd" src="assets/cta.wav" data-start="0" data-duration="{dur}" data-track-index="5" data-volume="0.7"></audio>'
     if t_intro is not None:
         (d / "assets/logo-jingle.mp3").write_bytes((ROOT / "hundewissen/magazin/logo-jingle.mp3").read_bytes())
         komhtml += (f'\n      <div id="ls-bg"></div><div id="ls-ring"></div><div id="ls-logo"><img src="assets/beagle.png" alt="" /></div>'
