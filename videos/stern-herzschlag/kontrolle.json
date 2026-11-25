@@ -1,0 +1,20 @@
+{
+ "gehoert": "Ein Stern stirbt und Forscher haben zum ersten Mal seinen letzten Herzschlag gesehen. Und das verrät uns, wie auch unsere Sonne eines Tages sterben könnte. Entdeckt hat das ein Forscherteam rund um die NASA. Der Stern liegt 12.000 Lichtjahre von uns entfernt. Er hat seinen Brennstoff fast aufgebraucht und ist zu einem Riesen angeschwollen. In dieser Phase zuckt ein Stern ein paar Mal heftig zusammen, wie ein Herz, das ein letztes Mal schlägt. Bei jedem Schlag schleudert er eine riesige Gashülle ins All. Genau so einen Gasring haben die Forscher jetzt gefunden. Er ist etwa 6.500 Jahre alt und ein halbes Lichtjahr groß. Bisher kannte man diesen letzten Schlag nur aus Berechnungen. Und dann die Überraschung: Um den Stern formt sich eine Wolke wie eine Sanduhr in nur 700 Jahren. Für einen Stern ist das ein Wimpernschlag. Wahrscheinlich versteckt sich daneben sogar ein zweiter Stern, den man nicht sehen kann. Und manches davon passt gar nicht zu dem, was die Forscher erwartet hatten. Unsere Sonne ist in etwa fünf Milliarden Jahren so weit. Was glaubst du? Wird auch unsere Sonne so einen letzten Herzschlag haben?",
+ "abweichungen": [
+  [
+   "replace",
+   "zwölftausend",
+   "12 000"
+  ],
+  [
+   "replace",
+   "sechstausendfünfhundert",
+   "6 500"
+  ],
+  [
+   "replace",
+   "siebenhundert",
+   "700"
+  ]
+ ]
+}

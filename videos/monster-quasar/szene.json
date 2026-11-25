@@ -1,0 +1,12 @@
+{
+ "tag": "26. NOVEMBER 2026",
+ "dauer": 67.1,
+ "hook": "Monster aus der<br /><span class=\"y\">URZEIT!</span>",
+ "hook_end": 4.0,
+ "karte": [
+  15.1,
+  5.4
+ ],
+ "fix": {},
+ "css": ".hookbig { font-size: 120px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"
+}
