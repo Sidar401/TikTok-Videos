@@ -1,0 +1,341 @@
+{
+ "dauer": 74.42,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 4.749,
+   "captions": [
+    {
+     "text": "Mit 40 solltest du drei",
+     "start": 0.0,
+     "end": 1.367
+    },
+    {
+     "text": "Jahresgehälter gespart haben,",
+     "start": 1.367,
+     "end": 3.091
+    },
+    {
+     "text": "sagt eine bekannte Faustregel",
+     "start": 3.091,
+     "end": 4.749
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 4.749,
+   "end": 9.376,
+   "captions": [
+    {
+     "text": "Teile das Video",
+     "start": 4.749,
+     "end": 5.575
+    },
+    {
+     "text": "mit deinen Freunden",
+     "start": 5.575,
+     "end": 6.622
+    },
+    {
+     "text": "und folge uns,",
+     "start": 6.622,
+     "end": 7.393
+    },
+    {
+     "text": "wir bringen jeden Tag",
+     "start": 7.393,
+     "end": 8.55
+    },
+    {
+     "text": "neue Geld‑Tipps",
+     "start": 8.55,
+     "end": 9.376
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 9.376,
+   "end": 13.296,
+   "captions": [
+    {
+     "text": "Und am Ende zeigen wir dir,",
+     "start": 9.376,
+     "end": 10.958
+    },
+    {
+     "text": "wie viel du dafür",
+     "start": 10.958,
+     "end": 11.953
+    },
+    {
+     "text": "im Monat sparen müsstest",
+     "start": 11.953,
+     "end": 13.296
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 13.296,
+   "end": 14.693,
+   "captions": [
+    {
+     "text": "Schauen wir uns das genau an",
+     "start": 13.296,
+     "end": 14.693
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 17.693,
+   "end": 23.637,
+   "captions": [
+    {
+     "text": "Die Regel stammt",
+     "start": 17.693,
+     "end": 18.682
+    },
+    {
+     "text": "von der Fondsfirma Fidelity",
+     "start": 18.682,
+     "end": 20.525
+    },
+    {
+     "text": "aus den USA und rechnet",
+     "start": 20.525,
+     "end": 22.095
+    },
+    {
+     "text": "bis zum Ruhestand mit 67",
+     "start": 22.095,
+     "end": 23.637
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 23.637,
+   "end": 29.015,
+   "captions": [
+    {
+     "text": "Mit 30: ein Jahresgehalt.",
+     "start": 23.637,
+     "end": 26.324
+    },
+    {
+     "text": "Mit 40: drei. Mit 50: sechs",
+     "start": 26.324,
+     "end": 29.015
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 29.015,
+   "end": 33.351,
+   "captions": [
+    {
+     "text": "Mit 60: acht. Mit 67:",
+     "start": 29.015,
+     "end": 31.215
+    },
+    {
+     "text": "zehn Jahresgehälter",
+     "start": 31.215,
+     "end": 33.351
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 33.351,
+   "end": 39.847,
+   "captions": [
+    {
+     "text": "Ein Beispiel: Wer 40.000 €",
+     "start": 33.351,
+     "end": 35.208
+    },
+    {
+     "text": "brutto im Jahr verdient,",
+     "start": 35.208,
+     "end": 37.177
+    },
+    {
+     "text": "sollte mit 40 rund",
+     "start": 37.177,
+     "end": 38.654
+    },
+    {
+     "text": "120.000 € haben",
+     "start": 38.654,
+     "end": 39.847
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 39.847,
+   "end": 42.48,
+   "captions": [
+    {
+     "text": "Und mit 67 400.000 €",
+     "start": 39.847,
+     "end": 42.48
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 42.48,
+   "end": 46.861,
+   "captions": [
+    {
+     "text": "Dreimal so viel mit 40?",
+     "start": 42.48,
+     "end": 43.813
+    },
+    {
+     "text": "Das klingt unmöglich,",
+     "start": 43.813,
+     "end": 45.119
+    },
+    {
+     "text": "wenn man gerade erst anfängt",
+     "start": 45.119,
+     "end": 46.861
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 46.861,
+   "end": 53.128,
+   "captions": [
+    {
+     "text": "Deshalb die Zahl",
+     "start": 46.861,
+     "end": 48.11
+    },
+    {
+     "text": "dahinter: Fidelity rechnet",
+     "start": 48.11,
+     "end": 50.004
+    },
+    {
+     "text": "mit 15 % des Gehalts,",
+     "start": 50.004,
+     "end": 51.644
+    },
+    {
+     "text": "die man ab 25 spart",
+     "start": 51.644,
+     "end": 53.128
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 53.128,
+   "end": 58.605,
+   "captions": [
+    {
+     "text": "Bei 40.000 € sind",
+     "start": 53.128,
+     "end": 54.803
+    },
+    {
+     "text": "das 6.000 € im Jahr,",
+     "start": 54.803,
+     "end": 56.773
+    },
+    {
+     "text": "also 500 € im Monat",
+     "start": 56.773,
+     "end": 58.605
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 58.605,
+   "end": 64.177,
+   "captions": [
+    {
+     "text": "Aber Vorsicht: Das ist",
+     "start": 58.605,
+     "end": 59.786
+    },
+    {
+     "text": "eine amerikanische Faustregel,",
+     "start": 59.786,
+     "end": 61.452
+    },
+    {
+     "text": "in Deutschland kommt noch",
+     "start": 61.452,
+     "end": 62.84
+    },
+    {
+     "text": "die gesetzliche Rente dazu",
+     "start": 62.84,
+     "end": 64.177
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 64.177,
+   "end": 69.704,
+   "captions": [
+    {
+     "text": "Merk dir: Fang früh an,",
+     "start": 64.177,
+     "end": 65.478
+    },
+    {
+     "text": "auch kleine Beträge helfen,",
+     "start": 65.478,
+     "end": 67.161
+    },
+    {
+     "text": "und niemand muss",
+     "start": 67.161,
+     "end": 68.201
+    },
+    {
+     "text": "die Regel genau erreichen",
+     "start": 68.201,
+     "end": 69.704
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "start": 69.704,
+   "end": 73.815,
+   "captions": [
+    {
+     "text": "Kurzer Hinweis: Das ist",
+     "start": 69.704,
+     "end": 71.125
+    },
+    {
+     "text": "keine Anlageberatung,",
+     "start": 71.125,
+     "end": 72.574
+    },
+    {
+     "text": "nur eine Erklärung",
+     "start": 72.574,
+     "end": 73.815
+    }
+   ]
+  }
+ ],
+ "logo_intro": 14.693
+}

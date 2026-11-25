@@ -1,0 +1,95 @@
+{
+ "titel": "Genug gespart",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Mit vierzig solltest du drei Jahresgehälter gespart haben, sagt eine bekannte Faustregel!",
+   "text": "Mit 40 solltest du drei Jahresgehälter gespart haben, sagt eine bekannte Faustregel",
+   "bild": ""
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Teile das Video mit deinen Freunden und folge uns, wir bringen jeden Tag neue Geld-Tipps!",
+   "text": "Teile das Video mit deinen Freunden und folge uns, wir bringen jeden Tag neue Geld-Tipps",
+   "bild": ""
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Und am Ende zeigen wir dir, wie viel du dafür im Monat sparen müsstest.",
+   "text": "Und am Ende zeigen wir dir, wie viel du dafür im Monat sparen müsstest",
+   "bild": ""
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Schauen wir uns das genau an.",
+   "text": "Schauen wir uns das genau an",
+   "bild": ""
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Die Regel stammt von der Fondsfirma Fidelity aus den USA und rechnet bis zum Ruhestand mit siebenundsechzig.",
+   "text": "Die Regel stammt von der Fondsfirma Fidelity aus den USA und rechnet bis zum Ruhestand mit 67",
+   "bild": ""
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Mit dreißig: ein Jahresgehalt. Mit vierzig: drei. Mit fünfzig: sechs.",
+   "text": "Mit 30: ein Jahresgehalt. Mit 40: drei. Mit 50: sechs",
+   "bild": ""
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Mit sechzig: acht. Mit siebenundsechzig: zehn Jahresgehälter.",
+   "text": "Mit 60: acht. Mit 67: zehn Jahresgehälter",
+   "bild": ""
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Ein Beispiel: Wer vierzigtausend Euro brutto im Jahr verdient, sollte mit vierzig rund hundertzwanzigtausend Euro haben.",
+   "text": "Ein Beispiel: Wer 40.000 € brutto im Jahr verdient, sollte mit 40 rund 120.000 € haben",
+   "bild": ""
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Und mit siebenundsechzig vierhunderttausend Euro.",
+   "text": "Und mit 67 400.000 €",
+   "bild": ""
+  },
+  {
+   "id": "s10",
+   "sprechtext": "Dreimal so viel mit vierzig? Das klingt unmöglich, wenn man gerade erst anfängt.",
+   "text": "Dreimal so viel mit 40? Das klingt unmöglich, wenn man gerade erst anfängt",
+   "bild": ""
+  },
+  {
+   "id": "s11",
+   "sprechtext": "Deshalb die Zahl dahinter: Fidelity rechnet mit fünfzehn Prozent des Gehalts, die man ab fünfundzwanzig spart.",
+   "text": "Deshalb die Zahl dahinter: Fidelity rechnet mit 15 % des Gehalts, die man ab 25 spart",
+   "bild": ""
+  },
+  {
+   "id": "s12",
+   "sprechtext": "Bei vierzigtausend Euro sind das sechstausend Euro im Jahr, also fünfhundert Euro im Monat.",
+   "text": "Bei 40.000 € sind das 6.000 € im Jahr, also 500 € im Monat",
+   "bild": ""
+  },
+  {
+   "id": "s13",
+   "sprechtext": "Aber Vorsicht: Das ist eine amerikanische Faustregel, in Deutschland kommt noch die gesetzliche Rente dazu.",
+   "text": "Aber Vorsicht: Das ist eine amerikanische Faustregel, in Deutschland kommt noch die gesetzliche Rente dazu",
+   "bild": ""
+  },
+  {
+   "id": "s14",
+   "sprechtext": "Merk dir: Fang früh an, auch kleine Beträge helfen, und niemand muss die Regel genau erreichen.",
+   "text": "Merk dir: Fang früh an, auch kleine Beträge helfen, und niemand muss die Regel genau erreichen",
+   "bild": ""
+  },
+  {
+   "id": "s15",
+   "sprechtext": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung.",
+   "text": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung",
+   "bild": ""
+  }
+ ]
+}
