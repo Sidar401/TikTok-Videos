@@ -48,3 +48,5 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
 - Abend-Börsenrückblick startet immer mit „Alles, was heute an der Börse passiert ist – in 60 Sekunden.“
 - Alles auf Deutsch, Antworten sehr kurz und iPad-tauglich, ohne Fachwörter
 - Higgsfield nur für Kanal 2 (siehe oben), sonst nicht (kostet Credits)
+
+- **Cover-Anzahl (Nutzer 25.11.):** ab sofort nur noch **2 Cover** pro Video (`<name>-A.jpg`, `<name>-B.jpg`, Favorit zusätzlich als `<name>-tiktok.jpg`), nicht mehr 3. Ersetzt „3 Varianten“.

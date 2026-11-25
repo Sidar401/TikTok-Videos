@@ -363,3 +363,7 @@ Kein Lauter-Machen, kein Pitch-/Tempo-Effekt (klingt nach Computer). Der erste S
 
 ## Hook-Stil abwechseln (Nutzer 24.11.)
 A = normal; B = Kurzsatz in zwei Ausrufe-Sätzen („Dein Börsenverlust! Könnte Amerika Milliarden sparen!“). Nicht bei jedem Video B – abwechseln. Nie Effekte auf die Stimme.
+
+
+## Cover-Anzahl (Nutzer 25.11.)
+Nur noch 2 Cover pro Video (A, B), nicht 3.

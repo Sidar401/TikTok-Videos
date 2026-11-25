@@ -1,0 +1,65 @@
+{
+ "titel": "Börsenrückblick 25.11.",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Alles, was heute an der Börse passiert ist – in 60 Sekunden.",
+   "text": "Alles, was heute an der Börse passiert ist – in 60 Sekunden",
+   "bild": ""
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Teile das Video mit deinen Freunden und folge uns, wir bringen jeden Tag neue Geld-Tipps!",
+   "text": "Teile das Video mit deinen Freunden und folge uns, wir bringen jeden Tag neue Geld-Tipps",
+   "bild": ""
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Der Dax verlor heute eins Komma drei Prozent und fiel auf den tiefsten Stand seit Juli.",
+   "text": "Der Dax verlor heute 1,3 % und fiel auf den tiefsten Stand seit Juli",
+   "bild": ""
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Grund: Anleger flüchten aus KI-Aktien.",
+   "text": "Grund: Anleger flüchten aus KI-Aktien",
+   "bild": ""
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Infineon war der größte Verlierer mit minus sechseinhalb Prozent.",
+   "text": "Infineon war der größte Verlierer mit minus 6,5 %",
+   "bild": ""
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Autowerte stiegen dagegen: Volkswagen plus viereinhalb, BMW plus dreieinhalb Prozent.",
+   "text": "Autowerte stiegen dagegen: Volkswagen plus 4,5 %, BMW plus 3,5 %",
+   "bild": ""
+  },
+  {
+   "id": "s7",
+   "sprechtext": "In den USA sackte die Technik-Börse Nasdaq zeitweise um rund vier Prozent ab.",
+   "text": "In den USA sackte die Technik-Börse Nasdaq zeitweise um rund 4 % ab",
+   "bild": ""
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Nvidia verlor dort zeitweise rund acht Prozent.",
+   "text": "Nvidia verlor dort zeitweise rund 8 %",
+   "bild": ""
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Merk dir: Wenn KI-Aktien fallen, zieht das den ganzen Markt runter.",
+   "text": "Merk dir: Wenn KI-Aktien fallen, zieht das den ganzen Markt runter",
+   "bild": ""
+  },
+  {
+   "id": "s10",
+   "sprechtext": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung.",
+   "text": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung",
+   "bild": ""
+  }
+ ]
+}
