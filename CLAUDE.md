@@ -66,6 +66,10 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
      Szene dann automatisch +2,5 s länger. **Shop-Hinweis als Karte mit Satz** („🛒 Den … gibt's in unserem Shop!
      Schau auf unserem 2. Kanal: HundeWissenTv 2.0“, `shop="Den Anti-Schling-Napf"`, Szene +1,5 s) **und die Stimme
      sagt es auch kurz** (z. B. „Diesen Napf findest du übrigens in unserem Shop auf HundeWissenTv 2.0.“).
+   - **Shop (Nutzer 25.11.):** Anti-Schling-Napf, Schnüffelteppich, Futterball sind im Shop. Shop-Account steht in der
+     **Beschreibung** → Stimme sagt „Link in der Beschreibung“. Pro Video **nur 1× aussprechen**, weitere Produkte nur Plakette.
+   - **CTAs verteilen (Nutzer 25.11.):** Kommentar- oder Teilen-Aufruf **früh** (im Einstieg vor dem Logo-Intro),
+     am Ende „Folg uns …“. Texte: `hundewissen/themen/01-schnellfresser-texte.md`.
 2. **HundeWissenTv 2.0**: ab Nov. 2026 **reiner TikTok-Shop-Kanal** (nur Hundesachen) → Skill `/shop-video`.
 3. **HundeFinanzTV**: Geld & Finanzen (faceless, animierte Grafiken) → Skill `/finanz-video`, `kanal.json`, `STIL.md`.
 
