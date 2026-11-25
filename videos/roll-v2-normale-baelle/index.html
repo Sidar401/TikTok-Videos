@@ -6,7 +6,7 @@
     <script src="assets/gsap.min.js"></script>
     <style>
       /* Studio-Stil HundeWissenTv 2.0 – erzeugt von scripts/shop_studio.py */
-      :root { --brand: #DB8622; --dark: #16181A; --ink: #1B1D1F; --soft: #F4EFE8; --ok: #2E9E62; --no: #D9534F;
+      :root { --brand: #DB8622; --dark: #16181A; --ink: #1B1D1F; --soft: #F3EDE3; --ok: #2E9E62; --no: #D9534F;
         --font: "Montserrat", sans-serif; }
       * { margin: 0; padding: 0; box-sizing: border-box; }
       html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
@@ -94,6 +94,12 @@
         background: rgba(219,134,34,0.5); }
       .typ-frage .unter { top: 1260px; }
 
+      #end2.orange { background: radial-gradient(circle at 50% 35%, #F3A64C 0%, #DB8622 55%, #B86A12 100%); }
+      #end2.orange #n-glow { background: radial-gradient(circle, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0) 65%); }
+      #end2.orange #n-badge span { background: #1B1D1F; }
+      #end2.orange #n-stars b { color: #FFE14D; }
+      #end2.orange #n-tap { background: #1B1D1F; box-shadow: 0 16px 50px rgba(0,0,0,0.35); }
+      #end2.orange #n-ring { border-color: #1B1D1F; }
       #e-cta .wg { width: 58px; height: 58px; vertical-align: -10px; stroke-width: 2.6; }
       .fotobox { position: absolute; left: 70px; top: 620px; width: 940px; height: 720px; border-radius: 40px; overflow: hidden;
         box-shadow: 0 30px 80px rgba(0,0,0,0.25); background: #fff; }
@@ -131,6 +137,12 @@
       #n-arrow path { fill: none; stroke: #fff; stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; }
       #n-ring { position: absolute; left: 168px; top: 1410px; width: 220px; height: 220px; margin: -110px 0 0 -110px;
         border: 8px solid var(--brand); border-radius: 50%; }
+      #end2.orange { background: radial-gradient(circle at 50% 35%, #F3A64C 0%, #DB8622 55%, #B86A12 100%); }
+      #end2.orange #n-glow { background: radial-gradient(circle, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0) 65%); }
+      #end2.orange #n-badge span { background: #1B1D1F; }
+      #end2.orange #n-stars b { color: #FFE14D; }
+      #end2.orange #n-tap { background: #1B1D1F; box-shadow: 0 16px 50px rgba(0,0,0,0.35); }
+      #end2.orange #n-ring { border-color: #1B1D1F; }
       #e-cta .wg { width: 58px; height: 58px; vertical-align: -10px; stroke-width: 2.6; }
       /* Endkarte */
       #end { position: absolute; inset: 0; z-index: 8;
@@ -163,23 +175,23 @@
   <body>
     <div id="root" data-composition-id="main" data-start="0" data-duration="20.00" data-width="1080" data-height="1920">
       <div id="scenes">
-        <div id="s1" class="clip scene bg-dunkel typ-titel" data-start="0.00" data-duration="3.00" data-track-index="1">
+        <div id="s1" class="clip scene bg-hell typ-titel" data-start="0.00" data-duration="3.00" data-track-index="1">
           <div class="bgfill"></div><div class="grain"></div>
           <div class="title"><span class="ln"><span class="lni">Hör auf, normale</span></span><span class="ln"><span class="lni">Bälle zu <em>kaufen</em>!</span></span></div>
           <img class="hund mitte" src="assets/hund-normaler-ball.png" alt="" />
         </div>
-        <div id="s2" class="clip scene bg-dunkel typ-vergleich" data-start="3.00" data-duration="5.00" data-track-index="1">
+        <div id="s2" class="clip scene bg-hell typ-vergleich" data-start="3.00" data-duration="5.00" data-track-index="1">
           <div class="bgfill"></div><div class="grain"></div>
           <div class="title"><span class="ln"><span class="lni">Normaler Ball</span></span><span class="ln"><span class="lni">vs. <em>dieser</em></span></span></div>
           <div class="vtab"><div class="vhead"><div></div><div class="vh a">Normaler Ball</div><div class="vh b"><img src="assets/produkt.png" alt="" />Dieser Ball</div></div><div class="vrow"><div class="vl">Rollt von allein</div><div class="vc a no"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></div><div class="vc b ok"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div></div><div class="vrow"><div class="vl">Zwitschert</div><div class="vc a no"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></div><div class="vc b ok"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div></div><div class="vrow"><div class="vl">Seile zum Zerren</div><div class="vc a no"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></div><div class="vc b ok"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div></div><div class="vrow"><div class="vl">Spielt ohne dich</div><div class="vc a no"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></div><div class="vc b ok"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div></div></div>
         </div>
-        <div id="s3" class="clip scene bg-dunkel typ-titel" data-start="8.00" data-duration="4.00" data-track-index="1">
+        <div id="s3" class="clip scene bg-hell typ-titel" data-start="8.00" data-duration="4.00" data-track-index="1">
           <div class="bgfill"></div><div class="grain"></div>
           <div class="title"><span class="ln"><span class="lni">Mit Seilen</span></span><span class="ln"><span class="lni">zum <em>Zerren</em></span></span></div>
           <img class="hund mitte" src="assets/hund-ball-zerren.png" alt="" />
           <div class="unter">Rollt &amp; zwitschert von allein</div>
         </div>
-        <div id="s4" class="clip scene bg-dunkel typ-titel" data-start="12.00" data-duration="4.00" data-track-index="1">
+        <div id="s4" class="clip scene bg-hell typ-titel" data-start="12.00" data-duration="4.00" data-track-index="1">
           <div class="bgfill"></div><div class="grain"></div>
           <div class="title"><span class="ln"><span class="lni">Perfekt für</span></span><span class="ln"><span class="lni"><em>kleine</em> Hunde</span></span></div>
           <img class="hund mitte" src="assets/hund-welpe-ball.png" alt="" />
@@ -187,7 +199,7 @@
         </div>
       </div>
 
-      <div id="end2" class="clip" data-start="16.00" data-duration="4.00" data-track-index="1" data-track-kind="graphics"><div id="n-glow"></div><div id="n-badge"><span>Bestseller</span></div><img id="n-prod" src="assets/produkt.png" alt="" /><div id="n-stars"><b>★★★★★</b> 4,0 · 12.800× verkauft</div><div id="n-price"><span>15,17 €</span></div><div id="n-tap">Hier tippen</div><div id="n-ring"></div><svg id="n-arrow" viewBox="0 0 1080 1920"><path class="sh" d="M600 1250 C 420 1270, 250 1300, 175 1400"/><path class="hd" d="M130 1330 L 168 1410 L 255 1395"/></svg></div>
+      <div id="end2" class="clip orange" data-start="16.00" data-duration="4.00" data-track-index="1" data-track-kind="graphics"><div id="n-glow"></div><div id="n-badge"><span>Bestseller</span></div><img id="n-prod" src="assets/produkt.png" alt="" /><div id="n-stars"><b>★★★★★</b> 4,0 · 12.800× verkauft</div><div id="n-price"><span>15,17 €</span></div><div id="n-tap">Hier tippen</div><div id="n-ring"></div><svg id="n-arrow" viewBox="0 0 1080 1920"><path class="sh" d="M600 1250 C 420 1270, 250 1300, 175 1400"/><path class="hd" d="M130 1330 L 168 1410 L 255 1395"/></svg></div>
       <div id="flash" class="clip" data-start="0" data-duration="20.00" data-track-index="3"></div>
     </div>
 

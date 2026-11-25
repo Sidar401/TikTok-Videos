@@ -196,7 +196,7 @@ def scene(i, s, t):
 
 def endkarte_pfeil(p, t, ende):
     """Endkarte: Produkt, Preis, „Hier tippen“ + Pfeil auf den TikTok-Produkt-Knopf unten links."""
-    div = (f'<div id="end2" class="clip" data-start="{t:.2f}" data-duration="{ende:.2f}" data-track-index="1" data-track-kind="graphics">'
+    div = (f'<div id="end2" class="clip{' orange' if p.get('endfarbe') == 'orange' else ''}" data-start="{t:.2f}" data-duration="{ende:.2f}" data-track-index="1" data-track-kind="graphics">'
            '<div id="n-glow"></div>'
            f'<div id="n-badge"><span>{html.escape(p.get("badge", "Bestseller"))}</span></div>'
            '<img id="n-prod" src="assets/produkt.png" alt="" />'
@@ -281,7 +281,7 @@ STUDIO = """<!doctype html>
     <script src="assets/gsap.min.js"></script>
     <style>
       /* Studio-Stil HundeWissenTv 2.0 – erzeugt von scripts/shop_studio.py */
-      :root { --brand: #DB8622; --dark: #16181A; --ink: #1B1D1F; --soft: #F4EFE8; --ok: #2E9E62; --no: #D9534F;
+      :root { --brand: #DB8622; --dark: #16181A; --ink: #1B1D1F; --soft: #F3EDE3; --ok: #2E9E62; --no: #D9534F;
         --font: "Montserrat", sans-serif; }
       * { margin: 0; padding: 0; box-sizing: border-box; }
       html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
@@ -369,6 +369,12 @@ STUDIO = """<!doctype html>
         background: rgba(219,134,34,0.5); }
       .typ-frage .unter { top: 1260px; }
 
+      #end2.orange { background: radial-gradient(circle at 50% 35%, #F3A64C 0%, #DB8622 55%, #B86A12 100%); }
+      #end2.orange #n-glow { background: radial-gradient(circle, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0) 65%); }
+      #end2.orange #n-badge span { background: #1B1D1F; }
+      #end2.orange #n-stars b { color: #FFE14D; }
+      #end2.orange #n-tap { background: #1B1D1F; box-shadow: 0 16px 50px rgba(0,0,0,0.35); }
+      #end2.orange #n-ring { border-color: #1B1D1F; }
       #e-cta .wg { width: 58px; height: 58px; vertical-align: -10px; stroke-width: 2.6; }
       .fotobox { position: absolute; left: 70px; top: 620px; width: 940px; height: 720px; border-radius: 40px; overflow: hidden;
         box-shadow: 0 30px 80px rgba(0,0,0,0.25); background: #fff; }
@@ -406,6 +412,12 @@ STUDIO = """<!doctype html>
       #n-arrow path { fill: none; stroke: #fff; stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; }
       #n-ring { position: absolute; left: 168px; top: 1410px; width: 220px; height: 220px; margin: -110px 0 0 -110px;
         border: 8px solid var(--brand); border-radius: 50%; }
+      #end2.orange { background: radial-gradient(circle at 50% 35%, #F3A64C 0%, #DB8622 55%, #B86A12 100%); }
+      #end2.orange #n-glow { background: radial-gradient(circle, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0) 65%); }
+      #end2.orange #n-badge span { background: #1B1D1F; }
+      #end2.orange #n-stars b { color: #FFE14D; }
+      #end2.orange #n-tap { background: #1B1D1F; box-shadow: 0 16px 50px rgba(0,0,0,0.35); }
+      #end2.orange #n-ring { border-color: #1B1D1F; }
       #e-cta .wg { width: 58px; height: 58px; vertical-align: -10px; stroke-width: 2.6; }
       /* Endkarte */{{END_CSS}}
     </style>

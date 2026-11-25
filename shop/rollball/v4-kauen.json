@@ -6,7 +6,8 @@
   "sterne": "4,0",
   "verkauft": "12.800× verkauft",
   "cta": "Hier tippen",
-  "badge": "Bestseller"
+  "badge": "Bestseller",
+  "endfarbe": "orange"
  },
  "ende": 4,
  "endkarte": "pfeil",
@@ -14,7 +15,7 @@
   {
    "typ": "titel",
    "dur": 3,
-   "bg": "dunkel",
+   "bg": "hell",
    "titel": "Warum kaut dein|Hund an *allem* herum?",
    "icon": "schuh",
    "hund": "schuh"
@@ -22,7 +23,7 @@
   {
    "typ": "titel",
    "dur": 3.5,
-   "bg": "dunkel",
+   "bg": "hell",
    "titel": "Oft ist es einfach|*Langeweile*",
    "icon": "uhr",
    "unter": "Gib ihm etwas Besseres zu tun",
@@ -31,7 +32,7 @@
   {
    "typ": "titel",
    "dur": 4.5,
-   "bg": "dunkel",
+   "bg": "hell",
    "titel": "Ein Stupser –|er *startet*",
    "hund": "ball-stupsen",
    "unter": "Rollt und zwitschert wie ein Vogel"
@@ -39,7 +40,7 @@
   {
    "typ": "liste",
    "dur": 5,
-   "bg": "dunkel",
+   "bg": "hell",
    "titel": "Dein Hund ist|*beschäftigt*",
    "punkte": [
     [

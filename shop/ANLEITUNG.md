@@ -55,3 +55,4 @@ Das Shop-Foto mit Hund (`shop/rollball/foto-hund.jpg`) wirkt zu sehr nach KI →
 - **Kein orangenes Unterstreichen.** Schlüsselwort stattdessen **orange in Fraunces kursiv** (wie HundeWissenTv „Schnellfresser!“).
 - **Keine Computer-Icons** (Uhr, Stern …) als große Bilder. Stattdessen den **Kanal-Hund (Australian Shepherd)** aus `brand/aussie/` (104 Bilder, `hund` in der Konfig).
 - Braucht ein Video ein anderes Bild (Stern, Uhr, Paket …): **Nutzer fragen** – er erstellt es mit ChatGPT.
+- **Hintergrund (Nutzer 25.11.): Creme** (`bg: hell`, Papierfarbe wie HundeWissenTv) – Schwarz war zu dunkel. Endkarte **orange** (`produkt.endfarbe: orange`).

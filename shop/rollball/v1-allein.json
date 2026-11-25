@@ -6,7 +6,8 @@
   "sterne": "4,0",
   "verkauft": "12.800× verkauft",
   "cta": "Hier tippen",
-  "badge": "Bestseller"
+  "badge": "Bestseller",
+  "endfarbe": "orange"
  },
  "ende": 4,
  "endkarte": "pfeil",
@@ -14,7 +15,7 @@
   {
    "typ": "titel",
    "dur": 3,
-   "bg": "dunkel",
+   "bg": "hell",
    "titel": "Dein Hund ist|*8 Stunden* allein!",
    "icon": "uhr",
    "hund": "gelangweilt"
@@ -22,7 +23,7 @@
   {
    "typ": "liste",
    "dur": 3.5,
-   "bg": "dunkel",
+   "bg": "hell",
    "titel": "Langeweile macht|Hunde *unruhig*",
    "punkte": [
     [
@@ -39,7 +40,7 @@
   {
    "typ": "titel",
    "dur": 4.5,
-   "bg": "dunkel",
+   "bg": "hell",
    "titel": "Dieser Ball|*spielt* mit ihm",
    "hund": "ball-jagen",
    "unter": "Ein Stupser – er rollt und zwitschert"
@@ -47,7 +48,7 @@
   {
    "typ": "zahl",
    "dur": 5,
-   "bg": "dunkel",
+   "bg": "hell",
    "titel": "So oft schon|*verkauft*",
    "wert": 12800,
    "nach": "×",
