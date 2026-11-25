@@ -1,0 +1,59 @@
+{
+ "titel": "Wachstum 0,1",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Wir sparen beim Essen! Und die Wirtschaft kommt kaum noch vom Fleck!",
+   "text": "Wir sparen beim Essen! Und die Wirtschaft kommt kaum noch vom Fleck",
+   "bild": ""
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Teile das Video mit deinen Freunden und folge uns, wir bringen jeden Tag neue Geld-Tipps!",
+   "text": "Teile das Video mit deinen Freunden und folge uns, wir bringen jeden Tag neue Geld-Tipps",
+   "bild": ""
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Im dritten Quartal ist Deutschland nur um null Komma eins Prozent gewachsen.",
+   "text": "Im dritten Quartal ist Deutschland nur um null Komma 1 % gewachsen",
+   "bild": ""
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Schauen wir uns das genau an.",
+   "text": "Schauen wir uns das genau an",
+   "bild": ""
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Die Verbraucher haben bei Essen und Sprit gespart.",
+   "text": "Die Verbraucher haben bei Essen und Sprit gespart",
+   "bild": ""
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Die Exporte sanken um ein Prozent, die Investitionen in Maschinen sogar um dreieinhalb Prozent.",
+   "text": "Die Exporte sanken um 1 %, die Investitionen in Maschinen sogar um 3,5 %",
+   "bild": ""
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Getragen wurde das Wachstum vor allem vom Staat.",
+   "text": "Getragen wurde das Wachstum vor allem vom Staat",
+   "bild": ""
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Merk dir: Wenn alle sparen, wächst die Wirtschaft kaum.",
+   "text": "Merk dir: Wenn alle sparen, wächst die Wirtschaft kaum",
+   "bild": ""
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung.",
+   "text": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung",
+   "bild": ""
+  }
+ ]
+}
