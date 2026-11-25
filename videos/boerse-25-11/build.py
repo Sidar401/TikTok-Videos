@@ -17,10 +17,14 @@ from analyse_kit import KIT_JS, laufband_szene  # noqa: E402
 from lf_kit import Kit  # noqa: E402
 
 G, R, D, O = nl.G, nl.R, nl.DUNKEL, nl.ORANGE
-K = Kit(HERE, 10, [])
+K = Kit(HERE, 10, [], logos=["infineon.svg", "vw.svg", "bmw.svg", "nasdaq.svg", "nvidia.svg"])
 cap, st = K.cap, K.st
 S = K.szene
 SFX_CTA = []
+
+
+def LG(f, h=64):
+    return f'<img src="assets/logos/{f}" style="height:{h}px;vertical-align:middle;margin-right:14px"/>'
 
 
 def titel(id_, text, y=340, farbe=D, gr=64):
@@ -58,15 +62,15 @@ S("s3", None, titel("t3", "Börse heute", 380, D, 66)
   + pille("p3", "Flucht aus KI-Aktien", 760, O, "#fff", 52) + CTA,
   lambda a, d: f'pop("#t3", {a}); pop("#k3", {a} + 0.15); pop("#r3a", {cap("s3", 1)}); pop("#p3", {cap("s4", 0)});' + cta_js, SFX_CTA, bis="s5")
 
-S("s5", None, titel("t5", "Größter Verlierer", 340, D, 64) + gross("n5", "Infineon", 470, D, 150) + gross("n5b", "−6,5 %", 650, R, 220),
+S("s5", None, titel("t5", "Größter Verlierer", 340, D, 64) + nl.logo_frei("n5", "infineon.svg", 190, 470, 700) + gross("n5b", "−6,5 %", 780, R, 220),
   lambda a, d: f'pop("#t5", {a}); pop("#n5", {a} + 0.15); pop("#n5b", {cap("s5", 1)});')
 
 S("s6", None, titel("t6", "Autowerte im Plus", 340, D, 64)
-  + nl.karte("k6", "Gewinner", nl.zeile("r6a", "Volkswagen", "+4,5 %", G, "▲") + nl.zeile("r6b", "BMW", "+3,5 %", G, "▲"), y=500),
+  + nl.karte("k6", "Gewinner", nl.zeile("r6a", LG("vw.svg") + " Volkswagen", "+4,5 %", G, "▲") + nl.zeile("r6b", LG("bmw.svg") + " BMW", "+3,5 %", G, "▲"), y=500),
   lambda a, d: f'pop("#t6", {a}); pop("#k6", {a} + 0.1); pop("#r6a", {cap("s6", 1)}); pop("#r6b", {cap("s6", 2)});')
 
 S("s7", None, titel("t7", "USA · zeitweise", 340, D, 64)
-  + nl.karte("k7", "Technik-Aktien", nl.zeile("r7a", "Nasdaq", "−4 %", R, f"<span style=\"color:{R}\">▼</span>") + nl.zeile("r7b", "Nvidia", "−8 %", R, f"<span style=\"color:{R}\">▼</span>"), y=500),
+  + nl.karte("k7", "Technik-Aktien", nl.zeile("r7a", LG("nasdaq.svg", 56), "−4 %", R, f"<span style=\"color:{R}\">▼</span>") + nl.zeile("r7b", LG("nvidia.svg", 56), "−8 %", R, f"<span style=\"color:{R}\">▼</span>"), y=500),
   lambda a, d: f'pop("#t7", {a}); pop("#k7", {a} + 0.1); pop("#r7a", {cap("s7", 2)}); pop("#r7b", {cap("s8", 0)} + 0.2);', bis="s9")
 
 
@@ -89,7 +93,7 @@ html, code = ls.szene(hell=True)
 K.SZ.append((T0, T0 + ls.DAUER, html, code, 7))
 K.SFX.extend(ls.sounds(T0))
 K.SZ.append(laufband_szene([("DAX ▼ −1,3 %", R), ("24.702", "#fff"), ("INFINEON ▼ −6,5 %", R), ("VW ▲ +4,5 %", G), ("BMW ▲ +3,5 %", G),
-                           ("NASDAQ ▼ ≈ −4 %", R), ("NVIDIA ▼ ≈ −8 %", R)], K.dauer, top=1640))
+                           ("NASDAQ ▼ ≈ −4 %", R), ("NVIDIA ▼ ≈ −8 %", R)], K.dauer, top=1560))
 K.SZ.append((0.0, K.dauer, nl.kopf("NEWS", "25.11.2026"), lambda a, d: "", 8))
 
 if __name__ == "__main__":
