@@ -50,3 +50,5 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
 - Higgsfield nur für Kanal 2 (siehe oben), sonst nicht (kostet Credits)
 
 - **Cover-Anzahl (Nutzer 25.11.):** ab sofort nur noch **2 Cover** pro Video (`<name>-A.jpg`, `<name>-B.jpg`, Favorit zusätzlich als `<name>-tiktok.jpg`), nicht mehr 3. Ersetzt „3 Varianten“.
+
+- **Börsen-Laufband beim Abend-Börsenrückblick (Nutzer 25.11.):** IMMER eine kleine Kurs-Leiste (Laufband) unten, über die ganze Länge, mit den geprüften Werten des Tages (Dax, Einzelwerte, USA). `laufband_szene` aus `scripts/analyse_kit.py`, `top≈1620`, unter den Untertiteln. Beim Mittags-Short nur bei echten Kursbewegungen.

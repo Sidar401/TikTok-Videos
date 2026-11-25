@@ -13,7 +13,7 @@ T0 = ls.einfuegen(HERE, next(s["end"] for s in _t["saetze"] if s["id"] == "s4") 
 
 import glow_short as gs  # noqa: E402
 import news_look as nl  # noqa: E402
-from analyse_kit import KIT_JS  # noqa: E402
+from analyse_kit import KIT_JS, laufband_szene  # noqa: E402
 from lf_kit import Kit  # noqa: E402
 
 G, R, D, O = nl.G, nl.R, nl.DUNKEL, nl.ORANGE
@@ -88,6 +88,8 @@ K.SFX.extend([(0.05, "bass-schlag"), (cap("s2", 1), "klick"), (cap("s5", 1), "ku
 html, code = ls.szene(hell=True)
 K.SZ.append((T0, T0 + ls.DAUER, html, code, 7))
 K.SFX.extend(ls.sounds(T0))
+K.SZ.append(laufband_szene([("DAX ▼ −1,3 %", R), ("24.702", "#fff"), ("INFINEON ▼ −6,5 %", R), ("VW ▲ +4,5 %", G), ("BMW ▲ +3,5 %", G),
+                           ("NASDAQ ▼ ≈ −4 %", R), ("NVIDIA ▼ ≈ −8 %", R)], K.dauer, top=1640))
 K.SZ.append((0.0, K.dauer, nl.kopf("NEWS", "25.11.2026"), lambda a, d: "", 8))
 
 if __name__ == "__main__":
