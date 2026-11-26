@@ -77,7 +77,7 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
      Bild (z. B. links Spalte x=60, Bild rechts px≈780), Chips über dem Hund statt daneben.
    - **Videos mit Stimme:** `sprechtext.txt` (eine Szene pro Zeile) → `hundewissen/stimme.py` → `zeilen.json` →
      `hundewissen/plan_voice.py` (Logo-Pause, Kommentar-/Teilen-Zeit) → Szenen in `bau_einfach.py` → prüfen → rendern.
-     Fertig: `renders/hw-schnellfresser-teil1.mp4`.
+     Fertig (26.11.): Schnellfresser Teil 1–3 `renders/hw-schnellfresser-teil{1,2,3}.mp4` + `renders/thumbnails/hw-schnellfresser-teil{1,2,3}-cover.jpg`.
    - **Thumbnails (Nutzer 26.11.):** 1080×1920 als **JPEG** (~200–300 KB, nicht PNG) per `hundewissen/cover.py`.
      Alles Wichtige im **mittleren 4:5-Bereich (y 285–1635)**, Titel zwischen y 400–1500 (wie Novaro-Regel 16.11.:
      Profil-Raster zeigt nur 3:4 = y 240–1680). Kein Untertitel-Satz unter dem Titel (Nutzer 26.11.).

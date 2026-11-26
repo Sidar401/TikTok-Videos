@@ -189,10 +189,26 @@ VIDEOS = {
         dict(h='Welchen Tipp <i>probierst du?</i>', size=104, pose='nachdenken', ph=540, caps=[]),
         dict(h='In Teil 3: <i>Der große Test.</i>', size=104, pose='themen/stoppuhr', ph=480, caps=[]),
     ],
+    "hw-schnellfresser-teil3": [
+        dict(h='Schnellfresser? <i>Mach den Test!</i>', size=104, pose='themen/stoppuhr', ph=520, caps=[]),
+        dict(h='Teil 3: <i>Der Schnellfresser-Test.</i>', size=96, pose='gierig', ph=520, caps=[]),
+        dict(h='Teile das Video <i>mit Freunden!</i>', size=104, pose='winkend', ph=560, caps=[]),
+        dict(h='Napf füllen, <i>Uhr starten.</i>', size=110, pose='themen/napf-voll', ph=330, px=400, caps=[], bilder=[('themen/stoppuhr', 300, 840, 1100)]),
+        dict(h='In Sekunden leer? <i>Schnellfresser!</i>', size=100, pose='schlingt', ph=560, caps=[]),
+        dict(h='Zeichen 1: <i>Er würgt oft.</i>', size=110, pose='wuergt', ph=580, caps=[]),
+        dict(h='Zeichen 2: <i>Dicker Bauch.</i>', size=110, pose='aufgeblaeht', ph=600, caps=[]),
+        dict(h='Zeichen 3: <i>Bettelt sofort weiter.</i>', size=100, pose='bettelnd', ph=580, caps=[]),
+        dict(h='Erkennst du <i>deinen Hund?</i>', size=110, pose='themen/magen-luft', ph=480, px=790, caps=[], infos=[('Er schluckt viel <b>Luft</b>', 60, 950), ('Kann <b>gefährlich</b> werden', 60, 1110)]),
+        dict(h='Die Lösung: <i>Futterball!</i>', size=110, pose='themen/shop-futterball', ph=520, caps=[], infos=[('Fressen wird zum <b>Spiel</b>', 280, 740)]),
+        dict(h='Gibt\'s in <i>unserem Shop!</i>', size=110, pose='ball', ph=520, caps=[], shop='Den Futterball'),
+        dict(h='Alles in <i>Teil 1 und 2.</i>', size=110, pose='zeigend', ph=580, caps=[]),
+        dict(h='Wie schnell ist <i>deiner?</i>', size=110, pose='pfote-oben', ph=540, caps=[]),
+    ],
 }
 
 # Kommentar-Aufruf am Ende der letzten Szene: (getippter Text, Banner)
 KOMMENTAR = {
+    "hw-schnellfresser-teil3": ("Meiner: 20 Sekunden", "WIE SCHNELL IST DEINER? <b>KOMMENTIER!</b>"),
     "hw-schnellfresser-teil2": ("Ich probier Tipp 3!", "WELCHER TIPP? <b>AB IN DIE KOMMENTARE</b>"),
     "hw-schnellfresser-teil1": ("Meiner schlingt auch!", "SCHREIB'S IN DIE <b>KOMMENTARE</b>"),
     "hw-p1-schnellfresser": ("Meiner schlingt auch!", "SCHREIB'S IN DIE <b>KOMMENTARE</b>"),
