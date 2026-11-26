@@ -75,7 +75,10 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
      Bild (z. B. links Spalte x=60, Bild rechts px≈780), Chips über dem Hund statt daneben.
    - **Videos mit Stimme:** `sprechtext.txt` (eine Szene pro Zeile) → `hundewissen/stimme.py` → `zeilen.json` →
      `hundewissen/plan_voice.py` (Logo-Pause, Kommentar-/Teilen-Zeit) → Szenen in `bau_einfach.py` → prüfen → rendern.
-     Fertig: `renders/hw-schnellfresser-teil1.mp4` + `-cover.png`.
+     Fertig: `renders/hw-schnellfresser-teil1.mp4`.
+   - **Thumbnails (Nutzer 26.11.):** 1080×1920 als **JPEG** (~200–300 KB, nicht PNG) per `hundewissen/cover.py`.
+     Alles Wichtige im **mittleren 4:5-Bereich (y 285–1635)** – Instagram/TikTok-Profil schneidet oben/unten ab.
+     Text nie über Hund/Bild. Pro Video 3 Vorschläge, Nutzer wählt. Ablage: `renders/thumbnails/`.
 2. **HundeWissenTv 2.0**: ab Nov. 2026 **reiner TikTok-Shop-Kanal** (nur Hundesachen) → Skill `/shop-video`.
 3. **HundeFinanzTV**: Geld & Finanzen (faceless, animierte Grafiken) → Skill `/finanz-video`, `kanal.json`, `STIL.md`.
 
