@@ -182,7 +182,7 @@ VIDEOS = {
         dict(h='Schick das Video <i>weiter!</i>', size=110, pose='freudig', ph=520, caps=[]),
         dict(h='Tipp 1: <i>Anti-Schling-Napf.</i>', size=100, pose='antischling-frisst', ph=580, caps=[]),
         dict(h='Gibt\'s in <i>unserem Shop!</i>', size=110, pose='themen/shop-antischling-napf', ph=380, caps=[], shop='Den Anti-Schling-Napf'),
-        dict(h='Tipp 2: <i>Schnüffelteppich.</i>', size=100, pose='themen/shop-schnueffelteppich', ph=360, caps=[], shopbtn=True, infos=[('Futter mit der <b>Nase</b> suchen', 60, 760), ('Macht <b>langsam</b> und müde', 560, 760)]),
+        dict(h='Tipp 2: <i>Schnüffelteppich.</i>', size=100, pose='themen/shop-schnueffelteppich', ph=360, caps=[], shop='Den Schnüffelteppich', infos=[('Futter mit der <b>Nase</b> suchen', 60, 760), ('Macht <b>langsam</b> und müde', 560, 760)]),
         dict(h='Tipp 3: <i>Muffinblech.</i>', size=116, pose='themen/muffinblech', ph=320, caps=[], infos=[('<b>0 €</b> – hast du schon zuhause', 270, 760)]),
         dict(h='Tipp 4: <i>Kleinere Portionen.</i>', size=100, pose='themen/portionen', ph=480, caps=[], infos=[('<b>2–3</b> kleine statt <b>1</b> große', 260, 740)]),
         dict(h='Tipp 5: <i>Ruhe nach dem Fressen.</i>', size=96, pose='korb', ph=350, px=770, caps=[], infos=[('Mind. <b>1 Stunde</b> kein Toben', 60, 1040), ('Schont den <b>Magen</b>', 60, 1180)]),
@@ -230,7 +230,7 @@ def shopk(sz):
         return ""
     ding = sz["shop"] if isinstance(sz["shop"], str) else "Das"
     return (f'<div class="shopk"><img src="assets/beagle.png" alt="" /><div>🛒 {ding} gibt\'s in unserem Shop!'
-            f'<small>👇 Link in der Beschreibung · HundeWissenTv 2.0</small></div></div>')
+            f'<small>👇 In der Beschreibung: @HundeWissenTv 2.0</small></div></div>')
 
 
 def sfx(ziel, dur, tick_at, pops):

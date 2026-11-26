@@ -30,9 +30,9 @@ Kennst du jemanden, dessen Hund auch schlingt? Dann schick ihm dieses Video. [T]
 [LOGO-INTRO]
 Tipp eins: ein Anti-Schling-Napf.
 Die Rillen im Napf bremsen ihn, er muss jedes Stück einzeln herausholen.
-Diesen Napf gibt es in unserem Shop. Den Link findest du direkt in der Beschreibung. [SHOP]
+Diesen Napf gibt es in unserem Shop. Tipp in der Beschreibung einfach auf unseren Account HundeWissenTv zwei Punkt null. [SHOP]
 Tipp zwei: ein Schnüffelteppich. [SHOP-BTN]
-Hier muss er das Futter erst mit der Nase suchen. Das macht langsam und richtig müde.
+Hier muss er das Futter erst mit der Nase suchen. Das macht langsam und richtig müde. Und auch den Schnüffelteppich findest du in unserem Shop.
 Tipp drei: das Muffinblech aus deiner Küche.
 Verteil das Futter in den Mulden. Fertig ist der Spar-Trick.
 Tipp vier: Füttere lieber zwei bis drei kleine Portionen statt einer großen.
@@ -56,7 +56,7 @@ Zeichen drei: Er bettelt sofort weiter, obwohl er gerade gefressen hat.
 Erkennst du deinen Hund wieder? Dann handle jetzt.
 Denn beim Schlingen schluckt er viel Luft, und das kann im schlimmsten Fall gefährlich werden.
 Die gute Nachricht: Mit einem Futterball wird Fressen zum Spiel.
-Den Futterball gibt es in unserem Shop. Link in der Beschreibung. [SHOP]
+Den Futterball gibt es in unserem Shop. Tipp in der Beschreibung einfach auf unseren Account HundeWissenTv zwei Punkt null. [SHOP]
 Alle Gefahren und Tipps findest du in Teil eins und zwei auf unserem Kanal.
 Wie viele Sekunden braucht dein Hund? Schreib's in die Kommentare. [K]
 Folg uns für mehr Hundewissen. [F]

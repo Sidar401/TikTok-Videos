@@ -67,7 +67,9 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
      Schau auf unserem 2. Kanal: HundeWissenTv 2.0“, `shop="Den Anti-Schling-Napf"`, Szene +1,5 s) **und die Stimme
      sagt es auch kurz** (z. B. „Diesen Napf findest du übrigens in unserem Shop auf HundeWissenTv 2.0.“).
    - **Shop (Nutzer 25.11.):** Anti-Schling-Napf, Schnüffelteppich, Futterball sind im Shop. Shop-Account steht in der
-     **Beschreibung** → Stimme sagt „Link in der Beschreibung“. Pro Video **nur 1× aussprechen**, weitere Produkte nur Plakette.
+     **Beschreibung** (dort steht nur der **Account-Name HundeWissenTv 2.0**, kein Produkt-Link) → Stimme sagt
+     „Tipp in der Beschreibung einfach auf unseren Account HundeWissenTv zwei Punkt null“. Weitere Shop-Produkte im
+     selben Video kurz erwähnen („Und auch den … findest du in unserem Shop.“) – Nutzer 26.11.: geht klar.
    - **CTAs verteilen (Nutzer 25.11.):** Kommentar- oder Teilen-Aufruf **früh** (im Einstieg vor dem Logo-Intro),
      am Ende „Folg uns …“. Texte: `hundewissen/themen/01-schnellfresser-texte.md`.
    - **PFLICHT vor jedem Rendern (Nutzer 26.11.):** `node hundewissen/pruefen.js videos/<name>` – jeder Text komplett
