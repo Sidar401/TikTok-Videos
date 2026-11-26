@@ -50,6 +50,13 @@ def von_nach(a, b, einheit, gr=118):
             f'<div style="font-weight:700;font-size:44px;color:#cbd5e1;margin-top:16px">{einheit}</div>')
 
 
+def pfeil(y, d=150):
+    """Oranger Pfeil nach rechts (Nutzer 26.11.: statt „Weiter wischen“). d=150 → rechts unten; d>=240 → mittig (Thumbnail)."""
+    x = (1080 - d) // 2 if d >= 240 else 1080 - d - 90
+    return (f'<div style="position:absolute;left:{x}px;top:{y}px;width:{d}px;height:{d}px;border-radius:50%;background:{O};box-shadow:0 0 50px {O}aa;z-index:6;display:flex;align-items:center;justify-content:center">'
+            f'<svg viewBox="0 0 100 100" style="width:{d*0.6:.0f}px;height:{d*0.6:.0f}px"><path d="M12 50 H78 M52 22 L80 50 L52 78" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/></svg></div>')
+
+
 def laufband(t, y=1600):
     return (f'<div style="position:absolute;left:0;top:{y}px;width:1080px;height:90px;background:#0b0d0ef2;border-top:4px solid {G}77;border-bottom:4px solid {G}77;z-index:6;'
             f'overflow:hidden;white-space:nowrap;font-family:monospace;font-weight:700;font-size:48px;line-height:82px;color:{ROT}">{t}</div>')
