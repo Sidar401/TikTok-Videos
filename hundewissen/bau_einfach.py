@@ -162,10 +162,25 @@ VIDEOS = {
         dict(h='Tipp 4: <i>Futter suchen lassen.</i>', size=96, pose='schnueffelteppich-frisst', ph=540, caps=['futter im <b>schnüffelteppich</b> verstecken', 'das macht ihn <b>langsam und satt</b>'], shop='Den Schnüffelteppich'),
         dict(h='Ruhig fressen = <i>gesund fressen.</i>', size=96, pose='antischling-frisst', ph=560, caps=['so frisst er <b>langsamer</b>', 'und viel <b>gesünder</b>']),
     ],
+    "hw-schnellfresser-teil1": [
+        dict(h='Dein Hund frisst in <i>10 Sekunden?</i>', size=104, pose='schlingt', ph=560, caps=[]),
+        dict(h='Schlingen ist <i>gefährlicher,</i> als du denkst.', size=96, pose='themen/warnung', ph=420, caps=[]),
+        dict(h='Schlingt deiner <i>auch?</i>', size=116, pose='gierig', ph=520, caps=[]),
+        dict(h='Teil 1: <i>Die Gefahr beim Schlingen.</i>', size=96, pose='aufmerksam', ph=600, caps=[]),
+        dict(h='Er schluckt dabei <i>viel Luft.</i>', size=110, pose='themen/magen-luft', ph=560, caps=[], infos=[('Luft + Futter = <b>Blähbauch</b>', 70, 830), ('Magen bläht sich auf wie ein <b>Ballon</b>', 560, 1050), ('Kann <b>Schmerzen</b> machen', 70, 1270)]),
+        dict(h='Die Folge: <i>Bauchweh.</i>', size=116, pose='aufgeblaeht', ph=600, caps=[], infos=[('<b>Blähungen</b>', 90, 900), ('Fühlt sich <b>unwohl</b>', 680, 1120)]),
+        dict(h='Oft würgt er <i>alles wieder hoch.</i>', size=100, pose='wuergt', ph=580, caps=[]),
+        dict(h='Im schlimmsten Fall: <i>Magendrehung.</i>', size=96, pose='themen/magen-verdreht', ph=540, caps=[], px=470, bilder=[('themen/warnung', 210, 850, 830)], infos=[('Magen <b>dreht sich</b>', 60, 1190), ('Blut wird <b>abgeschnürt</b>', 560, 1130), ('Nur eine <b>OP</b> hilft', 600, 1290)]),
+        dict(h='Besonders gefährdet: <i>große Hunde.</i>', size=100, pose='themen/dogge', ph=600, px=340, caps=[], bilder=[('themen/schaeferhund', 500, 770, 900)], infos=[('<b>Doggen</b>', 120, 1420), ('<b>Schäferhunde</b>', 640, 1420)]),
+        dict(h='Achte auf diese <i>Notfall-Zeichen.</i>', size=100, pose='zittert', ph=400, px=760, caps=[], extra='<div class="chip x" style="top:860px">🎈 Dicker, harter Bauch</div><div class="chip x" style="top:990px">🤢 Würgen, aber nichts kommt</div><div class="chip x" style="top:1120px">😰 Große Unruhe</div>'),
+        dict(h='Jede Minute zählt: <i>sofort zum Tierarzt!</i>', size=96, pose='themen/tierarzt-koffer', ph=420, caps=[]),
+        dict(h='In Teil 2: <i>So frisst er langsamer.</i>', size=96, pose='antischling-frisst', ph=580, caps=[]),
+    ],
 }
 
 # Kommentar-Aufruf am Ende der letzten Szene: (getippter Text, Banner)
 KOMMENTAR = {
+    "hw-schnellfresser-teil1": ("Meiner schlingt auch!", "SCHREIB'S IN DIE <b>KOMMENTARE</b>"),
     "hw-p1-schnellfresser": ("Meiner schlingt auch!", "SCHREIB'S IN DIE <b>KOMMENTARE</b>"),
     "hw-p2-test": ("Meiner braucht 20 Sekunden", "WIE SCHNELL IST DEINER? <b>KOMMENTIER!</b>"),
     "hw-s1-problem": ("Meiner schlingt auch!", "SCHREIB'S IN DIE <b>KOMMENTARE</b>"),
@@ -233,6 +248,13 @@ def kommentar_sound(ziel, dur, a, n):
     tick(a + 0.5 + n * 0.08 + 0.9, 0.6, 900)
     sf.write(ziel, (y / max(1e-6, np.abs(y).max()) * 0.5).astype("float32"), sr)
 
+# Videos mit Stimme: Zeiten je Szene (aus hundewissen/plan_voice.py)
+PLAENE = {}
+_pl = ROOT / "hundewissen" / "plaene.json"
+if _pl.exists():
+    import json as _j
+    PLAENE = _j.loads(_pl.read_text())
+
 HTML = """<!doctype html>
 <html lang="de" data-resolution="portrait">
   <head>
@@ -290,22 +312,26 @@ def bau(name):
         (d / "assets" / f).write_bytes((ROOT / "hundewissen/magazin" / f).read_bytes())
     (d / "assets/themen").mkdir(exist_ok=True)
     sz_list = VIDEOS[name]
-    if len(sz_list) == 3:
-        zeiten, schluss, dur = T, SCHLUSS, DUR
-    else:  # längere Videos: je Szene 4,5 s, Schluss 3 s
-        zeiten, t = [], 0.0
-        for sz in sz_list:
-            l = 4.5 + sz.get("plus", 2.5 if sz.get("infos") else 0) + (1.5 if sz.get("shop") else 0)
-            zeiten.append((round(t, 2), round(t + l, 2))); t += l
-        schluss = zeiten[-1][1]; dur = schluss + 3
-    t_intro = None
-    if name in INTRO and len(zeiten) > 1:
-        t_intro = zeiten[0][1]
-        zeiten = [zeiten[0]] + [(round(a + INTRO_DAUER, 2), round(b + INTRO_DAUER, 2)) for a, b in zeiten[1:]]
-        schluss += INTRO_DAUER; dur += INTRO_DAUER
+    plan = PLAENE.get(name)
     kom = KOMMENTAR.get(name)
-    if kom:
-        schluss += KOM_DAUER; dur += KOM_DAUER
+    if plan:  # mit Stimme: Zeiten kommen aus der Sprachaufnahme
+        zeiten, t_intro, schluss, dur = plan["zeiten"], plan.get("t_intro"), plan["schluss"], plan["dur"]
+    else:
+        if len(sz_list) == 3:
+            zeiten, schluss, dur = T, SCHLUSS, DUR
+        else:  # längere Videos: je Szene 4,5 s, Schluss 3 s
+            zeiten, t = [], 0.0
+            for sz in sz_list:
+                l = 4.5 + sz.get("plus", 2.5 if sz.get("infos") else 0) + (1.5 if sz.get("shop") else 0)
+                zeiten.append((round(t, 2), round(t + l, 2))); t += l
+            schluss = zeiten[-1][1]; dur = schluss + 3
+        t_intro = None
+        if name in INTRO and len(zeiten) > 1:
+            t_intro = zeiten[0][1]
+            zeiten = [zeiten[0]] + [(round(a + INTRO_DAUER, 2), round(b + INTRO_DAUER, 2)) for a, b in zeiten[1:]]
+            schluss += INTRO_DAUER; dur += INTRO_DAUER
+        if kom:
+            schluss += KOM_DAUER; dur += KOM_DAUER
     def img(n):
         if "/" in n:
             (d / "assets" / f"{n}.png").write_bytes(bildpfad(n).read_bytes())
@@ -344,17 +370,27 @@ def bau(name):
             js.append(f'      tl.fromTo("#s{i} .info{k}", {{ scale: 0, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(3)" }}, {ti:.2f});')
             pops.append(ti)
         js.append(f'      tl.fromTo("#x{i} .x", {{ y: 30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.5, stagger: 0.35, ease: "power3.out" }}, {a + 1.4});')
-    sc = [f'["#s{i}", {a}, {(t_intro if (t_intro and i == 1) else b) if i < len(zeiten) else schluss + 0.2}]' for i, (a, b) in enumerate(zeiten, 1)]
+    if plan:
+        sc = [f'["#s{i}", {a}, {b if i < len(zeiten) else schluss + 0.2}]' for i, (a, b) in enumerate(zeiten, 1)]
+    else:
+        sc = [f'["#s{i}", {a}, {(t_intro if (t_intro and i == 1) else b) if i < len(zeiten) else schluss + 0.2}]' for i, (a, b) in enumerate(zeiten, 1)]
     js.insert(0, f'      scenes([{", ".join(sc)}]);')
     komhtml = komjs = ""; tick_at = None
     if kom:
-        ka = zeiten[-1][1] + 0.2; n = len(kom[0])
+        ka = plan["ka"] if plan and "ka" in plan else zeiten[-1][1] + 0.2; n = len(kom[0])
         komhtml = "      " + kommentar_html(kom[0]) + f'<div id="co-bn"><span>{kom[1]}</span></div>'
         tick_at = (ka, n)
         komjs = f"      kommentar({ka}, {n});"
     if tick_at or pops:
         sfx(d / "assets/cta.wav", dur, tick_at, pops)
         komhtml += f'\n      <audio id="ctasnd" src="assets/cta.wav" data-start="0" data-duration="{dur}" data-track-index="5" data-volume="0.7"></audio>'
+    if plan:
+        komhtml += f'\n      <audio id="voice" src="assets/voice.wav" data-start="0" data-duration="{dur}" data-track-index="4"></audio>'
+        if plan.get("teil"):
+            komhtml += f'\n      <div id="teil">{plan["teil"]}</div>'
+        if plan.get("teilen"):
+            komhtml += f'\n      <div id="teilen"><span>📤 Teile das Video mit Freunden!</span></div>'
+            komjs += f'\n      teilen({plan["teilen"]});'
     if t_intro is not None:
         (d / "assets/logo-jingle.mp3").write_bytes((ROOT / "hundewissen/magazin/logo-jingle.mp3").read_bytes())
         komhtml += (f'\n      <div id="ls-bg"></div><div id="ls-ring"></div><div id="ls-logo"><img src="assets/beagle.png" alt="" /></div>'

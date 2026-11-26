@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" />
+<script src="assets/gsap.min.js"></script><link rel="stylesheet" href="assets/magazin.css" />
+<style>
+ .c-h { position:absolute; left:60px; right:60px; top:420px; text-align:center; font-family:"FR"; font-weight:900; font-size:150px; line-height:0.95; letter-spacing:-3px; }
+ .c-h i { color:#db8622; font-style:italic; }
+ .badge { position:absolute; left:0; width:1080px; top:250px; text-align:center; }
+ .badge span { display:inline-block; background:#db8622; color:#fff; font-family:"IN"; font-weight:900; font-size:52px; padding:12px 40px 16px; border-radius:50px; letter-spacing:2px; }
+ .dog { position:absolute; left:210px; top:1170px; width:660px; filter: drop-shadow(0 30px 30px #0003); }
+ .warn { position:absolute; left:800px; top:1180px; width:210px; transform:rotate(10deg); }
+ .sub { position:absolute; left:0; width:1080px; top:1050px; text-align:center; font-family:"IN"; font-weight:800; font-size:56px; }
+ .sub b { color:#d23c3c; }
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="1" data-width="1080" data-height="1920">
+ <div class="badge"><span>TEIL 1 VON 3</span></div>
+ <div class="c-h">Ist dein Hund ein <i>Schnell&shy;fresser?</i></div>
+ <img class="dog" src="assets/aussie/schlingt.png" alt="" />
+ <img class="warn" src="assets/warnung.png" alt="" />
+ <div class="sub">Das kann <b>gefährlich</b> werden!</div>
+ <div id="grain"></div><div id="frame"></div>
+</div>
+<script>const tl=gsap.timeline({paused:true});window.__timelines=window.__timelines||{};window.__timelines["main"]=tl;tl.to({}, {duration:0.01}, 0.99);</script>
+</body></html>

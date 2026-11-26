@@ -56,3 +56,9 @@ const logoIntro = (a, d = 3) => {
   tl.to(["#ls-logo", "#ls-txt"], { scale: 1.02, duration: 1.2, ease: "none" }, a + 1.4);
   tl.to(["#ls-logo", "#ls-txt"], { opacity: 0, duration: 0.2 }, a + d - 0.2);
 };
+// Teilen-Aufruf (dunkle Pille unten, wackelt kurz)
+const teilen = (a) => {
+  tl.fromTo("#teilen", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "back.out(2)" }, a);
+  tl.to("#teilen span", { rotation: 3, duration: 0.12, yoyo: true, repeat: 7, ease: "sine.inOut" }, a + 0.5);
+  tl.to("#teilen", { opacity: 0, duration: 0.3 }, a + 3.6);
+};
