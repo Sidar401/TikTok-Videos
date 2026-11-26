@@ -77,7 +77,8 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
      `hundewissen/plan_voice.py` (Logo-Pause, Kommentar-/Teilen-Zeit) → Szenen in `bau_einfach.py` → prüfen → rendern.
      Fertig: `renders/hw-schnellfresser-teil1.mp4`.
    - **Thumbnails (Nutzer 26.11.):** 1080×1920 als **JPEG** (~200–300 KB, nicht PNG) per `hundewissen/cover.py`.
-     Alles Wichtige im **mittleren 4:5-Bereich (y 285–1635)** – Instagram/TikTok-Profil schneidet oben/unten ab.
+     Alles Wichtige im **mittleren 4:5-Bereich (y 285–1635)**, Titel zwischen y 400–1500 (wie Novaro-Regel 16.11.:
+     Profil-Raster zeigt nur 3:4 = y 240–1680). Kein Untertitel-Satz unter dem Titel (Nutzer 26.11.).
      Text nie über Hund/Bild. Pro Video 3 Vorschläge, Nutzer wählt. Ablage: `renders/thumbnails/`.
 2. **HundeWissenTv 2.0**: ab Nov. 2026 **reiner TikTok-Shop-Kanal** (nur Hundesachen) → Skill `/shop-video`.
 3. **HundeFinanzTV**: Geld & Finanzen (faceless, animierte Grafiken) → Skill `/finanz-video`, `kanal.json`, `STIL.md`.
