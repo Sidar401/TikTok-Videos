@@ -167,12 +167,12 @@ VIDEOS = {
         dict(h='Schlingen ist <i>gefährlicher,</i> als du denkst.', size=96, pose='themen/warnung', ph=420, caps=[]),
         dict(h='Schlingt deiner <i>auch?</i>', size=116, pose='gierig', ph=520, caps=[]),
         dict(h='Teil 1: <i>Die Gefahr beim Schlingen.</i>', size=96, pose='aufmerksam', ph=600, caps=[]),
-        dict(h='Er schluckt dabei <i>viel Luft.</i>', size=110, pose='themen/magen-luft', ph=560, caps=[], infos=[('Luft + Futter = <b>Blähbauch</b>', 70, 830), ('Magen bläht sich auf wie ein <b>Ballon</b>', 560, 1050), ('Kann <b>Schmerzen</b> machen', 70, 1270)]),
-        dict(h='Die Folge: <i>Bauchweh.</i>', size=116, pose='aufgeblaeht', ph=600, caps=[], infos=[('<b>Blähungen</b>', 90, 900), ('Fühlt sich <b>unwohl</b>', 680, 1120)]),
+        dict(h='Er schluckt dabei <i>viel Luft.</i>', size=110, pose='themen/magen-luft', ph=480, px=790, caps=[], infos=[('Luft + Futter = <b>Blähbauch</b>', 60, 900), ('Bläht sich auf wie ein <b>Ballon</b>', 60, 1060), ('Kann <b>Schmerzen</b> machen', 60, 1220)]),
+        dict(h='Die Folge: <i>Bauchweh.</i>', size=116, pose='aufgeblaeht', ph=560, px=770, caps=[], infos=[('<b>Blähungen</b>', 60, 1000), ('Fühlt sich <b>unwohl</b>', 60, 1160)]),
         dict(h='Oft würgt er <i>alles wieder hoch.</i>', size=100, pose='wuergt', ph=580, caps=[]),
-        dict(h='Im schlimmsten Fall: <i>Magendrehung.</i>', size=96, pose='themen/magen-verdreht', ph=540, caps=[], px=470, bilder=[('themen/warnung', 210, 850, 830)], infos=[('Magen <b>dreht sich</b>', 60, 1190), ('Blut wird <b>abgeschnürt</b>', 560, 1130), ('Nur eine <b>OP</b> hilft', 600, 1290)]),
+        dict(h='Im schlimmsten Fall: <i>Magendrehung.</i>', size=96, pose='themen/magen-verdreht', ph=480, px=790, caps=[], infos=[('Magen <b>dreht sich</b>', 60, 900), ('Blut wird <b>abgeschnürt</b>', 60, 1060), ('Nur eine <b>OP</b> hilft', 60, 1220)]),
         dict(h='Besonders gefährdet: <i>große Hunde.</i>', size=100, pose='themen/dogge', ph=600, px=340, caps=[], bilder=[('themen/schaeferhund', 500, 770, 900)], infos=[('<b>Doggen</b>', 120, 1420), ('<b>Schäferhunde</b>', 640, 1420)]),
-        dict(h='Achte auf diese <i>Notfall-Zeichen.</i>', size=100, pose='zittert', ph=400, px=760, caps=[], extra='<div class="chip x" style="top:860px">🎈 Dicker, harter Bauch</div><div class="chip x" style="top:990px">🤢 Würgen, aber nichts kommt</div><div class="chip x" style="top:1120px">😰 Große Unruhe</div>'),
+        dict(h='Achte auf diese <i>Notfall-Zeichen.</i>', size=100, pose='zittert', ph=380, px=540, caps=[], extra='<div class="chip x" style="top:700px">🎈 Dicker, harter Bauch</div><div class="chip x" style="top:810px">🤢 Würgen, aber nichts kommt</div><div class="chip x" style="top:920px">😰 Große Unruhe</div>'),
         dict(h='Jede Minute zählt: <i>sofort zum Tierarzt!</i>', size=96, pose='themen/tierarzt-koffer', ph=420, caps=[]),
         dict(h='In Teil 2: <i>So frisst er langsamer.</i>', size=96, pose='antischling-frisst', ph=580, caps=[]),
     ],
@@ -350,7 +350,7 @@ def bau(name):
             mehr += f'<img class="pose x" src="{img(bn)}" style="left:{bx - bw / 2:.0f}px;top:{by}px;width:{bw}px" alt="" />'
         scenes.append(f'''      <div id="s{i}" class="scene">
         <div id="h{i}" class="h" style="top: 470px; font-size: {sz["size"]}px">{sz["h"]}</div>
-        <div style="position:absolute;inset:0;transform:translateY({0 if UNTERTITEL else 150}px) scale({1 if UNTERTITEL else 1.08});transform-origin:50% 75%">
+        <div style="position:absolute;inset:0;transform:translateY({0 if UNTERTITEL else 100}px)">
         <div class="shadow" style="left:{cx - pw * 0.42:.0f}px;top:1378px;width:{pw * 0.84:.0f}px"></div>
         <img id="p{i}" class="pose" src="{img(sz["pose"])}" style="left:{cx - pw / 2:.0f}px;top:{top}px;width:{pw}px" alt="" />
         <div id="x{i}">{sz.get("extra", "")}{mehr}</div>{infos_html(sz)}</div>{src}{shopk(sz)}

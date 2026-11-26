@@ -43,7 +43,7 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
 /* Oranger Rahmen ums ganze Video (Nutzer 17.11., wie HundeFinanzTv) */
 #frame { position: absolute; inset: 0; border: 26px solid #db8622; z-index: 40; pointer-events: none; }
 /* Kommentar-Aufruf (wie HundeFinanzTv, Nutzer 23.11.) */
-#co { position: absolute; left: 90px; width: 900px; top: 1430px; background: #101722ee; border: 1px solid #ffffff22; border-radius: 22px; padding: 26px 34px 24px; box-shadow: 0 18px 40px #0006; z-index: 28; opacity: 0; font-family: "IN", sans-serif; }
+#co { position: absolute; left: 90px; width: 900px; top: 1525px; background: #101722ee; border: 1px solid #ffffff22; border-radius: 22px; padding: 26px 34px 24px; box-shadow: 0 18px 40px #0006; z-index: 28; opacity: 0; font-family: "IN", sans-serif; }
 #co .t1 { font-weight: 800; font-size: 34px; color: #fff; }
 #co .row { display: flex; align-items: center; gap: 18px; margin-top: 20px; }
 #co .av { width: 54px; height: 54px; border-radius: 50%; overflow: hidden; flex: none; border: 2px solid #db8622; }
@@ -54,8 +54,8 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
 #co .bt { display: flex; justify-content: flex-end; align-items: center; gap: 30px; margin-top: 20px; }
 #co .ab { font-size: 30px; color: #ffffffaa; font-weight: 600; }
 #co-btn { display: inline-block; padding: 12px 34px; border-radius: 30px; background: #db8622; color: #fff; font-weight: 800; font-size: 32px; }
-#co-z { position: absolute; left: 560px; top: 1780px; width: 58px; height: 58px; z-index: 30; opacity: 0; }
-#co-bn { position: absolute; left: 0; width: 1080px; top: 1750px; display: flex; justify-content: center; z-index: 27; opacity: 0; }
+#co-z { position: absolute; left: 560px; top: 1875px; width: 58px; height: 58px; z-index: 30; opacity: 0; }
+#co-bn { position: absolute; left: 0; width: 1080px; top: 1795px; display: flex; justify-content: center; z-index: 27; opacity: 0; }
 #co-bn span { padding: 18px 40px; border-radius: 40px; background: #101722ee; color: #fff; font-weight: 900; font-size: 40px; letter-spacing: 2px; white-space: nowrap; }
 #co-bn b { color: #f2a14e; }
 /* Logo-Intro wie HundeFinanzTv (Nutzer 23.11.) */

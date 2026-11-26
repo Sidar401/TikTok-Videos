@@ -70,6 +70,12 @@ Videos werden mit HyperFrames (HTML + GSAP → MP4) gebaut. Skills: `.claude/ski
      **Beschreibung** → Stimme sagt „Link in der Beschreibung“. Pro Video **nur 1× aussprechen**, weitere Produkte nur Plakette.
    - **CTAs verteilen (Nutzer 25.11.):** Kommentar- oder Teilen-Aufruf **früh** (im Einstieg vor dem Logo-Intro),
      am Ende „Folg uns …“. Texte: `hundewissen/themen/01-schnellfresser-texte.md`.
+   - **PFLICHT vor jedem Rendern (Nutzer 26.11.):** `node hundewissen/pruefen.js videos/<name>` – jeder Text komplett
+     im Bild, **kein Text/Kästchen verdeckt Hund oder Bild**. Erst rendern, wenn „Prüfung ok“. Info-Kästchen neben das
+     Bild (z. B. links Spalte x=60, Bild rechts px≈780), Chips über dem Hund statt daneben.
+   - **Videos mit Stimme:** `sprechtext.txt` (eine Szene pro Zeile) → `hundewissen/stimme.py` → `zeilen.json` →
+     `hundewissen/plan_voice.py` (Logo-Pause, Kommentar-/Teilen-Zeit) → Szenen in `bau_einfach.py` → prüfen → rendern.
+     Fertig: `renders/hw-schnellfresser-teil1.mp4` + `-cover.png`.
 2. **HundeWissenTv 2.0**: ab Nov. 2026 **reiner TikTok-Shop-Kanal** (nur Hundesachen) → Skill `/shop-video`.
 3. **HundeFinanzTV**: Geld & Finanzen (faceless, animierte Grafiken) → Skill `/finanz-video`, `kanal.json`, `STIL.md`.
 
