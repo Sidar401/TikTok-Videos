@@ -25,7 +25,7 @@ s2 = (sd.kopf(D, nr="1 / 6") + sd.txt("1 · Briefporto", 540, 100, O)
 s3 = (sd.kopf(D, nr="2 / 6") + sd.txt("2 · Krankenkasse", 540, 100, O)
       + sd.glas('<div style="font-weight:700;font-size:46px;color:#cbd5e1">Ø Zusatzbeitrag 2027</div>'
                 f'<div style="font-weight:900;font-size:220px;line-height:1.1;text-shadow:0 0 40px #fff4">2,9 %</div><div style="font-weight:800;font-size:54px;color:{G}">bleibt wie 2026</div>', 700, 520)
-      + sd.txt("Aber: Deine Kasse kann<br>trotzdem mehr verlangen.", 1260, 54) + sd.pille("Dann darfst du wechseln", 1440, O, 50)
+      + sd.txt("Aber: Deine Kasse kann<br>trotzdem mehr verlangen.", 1230, 54) + sd.pille("Dann darfst du wechseln", 1390, O, 50)
       + W() + sd.quelle("Quelle: Bundesgesundheitsministerium, 30.10.2026"))
 s4 = (sd.kopf(D, nr="3 / 6") + sd.txt("3 · Krankenversicherung", 540, 70, O)
       + sd.glas(sd.von_nach("5.812,50 €", "6.375 €", "Beitragsgrenze pro Monat", 72), 680, 400)
