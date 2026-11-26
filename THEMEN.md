@@ -149,4 +149,4 @@ Auch in Videos: Geldbeutel-Icon sparsam, nicht in jedem Video.
 - wachstum-0-1 (26.11.): Deutschland BIP Q3 +0,1 % (35-s-Test)
 - boerse-25-11 (25.11. Abend, mit Laufband): Börsenrückblick Dax −1,26 %, KI-Flucht, Infineon, Nvidia
 - 26.11.: Slideshow „2027-teurer“ (7 Bilder 9:16, TEST; Porto 0,95→1,15 €, Zusatzbeitrag 2,9 %, BBG KV 6.375 €, BBG Rente 8.850 €; Post-Logo fehlt, Commons 429)
-- 26.11. Abend: boerse-26-11 Börsenrückblick (dunkler Look, Laufband; Dax +2,08 % 25.215,52, Rheinmetall/Siemens Energy/Infineon, Nvidia Mi. −3,9 %, Thanksgiving; Rheinmetall-Logo fehlt, Commons 429)
+- 26.11. Abend: boerse-26-11 Börsenrückblick (dunkler Look, Laufband; Dax +2,08 % 25.215,52, Rheinmetall/Siemens Energy/Infineon, Nvidia Mi. −3,9 %, Thanksgiving; mit Logos)
