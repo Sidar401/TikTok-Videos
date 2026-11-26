@@ -150,3 +150,4 @@ Auch in Videos: Geldbeutel-Icon sparsam, nicht in jedem Video.
 - boerse-25-11 (25.11. Abend, mit Laufband): Börsenrückblick Dax −1,26 %, KI-Flucht, Infineon, Nvidia
 - 26.11.: Slideshow „2027-teurer“ (7 Bilder 9:16, TEST; Porto 0,95→1,15 €, Zusatzbeitrag 2,9 %, BBG KV 6.375 €, BBG Rente 8.850 €; Post-Logo fehlt, Commons 429)
 - 26.11. Abend: boerse-26-11 Börsenrückblick (dunkler Look, Laufband; Dax +2,08 % 25.215,52, Rheinmetall/Siemens Energy/Infineon, Nvidia Mi. −3,9 %, Thanksgiving; mit Logos)
+- 27.11. Mittag: zoelle-14-laender (Short ~45 s, dunkler Look, TREND: Trump Section-301-Zölle 14 Länder, China 20 %, EU 15 %, noch nicht in Kraft; Flaggen; Trump-Foto fehlt, Commons 429)

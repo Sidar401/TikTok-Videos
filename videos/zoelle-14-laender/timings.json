@@ -1,0 +1,229 @@
+{
+ "dauer": 44.89,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 4.219,
+   "captions": [
+    {
+     "text": "Trump greift wieder an:",
+     "start": 0.0,
+     "end": 1.438
+    },
+    {
+     "text": "Neue Zölle auf 14 Länder,",
+     "start": 1.438,
+     "end": 3.173
+    },
+    {
+     "text": "auch auf Europa!",
+     "start": 3.173,
+     "end": 4.219
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 4.219,
+   "end": 8.33,
+   "captions": [
+    {
+     "text": "Das haben die USA",
+     "start": 4.219,
+     "end": 5.178
+    },
+    {
+     "text": "am Mittwoch vorgeschlagen,",
+     "start": 5.178,
+     "end": 6.749
+    },
+    {
+     "text": "nach 8 Monaten Untersuchung",
+     "start": 6.749,
+     "end": 8.33
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 8.33,
+   "end": 12.276,
+   "captions": [
+    {
+     "text": "Für China sind 20 % Zoll",
+     "start": 8.33,
+     "end": 10.091
+    },
+    {
+     "text": "auf die meisten Waren geplant",
+     "start": 10.091,
+     "end": 12.276
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 12.276,
+   "end": 17.963,
+   "captions": [
+    {
+     "text": "Für die EU sind es 15 %,",
+     "start": 12.276,
+     "end": 14.146
+    },
+    {
+     "text": "das ist die Grenze",
+     "start": 14.146,
+     "end": 15.548
+    },
+    {
+     "text": "aus dem Abkommen",
+     "start": 15.548,
+     "end": 16.795
+    },
+    {
+     "text": "vom Sommer 2025",
+     "start": 16.795,
+     "end": 17.963
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 20.963,
+   "end": 24.632,
+   "captions": [
+    {
+     "text": "Die EU‑Kommission weist",
+     "start": 20.963,
+     "end": 22.308
+    },
+    {
+     "text": "die Vorwürfe zurück",
+     "start": 22.308,
+     "end": 23.479
+    },
+    {
+     "text": "und will verhandeln",
+     "start": 23.479,
+     "end": 24.632
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 24.632,
+   "end": 30.568,
+   "captions": [
+    {
+     "text": "Noch ist nichts",
+     "start": 24.632,
+     "end": 25.51
+    },
+    {
+     "text": "in Kraft: Erst gibt es",
+     "start": 25.51,
+     "end": 26.74
+    },
+    {
+     "text": "eine öffentliche Anhörung,",
+     "start": 26.74,
+     "end": 28.296
+    },
+    {
+     "text": "vor nächstem Jahr",
+     "start": 28.296,
+     "end": 29.299
+    },
+    {
+     "text": "gelten die Zölle nicht",
+     "start": 29.299,
+     "end": 30.568
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 30.568,
+   "end": 35.478,
+   "captions": [
+    {
+     "text": "Merk dir: Ein Vorschlag",
+     "start": 30.568,
+     "end": 32.03
+    },
+    {
+     "text": "ist noch kein Zoll,",
+     "start": 32.03,
+     "end": 33.303
+    },
+    {
+     "text": "aber die Börsen",
+     "start": 33.303,
+     "end": 34.368
+    },
+    {
+     "text": "reagieren sofort",
+     "start": 34.368,
+     "end": 35.478
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 35.478,
+   "end": 40.231,
+   "captions": [
+    {
+     "text": "Teile das Video",
+     "start": 35.478,
+     "end": 36.306
+    },
+    {
+     "text": "mit deinen Freunden",
+     "start": 36.306,
+     "end": 37.39
+    },
+    {
+     "text": "und folge uns,",
+     "start": 37.39,
+     "end": 38.189
+    },
+    {
+     "text": "wir bringen jeden Tag",
+     "start": 38.189,
+     "end": 39.387
+    },
+    {
+     "text": "neue Geld‑Tipps",
+     "start": 39.387,
+     "end": 40.231
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 40.231,
+   "end": 44.269,
+   "captions": [
+    {
+     "text": "Kurzer Hinweis: Das ist",
+     "start": 40.231,
+     "end": 41.721
+    },
+    {
+     "text": "keine Anlageberatung,",
+     "start": 41.721,
+     "end": 43.093
+    },
+    {
+     "text": "nur eine Erklärung",
+     "start": 43.093,
+     "end": 44.269
+    }
+   ]
+  }
+ ],
+ "logo_intro": 17.963
+}
