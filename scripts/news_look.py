@@ -273,3 +273,18 @@ def cta_overlay_js(id_, t, n_zeichen, sfx=None, tipp=1.5):
     if sfx is not None:
         sfx += [(t, "whoosh-weich"), (t + 0.5, "tippen"), (klick, "klick")]
     return s
+
+
+def ohne_untertitel_zwischen(here, von, bis):
+    """Untertitel entfernen, die zwischen `von` und `bis` Sekunden starten (Nutzer 26.11.: kein Untertitel beim Kommentar-Bild).
+    Nach glow_short.build aufrufen. Gleiche Logik wie ohne_untertitel()."""
+    import re
+    p = Path(here) / "index.html"
+    s = p.read_text()
+    weg = [m.group(1) for m in re.finditer(r'<div id="c(\d+)" class="cap clip" data-start="([\d.]+)"', s) if von - 0.01 <= float(m.group(2)) < bis]
+    zeilen = []
+    for z in s.split("\n"):
+        if any(f'id="c{n}" class="cap clip"' in z or f'"#w{n}-' in z for n in weg):
+            continue
+        zeilen.append(z)
+    p.write_text("\n".join(zeilen))
