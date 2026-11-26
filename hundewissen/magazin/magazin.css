@@ -69,7 +69,7 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--
 #ls-tag { margin-top: 16px; font-family: "IN"; font-weight: 900; font-size: 26px; color: #db8622; letter-spacing: 1px; white-space: nowrap; }
 #ls-tag i { font-style: normal; color: #1d1b19aa; padding: 0 6px; }
 /* Shop-Hinweis auf Kanal 2 (Nutzer 24.11.) */
-.shop { position: absolute; right: 60px; top: 1290px; z-index: 8; display: flex; align-items: center; gap: 14px; padding: 12px 26px 12px 12px; border-radius: 50px; background: #db8622; color: #fff; box-shadow: 0 14px 30px #db862266; font-family: "IN"; }
+.shop { position: absolute; right: 60px; top: 1640px; z-index: 8; display: flex; align-items: center; gap: 14px; padding: 12px 26px 12px 12px; border-radius: 50px; background: #db8622; color: #fff; box-shadow: 0 14px 30px #db862266; font-family: "IN"; }
 .shop img { width: 62px; height: 62px; border-radius: 50%; border: 3px solid #fff; }
 .shop span { font-weight: 800; font-size: 30px; line-height: 1.1; }
 .shop span small { display: block; font-weight: 600; font-size: 22px; opacity: 0.9; }

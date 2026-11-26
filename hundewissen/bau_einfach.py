@@ -176,10 +176,24 @@ VIDEOS = {
         dict(h='Jede Minute zählt: <i>sofort zum Tierarzt!</i>', size=96, pose='themen/tierarzt-koffer', ph=420, caps=[]),
         dict(h='In Teil 2: <i>So frisst er langsamer.</i>', size=96, pose='antischling-frisst', ph=580, caps=[]),
     ],
+    "hw-schnellfresser-teil2": [
+        dict(h='Dein Hund <i>schlingt?</i>', size=120, pose='schlingt', ph=560, caps=[]),
+        dict(h='Teil 2: <i>5 Tipps gegen Schlingen.</i>', size=100, pose='zeigend', ph=600, caps=[]),
+        dict(h='Schick das Video <i>weiter!</i>', size=110, pose='freudig', ph=520, caps=[]),
+        dict(h='Tipp 1: <i>Anti-Schling-Napf.</i>', size=100, pose='antischling-frisst', ph=580, caps=[]),
+        dict(h='Gibt\'s in <i>unserem Shop!</i>', size=110, pose='themen/shop-antischling-napf', ph=380, caps=[], shop='Den Anti-Schling-Napf'),
+        dict(h='Tipp 2: <i>Schnüffelteppich.</i>', size=100, pose='themen/shop-schnueffelteppich', ph=360, caps=[], shopbtn=True, infos=[('Futter mit der <b>Nase</b> suchen', 60, 760), ('Macht <b>langsam</b> und müde', 560, 760)]),
+        dict(h='Tipp 3: <i>Muffinblech.</i>', size=116, pose='themen/muffinblech', ph=320, caps=[], infos=[('<b>0 €</b> – hast du schon zuhause', 270, 760)]),
+        dict(h='Tipp 4: <i>Kleinere Portionen.</i>', size=100, pose='themen/portionen', ph=480, caps=[], infos=[('<b>2–3</b> kleine statt <b>1</b> große', 260, 740)]),
+        dict(h='Tipp 5: <i>Ruhe nach dem Fressen.</i>', size=96, pose='korb', ph=350, px=770, caps=[], infos=[('Mind. <b>1 Stunde</b> kein Toben', 60, 1040), ('Schont den <b>Magen</b>', 60, 1180)]),
+        dict(h='Welchen Tipp <i>probierst du?</i>', size=104, pose='nachdenken', ph=540, caps=[]),
+        dict(h='In Teil 3: <i>Der große Test.</i>', size=104, pose='themen/stoppuhr', ph=480, caps=[]),
+    ],
 }
 
 # Kommentar-Aufruf am Ende der letzten Szene: (getippter Text, Banner)
 KOMMENTAR = {
+    "hw-schnellfresser-teil2": ("Ich probier Tipp 3!", "WELCHER TIPP? <b>AB IN DIE KOMMENTARE</b>"),
     "hw-schnellfresser-teil1": ("Meiner schlingt auch!", "SCHREIB'S IN DIE <b>KOMMENTARE</b>"),
     "hw-p1-schnellfresser": ("Meiner schlingt auch!", "SCHREIB'S IN DIE <b>KOMMENTARE</b>"),
     "hw-p2-test": ("Meiner braucht 20 Sekunden", "WIE SCHNELL IST DEINER? <b>KOMMENTIER!</b>"),
@@ -216,7 +230,7 @@ def shopk(sz):
         return ""
     ding = sz["shop"] if isinstance(sz["shop"], str) else "Das"
     return (f'<div class="shopk"><img src="assets/beagle.png" alt="" /><div>🛒 {ding} gibt\'s in unserem Shop!'
-            f'<small>Schau auf unserem 2. Kanal: HundeWissenTv 2.0</small></div></div>')
+            f'<small>👇 Link in der Beschreibung · HundeWissenTv 2.0</small></div></div>')
 
 
 def sfx(ziel, dur, tick_at, pops):
@@ -353,7 +367,7 @@ def bau(name):
         <div style="position:absolute;inset:0;transform:translateY({0 if UNTERTITEL else 100}px)">
         <div class="shadow" style="left:{cx - pw * 0.42:.0f}px;top:1378px;width:{pw * 0.84:.0f}px"></div>
         <img id="p{i}" class="pose" src="{img(sz["pose"])}" style="left:{cx - pw / 2:.0f}px;top:{top}px;width:{pw}px" alt="" />
-        <div id="x{i}">{sz.get("extra", "")}{mehr}</div>{infos_html(sz)}</div>{src}{shopk(sz)}
+        <div id="x{i}">{sz.get("extra", "")}{mehr}</div>{infos_html(sz)}</div>{src}{shopk(sz)}{SHOP if sz.get("shopbtn") else ""}
       </div>''')
         m = round((a + b) / 2, 2)
         for k, (c, ca, cb) in enumerate(zip(sz["caps"] if UNTERTITEL else [], [a, m], [m, b])):
@@ -365,6 +379,9 @@ def bau(name):
             ts = b - 2.6
             js.append(f'      tl.fromTo("#s{i} .shopk", {{ y: 80, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.45, ease: "back.out(2)" }}, {ts});')
             pops.append(ts)
+        if sz.get("shopbtn"):
+            js.append(f'      tl.fromTo("#s{i} .shop", {{ scale: 0.5, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2.5)" }}, {a + 1.2});')
+            pops.append(a + 1.2)
         for k, _ in enumerate(sz.get("infos", [])):
             ti = a + 1.6 + k * 0.9
             js.append(f'      tl.fromTo("#s{i} .info{k}", {{ scale: 0, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(3)" }}, {ti:.2f});')
