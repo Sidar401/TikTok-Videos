@@ -148,3 +148,4 @@ Auch in Videos: Geldbeutel-Icon sparsam, nicht in jedem Video.
 - 25.11.: Short „genug-gespart“ (74 s, neuer Look, Puffer ohne Datum; Hook-Stil A; Teilen-/Folgen-CTA als Satz 2) – Fidelity-Faustregel (USA): 1× Jahresgehalt mit 30, 3× mit 40, 6× mit 50, 8× mit 60, 10× mit 67; 15 % ab 25; Beispiel 40.000 € → 120.000 € (40) / 400.000 € (67); 6.000 €/Jahr = 500 €/Monat; Hinweis gesetzliche Rente in DE | 3 Cover: € + 120.000 €, Treppe 30–67, riesige 3×
 - wachstum-0-1 (26.11.): Deutschland BIP Q3 +0,1 % (35-s-Test)
 - boerse-25-11 (25.11. Abend, mit Laufband): Börsenrückblick Dax −1,26 %, KI-Flucht, Infineon, Nvidia
+- 26.11.: Slideshow „2027-teurer“ (7 Bilder 9:16, TEST; Porto 0,95→1,15 €, Zusatzbeitrag 2,9 %, BBG KV 6.375 €, BBG Rente 8.850 €; Post-Logo fehlt, Commons 429)
