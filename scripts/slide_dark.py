@@ -51,10 +51,11 @@ def von_nach(a, b, einheit, gr=118):
 
 
 def pfeil(y, d=150):
-    """Oranger Pfeil nach rechts (Nutzer 26.11.: statt „Weiter wischen“). d=150 → rechts unten; d>=240 → mittig (Thumbnail)."""
-    x = (1080 - d) // 2 if d >= 240 else 1080 - d - 90
-    return (f'<div style="position:absolute;left:{x}px;top:{y}px;width:{d}px;height:{d}px;border-radius:50%;background:{O};box-shadow:0 0 50px {O}aa;z-index:6;display:flex;align-items:center;justify-content:center">'
-            f'<svg viewBox="0 0 100 100" style="width:{d*0.6:.0f}px;height:{d*0.6:.0f}px"><path d="M12 50 H78 M52 22 L80 50 L52 78" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/></svg></div>')
+    """Oranger Pfeil nach rechts, OHNE Kreis, länglich (Nutzer 26.11.). d=150 → rechts unten (Breite 1,9·d); d>=240 → mittig groß (Thumbnail)."""
+    w, h = int(d * 1.9), int(d * 0.8)
+    x = (1080 - w) // 2 if d >= 240 else 1080 - w - 70
+    return (f'<svg viewBox="0 0 190 80" style="position:absolute;left:{x}px;top:{y}px;width:{w}px;height:{h}px;z-index:6;filter:drop-shadow(0 0 22px {O}aa);overflow:visible">'
+            f'<path d="M8 40 H168 M128 8 L174 40 L128 72" fill="none" stroke="{O}" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/></svg>')
 
 
 def laufband(t, y=1600):

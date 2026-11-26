@@ -10,14 +10,14 @@ OUT = "/home/user/tiktok-videos/renders/slides/2027-teurer-dunkel/"
 POSTF = sd.L + "deutsche-post.svg"
 HAS_POST = os.path.exists(POSTF) and b"<svg" in open(POSTF, "rb").read(400)
 D = "26.11.2026"
-W = lambda: sd.pfeil(1540)  # noqa: E731
+W = lambda: sd.pfeil(1530, 170)  # noqa: E731
 
 
 def liste(zeilen):
     return "".join(f'<div style="display:flex;width:100%;align-items:center;gap:22px;font-weight:800;font-size:46px;padding:14px 0"><span style="color:{O}">{i}</span>{t}</div>' for i, t in zeilen)
 
 
-s1 = (sd.kopf(D) + sd.txt("Ab Januar 2027", 600, 90) + sd.txt("wird vieles", 710, 130) + sd.txt("TEURER", 860, 230, R) + sd.pfeil(1250, 260))
+s1 = (sd.kopf(D) + sd.txt("Ab Januar 2027", 600, 90) + sd.txt("wird vieles", 710, 130) + sd.txt("TEURER", 860, 230, R) + sd.pfeil(1230, 260))
 s2 = (sd.kopf(D, nr="1 / 6") + sd.txt("1 · Briefporto", 540, 100, O)
       + sd.glas((f'<img src="file://{POSTF}" style="height:110px;margin-bottom:26px"/>' if HAS_POST else "") + sd.von_nach("0,95 €", "1,15 €", "Standardbrief", 118), 700, 420)
       + sd.pille("+ 21 %", 1190, R, 80) + sd.txt("geplant ab 1. Januar 2027<br>Bundesnetzagentur muss noch zustimmen", 1330, 44, "#e5e7eb")
