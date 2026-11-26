@@ -65,4 +65,4 @@ Folg uns für mehr Hundewissen. [F]
 1. Große Rassen (Teil 1) – Vorlage: renders/aussie-stil-neu.png
 2. Shop-Produkte (Teil 2+3) – Vorlage: renders/aussie-stil-neu.png + 3 Screenshots aus dem TikTok-Shop
 - 26.11.: Bild 1 (dogge, schaeferhund, aussie-stehend) + Schnüffelteppich (3 Ansichten) gespeichert in brand/themen/.
-  Offen: Anti-Schling-Napf + Futterball aus Shop-Screenshots.
+  26.11.: shop-antischling-napf + shop-futterball gespeichert. Alle Bilder da – nur noch Texte-Freigabe offen.
