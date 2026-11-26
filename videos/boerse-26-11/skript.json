@@ -1,0 +1,65 @@
+{
+ "titel": "Börsenrückblick 26.11.",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Alles, was heute an der Börse passiert ist – in 60 Sekunden.",
+   "text": "Alles, was heute an der Börse passiert ist – in 60 Sekunden",
+   "bild": ""
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Teile das Video mit deinen Freunden und folge uns, wir bringen jeden Tag neue Geld-Tipps!",
+   "text": "Teile das Video mit deinen Freunden und folge uns, wir bringen jeden Tag neue Geld-Tipps",
+   "bild": ""
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Der Dax hat sich heute kräftig erholt: plus zwei Komma eins Prozent auf über 25.000 Punkte.",
+   "text": "Der Dax hat sich heute kräftig erholt: plus 2,1 % auf über 25.000 Punkte",
+   "bild": ""
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Gestern stand er noch auf dem tiefsten Stand seit Juli.",
+   "text": "Gestern stand er noch auf dem tiefsten Stand seit Juli",
+   "bild": ""
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Größte Gewinner waren Rheinmetall, Siemens Energy und Infineon mit bis zu vier Prozent Plus.",
+   "text": "Größte Gewinner waren Rheinmetall, Siemens Energy und Infineon mit bis zu 4 % Plus",
+   "bild": ""
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Grund: Die Technik-Aktien in Amerika haben gestern ihre Verluste fast ganz aufgeholt.",
+   "text": "Grund: Die Technik-Aktien in Amerika haben gestern ihre Verluste fast ganz aufgeholt",
+   "bild": ""
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Nvidia schloss gestern nur noch vier Prozent im Minus, zwischenzeitlich waren es über neun.",
+   "text": "Nvidia schloss gestern nur noch 4 % im Minus, zwischenzeitlich waren es über 9 %",
+   "bild": ""
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Heute ist in Amerika Feiertag, Thanksgiving, die Börse bleibt zu.",
+   "text": "Heute ist in Amerika Feiertag, Thanksgiving, die Börse bleibt zu",
+   "bild": ""
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Merk dir: Nach einem Absturz kann die Erholung schnell kommen.",
+   "text": "Merk dir: Nach einem Absturz kann die Erholung schnell kommen",
+   "bild": ""
+  },
+  {
+   "id": "s10",
+   "sprechtext": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung.",
+   "text": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung",
+   "bild": ""
+  }
+ ]
+}

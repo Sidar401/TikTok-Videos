@@ -1,0 +1,246 @@
+{
+ "dauer": 46.79,
+ "saetze": [
+  {
+   "id": "s1",
+   "start": 0.0,
+   "end": 3.377,
+   "captions": [
+    {
+     "text": "Alles,",
+     "start": 0.0,
+     "end": 0.364
+    },
+    {
+     "text": "was heute an der Börse",
+     "start": 0.364,
+     "end": 1.698
+    },
+    {
+     "text": "passiert ist – in 60 Sekunden",
+     "start": 1.698,
+     "end": 3.377
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "start": 3.377,
+   "end": 7.926,
+   "captions": [
+    {
+     "text": "Teile das Video",
+     "start": 3.377,
+     "end": 4.144
+    },
+    {
+     "text": "mit deinen Freunden",
+     "start": 4.144,
+     "end": 5.217
+    },
+    {
+     "text": "und folge uns,",
+     "start": 5.217,
+     "end": 6.007
+    },
+    {
+     "text": "wir bringen jeden Tag",
+     "start": 6.007,
+     "end": 7.192
+    },
+    {
+     "text": "neue Geld‑Tipps",
+     "start": 7.192,
+     "end": 7.926
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "start": 7.926,
+   "end": 13.665,
+   "captions": [
+    {
+     "text": "Der Dax hat sich",
+     "start": 7.926,
+     "end": 9.155
+    },
+    {
+     "text": "heute kräftig erholt: plus",
+     "start": 9.155,
+     "end": 11.337
+    },
+    {
+     "text": "2,1 % auf über 25.000 Punkte",
+     "start": 11.337,
+     "end": 13.665
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "start": 13.665,
+   "end": 16.9,
+   "captions": [
+    {
+     "text": "Gestern stand er",
+     "start": 13.665,
+     "end": 14.679
+    },
+    {
+     "text": "noch auf dem tiefsten",
+     "start": 14.679,
+     "end": 16.04
+    },
+    {
+     "text": "Stand seit Juli",
+     "start": 16.04,
+     "end": 16.9
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "start": 19.9,
+   "end": 25.191,
+   "captions": [
+    {
+     "text": "Größte Gewinner",
+     "start": 19.9,
+     "end": 20.905
+    },
+    {
+     "text": "waren Rheinmetall,",
+     "start": 20.905,
+     "end": 22.111
+    },
+    {
+     "text": "Siemens Energy und Infineon",
+     "start": 22.111,
+     "end": 23.919
+    },
+    {
+     "text": "mit bis zu 4 % Plus",
+     "start": 23.919,
+     "end": 25.191
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "start": 25.191,
+   "end": 30.393,
+   "captions": [
+    {
+     "text": "Grund: Die Technik‑Aktien",
+     "start": 25.191,
+     "end": 26.759
+    },
+    {
+     "text": "in Amerika haben gestern ihre",
+     "start": 26.759,
+     "end": 28.632
+    },
+    {
+     "text": "Verluste fast ganz aufgeholt",
+     "start": 28.632,
+     "end": 30.393
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "start": 30.393,
+   "end": 35.225,
+   "captions": [
+    {
+     "text": "Nvidia schloss gestern",
+     "start": 30.393,
+     "end": 31.774
+    },
+    {
+     "text": "nur noch 4 % im Minus,",
+     "start": 31.774,
+     "end": 33.201
+    },
+    {
+     "text": "zwischenzeitlich",
+     "start": 33.201,
+     "end": 34.239
+    },
+    {
+     "text": "waren es über 9 %",
+     "start": 34.239,
+     "end": 35.225
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "start": 35.225,
+   "end": 38.978,
+   "captions": [
+    {
+     "text": "Heute ist in Amerika Feiertag,",
+     "start": 35.225,
+     "end": 37.047
+    },
+    {
+     "text": "Thanksgiving,",
+     "start": 37.047,
+     "end": 37.838
+    },
+    {
+     "text": "die Börse bleibt zu",
+     "start": 37.838,
+     "end": 38.978
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "start": 38.978,
+   "end": 42.234,
+   "captions": [
+    {
+     "text": "Merk dir:",
+     "start": 38.978,
+     "end": 39.432
+    },
+    {
+     "text": "Nach einem Absturz kann",
+     "start": 39.432,
+     "end": 40.777
+    },
+    {
+     "text": "die Erholung schnell kommen",
+     "start": 40.777,
+     "end": 42.234
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 42.234,
+   "end": 46.189,
+   "captions": [
+    {
+     "text": "Kurzer Hinweis: Das ist",
+     "start": 42.234,
+     "end": 43.62
+    },
+    {
+     "text": "keine Anlageberatung,",
+     "start": 43.62,
+     "end": 45.046
+    },
+    {
+     "text": "nur eine Erklärung",
+     "start": 45.046,
+     "end": 46.189
+    }
+   ]
+  }
+ ],
+ "logo_intro": 16.9
+}
