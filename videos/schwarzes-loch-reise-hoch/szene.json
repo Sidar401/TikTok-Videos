@@ -1,0 +1,13 @@
+{
+ "tag": "",
+ "dauer": 219.9,
+ "format": "9:16",
+ "hook": "Du fällst in ein<br /><span class=\"y\">SCHWARZES LOCH</span>",
+ "hook_end": 5.6,
+ "fix": {},
+ "css": ".hookbig { font-size: 110px; } #word { top: 1130px; font-size: 84px; }",
+ "karte": [
+  15.7,
+  8.6
+ ]
+}

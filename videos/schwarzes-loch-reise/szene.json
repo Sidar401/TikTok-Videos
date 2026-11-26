@@ -1,0 +1,14 @@
+{
+ "tag": "",
+ "dauer": 219.9,
+ "format": "16:9",
+ "hook": "Du fällst in ein<br /><span class=\"y\">SCHWARZES LOCH</span>",
+ "hook_end": 5.6,
+ "fix": {},
+ "css": ".hookbig { font-size: 110px; } #word { top: 1130px; font-size: 84px; }",
+ "css_land": ".hookbig { font-size: 130px !important; } #word .sub { font: 600 36px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 8px; } .capw, #cap-in { display: none !important; } #fk-wrap { left: 590px !important; top: 300px !important; } #fk-touch, #fk-rip { left: 960px !important; top: 668px !important; } #fk-box { transform: none !important; }",
+ "karte": [
+  15.7,
+  8.6
+ ]
+}
