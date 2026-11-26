@@ -1,0 +1,9 @@
+{
+ "tag": "27. NOVEMBER 2026",
+ "dauer": 63.0,
+ "hook": "Aus Versehen<br /><span class=\"y\">ENTDECKT!</span>",
+ "hook_end": 3.9,
+ "karte": [12.89, 5.4],
+ "fix": {},
+ "css": ".hookbig { font-size: 124px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"
+}

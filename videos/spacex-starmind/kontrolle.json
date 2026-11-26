@@ -1,0 +1,35 @@
+{
+ "gehoert": "SpaceX darf jetzt eine Million Satelliten ins All schießen. Die US-Behörde FCC hat den riesigen Plan gerade erlaubt. Das Projekt heißt Star Mind. Heute kreisen insgesamt etwa 17.000 aktive Satelliten um die Erde. Zwei Drittel davon gehören schon SpaceX. Eine Million wären fast 60 Mal so viele. Aber diese Satelliten sollen kein Internet liefern. Sie sollen denken. In jedem steckt ein Computer für künstliche Intelligenz, angetrieben nur vom Licht der Sonne. Denn Rechenzentren auf der Erde fressen riesige Mengen Strom. Im All scheint die Sonne dagegen fast immer. Die Ergebnisse funken die Satelliten dann über Starlink zurück zur Erde. Fliegen sollen sie zwischen 500 und 1.000 Kilometern über uns. Der erste Start ist für 2027 geplant, mit der Riesenrakete Starship. Astronomen machen sich Sorgen. Schon heute ziehen Satelliten helle Striche durch ihre Bilder vom Himmel. Und ob sich Rechnen im All überhaupt lohnt, weiß noch niemand. Was glaubst du? Ist dieser Plan genial oder verrückt?",
+ "abweichungen": [
+  [
+   "replace",
+   "starmind",
+   "star mind"
+  ],
+  [
+   "replace",
+   "siebzehntausend",
+   "17 000"
+  ],
+  [
+   "replace",
+   "sechzigmal",
+   "60 mal"
+  ],
+  [
+   "replace",
+   "fünfhundert",
+   "500"
+  ],
+  [
+   "replace",
+   "tausend",
+   "1 000"
+  ],
+  [
+   "replace",
+   "zweitausendsiebenundzwanzig",
+   "2027"
+  ]
+ ]
+}
