@@ -24,14 +24,4 @@ Erstelle ein fotorealistisches Produktbild von genau diesem Hunde-Pflegeset mit 
 6. der Auffangbehälter voller Hundehaare
 ```
 
-## Bild 3 – Unser Aussie mit beiden Produkten (hochladen: `renders/aussie-stil-neu.png` + Geschirr-Foto + Pflegeset-Foto)
-```
-Bild 1 zeigt unseren Hund. Bild 2 ist ein leuchtendes Hundegeschirr, Bild 3 ein Hunde-Pflegeset mit Staubsauger.
-Zeichne genau diesen Hund (Australian Shepherd, blue merle, gleicher Zeichenstil, gleiche Farben, gleiche Linien) in 6 Szenen nebeneinander in 2 Reihen auf reinweißem Hintergrund, ohne Schatten, ohne Text, ohne Logo, jede Szene mit Abstand:
-1. trägt das Geschirr aus Bild 2, die LED leuchtet grün, er läuft fröhlich
-2. sitzt nachts auf einem kleinen Stück dunklem Gehweg, das Geschirr leuchtet hell grün
-3. schaut stolz, das Geschirr leuchtet blau
-4. wird mit dem Handstück aus Bild 3 gebürstet und genießt es mit geschlossenen Augen
-5. sitzt neben einem großen Haufen ausgekämmter Hundehaare auf dem Boden und schaut schuldig
-6. liegt entspannt und gepflegt neben dem Pflegeset aus Bild 3
-```
+(Nutzer 27.11.: nur Produktbilder im Original, ohne Aussie – 1 Code pro Produkt.)
