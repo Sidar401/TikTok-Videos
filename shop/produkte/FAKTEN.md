@@ -12,8 +12,11 @@ Screenshots: `original/shop-27-11/`. Alle: Versand aus Übersee außer markiert,
 | Schnüffelball (bunte Stoffrollen) | KuaMao Pet | 22,49–23,39 € | 3,99 € | 4.–11. Dez. | 4,6 (992) | 21.700 | 2,10 € |
 | Leckschale / Anti-Schling-Napf mit Leckball (blau/schwarz) | Exquisite Pet / YM | 21,82 € | 3,99 € | 4.–11. Dez. | 4,3 (87) | 2.677 | 1,68 € |
 | Snack-Ball / Futterspender (gelb-blau, schwarz-rot) | Pet King / RATQ | 18,91 € | 3,99 € | 4.–11. Dez. | 4,6 (298) | 4.642 | – |
+| Bade-Massagebürste mit Shampoo-Spender (Silikon, Rosa/Türkis/Gelb, 8 × 5,5 cm) | GETLAXME | 15,92–23,65 € (1–3 Stück) | 3,99 € | 4.–11. Dez. | 4,3 (1.511) | 29.400 | 1,09 € (10 %) |
+| Futter-Puzzle / Intelligenzspiel (Ø 24 cm, Schieber + Drehscheibe, Hellblau/Hellrosa/Weiß) | Paws Nest | 19,59 € | 3,99 € | 4.–11. Dez. | 4,4 (41) | 1.335 | 1,46 € |
 
 Hinweise:
+- **Ab 1.12. normale Preise** → Nutzer liefert neue Preise; Claude erinnert daran (Erinnerung gesetzt für 1.12.).
 - Hand-Staubsauger ist eigentlich fürs Auto/Zuhause → im Video als „Hundehaare von Sofa & Auto“ zeigen.
 - Snack-Ball laut Shop „für kleine Rassen“; Rollball nur für kleine Hunde.
 - Keine Werbeaussagen aus Verkäuferbildern übernehmen („Nur noch 1 auf Lager“, „Nr. 1“, Medaillen).

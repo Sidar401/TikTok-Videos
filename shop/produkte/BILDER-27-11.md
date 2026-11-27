@@ -25,3 +25,25 @@ Erstelle ein fotorealistisches Produktbild von genau diesem Hunde-Pflegeset mit 
 ```
 
 (Nutzer 27.11.: nur Produktbilder im Original, ohne Aussie – 1 Code pro Produkt.)
+
+## Badebürste (hochladen: Shop-Foto mit den 3 Bürsten)
+```
+Erstelle ein fotorealistisches Produktbild von genau dieser Hunde-Badebürste (weiches Silikon, viele weiche Borsten, runder Deckel oben als Shampoo-Spender, Griffschlaufe hinten, kleines lächelndes Gesicht vorne). 6 Ansichten nebeneinander in 2 Reihen auf reinweißem Hintergrund, ohne Schatten, ohne Text, ohne Logo, ohne Tiere, ohne Hände, jede Ansicht mit Abstand:
+1. die türkise Bürste schräg von vorne
+2. die rosa Bürste schräg von vorne
+3. die gelbe Bürste schräg von vorne
+4. die türkise Bürste mit offenem Deckel, man sieht das Fach für Shampoo
+5. die türkise Bürste von unten, man sieht die weichen Borsten
+6. die türkise Bürste voller weißem Seifenschaum
+```
+
+## Futter-Puzzle (hochladen: Shop-Foto vom rosa Puzzle)
+```
+Erstelle ein fotorealistisches Produktbild von genau diesem Hunde-Futterpuzzle (runde Scheibe, gelbe Schieber mit Pfotenabdruck, Drehscheibe in der Mitte, Trockenfutter in den Fächern). 6 Ansichten nebeneinander in 2 Reihen auf reinweißem Hintergrund, ohne Schatten, ohne Text, ohne Logo, ohne Tiere, ohne Hände, jede Ansicht mit Abstand:
+1. das rosa Puzzle von oben, alle Fächer zu
+2. das rosa Puzzle von oben, einige Schieber offen, Futter sichtbar
+3. das blaue Puzzle von oben, einige Schieber offen
+4. das rosa Puzzle schräg von der Seite
+5. Nahaufnahme von einem gelben Schieber, darunter Futter
+6. ein kleines Häufchen Trockenfutter (ohne Puzzle)
+```
