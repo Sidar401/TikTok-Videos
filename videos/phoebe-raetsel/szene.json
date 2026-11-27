@@ -1,0 +1,9 @@
+{
+ "tag": "28. NOVEMBER 2026",
+ "dauer": 65.9,
+ "hook": "Etwas<br /><span class=\"y\">UNSICHTBARES!</span>",
+ "hook_end": 3.2,
+ "karte": [13.3, 5.4],
+ "fix": {},
+ "css": ".hookbig { font-size: 122px; } #word { top: 1130px; font-size: 92px; } #word .sub { font: 600 40px Inter, sans-serif; color: rgba(255,255,255,.75); margin-top: 10px; }"
+}

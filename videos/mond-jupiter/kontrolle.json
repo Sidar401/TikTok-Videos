@@ -1,0 +1,25 @@
+{
+ "gehoert": "Am Montagmorgen trifft der Mond auf den Riesenplaneten Jupiter und du kannst das ganz ohne Fernrohr sehen. Du musst nur früh aufstehen. Schau am 30. November vor Sonnenaufgang Richtung Süden. Dort steht der Mond und direkt daneben ein heller Punkt, der nicht funkelt. Das ist Jupiter. Er sieht winzig aus, aber er ist so riesig, dass über 1.000 Erden hineinpassen würden. Jupiter ist ein Ball aus Gas mit einem Sturm, der größer ist als die ganze Erde. Und er ist mehr als 600 Millionen Kilometer von uns entfernt. Sein Licht braucht über eine halbe Stunde bis zu deinen Augen. Der Mond dagegen ist nicht mal 400.000 Kilometer weit weg. Sein Licht braucht nur gut eine Sekunde. Die beiden stehen also nur scheinbar nebeneinander. Ganz in der Nähe leuchtet noch ein orangener Punkt, der Mars, und dazu der helle Stern Regulus, das Herz des Sternbilds Löwe. Am besten schaust du etwa eine Stunde vor Sonnenaufgang. Mit einem Fernglas siehst du neben Jupiter sogar winzige Lichtpunkte, seine größten Monde. Wirst du am Montag früh rausschauen?",
+ "abweichungen": [
+  [
+   "replace",
+   "dreißigsten",
+   "30"
+  ],
+  [
+   "replace",
+   "tausend",
+   "1 000"
+  ],
+  [
+   "replace",
+   "sechshundert",
+   "600"
+  ],
+  [
+   "replace",
+   "vierhunderttausend",
+   "400 000"
+  ]
+ ]
+}
