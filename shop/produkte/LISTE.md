@@ -18,3 +18,11 @@ Für Videos noch nötig, sobald gepostet wird: Shop-Screenshot (Preis, Sterne, v
 - **Pflegeset mit Staubsauger** (Marke oneisall): Bürste, Schermaschine, Pfoten-Trimmer, Krallen-Schleifer, Reinigungs-Aufsätze.
   Preis/Sterne/Verkäufe fehlen noch (Screenshot der Shop-Seite nötig).
 - ChatGPT-Aufträge: `shop/produkte/BILDER-27-11.md`
+
+## Neu 27.11. (ChatGPT, freigestellt)
+| Produkt | Bilder |
+|---|---|
+| Pflegeset mit Staubsauger (oneisall) | `pflegeset/geraet`, `handstueck`, `schermaschine`, `krallenschleifer`, `aufsaetze`, `behaelter-haare` |
+| Snack-Ball / Futterball (blau-gelb, durchsichtig) | `snackball/liegend`, `stehend`, `offen`, `schraeg-futter`, `nah`, `stehend-futter` |
+| Akku-Handstaubsauger/Gebläse (schwarz-gold) | `staubsauger/seite`, `seite-licht`, `blasen`, `filter-wasser`, `nah-hinten`, `zubehoer` |
+Noch fehlt: LED-Geschirr (ChatGPT-Bild), Shop-Screenshots mit Preis/Sternen/Verkäufen für Pflegeset, Snack-Ball, Staubsauger.
