@@ -25,4 +25,5 @@ Für Videos noch nötig, sobald gepostet wird: Shop-Screenshot (Preis, Sterne, v
 | Pflegeset mit Staubsauger (oneisall) | `pflegeset/geraet`, `handstueck`, `schermaschine`, `krallenschleifer`, `aufsaetze`, `behaelter-haare` |
 | Snack-Ball / Futterball (blau-gelb, durchsichtig) | `snackball/liegend`, `stehend`, `offen`, `schraeg-futter`, `nah`, `stehend-futter` |
 | Akku-Handstaubsauger/Gebläse (schwarz-gold) | `staubsauger/seite`, `seite-licht`, `blasen`, `filter-wasser`, `nah-hinten`, `zubehoer` |
-Noch fehlt: LED-Geschirr (ChatGPT-Bild), Shop-Screenshots mit Preis/Sternen/Verkäufen für Pflegeset, Snack-Ball, Staubsauger.
+| LED-Geschirr (Elite Paws) | `geschirr/gruen`, `rot`, `blau`, `seite-aus`, `knopf-usb`, `hinten-gruen` |
+Noch fehlt: Shop-Screenshots mit Preis/Sternen/Verkäufen für Pflegeset, Snack-Ball, Staubsauger.
