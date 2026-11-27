@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="de" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0e1012; }
+      #root { position: relative; width: 100%; height: 100%; font-family: Montserrat, sans-serif; overflow: hidden;
+        background: radial-gradient(ellipse at 50% 42%, #ff8a1f33 0%, #ff8a1f0d 38%, transparent 62%), radial-gradient(ellipse at 50% 50%, #1b1f22 0%, #0e1012 75%); }
+      #raster { position: absolute; inset: 0; background-image: linear-gradient(#ffffff0c 2px, transparent 2px), linear-gradient(90deg, #ffffff0c 2px, transparent 2px); background-size: 90px 90px; }
+      .scene { position: absolute; inset: 0; }
+      .inner { position: absolute; inset: 0; }
+      .t { position: absolute; left: 0; width: 1080px; text-align: center; font-weight: 900; line-height: 1.02; letter-spacing: -1px; color: #fff; }
+      .glow-o { color: #ff8a1f; text-shadow: 0 0 50px #ff8a1faa; }
+      .glow-g { color: #2fd27a; text-shadow: 0 0 50px #2fd27aaa; }
+      .glow-r { color: #ff4d4d; text-shadow: 0 0 50px #ff4d4daa; }
+      .box { display: inline-block; padding: 6px 34px 14px; border-radius: 24px; background: #ff8a1f; color: #111; box-shadow: 0 0 60px #ff8a1f88; }
+      #logo { position: absolute; left: 445px; top: 135px; width: 190px; height: 190px; border-radius: 50%; overflow: hidden; border: 5px solid #DB8622; box-shadow: 0 0 30px #ff8a1f88; z-index: 5; }
+      #logo img { width: 100%; height: 100%; object-fit: cover; }
+      #brand { position: absolute; left: 0; top: 335px; width: 1080px; text-align: center; font-size: 38px; font-weight: 800; color: #ffffffdd; letter-spacing: 1px; z-index: 5; }
+      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; z-index: 9; pointer-events: none; }
+      .p { position: absolute; border-radius: 50%; }
+      .l { display: inline-block; }
+      #frame { position: absolute; inset: 0; border: 26px solid #DB8622; z-index: 10; }
+      .ew { position: absolute; left: 0; width: 1080px; text-align: center; z-index: 6; font-weight: 900; font-size: 104px; line-height: 1; color: #fff; text-transform: uppercase;
+        letter-spacing: -1px; text-shadow: 0 6px 0 #000, 0 0 30px #000; white-space: nowrap; }
+      .cap { position: absolute; left: 60px; top: 1330px; width: 960px; text-align: center; z-index: 6; }
+      .cap span { display: inline-block; margin: 0 16px; font-weight: 900; font-size: 74px; line-height: 1.15; color: #fff; text-shadow: 0 6px 0 #000, 0 0 30px #000; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="48.42" data-width="1080" data-height="1920">
+      <div id="raster"></div>
+      <div id="z0" class="scene clip" data-start="0.0" data-duration="5.499" data-track-index="1"><div id="z0-i" class="inner"><img id="bg0" class="hgfoto" src="assets/hg/frei-code-monitor.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><style>
+.nk-karte { position:absolute; background:#ffffff; border:2px solid #e2e5ea; border-radius:12px; box-shadow:0 18px 40px #0000001a; padding:34px 40px; z-index:4; }
+.nk-kt { font-weight:700; font-size:42px; color:#1d2330; padding-bottom:20px; border-bottom:2px solid #e8eaee; margin-bottom:12px; }
+.nk-row { display:flex; align-items:center; font-size:40px; color:#3a414c; padding:20px 0; white-space:nowrap; }
+.nk-row .v { margin-left:auto; font-weight:800; }
+.nk-ok { color:#22a35a; font-size:46px; margin-left:26px; }
+.nk-kachel { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; border-radius:8px; height:200px; }
+.nk-kachel img { max-width:200px; max-height:84px; }
+.nk-kachel .nk-p { font-weight:800; font-size:44px; }
+.nk-gross { position:absolute; left:0; width:1080px; text-align:center; font-weight:900; color:#1d2330; z-index:4; }
+</style><style>.nk-karte{background:linear-gradient(180deg,#14171bf0,#0c0e11f5);border:2px solid #ffffff22;box-shadow:0 0 60px #000a}.nk-kt{color:#fff;border-bottom-color:#ffffff22}.nk-row{color:#e5e7eb}.nk-gross{color:#fff;text-shadow:0 6px 20px #000}.nk-row img,.nk-kt img{background:#fff;padding:6px 12px;border-radius:10px;margin-right:18px}</style><div id="n1" class="nk-gross" style="top:540px;font-size:136px;color:#ff4d4d;line-height:1.05;text-shadow:0 0 50px #ff4d4d99,0 6px 20px #000">NULLRUNDE</div><div id="n1b" class="nk-gross" style="top:740px;font-size:92px;color:#ffffff;line-height:1.05;text-shadow:0 0 50px #ffffff99,0 6px 20px #000">bis Mitte 2028</div><div id="p1" style="position:absolute;left:0;width:1080px;top:960px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#f28a1e;color:#fff;font-weight:900;font-size:50px;box-shadow:0 0 40px #f28a1e88;white-space:nowrap">Grundsicherung · Bürgergeld</span></div></div></div>
+      <div id="z1" class="scene clip" data-start="5.499" data-duration="13.278" data-track-index="1"><div id="z1-i" class="inner"><img id="bg1" class="hgfoto" src="assets/hg/frei-code-monitor.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div id="t2" class="nk-gross" style="top:520px;font-size:58px;color:#ffffff;line-height:1.1">Regelsatz Alleinstehende</div><div id="k2" class="nk-karte" style="left:110px;top:610px;width:860px"><div class="nk-kt">Grundsicherung</div><div id="r2a" class="nk-row">pro Monat<span class="v" style="color:#ffffff">563 €</span></div><div id="r2b" class="nk-row">nächste Anpassung<span class="v" style="color:#ff4d4d">1. Juli 2028</span></div></div><div id="co" style="position:absolute;left:90px;width:900px;top:960px;background:#101722e8;border:1px solid #ffffff22;border-radius:22px;padding:26px 34px 24px;box-shadow:0 18px 40px #0006;z-index:28;opacity:0;font-family:Montserrat,sans-serif"><div style="font-weight:700;font-size:34px;color:#fff">Kommentare</div><div style="display:flex;align-items:center;gap:18px;margin-top:20px"><div style="width:50px;height:50px;border-radius:50%;background:#3b82f6;flex:none;display:flex;align-items:flex-end;justify-content:center;overflow:hidden"><div style="width:22px;height:22px;border-radius:50%;background:#fff;margin-bottom:-2px;box-shadow:0 26px 0 6px #fff"></div></div><div style="flex:1;border-bottom:3px solid #ffffffcc;padding-bottom:8px;font-size:36px;color:#fff;white-space:nowrap"><span class="tz" style="opacity:0">B</span><span class="tz" style="opacity:0">e</span><span class="tz" style="opacity:0">t</span><span class="tz" style="opacity:0">r</span><span class="tz" style="opacity:0">i</span><span class="tz" style="opacity:0">f</span><span class="tz" style="opacity:0">f</span><span class="tz" style="opacity:0">t</span><span class="tz" style="opacity:0">&nbsp;</span><span class="tz" style="opacity:0">d</span><span class="tz" style="opacity:0">i</span><span class="tz" style="opacity:0">c</span><span class="tz" style="opacity:0">h</span><span class="tz" style="opacity:0">&nbsp;</span><span class="tz" style="opacity:0">d</span><span class="tz" style="opacity:0">a</span><span class="tz" style="opacity:0">s</span><span class="tz" style="opacity:0">?</span><span id="co-cur" style="display:inline-block;width:3px;height:38px;background:#fff;vertical-align:middle;margin-left:2px"></span></div></div><div style="display:flex;justify-content:flex-end;align-items:center;gap:30px;margin-top:20px"><span style="font-size:30px;color:#ffffffaa;font-weight:600">Abbrechen</span><span style="position:relative;display:inline-block"><span id="co-btn" style="display:inline-block;padding:12px 34px;border-radius:30px;background:#f28a1e;color:#111;font-weight:800;font-size:32px;white-space:nowrap">Kommentieren</span></span></div></div><div id="co-z" style="position:absolute;left:560px;top:1290px;width:58px;height:58px;z-index:30;opacity:0"><svg viewBox="0 0 24 24" style="width:100%;height:100%;filter:drop-shadow(0 4px 6px #0006)"><path d="M4 2 L4 20 L9 15.5 L12.5 23 L15.5 21.6 L12 14.3 L19 14 Z" fill="#fff" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/></svg></div><div id="co-bn" style="position:absolute;left:0;width:1080px;top:1260px;display:flex;justify-content:center;z-index:27;opacity:0"><span style="padding:18px 40px;border-radius:40px;background:#101722e8;border:1px solid #ffffff22;color:#fff;font-weight:900;font-size:40px;letter-spacing:3px;white-space:nowrap">DEINE MEINUNG <span style="color:#f28a1e">IN DIE KOMMENTARE</span></span></div></div></div>
+      <div id="z2" class="scene clip" data-start="18.777" data-duration="5.593" data-track-index="1"><div id="z2-i" class="inner"><img id="bg2" class="hgfoto" src="assets/hg/frei-code-monitor.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div id="t4" class="nk-gross" style="top:520px;font-size:54px;color:#ffffff;line-height:1.1">Haushaltsbegleitgesetz 2027</div><div id="f4" style="position:absolute;left:290px;top:640px;width:500px;z-index:4"><img src="assets/logos/flagge-deutschland.svg" style="height:300px;vertical-align:middle;border-radius:12px;box-shadow:0 0 0 6px #fff"/></div><div id="p4" style="position:absolute;left:0;width:1080px;top:1000px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#22c55e;color:#fff;font-weight:900;font-size:54px;box-shadow:0 0 40px #22c55e88;white-space:nowrap">Bundestag: beschlossen</span></div></div></div>
+      <div id="z3" class="scene clip" data-start="24.37" data-duration="5.817" data-track-index="1"><div id="z3-i" class="inner"><img id="bg3" class="hgfoto" src="assets/hg/frei-code-monitor.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div id="t5" class="nk-gross" style="top:520px;font-size:66px;color:#ffffff;line-height:1.1">Kritik</div><div id="k5" class="nk-karte" style="left:110px;top:640px;width:860px"><div class="nk-kt">Der Paritätische</div><div id="r5a" class="nk-row">bis Mitte 2028<span class="v" style="color:#ff4d4d">keine Erhöhung</span></div></div></div></div>
+      <div id="z4" class="scene clip" data-start="30.187" data-duration="3.572" data-track-index="1"><div id="z4-i" class="inner"><img id="bg4" class="hgfoto" src="assets/hg/frei-code-monitor.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div id="t6" class="nk-gross" style="top:520px;font-size:62px;color:#ffffff;line-height:1.1">Wie geht es weiter?</div><div id="k6" class="nk-karte" style="left:110px;top:640px;width:860px"><div class="nk-kt">Gesetzgebung</div><div id="r6a" class="nk-row">Bundestag<span class="v" style="color:#22c55e">beschlossen</span><span class="nk-ok"><span style="color:#22c55e">▲</span></span></div><div id="r6b" class="nk-row">Bundesrat<span class="v" style="color:#f28a1e">noch offen</span></div></div></div></div>
+      <div id="z5" class="scene clip" data-start="33.759" data-duration="5.237" data-track-index="1"><div id="z5-i" class="inner"><img id="bg5" class="hgfoto" src="assets/hg/frei-code-monitor.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div id="ts7" class="nk-gross" style="top:520px;font-size:70px;color:#f28a1e;line-height:1.1">Merk dir</div><div id="ks7" class="nk-karte" style="left:110px;top:660px;width:860px"><div class="nk-kt">Nullrunde bei steigenden Preisen</div><div style="font-weight:900;font-size:62px;color:#ff4d4d;text-align:center;padding:14px 0;line-height:1.15">das Geld ist weniger wert ▼</div></div></div></div>
+      <div id="z6" class="scene clip" data-start="38.996" data-duration="4.861" data-track-index="1"><div id="z6-i" class="inner"><img id="bg6" class="hgfoto" src="assets/hg/frei-code-monitor.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div id="fls8" style="position:absolute;left:340px;top:520px;width:400px;height:400px;border-radius:50%;overflow:hidden;border:10px solid #f28a1e;box-shadow:0 0 50px #f28a1e88;background:#1b1f22;z-index:4"><img src="assets/beagle.png" style="width:100%;height:100%;object-fit:cover"/></div><div id="ns8" class="nk-gross" style="top:940px;font-size:64px">HundeFinanz<span style="color:#f28a1e">Tv</span></div><div id="cs8" style="position:absolute;left:0;width:1080px;top:1060px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#f28a1e;color:#fff;font-weight:900;font-size:58px;box-shadow:0 0 40px #f28a1e88;white-space:nowrap">+ Folgen</span></div><div id="ts8" style="position:absolute;left:0;width:1080px;top:1190px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#1d2330;color:#fff;font-weight:900;font-size:52px;box-shadow:0 0 40px #1d233088;white-space:nowrap">Video teilen ↗</span></div></div></div>
+      <div id="z7" class="scene clip" data-start="43.857" data-duration="4.563" data-track-index="1"><div id="z7-i" class="inner"><img id="bg7" class="hgfoto" src="assets/hg/frei-code-monitor.jpg" alt="" data-color-grading='{"preset":null,"intensity":1,"adjust":{"exposure":-1.5,"contrast":-0.15,"highlights":0,"shadows":0,"whites":0,"blacks":0,"temperature":0,"tint":0,"vibrance":0,"saturation":-0.55},"details":{"vignette":0.8,"vignetteMidpoint":0.5,"vignetteRoundness":0,"vignetteFeather":0.8,"grain":0,"grainSize":0.25,"grainRoughness":0.5},"effects":{"blur":0,"pixelate":0,"chromaBleed":0,"tapeDamage":0,"tapeTracking":0,"tapeNoise":1,"tapeSpeed":0.5,"filmArtifacts":0,"halftone":0,"halftoneSize":0,"twoInkPrint":0,"twoInkPrintSize":0,"ascii":0,"asciiSize":0.06578947368421052,"asciiInvert":0,"asciiStyle":0,"asciiColor":1,"asciiRotation":0,"dither":0,"ditherSize":0,"bloom":0,"bloomRadius":8,"monoScreen":0,"monoScreenSize":0,"monoScreenAngle":0,"monoScreenSpread":0,"monoScreenShape":0,"monoScreenInvert":0,"scanlines":0,"scanlineCount":0,"scanlineSoftness":0,"chromaticAberration":0,"chromaticAngle":0,"crtCurvature":0,"digitalGlitch":0,"digitalGlitchColorSplit":0,"digitalGlitchLineTear":0,"digitalGlitchPixelate":0,"digitalGlitchBlockAmount":0,"digitalGlitchBlockDisplacement":0,"digitalGlitchBlockOpacity":0,"digitalGlitchSpeed":0,"engraving":0,"engravingSpacing":0.4117647058823529,"engravingMinThickness":0.2,"engravingMaxThickness":0.4571428571428572,"engravingAngle":0.25,"engravingContrast":0.4666666666666667,"engravingSharpness":0.59,"engravingWave":0.2,"engravingWaveFrequency":0.2222222222222222,"crosshatch":0,"crosshatchSpacing":0.28,"crosshatchThickness":0.25,"crosshatchAngle":0.25,"crosshatchContrast":0.3333333333333333,"crosshatchEdges":0.5,"crosshatchLineWeight":0,"crosshatchWave":0.33,"crosshatchWaveFrequency":0.2222222222222222,"kuwahara":0,"kuwaharaRadius":0.14285714285714285,"kuwaharaSharpness":0.3125,"kuwaharaSaturation":0.5},"lut":null,"colorSpace":"rec709"}' style="position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;z-index:0"/><div id="fls9" style="position:absolute;left:340px;top:520px;width:400px;height:400px;border-radius:50%;overflow:hidden;border:10px solid #f28a1e;box-shadow:0 0 50px #f28a1e88;background:#1b1f22;z-index:4"><img src="assets/beagle.png" style="width:100%;height:100%;object-fit:cover"/></div><div id="ns9" class="nk-gross" style="top:940px;font-size:64px">HundeFinanz<span style="color:#f28a1e">Tv</span></div><div id="cs9" style="position:absolute;left:0;width:1080px;top:1060px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#f28a1e;color:#fff;font-weight:900;font-size:58px;box-shadow:0 0 40px #f28a1e88;white-space:nowrap">+ Folgen</span></div><div id="ts9" style="position:absolute;left:0;width:1080px;top:1190px;display:flex;justify-content:center;z-index:5"><span style="padding:16px 46px;border-radius:60px;background:#1d2330;color:#fff;font-weight:900;font-size:52px;box-shadow:0 0 40px #1d233088;white-space:nowrap">Video teilen ↗</span></div></div></div>
+      <div id="z8" class="scene clip" data-start="15.777" data-duration="3.0" data-track-index="7"><div id="z8-i" class="inner"><style>
+#ls-bg { position:absolute; inset:0; background: radial-gradient(ellipse at 50% 46%, #ff8a1f55 0%, #ff8a1f14 30%, transparent 60%), #0e1012; border:26px solid #DB8622; box-sizing:border-box; z-index:11; overflow:hidden; }
+#ls-ring { position:absolute; left:375.0px; top:715.0px; width:330px; height:330px; border-radius:50%; border:6px solid #ff8a1f; z-index:12; }
+#ls-logo { position:absolute; left:415.0px; top:755.0px; width:250px; height:250px; border-radius:50%; overflow:hidden;
+  border:8px solid #DB8622; box-shadow:0 0 70px #ff8a1fbb, 0 20px 40px #000; z-index:13; }
+#ls-logo img { width:100%; height:100%; object-fit:cover; }
+#ls-txt { position:absolute; left:320px; top:817.6px; z-index:13; clip-path: inset(0 0 0 0); }
+#ls-name { font-weight:900; font-size:80px; line-height:1; color:#fff; letter-spacing:-1px; white-space:nowrap; text-shadow:0 0 40px #0008; }
+#ls-name b { color:#ff8a1f; text-shadow:0 0 40px #ff8a1faa; }
+#ls-tag { margin-top:18px; font-weight:900; font-size:33px; color:#ff8a1f; letter-spacing:1px; white-space:nowrap; }
+#ls-tag i { font-style:normal; color:#ffffffcc; padding:0 6px; }
+</style>
+<div id="ls-bg"></div><div id="ls-ring"></div>
+<div id="ls-logo"><img src="assets/beagle.png" alt="" /></div>
+<div id="ls-txt"><div id="ls-name">HundeFinanz<b>Tv</b></div><div id="ls-tag">AKTIEN <i>|</i> FINANZEN <i>|</i> VERMÖGEN</div></div></div></div>
+      <div id="z9" class="scene clip" data-start="0.0" data-duration="48.42" data-track-index="8"><div id="z9-i" class="inner"><div id="nk" style="position:absolute;left:60px;top:392px;width:960px;height:58px;display:flex;align-items:center;z-index:8"><span id="nk-l" style="display:inline-block;padding:4px 20px;border-radius:10px;background:#ff8a1f;color:#111;font-weight:900;font-size:32px;letter-spacing:4px">NEWS</span><span class="mono" style="margin-left:auto;font-size:30px;color:#ffffffcc">28.11.2026</span></div><div style="position:absolute;left:60px;top:456px;width:960px;height:3px;background:linear-gradient(90deg,#ff8a1f,transparent);z-index:8"></div></div></div>
+      <div id="logo"><img src="assets/beagle.png" alt="" /></div>
+      <div id="brand">HundeFinanzTv</div>
+      <div id="flash"></div>
+      <div id="frame"></div>
+      <div id="captions" data-track-kind="captions">
+        <div id="c1" class="cap clip" data-start="0.0" data-duration="1.438" data-track-index="2"><span id="w1-0">Der</span> <span id="w1-1">Bundestag</span> <span id="w1-2">friert</span> </div>
+        <div id="c2" class="cap clip" data-start="1.438" data-duration="1.514" data-track-index="2"><span id="w2-0">die</span> <span id="w2-1">Grundsicherung</span> <span id="w2-2">ein:</span> </div>
+        <div id="c3" class="cap clip" data-start="2.952" data-duration="1.366" data-track-index="2"><span id="w3-0">Bis</span> <span id="w3-1">Mitte</span> <span id="w3-2">2028</span> <span id="w3-3">gibt</span> </div>
+        <div id="c4" class="cap clip" data-start="4.318" data-duration="1.181" data-track-index="2"><span id="w4-0">es</span> <span id="w4-1">keine</span> <span id="w4-2">Erhöhung!</span> </div>
+        <div id="c11" class="cap clip" data-start="18.777" data-duration="0.642" data-track-index="2"><span id="w11-0">Das</span> <span id="w11-1">steckt</span> </div>
+        <div id="c12" class="cap clip" data-start="19.419" data-duration="1.736" data-track-index="2"><span id="w12-0">im</span> <span id="w12-1" style="font-size:66px">Haushaltsbegleitgesetz</span> </div>
+        <div id="c13" class="cap clip" data-start="21.155" data-duration="0.625" data-track-index="2"><span id="w13-0">für</span> <span id="w13-1">2027,</span> </div>
+        <div id="c14" class="cap clip" data-start="21.78" data-duration="1.18" data-track-index="2"><span id="w14-0">das</span> <span id="w14-1">der</span> <span id="w14-2">Bundestag</span> </div>
+        <div id="c15" class="cap clip" data-start="22.96" data-duration="1.41" data-track-index="2"><span id="w15-0">heute</span> <span id="w15-1">beschlossen</span> <span id="w15-2">hat</span> </div>
+        <div id="c16" class="cap clip" data-start="24.37" data-duration="1.883" data-track-index="2"><span id="w16-0">Der</span> <span id="w16-1">Paritätische</span> <span id="w16-2">kritisiert,</span> </div>
+        <div id="c17" class="cap clip" data-start="26.253" data-duration="1.933" data-track-index="2"><span id="w17-0">dass</span> <span id="w17-1">damit</span> <span id="w17-2">jede</span> <span id="w17-3">Erhöhung</span> <span id="w17-4">bis</span> </div>
+        <div id="c18" class="cap clip" data-start="28.186" data-duration="2.001" data-track-index="2"><span id="w18-0">Mitte</span> <span id="w18-1">2028</span> <span id="w18-2">ausgeschlossen</span> <span id="w18-3">ist</span> </div>
+        <div id="c19" class="cap clip" data-start="30.187" data-duration="1.352" data-track-index="2"><span id="w19-0">Noch</span> <span id="w19-1">ist</span> <span id="w19-2">der</span> <span id="w19-3">Bundesrat</span> </div>
+        <div id="c20" class="cap clip" data-start="31.539" data-duration="0.738" data-track-index="2"><span id="w20-0">nicht</span> <span id="w20-1">durch,</span> </div>
+        <div id="c21" class="cap clip" data-start="32.277" data-duration="1.482" data-track-index="2"><span id="w21-0">erst</span> <span id="w21-1">dann</span> <span id="w21-2">ist</span> <span id="w21-3">es</span> <span id="w21-4">endgültig</span> </div>
+        <div id="c22" class="cap clip" data-start="33.759" data-duration="1.424" data-track-index="2"><span id="w22-0">Merk</span> <span id="w22-1">dir:</span> <span id="w22-2">Bei</span> <span id="w22-3">steigenden</span> </div>
+        <div id="c23" class="cap clip" data-start="35.183" data-duration="1.898" data-track-index="2"><span id="w23-0">Preisen</span> <span id="w23-1">heißt</span> <span id="w23-2">eine</span> <span id="w23-3">Nullrunde,</span> </div>
+        <div id="c24" class="cap clip" data-start="37.081" data-duration="1.915" data-track-index="2"><span id="w24-0">dass</span> <span id="w24-1">das</span> <span id="w24-2">Geld</span> <span id="w24-3">weniger</span> <span id="w24-4">wert</span> <span id="w24-5">ist</span> </div>
+        <div id="c25" class="cap clip" data-start="38.996" data-duration="0.833" data-track-index="2"><span id="w25-0">Teile</span> <span id="w25-1">das</span> <span id="w25-2">Video</span> </div>
+        <div id="c26" class="cap clip" data-start="39.829" data-duration="1.118" data-track-index="2"><span id="w26-0">mit</span> <span id="w26-1">deinen</span> <span id="w26-2">Freunden</span> </div>
+        <div id="c27" class="cap clip" data-start="40.947" data-duration="0.824" data-track-index="2"><span id="w27-0">und</span> <span id="w27-1">folge</span> <span id="w27-2">uns,</span> </div>
+        <div id="c28" class="cap clip" data-start="41.771" data-duration="1.235" data-track-index="2"><span id="w28-0">wir</span> <span id="w28-1">bringen</span> <span id="w28-2">jeden</span> <span id="w28-3">Tag</span> </div>
+        <div id="c29" class="cap clip" data-start="43.006" data-duration="0.851" data-track-index="2"><span id="w29-0">neue</span> <span id="w29-1">Geld‑Tipps</span> </div>
+        <div id="c30" class="cap clip" data-start="43.857" data-duration="1.479" data-track-index="2"><span id="w30-0">Kurzer</span> <span id="w30-1">Hinweis:</span> <span id="w30-2">Das</span> <span id="w30-3">ist</span> </div>
+        <div id="c31" class="cap clip" data-start="45.336" data-duration="1.379" data-track-index="2"><span id="w31-0">keine</span> <span id="w31-1">Anlageberatung,</span> </div>
+        <div id="c32" class="cap clip" data-start="46.715" data-duration="1.103" data-track-index="2"><span id="w32-0">nur</span> <span id="w32-1">eine</span> <span id="w32-2">Erklärung</span> </div>
+      </div>
+      <audio id="voice" src="assets/mix.wav" data-start="0" data-duration="48.42" data-track-index="3"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const pop = (sel, at) => tl.fromTo(sel, { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.2)" }, at);
+      const slam = (sel, at) => tl.fromTo(sel, { scale: 2.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.28, ease: "power4.in" }, at);
+      const shake = (sel, at) => tl.fromTo(sel, { x: -14 }, { x: 14, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }, at);
+      const draw = (sel, at, dur) => {
+        const len = document.querySelector(sel).getTotalLength();
+        tl.fromTo(sel, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: dur, ease: "power2.out" }, at);
+      };
+      const zaehl = (sel, von, bis, at, dur, nach) => {
+        const o = { v: von };
+        tl.fromTo(o, { v: von }, { v: bis, duration: dur, ease: "power2.out", onUpdate: () => {
+          document.querySelector(sel).textContent = Math.round(o.v).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (nach || ""); }, immediateRender: false }, at);
+      };
+      const flash = (at, st) => tl.fromTo("#flash", { opacity: st || 0.85 }, { opacity: 0, duration: 0.35, ease: "power2.out", immediateRender: false }, at);
+      const burst = (sel, at, dur) => tl.fromTo(sel + " .p", { x: 0, y: 0, scale: 1.4, opacity: 1 },
+        { x: (i, el) => +el.dataset.dx, y: (i, el) => +el.dataset.dy, scale: 0.2, opacity: 0, duration: dur || 1.0, ease: "power3.out", immediateRender: false }, at);
+      const letters = (sel, at) => tl.fromTo(sel + " .l", { y: 140, opacity: 0, rotation: 12, scale: 0.6 },
+        { y: 0, opacity: 1, rotation: 0, scale: 1, duration: 0.45, stagger: 0.035, ease: "back.out(2.2)" }, at);
+      const glitch = (sel, at) => tl.fromTo(sel, { x: -22, skewX: 18 }, { x: 0, skewX: 0, duration: 0.24, ease: "steps(6)" }, at);
+      tl.fromTo("#z0-i", { scale: 1.0 }, { scale: 1.06, duration: 5.499, ease: "none" }, 0.0);
+      const wachs = (sel, at, dur) => tl.fromTo(sel, { scaleY: 0 }, { scaleY: 1, duration: dur || 0.6, ease: "power3.out" }, at); const spann = (sel, at) => { tl.fromTo(sel + "-f", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, at); tl.fromTo(sel + "-a", { scale: 0 }, { scale: 1, duration: 0.25, ease: "back.out(2)" }, at); tl.fromTo(sel + "-b", { x: -200, scale: 0 }, { x: 0, scale: 1, duration: 0.6, ease: "power3.out" }, at); }; const lauf = (sel, at, dur) => tl.fromTo(sel + "-s", { x: 0 }, { x: -1400, duration: dur, ease: "none" }, at); const blink = (sel, at) => { tl.fromTo(sel + " .rk", { y: 120, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, stagger: 0.08, ease: "back.out(1.6)" }, at); tl.fromTo(sel + " .led", { opacity: 0.2 }, { opacity: 1, duration: 0.18, stagger: { each: 0.02, repeat: 7, yoyo: true }, ease: "none" }, at + 0.4); }; const stempeln = (sel, at) => tl.fromTo(sel, { scale: 3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "power4.in" }, at); tl.set("#n1", { opacity: 1 }, 0); pop("#n1", 0.0); pop("#n1b", 0.0 + 0.15); pop("#p1", 2.952); tl.fromTo("#bg0", { scale: 1 }, { scale: 1.12, duration: 5.499, ease: "sine.inOut", immediateRender: false }, 0.0);
+      tl.fromTo("#z1-i", { scale: 1.0 }, { scale: 1.06, duration: 13.278, ease: "none" }, 5.499);
+      pop("#t2", 5.499); pop("#k2", 5.499 + 0.15); pop("#r2a", 5.499 + 0.6); pop("#r2b", 13.541); tl.fromTo("#co", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 5.499); tl.fromTo("#co-bn", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 5.499 + 0.15); tl.to("#co .tz", { opacity: 1, duration: 0.01, stagger: 0.067 }, 5.499 + 0.5); tl.fromTo("#co-cur", { opacity: 1 }, { opacity: 0, duration: 0.3, repeat: 13, yoyo: true, ease: "steps(1)" }, 5.499 + 0.3); tl.fromTo("#co-z", { x: -200, y: 120, opacity: 0 }, { x: 230, y: -160, opacity: 1, duration: 0.8, ease: "power2.inOut" }, 5.499 + 0.5 + 1.2); tl.to("#co-z", { scale: 0.82, duration: 0.08, yoyo: true, repeat: 1 }, 8.099); tl.to("#co-btn", { scale: 0.9, duration: 0.08, yoyo: true, repeat: 1 }, 8.099); tl.to("#co-k2", { opacity: 1, duration: 0.15 }, 8.099 + 0.15); tl.fromTo("#z1-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 5.499); tl.fromTo("#bg1", { scale: 1 }, { scale: 1.12, duration: 13.278, ease: "sine.inOut", immediateRender: false }, 5.499);
+      tl.fromTo("#z2-i", { scale: 1.0 }, { scale: 1.06, duration: 5.593, ease: "none" }, 18.777);
+      pop("#t4", 18.777); pop("#f4", 18.777 + 0.1); pop("#p4", 21.78); tl.fromTo("#z2-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 18.777); tl.fromTo("#bg2", { scale: 1 }, { scale: 1.12, duration: 5.593, ease: "sine.inOut", immediateRender: false }, 18.777);
+      tl.fromTo("#z3-i", { scale: 1.0 }, { scale: 1.06, duration: 5.817, ease: "none" }, 24.37);
+      pop("#t5", 24.37); pop("#k5", 24.37 + 0.1); pop("#r5a", 26.253); tl.fromTo("#z3-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 24.37); tl.fromTo("#bg3", { scale: 1 }, { scale: 1.12, duration: 5.817, ease: "sine.inOut", immediateRender: false }, 24.37);
+      tl.fromTo("#z4-i", { scale: 1.0 }, { scale: 1.06, duration: 3.572, ease: "none" }, 30.187);
+      pop("#t6", 30.187); pop("#k6", 30.187 + 0.1); pop("#r6a", 30.187 + 0.5); pop("#r6b", 31.539); tl.fromTo("#z4-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 30.187); tl.fromTo("#bg4", { scale: 1 }, { scale: 1.12, duration: 3.572, ease: "sine.inOut", immediateRender: false }, 30.187);
+      tl.fromTo("#z5-i", { scale: 1.0 }, { scale: 1.06, duration: 5.237, ease: "none" }, 33.759);
+      pop("#ts7", 33.759); pop("#ks7", 33.759 + 0.15); tl.fromTo("#z5-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 33.759); tl.fromTo("#bg5", { scale: 1 }, { scale: 1.12, duration: 5.237, ease: "sine.inOut", immediateRender: false }, 33.759);
+      tl.fromTo("#z6-i", { scale: 1.0 }, { scale: 1.06, duration: 4.861, ease: "none" }, 38.996);
+      pop("#fls8", 38.996); pop("#ns8", 38.996 + 0.2); pop("#cs8", 39.829); pop("#ts8", 38.996 + 0.4); tl.fromTo("#z6-i", { x: 140, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 38.996); tl.fromTo("#bg6", { scale: 1 }, { scale: 1.12, duration: 4.861, ease: "sine.inOut", immediateRender: false }, 38.996);
+      tl.fromTo("#z7-i", { scale: 1.0 }, { scale: 1.06, duration: 4.563, ease: "none" }, 43.857);
+       tl.fromTo("#z7-i", { y: 120, opacity: 0 }, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, 43.857); tl.fromTo("#bg7", { scale: 1 }, { scale: 1.12, duration: 4.563, ease: "sine.inOut", immediateRender: false }, 43.857);
+      tl.fromTo("#z8-i", { scale: 1.0 }, { scale: 1.06, duration: 3.0, ease: "none" }, 15.777);
+      var lsHide = ["#logo", "#brand"].concat(Array.from(document.querySelectorAll("#lb, #nk, #nk + div, #kopf")));
+      tl.set(lsHide, { opacity: 0 }, 15.777); tl.set(lsHide, { opacity: 1 }, 18.777);
+      tl.fromTo("#ls-logo", { scale: 0, rotation: -25 }, { scale: 1, rotation: 0, duration: 0.5, ease: "back.out(2.4)" }, 15.777);
+      flash(15.896999999999998, 0.35);
+      tl.fromTo("#ls-ring", { scale: 0.6, opacity: 1 }, { scale: 1.7, opacity: 0, duration: 0.7, ease: "power2.out" }, 15.927);
+      tl.fromTo(["#ls-logo", "#ls-ring"], { x: 0 }, { x: -365.0, duration: 0.5, ease: "power3.inOut" }, 16.527);
+      tl.fromTo("#ls-txt", { x: 260, opacity: 0, clipPath: "inset(0 0 0 100%)" }, { x: 0, opacity: 1, clipPath: "inset(0 0 0 0%)", duration: 0.55, ease: "power3.out" }, 16.677);
+      tl.fromTo("#ls-tag", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power2.out" }, 17.127);
+      tl.fromTo("#ls-bg", { scale: 1 }, { scale: 1.08, duration: 3.0, ease: "none" }, 15.777);
+      tl.to(["#ls-logo", "#ls-txt"], { scale: 1.02, duration: 1.2, ease: "none" }, 17.177);
+      tl.to(["#ls-logo", "#ls-txt"], { opacity: 0, duration: 0.2 }, 18.577);
+      tl.fromTo("#z9-i", { scale: 1.0 }, { scale: 1.06, duration: 48.42, ease: "none" }, 0.0);
+      
+      tl.fromTo("#w1-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 0.0);
+      tl.to("#w1-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 0.274);
+      tl.fromTo("#w1-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 0.274);
+      tl.to("#w1-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 0.959);
+      tl.fromTo("#w1-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 0.959);
+      tl.fromTo("#w2-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 1.438);
+      tl.to("#w2-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 1.69);
+      tl.fromTo("#w2-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 1.69);
+      tl.to("#w2-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 2.637);
+      tl.fromTo("#w2-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 2.637);
+      tl.fromTo("#w3-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 2.952);
+      tl.to("#w3-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 3.225);
+      tl.fromTo("#w3-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 3.225);
+      tl.to("#w3-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 3.635);
+      tl.fromTo("#w3-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 3.635);
+      tl.to("#w3-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 3.976);
+      tl.fromTo("#w3-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 3.976);
+      tl.fromTo("#w4-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 4.318);
+      tl.to("#w4-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 4.504);
+      tl.fromTo("#w4-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 4.504);
+      tl.to("#w4-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 4.877);
+      tl.fromTo("#w4-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 4.877);
+      tl.fromTo("#w11-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 18.777);
+      tl.to("#w11-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 19.01);
+      tl.fromTo("#w11-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 19.01);
+      tl.fromTo("#w12-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 19.419);
+      tl.to("#w12-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 19.619);
+      tl.fromTo("#w12-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 19.619);
+      tl.fromTo("#w13-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 21.155);
+      tl.to("#w13-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 21.405);
+      tl.fromTo("#w13-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 21.405);
+      tl.fromTo("#w14-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 21.78);
+      tl.to("#w14-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 22.042);
+      tl.fromTo("#w14-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 22.042);
+      tl.to("#w14-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 22.304);
+      tl.fromTo("#w14-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 22.304);
+      tl.fromTo("#w15-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 22.96);
+      tl.to("#w15-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 23.345);
+      tl.fromTo("#w15-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 23.345);
+      tl.to("#w15-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 24.114);
+      tl.fromTo("#w15-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 24.114);
+      tl.fromTo("#w16-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 24.37);
+      tl.to("#w16-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 24.63);
+      tl.fromTo("#w16-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 24.63);
+      tl.to("#w16-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 25.474);
+      tl.fromTo("#w16-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 25.474);
+      tl.fromTo("#w17-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 26.253);
+      tl.to("#w17-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 26.586);
+      tl.fromTo("#w17-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 26.586);
+      tl.to("#w17-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 26.986);
+      tl.fromTo("#w17-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 26.986);
+      tl.to("#w17-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 27.319);
+      tl.fromTo("#w17-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 27.319);
+      tl.to("#w17-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 27.919);
+      tl.fromTo("#w17-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 27.919);
+      tl.fromTo("#w18-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 28.186);
+      tl.to("#w18-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 28.586);
+      tl.fromTo("#w18-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 28.586);
+      tl.to("#w18-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 28.92);
+      tl.fromTo("#w18-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 28.92);
+      tl.to("#w18-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 29.92);
+      tl.fromTo("#w18-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 29.92);
+      tl.fromTo("#w19-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 30.187);
+      tl.to("#w19-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 30.481);
+      tl.fromTo("#w19-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 30.481);
+      tl.to("#w19-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 30.716);
+      tl.fromTo("#w19-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 30.716);
+      tl.to("#w19-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 30.951);
+      tl.fromTo("#w19-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 30.951);
+      tl.fromTo("#w20-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 31.539);
+      tl.to("#w20-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 31.88);
+      tl.fromTo("#w20-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 31.88);
+      tl.fromTo("#w21-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 32.277);
+      tl.to("#w21-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 32.551);
+      tl.fromTo("#w21-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 32.551);
+      tl.to("#w21-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 32.826);
+      tl.fromTo("#w21-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 32.826);
+      tl.to("#w21-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 33.045);
+      tl.fromTo("#w21-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 33.045);
+      tl.to("#w21-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 33.21);
+      tl.fromTo("#w21-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 33.21);
+      tl.fromTo("#w22-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 33.759);
+      tl.to("#w22-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 34.044);
+      tl.fromTo("#w22-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 34.044);
+      tl.to("#w22-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 34.329);
+      tl.fromTo("#w22-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 34.329);
+      tl.to("#w22-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 34.556);
+      tl.fromTo("#w22-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 34.556);
+      tl.fromTo("#w23-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 35.183);
+      tl.to("#w23-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 35.689);
+      tl.fromTo("#w23-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 35.689);
+      tl.to("#w23-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 36.069);
+      tl.fromTo("#w23-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 36.069);
+      tl.to("#w23-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 36.385);
+      tl.fromTo("#w23-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 36.385);
+      tl.fromTo("#w24-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 37.081);
+      tl.to("#w24-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 37.39);
+      tl.fromTo("#w24-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 37.39);
+      tl.to("#w24-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 37.637);
+      tl.fromTo("#w24-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 37.637);
+      tl.to("#w24-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 37.946);
+      tl.fromTo("#w24-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 37.946);
+      tl.to("#w24-3", { color: "#ffffff", scale: 1, duration: 0.08 }, 38.44);
+      tl.fromTo("#w24-4", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 38.44);
+      tl.to("#w24-4", { color: "#ffffff", scale: 1, duration: 0.08 }, 38.749);
+      tl.fromTo("#w24-5", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 38.749);
+      tl.fromTo("#w25-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 38.996);
+      tl.to("#w25-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 39.308);
+      tl.fromTo("#w25-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 39.308);
+      tl.to("#w25-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 39.517);
+      tl.fromTo("#w25-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 39.517);
+      tl.fromTo("#w26-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 39.829);
+      tl.to("#w26-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 40.053);
+      tl.fromTo("#w26-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 40.053);
+      tl.to("#w26-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 40.444);
+      tl.fromTo("#w26-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 40.444);
+      tl.fromTo("#w27-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 40.947);
+      tl.to("#w27-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 41.167);
+      tl.fromTo("#w27-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 41.167);
+      tl.to("#w27-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 41.496);
+      tl.fromTo("#w27-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 41.496);
+      tl.fromTo("#w28-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 41.771);
+      tl.to("#w28-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 41.996);
+      tl.fromTo("#w28-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 41.996);
+      tl.to("#w28-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 42.445);
+      tl.fromTo("#w28-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 42.445);
+      tl.to("#w28-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 42.781);
+      tl.fromTo("#w28-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 42.781);
+      tl.fromTo("#w29-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 43.006);
+      tl.to("#w29-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 43.272);
+      tl.fromTo("#w29-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 43.272);
+      tl.fromTo("#w30-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 43.857);
+      tl.to("#w30-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 44.288);
+      tl.fromTo("#w30-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 44.288);
+      tl.to("#w30-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 44.843);
+      tl.fromTo("#w30-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 44.843);
+      tl.to("#w30-2", { color: "#ffffff", scale: 1, duration: 0.08 }, 45.09);
+      tl.fromTo("#w30-3", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 45.09);
+      tl.fromTo("#w31-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 45.336);
+      tl.to("#w31-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 45.712);
+      tl.fromTo("#w31-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 45.712);
+      tl.fromTo("#w32-0", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 46.715);
+      tl.to("#w32-0", { color: "#ffffff", scale: 1, duration: 0.08 }, 46.947);
+      tl.fromTo("#w32-1", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 46.947);
+      tl.to("#w32-1", { color: "#ffffff", scale: 1, duration: 0.08 }, 47.237);
+      tl.fromTo("#w32-2", { color: "#ffffff", scale: 1 }, { color: "#ff8a1f", scale: 1.06, duration: 0.08 }, 47.237);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

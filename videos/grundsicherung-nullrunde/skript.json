@@ -1,0 +1,59 @@
+{
+ "titel": "Grundsicherung Nullrunde",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Der Bundestag friert die Grundsicherung ein: Bis Mitte 2028 gibt es keine Erhöhung!",
+   "text": "Der Bundestag friert die Grundsicherung ein: Bis Mitte 2028 gibt es keine Erhöhung!",
+   "bild": ""
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Der Regelsatz für Alleinstehende bleibt bei fünfhundertdreiundsechzig Euro im Monat.",
+   "text": "Der Regelsatz für Alleinstehende bleibt bei 563 Euro im Monat",
+   "bild": ""
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Bisher wurde er jedes Jahr im Januar angepasst, jetzt erst wieder im Juli 2028.",
+   "text": "Bisher wurde er jedes Jahr im Januar angepasst, jetzt erst wieder im Juli 2028",
+   "bild": ""
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Das steckt im Haushaltsbegleitgesetz für 2027, das der Bundestag heute beschlossen hat.",
+   "text": "Das steckt im Haushaltsbegleitgesetz für 2027, das der Bundestag heute beschlossen hat",
+   "bild": ""
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Der Paritätische kritisiert, dass damit jede Erhöhung bis Mitte 2028 ausgeschlossen ist.",
+   "text": "Der Paritätische kritisiert, dass damit jede Erhöhung bis Mitte 2028 ausgeschlossen ist",
+   "bild": ""
+  },
+  {
+   "id": "s6",
+   "sprechtext": "Noch ist der Bundesrat nicht durch, erst dann ist es endgültig.",
+   "text": "Noch ist der Bundesrat nicht durch, erst dann ist es endgültig",
+   "bild": ""
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Merk dir: Bei steigenden Preisen heißt eine Nullrunde, dass das Geld weniger wert ist.",
+   "text": "Merk dir: Bei steigenden Preisen heißt eine Nullrunde, dass das Geld weniger wert ist",
+   "bild": ""
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Teile das Video mit deinen Freunden und folge uns, wir bringen jeden Tag neue Geld-Tipps!",
+   "text": "Teile das Video mit deinen Freunden und folge uns, wir bringen jeden Tag neue Geld-Tipps",
+   "bild": ""
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung.",
+   "text": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung",
+   "bild": ""
+  }
+ ]
+}
