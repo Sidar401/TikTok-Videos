@@ -152,3 +152,4 @@ Auch in Videos: Geldbeutel-Icon sparsam, nicht in jedem Video.
 - 26.11. Abend: boerse-26-11 Börsenrückblick (dunkler Look, Laufband; Dax +2,08 % 25.215,52, Rheinmetall/Siemens Energy/Infineon, Nvidia Mi. −3,9 %, Thanksgiving; mit Logos)
 - 27.11. Mittag: zoelle-14-laender (Short ~45 s, dunkler Look, TREND: Trump Section-301-Zölle 14 Länder, China 20 %, EU 15 %, noch nicht in Kraft; Flaggen; Trump-Foto fehlt, Commons 429)
 - 27.11. Nachmittag: Slideshow „rheinmetall“ (3:4, 5 Bilder + Thumbnail, Umsatzziel 2030 33–37 Mrd. statt ~45, Aktie +3 %)
+- 27.11. Abend: boerse-27-11 Börsenrückblick (Dax +0,90 % 25.441,24, Woche +2,6 %, Rheinmetall +3,3 %, Nasdaq 100 +2,61 %; neue Regeln CTA vor Hinweis)

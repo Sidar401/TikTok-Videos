@@ -1,0 +1,65 @@
+{
+ "titel": "Börsenrückblick 27.11.",
+ "saetze": [
+  {
+   "id": "s1",
+   "sprechtext": "Alles, was heute an der Börse passiert ist – in 60 Sekunden.",
+   "text": "Alles, was heute an der Börse passiert ist – in 60 Sekunden",
+   "bild": ""
+  },
+  {
+   "id": "s2",
+   "sprechtext": "Der Dax hat die Woche mit einem Plus beendet: heute plus null Komma neun Prozent auf über 25.400 Punkte.",
+   "text": "Der Dax hat die Woche mit einem Plus beendet: heute plus 0,9 % auf über 25.400 Punkte",
+   "bild": ""
+  },
+  {
+   "id": "s3",
+   "sprechtext": "Auf die ganze Woche gerechnet sind das plus zwei Komma sechs Prozent.",
+   "text": "Auf die ganze Woche gerechnet sind das plus 2,6 %",
+   "bild": ""
+  },
+  {
+   "id": "s4",
+   "sprechtext": "Treiber war die Erholung bei den KI- und Chip-Aktien.",
+   "text": "Treiber war die Erholung bei den KI- und Chip-Aktien",
+   "bild": ""
+  },
+  {
+   "id": "s5",
+   "sprechtext": "Rheinmetall war mit plus drei Komma drei Prozent der Spitzenreiter, Infineon und Siemens Energy legten bis zu zwei Komma sieben Prozent zu.",
+   "text": "Rheinmetall war mit plus 3,3 % der Spitzenreiter, Infineon und Siemens Energy legten bis zu 2,7 % zu",
+   "bild": ""
+  },
+  {
+   "id": "s6",
+   "sprechtext": "In Amerika ging es am verkürzten Black-Friday-Handel weiter nach oben: Der Technik-Index Nasdaq 100 gewann zwei Komma sechs Prozent.",
+   "text": "In Amerika ging es am verkürzten Black-Friday-Handel weiter nach oben: Der Technik-Index Nasdaq 100 gewann 2,6 %",
+   "bild": ""
+  },
+  {
+   "id": "s7",
+   "sprechtext": "Auf die Woche gerechnet sind das sogar plus sechs Komma acht Prozent.",
+   "text": "Auf die Woche gerechnet sind das sogar plus 6,8 %",
+   "bild": ""
+  },
+  {
+   "id": "s8",
+   "sprechtext": "Merk dir: Die KI-Aktien bleiben der Taktgeber der Börse.",
+   "text": "Merk dir: Die KI-Aktien bleiben der Taktgeber der Börse",
+   "bild": ""
+  },
+  {
+   "id": "s9",
+   "sprechtext": "Teile das Video mit deinen Freunden und folge uns, wir bringen jeden Tag neue Geld-Tipps!",
+   "text": "Teile das Video mit deinen Freunden und folge uns, wir bringen jeden Tag neue Geld-Tipps",
+   "bild": ""
+  },
+  {
+   "id": "s10",
+   "sprechtext": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung.",
+   "text": "Kurzer Hinweis: Das ist keine Anlageberatung, nur eine Erklärung",
+   "bild": ""
+  }
+ ]
+}
